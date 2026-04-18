@@ -4,7 +4,7 @@ import {
   Mail,
   MapPin,
   Clock,
-  Wind,
+  Snowflake,
   ExternalLink,
   Star,
 } from "lucide-react";
@@ -38,7 +38,7 @@ export const Footer = () => {
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:border-brand-500 hover:text-brand-400"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:border-[rgb(var(--color-accent-500))] hover:text-[rgb(var(--color-accent-400))]"
             >
               <Phone className="h-4 w-4" /> {siteConfig.phoneDisplay}
             </a>
@@ -52,14 +52,15 @@ export const Footer = () => {
           {/* Brand column */}
           <div className="md:col-span-2">
             <NextLink href="/" className="inline-flex items-center gap-2.5">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-md">
-                <Wind className="h-5 w-5" />
+              <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-700 via-blue-600 to-sky-400 text-white shadow-md">
+                <span className="text-sm font-black tracking-tighter">KL</span>
+                <Snowflake className="absolute -top-1 -right-1 h-3.5 w-3.5 text-sky-300 bg-slate-950 rounded-full p-0.5" />
               </span>
               <span className="flex flex-col leading-none">
                 <span className="text-base font-extrabold tracking-tight text-white">
-                  {siteConfig.name}
+                  KL Renovator
                 </span>
-                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-400">
+                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-sky-400">
                   Aircon Specialist
                 </span>
               </span>
@@ -73,7 +74,7 @@ export const Footer = () => {
               href={siteConfig.links.googleMaps}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-3 rounded-lg border border-slate-800 bg-slate-900 px-4 py-2.5 hover:border-brand-500 transition"
+              className="mt-4 inline-flex items-center gap-3 rounded-lg border border-slate-800 bg-slate-900 px-4 py-2.5 hover:border-sky-500 transition"
             >
               <div className="flex items-center gap-0.5 text-amber-400">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -81,7 +82,8 @@ export const Footer = () => {
                 ))}
               </div>
               <span className="text-xs text-slate-300">
-                <span className="font-semibold text-white">4.9 / 5</span> · 500+ Google Reviews
+                <span className="font-semibold text-white">4.9 / 5</span> · 500+
+                Google Reviews
               </span>
               <ExternalLink className="h-3 w-3 text-slate-500" />
             </a>
@@ -100,14 +102,14 @@ export const Footer = () => {
               <a
                 aria-label="Facebook"
                 href={siteConfig.links.facebook}
-                className="h-9 w-9 inline-flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-brand-700 hover:text-white"
+                className="h-9 w-9 inline-flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-blue-700 hover:text-white"
               >
                 <FaFacebookF className="h-4 w-4" />
               </a>
               <a
                 aria-label="Instagram"
                 href={siteConfig.links.instagram}
-                className="h-9 w-9 inline-flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-brand-700 hover:text-white"
+                className="h-9 w-9 inline-flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-blue-700 hover:text-white"
               >
                 <FaInstagram className="h-4 w-4" />
               </a>
@@ -124,7 +126,7 @@ export const Footer = () => {
                 <li key={s.slug}>
                   <NextLink
                     href={`/services/${s.slug}`}
-                    className="text-slate-400 hover:text-brand-400 transition"
+                    className="text-slate-400 hover:text-sky-400 transition"
                   >
                     {s.title}
                   </NextLink>
@@ -133,7 +135,7 @@ export const Footer = () => {
               <li>
                 <NextLink
                   href="/#services"
-                  className="text-brand-400 hover:text-brand-300 transition font-semibold"
+                  className="text-sky-400 hover:text-sky-300 transition font-semibold"
                 >
                   View all services →
                 </NextLink>
@@ -148,31 +150,37 @@ export const Footer = () => {
             </h4>
             <ul className="mt-4 space-y-3.5 text-sm">
               <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 h-4 w-4 text-brand-400 shrink-0" />
-                <a href={`tel:${siteConfig.phone}`} className="text-slate-300 hover:text-brand-400">
+                <Phone className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
+                <a
+                  href={`tel:${siteConfig.phone}`}
+                  className="text-slate-300 hover:text-sky-400"
+                >
                   {siteConfig.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 h-4 w-4 text-brand-400 shrink-0" />
-                <a href={`mailto:${siteConfig.email}`} className="text-slate-300 hover:text-brand-400 break-all">
+                <Mail className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-slate-300 hover:text-sky-400 break-all"
+                >
                   {siteConfig.email}
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 text-brand-400 shrink-0" />
+                <MapPin className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
                 <a
                   href={siteConfig.links.googleMaps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-brand-400"
+                  className="text-slate-300 hover:text-sky-400"
                 >
                   Find us on Google Maps
                   <ExternalLink className="inline h-3 w-3 ml-1" />
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
-                <Clock className="mt-0.5 h-4 w-4 text-brand-400 shrink-0" />
+                <Clock className="mt-0.5 h-4 w-4 text-sky-400 shrink-0" />
                 <span className="text-slate-300">{siteConfig.hours}</span>
               </li>
             </ul>
@@ -185,7 +193,7 @@ export const Footer = () => {
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <p className="text-xs text-slate-500">
-            Serving KL & Selangor · Same-day bookings via WhatsApp
+            Serving KL &amp; Selangor · Same-day bookings via WhatsApp
           </p>
         </div>
       </div>

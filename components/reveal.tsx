@@ -20,12 +20,12 @@ type RevealProps = {
 /**
  * Scroll-reveal wrapper.
  *
- * Progressive-enhancement approach:
- *  - SSR / pre-JS: content renders fully VISIBLE (no FOUC, no hidden text).
- *  - On mount, if element is below the fold we hide it and observe; it
- *    fades-up into view when scrolled into the viewport.
- *  - Elements already in the viewport on mount stay visible (no flicker).
- *  - Respects prefers-reduced-motion.
+ * IMPORTANT: Content is ALWAYS visible by default (no `reveal-hidden` class
+ * is ever applied in SSR or before JS runs). If a supported IntersectionObserver
+ * is present and the element enters the viewport, we apply the fade-up
+ * animation. If anything goes wrong, the content simply stays visible.
+ *
+ * This avoids any scenario where text becomes permanently invisible.
  */
 export const Reveal = ({
   children,
@@ -35,62 +35,51 @@ export const Reveal = ({
   once = true,
 }: RevealProps) => {
   const ref = useRef<HTMLElement | null>(null);
-  const [state, setState] = useState<"initial" | "hidden" | "visible">(
-    "initial",
-  );
+  const [animated, setAnimated] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const node = ref.current;
     if (!node) return;
 
-    // Reduced motion — skip entirely
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      setState("visible");
+    // Reduced motion — never animate, always visible.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // If IntersectionObserver isn't available, skip animation entirely.
+    if (!("IntersectionObserver" in window)) {
+      setAnimated(true);
       return;
     }
-
-    // If element is already in viewport on mount, keep visible (no animation)
-    const rect = node.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight - 40 && rect.bottom > 0;
-    if (inView) {
-      setState("visible");
-      return;
-    }
-
-    // Otherwise hide and wait for it to scroll in
-    setState("hidden");
 
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setState("visible");
+            setAnimated(true);
             if (once) io.unobserve(entry.target);
-          } else if (!once) {
-            setState("hidden");
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
     );
 
     io.observe(node);
-    return () => io.disconnect();
+
+    // Safety net: if IO hasn't fired in 1.2s, just show normally.
+    const t = window.setTimeout(() => setAnimated(true), 1200);
+
+    return () => {
+      io.disconnect();
+      window.clearTimeout(t);
+    };
   }, [once]);
 
   const Component = Tag as any;
   return (
     <Component
       ref={ref as any}
-      className={clsx(
-        state === "hidden" && "reveal-hidden",
-        state === "visible" && "reveal-visible",
-        className,
-      )}
-      style={{ animationDelay: `${delay}ms` }}
+      className={clsx(animated && "reveal-visible", className)}
+      style={animated ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}
     </Component>

@@ -9,6 +9,7 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
+import { ServiceHeroImage } from "@/components/service-hero-image";
 import { title, subtitle } from "@/components/primitives";
 
 export function generateStaticParams() {
@@ -84,11 +85,7 @@ export default async function ServicePage({
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <img
-                src={data.heroImage}
-                alt={data.title}
-                className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
-              />
+              <ServiceHeroImage src={data.heroImage} alt={data.title} />
             </Reveal>
           </div>
         </div>

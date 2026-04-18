@@ -3,16 +3,17 @@ import { tv } from "tailwind-variants";
 /**
  * Title primitive.
  * - Default: solid foreground color (always readable).
- * - `color: "brand"` applies a brand gradient via bg-clip-text.
+ * - `color: "brand"` applies a brand gradient with SOLID fallback
+ *   so text is never invisible on browsers that don't support
+ *   background-clip: text.
  */
 export const title = tv({
-  base: "tracking-tight inline font-bold text-slate-900 dark:text-white",
+  base: "tracking-tight inline font-extrabold text-slate-900 dark:text-white",
   variants: {
     color: {
-      brand:
-        "bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-brand-700 dark:from-brand-400 dark:to-brand-600",
+      brand: "brand-gradient-text",
       accent:
-        "bg-clip-text text-transparent bg-gradient-to-r from-[rgb(var(--color-accent-500))] to-[rgb(var(--color-accent-600))]",
+        "text-[rgb(var(--color-accent-500))] dark:text-[rgb(var(--color-accent-400))]",
     },
     size: {
       sm: "text-2xl sm:text-3xl lg:text-4xl",
@@ -26,7 +27,7 @@ export const title = tv({
 });
 
 export const subtitle = tv({
-  base: "w-full md:w-3/4 my-2 text-base sm:text-lg text-slate-600 dark:text-slate-400 block max-w-full",
+  base: "w-full md:w-3/4 my-2 text-base sm:text-lg text-slate-600 dark:text-slate-300 block max-w-full",
   variants: { fullWidth: { true: "!w-full" } },
   defaultVariants: { fullWidth: true },
 });

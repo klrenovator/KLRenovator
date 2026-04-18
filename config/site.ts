@@ -223,7 +223,6 @@ export const siteConfig = {
     facebook: "#",
     instagram: "#",
     tiktok: "#",
-    googleMaps:
-      "https://www.google.com/maps/place/KL+Renovator/@3.214328,101.640755,17z/data=!4m10!1m2!2m1!1sklrenovator!3m6!1s0x64bcb235e3ce847b:0x8fac1f567878cdaa!8m2!3d3.214328!4d101.640755",
+    googleMaps: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   },
 };
