@@ -18,7 +18,7 @@ export const Hero = () => {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 dark:border-brand-700 bg-brand-50 dark:bg-brand-900/40 px-3 py-1 text-xs font-semibold text-brand-700 dark:text-brand-300">
                 <Star className="h-3.5 w-3.5" fill="currentColor" />
-                Trusted by 5,000+ homes & offices in KL & Selangor
+                Trusted by 1,000+ homes & offices in KL & Selangor
               </span>
 
               <h1 className="mt-5 leading-[1.05]">
