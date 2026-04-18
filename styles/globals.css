@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   DYNAMIC THEME COLOR PRIMITIVES (edit here to re-skin)
+   ========================================================= */
+:root {
+  /* Brand (cool cyan / aircon blue) */
+  --color-brand-50: 236 253 255;
+  --color-brand-100: 207 250 254;
+  --color-brand-200: 165 243 252;
+  --color-brand-300: 103 232 249;
+  --color-brand-400: 34 211 238;
+  --color-brand-500: 6 182 212;
+  --color-brand-600: 8 145 178;
+  --color-brand-700: 14 116 144;
+  --color-brand-800: 21 94 117;
+  --color-brand-900: 22 78 99;
+
+  --color-accent-500: 249 115 22;
+  --color-accent-600: 234 88 12;
+
+  --color-success: 34 197 94;
+  --color-danger: 239 68 68;
+
+  --color-bg: 255 255 255;
+  --color-bg-soft: 248 250 252;
+  --color-surface: 255 255 255;
+  --color-fg: 15 23 42;
+  --color-muted: 100 116 139;
+  --color-border: 226 232 240;
+
+  --color-whatsapp: 37 211 102;
+}
+
+.dark {
+  --color-brand-50: 22 78 99;
+  --color-brand-100: 21 94 117;
+  --color-brand-200: 14 116 144;
+  --color-brand-300: 8 145 178;
+  --color-brand-400: 6 182 212;
+  --color-brand-500: 34 211 238;
+  --color-brand-600: 103 232 249;
+  --color-brand-700: 165 243 252;
+  --color-brand-800: 207 250 254;
+  --color-brand-900: 236 253 255;
+
+  --color-accent-500: 251 146 60;
+  --color-accent-600: 253 186 116;
+
+  --color-bg: 2 6 23;
+  --color-bg-soft: 15 23 42;
+  --color-surface: 15 23 42;
+  --color-fg: 241 245 249;
+  --color-muted: 148 163 184;
+  --color-border: 30 41 59;
+
+  --color-whatsapp: 37 211 102;
+}
+
+@theme {
+  --font-sans: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-mono, ui-monospace, monospace);
+
+  --color-brand-50: rgb(var(--color-brand-50));
+  --color-brand-100: rgb(var(--color-brand-100));
+  --color-brand-200: rgb(var(--color-brand-200));
+  --color-brand-300: rgb(var(--color-brand-300));
+  --color-brand-400: rgb(var(--color-brand-400));
+  --color-brand-500: rgb(var(--color-brand-500));
+  --color-brand-600: rgb(var(--color-brand-600));
+  --color-brand-700: rgb(var(--color-brand-700));
+  --color-brand-800: rgb(var(--color-brand-800));
+  --color-brand-900: rgb(var(--color-brand-900));
+
+  --color-accent: rgb(var(--color-accent-500));
+  --color-accent-soft: rgb(var(--color-accent-600));
+  --color-whatsapp: rgb(var(--color-whatsapp));
+
+  /* Expose fg/muted for gradient text utilities */
+  --color-fg: rgb(var(--color-fg));
+  --color-muted-foreground: rgb(var(--color-muted));
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+}
+
+/* Reveal animation — SSR-safe */
+@keyframes fade-up {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Default: visible (so SSR + no-JS shows content) */
+.reveal-hidden {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  will-change: opacity, transform;
+}
+.reveal-visible {
+  animation: fade-up 0.7s ease-out both;
+  will-change: opacity, transform;
+}
+
+.float-anim { animation: float 3s ease-in-out infinite; }
+
+/* Mobile-first tuned font size */
+html { font-size: 15px; }
+@media (min-width: 640px) { html { font-size: 16px; } }
