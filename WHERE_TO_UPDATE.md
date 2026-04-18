@@ -7,13 +7,6 @@ File: `styles/globals.css`
 - Edit `--color-accent-*` for the secondary (cyan) accent
 - Edit `--color-whatsapp` for the WhatsApp button green
 
-## 🖼️ Gallery / project images
-File: `components/sections/gallery.tsx`
-1. Drop images into `/public/gallery/` (e.g. `/public/gallery/job-1.jpg`)
-2. In the `galleryItems` array, replace each `src` with the local path
-   (e.g. `"/gallery/job-1.jpg"`) plus the `title` + `location`
-3. Add or remove entries freely — the grid adapts
-
 ## ⭐ Google reviews (REAL ones)
 We cannot auto-scrape reviews from `maps.app.goo.gl` short-links, so you
 have two options:

@@ -7,11 +7,11 @@ import { waLink, defaultWhatsAppMsg } from "@/lib/whatsapp";
 export const ReadyToBook = () => {
   return (
     <section className="relative overflow-hidden py-16 sm:py-24">
-      {/* Background gradient + decorative blobs */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900" />
+      {/* Solid background */}
+      <div className="absolute inset-0 -z-10 bg-brand-700" />
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
@@ -45,7 +45,7 @@ export const ReadyToBook = () => {
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border-2 border-white/40 bg-white/10 backdrop-blur px-7 py-4 text-base font-bold text-white hover:bg-white hover:text-brand-700 transition-colors"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-brand-900 hover:bg-brand-800 ring-1 ring-white/20 px-7 py-4 text-base font-bold text-white shadow-2xl shadow-black/30 transition-colors"
             >
               <Phone className="h-5 w-5" />
               Call {siteConfig.phoneDisplay}

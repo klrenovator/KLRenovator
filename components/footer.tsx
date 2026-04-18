@@ -38,7 +38,7 @@ export const Footer = () => {
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:border-[rgb(var(--color-accent-500))] hover:text-[rgb(var(--color-accent-400))]"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 hover:bg-brand-700 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-brand-600/30"
             >
               <Phone className="h-4 w-4" /> {siteConfig.phoneDisplay}
             </a>
@@ -52,9 +52,9 @@ export const Footer = () => {
           {/* Brand column */}
           <div className="md:col-span-2">
             <NextLink href="/" className="inline-flex items-center gap-2.5">
-              <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-700 via-blue-600 to-sky-400 text-white shadow-md">
+              <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md">
                 <span className="text-sm font-black tracking-tighter">KL</span>
-                <Snowflake className="absolute -top-1 -right-1 h-3.5 w-3.5 text-sky-300 bg-slate-950 rounded-full p-0.5" />
+                <Snowflake className="absolute -top-1 -right-1 h-3.5 w-3.5 text-white bg-sky-500 rounded-full p-0.5" />
               </span>
               <span className="flex flex-col leading-none">
                 <span className="text-base font-extrabold tracking-tight text-white">

@@ -17,7 +17,7 @@ export const StickyActions = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-[rgb(var(--color-whatsapp))] text-white shadow-lg shadow-emerald-600/30 transition-transform hover:scale-105 active:scale-95 sm:h-16 sm:w-16"
+        className="group relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-[rgb(var(--color-whatsapp))] text-white shadow-lg shadow-brand-600/40 transition-transform hover:scale-105 active:scale-95 sm:h-16 sm:w-16"
       >
         <span className="absolute inset-0 rounded-full bg-[rgb(var(--color-whatsapp))] opacity-60 animate-ping" />
         <MessageCircle className="relative h-6 w-6 sm:h-7 sm:w-7" fill="currentColor" />

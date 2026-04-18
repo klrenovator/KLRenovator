@@ -11,9 +11,9 @@ export const siteConfig = {
     "Trusted aircon service in KL & Selangor. Installation, chemical wash, servicing, gas top-up, repair, ceiling cassette & more. Fast quotes via WhatsApp.",
 
   // 🔧 Change these before going live
-  phone: "+60123456789",
-  phoneDisplay: "+60 12-345 6789",
-  whatsapp: "60123456789",
+  phone: "+60182983573",
+  phoneDisplay: "+60 18-298 3573",
+  whatsapp: "60182983573",
   email: "hello@klrenovator.com",
   address: "Kuala Lumpur, Malaysia",
   hours: "Mon–Sun · 9:00 AM – 9:00 PM",
@@ -219,7 +219,7 @@ export const siteConfig = {
   ],
 
   links: {
-    whatsapp: "https://wa.me/60123456789",
+    whatsapp: "https://wa.me/60182983573",
     facebook: "#",
     instagram: "#",
     tiktok: "#",

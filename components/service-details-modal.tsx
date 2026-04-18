@@ -52,9 +52,9 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
       />
 
       {/* Panel */}
-      <div className="relative w-full sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] overflow-hidden rounded-t-3xl sm:rounded-3xl bg-white dark:bg-slate-900 shadow-2xl ring-1 ring-slate-200 dark:ring-slate-800">
+      <div className="relative w-full sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] flex flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl bg-white dark:bg-slate-900 shadow-2xl ring-1 ring-slate-200 dark:ring-slate-800">
         {/* Header */}
-        <div className="relative p-5 sm:p-6 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 text-white">
+        <div className="relative shrink-0 p-5 sm:p-6 bg-brand-600 text-white">
           <button
             aria-label="Close modal"
             onClick={onClose}
@@ -82,7 +82,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
         </div>
 
         {/* Scrollable body */}
-        <div className="overflow-y-auto overscroll-contain px-5 sm:px-6 py-5 space-y-6 max-h-[calc(92vh-170px)] sm:max-h-[calc(88vh-170px)]">
+        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-5 sm:px-6 py-5 space-y-6">
           {/* Description */}
           <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
             {data.description}
@@ -193,7 +193,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
         </div>
 
         {/* Footer actions */}
-        <div className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 sm:p-5 flex flex-col sm:flex-row gap-2.5">
+        <div className="shrink-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 sm:p-5 flex flex-col sm:flex-row gap-2.5">
           <a
             href={waLink(
               `Hi Klrenovator, I'd like to book "${data.title}". Please share availability and a quote.`,
@@ -208,7 +208,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
           <NextLink
             href={`/services/${data.slug}`}
             onClick={onClose}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 px-5 py-3 text-sm font-bold text-slate-800 dark:text-slate-200 hover:border-brand-500 hover:text-brand-600 transition"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 px-5 py-3 text-sm font-bold text-white shadow-md shadow-brand-600/30 active:scale-[0.98] transition"
           >
             Full page <ArrowRight className="h-4 w-4" />
           </NextLink>

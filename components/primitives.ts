@@ -1,17 +1,13 @@
 import { tv } from "tailwind-variants";
 
 /**
- * Title primitive.
- * - Default: solid foreground color (always readable).
- * - `color: "brand"` applies a brand gradient with SOLID fallback
- *   so text is never invisible on browsers that don't support
- *   background-clip: text.
+ * Title primitive — solid colours only (no gradients).
  */
 export const title = tv({
   base: "tracking-tight inline font-extrabold text-slate-900 dark:text-white",
   variants: {
     color: {
-      brand: "brand-gradient-text",
+      brand: "text-brand-600 dark:text-brand-400",
       accent:
         "text-[rgb(var(--color-accent-500))] dark:text-[rgb(var(--color-accent-400))]",
     },

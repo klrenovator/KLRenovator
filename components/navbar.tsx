@@ -12,7 +12,6 @@ import { waLink, defaultWhatsAppMsg } from "@/lib/whatsapp";
 const NAV_LINKS: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#services" },
-  { label: "Gallery", href: "/#gallery" },
   { label: "Reviews", href: "/#reviews" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
@@ -39,7 +38,7 @@ export const Navbar = () => {
       )}
     >
       {/* Top announcement bar */}
-      <div className="hidden sm:block bg-gradient-to-r from-brand-700 via-brand-600 to-[rgb(var(--color-accent-500))] text-white text-xs">
+      <div className="hidden sm:block bg-brand-600 text-white text-xs">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 py-1.5">
           <span className="truncate">
             ⚡ Same-day aircon service across KL &amp; Selangor · 5-star rated
@@ -56,9 +55,9 @@ export const Navbar = () => {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Brand */}
         <NextLink href="/" className="flex items-center gap-2.5 shrink-0">
-          <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-700 via-brand-600 to-[rgb(var(--color-accent-500))] text-white shadow-md shadow-brand-600/30">
+          <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/30">
             <span className="text-sm font-black tracking-tighter">KL</span>
-            <Snowflake className="absolute -top-1 -right-1 h-3.5 w-3.5 text-[rgb(var(--color-accent-300))] bg-slate-950 rounded-full p-0.5" />
+            <Snowflake className="absolute -top-1 -right-1 h-3.5 w-3.5 text-white bg-[rgb(var(--color-accent-500))] rounded-full p-0.5" />
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-base font-extrabold tracking-tight text-slate-900 dark:text-white">
@@ -91,7 +90,7 @@ export const Navbar = () => {
             href={waLink(defaultWhatsAppMsg)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--color-whatsapp))] px-4 py-2 text-sm font-bold text-white shadow-md shadow-emerald-600/20 hover:brightness-110 hover:scale-[1.02] active:scale-95 transition"
+            className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--color-whatsapp))] px-4 py-2 text-sm font-bold text-white shadow-md shadow-brand-600/30 hover:brightness-110 hover:scale-[1.02] active:scale-95 transition"
           >
             <MessageCircle className="h-4 w-4" fill="currentColor" />
             Book on WhatsApp

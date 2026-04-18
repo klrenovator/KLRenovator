@@ -61,7 +61,7 @@ export default async function ServicePage({
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <Reveal>
               <div>
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-md">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md">
                   <ServiceIcon name={iconName} className="h-6 w-6" />
                 </div>
                 <h1 className="mt-4">
@@ -74,10 +74,12 @@ export default async function ServicePage({
                   {data.description}
                 </p>
                 <div className="mt-5 flex items-center gap-3 text-sm">
-                  <span className="rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 px-3 py-1 font-semibold">
+                  <span className="rounded-full bg-brand-600 text-white px-3 py-1 font-semibold shadow-sm">
                     From {data.startPrice}
                   </span>
-                  <span className="text-slate-500">All KL & Selangor</span>
+                  <span className="text-slate-600 dark:text-slate-300 font-medium">
+                    All KL &amp; Selangor
+                  </span>
                 </div>
                 <div className="mt-6">
                   <BookingButton serviceName={data.title} size="lg" />

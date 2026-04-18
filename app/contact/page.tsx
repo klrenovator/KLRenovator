@@ -39,7 +39,7 @@ export default function ContactPage() {
                 href={waLink(defaultWhatsAppMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl bg-[rgb(var(--color-whatsapp))] text-white p-5 shadow-lg shadow-emerald-600/20 hover:brightness-110 transition"
+                className="flex items-center gap-4 rounded-2xl bg-[rgb(var(--color-whatsapp))] text-white p-5 shadow-lg shadow-brand-600/30 hover:brightness-110 transition"
               >
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/20">
                   <MessageCircle className="h-6 w-6" fill="currentColor" />
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 href={`tel:${siteConfig.phone}`}
                 className="flex items-center gap-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-500 transition"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-600">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/30">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                 href={`mailto:${siteConfig.email}`}
                 className="flex items-center gap-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-500 transition"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-600">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/30">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>

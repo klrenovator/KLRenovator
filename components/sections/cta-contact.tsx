@@ -27,7 +27,7 @@ export const CtaContact = () => {
 
               <div className="mt-6 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-600">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm shadow-brand-600/30">
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
@@ -41,7 +41,7 @@ export const CtaContact = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-600">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm shadow-brand-600/30">
                     <Mail className="h-4 w-4" />
                   </div>
                   <div>
@@ -55,7 +55,7 @@ export const CtaContact = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-600">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm shadow-brand-600/30">
                     <Clock className="h-4 w-4" />
                   </div>
                   <div>
@@ -66,7 +66,7 @@ export const CtaContact = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-600">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm shadow-brand-600/30">
                     <MapPin className="h-4 w-4" />
                   </div>
                   <div>

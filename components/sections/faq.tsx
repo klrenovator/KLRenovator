@@ -106,10 +106,10 @@ export const FAQ = () => {
                       </span>
                       <span
                         className={clsx(
-                          "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all",
+                          "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all ring-1",
                           isOpen
-                            ? "bg-brand-600 text-white rotate-45"
-                            : "bg-brand-100 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400",
+                            ? "bg-brand-600 text-white ring-brand-700 rotate-45"
+                            : "bg-brand-600 text-white ring-brand-700 dark:bg-brand-900/40 dark:text-brand-300 dark:ring-brand-800",
                         )}
                       >
                         <Plus className="h-4 w-4" />
@@ -137,7 +137,7 @@ export const FAQ = () => {
 
           {/* Still have questions card */}
           <Reveal>
-            <div className="mt-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-brand-50 to-white dark:from-brand-900/20 dark:to-slate-900 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="mt-8 rounded-2xl border border-brand-200 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/20 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">
                   Still have questions?

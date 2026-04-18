@@ -19,7 +19,7 @@ export const ServiceHeroImage = ({
   if (failed) {
     return (
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-700 via-brand-600 to-[rgb(var(--color-accent-500))]" />
+        <div className="absolute inset-0 bg-brand-600" />
         <div className="absolute inset-0 flex items-center justify-center">
           <Snowflake className="h-32 w-32 text-white/80" />
         </div>

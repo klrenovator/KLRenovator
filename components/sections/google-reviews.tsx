@@ -40,7 +40,7 @@ export const GoogleReviews = () => {
   return (
     <section
       id="reviews"
-      className="py-16 sm:py-20 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950"
+      className="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
@@ -85,13 +85,13 @@ export const GoogleReviews = () => {
                 className={
                   "flex h-full flex-col rounded-2xl border p-5 sm:p-6 shadow-sm hover:shadow-xl transition-shadow " +
                   (i === 0
-                    ? "border-brand-200 dark:border-brand-800 bg-gradient-to-br from-white to-brand-50 dark:from-slate-900 dark:to-brand-900/20"
+                    ? "border-brand-300 dark:border-brand-700 bg-brand-50 dark:bg-brand-900/20"
                     : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900")
                 }
               >
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-600 via-brand-700 to-[rgb(var(--color-accent-500))] text-white text-sm font-bold">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white text-sm font-bold">
                       {r.initials}
                     </div>
                     <div>
@@ -112,7 +112,7 @@ export const GoogleReviews = () => {
                   ))}
                 </div>
 
-                <Quote className="mt-3 h-5 w-5 text-brand-400 dark:text-brand-500 shrink-0" />
+                <Quote className="mt-3 h-5 w-5 text-brand-600 dark:text-brand-400 shrink-0" />
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                   {r.text}
                 </p>

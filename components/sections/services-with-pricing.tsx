@@ -46,10 +46,10 @@ export const ServicesWithPricing = () => {
                 />
 
                 <div className="relative flex items-start justify-between gap-3 pointer-events-none">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 via-brand-700 to-[rgb(var(--color-accent-500))] text-white shadow-md">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/30">
                     <ServiceIcon name={s.icon} className="h-6 w-6" />
                   </div>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-brand-100 dark:bg-brand-900/50 px-2.5 py-1 text-xs font-bold text-brand-700 dark:text-brand-300">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-brand-600 px-2.5 py-1 text-xs font-bold text-white shadow-sm">
                     <Tag className="h-3 w-3" /> from RM {s.startPrice}
                   </span>
                 </div>
@@ -57,11 +57,11 @@ export const ServicesWithPricing = () => {
                 <h3 className="relative mt-4 text-lg font-bold text-slate-900 dark:text-white pointer-events-none">
                   {s.title}
                 </h3>
-                <p className="relative mt-1.5 text-sm text-slate-600 dark:text-slate-300 pointer-events-none">
+                <p className="relative mt-1.5 text-sm text-slate-700 dark:text-slate-300 pointer-events-none">
                   {s.short}
                 </p>
 
-                <div className="relative mt-4 flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 pointer-events-none">
+                <div className="relative mt-4 flex items-center gap-2 text-sm font-semibold text-brand-700 dark:text-brand-300 pointer-events-none">
                   <Info className="h-4 w-4" /> Tap for details &amp; prices
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
@@ -88,7 +88,7 @@ export const ServicesWithPricing = () => {
 
         {/* Volume discount banner */}
         <Reveal>
-          <div className="mt-10 rounded-2xl bg-gradient-to-r from-brand-700 via-brand-600 to-[rgb(var(--color-accent-500))] text-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="mt-10 rounded-2xl bg-brand-600 text-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <h3 className="text-lg sm:text-xl font-bold">
                 More units = bigger discounts

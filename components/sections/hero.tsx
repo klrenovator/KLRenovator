@@ -1,251 +1,244 @@
-import { ShieldCheck, Clock, Star, Zap, Snowflake } from "lucide-react";
+import {
+  ShieldCheck,
+  Clock,
+  Star,
+  Wrench,
+  Award,
+  CheckCircle2,
+  MessageCircle,
+  Phone,
+  Snowflake,
+  ThumbsUp,
+  Users,
+} from "lucide-react";
+import { FaGoogle } from "react-icons/fa";
 import { Reveal } from "@/components/reveal";
-import { BookingButton } from "@/components/booking-button";
-import { title, subtitle } from "@/components/primitives";
+import { siteConfig } from "@/config/site";
+import { waLink, defaultWhatsAppMsg } from "@/lib/whatsapp";
 
+/**
+ * Hero v3 — conversion-focused, centred, solid-color layout.
+ * Strategy: one strong headline, one price anchor, two big CTAs,
+ * trust strip, and a full-width stat band. No gradients, no SVG
+ * illustrations; every piece renders cleanly on any device.
+ */
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
-      {/* Decorative background */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-[rgb(var(--color-accent-300))]/40 dark:bg-[rgb(var(--color-accent-500))]/20 blur-3xl" />
-        <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-brand-300/40 dark:bg-brand-500/10 blur-3xl" />
-      </div>
+    <section className="relative isolate overflow-hidden bg-white dark:bg-slate-950">
+      {/* Subtle dot pattern — adds depth without colour gradients */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] dark:opacity-[0.12]"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgb(37 99 235 / 0.35) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+          maskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0) 100%)",
+        }}
+      />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-12 lg:pb-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <Reveal>
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 dark:border-brand-700 bg-brand-50 dark:bg-brand-900/40 px-3 py-1 text-xs font-semibold text-brand-700 dark:text-brand-300">
-                <Star className="h-3.5 w-3.5" fill="currentColor" />
-                Trusted by 1,000+ homes &amp; offices in KL &amp; Selangor
-              </span>
-
-              <h1 className="mt-5 leading-[1.05]">
-                <span className={title({ size: "lg" })}>
-                  Keep your home
-                </span>{" "}
-                <span className={title({ size: "lg", color: "brand" })}>
-                  icy cold
-                </span>
-                <br />
-                <span className={title({ size: "lg" })}>
-                  with trusted aircon experts.
-                </span>
-              </h1>
-
-              <p className={subtitle({ class: "mt-4 max-w-xl" })}>
-                Installation, chemical wash, servicing, gas top-up, repair and
-                more. Same-day bookings via WhatsApp · Transparent pricing · No
-                hidden fees.
-              </p>
-
-              <div className="mt-6">
-                <BookingButton size="lg" />
-              </div>
-
-              {/* Trust mini-row */}
-              <div className="mt-8 grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-6">
-                {[
-                  { icon: ShieldCheck, label: "Licensed technicians" },
-                  { icon: Clock, label: "Same-day service" },
-                  { icon: Zap, label: "Fast response" },
-                  { icon: Star, label: "5-star rated" },
-                ].map(({ icon: Icon, label }) => (
-                  <div
-                    key={label}
-                    className="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300"
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-20 sm:pb-24">
+        {/* Top social-proof badge */}
+        <Reveal>
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-1.5 shadow-sm">
+              <div className="flex -space-x-2">
+                {["A", "M", "L"].map((l, i) => (
+                  <span
+                    key={l}
+                    className={
+                      "inline-flex h-6 w-6 items-center justify-center rounded-full ring-2 ring-white dark:ring-slate-900 text-[10px] font-bold text-white " +
+                      ["bg-brand-600", "bg-brand-700", "bg-sky-500"][i]
+                    }
                   >
-                    <Icon className="h-4 w-4 text-brand-600 dark:text-brand-400" />
-                    {label}
-                  </div>
+                    {l}
+                  </span>
                 ))}
               </div>
+              <span className="text-xs font-semibold text-slate-700 dark:text-slate-200">
+                Trusted by <span className="text-brand-600 dark:text-brand-400">5,000+</span> homes in KL &amp; Selangor
+              </span>
             </div>
-          </Reveal>
+          </div>
+        </Reveal>
 
-          <Reveal delay={120}>
-            <div className="relative">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-2xl shadow-brand-600/20 ring-1 ring-slate-200 dark:ring-slate-800">
-                {/* SVG hero illustration — guaranteed to render, brand-matched colours */}
-                <svg
-                  viewBox="0 0 800 600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-full w-full"
-                  role="img"
-                  aria-label="KL Renovator — aircon servicing illustration"
-                >
-                  <defs>
-                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="rgb(var(--color-brand-700))" />
-                      <stop offset="50%" stopColor="rgb(var(--color-brand-500))" />
-                      <stop offset="100%" stopColor="rgb(var(--color-accent-400))" />
-                    </linearGradient>
-                    <linearGradient id="unit" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#ffffff" />
-                      <stop offset="100%" stopColor="#e2e8f0" />
-                    </linearGradient>
-                    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="rgba(255,255,255,0.35)" />
-                      <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-                    </radialGradient>
-                  </defs>
-                  {/* Background */}
-                  <rect width="800" height="600" fill="url(#sky)" />
-                  {/* Glow */}
-                  <circle cx="550" cy="180" r="220" fill="url(#glow)" />
-                  {/* Wall */}
-                  <rect x="0" y="430" width="800" height="170" fill="rgba(255,255,255,0.08)" />
-                  {/* Aircon unit */}
-                  <rect
-                    x="170"
-                    y="220"
-                    width="460"
-                    height="130"
-                    rx="18"
-                    fill="url(#unit)"
-                    stroke="#cbd5e1"
-                    strokeWidth="3"
-                  />
-                  {/* Vent slats */}
-                  <rect x="190" y="296" width="420" height="10" rx="5" fill="#cbd5e1" />
-                  <rect x="190" y="316" width="420" height="10" rx="5" fill="#cbd5e1" />
-                  {/* LED */}
-                  <circle cx="590" cy="250" r="6" fill="#22d3ee">
-                    <animate
-                      attributeName="opacity"
-                      values="1;0.3;1"
-                      dur="2s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                  <rect x="540" y="240" width="40" height="20" rx="4" fill="#0f172a" opacity="0.7" />
-                  {/* Cool breeze */}
-                  <g opacity="0.9">
-                    <path
-                      d="M210 380 Q260 430 210 480 Q260 530 210 560"
-                      stroke="#e0f2fe"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      fill="none"
-                    >
-                      <animate
-                        attributeName="opacity"
-                        values="0.3;1;0.3"
-                        dur="2s"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                    <path
-                      d="M320 380 Q370 430 320 480 Q370 530 320 560"
-                      stroke="#bae6fd"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      fill="none"
-                    >
-                      <animate
-                        attributeName="opacity"
-                        values="0.5;1;0.5"
-                        dur="2.4s"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                    <path
-                      d="M430 380 Q480 430 430 480 Q480 530 430 560"
-                      stroke="#e0f2fe"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      fill="none"
-                    >
-                      <animate
-                        attributeName="opacity"
-                        values="0.4;1;0.4"
-                        dur="1.8s"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                    <path
-                      d="M540 380 Q590 430 540 480 Q590 530 540 560"
-                      stroke="#bae6fd"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      fill="none"
-                    >
-                      <animate
-                        attributeName="opacity"
-                        values="0.6;1;0.6"
-                        dur="2.2s"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                  </g>
-                  {/* Snowflakes */}
-                  {[
-                    { x: 240, y: 430, d: "3s" },
-                    { x: 350, y: 450, d: "2.4s" },
-                    { x: 460, y: 440, d: "2.8s" },
-                    { x: 570, y: 460, d: "2.2s" },
-                  ].map((s) => (
-                    <g key={`${s.x}-${s.y}`} transform={`translate(${s.x},${s.y})`}>
-                      <g fill="#ffffff">
-                        <circle r="3" />
-                        <rect x="-0.5" y="-8" width="1" height="16" />
-                        <rect x="-8" y="-0.5" width="16" height="1" />
-                        <rect
-                          x="-0.5"
-                          y="-8"
-                          width="1"
-                          height="16"
-                          transform="rotate(45)"
-                        />
-                        <rect
-                          x="-0.5"
-                          y="-8"
-                          width="1"
-                          height="16"
-                          transform="rotate(-45)"
-                        />
-                      </g>
-                      <animateTransform
-                        attributeName="transform"
-                        type="translate"
-                        values={`${s.x},${s.y}; ${s.x - 5},${s.y + 15}; ${s.x},${s.y}`}
-                        dur={s.d}
-                        repeatCount="indefinite"
-                      />
-                    </g>
-                  ))}
-                </svg>
-              </div>
+        {/* Headline */}
+        <Reveal delay={80}>
+          <h1 className="mt-6 text-center mx-auto max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-white">
+            Aircon service you can{" "}
+            <span className="relative whitespace-nowrap text-brand-600 dark:text-brand-400">
+              trust today
+              <span
+                aria-hidden
+                className="absolute inset-x-0 -bottom-1 h-2 bg-brand-200/70 dark:bg-brand-700/50 -z-10 rounded"
+              />
+            </span>
+            <br />
+            at transparent prices.
+          </h1>
+        </Reveal>
 
-              {/* Floating rating card */}
-              <div className="absolute -bottom-6 -left-4 sm:-left-6 w-56 rounded-2xl bg-white dark:bg-slate-900 p-4 shadow-xl border border-slate-200 dark:border-slate-800 float-anim">
-                <div className="flex items-center gap-1 text-amber-500 dark:text-amber-400">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4" fill="currentColor" />
-                  ))}
+        {/* Subheadline */}
+        <Reveal delay={140}>
+          <p className="mt-5 text-center mx-auto max-w-2xl text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            Licensed technicians for chemical wash, installation, repair &amp;
+            gas top-up — across Kuala Lumpur &amp; Selangor. Get a firm quote on
+            WhatsApp in 30 seconds.
+          </p>
+        </Reveal>
+
+        {/* CTAs — BOTH BLUE */}
+        <Reveal delay={200}>
+          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+            <a
+              href={waLink(defaultWhatsAppMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-600/30 hover:scale-[1.02] active:scale-95 transition"
+            >
+              <MessageCircle className="h-5 w-5" fill="currentColor" />
+              Get WhatsApp Quote
+            </a>
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-slate-900/20 active:scale-95 transition"
+            >
+              <Phone className="h-5 w-5" />
+              Call {siteConfig.phoneDisplay}
+            </a>
+          </div>
+        </Reveal>
+
+        {/* Reassurance row */}
+        <Reveal delay={260}>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-700 dark:text-slate-300">
+            {[
+              { icon: CheckCircle2, t: "Same-day booking" },
+              { icon: CheckCircle2, t: "No hidden fees" },
+              { icon: CheckCircle2, t: "1-year workmanship warranty" },
+            ].map(({ icon: Icon, t }) => (
+              <span key={t} className="inline-flex items-center gap-1.5">
+                <Icon className="h-4 w-4 text-brand-600 dark:text-brand-400" />
+                <span className="font-medium">{t}</span>
+              </span>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Feature card row (4 big white cards) */}
+        <Reveal delay={340}>
+          <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            {[
+              {
+                icon: Snowflake,
+                title: "Chemical Wash",
+                sub: "from RM 130",
+              },
+              {
+                icon: Wrench,
+                title: "Repair",
+                sub: "from RM 88",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Installation",
+                sub: "from RM 250",
+              },
+              {
+                icon: Clock,
+                title: "Gas Top-Up",
+                sub: "from RM 80",
+              },
+            ].map(({ icon: Icon, title, sub }) => (
+              <a
+                key={title}
+                href="#services"
+                className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 sm:p-5 text-left hover:border-brand-500 hover:shadow-lg hover:shadow-brand-600/10 transition-all"
+              >
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/30 group-hover:scale-110 transition">
+                  <Icon className="h-5 w-5" />
                 </div>
-                <p className="mt-2 text-sm font-semibold text-slate-900 dark:text-white">
-                  4.9 / 5 rating
+                <p className="mt-3 text-sm sm:text-base font-bold text-slate-900 dark:text-white">
+                  {title}
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  from 500+ Google reviews
+                <p className="mt-0.5 text-xs sm:text-sm font-semibold text-brand-600 dark:text-brand-400">
+                  {sub}
                 </p>
-              </div>
+              </a>
+            ))}
+          </div>
+        </Reveal>
 
-              {/* Floating price card */}
-              <div className="absolute -top-4 -right-2 sm:-right-4 rounded-2xl bg-white dark:bg-slate-900 px-4 py-3 shadow-xl border border-slate-200 dark:border-slate-800">
-                <p className="text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">
-                  Service from
-                </p>
-                <p className="flex items-center gap-1 text-xl font-extrabold text-brand-600 dark:text-brand-400">
-                  <Snowflake className="h-4 w-4" />
-                  RM 99
-                </p>
-              </div>
+        {/* Trust band — stats + reviews */}
+        <Reveal delay={400}>
+          <div className="mt-10 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200 dark:divide-slate-800">
+              {[
+                {
+                  icon: Users,
+                  value: "5,000+",
+                  label: "Happy customers",
+                },
+                {
+                  icon: Award,
+                  value: "10+",
+                  label: "Years experience",
+                },
+                {
+                  icon: ThumbsUp,
+                  value: "4.9★",
+                  label: "Google rating",
+                },
+                {
+                  icon: Clock,
+                  value: "< 30 min",
+                  label: "Response time",
+                },
+              ].map(({ icon: Icon, value, label }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-3 p-5 sm:p-6"
+                >
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 ring-1 ring-brand-100 dark:ring-brand-800">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white leading-none">
+                      {value}
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-slate-600 dark:text-slate-400">
+                      {label}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          </Reveal>
-        </div>
+
+            {/* Google verified strip */}
+            <a
+              href={siteConfig.links.googleMaps}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 px-5 py-3 text-xs sm:text-sm"
+            >
+              <FaGoogle className="h-4 w-4 text-brand-600 dark:text-brand-400" />
+              <span className="font-semibold text-slate-900 dark:text-white">
+                Verified on Google
+              </span>
+              <span className="inline-flex items-center gap-0.5 text-amber-500">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-3.5 w-3.5" fill="currentColor" />
+                ))}
+              </span>
+              <span className="text-slate-600 dark:text-slate-400">
+                500+ reviews · 4.9/5
+              </span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -45,7 +45,7 @@ export const BookingButton = ({
           target="_blank"
           rel="noopener noreferrer"
           className={clsx(
-            "inline-flex items-center justify-center gap-2 rounded-lg bg-[rgb(var(--color-whatsapp))] font-semibold text-white shadow-md shadow-emerald-600/20 hover:brightness-110 active:scale-[0.98] transition",
+            "inline-flex items-center justify-center gap-2 rounded-lg bg-[rgb(var(--color-whatsapp))] font-semibold text-white shadow-md shadow-brand-600/30 hover:brightness-110 active:scale-[0.98] transition",
             sizeCls,
             fullWidth && "flex-1",
           )}
@@ -58,7 +58,7 @@ export const BookingButton = ({
         <a
           href={`tel:${siteConfig.phone}`}
           className={clsx(
-            "inline-flex items-center justify-center gap-2 rounded-lg border border-brand-600 text-brand-700 dark:text-brand-300 dark:border-brand-500 font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 active:scale-[0.98] transition",
+            "inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 hover:bg-brand-700 font-semibold text-white shadow-md shadow-brand-600/30 active:scale-[0.98] transition",
             sizeCls,
             fullWidth && "flex-1",
           )}
