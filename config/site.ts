@@ -14,7 +14,7 @@ export const siteConfig = {
   phone: "+60182983573",
   phoneDisplay: "+60 18-298 3573",
   whatsapp: "60182983573",
-  email: "hello@klrenovator.com",
+  email: "info@klrenovator.com",
   address: "Kuala Lumpur, Malaysia",
   hours: "Mon–Sun · 9:00 AM – 9:00 PM",
 
