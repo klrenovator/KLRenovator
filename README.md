@@ -1,6 +1,6 @@
 # Next.js & HeroUI 
 This is a template for creating apicdhsdjcnjscations using Next.js 15 (app directory) and HeroUI (v3).
-
+cdscscsc
 [Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
 
 ## Technologies Used
