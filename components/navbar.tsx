@@ -74,10 +74,10 @@ export const Navbar = () => {
         <NextLink
           href="/"
           aria-label="KL Renovator home"
-          className="relative inline-block h-14 w-56 "
+          className="relative inline-block h-56 w-80 mt-4 "
         >
           <Image
-            src="/logo/logo.jpeg"
+            src="/logo/image.png"
             alt="KL Renovator"
             fill
             priority

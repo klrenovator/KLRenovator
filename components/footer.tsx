@@ -59,7 +59,7 @@ export const Footer = () => {
               className="relative inline-block h-16 w-16 bg-white p-1"
             >
               <Image
-                src="/logo/logo.jpeg"
+                src="/logo/image.png"
                 alt="KL Renovator"
                 fill
                 sizes="64px"
