@@ -220,7 +220,7 @@ export const siteConfig = {
 
   links: {
     whatsapp: "https://wa.me/60182983573",
-    facebook: "#",
+    facebook: "https://www.facebook.com/share/18BpXK69Ai/",
     instagram: "https://www.instagram.com/klrneovator?igsh=cWp0enU0MjRsNHk1",
     tiktok: "#",
     googleMaps: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
