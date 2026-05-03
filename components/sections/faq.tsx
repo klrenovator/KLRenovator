@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { HelpCircle, Plus, MessageCircle } from "lucide-react";
 import clsx from "clsx";
+import { FaWhatsapp } from "react-icons/fa";
+import { FiPlus, FiHelpCircle } from "react-icons/fi";
 
 import { Reveal } from "@/components/reveal";
-import { title } from "@/components/primitives";
-import { waLink, defaultWhatsAppMsg } from "@/lib/whatsapp";
+import { title, eyebrow } from "@/components/primitives";
+import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 type QA = { q: string; a: string };
 
-const faqs: QA[] = [
+export const faqs: QA[] = [
   {
     q: "Which areas do you cover in KL & Selangor?",
     a: "We serve the whole of KL & Selangor — including Petaling Jaya, Subang Jaya, Shah Alam, Cheras, Ampang, Damansara, Puchong, Kajang, Bangsar, Mont Kiara, Klang, Setapak, Sentul, Putrajaya and Cyberjaya. Just drop your address on WhatsApp and we'll confirm the slot.",
@@ -25,7 +26,7 @@ const faqs: QA[] = [
   },
   {
     q: "Is your pricing transparent — any hidden charges?",
-    a: "No hidden fees. Quoted price = price you pay. If any additional material is needed (gas, copper pipe, bracket), we'll inform you BEFORE starting and get your approval. Tap any service card to see the full pricing list.",
+    a: "No hidden fees. Quoted price = price you pay. If any additional material is needed (gas, copper pipe, bracket), we'll inform you BEFORE starting and get your approval.",
   },
   {
     q: "What brands do you service and install?",
@@ -53,111 +54,110 @@ const faqs: QA[] = [
   },
 ];
 
-export const FAQ = () => {
+type Props = {
+  showHeading?: boolean;
+  limit?: number;
+};
+
+export const FAQ = ({ showHeading = true, limit }: Props) => {
   const [open, setOpen] = useState<number | null>(0);
+  const items = limit ? faqs.slice(0, limit) : faqs;
 
   return (
-    <section
-      id="faq"
-      className="py-16 sm:py-20 bg-white dark:bg-slate-950"
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-200 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 text-xs font-semibold text-brand-700 dark:text-brand-300">
-              <HelpCircle className="h-3.5 w-3.5" />
-              Frequently Asked Questions
-            </div>
-            <h2 className="mt-4">
-              <span className={title({ size: "md" })}>Got questions? </span>
-              <span className={title({ size: "md", color: "brand" })}>
-                We&apos;ve got answers.
-              </span>
-            </h2>
-            <p className="mt-3 text-slate-600 dark:text-slate-300">
-              Everything you need to know about our aircon services — and if
-              something&apos;s not covered, just WhatsApp us.
-            </p>
-          </div>
-        </Reveal>
-
-        <div className="mt-10 mx-auto max-w-3xl">
-          <div className="space-y-3">
-            {faqs.map((f, i) => {
-              const isOpen = open === i;
-              return (
-                <Reveal key={f.q} delay={i * 30}>
-                  <div
-                    className={clsx(
-                      "rounded-2xl border transition-all overflow-hidden",
-                      isOpen
-                        ? "border-brand-500 bg-white dark:bg-slate-900 shadow-lg shadow-brand-500/10"
-                        : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-brand-400 dark:hover:border-brand-600",
-                    )}
-                  >
-                    <button
-                      type="button"
-                      aria-expanded={isOpen}
-                      onClick={() => setOpen(isOpen ? null : i)}
-                      className="flex w-full items-start justify-between gap-4 px-5 py-4 text-left"
-                    >
-                      <span className="text-base font-semibold text-slate-900 dark:text-white">
-                        {f.q}
-                      </span>
-                      <span
-                        className={clsx(
-                          "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all ring-1",
-                          isOpen
-                            ? "bg-brand-600 text-white ring-brand-700 rotate-45"
-                            : "bg-brand-600 text-white ring-brand-700 dark:bg-brand-900/40 dark:text-brand-300 dark:ring-brand-800",
-                        )}
-                      >
-                        <Plus className="h-4 w-4" />
-                      </span>
-                    </button>
-                    <div
-                      className={clsx(
-                        "grid transition-all duration-300 ease-out",
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100"
-                          : "grid-rows-[0fr] opacity-0",
-                      )}
-                    >
-                      <div className="overflow-hidden">
-                        <p className="px-5 pb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                          {f.a}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
-
-          {/* Still have questions card */}
+    <section id="faq" className="py-16 sm:py-20 bg-white">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        {showHeading && (
           <Reveal>
-            <div className="mt-8 rounded-2xl border border-brand-200 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/20 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                  Still have questions?
-                </h3>
-                <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                  Message us on WhatsApp — we usually reply within 30 minutes.
-                </p>
-              </div>
-              <a
-                href={waLink(defaultWhatsAppMsg)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--color-whatsapp))] px-5 py-3 text-sm font-bold text-white shadow-md hover:brightness-110 transition"
-              >
-                <MessageCircle className="h-4 w-4" fill="currentColor" />
-                Chat with us
-              </a>
+            <div className="text-center max-w-3xl mx-auto">
+              <p className={eyebrow()}>
+                <FiHelpCircle className="inline h-3.5 w-3.5 mr-1 -mt-0.5" />
+                FAQ
+              </p>
+              <h2 className="mt-3">
+                <span className={title({ size: "md" })}>Got questions? </span>
+                <span className={title({ size: "md", color: "brand" })}>
+                  We&apos;ve got answers.
+                </span>
+              </h2>
+              <p className="mt-4 text-slate-600">
+                Everything you need to know about our aircon services — and if
+                something&apos;s not covered, just WhatsApp us.
+              </p>
             </div>
           </Reveal>
+        )}
+
+        <div className="mt-10 border border-slate-200 divide-y divide-slate-200">
+          {items.map((f, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={f.q}
+                className={clsx(
+                  "transition-colors",
+                  isOpen ? "bg-slate-50" : "bg-white hover:bg-slate-50",
+                )}
+              >
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="flex w-full items-start justify-between gap-4 px-5 py-5 text-left"
+                >
+                  <span className="text-base font-bold text-ink leading-snug">
+                    {f.q}
+                  </span>
+                  <span
+                    className={clsx(
+                      "mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center transition-all",
+                      isOpen
+                        ? "bg-brand-700 text-white rotate-45"
+                        : "bg-ink text-white",
+                    )}
+                  >
+                    <FiPlus className="h-4 w-4" />
+                  </span>
+                </button>
+                <div
+                  className={clsx(
+                    "grid transition-all duration-300 ease-out",
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0",
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-5 pb-5 text-sm leading-relaxed text-slate-700 max-w-3xl">
+                      {f.a}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
+
+        <Reveal>
+          <div className="mt-10 border border-slate-200 bg-slate-50 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h3 className="text-lg font-extrabold text-ink uppercase tracking-tight">
+                Still have questions?
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Message us on WhatsApp — we usually reply within 30 minutes.
+              </p>
+            </div>
+            <a
+              href={waLink(rfqMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition"
+            >
+              <FaWhatsapp className="h-4 w-4" />
+              Chat with us
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

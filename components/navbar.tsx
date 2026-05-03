@@ -2,24 +2,27 @@
 
 import { useState, useEffect } from "react";
 import NextLink from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
-import { Menu, X, Phone, Snowflake, MessageCircle } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { HiBars3, HiXMark } from "react-icons/hi2";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { waLink, defaultWhatsAppMsg } from "@/lib/whatsapp";
+import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 const NAV_LINKS: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/#services" },
-  { label: "Reviews", href: "/#reviews" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -28,131 +31,177 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <nav
+    <header
       className={clsx(
-        "sticky top-0 z-40 w-full transition-all",
+        "sticky top-0 z-40 w-full bg-white transition-shadow",
         scrolled
-          ? "bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800/70 shadow-sm"
-          : "bg-white/70 dark:bg-slate-950/70 backdrop-blur-md",
+          ? "shadow-[0_2px_0_0_#1d4ed8]"
+          : "border-b border-slate-200",
       )}
     >
-      {/* Top announcement bar */}
-      <div className="hidden sm:block bg-brand-600 text-white text-xs">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 py-1.5">
-          <span className="truncate">
-            ⚡ Same-day aircon service across KL &amp; Selangor · 5-star rated
+      {/* Top utility bar */}
+      <div className="hidden sm:block bg-brand-900 text-white text-xs">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 py-2">
+          <span className="truncate font-medium tracking-wide">
+            Same-day aircon service across KL &amp; Selangor
           </span>
-          <a
-            href={`tel:${siteConfig.phone}`}
-            className="hidden md:inline-flex items-center gap-1.5 font-semibold hover:underline"
-          >
-            <Phone className="h-3 w-3" /> {siteConfig.phoneDisplay}
-          </a>
+          <div className="flex items-center gap-5">
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="hidden md:inline-flex items-center gap-1.5 font-semibold hover:text-brand-300 transition-colors"
+            >
+              <FaPhoneAlt className="h-3 w-3" /> {siteConfig.phoneDisplay}
+            </a>
+            <a
+              href={waLink(rfqMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-1.5 font-semibold hover:text-brand-300 transition-colors"
+            >
+              <FaWhatsapp className="h-3.5 w-3.5" /> WhatsApp
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        {/* Brand */}
-        <NextLink href="/" className="flex items-center gap-2.5 shrink-0">
-          <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/30">
-            <span className="text-sm font-black tracking-tighter">KL</span>
-            <Snowflake className="absolute -top-1 -right-1 h-3.5 w-3.5 text-white bg-[rgb(var(--color-accent-500))] rounded-full p-0.5" />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="text-base font-extrabold tracking-tight text-slate-900 dark:text-white">
-              KL Renovator
-            </span>
-            <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-600 dark:text-[rgb(var(--color-accent-400))]">
-              Aircon Specialist · KL &amp; Selangor
-            </span>
-          </span>
+      <div className="mx-auto flex h-20 sm:h-24 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        {/* Logo only — no text */}
+        <NextLink
+          href="/"
+          aria-label="KL Renovator home"
+          className="relative inline-block h-14 w-56 shrink-0"
+        >
+          <Image
+            src="/logo/logo.jpeg"
+            alt="KL Renovator"
+            fill
+            priority
+          
+            className=" w-full"
+          />
         </NextLink>
 
         {/* Desktop nav */}
-        <ul className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map((l) => (
-            <li key={l.href}>
+        <nav className="hidden lg:flex items-center gap-8">
+          {NAV_LINKS.map((l) => {
+            const active =
+              l.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(l.href);
+            return (
               <NextLink
+                key={l.href}
                 href={l.href}
-                className="inline-flex rounded-lg px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition"
+                className={clsx(
+                  "relative text-sm font-bold uppercase tracking-wider transition-colors",
+                  active ? "text-brand-700" : "text-black hover:text-brand-700",
+                )}
               >
                 {l.label}
+                {active && (
+                  <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-500" />
+                )}
               </NextLink>
-            </li>
-          ))}
-        </ul>
+            );
+          })}
+        </nav>
 
         {/* Desktop actions */}
         <div className="hidden lg:flex items-center gap-2">
-          <ThemeSwitch />
           <a
-            href={waLink(defaultWhatsAppMsg)}
+            href={`tel:${siteConfig.phone}`}
+            className="inline-flex items-center gap-2 border-2 border-brand-900 px-4 py-2.5 text-sm font-bold text-brand-900 hover:bg-brand-900 hover:text-white transition"
+          >
+            <FaPhoneAlt className="h-3.5 w-3.5" />
+            {siteConfig.phoneDisplay}
+          </a>
+          <a
+            href={waLink(rfqMsg)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[rgb(var(--color-whatsapp))] px-4 py-2 text-sm font-bold text-white shadow-md shadow-brand-600/30 hover:brightness-110 hover:scale-[1.02] active:scale-95 transition"
+            className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition"
           >
-            <MessageCircle className="h-4 w-4" fill="currentColor" />
-            Book on WhatsApp
+            <FaWhatsapp className="h-4 w-4" />
+            Request a Quote
           </a>
         </div>
 
         {/* Mobile actions */}
         <div className="flex lg:hidden items-center gap-1">
           <a
-            href={`tel:${siteConfig.phone}`}
-            aria-label="Call now"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-brand-600 dark:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+            href={waLink(rfqMsg)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="inline-flex h-11 w-11 items-center justify-center bg-brand-500 text-white"
           >
-            <Phone className="h-5 w-5" />
+            <FaWhatsapp className="h-5 w-5" />
           </a>
-          <ThemeSwitch />
           <button
             aria-expanded={open}
             aria-label="Toggle menu"
             onClick={() => setOpen(!open)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+            className="inline-flex h-11 w-11 items-center justify-center text-black hover:bg-slate-100"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? (
+              <HiXMark className="h-7 w-7" />
+            ) : (
+              <HiBars3 className="h-7 w-7" />
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile panel */}
+      {/* Mobile drawer */}
       {open && (
-        <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
-          <ul className="px-4 py-2">
-            {NAV_LINKS.map((l) => (
-              <li key={l.href}>
-                <NextLink
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-semibold text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800"
-                >
-                  {l.label}
-                </NextLink>
-              </li>
-            ))}
+        <div className="lg:hidden border-t border-slate-200 bg-white">
+          <ul>
+            {NAV_LINKS.map((l) => {
+              const active =
+                l.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(l.href);
+              return (
+                <li key={l.href} className="border-b border-slate-100">
+                  <NextLink
+                    href={l.href}
+                    className={clsx(
+                      "block px-5 py-4 text-base font-bold uppercase tracking-wider border-l-4 transition-colors",
+                      active
+                        ? "border-brand-500 text-brand-700 bg-brand-50"
+                        : "border-transparent text-black hover:bg-slate-50",
+                    )}
+                  >
+                    {l.label}
+                  </NextLink>
+                </li>
+              );
+            })}
           </ul>
-          <div className="px-4 pb-4 pt-2 grid grid-cols-2 gap-2">
+          <div className="px-4 py-4 grid grid-cols-2 gap-2">
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-3 py-3 text-sm font-semibold text-white"
+              className="inline-flex items-center justify-center gap-2 bg-brand-900 px-3 py-3.5 text-sm font-bold text-white"
             >
-              <Phone className="h-4 w-4" /> Call Now
+              <FaPhoneAlt className="h-4 w-4" /> Call
             </a>
             <a
-              href={waLink(defaultWhatsAppMsg)}
+              href={waLink(rfqMsg)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[rgb(var(--color-whatsapp))] px-3 py-3 text-sm font-semibold text-white"
+              className="inline-flex items-center justify-center gap-2 bg-brand-500 px-3 py-3.5 text-sm font-bold text-white"
             >
-              <MessageCircle className="h-4 w-4" fill="currentColor" />
-              WhatsApp
+              <FaWhatsapp className="h-4 w-4" />
+              RFQ
             </a>
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 };

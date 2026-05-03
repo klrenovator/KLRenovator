@@ -1,18 +1,18 @@
 import { Hero } from "@/components/sections/hero";
+import { StatsBand } from "@/components/sections/stats-band";
 import { ServicesWithPricing } from "@/components/sections/services-with-pricing";
+import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { GoogleReviews } from "@/components/sections/google-reviews";
-import { FAQ } from "@/components/sections/faq";
-import { CtaContact } from "@/components/sections/cta-contact";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesWithPricing />
+      <StatsBand />
+      <ServicesWithPricing limit={6} />
+      <WhyChooseUs />
       <GoogleReviews />
-      <FAQ />
-      <CtaContact />
       <ReadyToBook />
     </>
   );

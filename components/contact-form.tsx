@@ -1,15 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Send, MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
-/**
- * Lead contact form.
- * On submit, composes a WhatsApp message and opens wa.me with
- * a pre-filled message — no backend required, lowest friction.
- */
 export const ContactForm = () => {
   const [form, setForm] = useState({
     name: "",
@@ -23,7 +18,7 @@ export const ContactForm = () => {
     e.preventDefault();
     setSubmitting(true);
     const msg =
-      `Hi Klrenovator, I'd like to request a quote.\n\n` +
+      `Hi Klrenovator, I'd like to request a quote (RFQ).\n\n` +
       `• Name: ${form.name}\n` +
       `• Area: ${form.area}\n` +
       `• Service: ${form.service}\n` +
@@ -34,29 +29,38 @@ export const ContactForm = () => {
   };
 
   const inputCls =
-    "w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent";
+    "w-full border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-brand-700 focus:ring-1 focus:ring-brand-700 transition";
 
   return (
     <form
       onSubmit={handle}
-      className="w-full space-y-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm"
+      className="w-full space-y-5 border border-slate-200 bg-white p-6 sm:p-7 shadow-sm"
     >
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-700">
+          Request a Quote
+        </p>
+        <h3 className="mt-1 text-xl font-extrabold text-ink">
+          Tell us what you need.
+        </h3>
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
-            Name
+          <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
+            Your Name
           </label>
           <input
             required
             type="text"
-            placeholder="Your name"
+            placeholder="Full name"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             className={inputCls}
           />
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
+          <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
             Area
           </label>
           <input
@@ -77,7 +81,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
+        <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
           Service
         </label>
         <select
@@ -94,7 +98,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
+        <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
           Message (optional)
         </label>
         <textarea
@@ -109,14 +113,20 @@ export const ContactForm = () => {
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[rgb(var(--color-whatsapp))] px-5 py-3.5 text-sm font-semibold text-white hover:brightness-110 active:scale-[0.99] disabled:opacity-60 transition"
+        className="inline-flex w-full items-center justify-center gap-2 bg-brand-700 hover:bg-brand-800 px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white disabled:opacity-60 transition"
       >
-        <MessageCircle className="h-4 w-4" fill="currentColor" />
+        <FaWhatsapp className="h-4 w-4" />
         {submitting ? "Opening WhatsApp..." : "Send via WhatsApp"}
       </button>
 
       <p className="text-center text-xs text-slate-500">
-        Or send directly — <a className="font-medium text-brand-600" href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a>
+        Or call directly —{" "}
+        <a
+          className="font-semibold text-brand-700 hover:text-brand-800"
+          href={`tel:${siteConfig.phone}`}
+        >
+          {siteConfig.phoneDisplay}
+        </a>
       </p>
     </form>
   );

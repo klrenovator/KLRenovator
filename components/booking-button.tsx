@@ -1,7 +1,7 @@
 "use client";
 
-import { MessageCircle, Phone } from "lucide-react";
 import clsx from "clsx";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
@@ -9,8 +9,9 @@ type Props = {
   serviceName?: string;
   size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
-  variant?: "whatsapp" | "call" | "both";
+  variant?: "rfq" | "call" | "both";
   className?: string;
+  label?: string;
 };
 
 export const BookingButton = ({
@@ -19,10 +20,11 @@ export const BookingButton = ({
   fullWidth,
   variant = "both",
   className,
+  label,
 }: Props) => {
   const msg = serviceName
-    ? `Hi Klrenovator, I'd like to book "${serviceName}". Please share the next available slot and price. Thanks!`
-    : `Hi Klrenovator, I'd like to book an aircon service. Please share the next available slot. Thanks!`;
+    ? `Hi Klrenovator, I'd like to request a quote (RFQ) for "${serviceName}". Please share availability and pricing. Thanks!`
+    : `Hi Klrenovator, I'd like to request a quote (RFQ) for an aircon service. Please share availability. Thanks!`;
 
   const sizeCls =
     size === "sm"
@@ -39,31 +41,31 @@ export const BookingButton = ({
         className,
       )}
     >
-      {(variant === "whatsapp" || variant === "both") && (
+      {(variant === "rfq" || variant === "both") && (
         <a
           href={waLink(msg)}
           target="_blank"
           rel="noopener noreferrer"
           className={clsx(
-            "inline-flex items-center justify-center gap-2 rounded-lg bg-[rgb(var(--color-whatsapp))] font-semibold text-white shadow-md shadow-brand-600/30 hover:brightness-110 active:scale-[0.98] transition",
+            "inline-flex items-center justify-center gap-2 bg-brand-500 font-bold text-white hover:bg-brand-600 active:scale-[0.98] transition uppercase tracking-wide",
             sizeCls,
             fullWidth && "flex-1",
           )}
         >
-          <MessageCircle className="h-4 w-4" fill="currentColor" />
-          WhatsApp Quote
+          <FaWhatsapp className="h-4 w-4" />
+          {label ?? "Request a Quote"}
         </a>
       )}
       {(variant === "call" || variant === "both") && (
         <a
           href={`tel:${siteConfig.phone}`}
           className={clsx(
-            "inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 hover:bg-brand-700 font-semibold text-white shadow-md shadow-brand-600/30 active:scale-[0.98] transition",
+            "inline-flex items-center justify-center gap-2 bg-brand-900 font-bold text-white hover:bg-black active:scale-[0.98] transition uppercase tracking-wide",
             sizeCls,
             fullWidth && "flex-1",
           )}
         >
-          <Phone className="h-4 w-4" />
+          <FaPhoneAlt className="h-3.5 w-3.5" />
           Call Now
         </a>
       )}

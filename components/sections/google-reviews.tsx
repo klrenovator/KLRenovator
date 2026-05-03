@@ -1,17 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Star, Quote, ExternalLink } from "lucide-react";
-import { FaGoogle } from "react-icons/fa";
+import { FaStar, FaQuoteLeft, FaGoogle } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
+
 import { Reveal } from "@/components/reveal";
 import { googlePlace, googleReviews, type Review } from "@/config/reviews";
-import { title } from "@/components/primitives";
+import { title, eyebrow } from "@/components/primitives";
 
-/**
- * Google Reviews section — tries to fetch live reviews from
- * /api/google-reviews if GOOGLE_PLACES_API_KEY + PLACE_ID are set.
- * Falls back to the curated list in config/reviews.ts otherwise.
- */
 export const GoogleReviews = () => {
   const [reviews, setReviews] = useState<Review[]>(googleReviews);
   const [meta, setMeta] = useState({
@@ -38,82 +34,64 @@ export const GoogleReviews = () => {
   }, []);
 
   return (
-    <section
-      id="reviews"
-      className="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/50"
-    >
+    <section id="reviews" className="py-16 sm:py-20 bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <FaGoogle className="h-3.5 w-3.5 text-brand-600 dark:text-brand-400" />
-              Verified Google Reviews
+          <div className="grid gap-6 md:grid-cols-2 md:items-end">
+            <div>
+              <p className={eyebrow()}>Customer Reviews</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "md" })}>What customers </span>
+                <span className={title({ size: "md", color: "brand" })}>
+                  say about us
+                </span>
+              </h2>
             </div>
-            <h2 className="mt-4">
-              <span className={title({ size: "md" })}>What customers </span>
-              <span className={title({ size: "md", color: "brand" })}>
-                say about us
-              </span>
-            </h2>
-            <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2">
-              <div className="flex items-center gap-0.5 text-amber-500 dark:text-amber-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5" fill="currentColor" />
-                ))}
+            <div className="md:text-right">
+              <div className="inline-flex flex-wrap items-center justify-start md:justify-end gap-3">
+                <div className="flex items-center gap-1 text-amber-500">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <FaStar key={i} className="h-5 w-5" />
+                  ))}
+                </div>
+                <div>
+                  <p className="text-2xl font-extrabold text-ink leading-none">
+                    {meta.rating} / 5
+                  </p>
+                  <p className="mt-1 text-xs text-slate-500 uppercase tracking-wider">
+                    {meta.total}+ Google reviews
+                  </p>
+                </div>
               </div>
-              <span className="text-lg font-bold text-slate-900 dark:text-white">
-                {meta.rating}/5
-              </span>
-              <span className="text-sm text-slate-500 dark:text-slate-400">
-                from {meta.total}+ Google reviews
-              </span>
             </div>
           </div>
         </Reveal>
 
-        {/* Reviews grid */}
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {reviews.slice(0, 5).map((r, i) => (
-            <Reveal
-              key={r.author + i}
-              delay={i * 60}
-              className={
-                i === 0 ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
-              }
-            >
-              <article
-                className={
-                  "flex h-full flex-col rounded-2xl border p-5 sm:p-6 shadow-sm hover:shadow-xl transition-shadow " +
-                  (i === 0
-                    ? "border-brand-300 dark:border-brand-700 bg-brand-50 dark:bg-brand-900/20"
-                    : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900")
-                }
-              >
-                <div className="flex items-start justify-between">
+        <div className="mt-10 grid gap-px bg-slate-200 md:grid-cols-2 lg:grid-cols-3 border border-slate-200">
+          {reviews.slice(0, 6).map((r, i) => (
+            <Reveal key={r.author + i} delay={i * 60}>
+              <article className="flex h-full flex-col bg-white p-6">
+                <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white text-sm font-bold">
+                    <div className="flex h-10 w-10 items-center justify-center bg-brand-700 text-white text-sm font-extrabold">
                       {r.initials}
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                        {r.author}
-                      </p>
-                      <p className="text-xs text-slate-500 dark:text-slate-400">
-                        {r.date}
-                      </p>
+                      <p className="text-sm font-bold text-ink">{r.author}</p>
+                      <p className="text-xs text-slate-500">{r.date}</p>
                     </div>
                   </div>
                   <FaGoogle className="h-4 w-4 text-slate-400" />
                 </div>
 
-                <div className="mt-3 flex items-center gap-0.5 text-amber-500 dark:text-amber-400">
+                <div className="mt-3 flex items-center gap-0.5 text-amber-500">
                   {Array.from({ length: r.rating }).map((_, k) => (
-                    <Star key={k} className="h-4 w-4" fill="currentColor" />
+                    <FaStar key={k} className="h-3.5 w-3.5" />
                   ))}
                 </div>
 
-                <Quote className="mt-3 h-5 w-5 text-brand-600 dark:text-brand-400 shrink-0" />
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                <FaQuoteLeft className="mt-4 h-4 w-4 text-brand-700 shrink-0" />
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-700">
                   {r.text}
                 </p>
               </article>
@@ -127,11 +105,11 @@ export const GoogleReviews = () => {
               href={googlePlace.reviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-5 py-2.5 text-sm font-semibold text-slate-800 dark:text-slate-200 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition"
+              className="inline-flex items-center gap-2 border-2 border-ink bg-white px-6 py-3 text-sm font-bold uppercase tracking-wide text-ink hover:bg-ink hover:text-white transition"
             >
               <FaGoogle className="h-4 w-4" />
               Read all reviews on Google
-              <ExternalLink className="h-3.5 w-3.5" />
+              <FiArrowUpRight className="h-4 w-4" />
             </a>
           </div>
         </Reveal>

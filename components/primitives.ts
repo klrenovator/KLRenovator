@@ -1,15 +1,15 @@
 import { tv } from "tailwind-variants";
 
 /**
- * Title primitive — solid colours only (no gradients).
+ * Title primitive — black & blue palette, square, professional.
  */
 export const title = tv({
-  base: "tracking-tight inline font-extrabold text-slate-900 dark:text-white",
+  base: "tracking-tight inline font-extrabold text-black",
   variants: {
     color: {
-      brand: "text-brand-600 dark:text-brand-400",
-      accent:
-        "text-[rgb(var(--color-accent-500))] dark:text-[rgb(var(--color-accent-400))]",
+      brand: "text-brand-700",
+      darkBrand: "text-brand-900",
+      white: "text-white",
     },
     size: {
       sm: "text-2xl sm:text-3xl lg:text-4xl",
@@ -23,11 +23,15 @@ export const title = tv({
 });
 
 export const subtitle = tv({
-  base: "w-full md:w-3/4 my-2 text-base sm:text-lg text-slate-600 dark:text-slate-300 block max-w-full",
+  base: "w-full md:w-3/4 my-2 text-base sm:text-lg text-slate-700 block max-w-full",
   variants: { fullWidth: { true: "!w-full" } },
   defaultVariants: { fullWidth: true },
 });
 
 export const sectionContainer = tv({
   base: "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8",
+});
+
+export const eyebrow = tv({
+  base: "inline-block text-xs font-bold uppercase tracking-[0.18em] text-brand-700",
 });

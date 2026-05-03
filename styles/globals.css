@@ -1,116 +1,65 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
-@custom-variant dark (&:is(.dark *));
-
 /* =========================================================
-   DYNAMIC THEME COLOR PRIMITIVES (edit here to re-skin)
-   Brand palette matches the KL Renovator logo — royal blue
-   (deep) transitioning to bright cyan (accent).
+   KL RENOVATOR — LIGHT MODE ONLY
+   Palette: dark blue + light blue + white + black.
+   Square UI everywhere — zero rounded corners.
    ========================================================= */
-:root {
-  /* Brand (royal blue — matches the deep blue in the logo) */
-  --color-brand-50: 239 246 255;   /* blue-50  */
-  --color-brand-100: 219 234 254;  /* blue-100 */
-  --color-brand-200: 191 219 254;  /* blue-200 */
-  --color-brand-300: 147 197 253;  /* blue-300 */
-  --color-brand-400: 96 165 250;   /* blue-400 */
-  --color-brand-500: 59 130 246;   /* blue-500 */
-  --color-brand-600: 37 99 235;    /* blue-600 — primary */
-  --color-brand-700: 29 78 216;    /* blue-700 */
-  --color-brand-800: 30 64 175;    /* blue-800 */
-  --color-brand-900: 30 58 138;    /* blue-900 */
-
-  /* Accent (bright cyan — matches the light blue L + snowflake) */
-  --color-accent-300: 125 211 252; /* sky-300 */
-  --color-accent-400: 56 189 248;  /* sky-400 */
-  --color-accent-500: 14 165 233;  /* sky-500 */
-  --color-accent-600: 2 132 199;   /* sky-600 */
-
-  --color-success: 34 197 94;
-  --color-danger: 239 68 68;
-
-  --color-bg: 255 255 255;
-  --color-bg-soft: 248 250 252;
-  --color-surface: 255 255 255;
-  --color-fg: 15 23 42;
-  --color-muted: 100 116 139;
-  --color-border: 226 232 240;
-
-  /* "whatsapp" variable now drives BLUE buttons site-wide (the user
-     prefers a single blue brand CTA rather than green). Keep the name
-     so existing classnames continue to work. */
-  --color-whatsapp: 37 99 235;
-}
-
-.dark {
-  /* In dark mode we LIGHTEN the brand so it remains legible. */
-  --color-brand-50: 30 58 138;
-  --color-brand-100: 30 64 175;
-  --color-brand-200: 29 78 216;
-  --color-brand-300: 37 99 235;
-  --color-brand-400: 59 130 246;
-  --color-brand-500: 96 165 250;
-  --color-brand-600: 147 197 253;
-  --color-brand-700: 191 219 254;
-  --color-brand-800: 219 234 254;
-  --color-brand-900: 239 246 255;
-
-  --color-accent-300: 186 230 253;
-  --color-accent-400: 125 211 252;
-  --color-accent-500: 56 189 248;
-  --color-accent-600: 14 165 233;
-
-  --color-bg: 2 6 23;
-  --color-bg-soft: 15 23 42;
-  --color-surface: 15 23 42;
-  --color-fg: 241 245 249;
-  --color-muted: 148 163 184;
-  --color-border: 30 41 59;
-
-  /* Dark mode keeps the same blue for continuity — uses the inverted
-     brand-400 value so contrast remains strong against a dark surface. */
-  --color-whatsapp: 59 130 246;
-}
 
 @theme {
   --font-sans: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
   --font-mono: var(--font-mono, ui-monospace, monospace);
 
-  --color-brand-50: rgb(var(--color-brand-50));
-  --color-brand-100: rgb(var(--color-brand-100));
-  --color-brand-200: rgb(var(--color-brand-200));
-  --color-brand-300: rgb(var(--color-brand-300));
-  --color-brand-400: rgb(var(--color-brand-400));
-  --color-brand-500: rgb(var(--color-brand-500));
-  --color-brand-600: rgb(var(--color-brand-600));
-  --color-brand-700: rgb(var(--color-brand-700));
-  --color-brand-800: rgb(var(--color-brand-800));
-  --color-brand-900: rgb(var(--color-brand-900));
+  /* Brand blue scale (from logo) */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;   /* light blue (CTA hover) */
+  --color-brand-500: #3b82f6;   /* light blue (CTA primary) */
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;   /* dark blue (headings, dark accents) */
+  --color-brand-950: #0c1f4a;
 
-  --color-accent-300: rgb(var(--color-accent-300));
-  --color-accent-400: rgb(var(--color-accent-400));
-  --color-accent-500: rgb(var(--color-accent-500));
-  --color-accent-600: rgb(var(--color-accent-600));
-  --color-accent: rgb(var(--color-accent-500));
-  --color-accent-soft: rgb(var(--color-accent-600));
-  --color-whatsapp: rgb(var(--color-whatsapp));
+  /* Ink — pure black for text & footer */
+  --color-ink: #000000;
+  --color-ink-soft: #0a0a0a;
 
-  /* Expose fg/muted for gradient text utilities */
-  --color-fg: rgb(var(--color-fg));
-  --color-muted-foreground: rgb(var(--color-muted));
+  /* WhatsApp/CTA color */
+  --color-whatsapp: #2563eb;
+
+  /* Force ALL radii to zero. */
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 0px;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
-  background: rgb(var(--color-bg));
-  color: rgb(var(--color-fg));
+  background: #ffffff;
+  color: #000000;
   font-feature-settings: "rlig" 1, "calt" 1;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* SQUARE UI — globally remove every rounded corner. */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
 }
 
 /* Reveal animation — SSR-safe */
@@ -126,8 +75,11 @@ body {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-6px); }
 }
+@keyframes carousel-zoom {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1.15); }
+}
 
-/* Default: visible (so SSR + no-JS shows content) */
 .reveal-hidden {
   opacity: 0;
   transform: translate3d(0, 24px, 0);
@@ -139,11 +91,26 @@ body {
 }
 
 .float-anim { animation: float 3s ease-in-out infinite; }
+.zoom-anim  { animation: carousel-zoom 8s ease-in-out forwards; }
 
-/* Mobile-first tuned font size */
 html { font-size: 15px; }
 @media (min-width: 640px) { html { font-size: 16px; } }
 
-/* Hide scrollbar but allow scrolling (used by horizontal rows) */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Hero overlay — dark blue gradient for legibility */
+.hero-overlay {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(12, 31, 74, 0.65) 0%,
+      rgba(12, 31, 74, 0.78) 60%,
+      rgba(0, 0, 0, 0.88) 100%
+    );
+}
+
+::selection {
+  background: #2563eb;
+  color: #fff;
+}
