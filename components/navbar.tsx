@@ -74,7 +74,7 @@ export const Navbar = () => {
         <NextLink
           href="/"
           aria-label="KL Renovator home"
-          className="relative inline-block h-14 w-56 shrink-0"
+          className="relative inline-block h-14 w-56 "
         >
           <Image
             src="/logo/logo.jpeg"

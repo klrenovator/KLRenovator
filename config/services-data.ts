@@ -23,7 +23,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     tagline: "Deep-clean that removes mould, dust, smell & bacteria.",
     description:
       "A chemical wash uses a food-safe chemical solution to dissolve dirt, mould and bacteria trapped in the evaporator coil and blower wheel. Recommended if your aircon smells, isn't cold, or hasn't been serviced in 12+ months.",
-    startPrice: "RM 130",
+    startPrice: "RM 120",
     heroImage:
       "https://images.unsplash.com/photo-1580595999172-187fe6ccb3bd?auto=format&fit=crop&w=1600&q=80",
     highlights: [
@@ -43,15 +43,15 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "What's the difference vs basic servicing?", a: "Basic servicing is a surface cleaning. Chemical wash dissolves stubborn deposits the surface clean cannot reach." },
     ],
     priceTable: [
-      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 160" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 220" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 250" },
-      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 280" },
+      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 150" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 180" },
+      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 220" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Ceiling Cassette · 4.0 – 5.0 HP", price: "RM 350" },
-      { label: "Window · 1.0 – 2.0 HP", price: "RM 130" },
-      { label: "Window · 2.5 – 3.0 HP", price: "RM 160" },
+      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 250" },
+      { label: "Ceiling Cassette · 4.0 – 5.0 HP", price: "RM 300" },
+      { label: "Window · 1.0 – 2.0 HP", price: "RM 120" },
+      { label: "Window · 2.5 – 3.0 HP", price: "RM 150" },
     ],
   },
   "chemical-overhaul": {
@@ -82,7 +82,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 350" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 320" },
       { label: "Ceiling Cassette · 1.0 – 3.0 HP", price: "RM 380 – 480" },
     ],
   },
@@ -113,8 +113,8 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 99" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 150" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 180" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 120" },
+      { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Ceiling Cassette · 3.5 – 5.0 HP", price: "RM 250" },
@@ -126,7 +126,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     tagline: "Restore icy cold performance with a professional refill.",
     description:
       "If your aircon runs but isn't cold, low refrigerant is usually the cause. We refill R22, R410A, and R32 with accurate pressure charts — never over or under charge.",
-    startPrice: "RM 80",
+    startPrice: "RM 100",
     heroImage:
       "https://images.unsplash.com/photo-1631545308456-c3e32f5f1abe?auto=format&fit=crop&w=1600&q=80",
     highlights: [
@@ -146,15 +146,15 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "How long before it leaks again?", a: "If there's no leak, gas lasts many years. If it leaks quickly, we'll diagnose the cause." },
     ],
     priceTable: [
-      { label: "R22 · 1.0 HP", price: "RM 80 – 100" },
-      { label: "R22 · 1.5 – 2.0 HP", price: "RM 100 – 130" },
-      { label: "R22 · 2.5 – 3.0 HP", price: "RM 130 – 160" },
-      { label: "R410A · 1.0 HP", price: "RM 100 – 120" },
-      { label: "R410A · 1.5 – 2.0 HP", price: "RM 120 – 150" },
-      { label: "R410A · 2.5 – 3.0 HP", price: "RM 150 – 180" },
-      { label: "R32 · 1.0 HP", price: "RM 130 – 150" },
-      { label: "R32 · 1.5 – 2.0 HP", price: "RM 150 – 180" },
-      { label: "R32 · 2.5 – 3.0 HP", price: "RM 180 – 200" },
+      { label: "R22 · 1.0 HP", price: "RM 100" },
+      { label: "R22 · 1.5 – 2.0 HP", price: "RM 130" },
+      { label: "R22 · 2.5 – 3.0 HP", price: "RM 160" },
+      { label: "R410A · 1.0 HP", price: "RM 120" },
+      { label: "R410A · 1.5 – 2.0 HP", price: "RM 150" },
+      { label: "R410A · 2.5 – 3.0 HP", price: "RM 180" },
+      { label: "R32 · 1.0 HP", price: "RM 150" },
+      { label: "R32 · 1.5 – 2.0 HP", price: "RM 180" },
+      { label: "R32 · 2.5 – 3.0 HP", price: "RM 200" },
     ],
   },
   repair: {
@@ -190,7 +190,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "PCB / main board", price: "RM 300 – 800" },
       { label: "Compressor", price: "RM 800 – 2,000" },
       { label: "Thermostat", price: "RM 120 – 200" },
-      { label: "Drain pump", price: "RM 200 – 400" },
+      { label: "Drain pump", price: "RM 300 – 400" },
     ],
   },
   installation: {
@@ -199,7 +199,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     tagline: "Clean, professional installation for any brand.",
     description:
       "We install split, inverter, and cassette units for homes, condos, and offices across KL & Selangor. All piping, bracketing, and electrical work by licensed technicians — tidy cable concealment and thorough test-run before we leave.",
-    startPrice: "RM 250",
+    startPrice: "RM 199",
     heroImage:
       "https://images.unsplash.com/photo-1628592102751-ba83b0314276?auto=format&fit=crop&w=1600&q=80",
     highlights: [
@@ -220,11 +220,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "Do you provide warranty?", a: "Yes — 1-year workmanship warranty on our installation." },
     ],
     priceTable: [
-      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 250" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 350" },
-      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 550" },
-      { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 250" },
+      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 199" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 230" },
+      { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 250" },
+      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 300" },
+      { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 290" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
     ],
@@ -235,7 +235,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     tagline: "Specialist care for commercial cassette units.",
     description:
       "Ceiling cassette units cool large spaces evenly. We install new units and service existing ones — including chemical wash, panel removal, and drain pump checks.",
-    startPrice: "RM 250",
+    startPrice: "RM 290",
     heroImage:
       "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=1600&q=80",
     highlights: [
@@ -255,12 +255,12 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "Can you service brands I bought elsewhere?", a: "Absolutely. We service all brands regardless of purchase origin." },
     ],
     priceTable: [
-      { label: "Install · 1.0 – 1.5 HP", price: "RM 250" },
+      { label: "Install · 1.0 – 1.5 HP", price: "RM 290" },
       { label: "Install · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Install · 3.5 – 6.0 HP", price: "RM 400" },
       { label: "Chemical wash · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Chemical wash · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Chemical wash · 4.0 – 5.0 HP", price: "RM 350" },
+      { label: "Chemical wash · 2.0 – 3.0 HP", price: "RM 250" },
+      { label: "Chemical wash · 4.0 – 5.0 HP", price: "RM 300" },
       { label: "Basic servicing · 1.0 – 1.5 HP", price: "RM 150" },
       { label: "Basic servicing · 2.0 – 3.0 HP", price: "RM 200" },
     ],
@@ -271,7 +271,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     tagline: "Move your aircon to your new home — safely.",
     description:
       "Moving house? We carefully pump-down, disconnect, and reinstall your existing aircon at the new location. All copper, brackets, and sealing properly re-done.",
-    startPrice: "RM 200",
+    startPrice: "RM 90",
     heroImage:
       "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=1600&q=80",
     highlights: [
@@ -291,9 +291,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "Do you charge extra for long distance?", a: "Cross-area relocation has a small surcharge. WhatsApp us for a full quote." },
     ],
     priceTable: [
-      { label: "Dismantle only (per unit)", price: "RM 200" },
-      { label: "Dismantle + Relocate (same area)", price: "RM 350" },
-      { label: "Dismantle + Relocate (cross area)", price: "RM 450" },
+      { label: "Dismantle only (per unit)", price: "RM 90" },
+      { label: "Dismantle + installation (same location)", price: "RM 290" },
+      { label: "Dismantle + installation (another location)", price: "RM 350" },
     ],
   },
 };

@@ -68,59 +68,6 @@ export default function ServicesIndexPage() {
 
       <ServicesWithPricing showHeading={false} />
 
-      {/* Pricing breakdown */}
-      <section className="py-16 sm:py-20 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className={eyebrow()}>Pricing</p>
-              <h2 className="mt-3">
-                <span className={title({ size: "md" })}>Honest, </span>
-                <span className={title({ size: "md", color: "brand" })}>
-                  transparent rates.
-                </span>
-              </h2>
-              <p className="mt-4 text-slate-600">
-                Starting prices listed here. Material costs (gas, copper pipe,
-                brackets) are quoted separately and approved before any work
-                begins.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {Object.values(siteConfig.pricing).map((block, i) => (
-              <Reveal key={block.title} delay={i * 60}>
-                <div className="border border-slate-200 bg-white">
-                  <div className="bg-ink text-white px-5 py-4">
-                    <h3 className="text-base font-extrabold uppercase tracking-tight">
-                      {block.title}
-                    </h3>
-                  </div>
-                  <ul className="divide-y divide-slate-200">
-                    {block.rows.map((r) => (
-                      <li
-                        key={r.label}
-                        className="flex items-center justify-between gap-3 px-5 py-3"
-                      >
-                        <span className="text-sm text-slate-700">{r.label}</span>
-                        <span className="text-sm font-bold text-brand-700 whitespace-nowrap">
-                          {r.price}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  {"note" in block && block.note && (
-                    <p className="px-5 py-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-200">
-                      {block.note}
-                    </p>
-                  )}
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CoverageAreas />
       <ReadyToBook />

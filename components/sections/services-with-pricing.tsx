@@ -113,16 +113,7 @@ export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
                   Servicing multiple units in one visit? We pass the savings to you.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {siteConfig.volumeDiscounts.map((d) => (
-                  <span
-                    key={d.units}
-                    className="bg-brand-700 px-3 py-1.5 text-xs font-bold uppercase tracking-wider"
-                  >
-                    {d.units} · {d.off}
-                  </span>
-                ))}
-              </div>
+   
             </div>
           </Reveal>
         )}
