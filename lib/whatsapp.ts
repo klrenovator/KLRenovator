@@ -13,15 +13,15 @@ export function waLink(message?: string) {
  * Standard RFQ template — used by all generic "Request a Quote" buttons.
  */
 export const rfqMsg = [
-  "Hi KL Renovator 👋",
+  "Hi KL Renovator",
   "",
   "I would like to get a quotation for Aircond service/installation.",
   "",
   "Here are my details:",
-  "📍 Location:",
-  "❄️ Type of service:",
-  "🔢 Number of units:",
-  "💨 HP (if known):",
+  "Location:",
+  "Type of service:",
+  "Number of units:",
+  "HP (if known):",
   "",
   "Please share price and available time. Thank you!",
 ].join("\n");
