@@ -1,5 +1,5 @@
 # Next.js & HeroUI 
-This is a template for creating applications using Next.js 15 (app directory) and HeroUI (v3).
+This is a template for creating apications using Next.js 15 (app directory) and HeroUI (v3).
 
 [Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
 
