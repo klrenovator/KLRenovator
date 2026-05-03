@@ -17,13 +17,21 @@ export const ContactForm = () => {
   const handle = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    const msg =
-      `Hi Klrenovator, I'd like to request a quote (RFQ).\n\n` +
-      `• Name: ${form.name}\n` +
-      `• Area: ${form.area}\n` +
-      `• Service: ${form.service}\n` +
-      `• Message: ${form.message || "-"}\n\n` +
-      `Please contact me back. Thanks!`;
+    const msg = [
+      "Hi KL Renovator 👋",
+      "",
+      `I would like to get a quotation for "${form.service}".`,
+      "",
+      "Here are my details:",
+      `🙋 Name: ${form.name}`,
+      `📍 Location: ${form.area}`,
+      `❄️ Type of service: ${form.service}`,
+      "🔢 Number of units:",
+      "💨 HP (if known):",
+      ...(form.message ? ["", `📝 Note: ${form.message}`] : []),
+      "",
+      "Please share price and available time. Thank you!",
+    ].join("\n");
     window.open(waLink(msg), "_blank");
     setTimeout(() => setSubmitting(false), 1000);
   };

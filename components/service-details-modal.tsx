@@ -8,7 +8,7 @@ import { FiX, FiCheck, FiArrowRight, FiTag, FiPlus } from "react-icons/fi";
 import { ServiceIcon } from "@/components/service-icon";
 import { servicesData } from "@/config/services-data";
 import { siteConfig } from "@/config/site";
-import { waLink } from "@/lib/whatsapp";
+import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 
 type Props = {
   slug: string | null;
@@ -174,9 +174,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
         {/* Footer actions */}
         <div className="shrink-0 border-t border-slate-200 bg-slate-50 p-4 sm:p-5 flex flex-col sm:flex-row gap-2.5">
           <a
-            href={waLink(
-              `Hi Klrenovator, I'd like to request a quote (RFQ) for "${data.title}". Please share availability and pricing.`,
-            )}
+            href={waLink(rfqMsgForService(data.title))}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex flex-1 items-center justify-center gap-2 bg-brand-700 hover:bg-brand-800 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition"

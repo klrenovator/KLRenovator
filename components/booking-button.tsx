@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
-import { waLink } from "@/lib/whatsapp";
+import { waLink, rfqMsg, rfqMsgForService } from "@/lib/whatsapp";
 
 type Props = {
   serviceName?: string;
@@ -22,9 +22,7 @@ export const BookingButton = ({
   className,
   label,
 }: Props) => {
-  const msg = serviceName
-    ? `Hi Klrenovator, I'd like to request a quote (RFQ) for "${serviceName}". Please share availability and pricing. Thanks!`
-    : `Hi Klrenovator, I'd like to request a quote (RFQ) for an aircon service. Please share availability. Thanks!`;
+  const msg = serviceName ? rfqMsgForService(serviceName) : rfqMsg;
 
   const sizeCls =
     size === "sm"

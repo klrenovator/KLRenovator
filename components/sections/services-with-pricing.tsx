@@ -8,7 +8,7 @@ import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
 import { ServiceIcon } from "@/components/service-icon";
 import { title, eyebrow } from "@/components/primitives";
-import { waLink } from "@/lib/whatsapp";
+import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 
 type Props = {
   /**
@@ -72,9 +72,7 @@ export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
                     <FiArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </NextLink>
                   <a
-                    href={waLink(
-                      `Hi Klrenovator, I'd like to request a quote (RFQ) for "${s.title}". Please share availability and pricing.`,
-                    )}
+                    href={waLink(rfqMsgForService(s.title))}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 bg-brand-700 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-white hover:bg-brand-800 transition"
