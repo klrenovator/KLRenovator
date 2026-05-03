@@ -46,44 +46,56 @@ export const googlePlace = {
 };
 
 /**
- * Sample reviews — placeholders until live reviews are wired up
- * (see top-of-file instructions). Written to sound like realistic
- * KL / Selangor customer feedback.
+ * Real Google reviews — copied from the KL Renovator Google Business listing.
  */
 export const googleReviews: Review[] = [
   {
-    author: "Nurul Aisyah",
-    initials: "NA",
+    author: "Jithin menon",
+    initials: "J",
     rating: 5,
-    date: "2 weeks ago",
-    text: "Super fast response via WhatsApp. Technician came on time, very professional, and did an amazing chemical wash on my 3 units in Subang Jaya. Aircond is icy cold again and the price was very reasonable. Highly recommended!",
+    date: "a month ago",
+    text: "Great lads with a good attitude, dedicated and hard working. They are willing to sacrifice their time to ensure the job is done well. Good work.",
   },
   {
-    author: "Jason Tan",
-    initials: "JT",
+    author: "Afiq Saiful",
+    initials: "A",
     rating: 5,
-    date: "1 month ago",
-    text: "Booked via WhatsApp in the morning and they came in the afternoon same day. Installation was neat, tidy, technician even wore shoe covers inside the condo. Explained everything clearly before starting. Syabas KL Renovator!",
+    date: "a month ago",
+    text: "Response fast to your queries and will answer all your questions should you need any clarification. The job is clean and tolerable for the price.",
   },
   {
-    author: "Farid Hakim",
-    initials: "FH",
+    author: "Sidra Riaz",
+    initials: "S",
     rating: 5,
-    date: "1 month ago",
-    text: "Gas top-up for my Daikin inverter done within 40 minutes. Transparent pricing, no hidden fees. Technician also checked the other units for free and gave honest advice. Will definitely use again for next service.",
+    date: "a month ago",
+    text: "If you are looking for a reliable electrician in KL, I highly recommend KL RENOVATOR. I had some complex electrical wiring and light installation work done, and the team handled everything safely and efficiently. They are very knowledgeable about safety standards and ensured all circuits were perfectly balanced. Professional, honest, and fast service. Best choice for any electrical repair or renovation!",
   },
   {
-    author: "Samantha Lee",
-    initials: "SL",
+    author: "muhd ismail abdul malik",
+    initials: "M",
+    rating: 5,
+    date: "a month ago",
+    text: "Good technician.. tq very much",
+  },
+  {
+    author: "Nerissa Sinnappah",
+    initials: "N",
     rating: 5,
     date: "2 months ago",
-    text: "Third time using KL Renovator — consistent, tidy, on-time. Chemical wash for 4 units and everything works perfectly. My go-to aircon company in KL. The team is trustworthy and communicates clearly.",
+    text: "Love love the team! Very professional. Their work is clean, and neat. They are very kind in explaining to me my concerns and patient. I owe them alot of gratitude. Even when the air con was slightly leaking after installation they ran back to fix it without any hesitation.",
   },
   {
-    author: "Rajesh Kumar",
-    initials: "RK",
+    author: "rachelle recuenco",
+    initials: "R",
     rating: 5,
-    date: "3 months ago",
-    text: "Called them for an emergency repair on a Sunday — they came same day and fixed the compressor issue. Gave clear quotation before starting work. Very honest and reliable team. Highly recommend for anyone in KL/Selangor.",
+    date: "4 months ago",
+    text: "Trustworthy and very helpful service",
+  },
+  {
+    author: "Norcs X2",
+    initials: "N",
+    rating: 5,
+    date: "a month ago",
+    text: "Very good!",
   },
 ];
