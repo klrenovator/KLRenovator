@@ -16,7 +16,7 @@ export const siteConfig = {
   whatsapp: "60182983573",
   email: "info@klrenovator.com",
   address: "Kuala Lumpur, Malaysia",
-  hours: "Mon–Sun · 9:00 AM – 9:00 PM",
+  hours: "Mon–Sun · 9:00 AM – 6:00 PM",
 
   navItems: [
     { label: "Home", href: "/" },
