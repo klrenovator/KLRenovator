@@ -16,8 +16,132 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesIndexPage() {
+  // Service Schema JSON-LD Injection
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "KL Renovator Aircon Services Prices",
+    "description": "Professional aircond servicing, cleaning, repair, and installation price list in Kuala Lumpur and Selangor.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Basic Servicing",
+          "description": "Routine maintenance to keep your aircon cool & efficient.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "KL Renovator"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "99.00",
+            "priceCurrency": "RM"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Chemical Wash",
+          "description": "Deep chemical cleaning that removes mould, dust & bacteria.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "KL Renovator"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "120.00",
+            "priceCurrency": "RM"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Gas Top-Up",
+          "description": "R22, R410A & R32 refill to restore cooling performance.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "KL Renovator"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "100.00",
+            "priceCurrency": "RM"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Service",
+          "name": "Aircon Repair",
+          "description": "Troubleshoot & fix cooling, noise, leak or electrical issues.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "KL Renovator"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "88.00",
+            "priceCurrency": "RM"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Service",
+          "name": "Chemical Overhaul",
+          "description": "Complete unit removal & deep-clean — the ultimate restoration.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "KL Renovator"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "220.00",
+            "priceCurrency": "RM"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Service",
+          "name": "Aircond Installation",
+          "description": "Professional installation — all brands, all HP sizes.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "KL Renovator"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "199.00",
+            "priceCurrency": "RM"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      {/* Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* Page hero */}
       <section className="relative bg-ink text-white">
         <div className="absolute inset-0 opacity-20">
@@ -67,7 +191,6 @@ export default function ServicesIndexPage() {
       </section>
 
       <ServicesWithPricing showHeading={false} />
-
 
       <CoverageAreas />
       <ReadyToBook />
