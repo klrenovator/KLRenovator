@@ -12,8 +12,70 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPage() {
+  // FAQPage Schema JSON-LD Injection
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is included in the standard aircond installation package?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard Wall-Mounted promo package starts at RM199 (1.0-1.5HP) and includes FREE 7 Feet Copper Pipe, 7 Feet Drainage Pipe, 7 Feet Back-to-Back Wiring, and a 1-Month Workmanship Warranty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your extra material and accessory charges?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Extra charges apply transparently beyond standard package allocations: Extra Copper Pipe is RM17/ft, Extra Wiring is RM9/ft, Small wire casing is RM6/ft, Big pipe casing is RM12/ft, Outdoor bracket is RM45, Universal indoor bracket is RM35, and a dedicated 20A Aircon Switch is RM100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your emergency and after-hours service policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our standard hours are 9:00 AM to 6:00 PM. Urgent jobs booked between 6:00 PM and 10:00 PM carry a mandatory RM50 overtime surcharge, making the after-hours diagnostic fee RM138 instead of the regular daytime RM88."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ada hidden charges tak untuk service aircond?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tiada hidden charges sama sekali dengan KL Renovator. Harga kami sangat telus (transparent). Kami hanya charge mengikut material extra yang betul-betul dipasang dan digunakan di tapak (site) sahaja."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Berapa harga pasang aircond 1.0HP dekat Selangor / KL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pakej promo pemasangan aircond 1.0HP Wall-Mounted hanyalah RM199 sahaja boss. Ini dah termasuk FREE 7 kaki copper pipe, 7 kaki wire, insulation, water pipe, dan transport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kawasan mana sahaja yang KL Renovator cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kami cover seluruh kawasan Kuala Lumpur dan Selangor secara menyeluruh termasuk Selayang, Batu Caves, Gombak, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, dan sekitar Lembah Klang."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      {/* Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <section className="relative bg-ink text-white">
         <div className="absolute inset-0 opacity-20">
           <Image
