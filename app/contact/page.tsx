@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import {
-  FaPhoneAlt,
+  FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
   FaRegClock,
   FaWhatsapp,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
@@ -95,7 +95,7 @@ export default function ContactPage() {
                     className="flex items-center gap-4 border border-slate-200 bg-white p-5 hover:border-brand-700 transition rounded-xl"
                   >
                     <span className="inline-flex h-12 w-12 items-center justify-center bg-ink text-white rounded-lg">
-                      <FaPhoneAlt className="h-5 w-5" />
+                      <FaPhone className="h-5 w-5" />
                     </span>
                     <div>
                       <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">
@@ -155,7 +155,8 @@ export default function ContactPage() {
             <Reveal delay={100}>
               <ContactForm />
             </Reveal>
-          </><input type="hidden" id="geo-regions" value="Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam" />
+          </div>
+          <input type="hidden" id="geo-regions" value="Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam" />
         </div>
       </section>
 
