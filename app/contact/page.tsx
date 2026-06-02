@@ -3,7 +3,7 @@ import Image from "next/image";
 import {
   FaPhone,
   FaEnvelope,
-  FaMapMarkerAlt,
+  FaLocationDot,
   FaRegClock,
   FaWhatsapp,
 } from "react-icons/fa6";
@@ -15,10 +15,9 @@ import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 
-// GEO & SEO Engine Friendly Metadata Optimization
 export const metadata: Metadata = {
   title: "Contact KL Renovator | Aircond Service Kuala Lumpur & Selangor",
-  description: `Get fast, professional residential & commercial aircond servicing, chemical wash, and repairs from KL Renovator in Ampang, Cheras, PJ, Subang Jaya, Puchong, and Shah Alam.`,
+  description: `Get fast, professional residential & commercial aircond servicing, chemical wash, and repairs from KL Renovator from Multicore Dynamic Resources in Ampang, Cheras, PJ, Subang Jaya, Puchong, and Shah Alam.`,
 };
 
 export default function ContactPage() {
@@ -138,7 +137,7 @@ export default function ContactPage() {
                     </div>
                     <div className="bg-white p-5">
                       <div className="flex items-center gap-2">
-                        <FaMapMarkerAlt className="h-3.5 w-3.5 text-brand-700" />
+                        <FaLocationDot className="h-3.5 w-3.5 text-brand-700" />
                         <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">
                           Coverage Areas
                         </p>
@@ -164,3 +163,4 @@ export default function ContactPage() {
     </>
   );
 }
+
