@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa6";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg, rfqMsgForService } from "@/lib/whatsapp";
 
