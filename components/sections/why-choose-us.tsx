@@ -1,20 +1,20 @@
 "use client";
 
 import {
-  FaShieldAlt,
+  FaShieldHalved,
   FaUserCheck,
-  FaTools,
+  FaToolbox,
   FaRegClock,
   FaMoneyBillWave,
   FaAward,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 
 const FEATURES = [
   {
-    icon: FaShieldAlt,
+    icon: FaShieldHalved,
     title: "Registered Engineering Team",
     desc: "Every technician is highly trained and background-verified, executing safe residential and commercial HVAC diagnostics under strict corporate safety guidelines.",
   },
@@ -24,7 +24,7 @@ const FEATURES = [
     desc: "Proudly serving homes, retail outlets, and corporate offices across Kuala Lumpur and Selangor (including Ampang, Cheras, PJ, Subang Jaya, Puchong, and Shah Alam).",
   },
   {
-    icon: FaTools,
+    icon: FaToolbox,
     title: "Multi-Brand Specialists",
     desc: "Authorized maintenance, repair, and precision gas top-ups for major cooling brands: Daikin, Panasonic, Mitsubishi, York, LG, Samsung, and Midea.",
   },
