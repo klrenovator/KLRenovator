@@ -37,25 +37,25 @@ export const ContactForm = () => {
   };
 
   const inputCls =
-    "w-full border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-brand-700 focus:ring-1 focus:ring-brand-700 transition";
+    "w-full border border-slate-200 bg-slate-50/50 px-4 py-3.5 text-sm text-slate-900 placeholder:text-slate-400 rounded-xl focus:outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-[#0284c7]/20 focus:bg-white transition-all duration-200";
 
   return (
     <form
       onSubmit={handle}
-      className="w-full space-y-5 border border-slate-200 bg-white p-6 sm:p-7 shadow-sm"
+      className="w-full space-y-6 border border-slate-100 bg-white p-6 sm:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.04)]"
     >
       <div>
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-700">
-          Request a Quote
+        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#0284c7]">
+          Fast Quotation
         </p>
-        <h3 className="mt-1 text-xl font-extrabold text-ink">
+        <h3 className="mt-1 text-2xl font-black tracking-tight text-slate-950">
           Tell us what you need.
         </h3>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
+          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
             Your Name
           </label>
           <input
@@ -68,8 +68,8 @@ export const ContactForm = () => {
           />
         </div>
         <div>
-          <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
-            Area
+          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+            Area / Location
           </label>
           <input
             required
@@ -89,13 +89,13 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
-          Service
+        <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+          Required Aircond Service
         </label>
         <select
           value={form.service}
           onChange={(e) => setForm({ ...form, service: e.target.value })}
-          className={inputCls}
+          className={`${inputCls} appearance-none cursor-pointer`}
         >
           {siteConfig.services.map((s) => (
             <option key={s.slug} value={s.title}>
@@ -106,31 +106,38 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
-          Message (optional)
+        <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+          Message / Notes (optional)
         </label>
         <textarea
           rows={4}
-          placeholder="HP size, issue, preferred date..."
+          placeholder="e.g. No. of units, AC brand, leaking or noise issues, preferred booking date..."
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           className={inputCls}
         />
       </div>
 
+      {/* Extreme Visual CTR Pure Green WhatsApp Direct Dispatch Button */}
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 bg-brand-700 hover:bg-brand-800 px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white disabled:opacity-60 transition"
+        className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-5 py-4 text-sm font-black uppercase tracking-wider text-white rounded-xl disabled:opacity-60 transition-all active:scale-[0.98] shadow-lg shadow-green-500/20"
       >
-        <FaWhatsapp className="h-4 w-4" />
+        <FaWhatsapp className="h-5 w-5 animate-pulse" />
         {submitting ? "Opening WhatsApp..." : "Send via WhatsApp"}
       </button>
 
-      <p className="text-center text-xs text-slate-500">
-        Or call directly —{" "}
+      <div className="relative flex py-2 items-center">
+        <div className="flex-grow border-t border-slate-100"></div>
+        <span className="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-400">OR</span>
+        <div className="flex-grow border-t border-slate-100"></div>
+      </div>
+
+      <p className="text-center text-xs text-slate-500 font-medium">
+        Prefer calling? Speak with us directly —{" "}
         <a
-          className="font-semibold text-brand-700 hover:text-brand-800"
+          className="font-black text-[#0284c7] hover:text-[#0369a1] underline transition-all"
           href={`tel:${siteConfig.phone}`}
         >
           {siteConfig.phoneDisplay}
