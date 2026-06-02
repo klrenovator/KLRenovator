@@ -1,6 +1,6 @@
 "use client";
 
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { title, eyebrow } from "@/components/primitives";
@@ -50,3 +50,4 @@ export const CoverageAreas = () => {
     </section>
   );
 };
+
