@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa6";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
