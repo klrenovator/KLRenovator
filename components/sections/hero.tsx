@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaWhatsapp, FaPhoneAlt, FaCheck, FaStar } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaCheck, FaStar } from "react-icons/fa6";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 import { Reveal } from "@/components/reveal";
@@ -102,16 +102,16 @@ export const Hero = () => {
               href={waLink(rfqMsg)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-xs font-black uppercase tracking-widest text-white rounded-xl shadow-xl shadow-green-500/20 transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-xs font-black uppercase tracking-widest text-white rounded-xl shadow-xl shadow-green-500/20 transition-all active:scale-[0.97]"
             >
               <FaWhatsapp className="h-5 w-5" />
               Book via WhatsApp
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2.5 border border-white/20 hover:border-white bg-white/10 hover:bg-white text-white hover:text-slate-950 backdrop-blur-sm px-8 py-4 text-xs font-black uppercase tracking-widest rounded-xl transition-all active:scale-95 shadow-lg"
+              className="inline-flex items-center justify-center gap-2.5 border border-white/20 hover:border-white bg-white/10 hover:bg-white text-white hover:text-slate-950 backdrop-blur-sm px-8 py-4 text-xs font-black uppercase tracking-widest rounded-xl transition-all active:scale-[0.97] shadow-lg"
             >
-              <FaPhoneAlt className="h-3.5 w-3.5 text-sky-400 group-hover:text-slate-950" />
+              <FaPhone className="h-3.5 w-3.5 text-sky-400 group-hover:text-slate-950" />
               Call {siteConfig.phoneDisplay}
             </a>
           </div>
@@ -151,14 +151,14 @@ export const Hero = () => {
             <button
               aria-label="Previous slider scene"
               onClick={prev}
-              className="inline-flex h-10 w-10 items-center justify-center border border-white/10 bg-slate-950/40 backdrop-blur-md text-white hover:bg-white hover:text-slate-950 rounded-xl transition-all active:scale-95"
+              className="inline-flex h-10 w-10 items-center justify-center border border-white/10 bg-slate-950/40 backdrop-blur-md text-white hover:bg-white hover:text-slate-950 rounded-xl transition-all active:scale-[0.97]"
             >
               <FiChevronLeft className="h-5 w-5" />
             </button>
             <button
               aria-label="Next slider scene"
               onClick={next}
-              className="inline-flex h-10 w-10 items-center justify-center border border-white/10 bg-slate-950/40 backdrop-blur-md text-white hover:bg-white hover:text-slate-950 rounded-xl transition-all active:scale-95"
+              className="inline-flex h-10 w-10 items-center justify-center border border-white/10 bg-slate-950/40 backdrop-blur-md text-white hover:bg-white hover:text-slate-950 rounded-xl transition-all active:scale-[0.97]"
             >
               <FiChevronRight className="h-5 w-5" />
             </button>
