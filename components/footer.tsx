@@ -9,9 +9,9 @@ import {
   FaMapMarkerAlt,
   FaRegClock,
   FaFacebookF,
-  FaInstagram,
   FaStar,
-} from "react-icons/fa";
+} from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
@@ -36,13 +36,13 @@ export const Footer = () => {
               href={waLink(rfqMsg)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl transition-all shadow-lg shadow-green-500/10 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl transition-all shadow-lg shadow-green-500/10 active:scale-[0.97]"
             >
               <FaWhatsapp className="h-5 w-5" /> Request Quote
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 border-2 border-slate-700 hover:border-white bg-slate-950 hover:bg-white text-white hover:text-black px-6 py-3.5 text-xs font-black uppercase tracking-wider rounded-xl transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2 border-2 border-slate-700 hover:border-white bg-slate-950 hover:bg-white text-white hover:text-black px-6 py-3.5 text-xs font-black uppercase tracking-wider rounded-xl transition-all active:scale-[0.97]"
             >
               <FaPhoneAlt className="h-3.5 w-3.5" /> {siteConfig.phoneDisplay}
             </a>
@@ -112,6 +112,8 @@ export const Footer = () => {
               <a
                 aria-label="Follow us on Instagram"
                 href={siteConfig.links.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-10 w-10 inline-flex items-center justify-center bg-slate-900 text-slate-400 hover:bg-[#e1306c] hover:text-white rounded-xl transition-all duration-200"
               >
                 <FaInstagram className="h-4 w-4" />
