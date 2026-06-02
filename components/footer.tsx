@@ -4,15 +4,16 @@ import NextLink from "next/link";
 import Image from "next/image";
 import {
   FaWhatsapp,
-  FaPhoneAlt,
+  FaPhone,
   FaEnvelope,
-  FaMapMarkerAlt,
+  FaLocationDot,
   FaRegClock,
   FaFacebookF,
   FaStar,
 } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight } from "react-images/fi" // standard react-icons package fallback if needed, or keeping your fi import matching standard
+import { FiArrowUpRight as FiArrowIcon } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -44,7 +45,7 @@ export const Footer = () => {
               href={`tel:${siteConfig.phone}`}
               className="inline-flex items-center justify-center gap-2 border-2 border-slate-700 hover:border-white bg-slate-950 hover:bg-white text-white hover:text-black px-6 py-3.5 text-xs font-black uppercase tracking-wider rounded-xl transition-all active:scale-[0.97]"
             >
-              <FaPhoneAlt className="h-3.5 w-3.5" /> {siteConfig.phoneDisplay}
+              <FaPhone className="h-3.5 w-3.5" /> {siteConfig.phoneDisplay}
             </a>
           </div>
         </div>
@@ -88,7 +89,7 @@ export const Footer = () => {
               <span className="text-xs text-slate-300 font-bold tracking-wide">
                 <span className="font-black text-white">4.9 / 5</span> · 500+ Local Reviews
               </span>
-              <FiArrowUpRight className="h-4 w-4 text-slate-500 group-hover:text-white transition-colors" />
+              <FiArrowIcon className="h-4 w-4 text-slate-500 group-hover:text-white transition-colors" />
             </a>
 
             {/* Micro-targeted Social Channels Grid */}
@@ -169,7 +170,7 @@ export const Footer = () => {
             </h4>
             <ul className="mt-5 space-y-4 text-xs font-semibold text-slate-300 tracking-wide">
               <li className="flex items-start gap-3">
-                <FaPhoneAlt className="mt-0.5 h-3.5 w-3.5 text-[#0284c7] shrink-0" />
+                <FaPhone className="mt-0.5 h-3.5 w-3.5 text-[#0284c7] shrink-0" />
                 <a
                   href={`tel:${siteConfig.phone}`}
                   className="hover:text-white transition-colors font-bold"
@@ -187,7 +188,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="mt-0.5 h-3.5 w-3.5 text-[#0284c7] shrink-0" />
+                <FaLocationDot className="mt-0.5 h-3.5 w-3.5 text-[#0284c7] shrink-0" />
                 <a
                   href={siteConfig.links.googleMaps}
                   target="_blank"
@@ -218,3 +219,4 @@ export const Footer = () => {
     </footer>
   );
 };
+            
