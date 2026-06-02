@@ -69,11 +69,11 @@ export const ServicesWithPricing = () => {
               <div className="flex flex-col h-full bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300 relative group">
                 
                 {/* Visual Engineering Backdrop Accent */}
-                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-sky-500 to-brand-500 rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-sky-500 to-sky-600 rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div className="flex-grow">
                   <div className="inline-flex p-3 rounded-2xl bg-sky-50 border border-sky-100 text-sky-600 mb-5">
-                    <FaSnowflake className="h-5 w-5 animate-spin-slow" />
+                    <FaSnowflake className="h-5 w-5" />
                   </div>
                   
                   <h3 className="text-xl font-black text-slate-950 tracking-tight uppercase">
