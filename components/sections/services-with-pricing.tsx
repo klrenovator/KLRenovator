@@ -1,9 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowRight, FiTag } from "react-content-development/fi"; // Adjusted structural matching
-import { FiArrowRight as ArrowIcon, FiTag as TagIcon } from "react-icons/fi";
+import { FaWhatsapp, FiArrowRight, FiTag } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
@@ -52,7 +50,7 @@ export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
                     <ServiceIcon name={s.icon} className="h-6 w-6 text-white" />
                   </div>
                   <span className="inline-flex items-center gap-1 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-lg text-xs font-black uppercase tracking-wider text-amber-700">
-                    <TagIcon className="h-3 w-3" /> from RM {s.startPrice}
+                    <FiTag className="h-3 w-3" /> from RM {s.startPrice}
                   </span>
                 </div>
 
@@ -71,13 +69,13 @@ export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
                     className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-slate-900 hover:text-slate-950 transition group/link"
                   >
                     Details
-                    <ArrowIcon className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                    <FiArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
                   </NextLink>
                   <a
                     href={waLink(rfqMsgForService(s.title))}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 rounded-lg text-xs font-black uppercase tracking-wider text-white shadow-sm transition-all active:scale-95"
+                    className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 rounded-lg text-xs font-black uppercase tracking-wider text-white shadow-sm transition-all active:scale-[0.97]"
                   >
                     <FaWhatsapp className="h-4 w-4" />
                     Book Now
@@ -93,10 +91,10 @@ export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
             <div className="mt-12 flex justify-center">
               <NextLink
                 href="/services"
-                className="inline-flex items-center gap-2 border-2 border-slate-900 bg-white hover:bg-slate-900 px-8 py-3.5 text-xs font-black uppercase tracking-widest text-slate-900 hover:text-white rounded-xl transition-all shadow-sm active:scale-95"
+                className="inline-flex items-center gap-2 border-2 border-slate-900 bg-white hover:bg-slate-900 px-8 py-3.5 text-xs font-black uppercase tracking-widest text-slate-900 hover:text-white rounded-xl transition-all shadow-sm active:scale-[0.97]"
               >
                 View All Aircond Services
-                <ArrowIcon className="h-4 w-4" />
+                <FiArrowRight className="h-4 w-4" />
               </NextLink>
             </div>
           </Reveal>
@@ -120,7 +118,7 @@ export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
                 href={waLinkCustom("Hello KL Renovator, I want to request a custom discount quote for servicing multiple aircond units together.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-950 px-6 py-3.5 text-xs font-black uppercase tracking-widest rounded-xl transition-all shrink-0 active:scale-95 shadow-lg"
+                className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-950 px-6 py-3.5 text-xs font-black uppercase tracking-widest rounded-xl transition-all shrink-0 active:scale-[0.97] shadow-lg"
               >
                 <FaWhatsapp className="h-4 w-4 text-[#22c55e]" /> Claim Bulk Pricing
               </a>
