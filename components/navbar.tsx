@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa6";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
 import { siteConfig } from "@/config/site";
@@ -206,3 +206,4 @@ export const Navbar = () => {
     </header>
   );
 };
+        
