@@ -23,15 +23,51 @@ export const metadata: Metadata = {
     "gas top up aircon",
     "ceiling cassette service",
     "aircon repair KL",
-    "klrenovator",
+    "KL Renovator",
+    "Pressure Chemical Wash Ampang",
+    "Chemical Overhaul Cheras",
+    "Daikin aircond service PJ",
+    "Panasonic aircond repair Subang Jaya",
+    "Mitsubishi aircond installation Puchong",
+    "York servicing Shah Alam",
+    "Aircond leaking repair Damansara",
+    "R32 gas top up Kuala Lumpur",
+    "Multicore Dynamic Resources",
+    "Commercial HVAC contract Selangor",
   ],
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     type: "website",
     locale: "en_MY",
+    url: "https://www.klrenovator.com/",
+    siteName: "KL Renovator",
+    images: [
+      {
+        url: "https://www.klrenovator.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "KL Renovator - Premium Airconditioning Services Kuala Lumpur & Selangor",
+      },
+    ],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    images: ["https://www.klrenovator.com/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: { icon: "/favicon.ico" },
 };
 
@@ -48,8 +84,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
+        {/* Structured Local JSON-LD Schema Core for Advanced Google SEO & GEO Citations */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,16 +94,17 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HVACBusiness",
               "name": "KL Renovator",
-              "alternateName": "Multicore Dynamic Resources",
+              "legalName": "Multicore Dynamic Resources",
+              "alternateName": "KL Renovator Aircond Services",
               "url": "https://www.klrenovator.com/",
-              "telephone": "+60182983573",
-              "priceRange": "RM",
+              "telephone": siteConfig.phone,
+              "priceRange": "RM88 - RM2000",
               "image": "https://www.klrenovator.com/logo.png",
-              "description": "Professional Aircond installation, chemical wash, overhaul, gas top-up, and repair services for residential and commercial units in Kuala Lumpur and Selangor.",
+              "description": siteConfig.description,
               "sameAs": [
-                "https://share.google/HhXvqWDkefZ5bzNdL",
-                "https://www.facebook.com/share/1EXXRLVXER/",
-                "https://www.instagram.com/klrneovator",
+                siteConfig.links.googleMaps,
+                siteConfig.links.facebook,
+                siteConfig.links.instagram,
                 "https://www.tiktok.com/@klrenovator"
               ],
               "address": {
@@ -85,29 +123,36 @@ export default function RootLayout({
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                  ],
                   "opens": "09:00",
                   "closes": "18:00"
                 }
               ],
-              "areaServed": [
-                {
-                  "@type": "AdministrativeArea",
-                  "name": "Kuala Lumpur"
-                },
-                {
-                  "@type": "AdministrativeArea",
-                  "name": "Selangor"
-                }
-              ],
+              "areaServed": siteConfig.areas.map(area => ({
+                "@type": "AdministrativeArea",
+                "name": area
+              })),
               "knowsAbout": [
-                "Airconditioning Installation",
-                "Aircond Chemical Wash",
-                "Chemical Overhaul",
-                "Gas Top-Up R32 R410A R22",
-                "Aircond Leaking Repair",
-                "HVAC Maintenance Kuala Lumpur"
-              ]
+                "Airconditioning Installation & Dismantling",
+                "Pressure Chemical Wash Maintenance",
+                "Chemical Overhaul Deep Cleaning",
+                "Precision Gas Top-Up R32 R410A R22 balancing",
+                "Aircond Water Leaking Troubleshooting",
+                "HVAC Commercial Ceiling Cassette Solutions",
+                "Capacitor and Fan Motor Repairs"
+              ],
+              "brand": siteConfig.brandsSupported.map(brand => ({
+                "@type": "Brand",
+                "name": brand
+              }))
             }),
           }}
         />
