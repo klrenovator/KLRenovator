@@ -9,16 +9,18 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 
-// Complete Matrix of All 8-10 Project Images with Exact Fallbacks
+// Clean, simple and error-proof image paths matrix
 const images = [
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.36.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.37.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.38.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.36.jpg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.37.jpg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.38.jpg"
+  "/hero/1.jpg",
+  "/hero/2.jpg",
+  "/hero/3.jpg",
+  "/hero/4.jpg",
+  "/hero/5.jpg",
+  "/hero/6.jpg",
+  "/hero/7.jpg",
+  "/hero/8.jpg",
+  "/hero/9.jpg",
+  "/hero/10.jpg"
 ];
 
 export const Hero = () => {
@@ -34,7 +36,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full min-h-[85vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden py-12">
       
-      {/* High-Visibility Bright Slider Control */}
+      {/* Maximum Brightness Slider Layer */}
       <div className="absolute inset-0 z-0 bg-slate-900">
         <AnimatePresence mode="wait">
           <motion.div
@@ -50,16 +52,16 @@ export const Hero = () => {
               alt="KL Renovator Professional Aircond Servicing Kuala Lumpur Selangor"
               fill
               priority
-              className="object-cover object-[center_25%] opacity-65"
+              className="object-cover object-[center_25%] opacity-75"
               onError={(e) => {
-                // If any image path fails, safely skip to the first valid one so it never turns black
+                // If a number doesn't exist (e.g. if you only have 8 photos instead of 10), safely skip to next
                 setCurrent((prev) => (prev + 1) % images.length);
               }}
             />
           </motion.div>
         </AnimatePresence>
-        {/* Soft balance gradient - makes text readable without making the background dark */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/70 z-10" />
+        {/* Transparent overlay to protect text contrast while keeping photo crystal clear */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/60 z-10" />
       </div>
 
       {/* Main Structural Content Layer matching Screenshot 1000479402_2.jpg */}
@@ -83,7 +85,7 @@ export const Hero = () => {
 
         {/* Brand Explainer Copy */}
         <Reveal delay={200}>
-          <p className="mt-6 max-w-2xl text-xs sm:text-sm text-slate-100 font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] px-2">
+          <p className="mt-6 max-w-2xl text-xs sm:text-sm text-slate-100 font-bold leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] px-2 bg-slate-950/40 py-2 rounded-md backdrop-blur-xs">
             Premium residential and commercial HVAC solutions by KL Renovator. Specialist pressure chemical wash, chemical overhaul, precision troubleshooting, leak repairs, and gas balancing. Rapid response teams across Klang Valley.
           </p>
         </Reveal>
@@ -111,7 +113,7 @@ export const Hero = () => {
 
         {/* Trust Checklist Badges */}
         <Reveal delay={400}>
-          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-y-3 gap-x-6 text-white font-bold text-xs uppercase tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-y-3 gap-x-6 text-white font-black text-xs uppercase tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
             <div className="flex items-center gap-2">
               <span className="text-emerald-500 bg-emerald-500/20 p-1 rounded-xs border border-emerald-500/30">✓</span> Same-Day Scheduled Visits
             </div>
