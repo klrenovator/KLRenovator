@@ -1,6 +1,6 @@
 "use client";
 
-import { FaMapMarkerAlt } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { title, eyebrow } from "@/components/primitives";
@@ -33,7 +33,7 @@ export const CoverageAreas = () => {
                 key={a}
                 className="inline-flex items-center gap-2 border border-slate-200 bg-white px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider text-slate-800 shadow-sm hover:border-slate-900 hover:text-slate-950 transition-all duration-150 cursor-default select-none"
               >
-                <FaMapMarkerAlt className="h-3.5 w-3.5 text-sky-500 shrink-0" />
+                <FaLocationDot className="h-3.5 w-3.5 text-sky-500 shrink-0" />
                 <span>{a}</span>
               </span>
             ))}
@@ -50,4 +50,3 @@ export const CoverageAreas = () => {
     </section>
   );
 };
-
