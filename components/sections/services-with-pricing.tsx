@@ -1,130 +1,127 @@
 "use client";
 
-import NextLink from "next/link";
-import { FaWhatsapp, FiArrowRight, FiTag } from "react-icons/fa6";
+import { useState } from "react";
+import { FaWhatsapp, FaCheck, FaSnowflake } from "react-icons/fa6";
 
-import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
-import { ServiceIcon } from "@/components/service-icon";
+import { siteConfig } from "@/config/site";
+import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
-import { waLink, rfqMsgForService, waLinkCustom } from "@/lib/whatsapp";
 
-type Props = {
-  /**
-   * Limit how many services to show.
-   * Useful when reusing on the homepage as a teaser.
-   */
-  limit?: number;
-  showHeading?: boolean;
-};
+export const ServicesWithPricing = () => {
+  const [activeTab, setActiveTab] = useState<"residential" | "commercial">("residential");
 
-export const ServicesWithPricing = ({ limit, showHeading = true }: Props) => {
-  const services = limit ? siteConfig.services.slice(0, limit) : siteConfig.services;
+  // Filter services based on active high-conversion tab segments
+  const filteredServices = siteConfig.services.filter(
+    (s) => s.category === activeTab || s.category === "both"
+  );
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-white">
+    <section id="services" className="py-20 sm:py-28 bg-slate-50 relative isolate overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {showHeading && (
+        
+        {/* Section Header Matrix */}
+        <div className="text-center max-w-3xl mx-auto">
           <Reveal>
-            <div className="max-w-3xl">
-              <p className={eyebrow()}>Transparent Pricing</p>
-              <h2 className="mt-3">
-                <span className={title({ size: "md" })}>Professional Aircond Services in </span>
-                <span className={title({ size: "md", color: "brand" })}>
-                  KL &amp; Selangor
-                </span>
-              </h2>
-              <p className="mt-4 text-slate-600 font-medium text-sm sm:text-base leading-relaxed">
-                Clear upfront rates with zero hidden charges. Tap any specialized service package below to view complete step-by-step processes, details, and exact warranties, or request an instant free estimation on WhatsApp.
-              </p>
+            <p className={eyebrow()}>Premium Aircond Solutions</p>
+            <h2 className="mt-3">
+              <span className={title({ size: "sm" })}>Transparent </span>
+              <span className={title({ size: "sm", color: "brand" })}>Aircond Pricing</span>
+            </h2>
+            <p className="mt-4 text-slate-600 font-medium">
+              No hidden fees. Professional residential and commercial HVAC services across Kuala Lumpur and Selangor with upfront, competitive rates.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Dynamic Interactive Segment Custom Tabs switcher */}
+        <div className="mt-12 flex justify-center">
+          <Reveal delay={100}>
+            <div className="inline-flex p-1.5 bg-slate-200/80 backdrop-blur-sm rounded-2xl border border-slate-300/30 shadow-inner">
+              <button
+                onClick={() => setActiveTab("residential")}
+                className={`px-6 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all duration-200 ${
+                  activeTab === "residential"
+                    ? "bg-white text-slate-950 shadow-md"
+                    : "text-slate-600 hover:text-slate-950"
+                }`}
+              >
+                Residential Services
+              </button>
+              <button
+                onClick={() => setActiveTab("commercial")}
+                className={`px-6 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all duration-200 ${
+                  activeTab === "commercial"
+                    ? "bg-white text-slate-950 shadow-md"
+                    : "text-slate-600 hover:text-slate-950"
+                }`}
+              >
+                Commercial HVAC
+              </button>
             </div>
           </Reveal>
-        )}
+        </div>
 
-        <div className="mt-12 grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-3 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-          {services.map((s, i) => (
-            <Reveal key={s.slug} delay={i * 40}>
-              <article className="group flex h-full flex-col bg-white p-6 sm:p-8 hover:bg-slate-50/60 transition-all duration-200">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-slate-900 rounded-xl text-white group-hover:bg-slate-950 transition-colors">
-                    <ServiceIcon name={s.icon} className="h-6 w-6 text-white" />
+        {/* Fact-Dense Answer-First Card Layout Schema Grid */}
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {filteredServices.map((service, index) => (
+            <Reveal key={service.slug} delay={index * 50}>
+              <div className="flex flex-col h-full bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-300 relative group">
+                
+                {/* Visual Engineering Backdrop Accent */}
+                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-sky-500 to-brand-500 rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                <div className="flex-grow">
+                  <div className="inline-flex p-3 rounded-2xl bg-sky-50 border border-sky-100 text-sky-600 mb-5">
+                    <FaSnowflake className="h-5 w-5 animate-spin-slow" />
                   </div>
-                  <span className="inline-flex items-center gap-1 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-lg text-xs font-black uppercase tracking-wider text-amber-700">
-                    <FiTag className="h-3 w-3" /> from RM {s.startPrice}
-                  </span>
-                </div>
-
-                <div className="flex-1">
-                  <h3 className="mt-6 text-lg font-black text-slate-900 uppercase tracking-tight group-hover:text-slate-950">
-                    {s.title}
+                  
+                  <h3 className="text-xl font-black text-slate-950 tracking-tight uppercase">
+                    {service.title}
                   </h3>
-                  <p className="mt-2.5 text-sm text-slate-500 leading-relaxed font-medium">
-                    {s.short}
+                  
+                  <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed">
+                    {service.description}
                   </p>
+
+                  {/* Pricing Display Matrix Area */}
+                  <div className="mt-6 pt-5 border-t border-slate-100 flex items-baseline gap-1">
+                    <span className="text-xs font-black text-slate-400 uppercase tracking-wider">From</span>
+                    <span className="text-3xl font-black tracking-tight text-slate-950">
+                      {service.price}
+                    </span>
+                  </div>
+
+                  {/* Semantic Scannable Feature List Matrix */}
+                  <ul className="mt-6 space-y-3">
+                    {service.features.map((feat) => (
+                      <li key={feat} className="flex items-start gap-3 text-xs font-bold text-slate-700 uppercase tracking-wide">
+                        <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#22c55e]/10 border border-[#22c55e]/20 text-[#22c55e]">
+                          <FaCheck className="h-2.5 w-2.5" />
+                        </span>
+                        <span className="pt-0.5">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <div className="mt-8 flex items-center justify-between gap-3 pt-5 border-t border-slate-100">
-                  <NextLink
-                    href={`/services/${s.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-slate-900 hover:text-slate-950 transition group/link"
-                  >
-                    Details
-                    <FiArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
-                  </NextLink>
+                {/* Direct High-Conversion WhatsApp CTAs */}
+                <div className="mt-8 pt-2">
                   <a
-                    href={waLink(rfqMsgForService(s.title))}
+                    href={waLink(rfqMsgForService(service.title))}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 rounded-lg text-xs font-black uppercase tracking-wider text-white shadow-sm transition-all active:scale-[0.97]"
+                    className="inline-flex w-full items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs py-4 rounded-xl shadow-lg shadow-green-500/10 hover:shadow-green-500/20 transition-all active:scale-[0.98]"
                   >
                     <FaWhatsapp className="h-4 w-4" />
-                    Book Now
+                    Book Service Now
                   </a>
                 </div>
-              </article>
+              </div>
             </Reveal>
           ))}
         </div>
 
-        {limit && limit < siteConfig.services.length && (
-          <Reveal>
-            <div className="mt-12 flex justify-center">
-              <NextLink
-                href="/services"
-                className="inline-flex items-center gap-2 border-2 border-slate-900 bg-white hover:bg-slate-900 px-8 py-3.5 text-xs font-black uppercase tracking-widest text-slate-900 hover:text-white rounded-xl transition-all shadow-sm active:scale-[0.97]"
-              >
-                View All Aircond Services
-                <FiArrowRight className="h-4 w-4" />
-              </NextLink>
-            </div>
-          </Reveal>
-        )}
-
-        {!limit && (
-          <Reveal>
-            <div className="mt-12 border border-slate-900 bg-slate-950 text-white p-6 sm:p-10 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
-              <div className="max-w-2xl">
-                <span className="bg-white/10 px-3 py-1 rounded-md text-[10px] font-black uppercase tracking-widest text-white">
-                  Corporate &amp; Residential Deals
-                </span>
-                <h3 className="mt-3 text-xl sm:text-2xl font-black uppercase tracking-tight text-white">
-                  Multi-Unit Booking Discounts
-                </h3>
-                <p className="mt-2 text-sm text-slate-400 font-medium leading-relaxed">
-                  Servicing multiple commercial or residential aircond units during a single scheduled property visit? We pass the transport and logistical savings directly back to you with custom bundle contract rates.
-                </p>
-              </div>
-              <a
-                href={waLinkCustom("Hello KL Renovator, I want to request a custom discount quote for servicing multiple aircond units together.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-950 px-6 py-3.5 text-xs font-black uppercase tracking-widest rounded-xl transition-all shrink-0 active:scale-[0.97] shadow-lg"
-              >
-                <FaWhatsapp className="h-4 w-4 text-[#22c55e]" /> Claim Bulk Pricing
-              </a>
-            </div>
-          </Reveal>
-        )}
       </div>
     </section>
   );
