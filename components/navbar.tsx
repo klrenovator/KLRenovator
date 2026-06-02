@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa6";
+import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
 import { siteConfig } from "@/config/site";
@@ -56,7 +56,7 @@ export const Navbar = () => {
               href={`tel:${siteConfig.phone}`}
               className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-slate-200 hover:text-[#0284c7] transition-colors"
             >
-              <FaPhoneAlt className="h-3 w-3 text-[#0284c7]" /> {siteConfig.phoneDisplay}
+              <FaPhone className="h-3 w-3 text-[#0284c7]" /> {siteConfig.phoneDisplay}
             </a>
             <a
               href={waLink(rfqMsg)}
@@ -117,7 +117,7 @@ export const Navbar = () => {
             href={`tel:${siteConfig.phone}`}
             className="inline-flex items-center gap-2 border-2 border-slate-900 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white rounded-xl transition-all duration-200"
           >
-            <FaPhoneAlt className="h-3.5 w-3.5" />
+            <FaPhone className="h-3.5 w-3.5" />
             Call Support
           </a>
           <a
@@ -190,7 +190,7 @@ export const Navbar = () => {
               href={`tel:${siteConfig.phone}`}
               className="inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-900 px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl transition-all"
             >
-              <FaPhoneAlt className="h-3.5 w-3.5 text-[#0284c7]" /> Call Hotline
+              <FaPhone className="h-3.5 w-3.5 text-[#0284c7]" /> Call Hotline
             </a>
             <a
               href={waLink(rfqMsg)}
@@ -206,4 +206,4 @@ export const Navbar = () => {
     </header>
   );
 };
-        
+
