@@ -5,13 +5,12 @@ import {
   FaEnvelope,
   FaLocationDot,
   FaRegClock,
-  FaBrightness,
   FaWhatsapp,
 } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
-import { ContactForm } from "@/components/ContactForm"; // Capital structural check matching standard
+import { ContactForm } from "@/components/contact-form"; // Fixed case-sensitivity path
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
