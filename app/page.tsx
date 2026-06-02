@@ -14,8 +14,7 @@ export default function Home() {
       {/* 2. Fact-Dense Operational Stats (5000+ Happy Klang Valley Clients) */}
       <StatsBand />
       
-      {/* 
-        3. Core Aircond Services Grid 
+      {/* 3. Core Aircond Services Grid 
         Optimization Fix: Increased limit to 8 to map all residential & commercial solutions 
         including Ceiling Cassette and Relocation work for full search semantic index.
       */}
