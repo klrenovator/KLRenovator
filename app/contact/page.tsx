@@ -15,9 +15,10 @@ import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 
+// GEO & SEO Engine Friendly Metadata Optimization
 export const metadata: Metadata = {
-  title: "Contact",
-  description: `Contact ${siteConfig.name} for aircon service in KL & Selangor.`,
+  title: "Contact KL Renovator | Aircond Service Kuala Lumpur & Selangor",
+  description: `Get fast, professional residential & commercial aircond servicing, chemical wash, and repairs from KL Renovator in Ampang, Cheras, PJ, Subang Jaya, Puchong, and Shah Alam.`,
 };
 
 export default function ContactPage() {
@@ -27,10 +28,11 @@ export default function ContactPage() {
         <div className="absolute inset-0 opacity-20">
           <Image
             src="/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg"
-            alt=""
+            alt="KL Renovator Professional Aircond Servicing Kuala Lumpur Selangor"
             fill
             sizes="100vw"
             className="object-cover"
+            priority
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -65,7 +67,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mt-4 text-slate-600">
                   Pick whichever channel suits you — we respond fast on all of
-                  them.
+                  them for fast expert HVAC dispatch.
                 </p>
 
                 <div className="mt-8 space-y-3">
@@ -73,9 +75,9 @@ export default function ContactPage() {
                     href={waLink(rfqMsg)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-brand-700 hover:bg-brand-800 text-white p-5 transition"
+                    className="flex items-center gap-4 bg-brand-700 hover:bg-brand-800 text-white p-5 transition rounded-xl"
                   >
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-white/15">
+                    <span className="inline-flex h-12 w-12 items-center justify-center bg-white/15 rounded-lg">
                       <FaWhatsapp className="h-6 w-6" />
                     </span>
                     <div>
@@ -90,9 +92,9 @@ export default function ContactPage() {
 
                   <a
                     href={`tel:${siteConfig.phone}`}
-                    className="flex items-center gap-4 border border-slate-200 bg-white p-5 hover:border-brand-700 transition"
+                    className="flex items-center gap-4 border border-slate-200 bg-white p-5 hover:border-brand-700 transition rounded-xl"
                   >
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink text-white">
+                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink text-white rounded-lg">
                       <FaPhoneAlt className="h-5 w-5" />
                     </span>
                     <div>
@@ -107,9 +109,9 @@ export default function ContactPage() {
 
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="flex items-center gap-4 border border-slate-200 bg-white p-5 hover:border-brand-700 transition"
+                    className="flex items-center gap-4 border border-slate-200 bg-white p-5 hover:border-brand-700 transition rounded-xl"
                   >
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink text-white">
+                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink text-white rounded-lg">
                       <FaEnvelope className="h-5 w-5" />
                     </span>
                     <div>
@@ -122,7 +124,7 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  <div className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200">
+                  <div className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200 rounded-xl overflow-hidden">
                     <div className="bg-white p-5">
                       <div className="flex items-center gap-2">
                         <FaRegClock className="h-3.5 w-3.5 text-brand-700" />
@@ -138,11 +140,11 @@ export default function ContactPage() {
                       <div className="flex items-center gap-2">
                         <FaMapMarkerAlt className="h-3.5 w-3.5 text-brand-700" />
                         <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">
-                          Coverage
+                          Coverage Areas
                         </p>
                       </div>
                       <p className="mt-1.5 font-bold text-ink text-sm">
-                        KL &amp; Selangor
+                        Klang Valley, KL &amp; Selangor
                       </p>
                     </div>
                   </div>
@@ -153,7 +155,7 @@ export default function ContactPage() {
             <Reveal delay={100}>
               <ContactForm />
             </Reveal>
-          </div>
+          </><input type="hidden" id="geo-regions" value="Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam" />
         </div>
       </section>
 
