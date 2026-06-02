@@ -15,10 +15,10 @@ export default function Home() {
       <StatsBand />
       
       {/* 3. Core Aircond Services Grid 
-        Optimization Fix: Increased limit to 8 to map all residential & commercial solutions 
-        including Ceiling Cassette and Relocation work for full search semantic index.
+        Optimization Fix: Removed mismatched TypeScript limit prop to perfectly align 
+        with internal siteConfig data mapping for full search semantic index.
       */}
-      <ServicesWithPricing limit={8} />
+      <ServicesWithPricing />
       
       {/* 4. Local Trust & Value Proposition (HVAC Expertise, R32 balancing, Brand support) */}
       <WhyChooseUs />
@@ -30,4 +30,4 @@ export default function Home() {
       <ReadyToBook />
     </>
   );
-}   
+}
