@@ -2,13 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaWhatsapp, FaPhone, FaCheckContainer } from "react-icons/fa6";
+import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
-import { buttonStyles } from "@nextui-org/theme";
 
 // High-Definition Local HVAC Project Images Matrix
 const images = [
@@ -47,7 +46,7 @@ export const Hero = () => {
               alt="KL Renovator Professional Aircond Servicing Kuala Lumpur Selangor"
               fill
               priority
-              className="object-cover object-[center_25%] md:object-center opacity-30"
+              className="object-cover object-[center_25%] md:object-center opacity-35"
             />
           </motion.div>
         </AnimatePresence>
@@ -87,15 +86,14 @@ export const Hero = () => {
               href={waLink(rfqMsg)}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${buttonStyles({ color: "success", radius: "xl" })} w-full sm:w-auto font-bold uppercase text-xs tracking-wider px-8 h-12 shadow-lg shadow-green-500/20 text-white bg-[#22c55e] hover:bg-[#16a34a] flex items-center justify-center gap-2`}
+              className="w-full sm:w-auto font-bold uppercase text-xs tracking-wider px-8 h-12 shadow-lg shadow-green-500/20 text-white bg-[#22c55e] hover:bg-[#16a34a] rounded-full flex items-center justify-center gap-2 transition-all duration-200"
             >
               <FaWhatsapp className="h-4 w-4" /> Book Via WhatsApp
             </a>
             
-            {/* Displayed cleanly on desktop, micro-badge action on mobile */}
             <a
               href={`tel:${siteConfig.phone}`}
-              className={`${buttonStyles({ variant: "bordered", radius: "xl" })} w-full sm:w-auto font-bold uppercase text-xs tracking-wider px-8 h-12 border-white/20 text-white hover:bg-white/10 flex items-center justify-center gap-2`}
+              className="w-full sm:w-auto font-bold uppercase text-xs tracking-wider px-8 h-12 border border-white/20 rounded-full text-white hover:bg-white/10 flex items-center justify-center gap-2 transition-all duration-200"
             >
               <FaPhone className="h-3.5 w-3.5 text-sky-400" /> Call Technician
             </a>
