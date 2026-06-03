@@ -250,3 +250,4 @@ export const siteConfig = {
     tiktok: "https://www.tiktok.com/@klrenovator?_r=1&_t=ZS-96tR1k7aVU5",
     googleMaps: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   },
+};
