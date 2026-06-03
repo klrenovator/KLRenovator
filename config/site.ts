@@ -1,10 +1,5 @@
 export type SiteConfig = typeof siteConfig;
 
-/**
- * Central site configuration for KL Renovator (Multicore Dynamic Resources).
- * Super-optimized for Google SEO, GEO (AI Engines Citation), and Local Klang Valley Conversions.
- * Core Focus: Residential & Commercial HVAC/Airconditioning Solutions.
- */
 export const siteConfig = {
   name: "KL Renovator",
   parentCompany: "Multicore Dynamic Resources",
@@ -12,7 +7,6 @@ export const siteConfig = {
   description:
     "KL Renovator provides professional residential and commercial aircond servicing in Kuala Lumpur & Selangor. Specialized in Pressure Chemical Wash, Chemical Overhaul, Precision Gas Top-ups (R22, R410A, R32 balancing), Troubleshooting & New Installations for Daikin, Panasonic, Mitsubishi, York, LG, Midea & Samsung. Fast response and transparent pricing across Klang Valley.",
 
-  // 🔧 Verified Contact & Business Information
   phone: "+60182983573",
   phoneDisplay: "+60 18-298 3573",
   whatsapp: "60182983573",
@@ -23,45 +17,22 @@ export const siteConfig = {
 
   navItems: [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/#services" },
-    { label: "Pricing", href: "/#pricing" },
-    { label: "Reviews", href: "/#reviews" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ],
 
-  // Core Klang Valley Target Areas for Hyper-Local SEO
   areas: [
-    "Kuala Lumpur",
-    "Selangor",
-    "Ampang",
-    "Cheras",
-    "Petaling Jaya",
-    "Subang Jaya",
-    "Puchong",
-    "Shah Alam",
-    "Damansara",
-    "Klang",
-    "Kajang",
-    "Bangsar",
-    "Mont Kiara",
-    "Setapak",
-    "Sentul",
-    "Putrajaya",
-    "Cyberjaya",
+    "Kuala Lumpur", "Selangor", "Ampang", "Cheras", "Petaling Jaya",
+    "Subang Jaya", "Puchong", "Shah Alam", "Damansara", "Klang",
+    "Kajang", "Bangsar", "Mont Kiara", "Setapak", "Sentul",
+    "Putrajaya", "Cyberjaya",
   ],
 
-  // Top HVAC Brands Managed & Serviced
-  brandsSupported: [
-    "Daikin",
-    "Panasonic",
-    "Mitsubishi",
-    "York",
-    "Midea",
-    "LG",
-    "Samsung",
-  ],
+  brandsSupported: ["Daikin", "Panasonic", "Mitsubishi", "York", "Midea", "LG", "Samsung"],
 
-  // Fact-Dense Services Data Optimized for AI Engine Crawlers & Semantic Search
+  // IMPORTANT: category field required for services-with-pricing.tsx tab filter
   services: [
     {
       slug: "chemical-wash",
@@ -70,6 +41,7 @@ export const siteConfig = {
       startPrice: 120,
       icon: "flask-conical",
       targetProblem: "Slow cooling, foul smell, low airflow, dusty air extraction.",
+      category: "both" as const,
     },
     {
       slug: "chemical-overhaul",
@@ -78,6 +50,7 @@ export const siteConfig = {
       startPrice: 220,
       icon: "sparkles",
       targetProblem: "Water leaking, ice formation, complete blockage, system choking.",
+      category: "both" as const,
     },
     {
       slug: "basic-servicing",
@@ -86,6 +59,7 @@ export const siteConfig = {
       startPrice: 99,
       icon: "wrench",
       targetProblem: "Routine 6-month checkup, electrical current load optimization.",
+      category: "residential" as const,
     },
     {
       slug: "gas-topup",
@@ -94,6 +68,7 @@ export const siteConfig = {
       startPrice: 100,
       icon: "gauge",
       targetProblem: "Aircond running but blowing warm air, low gas pressure.",
+      category: "both" as const,
     },
     {
       slug: "repair",
@@ -102,6 +77,7 @@ export const siteConfig = {
       startPrice: 88,
       icon: "settings",
       targetProblem: "Noisy outdoor unit, sudden auto shut-off, blinking green timer light, wiring sparks.",
+      category: "both" as const,
     },
     {
       slug: "installation",
@@ -110,6 +86,7 @@ export const siteConfig = {
       startPrice: 199,
       icon: "plug",
       targetProblem: "Upgrading old non-inverter systems, moving into new office/house.",
+      category: "both" as const,
     },
     {
       slug: "ceiling-cassette",
@@ -118,6 +95,7 @@ export const siteConfig = {
       startPrice: 290,
       icon: "layout-grid",
       targetProblem: "Commercial office hot spots, corporate annual maintenance contract needs.",
+      category: "commercial" as const,
     },
     {
       slug: "dismantling-relocation",
@@ -126,10 +104,10 @@ export const siteConfig = {
       startPrice: 90,
       icon: "move",
       targetProblem: "House moving, business shop shifting, office renovation adjustments.",
+      category: "both" as const,
     },
   ],
 
-  // Structured Pricing for Client Clarity & Schema Generation
   pricing: {
     chemicalWash: {
       title: "Pressure Chemical Wash",
@@ -229,7 +207,6 @@ export const siteConfig = {
     },
   },
 
-  // Instant booking volume discount setups
   volumeDiscounts: [
     { units: "2 – 3 units", off: "5% off instant booking discount" },
     { units: "4 – 8 units", off: "10% off instant booking discount" },
