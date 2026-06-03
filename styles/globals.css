@@ -3,49 +3,43 @@
 
 /* =========================================================
    KL RENOVATOR — LIGHT MODE ONLY
-   Palette: dark blue + light blue + white + black.
-   Square UI everywhere — zero rounded corners.
+   Palette: dark navy + sky blue + white.
    ========================================================= */
 
 @theme {
   --font-sans: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
   --font-mono: var(--font-mono, ui-monospace, monospace);
 
-  /* Brand blue scale (from logo) */
-  --color-brand-50: #eff6ff;
+  /* Brand blue scale */
+  --color-brand-50:  #eff6ff;
   --color-brand-100: #dbeafe;
   --color-brand-200: #bfdbfe;
   --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;   /* light blue (CTA hover) */
-  --color-brand-500: #3b82f6;   /* light blue (CTA primary) */
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
   --color-brand-600: #2563eb;
   --color-brand-700: #1d4ed8;
   --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;   /* dark blue (headings, dark accents) */
+  --color-brand-900: #1e3a8a;
   --color-brand-950: #0c1f4a;
 
-  /* Ink — pure black for text & footer */
-  --color-ink: #000000;
+  /* Ink */
+  --color-ink:      #000000;
   --color-ink-soft: #0a0a0a;
 
-  /* WhatsApp/CTA color */
-  --color-whatsapp: #2563eb;
-
-  /* Force ALL radii to zero. */
-  --radius-xs: 0px;
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius-2xl: 0px;
-  --radius-3xl: 0px;
-  --radius-full: 0px;
+  /* WhatsApp green */
+  --color-whatsapp: #22c55e;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   overflow-x: clip;
+  font-size: 15px;
+}
+
+@media (min-width: 640px) {
+  html { font-size: 16px; }
 }
 
 body {
@@ -55,14 +49,7 @@ body {
   overflow-x: clip;
 }
 
-/* SQUARE UI — globally remove every rounded corner. */
-*,
-*::before,
-*::after {
-  border-radius: 0 !important;
-}
-
-/* Reveal animation — SSR-safe */
+/* ── Reveal animations ────────────────────────────────────── */
 @keyframes fade-up {
   from { opacity: 0; transform: translate3d(0, 24px, 0); }
   to   { opacity: 1; transform: translate3d(0, 0, 0); }
@@ -73,11 +60,11 @@ body {
 }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+  50%       { transform: translateY(-6px); }
 }
-@keyframes carousel-zoom {
-  from { transform: scale(1.05); }
-  to   { transform: scale(1.15); }
+@keyframes marquee-scroll {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 .reveal-hidden {
@@ -91,26 +78,41 @@ body {
 }
 
 .float-anim { animation: float 3s ease-in-out infinite; }
-.zoom-anim  { animation: carousel-zoom 8s ease-in-out forwards; }
 
-html { font-size: 15px; }
-@media (min-width: 640px) { html { font-size: 16px; } }
+/* Marquee */
+.kl-marquee {
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .kl-marquee { animation: none; }
+  .reveal-visible { animation: none; opacity: 1; transform: none; }
+}
 
+/* ── Scrollbar ────────────────────────────────────────────── */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Hero overlay — dark blue gradient for legibility */
-.hero-overlay {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(12, 31, 74, 0.5) 0%,
-      rgba(12, 31, 74, 0.4) 60%,
-      rgba(0, 0, 0, 0.88) 100%
-    );
-}
-
+/* ── Selection ────────────────────────────────────────────── */
 ::selection {
   background: #2563eb;
   color: #fff;
+}
+
+/* ── Animate-in utility (used by mobile menu) ─────────────── */
+@keyframes slide-in-from-top-4 {
+  from { opacity: 0; transform: translateY(-1rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  animation-fill-mode: both;
+}
+.fade-in {
+  animation-name: fade-in;
+}
+.slide-in-from-top-4 {
+  animation-name: slide-in-from-top-4;
+}
+.duration-200 {
+  animation-duration: 200ms;
 }
