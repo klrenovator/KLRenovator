@@ -1,4 +1,5 @@
-import { FaWhatsapp, FaPhoneAlt, FaRegClock, FaShieldAlt } from "react-icons/fa";
+import { FaWhatsapp, FaPhone } from "react-icons/fa6";
+import { FaRegClock, FaShieldAlt } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
@@ -7,19 +8,22 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 export const ReadyToBook = () => {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-24 bg-brand-900">
+    <section className="relative overflow-hidden py-16 sm:py-24 bg-slate-950 text-white">
+      {/* Subtle glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,165,233,0.08),transparent_70%)]" />
+
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
         <Reveal>
-          <span className="inline-block border border-brand-300/50 bg-brand-950/50 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-200">
+          <span className="inline-block border border-sky-700 bg-sky-950 px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.18em] text-sky-300">
             Same-day slots available
           </span>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.1]">
+          <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-[1.1] uppercase">
             Ready to book your{" "}
-            <span className="text-brand-300">aircond service?</span>
+            <span className="text-sky-400">aircond service?</span>
           </h2>
 
-          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-blue-100">
+          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-slate-400 font-medium">
             Chat with us on WhatsApp and get a transparent quote in minutes.
             Licensed technicians · Honest pricing · Quality workmanship.
           </p>
@@ -31,23 +35,23 @@ export const ReadyToBook = () => {
               href={waLink(rfqMsg)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-brand-500 hover:bg-brand-400 px-7 py-4 text-base font-bold uppercase tracking-wide text-white transition"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all"
             >
               <FaWhatsapp className="h-5 w-5" />
               Request a Quote
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-white hover:bg-slate-100 px-7 py-4 text-base font-bold uppercase tracking-wide text-black transition"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-white hover:bg-slate-100 px-8 py-4 text-sm font-black uppercase tracking-widest text-slate-950 transition-all"
             >
-              <FaPhoneAlt className="h-4 w-4" />
+              <FaPhone className="h-4 w-4" />
               Call {siteConfig.phoneDisplay}
             </a>
           </div>
         </Reveal>
 
         <Reveal delay={180}>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-brand-800 border border-brand-800">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-slate-800 border border-slate-800">
             {[
               { icon: FaRegClock, label: "Reply within 30 mins" },
               { icon: FaShieldAlt, label: "Licensed & insured" },
@@ -55,9 +59,9 @@ export const ReadyToBook = () => {
             ].map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="flex items-center justify-center gap-2.5 bg-brand-900 px-4 py-4 text-sm font-semibold text-white"
+                className="flex items-center justify-center gap-2.5 bg-slate-950 hover:bg-slate-900 transition-colors px-4 py-5 text-sm font-black text-white uppercase tracking-wider"
               >
-                <Icon className="h-4 w-4 text-brand-300 shrink-0" />
+                <Icon className="h-4 w-4 text-sky-400 shrink-0" />
                 {label}
               </div>
             ))}
