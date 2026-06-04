@@ -30,11 +30,12 @@ export const Navbar = () => {
   const mobileLangRef = useRef<HTMLDivElement>(null);
 
   const NAV_LINKS = [
-    { label: t("nav_home"), href: "/" },
-    { label: t("nav_about"), href: "/about" },
+    { label: t("nav_home"),     href: "/" },
     { label: t("nav_services"), href: "/services" },
-    { label: t("nav_faq"), href: "/faq" },
-    { label: t("nav_contact"), href: "/contact" },
+    { label: t("nav_about"),    href: "/about" },
+    { label: t("nav_faq"),      href: "/faq" },
+    { label: "Blog",            href: "/blog" },
+    { label: t("nav_contact"),  href: "/contact" },
   ];
 
   useEffect(() => {
@@ -46,13 +47,15 @@ export const Navbar = () => {
 
   useEffect(() => { setOpen(false); setLangOpen(false); }, [pathname]);
 
-  // Close lang dropdown on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      const t = e.target as Node;
-      const inDesktop = desktopLangRef.current?.contains(t);
-      const inMobile = mobileLangRef.current?.contains(t);
-      if (!inDesktop && !inMobile) setLangOpen(false);
+      const target = e.target as Node;
+      if (
+        !desktopLangRef.current?.contains(target) &&
+        !mobileLangRef.current?.contains(target)
+      ) {
+        setLangOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -77,12 +80,18 @@ export const Navbar = () => {
             {t("nav_topbar")}
           </span>
           <div className="flex items-center gap-6">
-            <a href={`tel:${siteConfig.phone}`}
-              className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-slate-200 hover:text-[#0284c7] transition-colors">
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-slate-200 hover:text-[#0284c7] transition-colors"
+            >
               <FaPhone className="h-3 w-3 text-[#0284c7]" /> {siteConfig.phoneDisplay}
             </a>
-            <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-white hover:text-[#22c55e] transition-colors">
+            <a
+              href={waLink(rfqMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-white hover:text-[#22c55e] transition-colors"
+            >
               <FaWhatsapp className="h-3.5 w-3.5 text-[#22c55e]" /> WhatsApp Online
             </a>
           </div>
@@ -90,25 +99,42 @@ export const Navbar = () => {
       </div>
 
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
         {/* Logo */}
-        <NextLink href="/" aria-label="KL Renovator Home"
-          className="relative inline-block h-48 w-64 md:w-72 mt-2 shrink-0">
-          <Image src="/logo/image.png" alt="KL Renovator Aircon Specialist Logo"
-            fill priority className="object-contain object-left" />
+        <NextLink
+          href="/"
+          aria-label="KL Renovator Home"
+          className="relative inline-block h-48 w-56 md:w-64 mt-2 shrink-0"
+        >
+          <Image
+            src="/logo/image.png"
+            alt="KL Renovator Aircon Specialist Logo"
+            fill
+            priority
+            className="object-contain object-left"
+          />
         </NextLink>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-6">
           {NAV_LINKS.map((l) => {
-            const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+            const active =
+              l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
-              <NextLink key={l.href} href={l.href}
+              <NextLink
+                key={l.href}
+                href={l.href}
                 className={clsx(
                   "relative text-xs font-black uppercase tracking-widest transition-colors py-2",
-                  active ? "text-[#0284c7]" : "text-slate-900 hover:text-[#0284c7]",
-                )}>
+                  active
+                    ? "text-[#0284c7]"
+                    : "text-slate-900 hover:text-[#0284c7]",
+                )}
+              >
                 {l.label}
-                {active && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />}
+                {active && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />
+                )}
               </NextLink>
             );
           })}
@@ -116,64 +142,94 @@ export const Navbar = () => {
 
         {/* Desktop Right */}
         <div className="hidden lg:flex items-center gap-3">
+
           {/* Language Switcher Desktop */}
           <div ref={desktopLangRef} className="relative">
-            <button onClick={() => setLangOpen(!langOpen)}
+            <button
+              onClick={() => setLangOpen(!langOpen)}
               className="inline-flex items-center gap-2 border-2 border-slate-200 px-3 py-2.5 text-xs font-black uppercase tracking-wider text-slate-700 hover:border-[#0284c7] hover:text-[#0284c7] transition-all duration-200 bg-white"
-              aria-label="Change Language">
+              aria-label="Change Language"
+            >
               <span className="text-base leading-none">{currentLang.flag}</span>
               <span>{currentLang.label}</span>
-              <svg className={clsx("h-3 w-3 transition-transform duration-200", langOpen && "rotate-180")}
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <svg
+                className={clsx(
+                  "h-3 w-3 transition-transform duration-200",
+                  langOpen && "rotate-180",
+                )}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 w-40 bg-white border border-slate-200 shadow-xl overflow-hidden z-50">
                 {LANG_OPTIONS.map((opt) => (
-                  <button key={opt.code}
+                  <button
+                    key={opt.code}
                     onClick={() => { setLang(opt.code); setLangOpen(false); }}
                     className={clsx(
                       "w-full flex items-center gap-3 px-4 py-3 text-xs font-black uppercase tracking-wider transition-colors",
-                      lang === opt.code ? "bg-blue-50 text-[#0284c7]" : "text-slate-700 hover:bg-slate-50",
-                    )}>
+                      lang === opt.code
+                        ? "bg-blue-50 text-[#0284c7]"
+                        : "text-slate-700 hover:bg-slate-50",
+                    )}
+                  >
                     <span className="text-base">{opt.flag}</span>
                     {opt.label}
-                    {lang === opt.code && <span className="ml-auto text-[#0284c7]">✓</span>}
+                    {lang === opt.code && (
+                      <span className="ml-auto text-[#0284c7]">✓</span>
+                    )}
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          <a href={`tel:${siteConfig.phone}`}
-            className="inline-flex items-center gap-2 border-2 border-slate-900 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-200">
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className="inline-flex items-center gap-2 border-2 border-slate-900 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-200"
+          >
             <FaPhone className="h-3.5 w-3.5" /> {t("nav_call")}
           </a>
-          <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200">
+          <a
+            href={waLink(rfqMsg)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200"
+          >
             <FaWhatsapp className="h-4 w-4" /> {t("nav_book")}
           </a>
         </div>
 
         {/* Mobile Buttons */}
         <div className="flex lg:hidden items-center gap-2">
-          {/* Mobile Language Switcher */}
+
+          {/* Language Switcher Mobile */}
           <div ref={mobileLangRef} className="relative">
-            <button onClick={() => setLangOpen(!langOpen)}
+            <button
+              onClick={() => setLangOpen(!langOpen)}
               className="inline-flex h-11 w-11 items-center justify-center border border-slate-200 text-slate-700 bg-white text-base"
-              aria-label="Language">
+              aria-label="Language"
+            >
               {currentLang.flag}
             </button>
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 w-36 bg-white border border-slate-200 shadow-xl overflow-hidden z-50">
                 {LANG_OPTIONS.map((opt) => (
-                  <button key={opt.code}
+                  <button
+                    key={opt.code}
                     onClick={() => { setLang(opt.code); setLangOpen(false); }}
                     className={clsx(
                       "w-full flex items-center gap-2 px-3 py-3 text-xs font-black uppercase tracking-wider transition-colors",
-                      lang === opt.code ? "bg-blue-50 text-[#0284c7]" : "text-slate-700 hover:bg-slate-50",
-                    )}>
+                      lang === opt.code
+                        ? "bg-blue-50 text-[#0284c7]"
+                        : "text-slate-700 hover:bg-slate-50",
+                    )}
+                  >
                     <span className="text-base">{opt.flag}</span>
                     {opt.label}
                   </button>
@@ -182,14 +238,21 @@ export const Navbar = () => {
             )}
           </div>
 
-          <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
+          <a
+            href={waLink(rfqMsg)}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="WhatsApp"
-            className="inline-flex h-11 w-11 items-center justify-center bg-[#22c55e] text-white">
+            className="inline-flex h-11 w-11 items-center justify-center bg-[#22c55e] text-white"
+          >
             <FaWhatsapp className="h-5 w-5" />
           </a>
-          <button aria-expanded={open} aria-label="Toggle menu"
+          <button
+            aria-expanded={open}
+            aria-label="Toggle menu"
             onClick={() => setOpen(!open)}
-            className="inline-flex h-11 w-11 items-center justify-center text-slate-900 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all">
+            className="inline-flex h-11 w-11 items-center justify-center text-slate-900 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all"
+          >
             {open ? <HiXMark className="h-6 w-6" /> : <HiBars3 className="h-6 w-6" />}
           </button>
         </div>
@@ -201,15 +264,19 @@ export const Navbar = () => {
           <nav>
             <ul>
               {NAV_LINKS.map((l) => {
-                const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+                const active =
+                  l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
                 return (
                   <li key={l.href} className="border-b border-slate-50">
-                    <NextLink href={l.href}
+                    <NextLink
+                      href={l.href}
                       className={clsx(
                         "block px-6 py-4 text-sm font-black uppercase tracking-widest border-l-4 transition-all",
-                        active ? "border-[#0284c7] text-[#0284c7] bg-blue-50/40"
-                               : "border-transparent text-slate-900 hover:bg-slate-50",
-                      )}>
+                        active
+                          ? "border-[#0284c7] text-[#0284c7] bg-blue-50/40"
+                          : "border-transparent text-slate-900 hover:bg-slate-50",
+                      )}
+                    >
                       {l.label}
                     </NextLink>
                   </li>
@@ -218,12 +285,18 @@ export const Navbar = () => {
             </ul>
           </nav>
           <div className="px-5 py-5 grid grid-cols-2 gap-3 bg-slate-50/50 border-t border-slate-100">
-            <a href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 bg-slate-950 px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all">
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="inline-flex items-center justify-center gap-2 bg-slate-950 px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
+            >
               <FaPhone className="h-3.5 w-3.5 text-[#0284c7]" /> {t("nav_call")}
             </a>
-            <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all">
+            <a
+              href={waLink(rfqMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
+            >
               <FaWhatsapp className="h-4 w-4" /> {t("nav_book")}
             </a>
           </div>
