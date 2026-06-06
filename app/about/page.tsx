@@ -47,16 +47,40 @@ const HIGHLIGHTS = [
   "5,000+ satisfied customers",
   "Licensed & insured technicians",
   "Same-day service available",
-  "1-year workmanship warranty",
+  "1-month workmanship warranty",
   "Servicing all major brands",
+];
+
+const GALLERY_IMAGES = [
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg", alt: "KL Renovator aircond installation work" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (1).jpeg", alt: "Professional aircond servicing KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (2).jpeg", alt: "Aircond chemical wash Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg", alt: "HVAC technician at work" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.26.jpeg", alt: "Aircond repair and maintenance" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.27.jpeg", alt: "KL Renovator project photo" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29 (1).jpeg", alt: "Aircond installation project" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg", alt: "Chemical overhaul service" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (1).jpeg", alt: "Gas top-up precision balancing" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (2).jpeg", alt: "Aircond troubleshooting KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg", alt: "HVAC maintenance Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32 (1).jpeg", alt: "KL Renovator team on site" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg", alt: "KL Renovator technician servicing" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg", alt: "Ceiling cassette installation" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (2).jpeg", alt: "Commercial aircond service" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg", alt: "Aircond cleaning and servicing" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (1).jpeg", alt: "Daikin Panasonic installation KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (2).jpeg", alt: "Aircond bracket outdoor unit" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg", alt: "Copper pipe installation work" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35 (1).jpeg", alt: "KL Renovator quality workmanship" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg", alt: "KL Renovator completed project" },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-slate-950 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-25">
+      {/* Hero — White */}
+      <section className="relative bg-white overflow-hidden border-b border-slate-100">
+        <div className="absolute inset-0 opacity-10">
           <Image
             src="/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg"
             alt="KL Renovator team at work"
@@ -66,18 +90,17 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 to-slate-950/90" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-400 mb-4">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-4">
               About KL Renovator
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight max-w-3xl leading-[1.05] text-white uppercase">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight max-w-3xl leading-[1.05] text-slate-900 uppercase">
               Built on craft.
               <br />
-              <span className="text-sky-400">Driven by trust.</span>
+              <span className="text-sky-500">Driven by trust.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed font-medium">
+            <p className="mt-6 max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
               For over a decade we have been the aircon partner Kuala Lumpur
               and Selangor turn to when comfort matters. From condos to
               commercial cassette installs — we deliver clean, careful work
@@ -94,7 +117,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <Reveal>
-              <div className="relative aspect-[4/5] w-full overflow-hidden shadow-2xl">
+              <div className="relative aspect-[4/5] w-full overflow-hidden shadow-xl rounded-2xl">
                 <Image
                   src="/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg"
                   alt="KL Renovator aircond technician servicing unit"
@@ -140,8 +163,49 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Photo Gallery — Horizontal Scroll */}
       <section className="py-16 sm:py-20 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <p className={eyebrow()}>Our Work</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "md" })}>Real Projects. </span>
+                <span className={title({ size: "md", color: "brand" })}>Real Results.</span>
+              </h2>
+              <p className="mt-4 text-slate-600 font-medium">
+                Every photo below is from an actual KL Renovator job — no stock images, no staging.
+              </p>
+            </div>
+          </Reveal>
+
+          <div
+            className="flex gap-4 overflow-x-auto pb-4 no-scrollbar snap-x snap-mandatory"
+            style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
+          >
+            {GALLERY_IMAGES.map((img, i) => (
+              <div
+                key={i}
+                className="relative shrink-0 w-72 sm:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-md snap-start border border-slate-100"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="320px"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-center text-xs text-slate-400 font-medium">
+            ← Swipe or scroll horizontally to view more →
+          </p>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-16 sm:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto">
@@ -160,10 +224,10 @@ export default function AboutPage() {
             {VALUES.map((v, i) => (
               <Reveal key={v.title} delay={i * 60}>
                 <div className="bg-white p-6 sm:p-8 h-full hover:bg-slate-50 transition-colors">
-                  <div className="inline-flex h-12 w-12 items-center justify-center bg-sky-700 text-white">
+                  <div className="inline-flex h-12 w-12 items-center justify-center bg-sky-600 text-white rounded-xl">
                     <v.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-5 text-lg font-black uppercase tracking-tight text-slate-950">
+                  <h3 className="mt-5 text-lg font-black uppercase tracking-tight text-slate-900">
                     {v.title}
                   </h3>
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed font-medium">
@@ -179,29 +243,29 @@ export default function AboutPage() {
       <CoverageAreas />
 
       {/* CTA */}
-      <section className="py-16 sm:py-20 bg-slate-950 text-white">
+      <section className="py-16 sm:py-20 bg-sky-600 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white uppercase">
               Let&apos;s get your aircon{" "}
-              <span className="text-sky-400">running like new.</span>
+              <span className="text-sky-100">running like new.</span>
             </h2>
-            <p className="mt-4 text-slate-400 font-medium">
-              Same-day slots available across KL &amp; Selangor.
+            <p className="mt-4 text-sky-100 font-medium">
+              Same-day slots available across KL &amp; Selangor, including Batu Caves, Ampang, Cheras &amp; more.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href={waLink(rfqMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" />
                 Request a Quote
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-white hover:bg-slate-100 px-8 py-4 text-sm font-black uppercase tracking-widest text-slate-950 transition-all"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-white hover:bg-slate-100 px-8 py-4 text-sm font-black uppercase tracking-widest text-slate-900 transition-all rounded-xl"
               >
                 <FaPhoneAlt className="h-4 w-4" />
                 Call {siteConfig.phoneDisplay}
