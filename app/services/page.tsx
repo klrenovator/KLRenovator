@@ -209,11 +209,11 @@ export default function ServicesPage() {
 
           {/* Quote CTA */}
           <Reveal>
-            <div className="mt-10 bg-slate-900 text-white p-8 sm:p-12 text-center rounded-2xl">
-              <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight">
+            <div className="mt-10 bg-[#0284c7] text-white p-8 sm:p-12 text-center rounded-2xl">
+              <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
                 Not sure what you need?
               </h2>
-              <p className="mt-3 text-slate-400 font-medium max-w-xl mx-auto">
+              <p className="mt-3 text-sky-100 font-medium max-w-xl mx-auto">
                 Send us a photo of your unit on WhatsApp — we&apos;ll give you an accurate quote within 30 minutes.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -227,7 +227,7 @@ export default function ServicesPage() {
                 </a>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="inline-flex items-center gap-2.5 border-2 border-slate-600 hover:border-white px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
+                  className="inline-flex items-center gap-2.5 border-2 border-white/40 hover:border-white px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
                 >
                   Call {siteConfig.phoneDisplay}
                 </a>
