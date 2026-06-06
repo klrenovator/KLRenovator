@@ -83,27 +83,32 @@ export default function ContactPage() {
         }}
       />
 
-      {/* Hero */}
-      <section className="relative bg-slate-950 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      {/* ── HERO — White + Low-Opacity Watermark ── */}
+      <section className="relative bg-white overflow-hidden border-b border-slate-100">
+        {/* Watermark image — very low opacity */}
+        <div className="absolute inset-0 opacity-[0.07]">
           <Image
             src="/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg"
             alt="KL Renovator aircond technician"
-            fill sizes="100vw"
-            className="object-cover" priority
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 to-slate-950/90" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        {/* Gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/40" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-400 mb-4">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-4">
               Contact Us
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight max-w-3xl leading-[1.05] uppercase text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight max-w-3xl leading-[1.05] uppercase text-slate-900">
               Let&apos;s get your<br />
-              <span className="text-sky-400">aircon sorted.</span>
+              <span className="text-sky-500">aircon sorted.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-slate-300 font-medium leading-relaxed">
+            <p className="mt-5 max-w-xl text-slate-600 font-medium leading-relaxed">
               Fastest response is via WhatsApp — we reply within 30 minutes
               during business hours. Same-day visits available across KL &amp; Selangor.
             </p>
@@ -129,7 +134,7 @@ export default function ContactPage() {
                 </p>
 
                 <div className="mt-8 space-y-3">
-                  {/* WhatsApp — Primary */}
+                  {/* WhatsApp */}
                   <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-4 bg-[#0284c7] hover:bg-[#0369a1] text-white p-5 transition-all group">
                     <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#22c55e]">
@@ -206,7 +211,7 @@ export default function ContactPage() {
               </div>
             </Reveal>
 
-            {/* Right: WhatsApp Quick-Select Form */}
+            {/* Right: WhatsApp Quick-Select */}
             <Reveal delay={100}>
               <div className="bg-[#0284c7] text-white p-8 sm:p-10">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-100 mb-2">
@@ -219,7 +224,6 @@ export default function ContactPage() {
                   Tap the service you need — it opens WhatsApp with your message ready.
                   No typing needed.
                 </p>
-
                 <div className="grid gap-3">
                   {WHATSAPP_MESSAGES.map((item) => (
                     <a
@@ -237,7 +241,6 @@ export default function ContactPage() {
                     </a>
                   ))}
                 </div>
-
                 <div className="mt-8 border-t border-white/20 pt-6">
                   <p className="text-xs text-sky-100 font-medium text-center">
                     Or call us directly at{" "}
