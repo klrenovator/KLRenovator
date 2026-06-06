@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import NextLink from "next/link";
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiClock, FiTag, FiChevronRight, FiArrowLeft } from "react-icons/fi";
 
@@ -47,7 +48,6 @@ export default async function BlogPostPage({
 
   return (
     <>
-      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -89,18 +89,30 @@ export default async function BlogPostPage({
         </div>
       </div>
 
-      {/* Article Header */}
+      {/* Article */}
       <article>
-        <header className="bg-slate-950 text-white py-14 sm:py-20">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        {/* Header — White + watermark */}
+        <header className="relative bg-white overflow-hidden border-b border-slate-100">
+          <div className="absolute inset-0 opacity-[0.07]">
+            <Image
+              src="/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg"
+              alt="KL Renovator aircond technician working"
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/70 to-white/40" />
+          <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
             <Reveal>
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-sky-400 border border-sky-900 bg-sky-950 px-2.5 py-1 mb-5">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-sky-600 border border-sky-200 bg-sky-50 px-2.5 py-1 mb-5">
                 <FiTag className="h-2.5 w-2.5" /> {post.category}
               </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase leading-tight">
                 {post.title}
               </h1>
-              <p className="mt-4 text-slate-400 font-medium text-base leading-relaxed max-w-2xl">
+              <p className="mt-4 text-slate-600 font-medium text-base leading-relaxed max-w-2xl">
                 {post.excerpt}
               </p>
               <div className="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 font-bold uppercase tracking-wider">
@@ -108,19 +120,17 @@ export default async function BlogPostPage({
                   <FiClock className="h-3 w-3 text-sky-500" /> {post.readTime} min read
                 </span>
                 <span>{post.date}</span>
-                <span className="text-slate-600">·</span>
+                <span className="text-slate-300">·</span>
                 <span>By KL Renovator Team</span>
               </div>
             </Reveal>
           </div>
         </header>
 
-        {/* Article Body */}
+        {/* Body */}
         <div className="py-12 sm:py-16 bg-white">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-[1fr_280px] gap-12">
-
-              {/* Main Content */}
               <div
                 className="prose prose-slate prose-sm sm:prose-base max-w-none
                   prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight
@@ -133,17 +143,16 @@ export default async function BlogPostPage({
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 
-              {/* Sidebar */}
+              {/* Sidebar — all white */}
               <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-                {/* Quick Book */}
-                <div className="bg-slate-950 text-white p-6">
-                  <p className="text-xs font-black uppercase tracking-widest text-sky-400 mb-2">
+                <div className="bg-white border-2 border-sky-100 shadow-sm p-6">
+                  <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
                     Need This Service?
                   </p>
-                  <h3 className="text-lg font-black uppercase text-white leading-tight">
+                  <h3 className="text-lg font-black uppercase text-slate-900 leading-tight">
                     Book an expert now
                   </h3>
-                  <p className="mt-2 text-xs text-slate-400 font-medium leading-relaxed">
+                  <p className="mt-2 text-xs text-slate-500 font-medium leading-relaxed">
                     Same-day service available. WhatsApp for instant quote.
                   </p>
                   <a
@@ -154,22 +163,23 @@ export default async function BlogPostPage({
                   >
                     <FaWhatsapp className="h-4 w-4" /> Book on WhatsApp
                   </a>
+                  <p className="mt-3 text-[10px] text-slate-400 font-medium text-center leading-relaxed">
+                    Serving KL, Selangor, Ampang, Batu Caves, Cheras, PJ, Subang, Shah Alam & more
+                  </p>
                 </div>
 
-                {/* Tags */}
-                <div className="bg-slate-50 border border-slate-200 p-5">
+                <div className="bg-white border border-slate-200 p-5">
                   <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3">Tags</p>
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag) => (
                       <span key={tag}
-                        className="text-[11px] font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 px-2.5 py-1">
+                        className="text-[11px] font-bold uppercase tracking-wider bg-slate-50 border border-slate-200 text-slate-600 px-2.5 py-1">
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Back to Blog */}
                 <NextLink href="/blog"
                   className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-700 hover:text-sky-600 transition-colors">
                   <FiArrowLeft className="h-3.5 w-3.5" /> Back to all articles
