@@ -34,7 +34,7 @@ export const faqs: QA[] = [
   },
   {
     q: "Do you offer warranty for installations and repairs?",
-    a: "Yes. All installations come with a 1-year workmanship warranty. Repairs carry a 3-month parts & labour warranty. Chemical wash includes a 30-day cooling guarantee.",
+    a: "Yes. All installations come with a 1-month workmanship warranty. Repairs carry a 3-month parts & labour warranty. Chemical wash includes a 30-day cooling guarantee.",
   },
   {
     q: "How do I book — WhatsApp, call, or form?",
