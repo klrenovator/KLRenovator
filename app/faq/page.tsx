@@ -7,6 +7,7 @@ import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
+
 // ─── FAQ DATA — All 3 Languages ──────────────────────────────────────────────
 const FAQS = {
   en: [
@@ -73,12 +74,12 @@ const FAQS = {
     {
       category: "trust",
       q: "Is there a warranty on your work?",
-      a: "Yes. All workmanship carries a 1-year warranty. Parts and components replaced by us are covered under the respective manufacturer's warranty.",
+      a: "Yes. All workmanship carries a 1-month warranty. Parts and components replaced by us are covered under the respective manufacturer's warranty.",
     },
     {
       category: "trust",
       q: "What areas do you cover?",
-      a: "We cover the entire Klang Valley — all areas of Kuala Lumpur and Selangor including Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Putrajaya, and Cyberjaya.",
+      a: "We cover the entire Klang Valley — all areas of Kuala Lumpur and Selangor including Ampang, Batu Caves, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Putrajaya, and Cyberjaya.",
     },
     {
       category: "trust",
@@ -135,12 +136,12 @@ const FAQS = {
     {
       category: "trust",
       q: "Adakah terdapat waranti untuk kerja anda?",
-      a: "Ya. Semua kerja buruh dilindungi waranti 1 tahun. Komponen yang diganti oleh kami dilindungi di bawah waranti pengilang.",
+      a: "Ya. Semua kerja buruh dilindungi waranti 1 bulan. Komponen yang diganti oleh kami dilindungi di bawah waranti pengilang.",
     },
     {
       category: "trust",
       q: "Kawasan mana yang anda liputi?",
-      a: "Kami meliputi seluruh Lembah Klang — semua kawasan Kuala Lumpur dan Selangor termasuk Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, dan Cyberjaya.",
+      a: "Kami meliputi seluruh Lembah Klang — semua kawasan Kuala Lumpur dan Selangor termasuk Ampang, Batu Caves, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, dan Cyberjaya.",
     },
     {
       category: "trust",
@@ -192,7 +193,7 @@ const FAQS = {
     {
       category: "trust",
       q: "服务是否有保固？",
-      a: "是的。所有工艺提供 1 年保固。我们更换的零件受制造商保固保障。",
+      a: "是的。所有工艺提供 1 个月保固。我们更换的零件受制造商保固保障。",
     },
     {
       category: "trust",
@@ -241,7 +242,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function FaqPage() {
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   const [activeCategory, setActiveCategory] = useState("all");
 
   const currentLang = (lang === "en" || lang === "ms" || lang === "zh") ? lang : "en";
@@ -283,12 +284,26 @@ export default function FaqPage() {
             <p className="mt-5 text-slate-400 font-medium max-w-xl leading-relaxed">
               Quick honest answers about our aircon services, pricing, warranty, and coverage areas — in English, Bahasa Malaysia, and Chinese.
             </p>
-            {/* Language hint */}
+            {/* Language tabs — clickable, connected to lang context */}
             <div className="mt-6 flex items-center gap-2 flex-wrap">
               <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">FAQ available in:</span>
-              <span className="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-full">🇬🇧 English</span>
-              <span className="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-full">🇲🇾 Bahasa Malaysia</span>
-              <span className="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-full">🇨🇳 中文</span>
+              {([
+                { code: "en" as const, flag: "🇬🇧", label: "English" },
+                { code: "ms" as const, flag: "🇲🇾", label: "Bahasa Malaysia" },
+                { code: "zh" as const, flag: "🇨🇳", label: "中文" },
+              ]).map((opt) => (
+                <button
+                  key={opt.code}
+                  onClick={() => setLang(opt.code)}
+                  className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-all duration-200 ${
+                    lang === opt.code
+                      ? "bg-sky-500 border-sky-400 text-white shadow-sm"
+                      : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 hover:border-slate-500"
+                  }`}
+                >
+                  {opt.flag} {opt.label}
+                </button>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -334,12 +349,12 @@ export default function FaqPage() {
 
           {/* Still have questions CTA */}
           <Reveal>
-            <div className="mt-10 bg-slate-950 text-white rounded-2xl p-8 text-center">
+            <div className="mt-10 bg-[#0284c7] text-white rounded-2xl p-8 text-center">
               <p className="text-2xl mb-1">💬</p>
               <h2 className="text-xl font-black uppercase tracking-tight text-white">
                 Still have a question?
               </h2>
-              <p className="mt-2 text-slate-400 font-medium text-sm">
+              <p className="mt-2 text-sky-100 font-medium text-sm">
                 WhatsApp us — our technicians reply within 30 minutes.
               </p>
               <a
