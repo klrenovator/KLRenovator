@@ -58,12 +58,14 @@ export const Footer = () => {
           </ul>
         </div>
 
-        {/* Service Areas — ALL cities shown (no slice limit) */}
+        {/* ── Service Areas — Tamam cities (Batu Caves included) ── */}
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_areas")}</p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
             {siteConfig.areas.map((area) => (
-              <li key={area} className="text-xs text-slate-500 font-medium">{area}</li>
+              <li key={area} className="text-xs text-slate-500 font-medium">
+                {area}
+              </li>
             ))}
           </ul>
         </div>
