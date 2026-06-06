@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { FaWhatsapp, FaChevronDown } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
@@ -216,7 +217,6 @@ const CATEGORIES = [
   { key: "trust", label: { en: "Trust & Areas", ms: "Kawasan & Waranti", zh: "保障与覆盖范围" } },
 ];
 
-// ─── Single FAQ Item ──────────────────────────────────────────────────────────
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
@@ -240,7 +240,6 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
 export default function FaqPage() {
   const { lang, setLang } = useLang();
   const [activeCategory, setActiveCategory] = useState("all");
@@ -264,27 +263,35 @@ export default function FaqPage() {
 
   return (
     <>
-      {/* Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero */}
-      <section className="bg-slate-950 text-white py-16 sm:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(14,165,233,0.08),transparent_60%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Hero — White + watermark */}
+      <section className="relative bg-white overflow-hidden border-b border-slate-100">
+        <div className="absolute inset-0 opacity-[0.07]">
+          <Image
+            src="/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg"
+            alt="HVAC technician servicing aircond unit"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-400 mb-4">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-4">
               Knowledge Base
             </p>
-            <h1 className="text-4xl sm:text-5xl font-black tracking-tight uppercase text-white max-w-2xl leading-[1.05]">
-              Frequently Asked <span className="text-sky-400">Questions</span>
+            <h1 className="text-4xl sm:text-5xl font-black tracking-tight uppercase text-slate-900 max-w-2xl leading-[1.05]">
+              Frequently Asked <span className="text-sky-500">Questions</span>
             </h1>
-            <p className="mt-5 text-slate-400 font-medium max-w-xl leading-relaxed">
+            <p className="mt-5 text-slate-600 font-medium max-w-xl leading-relaxed">
               Quick honest answers about our aircon services, pricing, warranty, and coverage areas — in English, Bahasa Malaysia, and Chinese.
             </p>
-            {/* Language tabs — clickable, connected to lang context */}
             <div className="mt-6 flex items-center gap-2 flex-wrap">
               <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">FAQ available in:</span>
               {([
@@ -298,7 +305,7 @@ export default function FaqPage() {
                   className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-all duration-200 ${
                     lang === opt.code
                       ? "bg-sky-500 border-sky-400 text-white shadow-sm"
-                      : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 hover:border-slate-500"
+                      : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50 hover:border-slate-400"
                   }`}
                 >
                   {opt.flag} {opt.label}
@@ -333,12 +340,9 @@ export default function FaqPage() {
       {/* FAQ Accordion */}
       <section className="py-12 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-
-          {/* Count */}
           <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6">
             {filtered.length} questions
           </p>
-
           <div className="bg-white rounded-2xl border border-slate-100 shadow-sm px-6 sm:px-8 divide-y divide-slate-100">
             {filtered.map((faq, i) => (
               <Reveal key={i} delay={i * 20}>
@@ -346,8 +350,6 @@ export default function FaqPage() {
               </Reveal>
             ))}
           </div>
-
-          {/* Still have questions CTA */}
           <Reveal>
             <div className="mt-10 bg-[#0284c7] text-white rounded-2xl p-8 text-center">
               <p className="text-2xl mb-1">💬</p>
