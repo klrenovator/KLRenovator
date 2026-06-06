@@ -131,26 +131,26 @@ export default function ContactPage() {
                 <div className="mt-8 space-y-3">
                   {/* WhatsApp — Primary */}
                   <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-slate-950 hover:bg-slate-800 text-white p-5 transition-all group">
+                    className="flex items-center gap-4 bg-[#0284c7] hover:bg-[#0369a1] text-white p-5 transition-all group">
                     <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#22c55e]">
                       <FaWhatsapp className="h-6 w-6 text-white" />
                     </span>
                     <div className="flex-1">
-                      <p className="text-[11px] font-black uppercase tracking-wider text-slate-400">
+                      <p className="text-[11px] font-black uppercase tracking-wider text-sky-100">
                         Fastest · Reply within 30 mins
                       </p>
                       <p className="font-black uppercase tracking-tight text-white text-lg">
                         WhatsApp Us Now
                       </p>
                     </div>
-                    <span className="text-[#22c55e] font-black text-xl group-hover:translate-x-1 transition-transform">→</span>
+                    <span className="text-white font-black text-xl group-hover:translate-x-1 transition-transform">→</span>
                   </a>
 
                   {/* Phone */}
                   <a href={`tel:${siteConfig.phone}`}
                     className="flex items-center gap-4 border-2 border-slate-200 bg-white p-5 hover:border-sky-500 hover:bg-sky-50 transition-all">
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-slate-950 text-white">
-                      <FaPhone className="h-5 w-5 text-sky-400" />
+                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#0284c7] text-white">
+                      <FaPhone className="h-5 w-5 text-white" />
                     </span>
                     <div>
                       <p className="text-[11px] text-slate-500 font-black uppercase tracking-wider">Direct Call</p>
@@ -161,8 +161,8 @@ export default function ContactPage() {
                   {/* Email */}
                   <a href={`mailto:${siteConfig.email}`}
                     className="flex items-center gap-4 border-2 border-slate-200 bg-white p-5 hover:border-sky-500 hover:bg-sky-50 transition-all">
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-slate-950 text-white">
-                      <FaEnvelope className="h-5 w-5 text-sky-400" />
+                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#0284c7] text-white">
+                      <FaEnvelope className="h-5 w-5 text-white" />
                     </span>
                     <div>
                       <p className="text-[11px] text-slate-500 font-black uppercase tracking-wider">Email</p>
@@ -208,14 +208,14 @@ export default function ContactPage() {
 
             {/* Right: WhatsApp Quick-Select Form */}
             <Reveal delay={100}>
-              <div className="bg-slate-950 text-white p-8 sm:p-10">
-                <p className="text-xs font-black uppercase tracking-widest text-sky-400 mb-2">
+              <div className="bg-[#0284c7] text-white p-8 sm:p-10">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-100 mb-2">
                   Quick WhatsApp Booking
                 </p>
                 <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-2">
                   What do you need?
                 </h3>
-                <p className="text-slate-400 text-sm font-medium mb-8">
+                <p className="text-sky-100 text-sm font-medium mb-8">
                   Tap the service you need — it opens WhatsApp with your message ready.
                   No typing needed.
                 </p>
@@ -227,22 +227,22 @@ export default function ContactPage() {
                       href={`https://wa.me/60182983573?text=${encodeURIComponent(item.text)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between gap-3 bg-slate-900 hover:bg-[#22c55e] border border-slate-800 hover:border-[#22c55e] px-5 py-4 text-sm font-black uppercase tracking-wider text-white transition-all group"
+                      className="flex items-center justify-between gap-3 bg-white/15 hover:bg-[#22c55e] border border-white/20 hover:border-[#22c55e] px-5 py-4 text-sm font-black uppercase tracking-wider text-white transition-all group"
                     >
                       <span className="flex items-center gap-3">
-                        <FaWhatsapp className="h-4 w-4 text-[#22c55e] group-hover:text-white shrink-0" />
+                        <FaWhatsapp className="h-4 w-4 text-white shrink-0" />
                         {item.label}
                       </span>
-                      <span className="text-slate-500 group-hover:text-white transition-colors">→</span>
+                      <span className="text-sky-100 group-hover:text-white transition-colors">→</span>
                     </a>
                   ))}
                 </div>
 
-                <div className="mt-8 border-t border-slate-800 pt-6">
-                  <p className="text-xs text-slate-500 font-medium text-center">
+                <div className="mt-8 border-t border-white/20 pt-6">
+                  <p className="text-xs text-sky-100 font-medium text-center">
                     Or call us directly at{" "}
                     <a href={`tel:${siteConfig.phone}`}
-                      className="text-sky-400 font-black hover:text-white transition-colors">
+                      className="text-white font-black hover:text-sky-200 transition-colors">
                       {siteConfig.phoneDisplay}
                     </a>
                   </p>
