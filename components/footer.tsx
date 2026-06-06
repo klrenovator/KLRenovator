@@ -2,11 +2,7 @@
 
 import NextLink from "next/link";
 import {
-  FaPhone,
-  FaEnvelope,
-  FaLocationDot,
-  FaClock,
-  FaWhatsapp,
+  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp,
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
@@ -19,8 +15,6 @@ export const Footer = () => {
 
   return (
     <footer className="w-full bg-white text-slate-500 border-t border-slate-200">
-
-      {/* Main Footer Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* Brand Block */}
@@ -28,28 +22,21 @@ export const Footer = () => {
           <p className="text-slate-900 font-black text-xl tracking-tight uppercase">
             KL <span className="text-sky-500">RENOVATOR</span>
           </p>
-          <p className="text-xs leading-relaxed text-slate-500">
-            {t("footer_desc")}
-          </p>
-          {/* Social */}
+          <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
           <div className="flex items-center gap-3 pt-1">
-            <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
-              aria-label="WhatsApp"
+            <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
               className="p-2.5 bg-slate-100 hover:bg-[#22c55e] hover:text-white text-slate-500 transition-all rounded-lg">
               <FaWhatsapp className="h-4 w-4" />
             </a>
-            <a href={siteConfig.links.instagram} target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram"
+            <a href={siteConfig.links.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
               className="p-2.5 bg-slate-100 hover:bg-pink-600 hover:text-white text-slate-500 transition-all rounded-lg">
               <FaInstagram className="h-4 w-4" />
             </a>
-            <a href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"
+            <a href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"
               className="p-2.5 bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-500 transition-all rounded-lg">
               <FaFacebook className="h-4 w-4" />
             </a>
-            <a href={siteConfig.links.tiktok} target="_blank" rel="noopener noreferrer"
-              aria-label="TikTok"
+            <a href={siteConfig.links.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok"
               className="p-2.5 bg-slate-100 hover:bg-slate-700 hover:text-white text-slate-500 transition-all rounded-lg">
               <FaTiktok className="h-4 w-4" />
             </a>
@@ -58,16 +45,12 @@ export const Footer = () => {
 
         {/* Services List */}
         <div className="space-y-4">
-          <p className="text-xs font-black uppercase tracking-wider text-slate-900">
-            {t("footer_services")}
-          </p>
+          <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_services")}</p>
           <ul className="space-y-2">
             {siteConfig.services.map((s) => (
               <li key={s.slug}>
-                <NextLink
-                  href={`/services/${s.slug}`}
-                  className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium"
-                >
+                <NextLink href={`/services/${s.slug}`}
+                  className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
                   {s.title}
                 </NextLink>
               </li>
@@ -75,25 +58,19 @@ export const Footer = () => {
           </ul>
         </div>
 
-        {/* Service Areas */}
+        {/* Service Areas — ALL cities shown (no slice limit) */}
         <div className="space-y-4">
-          <p className="text-xs font-black uppercase tracking-wider text-slate-900">
-            {t("footer_areas")}
-          </p>
+          <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_areas")}</p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
-            {siteConfig.areas.slice(0, 14).map((area) => (
-              <li key={area} className="text-xs text-slate-500 font-medium">
-                {area}
-              </li>
+            {siteConfig.areas.map((area) => (
+              <li key={area} className="text-xs text-slate-500 font-medium">{area}</li>
             ))}
           </ul>
         </div>
 
         {/* Contact Block */}
         <div className="space-y-4">
-          <p className="text-xs font-black uppercase tracking-wider text-slate-900">
-            {t("footer_dispatch")}
-          </p>
+          <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_dispatch")}</p>
           <ul className="space-y-3 text-xs">
             <li>
               <a href={`tel:${siteConfig.phone}`}
@@ -121,16 +98,13 @@ export const Footer = () => {
               </div>
             </li>
           </ul>
-
-          {/* WhatsApp CTA */}
           <a
             href={waLink(rfqMsg)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all mt-2 rounded-xl"
           >
-            <FaWhatsapp className="h-4 w-4" />
-            Book Via WhatsApp
+            <FaWhatsapp className="h-4 w-4" /> Book Via WhatsApp
           </a>
         </div>
       </div>
@@ -138,22 +112,12 @@ export const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
-          <p>
-            © {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamic Resources). {t("footer_rights")}
-          </p>
+          <p>© {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamic Resources). {t("footer_rights")}</p>
           <div className="flex items-center gap-4">
-            <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">
-              Services
-            </NextLink>
-            <NextLink href="/gallery" className="hover:text-sky-600 transition-colors font-medium">
-              Gallery
-            </NextLink>
-            <NextLink href="/about" className="hover:text-sky-600 transition-colors font-medium">
-              About
-            </NextLink>
-            <NextLink href="/contact" className="hover:text-sky-600 transition-colors font-medium">
-              Contact
-            </NextLink>
+            <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">Services</NextLink>
+            <NextLink href="/gallery" className="hover:text-sky-600 transition-colors font-medium">Gallery</NextLink>
+            <NextLink href="/about" className="hover:text-sky-600 transition-colors font-medium">About</NextLink>
+            <NextLink href="/contact" className="hover:text-sky-600 transition-colors font-medium">Contact</NextLink>
           </div>
         </div>
       </div>
