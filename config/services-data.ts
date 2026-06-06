@@ -206,7 +206,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "All brands — Daikin, Panasonic, Mitsubishi, Midea, Samsung, York",
       "Free 7 ft copper pipe, wiring & drainage included",
       "Clean cable routing & post-install cooling test",
-      "1-year workmanship warranty",
+      "1-month workmanship warranty",
     ],
     process: [
       { step: "Site inspection", desc: "Check wall, power point & drainage route." },
@@ -217,7 +217,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       { q: "Do I need to buy the aircond separately?", a: "Yes — we install units you've purchased. We can also help source any brand, just ask on WhatsApp." },
       { q: "How long does installation take?", a: "Typically 2 – 4 hours for a standard split unit." },
-      { q: "Do you provide warranty?", a: "Yes — 1-year workmanship warranty on our installation." },
+      { q: "Do you provide warranty?", a: "Yes — 1-month workmanship warranty on our installation." },
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 199" },
@@ -280,7 +280,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Outdoor bracket mounting included",
       "Old unit dismantling available",
       "7ft copper pipe included as standard",
-      "1-year workmanship warranty",
+      "1-month workmanship warranty",
     ],
     process: [
       { step: "Site survey", desc: "We assess wall, pipe routing, and electrical points." },
@@ -333,7 +333,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "What is the diagnostic fee?", a: "RM 88 — waived if you proceed with the repair. You only pay for parts and labour." },
       { q: "My aircond keeps shutting off automatically. What's wrong?", a: "Common causes are a dirty filter, low gas, or a faulty thermistor sensor. Our technician will diagnose on-site." },
       { q: "Do you use original parts?", a: "We use OEM-compatible parts. Original brand parts can be sourced on request — lead time may apply." },
-      { q: "Is there a warranty on repairs?", a: "Yes — 3-month warranty on replaced parts, and 1-year workmanship warranty." },
+      { q: "Is there a warranty on repairs?", a: "Yes — 3-month warranty on replaced parts, and 1-month workmanship warranty." },
     ],
     priceTable: [
       { label: "Diagnostic / inspection fee", price: "RM 88 (waived on repair)" },
