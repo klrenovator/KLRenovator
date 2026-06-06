@@ -157,7 +157,7 @@ export const ServicesWithPricing = () => {
                 <div className="mt-8 flex flex-col gap-3">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex w-full items-center justify-center gap-2 bg-slate-950 hover:bg-sky-600 text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
+                    className="inline-flex w-full items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
                   >
                     View Details & Pricing
                     <FaArrowRight className="h-3 w-3" />
