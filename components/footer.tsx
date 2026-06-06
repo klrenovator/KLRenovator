@@ -145,6 +145,9 @@ export const Footer = () => {
             <NextLink href="/services" className="hover:text-slate-300 transition-colors font-medium">
               Services
             </NextLink>
+            <NextLink href="/gallery" className="hover:text-slate-300 transition-colors font-medium">
+              Gallery
+            </NextLink>
             <NextLink href="/about" className="hover:text-slate-300 transition-colors font-medium">
               About
             </NextLink>
