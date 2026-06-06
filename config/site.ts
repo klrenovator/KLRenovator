@@ -459,7 +459,7 @@ export const siteConfig = {
   links: {
     whatsapp: "https://wa.me/60182983573",
     facebook: "https://www.facebook.com/share/1HV3kAqC6V/",
-    instagram: "https://www.instagram.com/klrneovator?igsh=MTNqb3p1NDExZ3Boeg==",
+    instagram: "https://www.instagram.com/klrenovator?igsh=MTNqb3p1NDExZ3Boeg==",
     tiktok: "https://www.tiktok.com/@klrenovator?_r=1&_t=ZS-96tR1k7aVU5",
     googleMaps: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
     googleBusiness: "https://share.google/HhXvqWDkefZ5bzNdL",
