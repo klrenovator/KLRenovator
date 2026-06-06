@@ -28,14 +28,11 @@ export const siteConfig = {
     "Kuala Lumpur", "Selangor", "Ampang", "Cheras", "Petaling Jaya",
     "Subang Jaya", "Puchong", "Shah Alam", "Damansara", "Klang",
     "Kajang", "Bangsar", "Mont Kiara", "Setapak", "Sentul",
-    "Putrajaya", "Cyberjaya",
+    "Batu Caves", "Putrajaya", "Cyberjaya",
   ],
 
   brandsSupported: ["Daikin", "Panasonic", "Mitsubishi", "York", "Midea", "LG", "Samsung"],
 
-  // IMPORTANT: category field required for services-with-pricing.tsx tab filter
-  // ORDER: 1.Installation 2.Basic Servicing 3.Chemical Wash 4.Chemical Overhaul
-  //        5.Gas Top-Up 6.Repair 7.Dismantle & Relocate  (+ commercial extras)
   services: [
     {
       slug: "installation",
@@ -190,15 +187,15 @@ export const siteConfig = {
     materials: {
       title: "Additional High-Quality Materials",
       rows: [
-        { label: "Premium Copper Pipe · 1.0 – 1.5 HP", price: "RM 22 – 25 / ft" },
-        { label: "Premium Copper Pipe · 3.0 – 3.5 HP", price: "RM 30 – 35 / ft" },
-        { label: "Standard Outdoor Bracket", price: "RM 20" },
-        { label: "Heavy-Duty Outdoor Bracket", price: "RM 35" },
-        { label: "Protective Cable Tray Setup", price: "RM 50" },
-        { label: "PVC Trunking / Conduit Layout", price: "RM 15 – 25 / m" },
-        { label: "Wall Hacking & Concealment Work", price: "RM 80 – 200" },
-        { label: "High-Rise / Difficult Access Charge", price: "RM 50 – 150" },
+        { label: "Premium Copper Pipe · 1.0 – 2.0 HP", price: "RM 17 / ft" },
+        { label: "Premium Copper Pipe · 2.5 – 3.5 HP", price: "RM 26 / ft" },
+        { label: "Standard Outdoor Bracket", price: "RM 45" },
+        { label: "Indoor Universal Bracket", price: "RM 25" },
+        { label: "PVC Casing Wire / Copper Pipe", price: "RM 6 – 12 / ft" },
         { label: "Dedicated Electrical Plug Point Installation", price: "RM 100" },
+        { label: "Wall Hacking & Concealment Work", price: "RM 6 / ft" },
+        { label: "High-Rise / Difficult Access Charge", price: "RM 50 – 150" },
+        { label: "Standard Metal Cable Tray (White/Orange/HDG)", price: "RM 16 / ft" },
       ],
     },
     contracts: {
