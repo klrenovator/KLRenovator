@@ -287,9 +287,9 @@ export const Navbar = () => {
           <div className="px-5 py-5 grid grid-cols-2 gap-3 bg-slate-50/50 border-t border-slate-100">
             <a
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2 bg-slate-950 px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
             >
-              <FaPhone className="h-3.5 w-3.5 text-[#0284c7]" /> {t("nav_call")}
+              <FaPhone className="h-3.5 w-3.5 text-white" /> {t("nav_call")}
             </a>
             <a
               href={waLink(rfqMsg)}
