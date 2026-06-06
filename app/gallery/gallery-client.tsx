@@ -1,22 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import NextImage from "next/image";
 import { FaWhatsapp, FaXmark, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
-
-// ─────────────────────────────────────────────────────────────────────────────
-// GALLERY DATA
-// To add new photos: just add an object to the GALLERY_ITEMS array below.
-// Fields:
-//   id        — unique number
-//   category  — must be one of the CATEGORIES keys (e.g. "installation")
-//   title     — short caption shown in the card
-//   desc      — optional longer description shown in lightbox
-//   src       — URL of the image (Unsplash, your CDN, or /public path)
-//   before    — (optional) src of before photo for before/after cards
-// ─────────────────────────────────────────────────────────────────────────────
 
 export type GalleryItem = {
   id: number;
@@ -24,7 +13,7 @@ export type GalleryItem = {
   title: string;
   desc?: string;
   src: string;
-  before?: string; // for before/after
+  before?: string;
 };
 
 export const GALLERY_ITEMS: GalleryItem[] = [
@@ -126,7 +115,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     desc: "4 cassette units for fashion retail outlet. Completed over one weekend.",
     src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
   },
-  // ── TECHNICIANS ───────────────────────────────────────────────
+  // ── TEAM ──────────────────────────────────────────────────────
   {
     id: 14,
     category: "team",
@@ -143,7 +132,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
 ];
 
-// ─── CATEGORIES ──────────────────────────────────────────────────────────────
 const CATEGORIES = [
   { key: "all",           label: "All Projects" },
   { key: "installation",  label: "Installations" },
@@ -153,8 +141,6 @@ const CATEGORIES = [
   { key: "commercial",    label: "Commercial" },
   { key: "team",          label: "Our Team" },
 ];
-
-// ─── COMPONENT ───────────────────────────────────────────────────────────────
 
 export function GalleryClient() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -193,27 +179,40 @@ export function GalleryClient() {
 
   return (
     <main>
-      {/* Hero Banner */}
-      <section className="bg-slate-950 text-white py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      {/* ── HERO — White + Low-Opacity Watermark ── */}
+      <section className="relative bg-white overflow-hidden border-b border-slate-100 py-16 sm:py-20">
+        {/* Watermark */}
+        <div className="absolute inset-0 opacity-[0.07]">
+          <NextImage
+            src="/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg"
+            alt="KL Renovator aircond installation project"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-white/60" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-400 mb-4">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-4">
               Real Projects · Real Results
             </p>
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900">
               Our Work Gallery
             </h1>
-            <p className="mt-4 text-slate-400 max-w-2xl mx-auto font-medium">
-              Browse our real project photos — installations, chemical wash, overhaul, commercial HVAC, repairs, and our team at work across KL & Selangor.
+            <p className="mt-4 text-slate-600 max-w-2xl mx-auto font-medium">
+              Browse our real project photos — installations, chemical wash, overhaul, commercial HVAC, repairs, and our team at work across KL &amp; Selangor.
             </p>
             <div className="mt-8 flex justify-center gap-4 flex-wrap">
-              <span className="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold px-4 py-2 rounded-full">
+              <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
                 📸 {GALLERY_ITEMS.length}+ Project Photos
               </span>
-              <span className="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold px-4 py-2 rounded-full">
-                🏙️ KL & Selangor
+              <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
+                🏙️ KL &amp; Selangor
               </span>
-              <span className="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold px-4 py-2 rounded-full">
+              <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
                 ✅ Verified Projects
               </span>
             </div>
@@ -256,7 +255,6 @@ export function GalleryClient() {
                     onClick={() => openLightbox(index)}
                     aria-label={`View: ${item.title}`}
                   >
-                    {/* Image */}
                     <div className="relative aspect-[4/3] overflow-hidden bg-slate-200">
                       <img
                         src={item.src}
@@ -264,31 +262,24 @@ export function GalleryClient() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
-                      {/* Before/After badge */}
                       {item.before && (
                         <span className="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
                           Before / After
                         </span>
                       )}
-                      {/* Category badge */}
                       <span className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
                         {CATEGORIES.find((c) => c.key === item.category)?.label}
                       </span>
-                      {/* Hover overlay */}
                       <div className="absolute inset-0 bg-sky-900/0 group-hover:bg-sky-900/20 transition-all duration-300 flex items-center justify-center">
                         <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white text-slate-900 text-xs font-black uppercase tracking-wider px-4 py-2 rounded-full shadow-lg">
                           View Full
                         </span>
                       </div>
                     </div>
-
-                    {/* Caption */}
                     <div className="p-4">
                       <p className="font-black text-slate-900 text-sm leading-snug">{item.title}</p>
                       {item.desc && (
-                        <p className="text-xs text-slate-400 mt-1.5 line-clamp-2 font-medium">
-                          {item.desc}
-                        </p>
+                        <p className="text-xs text-slate-400 mt-1.5 line-clamp-2 font-medium">{item.desc}</p>
                       )}
                     </div>
                   </button>
@@ -297,7 +288,7 @@ export function GalleryClient() {
             </div>
           )}
 
-          {/* Add More Notice for owner */}
+          {/* CTA */}
           <Reveal>
             <div className="mt-16 bg-sky-50 border border-sky-100 rounded-2xl p-8 text-center">
               <p className="text-2xl mb-2">📸</p>
@@ -356,8 +347,8 @@ export function GalleryClient() {
               </div>
             )}
 
-            {/* Image */}
-            <div className="relative aspect-video bg-slate-900">
+            {/* ── Image container — light background (was dark bg-slate-900) ── */}
+            <div className="relative aspect-video bg-slate-100">
               <img
                 src={showBefore && currentItem.before ? currentItem.before : currentItem.src}
                 alt={currentItem.title}
@@ -388,7 +379,7 @@ export function GalleryClient() {
             </div>
           </div>
 
-          {/* Prev / Next */}
+          {/* Prev/Next */}
           {filtered.length > 1 && (
             <>
               <button
