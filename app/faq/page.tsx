@@ -8,24 +8,24 @@ import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
-
 // ─── FAQ DATA — All 3 Languages ──────────────────────────────────────────────
+// IMPORTANT: All prices synced with site.ts and services-data.ts (June 2026)
 const FAQS = {
   en: [
     {
       category: "pricing",
-      q: "How much does a chemical wash cost?",
-      a: "Chemical wash starts from RM 120 for a 1.0–1.5 HP wall-mounted unit. Prices vary by unit type and HP size. Check our full price list on the Services page.",
+      q: "How much does a chemical wash cost in KL & Selangor?",
+      a: "Chemical wash starts from RM 160 for a standard 1.0–1.5 HP wall-mounted unit. Ceiling cassette starts from RM 220. Prices vary by unit type and HP size. All prices confirmed before work begins — no hidden charges.",
     },
     {
       category: "pricing",
       q: "Are there any hidden charges?",
-      a: "No hidden charges at all. We provide a full quote before starting any work. Extra materials (copper pipe, brackets) are quoted and approved by you on-site before installation.",
+      a: "No hidden charges at all. We provide a full quote before starting any work. Extra materials (copper pipe, brackets, casing) are quoted and approved by you on-site before installation.",
     },
     {
       category: "pricing",
       q: "What is your emergency / after-hours rate?",
-      a: "Standard hours are 9:00 AM to 6:00 PM. Jobs booked between 6:00 PM and 10:00 PM carry an overtime surcharge of RM 50.",
+      a: "Standard hours are 9:00 AM to 6:00 PM daily. Jobs booked between 6:00 PM and 10:00 PM carry a mandatory overtime surcharge of RM 50. Total after-hours diagnostic fee is RM 138.",
     },
     {
       category: "pricing",
@@ -33,24 +33,29 @@ const FAQS = {
       a: "Yes! 2–3 units: 5% off. 4–8 units: 10% off. 8+ units: 15% off. Discounts apply to labour charges. WhatsApp us to confirm.",
     },
     {
-      category: "service",
-      q: "What is the difference between chemical wash and chemical overhaul?",
-      a: "A chemical wash cleans the unit while it stays mounted on the wall — great for regular maintenance. A chemical overhaul fully dismantles the unit for a deep clean of every internal component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
+      category: "pricing",
+      q: "How much does gas top-up cost?",
+      a: "R22 gas top-up starts from RM 100. R410A from RM 120. R32 from RM 130. Price depends on unit HP size. Leak check is included with every gas top-up.",
     },
     {
       category: "service",
-      q: "How often should I service my aircond?",
-      a: "For light use (evenings only), service every 6 months. For heavy use (8+ hours daily), every 3 months. A chemical wash is recommended annually regardless of usage.",
+      q: "What is the difference between chemical wash and chemical overhaul?",
+      a: "A chemical wash (from RM 160) cleans the unit while it stays mounted on the wall — great for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the unit for a deep clean of every internal component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
+    },
+    {
+      category: "service",
+      q: "How often should I service my aircond in Malaysia?",
+      a: "For light use (evenings only), service every 6 months. For heavy use (8+ hours daily), every 3 months. A chemical wash is recommended annually regardless of usage. Malaysia's humidity means units accumulate dirt faster than in temperate countries.",
     },
     {
       category: "service",
       q: "My aircond is running but not cold. What's wrong?",
-      a: "The most common causes are low refrigerant gas, a dirty evaporator coil, or a faulty capacitor. Our technicians diagnose the exact issue and quote you before any repair starts. Diagnostic fee is RM 88 (waived if repair is done).",
+      a: "The most common causes are low refrigerant gas, a dirty evaporator coil, or a faulty capacitor. Our technicians diagnose the exact issue and quote you before any repair starts. Diagnostic fee is RM 88 (waived if repair is done on the same visit).",
     },
     {
       category: "service",
       q: "My aircond is leaking water. What should I do?",
-      a: "Switch off the unit if leaking heavily to prevent damage. The most common cause is a blocked drain pipe — usually fixed with a basic service. If severe (heavy leaking, ice forming), a chemical overhaul may be needed.",
+      a: "Switch off the unit if leaking heavily to prevent damage. The most common cause is a blocked drain pipe — usually fixed with a basic service or chemical wash. If leaking continues after a wash, a chemical overhaul is needed to clean the drain pan and internal channels properly.",
     },
     {
       category: "service",
@@ -60,39 +65,39 @@ const FAQS = {
     {
       category: "service",
       q: "Do you do commercial and office aircond servicing?",
-      a: "Yes, we handle commercial ceiling cassette units, VRF/VRV systems, ducted systems, and large-capacity commercial units. We also offer annual maintenance contracts for offices and commercial properties.",
+      a: "Yes, we handle commercial ceiling cassette units, VRF/VRV multi-split systems, and large-capacity commercial units. We also offer annual maintenance contracts for offices and commercial properties.",
     },
     {
       category: "booking",
       q: "How do I book a service?",
-      a: "The fastest way is via WhatsApp at +60 18-298 3573. Tell us your unit type, area, and the issue — we'll confirm availability and pricing within 30 minutes.",
+      a: "The fastest way is via WhatsApp at +60 18-298 3573. Tell us your unit type (HP and brand), area, and the issue. We'll confirm availability and pricing within 30 minutes.",
     },
     {
       category: "booking",
       q: "Do you offer same-day service?",
-      a: "Yes, same-day appointments are available subject to technician availability. WhatsApp us early in the morning for the best chance of a same-day slot.",
+      a: "Yes, same-day appointments are available subject to technician availability. WhatsApp us early in the morning for the best chance of a same-day slot across KL and Selangor.",
     },
     {
       category: "trust",
       q: "Is there a warranty on your work?",
-      a: "Yes. All workmanship carries a 1-month warranty. Parts and components replaced by us are covered under the respective manufacturer's warranty.",
+      a: "Yes. All workmanship carries a 1-month warranty. Replaced parts carry a 3-month warranty. If any related issue arises within the warranty period, we return and inspect at no charge.",
     },
     {
       category: "trust",
-      q: "What areas do you cover?",
-      a: "We cover the entire Klang Valley — all areas of Kuala Lumpur and Selangor including Ampang, Batu Caves, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Putrajaya, and Cyberjaya.",
+      q: "What areas does KL Renovator cover?",
+      a: "We cover the entire Klang Valley — all areas of Kuala Lumpur and Selangor including Petaling Jaya, Ampang, Batu Caves, Cheras, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Selayang, Putrajaya, and Cyberjaya.",
     },
     {
       category: "trust",
       q: "What brands do you service?",
-      a: "We service all major brands including Daikin, Panasonic, Mitsubishi, York, Midea, LG, and Samsung. If your brand isn't listed, WhatsApp us — we likely service it.",
+      a: "We service all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models. If your brand isn't listed, WhatsApp us — we likely service it.",
     },
   ],
   ms: [
     {
       category: "pricing",
-      q: "Berapa harga cuci kimia (chemical wash)?",
-      a: "Cuci kimia bermula dari RM 120 untuk unit dinding 1.0–1.5 HP. Harga bergantung kepada jenis dan saiz HP unit. Semak senarai harga penuh di halaman Perkhidmatan kami.",
+      q: "Berapa harga cuci kimia (chemical wash) di KL & Selangor?",
+      a: "Cuci kimia bermula dari RM 160 untuk unit dinding 1.0–1.5 HP. Ceiling cassette bermula RM 220. Harga bergantung kepada jenis dan saiz HP unit. Semua harga disahkan sebelum kerja bermula — tiada caj tersembunyi.",
     },
     {
       category: "pricing",
@@ -102,7 +107,7 @@ const FAQS = {
     {
       category: "pricing",
       q: "Adakah terdapat kadar lebih masa?",
-      a: "Waktu standard ialah 9:00 PG hingga 6:00 PTG. Kerja yang ditempah antara 6:00 PTG – 10:00 malam akan dikenakan tambahan RM 50.",
+      a: "Waktu standard ialah 9:00 PG hingga 6:00 PTG setiap hari. Kerja yang ditempah antara 6:00 PTG – 10:00 malam akan dikenakan tambahan wajib RM 50. Jumlah yuran diagnosis luar waktu ialah RM 138.",
     },
     {
       category: "pricing",
@@ -112,12 +117,12 @@ const FAQS = {
     {
       category: "service",
       q: "Apa beza cuci kimia dan overhaul kimia?",
-      a: "Cuci kimia membersihkan unit di tempat ia terpasang — sesuai untuk penyelenggaraan biasa. Overhaul kimia menanggalkan unit sepenuhnya untuk pembersihan mendalam setiap komponen — disyorkan untuk kebocoran air, pembentukan ais, atau unit yang tidak diservis lebih 3 tahun.",
+      a: "Cuci kimia (dari RM 160) membersihkan unit di tempat ia terpasang — sesuai untuk penyelenggaraan biasa. Overhaul kimia (dari RM 220) menanggalkan unit sepenuhnya untuk pembersihan mendalam setiap komponen — disyorkan untuk kebocoran air, pembentukan ais, atau unit yang tidak diservis lebih 3 tahun.",
     },
     {
       category: "service",
-      q: "Berapa kerap saya perlu servis aircond?",
-      a: "Penggunaan ringan (waktu malam sahaja): setiap 6 bulan. Penggunaan berat (8+ jam sehari): setiap 3 bulan. Cuci kimia disyorkan setiap tahun.",
+      q: "Berapa kerap saya perlu servis aircond di Malaysia?",
+      a: "Penggunaan ringan (waktu malam sahaja): setiap 6 bulan. Penggunaan berat (8+ jam sehari): setiap 3 bulan. Cuci kimia disyorkan setiap tahun kerana kelembapan tinggi di Malaysia menyebabkan unit kotor lebih cepat.",
     },
     {
       category: "service",
@@ -132,29 +137,29 @@ const FAQS = {
     {
       category: "booking",
       q: "Adakah servis hari sama tersedia?",
-      a: "Ya, temujanji hari sama tersedia bergantung kepada ketersediaan juruteknik. WhatsApp kami awal pagi untuk peluang terbaik mendapat slot hari sama.",
+      a: "Ya, temujanji hari sama tersedia bergantung kepada ketersediaan juruteknik. WhatsApp kami awal pagi untuk peluang terbaik mendapat slot hari sama merentasi KL dan Selangor.",
     },
     {
       category: "trust",
       q: "Adakah terdapat waranti untuk kerja anda?",
-      a: "Ya. Semua kerja buruh dilindungi waranti 1 bulan. Komponen yang diganti oleh kami dilindungi di bawah waranti pengilang.",
+      a: "Ya. Semua kerja buruh dilindungi waranti 1 bulan. Komponen yang diganti dilindungi waranti 3 bulan. Jika masalah berkaitan timbul dalam tempoh waranti, kami akan kembali dan memeriksa tanpa sebarang bayaran.",
     },
     {
       category: "trust",
-      q: "Kawasan mana yang anda liputi?",
-      a: "Kami meliputi seluruh Lembah Klang — semua kawasan Kuala Lumpur dan Selangor termasuk Ampang, Batu Caves, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, dan Cyberjaya.",
+      q: "Kawasan mana yang KL Renovator liputi?",
+      a: "Kami meliputi seluruh Lembah Klang — semua kawasan Kuala Lumpur dan Selangor termasuk Petaling Jaya, Ampang, Batu Caves, Cheras, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Selayang, Putrajaya dan Cyberjaya.",
     },
     {
       category: "trust",
       q: "Jenama apa yang anda servis?",
-      a: "Kami servis semua jenama utama termasuk Daikin, Panasonic, Mitsubishi, York, Midea, LG, dan Samsung. Jika jenama anda tidak disenaraikan, WhatsApp kami — kami mungkin servisnya.",
+      a: "Kami servis semua jenama utama termasuk Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp dan Haier. Jika jenama anda tidak disenaraikan, WhatsApp kami.",
     },
   ],
   zh: [
     {
       category: "pricing",
-      q: "化学清洗（Chemical Wash）费用是多少？",
-      a: "化学清洗起价 RM 120，适用于 1.0–1.5 HP 壁挂式冷气机。价格因机型和匹数而异。请查阅服务页面的完整价格表。",
+      q: "KL & 雪兰莪化学清洗（Chemical Wash）费用是多少？",
+      a: "化学清洗起价 RM 160，适用于 1.0–1.5 HP 壁挂式冷气机。天花板卡式机起价 RM 220。价格因机型和匹数而异。所有价格在开工前确认——没有隐藏收费。",
     },
     {
       category: "pricing",
@@ -169,12 +174,12 @@ const FAQS = {
     {
       category: "service",
       q: "化学清洗和化学大修（Chemical Overhaul）有什么区别？",
-      a: "化学清洗是在机器安装状态下进行清洗，适合定期保养。化学大修是将室内机完全拆卸进行深层清洁，适合严重漏水、结冰或超过 3 年未保养的机器。",
+      a: "化学清洗（起价 RM 160）是在机器安装状态下进行清洗，适合定期保养。化学大修（起价 RM 220）是将室内机完全拆卸进行深层清洁，适合严重漏水、结冰或超过 3 年未保养的机器。",
     },
     {
       category: "service",
       q: "冷气机应该多久保养一次？",
-      a: "轻度使用（晚间使用）：每 6 个月一次。重度使用（每天 8 小时以上）：每 3 个月一次。无论使用频率如何，建议每年进行一次化学清洗。",
+      a: "轻度使用（晚间使用）：每 6 个月一次。重度使用（每天 8 小时以上）：每 3 个月一次。无论使用频率如何，建议每年进行一次化学清洗。马来西亚湿度高，冷气机积尘更快。",
     },
     {
       category: "service",
@@ -194,12 +199,12 @@ const FAQS = {
     {
       category: "trust",
       q: "服务是否有保固？",
-      a: "是的。所有工艺提供 1 个月保固。我们更换的零件受制造商保固保障。",
+      a: "是的。所有工艺提供 1 个月保固，更换零件提供 3 个月保固。保固期内如有相关问题，我们免费上门检查。",
     },
     {
       category: "trust",
       q: "服务范围覆盖哪些地区？",
-      a: "我们覆盖整个巴生谷地区——包括吉隆坡及雪兰莪所有地区，如安邦、蕉赖、八打灵再也、梳邦再也、普城、沙阿南、白沙罗、巴生、加影、孟沙、满家乐及布城等。",
+      a: "我们覆盖整个巴生谷地区——包括吉隆坡及雪兰莪所有地区，如八打灵再也、安邦、蕉赖、梳邦再也、普城、沙阿南、白沙罗、巴生、加影、孟沙、满家乐、武吉洞、万宜及布城等。",
     },
     {
       category: "trust",
@@ -251,29 +256,14 @@ export default function FaqPage() {
     ? faqs
     : faqs.filter((f) => f.category === activeCategory);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQS.en.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
-    })),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
       {/* Hero — White + watermark */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
             src="/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg"
-            alt="HVAC technician servicing aircond unit"
+            alt="HVAC technician servicing aircond unit KL Selangor"
             fill
             sizes="100vw"
             className="object-cover object-center"
@@ -290,7 +280,7 @@ export default function FaqPage() {
               Frequently Asked <span className="text-sky-500">Questions</span>
             </h1>
             <p className="mt-5 text-slate-600 font-medium max-w-xl leading-relaxed">
-              Quick honest answers about our aircon services, pricing, warranty, and coverage areas — in English, Bahasa Malaysia, and Chinese.
+              Quick honest answers about our aircon services, pricing, warranty, and coverage areas in KL & Selangor — in English, Bahasa Malaysia, and Chinese.
             </p>
             <div className="mt-6 flex items-center gap-2 flex-wrap">
               <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">FAQ available in:</span>
