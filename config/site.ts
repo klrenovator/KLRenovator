@@ -542,6 +542,15 @@ export const siteConfig = {
         { label: "Standard Metal Cable Tray", price: "RM 15/ft" },
       ],
     },
+    contracts: {
+      title: "Annual Corporate & Residential Maintenance Contracts",
+      rows: [
+        { label: "Residential Package · 2 – 4 units / year contract", price: "RM 499" },
+        { label: "Residential Package · 5+ units / year contract", price: "RM 999" },
+        { label: "Commercial Package · 5 – 10 units / year contract", price: "RM 1,999" },
+        { label: "Commercial Package · 10+ units / year contract", price: "RM 3,499" },
+      ],
+    },
   },
 
   volumeDiscounts: [
