@@ -7,7 +7,7 @@ const BASE = "https://www.klrenovator.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  // Static pages
+  // ── Static Pages ──────────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE,
@@ -19,13 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE}/services`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/gallery`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.85,
+      priority: 0.95,
     },
     {
       url: `${BASE}/about`,
@@ -43,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE}/faq`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.75,
     },
     {
       url: `${BASE}/blog`,
@@ -51,23 +45,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${BASE}/gallery`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
   ];
 
-  // Service detail pages
+  // ── Service Detail Pages ──────────────────────────────────────────────────
   const servicePages: MetadataRoute.Sitemap = siteConfig.services.map((s) => ({
     url: `${BASE}/services/${s.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.85,
+    priority: 0.9,
   }));
 
-  // Blog post pages
+  // ── Area Pages — CRITICAL for Local SEO ──────────────────────────────────
+  // These pages target "aircond service [area]" searches across KL & Selangor
+  const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
+    url: `${BASE}/areas/${area.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.88,
+  }));
+
+  // ── Blog Post Pages ───────────────────────────────────────────────────────
   const blogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: 0.72,
   }));
 
-  return [...staticPages, ...servicePages, ...blogPages];
+  return [...staticPages, ...servicePages, ...areaPages, ...blogPages];
 }
