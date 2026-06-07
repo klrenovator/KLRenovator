@@ -46,7 +46,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical wash cost in KL & Selangor?",
-        a: "Chemical wash starts from RM 120 for a wall-mounted 1.0–1.5 HP unit. Ceiling cassette starts from RM 220. All prices confirmed before work begins — no hidden charges.",
+        a: "Chemical wash starts from RM 160 for a wall-mounted 1.0–1.5 HP unit. Ceiling cassette starts from RM 220. All prices confirmed before work begins — no hidden charges.",
       },
       {
         q: "How often should I get a chemical wash?",
@@ -70,13 +70,13 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
     ],
     priceTable: [
-      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 150" },
-      { label: "Wall-Mounted · 3.0 - 3.5 HP", price: "RM 180" },
-      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 220" },
+      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 160" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 220" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 250" },
+      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 280" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 250" },
-      { label: "Ceiling Cassette · 4.0 – 5.0 HP", price: "RM 300" },
+      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 280" },
+      { label: "Ceiling Cassette · 4.0 – 5.0 HP", price: "RM 350" },
       { label: "Floor Standing · 3.0 – 5.0 HP", price: "RM 320" },
       { label: "Window Unit · 1.0 – 2.0 HP", price: "RM 130" },
       { label: "Window Unit · 2.5 – 3.0 HP", price: "RM 160" },
@@ -133,7 +133,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Wall-Mounted · 3.0 - 3.5 HP", price: "RM 350" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 350" },
       { label: "Ceiling Cassette · 1.0 – 3.0 HP", price: "RM 380 – 480" },
     ],
   },
@@ -222,7 +222,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "How much does gas top-up cost in KL & Selangor?",
-        a: "R22 gas starts from RM 120, R410A from RM 130, R32 from RM 150 — depending on unit size. All prices confirmed before work begins.",
+        a: "R22 gas starts from RM 100, R410A from RM 120, R32 from RM 130 — depending on unit size. All prices confirmed before work begins.",
       },
       {
         q: "My aircond is running but blowing warm air. Is it low gas?",
@@ -238,13 +238,13 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
     ],
     priceTable: [
-      { label: "R22 Gas · 1.0 HP", price: "RM 120" },
-      { label: "R22 Gas · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "R22 Gas · 2.5 – 3.0 HP", price: "RM 180" },
-      { label: "R410A Gas · 1.0 HP", price: "RM 130" },
+      { label: "R22 Gas · 1.0 HP", price: "RM 100" },
+      { label: "R22 Gas · 1.5 – 2.0 HP", price: "RM 130" },
+      { label: "R22 Gas · 2.5 – 3.0 HP", price: "RM 160" },
+      { label: "R410A Gas · 1.0 HP", price: "RM 120" },
       { label: "R410A Gas · 1.5 – 2.0 HP", price: "RM 150" },
       { label: "R410A Gas · 2.5 – 3.0 HP", price: "RM 180" },
-      { label: "R32 Gas · 1.0 HP", price: "RM 150" },
+      { label: "R32 Gas · 1.0 HP", price: "RM 130" },
       { label: "R32 Gas · 1.5 – 2.0 HP", price: "RM 180" },
       { label: "R32 Gas · 2.5 – 3.0 HP", price: "RM 200" },
     ],
@@ -299,20 +299,20 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Diagnostic / Inspection Fee (waived with repair)", price: "RM 88" },
-      { label: "Capacitor Replacement", price: "RM 180" },
+      { label: "Capacitor Replacement", price: "RM 120 – 180" },
       { label: "Copper Sensor / Thermistor Replacement", price: "RM 150" },
       { label: "Fan Motor Replacement", price: "RM 250 – 450" },
       { label: "PCB / Main Board Replacement", price: "RM 300 – 600" },
-      { label: "Drain Pipe Clearing", price: "RM 120" },
+      { label: "Drain Pipe Clearing", price: "RM 80 – 120" },
       { label: "Drain Pump Installation", price: "RM 300 – 400" },
-      { label: "Compressor Replacement", price: "RM 600 – 2,000" },
-      { label: "Remote Control Replacement", price: "RM 80 – 150" },
+      { label: "Compressor Replacement", price: "RM 800 – 2,000" },
+      { label: "Remote Control Replacement", price: "RM 60 – 100" },
     ],
   },
 
   installation: {
     slug: "installation",
-    title: "New Unit Installation",
+    title: "New Unit Installation & Dismantling",
     tagline: "Professional AC installation for all brands — clean routing, proper commissioning, 1-month warranty.",
     description:
       "KL Renovator installs all types of split-unit and ceiling cassette airconds for homes, condos and offices across KL and Selangor. Our technicians handle the complete scope: copper pipe routing, wiring, drainage, outdoor bracket mounting, and a full vacuum and test-run before handover. Old unit dismantling is also available. Standard installation includes free 7ft copper pipe, wiring, insulation and water pipe.",
@@ -322,7 +322,8 @@ export const servicesData: Record<string, ServiceDetail> = {
     highlights: [
       "All brands — Daikin, Panasonic, Mitsubishi, Midea, Samsung, York, LG",
       "Free 7ft copper pipe, wiring, insulation and water pipe included",
-      "Clean cable and pipe routing" 
+      "Clean concealed cable and pipe routing",
+      "Outdoor bracket mounting included",
       "Vacuum, commissioning and cooling test before handover",
       "Old unit dismantling available from RM 90",
       "Same-day installation available",
@@ -341,7 +342,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "What if I need more copper pipe than 7ft?",
-        a: "Additional copper pipe is charged at RM 18/ft. Additional wiring at RM 9/ft. All extra materials quoted and approved by you on-site before installation.",
+        a: "Additional copper pipe is charged at RM 17/ft. Additional wiring at RM 9/ft. All extra materials quoted and approved by you on-site before installation.",
       },
       {
         q: "Do I need to buy the aircond unit separately?",
@@ -357,7 +358,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Do you install ceiling cassette units?",
-        a: "Yes — ceiling cassette installation starts from RM 290 for 1.0–1.5 HP. We handle all ceiling prep, ducting, drain pump setup and commissioning.",
+        a: "Yes — ceiling cassette installation starts from RM 250 for 1.0–1.5 HP. We handle all ceiling prep, ducting, drain pump setup and commissioning.",
       },
     ],
     priceTable: [
@@ -368,10 +369,10 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Wall-Mounted · 3.0 HP", price: "RM 329" },
       { label: "Wall-Mounted · 4.0 HP", price: "RM 399" },
       { label: "Wall-Mounted · 5.0 HP", price: "RM 449" },
-      { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 290" },
+      { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 250" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
-      { label: "Additional copper pipe (per foot)", price: "RM 18" },
+      { label: "Additional copper pipe (per foot)", price: "RM 17" },
       { label: "Dismantling old unit", price: "From RM 90" },
     ],
   },
@@ -471,10 +472,10 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Basic Servicing · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Basic Servicing · 3.5 – 5.0 HP", price: "RM 250" },
       { label: "Chemical Wash · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 250" },
-      { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 300" },
+      { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 280" },
+      { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 350" },
       { label: "Chemical Overhaul · 1.0 – 3.0 HP", price: "RM 380 – 480" },
-      { label: "Installation · 1.0 – 1.5 HP", price: "RM 290" },
+      { label: "Installation · 1.0 – 1.5 HP", price: "RM 250" },
       { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
     ],
