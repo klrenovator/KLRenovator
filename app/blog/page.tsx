@@ -18,7 +18,54 @@ const LANG_LABELS: Record<Lang, string> = {
   zh: "🇨🇳 中文",
 };
 
+// ── ALL BLOGS — Full Trilingual Translations ──────────────────────────────────
 const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt: string }>> = {
+
+  "aircon-service-batu-caves-selayang-2026": {
+    en: {
+      title: "Aircon Service in Batu Caves & Selayang 2026 — Fast Response by KL Renovator",
+      excerpt: "Looking for reliable aircond service in Batu Caves or Selayang? KL Renovator dispatches trained HVAC technicians same-day across Batu Caves, Selayang, Kepong and surrounding areas.",
+    },
+    ms: {
+      title: "Servis Aircond Batu Caves & Selayang 2026 — Tindak Balas Pantas KL Renovator",
+      excerpt: "Cari servis aircond yang boleh dipercayai di Batu Caves atau Selayang? KL Renovator menghantar juruteknik HVAC terlatih pada hari yang sama merentasi Batu Caves, Selayang, Kepong dan kawasan sekitar.",
+    },
+    zh: {
+      title: "2026年白沙罗及士拉央冷气服务 — KL Renovator 快速响应",
+      excerpt: "寻找白沙罗或士拉央可靠的冷气服务？KL Renovator 在白沙罗、士拉央、甲洞及周边地区提供当天派遣专业技术员服务。",
+    },
+  },
+
+  "aircon-chemical-wash-price-malaysia-2026": {
+    en: {
+      title: "Aircond Chemical Wash Price Malaysia 2026 — Complete Breakdown",
+      excerpt: "How much does a chemical wash cost in Malaysia in 2026? Full price breakdown for wall-mounted, ceiling cassette and window units — from RM 120.",
+    },
+    ms: {
+      title: "Harga Cuci Kimia Aircond Malaysia 2026 — Senarai Lengkap",
+      excerpt: "Berapa harga cuci kimia di Malaysia pada 2026? Senarai harga lengkap untuk unit dinding, ceiling cassette dan unit tingkap — bermula dari RM 120.",
+    },
+    zh: {
+      title: "2026年马来西亚冷气化学清洗价格 — 完整分类",
+      excerpt: "2026年马来西亚化学清洗费用是多少？壁挂式、天花板卡式和窗式冷气的完整价格分类——从RM 120起。",
+    },
+  },
+
+  "signs-your-aircon-needs-chemical-overhaul-malaysia": {
+    en: {
+      title: "5 Signs Your Aircond Needs a Chemical Overhaul in Malaysia",
+      excerpt: "Water leaking, ice forming, bad smell after a wash? Your aircond might need a chemical overhaul — not just a basic clean. Learn the 5 key signs.",
+    },
+    ms: {
+      title: "5 Tanda Aircond Anda Perlukan Chemical Overhaul di Malaysia",
+      excerpt: "Kebocoran air, pembentukan ais, bau busuk selepas cuci? Aircond anda mungkin perlu overhaul kimia — bukan sekadar cuci biasa. Ketahui 5 tanda utama.",
+    },
+    zh: {
+      title: "5个迹象表明您的冷气需要化学大修",
+      excerpt: "漏水、结冰、清洗后仍有异味？您的冷气可能需要化学大修，而不仅仅是基本清洁。了解5个关键迹象。",
+    },
+  },
+
   "chemical-wash-vs-chemical-overhaul": {
     en: {
       title: "Chemical Wash vs Chemical Overhaul — What's the Difference?",
@@ -33,6 +80,7 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
       excerpt: "不确定您的空调需要化学清洗还是全面大修？本指南解释两种服务的区别及何时选择。",
     },
   },
+
   "aircon-not-cold-reasons": {
     en: {
       title: "Aircon Running But Not Cold? 7 Common Causes in Malaysia",
@@ -47,7 +95,8 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
       excerpt: "空调开了但房间还是热？这里有7个最常见的原因以及每个问题的解决方法。",
     },
   },
-  "how-often-service-aircond": {
+
+  "how-often-service-aircond-malaysia": {
     en: {
       title: "How Often Should You Service Your Aircond in Malaysia?",
       excerpt: "Discover the recommended aircond servicing frequency based on your usage patterns, unit type, and Malaysia's tropical climate.",
@@ -59,6 +108,51 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
     zh: {
       title: "在马来西亚多久保养一次空调？",
       excerpt: "根据您的使用习惯、机型和马来西亚热带气候，了解建议的空调保养频率。",
+    },
+  },
+
+  "r32-r410a-r22-gas-difference": {
+    en: {
+      title: "R32 vs R410A vs R22 — Which Gas Does Your Aircond Use?",
+      excerpt: "Confused about refrigerant gas types? This guide explains the difference between R22, R410A and R32 — and how to check which one your unit uses.",
+    },
+    ms: {
+      title: "R32 vs R410A vs R22 — Gas Mana yang Aircond Anda Guna?",
+      excerpt: "Keliru tentang jenis gas penyejuk? Panduan ini menerangkan perbezaan antara R22, R410A dan R32 — dan cara mengetahui yang mana digunakan oleh unit anda.",
+    },
+    zh: {
+      title: "R32 vs R410A vs R22 — 您的冷气使用哪种冷媒？",
+      excerpt: "对冷媒类型感到困惑？本指南解释R22、R410A和R32之间的区别，以及如何检查您的机器使用哪种冷媒。",
+    },
+  },
+
+  "aircond-water-leaking-causes": {
+    en: {
+      title: "Aircond Leaking Water? Here Are the Most Common Causes & Fixes",
+      excerpt: "Water dripping from your indoor unit? Don't ignore it. This guide covers the most common causes of aircond water leaks and how to fix each one.",
+    },
+    ms: {
+      title: "Aircond Bocor Air? Inilah Sebab Paling Biasa & Cara Membaikinya",
+      excerpt: "Air menitis dari unit dalaman anda? Jangan abaikan. Panduan ini merangkumi sebab paling biasa kebocoran air aircond dan cara membaikinya.",
+    },
+    zh: {
+      title: "冷气漏水？这些是最常见的原因和解决方法",
+      excerpt: "室内机滴水？不要忽视。本指南涵盖冷气漏水最常见的原因及每种情况的解决方法。",
+    },
+  },
+
+  "best-aircond-brands-malaysia-2025": {
+    en: {
+      title: "Best Aircond Brands in Malaysia 2025 — Daikin, Panasonic, Mitsubishi Compared",
+      excerpt: "Which aircond brand is best for Malaysian homes? We compare Daikin, Panasonic, Mitsubishi, Midea, York and more — from energy rating to after-sales service.",
+    },
+    ms: {
+      title: "Jenama Aircond Terbaik di Malaysia 2025 — Perbandingan Daikin, Panasonic, Mitsubishi",
+      excerpt: "Jenama aircond mana yang terbaik untuk rumah Malaysia? Kami membandingkan Daikin, Panasonic, Mitsubishi, Midea, York dan lain-lain — dari penilaian tenaga hingga servis selepas jualan.",
+    },
+    zh: {
+      title: "2025年马来西亚最佳冷气品牌 — 大金、松下、三菱比较",
+      excerpt: "哪个冷气品牌最适合马来西亚家庭？我们比较大金、松下、三菱、美的、约克等品牌——从能源评级到售后服务。",
     },
   },
 };
@@ -89,7 +183,7 @@ export default function BlogPage() {
               Aircond Tips &amp; <span className="text-sky-500">Expert Guides</span>
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-slate-500 font-medium">
-              Practical aircond advice from KL Renovator — Malaysia&apos;s trusted HVAC specialist.
+              Practical aircond advice from KL Renovator — Malaysia&apos;s trusted HVAC specialist across KL &amp; Selangor.
             </p>
 
             {/* Language Toggle */}
@@ -116,6 +210,7 @@ export default function BlogPage() {
       <section className="py-16 sm:py-20 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
+          {/* Featured Post */}
           {featured && (
             <Reveal>
               <NextLink href={`/blog/${featured.slug}`}
@@ -160,6 +255,7 @@ export default function BlogPage() {
             </Reveal>
           </div>
 
+          {/* All Posts Grid */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((post, i) => {
               const t = getTranslated(post.slug, lang);
@@ -191,19 +287,20 @@ export default function BlogPage() {
             })}
           </div>
 
+          {/* CTA */}
           <Reveal>
             <div className="mt-16 bg-sky-600 text-white p-8 sm:p-12 text-center rounded-2xl">
               <h3 className="text-2xl font-black uppercase tracking-tight">
                 Need expert help with your aircon?
               </h3>
               <p className="mt-2 text-sky-100 font-medium">
-                Talk to our team on WhatsApp — quick answers and same-day service.
+                Talk to our team on WhatsApp — quick answers and same-day service across KL &amp; Selangor.
               </p>
               <a
                 href={waLink(rfqMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 mt-6 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
+                className="inline-flex items-center gap-2.5 mt-6 bg-[#25D366] hover:bg-[#1ebe5d] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" /> Chat with Us on WhatsApp
               </a>
