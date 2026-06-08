@@ -9,17 +9,48 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
+// Each image paired with a unique, keyword-rich alt tag for SEO & accessibility
 const HERO_IMAGES = [
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.26.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.27.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg",
-  "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg",
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg",
+    alt: "KL Renovator technician performing aircond chemical wash Kuala Lumpur",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg",
+    alt: "Professional aircond installation wall-mounted unit Selangor",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.26.jpeg",
+    alt: "Aircond chemical overhaul deep cleaning indoor unit KL",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.27.jpeg",
+    alt: "HVAC technician gas top-up R32 R410A refrigerant Klang Valley",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg",
+    alt: "Aircond repair troubleshooting outdoor unit Petaling Jaya",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg",
+    alt: "Pressure chemical wash high-pressure rinse evaporator coil Selangor",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg",
+    alt: "Daikin Panasonic Mitsubishi aircond servicing Cheras Ampang",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg",
+    alt: "Ceiling cassette aircond service commercial office KL Selangor",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg",
+    alt: "New aircond unit installation copper pipe routing Shah Alam Subang",
+  },
+  {
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg",
+    alt: "KL Renovator completed aircond project satisfied customer Klang Valley",
+  },
 ];
 
 export const Hero = () => {
@@ -48,8 +79,8 @@ export const Hero = () => {
             className="absolute inset-0"
           >
             <Image
-              src={HERO_IMAGES[current]}
-              alt="KL Renovator Professional Aircond Servicing Kuala Lumpur Selangor"
+              src={HERO_IMAGES[current].src}
+              alt={HERO_IMAGES[current].alt}
               fill
               priority={current === 0}
               sizes="100vw"
@@ -74,7 +105,7 @@ export const Hero = () => {
             className={`h-1 rounded-full transition-all duration-500 ${
               i === current ? "w-8 bg-white" : "w-2 bg-white/35 hover:bg-white/60"
             }`}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={`Slide ${i + 1}: ${HERO_IMAGES[i].alt}`}
           />
         ))}
       </div>
