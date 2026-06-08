@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
   description:
-    "Frequently asked questions about KL Renovator's aircond services in KL & Selangor. Chemical wash from RM 160, overhaul from RM 220, gas top-up, repairs, same-day booking, warranty and coverage areas.",
+    "Frequently asked questions about KL Renovator's aircond services in KL & Selangor. Chemical wash from RM 120, overhaul from RM 220, gas top-up, repairs, same-day booking, warranty and coverage areas.",
   keywords: [
     "aircond service FAQ Malaysia",
     "aircon chemical wash price KL",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
     description:
-      "Frequently asked questions about KL Renovator's aircond services. Chemical wash from RM 160, overhaul from RM 220, same-day service, 1-month warranty. All areas of KL & Selangor covered.",
+      "Frequently asked questions about KL Renovator's aircond services. Chemical wash from RM 120, overhaul from RM 220, same-day service, 1-month warranty. All areas of KL & Selangor covered.",
     url: "https://www.klrenovator.com/faq",
     type: "website",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Aircond Service FAQ | KL Renovator",
-    description: "Aircond pricing, booking and service FAQs for KL & Selangor. Chemical wash from RM 160.",
+    description: "Aircond pricing, booking and service FAQs for KL & Selangor. Chemical wash from RM 120.",
     images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
@@ -54,7 +54,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "How much does a chemical wash cost in KL & Selangor?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Chemical wash starts from RM 160 for a wall-mounted 1.0–1.5 HP unit. Ceiling cassette starts from RM 220. All prices confirmed before work begins — no hidden charges. KL Renovator serves all areas of Kuala Lumpur and Selangor.",
+          text: "Chemical wash starts from RM 120 for a wall-mounted 1.0–1.5 HP unit. Ceiling cassette starts from RM 220. All prices confirmed before work begins — no hidden charges. KL Renovator serves all areas of Kuala Lumpur and Selangor.",
         },
       },
       {
@@ -86,7 +86,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "What is the difference between chemical wash and chemical overhaul?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A chemical wash cleans the unit while it stays mounted on the wall — great for regular maintenance, starts from RM 160. A chemical overhaul fully dismantles the unit for a deep clean of every internal component — starts from RM 220, recommended for water leaking, ice formation, or units not serviced in 3+ years.",
+          text: "A chemical wash cleans the unit while it stays mounted on the wall — great for regular maintenance, starts from RM 120. A chemical overhaul fully dismantles the unit for a deep clean of every internal component — starts from RM 220, recommended for water leaking, ice formation, or units not serviced in 3+ years.",
         },
       },
       {
