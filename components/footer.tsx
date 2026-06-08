@@ -2,10 +2,9 @@
 
 import NextLink from "next/link";
 import {
-  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaYoutube,
+  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaYoutube, FaGoogle,
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
-import { SiGooglemybusiness } from "react-icons/si";
 
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -26,59 +25,82 @@ export const Footer = () => {
             </p>
           </NextLink>
           <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
+
+          {/* Social Icons — Official Brand Colors */}
           <div className="flex items-center gap-2.5 pt-1 flex-wrap">
-            {/* WhatsApp — official green */}
-            <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp KL Renovator"
-              className="p-2.5 rounded-lg transition-all duration-200"
-              style={{ background: "#25D366", color: "#fff" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#1ebe5d"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#25D366"; }}
+
+            {/* WhatsApp — #25D366 */}
+            <a
+              href={waLink(rfqMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp KL Renovator"
+              style={{ backgroundColor: "#25D366" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
               <FaWhatsapp className="h-4 w-4" />
             </a>
-            {/* Instagram — gradient brand */}
-            <a href={siteConfig.links.instagram} target="_blank" rel="noopener noreferrer" aria-label="KL Renovator Instagram"
-              className="p-2.5 rounded-lg transition-all duration-200"
-              style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)", color: "#fff" }}
+
+            {/* Instagram — gradient */}
+            <a
+              href={siteConfig.links.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KL Renovator Instagram"
+              style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
               <FaInstagram className="h-4 w-4" />
             </a>
-            {/* Facebook — official blue */}
-            <a href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer" aria-label="KL Renovator Facebook"
-              className="p-2.5 rounded-lg transition-all duration-200"
-              style={{ background: "#1877F2", color: "#fff" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#0e65d9"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#1877F2"; }}
+
+            {/* Facebook — #1877F2 */}
+            <a
+              href={siteConfig.links.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KL Renovator Facebook"
+              style={{ backgroundColor: "#1877F2" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
               <FaFacebook className="h-4 w-4" />
             </a>
-            {/* TikTok — official black */}
-            <a href={siteConfig.links.tiktok} target="_blank" rel="noopener noreferrer" aria-label="KL Renovator TikTok"
-              className="p-2.5 rounded-lg transition-all duration-200"
-              style={{ background: "#010101", color: "#fff" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#333"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#010101"; }}
+
+            {/* TikTok — #010101 */}
+            <a
+              href={siteConfig.links.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KL Renovator TikTok"
+              style={{ backgroundColor: "#010101" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
               <FaTiktok className="h-4 w-4" />
             </a>
-            {/* YouTube — official red */}
-            <a href={siteConfig.links.youtube} target="_blank" rel="noopener noreferrer" aria-label="KL Renovator YouTube"
-              className="p-2.5 rounded-lg transition-all duration-200"
-              style={{ background: "#FF0000", color: "#fff" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#cc0000"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#FF0000"; }}
+
+            {/* YouTube — #FF0000 */}
+            <a
+              href={siteConfig.links.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KL Renovator YouTube"
+              style={{ backgroundColor: "#FF0000" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
               <FaYoutube className="h-4 w-4" />
             </a>
-            {/* Google Business — official blue */}
-            <a href={siteConfig.links.googleBusiness} target="_blank" rel="noopener noreferrer" aria-label="KL Renovator Google Business"
-              className="p-2.5 rounded-lg transition-all duration-200"
-              style={{ background: "#4285F4", color: "#fff" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#3367d6"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#4285F4"; }}
+
+            {/* Google Business — #4285F4 */}
+            <a
+              href={siteConfig.links.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KL Renovator Google Business"
+              style={{ backgroundColor: "#4285F4" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
-              <SiGooglemybusiness className="h-4 w-4" />
+              <FaGoogle className="h-4 w-4" />
             </a>
+
           </div>
         </div>
 
@@ -99,7 +121,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        {/* ── Service Areas — All with clickable links for SEO ── */}
+        {/* ── Service Areas ── */}
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_areas")}</p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
@@ -161,10 +183,8 @@ export const Footer = () => {
             href={waLink(rfqMsg)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all mt-2 rounded-xl"
-            style={{ background: "#25D366" }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#1ebe5d"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#25D366"; }}
+            style={{ backgroundColor: "#25D366" }}
+            className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"
           >
             <FaWhatsapp className="h-4 w-4" /> Book Via WhatsApp
           </a>
