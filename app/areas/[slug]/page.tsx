@@ -157,7 +157,7 @@ export default async function AreaPage({
         name: `How much does aircond service cost in ${area.name}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Basic servicing starts from RM 99, pressure chemical wash from RM 160, chemical overhaul from RM 220, and gas top-up from RM 80 in ${area.name}. All prices are transparent with no hidden charges.`,
+          text: `Basic servicing starts from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, and gas top-up from RM 120 in ${area.name}. All prices are transparent with no hidden charges.`,
         },
       },
       {
@@ -286,7 +286,7 @@ export default async function AreaPage({
                   href={waLink(`Hi KL Renovator, I need aircond service in ${area.name}. Please advise.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider text-xs px-4 py-3.5 rounded-xl transition-all"
+                  className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-wider text-xs px-4 py-3.5 rounded-xl transition-all"
                 >
                   <FaWhatsapp className="h-4 w-4" />
                   WhatsApp for {area.name} Service
@@ -364,13 +364,13 @@ export default async function AreaPage({
               <ul className="divide-y divide-slate-100">
                 {[
                   { service: "Basic Servicing (1.0–1.5 HP)", price: "RM 99" },
-                  { service: "Basic Servicing (2.0–2.5 HP)", price: "RM 150" },
-                  { service: "Pressure Chemical Wash (1.0–1.5 HP)", price: "RM 160" },
-                  { service: "Pressure Chemical Wash (2.0–2.5 HP)", price: "RM 220" },
+                  { service: "Basic Servicing (2.0–2.5 HP)", price: "RM 120" },
+                  { service: "Pressure Chemical Wash (1.0–1.5 HP)", price: "RM 120" },
+                  { service: "Pressure Chemical Wash (2.0–2.5 HP)", price: "RM 150" },
                   { service: "Chemical Overhaul (1.0–1.5 HP)", price: "RM 220" },
                   { service: "Chemical Overhaul (2.0–2.5 HP)", price: "RM 280" },
-                  { service: "Gas Top-Up R32 (1.0 HP)", price: "RM 130 – 150" },
-                  { service: "Gas Top-Up R410A (1.0 HP)", price: "RM 100 – 120" },
+                  { service: "Gas Top-Up R32 (1.0 HP)", price: "RM 180" },
+                  { service: "Gas Top-Up R410A (1.0 HP)", price: "RM 150" },
                   { service: "Diagnostic / Troubleshooting", price: "RM 88 (waived with repair)" },
                   { service: "New Installation (1.0–1.5 HP)", price: "From RM 199" },
                 ].map((row) => (
@@ -393,7 +393,7 @@ export default async function AreaPage({
                   href={waLink(`Hi KL Renovator, I need a quote for aircond service in ${area.name}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all"
+                  className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all"
                 >
                   <FaWhatsapp className="h-3.5 w-3.5" /> Get Exact Quote
                 </a>
@@ -424,7 +424,7 @@ export default async function AreaPage({
               },
               {
                 q: `How much does aircond chemical wash cost in ${area.name}?`,
-                a: `Pressure chemical wash in ${area.name} starts from RM 160 for a 1.0–1.5 HP wall-mounted unit. For 2.0–2.5 HP it is RM 220. All prices are transparent — confirmed with you before work begins.`,
+                a: `Pressure chemical wash in ${area.name} starts from RM 120 for a 1.0–1.5 HP wall-mounted unit. For 2.0–2.5 HP it is RM 150. All prices are transparent — confirmed with you before work begins.`,
               },
               {
                 q: `Is same-day aircond service available in ${area.name}?`,
