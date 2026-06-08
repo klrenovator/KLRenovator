@@ -46,7 +46,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator's standard pricing applies across the Batu Caves and Selayang area:</p>
       <ul>
         <li>Basic Service: from <strong>RM 99</strong></li>
-        <li>Chemical Wash: from <strong>RM 160</strong></li>
+        <li>Chemical Wash: from <strong>RM 120</strong></li>
         <li>Chemical Overhaul: from <strong>RM 220</strong></li>
         <li>Gas Top-Up (R32/R410A): from <strong>RM 100</strong></li>
       </ul>
@@ -72,9 +72,9 @@ export const allPosts: BlogPost[] = [
 
       <h2>Wall-Mounted Unit Prices</h2>
       <ul>
-        <li>1.0 – 1.5 HP: <strong>RM 160</strong></li>
-        <li>2.0 – 2.5 HP: <strong>RM 220</strong></li>
-        <li>3.0 HP: <strong>RM 250</strong></li>
+        <li>1.0 – 1.5 HP: <strong>RM 120</strong></li>
+        <li>2.0 – 2.5 HP: <strong>RM 150</strong></li>
+        <li>3.0 HP: <strong>RM 180</strong></li>
         <li>4.0 – 5.0 HP: <strong>RM 280</strong></li>
       </ul>
 
@@ -164,7 +164,7 @@ export const allPosts: BlogPost[] = [
         <li>You haven't cleaned the unit in over 12 months</li>
         <li>Dust or small insects visible inside the unit</li>
       </ul>
-      <p>A chemical wash typically takes <strong>45–90 minutes per unit</strong> and starts from <strong>RM 160</strong> for a 1.0–1.5 HP wall-mounted unit.</p>
+      <p>A chemical wash typically takes <strong>45–90 minutes per unit</strong> and starts from <strong>RM 120</strong> for a 1.0–1.5 HP wall-mounted unit.</p>
 
       <h2>What Is a Chemical Overhaul?</h2>
       <p>A <strong>chemical overhaul</strong> goes much further. The technician fully dismantles the indoor unit from the wall, removes every internal component, and bathes the coil, blower wheel, drain pan, and casing in a deep chemical solution.</p>
@@ -181,7 +181,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>Side-by-Side Comparison</h2>
       <ul>
-        <li><strong>Chemical Wash:</strong> Unit stays mounted · 45–90 min · From RM 160 · Best for routine maintenance</li>
+        <li><strong>Chemical Wash:</strong> Unit stays mounted · 45–90 min · From RM 120 · Best for routine maintenance</li>
         <li><strong>Chemical Overhaul:</strong> Unit fully dismantled · 2–3 hours · From RM 220 · Best for severe issues</li>
       </ul>
       <p>Not sure which you need? WhatsApp us a photo at <strong>+60 18-298 3573</strong> and our team will advise you honestly.</p>
@@ -202,7 +202,7 @@ export const allPosts: BlogPost[] = [
       <p>This is the most common aircond complaint in Malaysia — the unit is on, the fan is blowing, but the air is warm or barely cool. Here are the 7 most likely causes.</p>
 
       <h2>1. Low Refrigerant Gas</h2>
-      <p>Gas leaks slowly over time. When levels drop, cooling drops dramatically. Solution: Gas top-up (R22, R410A, or R32). From RM 100.</p>
+      <p>Gas leaks slowly over time. When levels drop, cooling drops dramatically. Solution: Gas top-up (R22, R410A, or R32). From RM 120.</p>
 
       <h2>2. Dirty Evaporator Coil</h2>
       <p>A heavily coated coil can't absorb heat efficiently. Solution: Chemical wash or overhaul depending on severity.</p>
@@ -260,7 +260,7 @@ export const allPosts: BlogPost[] = [
       </ul>
 
       <h2>Book a Service</h2>
-      <p>KL Renovator services all brands across KL & Selangor. Basic servicing from <strong>RM 99</strong>. Chemical wash from <strong>RM 160</strong>. WhatsApp <strong>+60 18-298 3573</strong> to book.</p>
+      <p>KL Renovator services all brands across KL & Selangor. Basic servicing from <strong>RM 99</strong>. Chemical wash from <strong>RM 120</strong>. WhatsApp <strong>+60 18-298 3573</strong> to book.</p>
     `,
   },
   {
@@ -348,7 +348,7 @@ export const allPosts: BlogPost[] = [
     tags: ["best aircon brand Malaysia", "Daikin vs Panasonic", "Mitsubishi aircond", "inverter aircond Malaysia 2025"],
     date: "January 2025",
     readTime: 7,
-    relatedService: "New Unit Installation & Dismantling",
+    relatedService: "New Unit Installation",
     content: `
       <h2>Top Aircond Brands in Malaysia 2025</h2>
       <p>Choosing the right aircond brand matters — not just for performance but for long-term service availability and energy costs. Here's an honest comparison based on our technicians' real-world experience servicing thousands of units across KL and Selangor.</p>
