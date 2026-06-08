@@ -16,119 +16,148 @@ export type GalleryItem = {
   before?: string;
 };
 
+// ── ALL REAL COMPANY IMAGES — no stock/Unsplash photos ────────────────────────
 export const GALLERY_ITEMS: GalleryItem[] = [
   // ── INSTALLATIONS ─────────────────────────────────────────────
   {
     id: 1,
     category: "installation",
-    title: "New Split Unit — Condo, Mont Kiara",
-    desc: "Daikin 1.5HP inverter installed with concealed pipe routing. Job completed in 2.5 hours.",
-    src: "https://images.unsplash.com/photo-1628592102751-ba83b0314276?auto=format&fit=crop&w=800&q=80",
+    title: "New Split Unit Installation — KL",
+    desc: "Wall-mounted inverter unit installed with clean concealed pipe routing. Job completed same day.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg",
   },
   {
     id: 2,
     category: "installation",
-    title: "Office Block Installation — Damansara",
-    desc: "8 units installed across 2 floors. All wiring concealed in casing.",
-    src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
+    title: "Aircond Unit Mounting — Selangor",
+    desc: "Professional bracket mounting and copper pipe routing for a new split unit installation.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg",
   },
   {
     id: 3,
     category: "installation",
-    title: "Ceiling Cassette — F&B Outlet, Cheras",
-    desc: "4HP cassette unit with drain pump and concealed ceiling routing.",
-    src: "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=800&q=80",
+    title: "New Installation — Petaling Jaya",
+    desc: "Full installation including outdoor unit bracket, copper piping and electrical connections.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (1).jpeg",
+  },
+  {
+    id: 4,
+    category: "installation",
+    title: "Ceiling Cassette Setup — Commercial",
+    desc: "Ceiling cassette installation for a commercial space with drain pump and full commissioning.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (2).jpeg",
   },
   // ── CHEMICAL WASH ─────────────────────────────────────────────
   {
-    id: 4,
-    category: "chemical-wash",
-    title: "Pressure Chemical Wash — Subang Jaya",
-    desc: "High-pressure chemical cleaning removes mould and restores airflow.",
-    src: "https://images.unsplash.com/photo-1580595999172-187fe6ccb3bd?auto=format&fit=crop&w=800&q=80",
-  },
-  {
     id: 5,
     category: "chemical-wash",
-    title: "Wall-Mounted Unit Chemical Wash",
-    desc: "Before: unit had foul smell and weak cooling. After: fresh air and full cooling restored.",
-    src: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80",
-    before: "https://images.unsplash.com/photo-1621905251189-77e3f4a46fba?auto=format&fit=crop&w=800&q=80",
+    title: "Pressure Chemical Wash — Cheras",
+    desc: "High-pressure chemical cleaning removes mould, dust and bacteria. Cooling fully restored.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.26.jpeg",
   },
   {
     id: 6,
     category: "chemical-wash",
-    title: "Coil Cleaning — Petaling Jaya",
-    desc: "Evaporator coil chemical treatment eliminates bacteria and mould buildup.",
-    src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
+    title: "Chemical Wash in Progress — Subang Jaya",
+    desc: "Food-safe chemical solution applied to evaporator coil and blower wheel for deep cleaning.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.27.jpeg",
+  },
+  {
+    id: 7,
+    category: "chemical-wash",
+    title: "Post Chemical Wash Result",
+    desc: "Before and after chemical wash. Coil completely clean, airflow restored to factory standard.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg",
+    before: "/hero/WhatsApp Image 2026-05-03 at 13.39.29 (1).jpeg",
   },
   // ── CHEMICAL OVERHAUL ─────────────────────────────────────────
   {
-    id: 7,
-    category: "overhaul",
-    title: "Chemical Overhaul — Shah Alam",
-    desc: "Full unit dismantle and immersion clean. Drain pan and blower completely restored.",
-    src: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80",
-  },
-  {
     id: 8,
     category: "overhaul",
-    title: "Heavy Blockage Cleared — Ampang",
-    desc: "Unit had years of buildup causing ice formation. Overhaul resolved completely.",
-    src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80",
-    before: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    title: "Chemical Overhaul — Shah Alam",
+    desc: "Full unit dismantle and immersion clean. Drain pan and blower wheel completely restored.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg",
   },
-  // ── REPAIRS ───────────────────────────────────────────────────
   {
     id: 9,
-    category: "repair",
-    title: "PCB Board Replacement",
-    desc: "Main board replaced with OEM part. Unit restored to full function same day.",
-    src: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80",
+    category: "overhaul",
+    title: "Heavy Blockage Cleared — Ampang",
+    desc: "Unit had years of mould buildup causing ice formation. Chemical overhaul resolved completely.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (1).jpeg",
+    before: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (2).jpeg",
   },
   {
     id: 10,
-    category: "repair",
-    title: "Compressor Fault Diagnosis",
-    desc: "Outdoor unit making noise — capacitor identified and replaced within the hour.",
-    src: "https://images.unsplash.com/photo-1631545308456-c3e32f5f1abe?auto=format&fit=crop&w=800&q=80",
+    category: "overhaul",
+    title: "Drain Pan Deep Clean — Damansara",
+    desc: "Drain pan removed, chemical soaked and flushed. Water leaking issue permanently resolved.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg",
   },
-  // ── COMMERCIAL ────────────────────────────────────────────────
+  // ── REPAIRS ───────────────────────────────────────────────────
   {
     id: 11,
-    category: "commercial",
-    title: "Office Block — Kuala Lumpur City Centre",
-    desc: "Annual maintenance contract for 22-unit commercial building. Quarterly visits.",
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    category: "repair",
+    title: "Component Diagnosis — KL",
+    desc: "Multi-point electrical diagnosis to identify root cause before any repair work begins.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32 (1).jpeg",
   },
   {
     id: 12,
-    category: "commercial",
-    title: "VRF System — Corporate Office, Bangsar",
-    desc: "VRF/VRV multi-split system covering entire floor of 8,000 sq ft office.",
-    src: "https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&w=800&q=80",
+    category: "repair",
+    title: "PCB Board Inspection",
+    desc: "Main board inspected and tested. OEM-compatible replacement fitted and unit restored to full function.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg",
   },
   {
     id: 13,
-    category: "commercial",
-    title: "Retail Outlet — Puchong",
-    desc: "4 cassette units for fashion retail outlet. Completed over one weekend.",
-    src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+    category: "repair",
+    title: "Capacitor Replacement — Setapak",
+    desc: "Outdoor unit capacitor identified as faulty and replaced within the hour. Cooling restored.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg",
   },
-  // ── TEAM ──────────────────────────────────────────────────────
+  // ── COMMERCIAL ────────────────────────────────────────────────
   {
     id: 14,
-    category: "team",
-    title: "Technician at Work — Setapak",
-    desc: "Our certified technicians carry full PPE and proper tools on every job.",
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    category: "commercial",
+    title: "Office Block — Kuala Lumpur",
+    desc: "Multi-unit commercial servicing. Annual maintenance contract covering quarterly visits.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg",
   },
   {
     id: 15,
+    category: "commercial",
+    title: "Ceiling Cassette Service — Bangsar",
+    desc: "Ceiling cassette chemical wash with full panel removal and drain pump inspection.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (2).jpeg",
+  },
+  // ── TEAM ──────────────────────────────────────────────────────
+  {
+    id: 16,
+    category: "team",
+    title: "Technician at Work — Mont Kiara",
+    desc: "Our certified technicians carry full PPE and proper tools on every job.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (1).jpeg",
+  },
+  {
+    id: 17,
     category: "team",
     title: "Installation Team — Kajang",
-    desc: "Two-man team ensures clean and efficient installations at any location.",
-    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
+    desc: "Experienced two-man team ensures clean and efficient installations at any location.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (2).jpeg",
+  },
+  {
+    id: 18,
+    category: "team",
+    title: "Service in Progress — Puchong",
+    desc: "Full service routine underway. Every visit includes a multi-point system check.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg",
+  },
+  {
+    id: 19,
+    category: "team",
+    title: "On-Site Gas Top-Up — Kepong",
+    desc: "Precision gas top-up with calibrated gauges. Cooling output verified after refill.",
+    src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35 (1).jpeg",
   },
 ];
 
@@ -179,7 +208,7 @@ export function GalleryClient() {
 
   return (
     <main>
-      {/* ── HERO — White + Low-Opacity Watermark ── */}
+      {/* ── HERO ── */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100 py-16 sm:py-20">
         {/* Watermark */}
         <div className="absolute inset-0 opacity-[0.07]">
@@ -207,13 +236,13 @@ export function GalleryClient() {
             </p>
             <div className="mt-8 flex justify-center gap-4 flex-wrap">
               <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
-                📸 {GALLERY_ITEMS.length}+ Project Photos
+                📸 {GALLERY_ITEMS.length}+ Real Project Photos
               </span>
               <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
                 🏙️ KL &amp; Selangor
               </span>
               <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
-                ✅ Verified Projects
+                ✅ 100% Genuine Company Photos
               </span>
             </div>
           </Reveal>
@@ -300,7 +329,10 @@ export function GalleryClient() {
                 href={waLink("Hi KL Renovator, I want to book an aircon service after viewing your gallery.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs px-7 py-4 rounded-xl shadow-md hover:shadow-green-200 transition-all"
+                className="inline-flex items-center gap-2.5 text-white font-black uppercase tracking-widest text-xs px-7 py-4 rounded-xl shadow-md transition-all"
+                style={{ background: "#25D366" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#1ebe5d"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#25D366"; }}
               >
                 <FaWhatsapp className="h-4 w-4" />
                 Book Your Service Now
@@ -347,7 +379,7 @@ export function GalleryClient() {
               </div>
             )}
 
-            {/* ── Image container — light background (was dark bg-slate-900) ── */}
+            {/* Image container */}
             <div className="relative aspect-video bg-slate-100">
               <img
                 src={showBefore && currentItem.before ? currentItem.before : currentItem.src}
@@ -371,7 +403,10 @@ export function GalleryClient() {
                 href={waLink(`Hi KL Renovator, I saw your gallery photo: "${currentItem.title}" and want to book a similar service.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all"
+                className="shrink-0 inline-flex items-center gap-2 text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all"
+                style={{ background: "#25D366" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#1ebe5d"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#25D366"; }}
               >
                 <FaWhatsapp className="h-4 w-4" />
                 Book This
