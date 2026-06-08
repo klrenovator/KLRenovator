@@ -16,33 +16,6 @@ export const metadata: Metadata = {
     template: `%s | KL Renovator`,
   },
   description: siteConfig.description,
-  keywords: [
-    "aircon service KL", "aircond service Selangor", "chemical wash aircond KL",
-    "aircon installation Malaysia", "gas top up aircon KL", "ceiling cassette service Malaysia",
-    "aircon repair KL", "KL Renovator", "aircon service Kuala Lumpur",
-    "aircon service Batu Caves", "aircon service Cheras", "aircon service Ampang",
-    "aircon service Petaling Jaya", "aircon service Subang Jaya", "aircon service Puchong",
-    "aircon service Shah Alam", "aircon service Damansara", "aircon service Mont Kiara",
-    "aircon service Bangsar", "aircon service Kajang", "aircon service Setapak",
-    "aircon service Wangsa Maju", "aircon service Kepong", "aircon service Sri Petaling",
-    "aircon service Bukit Jalil", "aircon service Mont Kiara", "aircon service Kota Damansara",
-    "aircon service Ara Damansara", "aircon service Sunway", "aircon service USJ",
-    "aircon service Port Klang", "aircon service Bukit Tinggi", "aircon service Setia Alam",
-    "aircon service Meru", "aircon service Rawang", "aircon service Kundang",
-    "aircon service Bangi", "aircon service Semenyih", "aircon service Balakong",
-    "aircon service Seri Kembangan", "aircon service Pandan Indah",
-    "aircon service Putrajaya", "aircon service Cyberjaya", "aircon service Dengkil",
-    "Daikin aircond service KL", "Panasonic aircond repair Selangor",
-    "Mitsubishi aircond installation KL", "York aircond servicing Malaysia",
-    "Midea aircond service KL", "aircond not cold KL", "aircond water leaking repair KL",
-    "aircond chemical wash price Malaysia", "R32 gas top up KL", "R410A gas refill Selangor",
-    "aircon compressor repair KL", "commercial HVAC KL",
-    "office aircon maintenance contract Selangor", "VRF VRV system installation KL",
-    "ceiling cassette chemical wash Malaysia", "Multicore Dynamic Resources",
-    "KL Renovator aircond specialist", "best aircon service company Kuala Lumpur",
-    "trusted aircond technician KL Selangor", "same day aircon repair booking KL",
-    "affordable chemical wash aircon Malaysia",
-  ],
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
@@ -141,8 +114,8 @@ export default function RootLayout({
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "3.2424",
-                "longitude": "101.6521",
+                "latitude": "3.22050",
+                "longitude": "101.64120",
               },
               "hasMap": siteConfig.links.googleMaps,
               "openingHoursSpecification": [
@@ -253,6 +226,135 @@ export default function RootLayout({
                     "@type": "Answer",
                     "text": "Yes. KL Renovator offers same-day aircond servicing across KL and Selangor. Book via WhatsApp at +60182983573 for fastest response.",
                   },
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between chemical wash and chemical overhaul?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A chemical wash (from RM 120) cleans the unit while it stays mounted on the wall — ideal for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the indoor unit for deep cleaning of every component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "What aircond brands does KL Renovator service?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models supported.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* HowTo Schema — Aircond Chemical Wash */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Book an Aircond Chemical Wash in KL & Selangor",
+              "description": "Book a professional aircond pressure chemical wash with KL Renovator in Kuala Lumpur or Selangor. Service starts from RM 120. Same-day available.",
+              "totalTime": "PT45M",
+              "estimatedCost": {
+                "@type": "MonetaryAmount",
+                "currency": "MYR",
+                "value": "120",
+              },
+              "supply": [
+                { "@type": "HowToSupply", "name": "Aircond unit (wall-mounted, ceiling cassette, or window unit)" },
+                { "@type": "HowToSupply", "name": "Access to your indoor and outdoor unit" },
+              ],
+              "tool": [
+                { "@type": "HowToTool", "name": "KL Renovator trained HVAC technician" },
+                { "@type": "HowToTool", "name": "High-pressure chemical wash equipment" },
+              ],
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "WhatsApp or Call to Book",
+                  "text": "Contact KL Renovator via WhatsApp at +60182983573 or call directly. Provide your area, unit type (wall-mounted / ceiling cassette), and HP size. Same-day slots available.",
+                  "url": "https://www.klrenovator.com/contact",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Receive Confirmed Quote",
+                  "text": "KL Renovator confirms the price before the technician is dispatched. Chemical wash starts from RM 120 for a 1.0–1.5 HP wall-mounted unit. No hidden charges.",
+                  "url": "https://www.klrenovator.com/services/chemical-wash",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Technician Arrives and Protects Your Space",
+                  "text": "The technician arrives at your property. Drop sheets are laid to protect your floor, walls and furniture before any work begins.",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 4,
+                  "name": "Chemical Spray and High-Pressure Rinse",
+                  "text": "Food-safe chemical solution is sprayed onto the evaporator coil and blower wheel. A high-pressure rinse flushes dissolved mould, dust and bacteria through the drain pipe.",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 5,
+                  "name": "Test and Handover",
+                  "text": "Cooling output is tested and confirmed. The work area is cleaned, and a job card with 1-month workmanship warranty is handed to you.",
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* HowTo Schema — Aircond Gas Top-Up */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Get Aircond Gas Top-Up (R22, R410A, R32) in KL & Selangor",
+              "description": "Book a precision refrigerant gas top-up with KL Renovator. Supports R22, R410A and R32 systems. Leak check included. Starts from RM 120.",
+              "totalTime": "PT30M",
+              "estimatedCost": {
+                "@type": "MonetaryAmount",
+                "currency": "MYR",
+                "value": "120",
+              },
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Identify Your Gas Type",
+                  "text": "Check the sticker on your outdoor unit for gas type (R22, R410A, or R32). Not sure? WhatsApp a photo to +60182983573 and KL Renovator will identify it for you.",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Book via WhatsApp",
+                  "text": "Contact KL Renovator at +60182983573. Provide your area, gas type, and unit HP. Same-day gas top-up slots available across KL and Selangor.",
+                  "url": "https://www.klrenovator.com/services/gas-topup",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Technician Checks for Leaks First",
+                  "text": "Before topping up, the technician performs a leak check. If a leak is found, it is repaired before gas is added — topping up without fixing a leak wastes gas and money.",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 4,
+                  "name": "Precision Gas Balancing",
+                  "text": "Refrigerant is added and balanced to the correct operating pressure using a manifold gauge. Over-filling or under-filling is avoided — both damage the compressor.",
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 5,
+                  "name": "Cooling Test and Handover",
+                  "text": "Unit is run and cooling output confirmed. Job card with warranty details handed to you. R22 from RM 120, R410A from RM 150, R32 from RM 180.",
                 },
               ],
             }),
