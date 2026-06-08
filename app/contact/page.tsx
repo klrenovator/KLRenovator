@@ -3,7 +3,8 @@ import Image from "next/image";
 import {
   FaPhone, FaEnvelope, FaLocationDot, FaRegClock, FaWhatsapp,
 } from "react-icons/fa6";
-import { FiCheck } from "react-icons/fi";
+import { FiCheck, FiChevronRight } from "react-icons/fi";
+import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
@@ -16,6 +17,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.klrenovator.com/contact" },
   description:
     "Contact KL Renovator for professional aircond servicing in KL & Selangor. Covering Cheras, Ampang, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Rawang, Putrajaya & Cyberjaya. WhatsApp +60182983573. Same-day service.",
+  openGraph: {
+    title: "Contact KL Renovator | Aircond Service KL & Selangor",
+    description:
+      "Fastest response via WhatsApp — reply within 30 minutes. Same-day aircond service across KL & Selangor. Chemical wash from RM 120. Call +60182983573.",
+    url: "https://www.klrenovator.com/contact",
+    type: "website",
+  },
 };
 
 const SERVICES_QUICK = [
@@ -57,32 +65,116 @@ const WHATSAPP_MESSAGES = [
 ];
 
 export default function ContactPage() {
+  // ContactPage Schema
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://www.klrenovator.com/contact#contactpage",
+    name: "Contact KL Renovator — Aircond Service KL & Selangor",
+    description:
+      "Contact KL Renovator for professional aircond servicing across Kuala Lumpur and Selangor. Same-day service available. WhatsApp +60182983573.",
+    url: "https://www.klrenovator.com/contact",
+    mainEntity: {
+      "@type": "HVACBusiness",
+      "@id": "https://www.klrenovator.com/#business",
+      name: "KL Renovator",
+      legalName: "Multicore Dynamic Resources",
+      telephone: siteConfig.phone,
+      email: siteConfig.email,
+      url: "https://www.klrenovator.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.addressStreet,
+        addressLocality: siteConfig.addressCity,
+        postalCode: siteConfig.addressPostal,
+        addressRegion: siteConfig.addressState,
+        addressCountry: siteConfig.addressCountry,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: siteConfig.geoLat,
+        longitude: siteConfig.geoLng,
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+      ],
+      hasMap: siteConfig.links.googleMaps,
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: siteConfig.phone,
+          contactType: "customer service",
+          areaServed: "MY",
+          availableLanguage: ["English", "Malay", "Chinese"],
+        },
+        {
+          "@type": "ContactPoint",
+          url: siteConfig.whatsappLink,
+          contactType: "sales",
+          areaServed: "MY",
+          availableLanguage: ["English", "Malay", "Chinese"],
+        },
+      ],
+      priceRange: "RM88 – RM2000",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "500",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
+  };
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.klrenovator.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact",
+        item: "https://www.klrenovator.com/contact",
+      },
+    ],
+  };
+
   return (
     <>
-      {/* JSON-LD Local Business Schema */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "KL Renovator",
-            alternateName: "Multicore Dynamic Resources",
-            telephone: siteConfig.phone,
-            email: siteConfig.email,
-            url: "https://www.klrenovator.com",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Kuala Lumpur",
-              addressRegion: "Selangor",
-              addressCountry: "MY",
-            },
-            openingHours: "Mo-Su 09:00-18:00",
-            priceRange: "RM99 – RM2000",
-            areaServed: siteConfig.areas,
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Breadcrumb Nav */}
+      <div className="bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex items-center gap-1 text-xs text-slate-500">
+            <NextLink href="/" className="hover:text-sky-600 transition">
+              Home
+            </NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <span className="text-slate-900 font-semibold">Contact</span>
+          </nav>
+        </div>
+      </div>
 
       {/* ── HERO — White + Low-Opacity Watermark ── */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
@@ -90,7 +182,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
             src="/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg"
-            alt="KL Renovator aircond technician"
+            alt="KL Renovator aircond technician servicing unit Kuala Lumpur"
             fill
             sizes="100vw"
             className="object-cover object-center"
