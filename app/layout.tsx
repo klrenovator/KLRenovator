@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     "aircon service Petaling Jaya", "aircon service Subang Jaya", "aircon service Puchong",
     "aircon service Shah Alam", "aircon service Damansara", "aircon service Mont Kiara",
     "aircon service Bangsar", "aircon service Kajang", "aircon service Setapak",
+    "aircon service Wangsa Maju", "aircon service Kepong", "aircon service Sri Petaling",
+    "aircon service Bukit Jalil", "aircon service Mont Kiara", "aircon service Kota Damansara",
+    "aircon service Ara Damansara", "aircon service Sunway", "aircon service USJ",
+    "aircon service Port Klang", "aircon service Bukit Tinggi", "aircon service Setia Alam",
+    "aircon service Meru", "aircon service Rawang", "aircon service Kundang",
+    "aircon service Bangi", "aircon service Semenyih", "aircon service Balakong",
+    "aircon service Seri Kembangan", "aircon service Pandan Indah",
+    "aircon service Putrajaya", "aircon service Cyberjaya", "aircon service Dengkil",
     "Daikin aircond service KL", "Panasonic aircond repair Selangor",
     "Mitsubishi aircond installation KL", "York aircond servicing Malaysia",
     "Midea aircond service KL", "aircond not cold KL", "aircond water leaking repair KL",
@@ -121,6 +129,7 @@ export default function RootLayout({
                 siteConfig.links.facebook,
                 siteConfig.links.instagram,
                 "https://www.tiktok.com/@klrenovator",
+                "https://www.youtube.com/@klrenovator",
               ],
               "address": {
                 "@type": "PostalAddress",
@@ -156,7 +165,7 @@ export default function RootLayout({
                 "VRF VRV System Installation",
               ],
               "knowsAbout": [
-                "Airconditioning Installation & Dismantling",
+                "New Unit Installation",
                 "Pressure Chemical Wash Maintenance",
                 "Chemical Overhaul Deep Cleaning",
                 "Precision Gas Top-Up R32 R410A R22 Balancing",
@@ -202,7 +211,7 @@ export default function RootLayout({
                   "name": "How much does aircon chemical wash cost in KL?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Aircon chemical wash in KL starts from RM 160 for a standard wall-mounted unit (1.0-1.5HP). Prices vary by unit type and HP. KL Renovator offers transparent pricing with no hidden fees.",
+                    "text": "Aircon chemical wash in KL starts from RM 120 for a standard wall-mounted unit (1.0-1.5HP). Prices vary by unit type and HP. KL Renovator offers transparent pricing with no hidden fees.",
                   },
                 },
                 {
@@ -219,6 +228,22 @@ export default function RootLayout({
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Yes. KL Renovator covers Batu Caves, Selayang, Kepong, and all surrounding areas. Same-day service available. Call +60182983573.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does KL Renovator service Cheras, Ampang and Setapak?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. KL Renovator covers Cheras, Ampang, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil and all KL areas. Chemical wash from RM 120, repairs from RM 88. Call +60182983573.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does KL Renovator cover Klang, Setia Alam and Port Klang?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. KL Renovator covers Klang, Port Klang, Setia Alam, Meru and Bukit Tinggi. Professional HVAC team, same-day slots available. WhatsApp +60182983573.",
                   },
                 },
                 {
