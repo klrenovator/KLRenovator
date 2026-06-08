@@ -15,7 +15,7 @@ const FAQS = {
     {
       category: "pricing",
       q: "How much does a chemical wash cost in KL & Selangor?",
-      a: "Chemical wash starts from RM 160 for a standard 1.0–1.5 HP wall-mounted unit. Ceiling cassette starts from RM 220. Prices vary by unit type and HP size. All prices confirmed before work begins — no hidden charges.",
+      a: "Chemical wash starts from RM 120 for a standard 1.0–1.5 HP wall-mounted unit. Ceiling cassette starts from RM 220. Prices vary by unit type and HP size. All prices confirmed before work begins — no hidden charges.",
     },
     {
       category: "pricing",
@@ -35,12 +35,12 @@ const FAQS = {
     {
       category: "pricing",
       q: "How much does gas top-up cost?",
-      a: "R22 gas top-up starts from RM 100. R410A from RM 120. R32 from RM 130. Price depends on unit HP size. Leak check is included with every gas top-up.",
+      a: "R22 gas top-up starts from RM 120. R410A from RM 150. R32 from RM 180. Price depends on unit HP size. Leak check is included with every gas top-up.",
     },
     {
       category: "service",
       q: "What is the difference between chemical wash and chemical overhaul?",
-      a: "A chemical wash (from RM 160) cleans the unit while it stays mounted on the wall — great for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the unit for a deep clean of every internal component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
+      a: "A chemical wash (from RM 120) cleans the unit while it stays mounted on the wall — great for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the unit for a deep clean of every internal component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
     },
     {
       category: "service",
@@ -97,7 +97,7 @@ const FAQS = {
     {
       category: "pricing",
       q: "Berapa harga cuci kimia (chemical wash) di KL & Selangor?",
-      a: "Cuci kimia bermula dari RM 160 untuk unit dinding 1.0–1.5 HP. Ceiling cassette bermula RM 220. Harga bergantung kepada jenis dan saiz HP unit. Semua harga disahkan sebelum kerja bermula — tiada caj tersembunyi.",
+      a: "Cuci kimia bermula dari RM 120 untuk unit dinding 1.0–1.5 HP. Ceiling cassette bermula RM 220. Harga bergantung kepada jenis dan saiz HP unit. Semua harga disahkan sebelum kerja bermula — tiada caj tersembunyi.",
     },
     {
       category: "pricing",
@@ -117,7 +117,7 @@ const FAQS = {
     {
       category: "service",
       q: "Apa beza cuci kimia dan overhaul kimia?",
-      a: "Cuci kimia (dari RM 160) membersihkan unit di tempat ia terpasang — sesuai untuk penyelenggaraan biasa. Overhaul kimia (dari RM 220) menanggalkan unit sepenuhnya untuk pembersihan mendalam setiap komponen — disyorkan untuk kebocoran air, pembentukan ais, atau unit yang tidak diservis lebih 3 tahun.",
+      a: "Cuci kimia (dari RM 120) membersihkan unit di tempat ia terpasang — sesuai untuk penyelenggaraan biasa. Overhaul kimia (dari RM 220) menanggalkan unit sepenuhnya untuk pembersihan mendalam setiap komponen — disyorkan untuk kebocoran air, pembentukan ais, atau unit yang tidak diservis lebih 3 tahun.",
     },
     {
       category: "service",
@@ -159,7 +159,7 @@ const FAQS = {
     {
       category: "pricing",
       q: "KL & 雪兰莪化学清洗（Chemical Wash）费用是多少？",
-      a: "化学清洗起价 RM 160，适用于 1.0–1.5 HP 壁挂式冷气机。天花板卡式机起价 RM 220。价格因机型和匹数而异。所有价格在开工前确认——没有隐藏收费。",
+      a: "化学清洗起价 RM 120，适用于 1.0–1.5 HP 壁挂式冷气机。天花板卡式机起价 RM 220。价格因机型和匹数而异。所有价格在开工前确认——没有隐藏收费。",
     },
     {
       category: "pricing",
@@ -174,7 +174,7 @@ const FAQS = {
     {
       category: "service",
       q: "化学清洗和化学大修（Chemical Overhaul）有什么区别？",
-      a: "化学清洗（起价 RM 160）是在机器安装状态下进行清洗，适合定期保养。化学大修（起价 RM 220）是将室内机完全拆卸进行深层清洁，适合严重漏水、结冰或超过 3 年未保养的机器。",
+      a: "化学清洗（起价 RM 120）是在机器安装状态下进行清洗，适合定期保养。化学大修（起价 RM 220）是将室内机完全拆卸进行深层清洁，适合严重漏水、结冰或超过 3 年未保养的机器。",
     },
     {
       category: "service",
@@ -353,7 +353,7 @@ export default function FaqPage() {
                 href={waLink(rfqMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 mt-6 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
+                className="inline-flex items-center gap-2.5 mt-6 bg-[#25D366] hover:bg-[#1ebe5d] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" /> Ask Us on WhatsApp
               </a>
