@@ -16,7 +16,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
-    "Learn about KL Renovator (Multicore Dynamic Resources) — KL & Selangor's trusted aircon specialist for installation, chemical wash, repair, and gas top-up. 10+ years experience, 5,000+ happy customers.",
+    "Learn about KL Renovator (Multicore Dynamic Resources) — KL & Selangor's trusted aircon specialist. Serving Kuala Lumpur, Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Putrajaya & Cyberjaya. 10+ years experience, 5,000+ happy customers.",
 };
 
 const VALUES = [
@@ -251,14 +251,14 @@ export default function AboutPage() {
               <span className="text-sky-100">running like new.</span>
             </h2>
             <p className="mt-4 text-sky-100 font-medium">
-              Same-day slots available across KL &amp; Selangor, including Batu Caves, Ampang, Cheras &amp; more.
+              Same-day slots available across KL &amp; Selangor — Batu Caves, Ampang, Cheras, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Kepong, Sri Petaling, Sunway, USJ, Putrajaya, Cyberjaya &amp; more.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href={waLink(rfqMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" />
                 Request a Quote
