@@ -13,8 +13,9 @@ import { title, eyebrow } from "@/components/primitives";
 
 export const metadata: Metadata = {
   title: "Contact KL Renovator | Aircond Service KL & Selangor",
+  alternates: { canonical: "https://www.klrenovator.com/contact" },
   description:
-    "Contact KL Renovator for fast professional aircond servicing in Kuala Lumpur & Selangor. WhatsApp for instant quotes. Call +60 18-298 3573. Same-day service available.",
+    "Contact KL Renovator for professional aircond servicing in KL & Selangor. Covering Cheras, Ampang, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Rawang, Putrajaya & Cyberjaya. WhatsApp +60182983573. Same-day service.",
 };
 
 const SERVICES_QUICK = [
@@ -137,7 +138,7 @@ export default function ContactPage() {
                   {/* WhatsApp */}
                   <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-4 bg-[#0284c7] hover:bg-[#0369a1] text-white p-5 transition-all group">
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#22c55e]">
+                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#25D366]">
                       <FaWhatsapp className="h-6 w-6 text-white" />
                     </span>
                     <div className="flex-1">
@@ -231,7 +232,7 @@ export default function ContactPage() {
                       href={`https://wa.me/60182983573?text=${encodeURIComponent(item.text)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between gap-3 bg-white/15 hover:bg-[#22c55e] border border-white/20 hover:border-[#22c55e] px-5 py-4 text-sm font-black uppercase tracking-wider text-white transition-all group"
+                      className="flex items-center justify-between gap-3 bg-white/15 hover:bg-[#25D366] border border-white/20 hover:border-[#25D366] px-5 py-4 text-sm font-black uppercase tracking-wider text-white transition-all group"
                     >
                       <span className="flex items-center gap-3">
                         <FaWhatsapp className="h-4 w-4 text-white shrink-0" />
