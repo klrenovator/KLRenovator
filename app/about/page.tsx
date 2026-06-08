@@ -4,7 +4,8 @@ import {
   FaShieldAlt, FaUserCheck, FaTools, FaHandshake,
   FaWhatsapp, FaPhoneAlt,
 } from "react-icons/fa";
-import { FiCheck } from "react-icons/fi";
+import { FiCheck, FiChevronRight } from "react-icons/fi";
+import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
     "Learn about KL Renovator (Multicore Dynamic Resources) — KL & Selangor's trusted aircon specialist. Serving Kuala Lumpur, Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Putrajaya & Cyberjaya. 10+ years experience, 5,000+ happy customers.",
+  alternates: { canonical: "https://www.klrenovator.com/about" },
+  openGraph: {
+    title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
+    description:
+      "KL Renovator (Multicore Dynamic Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
+    url: "https://www.klrenovator.com/about",
+    type: "website",
+  },
 };
 
 const VALUES = [
@@ -52,38 +61,134 @@ const HIGHLIGHTS = [
 ];
 
 const GALLERY_IMAGES = [
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg", alt: "KL Renovator aircond installation work" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (1).jpeg", alt: "Professional aircond servicing KL" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (2).jpeg", alt: "Aircond chemical wash Selangor" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg", alt: "HVAC technician at work" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.26.jpeg", alt: "Aircond repair and maintenance" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.27.jpeg", alt: "KL Renovator project photo" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29 (1).jpeg", alt: "Aircond installation project" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg", alt: "Chemical overhaul service" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (1).jpeg", alt: "Gas top-up precision balancing" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (2).jpeg", alt: "Aircond troubleshooting KL" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg", alt: "HVAC maintenance Selangor" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32 (1).jpeg", alt: "KL Renovator team on site" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg", alt: "KL Renovator technician servicing" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg", alt: "Ceiling cassette installation" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (2).jpeg", alt: "Commercial aircond service" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg", alt: "Aircond cleaning and servicing" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (1).jpeg", alt: "Daikin Panasonic installation KL" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (2).jpeg", alt: "Aircond bracket outdoor unit" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg", alt: "Copper pipe installation work" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35 (1).jpeg", alt: "KL Renovator quality workmanship" },
-  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg", alt: "KL Renovator completed project" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg", alt: "KL Renovator aircond installation work Kuala Lumpur" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (1).jpeg", alt: "Professional aircond servicing technician KL Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25 (2).jpeg", alt: "Aircond chemical wash deep cleaning Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.25.jpeg", alt: "HVAC technician pressure chemical wash KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.26.jpeg", alt: "Aircond repair and maintenance Klang Valley" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.27.jpeg", alt: "KL Renovator completed installation project" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29 (1).jpeg", alt: "Wall-mounted aircond installation Petaling Jaya" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg", alt: "Chemical overhaul deep clean service KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (1).jpeg", alt: "Gas top-up R32 R410A precision balancing Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30 (2).jpeg", alt: "Aircond troubleshooting repair Cheras Ampang" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg", alt: "HVAC maintenance outdoor unit Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32 (1).jpeg", alt: "KL Renovator technician team on-site visit" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg", alt: "Aircond servicing Daikin Panasonic Mitsubishi KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg", alt: "Ceiling cassette installation commercial KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (2).jpeg", alt: "Commercial aircond service office Selangor" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg", alt: "Aircond filter cleaning basic servicing KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (1).jpeg", alt: "Daikin Panasonic new unit installation Subang Jaya" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (2).jpeg", alt: "Aircond outdoor bracket unit installation Shah Alam" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg", alt: "Copper pipe routing clean installation KL" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35 (1).jpeg", alt: "KL Renovator quality workmanship Klang Valley" },
+  { src: "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg", alt: "KL Renovator completed aircond project Selangor" },
 ];
 
 export default function AboutPage() {
+  // Organization Schema
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.klrenovator.com/#organization",
+    name: "KL Renovator",
+    legalName: "Multicore Dynamic Resources",
+    url: "https://www.klrenovator.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.klrenovator.com/logo/image.png",
+      width: 400,
+      height: 400,
+    },
+    image: "https://www.klrenovator.com/logo/image.png",
+    description:
+      "KL Renovator (Multicore Dynamic Resources) is a professional HVAC and aircond servicing company based in Selayang, serving all of Kuala Lumpur and Selangor since 2014. Specialized in chemical wash, chemical overhaul, gas top-up, repair, and new unit installation.",
+    foundingDate: "2014",
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Megnavilla Selayang",
+      postalCode: "68100",
+      addressLocality: "Selayang",
+      addressRegion: "Selangor",
+      addressCountry: "MY",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone,
+        contactType: "customer service",
+        areaServed: "MY",
+        availableLanguage: ["English", "Malay", "Chinese"],
+      },
+    ],
+    sameAs: [
+      siteConfig.links.facebook,
+      siteConfig.links.instagram,
+      siteConfig.links.tiktok,
+      siteConfig.links.youtube,
+      siteConfig.links.googleBusiness,
+      siteConfig.links.googleMaps,
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "500",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.klrenovator.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://www.klrenovator.com/about",
+      },
+    ],
+  };
+
   return (
     <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Breadcrumb Nav */}
+      <div className="bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex items-center gap-1 text-xs text-slate-500">
+            <NextLink href="/" className="hover:text-sky-600 transition">
+              Home
+            </NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <span className="text-slate-900 font-semibold">About</span>
+          </nav>
+        </div>
+      </div>
+
       {/* Hero — White */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-10">
           <Image
             src="/hero/WhatsApp Image 2026-05-03 at 13.39.32.jpeg"
-            alt="KL Renovator team at work"
+            alt="KL Renovator professional HVAC team at work Kuala Lumpur"
             fill
             sizes="100vw"
             className="object-cover"
@@ -120,7 +225,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] w-full overflow-hidden shadow-xl rounded-2xl">
                 <Image
                   src="/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg"
-                  alt="KL Renovator aircond technician servicing unit"
+                  alt="KL Renovator HVAC technician servicing aircond unit Selangor"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
