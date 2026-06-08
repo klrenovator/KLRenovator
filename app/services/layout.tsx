@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Aircond Services & Price List KL Selangor | KL Renovator",
   description:
-    "Full aircond service price list for KL & Selangor — chemical wash from RM 160, chemical overhaul from RM 220, gas top-up, installation, repair. Transparent pricing, no hidden fees.",
+    "Full aircond service price list for KL & Selangor — chemical wash from RM 120, chemical overhaul from RM 220, gas top-up, installation, repair. Transparent pricing, no hidden fees.",
   alternates: {
     canonical: "https://www.klrenovator.com/services",
   },
