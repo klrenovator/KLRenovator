@@ -31,6 +31,10 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       url: `https://www.klrenovator.com/blog/${post.slug}`,
+      images: [{ url: "https://www.klrenovator.com/logo/image.png" }],
+    },
+    alternates: {
+      canonical: `https://www.klrenovator.com/blog/${slug}`,
     },
   };
 }
@@ -48,6 +52,7 @@ export default async function BlogPostPage({
 
   return (
     <>
+      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -57,6 +62,7 @@ export default async function BlogPostPage({
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
+            dateModified: post.date,
             author: {
               "@type": "Organization",
               name: "KL Renovator",
@@ -72,6 +78,7 @@ export default async function BlogPostPage({
             },
             mainEntityOfPage: `https://www.klrenovator.com/blog/${post.slug}`,
             keywords: post.tags.join(", "),
+            inLanguage: "en-MY",
           }),
         }}
       />
@@ -91,7 +98,7 @@ export default async function BlogPostPage({
 
       {/* Article */}
       <article>
-        {/* Header — White + watermark */}
+        {/* Header */}
         <header className="relative bg-white overflow-hidden border-b border-slate-100">
           <div className="absolute inset-0 opacity-[0.07]">
             <Image
@@ -131,6 +138,8 @@ export default async function BlogPostPage({
         <div className="py-12 sm:py-16 bg-white">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-[1fr_280px] gap-12">
+
+              {/* Article Content */}
               <div
                 className="prose prose-slate prose-sm sm:prose-base max-w-none
                   prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight
@@ -143,8 +152,10 @@ export default async function BlogPostPage({
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 
-              {/* Sidebar — all white */}
+              {/* Sidebar */}
               <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+
+                {/* Book CTA */}
                 <div className="bg-white border-2 border-sky-100 shadow-sm p-6">
                   <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
                     Need This Service?
@@ -159,15 +170,16 @@ export default async function BlogPostPage({
                     href={waLink(rfqMsgForService(post.relatedService))}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-center gap-2 mt-4 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all"
+                    className="inline-flex w-full items-center justify-center gap-2 mt-4 bg-[#25D366] hover:bg-[#1ebe5d] px-4 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all"
                   >
                     <FaWhatsapp className="h-4 w-4" /> Book on WhatsApp
                   </a>
                   <p className="mt-3 text-[10px] text-slate-400 font-medium text-center leading-relaxed">
-                    Serving KL, Selangor, Ampang, Batu Caves, Cheras, PJ, Subang, Shah Alam & more
+                    KL · Selangor · Ampang · Batu Caves · Cheras · Petaling Jaya · Subang · Shah Alam · Klang · Kajang · Bangsar · Mont Kiara · Setapak · Kepong · Sri Petaling · Bukit Jalil · Kota Damansara · Sunway · USJ · Putrajaya · Cyberjaya
                   </p>
                 </div>
 
+                {/* Tags */}
                 <div className="bg-white border border-slate-200 p-5">
                   <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3">Tags</p>
                   <div className="flex flex-wrap gap-2">
@@ -178,6 +190,29 @@ export default async function BlogPostPage({
                       </span>
                     ))}
                   </div>
+                </div>
+
+                {/* Related Services */}
+                <div className="bg-white border border-slate-200 p-5">
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3">Our Services</p>
+                  <ul className="space-y-1.5">
+                    {[
+                      { label: "Pressure Chemical Wash", slug: "chemical-wash" },
+                      { label: "Chemical Overhaul", slug: "chemical-overhaul" },
+                      { label: "Gas Top-Up", slug: "gas-topup" },
+                      { label: "Repairs & Troubleshooting", slug: "repair" },
+                      { label: "New Installation", slug: "installation" },
+                    ].map((s) => (
+                      <li key={s.slug}>
+                        <NextLink
+                          href={`/services/${s.slug}`}
+                          className="text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
+                        >
+                          → {s.label}
+                        </NextLink>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <NextLink href="/blog"
@@ -203,7 +238,7 @@ export default async function BlogPostPage({
               {related.map((p, i) => (
                 <Reveal key={p.slug} delay={i * 50}>
                   <NextLink href={`/blog/${p.slug}`}
-                    className="group block bg-white border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all p-5">
+                    className="group block bg-white border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all p-5 rounded-2xl">
                     <span className="text-[10px] font-black uppercase tracking-widest text-sky-600">{p.category}</span>
                     <h3 className="mt-2 text-sm font-black text-slate-950 uppercase leading-snug group-hover:text-sky-700 transition-colors">
                       {p.title}
