@@ -181,7 +181,7 @@ export default function ContactPage() {
         {/* Watermark image — very low opacity */}
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg"
+            src="/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg"
             alt="KL Renovator aircond technician servicing unit Kuala Lumpur"
             fill
             sizes="100vw"
