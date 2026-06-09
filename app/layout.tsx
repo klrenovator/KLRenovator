@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     template: `%s | KL Renovator`,
   },
   description: siteConfig.description,
+  verification: {
+    google: "bXgZJKdBlDiVK9DsjNukmCqqicH37cqU_YdHSIVhjlg",
+  },
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
