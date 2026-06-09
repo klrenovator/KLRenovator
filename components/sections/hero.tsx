@@ -9,10 +9,11 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
+// Each image paired with a unique, keyword-rich alt tag for SEO & accessibility
 const HERO_IMAGES = [
   {
     src: "/hero/Installation 2026-05-03 at 13.39.24.jpeg",
-    alt: "KL Renovator professional aircond installation Kuala Lumpur",
+    alt: "KL Renovator technician performing aircond chemical wash Kuala Lumpur",
   },
   {
     src: "/hero/Installation again 2026-05-03 at 13.39.25.jpeg",
@@ -20,35 +21,35 @@ const HERO_IMAGES = [
   },
   {
     src: "/hero/Pressure Chemical Wash2026-05-03 at 13.39.26.jpeg",
-    alt: "Aircond pressure chemical wash deep cleaning KL Selangor",
+    alt: "Aircond chemical overhaul deep cleaning indoor unit KL",
   },
   {
     src: "/hero/Aircon Repairing 2026-05-03 at 13.39.27.jpeg",
-    alt: "Expert aircond repair and troubleshooting Klang Valley",
+    alt: "HVAC technician gas top-up R32 R410A refrigerant Klang Valley",
   },
   {
     src: "/hero/Aircon Compressor Flaring2026-05-03 at 13.39.29.jpeg",
-    alt: "Aircond compressor flaring gas top-up Petaling Jaya",
+    alt: "Aircond repair troubleshooting outdoor unit Petaling Jaya",
   },
   {
     src: "/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg",
-    alt: "Aircond gas top-up R32 R410A R22 precision balancing Selangor",
+    alt: "Pressure chemical wash high-pressure rinse evaporator coil Selangor",
   },
   {
     src: "/hero/PCB Board Replacement 2026-05-03 at 13.39.32.jpeg",
-    alt: "Aircond PCB board replacement repair Cheras Ampang KL",
+    alt: "Daikin Panasonic Mitsubishi aircond servicing Cheras Ampang",
   },
   {
     src: "/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg",
-    alt: "New aircond installation Ampang Kuala Lumpur KL Renovator",
+    alt: "Ceiling cassette aircond service commercial office KL Selangor",
   },
   {
     src: "/hero/Bracket Installation 2026-05-03 at 13.39.34.jpeg",
-    alt: "Aircond bracket installation outdoor unit Shah Alam Subang",
+    alt: "New aircond unit installation copper pipe routing Shah Alam Subang",
   },
   {
     src: "/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg",
-    alt: "Aircond copper sensor thermistor replacement KL Renovator",
+    alt: "KL Renovator completed aircond project satisfied customer Klang Valley",
   },
 ];
 
@@ -66,7 +67,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden bg-slate-900">
 
-      {/* Background Slideshow */}
+      {/* ── Background Slideshow ─────────────────────────── */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="sync">
           <motion.div
@@ -89,11 +90,13 @@ export const Hero = () => {
           </motion.div>
         </AnimatePresence>
 
+        {/* ✅ LIGHTER overlay — images clearly visible */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-slate-900/30 z-10" />
+        {/* Bottom fade for text area */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950/60 to-transparent z-10" />
       </div>
 
-      {/* Slide Indicators */}
+      {/* ── Slide Indicators ─────────────────────────────── */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2">
         {HERO_IMAGES.map((_, i) => (
           <button
@@ -107,7 +110,7 @@ export const Hero = () => {
         ))}
       </div>
 
-      {/* Content */}
+      {/* ── Content ──────────────────────────────────────── */}
       <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-20">
         <div className="max-w-2xl">
 
