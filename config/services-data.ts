@@ -486,4 +486,135 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
     ],
   },
+
+  "installation": {
+    slug: "installation",
+    title: "New Aircond Unit Installation",
+    tagline: "Professional new aircond installation in KL & Selangor — all brands and HP sizes, clean cable routing, same-day available.",
+    description:
+      "KL Renovator installs all residential and commercial aircond brands across Kuala Lumpur and Selangor. Every installation includes free 7 ft copper pipe, heavy duty wiring, drain pipe routing and a full system test. Our technicians ensure clean cable concealment and proper drainage setup to prevent future water leaking. Whether you are installing your first unit, upgrading an old system, or setting up a commercial space, we provide transparent pricing with no hidden charges.",
+    startPrice: "RM 199",
+    heroImage: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg",
+    highlights: [
+      "All brands supported — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung and more",
+      "Free 7 ft copper pipe included with every installation",
+      "Heavy duty wiring and proper earthing",
+      "Clean cable routing and PVC casing",
+      "Correct drainage setup prevents future water leaking",
+      "Full system test and performance confirmation",
+      "Same-day installation slots available",
+      "1-month workmanship warranty",
+    ],
+    process: [
+      { step: "Site Assessment", desc: "Technician checks wall, electrical point, drainage path and distance before starting." },
+      { step: "Mount Indoor Unit", desc: "Indoor unit bracket is levelled and mounted securely. Cable and copper pipe are routed cleanly through wall or casing." },
+      { step: "Install Outdoor Unit", desc: "Outdoor unit is positioned on bracket with proper spacing for ventilation and drainage." },
+      { step: "Connect & Vacuum", desc: "Copper pipes are connected, system is vacuumed to remove air and moisture before gas is released." },
+      { step: "Test & Handover", desc: "System is run and cooling output confirmed. Job card and 1-month warranty issued." },
+    ],
+    faqs: [
+      {
+        q: "How much does aircond installation cost in KL & Selangor?",
+        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP and goes up to RM 449 for 5.0 HP. Ceiling cassette installation starts from RM 290. Standard installation includes 7 ft copper pipe, wiring, and drain routing. Additional materials are quoted separately if needed.",
+      },
+      {
+        q: "Do you supply the aircond unit or just install?",
+        a: "KL Renovator provides labour-only installation. You purchase your preferred brand and model from any retailer, and we install it professionally. We install all major brands including Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Sharp and more.",
+      },
+      {
+        q: "How long does aircond installation take?",
+        a: "A standard wall-mounted installation takes 1.5 to 3 hours. Ceiling cassette installation takes 2 to 4 hours depending on ceiling height and access. We aim to complete all work in one visit.",
+      },
+      {
+        q: "What is included in the standard installation price?",
+        a: "Standard installation includes: 7 ft copper pipe, heavy duty wiring, drain pipe routing, PVC casing, brackets (indoor and outdoor), vacuuming the system, and a full test run. Additional pipe or wire length beyond 7 ft is charged at RM 17–27/ft.",
+      },
+      {
+        q: "Do you offer same-day aircond installation?",
+        a: "Yes. Same-day installation slots are available subject to technician availability. WhatsApp +60182983573 with your area and unit details to confirm a slot.",
+      },
+      {
+        q: "Can you install on a high-rise balcony or high floor?",
+        a: "Yes. KL Renovator handles high-rise installations. A difficult access surcharge of RM 50–150 may apply for units above level 10 or where outdoor unit access requires special rigging.",
+      },
+    ],
+    priceTable: [
+      { label: "Wall-Mounted · 1.0 HP", price: "RM 199" },
+      { label: "Wall-Mounted · 1.5 HP", price: "RM 199" },
+      { label: "Wall-Mounted · 2.0 HP", price: "RM 249" },
+      { label: "Wall-Mounted · 2.5 HP", price: "RM 279" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 329" },
+      { label: "Wall-Mounted · 4.0 HP", price: "RM 399" },
+      { label: "Wall-Mounted · 5.0 HP", price: "RM 449" },
+      { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 290" },
+      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 350" },
+      { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
+      { label: "Additional copper pipe (per ft)", price: "RM 17 – 27/ft" },
+      { label: "Additional wire (per ft)", price: "RM 9/ft" },
+      { label: "Dismantle old unit", price: "From RM 90" },
+    ],
+  },
+
+  "repair": {
+    slug: "repair",
+    title: "Aircond Troubleshooting & Repair",
+    tagline: "Expert aircond fault diagnosis and repair in KL & Selangor — capacitors, fan motors, PCB boards, compressors and more.",
+    description:
+      "KL Renovator provides professional aircond repair and troubleshooting across Kuala Lumpur and Selangor. Our technicians diagnose the root cause of any aircond fault — from blinking error lights to complete breakdowns — and provide a transparent quote before any repair work begins. We carry common replacement parts on the van to fix most issues in a single visit. Diagnostic fee is RM 88, which is fully waived if the repair is carried out on the same visit.",
+    startPrice: "RM 88",
+    heroImage: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (1).jpeg",
+    highlights: [
+      "Full fault diagnosis before any repair work",
+      "Transparent quote — you approve before we start",
+      "Diagnostic fee waived if repair done same visit",
+      "Capacitor, fan motor, PCB, sensor and compressor repairs",
+      "Error code reading for all major brands",
+      "Common parts carried on-van for same-day fix",
+      "1-month workmanship warranty on all parts",
+      "All brands: Daikin, Panasonic, Mitsubishi, LG, Samsung & more",
+    ],
+    process: [
+      { step: "Diagnosis", desc: "Technician runs a full system test, reads error codes, and identifies the fault. A quote is provided before any work begins." },
+      { step: "Quote Approval", desc: "You receive an itemised quote covering parts and labour. Work only begins after your approval." },
+      { step: "Part Replacement", desc: "Faulty component is replaced — capacitor, fan motor, PCB, sensor, drain pump, or other part as needed." },
+      { step: "Test & Warranty", desc: "System is tested to confirm the fault is resolved. A 1-month warranty is issued on the repaired component." },
+    ],
+    faqs: [
+      {
+        q: "How much does aircond repair cost in KL & Selangor?",
+        a: "Diagnostic fee is RM 88 (waived if repair is done on the same visit). Common repairs: capacitor RM 180, fan motor RM 250–450, PCB board RM 300–600, compressor RM 600–2,000. All quoted before work begins.",
+      },
+      {
+        q: "My aircond is blinking and not working. What does that mean?",
+        a: "A blinking light usually indicates an error code from the unit's PCB. Our technician reads the error code and identifies the exact fault — it could be a dirty sensor, low gas, PCB fault or communication error. We diagnose and fix the root cause.",
+      },
+      {
+        q: "My aircond is running but not cold. Is that a repair or gas top-up?",
+        a: "Not cold can be caused by low refrigerant gas, a dirty coil, or a faulty capacitor. Our technician checks all three before recommending a solution. You will receive a quote for the correct service — gas top-up, chemical wash or part replacement.",
+      },
+      {
+        q: "Is the diagnostic fee refundable or waived?",
+        a: "Yes. The RM 88 diagnostic fee is fully waived if you proceed with the repair on the same visit. You only pay for the repair itself.",
+      },
+      {
+        q: "How long does a repair visit take?",
+        a: "Most repairs take 1 to 2 hours. PCB board replacements may take longer if the part needs to be sourced. In most cases, common parts like capacitors and fan motors are carried on the van and replaced on the spot.",
+      },
+      {
+        q: "Do you repair all aircond brands?",
+        a: "Yes. KL Renovator repairs all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Acson, Midea, LG, Samsung, Sharp, Toshiba, Haier and more.",
+      },
+    ],
+    priceTable: [
+      { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
+      { label: "Capacitor Replacement", price: "RM 180" },
+      { label: "Copper Sensor / Thermistor", price: "RM 150" },
+      { label: "Fan Motor", price: "RM 250 – 450" },
+      { label: "PCB / Main Board", price: "RM 300 – 600" },
+      { label: "Drain Pipe Clearing", price: "RM 120" },
+      { label: "Drain Pump Installation", price: "RM 300 – 400" },
+      { label: "Compressor Replacement", price: "RM 600 – 2,000" },
+      { label: "Remote Control Replacement", price: "RM 80 – 130" },
+    ],
+  },
 };
