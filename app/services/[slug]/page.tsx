@@ -206,7 +206,7 @@ export default async function ServicePage({
         {/* Low-opacity background watermark */}
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/WhatsApp Image 2026-05-03 at 13.39.32 (1).jpeg"
+            src="/hero/Compressor installation new2026-05-03 at 13.39.32 (1).jpeg"
             alt="KL Renovator aircond technician on site"
             fill
             sizes="100vw"
