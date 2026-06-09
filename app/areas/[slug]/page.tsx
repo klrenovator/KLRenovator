@@ -212,7 +212,7 @@ export default async function AreaPage({
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg"
+            src="/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg"
             alt={`KL Renovator aircond technician servicing in ${area.name}`}
             fill
             sizes="100vw"
