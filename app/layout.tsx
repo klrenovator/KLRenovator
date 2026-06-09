@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import Script from "next/script";
 
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
@@ -444,6 +445,23 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
+        {/* Google Analytics GA4 */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-5V6TDZ48W0"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5V6TDZ48W0');
+            `,
+          }}
+        />
         <Providers>
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
