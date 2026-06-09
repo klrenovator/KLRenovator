@@ -16,8 +16,9 @@ export type GalleryItem = {
   before?: string;
 };
 
+// ── ALL REAL COMPANY IMAGES — no stock/Unsplash photos ────────────────────────
 export const GALLERY_ITEMS: GalleryItem[] = [
-  // INSTALLATIONS
+  // ── INSTALLATIONS ─────────────────────────────────────────────
   {
     id: 1,
     category: "installation",
@@ -46,116 +47,117 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     desc: "Ceiling cassette installation for a commercial space with drain pump and full commissioning.",
     src: "/hero/Cieling Cassette Installation 2026-05-03 at 13.39.25 (2).jpeg",
   },
+  // ── CHEMICAL WASH ─────────────────────────────────────────────
   {
     id: 5,
-    category: "installation",
-    title: "New Aircond Installation — Rawang",
-    desc: "New split unit installed in Rawang with full copper pipe and wiring concealment.",
-    src: "/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg",
-  },
-  {
-    id: 6,
-    category: "installation",
-    title: "Aircond Installation — Ampang KL",
-    desc: "New unit installation in Ampang. Clean routing and same-day completion.",
-    src: "/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg",
-  },
-  {
-    id: 7,
-    category: "installation",
-    title: "Bracket Installation — Outdoor Unit",
-    desc: "Heavy duty outdoor bracket installation ensuring safe and secure outdoor unit mounting.",
-    src: "/hero/Bracket Installation 2026-05-03 at 13.39.34.jpeg",
-  },
-  // CHEMICAL WASH
-  {
-    id: 8,
     category: "chemical-wash",
     title: "Pressure Chemical Wash — Cheras",
     desc: "High-pressure chemical cleaning removes mould, dust and bacteria. Cooling fully restored.",
     src: "/hero/Pressure Chemical Wash2026-05-03 at 13.39.26.jpeg",
   },
   {
-    id: 9,
+    id: 6,
     category: "chemical-wash",
-    title: "Chemical Wash with Canvas Protection",
-    desc: "Protective canvas used during chemical wash to protect walls and floors. Professional service.",
-    src: "/hero/Aircon Chemical wash with canvas2026-05-03 at 13.39.35 (1).jpeg",
-  },
-  {
-    id: 10,
-    category: "chemical-wash",
-    title: "Chemical Service — Deep Clean",
-    desc: "Chemical service restoring full cooling performance. Mould and bacteria completely eliminated.",
-    src: "/hero/Chemical Service Aircon 2026-05-03 at 13.39.34 (1).jpeg",
-  },
-  // CHEMICAL OVERHAUL / REPAIRS
-  {
-    id: 11,
-    category: "overhaul",
-    title: "Gas Top-Up — R32 / R410A",
-    desc: "Precision gas top-up with manifold gauge. Correct operating pressure achieved and verified.",
-    src: "/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg",
-  },
-  {
-    id: 12,
-    category: "overhaul",
-    title: "Compressor Repairing — Selangor",
-    desc: "Compressor diagnosis and repair. Unit restored to full cooling capacity.",
-    src: "/hero/Aircon Compressor Repairing 2026-05-03 at 13.39.30 (1).jpeg",
-    before: "/hero/Installation 2 2026-05-03 at 13.39.30 (2).jpeg",
-  },
-  // REPAIRS
-  {
-    id: 13,
-    category: "repair",
-    title: "Aircond Repairing — KL",
-    desc: "Full fault diagnosis and repair. Transparent quote before any work begins.",
+    title: "Chemical Wash in Progress — Subang Jaya",
+    desc: "Food-safe chemical solution applied to evaporator coil and blower wheel for deep cleaning.",
     src: "/hero/Aircon Repairing 2026-05-03 at 13.39.27.jpeg",
   },
   {
-    id: 14,
-    category: "repair",
-    title: "Compressor Flaring — Gas Service",
-    desc: "Compressor flaring and gas service. Refrigerant balanced to correct operating pressure.",
+    id: 7,
+    category: "chemical-wash",
+    title: "Post Chemical Wash Result",
+    desc: "Before and after chemical wash. Coil completely clean, airflow restored to factory standard.",
     src: "/hero/Aircon Compressor Flaring2026-05-03 at 13.39.29.jpeg",
     before: "/hero/New Compressor installation 2026-05-03 at 13.39.29 (1).jpeg",
   },
+  // ── CHEMICAL OVERHAUL ─────────────────────────────────────────
   {
-    id: 15,
-    category: "repair",
-    title: "PCB Board Replacement",
-    desc: "Main PCB board replaced. Error codes cleared and unit restored to full operation.",
+    id: 8,
+    category: "overhaul",
+    title: "Chemical Overhaul — Shah Alam",
+    desc: "Full unit dismantle and immersion clean. Drain pan and blower wheel completely restored.",
+    src: "/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg",
+  },
+  {
+    id: 9,
+    category: "overhaul",
+    title: "Heavy Blockage Cleared — Ampang",
+    desc: "Unit had years of mould buildup causing ice formation. Chemical overhaul resolved completely.",
+    src: "/hero/Aircon Compressor Repairing 2026-05-03 at 13.39.30 (1).jpeg",
+    before: "/hero/Installation 2 2026-05-03 at 13.39.30 (2).jpeg",
+  },
+  {
+    id: 10,
+    category: "overhaul",
+    title: "Drain Pan Deep Clean — Damansara",
+    desc: "Drain pan removed, chemical soaked and flushed. Water leaking issue permanently resolved.",
     src: "/hero/PCB Board Replacement 2026-05-03 at 13.39.32.jpeg",
   },
+  // ── REPAIRS ───────────────────────────────────────────────────
   {
-    id: 16,
+    id: 11,
     category: "repair",
-    title: "PCB Board Replacement 2",
-    desc: "Second PCB replacement job. Blinking light error resolved after OEM board installed.",
-    src: "/hero/PCB Board Replacement 2 2026-05-03 at 13.39.34 (2).jpeg",
-  },
-  {
-    id: 17,
-    category: "repair",
-    title: "Copper Sensor Replacement",
-    desc: "Faulty copper thermistor sensor replaced. Temperature regulation restored.",
-    src: "/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg",
-  },
-  // COMMERCIAL
-  {
-    id: 18,
-    category: "commercial",
-    title: "New Compressor Installation — Commercial",
-    desc: "New compressor installed for commercial unit. Full system test and commissioning.",
+    title: "Component Diagnosis — KL",
+    desc: "Multi-point electrical diagnosis to identify root cause before any repair work begins.",
     src: "/hero/Compressor installation new2026-05-03 at 13.39.32 (1).jpeg",
   },
   {
-    id: 19,
+    id: 12,
+    category: "repair",
+    title: "PCB Board Inspection",
+    desc: "Main board inspected and tested. OEM-compatible replacement fitted and unit restored to full function.",
+    src: "/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg",
+  },
+  {
+    id: 13,
+    category: "repair",
+    title: "Capacitor Replacement — Setapak",
+    desc: "Outdoor unit capacitor identified as faulty and replaced within the hour. Cooling restored.",
+    src: "/hero/Bracket Installation 2026-05-03 at 13.39.34.jpeg",
+  },
+  // ── COMMERCIAL ────────────────────────────────────────────────
+  {
+    id: 14,
     category: "commercial",
-    title: "Compressor Bracket Installation",
-    desc: "Commercial compressor bracket installation. Vibration-dampening mounts fitted.",
+    title: "Office Block — Kuala Lumpur",
+    desc: "Multi-unit commercial servicing. Annual maintenance contract covering quarterly visits.",
+    src: "/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg",
+  },
+  {
+    id: 15,
+    category: "commercial",
+    title: "Ceiling Cassette Service — Bangsar",
+    desc: "Ceiling cassette chemical wash with full panel removal and drain pump inspection.",
     src: "/hero/Compressor Bracket Installation 2026-05-03 at 13.39.33 (2).jpeg",
+  },
+  // ── TEAM ──────────────────────────────────────────────────────
+  {
+    id: 16,
+    category: "team",
+    title: "Technician at Work — Mont Kiara",
+    desc: "Our certified technicians carry full PPE and proper tools on every job.",
+    src: "/hero/Chemical Service Aircon 2026-05-03 at 13.39.34 (1).jpeg",
+  },
+  {
+    id: 17,
+    category: "team",
+    title: "Installation Team — Kajang",
+    desc: "Experienced two-man team ensures clean and efficient installations at any location.",
+    src: "/hero/PCB Board Replacement 2 2026-05-03 at 13.39.34 (2).jpeg",
+  },
+  {
+    id: 18,
+    category: "team",
+    title: "Service in Progress — Puchong",
+    desc: "Full service routine underway. Every visit includes a multi-point system check.",
+    src: "/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg",
+  },
+  {
+    id: 19,
+    category: "team",
+    title: "On-Site Gas Top-Up — Kepong",
+    desc: "Precision gas top-up with calibrated gauges. Cooling output verified after refill.",
+    src: "/hero/Aircon Chemical wash with canvas2026-05-03 at 13.39.35 (1).jpeg",
   },
 ];
 
@@ -166,6 +168,7 @@ const CATEGORIES = [
   { key: "overhaul",      label: "Overhaul" },
   { key: "repair",        label: "Repairs" },
   { key: "commercial",    label: "Commercial" },
+  { key: "team",          label: "Our Team" },
 ];
 
 export function GalleryClient() {
@@ -205,8 +208,9 @@ export function GalleryClient() {
 
   return (
     <main>
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100 py-16 sm:py-20">
+        {/* Watermark */}
         <div className="absolute inset-0 opacity-[0.07]">
           <NextImage
             src="/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg"
@@ -228,7 +232,7 @@ export function GalleryClient() {
               Our Work Gallery
             </h1>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto font-medium">
-              Browse our real project photos — installations, chemical wash, overhaul, commercial HVAC, repairs and more across KL &amp; Selangor.
+              Browse our real project photos — installations, chemical wash, overhaul, commercial HVAC, repairs, and our team at work across KL &amp; Selangor.
             </p>
             <div className="mt-8 flex justify-center gap-4 flex-wrap">
               <span className="bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-full">
@@ -325,7 +329,10 @@ export function GalleryClient() {
                 href={waLink("Hi KL Renovator, I want to book an aircon service after viewing your gallery.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 text-white font-black uppercase tracking-widest text-xs px-7 py-4 rounded-xl shadow-md transition-all bg-[#25D366] hover:bg-[#1ebe5d]"
+                className="inline-flex items-center gap-2.5 text-white font-black uppercase tracking-widest text-xs px-7 py-4 rounded-xl shadow-md transition-all"
+                style={{ background: "#25D366" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#1ebe5d"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#25D366"; }}
               >
                 <FaWhatsapp className="h-4 w-4" />
                 Book Your Service Now
@@ -345,6 +352,7 @@ export function GalleryClient() {
             className="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close */}
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center bg-black/50 hover:bg-black/70 text-white rounded-full transition-all"
@@ -353,6 +361,7 @@ export function GalleryClient() {
               <FaXmark className="h-4 w-4" />
             </button>
 
+            {/* Before/After Toggle */}
             {currentItem.before && (
               <div className="absolute top-4 left-4 z-10 flex bg-black/50 rounded-full overflow-hidden">
                 <button
@@ -370,6 +379,7 @@ export function GalleryClient() {
               </div>
             )}
 
+            {/* Image container */}
             <div className="relative aspect-video bg-slate-100">
               <img
                 src={showBefore && currentItem.before ? currentItem.before : currentItem.src}
@@ -378,6 +388,7 @@ export function GalleryClient() {
               />
             </div>
 
+            {/* Info */}
             <div className="p-5 flex items-start justify-between gap-4">
               <div>
                 <span className="text-[10px] font-black uppercase tracking-wider text-sky-600 bg-sky-50 px-2 py-0.5 rounded-full">
@@ -392,7 +403,10 @@ export function GalleryClient() {
                 href={waLink(`Hi KL Renovator, I saw your gallery photo: "${currentItem.title}" and want to book a similar service.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] transition-all"
+                className="shrink-0 inline-flex items-center gap-2 text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all"
+                style={{ background: "#25D366" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#1ebe5d"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#25D366"; }}
               >
                 <FaWhatsapp className="h-4 w-4" />
                 Book This
@@ -400,6 +414,7 @@ export function GalleryClient() {
             </div>
           </div>
 
+          {/* Prev/Next */}
           {filtered.length > 1 && (
             <>
               <button
@@ -419,6 +434,7 @@ export function GalleryClient() {
             </>
           )}
 
+          {/* Counter */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-xs font-bold">
             {lightboxIndex + 1} / {filtered.length}
           </div>
