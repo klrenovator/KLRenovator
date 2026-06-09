@@ -9,48 +9,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Static Pages ──────────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: BASE,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE}/services`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${BASE}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE}/contact`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/faq`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: `${BASE}/blog`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/gallery`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
+    { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 
   // ── Service Detail Pages ──────────────────────────────────────────────────
@@ -61,13 +27,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // ── Area Pages — CRITICAL for Local SEO ──────────────────────────────────
-  // These pages target "aircond service [area]" searches across KL & Selangor
+  // ── Area Pages ────────────────────────────────────────────────────────────
   const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
     url: `${BASE}/areas/${area.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.88,
+  }));
+
+  // ── Brand Pages ───────────────────────────────────────────────────────────
+  const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/brands/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.82,
+  }));
+
+  // ── Problem Pages ─────────────────────────────────────────────────────────
+  const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
+    url: `${BASE}/problems/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.80,
   }));
 
   // ── Blog Post Pages ───────────────────────────────────────────────────────
@@ -78,5 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.72,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages, ...blogPages];
+  return [
+    ...staticPages,
+    ...servicePages,
+    ...areaPages,
+    ...brandPages,
+    ...problemPages,
+    ...blogPages,
+  ];
 }
