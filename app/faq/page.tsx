@@ -262,7 +262,7 @@ export default function FaqPage() {
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg"
+            src="/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg"
             alt="HVAC technician servicing aircond unit KL Selangor"
             fill
             sizes="100vw"
