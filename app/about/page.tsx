@@ -17,12 +17,12 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
-    "Learn about KL Renovator (Multicore Dynamics Resources) — KL & Selangor's trusted aircon specialist. SSM: 003765188-T. Serving Kuala Lumpur, Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara & more. 10+ years experience, 5,000+ happy customers.",
+    "Learn about KL Renovator (Multicore Dynamic Resources) — KL & Selangor's trusted aircon specialist. Serving Kuala Lumpur, Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Putrajaya & Cyberjaya. 10+ years experience, 5,000+ happy customers.",
   alternates: { canonical: "https://www.klrenovator.com/about" },
   openGraph: {
     title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
     description:
-      "KL Renovator (Multicore Dynamics Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
+      "KL Renovator (Multicore Dynamic Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
     url: "https://www.klrenovator.com/about",
     type: "website",
   },
@@ -37,7 +37,7 @@ const VALUES = [
   {
     icon: FaTools,
     title: "Craftsmanship",
-    desc: "Every job is done by experienced technicians using proper tools and techniques.",
+    desc: "Every job is done by licensed technicians using proper tools and techniques.",
   },
   {
     icon: FaUserCheck,
@@ -54,44 +54,44 @@ const VALUES = [
 const HIGHLIGHTS = [
   "10+ years of aircon expertise",
   "5,000+ satisfied customers",
-  "Experienced & reliable technicians",
+  "Licensed & insured technicians",
   "Same-day service available",
   "1-month workmanship warranty",
   "Servicing all major brands",
 ];
 
 const GALLERY_IMAGES = [
-  { src: "/hero/Installation 2026-05-03 at 13.39.24.jpeg", alt: "KL Renovator professional aircond installation Kuala Lumpur" },
-  { src: "/hero/New installation 2026-05-03 at 13.39.25 (1).jpeg", alt: "New aircond installation wall-mounted unit KL Selangor" },
-  { src: "/hero/Cieling Cassette Installation 2026-05-03 at 13.39.25 (2).jpeg", alt: "Ceiling cassette aircond installation commercial KL" },
-  { src: "/hero/Installation again 2026-05-03 at 13.39.25.jpeg", alt: "Professional aircond installation HVAC technician Selangor" },
-  { src: "/hero/Pressure Chemical Wash2026-05-03 at 13.39.26.jpeg", alt: "Aircond pressure chemical wash deep clean KL Selangor" },
-  { src: "/hero/Aircon Repairing 2026-05-03 at 13.39.27.jpeg", alt: "KL Renovator aircond repair Klang Valley" },
-  { src: "/hero/New Compressor installation 2026-05-03 at 13.39.29 (1).jpeg", alt: "New compressor installation Petaling Jaya" },
-  { src: "/hero/Aircon Compressor Flaring2026-05-03 at 13.39.29.jpeg", alt: "Aircond compressor flaring gas service KL" },
-  { src: "/hero/Aircon Compressor Repairing 2026-05-03 at 13.39.30 (1).jpeg", alt: "Aircond compressor repair Selangor" },
-  { src: "/hero/Installation 2 2026-05-03 at 13.39.30 (2).jpeg", alt: "Aircond unit installation Cheras Ampang KL" },
-  { src: "/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg", alt: "Aircond gas top-up R32 R410A Selangor KL" },
-  { src: "/hero/Compressor installation new2026-05-03 at 13.39.32 (1).jpeg", alt: "New compressor installation KL Renovator team" },
-  { src: "/hero/PCB Board Replacement 2026-05-03 at 13.39.32.jpeg", alt: "Aircond PCB board replacement Daikin Panasonic KL" },
-  { src: "/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg", alt: "New aircond installation Rawang Selangor" },
-  { src: "/hero/Compressor Bracket Installation 2026-05-03 at 13.39.33 (2).jpeg", alt: "Compressor bracket installation commercial Selangor" },
-  { src: "/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg", alt: "Aircond installation Ampang Kuala Lumpur" },
-  { src: "/hero/Chemical Service Aircon 2026-05-03 at 13.39.34 (1).jpeg", alt: "Chemical service aircond deep clean KL Subang Jaya" },
-  { src: "/hero/PCB Board Replacement 2 2026-05-03 at 13.39.34 (2).jpeg", alt: "Aircond PCB board replacement Shah Alam" },
-  { src: "/hero/Bracket Installation 2026-05-03 at 13.39.34.jpeg", alt: "Aircond outdoor bracket installation clean routing KL" },
-  { src: "/hero/Aircon Chemical wash with canvas2026-05-03 at 13.39.35 (1).jpeg", alt: "Aircond chemical wash with protective canvas KL Renovator" },
-  { src: "/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg", alt: "Aircond copper sensor thermistor replacement Selangor" },
+  { src: "/hero/Installation 2026-05-03 at 13.39.24.jpeg", alt: "KL Renovator aircond installation work Kuala Lumpur" },
+  { src: "/hero/New installation 2026-05-03 at 13.39.25 (1).jpeg", alt: "Professional aircond servicing technician KL Selangor" },
+  { src: "/hero/Cieling Cassette Installation 2026-05-03 at 13.39.25 (2).jpeg", alt: "Aircond chemical wash deep cleaning Selangor" },
+  { src: "/hero/Installation again 2026-05-03 at 13.39.25.jpeg", alt: "HVAC technician pressure chemical wash KL" },
+  { src: "/hero/Pressure Chemical Wash2026-05-03 at 13.39.26.jpeg", alt: "Aircond repair and maintenance Klang Valley" },
+  { src: "/hero/Aircon Repairing 2026-05-03 at 13.39.27.jpeg", alt: "KL Renovator completed installation project" },
+  { src: "/hero/New Compressor installation 2026-05-03 at 13.39.29 (1).jpeg", alt: "Wall-mounted aircond installation Petaling Jaya" },
+  { src: "/hero/Aircon Compressor Flaring2026-05-03 at 13.39.29.jpeg", alt: "Chemical overhaul deep clean service KL" },
+  { src: "/hero/Aircon Compressor Repairing 2026-05-03 at 13.39.30 (1).jpeg", alt: "Gas top-up R32 R410A precision balancing Selangor" },
+  { src: "/hero/Installation 2 2026-05-03 at 13.39.30 (2).jpeg", alt: "Aircond troubleshooting repair Cheras Ampang" },
+  { src: "/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg", alt: "HVAC maintenance outdoor unit Selangor" },
+  { src: "/hero/Compressor installation new2026-05-03 at 13.39.32 (1).jpeg", alt: "KL Renovator technician team on-site visit" },
+  { src: "/hero/PCB Board Replacement 2026-05-03 at 13.39.32.jpeg", alt: "Aircond servicing Daikin Panasonic Mitsubishi KL" },
+  { src: "/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg", alt: "Ceiling cassette installation commercial KL" },
+  { src: "/hero/Compressor Bracket Installation 2026-05-03 at 13.39.33 (2).jpeg", alt: "Commercial aircond service office Selangor" },
+  { src: "/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg", alt: "Aircond filter cleaning basic servicing KL" },
+  { src: "/hero/Chemical Service Aircon 2026-05-03 at 13.39.34 (1).jpeg", alt: "Daikin Panasonic new unit installation Subang Jaya" },
+  { src: "/hero/PCB Board Replacement 2 2026-05-03 at 13.39.34 (2).jpeg", alt: "Aircond outdoor bracket unit installation Shah Alam" },
+  { src: "/hero/Bracket Installation 2026-05-03 at 13.39.34.jpeg", alt: "Copper pipe routing clean installation KL" },
+  { src: "/hero/Aircon Chemical wash with canvas2026-05-03 at 13.39.35 (1).jpeg", alt: "KL Renovator quality workmanship Klang Valley" },
+  { src: "/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg", alt: "KL Renovator completed aircond project Selangor" },
 ];
 
 export default function AboutPage() {
+  // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://www.klrenovator.com/#organization",
     name: "KL Renovator",
-    legalName: "Multicore Dynamics Resources",
-    taxID: "003765188-T",
+    legalName: "Multicore Dynamic Resources",
     url: "https://www.klrenovator.com",
     logo: {
       "@type": "ImageObject",
@@ -101,14 +101,14 @@ export default function AboutPage() {
     },
     image: "https://www.klrenovator.com/logo/image.png",
     description:
-      "KL Renovator (Multicore Dynamics Resources) is a professional HVAC and aircond servicing company based in Batu Caves/Selayang, serving all of Kuala Lumpur and Selangor. SSM: 003765188-T. Specialized in chemical wash, chemical overhaul, gas top-up, repair, and new unit installation.",
+      "KL Renovator (Multicore Dynamic Resources) is a professional HVAC and aircond servicing company based in Selayang, serving all of Kuala Lumpur and Selangor since 2014. Specialized in chemical wash, chemical overhaul, gas top-up, repair, and new unit installation.",
     foundingDate: "2014",
     numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "A-22-09 Magnaville Selayang",
+      streetAddress: "Megnavilla Selayang",
       postalCode: "68100",
-      addressLocality: "Batu Caves",
+      addressLocality: "Selayang",
       addressRegion: "Selangor",
       addressCountry: "MY",
     },
@@ -138,32 +138,52 @@ export default function AboutPage() {
     },
   };
 
+  // BreadcrumbList Schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
-      { "@type": "ListItem", position: 2, name: "About", item: "https://www.klrenovator.com/about" },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.klrenovator.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://www.klrenovator.com/about",
+      },
     ],
   };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* Breadcrumb Nav */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-1 text-xs text-slate-500">
-            <NextLink href="/" className="hover:text-sky-600 transition">Home</NextLink>
+            <NextLink href="/" className="hover:text-sky-600 transition">
+              Home
+            </NextLink>
             <FiChevronRight className="h-3 w-3" />
             <span className="text-slate-900 font-semibold">About</span>
           </nav>
         </div>
       </div>
 
-      {/* Hero */}
+      {/* Hero — White */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-10">
           <Image
@@ -218,7 +238,9 @@ export default function AboutPage() {
                 <p className={eyebrow()}>Our Story</p>
                 <h2 className="mt-3">
                   <span className={title({ size: "md" })}>A team of </span>
-                  <span className={title({ size: "md", color: "brand" })}>aircon experts.</span>
+                  <span className={title({ size: "md", color: "brand" })}>
+                    aircon experts.
+                  </span>
                 </h2>
                 <p className={subtitle({ class: "mt-4" })}>
                   KL Renovator started as a single-van operation servicing
@@ -231,6 +253,7 @@ export default function AboutPage() {
                   every visit, and giving customers a clear quote before a
                   single screw is turned.
                 </p>
+
                 <ul className="mt-8 grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200">
                   {HIGHLIGHTS.map((h) => (
                     <li key={h} className="flex items-start gap-2.5 bg-white px-4 py-3">
@@ -245,7 +268,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
+      {/* Photo Gallery — Horizontal Scroll */}
       <section className="py-16 sm:py-20 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
