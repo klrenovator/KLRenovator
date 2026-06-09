@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
-        alt: "KL Renovator - Premium Airconditioning Services Kuala Lumpur & Selangor",
+        alt: "KL Renovator - Professional Aircond Services Kuala Lumpur & Selangor",
       },
     ],
   },
@@ -70,22 +70,31 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Primary Local Business JSON-LD Schema */}
+        {/* Primary Local Business JSON-LD Schema — HVACBusiness */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HVACBusiness",
+              "@id": "https://www.klrenovator.com/#business",
               "name": "KL Renovator",
-              "legalName": "Multicore Dynamic Resources",
+              "legalName": "Multicore Dynamics Resources",
+              "taxID": "003765188-T",
               "alternateName": ["KL Renovator Aircond Services", "KL Renovator HVAC"],
               "url": "https://www.klrenovator.com/",
               "telephone": siteConfig.phone,
+              "email": siteConfig.email,
               "priceRange": "RM88 - RM2000",
               "currenciesAccepted": "MYR",
               "paymentAccepted": "Cash, Bank Transfer, DuitNow",
               "image": "https://www.klrenovator.com/logo/image.png",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.klrenovator.com/logo/image.png",
+                "width": 400,
+                "height": 400,
+              },
               "description": siteConfig.description,
               "slogan": "Expert Aircond Servicing, Chemical Overhaul & Repair KL & Selangor",
               "foundingDate": "2014",
@@ -106,9 +115,9 @@ export default function RootLayout({
               ],
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Megnavilla Selayang",
+                "streetAddress": "A-22-09 Magnaville Selayang",
                 "postalCode": "68100",
-                "addressLocality": "Selayang",
+                "addressLocality": "Batu Caves",
                 "addressRegion": "Selangor",
                 "addressCountry": "MY",
               },
@@ -171,6 +180,55 @@ export default function RootLayout({
           }}
         />
 
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": "https://www.klrenovator.com/#organization",
+              "name": "KL Renovator",
+              "legalName": "Multicore Dynamics Resources",
+              "taxID": "003765188-T",
+              "url": "https://www.klrenovator.com/",
+              "logo": "https://www.klrenovator.com/logo/image.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": siteConfig.phone,
+                "contactType": "customer service",
+                "areaServed": "MY",
+                "availableLanguage": ["English", "Malay", "Chinese"],
+              },
+              "sameAs": [
+                siteConfig.links.facebook,
+                siteConfig.links.instagram,
+                "https://www.tiktok.com/@klrenovator",
+                "https://www.youtube.com/@klrenovator",
+              ],
+            }),
+          }}
+        />
+
+        {/* WebSite Schema with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://www.klrenovator.com/#website",
+              "url": "https://www.klrenovator.com/",
+              "name": "KL Renovator",
+              "description": siteConfig.tagline,
+              "inLanguage": ["en-MY", "ms-MY", "zh-MY"],
+              "publisher": {
+                "@id": "https://www.klrenovator.com/#organization",
+              },
+            }),
+          }}
+        />
+
         {/* Global FAQ Schema — AEO */}
         <script
           type="application/ld+json"
@@ -184,7 +242,7 @@ export default function RootLayout({
                   "name": "How much does aircon chemical wash cost in KL?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Aircon chemical wash in KL starts from RM 120 for a standard wall-mounted unit (1.0-1.5HP). Prices vary by unit type and HP. KL Renovator offers transparent pricing with no hidden fees.",
+                    "text": "Aircon chemical wash in KL starts from RM 120 for a standard wall-mounted unit (1.0–1.5HP). Ceiling cassette starts from RM 220. KL Renovator offers transparent pricing with no hidden fees.",
                   },
                 },
                 {
@@ -197,26 +255,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "Does KL Renovator service Batu Caves?",
+                  "name": "What is the difference between chemical wash and chemical overhaul?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. KL Renovator covers Batu Caves, Selayang, Kepong, and all surrounding areas. Same-day service available. Call +60182983573.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does KL Renovator service Cheras, Ampang and Setapak?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. KL Renovator covers Cheras, Ampang, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil and all KL areas. Chemical wash from RM 120, repairs from RM 88. Call +60182983573.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does KL Renovator cover Klang, Setia Alam and Port Klang?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. KL Renovator covers Klang, Port Klang, Setia Alam, Meru and Bukit Tinggi. Professional HVAC team, same-day slots available. WhatsApp +60182983573.",
+                    "text": "A chemical wash (from RM 120) cleans the unit while it stays mounted on the wall — ideal for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the indoor unit for deep cleaning of every component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
                   },
                 },
                 {
@@ -229,18 +271,50 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "What is the difference between chemical wash and chemical overhaul?",
+                  "name": "What aircond brands does KL Renovator service?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "A chemical wash (from RM 120) cleans the unit while it stays mounted on the wall — ideal for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the indoor unit for deep cleaning of every component — recommended for water leaking, ice formation, or units not serviced in 3+ years.",
+                    "text": "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu and Gree. All inverter and non-inverter models supported.",
                   },
                 },
                 {
                   "@type": "Question",
-                  "name": "What aircond brands does KL Renovator service?",
+                  "name": "How much does aircon gas top-up cost in KL & Selangor?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models supported.",
+                    "text": "Gas top-up in KL starts from RM 120 for R22, RM 150 for R410A, and RM 180 for R32. Leak check is included with every gas top-up. KL Renovator covers all Klang Valley areas.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "Why is my aircon not cold?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The most common causes are low refrigerant gas, a dirty evaporator coil, or a faulty capacitor. KL Renovator diagnoses the exact issue and provides a quote before any repair starts. Diagnostic fee is RM 88 (waived if repair done same visit).",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "Why is my aircon leaking water?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Water leaking from the indoor unit is almost always caused by a blocked drain pipe or dirty drain pan. A chemical wash or chemical overhaul by KL Renovator clears the blockage and stops the leak.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much does aircond installation cost in KL & Selangor?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Aircond installation in KL starts from RM 199 for wall-mounted 1.0–1.5 HP. Ceiling cassette starts from RM 290. Standard installation includes 7 ft copper pipe, wiring and drainage setup. KL Renovator installs all major brands.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is KL Renovator a registered business in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. KL Renovator operates under the registered entity Multicore Dynamics Resources, SSM registration number 003765188-T, registered at A-22-09 Magnaville Selayang, 68100 Batu Caves, Selangor.",
                   },
                 },
               ],
