@@ -6,7 +6,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { HiBars3, HiXMark } from "react-icons/hi2";
+import { HiBars3, HiXMark, HiChevronDown } from "react-icons/hi2";
 
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -20,23 +20,101 @@ const LANG_OPTIONS: { code: LangCode; flag: string; label: string }[] = [
   { code: "zh", flag: "🇨🇳", label: "中文" },
 ];
 
-export const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const pathname = usePathname();
-  const { lang, setLang, t } = useLang();
-  const desktopLangRef = useRef<HTMLDivElement>(null);
-  const mobileLangRef = useRef<HTMLDivElement>(null);
+// Brands for dropdown — all 15
+const BRAND_ITEMS = [
+  { slug: "daikin",       name: "Daikin" },
+  { slug: "panasonic",    name: "Panasonic" },
+  { slug: "mitsubishi",   name: "Mitsubishi Electric" },
+  { slug: "york",         name: "York" },
+  { slug: "acson",        name: "Acson" },
+  { slug: "carrier",      name: "Carrier" },
+  { slug: "midea",        name: "Midea" },
+  { slug: "haier",        name: "Haier" },
+  { slug: "toshiba",      name: "Toshiba" },
+  { slug: "hitachi",      name: "Hitachi" },
+  { slug: "samsung",      name: "Samsung" },
+  { slug: "lg",           name: "LG" },
+  { slug: "sharp",        name: "Sharp" },
+  { slug: "fujitsu",      name: "Fujitsu" },
+  { slug: "gree",         name: "Gree" },
+];
 
-  const NAV_LINKS = [
-    { label: t("nav_home"),     href: "/" },
-    { label: t("nav_services"), href: "/services" },
-    { label: t("nav_about"),    href: "/about" },
-    { label: t("nav_faq"),      href: "/faq" },
-    { label: "Blog",            href: "/blog" },
-    { label: t("nav_contact"),  href: "/contact" },
-  ];
+// Problems for dropdown — all 20, grouped into two columns
+const PROBLEM_ITEMS = [
+  { slug: "aircond-not-cold",              name: { en: "Not Cold",            ms: "Tidak Sejuk",         zh: "不冷" } },
+  { slug: "aircond-water-leaking",         name: { en: "Water Leaking",       ms: "Bocor Air",           zh: "漏水" } },
+  { slug: "aircond-making-noise",          name: { en: "Making Noise",        ms: "Bunyi Bising",        zh: "噪音" } },
+  { slug: "aircond-bad-smell",             name: { en: "Bad Smell",           ms: "Bau Busuk",           zh: "异味" } },
+  { slug: "aircond-freezing-up",           name: { en: "Freezing Up",         ms: "Membeku",             zh: "结冰" } },
+  { slug: "aircond-low-gas",               name: { en: "Low Gas",             ms: "Gas Rendah",          zh: "气体不足" } },
+  { slug: "aircond-gas-leak",              name: { en: "Gas Leak",            ms: "Kebocoran Gas",       zh: "气体泄漏" } },
+  { slug: "aircond-compressor-problem",    name: { en: "Compressor Problem",  ms: "Masalah Kompressor",  zh: "压缩机故障" } },
+  { slug: "aircond-pcb-problem",           name: { en: "PCB Problem",         ms: "Masalah PCB",         zh: "电路板故障" } },
+  { slug: "aircond-fan-not-working",       name: { en: "Fan Not Working",     ms: "Kipas Rosak",         zh: "风扇不转" } },
+  { slug: "aircond-tripping-power",        name: { en: "Tripping Power",      ms: "Terjatuh Pawa",       zh: "跳闸断电" } },
+  { slug: "aircond-remote-not-working",    name: { en: "Remote Not Working",  ms: "Remote Rosak",        zh: "遥控器失灵" } },
+  { slug: "aircond-indoor-unit-leaking",   name: { en: "Indoor Unit Leaking", ms: "Unit Dalam Bocor",    zh: "室内机漏水" } },
+  { slug: "aircond-outdoor-unit-not-running", name: { en: "Outdoor Not Running", ms: "Unit Luar Mati",   zh: "室外机不运转" } },
+  { slug: "aircond-high-electricity-bill", name: { en: "High Electricity Bill", ms: "Bil Elektrik Tinggi", zh: "电费高" } },
+  { slug: "aircond-weak-airflow",          name: { en: "Weak Airflow",        ms: "Aliran Udara Lemah",  zh: "风力弱" } },
+  { slug: "aircond-not-turning-on",        name: { en: "Not Turning On",      ms: "Tidak Hidup",         zh: "开不了机" } },
+  { slug: "aircond-blinking-light",        name: { en: "Blinking Light Error", ms: "Lampu Berkelip",     zh: "指示灯闪烁" } },
+  { slug: "aircond-water-dripping",        name: { en: "Water Dripping",      ms: "Titisan Air",         zh: "滴水" } },
+  { slug: "aircond-thermostat-problems",   name: { en: "Thermostat Problems", ms: "Masalah Termostat",   zh: "温控器问题" } },
+];
+
+const NAV_LABELS = {
+  en: {
+    home: "Home", services: "Services", areas: "Areas",
+    brands: "Brands", problems: "Problems", blog: "Blog",
+    about: "About", faq: "FAQ", contact: "Contact",
+    allBrands: "All Brands", allProblems: "All Problems",
+    call: "Call Support", book: "Book Now",
+    topbar: "Same-day Aircond Service Across KL & Selangor",
+  },
+  ms: {
+    home: "Utama", services: "Perkhidmatan", areas: "Kawasan",
+    brands: "Jenama", problems: "Masalah", blog: "Blog",
+    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi",
+    allBrands: "Semua Jenama", allProblems: "Semua Masalah",
+    call: "Hubungi Kami", book: "Tempah Sekarang",
+    topbar: "Servis Aircond Hari Sama Seluruh KL & Selangor",
+  },
+  zh: {
+    home: "首页", services: "服务", areas: "服务地区",
+    brands: "品牌", problems: "常见问题", blog: "博客",
+    about: "关于我们", faq: "常见问答", contact: "联系我们",
+    allBrands: "全部品牌", allProblems: "全部问题",
+    call: "致电支持", book: "立即预约",
+    topbar: "当天冷气服务，覆盖吉隆坡及雪兰莪全区",
+  },
+};
+
+export const Navbar = () => {
+  const [open, setOpen]               = useState(false);
+  const [scrolled, setScrolled]       = useState(false);
+  const [langOpen, setLangOpen]       = useState(false);
+  const [brandsOpen, setBrandsOpen]   = useState(false);
+  const [problemsOpen, setProblemsOpen] = useState(false);
+  const [mobileBrandsOpen, setMobileBrandsOpen]   = useState(false);
+  const [mobileProblemsOpen, setMobileProblemsOpen] = useState(false);
+
+  const pathname        = usePathname();
+  const { lang, setLang } = useLang();
+  const lbl             = NAV_LABELS[lang];
+
+  const desktopLangRef    = useRef<HTMLDivElement>(null);
+  const mobileLangRef     = useRef<HTMLDivElement>(null);
+  const brandsRef         = useRef<HTMLDivElement>(null);
+  const problemsRef       = useRef<HTMLDivElement>(null);
+
+  // Close all dropdowns on route change
+  useEffect(() => {
+    setOpen(false);
+    setLangOpen(false);
+    setBrandsOpen(false);
+    setProblemsOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -45,23 +123,29 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setOpen(false); setLangOpen(false); }, [pathname]);
-
+  // Click outside to close dropdowns
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      const target = e.target as Node;
-      if (
-        !desktopLangRef.current?.contains(target) &&
-        !mobileLangRef.current?.contains(target)
-      ) {
-        setLangOpen(false);
-      }
+      const t = e.target as Node;
+      if (!desktopLangRef.current?.contains(t) && !mobileLangRef.current?.contains(t)) setLangOpen(false);
+      if (!brandsRef.current?.contains(t)) setBrandsOpen(false);
+      if (!problemsRef.current?.contains(t)) setProblemsOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
   const currentLang = LANG_OPTIONS.find((l) => l.code === lang) ?? LANG_OPTIONS[0];
+
+  const SIMPLE_LINKS = [
+    { label: lbl.home,     href: "/" },
+    { label: lbl.services, href: "/services" },
+    { label: lbl.areas,    href: "/areas" },
+    { label: lbl.blog,     href: "/blog" },
+    { label: lbl.about,    href: "/about" },
+    { label: lbl.faq,      href: "/faq" },
+    { label: lbl.contact,  href: "/contact" },
+  ];
 
   return (
     <header
@@ -77,7 +161,7 @@ export const Navbar = () => {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <span className="truncate font-black tracking-wider uppercase text-slate-300 flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-[#22c55e] animate-pulse" />
-            {t("nav_topbar")}
+            {lbl.topbar}
           </span>
           <div className="flex items-center gap-6">
             <a
@@ -116,28 +200,97 @@ export const Navbar = () => {
         </NextLink>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6">
-          {NAV_LINKS.map((l) => {
-            const active =
-              l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+        <nav className="hidden lg:flex items-center gap-1">
+
+          {/* Simple links */}
+          {SIMPLE_LINKS.map((l) => {
+            const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
               <NextLink
                 key={l.href}
                 href={l.href}
                 className={clsx(
-                  "relative text-xs font-black uppercase tracking-widest transition-colors py-2",
-                  active
-                    ? "text-[#0284c7]"
-                    : "text-slate-900 hover:text-[#0284c7]",
+                  "relative text-xs font-black uppercase tracking-widest transition-colors px-3 py-2",
+                  active ? "text-[#0284c7]" : "text-slate-900 hover:text-[#0284c7]",
                 )}
               >
                 {l.label}
-                {active && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />
-                )}
+                {active && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />}
               </NextLink>
             );
           })}
+
+          {/* Brands Dropdown */}
+          <div ref={brandsRef} className="relative">
+            <button
+              onClick={() => { setBrandsOpen(!brandsOpen); setProblemsOpen(false); }}
+              className={clsx(
+                "relative inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest transition-colors px-3 py-2",
+                pathname.startsWith("/brands") ? "text-[#0284c7]" : "text-slate-900 hover:text-[#0284c7]",
+              )}
+            >
+              {lbl.brands}
+              <HiChevronDown className={clsx("h-3.5 w-3.5 transition-transform duration-200", brandsOpen && "rotate-180")} />
+              {pathname.startsWith("/brands") && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />}
+            </button>
+            {brandsOpen && (
+              <div className="absolute left-0 top-full mt-1 w-56 bg-white border border-slate-200 shadow-xl rounded-b-xl overflow-hidden z-50">
+                <NextLink
+                  href="/brands"
+                  className="flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-wider bg-sky-50 text-[#0284c7] border-b border-slate-100 hover:bg-sky-100 transition-colors"
+                >
+                  {lbl.allBrands} →
+                </NextLink>
+                <div className="grid grid-cols-2">
+                  {BRAND_ITEMS.map((b) => (
+                    <NextLink
+                      key={b.slug}
+                      href={`/brands/${b.slug}`}
+                      className="px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0284c7] transition-colors border-b border-slate-50"
+                    >
+                      {b.name}
+                    </NextLink>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Problems Dropdown */}
+          <div ref={problemsRef} className="relative">
+            <button
+              onClick={() => { setProblemsOpen(!problemsOpen); setBrandsOpen(false); }}
+              className={clsx(
+                "relative inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest transition-colors px-3 py-2",
+                pathname.startsWith("/problems") ? "text-[#0284c7]" : "text-slate-900 hover:text-[#0284c7]",
+              )}
+            >
+              {lbl.problems}
+              <HiChevronDown className={clsx("h-3.5 w-3.5 transition-transform duration-200", problemsOpen && "rotate-180")} />
+              {pathname.startsWith("/problems") && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />}
+            </button>
+            {problemsOpen && (
+              <div className="absolute left-0 top-full mt-1 w-72 bg-white border border-slate-200 shadow-xl rounded-b-xl overflow-hidden z-50">
+                <NextLink
+                  href="/problems"
+                  className="flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-wider bg-sky-50 text-[#0284c7] border-b border-slate-100 hover:bg-sky-100 transition-colors"
+                >
+                  {lbl.allProblems} →
+                </NextLink>
+                <div className="grid grid-cols-2">
+                  {PROBLEM_ITEMS.map((p) => (
+                    <NextLink
+                      key={p.slug}
+                      href={`/problems/${p.slug}`}
+                      className="px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0284c7] transition-colors border-b border-slate-50"
+                    >
+                      {p.name[lang]}
+                    </NextLink>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Desktop Right */}
@@ -152,18 +305,7 @@ export const Navbar = () => {
             >
               <span className="text-base leading-none">{currentLang.flag}</span>
               <span>{currentLang.label}</span>
-              <svg
-                className={clsx(
-                  "h-3 w-3 transition-transform duration-200",
-                  langOpen && "rotate-180",
-                )}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2.5}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
+              <HiChevronDown className={clsx("h-3 w-3 transition-transform duration-200", langOpen && "rotate-180")} />
             </button>
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 w-40 bg-white border border-slate-200 shadow-xl overflow-hidden z-50">
@@ -180,9 +322,7 @@ export const Navbar = () => {
                   >
                     <span className="text-base">{opt.flag}</span>
                     {opt.label}
-                    {lang === opt.code && (
-                      <span className="ml-auto text-[#0284c7]">✓</span>
-                    )}
+                    {lang === opt.code && <span className="ml-auto text-[#0284c7]">✓</span>}
                   </button>
                 ))}
               </div>
@@ -193,7 +333,7 @@ export const Navbar = () => {
             href={`tel:${siteConfig.phone}`}
             className="inline-flex items-center gap-2 border-2 border-slate-900 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-200"
           >
-            <FaPhone className="h-3.5 w-3.5" /> {t("nav_call")}
+            <FaPhone className="h-3.5 w-3.5" /> {lbl.call}
           </a>
           <a
             href={waLink(rfqMsg)}
@@ -201,7 +341,7 @@ export const Navbar = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200"
           >
-            <FaWhatsapp className="h-4 w-4" /> {t("nav_book")}
+            <FaWhatsapp className="h-4 w-4" /> {lbl.book}
           </a>
         </div>
 
@@ -260,12 +400,12 @@ export const Navbar = () => {
 
       {/* Mobile Drawer */}
       {open && (
-        <div className="lg:hidden border-t border-slate-100 bg-white shadow-xl">
+        <div className="lg:hidden border-t border-slate-100 bg-white shadow-xl max-h-[80vh] overflow-y-auto">
           <nav>
             <ul>
-              {NAV_LINKS.map((l) => {
-                const active =
-                  l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+              {/* Simple links */}
+              {SIMPLE_LINKS.map((l) => {
+                const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
                 return (
                   <li key={l.href} className="border-b border-slate-50">
                     <NextLink
@@ -282,6 +422,80 @@ export const Navbar = () => {
                   </li>
                 );
               })}
+
+              {/* Mobile Brands Accordion */}
+              <li className="border-b border-slate-50">
+                <button
+                  onClick={() => setMobileBrandsOpen(!mobileBrandsOpen)}
+                  className={clsx(
+                    "w-full flex items-center justify-between px-6 py-4 text-sm font-black uppercase tracking-widest border-l-4 transition-all",
+                    pathname.startsWith("/brands")
+                      ? "border-[#0284c7] text-[#0284c7] bg-blue-50/40"
+                      : "border-transparent text-slate-900",
+                  )}
+                >
+                  {lbl.brands}
+                  <HiChevronDown className={clsx("h-4 w-4 transition-transform", mobileBrandsOpen && "rotate-180")} />
+                </button>
+                {mobileBrandsOpen && (
+                  <div className="bg-slate-50 border-t border-slate-100">
+                    <NextLink
+                      href="/brands"
+                      className="block px-8 py-3 text-xs font-black uppercase tracking-wider text-[#0284c7] border-b border-slate-100"
+                    >
+                      {lbl.allBrands} →
+                    </NextLink>
+                    <div className="grid grid-cols-2">
+                      {BRAND_ITEMS.map((b) => (
+                        <NextLink
+                          key={b.slug}
+                          href={`/brands/${b.slug}`}
+                          className="px-8 py-2.5 text-xs font-bold text-slate-700 hover:text-[#0284c7] border-b border-slate-100 transition-colors"
+                        >
+                          {b.name}
+                        </NextLink>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </li>
+
+              {/* Mobile Problems Accordion */}
+              <li className="border-b border-slate-50">
+                <button
+                  onClick={() => setMobileProblemsOpen(!mobileProblemsOpen)}
+                  className={clsx(
+                    "w-full flex items-center justify-between px-6 py-4 text-sm font-black uppercase tracking-widest border-l-4 transition-all",
+                    pathname.startsWith("/problems")
+                      ? "border-[#0284c7] text-[#0284c7] bg-blue-50/40"
+                      : "border-transparent text-slate-900",
+                  )}
+                >
+                  {lbl.problems}
+                  <HiChevronDown className={clsx("h-4 w-4 transition-transform", mobileProblemsOpen && "rotate-180")} />
+                </button>
+                {mobileProblemsOpen && (
+                  <div className="bg-slate-50 border-t border-slate-100">
+                    <NextLink
+                      href="/problems"
+                      className="block px-8 py-3 text-xs font-black uppercase tracking-wider text-[#0284c7] border-b border-slate-100"
+                    >
+                      {lbl.allProblems} →
+                    </NextLink>
+                    <div className="grid grid-cols-2">
+                      {PROBLEM_ITEMS.map((p) => (
+                        <NextLink
+                          key={p.slug}
+                          href={`/problems/${p.slug}`}
+                          className="px-8 py-2.5 text-xs font-bold text-slate-700 hover:text-[#0284c7] border-b border-slate-100 transition-colors"
+                        >
+                          {p.name[lang]}
+                        </NextLink>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </li>
             </ul>
           </nav>
           <div className="px-5 py-5 grid grid-cols-2 gap-3 bg-slate-50/50 border-t border-slate-100">
@@ -289,7 +503,7 @@ export const Navbar = () => {
               href={`tel:${siteConfig.phone}`}
               className="inline-flex items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
             >
-              <FaPhone className="h-3.5 w-3.5 text-white" /> {t("nav_call")}
+              <FaPhone className="h-3.5 w-3.5 text-white" /> {lbl.call}
             </a>
             <a
               href={waLink(rfqMsg)}
@@ -297,7 +511,7 @@ export const Navbar = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
             >
-              <FaWhatsapp className="h-4 w-4" /> {t("nav_book")}
+              <FaWhatsapp className="h-4 w-4" /> {lbl.book}
             </a>
           </div>
         </div>
