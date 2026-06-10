@@ -28,14 +28,38 @@ const waMsg =
 export default function BrandsPage() {
   const brands = siteConfig.brandPages;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.klrenovator.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Aircond Service by Brand",
+        item: "https://www.klrenovator.com/brands",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <p className={eyebrow()}>All Brands Covered</p>
+            <p className={eyebrow()}>15 Brands · All Models</p>
             <h1 className="mt-4">
               <span className={title({ size: "lg" })}>Aircond Service </span>
               <span className={title({ size: "lg", color: "brand" })}>
@@ -44,9 +68,22 @@ export default function BrandsPage() {
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
               KL Renovator services all major aircond brands across Kuala Lumpur
-              and Selangor. Select your brand below for specific service
-              information, pricing, and supported models.
+              and Selangor. Select your brand below for specific models,
+              supported gas types, and pricing.
             </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
+              {["Chemical Wash", "Gas Top-Up", "Repairs", "Installation", "Chemical Overhaul"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-600 uppercase tracking-wider rounded-full"
+                  >
+                    <FiCheck className="h-2.5 w-2.5 text-sky-500" />
+                    {tag}
+                  </span>
+                )
+              )}
+            </div>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
                 href={waLink(waMsg)}
@@ -54,7 +91,8 @@ export default function BrandsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-7 py-3.5 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
               >
-                <FaWhatsapp className="h-5 w-5" /> WhatsApp for Booking
+                <FaWhatsapp className="h-5 w-5" />
+                WhatsApp for Booking
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
@@ -72,13 +110,17 @@ export default function BrandsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-10">
-              <p className={eyebrow()}>15 Brands</p>
+              <p className={eyebrow()}>All Brands</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>Select Your </span>
                 <span className={title({ size: "sm", color: "brand" })}>
                   Aircond Brand
                 </span>
               </h2>
+              <p className="mt-3 text-sm text-slate-500 font-medium">
+                Click your brand to see supported models, gas types, and full
+                service details.
+              </p>
             </div>
           </Reveal>
 
@@ -87,18 +129,18 @@ export default function BrandsPage() {
               <Reveal key={brand.slug} delay={i * 20}>
                 <NextLink
                   href={`/brands/${brand.slug}`}
-                  className="group flex flex-col bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-2xl p-5 transition-all"
+                  className="group flex flex-col bg-white border border-slate-200 hover:border-sky-300 hover:shadow-md rounded-2xl p-5 transition-all"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-black text-base text-slate-900 group-hover:text-sky-700 transition-colors">
+                    <h2 className="font-black text-base text-slate-900 group-hover:text-sky-700 transition-colors">
                       {brand.name}
-                    </h3>
+                    </h2>
                     <FiArrowRight className="h-4 w-4 text-slate-300 group-hover:text-sky-500 transition-colors" />
                   </div>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed flex-1 mb-4">
                     {brand.description.substring(0, 90)}...
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {brand.gasTypes.map((gas) => (
                       <span
                         key={gas}
@@ -108,7 +150,7 @@ export default function BrandsPage() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-3 pt-3 border-t border-slate-100">
+                  <div className="pt-3 border-t border-slate-100">
                     <span className="text-xs font-black text-sky-600 uppercase tracking-wider">
                       View {brand.name} Service →
                     </span>
@@ -140,7 +182,7 @@ export default function BrandsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {[
               {
-                title: "All 15+ Brands Supported",
+                title: "All 15 Major Brands",
                 desc: "Daikin, Panasonic, Mitsubishi Electric, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu and Gree — every major brand sold in Malaysia.",
               },
               {
@@ -153,7 +195,7 @@ export default function BrandsPage() {
               },
               {
                 title: "Transparent Quote Before Work",
-                desc: "No matter which brand you have, you receive a confirmed quote before any work starts. No hidden charges, no surprises.",
+                desc: "No matter which brand you have, you receive a confirmed quote before any work starts. No hidden charges, no surprises on the invoice.",
               },
               {
                 title: "Same-Day Service Available",
@@ -217,22 +259,22 @@ export default function BrandsPage() {
                 note: "Wall-mounted 1–1.5 HP",
               },
               {
-                service: "Gas Top-Up",
+                service: "Gas Top-Up R22",
                 price: "From RM 120",
-                note: "R22 · 1.0 HP",
+                note: "Leak check included",
               },
               {
                 service: "Gas Top-Up R410A",
                 price: "From RM 150",
-                note: "R410A · 1.0 HP",
+                note: "Leak check included",
               },
               {
                 service: "Gas Top-Up R32",
                 price: "From RM 180",
-                note: "R32 · 1.0 HP",
+                note: "Leak check included",
               },
               {
-                service: "Repair / Diagnostic",
+                service: "Repair Diagnostic",
                 price: "From RM 88",
                 note: "Waived if repaired same visit",
               },
@@ -247,7 +289,9 @@ export default function BrandsPage() {
                   <p className="text-xs font-bold text-slate-400 mb-1">
                     {item.service}
                   </p>
-                  <p className="text-lg font-black text-sky-400">{item.price}</p>
+                  <p className="text-lg font-black text-sky-400">
+                    {item.price}
+                  </p>
                   <p className="text-xs text-slate-500 mt-1">{item.note}</p>
                 </div>
               </Reveal>
@@ -256,11 +300,56 @@ export default function BrandsPage() {
         </div>
       </section>
 
-      {/* Internal Links — Services + Areas */}
-      <section className="py-12 bg-slate-50 border-t border-slate-100">
+      {/* Multilingual Section */}
+      <section className="py-14 bg-slate-50">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="grid sm:grid-cols-3 gap-5">
+              {/* EN */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                  🇬🇧 English
+                </p>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  KL Renovator services all major aircond brands in KL &
+                  Selangor. Not an authorized dealer — an independent
+                  professional HVAC service company experienced with all brands.
+                  Same-day available. Call{" "}
+                  <strong>+60182983573</strong>.
+                </p>
+              </div>
+              {/* BM */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                  🇲🇾 Bahasa Malaysia
+                </p>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  KL Renovator menservis semua jenama aircond utama di KL &
+                  Selangor. Kami adalah syarikat servis HVAC profesional bebas
+                  yang berpengalaman dengan semua jenama. Slot hari yang sama
+                  tersedia. Hubungi <strong>+60182983573</strong>.
+                </p>
+              </div>
+              {/* ZH */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                  🇨🇳 中文
+                </p>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  KL Renovator为吉隆坡和雪兰莪所有主要冷气品牌提供服务。我们是经验丰富的独立专业HVAC服务公司。提供当天服务。请联系
+                  <strong>+60182983573</strong>。
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Internal Links */}
+      <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="grid sm:grid-cols-2 gap-10">
+            <div className="grid sm:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-4">
                   Our Services
@@ -284,16 +373,34 @@ export default function BrandsPage() {
                   Areas We Cover
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {siteConfig.areaPages.slice(0, 12).map((area) => (
+                  {siteConfig.areaPages.slice(0, 10).map((area) => (
                     <NextLink
                       key={area.slug}
                       href={`/areas/${area.slug}`}
-                      className="text-xs font-bold text-slate-600 border border-slate-200 bg-white hover:border-sky-200 px-3 py-1.5 rounded-lg transition-all"
+                      className="text-xs font-bold text-slate-600 border border-slate-200 bg-slate-50 hover:border-sky-200 px-3 py-1.5 rounded-lg transition-all"
                     >
                       {area.name}
                     </NextLink>
                   ))}
                 </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-4">
+                  Common Problems
+                </h3>
+                <ul className="space-y-2">
+                  {siteConfig.problemPages.slice(0, 6).map((p) => (
+                    <li key={p.slug}>
+                      <NextLink
+                        href={`/problems/${p.slug}`}
+                        className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-sky-700 transition-colors"
+                      >
+                        <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
+                        {p.name}
+                      </NextLink>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </Reveal>
@@ -308,8 +415,8 @@ export default function BrandsPage() {
               Book Your Aircond Service Today
             </h2>
             <p className="mt-3 text-sky-100 font-medium">
-              All brands. Same-day available. Transparent pricing across KL &
-              Selangor.
+              All 15 brands. Same-day available. Transparent pricing across KL
+              & Selangor.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -318,7 +425,8 @@ export default function BrandsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
               >
-                <FaWhatsapp className="h-5 w-5" /> WhatsApp Us Now
+                <FaWhatsapp className="h-5 w-5" />
+                WhatsApp Us Now
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
