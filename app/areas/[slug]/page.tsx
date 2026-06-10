@@ -36,6 +36,7 @@ export async function generateMetadata({
       `aircond installation ${area.name}`,
       `KL Renovator ${area.name}`,
       `HVAC ${area.name}`,
+      `aircond near me ${area.name}`,
     ].join(", "),
     openGraph: {
       title: area.metaTitle,
@@ -58,12 +59,12 @@ export default async function AreaPage({
   const area = siteConfig.areaPages.find((a) => a.slug === slug);
   if (!area) notFound();
 
-  // LocalBusiness schema specific to this area
+  // ── Schema: references the main #business entity as provider ──────────────
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": `https://www.klrenovator.com/areas/${slug}#business`,
-    name: `KL Renovator — Aircond Service ${area.name}`,
+    "@type": "HVACBusiness",
+    "@id": "https://www.klrenovator.com/#business",
+    name: siteConfig.name,
     legalName: siteConfig.parentCompany,
     url: `https://www.klrenovator.com/areas/${slug}`,
     telephone: siteConfig.phone,
@@ -157,7 +158,7 @@ export default async function AreaPage({
         name: `How much does aircond service cost in ${area.name}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Basic servicing starts from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, and gas top-up from RM 120 in ${area.name}. All prices are transparent with no hidden charges.`,
+          text: `Basic servicing starts from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, and gas top-up from RM 120 (R22) in ${area.name}. All prices are transparent with no hidden charges.`,
         },
       },
       {
@@ -200,8 +201,10 @@ export default async function AreaPage({
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
             <NextLink href="/" className="hover:text-sky-600 transition">Home</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <NextLink href="/areas" className="hover:text-sky-600 transition">Service Areas</NextLink>
             <FiChevronRight className="h-3 w-3" />
             <span className="text-slate-900 font-semibold">Aircond Service {area.name}</span>
           </nav>
@@ -212,7 +215,7 @@ export default async function AreaPage({
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/New Aircon installation in Rawang2026-05-03 at 13.39.33 (1).jpeg"
+            src="/hero/aircon-installation-ampang-klrenovator.jpeg"
             alt={`KL Renovator aircond technician servicing in ${area.name}`}
             fill
             sizes="100vw"
@@ -367,10 +370,13 @@ export default async function AreaPage({
                   { service: "Basic Servicing (2.0–2.5 HP)", price: "RM 120" },
                   { service: "Pressure Chemical Wash (1.0–1.5 HP)", price: "RM 120" },
                   { service: "Pressure Chemical Wash (2.0–2.5 HP)", price: "RM 150" },
+                  { service: "Pressure Chemical Wash (3.0 HP)", price: "RM 180" },
+                  { service: "Pressure Chemical Wash (4.0–5.0 HP)", price: "RM 200" },
                   { service: "Chemical Overhaul (1.0–1.5 HP)", price: "RM 220" },
                   { service: "Chemical Overhaul (2.0–2.5 HP)", price: "RM 280" },
-                  { service: "Gas Top-Up R32 (1.0 HP)", price: "RM 180" },
+                  { service: "Gas Top-Up R22 (1.0 HP)", price: "RM 120" },
                   { service: "Gas Top-Up R410A (1.0 HP)", price: "RM 150" },
+                  { service: "Gas Top-Up R32 (1.0 HP)", price: "RM 180" },
                   { service: "Diagnostic / Troubleshooting", price: "RM 88 (waived with repair)" },
                   { service: "New Installation (1.0–1.5 HP)", price: "From RM 199" },
                 ].map((row) => (
@@ -424,7 +430,7 @@ export default async function AreaPage({
               },
               {
                 q: `How much does aircond chemical wash cost in ${area.name}?`,
-                a: `Pressure chemical wash in ${area.name} starts from RM 120 for a 1.0–1.5 HP wall-mounted unit. For 2.0–2.5 HP it is RM 150. All prices are transparent — confirmed with you before work begins.`,
+                a: `Pressure chemical wash in ${area.name} starts from RM 120 for a 1.0–1.5 HP wall-mounted unit. For 2.0–2.5 HP it is RM 150. For 3.0 HP it is RM 180. All prices confirmed before work begins.`,
               },
               {
                 q: `Is same-day aircond service available in ${area.name}?`,
@@ -470,10 +476,10 @@ export default async function AreaPage({
                 </NextLink>
               ))}
               <NextLink
-                href="/services"
+                href="/areas"
                 className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-sky-600 hover:bg-sky-100 transition rounded-full"
               >
-                View All Services <FiArrowRight className="h-3 w-3" />
+                All Areas <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
           </Reveal>
