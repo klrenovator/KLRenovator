@@ -10,10 +10,11 @@ import { siteConfig } from "@/config/site";
 export default function Home() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": "HVACBusiness",
     "@id": "https://www.klrenovator.com/#business",
     name: siteConfig.name,
     legalName: siteConfig.parentCompany,
+    taxID: "003765188-T",
     url: "https://www.klrenovator.com",
     logo: {
       "@type": "ImageObject",
@@ -25,6 +26,9 @@ export default function Home() {
     description: siteConfig.description,
     telephone: siteConfig.phone,
     email: siteConfig.email,
+    priceRange: "RM 88 – RM 2,000",
+    currenciesAccepted: "MYR",
+    paymentAccepted: "Cash, Bank Transfer, DuitNow",
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.addressStreet,
@@ -72,8 +76,8 @@ export default function Home() {
           description: service.short,
           url: `https://www.klrenovator.com/services/${service.slug}`,
           provider: {
-            "@type": "HomeAndConstructionBusiness",
-            name: siteConfig.name,
+            "@type": "HVACBusiness",
+            "@id": "https://www.klrenovator.com/#business",
           },
         },
         priceSpecification: {
@@ -90,11 +94,25 @@ export default function Home() {
       siteConfig.links.tiktok,
       siteConfig.links.googleBusiness,
     ],
-    priceRange: "RM 88 – RM 2,000",
-    currenciesAccepted: "MYR",
-    paymentAccepted: "Cash, Bank Transfer, Online Transfer",
-    keywords:
-      "aircond service KL, aircond service Selangor, chemical wash, chemical overhaul, gas top up, aircond repair Kuala Lumpur, aircond installation Malaysia",
+    serviceType: [
+      "Aircond Basic Servicing",
+      "Pressure Chemical Wash",
+      "Chemical Overhaul",
+      "Gas Top-Up R22 R410A R32",
+      "Aircond Repair & Troubleshooting",
+      "New Aircond Installation",
+      "Dismantle & Relocation",
+      "Ceiling Cassette Service",
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone,
+        contactType: "customer service",
+        areaServed: "MY",
+        availableLanguage: ["English", "Malay", "Chinese"],
+      },
+    ],
   };
 
   const websiteSchema = {
@@ -104,6 +122,7 @@ export default function Home() {
     name: siteConfig.name,
     url: "https://www.klrenovator.com",
     description: siteConfig.tagline,
+    inLanguage: ["en-MY", "ms-MY", "zh-MY"],
     publisher: {
       "@id": "https://www.klrenovator.com/#business",
     },
@@ -119,7 +138,7 @@ export default function Home() {
 
   return (
     <>
-      {/* LocalBusiness Schema */}
+      {/* LocalBusiness Schema — HVACBusiness */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
