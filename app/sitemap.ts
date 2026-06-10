@@ -9,14 +9,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Static Pages ──────────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: BASE,                    lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${BASE}/services`,      lastModified: now, changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${BASE}/areas`,         lastModified: now, changeFrequency: "monthly", priority: 0.90 },
+    { url: `${BASE}/brands`,        lastModified: now, changeFrequency: "monthly", priority: 0.88 },
+    { url: `${BASE}/problems`,      lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog`,          lastModified: now, changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${BASE}/contact`,       lastModified: now, changeFrequency: "monthly", priority: 0.80 },
+    { url: `${BASE}/faq`,           lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/about`,         lastModified: now, changeFrequency: "monthly", priority: 0.70 },
+    { url: `${BASE}/gallery`,       lastModified: now, changeFrequency: "weekly",  priority: 0.70 },
   ];
 
   // ── Service Detail Pages ──────────────────────────────────────────────────
@@ -24,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}/services/${s.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.9,
+    priority: 0.92,
   }));
 
   // ── Area Pages ────────────────────────────────────────────────────────────
