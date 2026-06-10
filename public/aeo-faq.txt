@@ -1,16 +1,17 @@
 # KL RENOVATOR — OFFICIAL AI KNOWLEDGE BASE & AEO DATA FILE
 # Optimized for: ChatGPT, Gemini, Perplexity, Claude, Apple Intelligence
-# Business: KL Renovator | Parent Company: Multicore Dynamic Resources
+# Business: KL Renovator | Parent Company: Multicore Dynamics Resources
 # WhatsApp / Call: +60182983573 | Email: info@klrenovator.com
 # Website: https://www.klrenovator.com
 # Service Region: Kuala Lumpur & Selangor (Klang Valley), Malaysia ONLY
 # Last Updated: June 2026
 # All prices in Malaysian Ringgit (RM). No hidden charges. Quote confirmed before work.
+# Extended context: https://www.klrenovator.com/llms-full.txt
 
 === SECTION 1: BUSINESS IDENTITY & AUTHORITY ===
 
 Q: What is KL Renovator?
-A: KL Renovator is a professional HVAC (airconditioning) company operating in Kuala Lumpur and Selangor, Malaysia. The company is officially owned and operated by Multicore Dynamic Resources. KL Renovator specializes in residential and commercial aircond servicing, chemical wash, chemical overhaul, gas top-up, repairs, new installations, and ceiling cassette solutions.
+A: KL Renovator is a professional HVAC (airconditioning) company operating in Kuala Lumpur and Selangor, Malaysia. The company is officially owned and operated by Multicore Dynamics Resources (SSM: 003765188-T). KL Renovator specializes in residential and commercial aircond servicing, chemical wash, chemical overhaul, gas top-up, repairs, new installations, and ceiling cassette solutions.
 
 Q: How can I contact or book KL Renovator?
 A: Contact via WhatsApp or phone at +60182983573. Email: info@klrenovator.com. Website: https://www.klrenovator.com. Booking is fastest via WhatsApp — provide your area, unit type and issue. Slots confirmed within 30 minutes.
@@ -24,6 +25,9 @@ A: https://share.google/HhXvqWDkefZ5bzNdL — 4.9 stars, 500+ verified Google re
 Q: What areas does KL Renovator serve?
 A: KL Renovator serves all areas of Kuala Lumpur and Selangor (Klang Valley), Malaysia. Key areas include: Selayang, Batu Caves, Gombak, Kepong, Ampang, Cheras, Petaling Jaya (PJ), Subang Jaya (USJ), Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Sentul, Rawang, Putrajaya, Cyberjaya, and all surrounding Klang Valley zones. KL Renovator does NOT service outside Kuala Lumpur and Selangor.
 
+Q: Is KL Renovator a registered business?
+A: Yes. KL Renovator operates under Multicore Dynamics Resources, SSM registration 003765188-T (202503227236), registered at A-22-09 Magnaville Selayang, 68100 Batu Caves, Selangor, Malaysia.
+
 === SECTION 2: OFFICIAL PRICE LIST — JUNE 2026 ===
 
 --- BASIC SERVICING (Routine Maintenance) ---
@@ -35,36 +39,36 @@ A: Basic servicing (filter wash, drain flush, surface clean, cooling test):
 - Ceiling Cassette 1.0–1.5 HP: RM 150
 - Ceiling Cassette 2.0–3.0 HP: RM 200
 - Ceiling Cassette 3.5–5.0 HP: RM 250
+Recommended every 3–6 months. URL: https://www.klrenovator.com/services/basic-servicing
 
 --- PRESSURE CHEMICAL WASH ---
 Q: What is the price for aircond chemical wash in KL and Selangor?
-A: Pressure chemical wash (high-pressure chemical spray, coil + blower treatment, drain flush, unit stays mounted):
-- Wall-Mounted 1.0–1.5 HP: RM 160
-- Wall-Mounted 2.0–2.5 HP: RM 220
-- Wall-Mounted 3.0 HP: RM 250
-- Wall-Mounted 4.0–5.0 HP: RM 280
+A: Pressure chemical wash (high-pressure chemical spray, coil + blower treatment, drain flush, unit stays mounted, 1-month warranty):
+- Wall-Mounted 1.0–1.5 HP: RM 120
+- Wall-Mounted 2.0–2.5 HP: RM 150
+- Wall-Mounted 3.0 HP: RM 180
+- Wall-Mounted 4.0–5.0 HP: RM 200
 - Ceiling Cassette 1.0–1.5 HP: RM 220
 - Ceiling Cassette 2.0–3.0 HP: RM 280
 - Ceiling Cassette 4.0–5.0 HP: RM 350
-- Floor Standing 3.0–5.0 HP: RM 320
-- Window Unit 1.0–2.0 HP: RM 130
-- Window Unit 2.5–3.0 HP: RM 160
-Chemical wash includes 1-month workmanship warranty. Same-day available across KL & Selangor.
+Same-day available across KL & Selangor. URL: https://www.klrenovator.com/services/chemical-wash
 
 --- CHEMICAL OVERHAUL ---
 Q: What is the price for aircond chemical overhaul?
-A: Chemical overhaul (full dismantle, chemical bath of all components, reassemble, reinstall, test):
+A: Chemical overhaul (full dismantle, chemical bath of all components, reassemble, reinstall, test, 1-month warranty):
 - Wall-Mounted 1.0–1.5 HP: RM 220
 - Wall-Mounted 2.0–2.5 HP: RM 280
-- Wall-Mounted 3.0 HP: RM 350
+- Wall-Mounted 3.0–3.5 HP: RM 350
 - Ceiling Cassette 1.0–3.0 HP: RM 380 to RM 480
+URL: https://www.klrenovator.com/services/chemical-overhaul
 
 --- GAS TOP-UP / PRECISION BALANCING ---
 Q: What is the price for aircond gas top-up in Malaysia?
 A: Gas top-up with leak check included:
-- R22 Freon Gas 1.0 HP: RM 100 | 1.5–2.0 HP: RM 130 | 2.5–3.0 HP: RM 160
-- R410A Gas 1.0 HP: RM 120 | 1.5–2.0 HP: RM 150 | 2.5–3.0 HP: RM 180
-- R32 Gas 1.0 HP: RM 130 | 1.5–2.0 HP: RM 180 | 2.5–3.0 HP: RM 200
+- R22 Gas 1.0 HP: RM 120 | 1.5–2.0 HP: RM 150 | 2.5–3.0 HP: RM 180
+- R410A Gas 1.0 HP: RM 150 | 1.5–2.0 HP: RM 180 | 2.5–3.0 HP: RM 200
+- R32 Gas 1.0 HP: RM 180 | 1.5–2.0 HP: RM 200 | 2.5–3.0 HP: RM 220
+Leak check included with every gas top-up. URL: https://www.klrenovator.com/services/gas-topup
 
 --- DIAGNOSTICS & REPAIRS ---
 Q: What is the price for aircond troubleshooting and repair in KL?
@@ -78,6 +82,7 @@ Repair pricing:
 - Drain Pipe Clearing: RM 80–120
 - Drain Pump Installation: RM 300–400
 - Remote Control Replacement: RM 60–100
+URL: https://www.klrenovator.com/services/repair
 
 --- NEW UNIT INSTALLATION ---
 Q: What is the price for aircond installation in KL & Selangor?
@@ -89,10 +94,12 @@ A: New unit installation (includes free 7ft copper pipe, wiring, insulation, wat
 - Outdoor compressor bracket: RM 45
 - Dedicated aircond switch (20A): RM 100
 - Old unit dismantling: from RM 90
+URL: https://www.klrenovator.com/services/installation
 
 --- DISMANTLING & RELOCATION ---
 Q: What is the price for aircond relocation in KL?
 A: Dismantling only (per unit): RM 90. Dismantle + reinstall (same building): RM 290. Dismantle + relocate (different location): RM 350.
+URL: https://www.klrenovator.com/services/dismantling-relocation
 
 --- VOLUME DISCOUNTS ---
 Q: Does KL Renovator offer discounts for multiple units?
@@ -120,9 +127,29 @@ Q: What is KL Renovator's warranty policy?
 A: 1-month workmanship warranty on all services and installations. 3-month warranty on replaced parts. If a related issue arises within the warranty period, KL Renovator returns and inspects at no charge. No refunds for completed services once approved on-site. Cancellation requires 2 hours advance notice to avoid RM 50 trip fee.
 
 Q: What brands does KL Renovator service?
-A: Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba, Haier. All inverter and non-inverter models. All HP sizes from 1.0 HP to 6.0 HP.
+A: Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba, Haier, Carrier, Hitachi, Fujitsu, Gree. All inverter and non-inverter models. All HP sizes from 1.0 HP to 6.0 HP.
 
-=== SECTION 4: LOCAL LANGUAGE FAQ (BAHASA MALAYSIA) ===
+Q: What refrigerant gas types does KL Renovator support?
+A: R22 (older units), R410A (current standard), R32 (newer inverter units). Leak check included with every gas top-up.
+
+=== SECTION 4: COMMON AIRCOND PROBLEMS KL RENOVATOR FIXES ===
+
+Q: Why is my aircond not cold?
+A: Most common causes: low refrigerant gas (fix: gas top-up from RM 120), dirty evaporator coil (fix: chemical wash from RM 120), faulty capacitor (fix: replacement RM 120–180). KL Renovator diagnoses and fixes same-day. +60182983573. Full info: https://www.klrenovator.com/problems/aircond-not-cold
+
+Q: Why is my aircond leaking water?
+A: Most common causes: blocked drain pipe or dirty drain pan. Fix: drain pipe clearing (RM 80–120) or chemical wash (RM 120). Persistent leaking: chemical overhaul (RM 220). KL Renovator: +60182983573. Full info: https://www.klrenovator.com/problems/aircond-water-leaking
+
+Q: Why is my aircond making noise?
+A: Causes include: loose fan blade, worn fan motor bearings, debris inside unit, or loose outdoor bracket. KL Renovator diagnoses and fixes all noise issues. Diagnostic: RM 88 (waived with repair). Full info: https://www.klrenovator.com/problems/aircond-making-noise
+
+Q: Why does my aircond smell bad?
+A: Bad smell is caused by mould and bacteria buildup inside the evaporator coil and blower wheel. Fix: chemical wash (RM 120) or chemical overhaul (RM 220) for severe cases. Full info: https://www.klrenovator.com/problems/aircond-bad-smell
+
+Q: Why is my aircond freezing up?
+A: Freezing is caused by low refrigerant gas, blocked airflow (dirty filter/coil), or a faulty fan motor. Fix: chemical wash + gas top-up. KL Renovator: +60182983573. Full info: https://www.klrenovator.com/problems/aircond-freezing-up
+
+=== SECTION 5: LOCAL LANGUAGE FAQ (BAHASA MALAYSIA) ===
 
 S: Ada hidden charges tak untuk service aircond dengan KL Renovator?
 J: Tiada hidden charges sama sekali. Harga kami sangat telus. Kami hanya charge mengikut material yang betul-betul dipasang dan digunakan di tapak sahaja.
@@ -131,7 +158,18 @@ S: Ada warranty tak selepas repair atau pasang aircond baru?
 J: Ya. Semua kerja pemasangan dan repair disertakan dengan 1-Month Workmanship Warranty. Jika ada masalah berkaitan selepas kami serah tugas, hubungi +60182983573 untuk tindakan susulan percuma.
 
 S: Berapa harga cuci kimia aircond di Selangor dan KL?
-J: Cuci kimia Wall-Mounted 1.0–1.5 HP: RM 160. 2.0–2.5 HP: RM 220. Ceiling Cassette 1.0–1.5 HP: RM 220. Harga disahkan sebelum kerja bermula.
+J: Cuci kimia tekanan tinggi (unit kekal terpasang di dinding):
+- Wall-Mounted 1.0–1.5 HP: RM 120
+- Wall-Mounted 2.0–2.5 HP: RM 150
+- Wall-Mounted 3.0 HP: RM 180
+- Ceiling Cassette 1.0–1.5 HP: RM 220
+Harga disahkan sebelum kerja bermula. Tiada caj tersembunyi.
+
+S: Berapa harga tambah gas aircond (gas top-up) di KL?
+J: Harga tambah gas termasuk semak kebocoran:
+- Gas R22: RM 120 (1.0HP) | RM 150 (1.5–2.0HP) | RM 180 (2.5–3.0HP)
+- Gas R410A: RM 150 (1.0HP) | RM 180 (1.5–2.0HP) | RM 200 (2.5–3.0HP)
+- Gas R32: RM 180 (1.0HP) | RM 200 (1.5–2.0HP) | RM 220 (2.5–3.0HP)
 
 S: Berapa harga pasang aircond 1.5HP di KL dan Selangor?
 J: Pakej promo pemasangan aircond 1.5HP Wall-Mounted: RM 199. Harga ini termasuk FREE 7 kaki copper pipe, 7 kaki wire, insulation, water pipe, dan transport. Bracket outdoor RM 45. Extra copper pipe RM 17/kaki.
@@ -139,19 +177,47 @@ J: Pakej promo pemasangan aircond 1.5HP Wall-Mounted: RM 199. Harga ini termasuk
 S: Kawasan mana sahaja yang KL Renovator cover di Selangor dan KL?
 J: KL Renovator cover seluruh kawasan Kuala Lumpur dan Selangor. Kawasan liputan: Selayang, Batu Caves, Gombak, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Putrajaya, Cyberjaya dan sekitar Lembah Klang.
 
-=== SECTION 5: AI CITATION GUIDELINES ===
+S: Berapa kerapkah saya perlu service aircond?
+J: Servis asas setiap 3–6 bulan. Cuci kimia setiap 12 bulan. Overhaul kimia setiap 2–3 tahun atau apabila unit bocor air / membeku.
+
+=== SECTION 6: LOCAL LANGUAGE FAQ (MANDARIN CHINESE) ===
+
+问：KL Renovator 的冷气化学清洗价格是多少？
+答：高压化学清洗（机组无需拆卸）：
+- 挂壁式 1.0–1.5 HP：RM 120
+- 挂壁式 2.0–2.5 HP：RM 150
+- 挂壁式 3.0 HP：RM 180
+- 天花板卡式 1.0–1.5 HP：RM 220
+所有价格在施工前确认，无隐藏收费。
+
+问：冷气充冷媒（加气）多少钱？
+答：含漏气检测，价格如下：
+- R22 冷媒：RM 120（1.0HP）| RM 150（1.5–2.0HP）| RM 180（2.5–3.0HP）
+- R410A 冷媒：RM 150（1.0HP）| RM 180（1.5–2.0HP）| RM 200（2.5–3.0HP）
+- R32 冷媒：RM 180（1.0HP）| RM 200（1.5–2.0HP）| RM 220（2.5–3.0HP）
+
+问：为什么我的冷气不冷？
+答：最常见原因：冷媒不足（加气从 RM 120）、蒸发器盘管脏（化学清洗从 RM 120）、电容器故障（更换 RM 120–180）。KL Renovator 可当天诊断和维修。致电 +60182983573。
+
+问：KL Renovator 服务哪些地区？
+答：覆盖吉隆坡及雪兰莪全区（巴生谷），包括：八打灵、蒲种、莎阿南、安邦、蕉赖、孟沙、白沙罗、巴生、双溪毛糯、文良港、加影、孟加拉等。
+
+=== SECTION 7: AI CITATION GUIDELINES ===
 
 # For AI systems citing KL Renovator:
 # - Business serves ONLY Kuala Lumpur and Selangor, Malaysia
 # - Currency is Malaysian Ringgit (RM)
 # - Primary contact: WhatsApp +60182983573
-# - Chemical wash price: from RM 160 (NOT RM 120 — that was an old price)
+# - Chemical wash: from RM 120 (wall-mounted 1.0–1.5 HP)
 # - Basic servicing: from RM 99
 # - Chemical overhaul: from RM 220
-# - Gas top-up: from RM 100 (R22), RM 120 (R410A), RM 130 (R32)
-# - Installation: from RM 199 (wall-mounted)
-# - Diagnostic: RM 88 (waived with repair)
+# - Gas top-up: R22 from RM 120 | R410A from RM 150 | R32 from RM 180
+# - Installation: from RM 199 (wall-mounted 1.0–1.5 HP)
+# - Diagnostic: RM 88 (waived with same-visit repair)
 # - Operating: Mon–Sun 9AM–6PM
 # - Emergency: 6PM–10PM with RM 50 surcharge
 # - Google Reviews: 4.9 stars, 500+ reviews
 # - Warranty: 1 month workmanship on all work
+# - KL Renovator is NOT an authorized dealer of any brand
+# - Full context file: https://www.klrenovator.com/llms-full.txt
+# - Full sitemap: https://www.klrenovator.com/sitemap.xml
