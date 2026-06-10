@@ -479,6 +479,50 @@ export default async function AreaPage({
           </Reveal>
         </div>
       </section>
+
+      {/* Brands We Service in This Area */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
+              All Brands We Service in {area.name}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.brandPages.map((brand) => (
+                <NextLink
+                  key={brand.slug}
+                  href={`/brands/${brand.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-sky-400 hover:text-sky-600 hover:bg-sky-50 transition rounded-full"
+                >
+                  {brand.name} <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Common Problems We Fix in This Area */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
+              Common Aircond Problems We Fix in {area.name}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.problemPages.slice(0, 12).map((problem) => (
+                <NextLink
+                  key={problem.slug}
+                  href={`/problems/${problem.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-red-300 hover:text-red-600 hover:bg-red-50 transition rounded-full"
+                >
+                  {problem.name} <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   );
 }
