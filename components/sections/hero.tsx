@@ -9,47 +9,47 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
-// Each image paired with a unique, keyword-rich alt tag for SEO & accessibility
+// SEO-optimised filenames — keyword-rich, no date-stamps
 const HERO_IMAGES = [
   {
-    src: "/hero/Installation 2026-05-03 at 13.39.24.jpeg",
-    alt: "KL Renovator technician performing aircond chemical wash Kuala Lumpur",
+    src: "/hero/aircond-installation-kuala-lumpur.jpg",
+    alt: "KL Renovator technician performing professional aircond installation Kuala Lumpur",
   },
   {
-    src: "/hero/Installation again 2026-05-03 at 13.39.25.jpeg",
-    alt: "Professional aircond installation wall-mounted unit Selangor",
+    src: "/hero/aircond-installation-wall-mounted-kl.jpg",
+    alt: "Professional wall-mounted aircond installation service KL Renovator Selangor",
   },
   {
-    src: "/hero/Pressure Chemical Wash2026-05-03 at 13.39.26.jpeg",
-    alt: "Aircond chemical overhaul deep cleaning indoor unit KL",
+    src: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+    alt: "Aircond pressure chemical wash deep cleaning indoor unit Selangor",
   },
   {
-    src: "/hero/Aircon Repairing 2026-05-03 at 13.39.27.jpeg",
-    alt: "HVAC technician gas top-up R32 R410A refrigerant Klang Valley",
+    src: "/hero/aircond-repair-technician-klang-valley.jpg",
+    alt: "HVAC technician aircond repair troubleshooting Klang Valley KL Renovator",
   },
   {
-    src: "/hero/Aircon Compressor Flaring2026-05-03 at 13.39.29.jpeg",
-    alt: "Aircond repair troubleshooting outdoor unit Petaling Jaya",
+    src: "/hero/aircond-compressor-flaring-repair-kl.jpg",
+    alt: "Aircond compressor copper pipe flaring repair Kuala Lumpur",
   },
   {
-    src: "/hero/Gas Top up 2026-05-03 at 13.39.30.jpeg",
-    alt: "Pressure chemical wash high-pressure rinse evaporator coil Selangor",
+    src: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+    alt: "Aircond gas top-up R32 R410A R22 refrigerant balancing Selangor",
   },
   {
-    src: "/hero/PCB Board Replacement 2026-05-03 at 13.39.32.jpeg",
-    alt: "Daikin Panasonic Mitsubishi aircond servicing Cheras Ampang",
+    src: "/hero/aircond-pcb-board-replacement-kl.jpg",
+    alt: "Daikin Panasonic Mitsubishi aircond PCB board replacement Kuala Lumpur",
   },
   {
-    src: "/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg",
-    alt: "Ceiling cassette aircond service commercial office KL Selangor",
+    src: "/hero/aircond-installation-ampang-selangor.jpg",
+    alt: "Ceiling cassette aircond installation commercial office Ampang Selangor",
   },
   {
-    src: "/hero/Bracket Installation 2026-05-03 at 13.39.34.jpeg",
-    alt: "New aircond unit installation copper pipe routing Shah Alam Subang",
+    src: "/hero/aircond-bracket-installation-kl-renovator.jpg",
+    alt: "Aircond outdoor bracket installation copper pipe routing Shah Alam Subang",
   },
   {
-    src: "/hero/Copper Sensor replacement 2026-05-03 at 13.39.35.jpeg",
-    alt: "KL Renovator completed aircond project satisfied customer Klang Valley",
+    src: "/hero/aircond-sensor-replacement-klang-valley.jpg",
+    alt: "KL Renovator aircond temperature sensor replacement Klang Valley Malaysia",
   },
 ];
 
@@ -90,7 +90,7 @@ export const Hero = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* ✅ LIGHTER overlay — images clearly visible */}
+        {/* Lighter overlay — images clearly visible */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-slate-900/30 z-10" />
         {/* Bottom fade for text area */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950/60 to-transparent z-10" />
