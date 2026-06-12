@@ -19,7 +19,7 @@ export const googlePlace = {
   name: "KL Renovator",
   mapsUrl: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   reviewsUrl: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
-  averageRating: 4.9,
+  averageRating: 5,
   totalReviews: 500,
 };
 
