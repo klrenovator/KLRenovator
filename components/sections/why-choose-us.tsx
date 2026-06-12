@@ -59,7 +59,7 @@ export const WhyChooseUs = () => {
             <div className="flex flex-wrap gap-3">
               <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
                 <span className="text-amber-400 text-sm">★★★★★</span>
-                <span className="text-xs font-black text-slate-700">4.9 / 5 Google</span>
+                <span className="text-xs font-black text-slate-700">5 / 5 Google</span>
               </div>
               <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
                 <span className="text-xs font-black text-slate-700">✓ 5,000+ Customers</span>
