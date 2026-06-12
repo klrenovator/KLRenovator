@@ -20,7 +20,7 @@ const ReviewCard = ({ r }: { r: Review }) => (
         <p className="truncate text-sm font-black text-slate-950">{r.author}</p>
         <p className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">{r.date}</p>
       </div>
-      <FaGoogle aria-hidden className="h-4 w-4 text-slate-400 shrink-0" />
+      <FaGoogle aria-hidden className="h-4 w-4 shrink-0" style={{ color: "#4285F4" }} />
     </div>
 
     {/* Stars */}
@@ -42,7 +42,7 @@ const ReviewCard = ({ r }: { r: Review }) => (
         <span className="inline-block h-1.5 w-1.5 bg-sky-500" />
         Verified
       </span>
-      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+      <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: "#4285F4" }}>
         Google Review
       </span>
     </div>
@@ -130,9 +130,10 @@ export const GoogleReviews = () => {
               href={googlePlace.reviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border-2 border-slate-950 bg-white px-6 py-3 text-sm font-black uppercase tracking-widest text-slate-950 hover:bg-slate-950 hover:text-white transition-all"
+              className="inline-flex items-center gap-2.5 border-2 px-6 py-3 text-sm font-black uppercase tracking-widest transition-all hover:opacity-90"
+              style={{ borderColor: "#4285F4", color: "#4285F4", backgroundColor: "#ffffff" }}
             >
-              <FaGoogle className="h-4 w-4" />
+              <FaGoogle className="h-4 w-4" style={{ color: "#4285F4" }} />
               Read all reviews on Google
               <FiArrowUpRight className="h-4 w-4" />
             </a>
