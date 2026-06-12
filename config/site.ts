@@ -27,7 +27,7 @@ export const siteConfig = {
   googleMapsEmbed: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   googleBusinessProfile: "https://share.google/HhXvqWDkefZ5bzNdL",
   reviewCount: 500,
-  reviewRating: 4.9,
+  reviewRating: 5,
 
   navItems: [
     { label: "Home", href: "/" },
