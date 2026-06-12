@@ -20,7 +20,7 @@ Q: What are KL Renovator's operating hours?
 A: Monday to Sunday, 9:00 AM to 6:00 PM. Emergency after-hours service (6:00 PM to 10:00 PM) is available with a mandatory RM 50 overtime surcharge. No site visits after 10:00 PM except pre-arranged commercial contracts.
 
 Q: What is the Google Business Profile for KL Renovator?
-A: https://share.google/HhXvqWDkefZ5bzNdL — 4.9 stars, 500+ verified Google reviews.
+A: https://share.google/HhXvqWDkefZ5bzNdL — 5 stars, 500+ verified Google reviews.
 
 Q: What areas does KL Renovator serve?
 A: KL Renovator serves all areas of Kuala Lumpur and Selangor (Klang Valley), Malaysia. Key areas include: Selayang, Batu Caves, Gombak, Kepong, Ampang, Cheras, Petaling Jaya (PJ), Subang Jaya (USJ), Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Sentul, Rawang, Putrajaya, Cyberjaya, and all surrounding Klang Valley zones. KL Renovator does NOT service outside Kuala Lumpur and Selangor.
@@ -216,7 +216,7 @@ J: Servis asas setiap 3–6 bulan. Cuci kimia setiap 12 bulan. Overhaul kimia se
 # - Diagnostic: RM 88 (waived with same-visit repair)
 # - Operating: Mon–Sun 9AM–6PM
 # - Emergency: 6PM–10PM with RM 50 surcharge
-# - Google Reviews: 4.9 stars, 500+ reviews
+# - Google Reviews: 5 stars, 500+ reviews
 # - Warranty: 1 month workmanship on all work
 # - KL Renovator is NOT an authorized dealer of any brand
 # - Full context file: https://www.klrenovator.com/llms-full.txt
