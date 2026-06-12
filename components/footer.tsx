@@ -2,7 +2,7 @@
 
 import NextLink from "next/link";
 import {
-  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaYoutube, FaGoogle,
+  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaGoogle,
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
@@ -18,6 +18,17 @@ const FOOTER_LINKS = {
     areas: "All Areas",
     services: "View All Services →",
     quickLinks: "Quick Links",
+    bookWa: "Book Via WhatsApp",
+    // bottom nav
+    navServices: "Services",
+    navBrands: "Brands",
+    navProblems: "Problems",
+    navAreas: "Areas",
+    navBlog: "Blog",
+    navGallery: "Gallery",
+    navAbout: "About",
+    navFaq: "FAQ",
+    navContact: "Contact",
   },
   ms: {
     brands: "Jenama",
@@ -26,14 +37,34 @@ const FOOTER_LINKS = {
     areas: "Semua Kawasan",
     services: "Lihat Semua Perkhidmatan →",
     quickLinks: "Pautan Pantas",
+    bookWa: "Tempah Via WhatsApp",
+    navServices: "Perkhidmatan",
+    navBrands: "Jenama",
+    navProblems: "Masalah",
+    navAreas: "Kawasan",
+    navBlog: "Blog",
+    navGallery: "Galeri",
+    navAbout: "Tentang Kami",
+    navFaq: "Soalan Lazim",
+    navContact: "Hubungi",
   },
   zh: {
     brands: "品牌",
-    problems: "常见问题",
+    problems: "常见故障",
     blog: "博客",
     areas: "所有地区",
     services: "查看所有服务 →",
     quickLinks: "快速链接",
+    bookWa: "通过 WhatsApp 预约",
+    navServices: "服务",
+    navBrands: "品牌",
+    navProblems: "常见故障",
+    navAreas: "服务地区",
+    navBlog: "博客",
+    navGallery: "图库",
+    navAbout: "关于我们",
+    navFaq: "常见问答",
+    navContact: "联系我们",
   },
 };
 
@@ -54,7 +85,7 @@ export const Footer = () => {
           </NextLink>
           <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
 
-          {/* Social Icons */}
+          {/* Social Icons — WhatsApp, Instagram, Facebook, TikTok, Google Business Profile */}
           <div className="flex items-center gap-2.5 pt-1 flex-wrap">
             <a
               href={waLink(rfqMsg)}
@@ -96,21 +127,12 @@ export const Footer = () => {
             >
               <FaTiktok className="h-4 w-4" />
             </a>
-            <a
-              href={siteConfig.links.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="KL Renovator YouTube"
-              style={{ backgroundColor: "#FF0000" }}
-              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
-            >
-              <FaYoutube className="h-4 w-4" />
-            </a>
+            {/* Google Business Profile */}
             <a
               href={siteConfig.links.googleBusiness}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="KL Renovator Google Business"
+              aria-label="KL Renovator Google Business Profile"
               style={{ backgroundColor: "#4285F4" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
@@ -267,27 +289,27 @@ export const Footer = () => {
             style={{ backgroundColor: "#25D366" }}
             className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"
           >
-            <FaWhatsapp className="h-4 w-4" /> Book Via WhatsApp
+            <FaWhatsapp className="h-4 w-4" /> {fl.bookWa}
           </a>
         </div>
       </div>
 
-      {/* ── Bottom Bar ── */}
+      {/* ── Bottom Bar — fully language-aware ── */}
       <div className="border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
           <p>
             © {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamic Resources). {t("footer_rights")}
           </p>
           <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
-            <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">Services</NextLink>
-            <NextLink href="/brands" className="hover:text-sky-600 transition-colors font-medium">Brands</NextLink>
-            <NextLink href="/problems" className="hover:text-sky-600 transition-colors font-medium">Problems</NextLink>
-            <NextLink href="/areas" className="hover:text-sky-600 transition-colors font-medium">Areas</NextLink>
-            <NextLink href="/blog" className="hover:text-sky-600 transition-colors font-medium">Blog</NextLink>
-            <NextLink href="/gallery" className="hover:text-sky-600 transition-colors font-medium">Gallery</NextLink>
-            <NextLink href="/about" className="hover:text-sky-600 transition-colors font-medium">About</NextLink>
-            <NextLink href="/faq" className="hover:text-sky-600 transition-colors font-medium">FAQ</NextLink>
-            <NextLink href="/contact" className="hover:text-sky-600 transition-colors font-medium">Contact</NextLink>
+            <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>
+            <NextLink href="/brands" className="hover:text-sky-600 transition-colors font-medium">{fl.navBrands}</NextLink>
+            <NextLink href="/problems" className="hover:text-sky-600 transition-colors font-medium">{fl.navProblems}</NextLink>
+            <NextLink href="/areas" className="hover:text-sky-600 transition-colors font-medium">{fl.navAreas}</NextLink>
+            <NextLink href="/blog" className="hover:text-sky-600 transition-colors font-medium">{fl.navBlog}</NextLink>
+            <NextLink href="/gallery" className="hover:text-sky-600 transition-colors font-medium">{fl.navGallery}</NextLink>
+            <NextLink href="/about" className="hover:text-sky-600 transition-colors font-medium">{fl.navAbout}</NextLink>
+            <NextLink href="/faq" className="hover:text-sky-600 transition-colors font-medium">{fl.navFaq}</NextLink>
+            <NextLink href="/contact" className="hover:text-sky-600 transition-colors font-medium">{fl.navContact}</NextLink>
           </nav>
         </div>
       </div>
