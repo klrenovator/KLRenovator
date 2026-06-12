@@ -34,6 +34,8 @@ export async function generateMetadata({
       `${data.title} Kuala Lumpur`,
       `${data.title} Selangor`,
       `${data.title} KL`,
+      `servis ${data.title} KL`,
+      `${data.title} 吉隆坡`,
       "aircond service Malaysia",
       "KL Renovator",
     ].join(", "),
@@ -49,27 +51,81 @@ export async function generateMetadata({
   };
 }
 
-// ─── Multi-color palette for process step numbers ────────────────────────────
+// ─── Multi-color palettes ─────────────────────────────────────────────────────
 const stepColors = [
-  "bg-sky-500",
-  "bg-emerald-500",
-  "bg-violet-500",
-  "bg-amber-500",
-  "bg-rose-500",
-  "bg-teal-500",
+  "bg-sky-500", "bg-emerald-500", "bg-violet-500",
+  "bg-amber-500", "bg-rose-500", "bg-teal-500",
+];
+const highlightColors = [
+  "bg-sky-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500",
+  "bg-rose-500", "bg-teal-500", "bg-indigo-500", "bg-orange-500",
 ];
 
-// ─── Multi-color palette for highlight check icons ───────────────────────────
-const highlightColors = [
-  "bg-sky-500",
-  "bg-emerald-500",
-  "bg-violet-500",
-  "bg-amber-500",
-  "bg-rose-500",
-  "bg-teal-500",
-  "bg-indigo-500",
-  "bg-orange-500",
-];
+// ─── Trilingual static UI labels ─────────────────────────────────────────────
+const SECTION_LABELS = {
+  servingAll: {
+    en: "Serving All of Kuala Lumpur & Selangor",
+    ms: "Meliputi Seluruh Kuala Lumpur & Selangor",
+    zh: "覆盖吉隆坡及雪兰莪全区",
+  },
+  overview: { en: "Overview", ms: "Gambaran Keseluruhan", zh: "概述" },
+  whatsIncluded: { en: "What's included", ms: "Apa yang disertakan", zh: "包含内容" },
+  everythingYouGet: {
+    en: "Everything you get with us.",
+    ms: "Semua yang anda dapat bersama kami.",
+    zh: "您将获得的一切。",
+  },
+  pricing: { en: "Pricing", ms: "Harga", zh: "收费" },
+  transparentPricing: {
+    en: "Transparent pricing.",
+    ms: "Harga yang telus.",
+    zh: "透明收费。",
+  },
+  pricingNote: {
+    en: "Starting prices. Material costs (gas, copper, trunking) quoted separately.",
+    ms: "Harga permulaan. Kos bahan (gas, kuprum, trunking) dikira berasingan.",
+    zh: "起步价格。材料费用（气体、铜管等）另行报价。",
+  },
+  process: { en: "Process", ms: "Proses", zh: "工作流程" },
+  howItWorks: { en: "How it works.", ms: "Bagaimana ia berfungsi.", zh: "工作方式。" },
+  faq: { en: "FAQ", ms: "Soalan Lazim", zh: "常见问答" },
+  commonQuestions: {
+    en: "Common questions.",
+    ms: "Soalan-soalan biasa.",
+    zh: "常见问题。",
+  },
+  availableAreas: {
+    en: "— Available in These Areas",
+    ms: "— Tersedia di Kawasan Ini",
+    zh: "— 覆盖地区",
+  },
+  allBrandsServed: {
+    en: "— All Brands We Service",
+    ms: "— Semua Jenama yang Kami Servis",
+    zh: "— 我们服务的所有品牌",
+  },
+  problemsFixed: {
+    en: "Common Problems This Service Fixes",
+    ms: "Masalah Biasa yang Diselesaikan Perkhidmatan Ini",
+    zh: "此服务解决的常见问题",
+  },
+  bookIt: { en: "Book it", ms: "Tempah", zh: "立即预约" },
+  bookYour: { en: "Book your", ms: "Tempah perkhidmatan", zh: "预约您的" },
+  sendMessage: {
+    en: "Send us a message now — we'll reply with availability and a firm quote within 30 minutes.",
+    ms: "Hantar mesej kepada kami sekarang — kami akan membalas dengan ketersediaan dan sebut harga tepat dalam 30 minit.",
+    zh: "立即发送消息——我们将在30分钟内回复可用时间和确定报价。",
+  },
+  otherServices: {
+    en: "Other Services",
+    ms: "Perkhidmatan Lain",
+    zh: "其他服务",
+  },
+};
+
+function t(key: keyof typeof SECTION_LABELS, lang: "en" | "ms" | "zh") {
+  return SECTION_LABELS[key][lang];
+}
 
 export default async function ServicePage({
   params,
@@ -81,9 +137,9 @@ export default async function ServicePage({
   const service = siteConfig.services.find((s) => s.slug === slug);
   if (!data) notFound();
 
-  const iconName =
-    siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
+  const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
 
+  // ── Schema — fixed: HVACBusiness (not HomeAndConstructionBusiness) ──────────
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -91,16 +147,16 @@ export default async function ServicePage({
     description: data.tagline,
     url: `https://www.klrenovator.com/services/${slug}`,
     provider: {
-      "@type": "HomeAndConstructionBusiness",
+      "@type": "HVACBusiness",
       "@id": "https://www.klrenovator.com/#business",
       name: siteConfig.name,
       telephone: siteConfig.phone,
       url: "https://www.klrenovator.com",
     },
-    areaServed: siteConfig.areas.map((area) => ({
-      "@type": "City",
-      name: area,
-    })),
+    areaServed: [
+      { "@type": "City", name: "Kuala Lumpur" },
+      { "@type": "State", name: "Selangor" },
+    ],
     offers: {
       "@type": "Offer",
       price: service?.startPrice ?? 88,
@@ -117,12 +173,14 @@ export default async function ServicePage({
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `${data.title} Pricing`,
-      itemListElement: data.priceTable.map((row: { label: string; price: string }, i: number) => ({
-        "@type": "Offer",
-        position: i + 1,
-        name: row.label,
-        description: row.price,
-      })),
+      itemListElement: data.priceTable.map(
+        (row: { label: string; price: string }, i: number) => ({
+          "@type": "Offer",
+          position: i + 1,
+          name: row.label,
+          description: row.price,
+        }),
+      ),
     },
   };
 
@@ -130,83 +188,57 @@ export default async function ServicePage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.klrenovator.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://www.klrenovator.com/services",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: data.title,
-        item: `https://www.klrenovator.com/services/${slug}`,
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.klrenovator.com/services" },
+      { "@type": "ListItem", position: 3, name: data.title, item: `https://www.klrenovator.com/services/${slug}` },
     ],
   };
 
-  const faqSchema = data.faqs && data.faqs.length > 0
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: data.faqs.map((f: { q: string; a: string }) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: f.a,
-          },
-        })),
-      }
-    : null;
+  const faqSchema =
+    data.faqs && data.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: data.faqs.map((f: { q: string; a: string }) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
+  // ── Trilingual content ────────────────────────────────────────────────────
+  // Service pages show all 3 languages in static sections below
+  // (same pattern as existing problems page — all 3 visible at once)
+  const lang = "en" as const; // default for server render; labels below show all 3
 
   return (
     <>
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
 
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-1 text-xs text-slate-500">
-            <NextLink href="/" className="hover:text-brand-700 transition">
-              Home
-            </NextLink>
+            <NextLink href="/" className="hover:text-sky-600 transition">Home</NextLink>
             <FiChevronRight className="h-3 w-3" />
-            <NextLink href="/services" className="hover:text-brand-700 transition">
-              Services
-            </NextLink>
+            <NextLink href="/services" className="hover:text-sky-600 transition">Services</NextLink>
             <FiChevronRight className="h-3 w-3" />
             <span className="text-slate-900 font-semibold">{data.title}</span>
           </nav>
         </div>
       </div>
 
-      {/* ── Hero — White with low-opacity watermark ── */}
+      {/* ── Hero ── */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
-        {/* Low-opacity background watermark */}
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/Compressor installation new2026-05-03 at 13.39.32 (1).jpeg"
+            src="/hero/aircon-compressor-installation-klrenovator.jpeg"
             alt="KL Renovator aircond technician on site"
             fill
             sizes="100vw"
@@ -220,16 +252,23 @@ export default async function ServicePage({
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center">
             <Reveal>
               <div>
-                {/* Colored service icon */}
                 <div className="inline-flex h-14 w-14 items-center justify-center bg-sky-500 text-white shadow-md">
                   <ServiceIcon name={iconName} className="h-7 w-7" />
                 </div>
                 <h1 className="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05] text-slate-900">
                   {data.title}
                 </h1>
-                <p className="mt-2 text-sm font-bold text-sky-600 uppercase tracking-wider">
-                  Serving All of Kuala Lumpur & Selangor
+
+                {/* Trilingual serving label */}
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <span className="text-xs font-bold text-sky-600 uppercase tracking-wider">
+                    {t("servingAll", "en")}
+                  </span>
+                </div>
+                <p className="mt-1 text-xs font-medium text-slate-500">
+                  {t("servingAll", "ms")} · {t("servingAll", "zh")}
                 </p>
+
                 <p className="mt-4 text-lg text-slate-600 max-w-xl leading-relaxed">
                   {data.tagline}
                 </p>
@@ -248,7 +287,6 @@ export default async function ServicePage({
             </Reveal>
 
             <Reveal delay={120}>
-              {/* Overview card — white with sky border */}
               <div className="bg-white text-slate-900 p-6 sm:p-8 border-2 border-sky-100 shadow-sm">
                 <p className={eyebrow()}>Overview</p>
                 <p className="mt-3 text-sm sm:text-base text-slate-700 leading-relaxed">
@@ -277,9 +315,7 @@ export default async function ServicePage({
             <p className={eyebrow()}>What&apos;s included</p>
             <h2 className="mt-3">
               <span className={title({ size: "sm" })}>Everything you </span>
-              <span className={title({ size: "sm", color: "brand" })}>
-                get with us.
-              </span>
+              <span className={title({ size: "sm", color: "brand" })}>get with us.</span>
             </h2>
           </Reveal>
           <div className="mt-8 grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4 border border-slate-200">
@@ -289,9 +325,7 @@ export default async function ServicePage({
                   <span className={`inline-flex h-8 w-8 shrink-0 items-center justify-center ${highlightColors[i % highlightColors.length]} text-white`}>
                     <FiCheck className="h-4 w-4" />
                   </span>
-                  <p className="text-sm font-semibold text-slate-800 leading-relaxed">
-                    {h}
-                  </p>
+                  <p className="text-sm font-semibold text-slate-800 leading-relaxed">{h}</p>
                 </div>
               </Reveal>
             ))}
@@ -304,16 +338,16 @@ export default async function ServicePage({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center">
-              <p className={eyebrow()}>Pricing</p>
+              <p className={eyebrow()}>Pricing · Harga · 收费</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>Transparent </span>
-                <span className={title({ size: "sm", color: "brand" })}>
-                  pricing.
-                </span>
+                <span className={title({ size: "sm", color: "brand" })}>pricing.</span>
               </h2>
-              <p className="mt-3 text-sm text-slate-600">
-                Starting prices. Material costs (gas, copper, trunking) quoted
-                separately.
+              <p className="mt-2 text-xs text-slate-500">
+                {t("pricingNote", "en")}
+              </p>
+              <p className="text-xs text-slate-400 mt-0.5">
+                {t("pricingNote", "ms")} · {t("pricingNote", "zh")}
               </p>
             </div>
           </Reveal>
@@ -321,14 +355,9 @@ export default async function ServicePage({
             <div className="mt-8 border border-slate-200 bg-white">
               <ul className="divide-y divide-slate-200">
                 {data.priceTable.map((p: { label: string; price: string }) => (
-                  <li
-                    key={p.label}
-                    className="flex items-center justify-between gap-3 px-5 py-4"
-                  >
+                  <li key={p.label} className="flex items-center justify-between gap-3 px-5 py-4">
                     <span className="text-sm text-slate-700">{p.label}</span>
-                    <span className="text-base font-bold text-sky-600 whitespace-nowrap">
-                      {p.price}
-                    </span>
+                    <span className="text-base font-bold text-sky-600 whitespace-nowrap">{p.price}</span>
                   </li>
                 ))}
               </ul>
@@ -337,17 +366,15 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Process — Multi-color step numbers */}
+      {/* Process */}
       <section className="py-14 sm:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center">
-              <p className={eyebrow()}>Process</p>
+              <p className={eyebrow()}>Process · Proses · 流程</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>How it </span>
-                <span className={title({ size: "sm", color: "brand" })}>
-                  works.
-                </span>
+                <span className={title({ size: "sm", color: "brand" })}>works.</span>
               </h2>
             </div>
           </Reveal>
@@ -361,9 +388,7 @@ export default async function ServicePage({
                   <h3 className="mt-4 font-extrabold text-slate-900 uppercase tracking-tight">
                     {p.step}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                    {p.desc}
-                  </p>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{p.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -371,35 +396,67 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* FAQs */}
+      {/* FAQs — shown in all 3 languages */}
       <section className="py-14 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center">
-              <p className={eyebrow()}>FAQ</p>
+              <p className={eyebrow()}>FAQ · Soalan Lazim · 常见问答</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>Common </span>
-                <span className={title({ size: "sm", color: "brand" })}>
-                  questions.
-                </span>
+                <span className={title({ size: "sm", color: "brand" })}>questions.</span>
               </h2>
             </div>
           </Reveal>
+
+          {/* English FAQs */}
           <div className="mt-8 border border-slate-200 divide-y divide-slate-200">
             {data.faqs.map((f: { q: string; a: string }, i: number) => (
               <Reveal key={f.q} delay={i * 60}>
                 <details className="group bg-white p-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900">
                     {f.q}
-                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500" />
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
-                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                    {f.a}
-                  </p>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">{f.a}</p>
                 </details>
               </Reveal>
             ))}
           </div>
+
+          {/* BM FAQs */}
+          {data.faqsBM && data.faqsBM.length > 0 && (
+            <Reveal>
+              <div className="mt-6 border-t border-slate-200 pt-6">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                <div className="space-y-3">
+                  {data.faqsBM.map((f: { q: string; a: string }, i: number) => (
+                    <div key={i} className="bg-white border border-slate-200 p-4">
+                      <h3 className="font-black text-sm text-slate-900 mb-2">{f.q}</h3>
+                      <p className="text-sm text-slate-600 font-medium leading-relaxed">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          )}
+
+          {/* ZH FAQs */}
+          {data.faqsZH && data.faqsZH.length > 0 && (
+            <Reveal>
+              <div className="mt-6 border-t border-slate-200 pt-6">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                <div className="space-y-3">
+                  {data.faqsZH.map((f: { q: string; a: string }, i: number) => (
+                    <div key={i} className="bg-white border border-slate-200 p-4">
+                      <h3 className="font-black text-sm text-slate-900 mb-2">{f.q}</h3>
+                      <p className="text-sm text-slate-600 font-medium leading-relaxed">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 
@@ -408,7 +465,7 @@ export default async function ServicePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
-              {data.title} — Available in These Areas
+              {data.title} {t("availableAreas", "en")} · {t("availableAreas", "ms")} · {t("availableAreas", "zh")}
             </p>
             <div className="flex flex-wrap gap-2">
               {siteConfig.areaPages.map((area) => (
@@ -430,7 +487,7 @@ export default async function ServicePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
-              {data.title} — All Brands We Service
+              {data.title} {t("allBrandsServed", "en")} · {t("allBrandsServed", "ms")} · {t("allBrandsServed", "zh")}
             </p>
             <div className="flex flex-wrap gap-2">
               {siteConfig.brandPages.map((brand) => (
@@ -447,12 +504,12 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Related Problems Links */}
+      {/* Related Problems */}
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
-              Common Problems This Service Fixes
+              {t("problemsFixed", "en")} · {t("problemsFixed", "ms")} · {t("problemsFixed", "zh")}
             </p>
             <div className="flex flex-wrap gap-2">
               {siteConfig.problemPages.slice(0, 10).map((problem) => (
@@ -475,23 +532,26 @@ export default async function ServicePage({
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <Reveal>
               <div>
-                <p className={eyebrow()}>Book it</p>
+                <p className={eyebrow()}>Book it · Tempah · 预约</p>
                 <h2 className="mt-3">
                   <span className={title({ size: "md" })}>Book your </span>
-                  <span className={title({ size: "md", color: "brand" })}>
-                    {data.title}.
-                  </span>
+                  <span className={title({ size: "md", color: "brand" })}>{data.title}.</span>
                 </h2>
                 <p className={subtitle({ class: "mt-4" })}>
-                  Send us a message now — we&apos;ll reply with availability and
-                  a firm quote within 30 minutes.
+                  {t("sendMessage", "en")}
+                </p>
+                <p className="mt-1 text-sm text-slate-500 font-medium">
+                  {t("sendMessage", "ms")}
+                </p>
+                <p className="mt-0.5 text-sm text-slate-400 font-medium">
+                  {t("sendMessage", "zh")}
                 </p>
                 <div className="mt-6">
                   <BookingButton serviceName={data.title} size="lg" />
                 </div>
 
                 <div className="mt-10">
-                  <p className={eyebrow()}>Other Services</p>
+                  <p className={eyebrow()}>Other Services · Perkhidmatan Lain · 其他服务</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {siteConfig.services
                       .filter((s) => s.slug !== slug)
