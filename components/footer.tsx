@@ -2,7 +2,7 @@
 
 import NextLink from "next/link";
 import {
-  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaYoutube, FaGoogle,
+  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaStar,
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
@@ -77,28 +77,16 @@ export const Footer = () => {
               <FaTiktok className="h-4 w-4" />
             </a>
 
-            {/* YouTube — #FF0000 */}
+            {/* Google Business Profile — #4285F4 */}
             <a
-              href={siteConfig.links.youtube}
+              href={siteConfig.googleBusinessProfile}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="KL Renovator YouTube"
-              style={{ backgroundColor: "#FF0000" }}
-              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
-            >
-              <FaYoutube className="h-4 w-4" />
-            </a>
-
-            {/* Google Business — #4285F4 */}
-            <a
-              href={siteConfig.links.googleBusiness}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="KL Renovator Google Business"
+              aria-label="KL Renovator Google Business Profile — 4.9★ Reviews"
               style={{ backgroundColor: "#4285F4" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
-              <FaGoogle className="h-4 w-4" />
+              <FaStar className="h-4 w-4" />
             </a>
 
           </div>
