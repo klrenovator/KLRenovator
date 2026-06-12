@@ -2,6 +2,7 @@
  * Detailed content for each service page.
  * Keyed by slug (matches config/site.ts services).
  * ALL prices synced with site.ts — June 2026
+ * Hero images updated to SEO-clean filenames — June 2026
  */
 
 export type ServiceDetail = {
@@ -25,8 +26,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "A pressure chemical wash uses a food-safe chemical solution sprayed at high pressure onto the evaporator coil and blower wheel while the unit stays mounted on the wall. It dissolves stubborn mould, bacteria, dust and allergens that a basic service cannot remove. Recommended every 12 months, or sooner if your unit smells, blows warm air, or has low airflow.",
     startPrice: "RM 120",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.32 (1).jpeg",
+    heroImage: "/hero/aircond-pressure-chemical-wash-kl.jpeg",
     highlights: [
       "High-pressure food-safe chemical spray",
       "Full evaporator coil + blower wheel treatment",
@@ -89,8 +89,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "A chemical overhaul is the most thorough aircond cleaning service available. The technician fully dismantles the indoor unit from the wall, removes every internal component, and immerses the coil, blower wheel, drain pan and casing in a deep chemical solution. Every hidden corner is cleaned — areas that a chemical wash cannot reach. The unit is reassembled, reinstalled, pressure-tested, and handed back with a 1-month warranty. Ideal for units that are leaking, icing up, smelling bad after a wash, or haven't been opened in 3+ years.",
     startPrice: "RM 220",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg",
+    heroImage: "/hero/aircond-chemical-service-kuala-lumpur.jpeg",
     highlights: [
       "Indoor unit fully dismantled from wall",
       "Coil, blower, drain pan — all removed and deep-cleaned",
@@ -144,8 +143,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "A standard basic service covers filter washing, blower surface cleaning, drain pipe flushing, and a multi-point system check. It keeps your unit running at peak efficiency and extends its lifespan. Recommended every 3–6 months depending on usage. A basic service takes 30–45 minutes per unit and is the most affordable way to maintain your aircond.",
     startPrice: "RM 99",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.29.jpeg",
+    heroImage: "/hero/aircond-repair-technician-kl.jpeg",
     highlights: [
       "Filter removal, wash and reinstall",
       "Blower wheel surface cleaning",
@@ -197,8 +195,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "If your aircond runs but isn't cold, low refrigerant gas is one of the most common causes. Our technicians perform a precision gas top-up using calibrated pressure gauges — never over or under charging. We support all three refrigerant types used in Malaysia: R22, R410A and R32. A leak check is included with every gas top-up service.",
     startPrice: "RM 120",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.34.jpeg",
+    heroImage: "/hero/aircond-gas-topup-r32-r410a-kl.jpeg",
     highlights: [
       "R22, R410A and R32 all supported",
       "Precision pressure gauges — correct charge every time",
@@ -251,57 +248,60 @@ export const servicesData: Record<string, ServiceDetail> = {
 
   repair: {
     slug: "repair",
-    title: "Troubleshooting & Repairs",
-    tagline: "Fast diagnosis and same-day repair — quote confirmed before we touch anything.",
+    title: "Aircond Troubleshooting & Repair",
+    tagline: "Expert aircond fault diagnosis and repair in KL & Selangor — capacitors, fan motors, PCB boards, compressors and more.",
     description:
-      "Our technicians diagnose the root cause of your aircond problem on-site and repair it the same day in most cases. Common repairs include capacitor replacement, fan motor, PCB board, sensor coil, copper wiring and drain pump installation. We quote clearly before starting — no surprise bills. The RM 88 diagnostic fee is fully waived if you proceed with the repair.",
+      "KL Renovator provides professional aircond repair and troubleshooting across Kuala Lumpur and Selangor. Our technicians diagnose the root cause of any aircond fault — from blinking error lights to complete breakdowns — and provide a transparent quote before any repair work begins. We carry common replacement parts on the van to fix most issues in a single visit. Diagnostic fee is RM 88, which is fully waived if the repair is carried out on the same visit.",
     startPrice: "RM 88",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.35.jpeg",
+    heroImage: "/hero/aircond-compressor-repair-selangor.jpeg",
     highlights: [
-      "RM 88 diagnostic fee waived if repair proceeds",
-      "Multi-point electrical and mechanical diagnosis",
-      "OEM-compatible parts used",
-      "Clear quote before any work starts",
-      "PCB board, capacitor, fan motor, sensor repair",
-      "Copper wiring and drain pump replacement",
-      "Same-day completion for most common repairs",
-      "1-month workmanship warranty on all repairs",
+      "Full fault diagnosis before any repair work",
+      "Transparent quote — you approve before we start",
+      "Diagnostic fee waived if repair done same visit",
+      "Capacitor, fan motor, PCB, sensor and compressor repairs",
+      "Error code reading for all major brands",
+      "Common parts carried on-van for same-day fix",
+      "1-month workmanship warranty on all parts",
+      "All brands: Daikin, Panasonic, Mitsubishi, LG, Samsung & more",
     ],
     process: [
-      { step: "Diagnose", desc: "Multi-point electrical and mechanical inspection to identify the exact root cause." },
-      { step: "Quote", desc: "We explain the fault clearly and provide a firm parts + labour quote. You decide — no pressure." },
-      { step: "Repair", desc: "Fault repaired with OEM-compatible components. No shortcuts." },
-      { step: "Test", desc: "Full cooling and electrical test after repair to confirm the fix." },
+      { step: "Diagnosis", desc: "Technician runs a full system test, reads error codes, and identifies the fault. A quote is provided before any work begins." },
+      { step: "Quote Approval", desc: "You receive an itemised quote covering parts and labour. Work only begins after your approval." },
+      { step: "Part Replacement", desc: "Faulty component is replaced — capacitor, fan motor, PCB, sensor, drain pump, or other part as needed." },
+      { step: "Test & Warranty", desc: "System is tested to confirm the fault is resolved. A 1-month warranty is issued on the repaired component." },
     ],
     faqs: [
       {
-        q: "What is the diagnostic fee?",
-        a: "RM 88 during standard hours (9AM–6PM). This fee is fully waived if you proceed with the repair on the same visit.",
+        q: "How much does aircond repair cost in KL & Selangor?",
+        a: "Diagnostic fee is RM 88 (waived if repair is done on the same visit). Common repairs: capacitor RM 180, fan motor RM 250–450, PCB board RM 300–600, compressor RM 600–2,000. All quoted before work begins.",
       },
       {
-        q: "My aircond keeps shutting off automatically. What could be wrong?",
-        a: "Common causes are a dirty filter restricting airflow, low refrigerant gas, faulty thermistor sensor, or a weak capacitor. Our technician will diagnose on-site and quote before repairing.",
+        q: "My aircond is blinking and not working. What does that mean?",
+        a: "A blinking light usually indicates an error code from the unit's PCB. Our technician reads the error code and identifies the exact fault — it could be a dirty sensor, low gas, PCB fault or communication error. We diagnose and fix the root cause.",
       },
       {
-        q: "Do you use original brand parts?",
-        a: "We use OEM-compatible parts as standard. Original brand parts can be sourced on request — a lead time of 1–3 days may apply depending on brand availability.",
+        q: "My aircond is running but not cold. Is that a repair or gas top-up?",
+        a: "Not cold can be caused by low refrigerant gas, a dirty coil, or a faulty capacitor. Our technician checks all three before recommending a solution. You will receive a quote for the correct service — gas top-up, chemical wash or part replacement.",
       },
       {
-        q: "Is there a warranty on repairs?",
-        a: "Yes — 1-month workmanship warranty on all repairs. Replaced parts carry a 3-month warranty.",
+        q: "Is the diagnostic fee refundable or waived?",
+        a: "Yes. The RM 88 diagnostic fee is fully waived if you proceed with the repair on the same visit. You only pay for the repair itself.",
       },
       {
-        q: "Can you repair all brands?",
-        a: "Yes — Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Haier and more. All inverter and non-inverter models.",
+        q: "How long does a repair visit take?",
+        a: "Most repairs take 1 to 2 hours. PCB board replacements may take longer if the part needs to be sourced. In most cases, common parts like capacitors and fan motors are carried on the van and replaced on the spot.",
+      },
+      {
+        q: "Do you repair all aircond brands?",
+        a: "Yes. KL Renovator repairs all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Acson, Midea, LG, Samsung, Sharp, Toshiba, Haier and more.",
       },
     ],
     priceTable: [
-      { label: "Diagnostic / Inspection Fee (waived with repair)", price: "RM 88" },
+      { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
       { label: "Capacitor Replacement", price: "RM 180" },
-      { label: "Copper Sensor / Thermistor Replacement", price: "RM 150" },
-      { label: "Fan Motor Replacement", price: "RM 250 – 450" },
-      { label: "PCB / Main Board Replacement", price: "RM 300 – 600" },
+      { label: "Copper Sensor / Thermistor", price: "RM 150" },
+      { label: "Fan Motor", price: "RM 250 – 450" },
+      { label: "PCB / Main Board", price: "RM 300 – 600" },
       { label: "Drain Pipe Clearing", price: "RM 120" },
       { label: "Drain Pump Installation", price: "RM 300 – 400" },
       { label: "Compressor Replacement", price: "RM 600 – 2,000" },
@@ -311,190 +311,12 @@ export const servicesData: Record<string, ServiceDetail> = {
 
   installation: {
     slug: "installation",
-    title: "New Unit Installation",
-    tagline: "Professional AC installation for all brands — clean routing, proper commissioning, 1-month warranty.",
-    description:
-      "KL Renovator installs all types of split-unit and ceiling cassette airconds for homes, condos and offices across KL and Selangor. Our technicians handle the complete scope: copper pipe routing, wiring, drainage, outdoor bracket mounting, and a full vacuum and test-run before handover. Old unit dismantling is also available from RM 90. Standard installation includes free 7ft copper pipe, wiring, insulation and water pipe.",
-    startPrice: "RM 199",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.24.jpeg",
-    highlights: [
-      "All brands — Daikin, Panasonic, Mitsubishi, Midea, Samsung, York, LG",
-      "Free 7ft copper pipe, wiring, insulation and water pipe included",
-      "Clean concealed cable and pipe routing",
-      "Outdoor bracket mounting included",
-      "Vacuum, commissioning and cooling test before handover",
-      "Old unit dismantling available from RM 90",
-      "Same-day installation available",
-      "1-month workmanship warranty",
-    ],
-    process: [
-      { step: "Site Survey", desc: "We assess wall structure, power point location and best drainage route before starting." },
-      { step: "Bracket & Piping", desc: "Outdoor compressor bracket fixed. Copper pipe, drain and cable routed cleanly." },
-      { step: "Mount & Connect", desc: "Indoor unit mounted. All refrigerant, electrical and drainage connections secured." },
-      { step: "Vacuum & Test", desc: "Line vacuumed, system charged, cooling tested and handed over with job card." },
-    ],
-    faqs: [
-      {
-        q: "What is included in the RM 199 installation package?",
-        a: "Standard installation includes free 7ft copper pipe, 7ft wiring, insulation, water pipe, transport, site survey, and a 1-month workmanship warranty per unit.",
-      },
-      {
-        q: "What if I need more copper pipe than 7ft?",
-        a: "Additional copper pipe is charged at RM 17/ft for 1.0–1.5 HP, RM 23/ft for 2.0–2.5 HP, and RM 27/ft for 3.0–3.5 HP. Additional wiring at RM 9/ft. All extra materials quoted and approved by you on-site before installation.",
-      },
-      {
-        q: "Do I need to buy the aircond unit separately?",
-        a: "Yes — we provide installation service. You supply the unit, or we can advise on the best brand and model for your space via WhatsApp.",
-      },
-      {
-        q: "Can you dismantle my old unit before installing the new one?",
-        a: "Yes. Old unit dismantling starts from RM 90 and can be done in the same visit.",
-      },
-      {
-        q: "How long does installation take?",
-        a: "A standard single split-unit takes 2–3 hours. Multiple units are scheduled per job — WhatsApp us for a full plan.",
-      },
-      {
-        q: "Do you install ceiling cassette units?",
-        a: "Yes — ceiling cassette installation starts from RM 290 for 1.0–1.5 HP. We handle all ceiling prep, ducting, drain pump setup and commissioning.",
-      },
-    ],
-    priceTable: [
-      { label: "Wall-Mounted · 1.0 HP", price: "RM 199" },
-      { label: "Wall-Mounted · 1.5 HP", price: "RM 199" },
-      { label: "Wall-Mounted · 2.0 HP", price: "RM 249" },
-      { label: "Wall-Mounted · 2.5 HP", price: "RM 279" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 329" },
-      { label: "Wall-Mounted · 4.0 HP", price: "RM 399" },
-      { label: "Wall-Mounted · 5.0 HP", price: "RM 449" },
-      { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 290" },
-      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 350" },
-      { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
-      { label: "Additional copper pipe 1.0–1.5 HP", price: "RM 17/ft" },
-      { label: "Additional copper pipe 2.0–2.5 HP", price: "RM 23/ft" },
-      { label: "Additional copper pipe 3.0–3.5 HP", price: "RM 27/ft" },
-      { label: "Additional wire", price: "RM 9/ft" },
-      { label: "Dismantling old unit", price: "From RM 90" },
-    ],
-  },
-
-  "dismantling-relocation": {
-    slug: "dismantling-relocation",
-    title: "Dismantling & Relocation",
-    tagline: "Move your aircond to your new home safely — proper pump-down, transport and full reinstall.",
-    description:
-      "Moving house or shifting your aircond to another room? KL Renovator carefully recovers the refrigerant gas into the outdoor unit (pump-down), disconnects all piping and brackets, and reinstalls the complete system at the new location. All copper connections, brackets and drainage are re-done properly. Cooling is tested before we leave.",
-    startPrice: "RM 90",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.30.jpeg",
-    highlights: [
-      "Proper pump-down procedure — gas safely recovered",
-      "Careful disconnect and transport of indoor and outdoor units",
-      "Full reinstall at new location",
-      "New copper connections, brackets and drainage",
-      "Cooling test after reinstall",
-      "All brands and HP sizes handled",
-    ],
-    process: [
-      { step: "Pump Down", desc: "Refrigerant gas safely recovered into outdoor unit before disconnection." },
-      { step: "Disconnect", desc: "Copper pipes, brackets and drainage carefully removed. Units protected for transport." },
-      { step: "Transport", desc: "Units securely transported to new location." },
-      { step: "Reinstall & Test", desc: "Full reinstall at new location — new copper, brackets, drainage — then cooling tested." },
-    ],
-    faqs: [
-      {
-        q: "Is it worth relocating an old aircond or should I buy new?",
-        a: "If the unit is under 8 years old and in good condition, relocation is usually much cheaper than buying new. We'll advise honestly after seeing the unit.",
-      },
-      {
-        q: "How much does aircond relocation cost in KL?",
-        a: "Dismantling only starts from RM 90 per unit. Dismantle + reinstall in same building is RM 290. Full relocation (dismantle + relocate to new location) starts from RM 350. WhatsApp us for a full quote based on your situation.",
-      },
-      {
-        q: "Do you charge extra for long-distance relocation?",
-        a: "Cross-area relocation has a small surcharge depending on the distance. WhatsApp us with both addresses and we'll quote you accurately.",
-      },
-      {
-        q: "How long does full relocation take?",
-        a: "Allow 2–4 hours for a single unit full relocation — dismantle, transport and reinstall. We require a minimum 3-hour calendar block.",
-      },
-    ],
-    priceTable: [
-      { label: "Dismantle Only (per unit)", price: "RM 90" },
-      { label: "Dismantle + Reinstall (same building)", price: "RM 290" },
-      { label: "Dismantle + Relocate (different location)", price: "RM 350" },
-    ],
-  },
-
-  "ceiling-cassette": {
-    slug: "ceiling-cassette",
-    title: "Ceiling Cassette Service & Installation",
-    tagline: "Specialist servicing and installation for commercial and residential ceiling cassette HVAC systems.",
-    description:
-      "Ceiling cassette units distribute cool air evenly in all four directions, making them ideal for offices, retail outlets, F&B spaces and large open-plan homes. KL Renovator installs new cassette units and services existing ones — including chemical wash, panel removal, drain pump checks and coil cleaning. We also offer scheduled annual maintenance contracts for corporate and commercial clients.",
-    startPrice: "RM 150",
-    heroImage:
-      "/hero/WhatsApp Image 2026-05-03 at 13.39.33.jpeg",
-    highlights: [
-      "Residential, retail, F&B, office cassette systems",
-      "Chemical wash with full panel removal",
-      "Drain pump inspection and replacement",
-      "Ceiling cut and ducting for new installs",
-      "VRF/VRV multi-split system support",
-      "Scheduled annual maintenance contracts available",
-      "All major brands — Daikin, Panasonic, Mitsubishi",
-    ],
-    process: [
-      { step: "Survey", desc: "Site inspection to confirm unit spec, ceiling height and access requirements." },
-      { step: "Ceiling Prep", desc: "Ceiling panel cut or access panel installed cleanly for new installations." },
-      { step: "Install & Pipe", desc: "Unit mounted, copper pipe routed, drain connected with proper slope and drain pump installed." },
-      { step: "Commission & Test", desc: "Full system vacuum, charge, cooling test and handover with warranty." },
-    ],
-    faqs: [
-      {
-        q: "How much does ceiling cassette chemical wash cost?",
-        a: "Ceiling cassette chemical wash starts from RM 220 for a 1.0–1.5 HP unit. Larger units (4.0–5.0 HP) are RM 350.",
-      },
-      {
-        q: "Can you service ceiling cassette units from other companies?",
-        a: "Absolutely — we service all brands regardless of who installed them. We need the unit model to bring the correct tools and parts.",
-      },
-      {
-        q: "Do you handle VRF/VRV multi-split commercial systems?",
-        a: "Yes — we handle multi-split ceiling cassette systems for offices and commercial properties. WhatsApp us with the number of units and brands for a full quotation.",
-      },
-      {
-        q: "Do you offer annual maintenance contracts for offices?",
-        a: "Yes — we offer scheduled quarterly or bi-annual maintenance contracts for commercial properties. WhatsApp us for a custom quotation.",
-      },
-      {
-        q: "How much does ceiling cassette installation cost?",
-        a: "Ceiling cassette installation starts from RM 290 for 1.0–1.5 HP, RM 350 for 2.0–3.0 HP, and RM 400 for 3.5–6.0 HP. WhatsApp us for a full site quotation.",
-      },
-    ],
-    priceTable: [
-      { label: "Basic Servicing · 1.0 – 1.5 HP", price: "RM 150" },
-      { label: "Basic Servicing · 2.0 – 3.0 HP", price: "RM 200" },
-      { label: "Basic Servicing · 3.5 – 5.0 HP", price: "RM 250" },
-      { label: "Chemical Wash · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 350" },
-      { label: "Chemical Overhaul · 1.0 – 3.0 HP", price: "RM 380 – 480" },
-      { label: "Installation · 1.0 – 1.5 HP", price: "RM 290" },
-      { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
-      { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
-    ],
-  },
-
-  "installation": {
-    slug: "installation",
     title: "New Aircond Unit Installation",
     tagline: "Professional new aircond installation in KL & Selangor — all brands and HP sizes, clean cable routing, same-day available.",
     description:
       "KL Renovator installs all residential and commercial aircond brands across Kuala Lumpur and Selangor. Every installation includes free 7 ft copper pipe, heavy duty wiring, drain pipe routing and a full system test. Our technicians ensure clean cable concealment and proper drainage setup to prevent future water leaking. Whether you are installing your first unit, upgrading an old system, or setting up a commercial space, we provide transparent pricing with no hidden charges.",
     startPrice: "RM 199",
-    heroImage: "/hero/WhatsApp Image 2026-05-03 at 13.39.33 (1).jpeg",
+    heroImage: "/hero/aircond-new-installation-selangor.jpeg",
     highlights: [
       "All brands supported — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung and more",
       "Free 7 ft copper pipe included with every installation",
@@ -555,66 +377,109 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
   },
 
-  "repair": {
-    slug: "repair",
-    title: "Aircond Troubleshooting & Repair",
-    tagline: "Expert aircond fault diagnosis and repair in KL & Selangor — capacitors, fan motors, PCB boards, compressors and more.",
+  "dismantling-relocation": {
+    slug: "dismantling-relocation",
+    title: "Dismantling & Relocation",
+    tagline: "Move your aircond to your new home safely — proper pump-down, transport and full reinstall.",
     description:
-      "KL Renovator provides professional aircond repair and troubleshooting across Kuala Lumpur and Selangor. Our technicians diagnose the root cause of any aircond fault — from blinking error lights to complete breakdowns — and provide a transparent quote before any repair work begins. We carry common replacement parts on the van to fix most issues in a single visit. Diagnostic fee is RM 88, which is fully waived if the repair is carried out on the same visit.",
-    startPrice: "RM 88",
-    heroImage: "/hero/WhatsApp Image 2026-05-03 at 13.39.34 (1).jpeg",
+      "Moving house or shifting your aircond to another room? KL Renovator carefully recovers the refrigerant gas into the outdoor unit (pump-down), disconnects all piping and brackets, and reinstalls the complete system at the new location. All copper connections, brackets and drainage are re-done properly. Cooling is tested before we leave.",
+    startPrice: "RM 90",
+    heroImage: "/hero/aircond-bracket-installation-kl.jpeg",
     highlights: [
-      "Full fault diagnosis before any repair work",
-      "Transparent quote — you approve before we start",
-      "Diagnostic fee waived if repair done same visit",
-      "Capacitor, fan motor, PCB, sensor and compressor repairs",
-      "Error code reading for all major brands",
-      "Common parts carried on-van for same-day fix",
-      "1-month workmanship warranty on all parts",
-      "All brands: Daikin, Panasonic, Mitsubishi, LG, Samsung & more",
+      "Proper pump-down procedure — gas safely recovered",
+      "Careful disconnect and transport of indoor and outdoor units",
+      "Full reinstall at new location",
+      "New copper connections, brackets and drainage",
+      "Cooling test after reinstall",
+      "All brands and HP sizes handled",
     ],
     process: [
-      { step: "Diagnosis", desc: "Technician runs a full system test, reads error codes, and identifies the fault. A quote is provided before any work begins." },
-      { step: "Quote Approval", desc: "You receive an itemised quote covering parts and labour. Work only begins after your approval." },
-      { step: "Part Replacement", desc: "Faulty component is replaced — capacitor, fan motor, PCB, sensor, drain pump, or other part as needed." },
-      { step: "Test & Warranty", desc: "System is tested to confirm the fault is resolved. A 1-month warranty is issued on the repaired component." },
+      { step: "Pump Down", desc: "Refrigerant gas safely recovered into outdoor unit before disconnection." },
+      { step: "Disconnect", desc: "Copper pipes, brackets and drainage carefully removed. Units protected for transport." },
+      { step: "Transport", desc: "Units securely transported to new location." },
+      { step: "Reinstall & Test", desc: "Full reinstall at new location — new copper, brackets, drainage — then cooling tested." },
     ],
     faqs: [
       {
-        q: "How much does aircond repair cost in KL & Selangor?",
-        a: "Diagnostic fee is RM 88 (waived if repair is done on the same visit). Common repairs: capacitor RM 180, fan motor RM 250–450, PCB board RM 300–600, compressor RM 600–2,000. All quoted before work begins.",
+        q: "Is it worth relocating an old aircond or should I buy new?",
+        a: "If the unit is under 8 years old and in good condition, relocation is usually much cheaper than buying new. We'll advise honestly after seeing the unit.",
       },
       {
-        q: "My aircond is blinking and not working. What does that mean?",
-        a: "A blinking light usually indicates an error code from the unit's PCB. Our technician reads the error code and identifies the exact fault — it could be a dirty sensor, low gas, PCB fault or communication error. We diagnose and fix the root cause.",
+        q: "How much does aircond relocation cost in KL?",
+        a: "Dismantling only starts from RM 90 per unit. Dismantle + reinstall in same building is RM 290. Full relocation (dismantle + relocate to new location) starts from RM 350. WhatsApp us for a full quote based on your situation.",
       },
       {
-        q: "My aircond is running but not cold. Is that a repair or gas top-up?",
-        a: "Not cold can be caused by low refrigerant gas, a dirty coil, or a faulty capacitor. Our technician checks all three before recommending a solution. You will receive a quote for the correct service — gas top-up, chemical wash or part replacement.",
+        q: "Do you charge extra for long-distance relocation?",
+        a: "Cross-area relocation has a small surcharge depending on the distance. WhatsApp us with both addresses and we'll quote you accurately.",
       },
       {
-        q: "Is the diagnostic fee refundable or waived?",
-        a: "Yes. The RM 88 diagnostic fee is fully waived if you proceed with the repair on the same visit. You only pay for the repair itself.",
-      },
-      {
-        q: "How long does a repair visit take?",
-        a: "Most repairs take 1 to 2 hours. PCB board replacements may take longer if the part needs to be sourced. In most cases, common parts like capacitors and fan motors are carried on the van and replaced on the spot.",
-      },
-      {
-        q: "Do you repair all aircond brands?",
-        a: "Yes. KL Renovator repairs all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Acson, Midea, LG, Samsung, Sharp, Toshiba, Haier and more.",
+        q: "How long does full relocation take?",
+        a: "Allow 2–4 hours for a single unit full relocation — dismantle, transport and reinstall. We require a minimum 3-hour calendar block.",
       },
     ],
     priceTable: [
-      { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
-      { label: "Capacitor Replacement", price: "RM 180" },
-      { label: "Copper Sensor / Thermistor", price: "RM 150" },
-      { label: "Fan Motor", price: "RM 250 – 450" },
-      { label: "PCB / Main Board", price: "RM 300 – 600" },
-      { label: "Drain Pipe Clearing", price: "RM 120" },
-      { label: "Drain Pump Installation", price: "RM 300 – 400" },
-      { label: "Compressor Replacement", price: "RM 600 – 2,000" },
-      { label: "Remote Control Replacement", price: "RM 80 – 130" },
+      { label: "Dismantle Only (per unit)", price: "RM 90" },
+      { label: "Dismantle + Reinstall (same building)", price: "RM 290" },
+      { label: "Dismantle + Relocate (different location)", price: "RM 350" },
+    ],
+  },
+
+  "ceiling-cassette": {
+    slug: "ceiling-cassette",
+    title: "Ceiling Cassette Service & Installation",
+    tagline: "Specialist servicing and installation for commercial and residential ceiling cassette HVAC systems.",
+    description:
+      "Ceiling cassette units distribute cool air evenly in all four directions, making them ideal for offices, retail outlets, F&B spaces and large open-plan homes. KL Renovator installs new cassette units and services existing ones — including chemical wash, panel removal, drain pump checks and coil cleaning. We also offer scheduled annual maintenance contracts for corporate and commercial clients.",
+    startPrice: "RM 150",
+    heroImage: "/hero/ceiling-cassette-aircond-installation-kl.jpeg",
+    highlights: [
+      "Residential, retail, F&B, office cassette systems",
+      "Chemical wash with full panel removal",
+      "Drain pump inspection and replacement",
+      "Ceiling cut and ducting for new installs",
+      "VRF/VRV multi-split system support",
+      "Scheduled annual maintenance contracts available",
+      "All major brands — Daikin, Panasonic, Mitsubishi",
+    ],
+    process: [
+      { step: "Survey", desc: "Site inspection to confirm unit spec, ceiling height and access requirements." },
+      { step: "Ceiling Prep", desc: "Ceiling panel cut or access panel installed cleanly for new installations." },
+      { step: "Install & Pipe", desc: "Unit mounted, copper pipe routed, drain connected with proper slope and drain pump installed." },
+      { step: "Commission & Test", desc: "Full system vacuum, charge, cooling test and handover with warranty." },
+    ],
+    faqs: [
+      {
+        q: "How much does ceiling cassette chemical wash cost?",
+        a: "Ceiling cassette chemical wash starts from RM 220 for a 1.0–1.5 HP unit. Larger units (4.0–5.0 HP) are RM 350.",
+      },
+      {
+        q: "Can you service ceiling cassette units from other companies?",
+        a: "Absolutely — we service all brands regardless of who installed them. We need the unit model to bring the correct tools and parts.",
+      },
+      {
+        q: "Do you handle VRF/VRV multi-split commercial systems?",
+        a: "Yes — we handle multi-split ceiling cassette systems for offices and commercial properties. WhatsApp us with the number of units and brands for a full quotation.",
+      },
+      {
+        q: "Do you offer annual maintenance contracts for offices?",
+        a: "Yes — we offer scheduled quarterly or bi-annual maintenance contracts for commercial properties. WhatsApp us for a custom quotation.",
+      },
+      {
+        q: "How much does ceiling cassette installation cost?",
+        a: "Ceiling cassette installation starts from RM 290 for 1.0–1.5 HP, RM 350 for 2.0–3.0 HP, and RM 400 for 3.5–6.0 HP. WhatsApp us for a full site quotation.",
+      },
+    ],
+    priceTable: [
+      { label: "Basic Servicing · 1.0 – 1.5 HP", price: "RM 150" },
+      { label: "Basic Servicing · 2.0 – 3.0 HP", price: "RM 200" },
+      { label: "Basic Servicing · 3.5 – 5.0 HP", price: "RM 250" },
+      { label: "Chemical Wash · 1.0 – 1.5 HP", price: "RM 220" },
+      { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 280" },
+      { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 350" },
+      { label: "Chemical Overhaul · 1.0 – 3.0 HP", price: "RM 380 – 480" },
+      { label: "Installation · 1.0 – 1.5 HP", price: "RM 290" },
+      { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
+      { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
     ],
   },
 };
