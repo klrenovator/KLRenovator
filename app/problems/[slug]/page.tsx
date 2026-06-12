@@ -31,6 +31,8 @@ export async function generateMetadata({
       problem.name + " Selangor",
       problem.name + " repair KL",
       problem.name + " fix KL",
+      problem.nameMS + " KL",
+      problem.nameZH + " 吉隆坡",
       "aircond problem KL",
       "aircond repair KL",
       "KL Renovator aircond",
@@ -44,10 +46,16 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://www.klrenovator.com/problems/${slug}`,
     },
+    other: {
+      "title:ms": problem.metaTitleMS,
+      "description:ms": problem.metaDescMS,
+      "title:zh": problem.metaTitleZH,
+      "description:zh": problem.metaDescZH,
+    },
   };
 }
 
-// ─── Content map for each problem ───────────────────────────────────────────
+// ─── Detailed content map ─────────────────────────────────────────────────────
 const problemContent: Record<
   string,
   {
@@ -90,12 +98,9 @@ const problemContent: Record<
       "铜管或阀门损坏导致制冷剂泄漏",
       "压缩机老化，无法维持正确压力",
     ],
-    solutionEN:
-      "KL Renovator technicians first run a full system check — measuring discharge pressure, suction pressure, and temperature difference across the coil. If gas is low, the leak is located and repaired before topping up to the correct operating pressure. If the coil is dirty, a chemical wash restores heat exchange. If the capacitor is failing, it is replaced on the spot. You receive a transparent quote before any work starts.",
-    solutionBM:
-      "Juruteknik KL Renovator menjalankan pemeriksaan sistem penuh — mengukur tekanan pelepasan, tekanan sedutan dan perbezaan suhu. Jika gas rendah, kebocoran dikesan dan diperbaiki sebelum top-up ke tekanan operasi yang betul. Jika gegelung kotor, cuci kimia memulihkan pertukaran haba. Jika kapasitor rosak, ia diganti di tempat. Sebut harga telus diberikan sebelum kerja bermula.",
-    solutionZH:
-      "KL Renovator技术员进行全面系统检查——测量排放压力、吸入压力和盘管两端的温差。如果制冷剂不足，先找出并修复泄漏，然后充气至正确工作压力。如果盘管脏污，化学清洗可恢复热交换效率。如果电容器故障，当场更换。所有工作开始前提供透明报价。",
+    solutionEN: "KL Renovator technicians first run a full system check — measuring discharge pressure, suction pressure, and temperature difference across the coil. If gas is low, the leak is located and repaired before topping up to the correct operating pressure. If the coil is dirty, a chemical wash restores heat exchange. If the capacitor is failing, it is replaced on the spot. You receive a transparent quote before any work starts.",
+    solutionBM: "Juruteknik KL Renovator menjalankan pemeriksaan sistem penuh — mengukur tekanan pelepasan, tekanan sedutan dan perbezaan suhu. Jika gas rendah, kebocoran dikesan dan diperbaiki sebelum top-up ke tekanan operasi yang betul. Jika gegelung kotor, cuci kimia memulihkan pertukaran haba. Jika kapasitor rosak, ia diganti di tempat. Sebut harga telus diberikan sebelum kerja bermula.",
+    solutionZH: "KL Renovator技术员进行全面系统检查——测量排放压力、吸入压力和盘管两端的温差。如果制冷剂不足，先找出并修复泄漏，然后充气至正确工作压力。如果盘管脏污，化学清洗可恢复热交换效率。如果电容器故障，当场更换。所有工作开始前提供透明报价。",
     warningEN: "Do not ignore an aircond that is not cold. A running but ineffective unit consumes full electricity while delivering no comfort — and low gas pressure damages the compressor over time.",
     warningBM: "Jangan abaikan aircond yang tidak sejuk. Unit yang berjalan tetapi tidak berkesan menggunakan elektrik penuh tanpa memberikan keselesaan — dan tekanan gas rendah merosakkan pekali dari masa ke masa.",
     warningZH: "不要忽视不冷的冷气。运转但无效的机组消耗全额电力却毫无舒适感——长期低气压还会损坏压缩机。",
@@ -113,7 +118,6 @@ const problemContent: Record<
       { q: "修理不冷的冷气需要多少费用？", a: "如果是气体不足：充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。如果是盘管脏污：化学清洗从RM 120起。如果是电容器故障：更换RM 180。" },
     ],
   },
-
   "aircond-water-leaking": {
     causesEN: [
       "Blocked drain pipe — the most common cause in Malaysia's humid climate",
@@ -139,12 +143,9 @@ const problemContent: Record<
       "墙内排水管破裂或断开",
       "盘管严重脏污导致冷凝水溢出",
     ],
-    solutionEN:
-      "KL Renovator technicians clear the blocked drain pipe using pressurised water flush, clean the drain pan, and inspect the full drainage path. For severe cases — cracked drain pan, disconnected pipe, or heavily soiled coil — a chemical overhaul (full dismantle and deep clean) permanently resolves the leaking. Drain pump installation is available for units where gravity drainage is not possible.",
-    solutionBM:
-      "Juruteknik KL Renovator membersihkan paip longkang yang tersumbat menggunakan semburan air bertekanan, membersihkan dulang longkang, dan memeriksa laluan saliran penuh. Untuk kes teruk — dulang longkang retak, paip terputus, atau gegelung sangat kotor — overhaul kimia menyelesaikan kebocoran secara kekal.",
-    solutionZH:
-      "KL Renovator技术员使用加压水冲洗清通堵塞的排水管，清洁排水盘，并检查完整排水路径。对于严重情况——排水盘破裂、管道断开或盘管严重脏污——化学大修（完全拆卸深度清洁）可永久解决漏水问题。",
+    solutionEN: "KL Renovator technicians clear the blocked drain pipe using pressurised water flush, clean the drain pan, and inspect the full drainage path. For severe cases — cracked drain pan, disconnected pipe, or heavily soiled coil — a chemical overhaul permanently resolves the leaking. Drain pump installation is available for units where gravity drainage is not possible.",
+    solutionBM: "Juruteknik KL Renovator membersihkan paip longkang yang tersumbat menggunakan semburan air bertekanan, membersihkan dulang longkang, dan memeriksa laluan saliran penuh. Untuk kes teruk — dulang longkang retak, paip terputus, atau gegelung sangat kotor — overhaul kimia menyelesaikan kebocoran secara kekal.",
+    solutionZH: "KL Renovator技术员使用加压水冲洗清通堵塞的排水管，清洁排水盘，并检查完整排水路径。对于严重情况——排水盘破裂、管道断开或盘管严重脏污——化学大修可永久解决漏水问题。",
     warningEN: "A leaking aircond left unattended causes mould growth on walls and ceilings, water damage to furniture, electrical short circuit risk, and structural damage over time. Fix it immediately.",
     warningBM: "Aircond yang bocor dan dibiarkan menyebabkan pertumbuhan kulat di dinding dan siling, kerosakan air pada perabot, risiko litar pintas elektrik, dan kerosakan struktur dari masa ke masa.",
     warningZH: "长期不处理的漏水冷气会导致墙壁和天花板发霉、家具受水损坏、电气短路风险以及长期结构损坏。请立即修复。",
@@ -162,7 +163,51 @@ const problemContent: Record<
       { q: "在KL修理漏水冷气需要多少费用？", a: "排水管清通从RM 120起。化学清洗从RM 120起。严重漏水的化学大修从RM 220起。排水泵安装RM 300–400。" },
     ],
   },
-
+  "aircond-bad-smell": {
+    causesEN: [
+      "Mould and bacteria growing on the evaporator coil and blower wheel",
+      "Dirty drain pan where stagnant water breeds bacteria and mildew",
+      "Cigarette smoke, cooking odours or pet smells absorbed into the coil",
+      "Dead insects or debris inside the unit decomposing over time",
+      "Electrical burning smell — wiring insulation or component failure (urgent)",
+      "Chemical smell — refrigerant gas leak (stop unit immediately)",
+    ],
+    causesBM: [
+      "Kulat dan bakteria tumbuh pada gegelung penyejat dan roda penghembus",
+      "Dulang longkang kotor tempat air bertakung membiak bakteria dan kulat",
+      "Asap rokok, bau memasak atau bau haiwan peliharaan diserap ke dalam gegelung",
+      "Serangga mati atau serpihan di dalam unit reput dari masa ke masa",
+      "Bau elektrik terbakar — penebat wayar atau kegagalan komponen (segera)",
+      "Bau kimia — kebocoran gas penyejuk (matikan unit serta-merta)",
+    ],
+    causesZH: [
+      "霉菌和细菌在蒸发盘管和鼓风机叶轮上生长",
+      "排水盘内积水滋生细菌和霉菌",
+      "香烟烟雾、烹饪气味或宠物气味被盘管吸收",
+      "机内死虫或异物随时间分解腐烂",
+      "电气焦糊味——线路绝缘层或部件故障（紧急情况）",
+      "化学气味——制冷剂泄漏（立即关机）",
+    ],
+    solutionEN: "A chemical wash (from RM 120) uses a food-safe chemical solution to kill mould and bacteria on the evaporator coil and blower wheel, permanently eliminating the smell. For severe mould infestation, a chemical overhaul (from RM 220) fully dismantles and sterilises every component.",
+    solutionBM: "Cuci kimia (dari RM 120) menggunakan larutan kimia selamat makanan untuk membunuh kulat dan bakteria pada gegelung dan roda penghembus, menghapuskan bau secara kekal. Untuk serangan kulat teruk, overhaul kimia (dari RM 220) membongkar dan mensterilkan setiap komponen.",
+    solutionZH: "化学清洗（从RM 120起）使用食品级化学溶液杀死蒸发盘管和鼓风机叶轮上的霉菌和细菌，永久消除异味。对于严重的霉菌侵扰，化学大修（从RM 220起）完全拆卸并消毒每个部件。",
+    warningEN: "If you smell burning plastic or a sweet chemical/gas odour from the aircond, switch it off immediately and do not restart it. These smells indicate electrical failure or refrigerant leak.",
+    warningBM: "Jika anda menghidu bau plastik terbakar atau bau kimia/gas yang manis dari aircond, matikannya serta-merta dan jangan hidupkan semula.",
+    warningZH: "如果您闻到冷气机发出塑料燃烧气味或甜味化学/气体气味，请立即关机，不要重新启动。",
+    faqs: [
+      { q: "Why does my aircond smell musty or like dirty socks?", a: "A musty smell is caused by mould and bacteria growing on the evaporator coil. A chemical wash with food-safe solution kills the mould and eliminates the smell permanently. Starts from RM 120." },
+      { q: "How long does it take to remove the smell from an aircond?", a: "After a chemical wash, most smells are eliminated on the same visit. For severe mould cases requiring a chemical overhaul, the unit is fully deodorised within one service session." },
+      { q: "My aircond smells like something is burning. Is it dangerous?", a: "Yes. A burning smell from an aircond indicates an electrical fault. Switch off the unit immediately and call KL Renovator at +60182983573 for an emergency diagnostic." },
+    ],
+    faqsBM: [
+      { q: "Mengapa aircond saya berbau hapak?", a: "Bau hapak disebabkan kulat dan bakteria yang tumbuh pada gegelung penyejat. Cuci kimia membunuh kulat dan menghapuskan bau secara kekal. Bermula dari RM 120." },
+      { q: "Aircond saya berbau seperti sesuatu terbakar. Berbahayakah?", a: "Ya. Bau terbakar dari aircond menunjukkan kerosakan elektrik. Matikan unit serta-merta dan hubungi KL Renovator di +60182983573." },
+    ],
+    faqsZH: [
+      { q: "为什么我的冷气有霉味？", a: "霉味是由蒸发盘管上生长的霉菌和细菌引起的。化学清洗用食品级溶液杀死霉菌，永久消除异味，从RM 120起。" },
+      { q: "我的冷气有焦糊味。危险吗？", a: "是的。冷气焦糊味表示电气故障。请立即关机，拨打+60182983573联系KL Renovator紧急诊断。" },
+    ],
+  },
   "aircond-making-noise": {
     causesEN: [
       "Loose fan blade rattling against the housing at high speed",
@@ -188,19 +233,16 @@ const problemContent: Record<
       "电容器故障导致压缩机运转困难并发出嗡嗡声",
       "制冷剂气流噪音——铜管泄漏处发出嘶嘶声",
     ],
-    solutionEN:
-      "KL Renovator technicians identify the exact source of the noise by running the unit and isolating indoor vs outdoor components. Loose blades and screws are tightened, debris is removed, worn fan motors are replaced, and failing capacitors are swapped out. A quote is provided before any parts replacement.",
-    solutionBM:
-      "Juruteknik KL Renovator mengenal pasti sumber bunyi tepat dengan menjalankan unit dan mengasingkan komponen dalaman berbanding luar. Bilah dan skru longgar dikencangkan, serpihan dibuang, motor kipas haus diganti, dan kapasitor gagal ditukar. Sebut harga diberikan sebelum penggantian bahagian.",
-    solutionZH:
-      "KL Renovator技术员通过运行机组并隔离室内外部件来精确定位噪音来源。紧固松动的叶片和螺丝，清除异物，更换磨损的风扇电机，更换故障电容器。零件更换前提供报价。",
+    solutionEN: "KL Renovator technicians identify the exact source of the noise by running the unit and isolating indoor vs outdoor components. Loose blades and screws are tightened, debris is removed, worn fan motors are replaced, and failing capacitors are swapped out. A quote is provided before any parts replacement.",
+    solutionBM: "Juruteknik KL Renovator mengenal pasti sumber bunyi tepat dengan menjalankan unit dan mengasingkan komponen dalaman berbanding luar. Bilah dan skru longgar dikencangkan, serpihan dibuang, motor kipas haus diganti, dan kapasitor gagal ditukar.",
+    solutionZH: "KL Renovator技术员通过运行机组并隔离室内外部件来精确定位噪音来源。紧固松动的叶片和螺丝，清除异物，更换磨损的风扇电机，更换故障电容器。零件更换前提供报价。",
     warningEN: "Grinding or screeching noises from the outdoor unit indicate the fan motor bearings are failing. If ignored, the motor seizes completely and compressor damage can follow — a much more expensive repair.",
-    warningBM: "Bunyi menggiling atau melengking dari unit luar menunjukkan galas motor kipas sedang gagal. Jika diabaikan, motor akan terkunci sepenuhnya dan kerosakan pekali boleh berlaku — pembaikan yang jauh lebih mahal.",
+    warningBM: "Bunyi menggiling atau melengking dari unit luar menunjukkan galas motor kipas sedang gagal. Jika diabaikan, motor akan terkunci sepenuhnya dan kerosakan pekali boleh berlaku.",
     warningZH: "室外机发出研磨或尖叫声表明风扇电机轴承正在失效。如果忽视，电机将完全卡死，随后可能损坏压缩机——修理费用会贵得多。",
     faqs: [
-      { q: "My aircond outdoor unit is making a loud rattling noise. What is causing it?", a: "Rattling from the outdoor unit is usually a loose fan blade, debris inside the unit, or loose screws on the casing. KL Renovator diagnoses and fixes the root cause — most outdoor unit noise issues are resolved in one visit." },
+      { q: "My aircond outdoor unit is making a loud rattling noise. What is causing it?", a: "Rattling from the outdoor unit is usually a loose fan blade, debris inside the unit, or loose screws on the casing. KL Renovator diagnoses and fixes the root cause in one visit." },
       { q: "My aircond indoor unit makes a squeaking noise when cooling. What is it?", a: "A squeaking indoor unit often indicates a dirty blower wheel rubbing against its housing, or a failing blower motor bearing. A chemical wash or blower motor replacement resolves this." },
-      { q: "How much does aircond noise repair cost in KL?", a: "Diagnostic fee is RM 88 (waived with repair). Fan motor replacement RM 250–450. Capacitor replacement RM 180. Debris removal and tightening is included with any service visit." },
+      { q: "How much does aircond noise repair cost in KL?", a: "Diagnostic fee is RM 88 (waived with repair). Fan motor replacement RM 250–450. Capacitor replacement RM 180." },
     ],
     faqsBM: [
       { q: "Unit luar aircond saya membuat bunyi bising. Apakah penyebabnya?", a: "Bunyi bergetar dari unit luar biasanya disebabkan bilah kipas longgar, serpihan di dalam unit, atau skru longgar. KL Renovator mendiagnosis dan membaiki punca sebenar." },
@@ -211,59 +253,9 @@ const problemContent: Record<
       { q: "KL的冷气噪音维修费用是多少？", a: "诊断费RM 88（维修时免除）。风扇电机更换RM 250–450。电容器更换RM 180。" },
     ],
   },
-
-  "aircond-bad-smell": {
-    causesEN: [
-      "Mould and bacteria growing on the evaporator coil and blower wheel",
-      "Dirty drain pan where stagnant water breeds bacteria and mildew",
-      "Cigarette smoke, cooking odours or pet smells absorbed into the coil",
-      "Dead insects or debris inside the unit decomposing over time",
-      "Electrical burning smell — wiring insulation or component failure (urgent)",
-      "Chemical smell — refrigerant gas leak (stop unit immediately, call KL Renovator)",
-    ],
-    causesBM: [
-      "Kulat dan bakteria tumbuh pada gegelung penyejat dan roda penghembus",
-      "Dulang longkang kotor tempat air bertakung membiak bakteria dan kulat",
-      "Asap rokok, bau memasak atau bau haiwan peliharaan diserap ke dalam gegelung",
-      "Serangga mati atau serpihan di dalam unit reput dari masa ke masa",
-      "Bau elektrik terbakar — penebat wayar atau kegagalan komponen (segera)",
-      "Bau kimia — kebocoran gas penyejuk (matikan unit serta-merta, hubungi KL Renovator)",
-    ],
-    causesZH: [
-      "霉菌和细菌在蒸发盘管和鼓风机叶轮上生长",
-      "排水盘内积水滋生细菌和霉菌",
-      "香烟烟雾、烹饪气味或宠物气味被盘管吸收",
-      "机内死虫或异物随时间分解腐烂",
-      "电气焦糊味——线路绝缘层或部件故障（紧急情况）",
-      "化学气味——制冷剂泄漏（立即关机，联系KL Renovator）",
-    ],
-    solutionEN:
-      "A chemical wash (from RM 120) uses a food-safe chemical solution to kill mould and bacteria on the evaporator coil and blower wheel, permanently eliminating the smell. For severe mould infestation — when the blower wheel is fully coated — a chemical overhaul (from RM 220) fully dismantles and sterilises every component. If you smell burning or a chemical/refrigerant odour, switch off the unit and call KL Renovator immediately.",
-    solutionBM:
-      "Cuci kimia (dari RM 120) menggunakan larutan kimia selamat makanan untuk membunuh kulat dan bakteria pada gegelung dan roda penghembus, menghapuskan bau secara kekal. Untuk serangan kulat teruk — apabila roda penghembus diliputi sepenuhnya — overhaul kimia (dari RM 220) membongkar dan mensterilkan setiap komponen.",
-    solutionZH:
-      "化学清洗（从RM 120起）使用食品级化学溶液杀死蒸发盘管和鼓风机叶轮上的霉菌和细菌，永久消除异味。对于严重的霉菌侵扰——当鼓风机叶轮完全被覆盖时——化学大修（从RM 220起）完全拆卸并消毒每个部件。",
-    warningEN: "If you smell burning plastic or a sweet chemical/gas odour from the aircond, switch it off immediately and do not restart it. These smells indicate electrical failure or refrigerant leak — both require urgent professional attention.",
-    warningBM: "Jika anda menghidu bau plastik terbakar atau bau kimia/gas yang manis dari aircond, matikannya serta-merta dan jangan hidupkan semula. Bau-bau ini menunjukkan kegagalan elektrik atau kebocoran gas penyejuk.",
-    warningZH: "如果您闻到冷气机发出塑料燃烧气味或甜味化学/气体气味，请立即关机，不要重新启动。这些气味表明电气故障或制冷剂泄漏——两者都需要紧急专业处理。",
-    faqs: [
-      { q: "Why does my aircond smell musty or like dirty socks?", a: "A musty smell is caused by mould and bacteria growing on the evaporator coil. A chemical wash with food-safe solution kills the mould and eliminates the smell permanently. Starts from RM 120." },
-      { q: "How long does it take to remove the smell from an aircond?", a: "After a chemical wash, most smells are eliminated on the same visit. For severe mould cases requiring a chemical overhaul, the unit is fully deodorised within one service session." },
-      { q: "My aircond smells like something is burning. Is it dangerous?", a: "Yes. A burning smell from an aircond indicates an electrical fault — wiring, capacitor or PCB. Switch off the unit immediately and call KL Renovator at +60182983573 for an emergency diagnostic." },
-    ],
-    faqsBM: [
-      { q: "Mengapa aircond saya berbau hapak atau seperti stokin kotor?", a: "Bau hapak disebabkan kulat dan bakteria yang tumbuh pada gegelung penyejat. Cuci kimia membunuh kulat dan menghapuskan bau secara kekal. Bermula dari RM 120." },
-      { q: "Aircond saya berbau seperti sesuatu terbakar. Berbahayakah?", a: "Ya. Bau terbakar dari aircond menunjukkan kerosakan elektrik. Matikan unit serta-merta dan hubungi KL Renovator di +60182983573." },
-    ],
-    faqsZH: [
-      { q: "为什么我的冷气有霉味或臭袜子味？", a: "霉味是由蒸发盘管上生长的霉菌和细菌引起的。化学清洗用食品级溶液杀死霉菌，永久消除异味，从RM 120起。" },
-      { q: "我的冷气有焦糊味。危险吗？", a: "是的。冷气焦糊味表示电气故障。请立即关机，拨打+60182983573联系KL Renovator紧急诊断。" },
-    ],
-  },
-
   "aircond-low-gas": {
     causesEN: [
-      "Natural slow gas loss over many years of operation (all systems lose some gas)",
+      "Natural slow gas loss over many years of operation",
       "Refrigerant leak from a pinhole in the copper pipe caused by corrosion",
       "Leak at the flare joint connection between the indoor and outdoor unit",
       "Leak at the service valve or Schrader valve on the outdoor unit",
@@ -279,61 +271,72 @@ const problemContent: Record<
       "Retak keletihan akibat getaran pada paip tembaga dari masa ke masa",
     ],
     causesZH: [
-      "多年运行后气体自然缓慢流失（所有系统都会有所流失）",
+      "多年运行后气体自然缓慢流失",
       "铜管腐蚀产生针孔导致制冷剂泄漏",
       "室内机和室外机之间喇叭口接头处泄漏",
       "室外机维修阀或Schrader阀处泄漏",
       "原始安装不良，接头未正确紧固",
       "随时间推移，铜管因振动产生疲劳裂纹",
     ],
-    solutionEN:
-      "KL Renovator performs a leak check before every gas top-up. If a leak is found, it is repaired first — topping up without fixing the leak wastes gas and money. Refrigerant is then added using a manifold gauge to achieve the exact operating pressure specified for the unit — not simply filled until the gauge looks right. Over-filling damages the compressor as much as under-filling.",
-    solutionBM:
-      "KL Renovator melakukan pemeriksaan kebocoran sebelum setiap top-up gas. Jika kebocoran dijumpai, ia diperbaiki dahulu. Penyejuk kemudian ditambah menggunakan tolok manifold untuk mencapai tekanan operasi tepat yang ditentukan untuk unit — bukan sekadar diisi sehingga tolok kelihatan betul.",
-    solutionZH:
-      "KL Renovator在每次充气前都进行泄漏检查。如果发现泄漏，先行修复——不修复泄漏就直接充气是浪费金钱。然后使用歧管表将制冷剂充至该机型规定的精确工作压力——而非简单地看表盘数字充到看起来合适为止。",
+    solutionEN: "KL Renovator performs a leak check before every gas top-up. If a leak is found, it is repaired first. Refrigerant is then added using a manifold gauge to achieve the exact operating pressure specified for the unit — not simply filled until the gauge looks right.",
+    solutionBM: "KL Renovator melakukan pemeriksaan kebocoran sebelum setiap top-up gas. Jika kebocoran dijumpai, ia diperbaiki dahulu. Penyejuk kemudian ditambah menggunakan tolok manifold untuk mencapai tekanan operasi tepat.",
+    solutionZH: "KL Renovator在每次充气前都进行泄漏检查。如果发现泄漏，先行修复。然后使用歧管表将制冷剂充至该机型规定的精确工作压力。",
     warningEN: "Running an aircond with low gas causes the compressor to overwork, overheat, and eventually fail permanently. Gas top-up from RM 120 is far cheaper than compressor replacement at RM 600–2,000.",
     warningBM: "Menjalankan aircond dengan gas rendah menyebabkan pekali bekerja terlalu keras, terlalu panas, dan akhirnya gagal sepenuhnya. Top-up gas dari RM 120 jauh lebih murah daripada penggantian pekali pada RM 600–2,000.",
     warningZH: "在制冷剂不足的情况下运行冷气会导致压缩机过度工作、过热，最终永久损坏。充气从RM 120起，远比更换压缩机（RM 600–2,000）便宜得多。",
     faqs: [
-      { q: "How do I know if my aircond is low on gas?", a: "Symptoms include: not cold or barely cool air, longer cooling time, ice forming on the indoor coil, condensation on the outdoor unit pipes, and higher electricity bills. A technician confirms with a pressure gauge — not guesswork." },
+      { q: "How do I know if my aircond is low on gas?", a: "Symptoms include: not cold or barely cool air, longer cooling time, ice forming on the indoor coil, condensation on the outdoor unit pipes, and higher electricity bills." },
       { q: "How much does aircond gas top-up cost in KL?", a: "R22 from RM 120, R410A from RM 150, R32 from RM 180. Prices vary by HP size. Leak check is included with every gas top-up at KL Renovator." },
       { q: "How often does an aircond need gas top-up?", a: "A well-installed, leak-free aircond should not need gas top-up for many years. If you need gas top-up every year, there is a leak that needs to be found and repaired first." },
     ],
     faqsBM: [
-      { q: "Bagaimana saya tahu jika aircond saya rendah gas?", a: "Gejala termasuk: udara tidak sejuk, masa penyejukan lebih lama, ais terbentuk pada gegelung dalaman, dan bil elektrik lebih tinggi. Juruteknik mengesahkan dengan tolok tekanan." },
+      { q: "Bagaimana saya tahu jika aircond saya rendah gas?", a: "Gejala termasuk: udara tidak sejuk, masa penyejukan lebih lama, ais terbentuk pada gegelung dalaman, dan bil elektrik lebih tinggi." },
       { q: "Berapa kos top-up gas aircond di KL?", a: "R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. Pemeriksaan kebocoran disertakan dengan setiap top-up gas." },
     ],
     faqsZH: [
-      { q: "如何判断我的冷气是否气体不足？", a: "症状包括：空气不冷或几乎不凉、冷却时间更长、室内盘管结冰、室外机铜管结露以及电费更高。技术员用压力表确认，无需猜测。" },
+      { q: "如何判断我的冷气是否气体不足？", a: "症状包括：空气不冷、冷却时间更长、室内盘管结冰以及电费更高。" },
       { q: "KL冷气充气费用是多少？", a: "R22从RM 120起，R410A从RM 150起，R32从RM 180起。每次充气包含泄漏检查。" },
     ],
   },
 };
 
-// For problems not in the detailed content map, generate generic content
+// Generic content for problems not in the detailed map
 function getGenericContent(problem: (typeof siteConfig.problemPages)[0]) {
   return {
     causesEN: [
-      `Component wear and tear from extended use`,
-      `Lack of regular maintenance and servicing`,
-      `Electrical or mechanical fault in the unit`,
-      `Environmental factors — dust, humidity, insects`,
+      "Component wear and tear from extended use",
+      "Lack of regular maintenance and servicing",
+      "Electrical or mechanical fault in the unit",
+      "Environmental factors — dust, humidity, insects",
+    ],
+    causesBM: [
+      "Keausan komponen dari penggunaan lanjutan",
+      "Kekurangan penyelenggaraan dan servis tetap",
+      "Kerosakan elektrik atau mekanikal dalam unit",
+      "Faktor persekitaran — habuk, kelembapan, serangga",
+    ],
+    causesZH: [
+      "部件长期使用磨损",
+      "缺乏定期维护和保养",
+      "机组电气或机械故障",
+      "环境因素——灰尘、湿度、昆虫",
     ],
     solutionEN: `KL Renovator technicians diagnose the exact cause of ${problem.name.toLowerCase()} and provide a transparent quote before any repair work begins. Most issues are resolved in a single visit. Diagnostic fee is RM 88, waived if repair is done on the same visit.`,
-    solutionBM: `Juruteknik KL Renovator mendiagnosis punca tepat ${problem.name.toLowerCase()} dan memberikan sebut harga telus sebelum kerja pembaikan bermula. Kebanyakan masalah diselesaikan dalam satu lawatan. Yuran diagnostik RM 88, dilepaskan jika pembaikan dilakukan pada lawatan yang sama.`,
-    solutionZH: `KL Renovator技术员诊断${problem.name}的确切原因，并在开始任何维修工作前提供透明报价。大多数问题一次上门即可解决。诊断费RM 88，如当次进行维修则免除。`,
+    solutionBM: `Juruteknik KL Renovator mendiagnosis punca tepat dan memberikan sebut harga telus sebelum kerja pembaikan bermula. Kebanyakan masalah diselesaikan dalam satu lawatan. Yuran diagnostik RM 88, dilepaskan jika pembaikan dilakukan pada lawatan yang sama.`,
+    solutionZH: `KL Renovator技术员诊断确切原因，并在开始任何维修工作前提供透明报价。大多数问题一次上门即可解决。诊断费RM 88，如当次进行维修则免除。`,
     warningEN: `Do not ignore ${problem.name.toLowerCase()}. Early diagnosis prevents minor faults from becoming expensive repairs.`,
-    warningBM: `Jangan abaikan ${problem.name.toLowerCase()}. Diagnosis awal mencegah kerosakan kecil menjadi pembaikan mahal.`,
-    warningZH: `不要忽视${problem.name}。早期诊断可防止小故障演变为昂贵的维修。`,
-    causesBM: [`Keausan komponen dari penggunaan lanjutan`, `Kekurangan penyelenggaraan dan servis tetap`, `Kerosakan elektrik atau mekanikal dalam unit`, `Faktor persekitaran — habuk, kelembapan, serangga`],
-    causesZH: [`部件长期使用磨损`, `缺乏定期维护和保养`, `机组电气或机械故障`, `环境因素——灰尘、湿度、昆虫`],
+    warningBM: `Jangan abaikan masalah ini. Diagnosis awal mencegah kerosakan kecil menjadi pembaikan mahal.`,
+    warningZH: `不要忽视此问题。早期诊断可防止小故障演变为昂贵的维修。`,
     faqs: [
       { q: `How much does it cost to fix ${problem.name.toLowerCase()} in KL?`, a: `Diagnostic fee is RM 88 (waived if repair is done same visit). Most common repairs range from RM 120–600 depending on the faulty component. KL Renovator provides a full quote before starting.` },
       { q: `Can ${problem.name.toLowerCase()} be fixed the same day?`, a: `Yes. KL Renovator carries common parts on the van for same-day repair. WhatsApp +60182983573 to confirm a slot.` },
     ],
-    faqsBM: [{ q: `Berapa kos untuk membaiki ${problem.name.toLowerCase()} di KL?`, a: `Yuran diagnostik RM 88 (dilepaskan dengan pembaikan). KL Renovator memberikan sebut harga penuh sebelum bermula.` }],
-    faqsZH: [{ q: `在KL修理${problem.name}需要多少费用？`, a: `诊断费RM 88（维修时免除）。KL Renovator在开始前提供完整报价。` }],
+    faqsBM: [
+      { q: `Berapa kos untuk membaiki masalah ini di KL?`, a: `Yuran diagnostik RM 88 (dilepaskan dengan pembaikan). KL Renovator memberikan sebut harga penuh sebelum bermula.` },
+    ],
+    faqsZH: [
+      { q: `在KL修理此问题需要多少费用？`, a: `诊断费RM 88（维修时免除）。KL Renovator在开始前提供完整报价。` },
+    ],
   };
 }
 
@@ -347,29 +350,28 @@ export default async function ProblemPage({
   if (!problem) notFound();
 
   const content = problemContent[slug] ?? getGenericContent(problem);
-  const relatedService = problem.relatedService
-    ? servicesData[problem.relatedService]
-    : null;
+  const relatedService = problem.relatedService ? servicesData[problem.relatedService] : null;
   const waMsg = `Hi KL Renovator, my aircond has this problem: ${problem.name}. Please help me fix it. My location is:`;
+  const relatedProblems = siteConfig.problemPages.filter((p) => p.slug !== slug).slice(0, 6);
 
-  // Schema
+  // ── Schema ────────────────────────────────────────────────────────────────
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.klrenovator.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Aircond Problems", "item": "https://www.klrenovator.com/problems" },
-      { "@type": "ListItem", "position": 3, "name": problem.name, "item": `https://www.klrenovator.com/problems/${slug}` },
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com/" },
+      { "@type": "ListItem", position: 2, name: "Aircond Problems", item: "https://www.klrenovator.com/problems" },
+      { "@type": "ListItem", position: 3, name: problem.name, item: `https://www.klrenovator.com/problems/${slug}` },
     ],
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": content.faqs.map((faq) => ({
+    mainEntity: content.faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
     })),
   };
 
@@ -377,14 +379,22 @@ export default async function ProblemPage({
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `https://www.klrenovator.com/problems/${slug}#article`,
-    "headline": problem.h1,
-    "description": problem.description,
-    "author": { "@type": "Organization", "name": "KL Renovator", "@id": "https://www.klrenovator.com/#organization" },
-    "publisher": { "@type": "Organization", "name": "KL Renovator", "logo": { "@type": "ImageObject", "url": "https://www.klrenovator.com/logo/image.png" } },
-    "mainEntityOfPage": `https://www.klrenovator.com/problems/${slug}`,
+    headline: problem.h1,
+    description: problem.description,
+    datePublished: "2026-01-01",
+    author: {
+      "@type": "Organization",
+      name: "KL Renovator",
+      "@id": "https://www.klrenovator.com/#business",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.klrenovator.com/#business",
+      name: "KL Renovator",
+      logo: { "@type": "ImageObject", url: "https://www.klrenovator.com/logo/image.png" },
+    },
+    mainEntityOfPage: `https://www.klrenovator.com/problems/${slug}`,
   };
-
-  const relatedProblems = siteConfig.problemPages.filter((p) => p.slug !== slug).slice(0, 6);
 
   return (
     <>
@@ -405,7 +415,7 @@ export default async function ProblemPage({
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero — trilingual name */}
       <section className="py-14 sm:py-20 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(239,68,68,0.04),transparent_60%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -418,8 +428,19 @@ export default async function ProblemPage({
               <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 leading-tight">
                 {problem.h1}
               </h1>
-              <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
+              {/* Trilingual names */}
+              <p className="mt-2 text-sm font-bold text-slate-500">
+                🇲🇾 {problem.nameMS} &nbsp;·&nbsp; 🇨🇳 {problem.nameZH}
+              </p>
+              <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
                 {problem.description}
+              </p>
+              {/* Trilingual descriptions */}
+              <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed max-w-2xl border-l-2 border-sky-200 pl-3">
+                {problem.descriptionMS}
+              </p>
+              <p className="mt-2 text-sm text-slate-400 font-medium leading-relaxed max-w-2xl border-l-2 border-slate-200 pl-3">
+                {problem.descriptionZH}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -443,7 +464,7 @@ export default async function ProblemPage({
         </div>
       </section>
 
-      {/* Warning Box */}
+      {/* Warning */}
       <section className="py-8 bg-red-50 border-b border-red-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -453,13 +474,14 @@ export default async function ProblemPage({
                 <p className="text-sm font-black text-red-700 mb-1">Important</p>
                 <p className="text-sm text-red-700 font-medium leading-relaxed">{content.warningEN}</p>
                 <p className="mt-2 text-xs text-red-600 font-medium">{content.warningBM}</p>
+                <p className="mt-1 text-xs text-red-500 font-medium">{content.warningZH}</p>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Causes — EN */}
+      {/* Causes */}
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 max-w-5xl">
@@ -479,13 +501,11 @@ export default async function ProblemPage({
                 </ul>
               </div>
             </Reveal>
-
-            {/* Causes — BM */}
             <Reveal delay={50}>
               <div>
                 <p className={eyebrow()}>Punca Masalah — Bahasa Malaysia</p>
                 <h2 className="mt-3 text-xl font-black text-slate-900 uppercase mb-6">
-                  Apakah Punca {problem.name}?
+                  Apakah Punca {problem.nameMS}?
                 </h2>
                 <ul className="space-y-3">
                   {content.causesBM.map((cause, i) => (
@@ -499,10 +519,10 @@ export default async function ProblemPage({
             </Reveal>
           </div>
 
-          {/* Causes — ZH */}
+          {/* ZH Causes */}
           <Reveal delay={80}>
             <div className="mt-10 max-w-5xl">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">原因分析 — 中文</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">原因分析 — {problem.nameZH}</p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {content.causesZH.map((cause, i) => (
                   <div key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
@@ -541,27 +561,21 @@ export default async function ProblemPage({
                     <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionZH}</p>
                   </div>
                 </div>
-
-                {/* Pricing sidebar */}
                 <div className="space-y-4">
                   <div className="bg-sky-600 text-white rounded-2xl p-5">
                     <p className="text-xs font-black uppercase tracking-wider text-sky-200 mb-3">Typical Pricing</p>
                     <div className="space-y-2">
-                      <div className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2">
-                        <span>Diagnostic</span><span>RM 88*</span>
-                      </div>
-                      <div className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2">
-                        <span>Chemical Wash</span><span>From RM 120</span>
-                      </div>
-                      <div className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2">
-                        <span>Gas Top-Up</span><span>From RM 120</span>
-                      </div>
-                      <div className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2">
-                        <span>Chemical Overhaul</span><span>From RM 220</span>
-                      </div>
-                      <div className="flex justify-between items-center text-xs font-bold">
-                        <span>Repairs / Parts</span><span>RM 150–600</span>
-                      </div>
+                      {[
+                        ["Diagnostic", "RM 88*"],
+                        ["Chemical Wash", "From RM 120"],
+                        ["Gas Top-Up", "From RM 120"],
+                        ["Chemical Overhaul", "From RM 220"],
+                        ["Repairs / Parts", "RM 150–600"],
+                      ].map(([label, price]) => (
+                        <div key={label} className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2 last:border-0 last:pb-0">
+                          <span>{label}</span><span>{price}</span>
+                        </div>
+                      ))}
                     </div>
                     <p className="text-xs text-sky-200 mt-3">*Waived if repair done same visit</p>
                   </div>
@@ -607,12 +621,12 @@ export default async function ProblemPage({
         </section>
       )}
 
-      {/* FAQ */}
+      {/* FAQs — EN + BM + ZH */}
       <section className="py-14 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-10">
-              <p className={eyebrow()}>FAQs</p>
+              <p className={eyebrow()}>FAQs · Soalan Lazim · 常见问答</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>{problem.name} </span>
                 <span className={title({ size: "sm", color: "brand" })}>Questions Answered</span>
@@ -631,7 +645,6 @@ export default async function ProblemPage({
             ))}
           </div>
 
-          {/* BM FAQs */}
           {content.faqsBM.length > 0 && (
             <Reveal>
               <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
@@ -646,7 +659,6 @@ export default async function ProblemPage({
             </Reveal>
           )}
 
-          {/* ZH FAQs */}
           {content.faqsZH.length > 0 && (
             <Reveal>
               <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
@@ -678,7 +690,8 @@ export default async function ProblemPage({
                   className="flex items-center gap-2.5 border border-slate-200 bg-slate-50 hover:border-sky-200 hover:bg-sky-50 px-4 py-3 text-sm font-bold text-slate-700 rounded-xl transition-all"
                 >
                   <FiArrowRight className="h-3.5 w-3.5 text-sky-500 shrink-0" />
-                  {p.name}
+                  <span>{p.name}</span>
+                  <span className="ml-auto text-xs text-slate-400">{p.nameMS}</span>
                 </NextLink>
               ))}
             </div>
@@ -686,7 +699,7 @@ export default async function ProblemPage({
         </div>
       </section>
 
-      {/* Internal links — Areas */}
+      {/* Areas */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -703,6 +716,12 @@ export default async function ProblemPage({
                   {area.name}
                 </NextLink>
               ))}
+              <NextLink
+                href="/areas"
+                className="inline-flex items-center gap-1 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-bold text-sky-600 rounded-lg transition-all"
+              >
+                All Areas →
+              </NextLink>
             </div>
           </Reveal>
         </div>
@@ -715,6 +734,9 @@ export default async function ProblemPage({
             <h2 className="text-2xl sm:text-3xl font-black uppercase text-white">
               Fix {problem.name} Today
             </h2>
+            <p className="mt-1 text-sky-200 text-sm font-medium">
+              {problem.nameMS} · {problem.nameZH}
+            </p>
             <p className="mt-3 text-sky-100 font-medium max-w-lg mx-auto">
               Same-day service across KL & Selangor. Transparent pricing — quote before work starts. All brands serviced.
             </p>
