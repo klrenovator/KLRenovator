@@ -2,7 +2,7 @@
 
 import NextLink from "next/link";
 import {
-  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaStar,
+  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaYoutube, FaGoogle,
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
@@ -10,12 +10,40 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
+const FOOTER_LINKS = {
+  en: {
+    brands: "Brands",
+    problems: "Problems",
+    blog: "Blog",
+    areas: "All Areas",
+    services: "View All Services →",
+    quickLinks: "Quick Links",
+  },
+  ms: {
+    brands: "Jenama",
+    problems: "Masalah",
+    blog: "Blog",
+    areas: "Semua Kawasan",
+    services: "Lihat Semua Perkhidmatan →",
+    quickLinks: "Pautan Pantas",
+  },
+  zh: {
+    brands: "品牌",
+    problems: "常见问题",
+    blog: "博客",
+    areas: "所有地区",
+    services: "查看所有服务 →",
+    quickLinks: "快速链接",
+  },
+};
+
 export const Footer = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const fl = FOOTER_LINKS[lang as keyof typeof FOOTER_LINKS] ?? FOOTER_LINKS.en;
 
   return (
     <footer className="w-full bg-white text-slate-500 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
 
         {/* ── Brand Block ── */}
         <div className="space-y-4 lg:col-span-1">
@@ -26,10 +54,8 @@ export const Footer = () => {
           </NextLink>
           <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
 
-          {/* Social Icons — Official Brand Colors */}
+          {/* Social Icons */}
           <div className="flex items-center gap-2.5 pt-1 flex-wrap">
-
-            {/* WhatsApp — #25D366 */}
             <a
               href={waLink(rfqMsg)}
               target="_blank"
@@ -40,8 +66,6 @@ export const Footer = () => {
             >
               <FaWhatsapp className="h-4 w-4" />
             </a>
-
-            {/* Instagram — gradient */}
             <a
               href={siteConfig.links.instagram}
               target="_blank"
@@ -52,8 +76,6 @@ export const Footer = () => {
             >
               <FaInstagram className="h-4 w-4" />
             </a>
-
-            {/* Facebook — #1877F2 */}
             <a
               href={siteConfig.links.facebook}
               target="_blank"
@@ -64,8 +86,6 @@ export const Footer = () => {
             >
               <FaFacebook className="h-4 w-4" />
             </a>
-
-            {/* TikTok — #010101 */}
             <a
               href={siteConfig.links.tiktok}
               target="_blank"
@@ -76,19 +96,26 @@ export const Footer = () => {
             >
               <FaTiktok className="h-4 w-4" />
             </a>
-
-            {/* Google Business Profile — #4285F4 */}
             <a
-              href={siteConfig.googleBusinessProfile}
+              href={siteConfig.links.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="KL Renovator Google Business Profile — 4.9★ Reviews"
+              aria-label="KL Renovator YouTube"
+              style={{ backgroundColor: "#FF0000" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
+            >
+              <FaYoutube className="h-4 w-4" />
+            </a>
+            <a
+              href={siteConfig.links.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KL Renovator Google Business"
               style={{ backgroundColor: "#4285F4" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
-              <FaStar className="h-4 w-4" />
+              <FaGoogle className="h-4 w-4" />
             </a>
-
           </div>
         </div>
 
@@ -113,7 +140,7 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_areas")}</p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
-            {siteConfig.areaPages.map((area) => (
+            {siteConfig.areaPages.slice(0, 16).map((area) => (
               <li key={area.slug}>
                 <NextLink
                   href={`/areas/${area.slug}`}
@@ -126,11 +153,77 @@ export const Footer = () => {
             ))}
           </ul>
           <NextLink
-            href="/services"
+            href="/areas"
             className="inline-block text-xs font-black uppercase tracking-wider text-sky-600 hover:text-sky-700 transition-colors mt-1"
           >
-            View All Services →
+            {fl.areas} →
           </NextLink>
+        </div>
+
+        {/* ── Quick Links — Brands / Problems / Blog ── */}
+        <div className="space-y-4">
+          <p className="text-xs font-black uppercase tracking-wider text-slate-900">{fl.quickLinks}</p>
+
+          {/* Brands */}
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.brands}</p>
+            <ul className="space-y-1.5">
+              {siteConfig.brandPages.map((b) => (
+                <li key={b.slug}>
+                  <NextLink
+                    href={`/brands/${b.slug}`}
+                    className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium"
+                  >
+                    {b.name}
+                  </NextLink>
+                </li>
+              ))}
+              <li>
+                <NextLink
+                  href="/brands"
+                  className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors"
+                >
+                  {fl.brands} →
+                </NextLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Problems */}
+          <div className="pt-2 border-t border-slate-100">
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.problems}</p>
+            <ul className="space-y-1.5">
+              {siteConfig.problemPages.slice(0, 8).map((p) => (
+                <li key={p.slug}>
+                  <NextLink
+                    href={`/problems/${p.slug}`}
+                    className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium"
+                  >
+                    {p.name}
+                  </NextLink>
+                </li>
+              ))}
+              <li>
+                <NextLink
+                  href="/problems"
+                  className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors"
+                >
+                  {fl.problems} →
+                </NextLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Blog link */}
+          <div className="pt-2 border-t border-slate-100">
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.blog}</p>
+            <NextLink
+              href="/blog"
+              className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors"
+            >
+              {fl.blog} →
+            </NextLink>
+          </div>
         </div>
 
         {/* ── Contact Block ── */}
@@ -185,8 +278,11 @@ export const Footer = () => {
           <p>
             © {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamic Resources). {t("footer_rights")}
           </p>
-          <nav className="flex items-center gap-4" aria-label="Footer navigation">
+          <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
             <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">Services</NextLink>
+            <NextLink href="/brands" className="hover:text-sky-600 transition-colors font-medium">Brands</NextLink>
+            <NextLink href="/problems" className="hover:text-sky-600 transition-colors font-medium">Problems</NextLink>
+            <NextLink href="/areas" className="hover:text-sky-600 transition-colors font-medium">Areas</NextLink>
             <NextLink href="/blog" className="hover:text-sky-600 transition-colors font-medium">Blog</NextLink>
             <NextLink href="/gallery" className="hover:text-sky-600 transition-colors font-medium">Gallery</NextLink>
             <NextLink href="/about" className="hover:text-sky-600 transition-colors font-medium">About</NextLink>
