@@ -34,6 +34,8 @@ export async function generateMetadata({
       `${brand.name} gas top up KL`,
       `${brand.name} aircond installation KL`,
       `servis aircond ${brand.name} KL`,
+      `servis ${brand.name} Selangor`,
+      `${brand.name} 冷气服务 吉隆坡`,
       `KL Renovator ${brand.name}`,
     ].join(", "),
     openGraph: {
@@ -44,6 +46,12 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://www.klrenovator.com/brands/${slug}`,
+    },
+    other: {
+      "title:ms": brand.metaTitleMS,
+      "description:ms": brand.metaDescMS,
+      "title:zh": brand.metaTitleZH,
+      "description:zh": brand.metaDescZH,
     },
   };
 }
@@ -58,33 +66,38 @@ export default async function BrandPage({
   if (!brand) notFound();
 
   const waMsg = `Hi KL Renovator, I need help with my ${brand.name} aircond. Please advise.`;
+  const waMsgMS = `Hai KL Renovator, saya perlukan bantuan untuk aircond ${brand.name} saya. Tolong nasihatkan.`;
+  const waMsgZH = `你好 KL Renovator，我需要帮助处理我的${brand.name}冷气。请给予建议。`;
 
-  // Schema
+  const services = siteConfig.services;
+  const relatedAreas = siteConfig.areaPages.slice(0, 8);
+
+  // ── Schema ────────────────────────────────────────────────────────────────
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `https://www.klrenovator.com/brands/${slug}#service`,
-    "name": `${brand.name} Aircond Service KL & Selangor`,
-    "description": brand.description,
-    "provider": {
+    name: `${brand.name} Aircond Service KL & Selangor`,
+    description: brand.description,
+    provider: {
       "@type": "HVACBusiness",
       "@id": "https://www.klrenovator.com/#business",
-      "name": "KL Renovator",
+      name: "KL Renovator",
     },
-    "areaServed": [
-      { "@type": "City", "name": "Kuala Lumpur" },
-      { "@type": "State", "name": "Selangor" },
+    areaServed: [
+      { "@type": "City", name: "Kuala Lumpur" },
+      { "@type": "State", name: "Selangor" },
     ],
-    "serviceType": `${brand.name} Aircond Servicing`,
-    "offers": {
+    serviceType: `${brand.name} Aircond Servicing`,
+    offers: {
       "@type": "Offer",
-      "price": "99",
-      "priceCurrency": "MYR",
-      "priceSpecification": {
+      price: "99",
+      priceCurrency: "MYR",
+      priceSpecification: {
         "@type": "PriceSpecification",
-        "minPrice": "99",
-        "maxPrice": "2000",
-        "priceCurrency": "MYR",
+        minPrice: "99",
+        maxPrice: "2000",
+        priceCurrency: "MYR",
       },
     },
   };
@@ -92,54 +105,51 @@ export default async function BrandPage({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.klrenovator.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Brands", "item": "https://www.klrenovator.com/services" },
-      { "@type": "ListItem", "position": 3, "name": `${brand.name} Aircond Service`, "item": `https://www.klrenovator.com/brands/${slug}` },
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com/" },
+      { "@type": "ListItem", position: 2, name: "Brands", item: "https://www.klrenovator.com/brands" },
+      { "@type": "ListItem", position: 3, name: `${brand.name} Aircond Service`, item: `https://www.klrenovator.com/brands/${slug}` },
     ],
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
+    mainEntity: [
       {
         "@type": "Question",
-        "name": `How much does ${brand.name} aircond service cost in KL?`,
-        "acceptedAnswer": {
+        name: `How much does ${brand.name} aircond service cost in KL?`,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120. All prices confirmed before work begins.`,
+          text: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
         },
       },
       {
         "@type": "Question",
-        "name": `Can KL Renovator service my ${brand.name} aircond?`,
-        "acceptedAnswer": {
+        name: `Can KL Renovator service my ${brand.name} aircond?`,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": `Yes. KL Renovator technicians are experienced in servicing ${brand.name} air conditioners across KL and Selangor, including ${brand.models.slice(0, 2).join(", ")} and other models. All services available: chemical wash, overhaul, gas top-up, repairs and installation.`,
+          text: `Yes. KL Renovator technicians are experienced in servicing ${brand.name} air conditioners across KL and Selangor, including ${brand.models.slice(0, 2).join(", ")} and other models. All services available: chemical wash, overhaul, gas top-up, repairs and installation.`,
         },
       },
       {
         "@type": "Question",
-        "name": `What gas type does ${brand.name} aircond use?`,
-        "acceptedAnswer": {
+        name: `What gas type does ${brand.name} aircond use?`,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": `Most ${brand.name} air conditioners use ${brand.gasTypes.join(" or ")} refrigerant. KL Renovator handles all gas types: R22, R410A and R32 with precision balancing. Check the sticker on your outdoor unit for the exact gas type.`,
+          text: `Most ${brand.name} air conditioners use ${brand.gasTypes.join(" or ")} refrigerant. KL Renovator handles all gas types: R22, R410A and R32 with precision balancing. Check the sticker on your outdoor unit for the exact gas type.`,
         },
       },
       {
         "@type": "Question",
-        "name": `How do I book ${brand.name} aircond service in KL?`,
-        "acceptedAnswer": {
+        name: `How do I book ${brand.name} aircond service in KL?`,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": `WhatsApp KL Renovator at +60182983573 with your ${brand.name} model, HP size, location (KL/Selangor area), and the issue. Same-day slots available. Quote confirmed before technician is dispatched.`,
+          text: `WhatsApp KL Renovator at +60182983573 with your ${brand.name} model, HP size, location (KL/Selangor area), and the issue. Same-day slots available. Quote confirmed before technician is dispatched.`,
         },
       },
     ],
   };
-
-  const services = siteConfig.services;
-  const relatedAreas = siteConfig.areaPages.slice(0, 8);
 
   return (
     <>
@@ -154,19 +164,20 @@ export default async function BrandPage({
           <ol className="flex items-center gap-1.5 text-xs text-slate-500">
             <li><NextLink href="/" className="hover:text-sky-600 font-medium">Home</NextLink></li>
             <li><FiChevronRight className="h-3 w-3" /></li>
-            <li><NextLink href="/services" className="hover:text-sky-600 font-medium">Services</NextLink></li>
+            <li><NextLink href="/brands" className="hover:text-sky-600 font-medium">Brands</NextLink></li>
             <li><FiChevronRight className="h-3 w-3" /></li>
             <li className="text-slate-900 font-bold">{brand.name} Aircond Service</li>
           </ol>
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero — trilingual headings */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Reveal>
+              {/* EN */}
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600 mb-3">
                 {brand.name} · KL & Selangor
               </p>
@@ -177,6 +188,16 @@ export default async function BrandPage({
               </h1>
               <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
                 {brand.description}
+              </p>
+
+              {/* BM description */}
+              <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed max-w-2xl border-l-2 border-sky-200 pl-3">
+                {brand.descriptionMS}
+              </p>
+
+              {/* ZH description */}
+              <p className="mt-2 text-sm text-slate-400 font-medium leading-relaxed max-w-2xl border-l-2 border-slate-200 pl-3">
+                {brand.descriptionZH}
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2">
@@ -313,7 +334,7 @@ export default async function BrandPage({
         </div>
       </section>
 
-      {/* Why Choose — {Brand} + KL Renovator */}
+      {/* Why Choose — reasons */}
       <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -348,12 +369,12 @@ export default async function BrandPage({
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ — EN + BM + ZH */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-10">
-              <p className={eyebrow()}>FAQs</p>
+              <p className={eyebrow()}>FAQs · Soalan Lazim · 常见问答</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>{brand.name} Aircond </span>
                 <span className={title({ size: "sm", color: "brand" })}>Questions Answered</span>
@@ -397,11 +418,15 @@ export default async function BrandPage({
               {[
                 {
                   q: `Berapa harga servis aircond ${brand.name} di KL & Selangor?`,
-                  a: `Servis aircond ${brand.name} dengan KL Renovator bermula dari RM 99 (servis asas), RM 120 (cuci kimia), dan RM 220 (overhaul kimia). Top-up gas bermula dari RM 120. Semua harga disahkan sebelum kerja bermula.`,
+                  a: `Servis aircond ${brand.name} dengan KL Renovator bermula dari RM 99 (servis asas), RM 120 (cuci kimia), dan RM 220 (overhaul kimia). Top-up gas bermula dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Semua harga disahkan sebelum kerja bermula.`,
                 },
                 {
                   q: `Adakah KL Renovator boleh servis aircond ${brand.name} saya?`,
                   a: `Ya. Juruteknik KL Renovator berpengalaman menservis semua model aircond ${brand.name} termasuk ${brand.models.slice(0, 2).join(", ")} dan model lain. Hubungi +60182983573.`,
+                },
+                {
+                  q: `Aircond ${brand.name} saya tidak sejuk. Apa yang perlu saya lakukan?`,
+                  a: `Punca paling biasa adalah gas rendah, gegelung kotor atau kapasitor rosak. WhatsApp KL Renovator di +60182983573 dengan model dan saiz HP ${brand.name} anda. Juruteknik akan mendiagnosis dan memberi sebut harga sebelum memulakan kerja.`,
                 },
               ].map((faq, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
@@ -419,11 +444,15 @@ export default async function BrandPage({
               {[
                 {
                   q: `KL Renovator的${brand.name}冷气服务费用是多少？`,
-                  a: `${brand.name}冷气服务费用：基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，冷媒充气从RM 120起。所有价格在施工前确认，无隐藏收费。`,
+                  a: `${brand.name}冷气服务费用：基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，冷媒充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。所有价格在施工前确认，无隐藏收费。`,
                 },
                 {
                   q: `KL Renovator能维修我的${brand.name}冷气吗？`,
                   a: `能。KL Renovator的技术员在吉隆坡和雪兰莪拥有丰富的${brand.name}冷气维修经验，包括${brand.models.slice(0, 2).join("、")}等型号。请WhatsApp +60182983573预约。`,
+                },
+                {
+                  q: `我的${brand.name}冷气不冷，该怎么办？`,
+                  a: `最常见原因是制冷剂不足、盘管脏污或电容器故障。请WhatsApp KL Renovator +60182983573，提供您的${brand.name}型号和HP大小。技术员将在开始工作前诊断并报价。`,
                 },
               ].map((faq, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
@@ -436,7 +465,7 @@ export default async function BrandPage({
         </div>
       </section>
 
-      {/* Internal Links — Related Areas */}
+      {/* Related Areas */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -451,15 +480,21 @@ export default async function BrandPage({
                   className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-2 text-xs font-bold text-slate-600 rounded-xl transition-all"
                 >
                   <FiArrowRight className="h-3 w-3 text-sky-500" />
-                  {brand.name} Aircond Service {area.name}
+                  {brand.name} Service {area.name}
                 </NextLink>
               ))}
+              <NextLink
+                href="/areas"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-600 rounded-xl transition-all"
+              >
+                All Areas <FiArrowRight className="h-3 w-3" />
+              </NextLink>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Internal Links — Other Brands */}
+      {/* Other Brands */}
       <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -492,6 +527,10 @@ export default async function BrandPage({
             </h2>
             <p className="mt-3 text-sky-100 font-medium">
               Same-day service available. All {brand.name} models. Transparent pricing — no hidden charges.
+            </p>
+            {/* Trilingual sub-note */}
+            <p className="mt-1 text-xs text-sky-200 font-medium">
+              Servis hari sama tersedia · 当天服务可用
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
