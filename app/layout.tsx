@@ -9,6 +9,7 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { StickyActions } from "@/components/sticky-actions";
+import { googleReviews, googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
@@ -66,6 +67,32 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+// ── Build Review schema objects from real reviews ─────────────────────────────
+const reviewSchemaObjects = googleReviews.map((r) => ({
+  "@type": "Review",
+  author: {
+    "@type": "Person",
+    name: r.author,
+  },
+  reviewRating: {
+    "@type": "Rating",
+    ratingValue: r.rating,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  reviewBody: r.text,
+  datePublished: r.date,
+  publisher: {
+    "@type": "Organization",
+    name: "Google",
+  },
+  itemReviewed: {
+    "@type": "HVACBusiness",
+    "@id": "https://www.klrenovator.com/#business",
+    name: "KL Renovator",
+  },
+}));
+
 export default function RootLayout({
   children,
 }: {
@@ -74,7 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Primary Local Business JSON-LD Schema — HVACBusiness */}
+        {/* ── 1. Primary Local Business — HVACBusiness ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -105,36 +132,40 @@ export default function RootLayout({
               "numberOfEmployees": { "@type": "QuantitativeValue", "value": 10 },
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "500",
-                "bestRating": "5",
-                "worstRating": "1",
+                "ratingValue": googlePlace.averageRating,
+                "reviewCount": googlePlace.totalReviews,
+                "bestRating": 5,
+                "worstRating": 1,
               },
+              "review": reviewSchemaObjects,
               "sameAs": [
                 siteConfig.links.googleMaps,
                 siteConfig.links.facebook,
                 siteConfig.links.instagram,
-                "https://www.tiktok.com/@klrenovator",
-                "https://www.youtube.com/@klrenovator",
+                siteConfig.links.tiktok,
+                siteConfig.links.youtube,
               ],
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "A-22-09 Magnaville Selayang",
-                "postalCode": "68100",
-                "addressLocality": "Batu Caves",
-                "addressRegion": "Selangor",
-                "addressCountry": "MY",
+                "streetAddress": siteConfig.addressStreet,
+                "postalCode": siteConfig.addressPostal,
+                "addressLocality": siteConfig.addressCity,
+                "addressRegion": siteConfig.addressState,
+                "addressCountry": siteConfig.addressCountry,
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "3.22050",
-                "longitude": "101.64120",
+                "latitude": siteConfig.geoLat,
+                "longitude": siteConfig.geoLng,
               },
               "hasMap": siteConfig.links.googleMaps,
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                  "dayOfWeek": [
+                    "Monday", "Tuesday", "Wednesday", "Thursday",
+                    "Friday", "Saturday", "Sunday",
+                  ],
                   "opens": "09:00",
                   "closes": "18:00",
                 },
@@ -144,10 +175,15 @@ export default function RootLayout({
                 "name": `${area}, Malaysia`,
               })),
               "serviceType": [
-                "Aircon Installation", "Aircon Basic Servicing", "Pressure Chemical Wash",
-                "Chemical Overhaul", "Gas Top-Up R22 R410A R32",
-                "Aircon Repair & Troubleshooting", "Dismantle & Relocation",
-                "Ceiling Cassette Service", "Commercial HVAC Maintenance",
+                "Aircon Installation",
+                "Aircon Basic Servicing",
+                "Pressure Chemical Wash",
+                "Chemical Overhaul",
+                "Gas Top-Up R22 R410A R32",
+                "Aircon Repair & Troubleshooting",
+                "Dismantle & Relocation",
+                "Ceiling Cassette Service",
+                "Commercial HVAC Maintenance",
                 "VRF VRV System Installation",
               ],
               "knowsAbout": [
@@ -184,7 +220,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Organization Schema */}
+        {/* ── 2. Organization Schema ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -207,14 +243,14 @@ export default function RootLayout({
               "sameAs": [
                 siteConfig.links.facebook,
                 siteConfig.links.instagram,
-                "https://www.tiktok.com/@klrenovator",
-                "https://www.youtube.com/@klrenovator",
+                siteConfig.links.tiktok,
+                siteConfig.links.youtube,
               ],
             }),
           }}
         />
 
-        {/* WebSite Schema with SearchAction */}
+        {/* ── 3. WebSite Schema with SearchAction ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -229,11 +265,19 @@ export default function RootLayout({
               "publisher": {
                 "@id": "https://www.klrenovator.com/#organization",
               },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.klrenovator.com/services/{search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />
 
-        {/* Global FAQ Schema — AEO */}
+        {/* ── 4. Global FAQ Schema — AEO / Answer Engine Optimization ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -246,7 +290,7 @@ export default function RootLayout({
                   "name": "How much does aircon chemical wash cost in KL?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Aircon chemical wash in KL starts from RM 120 for a standard wall-mounted unit (1.0–1.5HP). Ceiling cassette starts from RM 220. KL Renovator offers transparent pricing with no hidden fees.",
+                    "text": "Aircon chemical wash in KL starts from RM 120 for a standard wall-mounted 1.0–1.5HP unit. For 2.0–2.5HP it is RM 150, 3.0HP is RM 180. Ceiling cassette starts from RM 220. KL Renovator offers transparent pricing with no hidden fees.",
                   },
                 },
                 {
@@ -286,7 +330,7 @@ export default function RootLayout({
                   "name": "How much does aircon gas top-up cost in KL & Selangor?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Gas top-up in KL starts from RM 120 for R22, RM 150 for R410A, and RM 180 for R32. Leak check is included with every gas top-up. KL Renovator covers all Klang Valley areas.",
+                    "text": "Gas top-up in KL starts from RM 120 for R22 (1.0HP), RM 150 for R410A (1.0HP), and RM 180 for R32 (1.0HP). Leak check is included with every gas top-up. KL Renovator covers all Klang Valley areas.",
                   },
                 },
                 {
@@ -321,12 +365,28 @@ export default function RootLayout({
                     "text": "Yes. KL Renovator operates under the registered entity Multicore Dynamics Resources, SSM registration number 003765188-T, registered at A-22-09 Magnaville Selayang, 68100 Batu Caves, Selangor.",
                   },
                 },
+                {
+                  "@type": "Question",
+                  "name": "Berapa harga cuci kimia aircond di KL?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cuci kimia aircond di KL bermula dari RM 120 untuk unit dinding 1.0–1.5HP. Ceiling cassette bermula dari RM 220. Harga disahkan sebelum kerja bermula — tiada caj tersembunyi.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "KL冷气化学清洗价格是多少？",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "吉隆坡冷气化学清洗从RM 120起（1.0–1.5HP挂壁式）。天花板卡式机从RM 220起。所有价格在施工前确认，无隐藏收费。致电 +60182983573。",
+                  },
+                },
               ],
             }),
           }}
         />
 
-        {/* HowTo Schema — Aircond Chemical Wash */}
+        {/* ── 5. HowTo — Chemical Wash ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -387,7 +447,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* HowTo Schema — Aircond Gas Top-Up */}
+        {/* ── 6. HowTo — Gas Top-Up ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
