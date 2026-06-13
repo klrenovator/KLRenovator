@@ -9,6 +9,45 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { allPosts } from "@/config/blog-posts";
+
+// ── Brand → Blog relevance map ───────────────────────────────────────────────
+const BRAND_BLOG_MAP: Record<string, string[]> = {
+  "daikin":       ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
+  "panasonic":    ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia"],
+  "mitsubishi":   ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
+  "york":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
+  "acson":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
+  "carrier":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl"],
+  "midea":        ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia"],
+  "haier":        ["best-aircond-brands-malaysia-2025", "aircond-installation-guide-malaysia"],
+  "toshiba":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia"],
+  "hitachi":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia"],
+  "samsung":      ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia"],
+  "lg":           ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia"],
+  "sharp":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
+  "fujitsu":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl"],
+  "gree":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
+};
+
+// ── Brand → Problem relevance map ─────────────────────────────────────────────
+const BRAND_PROBLEM_MAP: Record<string, string[]> = {
+  "daikin":       ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-pcb-problem"],
+  "panasonic":    ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
+  "mitsubishi":   ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
+  "york":         ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking"],
+  "acson":        ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
+  "carrier":      ["aircond-not-cold", "aircond-compressor-problem", "aircond-high-electricity-bill"],
+  "midea":        ["aircond-not-cold", "aircond-water-leaking", "aircond-remote-not-working"],
+  "haier":        ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
+  "toshiba":      ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem"],
+  "hitachi":      ["aircond-not-cold", "aircond-compressor-problem", "aircond-blinking-light"],
+  "samsung":      ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
+  "lg":           ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
+  "sharp":        ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
+  "fujitsu":      ["aircond-not-cold", "aircond-compressor-problem", "aircond-pcb-problem"],
+  "gree":         ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
+};
 
 export function generateStaticParams() {
   return siteConfig.brandPages.map((b) => ({ slug: b.slug }));
@@ -517,6 +556,72 @@ export default async function BrandPage({
           </Reveal>
         </div>
       </section>
+
+      {/* Related Blog Guides */}
+      {(() => {
+        const relatedSlugs = BRAND_BLOG_MAP[slug] ?? [];
+        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 4);
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-12 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
+                <h2 className="text-base font-black text-slate-900 mb-5">Related Aircond Guides &amp; Articles</h2>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {relatedPosts.map((post) => (
+                    <NextLink
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="group flex flex-col bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                    >
+                      <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                      <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                      <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                    </NextLink>
+                  ))}
+                </div>
+                <NextLink href="/blog" className="inline-flex items-center gap-1 mt-5 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                  All Aircond Guides <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Common Problems for This Brand */}
+      {(() => {
+        const problemSlugs = BRAND_PROBLEM_MAP[slug] ?? [];
+        const relatedProblems = siteConfig.problemPages.filter((p) => problemSlugs.includes(p.slug));
+        if (relatedProblems.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Problems · Masalah · 问题</p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  Common {brand.name} Aircond Problems We Fix
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {relatedProblems.map((p) => (
+                    <NextLink
+                      key={p.slug}
+                      href={`/problems/${p.slug}`}
+                      className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                    >
+                      {p.name}
+                    </NextLink>
+                  ))}
+                  <NextLink href="/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+                    All Problems →
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* CTA */}
       <section className="py-16 bg-sky-600">
