@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { FaWhatsapp, FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
@@ -91,7 +93,17 @@ export default function ServicesPage() {
     <>
       {/* Page Header — White */}
       <section className="py-16 sm:py-24 bg-white relative overflow-hidden border-b border-slate-100">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.05),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-[0.07]">
+          <Image
+            src="/hero/aircond-installation-kuala-lumpur.jpg"
+            alt="KL Renovator professional aircond services Kuala Lumpur"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600 mb-4">
