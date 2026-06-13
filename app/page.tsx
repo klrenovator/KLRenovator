@@ -6,6 +6,8 @@ import { GoogleReviews } from "@/components/sections/google-reviews";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { siteConfig } from "@/config/site";
+import NextLink from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 
 export default function Home() {
   const localBusinessSchema = {
@@ -155,6 +157,85 @@ export default function Home() {
       <WhyChooseUs />
       <GoogleReviews />
       <CoverageAreas />
+      {/* Topical Authority Hub — Internal Linking */}
+      <section className="py-14 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Problems Hub */}
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">Aircond Problems · Masalah</p>
+              <ul className="space-y-1.5">
+                {siteConfig.problemPages.slice(0, 6).map((p) => (
+                  <li key={p.slug}>
+                    <NextLink href={`/problems/${p.slug}`} className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition">
+                      <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />{p.name}
+                    </NextLink>
+                  </li>
+                ))}
+                <li>
+                  <NextLink href="/problems" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                    All Problems →
+                  </NextLink>
+                </li>
+              </ul>
+            </div>
+            {/* Brands Hub */}
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">Brands We Service · Jenama</p>
+              <ul className="space-y-1.5">
+                {siteConfig.brandPages.slice(0, 6).map((b) => (
+                  <li key={b.slug}>
+                    <NextLink href={`/brands/${b.slug}`} className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition">
+                      <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />{b.name} Aircond Service
+                    </NextLink>
+                  </li>
+                ))}
+                <li>
+                  <NextLink href="/brands" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                    All Brands →
+                  </NextLink>
+                </li>
+              </ul>
+            </div>
+            {/* Areas Hub */}
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">Service Areas · Kawasan</p>
+              <ul className="space-y-1.5">
+                {siteConfig.areaPages.slice(0, 6).map((a) => (
+                  <li key={a.slug}>
+                    <NextLink href={`/areas/${a.slug}`} className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition">
+                      <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Aircond Service {a.name}
+                    </NextLink>
+                  </li>
+                ))}
+                <li>
+                  <NextLink href="/areas" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                    All Areas →
+                  </NextLink>
+                </li>
+              </ul>
+            </div>
+            {/* Blog Hub */}
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">Expert Guides · Panduan</p>
+              <ul className="space-y-1.5">
+                <li><NextLink href="/blog/how-often-service-aircond-malaysia" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />How Often to Service Aircond</NextLink></li>
+                <li><NextLink href="/blog/chemical-wash-vs-chemical-overhaul" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Chemical Wash vs Overhaul</NextLink></li>
+                <li><NextLink href="/blog/aircond-not-cold-reasons" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Why Aircond Not Cold</NextLink></li>
+                <li><NextLink href="/blog/aircond-water-leaking-causes" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Why Aircond Leaking Water</NextLink></li>
+                <li><NextLink href="/blog/r32-r410a-r22-gas-difference" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />R32 vs R410A vs R22 Gas</NextLink></li>
+                <li><NextLink href="/blog/best-aircond-brands-malaysia-2025" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Best Aircond Brands Malaysia</NextLink></li>
+                <li>
+                  <NextLink href="/blog" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                    All Guides →
+                  </NextLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ReadyToBook />
     </>
   );
