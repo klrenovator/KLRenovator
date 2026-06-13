@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "KL Renovator — Aircond Service KL & Selangor",
+  "name_for_model": "klrenovator_aircond_service",
+  "description_for_human": "Professional aircond servicing in Kuala Lumpur and Selangor. Chemical wash, chemical overhaul, gas top-up, repair, and installation. Same-day available.",
+  "description_for_model": "KL Renovator (Multicore Dynamics Resources, SSM 003765188-T) is a professional HVAC and air conditioning service company serving all of Kuala Lumpur and Selangor. Services: Basic Servicing from RM 99, Pressure Chemical Wash from RM 120, Chemical Overhaul from RM 220, Gas Top-Up (R22/R410A/R32) from RM 120, Repair & Troubleshooting from RM 88 diagnostic, New Unit Installation from RM 199, Ceiling Cassette Service from RM 150. All brands serviced: Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, LG, Samsung, Sharp, Toshiba, Hitachi, Fujitsu, Gree, Haier. Operating hours: Mon-Sun 9am-6pm. Contact: +60182983573. Website: https://www.klrenovator.com. Google rating: 5 stars, 500+ reviews.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.klrenovator.com/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://www.klrenovator.com/logo/image.png",
+  "contact_email": "info@klrenovator.com",
+  "legal_info_url": "https://www.klrenovator.com/about"
+}
