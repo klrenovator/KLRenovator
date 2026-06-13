@@ -23,6 +23,55 @@ export const metadata: Metadata = {
       "Fastest response via WhatsApp — reply within 30 minutes. Same-day aircond service across KL & Selangor. Chemical wash from RM 120. Call +60182983573.",
     url: "https://www.klrenovator.com/contact",
     type: "website",
+    images: [
+      {
+        url: "https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact KL Renovator — Aircond Service KL & Selangor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact KL Renovator | Aircond Service KL & Selangor",
+    description: "Fastest WhatsApp response — same-day aircond service across KL & Selangor. Chemical wash from RM 120.",
+    images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.jpg"],
+  },
+};
+
+// ── Schemas ─────────────────────────────────────────────────────────────────
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.klrenovator.com/contact" },
+  ],
+};
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact KL Renovator",
+  url: "https://www.klrenovator.com/contact",
+  description: "Contact KL Renovator for professional aircond services in Kuala Lumpur and Selangor. WhatsApp for fastest response.",
+  mainEntity: {
+    "@type": "HVACBusiness",
+    "@id": "https://www.klrenovator.com/#business",
+    name: "KL Renovator",
+    telephone: "+60182983573",
+    email: "info@klrenovator.com",
+    url: "https://www.klrenovator.com",
+    openingHours: "Mo-Su 09:00-18:00",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "A-22-09 Magnaville Selayang",
+      addressLocality: "Batu Caves",
+      postalCode: "68100",
+      addressRegion: "Selangor",
+      addressCountry: "MY",
+    },
   },
 };
 
