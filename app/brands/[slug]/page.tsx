@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 import NextLink from "next/link";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -82,6 +83,20 @@ export async function generateMetadata({
       description: brand.metaDesc,
       url: `https://www.klrenovator.com/brands/${slug}`,
       type: "website",
+      images: [
+        {
+          url: `https://www.klrenovator.com${(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`,
+          width: 1200,
+          height: 630,
+          alt: `${brand.name} Aircond Service KL & Selangor — KL Renovator`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: brand.metaTitle,
+      description: brand.metaDesc,
+      images: [`https://www.klrenovator.com${(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/brands/${slug}`,
@@ -151,17 +166,32 @@ export default async function BrandPage({
     ],
   };
 
+  // ── HowTo Schema ─────────────────────────────────────────────────────────
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to Book ${brand.name} Aircond Service in KL & Selangor`,
+    description: `Step-by-step guide to booking ${brand.name} aircond servicing with KL Renovator in Kuala Lumpur and Selangor`,
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "MYR",
+      value: "99",
+    },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "WhatsApp KL Renovator", text: `Send a WhatsApp to +60182983573 with your ${brand.name} model, HP size and location.` },
+      { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "Get a confirmed price before the technician is dispatched — no hidden charges." },
+      { "@type": "HowToStep", position: 3, name: "Technician Arrives", text: "Trained KL Renovator technician arrives at your location on the agreed date and time." },
+      { "@type": "HowToStep", position: 4, name: "Service Completed", text: `Your ${brand.name} aircond is serviced, tested and handed over with a job card and warranty.` },
+    ],
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
+    mainEntity: ((brand as any).faqs ?? [
       {
-        "@type": "Question",
-        name: `How much does ${brand.name} aircond service cost in KL?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
-        },
+        q: `How much does ${brand.name} aircond service cost in KL?`,
+        a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
       },
       {
         "@type": "Question",
@@ -195,6 +225,7 @@ export default async function BrandPage({
       {/* Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
@@ -212,7 +243,17 @@ export default async function BrandPage({
 
       {/* Hero — trilingual headings */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.05),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-[0.07]">
+          <Image
+            src={(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}
+            alt={`${brand.name} aircond service KL & Selangor`}
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Reveal>
@@ -424,7 +465,7 @@ export default async function BrandPage({
           {/* EN FAQ */}
           <Reveal>
             <div className="space-y-4 mb-6">
-              {[
+              {((brand as any).faqs ?? [
                 {
                   q: `How much does ${brand.name} aircond service cost in KL & Selangor?`,
                   a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
@@ -454,7 +495,7 @@ export default async function BrandPage({
           <Reveal>
             <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
               <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
-              {[
+              {((brand as any).faqsBM ?? [
                 {
                   q: `Berapa harga servis aircond ${brand.name} di KL & Selangor?`,
                   a: `Servis aircond ${brand.name} dengan KL Renovator bermula dari RM 99 (servis asas), RM 120 (cuci kimia), dan RM 220 (overhaul kimia). Top-up gas bermula dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Semua harga disahkan sebelum kerja bermula.`,
@@ -480,7 +521,7 @@ export default async function BrandPage({
           <Reveal>
             <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
               <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
-              {[
+              {((brand as any).faqsZH ?? [
                 {
                   q: `KL Renovator的${brand.name}冷气服务费用是多少？`,
                   a: `${brand.name}冷气服务费用：基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，冷媒充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。所有价格在施工前确认，无隐藏收费。`,
