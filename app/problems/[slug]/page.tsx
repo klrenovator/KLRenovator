@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { servicesData } from "@/config/services-data";
+import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -339,6 +340,30 @@ function getGenericContent(problem: (typeof siteConfig.problemPages)[0]) {
     ],
   };
 }
+
+// ── Problem → Blog relevance map ─────────────────────────────────────────────
+const PROBLEM_BLOG_MAP: Record<string, string[]> = {
+  "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia"],
+  "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul"],
+  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes"],
+  "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia"],
+  "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2025"],
+  "aircond-pcb-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia"],
+  "aircond-weak-airflow": ["aircon-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia"],
+  "aircond-fan-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-tripping-power": ["aircond-troubleshooting-guide-malaysia"],
+  "aircond-remote-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-blinking-light": ["aircond-troubleshooting-guide-malaysia"],
+  "aircond-water-dripping": ["aircond-water-leaking-causes", "aircon-chemical-wash-price-malaysia-2026"],
+  "aircond-thermostat-problems": ["aircond-troubleshooting-guide-malaysia", "how-often-service-aircond-malaysia"],
+  "aircond-not-turning-on": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+};
 
 export default async function ProblemPage({
   params,
@@ -728,6 +753,59 @@ export default async function ProblemPage({
       </section>
 
       {/* CTA */}
+      {/* Related Blog Articles */}
+      {(() => {
+        const relatedSlugs = PROBLEM_BLOG_MAP[slug] ?? [];
+        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 3);
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
+              <h2 className="text-base font-black text-slate-900 mb-4">Related Aircond Guides</h2>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {relatedPosts.map((post) => (
+                  <NextLink
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col bg-slate-50 border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                    <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                    <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                  </NextLink>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Related Aircond Problems */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Also See · Lihat Juga · 另见</p>
+          <h2 className="text-base font-black text-slate-900 mb-4">Other Common Aircond Problems</h2>
+          <div className="flex flex-wrap gap-2">
+            {siteConfig.problemPages
+              .filter((p) => p.slug !== slug)
+              .slice(0, 10)
+              .map((p) => (
+                <NextLink
+                  key={p.slug}
+                  href={`/problems/${p.slug}`}
+                  className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                >
+                  {p.name}
+                </NextLink>
+              ))}
+            <NextLink href="/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+              All Problems →
+            </NextLink>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-sky-600">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
