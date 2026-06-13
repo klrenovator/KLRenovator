@@ -187,7 +187,7 @@ export function BlogPostClient({ post, related }: Props) {
         <header className="relative bg-white overflow-hidden border-b border-slate-100">
           <div className="absolute inset-0 opacity-[0.07]">
             <Image
-              src="/hero/aircon-installation-kl-klrenovator.jpeg"
+              src="/hero/aircond-installation-kuala-lumpur.jpg"
               alt="KL Renovator aircond technician"
               fill
               sizes="100vw"
