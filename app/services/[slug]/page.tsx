@@ -207,6 +207,25 @@ export default async function ServicePage({
     ],
   };
 
+  // ── HowTo Schema ─────────────────────────────────────────────────────────
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to Book ${data.title} in KL & Selangor`,
+    description: `Step-by-step process for ${data.title} by KL Renovator in Kuala Lumpur and Selangor`,
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "MYR",
+      value: service?.startPrice ?? "99",
+    },
+    step: data.process.map((step: { step: string; desc: string }, i: number) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.step,
+      text: step.desc,
+    })),
+  };
+
   const faqSchema =
     data.faqs && data.faqs.length > 0
       ? {
@@ -230,6 +249,7 @@ export default async function ServicePage({
       {/* Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
@@ -251,8 +271,8 @@ export default async function ServicePage({
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-compressor-installation-new-kl.jpg"
-            alt="KL Renovator aircond technician on site"
+            src={data.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}
+            alt={`KL Renovator ${data.title} — KL & Selangor`}
             fill
             sizes="100vw"
             className="object-cover object-center"
