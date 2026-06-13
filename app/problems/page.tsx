@@ -19,8 +19,32 @@ export const metadata: Metadata = {
       "Complete guide to aircond problems in KL & Selangor. All common faults diagnosed and fixed. Same-day service. Call +60182983573.",
     url: "https://www.klrenovator.com/problems",
     type: "website",
+    images: [
+      {
+        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KL Renovator Aircond Problems Guide — KL & Selangor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aircond Problems Guide KL & Selangor | KL Renovator",
+    description: "Complete aircond problems guide — not cold, water leaking, noise, bad smell, blinking lights. Same-day service.",
+    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.jpg"],
   },
   alternates: { canonical: "https://www.klrenovator.com/problems" },
+};
+
+// ── Schemas ─────────────────────────────────────────────────────────────────
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
+    { "@type": "ListItem", position: 2, name: "Aircond Problems", item: "https://www.klrenovator.com/problems" },
+  ],
 };
 
 const waMsg = "Hi KL Renovator, my aircond has a problem. Can you help diagnose and fix it? My location is:";
@@ -30,6 +54,7 @@ export default function ProblemsPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]">
