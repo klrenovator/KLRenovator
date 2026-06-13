@@ -28,7 +28,13 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       url: `https://www.klrenovator.com/blog/${post.slug}`,
-      images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 400, height: 400 }],
+      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.jpg", width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.jpg"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/blog/${slug}`,
@@ -46,10 +52,20 @@ export default async function BlogPostPage({
   const post = allPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  // Score posts by relevance: same category (+3), shared tags (+1 each), same relatedService (+2)
   const related = allPosts
     .filter((p) => p.slug !== slug)
-    .sort((a, b) => (a.relatedService === post.relatedService ? -1 : 1))
-    .slice(0, 3);
+    .map((p) => {
+      let score = 0;
+      if (p.category === post.category) score += 3;
+      if (p.relatedService === post.relatedService) score += 2;
+      const sharedTags = p.tags?.filter((t: string) => post.tags?.includes(t)) ?? [];
+      score += sharedTags.length;
+      return { post: p, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((x) => x.post);
 
   return <BlogPostClient post={post} related={related} />;
 }
