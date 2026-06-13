@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
@@ -505,6 +506,30 @@ export default async function AreaPage({
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Related Blog Guides for This Area */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
+          <h2 className="text-base font-black text-slate-900 mb-4">Aircond Guides for {area.name} Residents</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {allPosts.slice(0, 4).map((post) => (
+              <NextLink
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+              >
+                <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+              </NextLink>
+            ))}
+          </div>
+          <NextLink href="/blog" className="inline-flex items-center gap-1 mt-4 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+            All Aircond Guides <FiArrowRight className="h-3 w-3" />
+          </NextLink>
         </div>
       </section>
 
