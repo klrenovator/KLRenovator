@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI Search Crawlers — Full Access for GEO/AEO Visibility
+# AI Search Crawlers — Full Access for GEO/AEO/GRO Visibility
 User-agent: GPTBot
 Allow: /
 
@@ -35,4 +35,21 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap
 Sitemap: https://www.klrenovator.com/sitemap.xml
+
+# AI Context Files
+# https://www.klrenovator.com/llms.txt
+# https://www.klrenovator.com/llms-full.txt
+# https://www.klrenovator.com/aeo-faq.txt
+# https://www.klrenovator.com/site-summary.json
+# https://www.klrenovator.com/.well-known/ai-plugin.json
