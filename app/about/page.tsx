@@ -63,24 +63,24 @@ const HIGHLIGHTS = [
 const GALLERY_IMAGES = [
   { src: "/hero/aircond-installation-kuala-lumpur.jpg", alt: "KL Renovator aircond installation work Kuala Lumpur" },
   { src: "/hero/aircond-installation-wall-mounted-kl.jpg", alt: "Professional wall-mounted aircond installation KL Selangor" },
-  { src: "/hero/aircond-ceiling-cassette-installation-kl.jpg", alt: "Ceiling cassette aircond installation commercial KL" },
-  { src: "/hero/aircond-installation-selayang-selangor.jpg", alt: "HVAC technician aircond installation Selayang Selangor" },
+  { src: "/hero/aircond-ceiling-cassette-installation-commercial.jpg", alt: "Ceiling cassette aircond installation commercial KL" },
+  { src: "/hero/aircond-new-installation-rawang-selangor.jpg", alt: "HVAC technician aircond installation Selayang Selangor" },
   { src: "/hero/aircond-pressure-chemical-wash-selangor.jpg", alt: "Aircond pressure chemical wash deep cleaning Selangor" },
   { src: "/hero/aircond-repair-technician-klang-valley.jpg", alt: "KL Renovator aircond repair technician Klang Valley" },
-  { src: "/hero/aircond-new-compressor-installation-kl.jpg", alt: "New compressor installation Kuala Lumpur" },
+  { src: "/hero/aircond-new-compressor-installation-rawang.jpg", alt: "New compressor installation Kuala Lumpur" },
   { src: "/hero/aircond-compressor-flaring-repair-kl.jpg", alt: "Aircond compressor copper pipe flaring repair KL" },
-  { src: "/hero/aircond-compressor-repairing-selangor.jpg", alt: "Aircond compressor repairing service Selangor" },
-  { src: "/hero/aircond-installation-2-klang-valley.jpg", alt: "Aircond installation project Klang Valley" },
+  { src: "/hero/aircond-compressor-bracket-installation-kl.jpg", alt: "Aircond compressor repairing service Selangor" },
+  { src: "/hero/aircond-installation-double-unit-kl.jpg", alt: "Aircond installation project Klang Valley" },
   { src: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg", alt: "Aircond gas top-up R32 R410A precision balancing Selangor" },
   { src: "/hero/aircond-compressor-installation-new-kl.jpg", alt: "New outdoor compressor installation Kuala Lumpur" },
   { src: "/hero/aircond-pcb-board-replacement-kl.jpg", alt: "Daikin Panasonic aircond PCB board replacement KL" },
-  { src: "/hero/aircond-installation-rawang-selangor.jpg", alt: "New aircond installation Rawang Selangor" },
-  { src: "/hero/aircond-bracket-compressor-installation-kl.jpg", alt: "Compressor bracket installation outdoor unit KL" },
+  { src: "/hero/aircond-new-installation-rawang-selangor.jpg", alt: "New aircond installation Rawang Selangor" },
+  { src: "/hero/aircond-compressor-bracket-installation-kl.jpg", alt: "Compressor bracket installation outdoor unit KL" },
   { src: "/hero/aircond-installation-ampang-selangor.jpg", alt: "Aircond installation Ampang Selangor" },
-  { src: "/hero/aircond-chemical-service-selangor.jpg", alt: "Aircond chemical service cleaning Selangor" },
-  { src: "/hero/aircond-pcb-board-replacement-2-kl.jpg", alt: "Aircond PCB board replacement repair Kuala Lumpur" },
+  { src: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg", alt: "Aircond chemical service cleaning Selangor" },
+  { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.jpg", alt: "Aircond PCB board replacement repair Kuala Lumpur" },
   { src: "/hero/aircond-bracket-installation-kl-renovator.jpg", alt: "Aircond outdoor bracket installation KL Renovator" },
-  { src: "/hero/aircond-chemical-wash-canvas-selangor.jpg", alt: "Aircond chemical wash with canvas protection Selangor" },
+  { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg", alt: "Aircond chemical wash with canvas protection Selangor" },
   { src: "/hero/aircond-sensor-replacement-klang-valley.jpg", alt: "KL Renovator aircond temperature sensor replacement Klang Valley" },
 ];
 
@@ -187,7 +187,7 @@ export default function AboutPage() {
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/hero/PCB Board Replacement 2026-05-03 at 13.39.32.jpeg"
+            src="/hero/aircond-pcb-board-replacement-kl.jpg"
             alt="KL Renovator professional HVAC team at work Kuala Lumpur"
             fill
             sizes="100vw"
@@ -224,7 +224,7 @@ export default function AboutPage() {
             <Reveal>
               <div className="relative aspect-[4/5] w-full overflow-hidden shadow-xl rounded-2xl">
                 <Image
-                  src="/hero/Aircon installation in ampang2026-05-03 at 13.39.33.jpeg"
+                  src="/hero/aircond-installation-ampang-selangor.jpg"
                   alt="KL Renovator HVAC technician servicing aircond unit Selangor"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
