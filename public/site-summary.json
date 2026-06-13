@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "@id": "https://www.klrenovator.com/#business",
+  "name": "KL Renovator",
+  "alternateName": ["KL Renovator Aircond", "KLRenovator", "Multicore Dynamics Resources"],
+  "legalName": "Multicore Dynamics Resources",
+  "taxID": "003765188-T",
+  "description": "KL Renovator is the leading professional aircond service company in Kuala Lumpur and Selangor, Malaysia. Specialising in residential and commercial HVAC — chemical wash, chemical overhaul, gas top-up, troubleshooting, repair and new unit installation. 10+ years experience, 5,000+ customers, 500+ 5-star Google reviews. Same-day service available.",
+  "url": "https://www.klrenovator.com",
+  "telephone": "+60182983573",
+  "email": "info@klrenovator.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "A-22-09 Magnaville Selayang",
+    "addressLocality": "Batu Caves",
+    "postalCode": "68100",
+    "addressRegion": "Selangor",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.2205,
+    "longitude": 101.6412
+  },
+  "areaServed": [
+    "Kuala Lumpur", "Petaling Jaya", "Cheras", "Ampang", "Subang Jaya",
+    "Shah Alam", "Puchong", "Klang", "Kajang", "Damansara", "Bangsar",
+    "Mont Kiara", "Setapak", "Batu Caves", "Selayang", "Kepong",
+    "Sri Petaling", "Sunway", "Rawang", "Putrajaya", "Cyberjaya",
+    "Seri Kembangan", "Wangsa Maju", "Sentul", "Sungai Buloh", "Selangor"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "500",
+    "bestRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Aircond Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Basic Servicing / Routine Maintenance",
+        "description": "Standard filter cleaning and multi-point diagnostic. Recommended every 3-6 months.",
+        "price": "99",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/basic-servicing"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pressure Chemical Wash",
+        "description": "High-pressure chemical cleaning of evaporator coil and blower. Unit stays mounted.",
+        "price": "120",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/chemical-wash"
+      },
+      {
+        "@type": "Offer",
+        "name": "Chemical Overhaul",
+        "description": "Full unit dismantle and deep chemical clean. Best for water leaking and ice formation.",
+        "price": "220",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/chemical-overhaul"
+      },
+      {
+        "@type": "Offer",
+        "name": "Gas Top-Up / Precision Balancing",
+        "description": "R22, R410A and R32 refrigerant top-up with precision manifold gauge balancing. Leak check included.",
+        "price": "120",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/gas-topup"
+      },
+      {
+        "@type": "Offer",
+        "name": "Troubleshooting & Repairs",
+        "description": "Capacitor, fan motor, PCB board, sensor, compressor diagnosis and replacement.",
+        "price": "88",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/repair"
+      },
+      {
+        "@type": "Offer",
+        "name": "New Unit Installation",
+        "description": "All brands. Includes 7ft copper pipe, wiring, drainage. Wall-mounted and ceiling cassette.",
+        "price": "199",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/installation"
+      },
+      {
+        "@type": "Offer",
+        "name": "Ceiling Cassette Service",
+        "description": "Commercial ceiling cassette servicing, VRF/VRV systems.",
+        "price": "150",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/ceiling-cassette"
+      },
+      {
+        "@type": "Offer",
+        "name": "Dismantle & Relocation",
+        "description": "Safe extraction and reinstallation at new location.",
+        "price": "90",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/dismantling-relocation"
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/share/1HV3kAqC6V/",
+    "https://www.instagram.com/klrenovator",
+    "https://www.tiktok.com/@klrenovator",
+    "https://share.google/HhXvqWDkefZ5bzNdL"
+  ],
+  "knowsLanguage": ["en", "ms", "zh"]
+}
