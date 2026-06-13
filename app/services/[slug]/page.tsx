@@ -6,6 +6,7 @@ import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
 import { servicesData } from "@/config/services-data";
+import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { ContactForm } from "@/components/contact-form";
@@ -121,6 +122,18 @@ const SECTION_LABELS = {
     ms: "Perkhidmatan Lain",
     zh: "其他服务",
   },
+};
+
+// ── Service → Blog relevance map ─────────────────────────────────────────────
+const SERVICE_BLOG_MAP: Record<string, string[]> = {
+  "chemical-wash": ["aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
+  "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
+  "gas-topup": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "repair": ["aircond-not-cold-reasons", "aircond-water-leaking-causes", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "installation": ["aircond-installation-guide-malaysia", "best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "daikin-vs-panasonic-aircond-malaysia"],
+  "basic-servicing": ["how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia", "aircond-service-price-guide-kl-2026"],
+  "ceiling-cassette": ["commercial-hvac-maintenance-kl", "aircond-service-price-guide-kl-2026"],
+  "dismantling-relocation": ["aircond-installation-guide-malaysia", "aircond-lifespan-malaysia"],
 };
 
 function t(key: keyof typeof SECTION_LABELS, lang: "en" | "ms" | "zh") {
@@ -525,6 +538,39 @@ export default async function ServicePage({
           </Reveal>
         </div>
       </section>
+
+      {/* Related Blog Articles */}
+      {(() => {
+        const relatedSlugs = SERVICE_BLOG_MAP[slug] ?? [];
+        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 4);
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-12 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan Pakar · 专家指南</p>
+              <h2 className="text-lg font-black text-slate-900 mb-6">
+                Related Aircond Guides &amp; Articles
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {relatedPosts.map((post) => (
+                  <NextLink
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-2">{post.category}</span>
+                    <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                    <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                  </NextLink>
+                ))}
+              </div>
+              <NextLink href="/blog" className="inline-flex items-center gap-1 mt-6 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                All Aircond Guides <FiArrowRight className="h-3 w-3" />
+              </NextLink>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Contact CTA */}
       <section className="py-14 sm:py-20 bg-white">
