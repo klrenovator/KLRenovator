@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import NextLink from "next/link";
 import { FiArrowRight, FiAlertTriangle } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -31,7 +32,17 @@ export default function ProblemsPage() {
     <>
       {/* Hero */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(239,68,68,0.04),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-[0.07]">
+          <Image
+            src="/hero/aircond-repair-technician-klang-valley.jpg"
+            alt="KL Renovator aircond repair technician diagnosing problems"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <p className={eyebrow()}>Aircond Problem Diagnosis</p>
