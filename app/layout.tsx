@@ -74,6 +74,16 @@ export const metadata: Metadata = {
     "language": "English, Bahasa Malaysia, Chinese",
   },
   icons: { icon: "/favicon.ico" },
+  other: {
+    "geo.region": "MY-10",
+    "geo.placename": "Kuala Lumpur, Selangor, Malaysia",
+    "geo.position": "3.2205;101.6412",
+    "ICBM": "3.2205, 101.6412",
+    "language": "English, Bahasa Malaysia, Chinese",
+    "ai-context": "https://www.klrenovator.com/llms.txt",
+    "llms": "https://www.klrenovator.com/llms.txt",
+    "llms-full": "https://www.klrenovator.com/llms-full.txt",
+  },
 };
 
 export const viewport: Viewport = {
@@ -463,7 +473,61 @@ export default function RootLayout({
           }}
         />
 
-        {/* ── 6. HowTo — Gas Top-Up ── */}
+        {/* ── 6. SpeakableSpecification — GRO Direct Answer Block ── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://www.klrenovator.com/#webpage",
+              "name": "KL Renovator — Expert Aircond Services KL & Selangor",
+              "url": "https://www.klrenovator.com",
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", ".speakable"]
+              },
+              "about": {
+                "@type": "HVACBusiness",
+                "@id": "https://www.klrenovator.com/#business",
+                "name": "KL Renovator",
+                "telephone": "+60182983573",
+                "priceRange": "RM 88 - RM 480",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "5",
+                  "reviewCount": "500"
+                }
+              }
+            }),
+          }}
+        />
+
+        {/* ── 7. ItemList — Services for AI Overview ── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "KL Renovator Aircond Services",
+              "description": "Professional aircond services in Kuala Lumpur and Selangor by KL Renovator",
+              "numberOfItems": 8,
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Basic Servicing from RM 99", "url": "https://www.klrenovator.com/services/basic-servicing" },
+                { "@type": "ListItem", "position": 2, "name": "Pressure Chemical Wash from RM 120", "url": "https://www.klrenovator.com/services/chemical-wash" },
+                { "@type": "ListItem", "position": 3, "name": "Chemical Overhaul from RM 220", "url": "https://www.klrenovator.com/services/chemical-overhaul" },
+                { "@type": "ListItem", "position": 4, "name": "Gas Top-Up R22/R410A/R32 from RM 120", "url": "https://www.klrenovator.com/services/gas-topup" },
+                { "@type": "ListItem", "position": 5, "name": "Troubleshooting & Repair from RM 88", "url": "https://www.klrenovator.com/services/repair" },
+                { "@type": "ListItem", "position": 6, "name": "New Unit Installation from RM 199", "url": "https://www.klrenovator.com/services/installation" },
+                { "@type": "ListItem", "position": 7, "name": "Ceiling Cassette Service from RM 150", "url": "https://www.klrenovator.com/services/ceiling-cassette" },
+                { "@type": "ListItem", "position": 8, "name": "Dismantle & Relocation from RM 90", "url": "https://www.klrenovator.com/services/dismantling-relocation" },
+              ],
+            }),
+          }}
+        />
+
+        {/* ── 8. HowTo — Gas Top-Up ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
