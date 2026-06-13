@@ -25,6 +25,67 @@ export const metadata: Metadata = {
       "KL Renovator (Multicore Dynamic Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
     url: "https://www.klrenovator.com/about",
     type: "website",
+    images: [
+      {
+        url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KL Renovator — Trusted Aircond Specialist Kuala Lumpur & Selangor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
+    description: "10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across KL & Selangor.",
+    images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg"],
+  },
+};
+
+// ── Breadcrumb Schema ────────────────────────────────────────────────────────
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://www.klrenovator.com/about" },
+  ],
+};
+
+// ── Organization Schema ───────────────────────────────────────────────────────
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.klrenovator.com/#organization",
+  name: "KL Renovator",
+  legalName: "Multicore Dynamics Resources",
+  url: "https://www.klrenovator.com",
+  logo: "https://www.klrenovator.com/logo/image.png",
+  image: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg",
+  description: "Professional HVAC and air conditioning service company in Kuala Lumpur and Selangor. 10+ years experience, 5,000+ customers, 500+ 5-star reviews.",
+  foundingDate: "2014",
+  telephone: "+60182983573",
+  email: "info@klrenovator.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "A-22-09 Magnaville Selayang",
+    addressLocality: "Batu Caves",
+    postalCode: "68100",
+    addressRegion: "Selangor",
+    addressCountry: "MY",
+  },
+  sameAs: [
+    "https://www.facebook.com/share/1HV3kAqC6V/",
+    "https://www.instagram.com/klrenovator",
+    "https://www.tiktok.com/@klrenovator",
+    "https://share.google/HhXvqWDkefZ5bzNdL",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "500",
+    bestRating: "5",
+    worstRating: "1",
   },
 };
 
