@@ -185,39 +185,22 @@ export default async function BrandPage({
     ],
   };
 
+  // Build FAQ entries — use brand-specific faqs if available, else generic fallback
+  const faqItems = ((brand as any).faqs ?? [
+    { q: `How much does ${brand.name} aircond service cost in KL?`, a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.` },
+    { q: `Does KL Renovator service all ${brand.name} models?`, a: `Yes. KL Renovator technicians are experienced in servicing all ${brand.name} residential and commercial models including ${brand.models.join(", ")}. Both inverter and non-inverter systems supported.` },
+    { q: `My ${brand.name} aircond is not cold — what should I do?`, a: `The most common causes are low refrigerant gas, a dirty coil or a faulty capacitor. WhatsApp KL Renovator at +60182983573 with your ${brand.name} model and HP size. A technician will diagnose and quote you before starting any work.` },
+    { q: `What gas does ${brand.name} aircond use?`, a: `Most ${brand.name} air conditioners use ${brand.gasTypes.join(" or ")} refrigerant. KL Renovator handles all gas types: R22, R410A and R32 with precision balancing.` },
+  ]) as { q: string; a: string }[];
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: ((brand as any).faqs ?? [
-      {
-        q: `How much does ${brand.name} aircond service cost in KL?`,
-        a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
-      },
-      {
-        "@type": "Question",
-        name: `Can KL Renovator service my ${brand.name} aircond?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Yes. KL Renovator technicians are experienced in servicing ${brand.name} air conditioners across KL and Selangor, including ${brand.models.slice(0, 2).join(", ")} and other models. All services available: chemical wash, overhaul, gas top-up, repairs and installation.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `What gas type does ${brand.name} aircond use?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Most ${brand.name} air conditioners use ${brand.gasTypes.join(" or ")} refrigerant. KL Renovator handles all gas types: R22, R410A and R32 with precision balancing. Check the sticker on your outdoor unit for the exact gas type.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `How do I book ${brand.name} aircond service in KL?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `WhatsApp KL Renovator at +60182983573 with your ${brand.name} model, HP size, location (KL/Selangor area), and the issue. Same-day slots available. Quote confirmed before technician is dispatched.`,
-        },
-      },
-    ],
+    mainEntity: faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 
   return (
@@ -482,7 +465,7 @@ export default async function BrandPage({
                   q: `My ${brand.name} aircond is leaking water. What should I do?`,
                   a: `Switch off the unit if heavily leaking. Water leaking is usually caused by a blocked drain pipe or dirty drain pan. KL Renovator provides chemical wash (from RM 120) or chemical overhaul (from RM 220) to permanently resolve the issue.`,
                 },
-              ].map((faq, i) => (
+              ]).map((faq, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
                   <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
                   <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
@@ -508,7 +491,7 @@ export default async function BrandPage({
                   q: `Aircond ${brand.name} saya tidak sejuk. Apa yang perlu saya lakukan?`,
                   a: `Punca paling biasa adalah gas rendah, gegelung kotor atau kapasitor rosak. WhatsApp KL Renovator di +60182983573 dengan model dan saiz HP ${brand.name} anda. Juruteknik akan mendiagnosis dan memberi sebut harga sebelum memulakan kerja.`,
                 },
-              ].map((faq, i) => (
+              ]).map((faq, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
                   <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
                   <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
@@ -534,7 +517,7 @@ export default async function BrandPage({
                   q: `我的${brand.name}冷气不冷，该怎么办？`,
                   a: `最常见原因是制冷剂不足、盘管脏污或电容器故障。请WhatsApp KL Renovator +60182983573，提供您的${brand.name}型号和HP大小。技术员将在开始工作前诊断并报价。`,
                 },
-              ].map((faq, i) => (
+              ]).map((faq, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
                   <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
                   <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
