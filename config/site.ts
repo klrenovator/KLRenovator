@@ -73,19 +73,19 @@ export const siteConfig = {
       metaDescZH: "八打灵再也专业冷气服务。化学清洗、大修、充气、维修。所有品牌。当天可用。致电 +60182983573。",
       heroImage: "/hero/aircond-new-installation-petaling-jaya.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Petaling Jaya?", a: "Yes — KL Renovator covers all PJ zones including SS2, Damansara Utama, Tropicana, Kelana Jaya, Ara Damansara and Taman Jaya. Chemical wash from RM 120, same-day available. WhatsApp +60182983573." }
-        { q: "How much does aircond chemical wash cost in Petaling Jaya?", a: "Chemical wash in PJ starts from RM 120 (1.0–1.5 HP wall-mounted), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work." }
-        { q: "Is same-day aircond service available in PJ?", a: "Yes — same-day slots in Petaling Jaya are frequently available. WhatsApp +60182983573 early morning for the best chance of a same-day booking." }
+        { q: "Does KL Renovator service aircond in Petaling Jaya?", a: "Yes — KL Renovator covers all PJ zones including SS2, Damansara Utama, Tropicana, Kelana Jaya, Ara Damansara and Taman Jaya. Chemical wash from RM 120, same-day available. WhatsApp +60182983573." },
+        { q: "How much does aircond chemical wash cost in Petaling Jaya?", a: "Chemical wash in PJ starts from RM 120 (1.0–1.5 HP wall-mounted), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work." },
+        { q: "Is same-day aircond service available in PJ?", a: "Yes — same-day slots in Petaling Jaya are frequently available. WhatsApp +60182983573 early morning for the best chance of a same-day booking." },
         { q: "What aircond brands does KL Renovator service in PJ?", a: "All brands — Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, LG, Samsung, Sharp, Haier and more. Inverter and non-inverter, wall-mounted and ceiling cassette." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Petaling Jaya?", a: "Ya — KL Renovator meliputi semua zon PJ termasuk SS2, Damansara Utama, Tropicana, Kelana Jaya, Ara Damansara dan Taman Jaya. Cuci kimia dari RM 120, hari sama tersedia. WhatsApp +60182983573." }
-        { q: "Berapa harga cuci kimia aircond di Petaling Jaya?", a: "Cuci kimia di PJ bermula dari RM 120 (1.0–1.5 HP dinding), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette dari RM 220. Semua harga disahkan sebelum kerja." }
+        { q: "Adakah KL Renovator servis aircond di Petaling Jaya?", a: "Ya — KL Renovator meliputi semua zon PJ termasuk SS2, Damansara Utama, Tropicana, Kelana Jaya, Ara Damansara dan Taman Jaya. Cuci kimia dari RM 120, hari sama tersedia. WhatsApp +60182983573." },
+        { q: "Berapa harga cuci kimia aircond di Petaling Jaya?", a: "Cuci kimia di PJ bermula dari RM 120 (1.0–1.5 HP dinding), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette dari RM 220. Semua harga disahkan sebelum kerja." },
         { q: "Adakah servis hari sama tersedia di PJ?", a: "Ya — slot hari sama di Petaling Jaya kerap tersedia. WhatsApp +60182983573 awal pagi untuk peluang terbaik mendapatkan slot hari sama." }
       ],
       faqsZH: [
-        { q: "KL Renovator在八打灵再也提供冷气服务吗？", a: "是的——KL Renovator覆盖PJ所有区域，包括SS2、Damansara Utama、Tropicana、Kelana Jaya、Ara Damansara和Taman Jaya。化学清洗从RM 120起，可当天上门。WhatsApp +60182983573。" }
-        { q: "八打灵再也冷气化学清洗费用是多少？", a: "PJ化学清洗从RM 120起（1.0–1.5 HP挂壁式），RM 150（2.0–2.5 HP），RM 180（3.0 HP）。天花板卡式机从RM 220起。所有价格在施工前确认。" }
+        { q: "KL Renovator在八打灵再也提供冷气服务吗？", a: "是的——KL Renovator覆盖PJ所有区域，包括SS2、Damansara Utama、Tropicana、Kelana Jaya、Ara Damansara和Taman Jaya。化学清洗从RM 120起，可当天上门。WhatsApp +60182983573。" },
+        { q: "八打灵再也冷气化学清洗费用是多少？", a: "PJ化学清洗从RM 120起（1.0–1.5 HP挂壁式），RM 150（2.0–2.5 HP），RM 180（3.0 HP）。天花板卡式机从RM 220起。所有价格在施工前确认。" },
         { q: "PJ有当天冷气服务吗？", a: "有——八打灵再也经常有当天服务名额。请早上WhatsApp +60182983573以获得当天预约的最佳机会。" }
       ],
     },
@@ -109,19 +109,19 @@ export const siteConfig = {
       metaDescZH: "蕉赖专业冷气服务。化学清洗、大修、充气和维修，所有品牌。当天可用。致电 +60182983573。",
       heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Cheras?", a: "Yes — KL Renovator covers all Cheras areas including Taman Connaught, Batu 9, Batu 11, Miharja, Maluri and Taman Mutiara. Same-day service available. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Cheras?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Cheras. All prices confirmed before work begins." }
-        { q: "Is same-day aircond service available in Cheras?", a: "Yes — KL Renovator frequently has same-day slots available in Cheras. WhatsApp +60182983573 with your location and unit details for fastest response." }
+        { q: "Does KL Renovator service aircond in Cheras?", a: "Yes — KL Renovator covers all Cheras areas including Taman Connaught, Batu 9, Batu 11, Miharja, Maluri and Taman Mutiara. Same-day service available. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Cheras?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Cheras. All prices confirmed before work begins." },
+        { q: "Is same-day aircond service available in Cheras?", a: "Yes — KL Renovator frequently has same-day slots available in Cheras. WhatsApp +60182983573 with your location and unit details for fastest response." },
         { q: "Which areas of Cheras does KL Renovator cover?", a: "KL Renovator covers all Cheras zones: Taman Connaught, Batu 9, Batu 11, Batu 12, Miharja, Maluri, Taman Mutiara, Taman Miharja, Taman Cheras Perdana and surrounding areas." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Cheras?", a: "Ya — KL Renovator meliputi semua kawasan Cheras termasuk Taman Connaught, Batu 9, Batu 11, Miharja, Maluri dan Taman Mutiara. Servis hari sama tersedia. WhatsApp +60182983573." }
-        { q: "Berapa harga servis aircond di Cheras?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Cheras. Semua harga disahkan sebelum kerja bermula." }
+        { q: "Adakah KL Renovator servis aircond di Cheras?", a: "Ya — KL Renovator meliputi semua kawasan Cheras termasuk Taman Connaught, Batu 9, Batu 11, Miharja, Maluri dan Taman Mutiara. Servis hari sama tersedia. WhatsApp +60182983573." },
+        { q: "Berapa harga servis aircond di Cheras?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Cheras. Semua harga disahkan sebelum kerja bermula." },
         { q: "Adakah servis hari sama tersedia di Cheras?", a: "Ya — KL Renovator kerap mempunyai slot hari sama di Cheras. WhatsApp +60182983573 dengan lokasi dan butiran unit anda untuk tindak balas terpantas." }
       ],
       faqsZH: [
-        { q: "KL Renovator在蕉赖提供冷气服务吗？", a: "是的——KL Renovator覆盖蕉赖所有区域，包括Taman Connaught、9哩、11哩、Miharja、Maluri和Taman Mutiara。可当天上门。WhatsApp +60182983573。" }
-        { q: "蕉赖冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。所有价格在施工前确认。" }
+        { q: "KL Renovator在蕉赖提供冷气服务吗？", a: "是的——KL Renovator覆盖蕉赖所有区域，包括Taman Connaught、9哩、11哩、Miharja、Maluri和Taman Mutiara。可当天上门。WhatsApp +60182983573。" },
+        { q: "蕉赖冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。所有价格在施工前确认。" },
         { q: "蕉赖有当天冷气服务吗？", a: "有——KL Renovator在蕉赖经常有当天服务名额。请WhatsApp +60182983573告知您的位置和机器详情。" }
       ],
     },
@@ -145,19 +145,19 @@ export const siteConfig = {
       metaDescZH: "莎阿南专业冷气服务。覆盖所有区域。化学清洗、大修、安装和维修。致电 +60182983573。",
       heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Shah Alam?", a: "Yes — KL Renovator covers all Shah Alam sections including Section 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam and Glenmarie. WhatsApp +60182983573." }
-        { q: "How much does aircond chemical wash cost in Shah Alam?", a: "Chemical wash in Shah Alam starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Transparent pricing confirmed before work." }
-        { q: "Is same-day aircond repair available in Shah Alam?", a: "Yes — same-day repair and servicing slots are available in Shah Alam. WhatsApp +60182983573 early for priority scheduling." }
+        { q: "Does KL Renovator service aircond in Shah Alam?", a: "Yes — KL Renovator covers all Shah Alam sections including Section 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam and Glenmarie. WhatsApp +60182983573." },
+        { q: "How much does aircond chemical wash cost in Shah Alam?", a: "Chemical wash in Shah Alam starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Transparent pricing confirmed before work." },
+        { q: "Is same-day aircond repair available in Shah Alam?", a: "Yes — same-day repair and servicing slots are available in Shah Alam. WhatsApp +60182983573 early for priority scheduling." },
         { q: "Does KL Renovator service commercial aircond in Shah Alam?", a: "Yes — KL Renovator services commercial ceiling cassette and VRF systems for offices and commercial buildings in Shah Alam industrial areas and business parks." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Shah Alam?", a: "Ya — KL Renovator meliputi semua seksyen Shah Alam termasuk Seksyen 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam dan Glenmarie. WhatsApp +60182983573." }
-        { q: "Berapa harga cuci kimia aircond di Shah Alam?", a: "Cuci kimia di Shah Alam bermula dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette dari RM 220. Harga disahkan sebelum kerja." }
+        { q: "Adakah KL Renovator servis aircond di Shah Alam?", a: "Ya — KL Renovator meliputi semua seksyen Shah Alam termasuk Seksyen 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam dan Glenmarie. WhatsApp +60182983573." },
+        { q: "Berapa harga cuci kimia aircond di Shah Alam?", a: "Cuci kimia di Shah Alam bermula dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette dari RM 220. Harga disahkan sebelum kerja." },
         { q: "Adakah servis komersial tersedia di Shah Alam?", a: "Ya — KL Renovator menservis ceiling cassette komersial dan sistem VRF untuk pejabat dan bangunan komersial di kawasan perindustrian dan taman perniagaan Shah Alam." }
       ],
       faqsZH: [
-        { q: "KL Renovator在莎亚南提供冷气服务吗？", a: "是的——KL Renovator覆盖莎亚南所有区域，包括第7、13、14、17区，Bukit Jelutong、Kota Kemuning、Setia Alam和Glenmarie。WhatsApp +60182983573。" }
-        { q: "莎亚南冷气化学清洗费用是多少？", a: "莎亚南化学清洗从RM 120（1.0–1.5 HP）、RM 150（2.0–2.5 HP）、RM 180（3.0 HP）起。天花板卡式机从RM 220起。" }
+        { q: "KL Renovator在莎亚南提供冷气服务吗？", a: "是的——KL Renovator覆盖莎亚南所有区域，包括第7、13、14、17区，Bukit Jelutong、Kota Kemuning、Setia Alam和Glenmarie。WhatsApp +60182983573。" },
+        { q: "莎亚南冷气化学清洗费用是多少？", a: "莎亚南化学清洗从RM 120（1.0–1.5 HP）、RM 150（2.0–2.5 HP）、RM 180（3.0 HP）起。天花板卡式机从RM 220起。" },
         { q: "莎亚南有商业冷气服务吗？", a: "有——KL Renovator为莎亚南工业区和商业园的办公室和商业建筑提供天花板卡式机和VRF系统服务。" }
       ],
     },
@@ -181,16 +181,16 @@ export const siteConfig = {
       metaDescZH: "梳邦再也及USJ专业冷气服务。化学清洗、大修、充气，支持Daikin、Panasonic、Mitsubishi等品牌。致电 +60182983573。",
       heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Subang Jaya?", a: "Yes — KL Renovator covers all Subang Jaya areas including USJ, SS15, SS16, SS17, Putra Heights and Subang Bestari. Same-day service available. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Subang Jaya?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Subang Jaya. No hidden charges." }
+        { q: "Does KL Renovator service aircond in Subang Jaya?", a: "Yes — KL Renovator covers all Subang Jaya areas including USJ, SS15, SS16, SS17, Putra Heights and Subang Bestari. Same-day service available. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Subang Jaya?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Subang Jaya. No hidden charges." },
         { q: "Is same-day aircond service available in Subang Jaya?", a: "Yes — KL Renovator frequently covers Subang Jaya with same-day slots. WhatsApp +60182983573 with your USJ/SS/Putra Heights location for fastest dispatch." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Subang Jaya?", a: "Ya — KL Renovator meliputi semua kawasan Subang Jaya termasuk USJ, SS15, SS16, SS17, Putra Heights dan Subang Bestari. Servis hari sama tersedia." }
+        { q: "Adakah KL Renovator servis aircond di Subang Jaya?", a: "Ya — KL Renovator meliputi semua kawasan Subang Jaya termasuk USJ, SS15, SS16, SS17, Putra Heights dan Subang Bestari. Servis hari sama tersedia." },
         { q: "Berapa harga servis aircond di Subang Jaya?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Subang Jaya. Tiada caj tersembunyi." }
       ],
       faqsZH: [
-        { q: "KL Renovator在梳邦再也提供冷气服务吗？", a: "是的——KL Renovator覆盖梳邦再也所有区域，包括USJ、SS15、SS16、SS17、Putra Heights和Subang Bestari。可当天上门。" }
+        { q: "KL Renovator在梳邦再也提供冷气服务吗？", a: "是的——KL Renovator覆盖梳邦再也所有区域，包括USJ、SS15、SS16、SS17、Putra Heights和Subang Bestari。可当天上门。" },
         { q: "梳邦再也冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。无隐藏费用。" }
       ],
     },
@@ -214,16 +214,16 @@ export const siteConfig = {
       metaDescZH: "安邦及Ampang Jaya专业冷气服务。化学清洗、大修、维修和安装。致电 +60182983573。",
       heroImage: "/hero/aircond-installation-ampang-selangor.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Ampang?", a: "Yes — KL Renovator covers all Ampang areas including Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda and Ulu Klang. Same-day slots available. WhatsApp +60182983573." }
-        { q: "How much does aircond chemical wash cost in Ampang?", a: "Chemical wash in Ampang from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Chemical overhaul from RM 220. All prices confirmed before work." }
+        { q: "Does KL Renovator service aircond in Ampang?", a: "Yes — KL Renovator covers all Ampang areas including Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda and Ulu Klang. Same-day slots available. WhatsApp +60182983573." },
+        { q: "How much does aircond chemical wash cost in Ampang?", a: "Chemical wash in Ampang from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Chemical overhaul from RM 220. All prices confirmed before work." },
         { q: "Is same-day aircond repair available in Ampang?", a: "Yes — KL Renovator frequently dispatches to Ampang same-day. WhatsApp +60182983573 with your location and issue for fastest response." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Ampang?", a: "Ya — KL Renovator meliputi semua kawasan Ampang termasuk Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda dan Ulu Klang. Slot hari sama tersedia." }
+        { q: "Adakah KL Renovator servis aircond di Ampang?", a: "Ya — KL Renovator meliputi semua kawasan Ampang termasuk Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda dan Ulu Klang. Slot hari sama tersedia." },
         { q: "Berapa harga cuci kimia di Ampang?", a: "Cuci kimia di Ampang dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Overhaul kimia dari RM 220. Harga disahkan sebelum kerja." }
       ],
       faqsZH: [
-        { q: "KL Renovator在安邦提供冷气服务吗？", a: "是的——KL Renovator覆盖安邦所有区域，包括安邦再也、Pandan Indah、Pandan Perdana、Taman Muda和乌鲁冷岳。可当天上门。" }
+        { q: "KL Renovator在安邦提供冷气服务吗？", a: "是的——KL Renovator覆盖安邦所有区域，包括安邦再也、Pandan Indah、Pandan Perdana、Taman Muda和乌鲁冷岳。可当天上门。" },
         { q: "安邦冷气化学清洗费用是多少？", a: "安邦化学清洗从RM 120（1.0–1.5 HP）、RM 150（2.0–2.5 HP）、RM 180（3.0 HP）起。化学大修从RM 220起。" }
       ],
     },
@@ -247,16 +247,16 @@ export const siteConfig = {
       metaDescZH: "蒲种可信赖的冷气服务。化学清洗、充气、大修和维修，所有品牌。当天可用。致电 +60182983573。",
       heroImage: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Puchong?", a: "Yes — KL Renovator covers all Puchong areas including IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana and Bukit Puchong. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Puchong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Puchong. Same-day available." }
+        { q: "Does KL Renovator service aircond in Puchong?", a: "Yes — KL Renovator covers all Puchong areas including IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana and Bukit Puchong. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Puchong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Puchong. Same-day available." },
         { q: "Is same-day aircond service available in Puchong?", a: "Yes — KL Renovator covers Puchong with same-day slots regularly. WhatsApp +60182983573 early morning for the best chance of same-day service." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Puchong?", a: "Ya — KL Renovator meliputi semua kawasan Puchong termasuk IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana dan Bukit Puchong. WhatsApp +60182983573." }
+        { q: "Adakah KL Renovator servis aircond di Puchong?", a: "Ya — KL Renovator meliputi semua kawasan Puchong termasuk IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana dan Bukit Puchong. WhatsApp +60182983573." },
         { q: "Berapa harga servis aircond di Puchong?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Puchong." }
       ],
       faqsZH: [
-        { q: "KL Renovator在蒲种提供冷气服务吗？", a: "是的——KL Renovator覆盖蒲种所有区域，包括IOI、Bandar Puteri、Taman Kinrara、Puchong Perdana和Bukit Puchong。WhatsApp +60182983573。" }
+        { q: "KL Renovator在蒲种提供冷气服务吗？", a: "是的——KL Renovator覆盖蒲种所有区域，包括IOI、Bandar Puteri、Taman Kinrara、Puchong Perdana和Bukit Puchong。WhatsApp +60182983573。" },
         { q: "蒲种冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" }
       ],
     },
@@ -280,16 +280,16 @@ export const siteConfig = {
       metaDescZH: "巴生专业冷气服务。覆盖Bukit Tinggi、Meru、Port Klang、Setia Alam。化学清洗、维修和安装。致电 +60182983573。",
       heroImage: "/hero/aircond-compressor-installation-new-kl.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Klang?", a: "Yes — KL Renovator covers Klang including Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru and Teluk Pulai. Same-day service available. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Klang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Klang. All prices confirmed before work." }
+        { q: "Does KL Renovator service aircond in Klang?", a: "Yes — KL Renovator covers Klang including Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru and Teluk Pulai. Same-day service available. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Klang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Klang. All prices confirmed before work." },
         { q: "Does KL Renovator service Port Klang and Bukit Tinggi?", a: "Yes — KL Renovator covers Port Klang, Bukit Tinggi, Meru, Kapar and all surrounding Klang areas. WhatsApp +60182983573 for same-day scheduling." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Klang?", a: "Ya — KL Renovator meliputi Klang termasuk Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru dan Teluk Pulai. Servis hari sama tersedia." }
+        { q: "Adakah KL Renovator servis aircond di Klang?", a: "Ya — KL Renovator meliputi Klang termasuk Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru dan Teluk Pulai. Servis hari sama tersedia." },
         { q: "Berapa harga servis aircond di Klang?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Klang." }
       ],
       faqsZH: [
-        { q: "KL Renovator在巴生提供冷气服务吗？", a: "是的——KL Renovator覆盖巴生所有区域，包括新巴生镇、巴生港口、Bukit Tinggi、Kapar、Meru和Teluk Pulai。可当天上门。" }
+        { q: "KL Renovator在巴生提供冷气服务吗？", a: "是的——KL Renovator覆盖巴生所有区域，包括新巴生镇、巴生港口、Bukit Tinggi、Kapar、Meru和Teluk Pulai。可当天上门。" },
         { q: "巴生冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" }
       ],
     },
@@ -313,16 +313,16 @@ export const siteConfig = {
       metaDescZH: "加影及万宜专业冷气服务。化学清洗、大修和维修，所有品牌。快速响应。致电 +60182983573。",
       heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Kajang?", a: "Yes — KL Renovator covers Kajang including Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian and surrounding areas. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Kajang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Kajang. Same-day available." }
+        { q: "Does KL Renovator service aircond in Kajang?", a: "Yes — KL Renovator covers Kajang including Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian and surrounding areas. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Kajang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Kajang. Same-day available." },
         { q: "Does KL Renovator cover Bangi and Semenyih?", a: "Yes — KL Renovator services Kajang, Bangi, Semenyih and all surrounding areas. WhatsApp +60182983573 with your location for scheduling." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Kajang?", a: "Ya — KL Renovator meliputi Kajang termasuk Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian dan kawasan sekitar. WhatsApp +60182983573." }
+        { q: "Adakah KL Renovator servis aircond di Kajang?", a: "Ya — KL Renovator meliputi Kajang termasuk Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian dan kawasan sekitar. WhatsApp +60182983573." },
         { q: "Berapa harga servis aircond di Kajang?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Kajang." }
       ],
       faqsZH: [
-        { q: "KL Renovator在加影提供冷气服务吗？", a: "是的——KL Renovator覆盖加影、万宜、士毛月及周边地区。WhatsApp +60182983573。" }
+        { q: "KL Renovator在加影提供冷气服务吗？", a: "是的——KL Renovator覆盖加影、万宜、士毛月及周边地区。WhatsApp +60182983573。" },
         { q: "加影冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" }
       ],
     },
@@ -366,16 +366,16 @@ export const siteConfig = {
       metaDescZH: "白沙罗专业冷气服务。覆盖所有区域，包括Kota Damansara和Ara Damansara。化学清洗、大修、充气。致电 +60182983573。",
       heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Damansara?", a: "Yes — KL Renovator covers all Damansara areas including Damansara Utama, Damansara Jaya, Damansara Perdana, Damansara Damai and One Utama vicinity. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Damansara?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Damansara. All prices confirmed before work." }
+        { q: "Does KL Renovator service aircond in Damansara?", a: "Yes — KL Renovator covers all Damansara areas including Damansara Utama, Damansara Jaya, Damansara Perdana, Damansara Damai and One Utama vicinity. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Damansara?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Damansara. All prices confirmed before work." },
         { q: "Is same-day aircond service available in Damansara?", a: "Yes — Damansara is a priority service area for KL Renovator. Same-day slots frequently available. WhatsApp +60182983573 early morning for priority scheduling." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Damansara?", a: "Ya — KL Renovator meliputi semua kawasan Damansara termasuk Damansara Utama, Damansara Jaya, Damansara Perdana, Damansara Damai dan sekitar One Utama." }
+        { q: "Adakah KL Renovator servis aircond di Damansara?", a: "Ya — KL Renovator meliputi semua kawasan Damansara termasuk Damansara Utama, Damansara Jaya, Damansara Perdana, Damansara Damai dan sekitar One Utama." },
         { q: "Berapa harga servis aircond di Damansara?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Damansara." }
       ],
       faqsZH: [
-        { q: "KL Renovator在白蒲提供冷气服务吗？", a: "是的——KL Renovator覆盖所有白蒲区域，包括Damansara Utama、Damansara Jaya、Damansara Perdana、Damansara Damai和One Utama周边。" }
+        { q: "KL Renovator在白蒲提供冷气服务吗？", a: "是的——KL Renovator覆盖所有白蒲区域，包括Damansara Utama、Damansara Jaya、Damansara Perdana、Damansara Damai和One Utama周边。" },
         { q: "白蒲冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" }
       ],
     },
@@ -399,16 +399,16 @@ export const siteConfig = {
       metaDescZH: "孟沙及Bangsar South专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
       heroImage: "/hero/aircond-repair-technician-klang-valley.jpg",
       faqs: [
-        { q: "Does KL Renovator service aircond in Bangsar?", a: "Yes — KL Renovator covers Bangsar including Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam and surrounding areas. Same-day available. WhatsApp +60182983573." }
-        { q: "How much does aircond service cost in Bangsar?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Bangsar. All prices confirmed before work." }
+        { q: "Does KL Renovator service aircond in Bangsar?", a: "Yes — KL Renovator covers Bangsar including Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam and surrounding areas. Same-day available. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Bangsar?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Bangsar. All prices confirmed before work." },
         { q: "Does KL Renovator cover Bangsar South and Mid Valley area?", a: "Yes — KL Renovator services Bangsar South, Kerinchi, Mid Valley vicinity and all surrounding KL areas. WhatsApp +60182983573 for same-day scheduling." }
       ],
       faqsBM: [
-        { q: "Adakah KL Renovator servis aircond di Bangsar?", a: "Ya — KL Renovator meliputi Bangsar termasuk Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam dan kawasan sekitar. Hari sama tersedia." }
+        { q: "Adakah KL Renovator servis aircond di Bangsar?", a: "Ya — KL Renovator meliputi Bangsar termasuk Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam dan kawasan sekitar. Hari sama tersedia." },
         { q: "Berapa harga servis aircond di Bangsar?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Bangsar." }
       ],
       faqsZH: [
-        { q: "KL Renovator在孟沙提供冷气服务吗？", a: "是的——KL Renovator覆盖孟沙，包括Bangsar Baru、Bangsar South、Kerinchi、Pantai Dalam及周边区域。可当天上门。" }
+        { q: "KL Renovator在孟沙提供冷气服务吗？", a: "是的——KL Renovator覆盖孟沙，包括Bangsar Baru、Bangsar South、Kerinchi、Pantai Dalam及周边区域。可当天上门。" },
         { q: "孟沙冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" }
       ],
     },
