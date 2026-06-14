@@ -1,0 +1,1480 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Image from "next/image";
+import NextLink from "next/link";
+import { FiCheck, FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa6";
+
+import { siteConfig } from "@/config/site";
+import { servicesData } from "@/config/services-data";
+import { allPosts } from "@/config/blog-posts";
+import { Reveal } from "@/components/reveal";
+import { title, eyebrow } from "@/components/primitives";
+import { waLink } from "@/lib/whatsapp";
+
+export function generateStaticParams() {
+  return siteConfig.problemPages.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const problem = siteConfig.problemPages.find((p) => p.slug === slug);
+  if (!problem) return { title: "Not found" };
+
+  return {
+    title: problem.metaTitle,
+    description: problem.metaDesc,
+    keywords: [
+      problem.name + " KL",
+      problem.name + " Selangor",
+      problem.name + " repair KL",
+      problem.name + " fix KL",
+      problem.nameMS + " KL",
+      problem.nameZH + " 吉隆坡",
+      "aircond problem KL",
+      "aircond repair KL",
+      "KL Renovator aircond",
+    ].join(", "),
+    openGraph: {
+      title: problem.metaTitle,
+      description: problem.metaDesc,
+      url: `https://www.klrenovator.com/problems/${slug}`,
+      type: "website",
+      images: (problem as any).heroImage ? [{ url: `https://www.klrenovator.com${(problem as any).heroImage}`, width: 1200, height: 630, alt: problem.metaTitle }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: problem.metaTitle,
+      description: problem.metaDesc,
+      images: (problem as any).heroImage ? [`https://www.klrenovator.com${(problem as any).heroImage}`] : [],
+    },
+    alternates: {
+      canonical: `https://www.klrenovator.com/problems/${slug}`,
+    },
+    other: {
+      "title:ms": problem.metaTitleMS,
+      "description:ms": problem.metaDescMS,
+      "title:zh": problem.metaTitleZH,
+      "description:zh": problem.metaDescZH,
+    },
+  };
+}
+
+// ─── Detailed content map ─────────────────────────────────────────────────────
+const problemContent: Record<
+  string,
+  {
+    causesEN: string[];
+    causesBM: string[];
+    causesZH: string[];
+    solutionEN: string;
+    solutionBM: string;
+    solutionZH: string;
+    warningEN: string;
+    warningBM: string;
+    warningZH: string;
+    faqs: { q: string; a: string }[];
+    faqsBM: { q: string; a: string }[];
+    faqsZH: { q: string; a: string }[];
+  }
+> = {
+  "aircond-not-cold": {
+    causesEN: [
+      "Low refrigerant gas (R22, R410A or R32) — most common cause",
+      "Dirty or blocked evaporator coil reducing heat exchange",
+      "Faulty capacitor preventing compressor from running at full speed",
+      "Dirty air filter blocking airflow to the evaporator",
+      "Refrigerant gas leak from a damaged copper pipe or valve",
+      "Failing compressor that cannot maintain correct pressure",
+    ],
+    causesBM: [
+      "Gas penyejuk rendah (R22, R410A atau R32) — punca paling biasa",
+      "Gegelung penyejat kotor atau tersumbat mengurangkan pertukaran haba",
+      "Kapasitor rosak menghalang pekali dari berjalan pada kelajuan penuh",
+      "Penapis udara kotor menyekat aliran udara ke penyejat",
+      "Kebocoran gas penyejuk dari paip tembaga atau injap yang rosak",
+      "Pekali yang gagal tidak dapat mengekalkan tekanan yang betul",
+    ],
+    causesZH: [
+      "制冷剂不足（R22、R410A或R32）——最常见的原因",
+      "蒸发盘管脏污或堵塞，导致热交换效率降低",
+      "电容器故障，导致压缩机无法全速运转",
+      "空气过滤网脏污，阻碍气流流向蒸发器",
+      "铜管或阀门损坏导致制冷剂泄漏",
+      "压缩机老化，无法维持正确压力",
+    ],
+    solutionEN: "KL Renovator technicians first run a full system check — measuring discharge pressure, suction pressure, and temperature difference across the coil. If gas is low, the leak is located and repaired before topping up to the correct operating pressure. If the coil is dirty, a chemical wash restores heat exchange. If the capacitor is failing, it is replaced on the spot. You receive a transparent quote before any work starts.",
+    solutionBM: "Juruteknik KL Renovator menjalankan pemeriksaan sistem penuh — mengukur tekanan pelepasan, tekanan sedutan dan perbezaan suhu. Jika gas rendah, kebocoran dikesan dan diperbaiki sebelum top-up ke tekanan operasi yang betul. Jika gegelung kotor, cuci kimia memulihkan pertukaran haba. Jika kapasitor rosak, ia diganti di tempat. Sebut harga telus diberikan sebelum kerja bermula.",
+    solutionZH: "KL Renovator技术员进行全面系统检查——测量排放压力、吸入压力和盘管两端的温差。如果制冷剂不足，先找出并修复泄漏，然后充气至正确工作压力。如果盘管脏污，化学清洗可恢复热交换效率。如果电容器故障，当场更换。所有工作开始前提供透明报价。",
+    warningEN: "Do not ignore an aircond that is not cold. A running but ineffective unit consumes full electricity while delivering no comfort — and low gas pressure damages the compressor over time.",
+    warningBM: "Jangan abaikan aircond yang tidak sejuk. Unit yang berjalan tetapi tidak berkesan menggunakan elektrik penuh tanpa memberikan keselesaan — dan tekanan gas rendah merosakkan pekali dari masa ke masa.",
+    warningZH: "不要忽视不冷的冷气。运转但无效的机组消耗全额电力却毫无舒适感——长期低气压还会损坏压缩机。",
+    faqs: [
+      { q: "My aircond is blowing air but it's warm. Is it low gas?", a: "Low gas is the most common cause, but a dirty coil or faulty capacitor can produce the same symptom. KL Renovator diagnoses all three before recommending a solution — you pay for what you actually need." },
+      { q: "How much does it cost to fix an aircond that is not cold?", a: "If it is low gas: gas top-up from RM 120 (R22), RM 150 (R410A), RM 180 (R32). If it is a dirty coil: chemical wash from RM 120. If it is a faulty capacitor: RM 180 replacement. Diagnostic fee RM 88 (waived if repair done same visit)." },
+      { q: "Can the aircond be fixed the same day?", a: "Yes. Most causes of an aircond not being cold — gas top-up, chemical wash, capacitor replacement — are done in one visit. KL Renovator carries common parts on the van." },
+    ],
+    faqsBM: [
+      { q: "Aircond saya menghembus udara tetapi panas. Adakah gas rendah?", a: "Gas rendah adalah punca paling biasa, tetapi gegelung kotor atau kapasitor rosak boleh menghasilkan gejala yang sama. KL Renovator mendiagnosis ketiga-tiganya sebelum mencadangkan penyelesaian." },
+      { q: "Berapa kos untuk membaiki aircond yang tidak sejuk?", a: "Jika gas rendah: top-up gas dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Jika gegelung kotor: cuci kimia dari RM 120. Jika kapasitor rosak: penggantian RM 180." },
+    ],
+    faqsZH: [
+      { q: "我的冷气在吹风，但是是暖风。是气体不足吗？", a: "气体不足是最常见的原因，但脏污的盘管或故障的电容器也会产生相同症状。KL Renovator会先诊断全部三项，再提供建议。" },
+      { q: "修理不冷的冷气需要多少费用？", a: "如果是气体不足：充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。如果是盘管脏污：化学清洗从RM 120起。如果是电容器故障：更换RM 180。" },
+    ],
+  },
+  "aircond-water-leaking": {
+    causesEN: [
+      "Blocked drain pipe — the most common cause in Malaysia's humid climate",
+      "Dirty drain pan with mould and slime buildup preventing drainage",
+      "Frozen evaporator coil that melts and overflows the drain pan",
+      "Incorrect drain pipe slope installed during original installation",
+      "Cracked or disconnected drain pipe inside the wall",
+      "Severely dirty coil causing condensation overflow",
+    ],
+    causesBM: [
+      "Paip longkang tersumbat — punca paling biasa dalam iklim lembap Malaysia",
+      "Dulang longkang kotor dengan penumpukan kulat dan lendir menghalang saliran",
+      "Gegelung penyejat beku yang cair dan melimpahi dulang longkang",
+      "Kecerunan paip longkang yang salah semasa pemasangan asal",
+      "Paip longkang retak atau terputus di dalam dinding",
+      "Gegelung yang sangat kotor menyebabkan limpahan kondensasi",
+    ],
+    causesZH: [
+      "排水管堵塞——马来西亚潮湿气候中最常见的原因",
+      "排水盘内霉菌和粘液堆积，阻碍排水",
+      "蒸发盘管结冰后融化，溢出排水盘",
+      "原始安装时排水管坡度不正确",
+      "墙内排水管破裂或断开",
+      "盘管严重脏污导致冷凝水溢出",
+    ],
+    solutionEN: "KL Renovator technicians clear the blocked drain pipe using pressurised water flush, clean the drain pan, and inspect the full drainage path. For severe cases — cracked drain pan, disconnected pipe, or heavily soiled coil — a chemical overhaul permanently resolves the leaking. Drain pump installation is available for units where gravity drainage is not possible.",
+    solutionBM: "Juruteknik KL Renovator membersihkan paip longkang yang tersumbat menggunakan semburan air bertekanan, membersihkan dulang longkang, dan memeriksa laluan saliran penuh. Untuk kes teruk — dulang longkang retak, paip terputus, atau gegelung sangat kotor — overhaul kimia menyelesaikan kebocoran secara kekal.",
+    solutionZH: "KL Renovator技术员使用加压水冲洗清通堵塞的排水管，清洁排水盘，并检查完整排水路径。对于严重情况——排水盘破裂、管道断开或盘管严重脏污——化学大修可永久解决漏水问题。",
+    warningEN: "A leaking aircond left unattended causes mould growth on walls and ceilings, water damage to furniture, electrical short circuit risk, and structural damage over time. Fix it immediately.",
+    warningBM: "Aircond yang bocor dan dibiarkan menyebabkan pertumbuhan kulat di dinding dan siling, kerosakan air pada perabot, risiko litar pintas elektrik, dan kerosakan struktur dari masa ke masa.",
+    warningZH: "长期不处理的漏水冷气会导致墙壁和天花板发霉、家具受水损坏、电气短路风险以及长期结构损坏。请立即修复。",
+    faqs: [
+      { q: "Why is my aircond dripping water inside the room?", a: "The indoor unit drips water when the drain pipe is blocked and the drain pan overflows. KL Renovator clears the blockage in one visit — starting from RM 120 for a drain clear and chemical wash." },
+      { q: "How much does it cost to fix a leaking aircond in KL?", a: "Drain pipe clearing starts from RM 120. Chemical wash (recommended to prevent recurrence) from RM 120. Chemical overhaul for severe or recurring leaks from RM 220. Drain pump installation RM 300–400." },
+      { q: "My aircond has been leaking for weeks. Is it serious?", a: "Yes. Prolonged leaking causes mould growth, ceiling damage and potential electrical risks. Book KL Renovator immediately via WhatsApp +60182983573 for same-day assessment." },
+    ],
+    faqsBM: [
+      { q: "Mengapa aircond saya menitis air di dalam bilik?", a: "Unit dalaman menitis apabila paip longkang tersumbat dan dulang longkang melimpah. KL Renovator membersihkan halangan dalam satu lawatan — bermula dari RM 120." },
+      { q: "Berapa kos untuk membaiki aircond bocor di KL?", a: "Pembersihan paip longkang bermula dari RM 120. Cuci kimia dari RM 120. Overhaul kimia untuk kebocoran teruk dari RM 220." },
+    ],
+    faqsZH: [
+      { q: "为什么我的冷气在室内滴水？", a: "当排水管堵塞、排水盘溢水时，室内机就会滴水。KL Renovator一次上门即可清通堵塞，化学清洗从RM 120起。" },
+      { q: "在KL修理漏水冷气需要多少费用？", a: "排水管清通从RM 120起。化学清洗从RM 120起。严重漏水的化学大修从RM 220起。排水泵安装RM 300–400。" },
+    ],
+  },
+  "aircond-bad-smell": {
+    causesEN: [
+      "Mould and bacteria growing on the evaporator coil and blower wheel",
+      "Dirty drain pan where stagnant water breeds bacteria and mildew",
+      "Cigarette smoke, cooking odours or pet smells absorbed into the coil",
+      "Dead insects or debris inside the unit decomposing over time",
+      "Electrical burning smell — wiring insulation or component failure (urgent)",
+      "Chemical smell — refrigerant gas leak (stop unit immediately)",
+    ],
+    causesBM: [
+      "Kulat dan bakteria tumbuh pada gegelung penyejat dan roda penghembus",
+      "Dulang longkang kotor tempat air bertakung membiak bakteria dan kulat",
+      "Asap rokok, bau memasak atau bau haiwan peliharaan diserap ke dalam gegelung",
+      "Serangga mati atau serpihan di dalam unit reput dari masa ke masa",
+      "Bau elektrik terbakar — penebat wayar atau kegagalan komponen (segera)",
+      "Bau kimia — kebocoran gas penyejuk (matikan unit serta-merta)",
+    ],
+    causesZH: [
+      "霉菌和细菌在蒸发盘管和鼓风机叶轮上生长",
+      "排水盘内积水滋生细菌和霉菌",
+      "香烟烟雾、烹饪气味或宠物气味被盘管吸收",
+      "机内死虫或异物随时间分解腐烂",
+      "电气焦糊味——线路绝缘层或部件故障（紧急情况）",
+      "化学气味——制冷剂泄漏（立即关机）",
+    ],
+    solutionEN: "A chemical wash (from RM 120) uses a food-safe chemical solution to kill mould and bacteria on the evaporator coil and blower wheel, permanently eliminating the smell. For severe mould infestation, a chemical overhaul (from RM 220) fully dismantles and sterilises every component.",
+    solutionBM: "Cuci kimia (dari RM 120) menggunakan larutan kimia selamat makanan untuk membunuh kulat dan bakteria pada gegelung dan roda penghembus, menghapuskan bau secara kekal. Untuk serangan kulat teruk, overhaul kimia (dari RM 220) membongkar dan mensterilkan setiap komponen.",
+    solutionZH: "化学清洗（从RM 120起）使用食品级化学溶液杀死蒸发盘管和鼓风机叶轮上的霉菌和细菌，永久消除异味。对于严重的霉菌侵扰，化学大修（从RM 220起）完全拆卸并消毒每个部件。",
+    warningEN: "If you smell burning plastic or a sweet chemical/gas odour from the aircond, switch it off immediately and do not restart it. These smells indicate electrical failure or refrigerant leak.",
+    warningBM: "Jika anda menghidu bau plastik terbakar atau bau kimia/gas yang manis dari aircond, matikannya serta-merta dan jangan hidupkan semula.",
+    warningZH: "如果您闻到冷气机发出塑料燃烧气味或甜味化学/气体气味，请立即关机，不要重新启动。",
+    faqs: [
+      { q: "Why does my aircond smell musty or like dirty socks?", a: "A musty smell is caused by mould and bacteria growing on the evaporator coil. A chemical wash with food-safe solution kills the mould and eliminates the smell permanently. Starts from RM 120." },
+      { q: "How long does it take to remove the smell from an aircond?", a: "After a chemical wash, most smells are eliminated on the same visit. For severe mould cases requiring a chemical overhaul, the unit is fully deodorised within one service session." },
+      { q: "My aircond smells like something is burning. Is it dangerous?", a: "Yes. A burning smell from an aircond indicates an electrical fault. Switch off the unit immediately and call KL Renovator at +60182983573 for an emergency diagnostic." },
+    ],
+    faqsBM: [
+      { q: "Mengapa aircond saya berbau hapak?", a: "Bau hapak disebabkan kulat dan bakteria yang tumbuh pada gegelung penyejat. Cuci kimia membunuh kulat dan menghapuskan bau secara kekal. Bermula dari RM 120." },
+      { q: "Aircond saya berbau seperti sesuatu terbakar. Berbahayakah?", a: "Ya. Bau terbakar dari aircond menunjukkan kerosakan elektrik. Matikan unit serta-merta dan hubungi KL Renovator di +60182983573." },
+    ],
+    faqsZH: [
+      { q: "为什么我的冷气有霉味？", a: "霉味是由蒸发盘管上生长的霉菌和细菌引起的。化学清洗用食品级溶液杀死霉菌，永久消除异味，从RM 120起。" },
+      { q: "我的冷气有焦糊味。危险吗？", a: "是的。冷气焦糊味表示电气故障。请立即关机，拨打+60182983573联系KL Renovator紧急诊断。" },
+    ],
+  },
+  "aircond-making-noise": {
+    causesEN: [
+      "Loose fan blade rattling against the housing at high speed",
+      "Worn or seized fan motor bearings producing grinding or screeching",
+      "Debris — leaves, insects or dirt — trapped in the outdoor unit fan",
+      "Loose screws or panels vibrating during operation",
+      "Failing capacitor causing the compressor to struggle and buzz loudly",
+      "Refrigerant gas flow noise — hissing from a leak in the copper pipe",
+    ],
+    causesBM: [
+      "Bilah kipas longgar bergetar pada kelajuan tinggi",
+      "Galas motor kipas haus atau terkunci menghasilkan bunyi menggiling atau melengking",
+      "Serpihan — daun, serangga atau kotoran — terperangkap dalam kipas unit luar",
+      "Skru atau panel longgar bergetar semasa operasi",
+      "Kapasitor gagal menyebabkan pekali bergelut dan berdengung kuat",
+      "Bunyi aliran gas penyejuk — mendesis dari kebocoran dalam paip tembaga",
+    ],
+    causesZH: [
+      "风扇叶片松动，高速旋转时撞击外壳",
+      "风扇电机轴承磨损或卡死，产生研磨或尖叫声",
+      "树叶、昆虫或污垢等杂物卡在室外机风扇中",
+      "运行时螺丝或面板松动振动",
+      "电容器故障导致压缩机运转困难并发出嗡嗡声",
+      "制冷剂气流噪音——铜管泄漏处发出嘶嘶声",
+    ],
+    solutionEN: "KL Renovator technicians identify the exact source of the noise by running the unit and isolating indoor vs outdoor components. Loose blades and screws are tightened, debris is removed, worn fan motors are replaced, and failing capacitors are swapped out. A quote is provided before any parts replacement.",
+    solutionBM: "Juruteknik KL Renovator mengenal pasti sumber bunyi tepat dengan menjalankan unit dan mengasingkan komponen dalaman berbanding luar. Bilah dan skru longgar dikencangkan, serpihan dibuang, motor kipas haus diganti, dan kapasitor gagal ditukar.",
+    solutionZH: "KL Renovator技术员通过运行机组并隔离室内外部件来精确定位噪音来源。紧固松动的叶片和螺丝，清除异物，更换磨损的风扇电机，更换故障电容器。零件更换前提供报价。",
+    warningEN: "Grinding or screeching noises from the outdoor unit indicate the fan motor bearings are failing. If ignored, the motor seizes completely and compressor damage can follow — a much more expensive repair.",
+    warningBM: "Bunyi menggiling atau melengking dari unit luar menunjukkan galas motor kipas sedang gagal. Jika diabaikan, motor akan terkunci sepenuhnya dan kerosakan pekali boleh berlaku.",
+    warningZH: "室外机发出研磨或尖叫声表明风扇电机轴承正在失效。如果忽视，电机将完全卡死，随后可能损坏压缩机——修理费用会贵得多。",
+    faqs: [
+      { q: "My aircond outdoor unit is making a loud rattling noise. What is causing it?", a: "Rattling from the outdoor unit is usually a loose fan blade, debris inside the unit, or loose screws on the casing. KL Renovator diagnoses and fixes the root cause in one visit." },
+      { q: "My aircond indoor unit makes a squeaking noise when cooling. What is it?", a: "A squeaking indoor unit often indicates a dirty blower wheel rubbing against its housing, or a failing blower motor bearing. A chemical wash or blower motor replacement resolves this." },
+      { q: "How much does aircond noise repair cost in KL?", a: "Diagnostic fee is RM 88 (waived with repair). Fan motor replacement RM 250–450. Capacitor replacement RM 180." },
+    ],
+    faqsBM: [
+      { q: "Unit luar aircond saya membuat bunyi bising. Apakah penyebabnya?", a: "Bunyi bergetar dari unit luar biasanya disebabkan bilah kipas longgar, serpihan di dalam unit, atau skru longgar. KL Renovator mendiagnosis dan membaiki punca sebenar." },
+      { q: "Berapa kos pembaikan bunyi bising aircond di KL?", a: "Yuran diagnostik RM 88 (dilepaskan dengan pembaikan). Penggantian motor kipas RM 250–450. Penggantian kapasitor RM 180." },
+    ],
+    faqsZH: [
+      { q: "我的冷气室外机发出很大的嘎嘎声。是什么原因？", a: "室外机嘎嘎声通常是风扇叶片松动、机内有异物或外壳螺丝松动所致。KL Renovator诊断并修复根本原因。" },
+      { q: "KL的冷气噪音维修费用是多少？", a: "诊断费RM 88（维修时免除）。风扇电机更换RM 250–450。电容器更换RM 180。" },
+    ],
+  },
+  "aircond-low-gas": {
+    causesEN: [
+      "Natural slow gas loss over many years of operation",
+      "Refrigerant leak from a pinhole in the copper pipe caused by corrosion",
+      "Leak at the flare joint connection between the indoor and outdoor unit",
+      "Leak at the service valve or Schrader valve on the outdoor unit",
+      "Poor original installation where joints were not properly tightened",
+      "Vibration-induced fatigue crack in the copper pipe over time",
+    ],
+    causesBM: [
+      "Kehilangan gas semula jadi yang perlahan selepas bertahun-tahun operasi",
+      "Kebocoran penyejuk dari lubang jarum dalam paip tembaga akibat kakisan",
+      "Kebocoran di sambungan flare antara unit dalaman dan luaran",
+      "Kebocoran di injap servis atau injap Schrader pada unit luar",
+      "Pemasangan asal yang lemah di mana sambungan tidak dikencangkan dengan betul",
+      "Retak keletihan akibat getaran pada paip tembaga dari masa ke masa",
+    ],
+    causesZH: [
+      "多年运行后气体自然缓慢流失",
+      "铜管腐蚀产生针孔导致制冷剂泄漏",
+      "室内机和室外机之间喇叭口接头处泄漏",
+      "室外机维修阀或Schrader阀处泄漏",
+      "原始安装不良，接头未正确紧固",
+      "随时间推移，铜管因振动产生疲劳裂纹",
+    ],
+    solutionEN: "KL Renovator performs a leak check before every gas top-up. If a leak is found, it is repaired first. Refrigerant is then added using a manifold gauge to achieve the exact operating pressure specified for the unit — not simply filled until the gauge looks right.",
+    solutionBM: "KL Renovator melakukan pemeriksaan kebocoran sebelum setiap top-up gas. Jika kebocoran dijumpai, ia diperbaiki dahulu. Penyejuk kemudian ditambah menggunakan tolok manifold untuk mencapai tekanan operasi tepat.",
+    solutionZH: "KL Renovator在每次充气前都进行泄漏检查。如果发现泄漏，先行修复。然后使用歧管表将制冷剂充至该机型规定的精确工作压力。",
+    warningEN: "Running an aircond with low gas causes the compressor to overwork, overheat, and eventually fail permanently. Gas top-up from RM 120 is far cheaper than compressor replacement at RM 600–2,000.",
+    warningBM: "Menjalankan aircond dengan gas rendah menyebabkan pekali bekerja terlalu keras, terlalu panas, dan akhirnya gagal sepenuhnya. Top-up gas dari RM 120 jauh lebih murah daripada penggantian pekali pada RM 600–2,000.",
+    warningZH: "在制冷剂不足的情况下运行冷气会导致压缩机过度工作、过热，最终永久损坏。充气从RM 120起，远比更换压缩机（RM 600–2,000）便宜得多。",
+    faqs: [
+      { q: "How do I know if my aircond is low on gas?", a: "Symptoms include: not cold or barely cool air, longer cooling time, ice forming on the indoor coil, condensation on the outdoor unit pipes, and higher electricity bills." },
+      { q: "How much does aircond gas top-up cost in KL?", a: "R22 from RM 120, R410A from RM 150, R32 from RM 180. Prices vary by HP size. Leak check is included with every gas top-up at KL Renovator." },
+      { q: "How often does an aircond need gas top-up?", a: "A well-installed, leak-free aircond should not need gas top-up for many years. If you need gas top-up every year, there is a leak that needs to be found and repaired first." },
+    ],
+    faqsBM: [
+      { q: "Bagaimana saya tahu jika aircond saya rendah gas?", a: "Gejala termasuk: udara tidak sejuk, masa penyejukan lebih lama, ais terbentuk pada gegelung dalaman, dan bil elektrik lebih tinggi." },
+      { q: "Berapa kos top-up gas aircond di KL?", a: "R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. Pemeriksaan kebocoran disertakan dengan setiap top-up gas." },
+    ],
+    faqsZH: [
+      { q: "如何判断我的冷气是否气体不足？", a: "症状包括：空气不冷、冷却时间更长、室内盘管结冰以及电费更高。" },
+      { q: "KL冷气充气费用是多少？", a: "R22从RM 120起，R410A从RM 150起，R32从RM 180起。每次充气包含泄漏检查。" },
+    ],
+  },
+  "aircond-freezing-up": {
+    causesEN: [
+      "Low refrigerant gas causing evaporator coil temperature to drop below freezing",
+      "Severely blocked air filter restricting airflow over the cold coil",
+      "Dirty or blocked evaporator coil trapping moisture that freezes",
+      "Faulty blower fan not circulating enough warm room air",
+      "Continuous running at very low temperature settings in cool weather",
+    ],
+    causesBM: [
+      "Gas penyejuk rendah menyebabkan suhu gegelung penyejat jatuh di bawah takat beku",
+      "Penapis udara yang sangat tersumbat menyekat aliran udara ke atas gegelung sejuk",
+      "Gegelung penyejat kotor atau tersumbat yang memerangkap lembapan yang membeku",
+      "Kipas blower yang rosak tidak mengalirkan udara bilik yang cukup panas",
+      "Berjalan berterusan pada tetapan suhu yang sangat rendah dalam cuaca sejuk",
+    ],
+    causesZH: [
+      "制冷剂不足导致蒸发盘管温度降至冰点以下",
+      "过滤网严重堵塞，限制了流经冷盘管的气流",
+      "蒸发盘管脏污或堵塞，困住水分后结冰",
+      "鼓风机风扇故障，无法循环足够的室内暖空气",
+      "在凉爽天气中持续以极低温度运行",
+    ],
+    solutionEN: "Switch off immediately and allow the ice to melt (1–3 hours). KL Renovator then diagnoses whether the cause is low gas (top-up from RM 120), dirty coil (chemical wash from RM 120), or blocked filter. All can be fixed in one visit.",
+    solutionBM: "Matikan unit segera dan biarkan ais cair (1–3 jam). KL Renovator kemudian mendiagnosis sama ada puncanya adalah gas rendah (top-up dari RM 120), gegelung kotor (cuci kimia dari RM 120), atau penapis tersumbat.",
+    solutionZH: "立即关机，让冰自然融化（1–3小时）。KL Renovator随后诊断原因是气体不足（充气从RM 120起）、盘管脏污（化学清洗从RM 120起）还是过滤网堵塞。一次上门即可解决。",
+    warningEN: "Do not run a frozen aircond. Ice formation can overflow the drain pan and cause water damage to your ceiling or wall.",
+    warningBM: "Jangan jalankan aircond yang membeku. Pembentukan ais boleh melimpah dari dulang longkang dan menyebabkan kerosakan air pada siling atau dinding anda.",
+    warningZH: "不要运行结冰的冷气。积冰可能从排水盘溢出，造成天花板或墙壁的水损害。",
+    faqs: [
+      { q: "Why is there ice forming on my aircond copper pipe?", a: "Ice on the copper pipe (suction line) indicates low refrigerant gas — the pipe temperature drops below 0°C when gas pressure is too low. Gas top-up by KL Renovator from RM 120 (R22), RM 150 (R410A), RM 180 (R32)." },
+      { q: "How do I stop my aircond from freezing?", a: "Switch off and let the ice melt first. Then call KL Renovator to diagnose the root cause — low gas, dirty coil or blocked filter. Do not restart until the cause is fixed." },
+      { q: "Can a frozen aircond be fixed same-day?", a: "Yes — after the ice melts (1–3 hours), KL Renovator diagnoses and repairs in the same visit. Gas top-up, chemical wash and filter cleaning all done same-day." },
+    ],
+    faqsBM: [
+      { q: "Mengapa terdapat ais pada paip kuprum aircond saya?", a: "Ais pada paip kuprum menunjukkan gas penyejuk rendah. Top-up gas oleh KL Renovator dari RM 120 (R22), RM 150 (R410A), RM 180 (R32)." },
+      { q: "Bagaimana saya menghentikan aircond daripada membeku?", a: "Matikan dan biarkan ais cair dahulu. Kemudian hubungi KL Renovator untuk mendiagnosis punca — gas rendah, gegelung kotor atau penapis tersumbat." },
+    ],
+    faqsZH: [
+      { q: "为什么冷气铜管上有冰？", a: "铜管结冰表示制冷剂不足。KL Renovator充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。" },
+      { q: "如何防止冷气结冰？", a: "先关机让冰融化。然后联系KL Renovator诊断根本原因——气体不足、盘管脏污或过滤网堵塞。" },
+    ],
+  },
+  "aircond-gas-leak": {
+    causesEN: [
+      "Loose or corroded flare nut connections at indoor or outdoor unit",
+      "Pinhole leak in the copper pipe from vibration or physical damage",
+      "Valve stem leak at the service port or shut-off valve",
+      "Hairline crack in copper pipe from improper installation bends",
+      "Corrosion of copper pipe from household chemicals (formicary corrosion)",
+    ],
+    causesBM: [
+      "Sambungan nat flare yang longgar atau berkarat pada unit dalam atau luar",
+      "Kebocoran lubang pin pada paip kuprum akibat getaran atau kerosakan fizikal",
+      "Kebocoran batang injap di port servis atau injap penutup",
+      "Retak rambut pada paip kuprum akibat bengkokan pemasangan yang tidak betul",
+      "Kakisan paip kuprum akibat bahan kimia isi rumah",
+    ],
+    causesZH: [
+      "室内机或室外机的喇叭口连接松动或腐蚀",
+      "铜管振动或物理损坏造成针孔泄漏",
+      "维修口或截止阀处的阀杆泄漏",
+      "铜管因安装弯曲不当产生细裂缝",
+      "家用化学品导致铜管蚁穴腐蚀",
+    ],
+    solutionEN: "KL Renovator uses electronic leak detectors and soapy water testing to pinpoint the exact leak. The leak is repaired — flare nut tightened, pipe section replaced, or valve replaced — before topping up gas to correct pressure. Just topping up without fixing the leak means you will lose gas again within weeks.",
+    solutionBM: "KL Renovator menggunakan pengesan kebocoran elektronik untuk menentukan kebocoran tepat. Kebocoran dibaiki sebelum top-up gas ke tekanan yang betul. Hanya top-up tanpa membaiki kebocoran bermakna gas akan hilang semula dalam beberapa minggu.",
+    solutionZH: "KL Renovator使用电子泄漏检测仪精确定位泄漏位置。先修复泄漏，然后再充气至正确压力。只充气不修漏，几周内还会再次跑气。",
+    warningEN: "Never top up refrigerant gas without first locating and repairing the leak. Repeated top-ups without fixing the source wastes money and damages the environment.",
+    warningBM: "Jangan sekali-kali menambah gas penyejuk tanpa terlebih dahulu mengesan dan membaiki kebocoran.",
+    warningZH: "切勿在没有找到并修复泄漏的情况下充气。不修漏就反复充气既浪费金钱又破坏环境。",
+    faqs: [
+      { q: "How do I know if my aircond has a gas leak?", a: "Signs: unit repeatedly not cold after gas top-up, ice on the copper pipe, hissing sound from the indoor or outdoor unit, or oily residue around pipe connections. KL Renovator confirms leaks with electronic detection." },
+      { q: "How much does it cost to repair a gas leak in KL?", a: "Gas leak detection and repair: RM 88 diagnostic + repair cost (flare nut tightening RM 50–80, pipe repair RM 150–300). Gas top-up after repair from RM 120 (R22) to RM 180 (R32)." },
+      { q: "Is refrigerant gas dangerous?", a: "R22, R410A and R32 are not acutely toxic at typical concentrations, but R32 is mildly flammable. Good ventilation is important. KL Renovator handles all refrigerants safely with proper equipment." },
+    ],
+    faqsBM: [
+      { q: "Bagaimana saya tahu jika aircond saya ada kebocoran gas?", a: "Tanda: unit berulang kali tidak sejuk selepas top-up gas, ais pada paip kuprum, bunyi mendesis dari unit, sisa berminyak di sekitar sambungan paip. KL Renovator mengesahkan kebocoran dengan pengesanan elektronik." },
+      { q: "Berapa kos membaiki kebocoran gas di KL?", a: "Pengesanan dan pembaikan dari RM 88 diagnostik + kos pembaikan. Top-up gas selepas pembaikan dari RM 120 (R22) hingga RM 180 (R32)." },
+    ],
+    faqsZH: [
+      { q: "我怎么知道冷气是否有气体泄漏？", a: "迹象：充气后反复不冷、铜管结冰、机器有嘶嘶声、管道连接处有油渍。KL Renovator使用电子检测确认泄漏。" },
+      { q: "在KL修理气体泄漏需要多少费用？", a: "泄漏检测和修复：RM 88诊断+维修费。修复后充气从RM 120（R22）到RM 180（R32）。" },
+    ],
+  },
+  "aircond-compressor-problem": {
+    causesEN: [
+      "Electrical failure — burnt windings or shorted compressor from power surge",
+      "Low refrigerant gas starving the compressor of lubrication",
+      "Failed capacitor preventing the compressor from starting",
+      "Overheating from dirty condenser coil or insufficient airflow around outdoor unit",
+      "Aged compressor reaching end of service life (typically 10–15 years)",
+    ],
+    causesBM: [
+      "Kegagalan elektrik — belitan terbakar atau kompressor terlitar pintas akibat lonjakan kuasa",
+      "Gas penyejuk rendah menyebabkan kompressor kekurangan pelinciran",
+      "Kapasitor gagal menghalang kompressor daripada bermula",
+      "Kepanasan berlebihan akibat gegelung kondenser kotor",
+      "Kompressor lama mencapai penghujung jangka hayat servis",
+    ],
+    causesZH: [
+      "电气故障——因电涌导致线圈烧坏或压缩机短路",
+      "制冷剂不足导致压缩机缺乏润滑",
+      "电容器失效，导致压缩机无法启动",
+      "冷凝器盘管脏污导致过热",
+      "压缩机老化，达到使用寿命终点（通常10–15年）",
+    ],
+    solutionEN: "KL Renovator tests the compressor with amp clamp and megohmmeter. Failed capacitor (most common): RM 180. Burnt compressor: transparent quote for replacement (RM 600–2,000 depending on brand and HP). Older units may be more economical to replace entirely.",
+    solutionBM: "KL Renovator menguji kompressor dengan pemasang amp dan megohmmeter. Kapasitor gagal (paling biasa): RM 180. Kompressor terbakar: sebut harga telus untuk penggantian (RM 600–2,000).",
+    solutionZH: "KL Renovator使用钳形电流表和绝缘电阻仪测试压缩机。电容器失效（最常见）：RM 180。压缩机烧坏：提供透明更换报价（RM 600–2,000，视品牌和HP）。",
+    warningEN: "Do not continue running an aircond with a suspected compressor problem. A shorted compressor can trip your MCB repeatedly and may pose a fire risk.",
+    warningBM: "Jangan terus menjalankan aircond dengan masalah kompressor yang disyaki. Kompressor yang terlitar pintas boleh menjatuhkan MCB berulang kali.",
+    warningZH: "不要继续运行疑有压缩机问题的冷气。短路的压缩机会反复导致MCB跳闸，并可能引起火灾风险。",
+    faqs: [
+      { q: "How do I know if my aircond compressor is faulty?", a: "Signs: outdoor unit not running while indoor fan blows warm air, outdoor unit humming/clicking then stopping, MCB tripping on startup, no cooling despite gas being full. KL Renovator diagnoses with electrical testing — RM 88." },
+      { q: "How much does aircond compressor replacement cost in KL?", a: "Compressor replacement: RM 600–1,000 (1.0–1.5 HP), RM 800–1,300 (2.0–2.5 HP), RM 1,200–2,000 (3.0 HP+). Includes removal, installation, vacuuming and gas charge. 3-month parts warranty." },
+      { q: "Is it worth replacing the compressor or buying a new aircond?", a: "If the unit is under 7 years old and compressor cost is under 60% of a new unit price, repair is worthwhile. Over 10 years old — a new inverter unit is usually more economical. KL Renovator advises honestly." },
+    ],
+    faqsBM: [
+      { q: "Bagaimana saya tahu jika kompressor aircond saya rosak?", a: "Tanda: unit luar tidak berjalan manakala kipas dalam meniup udara suam, unit luar berdengung kemudian berhenti, MCB jatuh semasa permulaan, tiada penyejukan walaupun gas penuh. Diagnosis RM 88." },
+      { q: "Berapa kos ganti kompressor aircond di KL?", a: "Gantian kompressor: RM 600–1,000 (1.0–1.5 HP), RM 800–1,300 (2.0–2.5 HP), RM 1,200–2,000 (3.0 HP+)." },
+    ],
+    faqsZH: [
+      { q: "我怎么知道冷气压缩机是否故障？", a: "迹象：室外机不运转但室内机吹暖风、室外机嗡嗡后停止、开机时MCB跳闸、气体充足但无制冷。诊断费RM 88。" },
+      { q: "KL冷气压缩机更换费用是多少？", a: "压缩机更换：RM 600–1,000（1.0–1.5 HP），RM 800–1,300（2.0–2.5 HP），RM 1,200–2,000（3.0 HP+）。3个月零件保修。" },
+    ],
+  },
+  "aircond-pcb-problem": {
+    causesEN: [
+      "Power surge or lightning strike damaging PCB components",
+      "Moisture ingress into the control board from water leaking internally",
+      "Component failure from overheating — failed capacitors or transistors on PCB",
+      "Insects (cockroaches) shorting PCB tracks",
+      "Age-related component degradation in units over 8–10 years old",
+    ],
+    causesBM: [
+      "Lonjakan kuasa atau petir merosakkan komponen PCB",
+      "Peresapan lembapan ke papan kawalan akibat kebocoran air dalaman",
+      "Kegagalan komponen akibat kepanasan berlebihan pada PCB",
+      "Serangga (lipas) yang menyebabkan litar pintas trek PCB",
+      "Degradasi komponen berkaitan usia pada unit melebihi 8–10 tahun",
+    ],
+    causesZH: [
+      "电涌或雷击损坏PCB组件",
+      "内部漏水导致水分侵入控制板",
+      "过热导致PCB上的电容器或晶体管失效",
+      "昆虫（蟑螂）造成PCB线路短路",
+      "使用超过8–10年的机器组件老化",
+    ],
+    solutionEN: "KL Renovator diagnoses PCB faults using digital multimeters and error code reading. Common faults — burnt capacitors, shorted transistors — are repaired if possible. If the board is beyond repair, replacement boards for all major brands are sourced and fitted. Quote given before any work begins.",
+    solutionBM: "KL Renovator mendiagnosis kerosakan PCB menggunakan multimeter digital dan pembacaan kod ralat. Kerosakan biasa dibaiki jika boleh. Jika papan tidak boleh dibaiki, papan gantian untuk semua jenama utama diperolehi. Sebut harga diberikan sebelum kerja bermula.",
+    solutionZH: "KL Renovator使用数字万用表和错误代码读取诊断PCB故障。常见故障尽可能修复。如果电路板无法修复，则为所有主要品牌采购替换板。施工前提供报价。",
+    warningEN: "A PCB problem causes persistent blinking lights, erratic operation or complete failure. Do not reset and ignore the error — the root cause will worsen over time.",
+    warningBM: "Masalah PCB menyebabkan lampu berkelip berterusan, operasi tidak menentu atau kegagalan sepenuhnya. Jangan abaikan ralat — punca masalah akan memburuk.",
+    warningZH: "PCB问题会导致持续的灯光闪烁、运行不稳定或完全失效。不要忽视错误——根本原因会随时间恶化。",
+    faqs: [
+      { q: "How much does PCB board replacement cost in KL?", a: "PCB board replacement: RM 300–600 for most residential brands. Exact cost depends on brand and model. KL Renovator provides a quote after diagnosis. Diagnostic fee RM 88 (waived if repair done same visit)." },
+      { q: "Can a PCB board be repaired instead of replaced?", a: "Sometimes — burnt capacitors or simple component failures can be repaired at lower cost. KL Renovator assesses repairability before recommending full replacement." },
+      { q: "My aircond shows a blinking error code — is it the PCB?", a: "Not necessarily. Blinking error codes can also indicate low gas, dirty sensor or communication errors. KL Renovator reads the specific error code for your brand to give an accurate diagnosis." },
+    ],
+    faqsBM: [
+      { q: "Berapa kos gantian papan PCB di KL?", a: "Gantian papan PCB: RM 300–600 untuk kebanyakan jenama kediaman. KL Renovator memberikan sebut harga selepas diagnosis. Yuran diagnostik RM 88." },
+      { q: "Bolehkah papan PCB dibaiki daripada diganti?", a: "Kadang-kadang — kapasitor terbakar atau kegagalan komponen mudah boleh dibaiki pada kos lebih rendah. KL Renovator menilai kebolehbaikan terlebih dahulu." },
+    ],
+    faqsZH: [
+      { q: "KL的PCB板更换费用是多少？", a: "PCB板更换：大多数住宅品牌RM 300–600。KL Renovator诊断后提供报价。诊断费RM 88。" },
+      { q: "PCB板能修复而不是更换吗？", a: "有时可以——烧焦的电容器或简单组件故障可以以更低成本修复。KL Renovator先评估可修复性。" },
+    ],
+  },
+  "aircond-fan-not-working": {
+    causesEN: [
+      "Burnt-out indoor fan motor from continuous operation or power surge",
+      "Failed start capacitor preventing the motor from spinning",
+      "Seized bearings in the fan motor from lack of lubrication",
+      "Broken fan blade hitting the housing and stopping rotation",
+      "PCB fault sending incorrect signal to the fan motor",
+    ],
+    causesBM: [
+      "Motor kipas dalam terbakar akibat operasi berterusan atau lonjakan kuasa",
+      "Kapasitor mula gagal menghalang motor dari berputar",
+      "Galas tersangkut dalam motor kipas akibat kekurangan pelinciran",
+      "Bilah kipas yang patah memukul perumahan dan menghentikan putaran",
+      "Kerosakan PCB menghantar isyarat tidak betul ke motor kipas",
+    ],
+    causesZH: [
+      "室内风扇电机因持续运行或电涌而烧坏",
+      "启动电容器失效，导致电机无法旋转",
+      "风扇电机轴承因缺乏润滑而卡死",
+      "风扇叶片破裂击打机壳导致停转",
+      "PCB故障，向风扇电机发送不正确信号",
+    ],
+    solutionEN: "KL Renovator tests the fan motor with a multimeter to determine if it is the motor or capacitor. Failed capacitor: RM 180 replacement. Burnt motor: RM 250–450 depending on brand and size. Most fan motor replacements are completed in one visit.",
+    solutionBM: "KL Renovator menguji motor kipas dengan multimeter. Kapasitor gagal: penggantian RM 180. Motor terbakar: RM 250–450 bergantung pada jenama dan saiz.",
+    solutionZH: "KL Renovator用万用表测试风扇电机。电容器失效：更换费RM 180。电机烧坏：RM 250–450，取决于品牌和大小。",
+    warningEN: "Do not run an aircond whose indoor fan has stopped. Without airflow the evaporator coil will freeze and cause water damage.",
+    warningBM: "Jangan jalankan aircond yang kipas dalamnya telah berhenti. Tanpa aliran udara gegelung penyejat akan membeku dan menyebabkan kerosakan air.",
+    warningZH: "不要运行室内风扇已停止的冷气。没有气流，蒸发盘管会结冰造成水损害。",
+    faqs: [
+      { q: "My aircond is on but no air is coming out — what is wrong?", a: "If the unit is on but the indoor fan is not blowing, it is almost certainly a failed fan motor or capacitor. Switch off immediately. KL Renovator replaces fan motors same-day. Motor from RM 250, capacitor RM 180." },
+      { q: "How long does fan motor replacement take?", a: "Fan motor replacement takes 1–2 hours. KL Renovator carries common fan motors for Daikin, Panasonic, Mitsubishi, York, Acson, Midea and most other brands." },
+      { q: "How do I know if it is the fan motor or capacitor?", a: "Both cause the same symptom — fan not spinning. The capacitor is always checked first as it is cheaper (RM 180 vs RM 250–450 for motor). KL Renovator accurately determines which part has failed." },
+    ],
+    faqsBM: [
+      { q: "Aircond saya dihidupkan tetapi tiada udara keluar — apa yang salah?", a: "Kemungkinan besar motor kipas atau kapasitor gagal. Matikan segera. KL Renovator menggantikan motor kipas hari sama. Motor dari RM 250, kapasitor RM 180." },
+      { q: "Berapa lama masa gantian motor kipas?", a: "Gantian motor kipas mengambil masa 1–2 jam. KL Renovator membawa motor kipas biasa untuk jenama utama." },
+    ],
+    faqsZH: [
+      { q: "冷气开着但没有风出来——是什么问题？", a: "几乎肯定是风扇电机或电容器故障。立即关机。KL Renovator当天更换风扇电机。电机从RM 250起，电容器RM 180。" },
+      { q: "风扇电机更换需要多长时间？", a: "风扇电机更换需要1–2小时。KL Renovator备有大金、松下、三菱、York、Acson、美的等品牌的常用风扇电机。" },
+    ],
+  },
+  "aircond-tripping-power": {
+    causesEN: [
+      "Shorted or locked compressor drawing excessive current and tripping MCB",
+      "Failed run capacitor causing compressor to draw locked-rotor current on startup",
+      "Earth leakage from damaged wiring or water ingress into electrical components",
+      "Undersized MCB that cannot handle the full load current of the aircond",
+      "PCB fault creating an electrical short in the control circuit",
+    ],
+    causesBM: [
+      "Kompressor terlitar pintas atau terkunci menarik arus berlebihan dan menjatuhkan MCB",
+      "Kapasitor larian gagal menyebabkan kompressor menarik arus terkunci semasa permulaan",
+      "Kebocoran bumi dari pendawaian rosak atau peresapan air ke komponen elektrik",
+      "MCB yang terlalu kecil tidak dapat menampung arus beban penuh aircond",
+      "Kerosakan PCB mencipta litar pintas dalam litar kawalan",
+    ],
+    causesZH: [
+      "压缩机短路或锁死，过度抽取电流导致MCB跳闸",
+      "运行电容器失效，导致压缩机启动时抽取锁转电流",
+      "线路损坏或水分侵入电气组件导致漏电",
+      "MCB规格不足，无法承受冷气的全负载电流",
+      "PCB故障在控制电路中产生电气短路",
+    ],
+    solutionEN: "This is a serious electrical fault. KL Renovator performs a full electrical diagnosis — measuring compressor current draw, testing capacitors, checking earth continuity and inspecting wiring. Root cause is fixed before MCB is reset. Never attempt to diagnose electrical faults yourself.",
+    solutionBM: "Ini adalah kerosakan elektrik yang serius. KL Renovator melakukan diagnosis elektrik penuh. Punca masalah diselesaikan sebelum MCB ditetapkan semula. Jangan cuba mendiagnosis kerosakan elektrik sendiri.",
+    solutionZH: "这是严重的电气故障。KL Renovator进行全面电气诊断。在重置MCB之前先解决根本原因。请勿自行尝试诊断电气故障。",
+    warningEN: "Do not repeatedly reset the MCB if your aircond keeps tripping it. Repeated MCB trips from an electrical fault can cause wiring fires. Switch off and call KL Renovator.",
+    warningBM: "Jangan berulang kali menetapkan semula MCB jika aircond anda terus menjatuhkannya. Jatuhan MCB berulang boleh menyebabkan kebakaran pendawaian.",
+    warningZH: "如果冷气持续导致MCB跳闸，请勿反复重置MCB。反复跳闸可能引起线路火灾。关机并联系KL Renovator。",
+    faqs: [
+      { q: "Why does my aircond keep tripping the MCB?", a: "Most common causes: failed capacitor (RM 180 fix), shorted compressor (RM 88 diagnosis + compressor quote), or earth leakage from damaged wiring. KL Renovator diagnoses accurately — do not keep resetting the MCB." },
+      { q: "Is it dangerous if my aircond trips the MCB?", a: "Yes. An electrical fault causing MCB trips can cause wiring damage or fire if left unresolved. Switch off at the isolator and call KL Renovator same-day at +60182983573." },
+      { q: "How much does it cost to fix an aircond tripping MCB in KL?", a: "Diagnostic fee RM 88 (waived with repair). Capacitor RM 180, wiring repair RM 150–250, compressor replacement RM 600–2,000. Quote given before work starts." },
+    ],
+    faqsBM: [
+      { q: "Mengapa aircond saya terus menjatuhkan MCB?", a: "Punca paling biasa: kapasitor gagal (RM 180), kompressor terlitar pintas (diagnostik RM 88), atau kebocoran bumi dari pendawaian rosak. Jangan terus menetapkan semula MCB." },
+      { q: "Adakah berbahaya jika aircond saya menjatuhkan MCB?", a: "Ya. Kerosakan elektrik yang menyebabkan jatuhan MCB boleh menyebabkan kebakaran pendawaian. Hubungi KL Renovator di +60182983573 hari sama." },
+    ],
+    faqsZH: [
+      { q: "为什么我的冷气一直导致MCB跳闸？", a: "最常见原因：电容器失效（RM 180）、压缩机短路（RM 88诊断）或线路损坏漏电。不要持续重置MCB。" },
+      { q: "冷气跳闸危险吗？", a: "是的。导致MCB跳闸的电气故障如不解决可能引起线路火灾。当天联系KL Renovator +60182983573。" },
+    ],
+  },
+  "aircond-remote-not-working": {
+    causesEN: [
+      "Dead or low batteries in the remote control",
+      "Faulty remote control — buttons not registering or LCD display blank",
+      "Damaged infrared receiver (IR sensor) on the indoor unit",
+      "Obstruction or bright light interfering with the IR signal",
+      "Remote control locked by child lock function",
+    ],
+    causesBM: [
+      "Bateri yang habis atau lemah dalam alat kawalan jauh",
+      "Alat kawalan jauh rosak — butang tidak mendaftar atau paparan LCD kosong",
+      "Penerima inframerah (sensor IR) yang rosak pada unit dalam",
+      "Halangan atau cahaya terang mengganggu isyarat IR",
+      "Alat kawalan jauh dikunci oleh fungsi kunci kanak-kanak",
+    ],
+    causesZH: [
+      "遥控器电池耗尽或电量不足",
+      "遥控器故障——按钮无响应或LCD显示屏空白",
+      "室内机红外线接收器损坏",
+      "障碍物或强光干扰红外线信号",
+      "遥控器被童锁功能锁定",
+    ],
+    solutionEN: "Start with fresh batteries. If still not working, KL Renovator tests the remote's IR output with a phone camera. Faulty remote: universal replacement RM 80–130. Damaged IR receiver on the indoor unit: repaired or replaced.",
+    solutionBM: "Mulakan dengan bateri baru. Jika masih tidak berfungsi, KL Renovator menguji output IR remote dengan kamera telefon. Remote rosak: gantian universal RM 80–130. Penerima IR rosak pada unit dalam: dibaiki atau diganti.",
+    solutionZH: "先换新电池。如果仍不工作，KL Renovator用手机相机测试遥控器红外线输出。遥控器故障：通用替换RM 80–130。室内机红外接收器损坏：修复或更换。",
+    warningEN: "If your remote is not working and you cannot turn off the unit, locate the manual on/off button on the indoor unit — usually under the front panel. This works without the remote.",
+    warningBM: "Jika alat kawalan jauh tidak berfungsi dan anda tidak dapat mematikan unit, cari butang on/off manual pada unit dalam — biasanya di bawah panel hadapan.",
+    warningZH: "如果遥控器不工作，请找到室内机上的手动开/关按钮——通常在前面板下方。",
+    faqs: [
+      { q: "My aircond remote is not responding — what should I check first?", a: "1) Replace batteries. 2) Point remote directly at indoor unit within 5 metres. 3) Check if child lock is on. If still no response, call KL Renovator." },
+      { q: "How much does aircond remote replacement cost in KL?", a: "Universal remote: RM 80–130. Brand-specific OEM remote: RM 100–180. KL Renovator supplies and programs replacements for all brands." },
+      { q: "Can the manual button on the indoor unit work without a remote?", a: "Yes — all indoor units have a manual on/off button, usually under the front panel. Pressing it once turns on in auto mode." },
+    ],
+    faqsBM: [
+      { q: "Remote aircond saya tidak bertindak balas — apa yang perlu saya periksa?", a: "1) Gantikan bateri. 2) Tujukan remote terus ke unit dalam dalam 5 meter. 3) Semak kunci kanak-kanak. Jika masih tiada tindak balas, hubungi KL Renovator." },
+      { q: "Berapa kos gantian remote aircond di KL?", a: "Remote universal: RM 80–130. Remote OEM khusus jenama: RM 100–180. KL Renovator membekal dan memprogramkan penggantian untuk semua jenama." },
+    ],
+    faqsZH: [
+      { q: "冷气遥控器没有响应——我应该先检查什么？", a: "1）换电池。2）在5米内直接对准室内机。3）检查童锁是否激活。如果仍无响应，请联系KL Renovator。" },
+      { q: "KL冷气遥控器更换费用是多少？", a: "通用遥控器：RM 80–130。品牌专用OEM遥控器：RM 100–180。KL Renovator为所有品牌提供并编程更换遥控器。" },
+    ],
+  },
+  "aircond-indoor-unit-leaking": {
+    causesEN: [
+      "Blocked condensate drain pipe — the single most common cause",
+      "Dirty or slime-filled drain pan preventing water from draining",
+      "Frozen evaporator coil melting and overflowing the drain pan",
+      "Incorrectly sloped drain pipe not allowing gravity drainage",
+      "Cracked drain pan that needs replacement",
+    ],
+    causesBM: [
+      "Paip longkang kondensat tersumbat — punca paling biasa",
+      "Dulang longkang kotor atau dipenuhi lendir menghalang air dari mengalir",
+      "Gegelung penyejat yang membeku cair dan melimpah dari dulang longkang",
+      "Paip longkang yang condong tidak betul tidak membenarkan pengaliran graviti",
+      "Dulang longkang yang retak yang perlu digantikan",
+    ],
+    causesZH: [
+      "冷凝水排水管堵塞——最常见的原因",
+      "排水盘脏污或充满污泥，妨碍水正常排出",
+      "蒸发盘管结冰融化，溢出排水盘",
+      "排水管坡度不正确，无法依靠重力排水",
+      "排水盘裂缝需要更换",
+    ],
+    solutionEN: "KL Renovator clears the blocked drain pipe with nitrogen flush or drain clearing tool. If the drain pan is dirty, a chemical wash or chemical overhaul is needed. 90% of indoor unit leaks are fixed in one visit.",
+    solutionBM: "KL Renovator membersihkan paip longkang tersumbat dengan pembasuhan nitrogen. Jika dulang longkang kotor, cuci kimia atau overhaul diperlukan. 90% kebocoran unit dalam dibaiki dalam satu lawatan.",
+    solutionZH: "KL Renovator用氮气冲洗疏通堵塞的排水管。如果排水盘脏污，则需要化学清洗或大修。90%的室内机漏水问题一次上门即可解决。",
+    warningEN: "Switch off your aircond immediately when you see water dripping from the indoor unit. Continued operation will overflow more water and can damage electrical components.",
+    warningBM: "Matikan aircond serta-merta apabila anda melihat air menitis dari unit dalam. Operasi berterusan boleh merosakkan komponen elektrik.",
+    warningZH: "看到室内机滴水时立即关闭冷气。持续运行会导致更多水溢出，可能损坏电气组件。",
+    faqs: [
+      { q: "Why is my aircond indoor unit leaking water?", a: "95% of cases: blocked drain pipe or dirty drain pan. Switch off and call KL Renovator. Drain clearing from RM 120. For recurring leaks, chemical overhaul from RM 220 permanently resolves the problem." },
+      { q: "How do I temporarily stop my aircond from leaking?", a: "Switch off the unit — the leaking will slow and stop once the coil defrosts. Place towels under the drip. Do not restart until KL Renovator clears the drain. Call +60182983573." },
+      { q: "Will chemical wash stop my aircond from leaking?", a: "For most leaks yes — chemical wash clears the drain pipe and pan. For severe blockages or a cracked drain pan, chemical overhaul (full dismantle) from RM 220 is recommended." },
+    ],
+    faqsBM: [
+      { q: "Mengapa unit dalam aircond saya bocor air?", a: "95% kes: paip longkang tersumbat atau dulang longkang kotor. Matikan dan hubungi KL Renovator. Pembersihan longkang dari RM 120. Untuk bocoran berulang, overhaul kimia dari RM 220." },
+      { q: "Bagaimana saya menghentikan sementara aircond daripada bocor?", a: "Matikan unit — bocoran akan berhenti setelah gegelung nyahbeku. Letakkan tuala di bawah titisan. Jangan hidupkan semula sehingga KL Renovator membersihkan longkang." },
+    ],
+    faqsZH: [
+      { q: "为什么我的冷气室内机漏水？", a: "95%的情况：排水管堵塞或排水盘脏污。关机并联系KL Renovator。排水管疏通从RM 120起。反复漏水，化学大修从RM 220起永久解决。" },
+      { q: "我如何暂时阻止冷气漏水？", a: "关闭机器——盘管解冻后漏水会停止。在滴水处放置毛巾。在KL Renovator疏通排水管之前不要重新开机。" },
+    ],
+  },
+  "aircond-outdoor-unit-not-running": {
+    causesEN: [
+      "Failed start or run capacitor — most common cause of outdoor unit not starting",
+      "Shorted or seized compressor — outdoor unit hums but does not start",
+      "Failed outdoor fan motor — fan not spinning while compressor tries to start",
+      "Contactor failure — relay switch that connects power to the compressor",
+      "High-pressure protection trip from dirty condenser coil",
+    ],
+    causesBM: [
+      "Kapasitor mula atau larian gagal — punca paling biasa unit luar tidak bermula",
+      "Kompressor terlitar pintas atau tersangkut — unit luar berdengung tetapi tidak bermula",
+      "Motor kipas luar gagal — kipas tidak berputar manakala pekali cuba bermula",
+      "Kegagalan penyambung — suis geganti yang menghubungkan kuasa ke pekali",
+      "Perlindungan tekanan tinggi terpicu dari gegelung kondenser kotor",
+    ],
+    causesZH: [
+      "启动或运行电容器失效——室外机不启动最常见的原因",
+      "压缩机短路或卡死——室外机嗡嗡但不启动",
+      "室外风扇电机失效——压缩机尝试启动时风扇不转",
+      "接触器失效——连接压缩机电源的继电器开关",
+      "冷凝器盘管脏污触发高压保护跳脱",
+    ],
+    solutionEN: "KL Renovator checks the outdoor unit with amp clamp, multimeter and pressure gauges. Failed capacitors (most common) replaced for RM 180. Failed contactors RM 80–120. Failed fan motors RM 250–400. Compressor issues diagnosed and quoted separately.",
+    solutionBM: "KL Renovator memeriksa unit luar dengan pemasang amp dan multimeter. Kapasitor gagal (paling biasa) digantikan RM 180. Penyambung gagal RM 80–120. Motor kipas gagal RM 250–400.",
+    solutionZH: "KL Renovator用钳形电流表和万用表检查室外机。电容器失效（最常见）更换费RM 180。接触器失效RM 80–120。风扇电机失效RM 250–400。",
+    warningEN: "If the outdoor unit is humming but not spinning, switch off the aircond immediately. Running with a seized compressor or locked fan motor can cause serious electrical damage and fire.",
+    warningBM: "Jika unit luar berdengung tetapi tidak berputar, matikan aircond serta-merta. Ini boleh menyebabkan kerosakan elektrik yang serius dan kebakaran.",
+    warningZH: "如果室外机嗡嗡但不转动，立即关闭冷气。带着卡死的压缩机运行可能导致严重电气损坏和火灾。",
+    faqs: [
+      { q: "My indoor unit blows warm air but outdoor unit is not running — what is wrong?", a: "Most likely a failed capacitor or contactor on the outdoor unit. KL Renovator diagnoses same-day. Capacitor RM 180, contactor RM 80–120. Diagnostic fee RM 88 waived with repair." },
+      { q: "How much does outdoor unit repair cost in KL?", a: "Diagnostic RM 88 (waived with repair). Capacitor RM 180, fan motor RM 250–400, contactor RM 80–120, compressor RM 600–2,000. Quote confirmed before work starts." },
+      { q: "Can the outdoor unit be repaired the same day?", a: "Yes — capacitor, contactor and fan motor replacements are usually done same-day. KL Renovator carries these parts for all major brands. Compressor replacement may require 1–3 days to source." },
+    ],
+    faqsBM: [
+      { q: "Unit dalam saya meniup udara suam tetapi unit luar tidak berjalan — apa yang salah?", a: "Kemungkinan besar kapasitor atau penyambung gagal. KL Renovator mendiagnosis hari sama. Kapasitor RM 180, penyambung RM 80–120. Yuran diagnostik RM 88 dikecualikan dengan pembaikan." },
+      { q: "Berapa kos pembaikan unit luar di KL?", a: "Diagnostik RM 88. Kapasitor RM 180, motor kipas RM 250–400, penyambung RM 80–120, kompressor RM 600–2,000." },
+    ],
+    faqsZH: [
+      { q: "室内机吹暖风但室外机不运转——是什么问题？", a: "很可能是室外机电容器或接触器失效。KL Renovator当天诊断。电容器RM 180，接触器RM 80–120。维修时免收RM 88诊断费。" },
+      { q: "KL室外机维修费用是多少？", a: "诊断RM 88。电容器RM 180，风扇电机RM 250–400，接触器RM 80–120，压缩机RM 600–2,000。施工前确认报价。" },
+    ],
+  },
+  "aircond-high-electricity-bill": {
+    causesEN: [
+      "Dirty evaporator coil reducing heat exchange efficiency and forcing compressor to overwork",
+      "Low refrigerant gas causing compressor to run longer to achieve cooling",
+      "Running at maximum cooling (16–18°C) instead of the efficient range (24–26°C)",
+      "Non-inverter unit running on/off cycles consuming more electricity",
+      "Air leaks in the room wasting cooled air",
+    ],
+    causesBM: [
+      "Gegelung penyejat kotor mengurangkan kecekapan dan memaksa pekali bekerja lebih keras",
+      "Gas penyejuk rendah menyebabkan pekali berjalan lebih lama untuk mencapai penyejukan",
+      "Berjalan pada penyejukan maksimum (16–18°C) dan bukan julat cekap (24–26°C)",
+      "Unit bukan inverter menjalankan kitaran hidup/mati menggunakan lebih banyak elektrik",
+      "Kebocoran udara dalam bilik membazir udara sejuk",
+    ],
+    causesZH: [
+      "蒸发盘管脏污降低热交换效率，迫使压缩机更努力工作",
+      "制冷剂不足，导致压缩机运行更长时间",
+      "在最大制冷（16–18°C）下运行，而非高效范围（24–26°C）",
+      "非变频机组开/关循环运行消耗更多电力",
+      "房间漏风浪费冷气",
+    ],
+    solutionEN: "KL Renovator's chemical wash removes dirty coil buildup — often reducing electricity consumption by 15–25%. Gas top-up restores correct operating pressure so the compressor reaches target temperature faster. Set thermostat to 24–26°C for optimal efficiency.",
+    solutionBM: "Cuci kimia KL Renovator membuang kotoran gegelung — sering mengurangkan penggunaan elektrik sebanyak 15–25%. Top-up gas memulihkan tekanan operasi yang betul. Tetapkan termostat pada 24–26°C untuk kecekapan optimum.",
+    solutionZH: "KL Renovator的化学清洗去除盘管积垢——通常可降低15–25%的电耗。充气恢复正确工作压力。将温控器设置在24–26°C以达到最佳效率。",
+    warningEN: "A sudden spike in your electricity bill from your aircond signals something is wrong — dirty coil, low gas, or a failing compressor. Get it checked before the problem worsens.",
+    warningBM: "Lonjakan mendadak dalam bil elektrik anda adalah isyarat bahawa sesuatu tidak kena. Semak sebelum masalah bertambah teruk.",
+    warningZH: "冷气电费突然飙升是出了问题的信号。在问题恶化之前检查一下。",
+    faqs: [
+      { q: "Why is my inverter aircond using so much electricity?", a: "A dirty coil or low gas forces even inverter compressors to run at maximum power. A chemical wash and gas check by KL Renovator typically restores efficiency. From RM 120." },
+      { q: "What temperature should I set my aircond to save electricity?", a: "24–26°C is recommended in Malaysia. Every 1°C below 24°C increases electricity consumption by approximately 6–8%." },
+      { q: "How much electricity can a chemical wash save?", a: "A dirty coil reduces efficiency by 20–30%. Chemical wash restores heat exchange performance, typically reducing electricity bills by 15–25% per month. From RM 120 for wall-mounted units." },
+    ],
+    faqsBM: [
+      { q: "Mengapa aircond inverter saya menggunakan begitu banyak elektrik?", a: "Gegelung kotor atau gas rendah memaksa pekali inverter berjalan pada kuasa maksimum. Cuci kimia dan semak gas oleh KL Renovator biasanya memulihkan kecekapan. Dari RM 120." },
+      { q: "Pada suhu berapa saya perlu menetapkan aircond untuk menjimatkan elektrik?", a: "24–26°C adalah julat yang disyorkan di Malaysia. Setiap 1°C di bawah 24°C meningkatkan penggunaan elektrik kira-kira 6–8%." },
+    ],
+    faqsZH: [
+      { q: "为什么我的变频冷气用了那么多电？", a: "脏污的盘管或制冷剂不足会迫使即使是变频压缩机也持续以最大功率运行。KL Renovator的化学清洗和气体检查通常能恢复效率。从RM 120起。" },
+      { q: "我应该把冷气调到什么温度才省电？", a: "马来西亚推荐24–26°C。每低于24°C 1度，耗电量增加约6–8%。" },
+    ],
+  },
+  "aircond-weak-airflow": {
+    causesEN: [
+      "Blocked or dirty air filter — the most common and easiest to fix",
+      "Heavily coated evaporator coil reducing the gap for air to pass through",
+      "Dirty or mould-blocked blower wheel reducing fan output",
+      "Failed or weakening fan motor running below rated speed",
+      "Ice formation on the coil blocking airflow entirely",
+    ],
+    causesBM: [
+      "Penapis udara tersumbat atau kotor — punca paling biasa dan paling mudah dibaiki",
+      "Gegelung penyejat yang sangat bersalut mengurangkan ruang untuk udara melalui",
+      "Roda blower yang kotor atau tersumbat kulat mengurangkan output kipas",
+      "Motor kipas yang gagal atau melemah berjalan di bawah kelajuan yang dinilai",
+      "Pembentukan ais pada gegelung menyekat aliran udara sepenuhnya",
+    ],
+    causesZH: [
+      "空气过滤网堵塞或脏污——最常见且最容易解决的原因",
+      "蒸发盘管严重积垢，减少了空气通过的间隙",
+      "风轮脏污或被霉菌堵塞，降低风扇输出量",
+      "风扇电机失效或减弱，转速低于额定值",
+      "盘管结冰完全阻碍气流",
+    ],
+    solutionEN: "Clean the filter first — this is a free DIY step. If still weak, KL Renovator performs a chemical wash (from RM 120) to deep-clean the coil and blower wheel. If the fan motor is failing, it is replaced. Weak airflow after chemical wash usually indicates a fan motor issue.",
+    solutionBM: "Bersihkan penapis dahulu — langkah DIY percuma. Jika masih lemah, KL Renovator melakukan cuci kimia (dari RM 120) untuk membersihkan gegelung dan roda blower. Jika motor kipas gagal, ia digantikan.",
+    solutionZH: "先清洁过滤网——这是免费的DIY步骤。如果仍微弱，KL Renovator进行化学清洗（从RM 120起）深度清洁盘管和风轮。如果风扇电机故障，则更换。",
+    warningEN: "Weak airflow forces the compressor to work harder, increasing electricity consumption. A blocked coil also promotes ice formation which can cause water leaks.",
+    warningBM: "Aliran udara yang lemah memaksa pekali bekerja lebih keras, meningkatkan penggunaan elektrik. Gegelung tersumbat juga menggalakkan pembentukan ais yang boleh menyebabkan kebocoran air.",
+    warningZH: "气流微弱迫使压缩机更努力工作，增加耗电量。盘管堵塞还会促进结冰，可能导致漏水。",
+    faqs: [
+      { q: "Why is my aircond blowing weak air even after cleaning the filter?", a: "If the filter is clean but airflow is still weak, the evaporator coil or blower wheel is dirty. A chemical wash from RM 120 deep-cleans these and fully restores airflow." },
+      { q: "How do I clean my aircond filter myself?", a: "Remove the front panel, slide out the filter, rinse under running water, let it dry completely, and reinstall. Do this every 2–4 weeks. Never run the unit without a filter." },
+      { q: "Will chemical wash fix weak aircond airflow?", a: "Yes in most cases. A dirty blower wheel is the most common cause of persistent weak airflow. Chemical wash removes the buildup. For severe cases, chemical overhaul from RM 220 with blower wheel removal gives the best result." },
+    ],
+    faqsBM: [
+      { q: "Mengapa aircond saya meniup udara lemah walaupun selepas membersihkan penapis?", a: "Jika penapis bersih tetapi aliran udara masih lemah, gegelung penyejat atau roda blower kotor. Cuci kimia dari RM 120 membersihkan secara mendalam dan memulihkan aliran udara." },
+      { q: "Bagaimana saya membersihkan penapis aircond sendiri?", a: "Keluarkan panel hadapan, gelungsurkan penapis, bilas di bawah air mengalir, biarkan kering sepenuhnya, dan pasang semula. Lakukan setiap 2–4 minggu." },
+    ],
+    faqsZH: [
+      { q: "为什么清洁过滤网后冷气仍然风力微弱？", a: "如果过滤网干净但气流仍微弱，是蒸发盘管或风轮脏了。化学清洗从RM 120起深度清洁并完全恢复气流。" },
+      { q: "我如何自行清洁冷气过滤网？", a: "取下前面板，滑出过滤网，在流水下冲洗，完全干燥后重新安装。每2–4周做一次。" },
+    ],
+  },
+  "aircond-not-turning-on": {
+    causesEN: [
+      "Tripped MCB or blown fuse — first thing to check",
+      "Dead remote batteries or faulty remote",
+      "Faulty PCB preventing the unit from receiving power-on signal",
+      "Failed start capacitor preventing compressor and fan from starting",
+      "Wiring fault — loose or damaged power cable to the indoor unit",
+    ],
+    causesBM: [
+      "MCB yang jatuh atau fius yang terbakar — perkara pertama yang perlu diperiksa",
+      "Bateri remote yang habis atau remote yang rosak",
+      "PCB yang rosak menghalang unit daripada menerima isyarat hidup",
+      "Kapasitor mula yang gagal menghalang pekali dan kipas daripada bermula",
+      "Kerosakan pendawaian — kabel kuasa yang longgar atau rosak ke unit dalam",
+    ],
+    causesZH: [
+      "MCB跳闸或保险丝断——首先检查",
+      "遥控器电池耗尽或遥控器故障",
+      "PCB故障，导致机器无法接收开机信号",
+      "启动电容器失效，导致压缩机和风扇无法启动",
+      "接线故障——室内机电源线松动或损坏",
+    ],
+    solutionEN: "Start with basic checks: MCB not tripped, remote has working batteries, isolator switch is on. If all pass and unit still does not respond, call KL Renovator. Technician tests power supply, capacitors, PCB signal and wiring. Most causes are fixed in one visit.",
+    solutionBM: "Mulakan dengan pemeriksaan asas: MCB tidak jatuh, remote mempunyai bateri yang berfungsi, suis penghasing hidup. Jika masih tidak bertindak balas, hubungi KL Renovator.",
+    solutionZH: "从基本检查开始：MCB未跳闸、遥控器有可用电池、隔离开关已开启。如果仍无响应，请联系KL Renovator。大多数原因一次上门即可解决。",
+    warningEN: "If the MCB trips again immediately after resetting, there is an electrical fault in the unit. Do not keep resetting — call KL Renovator for a safe electrical diagnosis.",
+    warningBM: "Jika MCB jatuh semula serta-merta selepas ditetapkan semula, terdapat kerosakan elektrik dalam unit. Jangan terus menetapkan semula MCB — hubungi KL Renovator.",
+    warningZH: "如果MCB重置后立即再次跳闸，说明机器内部有电气故障。不要持续重置——联系KL Renovator进行安全的电气诊断。",
+    faqs: [
+      { q: "My aircond will not turn on at all — what should I check first?", a: "1) Check MCB. 2) Check outdoor unit isolator switch. 3) Replace remote batteries. 4) Try the manual button on the indoor unit. If still no response, call KL Renovator at +60182983573." },
+      { q: "My aircond was working then suddenly stopped — what happened?", a: "Sudden failure is usually: MCB trip from power surge, capacitor failure, or PCB fault. KL Renovator diagnoses same-day. Diagnostic fee RM 88 waived with repair." },
+      { q: "How much does it cost to fix an aircond that will not turn on?", a: "Diagnostic fee RM 88 (waived with repair). Common fixes: remote RM 80–130, capacitor RM 180, PCB RM 300–600, wiring repair RM 150–250." },
+    ],
+    faqsBM: [
+      { q: "Aircond saya tidak dapat dihidupkan — apa yang perlu saya periksa?", a: "1) Periksa MCB. 2) Periksa suis penghasing unit luar. 3) Gantikan bateri remote. 4) Cuba butang manual pada unit dalam. Jika masih tiada tindak balas, hubungi +60182983573." },
+      { q: "Berapa kos untuk membaiki aircond yang tidak dapat dihidupkan?", a: "Diagnostik RM 88. Remote RM 80–130, kapasitor RM 180, PCB RM 300–600, pembaikan pendawaian RM 150–250." },
+    ],
+    faqsZH: [
+      { q: "我的冷气完全无法开机——我应该先检查什么？", a: "1）检查MCB。2）检查室外机隔离开关。3）换遥控器电池。4）尝试室内机上的手动按钮。如果仍无响应，请拨打+60182983573联系KL Renovator。" },
+      { q: "修理无法开机的冷气需要多少费用？", a: "诊断费RM 88。遥控器RM 80–130，电容器RM 180，PCB RM 300–600，线路修复RM 150–250。" },
+    ],
+  },
+  "aircond-blinking-light": {
+    causesEN: [
+      "Low refrigerant gas causing low-pressure protection to trigger",
+      "Dirty temperature sensor giving incorrect readings to the PCB",
+      "Communication error between indoor and outdoor PCB boards",
+      "Fan motor fault detected by the indoor PCB",
+      "High-pressure protection from dirty condenser coil",
+    ],
+    causesBM: [
+      "Gas penyejuk rendah menyebabkan perlindungan tekanan rendah terpicu",
+      "Sensor suhu kotor memberikan bacaan yang tidak betul kepada PCB",
+      "Ralat komunikasi antara papan PCB dalam dan luar",
+      "Kerosakan motor kipas yang dikesan oleh PCB dalam",
+      "Perlindungan tekanan tinggi dari gegelung kondenser kotor",
+    ],
+    causesZH: [
+      "制冷剂不足，触发低压保护",
+      "温度传感器脏污，向PCB提供不正确的读数",
+      "室内外PCB之间的通信错误",
+      "室内PCB检测到风扇电机故障",
+      "冷凝器盘管脏污触发高压保护",
+    ],
+    solutionEN: "KL Renovator reads the specific error code — the blink pattern is different for each fault type and brand. Common resolutions: gas top-up for low-pressure errors (from RM 120), sensor replacement for temperature errors (RM 80–150), PCB diagnosis and repair for communication errors.",
+    solutionBM: "KL Renovator membaca kod ralat khusus — corak berkelip berbeza untuk setiap jenis kerosakan dan jenama. Penyelesaian biasa: top-up gas (dari RM 120), gantian sensor (RM 80–150), diagnosis PCB untuk ralat komunikasi.",
+    solutionZH: "KL Renovator读取特定错误代码——每种故障类型和品牌的闪烁模式各不相同。常见解决方案：充气（从RM 120起），传感器更换（RM 80–150），PCB诊断和维修。",
+    warningEN: "A blinking error code means something is wrong. Resetting the unit without diagnosing the cause will only temporarily clear the error until the same fault recurs.",
+    warningBM: "Kod ralat berkelip bermakna sesuatu tidak kena. Menetapkan semula unit tanpa mendiagnosis punca hanya membersihkan ralat sementara sehingga kerosakan yang sama berulang.",
+    warningZH: "闪烁的错误代码意味着出了问题。不诊断原因就重置只会暂时清除错误，直到相同故障再次出现。",
+    faqs: [
+      { q: "My Daikin aircond is blinking — what does the error code mean?", a: "Daikin blink patterns: L1 = outdoor unit error, L5 = low gas pressure, L7 = compressor overload, A1 = PCB error. KL Renovator reads and resolves all Daikin error codes." },
+      { q: "My Panasonic aircond shows H11 error — what is it?", a: "Panasonic H11 indicates outdoor unit communication fault. Could be wiring, outdoor PCB or outdoor fan motor. KL Renovator diagnoses Panasonic error codes accurately." },
+      { q: "How much does it cost to fix an aircond blinking light in KL?", a: "Diagnostic fee RM 88 (waived with repair). By error type: low gas RM 120–180, sensor RM 80–150, capacitor RM 180, PCB RM 300–600." },
+    ],
+    faqsBM: [
+      { q: "Aircond Daikin saya berkelip — apa maksud kod ralat itu?", a: "Corak berkelip Daikin: L1 = ralat unit luar, L5 = tekanan gas rendah, L7 = lebihan beban pekali, A1 = ralat PCB. KL Renovator membaca dan menyelesaikan semua kod ralat Daikin." },
+      { q: "Berapa kos untuk membaiki lampu berkelip aircond di KL?", a: "Diagnostik RM 88. Gas rendah RM 120–180, sensor RM 80–150, kapasitor RM 180, PCB RM 300–600." },
+    ],
+    faqsZH: [
+      { q: "我的大金冷气在闪烁——错误代码是什么意思？", a: "大金闪烁模式：L1=室外机错误，L5=气压低，L7=压缩机过载，A1=PCB错误。KL Renovator读取并解决所有大金错误代码。" },
+      { q: "KL冷气指示灯闪烁的修复费用是多少？", a: "诊断费RM 88。气体不足RM 120–180，传感器RM 80–150，电容器RM 180，PCB RM 300–600。" },
+    ],
+  },
+  "aircond-water-dripping": {
+    causesEN: [
+      "Blocked condensate drain pipe — the most common cause",
+      "Dirty or slime-filled drain pan",
+      "Frozen evaporator coil that has melted and overflowed",
+      "Incorrectly sloped drain pipe from original installation",
+      "Cracked drain pan needing replacement",
+    ],
+    causesBM: [
+      "Paip longkang kondensat yang tersumbat — punca yang paling biasa",
+      "Dulang longkang yang kotor atau dipenuhi lendir",
+      "Gegelung penyejat yang membeku yang telah cair dan melimpah",
+      "Paip longkang yang condong tidak betul semasa pemasangan asal",
+      "Dulang longkang yang retak yang perlu digantikan",
+    ],
+    causesZH: [
+      "冷凝水排水管堵塞——最常见的原因",
+      "排水盘脏污或充满污泥",
+      "蒸发盘管结冰融化后溢出",
+      "原始安装时排水管坡度不正确",
+      "需要更换的破裂排水盘",
+    ],
+    solutionEN: "KL Renovator clears the drain pipe blockage with nitrogen flush or drain clearing tool. If the drain pan is dirty, chemical wash or overhaul cleans it properly. For recurring drips, the drain pipe slope is corrected. 90% of water dripping issues resolved in one visit.",
+    solutionBM: "KL Renovator membersihkan sekatan paip longkang dengan pembasuhan nitrogen. Jika dulang longkang kotor, cuci kimia atau overhaul membersihkannya. Untuk titisan berulang, condong paip longkang diperbetulkan.",
+    solutionZH: "KL Renovator用氮气冲洗疏通排水管堵塞。如果排水盘脏污，化学清洗或大修将其清洁。对于反复滴水，纠正排水管坡度。90%的滴水问题一次上门即可解决。",
+    warningEN: "Water dripping from the indoor unit can cause ceiling and wall damage, mould growth and electrical hazards. Switch off and call KL Renovator same-day.",
+    warningBM: "Air menitis dari unit dalam boleh menyebabkan kerosakan siling dan dinding, pertumbuhan kulat dan bahaya elektrik. Matikan dan hubungi KL Renovator hari sama.",
+    warningZH: "室内机滴水可能导致天花板和墙壁损坏、霉菌生长和电气危险。请关机并当天联系KL Renovator。",
+    faqs: [
+      { q: "My aircond is dripping water onto the floor — what should I do?", a: "Switch off immediately. Place a towel or bucket under the drip. Call KL Renovator at +60182983573 for same-day drain clearing. Service from RM 120." },
+      { q: "Why does my aircond drip only sometimes?", a: "Intermittent dripping usually means the drain pipe is partially blocked — water builds up and eventually overflows. Call KL Renovator to clear the partial blockage before it becomes a full overflow." },
+      { q: "Will my ceiling be damaged from aircond dripping?", a: "If caught early, ceiling damage is usually minimal. Fix the aircond first, then assess the ceiling for any water stains or softening." },
+    ],
+    faqsBM: [
+      { q: "Aircond saya menitis air ke lantai — apa yang perlu saya lakukan?", a: "Matikan unit serta-merta. Letakkan tuala atau baldi di bawah titisan. Hubungi KL Renovator di +60182983573 untuk pembersihan longkang hari sama. Servis dari RM 120." },
+      { q: "Mengapa aircond saya menitis hanya kadang-kadang?", a: "Titisan berselang biasanya bermakna paip longkang tersumbat sebahagiannya. Hubungi KL Renovator untuk membersihkan sekatan separa sebelum ia menjadi limpahan penuh." },
+    ],
+    faqsZH: [
+      { q: "我的冷气在向地板滴水——我该怎么办？", a: "立即关闭机器。放置毛巾或水桶。拨打+60182983573联系KL Renovator，当天疏通排水管。服务从RM 120起。" },
+      { q: "为什么我的冷气只是偶尔滴水？", a: "间歇性滴水通常意味着排水管部分堵塞。联系KL Renovator清除部分堵塞，以免发展为完全溢流。" },
+    ],
+  },
+  "aircond-thermostat-problems": {
+    causesEN: [
+      "Faulty temperature sensor (thermistor) giving wrong room temperature readings",
+      "Dirty temperature sensor coated in dust causing inaccurate readings",
+      "PCB fault causing incorrect temperature regulation",
+      "Remote control set to wrong mode (fan only instead of cooling)",
+      "Aged thermistor drifting out of calibration",
+    ],
+    causesBM: [
+      "Sensor suhu (termistor) yang rosak memberikan bacaan suhu bilik yang salah",
+      "Sensor suhu kotor yang diliputi habuk memberikan bacaan yang tidak tepat",
+      "Kerosakan PCB yang menyebabkan pengawalseliaan suhu yang tidak betul",
+      "Alat kawalan jauh ditetapkan pada mod yang salah (kipas sahaja)",
+      "Termistor lama yang telah menyimpang dari penentukuran",
+    ],
+    causesZH: [
+      "温度传感器（热敏电阻）故障，室温读数错误",
+      "温度传感器被灰尘覆盖，读数不准确",
+      "PCB故障导致温度调节不正确",
+      "遥控器设置为错误模式（仅风扇而非制冷）",
+      "老化的热敏电阻偏离校准",
+    ],
+    solutionEN: "KL Renovator tests the temperature sensor with a multimeter to check its resistance value at room temperature. A faulty sensor is replaced for RM 80–150. If PCB is causing the issue, it is diagnosed separately. In most cases, sensor replacement restores correct thermostat operation.",
+    solutionBM: "KL Renovator menguji sensor suhu dengan multimeter. Sensor yang rosak digantikan seharga RM 80–150. Jika PCB menyebabkan masalah, ia didiagnosis secara berasingan.",
+    solutionZH: "KL Renovator用万用表测试温度传感器，检查其阻值。故障传感器更换费RM 80–150。如果PCB导致问题，则单独诊断。",
+    warningEN: "A faulty thermostat causes the aircond to run non-stop or cut off too early. Both scenarios waste electricity and cause discomfort. Get it checked early.",
+    warningBM: "Termostat yang rosak menyebabkan aircond berjalan tanpa henti atau terputus terlalu awal. Kedua-dua senario membazir elektrik. Semak awal.",
+    warningZH: "温控器故障会导致冷气不停运行或过早关闭。两种情况都浪费电力。请尽早检查。",
+    faqs: [
+      { q: "My aircond keeps running and never reaches the set temperature — is it the thermostat?", a: "Possibly — but more commonly it is low gas or a dirty coil. KL Renovator tests the temperature sensor, gas pressure and coil condition for accurate diagnosis." },
+      { q: "My aircond switches off too quickly — what is wrong?", a: "Usually a faulty temperature sensor reading the room as cooler than it actually is. Sensor replacement costs RM 80–150. KL Renovator diagnoses and replaces same-day." },
+      { q: "How much does aircond thermostat or sensor repair cost in KL?", a: "Temperature sensor replacement: RM 80–150. PCB repair (if PCB is causing the issue): RM 300–600. Diagnostic fee RM 88 (waived with repair)." },
+    ],
+    faqsBM: [
+      { q: "Aircond saya terus berjalan dan tidak pernah mencapai suhu yang ditetapkan — adakah itu termostatnya?", a: "Mungkin — tetapi lebih biasanya gas rendah atau gegelung kotor. KL Renovator menguji sensor suhu, tekanan gas dan keadaan gegelung untuk diagnosis yang tepat." },
+      { q: "Berapa kos pembaikan termostat atau sensor aircond di KL?", a: "Gantian sensor suhu: RM 80–150. Pembaikan PCB: RM 300–600. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
+    ],
+    faqsZH: [
+      { q: "我的冷气一直运行，从不达到设定温度——是温控器的问题吗？", a: "可能——但更常见的是气体不足或盘管脏污。KL Renovator测试温度传感器、气压和盘管状况以准确诊断。" },
+      { q: "KL冷气温控器或传感器维修费用是多少？", a: "温度传感器更换：RM 80–150。PCB维修：RM 300–600。诊断费RM 88（维修时免收）。" },
+    ],
+  },
+};
+
+// Generic content for problems not in the detailed map
+function getGenericContent(problem: (typeof siteConfig.problemPages)[0]) {
+  return {
+    causesEN: [
+      "Component wear and tear from extended use",
+      "Lack of regular maintenance and servicing",
+      "Electrical or mechanical fault in the unit",
+      "Environmental factors — dust, humidity, insects",
+    ],
+    causesBM: [
+      "Keausan komponen dari penggunaan lanjutan",
+      "Kekurangan penyelenggaraan dan servis tetap",
+      "Kerosakan elektrik atau mekanikal dalam unit",
+      "Faktor persekitaran — habuk, kelembapan, serangga",
+    ],
+    causesZH: [
+      "部件长期使用磨损",
+      "缺乏定期维护和保养",
+      "机组电气或机械故障",
+      "环境因素——灰尘、湿度、昆虫",
+    ],
+    solutionEN: `KL Renovator technicians diagnose the exact cause of ${problem.name.toLowerCase()} and provide a transparent quote before any repair work begins. Most issues are resolved in a single visit. Diagnostic fee is RM 88, waived if repair is done on the same visit.`,
+    solutionBM: `Juruteknik KL Renovator mendiagnosis punca tepat dan memberikan sebut harga telus sebelum kerja pembaikan bermula. Kebanyakan masalah diselesaikan dalam satu lawatan. Yuran diagnostik RM 88, dilepaskan jika pembaikan dilakukan pada lawatan yang sama.`,
+    solutionZH: `KL Renovator技术员诊断确切原因，并在开始任何维修工作前提供透明报价。大多数问题一次上门即可解决。诊断费RM 88，如当次进行维修则免除。`,
+    warningEN: `Do not ignore ${problem.name.toLowerCase()}. Early diagnosis prevents minor faults from becoming expensive repairs.`,
+    warningBM: `Jangan abaikan masalah ini. Diagnosis awal mencegah kerosakan kecil menjadi pembaikan mahal.`,
+    warningZH: `不要忽视此问题。早期诊断可防止小故障演变为昂贵的维修。`,
+    faqs: [
+      { q: `How much does it cost to fix ${problem.name.toLowerCase()} in KL?`, a: `Diagnostic fee is RM 88 (waived if repair is done same visit). Most common repairs range from RM 120–600 depending on the faulty component. KL Renovator provides a full quote before starting.` },
+      { q: `Can ${problem.name.toLowerCase()} be fixed the same day?`, a: `Yes. KL Renovator carries common parts on the van for same-day repair. WhatsApp +60182983573 to confirm a slot.` },
+    ],
+    faqsBM: [
+      { q: `Berapa kos untuk membaiki masalah ini di KL?`, a: `Yuran diagnostik RM 88 (dilepaskan dengan pembaikan). KL Renovator memberikan sebut harga penuh sebelum bermula.` },
+    ],
+    faqsZH: [
+      { q: `在KL修理此问题需要多少费用？`, a: `诊断费RM 88（维修时免除）。KL Renovator在开始前提供完整报价。` },
+    ],
+  };
+}
+
+// ── Problem → Blog relevance map ─────────────────────────────────────────────
+const PROBLEM_BLOG_MAP: Record<string, string[]> = {
+  "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia"],
+  "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul"],
+  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes"],
+  "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia"],
+  "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2025"],
+  "aircond-pcb-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia"],
+  "aircond-weak-airflow": ["aircon-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia"],
+  "aircond-fan-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-tripping-power": ["aircond-troubleshooting-guide-malaysia"],
+  "aircond-remote-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-blinking-light": ["aircond-troubleshooting-guide-malaysia"],
+  "aircond-water-dripping": ["aircond-water-leaking-causes", "aircon-chemical-wash-price-malaysia-2026"],
+  "aircond-thermostat-problems": ["aircond-troubleshooting-guide-malaysia", "how-often-service-aircond-malaysia"],
+  "aircond-not-turning-on": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+};
+
+export default async function ProblemPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const problem = siteConfig.problemPages.find((p) => p.slug === slug);
+  if (!problem) notFound();
+
+  const content = problemContent[slug] ?? getGenericContent(problem);
+  const relatedService = problem.relatedService ? servicesData[problem.relatedService] : null;
+  const waMsg = `Hi KL Renovator, my aircond has this problem: ${problem.name}. Please help me fix it. My location is:`;
+  const relatedProblems = siteConfig.problemPages.filter((p) => p.slug !== slug).slice(0, 6);
+
+  // ── Schema ────────────────────────────────────────────────────────────────
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com/" },
+      { "@type": "ListItem", position: 2, name: "Aircond Problems", item: "https://www.klrenovator.com/problems" },
+      { "@type": "ListItem", position: 3, name: problem.name, item: `https://www.klrenovator.com/problems/${slug}` },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `https://www.klrenovator.com/problems/${slug}#article`,
+    headline: problem.h1,
+    description: problem.description,
+    datePublished: "2026-01-01",
+    author: {
+      "@type": "Organization",
+      name: "KL Renovator",
+      "@id": "https://www.klrenovator.com/#business",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.klrenovator.com/#business",
+      name: "KL Renovator",
+      logo: { "@type": "ImageObject", url: "https://www.klrenovator.com/logo/image.png" },
+    },
+    mainEntityOfPage: `https://www.klrenovator.com/problems/${slug}`,
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-slate-50 border-b border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center gap-1.5 text-xs text-slate-500 flex-wrap">
+            <li><NextLink href="/" className="hover:text-sky-600 font-medium">Home</NextLink></li>
+            <li><FiChevronRight className="h-3 w-3" /></li>
+            <li><NextLink href="/problems" className="hover:text-sky-600 font-medium">Problems</NextLink></li>
+            <li><FiChevronRight className="h-3 w-3" /></li>
+            <li className="text-slate-900 font-bold">{problem.name}</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero — trilingual name */}
+      <section className="py-14 sm:py-20 bg-white border-b border-slate-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(239,68,68,0.04),transparent_60%)]" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <Reveal>
+              <div className="inline-flex items-center gap-2 bg-red-50 border border-red-100 text-red-700 px-3 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-4">
+                <FiAlertTriangle className="h-3.5 w-3.5" />
+                Aircond Problem Guide
+              </div>
+              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 leading-tight">
+                {problem.h1}
+              </h1>
+              {/* Trilingual names */}
+              <p className="mt-2 text-sm font-bold text-slate-500">
+                🇲🇾 {problem.nameMS} &nbsp;·&nbsp; 🇨🇳 {problem.nameZH}
+              </p>
+              <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
+                {problem.description}
+              </p>
+              {/* Trilingual descriptions */}
+              <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed max-w-2xl border-l-2 border-sky-200 pl-3">
+                {problem.descriptionMS}
+              </p>
+              <p className="mt-2 text-sm text-slate-400 font-medium leading-relaxed max-w-2xl border-l-2 border-slate-200 pl-3">
+                {problem.descriptionZH}
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={waLink(waMsg)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-7 py-3.5 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+                >
+                  <FaWhatsapp className="h-5 w-5" />
+                  Get This Fixed Now
+                </a>
+                <a
+                  href={`tel:${siteConfig.phone}`}
+                  className="inline-flex items-center gap-2 border-2 border-slate-200 hover:border-sky-300 px-7 py-3.5 text-sm font-black uppercase tracking-widest text-slate-700 rounded-xl transition-all"
+                >
+                  Call {siteConfig.phoneDisplay}
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Warning */}
+      <section className="py-8 bg-red-50 border-b border-red-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex gap-3 items-start max-w-3xl">
+              <FiAlertTriangle className="h-5 w-5 text-red-500 shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-black text-red-700 mb-1">Important</p>
+                <p className="text-sm text-red-700 font-medium leading-relaxed">{content.warningEN}</p>
+                <p className="mt-2 text-xs text-red-600 font-medium">{content.warningBM}</p>
+                <p className="mt-1 text-xs text-red-500 font-medium">{content.warningZH}</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Causes */}
+      <section className="py-14 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 max-w-5xl">
+            <Reveal>
+              <div>
+                <p className={eyebrow()}>Root Causes — English</p>
+                <h2 className="mt-3 text-xl font-black text-slate-900 uppercase mb-6">
+                  What Causes {problem.name}?
+                </h2>
+                <ul className="space-y-3">
+                  {content.causesEN.map((cause, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
+                      <span className="w-5 h-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">{i + 1}</span>
+                      {cause}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={50}>
+              <div>
+                <p className={eyebrow()}>Punca Masalah — Bahasa Malaysia</p>
+                <h2 className="mt-3 text-xl font-black text-slate-900 uppercase mb-6">
+                  Apakah Punca {problem.nameMS}?
+                </h2>
+                <ul className="space-y-3">
+                  {content.causesBM.map((cause, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
+                      <span className="w-5 h-5 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">{i + 1}</span>
+                      {cause}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* ZH Causes */}
+          <Reveal delay={80}>
+            <div className="mt-10 max-w-5xl">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">原因分析 — {problem.nameZH}</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {content.causesZH.map((cause, i) => (
+                  <div key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
+                    <span className="w-5 h-5 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">{i + 1}</span>
+                    {cause}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Solution */}
+      <section className="py-14 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="max-w-4xl">
+              <p className={eyebrow()}>The Fix</p>
+              <h2 className="mt-3 text-xl sm:text-2xl font-black text-slate-900 uppercase mb-6 flex items-center gap-2">
+                <FiTool className="h-5 w-5 text-sky-600" />
+                How KL Renovator Fixes {problem.name}
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-5">
+                <div className="sm:col-span-2 space-y-4">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-600 mb-2">🇬🇧 English</p>
+                    <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionEN}</p>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-600 mb-2">🇲🇾 Bahasa Malaysia</p>
+                    <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionBM}</p>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-600 mb-2">🇨🇳 中文</p>
+                    <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionZH}</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-sky-600 text-white rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-200 mb-3">Typical Pricing</p>
+                    <div className="space-y-2">
+                      {[
+                        ["Diagnostic", "RM 88*"],
+                        ["Chemical Wash", "From RM 120"],
+                        ["Gas Top-Up", "From RM 120"],
+                        ["Chemical Overhaul", "From RM 220"],
+                        ["Repairs / Parts", "RM 150–600"],
+                      ].map(([label, price]) => (
+                        <div key={label} className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2 last:border-0 last:pb-0">
+                          <span>{label}</span><span>{price}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-sky-200 mt-3">*Waived if repair done same visit</p>
+                  </div>
+                  <a
+                    href={waLink(waMsg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] w-full py-3.5 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+                  >
+                    <FaWhatsapp className="h-4 w-4" /> Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Related Service */}
+      {relatedService && (
+        <section className="py-12 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 max-w-2xl">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Recommended Service</p>
+                <h3 className="font-black text-lg text-slate-900 mb-2">{relatedService.title}</h3>
+                <p className="text-sm text-slate-600 font-medium leading-relaxed mb-4">{relatedService.tagline}</p>
+                <div className="flex flex-wrap gap-3">
+                  <NextLink
+                    href={`/services/${relatedService.slug}`}
+                    className="inline-flex items-center gap-1.5 bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 text-xs font-black uppercase tracking-wider rounded-xl transition-all"
+                  >
+                    <FiArrowRight className="h-3.5 w-3.5" />
+                    View {relatedService.title} →
+                  </NextLink>
+                  <span className="inline-flex items-center text-xs font-black text-sky-700 bg-sky-50 border border-sky-100 px-3 py-2 rounded-xl">
+                    From {relatedService.startPrice}
+                  </span>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* FAQs — EN + BM + ZH */}
+      <section className="py-14 bg-slate-50">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-10">
+              <p className={eyebrow()}>FAQs · Soalan Lazim · 常见问答</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>{problem.name} </span>
+                <span className={title({ size: "sm", color: "brand" })}>Questions Answered</span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="space-y-4">
+            {content.faqs.map((faq, i) => (
+              <Reveal key={i} delay={i * 30}>
+                <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                  <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {content.faqsBM.length > 0 && (
+            <Reveal>
+              <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                {content.faqsBM.map((faq, i) => (
+                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
+                    <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
+
+          {content.faqsZH.length > 0 && (
+            <Reveal>
+              <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                {content.faqsZH.map((faq, i) => (
+                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
+                    <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </section>
+
+      {/* Related Problems */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-5">
+              Other Common Aircond Problems
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {relatedProblems.map((p) => (
+                <NextLink
+                  key={p.slug}
+                  href={`/problems/${p.slug}`}
+                  className="flex items-center gap-2.5 border border-slate-200 bg-slate-50 hover:border-sky-200 hover:bg-sky-50 px-4 py-3 text-sm font-bold text-slate-700 rounded-xl transition-all"
+                >
+                  <FiArrowRight className="h-3.5 w-3.5 text-sky-500 shrink-0" />
+                  <span>{p.name}</span>
+                  <span className="ml-auto text-xs text-slate-400">{p.nameMS}</span>
+                </NextLink>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Areas */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-4">
+              Fix {problem.name} by Area
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.areaPages.slice(0, 12).map((area) => (
+                <NextLink
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="inline-flex items-center gap-1 border border-slate-200 bg-white hover:border-sky-200 px-3 py-1.5 text-xs font-bold text-slate-600 rounded-lg transition-all"
+                >
+                  {area.name}
+                </NextLink>
+              ))}
+              <NextLink
+                href="/areas"
+                className="inline-flex items-center gap-1 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-bold text-sky-600 rounded-lg transition-all"
+              >
+                All Areas →
+              </NextLink>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      {/* Related Blog Articles */}
+      {(() => {
+        const relatedSlugs = PROBLEM_BLOG_MAP[slug] ?? [];
+        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 3);
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
+              <h2 className="text-base font-black text-slate-900 mb-4">Related Aircond Guides</h2>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {relatedPosts.map((post) => (
+                  <NextLink
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col bg-slate-50 border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                    <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                    <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                  </NextLink>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Related Aircond Problems */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Also See · Lihat Juga · 另见</p>
+          <h2 className="text-base font-black text-slate-900 mb-4">Other Common Aircond Problems</h2>
+          <div className="flex flex-wrap gap-2">
+            {siteConfig.problemPages
+              .filter((p) => p.slug !== slug)
+              .slice(0, 10)
+              .map((p) => (
+                <NextLink
+                  key={p.slug}
+                  href={`/problems/${p.slug}`}
+                  className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                >
+                  {p.name}
+                </NextLink>
+              ))}
+            <NextLink href="/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+              All Problems →
+            </NextLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-sky-600">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <Reveal>
+            <h2 className="text-2xl sm:text-3xl font-black uppercase text-white">
+              Fix {problem.name} Today
+            </h2>
+            <p className="mt-1 text-sky-200 text-sm font-medium">
+              {problem.nameMS} · {problem.nameZH}
+            </p>
+            <p className="mt-3 text-sky-100 font-medium max-w-lg mx-auto">
+              Same-day service across KL & Selangor. Transparent pricing — quote before work starts. All brands serviced.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={waLink(waMsg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+              >
+                <FaWhatsapp className="h-5 w-5" /> WhatsApp Us Now
+              </a>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white px-8 py-4 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+              >
+                Call {siteConfig.phoneDisplay}
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+}
