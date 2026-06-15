@@ -125,6 +125,8 @@ const SECTION_LABELS = {
 };
 
 // ── Service → Blog relevance map ─────────────────────────────────────────────
+import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-authority-map";
+
 const SERVICE_BLOG_MAP: Record<string, string[]> = {
   "chemical-wash": ["aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
   "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
@@ -551,23 +553,40 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Related Problems */}
+      {/* Related Problems — service-specific from topical authority map */}
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
               {t("problemsFixed", "en")} · {t("problemsFixed", "ms")} · {t("problemsFixed", "zh")}
             </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              Problems This Service Fixes
+            </h2>
             <div className="flex flex-wrap gap-2">
-              {siteConfig.problemPages.slice(0, 10).map((problem) => (
-                <NextLink
-                  key={problem.slug}
-                  href={`/problems/${problem.slug}`}
-                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-red-300 hover:text-red-600 hover:bg-red-50 transition rounded-full"
-                >
-                  {problem.name} <FiArrowRight className="h-3 w-3" />
-                </NextLink>
-              ))}
+              {(() => {
+                const specificSlugs = SERVICE_PROBLEM_MAP[slug] ?? [];
+                const specificProblems = specificSlugs.length > 0
+                  ? siteConfig.problemPages.filter((p) => specificSlugs.includes(p.slug))
+                  : siteConfig.problemPages.slice(0, 8);
+                return specificProblems.map((problem) => (
+                  <NextLink
+                    key={problem.slug}
+                    href={`/problems/${problem.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-red-300 hover:text-red-600 hover:bg-red-50 transition rounded-xl"
+                  >
+                    <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
+                    {problem.name}
+                    <span className="text-slate-400 font-normal"> · {problem.nameMS}</span>
+                  </NextLink>
+                ));
+              })()}
+              <NextLink
+                href="/problems"
+                className="inline-flex items-center gap-1.5 border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-black text-red-700 hover:bg-red-100 transition rounded-xl"
+              >
+                All Aircond Problems →
+              </NextLink>
             </div>
           </Reveal>
         </div>
@@ -575,7 +594,7 @@ export default async function ServicePage({
 
       {/* Related Blog Articles */}
       {(() => {
-        const relatedSlugs = SERVICE_BLOG_MAP[slug] ?? [];
+        const relatedSlugs = (SERVICE_BLOG_MAP_V2[slug] ?? SERVICE_BLOG_MAP[slug] ?? []);
         const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 4);
         if (relatedPosts.length === 0) return null;
         return (
