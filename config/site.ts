@@ -345,6 +345,22 @@ export const siteConfig = {
       metaTitleZH: "黑风洞冷气服务 | KL Renovator — 专业HVAC团队",
       metaDescZH: "黑风洞及双溪毛糯专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
       heroImage: "/hero/aircond-new-installation-rawang-selangor.jpg",
+      faqs: [
+        { q: "Does KL Renovator service aircond in Batu Caves?", a: "Yes — KL Renovator is headquartered in Selayang, right next to Batu Caves. We cover all Batu Caves areas including Taman Batu Muda, Taman Sri Murni, Taman Sri Rajang and the Rawang corridor. Same-day service available. WhatsApp +60182983573." },
+        { q: "How much does aircond service cost in Batu Caves?", a: "Basic service from RM 99, chemical wash from RM 120 (1.0-1.5 HP), chemical overhaul from RM 220, gas top-up from RM 120 in Batu Caves. All prices confirmed before work. No hidden charges." },
+        { q: "Is same-day aircond service available in Batu Caves?", a: "Yes — Batu Caves and Selayang are KL Renovator home territory. Same-day slots are almost always available. WhatsApp +60182983573 for fastest dispatch." },
+        { q: "What aircond brands does KL Renovator service in Batu Caves?", a: "All brands — Daikin, Panasonic, Mitsubishi Electric, York, Acson, Midea, LG, Samsung, Sharp, Haier and more. Inverter and non-inverter, wall-mounted and ceiling cassette." },
+      ],
+      faqsBM: [
+        { q: "Adakah KL Renovator servis aircond di Batu Caves?", a: "Ya — KL Renovator beribu pejabat di Selayang, bersebelahan Batu Caves. Kami meliputi semua kawasan Batu Caves termasuk Taman Batu Muda, Taman Sri Murni dan koridor Rawang. Servis hari sama tersedia. WhatsApp +60182983573." },
+        { q: "Berapa harga servis aircond di Batu Caves?", a: "Servis asas dari RM 99, cuci kimia dari RM 120 (1.0-1.5 HP), overhaul kimia dari RM 220, tambah gas dari RM 120 di Batu Caves. Semua harga disahkan sebelum kerja bermula." },
+        { q: "Adakah servis hari sama tersedia di Batu Caves?", a: "Ya — Batu Caves dan Selayang adalah kawasan utama KL Renovator. Slot hari sama hampir sentiasa tersedia. WhatsApp +60182983573 untuk penghantaran terpantas." },
+      ],
+      faqsZH: [
+        { q: "KL Renovator在黑风洞提供冷气服务吗？", a: "是的——KL Renovator总部位于双溪毛糯，紧邻黑风洞。我们覆盖黑风洞所有区域，包括Taman Batu Muda、Taman Sri Murni和Rawang走廊。可当天上门。WhatsApp +60182983573。" },
+        { q: "黑风洞冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120（1.0-1.5 HP）起，化学大修从RM 220起，充气从RM 120起。所有价格在施工前确认，无隐藏费用。" },
+        { q: "黑风洞有当天冷气服务吗？", a: "有——黑风洞和双溪毛糯是KL Renovator核心服务区。当天名额几乎随时都有。请WhatsApp +60182983573获得最快派遣。" },
+      ],
     },
     {
       slug: "damansara",
@@ -1417,6 +1433,7 @@ export const siteConfig = {
   ],
 
   services: [
+    { slug: "emergency", title: "Emergency Aircond Repair", short: "Same-day emergency response for complete aircond breakdown, heavy water leaking, outdoor unit failure, and urgent repairs across KL & Selangor.", startPrice: 88, icon: "alert-triangle", targetProblem: "Sudden complete breakdown, heavy water leak, MCB tripping, burning smell.", category: "both" as const },
     { slug: "installation", title: "New Unit Installation", short: "Professional residential and commercial AC setup with clean cable routing. Same-day installation available for all brands and HP sizes.", startPrice: 199, icon: "plug", targetProblem: "Upgrading old non-inverter systems, moving into a new office or home.", category: "both" as const },
     { slug: "basic-servicing", title: "Basic Servicing / Routine Maintenance", short: "Regular standard aircond filter cleaning and multi-point diagnostic check to maintain peak energy efficiency and extend unit lifespan.", startPrice: 99, icon: "wrench", targetProblem: "Routine 3–6 month checkup, energy efficiency optimization, preventive care.", category: "residential" as const },
     { slug: "chemical-wash", title: "Pressure Chemical Wash", short: "Deep high-pressure chemical cleaning to remove stubborn mould, dust, bacteria and dramatically improve cooling airflow and air quality.", startPrice: 120, icon: "flask-conical", targetProblem: "Slow cooling, foul smell, low airflow, dusty air extraction.", category: "both" as const },
