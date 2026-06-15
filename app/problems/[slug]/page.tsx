@@ -342,6 +342,8 @@ function getGenericContent(problem: (typeof siteConfig.problemPages)[0]) {
 }
 
 // ── Problem → Blog relevance map ─────────────────────────────────────────────
+import { PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
+
 const PROBLEM_BLOG_MAP: Record<string, string[]> = {
   "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia"],
   "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
@@ -376,6 +378,8 @@ export default async function ProblemPage({
 
   const content = problemContent[slug] ?? getGenericContent(problem);
   const relatedService = problem.relatedService ? servicesData[problem.relatedService] : null;
+  const secondaryServiceSlug = PROBLEM_SERVICE_MAP[slug]?.secondary;
+  const secondaryService = secondaryServiceSlug ? servicesData[secondaryServiceSlug] : null;
   const waMsg = `Hi KL Renovator, my aircond has this problem: ${problem.name}. Please help me fix it. My location is:`;
   const relatedProblems = siteConfig.problemPages.filter((p) => p.slug !== slug).slice(0, 6);
 
@@ -633,27 +637,48 @@ export default async function ProblemPage({
         </div>
       </section>
 
-      {/* Related Service */}
+      {/* Related Services — primary + secondary from topical map */}
       {relatedService && (
         <section className="py-12 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal>
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 max-w-2xl">
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Recommended Service</p>
-                <h3 className="font-black text-lg text-slate-900 mb-2">{relatedService.title}</h3>
-                <p className="text-sm text-slate-600 font-medium leading-relaxed mb-4">{relatedService.tagline}</p>
-                <div className="flex flex-wrap gap-3">
-                  <NextLink
-                    href={`/services/${relatedService.slug}`}
-                    className="inline-flex items-center gap-1.5 bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 text-xs font-black uppercase tracking-wider rounded-xl transition-all"
-                  >
-                    <FiArrowRight className="h-3.5 w-3.5" />
-                    View {relatedService.title} →
-                  </NextLink>
-                  <span className="inline-flex items-center text-xs font-black text-sky-700 bg-sky-50 border border-sky-100 px-3 py-2 rounded-xl">
-                    From {relatedService.startPrice}
-                  </span>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-4">
+                Recommended Services · Perkhidmatan Disyorkan · 推荐服务
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
+                {/* Primary service */}
+                <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">Best Fix</p>
+                  <h3 className="font-black text-base text-slate-900 mb-1">{relatedService.title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed mb-3">{relatedService.tagline}</p>
+                  <div className="flex items-center gap-2">
+                    <NextLink
+                      href={`/services/${relatedService.slug}`}
+                      className="inline-flex items-center gap-1.5 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 text-xs font-black uppercase tracking-wider rounded-xl transition-all"
+                    >
+                      <FiArrowRight className="h-3.5 w-3.5" />
+                      View Service →
+                    </NextLink>
+                    <span className="text-xs font-black text-sky-700">from RM {relatedService.startPrice}</span>
+                  </div>
                 </div>
+                {/* Secondary service */}
+                {secondaryService && (
+                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">Also Consider</p>
+                    <h3 className="font-black text-base text-slate-900 mb-1">{secondaryService.title}</h3>
+                    <p className="text-xs text-slate-500 leading-relaxed mb-3">{secondaryService.tagline}</p>
+                    <div className="flex items-center gap-2">
+                      <NextLink
+                        href={`/services/${secondaryService.slug}`}
+                        className="inline-flex items-center gap-1.5 border border-slate-300 hover:border-sky-400 text-slate-700 hover:text-sky-700 px-4 py-2 text-xs font-black uppercase tracking-wider rounded-xl transition-all"
+                      >
+                        View Service →
+                      </NextLink>
+                      <span className="text-xs font-black text-slate-500">from RM {secondaryService.startPrice}</span>
+                    </div>
+                  </div>
+                )}
               </div>
             </Reveal>
           </div>
@@ -769,7 +794,7 @@ export default async function ProblemPage({
       {/* CTA */}
       {/* Related Blog Articles */}
       {(() => {
-        const relatedSlugs = PROBLEM_BLOG_MAP[slug] ?? [];
+        const relatedSlugs = (PROBLEM_BLOG_MAP_V2[slug] ?? PROBLEM_BLOG_MAP[slug] ?? []);
         const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 3);
         if (relatedPosts.length === 0) return null;
         return (
