@@ -203,6 +203,19 @@ export default async function BrandPage({
     })),
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://www.klrenovator.com/brands/${slug}#webpage`,
+    name: `${brand.name} Aircond Service KL & Selangor — KL Renovator`,
+    description: brand.metaDesc,
+    url: `https://www.klrenovator.com/brands/${slug}`,
+    inLanguage: "en-MY",
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
+  };
+
   return (
     <>
       {/* Schema */}
@@ -210,6 +223,7 @@ export default async function BrandPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="bg-slate-50 border-b border-slate-100">
