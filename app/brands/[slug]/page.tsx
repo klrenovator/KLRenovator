@@ -32,22 +32,25 @@ const BRAND_BLOG_MAP: Record<string, string[]> = {
 };
 
 // ── Brand → Problem relevance map ─────────────────────────────────────────────
+import { BRAND_PROBLEM_MAP as BRAND_PROBLEM_MAP_TOPO } from "@/config/topical-authority-map";
+
 const BRAND_PROBLEM_MAP: Record<string, string[]> = {
-  "daikin":       ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-pcb-problem"],
-  "panasonic":    ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
-  "mitsubishi":   ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
-  "york":         ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking"],
-  "acson":        ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
-  "carrier":      ["aircond-not-cold", "aircond-compressor-problem", "aircond-high-electricity-bill"],
-  "midea":        ["aircond-not-cold", "aircond-water-leaking", "aircond-remote-not-working"],
-  "haier":        ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
-  "toshiba":      ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem"],
-  "hitachi":      ["aircond-not-cold", "aircond-compressor-problem", "aircond-blinking-light"],
-  "samsung":      ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
-  "lg":           ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light"],
-  "sharp":        ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
-  "fujitsu":      ["aircond-not-cold", "aircond-compressor-problem", "aircond-pcb-problem"],
-  "gree":         ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise"],
+  "daikin":             ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
+  "panasonic":          ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-blinking-light"],
+  "mitsubishi-electric": ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
+  "mitsubishi":         ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
+  "york":               ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking", "aircond-low-gas"],
+  "acson":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
+  "carrier":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-high-electricity-bill", "aircond-water-leaking"],
+  "midea":              ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-making-noise"],
+  "haier":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
+  "toshiba":            ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
+  "hitachi":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-blinking-light", "aircond-water-leaking"],
+  "samsung":            ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-pcb-problem"],
+  "lg":                 ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-fan-not-working"],
+  "sharp":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
+  "fujitsu":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-pcb-problem", "aircond-blinking-light"],
+  "gree":               ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
 };
 
 export function generateStaticParams() {
