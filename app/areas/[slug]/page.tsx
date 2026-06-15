@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map";
 
 export function generateStaticParams() {
   return siteConfig.areaPages.map((a) => ({ slug: a.slug }));
@@ -558,23 +559,76 @@ export default async function AreaPage({
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
               Common Aircond Problems We Fix in {area.name}
             </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              {area.name} Aircond Problems &amp; Solutions
+            </h2>
             <div className="flex flex-wrap gap-2">
-              {siteConfig.problemPages.slice(0, 12).map((problem) => (
-                <NextLink
-                  key={problem.slug}
-                  href={`/problems/${problem.slug}`}
-                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-red-300 hover:text-red-600 hover:bg-red-50 transition rounded-full"
-                >
-                  {problem.name} <FiArrowRight className="h-3 w-3" />
-                </NextLink>
-              ))}
+              {(() => {
+                const specificSlugs = AREA_PROBLEM_MAP[slug] ?? AREA_PROBLEM_MAP["_default"];
+                return siteConfig.problemPages
+                  .filter((p) => specificSlugs.includes(p.slug))
+                  .map((problem) => (
+                    <NextLink
+                      key={problem.slug}
+                      href={`/problems/${problem.slug}`}
+                      className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-red-300 hover:text-red-600 hover:bg-red-50 transition rounded-xl"
+                    >
+                      <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
+                      {problem.name}
+                      <span className="text-slate-400 font-normal"> · {problem.nameMS}</span>
+                    </NextLink>
+                  ));
+              })()}
+              <NextLink
+                href="/problems"
+                className="inline-flex items-center gap-1.5 border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-black text-red-700 hover:bg-red-100 transition rounded-xl"
+              >
+                All Aircond Problems →
+              </NextLink>
             </div>
           </Reveal>
         </div>
       </section>
+
+      {/* Related Blog Guides — area-contextual */}
+      {(() => {
+        const blogSlugs = AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"];
+        const areaPosts = allPosts.filter((p) => blogSlugs.includes(p.slug)).slice(0, 3);
+        if (areaPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">
+                  Expert Guides · Panduan · 指南
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  Aircond Service Guides for {area.name} Residents
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {areaPosts.map((post) => (
+                    <NextLink
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="group flex flex-col bg-slate-50 border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                    >
+                      <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                      <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                      <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                    </NextLink>
+                  ))}
+                </div>
+                <NextLink href="/blog" className="inline-flex items-center gap-1 mt-4 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                  All Aircond Guides <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
     </>
   );
 }
