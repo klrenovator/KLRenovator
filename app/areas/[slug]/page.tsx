@@ -183,6 +183,23 @@ export default async function AreaPage({
 
   const otherAreas = siteConfig.areaPages.filter((a) => a.slug !== slug).slice(0, 12);
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://www.klrenovator.com/areas/${slug}#webpage`,
+    name: `Aircond Service ${area.name} — KL Renovator`,
+    description: area.metaDesc,
+    url: `https://www.klrenovator.com/areas/${slug}`,
+    inLanguage: "en-MY",
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+    breadcrumb: { "@id": `https://www.klrenovator.com/areas/${slug}#breadcrumb` },
+  };
+
   return (
     <>
       {/* Structured Data */}
@@ -197,6 +214,10 @@ export default async function AreaPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       {/* Breadcrumb */}
