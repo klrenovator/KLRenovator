@@ -21,13 +21,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/gallery`,       lastModified: now, changeFrequency: "weekly",  priority: 0.70 },
   ];
 
+  // ── Emergency Page (high priority — standalone) ───────────────────────────
+  const emergencyPage: MetadataRoute.Sitemap = [
+    { url: `${BASE}/services/emergency`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.97 },
+  ];
+
   // ── Service Detail Pages ──────────────────────────────────────────────────
-  const servicePages: MetadataRoute.Sitemap = siteConfig.services.map((s) => ({
-    url: `${BASE}/services/${s.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.92,
-  }));
+  const servicePages: MetadataRoute.Sitemap = siteConfig.services
+    .filter((s) => s.slug !== "emergency")
+    .map((s) => ({
+      url: `${BASE}/services/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.92,
+    }));
 
   // ── Area Pages ────────────────────────────────────────────────────────────
   const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
@@ -63,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    ...emergencyPage,
     ...servicePages,
     ...areaPages,
     ...brandPages,
