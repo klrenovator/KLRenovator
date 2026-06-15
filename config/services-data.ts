@@ -754,4 +754,96 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Ceiling Cassette Dismantle + Reinstall", price: "RM 350" },
     ],
   },
+
+  // ── 9. EMERGENCY AIRCOND REPAIR ──────────────────────────────────────────
+  "emergency": {
+    slug: "emergency",
+    title: "Emergency Aircond Repair",
+    tagline: "Same-day emergency response for complete breakdowns, heavy water leaks, outdoor unit failure, and urgent repairs across KL & Selangor.",
+    description:
+      "When your aircond suddenly stops working, leaks heavily, or trips the MCB, you need help today — not tomorrow. KL Renovator dispatches trained technicians across all of Kuala Lumpur and Selangor for same-day emergency diagnosis and repair. Diagnostic fee RM 88, waived if repair completed same visit. Most emergency jobs dispatched within 30–60 minutes of WhatsApp confirmation.",
+    startPrice: "RM 88",
+    heroImage: "/hero/aircond-repair-technician-klang-valley.jpg",
+    highlights: [
+      "Same-day dispatch across all KL & Selangor",
+      "30–60 min response after confirmation",
+      "Diagnostic RM 88 — waived if repaired same visit",
+      "All brands serviced",
+      "Capacitor, fan motor, PCB repairs same-day",
+      "Emergency drain clearing same-day",
+      "After-hours until 10pm (RM 50 surcharge)",
+      "Transparent quote before work begins",
+    ],
+    process: [
+      { step: "WhatsApp Now", desc: "Send your location, unit count and problem to +60182983573. We respond in minutes." },
+      { step: "Confirm Quote", desc: "Diagnostic fee and estimated repair cost confirmed before dispatch. No surprises." },
+      { step: "Technician Dispatched", desc: "Nearest trained technician dispatched immediately. Most arrivals within 30–60 minutes." },
+      { step: "Diagnose & Fix", desc: "Full on-site diagnosis, repair quoted and completed same visit where possible." },
+    ],
+    faqs: [
+      {
+        q: "Does KL Renovator offer same-day emergency aircond repair in KL?",
+        a: "Yes — KL Renovator provides same-day emergency repair across all KL and Selangor areas. WhatsApp +60182983573 for fastest response. Most emergency jobs dispatched within 30–60 minutes of confirmation.",
+      },
+      {
+        q: "How much is the emergency aircond repair diagnostic fee?",
+        a: "Diagnostic fee is RM 88 during standard hours (9am–6pm). This is waived if the repair is completed on the same visit. After-hours jobs (6pm–10pm) carry a RM 50 overtime surcharge, making the diagnostic RM 138 (also waived if repaired).",
+      },
+      {
+        q: "What counts as an aircond emergency?",
+        a: "Complete breakdown with no cooling, heavy water leak near furniture or electrics, sparks or burning smell, outdoor unit completely stopped, or any situation affecting a server room, medical space, or home with elderly or infant.",
+      },
+      {
+        q: "My aircond suddenly stopped working — what should I do first?",
+        a: "Step 1: Check your MCB panel — it may have tripped. Step 2: Replace the remote battery. If still not working, WhatsApp KL Renovator at +60182983573 immediately for same-day emergency diagnosis.",
+      },
+      {
+        q: "Does KL Renovator cover emergency service in Selangor?",
+        a: "Yes — KL Renovator covers all of Selangor for emergency service including Petaling Jaya, Subang Jaya, Shah Alam, Klang, Kajang, Puchong, Ampang, Damansara, Batu Caves, Selayang and all surrounding areas.",
+      },
+      {
+        q: "Can KL Renovator come after working hours for an emergency?",
+        a: "Yes — KL Renovator accepts emergency bookings until 10pm. Jobs confirmed after 6pm carry a RM 50 overtime surcharge. WhatsApp +60182983573 even after hours — we will respond.",
+      },
+    ],
+    faqsBM: [
+      {
+        q: "Adakah KL Renovator menawarkan pembaikan aircond kecemasan hari sama di KL?",
+        a: "Ya — KL Renovator menyediakan pembaikan kecemasan hari sama merentasi semua kawasan KL dan Selangor. WhatsApp +60182983573 untuk respons terpantas. Kebanyakan kerja kecemasan dihantar dalam 30–60 minit selepas pengesahan.",
+      },
+      {
+        q: "Berapa caj diagnostik pembaikan aircond kecemasan?",
+        a: "Caj diagnostik ialah RM 88 semasa waktu standard (9am–6pm). Ini dikecualikan jika pembaikan diselesaikan dalam lawatan yang sama. Kerja luar waktu (6pm–10pm) dikenakan tambahan RM 50.",
+      },
+      {
+        q: "Aircond saya tiba-tiba rosak — apa yang perlu saya buat dahulu?",
+        a: "Langkah 1: Periksa panel MCB anda — mungkin telah jatuh. Langkah 2: Tukar bateri remote. Jika masih tidak berfungsi, WhatsApp KL Renovator di +60182983573 segera.",
+      },
+    ],
+    faqsZH: [
+      {
+        q: "KL Renovator是否提供吉隆坡当天紧急冷气维修？",
+        a: "是的——KL Renovator在吉隆坡和雪兰莪所有地区提供当天紧急维修。WhatsApp +60182983573获得最快响应。大多数紧急工作在确认后30-60分钟内派遣技术员。",
+      },
+      {
+        q: "紧急冷气维修诊断费是多少？",
+        a: "标准时间（上午9点至下午6点）诊断费为RM 88。如果在同次上门完成维修则免收。下午6点至晚上10点的工作加收RM 50加班费。",
+      },
+      {
+        q: "冷气突然停止工作——我应该先做什么？",
+        a: "第1步：检查MCB面板——可能已跳闸。第2步：更换遥控器电池。如果仍不工作，立即WhatsApp KL Renovator至+60182983573。",
+      },
+    ],
+    priceTable: [
+      { label: "Diagnostic Fee (Standard Hours 9am–6pm)", price: "RM 88" },
+      { label: "Diagnostic Fee (waived if repaired same visit)", price: "FREE" },
+      { label: "After-Hours Surcharge (6pm–10pm)", price: "RM 50" },
+      { label: "Capacitor Replacement (most common emergency)", price: "RM 180" },
+      { label: "Fan Motor Replacement (indoor)", price: "RM 250–350" },
+      { label: "Fan Motor Replacement (outdoor)", price: "RM 300–450" },
+      { label: "PCB Board Replacement", price: "RM 300–600" },
+      { label: "Emergency Drain Pipe Clearing", price: "RM 120" },
+      { label: "Compressor Replacement (quoted before work)", price: "RM 600–2,000" },
+    ],
+  },
 };
