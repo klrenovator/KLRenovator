@@ -3,10 +3,14 @@
   "@type": "HVACBusiness",
   "@id": "https://www.klrenovator.com/#business",
   "name": "KL Renovator",
-  "alternateName": ["KL Renovator Aircond", "KLRenovator", "Multicore Dynamics Resources"],
+  "alternateName": [
+    "KL Renovator Aircond",
+    "KLRenovator",
+    "Multicore Dynamics Resources"
+  ],
   "legalName": "Multicore Dynamics Resources",
   "taxID": "003765188-T",
-  "description": "KL Renovator is the leading professional aircond service company in Kuala Lumpur and Selangor, Malaysia. Specialising in residential and commercial HVAC — chemical wash, chemical overhaul, gas top-up, troubleshooting, repair and new unit installation. 10+ years experience, 5,000+ customers, 500+ 5-star Google reviews. Same-day service available.",
+  "description": "KL Renovator is the leading professional aircond service company in Kuala Lumpur and Selangor, Malaysia. Specialising in residential and commercial HVAC — emergency repair, chemical wash, chemical overhaul, gas top-up, troubleshooting, repair and new unit installation. Free Price Calculator and Diagnostic Tool on website. 10+ years experience, 5,000+ customers, 500+ 5-star Google reviews. Same-day service available including emergency dispatch.",
   "url": "https://www.klrenovator.com",
   "telephone": "+60182983573",
   "email": "info@klrenovator.com",
@@ -24,15 +28,44 @@
     "longitude": 101.6412
   },
   "areaServed": [
-    "Kuala Lumpur", "Petaling Jaya", "Cheras", "Ampang", "Subang Jaya",
-    "Shah Alam", "Puchong", "Klang", "Kajang", "Damansara", "Bangsar",
-    "Mont Kiara", "Setapak", "Batu Caves", "Selayang", "Kepong",
-    "Sri Petaling", "Sunway", "Rawang", "Putrajaya", "Cyberjaya",
-    "Seri Kembangan", "Wangsa Maju", "Sentul", "Sungai Buloh", "Selangor"
+    "Kuala Lumpur",
+    "Petaling Jaya",
+    "Cheras",
+    "Ampang",
+    "Subang Jaya",
+    "Shah Alam",
+    "Puchong",
+    "Klang",
+    "Kajang",
+    "Damansara",
+    "Bangsar",
+    "Mont Kiara",
+    "Setapak",
+    "Batu Caves",
+    "Selayang",
+    "Kepong",
+    "Sri Petaling",
+    "Sunway",
+    "Rawang",
+    "Putrajaya",
+    "Cyberjaya",
+    "Seri Kembangan",
+    "Wangsa Maju",
+    "Sentul",
+    "Sungai Buloh",
+    "Selangor"
   ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
     "opens": "09:00",
     "closes": "18:00"
   },
@@ -46,6 +79,15 @@
     "@type": "OfferCatalog",
     "name": "Aircond Services",
     "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Emergency Aircond Repair (Same-Day)",
+        "description": "Same-day emergency response for aircond breakdown, water leaking, electrical faults, and urgent repairs across KL and Selangor. Diagnostic from RM 88.",
+        "price": "88",
+        "priceCurrency": "MYR",
+        "url": "https://www.klrenovator.com/services/emergency",
+        "availability": "https://schema.org/InStock"
+      },
       {
         "@type": "Offer",
         "name": "Basic Servicing / Routine Maintenance",
@@ -118,5 +160,9 @@
     "https://www.tiktok.com/@klrenovator",
     "https://share.google/HhXvqWDkefZ5bzNdL"
   ],
-  "knowsLanguage": ["en", "ms", "zh"]
+  "knowsLanguage": [
+    "en",
+    "ms",
+    "zh"
+  ]
 }
