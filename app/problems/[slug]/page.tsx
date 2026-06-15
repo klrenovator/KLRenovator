@@ -421,11 +421,25 @@ export default async function ProblemPage({
     mainEntityOfPage: `https://www.klrenovator.com/problems/${slug}`,
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://www.klrenovator.com/problems/${slug}#webpage`,
+    name: problem.metaTitle,
+    description: problem.metaDesc,
+    url: `https://www.klrenovator.com/problems/${slug}`,
+    inLanguage: "en-MY",
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="bg-slate-50 border-b border-slate-100">
