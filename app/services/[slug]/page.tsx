@@ -244,12 +244,26 @@ export default async function ServicePage({
   // (same pattern as existing problems page — all 3 visible at once)
   const lang = "en" as const; // default for server render; labels below show all 3
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://www.klrenovator.com/services/${slug}#webpage`,
+    name: data.title + " KL & Selangor — KL Renovator",
+    description: data.tagline,
+    url: `https://www.klrenovator.com/services/${slug}`,
+    inLanguage: "en-MY",
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
+  };
+
   return (
     <>
       {/* Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
