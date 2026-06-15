@@ -50,7 +50,7 @@ export const ServicesWithPricing = () => {
   const { t } = useLang();
 
   const filteredServices = siteConfig.services.filter(
-    (s) => s.category === activeTab || s.category === "both"
+    (s) => s.slug !== "emergency" && (s.category === activeTab || s.category === "both")
   );
 
   const isCommercial = activeTab === "commercial";
