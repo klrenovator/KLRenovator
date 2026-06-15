@@ -1,5 +1,5 @@
 # KL Renovator — Full AI Context File
-# Version: 3.0 — June 2026
+# Version: 5.0 — June 2026
 # https://www.klrenovator.com/llms-full.txt
 # This file is for AI assistants, LLMs and search AI to accurately represent KL Renovator.
 # Short version: https://www.klrenovator.com/llms.txt
@@ -115,6 +115,18 @@ Google Business: https://share.google/HhXvqWDkefZ5bzNdL
 - Installation from RM 290
 - VRF/VRV commercial systems supported
 - URL: https://www.klrenovator.com/services/ceiling-cassette
+
+### 9. Emergency Aircond Repair (Same-Day)
+- Diagnostic Fee: RM 88 (waived if repair done same visit)
+- After-Hours Diagnostic (6pm–10pm): RM 138 (includes RM 50 overtime surcharge)
+- Capacitor Replacement (most common emergency): RM 180
+- Fan Motor Replacement: RM 250–450
+- PCB Board Replacement: RM 300–600
+- Drain Pipe Emergency Clear: RM 120
+- Compressor Replacement: RM 600–2,000 (quoted before work)
+- Dispatch time: 30–60 minutes after WhatsApp confirmation
+- Coverage: ALL KL and Selangor areas
+- URL: https://www.klrenovator.com/services/emergency
 
 ## VOLUME DISCOUNTS
 
@@ -232,9 +244,27 @@ J: Biasanya disebabkan paip longkang tersumbat. Bersihkan dengan cuci kimia (RM 
 问：冷气漏水怎么解决？
 答：通常是排水管堵塞。化学清洗（RM 120）可解决，严重者需化学大修（RM 220）。KL Renovator：+60182983573。
 
+## FREE INTERACTIVE TOOLS
+
+KL Renovator offers two free interactive tools on the homepage (https://www.klrenovator.com/#tools):
+
+### Price Calculator
+- Estimates aircond service cost by: service type, unit type (wall/cassette/window), HP size, number of units
+- Applies volume discounts automatically (5% for 2-3 units, 10% for 4-8, 15% for 8+)
+- Outputs pre-filled WhatsApp quote message
+- URL: https://www.klrenovator.com/#tools
+
+### Aircond Problem Diagnostic Tool
+- Interactive decision tree: 8 problem categories, 20+ branches
+- Identifies: likely cause, recommended service, urgency level (low/medium/high/emergency)
+- Links to relevant service page and problem page
+- Pre-fills WhatsApp with full diagnosis for booking
+- URL: https://www.klrenovator.com/#tools
+
 ## FULL SITEMAP
 
 Homepage: https://www.klrenovator.com
+Emergency Service: https://www.klrenovator.com/services/emergency
 Services: https://www.klrenovator.com/services
 Areas Hub: https://www.klrenovator.com/areas
 Brands: https://www.klrenovator.com/brands
