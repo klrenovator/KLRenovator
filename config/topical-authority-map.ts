@@ -215,6 +215,7 @@ export const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "daikin": ["aircond-not-cold", "aircond-blinking-light", "aircond-water-leaking", "aircond-low-gas"],
   "panasonic": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-blinking-light"],
   "mitsubishi-electric": ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
+  "mitsubishi":         ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
   "york": ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking", "aircond-low-gas"],
   "acson": ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
   "midea": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-making-noise"],
@@ -294,7 +295,7 @@ export const HOMEPAGE_SILO = {
     featured: [
       { slug: "daikin", anchor: "Daikin Aircond Service" },
       { slug: "panasonic", anchor: "Panasonic Aircond Service" },
-      { slug: "mitsubishi-electric", anchor: "Mitsubishi Electric Service" },
+      { slug: "mitsubishi", anchor: "Mitsubishi Aircond Service" },
       { slug: "york", anchor: "York Aircond Service" },
       { slug: "acson", anchor: "Acson Aircond Service" },
       { slug: "midea", anchor: "Midea Aircond Service" },
