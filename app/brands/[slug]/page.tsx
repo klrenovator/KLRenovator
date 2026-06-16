@@ -15,20 +15,68 @@ import { allPosts } from "@/config/blog-posts";
 // ── Brand → Blog relevance map ───────────────────────────────────────────────
 const BRAND_BLOG_MAP: Record<string, string[]> = {
   "daikin":       ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
-  "panasonic":    ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia"],
-  "mitsubishi":   ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
-  "york":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
-  "acson":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
-  "carrier":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl"],
-  "midea":        ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia"],
-  "haier":        ["best-aircond-brands-malaysia-2025", "aircond-installation-guide-malaysia"],
-  "toshiba":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia"],
-  "hitachi":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia"],
-  "samsung":      ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia"],
-  "lg":           ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia"],
-  "sharp":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
-  "fujitsu":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl"],
-  "gree":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026"],
+  "panasonic":    ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia"],
+  "mitsubishi":   ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "york":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "aircond-lifespan-malaysia", "how-often-service-aircond-malaysia"],
+  "acson":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "carrier":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-service-price-guide-kl-2026"],
+  "midea":        ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-service-price-guide-kl-2026"],
+  "haier":        ["best-aircond-brands-malaysia-2025", "aircond-installation-guide-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "toshiba":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "hitachi":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia", "commercial-hvac-maintenance-kl", "aircond-troubleshooting-guide-malaysia"],
+  "samsung":      ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "lg":           ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia"],
+  "sharp":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "fujitsu":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "gree":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-installation-guide-malaysia"],
+};
+
+// ── Error code reference per brand ───────────────────────────────────────────
+const BRAND_ERROR_CODES: Record<string, { code: string; meaning: string; fix: string }[]> = {
+  "daikin": [
+    { code: "A1", meaning: "Indoor PCB fault", fix: "PCB board inspection / replacement" },
+    { code: "C4", meaning: "Heat exchanger sensor fault", fix: "Sensor replacement" },
+    { code: "J3", meaning: "Discharge pipe sensor fault", fix: "Sensor replacement" },
+    { code: "L5", meaning: "Inverter overcurrent (low gas)", fix: "Gas top-up + leak check" },
+    { code: "U4", meaning: "Indoor/outdoor communication error", fix: "Wiring + PCB diagnosis" },
+  ],
+  "panasonic": [
+    { code: "H11", meaning: "Outdoor unit communication fault", fix: "PCB + wiring inspection" },
+    { code: "H15", meaning: "Outdoor fan motor fault", fix: "Fan motor replacement" },
+    { code: "H23", meaning: "Pipe temperature sensor fault", fix: "Sensor replacement" },
+    { code: "F11", meaning: "Refrigerant pressure issue", fix: "Gas top-up + leak check" },
+    { code: "E18", meaning: "Drive PCB fault", fix: "PCB board replacement" },
+  ],
+  "mitsubishi": [
+    { code: "P8", meaning: "Outdoor unit error (general)", fix: "Outdoor unit diagnosis" },
+    { code: "E6", meaning: "Communication fault indoor/outdoor", fix: "Wiring + PCB check" },
+    { code: "U1", meaning: "Reverse phase / open phase", fix: "Electrical supply inspection" },
+    { code: "P4", meaning: "Drain sensor fault", fix: "Drain sensor replacement" },
+    { code: "E4", meaning: "Remote controller error", fix: "Remote controller / PCB check" },
+  ],
+  "york": [
+    { code: "E1", meaning: "High pressure protection", fix: "Outdoor unit + gas pressure check" },
+    { code: "E2", meaning: "Low pressure protection", fix: "Gas top-up + leak check" },
+    { code: "E3", meaning: "Compressor overload", fix: "Compressor + capacitor diagnosis" },
+    { code: "E6", meaning: "Fan motor fault", fix: "Fan motor inspection / replacement" },
+  ],
+  "acson": [
+    { code: "E1", meaning: "Indoor fan motor fault", fix: "Fan motor replacement" },
+    { code: "E2", meaning: "Outdoor fan motor fault", fix: "Fan motor replacement" },
+    { code: "E3", meaning: "Compressor protection", fix: "Compressor + gas diagnosis" },
+    { code: "E5", meaning: "Refrigerant low pressure", fix: "Gas top-up + leak check" },
+  ],
+  "midea": [
+    { code: "E1", meaning: "High pressure protection", fix: "Outdoor unit + condenser check" },
+    { code: "E3", meaning: "Low pressure protection / low gas", fix: "Gas top-up + leak check" },
+    { code: "P2", meaning: "Overcurrent protection (compressor)", fix: "Compressor + capacitor diagnosis" },
+    { code: "F3", meaning: "Outdoor ambient sensor fault", fix: "Sensor replacement" },
+  ],
+  "_default": [
+    { code: "E1/E2/E3", meaning: "Various pressure / temperature faults", fix: "Diagnosis by KL Renovator technician" },
+    { code: "P-series", meaning: "Protection mode triggered", fix: "On-site error code reading + diagnosis" },
+    { code: "F-series", meaning: "Sensor fault codes", fix: "Sensor inspection + replacement if needed" },
+  ],
 };
 
 // ── Brand → Problem relevance map ─────────────────────────────────────────────
@@ -126,8 +174,8 @@ export default async function BrandPage({
   const waMsgMS = `Hai KL Renovator, saya perlukan bantuan untuk aircond ${brand.name} saya. Tolong nasihatkan.`;
   const waMsgZH = `你好 KL Renovator，我需要帮助处理我的${brand.name}冷气。请给予建议。`;
 
-  const services = siteConfig.services;
-  const relatedAreas = siteConfig.areaPages.slice(0, 8);
+  const services = siteConfig.services.filter((s) => s.slug !== "emergency");
+  const relatedAreas = siteConfig.areaPages.slice(0, 12);
 
   // ── Schema ────────────────────────────────────────────────────────────────
   const serviceSchema = {
@@ -310,6 +358,17 @@ export default async function BrandPage({
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ── Trust Signal Strip ─────────────────────────────────────────── */}
+      <section className="bg-slate-900 text-white py-4 px-4">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Workmanship Warranty</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> All {brand.name} Models Serviced</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Price Confirmed Before Work</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Same-Day Available</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Reviews</span>
         </div>
       </section>
 
@@ -545,29 +604,98 @@ export default async function BrandPage({
         </div>
       </section>
 
+      {/* ── Error Code Reference Section ───────────────────────────────── */}
+      {(() => {
+        const errorCodes = BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES["_default"];
+        return (
+          <section className="py-12 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-1">
+                  Error Code Guide · Panduan Kod Ralat · 错误代码指南
+                </p>
+                <h2 className="text-xl font-black text-slate-900 mb-2">
+                  Common {brand.name} Aircond Error Codes
+                </h2>
+                <p className="text-sm text-slate-500 mb-6 max-w-2xl">
+                  Blinking lights on your {brand.name} unit? These are the most common error codes and what they mean. WhatsApp KL Renovator the code + model for fast remote diagnosis.
+                </p>
+                <div className="overflow-hidden border border-slate-200 rounded-2xl">
+                  <div className="grid grid-cols-3 bg-slate-100 px-5 py-3 text-xs font-black uppercase tracking-widest text-slate-500">
+                    <span>Error Code</span>
+                    <span>Meaning</span>
+                    <span>Fix</span>
+                  </div>
+                  {errorCodes.map((ec, i) => (
+                    <div key={ec.code} className={`grid grid-cols-3 px-5 py-3.5 text-xs border-t border-slate-100 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
+                      <span className="font-black text-red-600">{ec.code}</span>
+                      <span className="font-semibold text-slate-700">{ec.meaning}</span>
+                      <span className="text-slate-500">{ec.fix}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-400 mt-3">
+                  Error code not listed? WhatsApp +60182983573 with your {brand.name} model number and the error pattern — we&apos;ll diagnose it remotely.
+                </p>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* ── Brand Comparison CTA ─────────────────────────────────────────── */}
+      {["daikin", "panasonic", "mitsubishi"].includes(slug) && (
+        <section className="py-8 bg-violet-50 border-t border-violet-100">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-1">Brand Comparison Guide</p>
+                  <h3 className="font-black text-slate-900 text-base">
+                    {slug === "daikin" ? "Daikin vs Panasonic — Which Should You Buy?" :
+                     slug === "panasonic" ? "Panasonic vs Daikin — Complete Comparison" :
+                     "Best Aircond Brands Malaysia — Full Comparison"}
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-0.5">Read our independent guide to help you decide. No brand bias.</p>
+                </div>
+                <NextLink
+                  href={slug === "daikin" || slug === "panasonic" ? "/blog/daikin-vs-panasonic-aircond-malaysia" : "/blog/best-aircond-brands-malaysia-2025"}
+                  className="shrink-0 inline-flex items-center gap-1.5 bg-violet-600 hover:bg-violet-700 text-white text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-xl transition-all"
+                >
+                  Read Comparison <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Related Areas */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-5">
-              {brand.name} Aircond Service by Area
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              Service Areas · Kawasan Servis · 服务区域
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-5">
+              {brand.name} Aircond Service by Area in KL & Selangor
             </h2>
             <div className="flex flex-wrap gap-2">
               {relatedAreas.map((area) => (
                 <NextLink
                   key={area.slug}
                   href={`/areas/${area.slug}`}
-                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-2 text-xs font-bold text-slate-600 rounded-xl transition-all"
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-2 text-xs font-bold text-slate-700 rounded-xl transition-all"
                 >
-                  <FiArrowRight className="h-3 w-3 text-sky-500" />
-                  {brand.name} Service {area.name}
+                  <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
+                  {brand.name} Aircond Service {area.name}
                 </NextLink>
               ))}
               <NextLink
                 href="/areas"
-                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-600 rounded-xl transition-all"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-700 rounded-xl transition-all"
               >
-                All Areas <FiArrowRight className="h-3 w-3" />
+                All 35+ Areas <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
           </Reveal>
