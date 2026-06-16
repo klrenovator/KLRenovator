@@ -323,6 +323,17 @@ export default async function AreaPage({
         </div>
       </section>
 
+      {/* Trust Signal Strip */}
+      <section className="bg-slate-900 text-white py-4 px-4">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Same-Day Available</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> All Brands Serviced</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Price Confirmed Before Work</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Workmanship Warranty</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Reviews</span>
+        </div>
+      </section>
+
       {/* Services Available in This Area */}
       <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -340,7 +351,7 @@ export default async function AreaPage({
           </Reveal>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {siteConfig.services.map((service, i) => (
+            {siteConfig.services.filter((s) => s.slug !== "emergency").map((service, i) => (
               <Reveal key={service.slug} delay={i * 40}>
                 <NextLink
                   href={`/services/${service.slug}`}
@@ -432,12 +443,12 @@ export default async function AreaPage({
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section — area-specific + BM + ZH */}
       <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-10">
-              <p className={eyebrow()}>Frequently Asked</p>
+              <p className={eyebrow()}>FAQ · Soalan Lazim · 常见问题</p>
               <h2 className="mt-3">
                 <span className={title({ size: "sm" })}>Aircond Service </span>
                 <span className={title({ size: "sm", color: "brand" })}>{area.name} — FAQ</span>
@@ -445,28 +456,17 @@ export default async function AreaPage({
             </div>
           </Reveal>
 
-          <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-            {[
-              {
-                q: `Does KL Renovator service aircond in ${area.name}?`,
-                a: `Yes — KL Renovator provides full aircond servicing across all of ${area.name}, ${area.state}. Services include chemical wash, chemical overhaul, gas top-up, repairs and new installations. WhatsApp +60182983573 to book.`,
-              },
-              {
-                q: `How much does aircond chemical wash cost in ${area.name}?`,
-                a: `Pressure chemical wash in ${area.name} starts from RM 120 for a 1.0–1.5 HP wall-mounted unit. For 2.0–2.5 HP it is RM 150. For 3.0 HP it is RM 180. All prices confirmed before work begins.`,
-              },
-              {
-                q: `Is same-day aircond service available in ${area.name}?`,
-                a: `Yes, same-day slots are frequently available in ${area.name}. WhatsApp us at +60182983573 in the morning to secure your slot. We operate Monday to Sunday, 9 AM to 6 PM.`,
-              },
-              {
-                q: `Which aircond brands do you service in ${area.name}?`,
-                a: `We service all major brands in ${area.name} — Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. Both inverter and non-inverter models.`,
-              },
-            ].map((faq, i) => (
-              <Reveal key={faq.q} delay={i * 60}>
+          {/* English FAQs — area-specific if available, else generic */}
+          <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden mb-6">
+            {((area as any).faqs?.length > 0 ? (area as any).faqs : [
+              { q: `Does KL Renovator service aircond in ${area.name}?`, a: `Yes — KL Renovator provides full aircond servicing across all of ${area.name}, ${area.state}. Services include chemical wash, chemical overhaul, gas top-up, repairs and new installations. WhatsApp +60182983573 to book.` },
+              { q: `How much does aircond chemical wash cost in ${area.name}?`, a: `Pressure chemical wash in ${area.name} starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work.` },
+              { q: `Is same-day aircond service available in ${area.name}?`, a: `Yes — same-day slots are frequently available in ${area.name}. WhatsApp +60182983573 in the morning to secure your slot. Mon–Sun, 9AM–6PM.` },
+              { q: `Which aircond brands do you service in ${area.name}?`, a: `All major brands in ${area.name} — Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. Inverter and non-inverter.` },
+            ]).map((faq: { q: string; a: string }, i: number) => (
+              <Reveal key={i} delay={i * 60}>
                 <details className="group bg-white p-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
                     {faq.q}
                     <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
@@ -475,34 +475,73 @@ export default async function AreaPage({
               </Reveal>
             ))}
           </div>
+
+          {/* BM FAQs */}
+          {(area as any).faqsBM?.length > 0 && (
+            <Reveal>
+              <div className="mt-4">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
+                  {(area as any).faqsBM.map((faq: { q: string; a: string }, i: number) => (
+                    <details key={i} className="group bg-white p-4">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                        {faq.q}
+                        <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                      </summary>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          )}
+
+          {/* ZH FAQs */}
+          {(area as any).faqsZH?.length > 0 && (
+            <Reveal>
+              <div className="mt-4">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
+                  {(area as any).faqsZH.map((faq: { q: string; a: string }, i: number) => (
+                    <details key={i} className="group bg-white p-4">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                        {faq.q}
+                        <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                      </summary>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 
-      {/* Other Areas */}
+      {/* Other Areas — with keyword-rich anchor text */}
       <section className="py-14 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className={eyebrow()}>Also Serving</p>
-            <h2 className="mt-2 mb-6">
-              <span className={title({ size: "sm" })}>Other </span>
-              <span className={title({ size: "sm", color: "brand" })}>Coverage Areas</span>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Also Serving · Kawasan Lain · 其他区域</p>
+            <h2 className="text-base font-black text-slate-900 mb-6">
+              Aircond Service Near {area.name} — Other Areas We Cover
             </h2>
             <div className="flex flex-wrap gap-2">
               {otherAreas.map((a) => (
                 <NextLink
                   key={a.slug}
                   href={`/areas/${a.slug}`}
-                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-sky-400 hover:text-sky-600 hover:bg-sky-50 transition rounded-full"
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
-                  <FiMapPin className="h-3 w-3" />
-                  {a.name}
+                  <FiMapPin className="h-3 w-3 text-sky-400 shrink-0" />
+                  Aircond Service {a.name}
                 </NextLink>
               ))}
               <NextLink
                 href="/areas"
-                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-sky-600 hover:bg-sky-100 transition rounded-full"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-black text-sky-700 hover:bg-sky-100 transition rounded-xl"
               >
-                All Areas <FiArrowRight className="h-3 w-3" />
+                All 35+ Areas <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
           </Reveal>
@@ -513,17 +552,21 @@ export default async function AreaPage({
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">
-              All Brands We Service in {area.name}
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              Aircond Brands · Jenama · 品牌
             </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              All Aircond Brands We Service in {area.name}
+            </h2>
             <div className="flex flex-wrap gap-2">
               {siteConfig.brandPages.map((brand) => (
                 <NextLink
                   key={brand.slug}
                   href={`/brands/${brand.slug}`}
-                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-sky-400 hover:text-sky-600 hover:bg-sky-50 transition rounded-full"
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
-                  {brand.name} <FiArrowRight className="h-3 w-3" />
+                  {brand.name} Aircond Service {area.name}
+                  <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
                 </NextLink>
               ))}
             </div>
@@ -531,29 +574,38 @@ export default async function AreaPage({
         </div>
       </section>
 
-      {/* Related Blog Guides for This Area */}
-      <section className="py-10 bg-slate-50 border-t border-slate-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
-          <h2 className="text-base font-black text-slate-900 mb-4">Aircond Guides for {area.name} Residents</h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {allPosts.slice(0, 4).map((post) => (
-              <NextLink
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group flex flex-col bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
-              >
-                <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
-                <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
-                <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+      {/* Related Blog Guides — AREA_BLOG_MAP driven */}
+      {(() => {
+        const blogSlugs = AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"];
+        const featuredPosts = allPosts.filter((p) => blogSlugs.includes(p.slug));
+        const displayPosts = featuredPosts.length > 0 ? featuredPosts : allPosts.slice(0, 4);
+        return (
+          <section className="py-10 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">Expert Guides · Panduan · 指南</p>
+              <h2 className="text-base font-black text-slate-900 mb-4">
+                Aircond Guides for {area.name} Residents
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {displayPosts.slice(0, 4).map((post) => (
+                  <NextLink
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                    <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                    <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                  </NextLink>
+                ))}
+              </div>
+              <NextLink href="/blog" className="inline-flex items-center gap-1 mt-4 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                All Aircond Guides <FiArrowRight className="h-3 w-3" />
               </NextLink>
-            ))}
-          </div>
-          <NextLink href="/blog" className="inline-flex items-center gap-1 mt-4 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
-            All Aircond Guides <FiArrowRight className="h-3 w-3" />
-          </NextLink>
-        </div>
-      </section>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Common Problems We Fix in This Area */}
       <section className="py-10 bg-white border-t border-slate-100">
