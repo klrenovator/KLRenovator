@@ -1,6 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
+import { BLOG_SERVICE_MAP } from "@/config/topical-authority-map";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiClock, FiTag, FiChevronRight, FiArrowLeft, FiArrowRight, FiMapPin } from "react-icons/fi";
@@ -281,41 +282,55 @@ export function BlogPostClient({ post, related }: Props) {
                   </div>
                 </div>
 
-                {/* Related Services */}
+                {/* Related Services — post-specific from BLOG_SERVICE_MAP */}
                 <div className="bg-white border border-slate-200 p-5 rounded-xl">
                   <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3">{ui.ourServices}</p>
                   <ul className="space-y-1.5">
-                    {ui.services.map((s) => (
-                      <li key={s.slug}>
-                        <NextLink
-                          href={`/services/${s.slug}`}
-                          className="flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
-                        >
-                          <FiArrowRight className="h-3 w-3 shrink-0" /> {s.label}
-                        </NextLink>
-                      </li>
-                    ))}
+                    {(() => {
+                      const specificSlugs = BLOG_SERVICE_MAP[post.slug] ?? [];
+                      const specificServices = specificSlugs.length > 0
+                        ? ui.services.filter((s) => specificSlugs.includes(s.slug))
+                        : ui.services;
+                      const displayServices = specificServices.length > 0 ? specificServices : ui.services;
+                      return displayServices.map((s) => (
+                        <li key={s.slug}>
+                          <NextLink
+                            href={`/services/${s.slug}`}
+                            className="flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
+                          >
+                            <FiArrowRight className="h-3 w-3 shrink-0 text-sky-400" /> {s.label}
+                          </NextLink>
+                        </li>
+                      ));
+                    })()}
                   </ul>
+                  <NextLink
+                    href="/services"
+                    className="block mt-3 text-xs font-black text-sky-600 hover:text-sky-800 transition-colors"
+                  >
+                    All Services →
+                  </NextLink>
                 </div>
 
-                {/* Area Links */}
+                {/* Area Links — keyword-rich anchors */}
                 <div className="bg-white border border-slate-200 p-5 rounded-xl">
                   <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3">
                     <FiMapPin className="inline h-3 w-3 mr-1 text-sky-500" />
                     {ui.alsoServing}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {siteConfig.areaPages.slice(0, 10).map((area) => (
+                    {siteConfig.areaPages.slice(0, 12).map((area) => (
                       <NextLink
                         key={area.slug}
                         href={`/areas/${area.slug}`}
                         className="text-[11px] font-bold text-slate-500 hover:text-sky-600 hover:underline transition-colors"
+                        title={`Aircond Service ${area.name}`}
                       >
                         {area.name}
                       </NextLink>
                     ))}
-                    <NextLink href="/areas" className="text-[11px] font-bold text-sky-600 hover:underline">
-                      +more →
+                    <NextLink href="/areas" className="text-[11px] font-black text-sky-600 hover:underline">
+                      All Areas →
                     </NextLink>
                   </div>
                 </div>
@@ -331,6 +346,42 @@ export function BlogPostClient({ post, related }: Props) {
           </div>
         </div>
       </article>
+
+      {/* ── In-Content Bottom CTA ───────────────────────────────────────── */}
+      <section className="py-10 bg-sky-50 border-y border-sky-100">
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+            {lang === "zh" ? "需要专业帮助？" : lang === "ms" ? "Perlukan bantuan profesional?" : "Need professional help?"}
+          </p>
+          <h2 className="text-xl font-black text-slate-900 mb-2">
+            {lang === "zh" ? "KL Renovator — 当天上门服务" : lang === "ms" ? "KL Renovator — Servis Hari Sama" : "KL Renovator — Same-Day Service Available"}
+          </h2>
+          <p className="text-sm text-slate-600 mb-5">
+            {lang === "zh" 
+              ? "覆盖吉隆坡及雪兰莪全区。价格透明，施工前确认。500+五星好评。"
+              : lang === "ms" 
+              ? "Meliputi semua kawasan KL & Selangor. Harga telus, disahkan sebelum kerja. 500+ ulasan bintang 5."
+              : "Covering all of KL & Selangor. Transparent pricing confirmed before work starts. 500+ 5-star reviews."}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={waLink(rfqMsgForService(post.relatedService))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-wider px-6 py-3 rounded-xl text-xs transition-all"
+            >
+              <FaWhatsapp className="h-4 w-4" />
+              {lang === "zh" ? "WhatsApp预约" : lang === "ms" ? "WhatsApp Tempah" : "WhatsApp to Book"}
+            </a>
+            <NextLink
+              href="/services"
+              className="inline-flex items-center justify-center gap-1 border-2 border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 font-black uppercase tracking-wider px-6 py-3 rounded-xl text-xs transition-all"
+            >
+              {lang === "zh" ? "查看所有服务 →" : lang === "ms" ? "Lihat Semua Perkhidmatan →" : "View All Services →"}
+            </NextLink>
+          </div>
+        </div>
+      </section>
 
       {/* Related Posts */}
       {related.length > 0 && (
