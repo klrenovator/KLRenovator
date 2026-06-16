@@ -9,6 +9,8 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { StickyActions } from "@/components/sticky-actions";
+import { ExitIntentPopup } from "@/components/exit-intent-popup";
+import { ScrollDepthCTA } from "@/components/scroll-depth-cta";
 import { googleReviews, googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
@@ -616,6 +618,8 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <StickyActions />
+            <ExitIntentPopup />
+            <ScrollDepthCTA />
           </div>
         </Providers>
       </body>
