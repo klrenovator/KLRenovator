@@ -9,7 +9,9 @@ export const ContactForm = () => {
   const [form, setForm] = useState({
     name: "",
     area: "",
-    service: siteConfig.services[0].title,
+    service: siteConfig.services.filter(s => s.slug !== "emergency")[0].title,
+    units: "1",
+    hp: "",
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
@@ -26,8 +28,8 @@ export const ContactForm = () => {
       `🙋 Name: ${form.name}`,
       `📍 Location: ${form.area}`,
       `❄️ Type of service: ${form.service}`,
-      "🔢 Number of units:",
-      "💨 HP (if known):",
+      `🔢 Number of units: ${form.units}`,
+      `💨 HP size: ${form.hp || "Not sure"}`,
       ...(form.message ? ["", `📝 Note: ${form.message}`] : []),
       "",
       "Please share price and available time. Thank you!",
@@ -97,12 +99,44 @@ export const ContactForm = () => {
           onChange={(e) => setForm({ ...form, service: e.target.value })}
           className={`${inputCls} appearance-none cursor-pointer`}
         >
-          {siteConfig.services.map((s) => (
+          {siteConfig.services.filter(s => s.slug !== "emergency").map((s) => (
             <option key={s.slug} value={s.title}>
               {s.title}
             </option>
           ))}
         </select>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+            Number of Units
+          </label>
+          <select
+            value={form.units}
+            onChange={(e) => setForm({ ...form, units: e.target.value })}
+            className={`${inputCls} appearance-none cursor-pointer`}
+          >
+            {["1","2","3","4","5","6","7","8+"].map((n) => (
+              <option key={n} value={n}>{n} unit{n !== "1" ? "s" : ""}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+            HP Size (if known)
+          </label>
+          <select
+            value={form.hp}
+            onChange={(e) => setForm({ ...form, hp: e.target.value })}
+            className={`${inputCls} appearance-none cursor-pointer`}
+          >
+            <option value="">Not sure</option>
+            {["1.0 HP","1.5 HP","2.0 HP","2.5 HP","3.0 HP","4.0 HP","5.0 HP"].map((h) => (
+              <option key={h} value={h}>{h}</option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div>
