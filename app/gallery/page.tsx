@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     title: "Project Gallery — KL Renovator Real Aircon Works",
     description: "Real project photos: installations, chemical wash, overhaul, commercial HVAC & repairs across KL & Selangor. 100% genuine photos.",
     url: "https://www.klrenovator.com/gallery",
+    type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
         url: "https://www.klrenovator.com/logo/image.png",
@@ -28,6 +31,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.klrenovator.com/gallery",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/gallery",
+      "ms-MY": "https://www.klrenovator.com/gallery",
+      "zh-MY": "https://www.klrenovator.com/gallery",
+      "x-default": "https://www.klrenovator.com/gallery",
+    },
   },
 };
 
