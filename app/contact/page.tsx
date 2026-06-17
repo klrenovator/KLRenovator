@@ -14,7 +14,15 @@ import { title, eyebrow } from "@/components/primitives";
 
 export const metadata: Metadata = {
   title: "Contact KL Renovator | Aircond Service KL & Selangor",
-  alternates: { canonical: "https://www.klrenovator.com/contact" },
+  alternates: {
+    canonical: "https://www.klrenovator.com/contact",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/contact",
+      "ms-MY": "https://www.klrenovator.com/contact",
+      "zh-MY": "https://www.klrenovator.com/contact",
+      "x-default": "https://www.klrenovator.com/contact",
+    },
+  },
   description:
     "Contact KL Renovator for professional aircond servicing in KL & Selangor. Covering Cheras, Ampang, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Rawang, Putrajaya & Cyberjaya. WhatsApp +60182983573. Same-day service.",
   openGraph: {
@@ -23,6 +31,8 @@ export const metadata: Metadata = {
       "Fastest response via WhatsApp — reply within 30 minutes. Same-day aircond service across KL & Selangor. Chemical wash from RM 120. Call +60182983573.",
     url: "https://www.klrenovator.com/contact",
     type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
         url: "https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.jpg",
