@@ -134,6 +134,8 @@ export async function generateMetadata({
       description: brand.metaDesc,
       url: `https://www.klrenovator.com/brands/${slug}`,
       type: "website",
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
           url: `https://www.klrenovator.com${(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`,
@@ -151,6 +153,12 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://www.klrenovator.com/brands/${slug}`,
+      languages: {
+        "en-MY": `https://www.klrenovator.com/brands/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/brands/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/brands/${slug}`,
+        "x-default": `https://www.klrenovator.com/brands/${slug}`,
+      },
     },
     other: {
       "title:ms": brand.metaTitleMS,
