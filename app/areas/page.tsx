@@ -22,9 +22,17 @@ export const metadata: Metadata = {
       "Professional aircond servicing across all KL & Selangor areas. Same-day available. 38 areas covered.",
     url: "https://www.klrenovator.com/areas",
     type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
   },
   alternates: {
     canonical: "https://www.klrenovator.com/areas",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/areas",
+      "ms-MY": "https://www.klrenovator.com/areas",
+      "zh-MY": "https://www.klrenovator.com/areas",
+      "x-default": "https://www.klrenovator.com/areas",
+    },
   },
 };
 
