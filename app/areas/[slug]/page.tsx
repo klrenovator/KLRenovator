@@ -45,9 +45,17 @@ export async function generateMetadata({
       description: area.metaDesc,
       url: `https://www.klrenovator.com/areas/${slug}`,
       type: "website",
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/areas/${slug}`,
+      languages: {
+        "en-MY": `https://www.klrenovator.com/areas/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/areas/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/areas/${slug}`,
+        "x-default": `https://www.klrenovator.com/areas/${slug}`,
+      },
     },
   };
 }
