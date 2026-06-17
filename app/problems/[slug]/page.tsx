@@ -43,9 +43,17 @@ export async function generateMetadata({
       description: problem.metaDesc,
       url: `https://www.klrenovator.com/problems/${slug}`,
       type: "website",
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/problems/${slug}`,
+      languages: {
+        "en-MY": `https://www.klrenovator.com/problems/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/problems/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/problems/${slug}`,
+        "x-default": `https://www.klrenovator.com/problems/${slug}`,
+      },
     },
     other: {
       "title:ms": problem.metaTitleMS,
