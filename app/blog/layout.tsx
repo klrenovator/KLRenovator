@@ -6,12 +6,21 @@ export const metadata: Metadata = {
     "Practical aircond advice from KL Renovator — chemical wash vs overhaul, why aircon not cold, how often to service, refrigerant gas types R22 R410A R32, and more.",
   alternates: {
     canonical: "https://www.klrenovator.com/blog",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/blog",
+      "ms-MY": "https://www.klrenovator.com/blog",
+      "zh-MY": "https://www.klrenovator.com/blog",
+      "x-default": "https://www.klrenovator.com/blog",
+    },
   },
   openGraph: {
     title: "Aircond Tips & Expert Guides | KL Renovator Blog",
     description:
       "Practical aircond maintenance guides, troubleshooting tips, and service advice from Malaysia's trusted HVAC specialist.",
     url: "https://www.klrenovator.com/blog",
+    type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630 }],
   },
 };
