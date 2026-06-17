@@ -43,6 +43,8 @@ export const metadata: Metadata = {
       "Urgent aircond breakdown? KL Renovator dispatches same-day. All brands. Call +60182983573.",
     url: "https://www.klrenovator.com/services/emergency",
     type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
         url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.jpg",
@@ -60,6 +62,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.klrenovator.com/services/emergency",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/services/emergency",
+      "ms-MY": "https://www.klrenovator.com/services/emergency",
+      "zh-MY": "https://www.klrenovator.com/services/emergency",
+      "x-default": "https://www.klrenovator.com/services/emergency",
+    },
   },
 };
 
