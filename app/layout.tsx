@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     type: "website",
     locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     url: "https://www.klrenovator.com/",
     siteName: "KL Renovator",
     images: [
@@ -66,6 +67,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.klrenovator.com",
+    languages: {
+      "en-MY": "https://www.klrenovator.com",
+      "ms-MY": "https://www.klrenovator.com",
+      "zh-MY": "https://www.klrenovator.com",
+      "x-default": "https://www.klrenovator.com",
+    },
   },
   // ── Geo + AI meta tags (merged — no duplicate) ───────────────────────────
   other: {
