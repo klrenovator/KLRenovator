@@ -28,6 +28,8 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       url: `https://www.klrenovator.com/blog/${post.slug}`,
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
       images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.jpg", width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
@@ -38,6 +40,12 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://www.klrenovator.com/blog/${slug}`,
+      languages: {
+        "en-MY": `https://www.klrenovator.com/blog/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/blog/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/blog/${slug}`,
+        "x-default": `https://www.klrenovator.com/blog/${slug}`,
+      },
     },
   };
 }
