@@ -15,9 +15,12 @@ import { googleReviews, googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
+  // NOTE: no `template` here — every page (services, areas, brands, problems, blog)
+  // already includes "| KL Renovator" in its own metaTitle. Adding a template here
+  // caused a double-suffix bug ("...KL Renovator | KL Renovator") across 100+ pages.
   title: {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s | KL Renovator`,
+    template: `%s`,
   },
   description: siteConfig.description,
   keywords: [
@@ -36,7 +39,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     type: "website",
     locale: "en_MY",
-    alternateLocale: ["ms_MY", "zh_MY"],
     url: "https://www.klrenovator.com/",
     siteName: "KL Renovator",
     images: [
@@ -67,12 +69,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.klrenovator.com",
-    languages: {
-      "en-MY": "https://www.klrenovator.com",
-      "ms-MY": "https://www.klrenovator.com",
-      "zh-MY": "https://www.klrenovator.com",
-      "x-default": "https://www.klrenovator.com",
-    },
   },
   // ── Geo + AI meta tags (merged — no duplicate) ───────────────────────────
   other: {
