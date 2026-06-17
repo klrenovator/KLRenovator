@@ -18,13 +18,23 @@ export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
     "Learn about KL Renovator (Multicore Dynamic Resources) — KL & Selangor's trusted aircon specialist. Serving Kuala Lumpur, Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Putrajaya & Cyberjaya. 10+ years experience, 5,000+ happy customers.",
-  alternates: { canonical: "https://www.klrenovator.com/about" },
+  alternates: {
+    canonical: "https://www.klrenovator.com/about",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/about",
+      "ms-MY": "https://www.klrenovator.com/about",
+      "zh-MY": "https://www.klrenovator.com/about",
+      "x-default": "https://www.klrenovator.com/about",
+    },
+  },
   openGraph: {
     title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
     description:
       "KL Renovator (Multicore Dynamic Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
     url: "https://www.klrenovator.com/about",
     type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
         url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg",
