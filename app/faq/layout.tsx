@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   ].join(", "),
   alternates: {
     canonical: "https://www.klrenovator.com/faq",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/faq",
+      "ms-MY": "https://www.klrenovator.com/faq",
+      "zh-MY": "https://www.klrenovator.com/faq",
+      "x-default": "https://www.klrenovator.com/faq",
+    },
   },
   openGraph: {
     title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
@@ -25,6 +31,8 @@ export const metadata: Metadata = {
       "Frequently asked questions about KL Renovator's aircond services. Chemical wash from RM 120, overhaul from RM 220, same-day service, 1-month warranty. All areas of KL & Selangor covered.",
     url: "https://www.klrenovator.com/faq",
     type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
         url: "https://www.klrenovator.com/logo/image.png",
