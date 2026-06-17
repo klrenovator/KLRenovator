@@ -18,8 +18,18 @@ export const metadata: Metadata = {
       "All major aircond brands serviced in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
     url: "https://www.klrenovator.com/brands",
     type: "website",
+    locale: "en_MY",
+    alternateLocale: ["ms_MY", "zh_MY"],
   },
-  alternates: { canonical: "https://www.klrenovator.com/brands" },
+  alternates: {
+    canonical: "https://www.klrenovator.com/brands",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/brands",
+      "ms-MY": "https://www.klrenovator.com/brands",
+      "zh-MY": "https://www.klrenovator.com/brands",
+      "x-default": "https://www.klrenovator.com/brands",
+    },
+  },
 };
 
 const waMsg =
