@@ -45,9 +45,17 @@ export async function generateMetadata({
       description: data.tagline,
       url: `https://www.klrenovator.com/services/${slug}`,
       type: "website",
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/services/${slug}`,
+      languages: {
+        "en-MY": `https://www.klrenovator.com/services/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/services/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/services/${slug}`,
+        "x-default": `https://www.klrenovator.com/services/${slug}`,
+      },
     },
   };
 }
