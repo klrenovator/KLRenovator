@@ -23,14 +23,6 @@ export const metadata: Metadata = {
     template: `%s`,
   },
   description: siteConfig.description,
-  keywords: [
-    "aircond service KL", "aircond service Selangor", "aircon chemical wash KL",
-    "aircond repair Kuala Lumpur", "aircond chemical overhaul", "gas top up aircond KL",
-    "aircond service near me", "aircond service Petaling Jaya", "aircond service Subang Jaya",
-    "Daikin aircond service KL", "Panasonic aircond service KL", "aircond installation KL",
-    "servis aircond KL", "cuci kimia aircond", "tambah gas aircond",
-    "冷气服务吉隆坡", "冷气化学清洗", "冷气维修雪兰莪",
-  ],
   verification: {
     google: "bXgZJKdBlDiVK9DsjNukmCqqicH37cqU_YdHSIVhjlg",
   },
