@@ -1,10 +1,9 @@
 /**
- * GOOGLE REVIEWS — KL Renovator
- * All reviews copied from KL Renovator Google Business Profile.
- * dates are in ISO 8601 format (YYYY-MM-DD) for use in Review schema.
- * dateDisplay is the human-readable label shown on the website.
- */
-
+GOOGLE REVIEWS — KL Renovator
+All reviews copied from KL Renovator Google Business Profile.
+dates are in ISO 8601 format (YYYY-MM-DD) for use in Review schema.
+dateDisplay is the human-readable label shown on the website.
+*/
 export type Review = {
   author: string;
   initials: string;
@@ -24,9 +23,10 @@ export const googlePlace = {
 };
 
 /**
- * Real Google reviews — copied from the KL Renovator Google Business listing.
- * Dates approximated from relative timestamps (e.g. "a month ago" → May 2026).
- */
+Real Google reviews — copied from the KL Renovator Google Business listing.
+Dates approximated from relative timestamps (e.g. "a month ago" → May 2026).
+NOTE: "Sidra Riaz" review removed (was about electrical work, not HVAC).
+*/
 export const googleReviews: Review[] = [
   {
     author: "Jithin menon",
@@ -43,14 +43,6 @@ export const googleReviews: Review[] = [
     date: "2026-05-01",
     dateDisplay: "May 2026",
     text: "Response fast to your queries and will answer all your questions should you need any clarification. The job is clean and tolerable for the price.",
-  },
-  {
-    author: "Sidra Riaz",
-    initials: "S",
-    rating: 5,
-    date: "2026-05-01",
-    dateDisplay: "May 2026",
-    text: "If you are looking for a reliable electrician in KL, I highly recommend KL RENOVATOR. I had some complex electrical wiring and light installation work done, and the team handled everything safely and efficiently. They are very knowledgeable about safety standards and ensured all circuits were perfectly balanced. Professional, honest, and fast service. Best choice for any electrical repair or renovation!",
   },
   {
     author: "muhd ismail abdul malik",
