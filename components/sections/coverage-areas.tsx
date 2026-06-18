@@ -1,5 +1,3 @@
-"use client";
-
 import NextLink from "next/link";
 import { FaLocationDot, FaCheck } from "react-icons/fa6";
 import { siteConfig } from "@/config/site";
