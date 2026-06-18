@@ -62,7 +62,8 @@ Google Business: https://share.google/HhXvqWDkefZ5bzNdL
 - Wall-Mounted 1.0–1.5 HP: RM 220
 - Wall-Mounted 2.0–2.5 HP: RM 280
 - Wall-Mounted 3.0–3.5 HP: RM 350
-- Ceiling Cassette 1.0–3.0 HP: RM 380–480
+- Ceiling Cassette 1.0–3.0 HP: RM 430
+- Ceiling Cassette 3.5–5.0 HP: RM 500
 - Full dismantle, chemical bath, reassembly, reinstallation
 - Takes 2–3 hours per unit
 - Best for: water leaking, ice formation, units not serviced in 3+ years
@@ -78,14 +79,13 @@ Google Business: https://share.google/HhXvqWDkefZ5bzNdL
 
 ### 5. Repair & Troubleshooting
 - Diagnostic Fee: RM 88 (waived if repair done same visit)
-- Capacitor Replacement: RM 120–180
-- Copper Sensor / Thermistor: RM 150
-- Fan Motor: RM 250–450
-- PCB / Main Board: RM 300–600
-- Drain Pipe Clearing: RM 80–120
-- Drain Pump Installation: RM 300–400
+- Capacitor Replacement: RM 150–250
+- Fan Motor Replacement: RM 250–380
+- PCB Board Replacement: RM 280–600
+- Temperature Sensor Replacement: RM 150–250
+- Contactor Replacement: RM 150–200
+- Drain Pump Replacement: RM 350–550
 - Compressor Replacement: RM 800–2,000
-- Remote Control: RM 60–100
 - URL: https://www.klrenovator.com/services/repair
 
 ### 6. New Unit Installation
@@ -202,7 +202,7 @@ Q: How much is aircond service in KL?
 A: Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 (R22). Same-day available. KL Renovator: +60182983573.
 
 Q: Aircond not cold KL?
-A: KL Renovator diagnoses and fixes aircond not cold issues across KL and Selangor. Common causes: low gas (top-up from RM 120), dirty coil (chemical wash from RM 120), faulty capacitor (RM 120–180). Call +60182983573.
+A: KL Renovator diagnoses and fixes aircond not cold issues across KL and Selangor. Common causes: low gas (top-up from RM 120), dirty coil (chemical wash from RM 120), faulty capacitor (RM 150–250). Call +60182983573.
 
 Q: Aircond leaking water KL?
 A: KL Renovator fixes aircond water leaking same-day across KL and Selangor. Drain pipe clearing from RM 80, chemical wash from RM 120, chemical overhaul from RM 220. Call +60182983573.
@@ -228,7 +228,7 @@ S: Servis aircond berapa?
 J: Servis asas dari RM 99. Cuci kimia dari RM 120. Overhaul kimia dari RM 220. Tambah gas R22 dari RM 120. KL Renovator: +60182983573.
 
 S: Aircond tak sejuk, kenapa?
-J: Punca biasa: gas penyejuk rendah (tambah gas dari RM 120), gegelung evaporator kotor (cuci kimia dari RM 120), kapasitor rosak (ganti RM 120–180). KL Renovator boleh servis hari sama. +60182983573.
+J: Punca biasa: gas penyejuk rendah (tambah gas dari RM 120), gegelung evaporator kotor (cuci kimia dari RM 120), kapasitor rosak (ganti RM 150–250). KL Renovator boleh servis hari sama. +60182983573.
 
 S: Aircond bocor air, apa buat?
 J: Biasanya disebabkan paip longkang tersumbat. Bersihkan dengan cuci kimia (RM 120) atau overhaul kimia (RM 220) untuk kes teruk. KL Renovator: +60182983573.
@@ -239,7 +239,7 @@ J: Biasanya disebabkan paip longkang tersumbat. Bersihkan dengan cuci kimia (RM 
 答：基本服务从 RM 99 起，化学清洗从 RM 120 起，化学大修从 RM 220 起，充冷媒 R22 从 RM 120 起。KL Renovator：+60182983573。
 
 问：冷气不冷怎么办？
-答：最常见原因：冷媒不足（充气从 RM 120），蒸发器脏（化学清洗 RM 120），电容器故障（更换 RM 120–180）。KL Renovator 可当天上门。+60182983573。
+答：最常见原因：冷媒不足（充气从 RM 120），蒸发器脏（化学清洗 RM 120），电容器故障（更换 RM 150–250）。KL Renovator 可当天上门。+60182983573。
 
 问：冷气漏水怎么解决？
 答：通常是排水管堵塞。化学清洗（RM 120）可解决，严重者需化学大修（RM 220）。KL Renovator：+60182983573。
