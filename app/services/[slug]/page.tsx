@@ -45,17 +45,9 @@ export async function generateMetadata({
       description: data.tagline,
       url: `https://www.klrenovator.com/services/${slug}`,
       type: "website",
-      locale: "en_MY",
-      alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/services/${slug}`,
-      languages: {
-        "en-MY": `https://www.klrenovator.com/services/${slug}`,
-        "ms-MY": `https://www.klrenovator.com/services/${slug}`,
-        "zh-MY": `https://www.klrenovator.com/services/${slug}`,
-        "x-default": `https://www.klrenovator.com/services/${slug}`,
-      },
     },
   };
 }
@@ -151,8 +143,8 @@ import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-autho
 const SERVICE_BLOG_MAP: Record<string, string[]> = {
   "chemical-wash": ["aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
   "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
-  "gas-topup": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "repair": ["aircond-not-cold-reasons", "aircond-water-leaking-causes", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "gas-topup": ["r32-r410a-r22-gas-difference", "aircon-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "repair": ["aircon-not-cold-reasons", "aircond-water-leaking-causes", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
   "installation": ["aircond-installation-guide-malaysia", "best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "daikin-vs-panasonic-aircond-malaysia"],
   "basic-servicing": ["how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia", "aircond-service-price-guide-kl-2026"],
   "ceiling-cassette": ["commercial-hvac-maintenance-kl", "aircond-service-price-guide-kl-2026"],
@@ -444,6 +436,49 @@ export default async function ServicePage({
               </ul>
             </div>
           </Reveal>
+          {(data as any).priceTableNote && (
+            <Reveal>
+              <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                <p className="text-xs text-emerald-800 leading-relaxed">
+                  <span className="font-black">✓ Included free: </span>
+                  {(data as any).priceTableNote}
+                </p>
+                <NextLink
+                  href="/services#materials"
+                  className="inline-flex items-center gap-1 mt-2 text-xs font-black text-sky-600 hover:text-sky-800 transition-colors"
+                >
+                  View Full Materials Pricing & Special Charges →
+                </NextLink>
+              </div>
+            </Reveal>
+          )}
+
+          {/* Inline Materials Pricing — shown directly on installation & dismantling pages */}
+          {(slug === "installation" || slug === "dismantling-relocation") && (
+            <Reveal>
+              <div className="mt-10">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+                  Materials Pricing
+                </p>
+                <h3 className="text-base font-black text-slate-900 mb-4">
+                  Additional Materials & Special Charges
+                </h3>
+                <div className="border border-slate-200 bg-white">
+                  <ul className="divide-y divide-slate-200">
+                    {siteConfig.pricing.materials.rows.map((row: { label: string; price: string }) => (
+                      <li key={row.label} className="flex items-center justify-between gap-3 px-5 py-3.5">
+                        <span className="text-sm text-slate-700">{row.label}</span>
+                        <span className="text-sm font-bold text-sky-600 whitespace-nowrap">{row.price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="text-xs text-slate-400 mt-3">
+                  All material costs are quoted and confirmed with you before work begins. No surprises.
+                </p>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 
