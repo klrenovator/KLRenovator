@@ -151,7 +151,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical overhaul cost in KL & Selangor?",
-        a: "Chemical overhaul starts from RM 220 for a wall-mounted 1.0–1.5 HP unit. Ceiling cassette from RM 380. All prices confirmed before work begins.",
+        a: "Chemical overhaul starts from RM 220 for a wall-mounted 1.0–1.5 HP unit. Ceiling cassette from RM 430. All prices confirmed before work begins.",
       },
       {
         q: "What is the difference between chemical wash and chemical overhaul?",
@@ -173,7 +173,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga chemical overhaul di KL & Selangor?",
-        a: "Chemical overhaul bermula dari RM 220 untuk unit dinding 1.0–1.5 HP. Ceiling cassette dari RM 380. Semua harga disahkan sebelum kerja dimulakan.",
+        a: "Chemical overhaul bermula dari RM 220 untuk unit dinding 1.0–1.5 HP. Ceiling cassette dari RM 430. Semua harga disahkan sebelum kerja dimulakan.",
       },
       {
         q: "Apa perbezaan cuci kimia dan chemical overhaul?",
@@ -191,7 +191,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修价格是多少？",
-        a: "挂壁式1.0–1.5 HP化学大修从RM 220起。天花板卡式机从RM 380起。所有价格在开始工作前确认。",
+        a: "挂壁式1.0–1.5 HP化学大修从RM 220起。天花板卡式机从RM 430起。所有价格在开始工作前确认。",
       },
       {
         q: "化学清洗和化学大修有什么区别？",
@@ -339,7 +339,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does aircond repair cost in KL & Selangor?",
-        a: "Diagnostic fee is RM 88 — this is waived if the repair is completed on the same visit. Common repairs: capacitor replacement RM 100–150, fan motor RM 220–380, PCB board RM 280–600, sensor RM 80–150.",
+        a: "Diagnostic fee is RM 88 — this is waived if the repair is completed on the same visit. Common repairs: capacitor replacement RM 150–250, fan motor RM 250–380, PCB board RM 280–600, sensor RM 150–250.",
       },
       {
         q: "My aircond is blinking and won't turn on — what's wrong?",
@@ -365,7 +365,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga pembaikan aircond di KL & Selangor?",
-        a: "Yuran diagnostik adalah RM 88 — ini dikecualikan jika pembaikan diselesaikan pada lawatan yang sama. Pembaikan biasa: penggantian kapasitor RM 100–150, motor kipas RM 220–380, PCB RM 280–600, penderia RM 80–150.",
+        a: "Yuran diagnostik adalah RM 88 — ini dikecualikan jika pembaikan diselesaikan pada lawatan yang sama. Pembaikan biasa: penggantian kapasitor RM 150–250, motor kipas RM 250–380, PCB RM 280–600, penderia RM 150–250.",
       },
       {
         q: "Aircond saya berkelip dan tidak mahu hidup — apa masalahnya?",
@@ -383,7 +383,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪冷气维修费用是多少？",
-        a: "诊断费为RM 88——如果当次完成维修则免收。常见维修：电容器更换RM 100–150，风扇电机RM 220–380，PCB板RM 280–600，传感器RM 80–150。",
+        a: "诊断费为RM 88——如果当次完成维修则免收。常见维修：电容器更换RM 150–250，风扇电机RM 250–380，PCB板RM 280–600，传感器RM 150–250。",
       },
       {
         q: "冷气灯闪烁无法开机——是什么问题？",
@@ -608,7 +608,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     highlights: [
       "Specialist ceiling cassette technicians",
       "Chemical wash from RM 220",
-      "Chemical overhaul from RM 380",
+      "Chemical overhaul from RM 430",
       "VRF / VRV multi-zone systems",
       "All brands — Daikin, Mitsubishi, York, Carrier",
       "Drain pan and tray deep clean",
@@ -624,7 +624,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does ceiling cassette servicing cost in KL?",
-        a: "Basic servicing from RM 150. Chemical wash from RM 220. Chemical overhaul from RM 380. Exact price confirmed on-site before work begins.",
+        a: "Basic servicing from RM 150. Chemical wash from RM 220. Chemical overhaul from RM 430. Installation from RM 290. Exact price confirmed on-site before work begins.",
       },
       {
         q: "My ceiling cassette is dripping water — what should I do?",
@@ -646,7 +646,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis ceiling cassette di KL?",
-        a: "Servis asas dari RM 150. Cuci kimia dari RM 220. Chemical overhaul dari RM 380. Harga tepat disahkan di tapak sebelum kerja dimulakan.",
+        a: "Servis asas dari RM 150. Cuci kimia dari RM 220. Chemical overhaul dari RM 430. Pemasangan dari RM 290. Harga tepat disahkan di tapak sebelum kerja dimulakan.",
       },
       {
         q: "Ceiling cassette saya menitis air — apa yang perlu dilakukan?",
@@ -660,7 +660,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡天花板卡式机保养费用是多少？",
-        a: "基本保养从RM 150起。化学清洗从RM 220起。化学大修从RM 380起。确切价格在现场开工前确认。",
+        a: "基本保养从RM 150起。化学清洗从RM 220起。化学大修从RM 430起。安装从RM 290起。确切价格在现场开工前确认。",
       },
       {
         q: "我的天花板卡式机滴水——该怎么办？",
@@ -680,7 +680,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 350" },
       { label: "Chemical Overhaul · 1.0 – 3.0 HP", price: "RM 430" },
       { label: "Chemical Overhaul · 3.5 – 5.0 HP", price: "RM 500" },
+      { label: "Installation · 1.0 – 1.5 HP", price: "RM 290" },
+      { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
+      { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
     ],
+    priceTableNote: "Installation includes 7ft copper pipe, wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
   },
 
   // ── 8. DISMANTLE & RELOCATION ────────────────────────────────────────────
