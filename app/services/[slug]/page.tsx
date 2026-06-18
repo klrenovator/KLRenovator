@@ -454,7 +454,7 @@ export default async function ServicePage({
           )}
 
           {/* Inline Materials Pricing — shown directly on installation & dismantling pages */}
-          {(slug === "installation" || slug === "dismantling-relocation") && (
+          {(slug === "installation" || slug === "dismantling-relocation" || slug === "ceiling-cassette") && (
             <Reveal>
               <div className="mt-10">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
