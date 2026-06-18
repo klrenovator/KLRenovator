@@ -1,5 +1,4 @@
 "use client";
-
 import clsx from "clsx";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { siteConfig } from "@/config/site";
@@ -11,6 +10,7 @@ interface BookingButtonProps {
   size?: "sm" | "md" | "lg";
   className?: string;
   fullWidth?: boolean;
+  areaName?: string; // NEW: Area name pass karne ke liye
 }
 
 export const BookingButton = ({
@@ -19,9 +19,22 @@ export const BookingButton = ({
   size = "md",
   className,
   fullWidth = false,
+  areaName,
 }: BookingButtonProps) => {
-  // Generate WhatsApp dynamic local content link
-  const finalLink = serviceName ? waLink(rfqMsgForService(serviceName)) : waLink(rfqMsg);
+  
+  // Smart Message Logic
+  let finalLink = waLink(rfqMsg);
+  
+  if (serviceName && areaName) {
+    // Agar Area aur Service dono hain
+    finalLink = waLink(`Hi KL Renovator, I need ${serviceName} in ${areaName}. Please advise on pricing and availability.`);
+  } else if (serviceName) {
+    // Agar sirf Service hai
+    finalLink = waLink(rfqMsgForService(serviceName));
+  } else if (areaName) {
+    // Agar sirf Area hai (Area pages ke liye)
+    finalLink = waLink(`Hi KL Renovator, I need aircond service in ${areaName}. Please advise.`);
+  }
 
   return (
     <div className={clsx("flex flex-wrap items-center gap-3", fullWidth && "w-full", className)}>
