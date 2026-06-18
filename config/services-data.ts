@@ -17,6 +17,7 @@ export type ServiceDetail = {
   faqsBM: { q: string; a: string }[];
   faqsZH: { q: string; a: string }[];
   priceTable: { label: string; price: string }[];
+  priceTableNote?: string;
   heroImage: string;
 };
 
@@ -399,13 +400,13 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
-      { label: "Capacitor Replacement", price: "RM 100 – 150" },
-      { label: "Fan Motor Replacement", price: "RM 220 – 380" },
+      { label: "Capacitor Replacement", price: "RM 150 – 250" },
+      { label: "Fan Motor Replacement", price: "RM 250 – 380" },
       { label: "PCB Board Replacement", price: "RM 280 – 600" },
-      { label: "Temperature Sensor Replacement", price: "RM 80 – 150" },
-      { label: "Contactor Replacement", price: "RM 80 – 120" },
-      { label: "Drain Pump Replacement", price: "RM 120 – 180" },
-      { label: "Compressor Replacement", price: "RM 600 – 1,500" },
+      { label: "Temperature Sensor Replacement", price: "RM 150 – 250" },
+      { label: "Contactor Replacement", price: "RM 150 – 200" },
+      { label: "Drain Pump Replacement", price: "RM 350 – 550" },
+      { label: "Compressor Replacement", price: "RM 800 – 2,000" },
     ],
   },
 
@@ -508,11 +509,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
       { label: "Window Unit · 1.0 – 1.5 HP", price: "RM 199" },
       { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 249" },
-      { label: "Additional Copper Pipe (per ft)", price: "RM 25" },
-      { label: "Compressor Bracket (standard)", price: "Included" },
-      { label: "Compressor Bracket (heavy-duty roof)", price: "RM 80 – 150" },
-      { label: "Dismantle of Old Unit (add-on)", price: "RM 90" },
     ],
+    priceTableNote: "Standard installation includes 7ft copper pipe, wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
   },
 
   // ── 6. BASIC SERVICING ───────────────────────────────────────────────────
@@ -758,11 +756,11 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Dismantle Only (indoor + outdoor)", price: "RM 90" },
-      { label: "Dismantle + Reinstall (standard)", price: "RM 250" },
-      { label: "Dismantle + Reinstall (2.0–2.5 HP)", price: "RM 290" },
-      { label: "Additional Copper Pipe (per ft)", price: "RM 25" },
-      { label: "Ceiling Cassette Dismantle + Reinstall", price: "RM 350" },
+      { label: "Dismantle + Reinstall Same Place (standard)", price: "RM 250" },
+      { label: "Dismantle + Reinstall Same Place (2.0–2.5 HP)", price: "RM 290" },
+      { label: "Dismantle + Reinstall Other Place", price: "RM 350" },
     ],
+    priceTableNote: "7ft copper pipe, wire, and drain pipe are free with reinstallation. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
   },
 
   // ── 9. EMERGENCY AIRCOND REPAIR ──────────────────────────────────────────
