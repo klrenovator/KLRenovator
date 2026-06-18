@@ -166,7 +166,7 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
 
 // ── SERVICE → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
-  "chemical-wash": ["aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
+  "chemical-wash": ["aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
   "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
   "gas-topup": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
   "repair": ["aircond-not-cold-reasons", "aircond-water-leaking-causes", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
@@ -204,7 +204,7 @@ export const AREA_PROBLEM_MAP: Record<string, string[]> = {
 export const AREA_BLOG_MAP: Record<string, string[]> = {
   "_default": [
     "how-often-service-aircond-malaysia",
-    "aircon-chemical-wash-price-malaysia-2026",
+    "aircond-chemical-wash-price-malaysia-2026",
     "aircond-troubleshooting-guide-malaysia",
   ],
 };
@@ -233,9 +233,9 @@ export const BRAND_SERVICE_MAP: Record<string, string[]> = {
 // ── BLOG → SERVICE MAP ────────────────────────────────────────────────────────
 // Which services to link from each blog post
 export const BLOG_SERVICE_MAP: Record<string, string[]> = {
-  "aircon-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul"],
+  "aircond-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul"],
   "chemical-wash-vs-chemical-overhaul": ["chemical-wash", "chemical-overhaul"],
-  "signs-your-aircon-needs-chemical-overhaul-malaysia": ["chemical-overhaul", "chemical-wash"],
+  "signs-your-aircond-needs-chemical-overhaul-malaysia": ["chemical-overhaul", "chemical-wash"],
   "aircond-not-cold-reasons": ["gas-topup", "chemical-wash", "repair"],
   "how-often-service-aircond-malaysia": ["basic-servicing", "chemical-wash"],
   "r32-r410a-r22-gas-difference": ["gas-topup"],
@@ -251,7 +251,7 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-troubleshooting-guide-malaysia": ["repair", "gas-topup", "chemical-wash"],
   "commercial-hvac-maintenance-kl": ["ceiling-cassette"],
   "aircond-gas-topup-myths-malaysia": ["gas-topup"],
-  "aircon-service-batu-caves-selayang-2026": ["chemical-wash", "basic-servicing"],
+  "aircond-service-batu-caves-selayang-2026": ["chemical-wash", "basic-servicing"],
 };
 
 // ── ANCHOR TEXT STRATEGY ─────────────────────────────────────────────────────
