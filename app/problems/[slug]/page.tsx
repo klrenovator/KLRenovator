@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import NextLink from "next/link";
-import { FiCheck, FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool, FiMapPin } from "react-icons/fi";
+import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool, FiMapPin } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
@@ -43,17 +43,9 @@ export async function generateMetadata({
       description: problem.metaDesc,
       url: `https://www.klrenovator.com/problems/${slug}`,
       type: "website",
-      locale: "en_MY",
-      alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/problems/${slug}`,
-      languages: {
-        "en-MY": `https://www.klrenovator.com/problems/${slug}`,
-        "ms-MY": `https://www.klrenovator.com/problems/${slug}`,
-        "zh-MY": `https://www.klrenovator.com/problems/${slug}`,
-        "x-default": `https://www.klrenovator.com/problems/${slug}`,
-      },
     },
     other: {
       "title:ms": problem.metaTitleMS,
@@ -590,7 +582,7 @@ const problemContent: Record<
     faqs: [
       { q: "How do I test if my aircond remote is working?", a: "Point the remote at your phone's front or back camera and press any button. If you see a purple or white light flash on the camera screen, the remote IR emitter is working. If you see nothing, the remote itself is faulty — try replacing the batteries first." },
       { q: "My remote works (I can see the IR light) but the aircond does not respond — why?", a: "The indoor unit's IR receiver is likely faulty or blocked. Clean the receiver window (small black panel on the unit). If still no response, the IR receiver or the PCB needs replacement. KL Renovator diagnoses on-site." },
-      { q: "How much does it cost to fix an aircond remote problem?", a: "If it's just batteries: RM 5. If the remote itself is faulty: replacement remote RM 50–120. If the IR receiver is faulty: RM 80–150. If the PCB is causing the issue: RM 300–600. KL Renovator diagnoses the exact cause first." },
+      { q: "How much does it cost to fix an aircond remote problem?", a: "If it's just batteries: RM 5. If the remote itself is faulty: replacement remote RM 50–120. If the IR receiver is faulty: RM 150–250. If the PCB is causing the issue: RM 300–600. KL Renovator diagnoses the exact cause first." },
     ],
     faqsBM: [
       { q: "Bagaimana saya menguji sama ada kawalan jauh aircond berfungsi?", a: "Hala kawalan jauh ke kamera telefon anda dan tekan mana-mana butang. Jika anda melihat cahaya ungu atau putih berkelip pada skrin kamera, IR kawalan jauh berfungsi. Jika tidak ada cahaya, cuba ganti bateri dahulu." },
@@ -841,16 +833,16 @@ const problemContent: Record<
     warningZH: "错误闪烁代码是冷气内置的诊断系统。忽视它们或在未修复根本故障的情况下反复重置机器可能导致问题恶化——尤其是气体不足或压缩机保护代码。",
     faqs: [
       { q: "How do I know what my aircond error blink code means?", a: "Count the number of blinks, then look up your brand's error code chart (available on KL Renovator's brand pages or WhatsApp us the blink pattern + brand + model). KL Renovator diagnoses all brands remotely via WhatsApp for common codes." },
-      { q: "My aircond shows a blinking light and will not cool — how much will it cost to fix?", a: "Depends on the fault: Low gas: RM 120–180. Sensor replacement: RM 100–200. PCB fault: RM 300–600. Capacitor: RM 180. Diagnostic RM 88 (waived with repair). WhatsApp KL Renovator the error code for a remote estimate." },
+      { q: "My aircond shows a blinking light and will not cool — how much will it cost to fix?", a: "Depends on the fault: Low gas: RM 120–220 (by HP/gas type). Sensor replacement: RM 150–250. PCB fault: RM 280–600. Capacitor: RM 150–250. Diagnostic RM 88 (waived with repair). WhatsApp KL Renovator the error code for a remote estimate." },
       { q: "Can I reset the error code myself?", a: "You can reset the unit by switching off the MCB for 10 minutes then restoring power. However, if the underlying fault is not fixed, the code will return. KL Renovator repairs the cause, not just resets the code." },
     ],
     faqsBM: [
       { q: "Bagaimana saya tahu apa maksud kod berkelip ralat aircond saya?", a: "Kira bilangan berkelip, kemudian cari carta kod ralat jenama anda (tersedia di halaman jenama KL Renovator atau WhatsApp kami corak berkelip + jenama + model). KL Renovator mendiagnosis semua jenama dari jauh melalui WhatsApp." },
-      { q: "Aircond saya menunjukkan lampu berkelip dan tidak menyejuk — berapa kos untuk membaiki?", a: "Bergantung pada kerosakan: Gas rendah: RM 120–180. Penggantian sensor: RM 100–200. Kerosakan PCB: RM 300–600. Kapasitor: RM 180. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
+      { q: "Aircond saya menunjukkan lampu berkelip dan tidak menyejuk — berapa kos untuk membaiki?", a: "Bergantung pada kerosakan: Gas rendah: RM 120–220. Penggantian sensor: RM 150–250. Kerosakan PCB: RM 280–600. Kapasitor: RM 150–250. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
     ],
     faqsZH: [
       { q: "我如何知道冷气闪烁错误代码的含义？", a: "数闪烁次数，然后查找您品牌的错误代码表（可在KL Renovator的品牌页面查看，或WhatsApp我们闪烁模式+品牌+型号）。KL Renovator通过WhatsApp远程诊断所有品牌的常见代码。" },
-      { q: "冷气显示闪烁灯且不制冷——修复需要多少钱？", a: "取决于故障：气体不足：RM 120-180。传感器更换：RM 100-200。PCB故障：RM 300-600。电容器：RM 180。诊断费RM 88（维修则免收）。" },
+      { q: "冷气显示闪烁灯且不制冷——修复需要多少钱？", a: "取决于故障：气体不足：RM 120-220。传感器更换：RM 150-250。PCB故障：RM 280-600。电容器：RM 150-250。诊断费RM 88（维修则免收）。" },
     ],
   },
   "aircond-water-dripping": {
@@ -917,24 +909,24 @@ const problemContent: Record<
       "遥控器温控器设置被锁定在错误温度",
       "气流不良导致房间内出现热点——机组从未达到显示的设定温度",
     ],
-    solutionEN: "KL Renovator tests the thermistor resistance with a multimeter to determine if it is giving correct readings for the ambient temperature. A faulty thermistor is replaced (RM 100–150). If the PCB's temperature regulation circuit is at fault, PCB repair or replacement is recommended. If the issue is poor airflow, a chemical wash resolves it.",
-    solutionBM: "KL Renovator menguji rintangan termistor dengan multimeter untuk menentukan sama ada ia memberikan bacaan yang betul untuk suhu ambien. Termistor yang rosak diganti (RM 100–150). Jika litar pengawalan suhu PCB bermasalah, pembaikan atau penggantian PCB disyorkan.",
-    solutionZH: "KL Renovator使用万用表测试热敏电阻阻值，确定其是否在环境温度下给出正确读数。有故障的热敏电阻予以更换（RM 100-150）。如果是PCB的温度调节电路有问题，建议修复或更换PCB。如果是气流问题，化学清洗可解决。",
+    solutionEN: "KL Renovator tests the thermistor resistance with a multimeter to determine if it is giving correct readings for the ambient temperature. A faulty thermistor is replaced (RM 150–250). If the PCB's temperature regulation circuit is at fault, PCB repair or replacement is recommended. If the issue is poor airflow, a chemical wash resolves it.",
+    solutionBM: "KL Renovator menguji rintangan termistor dengan multimeter untuk menentukan sama ada ia memberikan bacaan yang betul untuk suhu ambien. Termistor yang rosak diganti (RM 150–250). Jika litar pengawalan suhu PCB bermasalah, pembaikan atau penggantian PCB disyorkan.",
+    solutionZH: "KL Renovator使用万用表测试热敏电阻阻值，确定其是否在环境温度下给出正确读数。有故障的热敏电阻予以更换（RM 150-250）。如果是PCB的温度调节电路有问题，建议修复或更换PCB。如果是气流问题，化学清洗可解决。",
     warningEN: "A malfunctioning thermostat causes the compressor to run continuously without cycling off — significantly increasing electricity consumption. If your room feels cold but the unit never seems to stop, get the thermistor checked.",
     warningBM: "Termostat yang tidak berfungsi menyebabkan pekali berjalan berterusan tanpa berhenti — meningkatkan penggunaan elektrik dengan ketara. Jika bilik terasa sejuk tetapi unit nampaknya tidak pernah berhenti, periksa termistor.",
     warningZH: "故障的温控器导致压缩机持续运行而不循环停机——显著增加耗电量。如果您的房间感觉很冷但机器似乎从不停止，请检查热敏电阻。",
     faqs: [
       { q: "My aircond does not stop running even when the room is cold — is the thermostat broken?", a: "Possibly — the thermistor may be giving incorrect readings, causing the PCB to think the room is still warm. Other causes: set temperature too low, remote control calibration issue, or PCB fault. KL Renovator diagnoses with a multimeter." },
       { q: "My aircond cannot maintain a steady temperature — keeps cycling on and off too quickly. What is wrong?", a: "Short cycling usually means the unit is oversized for the room, refrigerant is overcharged, or the thermostat sensor is faulty. KL Renovator diagnoses the exact cause and advises the most economical solution." },
-      { q: "How much does thermistor replacement cost for an aircond?", a: "Thermistor (temperature sensor) replacement: RM 100–200 depending on brand and sensor type. Diagnostic RM 88 (waived with repair). KL Renovator carries common thermistor types for same-day replacement." },
+      { q: "How much does thermistor replacement cost for an aircond?", a: "Thermistor (temperature sensor) replacement: RM 150–250 depending on brand and sensor type. Diagnostic RM 88 (waived with repair). KL Renovator carries common thermistor types for same-day replacement." },
     ],
     faqsBM: [
       { q: "Aircond saya tidak berhenti berjalan walaupun bilik sejuk — adakah termostat rosak?", a: "Mungkin — termistor mungkin memberikan bacaan yang salah. KL Renovator mendiagnosis dengan multimeter." },
-      { q: "Berapa kos ganti termistor aircond?", a: "Penggantian termistor: RM 100–200 bergantung pada jenama. Diagnostik RM 88 (dikecualikan dengan pembaikan). KL Renovator membawa jenis termistor biasa untuk penggantian hari sama." },
+      { q: "Berapa kos ganti termistor aircond?", a: "Penggantian termistor: RM 150–250 bergantung pada jenama. Diagnostik RM 88 (dikecualikan dengan pembaikan). KL Renovator membawa jenis termistor biasa untuk penggantian hari sama." },
     ],
     faqsZH: [
       { q: "我的冷气即使房间很冷也不停止运行——是温控器坏了吗？", a: "可能——热敏电阻可能在给出错误读数。KL Renovator使用万用表进行诊断。" },
-      { q: "更换冷气热敏电阻需要多少钱？", a: "热敏电阻（温度传感器）更换：RM 100-200，取决于品牌。诊断费RM 88（维修则免收）。KL Renovator备有常见热敏电阻类型可当天更换。" },
+      { q: "更换冷气热敏电阻需要多少钱？", a: "热敏电阻（温度传感器）更换：RM 150-250，取决于品牌。诊断费RM 88（维修则免收）。KL Renovator备有常见热敏电阻类型可当天更换。" },
     ],
   },
 };
@@ -992,12 +984,12 @@ const EMERGENCY_PROBLEMS = [
 import { PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
 
 const PROBLEM_BLOG_MAP: Record<string, string[]> = {
-  "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia"],
+  "aircond-not-cold": ["aircon-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia"],
   "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
   "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
   "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul"],
-  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes"],
-  "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia"],
+  "aircond-freezing-up": ["aircon-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes"],
+  "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircon-not-cold-reasons", "aircond-gas-topup-myths-malaysia"],
   "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
   "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2025"],
   "aircond-pcb-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
