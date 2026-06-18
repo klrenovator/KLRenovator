@@ -23,7 +23,7 @@ const LANG_LABELS: Record<Lang, string> = {
 // ── ALL BLOGS — Full Trilingual Translations ──────────────────────────────────
 const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt: string }>> = {
 
-  "aircon-service-batu-caves-selayang-2026": {
+  "aircond-service-batu-caves-selayang-2026": {
     en: {
       title: "Aircon Service in Batu Caves & Selayang 2026 — Fast Response by KL Renovator",
       excerpt: "Looking for reliable aircond service in Batu Caves or Selayang? KL Renovator dispatches trained HVAC technicians same-day across Batu Caves, Selayang, Kepong and surrounding areas.",
@@ -38,7 +38,7 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
     },
   },
 
-  "aircon-chemical-wash-price-malaysia-2026": {
+  "aircond-chemical-wash-price-malaysia-2026": {
     en: {
       title: "Aircond Chemical Wash Price Malaysia 2026 — Complete Breakdown",
       excerpt: "How much does a chemical wash cost in Malaysia in 2026? Full price breakdown for wall-mounted, ceiling cassette and window units — from RM 120.",
@@ -53,7 +53,7 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
     },
   },
 
-  "signs-your-aircon-needs-chemical-overhaul-malaysia": {
+  "signs-your-aircond-needs-chemical-overhaul-malaysia": {
     en: {
       title: "5 Signs Your Aircond Needs a Chemical Overhaul in Malaysia",
       excerpt: "Water leaking, ice forming, bad smell after a wash? Your aircond might need a chemical overhaul — not just a basic clean. Learn the 5 key signs.",
@@ -83,7 +83,7 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
     },
   },
 
-  "aircon-not-cold-reasons": {
+  "aircond-not-cold-reasons": {
     en: {
       title: "Aircon Running But Not Cold? 7 Common Causes in Malaysia",
       excerpt: "Your aircond is switched on but the room is still warm. Here are the 7 most common reasons why — and what to do about each one.",
