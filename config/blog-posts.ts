@@ -603,19 +603,19 @@ export const allPosts: BlogPost[] = [
       <p>The oldest gas type. Found in units made before 2015. R22 is being phased out globally due to its high ozone depletion potential.</p>
       <ul>
         <li>Units: Pre-2015 models</li>
-        <li>Top-up cost: RM 120–180 (1.0–2.0 HP)</li>
+        <li>Top-up cost: RM 120 (1.0 HP), RM 150 (1.5–2.0 HP), RM 180 (2.5–3.0 HP)</li>
       </ul>
       <h2>R410A</h2>
       <p>The standard gas for units made between 2010–2020. No ozone depletion but higher global warming potential than R32.</p>
       <ul>
         <li>Units: 2010–2020 Daikin, Panasonic, Mitsubishi, LG, Samsung</li>
-        <li>Top-up cost: RM 150–200 (1.0–2.0 HP)</li>
+        <li>Top-up cost: RM 150 (1.0 HP), RM 180 (1.5–2.0 HP), RM 200 (2.5–3.0 HP)</li>
       </ul>
       <h2>R32</h2>
       <p>The current standard for new inverter units. Lower global warming potential, better energy efficiency. Most new units use R32.</p>
       <ul>
         <li>Units: 2018 onwards, especially inverter models</li>
-        <li>Top-up cost: RM 180–220 (1.0–2.0 HP)</li>
+        <li>Top-up cost: RM 180 (1.0 HP), RM 200 (1.5–2.0 HP), RM 220 (2.5–3.0 HP)</li>
       </ul>
       <h2>How to Check Which Gas Your Unit Uses</h2>
       <p>Look at the sticker on your outdoor unit — it clearly states the refrigerant type. Or WhatsApp us a photo at <strong>+60 18-298 3573</strong>.</p>
@@ -626,13 +626,13 @@ export const allPosts: BlogPost[] = [
       <p>Kebanyakan unit aircond di Malaysia menggunakan salah satu daripada tiga jenis penyejuk: R22, R410A, atau R32. Setiap satunya mempunyai sifat, kos, dan kesan alam sekitar yang berbeza.</p>
       <h2>R22 (Freon)</h2>
       <p>Jenis gas yang paling lama. Terdapat dalam unit yang dibuat sebelum 2015. R22 sedang dihentikan secara global kerana potensi penipisan ozon yang tinggi.</p>
-      <ul><li>Kos tambah gas: RM 120–180 (1.0–2.0 HP)</li></ul>
+      <ul><li>Kos tambah gas: RM 120 (1.0 HP), RM 150 (1.5–2.0 HP), RM 180 (2.5–3.0 HP)</li></ul>
       <h2>R410A</h2>
       <p>Gas standard untuk unit yang dibuat antara 2010–2020.</p>
-      <ul><li>Kos tambah gas: RM 150–200 (1.0–2.0 HP)</li></ul>
+      <ul><li>Kos tambah gas: RM 150 (1.0 HP), RM 180 (1.5–2.0 HP), RM 200 (2.5–3.0 HP)</li></ul>
       <h2>R32</h2>
       <p>Standard semasa untuk unit inverter baru. Potensi pemanasan global yang lebih rendah, kecekapan tenaga yang lebih baik.</p>
-      <ul><li>Kos tambah gas: RM 180–220 (1.0–2.0 HP)</li></ul>
+      <ul><li>Kos tambah gas: RM 180 (1.0 HP), RM 200 (1.5–2.0 HP), RM 220 (2.5–3.0 HP)</li></ul>
       <h2>Cara Menyemak Gas yang Digunakan oleh Unit Anda</h2>
       <p>Lihat pelekat pada unit luar anda — ia menyatakan jenis penyejuk dengan jelas. Atau WhatsApp foto kepada kami di <strong>+60 18-298 3573</strong>.</p>
     `,
@@ -641,13 +641,13 @@ export const allPosts: BlogPost[] = [
       <p>马来西亚大多数冷气机使用三种制冷剂之一：R22、R410A或R32。每种都有不同的特性、成本和环境影响。</p>
       <h2>R22（氟利昂）</h2>
       <p>最古老的气体类型。见于2015年前制造的机器。R22因其高臭氧消耗潜力正在全球范围内逐步淘汰。</p>
-      <ul><li>充气费用：RM 120–180（1.0–2.0 HP）</li></ul>
+      <ul><li>充气费用：RM 120（1.0 HP）、RM 150（1.5–2.0 HP）、RM 180（2.5–3.0 HP）</li></ul>
       <h2>R410A</h2>
       <p>2010-2020年制造机器的标准气体。</p>
-      <ul><li>充气费用：RM 150–200（1.0–2.0 HP）</li></ul>
+      <ul><li>充气费用：RM 150（1.0 HP）、RM 180（1.5–2.0 HP）、RM 200（2.5–3.0 HP）</li></ul>
       <h2>R32</h2>
       <p>新变频机器的当前标准。全球变暖潜力更低，能效更高。</p>
-      <ul><li>充气费用：RM 180–220（1.0–2.0 HP）</li></ul>
+      <ul><li>充气费用：RM 180（1.0 HP）、RM 200（1.5–2.0 HP）、RM 220（2.5–3.0 HP）</li></ul>
       <h2>如何查看您的机器使用哪种气体</h2>
       <p>查看室外机上的贴纸——它清楚地标明了制冷剂类型。或者WhatsApp照片给我们：<strong>+60 18-298 3573</strong>。</p>
     `,
@@ -1509,7 +1509,7 @@ export const allPosts: BlogPost[] = [
         <li>Basic Service 1.0–1.5 HP: <strong>RM 150</strong></li>
         <li>Chemical Wash 1.0–1.5 HP: <strong>RM 220</strong></li>
         <li>Chemical Wash 2.0–3.0 HP: <strong>RM 280</strong></li>
-        <li>Chemical Overhaul 1.0–3.0 HP: <strong>RM 380–480</strong></li>
+        <li>Chemical Overhaul 1.0–3.0 HP: <strong>RM 430</strong></li>
       </ul>
       <h2>Annual Maintenance Contracts</h2>
       <ul>
@@ -1532,7 +1532,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Servis Asas 1.0–1.5 HP: <strong>RM 150</strong></li>
         <li>Cuci Kimia 1.0–1.5 HP: <strong>RM 220</strong></li>
-        <li>Overhaul Kimia 1.0–3.0 HP: <strong>RM 380–480</strong></li>
+        <li>Overhaul Kimia 1.0–3.0 HP: <strong>RM 430</strong></li>
       </ul>
       <h2>Kontrak Penyelenggaraan Tahunan</h2>
       <ul>
@@ -1555,7 +1555,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>基本保养 1.0–1.5 HP：<strong>RM 150</strong></li>
         <li>化学清洗 1.0–1.5 HP：<strong>RM 220</strong></li>
-        <li>化学大修 1.0–3.0 HP：<strong>RM 380–480</strong></li>
+        <li>化学大修 1.0–3.0 HP：<strong>RM 430</strong></li>
       </ul>
       <h2>年度维护合同</h2>
       <ul>
