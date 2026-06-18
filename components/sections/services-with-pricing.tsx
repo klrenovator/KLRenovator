@@ -1,10 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import { FaWhatsapp, FaCheck, FaSnowflake, FaBuilding } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
-
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
@@ -18,7 +16,6 @@ const residentialHighlights = [
   "Same-day appointments",
   "Transparent fixed pricing",
 ];
-
 const commercialHighlights = [
   "Offices, Retail & F&B outlets",
   "VRF / VRV system specialists",
@@ -49,8 +46,12 @@ export const ServicesWithPricing = () => {
   const [activeTab, setActiveTab] = useState<"residential" | "commercial">("residential");
   const { t } = useLang();
 
-  const filteredServices = siteConfig.services.filter(
-    (s) => s.slug !== "emergency" && (s.category === activeTab || s.category === "both")
+  // ✅ SSR both tabs — Google can crawl commercial content too
+  const residentialServices = siteConfig.services.filter(
+    (s) => s.slug !== "emergency" && (s.category === "residential" || s.category === "both")
+  );
+  const commercialServices = siteConfig.services.filter(
+    (s) => s.slug !== "emergency" && (s.category === "commercial" || s.category === "both")
   );
 
   const isCommercial = activeTab === "commercial";
@@ -58,7 +59,6 @@ export const ServicesWithPricing = () => {
   return (
     <section id="services" className="py-20 sm:py-28 bg-slate-50 relative isolate overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
           <Reveal>
@@ -117,64 +117,95 @@ export const ServicesWithPricing = () => {
           </div>
         </Reveal>
 
-        {/* Service Cards — NO PRICES */}
+        {/* ✅ Service Cards — BOTH TABS RENDERED, CSS TOGGLES VISIBILITY */}
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {filteredServices.map((service, index) => (
-            <Reveal key={service.slug} delay={index * 50}>
-              <div className="flex flex-col h-full bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-sky-100 transition-all duration-300 relative group">
-
-                {/* Top accent bar */}
-                <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-sky-400 to-sky-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                <div className="flex-grow">
-                  {/* Icon */}
-                  <div className="inline-flex p-3 bg-sky-50 border border-sky-100 text-sky-600 mb-5 rounded-xl group-hover:bg-sky-500 group-hover:text-white transition-all duration-300">
-                    <FaSnowflake className="h-5 w-5" />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg font-black text-slate-950 tracking-tight leading-snug">
-                    {service.title}
-                  </h3>
-
-                  {/* Summary */}
-                  <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed">
-                    {service.short}
-                  </p>
-
-                  {/* Key benefit */}
-                  <div className="mt-5">
-                    <div className="flex items-start gap-3 text-xs font-bold text-slate-600 tracking-wide bg-green-50 border border-green-100 rounded-lg p-3">
-                      <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center bg-[#22c55e]/10 border border-[#22c55e]/20 text-[#22c55e] rounded-full mt-0.5">
-                        <FaCheck className="h-2.5 w-2.5" />
-                      </span>
-                      <span className="pt-0.5">{service.targetProblem}</span>
+          {/* Residential Grid */}
+          <div className={`col-span-full grid gap-8 md:grid-cols-2 lg:grid-cols-3 ${activeTab !== "residential" ? "hidden" : ""}`}>
+            {residentialServices.map((service, index) => (
+              <Reveal key={service.slug} delay={index * 50}>
+                <div className="flex flex-col h-full bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-sky-100 transition-all duration-300 relative group">
+                  <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-sky-400 to-sky-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="flex-grow">
+                    <div className="inline-flex p-3 bg-sky-50 border border-sky-100 text-sky-600 mb-5 rounded-xl group-hover:bg-sky-500 group-hover:text-white transition-all duration-300">
+                      <FaSnowflake className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-lg font-black text-slate-950 tracking-tight leading-snug">{service.title}</h3>
+                    <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed">{service.short}</p>
+                    <div className="mt-5">
+                      <div className="flex items-start gap-3 text-xs font-bold text-slate-600 tracking-wide bg-green-50 border border-green-100 rounded-lg p-3">
+                        <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center bg-[#22c55e]/10 border border-[#22c55e]/20 text-[#22c55e] rounded-full mt-0.5">
+                          <FaCheck className="h-2.5 w-2.5" />
+                        </span>
+                        <span className="pt-0.5">{service.targetProblem}</span>
+                      </div>
                     </div>
                   </div>
+                  <div className="mt-8 flex flex-col gap-3">
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex w-full items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
+                    >
+                      View Details & Pricing
+                      <FaArrowRight className="h-3 w-3" />
+                    </Link>
+                    <a
+                      href={waLink(`Hi KL Renovator, I want to enquire about: ${service.title}`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl shadow-sm hover:shadow-green-200 transition-all duration-200 active:scale-[0.98]"
+                    >
+                      <FaWhatsapp className="h-4 w-4" />
+                      {t("services_book")}
+                    </a>
+                  </div>
                 </div>
+              </Reveal>
+            ))}
+          </div>
 
-                {/* CTA Buttons — View Details + WhatsApp */}
-                <div className="mt-8 flex flex-col gap-3">
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="inline-flex w-full items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
-                  >
-                    View Details & Pricing
-                    <FaArrowRight className="h-3 w-3" />
-                  </Link>
-                  <a
-                    href={waLink(`Hi KL Renovator, I want to enquire about: ${service.title}`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl shadow-sm hover:shadow-green-200 transition-all duration-200 active:scale-[0.98]"
-                  >
-                    <FaWhatsapp className="h-4 w-4" />
-                    {t("services_book")}
-                  </a>
+          {/* Commercial Grid — SSR'd, Google can crawl */}
+          <div className={`col-span-full grid gap-8 md:grid-cols-2 lg:grid-cols-3 ${activeTab !== "commercial" ? "hidden" : ""}`}>
+            {commercialServices.map((service, index) => (
+              <Reveal key={service.slug} delay={index * 50}>
+                <div className="flex flex-col h-full bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-300 relative group">
+                  <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="flex-grow">
+                    <div className="inline-flex p-3 bg-blue-50 border border-blue-100 text-blue-600 mb-5 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                      <FaSnowflake className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-lg font-black text-slate-950 tracking-tight leading-snug">{service.title}</h3>
+                    <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed">{service.short}</p>
+                    <div className="mt-5">
+                      <div className="flex items-start gap-3 text-xs font-bold text-slate-600 tracking-wide bg-blue-50 border border-blue-100 rounded-lg p-3">
+                        <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center bg-blue-500/10 border border-blue-500/20 text-blue-600 rounded-full mt-0.5">
+                          <FaCheck className="h-2.5 w-2.5" />
+                        </span>
+                        <span className="pt-0.5">{service.targetProblem}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-8 flex flex-col gap-3">
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex w-full items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
+                    >
+                      View Details & Pricing
+                      <FaArrowRight className="h-3 w-3" />
+                    </Link>
+                    <a
+                      href={waLink(`Hi KL Renovator, I need a commercial quote for: ${service.title}`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl shadow-sm hover:shadow-green-200 transition-all duration-200 active:scale-[0.98]"
+                    >
+                      <FaWhatsapp className="h-4 w-4" />
+                      {t("services_book")}
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
 
         {/* Commercial Extra Info Block */}
@@ -195,7 +226,6 @@ export const ServicesWithPricing = () => {
                   </div>
                 ))}
               </div>
-              {/* Commercial CTA */}
               <div className="mt-10 text-center">
                 <a
                   href={waLink("Hi KL Renovator, I need a commercial HVAC quote for my business.")}
@@ -210,7 +240,6 @@ export const ServicesWithPricing = () => {
             </div>
           </Reveal>
         )}
-
       </div>
     </section>
   );
