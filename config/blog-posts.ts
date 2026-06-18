@@ -21,7 +21,7 @@ export type BlogPost = {
 
 export const allPosts: BlogPost[] = [
   {
-    slug: "aircon-service-batu-caves-selayang-2026",
+    slug: "aircond-service-batu-caves-selayang-2026",
     title: "Aircon Service in Batu Caves & Selayang — What to Expect in 2026",
     titleMS: "Servis Aircond di Batu Caves & Selayang — Apa yang Anda Perlu Tahu pada 2026",
     titleZH: "黑风洞及双溪毛糯冷气服务 — 2026年您需要了解的事项",
@@ -134,7 +134,7 @@ export const allPosts: BlogPost[] = [
     `,
   },
   {
-    slug: "aircon-chemical-wash-price-malaysia-2026",
+    slug: "aircond-chemical-wash-price-malaysia-2026",
     title: "Aircon Chemical Wash Price in Malaysia 2026 — Full Breakdown",
     titleMS: "Harga Cuci Kimia Aircond di Malaysia 2026 — Pecahan Lengkap",
     titleZH: "马来西亚2026年冷气化学清洗价格 — 完整明细",
@@ -271,7 +271,7 @@ export const allPosts: BlogPost[] = [
     `,
   },
   {
-    slug: "signs-your-aircon-needs-chemical-overhaul-malaysia",
+    slug: "signs-your-aircond-needs-chemical-overhaul-malaysia",
     title: "5 Signs Your Aircon Needs a Chemical Overhaul (Not Just a Wash)",
     titleMS: "5 Tanda Aircond Anda Memerlukan Overhaul Kimia (Bukan Sekadar Cuci)",
     titleZH: "5个迹象表明您的冷气需要化学大修（而不仅仅是清洗）",
@@ -437,7 +437,7 @@ export const allPosts: BlogPost[] = [
     `,
   },
   {
-    slug: "aircon-not-cold-reasons",
+    slug: "aircond-not-cold-reasons",
     title: "Aircon Running But Not Cold? 7 Common Causes in Malaysia",
     titleMS: "Aircond Berjalan Tapi Tidak Sejuk? 7 Punca Biasa di Malaysia",
     titleZH: "冷气开着但不冷？马来西亚7个常见原因",
