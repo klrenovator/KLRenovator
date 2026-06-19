@@ -155,6 +155,46 @@ const GALLERY_IMAGES = [
   { src: "/hero/aircond-sensor-replacement-klang-valley.jpg", alt: "KL Renovator aircond temperature sensor replacement Klang Valley" },
 ];
 
+// ── Meet The Team — E-E-A-T: named, real people behind the work ───────────────
+// NOTE for next Claude session: Technician #4's name is still missing (Tauseef
+// only gave "6 months experience" with no name as of 19 June 2026). Do not
+// invent a name — ask Tauseef for it before adding a 4th card here.
+const TEAM = [
+  {
+    name: "Muhammad",
+    role: "Owner & Founder",
+    experience: "Running KL Renovator since 2014",
+    bio: "Started KL Renovator as a single-van operation servicing homes in Cheras. Personally oversees every technician's training and every job quality check.",
+    image: "/hero/aircond-installation-ampang-selangor.jpg",
+    imageAlt: "Muhammad, Owner & Founder of KL Renovator, on an aircond installation job in Ampang Selangor",
+  },
+  {
+    name: "Shahzaib",
+    role: "Senior Installation Technician",
+    experience: "18 years experience",
+    bio: "Our most experienced installer — handles wall-mounted splits, ceiling cassettes, and multi-unit commercial installations across the Klang Valley.",
+    image: "/hero/aircond-installation-kuala-lumpur.jpg",
+    imageAlt: "Shahzaib, Senior Installation Technician with 18 years experience, installing an aircond unit in Kuala Lumpur",
+  },
+  {
+    name: "Mudassar",
+    role: "Service & Chemical Wash Technician",
+    experience: "3 years experience",
+    bio: "Specialist in chemical wash and chemical overhaul jobs — known for careful canvas-protected cleaning that keeps walls and floors spotless.",
+    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+    imageAlt: "Mudassar, Service & Chemical Wash Technician with 3 years experience, performing a canvas-protected chemical wash in Kepong KL",
+  },
+  {
+    name: "Hamzah",
+    role: "Service Technician",
+    experience: "1.5 years experience",
+    bio: "Handles pressure chemical washes and routine servicing across Selangor — fast, tidy, and thorough on every visit.",
+    image: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+    imageAlt: "Hamzah, Service Technician with 1.5 years experience, performing a pressure chemical wash in Selangor",
+  },
+  // 4th technician — 6 months experience — name pending from Tauseef, do not add until provided.
+];
+
 export default function AboutPage() {
   // Organization Schema
   const organizationSchema = {
@@ -199,6 +239,31 @@ export default function AboutPage() {
       siteConfig.links.youtube,
       siteConfig.links.googleBusiness,
       siteConfig.links.googleMaps,
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Muhammad",
+      jobTitle: "Owner & Founder",
+    },
+    employee: [
+      {
+        "@type": "Person",
+        name: "Shahzaib",
+        jobTitle: "Senior Installation Technician",
+        description: "18 years experience in aircond installation",
+      },
+      {
+        "@type": "Person",
+        name: "Mudassar",
+        jobTitle: "Service & Chemical Wash Technician",
+        description: "3 years experience in aircond chemical wash and servicing",
+      },
+      {
+        "@type": "Person",
+        name: "Hamzah",
+        jobTitle: "Service Technician",
+        description: "1.5 years experience in aircond servicing",
+      },
     ],
     aggregateRating: {
       "@type": "AggregateRating",
@@ -335,6 +400,54 @@ export default function AboutPage() {
                 </ul>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet The Team — named technicians for E-E-A-T trust signals */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <p className={eyebrow()}>Meet The Team</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "md" })}>The people </span>
+                <span className={title({ size: "md", color: "brand" })}>behind every job.</span>
+              </h2>
+              <p className="mt-4 text-slate-600 font-medium">
+                Real technicians, real experience — not a faceless call centre.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-10 grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4 border border-slate-200">
+            {TEAM.map((member, i) => (
+              <Reveal key={member.name} delay={i * 60}>
+                <div className="bg-white h-full">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden">
+                    <Image
+                      src={member.image}
+                      alt={member.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-black uppercase tracking-tight text-slate-900">
+                      {member.name}
+                    </h3>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-widest text-sky-600">
+                      {member.role}
+                    </p>
+                    <p className="mt-1 text-sm font-bold text-slate-500">{member.experience}</p>
+                    <p className="mt-3 text-sm text-slate-600 leading-relaxed font-medium">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
