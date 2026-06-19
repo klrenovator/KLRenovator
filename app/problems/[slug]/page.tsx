@@ -27,17 +27,6 @@ export async function generateMetadata({
   return {
     title: problem.metaTitle,
     description: problem.metaDesc,
-    keywords: [
-      problem.name + " KL",
-      problem.name + " Selangor",
-      problem.name + " repair KL",
-      problem.name + " fix KL",
-      problem.nameMS + " KL",
-      problem.nameZH + " 吉隆坡",
-      "aircond problem KL",
-      "aircond repair KL",
-      "KL Renovator aircond",
-    ].join(", "),
     openGraph: {
       title: problem.metaTitle,
       description: problem.metaDesc,
