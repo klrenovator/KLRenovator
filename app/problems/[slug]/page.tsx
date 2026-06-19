@@ -1232,4 +1232,343 @@ export default async function ProblemPage({
                   Apakah Punca {problem.nameMS}?
                 </h2>
                 <ul className="space-y-3">
-        
+                  {content.causesBM.map((cause, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
+                      <span className="w-5 h-5 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">{i + 1}</span>
+                      {cause}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* ZH Causes */}
+          <Reveal delay={80}>
+            <div className="mt-10 max-w-5xl">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">原因分析 — {problem.nameZH}</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {content.causesZH.map((cause, i) => (
+                  <div key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
+                    <span className="w-5 h-5 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">{i + 1}</span>
+                    {cause}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Solution */}
+      <section className="py-14 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="max-w-4xl">
+              <p className={eyebrow()}>The Fix</p>
+              <h2 className="mt-3 text-xl sm:text-2xl font-black text-slate-900 uppercase mb-6 flex items-center gap-2">
+                <FiTool className="h-5 w-5 text-sky-600" />
+                How KL Renovator Fixes {problem.name}
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-5">
+                <div className="sm:col-span-2 space-y-4">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-600 mb-2">🇬🇧 English</p>
+                    <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionEN}</p>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-600 mb-2">🇲🇾 Bahasa Malaysia</p>
+                    <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionBM}</p>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-600 mb-2">🇨🇳 中文</p>
+                    <p className="text-sm text-slate-700 font-medium leading-relaxed">{content.solutionZH}</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-sky-600 text-white rounded-2xl p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-sky-200 mb-3">Typical Pricing</p>
+                    <div className="space-y-2">
+                      {[
+                        ["Diagnostic", "RM 88*"],
+                        ["Chemical Wash", "From RM 120"],
+                        ["Gas Top-Up", "From RM 120"],
+                        ["Chemical Overhaul", "From RM 220"],
+                        ["Repairs / Parts", "RM 150–600"],
+                      ].map(([label, price]) => (
+                        <div key={label} className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2 last:border-0 last:pb-0">
+                          <span>{label}</span><span>{price}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-sky-200 mt-3">*Waived if repair done same visit</p>
+                  </div>
+                  <a
+                    href={waLink(waMsg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] w-full py-3.5 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+                  >
+                    <FaWhatsapp className="h-4 w-4" /> Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Related Services — primary + secondary from topical map */}
+      {relatedService && (
+        <section className="py-12 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-4">
+                Recommended Services · Perkhidmatan Disyorkan · 推荐服务
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
+                {/* Primary service */}
+                <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">Best Fix</p>
+                  <h3 className="font-black text-base text-slate-900 mb-1">{relatedService.title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed mb-3">{relatedService.tagline}</p>
+                  <div className="flex items-center gap-2">
+                    <NextLink
+                      href={`/services/${relatedService.slug}`}
+                      className="inline-flex items-center gap-1.5 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 text-xs font-black uppercase tracking-wider rounded-xl transition-all"
+                    >
+                      <FiArrowRight className="h-3.5 w-3.5" />
+                      View Service →
+                    </NextLink>
+                    <span className="text-xs font-black text-sky-700">from RM {relatedService.startPrice}</span>
+                  </div>
+                </div>
+                {/* Secondary service */}
+                {secondaryService && (
+                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">Also Consider</p>
+                    <h3 className="font-black text-base text-slate-900 mb-1">{secondaryService.title}</h3>
+                    <p className="text-xs text-slate-500 leading-relaxed mb-3">{secondaryService.tagline}</p>
+                    <div className="flex items-center gap-2">
+                      <NextLink
+                        href={`/services/${secondaryService.slug}`}
+                        className="inline-flex items-center gap-1.5 border border-slate-300 hover:border-sky-400 text-slate-700 hover:text-sky-700 px-4 py-2 text-xs font-black uppercase tracking-wider rounded-xl transition-all"
+                      >
+                        View Service →
+                      </NextLink>
+                      <span className="text-xs font-black text-slate-500">from RM {secondaryService.startPrice}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* FAQs — EN + BM + ZH */}
+      <section className="py-14 bg-slate-50">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-10">
+              <p className={eyebrow()}>FAQs · Soalan Lazim · 常见问答</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>{problem.name} </span>
+                <span className={title({ size: "sm", color: "brand" })}>Questions Answered</span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="space-y-4">
+            {content.faqs.map((faq, i) => (
+              <Reveal key={i} delay={i * 30}>
+                <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                  <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {content.faqsBM.length > 0 && (
+            <Reveal>
+              <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                {content.faqsBM.map((faq, i) => (
+                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
+                    <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
+
+          {content.faqsZH.length > 0 && (
+            <Reveal>
+              <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                {content.faqsZH.map((faq, i) => (
+                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
+                    <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </section>
+
+      {/* Related Problems */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              Related Problems · Masalah Berkaitan · 相关问题
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              Other Common Aircond Problems We Fix
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {relatedProblems.map((p) => (
+                <NextLink
+                  key={p.slug}
+                  href={`/problems/${p.slug}`}
+                  className="flex items-start gap-2.5 border border-slate-200 bg-slate-50 hover:border-red-200 hover:bg-red-50 px-4 py-3 text-sm font-bold text-slate-700 hover:text-red-700 rounded-xl transition-all group"
+                >
+                  <FiArrowRight className="h-3.5 w-3.5 text-red-400 shrink-0 mt-0.5" />
+                  <span>
+                    <span className="block">{p.name}</span>
+                    <span className="text-xs text-slate-400 font-normal group-hover:text-red-400">{p.nameMS} · {p.nameZH}</span>
+                  </span>
+                </NextLink>
+              ))}
+            </div>
+            <NextLink href="/problems" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-red-600 hover:text-red-800 transition">
+              All Aircond Problems → <FiArrowRight className="h-3 w-3" />
+            </NextLink>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Areas */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              Fix By Location · Baiki Mengikut Lokasi · 按地区修复
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              {problem.name} Repair — KL & Selangor Areas
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.areaPages.slice(0, 14).map((area) => (
+                <NextLink
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:text-sky-700 rounded-xl transition-all"
+                >
+                  <FiMapPin className="h-3 w-3 text-sky-400 shrink-0" />
+                  {problem.name} {area.name}
+                </NextLink>
+              ))}
+              <NextLink
+                href="/areas"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-black text-sky-700 rounded-xl transition-all"
+              >
+                All 35+ Areas <FiArrowRight className="h-3 w-3" />
+              </NextLink>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      {/* Related Blog Articles */}
+      {(() => {
+        const relatedSlugs = (PROBLEM_BLOG_MAP_V2[slug] ?? PROBLEM_BLOG_MAP[slug] ?? []);
+        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 3);
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
+              <h2 className="text-base font-black text-slate-900 mb-4">Related Aircond Guides</h2>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {relatedPosts.map((post) => (
+                  <NextLink
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col bg-slate-50 border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
+                    <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
+                    <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                  </NextLink>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Related Aircond Problems */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Also See · Lihat Juga · 另见</p>
+          <h2 className="text-base font-black text-slate-900 mb-4">Other Common Aircond Problems</h2>
+          <div className="flex flex-wrap gap-2">
+            {siteConfig.problemPages
+              .filter((p) => p.slug !== slug)
+              .slice(0, 10)
+              .map((p) => (
+                <NextLink
+                  key={p.slug}
+                  href={`/problems/${p.slug}`}
+                  className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                >
+                  {p.name}
+                </NextLink>
+              ))}
+            <NextLink href="/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+              All Problems →
+            </NextLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-sky-600">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <Reveal>
+            <h2 className="text-2xl sm:text-3xl font-black uppercase text-white">
+              Fix {problem.name} Today
+            </h2>
+            <p className="mt-1 text-sky-200 text-sm font-medium">
+              {problem.nameMS} · {problem.nameZH}
+            </p>
+            <p className="mt-3 text-sky-100 font-medium max-w-lg mx-auto">
+              Same-day service across KL & Selangor. Transparent pricing — quote before work starts. All brands serviced.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={waLink(waMsg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+              >
+                <FaWhatsapp className="h-5 w-5" /> WhatsApp Us Now
+              </a>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white px-8 py-4 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
+              >
+                Call {siteConfig.phoneDisplay}
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+}
