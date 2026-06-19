@@ -26,24 +26,30 @@ export async function generateMetadata({
   const area = siteConfig.areaPages.find((a) => a.slug === slug);
   if (!area) return { title: "Area not found" };
 
+  const enUrl = `https://www.klrenovator.com/areas/${slug}`;
+  const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
+  const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}`;
+  const hasMs = (area as any).faqsBM?.length > 0;
+  const hasZh = (area as any).faqsZH?.length > 0;
+
   return {
     title: area.metaTitle,
     description: area.metaDesc,
     openGraph: {
       title: area.metaTitle,
       description: area.metaDesc,
-      url: `https://www.klrenovator.com/areas/${slug}`,
+      url: enUrl,
       type: "website",
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
-      canonical: `https://www.klrenovator.com/areas/${slug}`,
+      canonical: enUrl,
       languages: {
-        "en-MY": `https://www.klrenovator.com/areas/${slug}`,
-        "ms-MY": `https://www.klrenovator.com/areas/${slug}`,
-        "zh-MY": `https://www.klrenovator.com/areas/${slug}`,
-        "x-default": `https://www.klrenovator.com/areas/${slug}`,
+        "en-MY": enUrl,
+        ...(hasMs ? { "ms-MY": msUrl } : {}),
+        ...(hasZh ? { "zh-MY": zhUrl } : {}),
+        "x-default": enUrl,
       },
     },
   };
