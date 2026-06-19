@@ -117,18 +117,6 @@ export async function generateMetadata({
   return {
     title: brand.metaTitle,
     description: brand.metaDesc,
-    keywords: [
-      `${brand.name} aircond service KL`,
-      `${brand.name} aircond service Selangor`,
-      `${brand.name} aircond repair KL`,
-      `${brand.name} chemical wash KL`,
-      `${brand.name} gas top up KL`,
-      `${brand.name} aircond installation KL`,
-      `servis aircond ${brand.name} KL`,
-      `servis ${brand.name} Selangor`,
-      `${brand.name} 冷气服务 吉隆坡`,
-      `KL Renovator ${brand.name}`,
-    ].join(", "),
     openGraph: {
       title: brand.metaTitle,
       description: brand.metaDesc,
