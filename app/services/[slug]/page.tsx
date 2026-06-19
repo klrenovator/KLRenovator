@@ -30,16 +30,6 @@ export async function generateMetadata({
   return {
     title: `${data.title} KL & Selangor | KL Renovator — From RM ${service.startPrice}`,
     description: data.tagline,
-    keywords: [
-      data.title,
-      `${data.title} Kuala Lumpur`,
-      `${data.title} Selangor`,
-      `${data.title} KL`,
-      `servis ${data.title} KL`,
-      `${data.title} 吉隆坡`,
-      "aircond service Malaysia",
-      "KL Renovator",
-    ].join(", "),
     openGraph: {
       title: `${data.title} | KL Renovator`,
       description: data.tagline,
