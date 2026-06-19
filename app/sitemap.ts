@@ -3,54 +3,50 @@ import { siteConfig } from "@/config/site";
 import { allPosts } from "@/config/blog-posts";
 
 const BASE = "https://www.klrenovator.com";
-const LOCALES = ["en", "ms", "zh"] as const;
+
+// ─────────────────────────────────────────────────────────────────────────
+// MULTILINGUAL ROUTING PLAN (in progress — being built in batches):
+//   - English = default locale, lives at the ROOT path (no /en/ prefix).
+//     This protects the SEO equity already earned on the current live URLs.
+//   - Bahasa Malaysia = /ms/... (NOT YET BUILT — being added batch by batch)
+//   - Mandarin        = /zh/... (NOT YET BUILT — being added batch by batch)
+//
+// RULE FOR THIS FILE: only add a /ms/ or /zh/ URL here ONCE the matching
+// real page actually exists and has been deployed. Do not add locale URLs
+// "in advance" — that is exactly what caused the ~290 dead-URL bug this
+// rewrite fixes. As each batch of /ms/ or /zh/ pages ships, add the
+// matching block back into this file in the same pattern as the English
+// blocks below, and add a real `languages` hreflang block to that page's
+// `generateMetadata()` pointing at all 3 real URLs.
+// ─────────────────────────────────────────────────────────────────────────
+
+const buildCanonicalOnly = (path: string) => ({
+  canonical: `${BASE}${path}`,
+});
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  // Helper to build alternates for a URL
-  const buildAlternates = (path: string) => ({
-    languages: Object.fromEntries(
-      LOCALES.map((locale) => [`${locale}-MY`, `${BASE}/${locale}${path}`])
-    ),
-    "x-default": `${BASE}${path}`,
-  });
-
-  // Helper to build alternates for non-localized pages
-  const buildCanonicalOnly = (path: string) => ({
-    canonical: `${BASE}${path}`,
-  });
-
-  // ── Static Pages (non-localized) ──────────────────────────────────────
+  // ── Static Pages ─────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: buildCanonicalOnly("") },
     { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildCanonicalOnly("/services") },
+    { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildCanonicalOnly("/areas") },
+    { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/brands") },
+    { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/problems") },
+    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildCanonicalOnly("/blog") },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/contact") },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildCanonicalOnly("/faq") },
     { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildCanonicalOnly("/about") },
     { url: `${BASE}/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.70, alternates: buildCanonicalOnly("/gallery") },
   ];
 
-  // ── Hub pages — localized (one entry per locale) ──────────────────────
-  const localizedHubPages: MetadataRoute.Sitemap = [];
-  (["areas", "brands", "problems", "blog"] as const).forEach((hub) => {
-    LOCALES.forEach((locale) => {
-      localizedHubPages.push({
-        url: `${BASE}/${locale}/${hub}`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: hub === "areas" ? 0.90 : 0.85,
-        alternates: buildAlternates(`/${hub}`),
-      });
-    });
-  });
-
-  // ── Emergency Page ────────────────────────────────────────────────────
+  // ── Emergency Page ───────────────────────────────────────────────────
   const emergencyPage: MetadataRoute.Sitemap = [
     { url: `${BASE}/services/emergency`, lastModified: now, changeFrequency: "monthly", priority: 0.97, alternates: buildCanonicalOnly("/services/emergency") },
   ];
 
-  // ── Service Detail Pages ──────────────────────────────────────────────
+  // ── Service Detail Pages (English, real, live) ──────────────────────
   const servicePages: MetadataRoute.Sitemap = siteConfig.services
     .filter((s) => s.slug !== "emergency")
     .map((s) => ({
@@ -61,68 +57,76 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: buildCanonicalOnly(`/services/${s.slug}`),
     }));
 
-  // ── Area Pages (localized) ────────────────────────────────────────────
-  const areaPages: MetadataRoute.Sitemap = [];
-  siteConfig.areaPages.forEach((area) => {
-    LOCALES.forEach((locale) => {
-      areaPages.push({
-        url: `${BASE}/${locale}/areas/${area.slug}`,
-        lastModified: now,
-        changeFrequency: "monthly" as const,
-        priority: 0.88,
-        alternates: buildAlternates(`/areas/${area.slug}`),
-      });
-    });
-  });
+  // ── Area Pages (English, real, live) ────────────────────────────────
+  const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
+    url: `${BASE}/areas/${area.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.88,
+    alternates: buildCanonicalOnly(`/areas/${area.slug}`),
+  }));
 
-  // ── Brand Pages (localized) ───────────────────────────────────────────
-  const brandPages: MetadataRoute.Sitemap = [];
-  siteConfig.brandPages.forEach((b) => {
-    LOCALES.forEach((locale) => {
-      brandPages.push({
-        url: `${BASE}/${locale}/brands/${b.slug}`,
-        lastModified: now,
-        changeFrequency: "monthly" as const,
-        priority: 0.82,
-        alternates: buildAlternates(`/brands/${b.slug}`),
-      });
-    });
-  });
+  // ── Area Pages — /ms/ and /zh/ — ONLY for areas with real translated
+  // pages live (i.e. faqsBM / faqsZH populated in config/site.ts). As more
+  // areas get their translated FAQ content written, they appear here
+  // automatically — no manual list to maintain. (Pilot batch shipped
+  // 19 June 2026: 11 of 38 areas. See KLRenovator-PROJECT-STATUS-HANDOFF.md.)
+  const msAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
+    .filter((a: any) => a.faqsBM && a.faqsBM.length > 0)
+    .map((area) => ({
+      url: `${BASE}/ms/areas/${area.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.80,
+      alternates: buildCanonicalOnly(`/ms/areas/${area.slug}`),
+    }));
 
-  // ── Problem Pages (localized) ─────────────────────────────────────────
-  const problemPages: MetadataRoute.Sitemap = [];
-  siteConfig.problemPages.forEach((p) => {
-    LOCALES.forEach((locale) => {
-      problemPages.push({
-        url: `${BASE}/${locale}/problems/${p.slug}`,
-        lastModified: now,
-        changeFrequency: "monthly" as const,
-        priority: 0.80,
-        alternates: buildAlternates(`/problems/${p.slug}`),
-      });
-    });
-  });
+  const zhAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
+    .filter((a: any) => a.faqsZH && a.faqsZH.length > 0)
+    .map((area) => ({
+      url: `${BASE}/zh/areas/${area.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.80,
+      alternates: buildCanonicalOnly(`/zh/areas/${area.slug}`),
+    }));
 
-  // ── Blog Post Pages (localized) ───────────────────────────────────────
-  const blogPages: MetadataRoute.Sitemap = [];
-  allPosts.forEach((p) => {
-    LOCALES.forEach((locale) => {
-      blogPages.push({
-        url: `${BASE}/${locale}/blog/${p.slug}`,
-        lastModified: now,
-        changeFrequency: "monthly" as const,
-        priority: 0.72,
-        alternates: buildAlternates(`/blog/${p.slug}`),
-      });
-    });
-  });
+  // ── Brand Pages (English, real, live) ───────────────────────────────
+  const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/brands/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.82,
+    alternates: buildCanonicalOnly(`/brands/${b.slug}`),
+  }));
+
+  // ── Problem Pages (English, real, live) ─────────────────────────────
+  const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
+    url: `${BASE}/problems/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.80,
+    alternates: buildCanonicalOnly(`/problems/${p.slug}`),
+  }));
+
+  // ── Blog Post Pages (English, real, live) ───────────────────────────
+  const blogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
+    url: `${BASE}/blog/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.72,
+    alternates: buildCanonicalOnly(`/blog/${p.slug}`),
+  }));
+
+  // ── /ms/ and /zh/ pages get appended here, batch by batch, as they ship ──
 
   return [
     ...staticPages,
-    ...localizedHubPages,
     ...emergencyPage,
     ...servicePages,
     ...areaPages,
+    ...msAreaPages,
+    ...zhAreaPages,
     ...brandPages,
     ...problemPages,
     ...blogPages,
