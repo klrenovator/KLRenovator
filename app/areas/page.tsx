@@ -5,17 +5,6 @@ export const metadata: Metadata = {
   title: "Aircond Service Areas — KL & Selangor | KL Renovator",
   description:
     "KL Renovator provides professional aircond servicing across all areas of Kuala Lumpur and Selangor. Same-day service. View all 38 service areas — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong, Klang, Kajang, Bangsar, Mont Kiara and more.",
-  keywords: [
-    "aircond service KL areas",
-    "aircond service Selangor areas",
-    "aircond service near me KL",
-    "servis aircond kawasan KL",
-    "servis aircond Selangor",
-    "冷气服务地区吉隆坡",
-    "冷气服务雪兰莪",
-    "KL Renovator service areas",
-    "aircond Klang Valley coverage",
-  ].join(", "),
   openGraph: {
     title: "Aircond Service Areas — KL & Selangor | KL Renovator",
     description:
