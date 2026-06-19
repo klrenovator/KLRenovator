@@ -4,18 +4,6 @@ export const metadata: Metadata = {
   title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
   description:
     "Frequently asked questions about KL Renovator's aircond services in KL & Selangor. Chemical wash from RM 120, overhaul from RM 220, gas top-up, repairs, same-day booking, warranty and coverage areas.",
-  keywords: [
-    "aircond service FAQ Malaysia",
-    "aircon chemical wash price KL",
-    "chemical wash price Malaysia 2026",
-    "aircon service cost Selangor",
-    "KL Renovator FAQ",
-    "same day aircond repair KL",
-    "aircon warranty Malaysia",
-    "aircond not cold Malaysia",
-    "chemical overhaul price KL",
-    "gas top up price Malaysia",
-  ].join(", "),
   alternates: {
     canonical: "https://www.klrenovator.com/faq",
     languages: {
