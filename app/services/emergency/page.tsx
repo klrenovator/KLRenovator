@@ -25,18 +25,6 @@ export const metadata: Metadata = {
   title: "Emergency Aircond Repair KL & Selangor — Same-Day Urgent Service | KL Renovator",
   description:
     "Emergency aircond repair in KL & Selangor. Same-day urgent response for aircond not working, water leaking, or complete breakdown. All brands. Call +60182983573 now.",
-  keywords: [
-    "emergency aircond repair KL",
-    "urgent aircond service Selangor",
-    "emergency aircond repair near me",
-    "same day aircond repair KL",
-    "aircond breakdown repair KL",
-    "urgent aircond technician Kuala Lumpur",
-    "emergency aircond service Klang Valley",
-    "kecemasan servis aircond KL",
-    "緊急冷氣維修吉隆坡",
-    "aircond not working emergency KL",
-  ].join(", "),
   openGraph: {
     title: "Emergency Aircond Repair KL & Selangor | KL Renovator",
     description:
