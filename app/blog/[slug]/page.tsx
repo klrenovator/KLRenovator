@@ -21,7 +21,6 @@ export async function generateMetadata({
   return {
     title: `${post.title} | KL Renovator Blog`,
     description: post.excerpt,
-    keywords: post.tags,
     openGraph: {
       title: post.title,
       description: post.excerpt,
