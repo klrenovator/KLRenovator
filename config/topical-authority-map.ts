@@ -143,10 +143,10 @@ export const PROBLEM_SERVICE_MAP: Record<string, { primary: string; secondary?: 
 // ── PROBLEM → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
   "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia", "aircond-gas-topup-myths-malaysia"],
-  "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircond-needs-chemical-overhaul-malaysia", "aircond-maintenance-checklist-malaysia"],
   "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia", "how-often-service-aircond-malaysia"],
-  "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircon-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "aircond-maintenance-checklist-malaysia"],
-  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "aircond-maintenance-checklist-malaysia"],
+  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes", "signs-your-aircond-needs-chemical-overhaul-malaysia"],
   "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
   "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
   "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2025"],
@@ -154,20 +154,20 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
   "aircond-fan-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-maintenance-checklist-malaysia"],
   "aircond-tripping-power": ["aircond-troubleshooting-guide-malaysia"],
   "aircond-remote-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "chemical-wash-vs-chemical-overhaul"],
+  "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircond-needs-chemical-overhaul-malaysia", "chemical-wash-vs-chemical-overhaul"],
   "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
   "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-weak-airflow": ["aircon-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-weak-airflow": ["aircond-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
   "aircond-not-turning-on": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
   "aircond-blinking-light": ["aircond-troubleshooting-guide-malaysia"],
-  "aircond-water-dripping": ["aircond-water-leaking-causes", "aircon-chemical-wash-price-malaysia-2026", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-water-dripping": ["aircond-water-leaking-causes", "aircond-chemical-wash-price-malaysia-2026", "signs-your-aircond-needs-chemical-overhaul-malaysia"],
   "aircond-thermostat-problems": ["aircond-troubleshooting-guide-malaysia", "how-often-service-aircond-malaysia"],
 };
 
 // ── SERVICE → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
-  "chemical-wash": ["aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
-  "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
+  "chemical-wash": ["aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircond-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
+  "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircond-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
   "gas-topup": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
   "repair": ["aircond-not-cold-reasons", "aircond-water-leaking-causes", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
   "installation": ["aircond-installation-guide-malaysia", "best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "daikin-vs-panasonic-aircond-malaysia"],
