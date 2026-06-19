@@ -29,17 +29,6 @@ export async function generateMetadata({
   return {
     title: area.metaTitle,
     description: area.metaDesc,
-    keywords: [
-      `aircond service ${area.name}`,
-      `aircond repair ${area.name}`,
-      `chemical wash ${area.name}`,
-      `chemical overhaul ${area.name}`,
-      `gas top up ${area.name}`,
-      `aircond installation ${area.name}`,
-      `KL Renovator ${area.name}`,
-      `HVAC ${area.name}`,
-      `aircond near me ${area.name}`,
-    ].join(", "),
     openGraph: {
       title: area.metaTitle,
       description: area.metaDesc,
