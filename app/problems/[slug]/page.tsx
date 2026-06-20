@@ -24,29 +24,35 @@ export async function generateMetadata({
   const problem = siteConfig.problemPages.find((p) => p.slug === slug);
   if (!problem) return { title: "Not found" };
 
+  const enUrl = `https://www.klrenovator.com/problems/${slug}`;
+  const msUrl = `https://www.klrenovator.com/ms/problems/${slug}`;
+  const zhUrl = `https://www.klrenovator.com/zh/problems/${slug}`;
+
   return {
     title: problem.metaTitle,
     description: problem.metaDesc,
     openGraph: {
       title: problem.metaTitle,
       description: problem.metaDesc,
-      url: `https://www.klrenovator.com/problems/${slug}`,
+      url: enUrl,
       type: "website",
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
     },
     alternates: {
-      canonical: `https://www.klrenovator.com/problems/${slug}`,
-    },
-    other: {
-      "title:ms": problem.metaTitleMS,
-      "description:ms": problem.metaDescMS,
-      "title:zh": problem.metaTitleZH,
-      "description:zh": problem.metaDescZH,
+      canonical: enUrl,
+      languages: {
+        "en-MY": enUrl,
+        "ms-MY": msUrl,
+        "zh-MY": zhUrl,
+        "x-default": enUrl,
+      },
     },
   };
 }
 
 // ─── Detailed content map ─────────────────────────────────────────────────────
-const problemContent: Record<
+export const problemContent: Record<
   string,
   {
     causesEN: string[];
