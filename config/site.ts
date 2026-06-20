@@ -1806,7 +1806,7 @@ export const siteConfig = {
       housingNote: "valley-area bungalows and semi-detached homes",
       description: "Lembah Jaya (literally 'prosperous valley') is a quieter, more upscale residential pocket of Ampang with bungalows and semi-detached homes set on sloping land. The sloping terrain sometimes means outdoor units are positioned at an angle or on a raised platform — our technicians check the mounting and drainage slope carefully on every job here to make sure water drains away properly rather than pooling.",
       descriptionMS: "Lembah Jaya adalah kawasan kediaman yang lebih senyap dan mewah di Ampang dengan banglo dan rumah berkembar di tanah condong. Rupa bumi yang condong kadangkala bermakna unit luar diposisikan pada sudut atau di atas platform yang dinaikkan.",
-      descriptionZH: "Lembah Jaya（意为"繁荣的山谷"）是安邦较安静、较高档的住宅区，独立别墅和半独立式住宅建在斜坡地形上。倾斜的地形有时意味着室外机以一定角度或在升高的平台上安装——我们的技师在这里的每项工作中都会仔细检查安装和排水坡度，确保水能正常排出而不会积水。",
+      descriptionZH: "Lembah Jaya（意为「繁荣的山谷」）是安邦较安静、较高档的住宅区，独立别墅和半独立式住宅建在斜坡地形上。倾斜的地形有时意味着室外机以一定角度或在升高的平台上安装——我们的技师在这里的每项工作中都会仔细检查安装和排水坡度，确保水能正常排出而不会积水。",
       metaTitle: "Aircond Service Lembah Jaya Ampang | KL Renovator",
       metaDesc: "Aircond servicing for bungalows & semi-D homes in Lembah Jaya, sloping terrain specialists. Call +60182983573.",
       metaTitleMS: "Servis Aircond Lembah Jaya Ampang | KL Renovator",
