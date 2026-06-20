@@ -267,17 +267,55 @@ export default async function AreaPage({
                   {area.description}
                 </p>
 
-                {/* Landmarks */}
+                {/* Landmarks — linked to dedicated kampung pages where they exist */}
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {area.landmarks.map((lm) => (
-                    <span
-                      key={lm}
-                      className="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-full border border-slate-200"
-                    >
-                      {lm}
-                    </span>
-                  ))}
+                  {area.landmarks.map((lm) => {
+                    const kampungPage = (siteConfig as any).kampungPages?.find(
+                      (k: any) => k.parentSlug === slug && k.name === lm
+                    );
+                    if (kampungPage) {
+                      return (
+                        <NextLink
+                          key={lm}
+                          href={`/areas/${slug}/${kampungPage.slug}`}
+                          className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                        >
+                          {lm}
+                        </NextLink>
+                      );
+                    }
+                    return (
+                      <span
+                        key={lm}
+                        className="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-full border border-slate-200"
+                      >
+                        {lm}
+                      </span>
+                    );
+                  })}
                 </div>
+
+                {/* Dedicated neighbourhood pages for this area, if any exist */}
+                {(siteConfig as any).kampungPages?.filter((k: any) => k.parentSlug === slug).length > 0 && (
+                  <div className="mt-4">
+                    <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
+                      Neighbourhood Guides
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {(siteConfig as any).kampungPages
+                        .filter((k: any) => k.parentSlug === slug)
+                        .map((k: any) => (
+                          <NextLink
+                            key={k.slug}
+                            href={`/areas/${slug}/${k.slug}`}
+                            className="inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 underline"
+                          >
+                            Aircond Service {k.name}
+                          </NextLink>
+                        ))}
+                    </div>
+                  </div>
+                )}
 
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <BookingButton serviceName={`Aircond Service ${area.name}`} size="lg" />
