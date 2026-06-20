@@ -221,6 +221,9 @@ export const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "midea": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-making-noise"],
   "samsung": ["aircond-not-cold", "aircond-blinking-light", "aircond-water-leaking", "aircond-pcb-problem"],
   "lg": ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-fan-not-working"],
+  "hisense": ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
+  "aux": ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
+  "tcl": ["aircond-not-cold", "aircond-bad-smell", "aircond-water-leaking", "aircond-blinking-light"],
   "_default": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-making-noise"],
 };
 
