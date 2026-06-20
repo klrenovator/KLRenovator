@@ -154,6 +154,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── /ms/ and /zh/ pages get appended here, batch by batch, as they ship ──
 
+  // ── Kampung/Neighbourhood Pages (English, real, live) — BATCH 1: Cheras
+  // cluster, shipped 19 June 2026. See KLRenovator-KAMPUNG-MASTER-PLAN.md.
+  const kampungPages: MetadataRoute.Sitemap = (siteConfig as any).kampungPages.map((k: any) => ({
+    url: `${BASE}/areas/${k.parentSlug}/${k.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.70,
+    alternates: buildCanonicalOnly(`/areas/${k.parentSlug}/${k.slug}`),
+  }));
+  const msKampungPages: MetadataRoute.Sitemap = (siteConfig as any).kampungPages
+    .filter((k: any) => k.descriptionMS)
+    .map((k: any) => ({
+      url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+      alternates: buildCanonicalOnly(`/ms/areas/${k.parentSlug}/${k.slug}`),
+    }));
+  const zhKampungPages: MetadataRoute.Sitemap = (siteConfig as any).kampungPages
+    .filter((k: any) => k.descriptionZH)
+    .map((k: any) => ({
+      url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+      alternates: buildCanonicalOnly(`/zh/areas/${k.parentSlug}/${k.slug}`),
+    }));
+
   return [
     ...staticPages,
     ...emergencyPage,
@@ -161,6 +189,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaPages,
     ...msAreaPages,
     ...zhAreaPages,
+    ...kampungPages,
+    ...msKampungPages,
+    ...zhKampungPages,
     ...brandPages,
     ...msBrandPages,
     ...zhBrandPages,
