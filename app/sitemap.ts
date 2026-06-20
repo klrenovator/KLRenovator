@@ -100,6 +100,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: buildCanonicalOnly(`/brands/${b.slug}`),
   }));
 
+  // ── Brand Pages — /ms/ and /zh/ — all 15 brands have full translated
+  // data, so every brand gets a page (shipped 19 June 2026, no filter needed).
+  const msBrandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/ms/brands/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+    alternates: buildCanonicalOnly(`/ms/brands/${b.slug}`),
+  }));
+  const zhBrandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/zh/brands/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+    alternates: buildCanonicalOnly(`/zh/brands/${b.slug}`),
+  }));
+
   // ── Problem Pages (English, real, live) ─────────────────────────────
   const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
     url: `${BASE}/problems/${p.slug}`,
@@ -107,6 +124,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.80,
     alternates: buildCanonicalOnly(`/problems/${p.slug}`),
+  }));
+
+  // ── Problem Pages — /ms/ and /zh/ — all 20 problems have full
+  // translated data, so every problem gets a page (shipped 19 June 2026).
+  const msProblemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
+    url: `${BASE}/ms/problems/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.73,
+    alternates: buildCanonicalOnly(`/ms/problems/${p.slug}`),
+  }));
+  const zhProblemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
+    url: `${BASE}/zh/problems/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.73,
+    alternates: buildCanonicalOnly(`/zh/problems/${p.slug}`),
   }));
 
   // ── Blog Post Pages (English, real, live) ───────────────────────────
@@ -128,7 +162,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...msAreaPages,
     ...zhAreaPages,
     ...brandPages,
+    ...msBrandPages,
+    ...zhBrandPages,
     ...problemPages,
+    ...msProblemPages,
+    ...zhProblemPages,
     ...blogPages,
   ];
 }
