@@ -143,8 +143,8 @@ export async function generateMetadata({
       canonical: `https://www.klrenovator.com/brands/${slug}`,
       languages: {
         "en-MY": `https://www.klrenovator.com/brands/${slug}`,
-        "ms-MY": `https://www.klrenovator.com/brands/${slug}`,
-        "zh-MY": `https://www.klrenovator.com/brands/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/ms/brands/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/zh/brands/${slug}`,
         "x-default": `https://www.klrenovator.com/brands/${slug}`,
       },
     },
