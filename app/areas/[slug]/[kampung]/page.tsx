@@ -5,9 +5,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /areas/[slug]/[kampung] — English kampung/neighbourhood page.
@@ -118,6 +120,19 @@ export default async function KampungPage({
     (x: any) => x.parentSlug === slug && x.slug !== kampung
   );
 
+  // Cross-silo links — inherited from the parent area's topical authority
+  // map entry (see getProblemsForKampung/getBlogsForKampung in
+  // config/topical-authority-map.ts for why this isn't a per-kampung list).
+  const relatedProblemSlugs = getProblemsForKampung(slug);
+  const relatedProblems = relatedProblemSlugs
+    .map((ps) => (siteConfig as any).problemPages.find((p: any) => p.slug === ps))
+    .filter(Boolean);
+
+  const relatedBlogSlugs = getBlogsForKampung(slug);
+  const relatedBlogs = relatedBlogSlugs
+    .map((bs) => allPosts.find((b) => b.slug === bs))
+    .filter(Boolean);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
@@ -176,6 +191,52 @@ export default async function KampungPage({
                     </summary>
                     <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
                   </details>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {relatedProblems.length > 0 && (
+        <section className="py-12 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+                Common Aircond Problems Near {k.name}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {relatedProblems.map((p: any) => (
+                  <NextLink
+                    key={p.slug}
+                    href={`/problems/${p.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
+                  >
+                    {p.name}
+                  </NextLink>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {relatedBlogs.length > 0 && (
+        <section className="py-12 bg-slate-50 border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+                Helpful Guides for {k.name} Residents
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {relatedBlogs.map((b: any) => (
+                  <NextLink
+                    key={b.slug}
+                    href={`/blog/${b.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-sky-200 bg-white px-3 py-1.5 text-xs font-bold text-sky-700 hover:bg-sky-50 transition rounded-xl"
+                  >
+                    {b.title}
+                  </NextLink>
                 ))}
               </div>
             </Reveal>
