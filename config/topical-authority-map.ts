@@ -10,11 +10,11 @@
  *
  * SILO ARCHITECTURE:
  * Homepage (Authority Hub)
- *   ├── Service Silo       /services → [8 service pages]
+ *   ├── Service Silo       /services → [9 service pages]
  *   ├── Problem Silo       /problems → [20 problem pages]
- *   ├── Location Silo      /areas    → [38 area pages]
- *   ├── Brand Silo         /brands   → [15 brand pages]
- *   └── Blog Silo          /blog     → [19 blog posts]
+ *   ├── Location Silo      /areas    → [39 area pages + 116 kampung pages]
+ *   ├── Brand Silo         /brands   → [18 brand pages]
+ *   └── Blog Silo          /blog     → [20 blog posts]
  *
  * CROSS-SILO LINK FLOW:
  * Service → Problem (service fixes these problems)
@@ -23,6 +23,7 @@
  * Service → Blog  (guides about this service)
  * Area → Service  (this service in this area)
  * Area → Blog     (local + educational guides)
+ * Kampung → Problem/Blog (inherits parent area's map — see getProblemsForKampung/getBlogsForKampung below)
  * Blog → Service  (book this service)
  * Blog → Problem  (related problems)
  * Brand → Service (service this brand)
@@ -208,6 +209,28 @@ export const AREA_BLOG_MAP: Record<string, string[]> = {
     "aircond-troubleshooting-guide-malaysia",
   ],
 };
+
+// ── KAMPUNG → TOP PROBLEMS / BLOGS (inherits from parent area) ──────────────
+// Kampung/neighbourhood pages (config/site.ts → kampungPages) don't get their
+// own entries here — with 116+ of them and growing, manually duplicating the
+// parent area's list per kampung would be a maintenance trap (every future
+// batch would need a matching map edit, breaking the "data-only" promise in
+// KLRenovator-KAMPUNG-MASTER-PLAN.md). Instead, a kampung page resolves its
+// cross-links by looking up its OWN parentSlug in the maps above. This means:
+//   - Every existing + future kampung gets relevant problem/blog links
+//     automatically the moment its parentSlug area has a map entry.
+//   - Areas not yet in AREA_PROBLEM_MAP/AREA_BLOG_MAP fall through to
+//     "_default", same as the parent area page itself does.
+// Call these from the kampung page templates instead of indexing the maps
+// directly with the kampung's own slug.
+export function getProblemsForKampung(parentSlug: string): string[] {
+  return AREA_PROBLEM_MAP[parentSlug] || AREA_PROBLEM_MAP["_default"];
+}
+
+export function getBlogsForKampung(parentSlug: string): string[] {
+  return AREA_BLOG_MAP[parentSlug] || AREA_BLOG_MAP["_default"];
+}
+
 
 // ── BRAND → COMMON PROBLEMS MAP ──────────────────────────────────────────────
 // Each brand page should link to these problem pages
