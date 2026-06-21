@@ -5,9 +5,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug]/[kampung] — Mandarin kampung page.
@@ -95,6 +97,16 @@ export default async function KampungPageZH({
     (x: any) => x.parentSlug === slug && x.slug !== kampung && x.descriptionZH
   );
 
+  const relatedProblemSlugs = getProblemsForKampung(slug);
+  const relatedProblems = relatedProblemSlugs
+    .map((ps) => (siteConfig as any).problemPages.find((p: any) => p.slug === ps))
+    .filter(Boolean);
+
+  const relatedBlogSlugs = getBlogsForKampung(slug);
+  const relatedBlogs = relatedBlogSlugs
+    .map((bs) => allPosts.find((b) => b.slug === bs))
+    .filter(Boolean);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -158,6 +170,52 @@ export default async function KampungPageZH({
                     </summary>
                     <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
                   </details>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {relatedProblems.length > 0 && (
+        <section className="py-12 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+                {k.name}附近常见冷气问题
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {relatedProblems.map((p: any) => (
+                  <NextLink
+                    key={p.slug}
+                    href={`/zh/problems/${p.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
+                  >
+                    {p.nameZH || p.name}
+                  </NextLink>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {relatedBlogs.length > 0 && (
+        <section className="py-12 bg-slate-50 border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+                {k.name}居民实用指南
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {relatedBlogs.map((b: any) => (
+                  <NextLink
+                    key={b.slug}
+                    href={`/blog/${b.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-sky-200 bg-white px-3 py-1.5 text-xs font-bold text-sky-700 hover:bg-sky-50 transition rounded-xl"
+                  >
+                    {b.titleZH || b.title}
+                  </NextLink>
                 ))}
               </div>
             </Reveal>
