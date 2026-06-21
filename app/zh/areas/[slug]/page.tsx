@@ -168,6 +168,30 @@ export default async function AreaPageZH({
               </p>
             )}
 
+            {/* Dedicated neighbourhood pages for this area, if any exist */}
+            {(siteConfig as any).kampungPages
+              ?.filter((k: any) => k.parentSlug === slug && k.descriptionZH)
+              .length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
+                  社区指南
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {(siteConfig as any).kampungPages
+                    .filter((k: any) => k.parentSlug === slug && k.descriptionZH)
+                    .map((k: any) => (
+                      <NextLink
+                        key={k.slug}
+                        href={`/zh/areas/${slug}/${k.slug}`}
+                        className="inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 underline"
+                      >
+                        {k.name} 冷气服务
+                      </NextLink>
+                    ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href={waLink(`Hi KL Renovator，我想在${area.name}预约冷气服务。`)}
