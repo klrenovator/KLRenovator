@@ -21,7 +21,7 @@ export type BlogPost = {
 
 export const allPosts: BlogPost[] = [
   {
-    slug: "aircond-service-batu-caves-selayang-2026",
+    slug: "aircon-service-batu-caves-selayang-2026",
     title: "Aircon Service in Batu Caves & Selayang — What to Expect in 2026",
     titleMS: "Servis Aircond di Batu Caves & Selayang — Apa yang Anda Perlu Tahu pada 2026",
     titleZH: "黑风洞及双溪毛糯冷气服务 — 2026年您需要了解的事项",
@@ -64,9 +64,18 @@ export const allPosts: BlogPost[] = [
       </ul>
       <p>No hidden charges. All prices confirmed before work begins.</p>
 
+      <h2>What to Expect During a Service Visit</h2>
+      <p>When a KL Renovator technician arrives at your Batu Caves or Selayang property, they will first inspect both the indoor and outdoor units before starting any work. A protective canvas sheet is laid on the floor beneath the indoor unit before any chemical spraying begins. For a chemical wash, the full process takes 45–90 minutes per unit. The technician will test cooling performance after completion and only leaves once the unit is confirmed running correctly.</p>
+
+      <h2>Why Choose KL Renovator in This Area</h2>
+      <p>KL Renovator is headquartered in Selayang, which means technicians dispatched to Batu Caves and Selayang are not travelling from distant parts of KL — response times are faster and same-day slots are more frequently available compared to companies based in other parts of the Klang Valley. Our team has serviced thousands of units specifically in this corridor, giving us direct familiarity with the local building types, installation styles, and the specific problems that arise from the local environment.</p>
+
       <h2>How to Book</h2>
       <p>WhatsApp <strong>+60 18-298 3573</strong> with your location, unit type, and issue. Slot confirmed within 30 minutes.</p>
       <p>We are headquartered in Selayang — fastest response time in the area. <a href="/areas/batu-caves">Batu Caves service page</a> | <a href="/areas/selayang">Selayang service page</a> | <a href="/services/chemical-wash">Chemical wash pricing</a></p>
+
+      <h2>Volume Discounts for Multiple Units</h2>
+      <p>Many Batu Caves and Selayang households have 2–4 aircond units. Booking all units in one visit saves travel cost and qualifies for volume discounts: 5% off for 2–3 units, 10% off for 4–8 units. A household with 3 wall-mounted units for chemical wash would pay RM 120 × 3 = RM 360, less 5% = <strong>RM 342</strong> total. WhatsApp us with the number of units for a confirmed quote before booking.</p>
     `,
     contentMS: `
       <h2>Servis Aircond di Batu Caves & Selayang</h2>
@@ -95,6 +104,9 @@ export const allPosts: BlogPost[] = [
         <li>Tambah Gas R32/R410A: dari <strong>RM 150</strong></li>
       </ul>
       <p>Tiada caj tersembunyi. Semua harga disahkan sebelum kerja bermula.</p>
+
+      <h2>Apa yang Dijangka Semasa Lawatan Servis</h2>
+      <p>Apabila juruteknik KL Renovator tiba di hartanah Batu Caves atau Selayang anda, mereka akan memeriksa kedua-dua unit dalam dan luar sebelum memulakan sebarang kerja. Kanvas pelindung diletakkan di lantai di bawah unit dalam sebelum sebarang semburan kimia dimulakan. Untuk cuci kimia, proses penuh mengambil masa 45–90 minit seunit. Juruteknik akan menguji prestasi penyejukan selepas selesai dan hanya meninggalkan tempat setelah unit disahkan berjalan dengan betul.</p>
 
       <h2>Cara Membuat Tempahan</h2>
       <p>WhatsApp <strong>+60 18-298 3573</strong> dengan lokasi, jenis unit, dan masalah anda. Slot disahkan dalam 30 minit.</p>
@@ -128,13 +140,16 @@ export const allPosts: BlogPost[] = [
       </ul>
       <p>无隐藏收费。所有价格在施工前确认。</p>
 
+      <h2>服务上门时的流程</h2>
+      <p>KL Renovator技术人员到达您在黑风洞或双溪毛糯的物业时，会先检查室内和室外机，然后再开始任何工作。在开始任何化学喷洒之前，会在室内机下方的地板上铺防护帆布。化学清洗全程每台需要45-90分钟。技术人员在完成后会测试冷却性能，确认机器正常运行后才离开。</p>
+
       <h2>如何预约</h2>
       <p>请WhatsApp <strong>+60 18-298 3573</strong>，提供您的位置、机型和问题。30分钟内确认时间段。</p>
       <p>我们总部位于双溪毛糯——该地区响应速度最快。<a href="/areas/batu-caves">黑风洞服务页</a> | <a href="/areas/selayang">双溪毛糯服务页</a></p>
     `,
   },
   {
-    slug: "aircond-chemical-wash-price-malaysia-2026",
+    slug: "aircon-chemical-wash-price-malaysia-2026",
     title: "Aircon Chemical Wash Price in Malaysia 2026 — Full Breakdown",
     titleMS: "Harga Cuci Kimia Aircond di Malaysia 2026 — Pecahan Lengkap",
     titleZH: "马来西亚2026年冷气化学清洗价格 — 完整明细",
@@ -187,7 +202,19 @@ export const allPosts: BlogPost[] = [
         <li>4–8 units: 10% off</li>
         <li>8+ units: 15% off</li>
       </ul>
+      <h2>How Long Does a Chemical Wash Take?</h2>
+      <p>A single wall-mounted unit chemical wash takes approximately 45–90 minutes depending on the level of soiling. A heavily neglected unit that has not been serviced for 2 or more years may take up to 2 hours. Ceiling cassette units typically take 90–120 minutes due to their larger coil surface area and the additional work required to access the unit through the ceiling panel.</p>
+
+      <h2>How Often Should You Get a Chemical Wash?</h2>
+      <p>For most Malaysian homes, once every 12 months is the recommended minimum. Units in high-humidity areas such as Batu Caves, Selayang, coastal properties, or zones near active construction benefit from servicing every 8–10 months. Units in air-conditioned offices or commercial spaces used 10–12 hours daily should be chemically washed every 6 months.</p>
+
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a firm quote. Also see: <a href="/services/chemical-wash">Chemical wash service page</a> | <a href="/services/chemical-overhaul">Chemical overhaul pricing</a></p>
+
+      <h2>Warranty After Chemical Wash</h2>
+      <p>Every chemical wash by KL Renovator comes with a 1-month workmanship warranty. If the drain pipe blocks again within 30 days of service, we return to clear it at no additional charge. This warranty covers workmanship — it does not cover pre-existing mechanical faults that were present before the service. All warranty terms are communicated clearly before work begins. For ongoing protection, an annual maintenance plan is available from RM 499 per year covering 2–4 residential units.</p>
+
+      <h2>Warranty and After-Service Guarantee</h2>
+      <p>Every chemical wash by KL Renovator includes a 1-month workmanship warranty. If the drain pipe blocks again within 30 days, we return at no charge. Volume discounts apply when booking multiple units in one visit — 5% off for 2–3 units, 10% off for 4–8 units. For example, 3 wall-mounted 1.5 HP units at RM 120 each becomes RM 342 total with the 5% multi-unit discount. Payment is accepted after the job is completed to your satisfaction — cash, online transfer, or DuitNow QR. No upfront payment required for residential bookings.</p>
     `,
     contentMS: `
       <h2>Harga Cuci Kimia di Malaysia 2026</h2>
@@ -227,6 +254,9 @@ export const allPosts: BlogPost[] = [
         <li>4–8 unit: 10% diskaun</li>
         <li>8+ unit: 15% diskaun</li>
       </ul>
+      <h2>Berapa Lama Cuci Kimia Mengambil Masa?</h2>
+      <p>Cuci kimia satu unit dinding mengambil masa lebih kurang 45–90 minit bergantung pada tahap kekotoran. Unit yang sangat diabaikan selama 2 tahun atau lebih mungkin mengambil masa sehingga 2 jam. Unit ceiling cassette biasanya mengambil masa 90–120 minit kerana kawasan permukaan gegelung yang lebih besar dan kerja tambahan yang diperlukan untuk mengakses unit melalui panel siling.</p>
+
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk sebutan harga yang pasti.</p>
     `,
     contentZH: `
@@ -267,11 +297,17 @@ export const allPosts: BlogPost[] = [
         <li>4-8台：9折</li>
         <li>8台以上：85折</li>
       </ul>
+      <h2>化学清洗需要多长时间？</h2>
+      <p>单台挂壁式机器化学清洗大约需要45-90分钟，具体取决于污垢程度。超过2年未保养的机器可能需要长达2小时。天花板卡式机通常需要90-120分钟，因为盘管表面积更大，且需要通过天花板面板进行额外操作。</p>
+
+      <h2>多久应该进行一次化学清洗？</h2>
+      <p>对于大多数马来西亚家庭，每12个月一次是建议的最低频率。高湿度地区（如黑风洞、双溪毛糯、沿海物业或活跃建筑区附近）的机器每8-10个月保养效果更好。每天使用10-12小时的商业空间机器应每6个月进行一次化学清洗。</p>
+
       <p>请WhatsApp <strong>+60 18-298 3573</strong> 获取确定报价。</p>
     `,
   },
   {
-    slug: "signs-your-aircond-needs-chemical-overhaul-malaysia",
+    slug: "signs-your-aircon-needs-chemical-overhaul-malaysia",
     title: "5 Signs Your Aircon Needs a Chemical Overhaul (Not Just a Wash)",
     titleMS: "5 Tanda Aircond Anda Memerlukan Overhaul Kimia (Bukan Sekadar Cuci)",
     titleZH: "5个迹象表明您的冷气需要化学大修（而不仅仅是清洗）",
@@ -305,8 +341,14 @@ export const allPosts: BlogPost[] = [
       <h2>Sign 5: Cooling Is Weak Even After Gas Top-Up and Chemical Wash</h2>
       <p>If both gas and coil cleaning have been done but cooling is still poor, the evaporator coil fins may be severely bent or the blower wheel may be so coated with grime that only a full clean will restore airflow.</p>
 
+      <h2>What Happens If You Delay an Overhaul?</h2>
+      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul that costs RM 220–350 is far less expensive than a compressor replacement at RM 600–2,000 or a complete new unit installation.</p>
+
       <h2>What to Do</h2>
       <p>Chemical overhaul starts from <strong>RM 220</strong> for a wall-mounted 1.0–1.5 HP unit. WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. See also: <a href="/services/chemical-overhaul">Chemical overhaul service page</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking guide</a></p>
+
+      <h2>Can You Delay an Overhaul?</h2>
+      <p>You can delay, but every week of continued use in a unit that needs an overhaul increases the risk of secondary damage. A cracked drain pan left unaddressed can leak onto electrical components and cause a PCB board failure. A severely fouled coil forces the compressor to run at high temperature, degrading compressor insulation. A unit that costs RM 220–350 to overhaul today can become a unit that costs RM 600–1,500 to repair in 6 months if the root cause is left unaddressed. Early action is always the more economical choice.</p>
     `,
     contentMS: `
       <h2>Apabila Cuci Kimia Tidak Mencukupi</h2>
@@ -326,6 +368,9 @@ export const allPosts: BlogPost[] = [
 
       <h2>Tanda 5: Penyejukan Lemah Walaupun Selepas Tambah Gas dan Cuci Kimia</h2>
       <p>Jika kedua-dua gas dan pembersihan gegelung telah dilakukan tetapi penyejukan masih lemah, sirip gegelung evaporator mungkin sangat bengkok atau roda blower mungkin sangat kotor sehingga hanya pembersihan penuh yang akan memulihkan aliran udara.</p>
+
+      <h2>Apa yang Berlaku Jika Anda Menangguhkan Overhaul?</h2>
+      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia berharga RM 220–350 jauh lebih murah berbanding penggantian kompressor pada RM 600–2,000 atau pemasangan unit baru yang lengkap.</p>
 
       <h2>Apa yang Perlu Dilakukan</h2>
       <p>Overhaul kimia bermula dari <strong>RM 220</strong> untuk unit dinding 1.0–1.5 HP. WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>.</p>
@@ -348,6 +393,9 @@ export const allPosts: BlogPost[] = [
 
       <h2>迹象5：充气和化学清洗后冷却效果仍差</h2>
       <p>如果充气和盘管清洗都已完成但冷却效果仍差，蒸发器盘管翅片可能严重弯曲，或鼓风机轮污垢太厚，只有完整清洗才能恢复气流。</p>
+
+      <h2>拖延大修会怎样？</h2>
+      <p>继续使用需要化学大修的机器会导致电费更高（压缩机补偿气流效率降低）、持续漏水损坏墙壁和天花板、以及压缩机在受限条件下运行加速磨损。RM 220-350的化学大修远比RM 600-2,000的压缩机更换或全新机器安装便宜。</p>
 
       <h2>该怎么做</h2>
       <p>挂壁式1.0–1.5 HP机器化学大修从<strong>RM 220</strong>起。请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong>。</p>
@@ -401,7 +449,13 @@ export const allPosts: BlogPost[] = [
         <li><strong>Chemical Overhaul:</strong> Unit fully dismantled · 2–3 hours · From RM 220 · Best for severe issues</li>
       </ul>
       <p>Not sure which you need? WhatsApp us a photo at <strong>+60 18-298 3573</strong> and our team will advise you honestly.</p>
+
+      <h2>Time and Cost Summary</h2>
+      <p>Chemical wash from <strong>RM 120</strong>, takes 45–90 minutes — ideal for units serviced within the past 18 months with no persistent problems. Chemical overhaul from <strong>RM 220</strong>, takes 2–3 hours — necessary when a wash alone cannot fix the issue. In both cases, all prices are confirmed before work starts and there are no hidden charges.</p>
       <p>Related: <a href="/services/chemical-wash">Chemical wash service</a> | <a href="/services/chemical-overhaul">Chemical overhaul service</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking</a></p>
+
+      <h2>Warranty Coverage for Both Services</h2>
+      <p>Both chemical wash and chemical overhaul from KL Renovator include a 1-month workmanship warranty. For chemical overhaul, the warranty covers the reinstallation and all internal cleaning work. Any pre-existing mechanical fault found during the overhaul — such as a failing capacitor or worn fan motor bearing — will be quoted separately with your approval required before any additional work proceeds. There are never any surprise charges after the job is complete.</p>
     `,
     contentMS: `
       <h2>Apa itu Cuci Kimia?</h2>
@@ -417,6 +471,8 @@ export const allPosts: BlogPost[] = [
         <li><strong>Cuci Kimia:</strong> Unit kekal dipasang · 45–90 minit · Dari RM 120 · Terbaik untuk penyelenggaraan rutin</li>
         <li><strong>Overhaul Kimia:</strong> Unit dibuka sepenuhnya · 2–3 jam · Dari RM 220 · Terbaik untuk masalah teruk</li>
       </ul>
+      <h2>Masa dan Kos — Ringkasan</h2>
+      <p>Cuci kimia dari <strong>RM 120</strong>, mengambil masa 45–90 minit — sesuai untuk unit yang diservisi dalam tempoh 18 bulan yang lalu tanpa masalah berterusan. Overhaul kimia dari <strong>RM 220</strong>, mengambil masa 2–3 jam — diperlukan apabila basuhan sahaja tidak dapat menyelesaikan masalah. Dalam kedua-dua kes, semua harga disahkan sebelum kerja bermula dan tiada caj tersembunyi.</p>
       <p>Tidak pasti yang mana anda perlukan? WhatsApp foto kepada kami di <strong>+60 18-298 3573</strong> dan pasukan kami akan memberi nasihat jujur.</p>
     `,
     contentZH: `
@@ -433,11 +489,13 @@ export const allPosts: BlogPost[] = [
         <li><strong>化学清洗：</strong>机器保持安装状态 · 45-90分钟 · 从RM 120起 · 最适合日常保养</li>
         <li><strong>化学大修：</strong>机器完全拆卸 · 2-3小时 · 从RM 220起 · 最适合严重问题</li>
       </ul>
+      <h2>时间和费用摘要</h2>
+      <p>化学清洗从<strong>RM 120</strong>起，需要45-90分钟——适合过去18个月内曾保养且无持续问题的机器。化学大修从<strong>RM 220</strong>起，需要2-3小时——当单独清洗无法解决问题时必要。两种情况下，所有价格在施工前确认，无隐藏收费。</p>
       <p>不确定您需要哪种？请WhatsApp照片给我们：<strong>+60 18-298 3573</strong>，我们的团队将诚实地为您建议。</p>
     `,
   },
   {
-    slug: "aircond-not-cold-reasons",
+    slug: "aircon-not-cold-reasons",
     title: "Aircon Running But Not Cold? 7 Common Causes in Malaysia",
     titleMS: "Aircond Berjalan Tapi Tidak Sejuk? 7 Punca Biasa di Malaysia",
     titleZH: "冷气开着但不冷？马来西亚7个常见原因",
@@ -469,8 +527,14 @@ export const allPosts: BlogPost[] = [
       <p>If the outdoor condenser is surrounded by walls or objects, heat can't escape and cooling efficiency drops. Solution: Clear the area around the outdoor unit.</p>
       <h2>7. Undersized Unit for the Room</h2>
       <p>A 1.0 HP unit in a 600 sq ft living room will struggle. If the unit has always been weak, the HP may simply be insufficient.</p>
+      <h2>What to Do First — Free DIY Checks</h2>
+      <p>Before calling a technician, do these two checks yourself. First, remove the front panel and clean the air filter under running water — a blocked filter alone can reduce cooling output by 20-30% and takes 10 minutes to fix at zero cost. Second, check that the outdoor unit fan is spinning and that there are no objects or debris blocking the airflow around it. If both of these are fine and the unit is still not cooling, the issue requires professional diagnosis.</p>
+
       <h2>What to Do</h2>
       <p>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. Diagnostic fee RM 88 (waived if repair is done same visit). See: <a href="/problems/aircond-not-cold">Aircond not cold — full guide</a> | <a href="/services/gas-topup">Gas top-up pricing</a></p>
+
+      <h2>How Long Does a Diagnostic Visit Take?</h2>
+      <p>A full diagnostic visit to identify why your aircond is not cooling takes approximately 30–60 minutes. The technician will check gas pressure with a manifold gauge, inspect the evaporator coil, test the capacitor, verify the thermostat sensor reading, and confirm outdoor unit operation. This covers all 7 causes listed above and gives you a clear diagnosis and repair cost before any work begins. Diagnostic fee RM 88 — waived if repair is carried out on the same visit.</p>
     `,
     contentMS: `
       <h2>Kenapa Aircond Saya Berjalan Tapi Tidak Menyejukkan?</h2>
@@ -489,6 +553,9 @@ export const allPosts: BlogPost[] = [
       <p>Jika kondenser luar dikelilingi oleh dinding atau objek, haba tidak dapat keluar dan kecekapan penyejukan merosot.</p>
       <h2>7. Unit Terlalu Kecil untuk Bilik</h2>
       <p>Unit 1.0 HP dalam ruang tamu 600 kaki persegi akan bergelut. Jika unit sentiasa lemah, HP mungkin tidak mencukupi.</p>
+      <h2>Apa yang Perlu Dilakukan Dahulu — Semakan DIY Percuma</h2>
+      <p>Sebelum memanggil juruteknik, lakukan dua semakan ini sendiri. Pertama, keluarkan panel hadapan dan bersihkan penapis udara di bawah air mengalir — penapis tersumbat sahaja boleh mengurangkan output penyejukan sebanyak 20-30% dan mengambil masa 10 minit untuk diperbaiki tanpa kos. Kedua, semak bahawa kipas unit luar sedang berputar dan tiada objek atau serpihan yang menyekat aliran udara di sekelilingnya.</p>
+
       <h2>Apa yang Perlu Dilakukan</h2>
       <p>WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>. Yuran diagnostik RM 88 (dikecualikan jika pembaikan dilakukan pada lawatan yang sama).</p>
     `,
@@ -509,6 +576,9 @@ export const allPosts: BlogPost[] = [
       <p>如果室外冷凝器被墙壁或物体包围，热量无法散发，制冷效率下降。解决方案：清除室外机周围的障碍物。</p>
       <h2>7. 机器功率不足</h2>
       <p>600平方英尺客厅中的1.0 HP机器会力不从心。如果机器一直很弱，可能HP确实不足。</p>
+      <h2>首先该做什么——免费DIY检查</h2>
+      <p>在联系技术人员之前，先自行做这两项检查。第一，取出前面板，在流水下清洗过滤网——单单过滤网堵塞就可以减少20-30%的冷却效果，而且只需10分钟零成本解决。第二，检查室外机风扇是否在转动，周围是否有物体或碎屑阻挡气流。如果这两项都正常而机器仍然不冷，则需要专业诊断。</p>
+
       <h2>该怎么做</h2>
       <p>请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong>。诊断费RM 88（同次维修则豁免）。</p>
     `,
@@ -548,8 +618,19 @@ export const allPosts: BlogPost[] = [
         <li>Water dripping from the indoor unit</li>
         <li>Higher electricity bill than usual</li>
       </ul>
+      <h2>What Happens When You Skip Servicing</h2>
+      <p>Skipping regular servicing for 2 or more years in Malaysian conditions causes mould colonies to establish deep inside the blower wheel and drain pan — areas that a basic service cannot clean. The evaporator coil gradually loses 15–40% of its heat exchange capacity as grime builds up on the fin surfaces. Electricity bills rise progressively as the compressor compensates. By the time a homeowner notices significant cooling decline, the unit typically needs a chemical overhaul rather than a simple wash.</p>
+
       <h2>Book a Service</h2>
       <p>Basic servicing from <strong>RM 99</strong>. Chemical wash from <strong>RM 120</strong>. WhatsApp <strong>+60 18-298 3573</strong> to book. See: <a href="/services/basic-servicing">Basic servicing page</a></p>
+
+      <h2>Signs You Are Overdue for Service</h2>
+      <p>These signs indicate your aircond needs immediate attention regardless of when it was last serviced: musty or sour smell during operation, water dripping from the indoor unit, cooling noticeably weaker than 3 months ago, ice visible on the copper pipes or evaporator coil, or the unit cycling on and off more frequently than usual. Any one of these warrants a service call rather than waiting for the next scheduled date.</p>
+      <h2>Getting on a Consistent Schedule</h2>
+      <p>The easiest way to maintain a consistent schedule is to book the next service at the end of each visit. KL Renovator can note your preferred interval and send a WhatsApp reminder when your next service is due. Basic service from RM 99, chemical wash from RM 120. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>How to Remember Your Service Schedule</h2>
+      <p>The simplest approach is to set a recurring WhatsApp reminder on your phone — 3 months for basic service, 12 months for chemical wash. Alternatively, after every KL Renovator visit, our team will note your preferred interval and send a reminder when the next service is approaching. For commercial and office clients, a maintenance contract removes the need to track schedules entirely — everything is handled automatically on pre-agreed dates with priority response for any breakdowns between scheduled visits.</p>
     `,
     contentMS: `
       <h2>Mengapa Malaysia Memerlukan Servis yang Lebih Kerap</h2>
@@ -562,6 +643,9 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>Bila Perlu Buat Cuci Kimia</h2>
       <p>Tanpa mengira penggunaan, cuci kimia disyorkan sekali setiap 12 bulan. Jika anda berdekatan dengan pembinaan, jalan utama, atau kawasan kelembapan tinggi, setiap 8–10 bulan adalah lebih baik.</p>
+      <h2>Apa yang Berlaku Apabila Anda Melangkau Servis</h2>
+      <p>Melangkau servis berkala selama 2 tahun atau lebih dalam keadaan Malaysia menyebabkan koloni kulat berkembang jauh di dalam roda blower dan dulang longkang. Gegelung evaporator secara beransur-ansur kehilangan 15–40% kapasiti pertukaran haba apabila kotoran terbina pada permukaan sirip. Bil elektrik meningkat secara progresif apabila kompressor mengimbanginya.</p>
+
       <h2>Tempah Servis</h2>
       <p>Servis asas dari <strong>RM 99</strong>. Cuci kimia dari <strong>RM 120</strong>. WhatsApp <strong>+60 18-298 3573</strong> untuk membuat tempahan.</p>
     `,
@@ -576,6 +660,9 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>何时进行化学清洗</h2>
       <p>无论使用情况如何，建议每12个月进行一次化学清洗。如果您靠近建筑工地、主干道或高湿度地区，每8-10个月更好。</p>
+      <h2>跳过保养会发生什么</h2>
+      <p>在马来西亚条件下跳过2年以上的定期保养，会导致霉菌群落在鼓风机轮和排水盘深处建立——这些是基本保养无法清洁的地方。随着污垢在翅片表面积累，蒸发器盘管逐渐失去15-40%的热交换能力。当房主注意到冷却效果明显下降时，机器通常需要化学大修而不是简单清洗。</p>
+
       <h2>预约保养</h2>
       <p>基本保养从<strong>RM 99</strong>起。化学清洗从<strong>RM 120</strong>起。请WhatsApp <strong>+60 18-298 3573</strong>预约。</p>
     `,
@@ -617,9 +704,16 @@ export const allPosts: BlogPost[] = [
         <li>Units: 2018 onwards, especially inverter models</li>
         <li>Top-up cost: RM 180 (1.0 HP), RM 200 (1.5–2.0 HP), RM 220 (2.5–3.0 HP)</li>
       </ul>
-      <h2>How to Check Which Gas Your Unit Uses</h2>
-      <p>Look at the sticker on your outdoor unit — it clearly states the refrigerant type. Or WhatsApp us a photo at <strong>+60 18-298 3573</strong>.</p>
-      <p>See: <a href="/services/gas-topup">Gas top-up service and full pricing</a> | <a href="/problems/aircond-low-gas">Aircond low gas symptoms</a></p>
+      <h2>Important: Never Mix Refrigerant Types</h2>
+      <p>This cannot be overstated — mixing refrigerant types causes immediate and permanent damage to the compressor. R22 and R410A operate at completely different pressure ranges. R32 and R410A, while both HFCs, have different molecular compositions and cannot be mixed. A technician who proposes "topping up" without first identifying the gas type or measuring current pressure is not following correct procedure. KL Renovator always identifies the refrigerant type from the outdoor unit sticker before any gas work begins.</p>
+
+      <h2>See: <a href="/services/gas-topup">Gas top-up service and full pricing</a> | <a href="/problems/aircond-low-gas">Aircond low gas symptoms</a></h2>
+
+      <h2>R22 Phase-Out and What It Means for Older Units</h2>
+      <p>R22 is being phased out globally under the Montreal Protocol. In Malaysia, new R22 production for domestic use has already been restricted, and prices for R22 top-up have risen as supply decreases. If your unit uses R22 and is over 12 years old, consider planning for replacement in the next 2–3 years rather than continuing to invest in top-ups and repairs on an aging unit with an increasingly difficult-to-source refrigerant.</p>
+      <h2>Which Gas Should You Choose When Buying New?</h2>
+      <p>Always choose R32 when buying a new aircond in 2026. All major brands — Daikin, Panasonic, Mitsubishi Electric, Samsung, LG — now use R32 in their latest inverter models. R32 has a lower global warming potential, requires less refrigerant volume for the same cooling output, and will remain readily available for many years. R410A units are still sold but represent older technology with higher environmental impact.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> to identify your gas type from a photo of your outdoor unit. See: <a href="/services/gas-topup">Gas top-up service</a></p>
     `,
     contentMS: `
       <h2>Tiga Jenis Penyejuk Utama di Malaysia</h2>
@@ -633,8 +727,10 @@ export const allPosts: BlogPost[] = [
       <h2>R32</h2>
       <p>Standard semasa untuk unit inverter baru. Potensi pemanasan global yang lebih rendah, kecekapan tenaga yang lebih baik.</p>
       <ul><li>Kos tambah gas: RM 180 (1.0 HP), RM 200 (1.5–2.0 HP), RM 220 (2.5–3.0 HP)</li></ul>
-      <h2>Cara Menyemak Gas yang Digunakan oleh Unit Anda</h2>
-      <p>Lihat pelekat pada unit luar anda — ia menyatakan jenis penyejuk dengan jelas. Atau WhatsApp foto kepada kami di <strong>+60 18-298 3573</strong>.</p>
+      <h2>Penting: Jangan Sekali-kali Mencampurkan Jenis Penyejuk</h2>
+      <p>R22 dan R410A beroperasi pada julat tekanan yang berbeza sepenuhnya. Mencampurkan jenis penyejuk menyebabkan kerosakan segera dan kekal pada kompressor. Juruteknik yang mencadangkan untuk "menambah gas" tanpa mengenal pasti jenis gas terlebih dahulu tidak mengikut prosedur yang betul. KL Renovator sentiasa mengenal pasti jenis penyejuk dari pelekat unit luar sebelum sebarang kerja gas dimulakan.</p>
+
+      <p>Lihat: <a href="/services/gas-topup">Perkhidmatan tambah gas dan harga penuh</a> | <a href="/problems/aircond-low-gas">Gejala gas aircond rendah</a></p>
     `,
     contentZH: `
       <h2>马来西亚三种主要制冷剂类型</h2>
@@ -650,6 +746,9 @@ export const allPosts: BlogPost[] = [
       <ul><li>充气费用：RM 180（1.0 HP）、RM 200（1.5–2.0 HP）、RM 220（2.5–3.0 HP）</li></ul>
       <h2>如何查看您的机器使用哪种气体</h2>
       <p>查看室外机上的贴纸——它清楚地标明了制冷剂类型。或者WhatsApp照片给我们：<strong>+60 18-298 3573</strong>。</p>
+      <h2>重要：切勿混合制冷剂类型</h2>
+      <p>R22和R410A在完全不同的压力范围内工作。混合制冷剂类型会立即对压缩机造成永久性损坏。KL Renovator在开始任何气体工作之前，始终从室外机贴纸识别制冷剂类型。</p>
+      <p>查看：<a href="/services/gas-topup">充气服务和完整价格</a> | <a href="/problems/aircond-low-gas">冷气气体不足症状</a></p>
     `,
   },
   {
@@ -681,11 +780,21 @@ export const allPosts: BlogPost[] = [
       <p>Over time, the plastic drain pan can crack. Solution: Drain pan replacement during an overhaul.</p>
       <h2>What to Do Right Now</h2>
       <ul>
-        <li>Place a bucket or towel below the unit</li>
-        <li>Turn off the aircond if leaking heavily</li>
-        <li>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong></li>
+        <li>Place a bucket or towel below the unit to protect floors and furniture</li>
+        <li>Turn off the aircond if leaking heavily to avoid electrical risk</li>
+        <li>Do NOT seal the leak with tape — water will back up into electrical components</li>
+        <li>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong> with a description or short video of the leak</li>
       </ul>
-      <p>See: <a href="/problems/aircond-water-leaking">Aircond water leaking full guide</a> | <a href="/services/chemical-overhaul">Chemical overhaul service</a></p>
+      <p>Same-day slots frequently available. See: <a href="/problems/aircond-water-leaking">Aircond water leaking full guide</a> | <a href="/services/chemical-overhaul">Chemical overhaul service</a></p>
+
+      <h2>Cost to Fix a Leaking Aircond</h2>
+      <p>Most water leaking issues are resolved during a chemical wash (from RM 120) which clears blocked drain pipes — the most common cause. If the drain pan is cracked or the unit has not been serviced in years, a chemical overhaul (from RM 220) addresses all internal causes comprehensively. Acting quickly prevents secondary water damage to walls, ceilings, and floors that can cost far more than the service itself.</p>
+      <h2>Prevention</h2>
+      <p>The best way to prevent water leaking is consistent maintenance. A drain pipe flush every 3–4 months as part of basic servicing (RM 99) prevents algae and mould blockages from forming. An annual chemical wash removes biofilm buildup that basic servicing cannot reach. Most leaking cases in Malaysia happen because the drain pipe has been left unserviced for 18 months or more.</p>
+      <p>Same-day slots frequently available. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>Can You Fix It Yourself?</h2>
+      <p>The only DIY step worth attempting is checking the outdoor drain pipe outlet — if it is visibly blocked by debris at the exit point, clearing it may resolve minor dripping. For anything more than this, professional service is recommended. Attempting to dismantle the indoor unit, modify the drain pipe, or seal the leak with tape risks causing additional damage. The cost of a professional drain pipe clearing (included in a RM 99 basic service) is far less than the cost of repairing water damage to walls or ceilings caused by a persistent leak.</p>
     `,
     contentMS: `
       <h2>Kenapa Aircond Saya Bocor Air?</h2>
@@ -698,10 +807,12 @@ export const allPosts: BlogPost[] = [
       <p>Jika gegelung membeku (akibat gas rendah atau sekatan teruk) dan kemudian mencair, sejumlah besar air menitis tiba-tiba.</p>
       <h2>Apa yang Perlu Dilakukan Sekarang</h2>
       <ul>
-        <li>Letakkan baldi atau tuala di bawah unit</li>
-        <li>Matikan aircond jika bocor teruk</li>
-        <li>WhatsApp KL Renovator di <strong>+60 18-298 3573</strong></li>
+        <li>Letakkan baldi atau tuala di bawah unit untuk melindungi lantai dan perabot</li>
+        <li>Matikan aircond jika bocor teruk untuk mengelakkan risiko elektrik</li>
+        <li>JANGAN menutup kebocoran dengan pita perekat — air akan mengalir balik ke komponen elektrik</li>
+        <li>WhatsApp KL Renovator di <strong>+60 18-298 3573</strong> dengan penerangan atau video pendek tentang kebocoran</li>
       </ul>
+      <p>Slot hari yang sama kerap tersedia. Lihat: <a href="/problems/aircond-water-leaking">Panduan lengkap aircond bocor air</a> | <a href="/services/chemical-overhaul">Perkhidmatan overhaul kimia</a></p>
     `,
     contentZH: `
       <h2>我的冷气为什么漏水？</h2>
@@ -714,10 +825,12 @@ export const allPosts: BlogPost[] = [
       <p>如果盘管结冰（因气体不足或严重堵塞）然后融化，大量水会突然滴落。</p>
       <h2>现在该做什么</h2>
       <ul>
-        <li>在机器下方放置水桶或毛巾</li>
-        <li>如果严重漏水，关闭冷气</li>
-        <li>请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong></li>
+        <li>在机器下方放置水桶或毛巾，保护地板和家具</li>
+        <li>如果严重漏水，关闭冷气以避免电气危险</li>
+        <li>不要用胶带封堵漏水——水会回流到电气组件中</li>
+        <li>请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong>，描述或发送漏水短视频</li>
       </ul>
+      <p>当天时间段经常有空。查看：<a href="/problems/aircond-water-leaking">冷气漏水完整指南</a> | <a href="/services/chemical-overhaul">化学大修服务</a></p>
     `,
   },
   {
@@ -752,7 +865,16 @@ export const allPosts: BlogPost[] = [
       <p>Good budget option for small rooms and rental properties. Parts are affordable and widely available.</p>
       <ul><li>Best for: Budget, rentals</li><li>Price range: RM 800 – 1,800</li></ul>
       <h2>Our Recommendation</h2>
-      <p>For most Malaysian homes: <strong>Daikin or Panasonic</strong> inverter models. KL Renovator installs all brands. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Installation pricing</a> | <a href="/brands/daikin">Daikin service</a> | <a href="/brands/panasonic">Panasonic service</a></p>
+      <p>For most Malaysian homes: <strong>Daikin or Panasonic</strong> inverter models in R32. Daikin for maximum reliability and longevity, Panasonic for the best balance of price, air quality features, and energy efficiency. Both brands have widely available spare parts across Malaysia and strong after-sales support networks. KL Renovator installs all brands across KL and Selangor — we can advise on the right model for your specific room size and usage pattern.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Installation pricing</a> | <a href="/brands/daikin">Daikin service</a> | <a href="/brands/panasonic">Panasonic service</a></p>
+
+      <h2>Brands to Avoid</h2>
+      <p>From our service experience, we see significantly higher failure rates in generic no-name brands and some lower-tier Chinese-manufactured brands that are not widely stocked in Malaysia. Spare parts for these brands are difficult to source, and when a compressor or PCB fails after 3–4 years, repair is often not economically viable. The initial price saving is quickly offset by earlier replacement costs.</p>
+      <h2>Installation and After-Sales Service</h2>
+      <p>Even the best brand will underperform if installed poorly. Ensure your installer performs a proper vacuum test on the refrigerant lines, correctly sizes the copper pipe to the unit HP, and provides a written warranty on the installation workmanship. KL Renovator provides a 1-month workmanship warranty on all installations. New unit installation from <strong>RM 199</strong>. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>What KL Renovator Recommends for Rental Properties</h2>
+      <p>For landlords managing rental properties, Midea or Acson inverter units offer the best balance of affordability and reasonable reliability. The lower purchase price matters for multi-unit properties, and the inverter technology reduces electricity bills for tenants — which reduces friction about utility costs. For premium rental units where tenant experience matters more, Panasonic or Daikin are worth the price premium for their quieter operation and longer lifespan.</p>
     `,
     contentMS: `
       <h2>Jenama Aircond Terbaik di Malaysia 2025</h2>
@@ -770,7 +892,8 @@ export const allPosts: BlogPost[] = [
       <p>Pilihan bajet yang baik untuk bilik kecil dan hartanah sewa.</p>
       <ul><li>Julat harga: RM 800 – 1,800</li></ul>
       <h2>Cadangan Kami</h2>
-      <p>Untuk kebanyakan rumah Malaysia: model inverter <strong>Daikin atau Panasonic</strong>. KL Renovator memasang semua jenama. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+      <p>Untuk kebanyakan rumah Malaysia: model inverter <strong>Daikin atau Panasonic</strong> dalam R32. Daikin untuk kebolehpercayaan dan ketahanan yang maksimum, Panasonic untuk keseimbangan terbaik harga, ciri kualiti udara, dan kecekapan tenaga. Kedua-dua jenama mempunyai alat ganti yang tersedia secara meluas di seluruh Malaysia. KL Renovator memasang semua jenama di seluruh KL dan Selangor.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
       <h2>2025年马来西亚最佳冷气品牌</h2>
@@ -788,7 +911,8 @@ export const allPosts: BlogPost[] = [
       <p>适合小房间和出租物业的预算选择。</p>
       <ul><li>价格范围：RM 800 – 1,800</li></ul>
       <h2>我们的推荐</h2>
-      <p>对大多数马来西亚家庭：<strong>大金或松下</strong>变频型号。KL Renovator安装所有品牌。WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <p>对大多数马来西亚家庭：R32<strong>大金或松下</strong>变频型号。大金以最长期的可靠性和耐久性著称，松下以价格、空气质量功能和能效的最佳平衡著称。两个品牌在马来西亚全国备件都有广泛供应。KL Renovator在吉隆坡和雪兰莪安装所有品牌，可根据您的具体房间大小和使用模式提供建议。</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
   {
@@ -830,7 +954,15 @@ export const allPosts: BlogPost[] = [
         <li>Full dismantling, deep cleaning of every component, inspection of all internal wiring and PCB board</li>
       </ul>
       <h2>Book Your Maintenance Service</h2>
-      <p>Basic service from RM 99, chemical wash from RM 120. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/basic-servicing">Basic servicing</a> | <a href="/services/chemical-wash">Chemical wash</a></p>
+      <p>Consistent maintenance is the single most cost-effective action you can take for your aircond. A unit that receives regular professional servicing uses 15–25% less electricity, lasts 3–5 years longer, and avoids the expensive emergency repairs that result from neglect. Basic service from RM 99, chemical wash from RM 120. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/basic-servicing">Basic servicing</a> | <a href="/services/chemical-wash">Chemical wash</a></p>
+
+      <h2>Signs You Are Behind on Maintenance</h2>
+      <p>If any of these apply to your unit, a service is overdue: the unit has a musty or sour smell when running; cooling is noticeably weaker than 6 months ago; water has dripped from the indoor unit at any point; the electricity bill has risen without changes in usage; or the unit has not received professional servicing in over 12 months. Each of these is a symptom of maintenance that is past due.</p>
+      <h2>The True Cost of Skipping Maintenance</h2>
+      <p>A unit that skips basic servicing for 2 years in Malaysian conditions will typically show 20-30% reduced cooling efficiency, a 15-25% increase in electricity consumption per month, and a meaningfully higher risk of component failure requiring expensive repair. The RM 99–120 per service that seems deferrable adds up to far less than the RM 600–2,000 compressor replacement that results from running a neglected unit to failure.</p>
+
+      <h2>Recording Your Maintenance History</h2>
+      <p>Keep a simple record of each service date, the service provider, and what was done. This helps you track the interval between services, provides evidence for warranty claims if a technician's workmanship causes damage, and gives future technicians context about the unit's history. A WhatsApp message to yourself after each service with the date and service type takes 30 seconds and can be invaluable reference later. KL Renovator also keeps records of all services performed for our regular customers.</p>
     `,
     contentMS: `
       <h2>Mengapa Senarai Semak Penyelenggaraan Penting</h2>
@@ -847,7 +979,7 @@ export const allPosts: BlogPost[] = [
       <h2>Setiap 12 Bulan — Cuci Kimia</h2>
       <ul><li>Pembersihan kimia tekanan tinggi gegelung evaporator, pembersihan roda blower, pensterilan dulang longkang, semakan tekanan penyejuk</li></ul>
       <h2>Tempah Servis Penyelenggaraan Anda</h2>
-      <p>Servis asas dari RM 99, cuci kimia dari RM 120. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+      <p>Penyelenggaraan yang konsisten adalah tindakan paling berkesan dari segi kos yang boleh anda ambil untuk aircond anda. Unit yang menerima servis profesional yang kerap menggunakan 15–25% kurang elektrik, bertahan 3–5 tahun lebih lama, dan mengelakkan pembaikan kecemasan yang mahal. Servis asas dari RM 99, cuci kimia dari RM 120. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
       <h2>为什么保养检查清单很重要</h2>
@@ -864,7 +996,7 @@ export const allPosts: BlogPost[] = [
       <h2>每12个月 — 化学清洗</h2>
       <ul><li>蒸发器盘管高压化学清洗、鼓风机轮清洁、排水盘消毒、制冷剂压力检查</li></ul>
       <h2>预约保养服务</h2>
-      <p>基本保养从RM 99起，化学清洗从RM 120起。WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <p>一致的保养是您为冷气采取的最具成本效益的行动。定期获得专业保养的机器减少15-25%的电力消耗，使用寿命延长3-5年，并避免因疏忽造成的昂贵紧急维修。基本保养从RM 99起，化学清洗从RM 120起。WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
   {
@@ -920,7 +1052,17 @@ export const allPosts: BlogPost[] = [
         <li>Diagnostic: <strong>RM 88</strong> (waived with repair)</li>
         <li>Installation Wall-Mounted 1.0–1.5 HP: <strong>RM 199</strong></li>
       </ul>
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. See also: <a href="/services">All services</a></p>
+      <h2>Volume Discounts and Additional Information</h2>
+      <p>Booking 2 or more units in the same visit qualifies for volume discounts: 2–3 units saves 5%, 4–8 units saves 10%, and 8 or more units saves 15%. All prices listed here are for the KL and Selangor service area. Prices are confirmed in writing via WhatsApp before any technician visit. There are never any charges added after the job without your explicit approval first.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong>. See also: <a href="/services">All services with full detail</a></p>
+
+      <h2>What Determines the Final Price</h2>
+      <p>The prices listed in this guide are for standard residential units in accessible locations. Factors that may affect the final quote include: unit height above floor level (above 15 feet may require additional equipment), ceiling cassette units installed above false ceilings requiring panel removal, and units with non-standard pipe routing that requires additional time. All of these are assessed and quoted before work begins — you will always know the full cost before any technician starts.</p>
+      <h2>Payment and Booking</h2>
+      <p>Payment is accepted via cash, online transfer, or DuitNow QR after the job is completed to your satisfaction. No upfront payment required. To book, WhatsApp <strong>+60 18-298 3573</strong> with your location, number of units, unit type, and preferred service date. Same-day appointments are frequently available, especially for Batu Caves, Selayang, and surrounding Klang Valley areas where our team is based.</p>
+
+      <h2>How Prices Are Confirmed</h2>
+      <p>When you WhatsApp KL Renovator, provide your location, unit type (wall-mounted or ceiling cassette), HP size, and the service needed. We will confirm the price in writing via WhatsApp before the technician visits. This means you have a written record of the agreed price before any work starts. If additional issues are found during the service — such as a failing capacitor or refrigerant leak — these are quoted separately and require your explicit approval before proceeding. No surprises at any stage.</p>
     `,
     contentMS: `
       <h2>Harga Servis Aircond KL & Selangor 2026</h2>
@@ -949,6 +1091,8 @@ export const allPosts: BlogPost[] = [
         <li>R410A — 1.0 HP: <strong>RM 150</strong></li>
         <li>R32 — 1.0 HP: <strong>RM 180</strong></li>
       </ul>
+      <h2>Diskaun Kuantiti dan Maklumat Tambahan</h2>
+      <p>Menempah 2 unit atau lebih dalam lawatan yang sama layak mendapat diskaun kuantiti: 2–3 unit jimat 5%, 4–8 unit jimat 10%, dan 8 unit atau lebih jimat 15%. Semua harga disahkan secara bertulis melalui WhatsApp sebelum sebarang lawatan juruteknik. Tiada caj ditambah selepas kerja tanpa kelulusan jelas anda terlebih dahulu.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk membuat tempahan.</p>
     `,
     contentZH: `
@@ -977,6 +1121,8 @@ export const allPosts: BlogPost[] = [
         <li>R410A — 1.0 HP：<strong>RM 150</strong></li>
         <li>R32 — 1.0 HP：<strong>RM 180</strong></li>
       </ul>
+      <h2>批量折扣和附加信息</h2>
+      <p>同次上门预约2台或以上机器可享受批量折扣：2-3台节省5%，4-8台节省10%，8台及以上节省15%。此处所列所有价格适用于吉隆坡和雪兰莪服务区域。价格在技术人员上门前通过WhatsApp书面确认。未经您明确批准，施工后绝不添加任何收费。</p>
       <p>请WhatsApp <strong>+60 18-298 3573</strong> 预约。</p>
     `,
   },
@@ -1015,8 +1161,19 @@ export const allPosts: BlogPost[] = [
         <li><strong>Inverter:</strong> Master bedroom, living room, home office — used daily</li>
         <li><strong>Non-inverter:</strong> Rarely used guest rooms, rental properties on tight budget</li>
       </ul>
+      <h2>Maintenance Differences</h2>
+      <p>Both inverter and non-inverter units require the same maintenance schedule in Malaysia — chemical wash every 12 months, basic service every 3–4 months. However, inverter compressors are generally more sensitive to low gas levels than non-inverter units. A non-inverter compressor running with slightly low gas will just cool less effectively. An inverter compressor running with significantly low gas can overheat more quickly, so annual gas pressure checks are especially important for inverter units over 5 years old.</p>
+
       <h2>Installation</h2>
       <p>KL Renovator installs all inverter and non-inverter brands from <strong>RM 199</strong>. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Installation service</a> | <a href="/brands/daikin">Daikin inverter service</a></p>
+
+      <h2>Energy Star and ENERGY Ratings in Malaysia</h2>
+      <p>Malaysia's Energy Commission (Suruhanjaya Tenaga) rates aircond units on a 1–5 star scale. All new inverter units from major brands achieve 5 stars. Non-inverter units typically achieve 2–3 stars. The star rating directly reflects annual electricity consumption — a 5-star unit uses significantly less electricity per hour of cooling output than a 3-star unit of the same HP. When buying, check the ENERGY label on the unit's packaging for the Malaysian Energy Commission star rating and annual energy consumption in kWh.</p>
+      <h2>Final Recommendation</h2>
+      <p>For master bedrooms, living rooms, home offices, and any room used more than 4 hours per day — <strong>inverter is the clear choice</strong>. The electricity savings, longer lifespan, quieter operation, and better humidity control justify the higher upfront cost in under 12 months for heavy users. KL Renovator installs all inverter and non-inverter brands from <strong>RM 199</strong>. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>Humidity Control Difference</h2>
+      <p>A key difference between inverter and non-inverter that is often overlooked in Malaysia's humid climate: inverter units are significantly better at dehumidification. Because an inverter compressor runs continuously at low speed once the set temperature is reached, it keeps processing air over the cold evaporator coil — which continuously condenses and removes moisture. A non-inverter unit that switches off frequently allows room humidity to rise between compressor cycles. In Malaysia's 70–85% relative humidity environment, this makes inverter units more comfortable even at the same temperature setting.</p>
     `,
     contentMS: `
       <h2>Inverter vs Bukan Inverter — Penjelasan Mudah</h2>
@@ -1032,6 +1189,8 @@ export const allPosts: BlogPost[] = [
         <li>Bukan inverter: purata 8–12 tahun</li>
         <li>Inverter: purata 12–15 tahun</li>
       </ul>
+      <h2>Perbezaan Penyelenggaraan</h2>
+      <p>Kedua-dua unit inverter dan bukan inverter memerlukan jadual penyelenggaraan yang sama di Malaysia. Walau bagaimanapun, kompressor inverter umumnya lebih sensitif terhadap tahap gas yang rendah. Semakan tekanan gas tahunan amat penting untuk unit inverter berusia lebih 5 tahun.</p>
       <h2>Pemasangan</h2>
       <p>KL Renovator memasang semua jenama dari <strong>RM 199</strong>. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
@@ -1051,6 +1210,8 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>安装</h2>
       <p>KL Renovator安装所有变频和定频品牌，从 <strong>RM 199</strong> 起。WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <h2>保养差异</h2>
+      <p>变频和定频机器在马来西亚需要相同的保养计划。但变频压缩机通常对气体不足更敏感。对于5年以上的变频机器，年度气压检查尤为重要，以防止压缩机过热损坏。</p>
     `,
   },
   {
@@ -1089,7 +1250,19 @@ export const allPosts: BlogPost[] = [
         <li><strong>Choose Daikin:</strong> Long-term reliability, commercial use, landlords</li>
         <li><strong>Choose Panasonic:</strong> Air quality priority, living rooms, slightly more affordable</li>
       </ul>
+      <p>Both are excellent choices and both receive the same quality of service from KL Renovator technicians. If you are still unsure, WhatsApp us with your room size, usage hours, and budget — we will advise which specific model makes most sense for your situation.</p>
       <p>KL Renovator installs and services both. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/brands/daikin">Daikin service</a> | <a href="/brands/panasonic">Panasonic service</a></p>
+
+      <h2>Noise Levels</h2>
+      <p>For bedrooms, noise level matters. Daikin's iSmile bedroom models operate at 19–22 dB at minimum speed — among the quietest available in Malaysia. Panasonic's bedroom models are similarly quiet at 20–24 dB. Both are significantly quieter than older non-inverter units, which typically produce 35–45 dB during compressor startup. If noise is a primary concern for a baby's room or a light sleeper, request the specific dB rating of the model you are considering before purchasing.</p>
+      <h2>Spare Parts Availability</h2>
+      <p>Both Daikin and Panasonic have authorised service centres and well-stocked spare parts networks across Malaysia. Capacitors, fan motors, sensors, and PCB boards for current models are generally available within 1–3 days from distributors in Klang Valley. This is an important consideration for long-term ownership — brands without established parts networks in Malaysia can result in weeks of downtime waiting for imported parts when something fails.</p>
+
+      <h2>After-Sales and Service Network</h2>
+      <p>Both Daikin and Panasonic have strong authorised service networks in Malaysia. Daikin has service centres in major cities and a responsive warranty claims process. Panasonic's authorised service centres are similarly widespread. For non-warranty service and maintenance, independent specialists like KL Renovator service both brands to the same standard as authorised centres, typically faster and with more flexible scheduling. All spare parts used by KL Renovator are original or certified OEM parts — never generic substitutes that can affect unit performance.</p>
+
+      <h2>Service and Maintenance Cost Comparison</h2>
+      <p>Both Daikin and Panasonic have comparable service costs through KL Renovator. Chemical wash, gas top-up, and basic service pricing is identical for both brands at the same HP. Where they differ is in spare parts cost for repairs — Daikin parts tend to be slightly more expensive than Panasonic equivalents, but the lower failure rate generally means fewer repair bills over the unit's lifespan. The net maintenance cost over 10 years is broadly similar between the two brands for well-maintained units.</p>
     `,
     contentMS: `
       <h2>Daikin vs Panasonic — Dua Jenama Teratas Malaysia</h2>
@@ -1109,6 +1282,12 @@ export const allPosts: BlogPost[] = [
         <li><strong>Pilih Daikin:</strong> Kebolehpercayaan jangka panjang, penggunaan komersial</li>
         <li><strong>Pilih Panasonic:</strong> Keutamaan kualiti udara, lebih berpatutan</li>
       </ul>
+      <h2>Cadangan Kami</h2>
+      <ul>
+        <li><strong>Pilih Daikin:</strong> Kebolehpercayaan jangka panjang, penggunaan komersial</li>
+        <li><strong>Pilih Panasonic:</strong> Keutamaan kualiti udara, lebih berpatutan</li>
+      </ul>
+      <p>Kedua-duanya adalah pilihan yang sangat baik. Jika anda masih tidak pasti, WhatsApp kami dengan saiz bilik, jam penggunaan, dan bajet anda — kami akan menasihati model mana yang paling sesuai untuk situasi anda.</p>
       <p>KL Renovator memasang dan menservis kedua-duanya. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
@@ -1129,6 +1308,7 @@ export const allPosts: BlogPost[] = [
         <li><strong>选大金：</strong>长期可靠性、商业用途、房东</li>
         <li><strong>选松下：</strong>空气质量优先、客厅、价格稍低</li>
       </ul>
+      <p>两者都是很好的选择。如果您仍不确定，请WhatsApp告知房间大小、使用时间和预算——我们将为您建议最适合的具体型号。</p>
       <p>KL Renovator安装和服务两个品牌。WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
@@ -1171,6 +1351,14 @@ export const allPosts: BlogPost[] = [
         <li>Book annual maintenance contract for consistent efficiency</li>
       </ul>
       <p>Chemical wash from RM 120. Gas top-up from RM 120. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/chemical-wash">Chemical wash</a> | <a href="/services/gas-topup">Gas top-up</a></p>
+
+      <h2>How Much Can You Actually Save?</h2>
+      <p>A household with 3 aircond units running 8 hours per day spending RM 300/month on electricity attributed to aircond can realistically reduce this to RM 180–200 per month by combining proper temperature setting (25°C instead of 18°C), annual chemical wash, and ceiling fan use. That is RM 100–120 per month in savings — or RM 1,200–1,440 per year — from changes that cost nothing or very little to implement.</p>
+      <h2>Book a Service to Start Saving</h2>
+      <p>The fastest way to reduce your aircond electricity bill is a chemical wash — it removes the coil fouling that forces the compressor to work harder. Chemical wash from <strong>RM 120</strong>. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>Is Your Electricity Bill Actually Aircond-Related?</h2>
+      <p>Before assuming the aircond is the cause of a high electricity bill, check: has usage pattern changed (more people at home, longer hours)? Has TNB changed the tariff tier your household falls into? Are other appliances running more — water heaters, washing machines, induction cookers? If nothing else has changed and the bill has risen, the aircond is the most likely culprit. A dirty coil and low gas together can increase aircond electricity consumption by 40–60% compared to a properly maintained unit — making a RM 120 chemical wash the fastest way to address the root cause.</p>
     `,
     contentMS: `
       <h2>Mengapa Bil Aircond Anda Tinggi</h2>
@@ -1189,6 +1377,7 @@ export const allPosts: BlogPost[] = [
         <li>Bersihkan penapis setiap bulan</li>
         <li>Naik taraf unit bukan inverter lama</li>
       </ul>
+      <p>Dengan melaksanakan petua-petua ini bersama-sama, kebanyakan isi rumah Malaysia boleh mengurangkan bahagian aircond bil elektrik mereka sebanyak 30–45% tanpa mengorbankan keselesaan. Langkah pertama dan paling mudah adalah menetapkan suhu yang betul dan memastikan servis yang konsisten.</p>
       <p>Cuci kimia dari RM 120. Tambah gas dari RM 120. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
@@ -1208,6 +1397,7 @@ export const allPosts: BlogPost[] = [
         <li>每月清洗过滤网</li>
         <li>升级旧定频机器以节省40-50%</li>
       </ul>
+      <p>综合实施这些技巧，大多数马来西亚家庭可以在不牺牲舒适度的情况下将电费中的冷气部分减少30-45%。最容易的第一步是设置正确的温度并确保定期保养。</p>
       <p>化学清洗从RM 120起。充气从RM 120起。WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
@@ -1253,6 +1443,19 @@ export const allPosts: BlogPost[] = [
         <li>Ceiling Cassette 2.0–3.0 HP: <strong>RM 350</strong></li>
       </ul>
       <p>WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Full installation page</a></p>
+
+      <h2>Common Installation Mistakes to Avoid</h2>
+      <p>Poor installation causes problems that persist for the entire life of the unit. The most common mistakes from unqualified installers include: not vacuuming the refrigerant lines before charging (air and moisture in the system degrade compressor performance), undersizing copper pipe (causes higher operating pressure and reduced efficiency), installing the indoor unit without adequate drainage fall (water backs up and leaks), and mounting the outdoor unit in a position with insufficient clearance for heat rejection. KL Renovator technicians are trained and equipped to avoid all of these mistakes on every installation.</p>
+      <h2>Book Installation</h2>
+      <p>Wall-mounted installation from <strong>RM 199</strong>. Same-day installation frequently available across KL and Selangor. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Full installation page</a></p>
+
+      <h2>After Installation — First 30 Days</h2>
+      <p>In the first 30 days after installation, monitor the unit for: water dripping from the indoor unit (indicates a drainage slope issue), unusual noise during compressor startup (may indicate a refrigerant charge issue), cooling performance that does not match the expected output for the HP size, or any smell from the unit beyond the typical "new unit" smell. KL Renovator's 1-month workmanship warranty covers any issues arising from the installation itself during this period. WhatsApp <strong>+60 18-298 3573</strong> immediately if any of these are observed.</p>
+
+      <h2>Electrical Point Requirements</h2>
+      <p>Every aircond requires a dedicated 15-amp electrical point — it cannot share a socket with other appliances. If your room does not have a dedicated aircond point, KL Renovator can install one as part of the installation visit for RM 100 additional. For units 3.0 HP and above, a 20-amp dedicated circuit is recommended to handle the higher compressor startup current. The electrical point must be within 2–3 metres of the indoor unit location for standard installation. Units requiring longer cable runs will be quoted accordingly before work begins.</p>
+      <h2>After Installation</h2>
+      <p>In the first 30 days, monitor for water dripping, unusual noise, or weaker than expected cooling. KL Renovator's 1-month workmanship warranty covers all installation workmanship issues. WhatsApp <strong>+60 18-298 3573</strong> immediately if any concern arises post-installation.</p>
     `,
     contentMS: `
       <h2>Memilih HP yang Betul untuk Bilik Anda</h2>
@@ -1275,6 +1478,7 @@ export const allPosts: BlogPost[] = [
         <li>Dinding 2.0 HP: <strong>RM 249</strong></li>
         <li>Ceiling Cassette 1.0–1.5 HP: <strong>RM 290</strong></li>
       </ul>
+      <p>Harga di atas adalah untuk pemasangan standard. Sebarang kerja tambahan seperti paip tambahan, titik elektrik baru, atau sokongan atap akan dikutip secara berasingan sebelum kerja bermula. Tiada caj kejutan.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
@@ -1298,6 +1502,7 @@ export const allPosts: BlogPost[] = [
         <li>挂壁式 2.0 HP：<strong>RM 249</strong></li>
         <li>天花板卡式 1.0–1.5 HP：<strong>RM 290</strong></li>
       </ul>
+      <p>以上价格为标准安装费用。任何额外工作（如额外管道、新电源插座或屋顶支架）将在施工前单独报价。无意外收费。</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
@@ -1339,6 +1544,16 @@ export const allPosts: BlogPost[] = [
         <li><strong>Replace if:</strong> unit uses R22 + over 10 years old</li>
       </ul>
       <p>Diagnostic fee RM 88 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/repair">Repair service</a> | <a href="/problems/aircond-compressor-problem">Compressor problem guide</a></p>
+
+      <h2>Maximising Lifespan — Practical Steps</h2>
+      <p>The single most impactful thing you can do to extend your aircond lifespan is never run it with significantly low gas. A unit running with low refrigerant operates at elevated compressor temperature, which degrades the compressor winding insulation progressively. What starts as reduced cooling efficiency becomes a compressor fault within 1–3 years of running with low gas. An annual gas pressure check (included in chemical wash service) catches this before it causes permanent damage.</p>
+      <p>The second most impactful action is annual chemical wash. A clean coil reduces compressor load, which directly reduces operating temperature and extends component life. Units with clean coils consistently last 3–5 years longer than neglected units of the same brand and model. KL Renovator diagnostic fee RM 88 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>Signs Your Unit Still Has Years Left</h2>
+      <p>A unit with good remaining lifespan will: cool to the set temperature without running continuously at maximum output; have a compressor that starts cleanly without buzzing or humming; show stable gas pressure readings year over year (no significant drop indicating slow leak); respond normally to remote control and mode changes; and not require repeated repairs to different components. If your unit ticks all these boxes, consistent maintenance will keep it running reliably for many more years regardless of its age.</p>
+
+      <h2>Compressor — The Most Expensive Component</h2>
+      <p>The compressor is the most expensive single component in any aircond unit, typically costing RM 600–2,000 to replace. A compressor that has been maintained with clean coils, correct gas levels, and clean filters rarely fails before 12 years in a properly sized application. The conditions that accelerate compressor failure are: running with low gas (compressor overheats without adequate refrigerant to cool it), running with a heavily fouled coil (compressor works harder and runs hotter), and frequent short-cycling from an oversized unit or blocked filter. All three are directly preventable with regular maintenance.</p>
     `,
     contentMS: `
       <h2>Jangka Hayat Purata Aircond di Malaysia</h2>
@@ -1358,6 +1573,7 @@ export const allPosts: BlogPost[] = [
         <li><strong>Baiki jika:</strong> unit di bawah 8 tahun, kos pembaikan kurang dari 40% harga unit baru</li>
         <li><strong>Ganti jika:</strong> kompressor perlu diganti + unit lebih dari 8 tahun</li>
       </ul>
+      <p>Panduan yang berguna: kos pembaikan melebihi 50% harga unit baru bermakna pelaburan dalam unit baru adalah lebih baik dari segi kewangan, terutamanya jika beralih ke inverter yang menggunakan 30-50% kurang elektrik setiap bulan.</p>
       <p>Yuran diagnostik RM 88 (dikecualikan dengan pembaikan). WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
@@ -1378,6 +1594,12 @@ export const allPosts: BlogPost[] = [
         <li><strong>维修如果：</strong>机器不到8年，维修费用低于新机器价格的40%</li>
         <li><strong>更换如果：</strong>需要更换压缩机且机器超过8年</li>
       </ul>
+      <h2>维修还是更换？— 决策指南</h2>
+      <ul>
+        <li><strong>维修如果：</strong>机器不到8年，维修费用低于新机器价格的40%</li>
+        <li><strong>更换如果：</strong>需要更换压缩机且机器超过8年</li>
+      </ul>
+      <p>一个有用的参考：维修费用超过新机器价格50%意味着投资新机器在经济上更合算，特别是如果换成每月节省30-50%电费的变频机器。</p>
       <p>诊断费RM 88（同次维修豁免）。WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
@@ -1430,6 +1652,14 @@ export const allPosts: BlogPost[] = [
         <li>Reset the MCB once (if it trips again, call a technician)</li>
       </ul>
       <p>Diagnostic fee RM 88 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/problems">All problem guides</a></p>
+
+      <h2>When to Call a Technician Immediately</h2>
+      <p>Do not attempt further DIY and call a technician immediately if: the MCB trips repeatedly when the aircond is switched on (electrical fault risk); you can smell burning or see smoke from the indoor or outdoor unit; water is dripping onto electrical outlets or wiring below the indoor unit; or the outdoor unit is making a loud grinding or knocking sound indicating compressor mechanical failure. These are not situations where waiting is safe.</p>
+      <h2>Diagnostic and Repair Pricing</h2>
+      <p>Diagnostic fee: <strong>RM 88</strong> (waived when repair is completed on the same visit). Most common repairs: capacitor RM 180, sensor RM 150, fan motor RM 250–450. WhatsApp <strong>+60 18-298 3573</strong> — describe the symptom and we will give you an estimated range before the technician visits. See: <a href="/services/repair">Repair service</a></p>
+
+      <h2>MCB Tripping — Do Not Ignore</h2>
+      <p>If your aircond trips the circuit breaker (MCB) when switched on, this is an electrical fault that must be investigated by a qualified technician. Do not repeatedly reset and retry — each restart attempt while a fault exists risks further damage to the PCB board, wiring, or compressor. The most common causes of MCB tripping are: a shorted compressor winding drawing excess current, a failed capacitor, earth leakage from water ingress into the outdoor unit, or a wiring fault. All of these are diagnosed during a standard service visit. Diagnostic fee RM 88, waived when repair is carried out same visit. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentMS: `
       <h2>Cara Mendiagnosis Masalah Aircond Anda</h2>
@@ -1446,6 +1676,8 @@ export const allPosts: BlogPost[] = [
         <li>Semak sama ada unit dalam dipasang dengan rata</li>
         <li>Lihat salur longkang — adakah ia tersumbat?</li>
       </ul>
+      <h2>Masalah: Lampu Berkelip / Kod Ralat</h2>
+      <p>Kebanyakan jenama aircond menggunakan corak kelipan untuk menyampaikan kod ralat. Kira bilangan kelipan dengan teliti dan semak manual unit anda. Atau WhatsApp video pendek kepada KL Renovator di <strong>+60 18-298 3573</strong> untuk pengenalpastian segera. Punca kod kelipan biasa termasuk: gas rendah, kerosakan sensor, ralat komunikasi antara unit dalam dan luar.</p>
       <h2>Apa yang Boleh Anda Baiki Sendiri</h2>
       <ul>
         <li>Bersihkan penapis udara setiap bulan</li>
@@ -1469,6 +1701,8 @@ export const allPosts: BlogPost[] = [
         <li>检查室内机是否水平安装</li>
         <li>查看排水管出口——是否堵塞？</li>
       </ul>
+      <h2>问题：指示灯闪烁/错误代码</h2>
+      <p>大多数冷气品牌使用闪烁模式传达错误代码。仔细数清闪烁次数并查阅机器手册。或WhatsApp短视频至KL Renovator <strong>+60 18-298 3573</strong> 即时识别。常见闪烁代码原因包括：气体不足、传感器故障、室内外机通信错误。</p>
       <h2>您可以自行解决的问题</h2>
       <ul>
         <li>每月清洗过滤网</li>
@@ -1517,6 +1751,18 @@ export const allPosts: BlogPost[] = [
         <li>10+ units / year: <strong>RM 3,499</strong></li>
       </ul>
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a commercial quote. See: <a href="/services/ceiling-cassette">Ceiling cassette service</a></p>
+
+      <h2>Why Commercial Units Fail Faster Without Contracts</h2>
+      <p>Commercial aircond units running 10–14 hours daily in offices accumulate the equivalent of 3–4 years of residential wear in a single year. Without a scheduled maintenance contract, drain pipes block silently and overflow into ceiling panels, coil fouling reduces cooling by 30–40% before anyone notices, and capacitor degradation causes compressor startup failures during peak hours. A maintenance contract ensures none of these develop unnoticed.</p>
+      <h2>Getting a Quote</h2>
+      <p>For commercial sites with 5 or more units, KL Renovator recommends a free site survey to assess current unit condition, recommend a service schedule, and provide a fixed annual contract price. WhatsApp <strong>+60 18-298 3573</strong> to arrange. See: <a href="/services/ceiling-cassette">Ceiling cassette service</a></p>
+
+      <h2>Documenting Commercial HVAC Maintenance</h2>
+      <p>Commercial properties — especially those in regulated industries such as food service, healthcare, or hospitality — may be required to demonstrate regular HVAC maintenance as part of licensing compliance. KL Renovator provides a service completion report for every commercial visit, documenting the date, units serviced, service type, technician name, and findings. These reports can be used for regulatory compliance, insurance purposes, and as a maintenance log for property management. Ask about our commercial service documentation package when booking.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> for commercial maintenance pricing and site surveys.</p>
+
+      <h2>Indoor Air Quality and Staff Productivity</h2>
+      <p>Commercial aircond units that are not regularly maintained become sources of airborne mould spores, bacteria, and allergens. Research consistently shows that poor indoor air quality in offices reduces cognitive performance and increases sick days. A properly maintained HVAC system — with clean coils, sterilised drain pans, and clean blower wheels — provides genuinely cleaner air than a neglected system regardless of what the thermostat reads. For businesses, the productivity cost of staff illness from poor IAQ far exceeds the cost of a maintenance contract. KL Renovator commercial maintenance contracts start from <strong>RM 1,999 per year</strong> for 5–10 units. WhatsApp <strong>+60 18-298 3573</strong> for a site survey and quote.</p>
     `,
     contentMS: `
       <h2>Mengapa Penyelenggaraan HVAC Komersial Berbeza</h2>
@@ -1539,6 +1785,12 @@ export const allPosts: BlogPost[] = [
         <li>5–10 unit / tahun: <strong>RM 1,999</strong></li>
         <li>10+ unit / tahun: <strong>RM 3,499</strong></li>
       </ul>
+      <h2>Kontrak Penyelenggaraan Tahunan</h2>
+      <ul>
+        <li>5–10 unit / tahun: <strong>RM 1,999</strong></li>
+        <li>10+ unit / tahun: <strong>RM 3,499</strong></li>
+      </ul>
+      <p>Pelanggan kontrak menerima penjadualan hari yang sama yang diprioritaskan dan diskaun 10% untuk sebarang kerja pembaikan yang diperlukan di luar skop kontrak. Ini memastikan perniagaan anda tidak pernah terpaksa menunggu lama apabila sistem HVAC memerlukan perhatian segera.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk sebutan komersial.</p>
     `,
     contentZH: `
@@ -1562,6 +1814,12 @@ export const allPosts: BlogPost[] = [
         <li>5-10台 / 年：<strong>RM 1,999</strong></li>
         <li>10台以上 / 年：<strong>RM 3,499</strong></li>
       </ul>
+      <h2>年度维护合同</h2>
+      <ul>
+        <li>5-10台 / 年：<strong>RM 1,999</strong></li>
+        <li>10台以上 / 年：<strong>RM 3,499</strong></li>
+      </ul>
+      <p>合同客户享有优先当天排程服务，以及合同范围外所需维修工作9折优惠。这确保您的企业在HVAC系统需要紧急关注时无需长时间等待。</p>
       <p>请WhatsApp <strong>+60 18-298 3573</strong> 获取商业报价。</p>
     `,
   },
@@ -1601,6 +1859,13 @@ export const allPosts: BlogPost[] = [
         <li>Cooling performance test</li>
       </ul>
       <p>R22 from RM 120, R410A from RM 150, R32 from RM 180. Leak check included. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/gas-topup">Gas top-up service</a> | <a href="/problems/aircond-low-gas">Low gas symptoms</a></p>
+
+      <h2>How to Know If Your Unit Actually Has Low Gas</h2>
+      <p>The clearest sign is consistently weak cooling across all modes and settings, combined with the outdoor unit compressor running continuously without cycling off. Ice forming on the evaporator coil or copper pipes is a strong indicator of significantly low gas. Warm air blowing from the vents while the fan runs at full speed also suggests the compressor is not achieving adequate pressure differential. These symptoms together almost always indicate low gas or a refrigerant leak — but the only way to confirm is with a manifold gauge measurement. Never top up based on symptoms alone without pressure verification.</p>
+      <p>R22 from RM 120, R410A from RM 150, R32 from RM 180. Leak check always included. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+
+      <h2>What a Legitimate Gas Top-Up Looks Like</h2>
+      <p>A professional gas top-up takes 45–60 minutes. The technician arrives with a manifold gauge set and refrigerant cylinder, connects the gauges to the service valves, reads current suction and discharge pressure, compares to manufacturer specifications for the ambient temperature, and only then adds refrigerant if the pressure is confirmed below specification. The gauge readings before and after are shown to you. If any technician proposes to top up gas in 10 minutes without connecting gauges, this is not a professional service. Always ask to see the gauge readings before and after any gas work.</p>
     `,
     contentMS: `
       <h2>Mitos 1 — "Gas perlu ditambah setiap tahun"</h2>
@@ -1616,7 +1881,16 @@ export const allPosts: BlogPost[] = [
         <li>Amaun yang betul ditambah</li>
         <li>Pengesahan tekanan akhir</li>
       </ul>
-      <p>R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+      <h2>Apa yang Disertakan dalam Top-Up Gas yang Betul</h2>
+      <ul>
+        <li>Semak kebocoran sebelum menambah gas</li>
+        <li>Pengukuran tekanan semasa</li>
+        <li>Amaun yang betul ditambah</li>
+        <li>Pengesahan tekanan akhir</li>
+        <li>Ujian prestasi penyejukan selepas selesai</li>
+      </ul>
+      <p>Ingat: jika juruteknik mencadangkan tambah gas tanpa terlebih dahulu mengukur tekanan semasa menggunakan tolok manifold, tanya mengapa. Tekanan mesti diukur terlebih dahulu — bukan agakan.</p>
+      <p>R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. Semak kebocoran disertakan. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
       <h2>误区1 — "气体需要每年充一次"</h2>
@@ -1632,6 +1906,15 @@ export const allPosts: BlogPost[] = [
         <li>添加正确量</li>
         <li>最终压力验证</li>
       </ul>
+      <h2>正确充气包含的内容</h2>
+      <ul>
+        <li>充气前泄漏检查</li>
+        <li>当前压力测量</li>
+        <li>添加正确量</li>
+        <li>最终压力验证</li>
+        <li>完成后冷却性能测试</li>
+      </ul>
+      <p>记住：如果技术人员在未先用压力表测量当前压力的情况下建议充气，请询问原因。压力必须先测量——不能凭猜测操作。</p>
       <p>R22从RM 120起，R410A从RM 150起，R32从RM 180起。含泄漏检查。WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `,
   },
@@ -1678,7 +1961,28 @@ export const allPosts: BlogPost[] = [
         <li>Installation: RM 199–449 (by HP)</li>
         <li>Annual maintenance: approx. RM 400–450 per unit</li>
       </ul>
+      <h2>Step 5 — Budget for Installation + Maintenance</h2>
+      <ul>
+        <li>Installation: RM 199–449 (by HP)</li>
+        <li>Annual maintenance: approx. RM 400–450 per unit</li>
+      </ul>
+      <p>The total cost of ownership over 10 years includes purchase price, installation, and 10 years of maintenance. A RM 1,400 inverter unit with RM 200 installation and RM 4,000 in maintenance over 10 years totals RM 5,600 — far less than the cumulative electricity cost savings vs a non-inverter over the same period. Factor in the full picture before comparing upfront prices alone.</p>
       <p>KL Renovator installs all brands. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Installation service</a> | <a href="/brands">All brands we service</a></p>
+
+      <h2>Checklist Before You Buy</h2>
+      <ul>
+        <li>Measure your room in square feet and match to the HP guide above</li>
+        <li>Confirm you have or can install a dedicated 15A electrical point</li>
+        <li>Plan the pipe route from indoor to outdoor unit location</li>
+        <li>Choose R32 inverter — it is the right choice for daily use in 2026</li>
+        <li>Budget for installation (RM 199–449) on top of the unit price</li>
+        <li>Plan annual maintenance (RM 120 chemical wash minimum)</li>
+      </ul>
+      <h2>Ready to Install?</h2>
+      <p>KL Renovator supplies and installs all major brands across KL and Selangor. We can advise on the right HP and model for your specific room before you purchase, helping you avoid costly sizing mistakes. Installation from <strong>RM 199</strong>. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/installation">Installation service and pricing</a> | <a href="/brands">All brands we service</a></p>
+
+      <h2>Common First-Time Buyer Mistakes</h2>
+      <p>The most common mistakes when buying an aircond in Malaysia: choosing the wrong HP based on price rather than room size; buying a non-inverter to save RM 200–400 upfront and paying significantly more in electricity over 5 years; choosing an unrecognised brand because spare parts availability is not considered; and not budgeting for installation cost separately from the unit price. Avoid all four and your aircond purchase will serve you well for 12–18 years with proper maintenance.</p>
     `,
     contentMS: `
       <h2>Langkah 1 — Pilih HP yang Betul</h2>
@@ -1703,7 +2007,13 @@ export const allPosts: BlogPost[] = [
         <li>Pemasangan: RM 199–449</li>
         <li>Penyelenggaraan tahunan: lebih kurang RM 400–450 seunit</li>
       </ul>
-      <p>WhatsApp <strong>+60 18-298 3573</strong>.</p>
+      <h2>Langkah 5 — Anggaran Pemasangan + Penyelenggaraan</h2>
+      <ul>
+        <li>Pemasangan: RM 199–449</li>
+        <li>Penyelenggaraan tahunan: lebih kurang RM 400–450 seunit</li>
+      </ul>
+      <p>Jumlah kos pemilikan sepanjang 10 tahun merangkumi harga pembelian, pemasangan, dan 10 tahun penyelenggaraan. Faktorkan gambaran penuh sebelum membandingkan harga pendahuluan sahaja — penjimatan elektrik inverter biasanya melebihi premium harga dalam masa 2–3 tahun untuk pengguna harian.</p>
+      <p>KL Renovator memasang semua jenama. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
     contentZH: `
       <h2>第一步 — 选择正确的HP</h2>
@@ -1728,7 +2038,13 @@ export const allPosts: BlogPost[] = [
         <li>安装：RM 199-449</li>
         <li>年度维护：约每台RM 400-450</li>
       </ul>
-      <p>请WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <h2>第五步 — 安装+维护预算</h2>
+      <ul>
+        <li>安装：RM 199-449</li>
+        <li>年度维护：约每台RM 400-450</li>
+      </ul>
+      <p>10年内的总拥有成本包括购买价格、安装和10年维护。在仅比较前期价格之前，请考虑完整情况——对于日常用户，变频机器的节电效益通常在2-3年内超过价格溢价。</p>
+      <p>请WhatsApp <strong>+60 18-298 3573</strong>。查看：<a href="/services/installation">安装服务</a> | <a href="/brands">我们服务的所有品牌</a></p>
     `,
   },
 ];
