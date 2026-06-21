@@ -178,6 +178,30 @@ export default async function AreaPageMS({
               </p>
             )}
 
+            {/* Dedicated neighbourhood pages for this area, if any exist */}
+            {(siteConfig as any).kampungPages
+              ?.filter((k: any) => k.parentSlug === slug && k.descriptionMS)
+              .length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
+                  Panduan Kawasan Kejiranan
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {(siteConfig as any).kampungPages
+                    .filter((k: any) => k.parentSlug === slug && k.descriptionMS)
+                    .map((k: any) => (
+                      <NextLink
+                        key={k.slug}
+                        href={`/ms/areas/${slug}/${k.slug}`}
+                        className="inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 underline"
+                      >
+                        Servis Aircond {k.name}
+                      </NextLink>
+                    ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href={waLink(`Hi KL Renovator, saya nak tempah servis aircond di ${area.name}.`)}
