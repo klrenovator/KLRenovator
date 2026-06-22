@@ -426,12 +426,12 @@ export default async function ServicePage({
               </ul>
             </div>
           </Reveal>
-          {(data as any).priceTableNote && (
+          {data.priceTableNote && (
             <Reveal>
               <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
                 <p className="text-xs text-emerald-800 leading-relaxed">
                   <span className="font-black">✓ Included free: </span>
-                  {(data as any).priceTableNote}
+                  {data.priceTableNote}
                 </p>
                 <NextLink
                   href="/services#materials"
