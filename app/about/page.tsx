@@ -22,8 +22,6 @@ export const metadata: Metadata = {
     canonical: "https://www.klrenovator.com/about",
     languages: {
       "en-MY": "https://www.klrenovator.com/about",
-      "ms-MY": "https://www.klrenovator.com/about",
-      "zh-MY": "https://www.klrenovator.com/about",
       "x-default": "https://www.klrenovator.com/about",
     },
   },
