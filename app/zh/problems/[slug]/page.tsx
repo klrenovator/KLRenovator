@@ -24,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const problem = siteConfig.problemPages.find((p) => p.slug === slug) as any;
+  const problem = siteConfig.problemPages.find((p) => p.slug === slug);
   if (!problem) return { title: "页面未找到" };
 
   const enUrl = `https://www.klrenovator.com/problems/${slug}`;
@@ -55,7 +55,7 @@ export default async function ProblemPageZH({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const problem = siteConfig.problemPages.find((p) => p.slug === slug) as any;
+  const problem = siteConfig.problemPages.find((p) => p.slug === slug);
   const content = problemContent[slug];
   if (!problem || !content) notFound();
 
