@@ -20,7 +20,7 @@ import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-auth
 // ─────────────────────────────────────────────────────────────────────────
 
 export function generateStaticParams() {
-  return (siteConfig as any).kampungPages.map((k: any) => ({
+  return siteConfig.kampungPages.map((k) => ({
     slug: k.parentSlug,
     kampung: k.slug,
   }));
@@ -32,8 +32,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string; kampung: string }>;
 }): Promise<Metadata> {
   const { slug, kampung } = await params;
-  const k = (siteConfig as any).kampungPages.find(
-    (x: any) => x.slug === kampung && x.parentSlug === slug
+  const k = siteConfig.kampungPages.find(
+    (x) => x.slug === kampung && x.parentSlug === slug
   );
   if (!k) return { title: "Page not found" };
 
@@ -65,12 +65,12 @@ export default async function KampungPage({
   params: Promise<{ slug: string; kampung: string }>;
 }) {
   const { slug, kampung } = await params;
-  const k = (siteConfig as any).kampungPages.find(
-    (x: any) => x.slug === kampung && x.parentSlug === slug
+  const k = siteConfig.kampungPages.find(
+    (x) => x.slug === kampung && x.parentSlug === slug
   );
   if (!k) notFound();
 
-  const parentArea = siteConfig.areaPages.find((a) => a.slug === k.parentSlug) as any;
+  const parentArea = siteConfig.areaPages.find((a) => a.slug === k.parentSlug);
   const enUrl = `https://www.klrenovator.com/areas/${slug}/${kampung}`;
 
   const localBusinessSchema = {
@@ -116,8 +116,8 @@ export default async function KampungPage({
       }
     : null;
 
-  const siblingKampungs = (siteConfig as any).kampungPages.filter(
-    (x: any) => x.parentSlug === slug && x.slug !== kampung
+  const siblingKampungs = siteConfig.kampungPages.filter(
+    (x) => x.parentSlug === slug && x.slug !== kampung
   );
 
   // Cross-silo links — inherited from the parent area's topical authority
@@ -125,13 +125,13 @@ export default async function KampungPage({
   // config/topical-authority-map.ts for why this isn't a per-kampung list).
   const relatedProblemSlugs = getProblemsForKampung(slug);
   const relatedProblems = relatedProblemSlugs
-    .map((ps) => (siteConfig as any).problemPages.find((p: any) => p.slug === ps))
-    .filter(Boolean);
+    .map((ps) => siteConfig.problemPages.find((p) => p.slug === ps))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   const relatedBlogSlugs = getBlogsForKampung(slug);
   const relatedBlogs = relatedBlogSlugs
     .map((bs) => allPosts.find((b) => b.slug === bs))
-    .filter(Boolean);
+    .filter((b): b is NonNullable<typeof b> => Boolean(b));
 
   return (
     <>
@@ -206,7 +206,7 @@ export default async function KampungPage({
                 Common Aircond Problems Near {k.name}
               </p>
               <div className="flex flex-wrap gap-2">
-                {relatedProblems.map((p: any) => (
+                {relatedProblems.map((p) => (
                   <NextLink
                     key={p.slug}
                     href={`/problems/${p.slug}`}
@@ -229,7 +229,7 @@ export default async function KampungPage({
                 Helpful Guides for {k.name} Residents
               </p>
               <div className="flex flex-wrap gap-2">
-                {relatedBlogs.map((b: any) => (
+                {relatedBlogs.map((b) => (
                   <NextLink
                     key={b.slug}
                     href={`/blog/${b.slug}`}
@@ -251,7 +251,7 @@ export default async function KampungPage({
               Other Areas Near {k.name}
             </p>
             <div className="flex flex-wrap gap-2">
-              {siblingKampungs.map((s: any) => (
+              {siblingKampungs.map((s) => (
                 <NextLink
                   key={s.slug}
                   href={`/areas/${slug}/${s.slug}`}
