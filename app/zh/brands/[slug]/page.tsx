@@ -23,7 +23,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const brand = siteConfig.brandPages.find((b) => b.slug === slug) as any;
+  const brand = siteConfig.brandPages.find((b) => b.slug === slug);
   if (!brand) return { title: "页面未找到" };
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
@@ -67,7 +67,7 @@ export default async function BrandPageZH({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const brand = siteConfig.brandPages.find((b) => b.slug === slug) as any;
+  const brand = siteConfig.brandPages.find((b) => b.slug === slug);
   if (!brand) notFound();
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
