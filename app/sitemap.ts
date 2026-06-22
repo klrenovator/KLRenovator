@@ -35,6 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/brands") },
     { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/problems") },
     { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildCanonicalOnly("/blog") },
+    { url: `${BASE}/ms/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.75, alternates: buildCanonicalOnly("/ms/blog") },
+    { url: `${BASE}/zh/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.75, alternates: buildCanonicalOnly("/zh/blog") },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/contact") },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildCanonicalOnly("/faq") },
     { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildCanonicalOnly("/about") },
@@ -152,7 +154,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: buildCanonicalOnly(`/blog/${p.slug}`),
   }));
 
-  // ── /ms/ and /zh/ pages get appended here, batch by batch, as they ship ──
+  // ── Blog Post Pages — /ms/ and /zh/ — all 20 posts have full translated
+  // titleMS/excerptMS/contentMS and titleZH/excerptZH/contentZH, so every
+  // post gets a page (shipped same day as the rest of this batch).
+  const msBlogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
+    url: `${BASE}/ms/blog/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+    alternates: buildCanonicalOnly(`/ms/blog/${p.slug}`),
+  }));
+  const zhBlogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
+    url: `${BASE}/zh/blog/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+    alternates: buildCanonicalOnly(`/zh/blog/${p.slug}`),
+  }));
 
   // ── Kampung/Neighbourhood Pages (English, real, live) — BATCH 1: Cheras
   // cluster, shipped 19 June 2026. See KLRenovator-KAMPUNG-MASTER-PLAN.md.
@@ -199,5 +217,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...msProblemPages,
     ...zhProblemPages,
     ...blogPages,
+    ...msBlogPages,
+    ...zhBlogPages,
   ];
 }
