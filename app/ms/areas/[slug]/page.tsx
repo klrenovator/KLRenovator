@@ -28,7 +28,7 @@ import { waLink } from "@/lib/whatsapp";
 
 export function generateStaticParams() {
   return siteConfig.areaPages
-    .filter((a) => (a as any).faqsBM && (a as any).faqsBM.length > 0)
+    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
     .map((a) => ({ slug: a.slug }));
 }
 
@@ -38,13 +38,13 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const area = siteConfig.areaPages.find((a) => a.slug === slug) as any;
+  const area = siteConfig.areaPages.find((a) => a.slug === slug);
   if (!area || !area.faqsBM?.length) return { title: "Halaman tidak dijumpai" };
 
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
   const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}`;
-  const hasZh = (area as any).faqsZH?.length > 0;
+  const hasZh = area.faqsZH?.length > 0;
 
   return {
     title: area.metaTitleMS || area.metaTitle,
@@ -75,7 +75,7 @@ export default async function AreaPageMS({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const area = siteConfig.areaPages.find((a) => a.slug === slug) as any;
+  const area = siteConfig.areaPages.find((a) => a.slug === slug);
   if (!area || !area.faqsBM?.length) notFound();
 
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
@@ -179,17 +179,17 @@ export default async function AreaPageMS({
             )}
 
             {/* Dedicated neighbourhood pages for this area, if any exist */}
-            {(siteConfig as any).kampungPages
-              ?.filter((k: any) => k.parentSlug === slug && k.descriptionMS)
+            {siteConfig.kampungPages
+              ?.filter((k) => k.parentSlug === slug && k.descriptionMS)
               .length > 0 && (
               <div className="mt-4">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
                   Panduan Kawasan Kejiranan
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {(siteConfig as any).kampungPages
-                    .filter((k: any) => k.parentSlug === slug && k.descriptionMS)
-                    .map((k: any) => (
+                  {siteConfig.kampungPages
+                    .filter((k) => k.parentSlug === slug && k.descriptionMS)
+                    .map((k) => (
                       <NextLink
                         key={k.slug}
                         href={`/ms/areas/${slug}/${k.slug}`}
