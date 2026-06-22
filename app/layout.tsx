@@ -474,12 +474,7 @@ export default function RootLayout({
                 "@id": "https://www.klrenovator.com/#business",
                 "name": "KL Renovator",
                 "telephone": "+60182983573",
-                "priceRange": "RM 88 - RM 480",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "5",
-                  "reviewCount": "500"
-                }
+                "priceRange": "RM 88 - RM 480"
               }
             }),
           }}
