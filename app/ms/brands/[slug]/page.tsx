@@ -25,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const brand = siteConfig.brandPages.find((b) => b.slug === slug) as any;
+  const brand = siteConfig.brandPages.find((b) => b.slug === slug);
   if (!brand) return { title: "Halaman tidak dijumpai" };
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
@@ -69,7 +69,7 @@ export default async function BrandPageMS({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const brand = siteConfig.brandPages.find((b) => b.slug === slug) as any;
+  const brand = siteConfig.brandPages.find((b) => b.slug === slug);
   if (!brand) notFound();
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
