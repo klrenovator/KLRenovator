@@ -126,7 +126,7 @@ export async function generateMetadata({
       alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
-          url: `https://www.klrenovator.com${(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`,
+          url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`,
           width: 1200,
           height: 630,
           alt: `${brand.name} Aircond Service KL & Selangor — KL Renovator`,
@@ -137,7 +137,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: brand.metaTitle,
       description: brand.metaDesc,
-      images: [`https://www.klrenovator.com${(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`],
+      images: [`https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/brands/${slug}`,
@@ -147,12 +147,6 @@ export async function generateMetadata({
         "zh-MY": `https://www.klrenovator.com/zh/brands/${slug}`,
         "x-default": `https://www.klrenovator.com/brands/${slug}`,
       },
-    },
-    other: {
-      "title:ms": brand.metaTitleMS,
-      "description:ms": brand.metaDescMS,
-      "title:zh": brand.metaTitleZH,
-      "description:zh": brand.metaDescZH,
     },
   };
 }
@@ -233,7 +227,7 @@ export default async function BrandPage({
   };
 
   // Build FAQ entries — use brand-specific faqs if available, else generic fallback
-  const faqItems = ((brand as any).faqs ?? [
+  const faqItems = (brand.faqs ?? [
     { q: `How much does ${brand.name} aircond service cost in KL?`, a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.` },
     { q: `Does KL Renovator service all ${brand.name} models?`, a: `Yes. KL Renovator technicians are experienced in servicing all ${brand.name} residential and commercial models including ${brand.models.join(", ")}. Both inverter and non-inverter systems supported.` },
     { q: `My ${brand.name} aircond is not cold — what should I do?`, a: `The most common causes are low refrigerant gas, a dirty coil or a faulty capacitor. WhatsApp KL Renovator at +60182983573 with your ${brand.name} model and HP size. A technician will diagnose and quote you before starting any work.` },
@@ -289,7 +283,7 @@ export default async function BrandPage({
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src={(brand as any).heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}
+            src={brand.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}
             alt={`${brand.name} aircond service KL & Selangor`}
             fill
             sizes="100vw"
@@ -520,7 +514,7 @@ export default async function BrandPage({
           {/* EN FAQ */}
           <Reveal>
             <div className="space-y-4 mb-6">
-              {((brand as any).faqs ?? [
+              {(brand.faqs ?? [
                 {
                   q: `How much does ${brand.name} aircond service cost in KL & Selangor?`,
                   a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
@@ -550,7 +544,7 @@ export default async function BrandPage({
           <Reveal>
             <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
               <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
-              {((brand as any).faqsBM ?? [
+              {(brand.faqsBM ?? [
                 {
                   q: `Berapa harga servis aircond ${brand.name} di KL & Selangor?`,
                   a: `Servis aircond ${brand.name} dengan KL Renovator bermula dari RM 99 (servis asas), RM 120 (cuci kimia), dan RM 220 (overhaul kimia). Top-up gas bermula dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Semua harga disahkan sebelum kerja bermula.`,
@@ -576,7 +570,7 @@ export default async function BrandPage({
           <Reveal>
             <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
               <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
-              {((brand as any).faqsZH ?? [
+              {(brand.faqsZH ?? [
                 {
                   q: `KL Renovator的${brand.name}冷气服务费用是多少？`,
                   a: `${brand.name}冷气服务费用：基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，冷媒充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。所有价格在施工前确认，无隐藏收费。`,
