@@ -173,9 +173,58 @@ export default async function AreaPageMS({
             </p>
 
             {area.landmarks?.length > 0 && (
-              <p className="mt-3 text-sm text-slate-500 font-medium">
-                Liputan kawasan: {area.landmarks.join(", ")}.
-              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {area.landmarks.map((lm) => {
+                  const kampungPage = siteConfig.kampungPages?.find(
+                    (k) => k.parentSlug === slug && k.name === lm
+                  );
+                  if (kampungPage && kampungPage.descriptionMS) {
+                    return (
+                      <NextLink
+                        key={lm}
+                        href={`/ms/areas/${slug}/${kampungPage.slug}`}
+                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                      >
+                        {lm}
+                      </NextLink>
+                    );
+                  }
+                  const crossArea = siteConfig.areaPages.find((a) => a.name === lm && a.slug !== slug);
+                  if (crossArea) {
+                    return (
+                      <NextLink
+                        key={lm}
+                        href={`/areas/${crossArea.slug}`}
+                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                      >
+                        {lm}
+                      </NextLink>
+                    );
+                  }
+                  const kampungElsewhere = siteConfig.kampungPages?.find(
+                    (k) => k.name === lm && k.parentSlug !== slug
+                  );
+                  if (kampungElsewhere) {
+                    return (
+                      <NextLink
+                        key={lm}
+                        href={`/areas/${kampungElsewhere.parentSlug}/${kampungElsewhere.slug}`}
+                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                      >
+                        {lm}
+                      </NextLink>
+                    );
+                  }
+                  return (
+                    <span
+                      key={lm}
+                      className="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-full border border-slate-200"
+                    >
+                      {lm}
+                    </span>
+                  );
+                })}
+              </div>
             )}
 
             {/* Dedicated neighbourhood pages for this area, if any exist */}
