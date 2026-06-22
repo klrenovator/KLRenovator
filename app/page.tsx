@@ -62,13 +62,6 @@ export default function Home() {
       "@type": "City",
       name: area,
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.reviewRating,
-      reviewCount: siteConfig.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Aircond Services Kuala Lumpur & Selangor",
