@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer";
 import { StickyActions } from "@/components/sticky-actions";
 import { ExitIntentPopup } from "@/components/exit-intent-popup";
 import { ScrollDepthCTA } from "@/components/scroll-depth-cta";
-import { googleReviews, googlePlace } from "@/config/reviews";
+import { googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
@@ -90,31 +90,17 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-// ── Build Review schema objects from real reviews ─────────────────────────────
-const reviewSchemaObjects = googleReviews.map((r) => ({
-  "@type": "Review",
-  author: {
-    "@type": "Person",
-    name: r.author,
-  },
-  reviewRating: {
-    "@type": "Rating",
-    ratingValue: r.rating,
-    bestRating: 5,
-    worstRating: 1,
-  },
-  reviewBody: r.text,
-  datePublished: r.date,
-  publisher: {
-    "@type": "Organization",
-    name: "Google",
-  },
-  itemReviewed: {
-    "@type": "HVACBusiness",
-    "@id": "https://www.klrenovator.com/#business",
-    name: "KL Renovator",
-  },
-}));
+// ── NOTE: We intentionally do NOT generate a "review" schema array here.
+// Google's structured data guidelines (Sept 2019 update) mark self-serving
+// reviews — reviews about Entity A published on Entity A's own website,
+// whether typed directly or pulled from a Google/Facebook reviews widget —
+// as INVALID for LocalBusiness/Organization types (and their subtypes,
+// which includes HVACBusiness). Embedding the "review" array here caused
+// 11 invalid items in Google's Rich Results Test. aggregateRating alone is
+// kept below since it remains valid (just won't render stars on its own,
+// which is expected and harmless). The testimonials themselves stay
+// visible on-page in plain HTML for users — only the rich-result markup
+// was removed. See: https://developers.google.com/search/blog/2019/09/making-review-rich-results-more-helpful
 
 export default function RootLayout({
   children,
@@ -160,7 +146,6 @@ export default function RootLayout({
                 "bestRating": 5,
                 "worstRating": 1,
               },
-              "review": reviewSchemaObjects,
               "sameAs": [
                 siteConfig.googleBusinessProfile,
                 siteConfig.links.googleMaps,
