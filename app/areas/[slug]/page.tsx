@@ -29,8 +29,8 @@ export async function generateMetadata({
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
   const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}`;
-  const hasMs = (area as any).faqsBM?.length > 0;
-  const hasZh = (area as any).faqsZH?.length > 0;
+  const hasMs = area.faqsBM?.length > 0;
+  const hasZh = area.faqsZH?.length > 0;
 
   return {
     title: area.metaTitle,
@@ -270,8 +270,8 @@ export default async function AreaPage({
                 {/* Landmarks — linked to dedicated kampung pages where they exist */}
                 <div className="mt-5 flex flex-wrap gap-2">
                   {area.landmarks.map((lm) => {
-                    const kampungPage = (siteConfig as any).kampungPages?.find(
-                      (k: any) => k.parentSlug === slug && k.name === lm
+                    const kampungPage = siteConfig.kampungPages?.find(
+                      (k) => k.parentSlug === slug && k.name === lm
                     );
                     if (kampungPage) {
                       return (
@@ -296,15 +296,15 @@ export default async function AreaPage({
                 </div>
 
                 {/* Dedicated neighbourhood pages for this area, if any exist */}
-                {(siteConfig as any).kampungPages?.filter((k: any) => k.parentSlug === slug).length > 0 && (
+                {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug).length > 0 && (
                   <div className="mt-4">
                     <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
                       Neighbourhood Guides
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {(siteConfig as any).kampungPages
-                        .filter((k: any) => k.parentSlug === slug)
-                        .map((k: any) => (
+                      {siteConfig.kampungPages
+                        .filter((k) => k.parentSlug === slug)
+                        .map((k) => (
                           <NextLink
                             key={k.slug}
                             href={`/areas/${slug}/${k.slug}`}
@@ -499,7 +499,7 @@ export default async function AreaPage({
 
           {/* English FAQs — area-specific if available, else generic */}
           <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden mb-6">
-            {((area as any).faqs?.length > 0 ? (area as any).faqs : [
+            {(area.faqs?.length > 0 ? area.faqs : [
               { q: `Does KL Renovator service aircond in ${area.name}?`, a: `Yes — KL Renovator provides full aircond servicing across all of ${area.name}, ${area.state}. Services include chemical wash, chemical overhaul, gas top-up, repairs and new installations. WhatsApp +60182983573 to book.` },
               { q: `How much does aircond chemical wash cost in ${area.name}?`, a: `Pressure chemical wash in ${area.name} starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work.` },
               { q: `Is same-day aircond service available in ${area.name}?`, a: `Yes — same-day slots are frequently available in ${area.name}. WhatsApp +60182983573 in the morning to secure your slot. Mon–Sun, 9AM–6PM.` },
@@ -518,12 +518,12 @@ export default async function AreaPage({
           </div>
 
           {/* BM FAQs */}
-          {(area as any).faqsBM?.length > 0 && (
+          {area.faqsBM?.length > 0 && (
             <Reveal>
               <div className="mt-4">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
                 <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-                  {(area as any).faqsBM.map((faq: { q: string; a: string }, i: number) => (
+                  {area.faqsBM.map((faq: { q: string; a: string }, i: number) => (
                     <details key={i} className="group bg-white p-4">
                       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
                         {faq.q}
@@ -538,12 +538,12 @@ export default async function AreaPage({
           )}
 
           {/* ZH FAQs */}
-          {(area as any).faqsZH?.length > 0 && (
+          {area.faqsZH?.length > 0 && (
             <Reveal>
               <div className="mt-4">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
                 <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-                  {(area as any).faqsZH.map((faq: { q: string; a: string }, i: number) => (
+                  {area.faqsZH.map((faq: { q: string; a: string }, i: number) => (
                     <details key={i} className="group bg-white p-4">
                       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
                         {faq.q}
