@@ -208,8 +208,8 @@ export const ServicesWithPricing = () => {
           </div>
         </div>
 
-        {/* Commercial Extra Info Block */}
-        {isCommercial && (
+        {/* Commercial Extra Info Block — always SSR'd, CSS toggles visibility (same pattern as the service grids above) */}
+        <div className={isCommercial ? "" : "hidden"}>
           <Reveal delay={200}>
             <div className="mt-16">
               <p className="text-center text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-8">
@@ -239,7 +239,8 @@ export const ServicesWithPricing = () => {
               </div>
             </div>
           </Reveal>
-        )}
+        </div>
+
       </div>
     </section>
   );
