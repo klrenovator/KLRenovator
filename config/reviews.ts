@@ -25,7 +25,11 @@ export const googlePlace = {
 /**
 Real Google reviews — copied from the KL Renovator Google Business listing.
 Dates approximated from relative timestamps (e.g. "a month ago" → May 2026).
-NOTE: "Sidra Riaz" review removed (was about electrical work, not HVAC).
+NOTE: The "Sidra Riaz" electrical-work review was never in this file — it
+does not exist in this codebase. If it is still visible on the live site,
+it is being pulled directly from the Google Business Profile widget, not
+from this file, and must be addressed on the GBP listing itself (flag/request
+removal via Google) — a code change here cannot remove it.
 */
 export const googleReviews: Review[] = [
   {
@@ -58,7 +62,7 @@ export const googleReviews: Review[] = [
     rating: 5,
     date: "2026-04-01",
     dateDisplay: "April 2026",
-    text: "Love love the team! Very professional. Their work is clean, and neat. They are very kind in explaining to me my concerns and patient. I owe them alot of gratitude. Even when the air con was slightly leaking after installation they ran back to fix it without any hesitation.",
+    text: "Love love the team! Very professional. Their work is clean, and neat. They are very kind in explaining to me my concerns and patient. I owe them a lot of gratitude. Even when the air con was slightly leaking after installation they ran back immediately to solve the problem without a fuss!! Please everybody get their services. I promise you won't regret it!",
   },
   {
     author: "rachelle recuenco",
@@ -76,4 +80,21 @@ export const googleReviews: Review[] = [
     dateDisplay: "May 2026",
     text: "Very good!",
   },
+  {
+    author: "Reez Iskandar Arbain",
+    initials: "R",
+    rating: 5,
+    date: "2026-03-25",
+    dateDisplay: "12 weeks ago",
+    text: "Thank you for being able to provide a service that seemed almost impossible — even though it was already past their working hours, they still responded. Without questioning my tight budget, they simply agreed to help and made sure I was in the best possible position. The two technicians, Shahzaib and Waheed, were efficient, easy to work with, and made sure the whole process went smoothly with no complaints afterwards. Boss, give them a raise — kudos to the team!",
+  },
+  {
+    author: "SALAHA",
+    initials: "S",
+    rating: 5,
+    date: "2026-03-25",
+    dateDisplay: "12 weeks ago",
+    text: "I am very happy with the air conditioner installation service. The team did an excellent job from start to finish. They arrived on time, were very polite and professional, and explained everything clearly before starting the work. The installation was done carefully and neatly without any mess. They made sure everything was working properly before leaving. The air conditioner is running perfectly and cooling very well. I really appreciate their hard work and honesty. I would definitely recommend their service to anyone looking for reliable and professional aircon installation.",
+  },
 ];
+
