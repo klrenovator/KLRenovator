@@ -267,7 +267,8 @@ export default async function AreaPage({
                   {area.description}
                 </p>
 
-                {/* Landmarks — linked to dedicated kampung pages where they exist */}
+                {/* Landmarks — linked to dedicated kampung pages, or to another
+                    top-level area page, where a real match exists */}
                 <div className="mt-5 flex flex-wrap gap-2">
                   {area.landmarks.map((lm) => {
                     const kampungPage = siteConfig.kampungPages?.find(
@@ -278,6 +279,41 @@ export default async function AreaPage({
                         <NextLink
                           key={lm}
                           href={`/areas/${slug}/${kampungPage.slug}`}
+                          className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                        >
+                          {lm}
+                        </NextLink>
+                      );
+                    }
+                    // Fallback 1: landmark name matches one of our other
+                    // top-level service areas (e.g. "Cyberjaya" mentioned on
+                    // the Putrajaya page should link to /areas/cyberjaya)
+                    const crossArea = siteConfig.areaPages.find(
+                      (a) => a.name === lm && a.slug !== slug
+                    );
+                    if (crossArea) {
+                      return (
+                        <NextLink
+                          key={lm}
+                          href={`/areas/${crossArea.slug}`}
+                          className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
+                        >
+                          {lm}
+                        </NextLink>
+                      );
+                    }
+                    // Fallback 2: landmark matches a kampung page that exists
+                    // under a DIFFERENT parent area (boundary-spanning names
+                    // like "Ukay Perdana" mentioned on both Ampang and Hulu
+                    // Kelang pages, but only built under Hulu Kelang)
+                    const kampungElsewhere = siteConfig.kampungPages?.find(
+                      (k) => k.name === lm && k.parentSlug !== slug
+                    );
+                    if (kampungElsewhere) {
+                      return (
+                        <NextLink
+                          key={lm}
+                          href={`/areas/${kampungElsewhere.parentSlug}/${kampungElsewhere.slug}`}
                           className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
                         >
                           {lm}
