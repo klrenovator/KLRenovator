@@ -17,9 +17,9 @@ import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-auth
 // ─────────────────────────────────────────────────────────────────────────
 
 export function generateStaticParams() {
-  return (siteConfig as any).kampungPages
-    .filter((k: any) => k.descriptionZH)
-    .map((k: any) => ({ slug: k.parentSlug, kampung: k.slug }));
+  return siteConfig.kampungPages
+    .filter((k) => k.descriptionZH)
+    .map((k) => ({ slug: k.parentSlug, kampung: k.slug }));
 }
 
 export async function generateMetadata({
@@ -28,8 +28,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string; kampung: string }>;
 }): Promise<Metadata> {
   const { slug, kampung } = await params;
-  const k = (siteConfig as any).kampungPages.find(
-    (x: any) => x.slug === kampung && x.parentSlug === slug
+  const k = siteConfig.kampungPages.find(
+    (x) => x.slug === kampung && x.parentSlug === slug
   );
   if (!k || !k.descriptionZH) return { title: "页面未找到" };
 
@@ -61,12 +61,12 @@ export default async function KampungPageZH({
   params: Promise<{ slug: string; kampung: string }>;
 }) {
   const { slug, kampung } = await params;
-  const k = (siteConfig as any).kampungPages.find(
-    (x: any) => x.slug === kampung && x.parentSlug === slug
+  const k = siteConfig.kampungPages.find(
+    (x) => x.slug === kampung && x.parentSlug === slug
   );
   if (!k || !k.descriptionZH) notFound();
 
-  const parentArea = siteConfig.areaPages.find((a) => a.slug === k.parentSlug) as any;
+  const parentArea = siteConfig.areaPages.find((a) => a.slug === k.parentSlug);
   const enUrl = `https://www.klrenovator.com/areas/${slug}/${kampung}`;
   const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}/${kampung}`;
 
@@ -93,19 +93,19 @@ export default async function KampungPageZH({
       }
     : null;
 
-  const siblingKampungs = (siteConfig as any).kampungPages.filter(
-    (x: any) => x.parentSlug === slug && x.slug !== kampung && x.descriptionZH
+  const siblingKampungs = siteConfig.kampungPages.filter(
+    (x) => x.parentSlug === slug && x.slug !== kampung && x.descriptionZH
   );
 
   const relatedProblemSlugs = getProblemsForKampung(slug);
   const relatedProblems = relatedProblemSlugs
-    .map((ps) => (siteConfig as any).problemPages.find((p: any) => p.slug === ps))
-    .filter(Boolean);
+    .map((ps) => siteConfig.problemPages.find((p) => p.slug === ps))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   const relatedBlogSlugs = getBlogsForKampung(slug);
   const relatedBlogs = relatedBlogSlugs
     .map((bs) => allPosts.find((b) => b.slug === bs))
-    .filter(Boolean);
+    .filter((b): b is NonNullable<typeof b> => Boolean(b));
 
   return (
     <>
@@ -185,7 +185,7 @@ export default async function KampungPageZH({
                 {k.name}附近常见冷气问题
               </p>
               <div className="flex flex-wrap gap-2">
-                {relatedProblems.map((p: any) => (
+                {relatedProblems.map((p) => (
                   <NextLink
                     key={p.slug}
                     href={`/zh/problems/${p.slug}`}
@@ -208,7 +208,7 @@ export default async function KampungPageZH({
                 {k.name}居民实用指南
               </p>
               <div className="flex flex-wrap gap-2">
-                {relatedBlogs.map((b: any) => (
+                {relatedBlogs.map((b) => (
                   <NextLink
                     key={b.slug}
                     href={`/blog/${b.slug}`}
@@ -230,7 +230,7 @@ export default async function KampungPageZH({
               {k.name}附近的其他区域
             </p>
             <div className="flex flex-wrap gap-2">
-              {siblingKampungs.map((s: any) => (
+              {siblingKampungs.map((s) => (
                 <NextLink
                   key={s.slug}
                   href={`/zh/areas/${slug}/${s.slug}`}
