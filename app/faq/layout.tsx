@@ -8,8 +8,6 @@ export const metadata: Metadata = {
     canonical: "https://www.klrenovator.com/faq",
     languages: {
       "en-MY": "https://www.klrenovator.com/faq",
-      "ms-MY": "https://www.klrenovator.com/faq",
-      "zh-MY": "https://www.klrenovator.com/faq",
       "x-default": "https://www.klrenovator.com/faq",
     },
   },
