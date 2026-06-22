@@ -163,8 +163,8 @@ function getTranslated(slug: string, lang: Lang) {
   return TRANSLATED_EXCERPTS[slug]?.[lang] ?? null;
 }
 
-export default function BlogPage() {
-  const [lang, setLang] = useState<Lang>("en");
+export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang }) {
+  const [lang, setLang] = useState<Lang>(initialLang);
 
   const featured = allPosts[0];
   const rest = allPosts.slice(1);
