@@ -92,11 +92,19 @@ const UI = {
 interface Props {
   post: BlogPost;
   related: BlogPost[];
+  // Optional: when rendered from a real /ms/blog/[slug] or /zh/blog/[slug]
+  // route, the URL itself determines language — must NOT depend on the
+  // client-side language-toggle state (that's only for the unprefixed
+  // /blog/[slug] route, where all 3 languages render on one URL). Passing
+  // forcedLang overrides useLang() so crawlers/visitors always see the
+  // language matching the URL they requested.
+  forcedLang?: "en" | "ms" | "zh";
 }
 
 // ─── Client Component ─────────────────────────────────────────────────────────
-export function BlogPostClient({ post, related }: Props) {
-  const { lang } = useLang();
+export function BlogPostClient({ post, related, forcedLang }: Props) {
+  const { lang: contextLang } = useLang();
+  const lang = forcedLang ?? contextLang;
   const ui = UI[lang];
 
   // Pick correct language
