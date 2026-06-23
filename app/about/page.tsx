@@ -17,7 +17,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
-    "Learn about KL Renovator (Multicore Dynamic Resources) — KL & Selangor's trusted aircon specialist. Serving Kuala Lumpur, Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Putrajaya & Cyberjaya. 10+ years experience, 5,000+ happy customers.",
+    "KL Renovator (Multicore Dynamic Resources) — trusted aircond specialist in KL & Selangor. 10+ years experience, 5,000+ happy customers, 500+ reviews.",
   alternates: {
     canonical: "https://www.klrenovator.com/about",
     languages: {
