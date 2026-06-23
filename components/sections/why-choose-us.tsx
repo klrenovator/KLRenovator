@@ -79,12 +79,12 @@ export const WhyChooseUs = () => {
                 <span className="text-amber-400 text-sm">★★★★★</span>
                 <span className="text-xs font-black text-slate-700">5 / 5</span>
                 <span className="flex items-center gap-0 text-xs font-black">
-                  <span style={{ color: "#EA4335" }}>G</span>
-                  <span style={{ color: "#4285F4" }}>o</span>
+                  <span style={{ color: "#4285F4" }}>G</span>
+                  <span style={{ color: "#EA4335" }}>o</span>
                   <span style={{ color: "#FBBC05" }}>o</span>
-                  <span style={{ color: "#34A853" }}>g</span>
-                  <span style={{ color: "#EA4335" }}>l</span>
-                  <span style={{ color: "#4285F4" }}>e</span>
+                  <span style={{ color: "#4285F4" }}>g</span>
+                  <span style={{ color: "#34A853" }}>l</span>
+                  <span style={{ color: "#EA4335" }}>e</span>
                 </span>
               </div>
               <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
