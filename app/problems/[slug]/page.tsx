@@ -1116,7 +1116,9 @@ export default async function ProblemPage({
             </div>
             <div className="flex gap-3 shrink-0">
               <a
-                href="https://wa.me/60182983573?text=%F0%9F%9A%A8%20URGENT%20%E2%80%94%20Emergency%20Aircond%20Service%20Needed%0A%0AHi%20KL%20Renovator%2C%20I%20need%20EMERGENCY%20aircond%20help%20right%20now.%0A%0A%F0%9F%93%8D%20Location%3A%0A%E2%9D%84%EF%B8%8F%20Problem%3A%0A%0APlease%20send%20a%20technician%20ASAP."
+                href={waLink(
+                  "🚨 URGENT — Emergency Aircond Service Needed\n\nHi KL Renovator, I need EMERGENCY aircond help right now.\n\n📍 Location:\n❄️ Problem:\n\nPlease send a technician ASAP."
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-red-700 hover:bg-red-50 font-black uppercase tracking-wider px-4 py-2 rounded-xl text-xs transition-all"
