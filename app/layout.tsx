@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
     template: `%s`,
   },
-  description: siteConfig.description,
+  description: siteConfig.metaDescription,
   verification: {
     google: "bXgZJKdBlDiVK9DsjNukmCqqicH37cqU_YdHSIVhjlg",
   },
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.description,
+    description: siteConfig.metaDescription,
     type: "website",
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.description,
+    description: siteConfig.metaDescription,
     images: ["https://www.klrenovator.com/logo/image.png"],
   },
   robots: {
