@@ -8,7 +8,14 @@ export const siteConfig = {
   ssmFull: "202503227236 (003765188-T)",
   tagline: "Expert Aircond Servicing, Chemical Overhaul & Repair KL & Selangor",
   description:
-    "KL Renovator provides professional residential and commercial aircond servicing in Kuala Lumpur & Selangor. Serving Batu Caves, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil, Kota Damansara, Ara Damansara, Sunway, USJ, Port Klang, Bukit Tinggi, Setia Alam, Meru, Rawang, Kundang, Bangi, Semenyih, Balakong, Seri Kembangan, Pandan Indah, Putrajaya, Cyberjaya & Dengkil. Specialized in Pressure Chemical Wash, Chemical Overhaul, Precision Gas Top-ups (R22, R410A, R32 balancing), Troubleshooting & New Installations for Daikin, Panasonic, Mitsubishi, York, LG, Midea & Samsung. Fast response and transparent pricing across Klang Valley.",
+    "KL Renovator provides professional residential and commercial aircond servicing in Kuala Lumpur & Selangor. Serving Batu Caves, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil, Kota Damansara, Ara Damansara, Sunway, USJ, Port Klang, Bukit Tinggi, Setia Alam, Meru, Rawang, Kundang, Semenyih, Balakong, Seri Kembangan, Pandan Indah, Putrajaya, Cyberjaya & Dengkil. Specialized in Pressure Chemical Wash, Chemical Overhaul, Precision Gas Top-ups (R22, R410A, R32 balancing), Troubleshooting & New Installations for Daikin, Panasonic, Mitsubishi, York, LG, Midea & Samsung. Fast response and transparent pricing across Klang Valley.",
+  // Short version for HTML <meta name="description">, OG, and Twitter cards —
+  // Google truncates around 155-160 characters, so the long `description`
+  // above (used for JSON-LD schema, where length doesn't hurt) is NOT
+  // suitable for these tags. This one is kept inside the 150-158 char
+  // target range from the project's own CTR-optimization brief.
+  metaDescription:
+    "Professional aircond servicing across KL & Selangor. Chemical wash, overhaul, gas top-up, repairs & installation. Same-day service, transparent pricing.",
 
   phone: "+60182983573",
   phoneDisplay: "+60 18-298 3573",
