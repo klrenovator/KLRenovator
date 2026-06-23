@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
   },
   description:
-    "Contact KL Renovator for professional aircond servicing in KL & Selangor. Covering Cheras, Ampang, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Kepong, Sri Petaling, Bukit Jalil, Sunway, USJ, Rawang, Putrajaya & Cyberjaya. WhatsApp +60182983573. Same-day service.",
+    "Contact KL Renovator for aircond servicing across KL & Selangor. WhatsApp +60182983573 for a same-day quote. Transparent pricing, fast response.",
   openGraph: {
     title: "Contact KL Renovator | Aircond Service KL & Selangor",
     description:
