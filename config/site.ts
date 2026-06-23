@@ -1458,7 +1458,7 @@ export const siteConfig = {
       name: "Panasonic",
       heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
       metaTitle: "Panasonic Aircond Service KL & Selangor | KL Renovator",
-      metaDesc: "Expert Panasonic aircond servicing in KL & Selangor. Chemical wash from RM 120, gas top-up, repairs & installation for all Panasonic models. Call +60182983573.",
+      metaDesc: "Expert Panasonic aircond servicing in KL & Selangor. Chemical wash from RM 120, gas top-up, repairs & install for all Panasonic models. Call +60182983573.",
       metaTitleMS: "Servis Aircond Panasonic KL & Selangor | KL Renovator",
       metaDescMS: "Servis aircond Panasonic pakar di KL & Selangor. Cuci kimia dari RM 120, tambah gas, pembaikan semua model Panasonic. Hubungi +60182983573.",
       metaTitleZH: "吉隆坡及雪兰莪松下冷气服务 | KL Renovator",
