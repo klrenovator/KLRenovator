@@ -11,7 +11,7 @@ import { waLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Aircond Service by Brand KL & Selangor | KL Renovator",
   description:
-    "KL Renovator services all major aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, Acson, LG, Samsung, Sharp, Midea, Haier, Toshiba, Hitachi, Carrier, Fujitsu and Gree. Call +60182983573.",
+    "KL Renovator services all major aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, LG, Samsung, Midea, Hisense & more. Call +60182983573.",
   openGraph: {
     title: "Aircond Service by Brand KL & Selangor | KL Renovator",
     description:
