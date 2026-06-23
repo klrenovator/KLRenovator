@@ -125,12 +125,12 @@ export const GoogleReviews = () => {
                     {meta.rating} / 5
                   </p>
                   <p className="mt-1 text-[11px] uppercase tracking-wider font-black flex items-center gap-1">
-                    <span style={{ color: "#EA4335" }}>G</span>
-                    <span style={{ color: "#4285F4" }}>o</span>
+                    <span style={{ color: "#4285F4" }}>G</span>
+                    <span style={{ color: "#EA4335" }}>o</span>
                     <span style={{ color: "#FBBC05" }}>o</span>
-                    <span style={{ color: "#34A853" }}>g</span>
-                    <span style={{ color: "#EA4335" }}>l</span>
-                    <span style={{ color: "#4285F4" }}>e</span>
+                    <span style={{ color: "#4285F4" }}>g</span>
+                    <span style={{ color: "#34A853" }}>l</span>
+                    <span style={{ color: "#EA4335" }}>e</span>
                     <span className="text-slate-500 ml-0.5">Reviews · {meta.total}+</span>
                   </p>
                 </div>
@@ -170,12 +170,12 @@ export const GoogleReviews = () => {
               {/* "Read all reviews on Google" with Google colored word */}
               <span className="text-slate-700">Read all reviews on&nbsp;</span>
               <span className="flex items-center gap-0.5">
-                <span style={{ color: "#EA4335" }} className="font-black">G</span>
-                <span style={{ color: "#4285F4" }} className="font-black">o</span>
+                <span style={{ color: "#4285F4" }} className="font-black">G</span>
+                <span style={{ color: "#EA4335" }} className="font-black">o</span>
                 <span style={{ color: "#FBBC05" }} className="font-black">o</span>
-                <span style={{ color: "#34A853" }} className="font-black">g</span>
-                <span style={{ color: "#EA4335" }} className="font-black">l</span>
-                <span style={{ color: "#4285F4" }} className="font-black">e</span>
+                <span style={{ color: "#4285F4" }} className="font-black">g</span>
+                <span style={{ color: "#34A853" }} className="font-black">l</span>
+                <span style={{ color: "#EA4335" }} className="font-black">e</span>
               </span>
               <FiArrowUpRight className="h-4 w-4" style={{ color: "#4285F4" }} />
             </a>
