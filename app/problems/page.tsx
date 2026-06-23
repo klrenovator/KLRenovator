@@ -12,7 +12,7 @@ import { waLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Aircond Problems Guide KL & Selangor | KL Renovator",
   description:
-    "Complete guide to aircond problems in KL & Selangor. Aircond not cold, water leaking, making noise, bad smell, blinking lights and more — diagnosed and fixed by KL Renovator. Call +60182983573.",
+    "Complete guide to aircond problems in KL & Selangor — not cold, water leaking, noise, bad smell & more, diagnosed and fixed. Call +60182983573.",
   openGraph: {
     title: "Aircond Problems Guide KL & Selangor | KL Renovator",
     description:
