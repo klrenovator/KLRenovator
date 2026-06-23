@@ -285,11 +285,13 @@ export function GalleryClient() {
                     aria-label={`View: ${item.title}`}
                   >
                     <div className="relative aspect-[4/3] overflow-hidden bg-slate-200">
-                      <img
+                      <NextImage
                         src={item.src}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading={index < 6 ? "eager" : "lazy"}
                       />
                       {item.before && (
                         <span className="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
@@ -381,10 +383,13 @@ export function GalleryClient() {
 
             {/* Image container */}
             <div className="relative aspect-video bg-slate-100">
-              <img
+              <NextImage
                 src={showBefore && currentItem.before ? currentItem.before : currentItem.src}
                 alt={currentItem.title}
-                className="w-full h-full object-contain"
+                fill
+                sizes="(min-width: 1024px) 56rem, 100vw"
+                className="object-contain"
+                priority
               />
             </div>
 
