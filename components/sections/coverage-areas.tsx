@@ -42,18 +42,26 @@ export const CoverageAreas = () => {
           ))}
         </div>
 
-        {/* Also covers these extra areas */}
+        {/* Also covers these neighbourhoods — each links to its real page */}
         <Reveal delay={100}>
           <div className="mt-6 flex flex-wrap gap-2 justify-center">
-            {["Wangsa Maju", "Kepong", "Bukit Jalil", "USJ", "Sunway", "Port Klang",
-              "Setia Alam", "Meru", "Kundang", "Balakong", "Pandan Indah", "Dengkil"
+            {[
+              { name: "Pandan Indah", parentSlug: "ampang", slug: "pandan-indah" },
+              { name: "Bukit Jalil", parentSlug: "sri-petaling", slug: "bukit-jalil" },
+              { name: "USJ", parentSlug: "subang-jaya", slug: "usj" },
+              { name: "Meru", parentSlug: "klang", slug: "meru" },
+              { name: "Port Klang", parentSlug: "klang", slug: "port-klang" },
+              { name: "Kundang", parentSlug: "rawang", slug: "kundang" },
+              { name: "Dengkil", parentSlug: "putrajaya", slug: "dengkil" },
             ].map((area) => (
-              <span
-                key={area}
-                className="text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-full"
+              <NextLink
+                key={area.slug}
+                href={`/areas/${area.parentSlug}/${area.slug}`}
+                title={`Aircond Service ${area.name}`}
+                className="text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100 border border-slate-200 hover:border-sky-400 hover:text-sky-600 hover:bg-white transition-colors px-2.5 py-1 rounded-full"
               >
-                {area}
-              </span>
+                {area.name}
+              </NextLink>
             ))}
           </div>
         </Reveal>
