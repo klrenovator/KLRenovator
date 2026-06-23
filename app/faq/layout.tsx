@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
   description:
-    "Frequently asked questions about KL Renovator's aircond services in KL & Selangor. Chemical wash from RM 120, overhaul from RM 220, gas top-up, repairs, same-day booking, warranty and coverage areas.",
+    "Frequently asked questions about KL Renovator aircond services. Chemical wash from RM 120, overhaul from RM 220, gas top-up, same-day booking & warranty.",
   alternates: {
     canonical: "https://www.klrenovator.com/faq",
     languages: {
