@@ -22,6 +22,9 @@ const BASE = "https://www.klrenovator.com";
 
 const buildCanonicalOnly = (path: string) => ({
   canonical: `${BASE}${path}`,
+  languages: {
+    "en-MY": `${BASE}${path}`,
+  },
 });
 
 // For URL families that exist in all 3 languages at the same depth
