@@ -4,7 +4,7 @@ import { AreasClient } from "./areas-client";
 export const metadata: Metadata = {
   title: "Aircond Service Areas — KL & Selangor | KL Renovator",
   description:
-    "KL Renovator provides professional aircond servicing across all areas of Kuala Lumpur and Selangor. Same-day service. View all 38 service areas — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong, Klang, Kajang, Bangsar, Mont Kiara and more.",
+    "KL Renovator services 39 areas across Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & more. Same-day service.",
   openGraph: {
     title: "Aircond Service Areas — KL & Selangor | KL Renovator",
     description:
