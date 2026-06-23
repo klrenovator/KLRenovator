@@ -4,7 +4,7 @@ import { GalleryClient } from "./gallery-client";
 export const metadata: Metadata = {
   title: "Aircond Project Gallery — Real Work by KL Renovator | KL & Selangor",
   description:
-    "Browse real aircond installation, chemical wash, chemical overhaul and repair project photos by KL Renovator across Kuala Lumpur & Selangor. 100% genuine company photos — no stock images.",
+    "Real aircond installation, chemical wash, overhaul & repair project photos by KL Renovator across KL & Selangor. 100% genuine — no stock images.",
   openGraph: {
     title: "Project Gallery — KL Renovator Real Aircon Works",
     description: "Real project photos: installations, chemical wash, overhaul, commercial HVAC & repairs across KL & Selangor. 100% genuine photos.",
