@@ -9,7 +9,7 @@ const BASE = "https://www.klrenovator.com";
 //   - English = default locale, lives at the ROOT path (no /en/ prefix).
 //   - Bahasa Malaysia = /ms/areas, /ms/brands, /ms/problems — LIVE.
 //   - Mandarin        = /zh/areas, /zh/brands, /zh/problems — LIVE.
-//   - Blog posts: English only — BM/ZH translation not started yet.
+//   - Blog posts: all 21 now have real /ms/blog and /zh/blog twins.
 //   - Static pages (home, about, contact, gallery, faq, services): English only.
 //
 // Coverage: 39/39 areas, 18/18 brands, 20/20 problems all have real /ms/
@@ -29,7 +29,7 @@ const buildCanonicalOnly = (path: string) => ({
 // real per-language alternates map so the sitemap itself — not just each
 // page's own <head> tags — tells Google which URLs are translations of
 // each other.
-const buildTrilingual = (path: string) => ({
+const buildTrilingual = (path: { en: string; ms: string; zh: string }) => ({
   canonical: `${BASE}${path.en}`,
   languages: {
     "en-MY": `${BASE}${path.en}`,
@@ -185,14 +185,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
-  // ── Blog Post Pages (English only — BM/ZH translation not started) ──
+  // ── Blog Post Pages — all 21 posts now have real /ms/blog and /zh/blog
+  // twins (contentMS/contentZH complete in config/blog-posts.ts).
   const blogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.72,
-    alternates: buildCanonicalOnly(`/blog/${p.slug}`),
+    alternates: buildTrilingual({
+      en: `/blog/${p.slug}`,
+      ms: `/ms/blog/${p.slug}`,
+      zh: `/zh/blog/${p.slug}`,
+    }),
   }));
+
+  const msBlogPages: MetadataRoute.Sitemap = allPosts
+    .filter((p) => p.contentMS)
+    .map((p) => ({
+      url: `${BASE}/ms/blog/${p.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+      alternates: buildTrilingual({
+        en: `/blog/${p.slug}`,
+        ms: `/ms/blog/${p.slug}`,
+        zh: `/zh/blog/${p.slug}`,
+      }),
+    }));
+
+  const zhBlogPages: MetadataRoute.Sitemap = allPosts
+    .filter((p) => p.contentZH)
+    .map((p) => ({
+      url: `${BASE}/zh/blog/${p.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+      alternates: buildTrilingual({
+        en: `/blog/${p.slug}`,
+        ms: `/ms/blog/${p.slug}`,
+        zh: `/zh/blog/${p.slug}`,
+      }),
+    }));
 
   // ── Kampung/Neighbourhood Pages — 116 pages nested under their parent
   // area, real /ms/ and /zh/ twins wherever descriptionMS/descriptionZH
@@ -253,5 +286,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...msProblemPages,
     ...zhProblemPages,
     ...blogPages,
+    ...msBlogPages,
+    ...zhBlogPages,
   ];
 }
