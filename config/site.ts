@@ -54,7 +54,7 @@ export const siteConfig = {
     "Klang", "Port Klang", "Bukit Tinggi", "Setia Alam", "Meru",
     "Kota Kemuning", "Bukit Jelutong", "Glenmarie",
     "Batu Caves", "Selayang", "Rawang", "Kundang", "Sungai Buloh",
-    "Kajang", "Bangi", "Semenyih", "Balakong", "Seri Kembangan", "Pandan Indah",
+    "Kajang", "Semenyih", "Balakong", "Seri Kembangan", "Pandan Indah",
     "Bandar Puteri", "Putrajaya", "Cyberjaya", "Dengkil",
     "Selangor", "Sentul", "Bandar Botanic",
   ],
