@@ -24,7 +24,7 @@ const T = {
     callBtn: "Call Us",
     ctaTitle: "Don't See Your Area?",
     ctaDesc: "We cover all of Klang Valley. WhatsApp us your location and we'll confirm availability within 30 minutes.",
-    stat1: "38 Service Areas",
+    stat1: "39 Service Areas",
     stat2: "Same-Day Available",
     stat3: "5★ Google Rating",
     stat4: "Mon–Sun 9AM–6PM",
@@ -44,7 +44,7 @@ const T = {
     callBtn: "Hubungi Kami",
     ctaTitle: "Tak Jumpa Kawasan Anda?",
     ctaDesc: "Kami meliputi seluruh Lembah Klang. WhatsApp lokasi anda dan kami akan sahkan ketersediaan dalam 30 minit.",
-    stat1: "38 Kawasan Servis",
+    stat1: "39 Kawasan Servis",
     stat2: "Servis Hari Sama",
     stat3: "5★ Rating Google",
     stat4: "Isnin–Ahad 9PG–6PTG",
@@ -64,7 +64,7 @@ const T = {
     callBtn: "立即致电",
     ctaTitle: "没有找到您的地区？",
     ctaDesc: "我们覆盖巴生谷全区。通过WhatsApp告诉我们您的位置，我们将在30分钟内确认可用性。",
-    stat1: "38个服务地区",
+    stat1: "39个服务地区",
     stat2: "当天服务",
     stat3: "Google评分 5★",
     stat4: "周一至周日 上午9时–下午6时",
@@ -77,6 +77,7 @@ const T = {
 const KL_SLUGS = [
   "cheras", "ampang", "setapak", "wangsa-maju", "kepong", "sentul", "bangsar",
   "mont-kiara", "sri-petaling", "desa-parkcity", "taman-melawati", "hulu-kelang",
+  "kuala-lumpur-city-centre",
 ];
 const PUTRAJAYA_SLUGS = ["putrajaya", "cyberjaya"];
 
