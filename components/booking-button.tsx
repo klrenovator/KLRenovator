@@ -58,10 +58,11 @@ export const BookingButton = ({
           target="_blank"
           rel="noopener noreferrer"
           className={clsx(
-            "inline-flex items-center justify-center font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 text-white shadow-md",
-            variant === "primary" && "bg-slate-950 hover:bg-slate-900 shadow-slate-950/10",
-            variant === "secondary" && "bg-[#0284c7] hover:bg-[#0369a1] shadow-sky-500/10",
-            variant === "whatsapp" && "bg-[#22c55e] hover:bg-[#16a34a] shadow-green-500/10",
+            "inline-flex items-center justify-center font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 shadow-md",
+            variant === "primary" && "bg-slate-950 hover:bg-slate-900 text-white shadow-slate-950/10",
+            variant === "secondary" && "bg-[#0284c7] hover:bg-[#0369a1] text-white shadow-sky-500/10",
+            variant === "whatsapp" && "bg-[#22c55e] hover:bg-[#16a34a] text-white shadow-green-500/10",
+            variant === "outline" && "bg-transparent border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white shadow-none",
             size === "sm" && "px-3.5 py-2 text-[11px]",
             size === "md" && "px-5 py-3 text-xs",
             size === "lg" && "px-7 py-4 text-sm",
