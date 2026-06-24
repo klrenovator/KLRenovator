@@ -1,12 +1,35 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 export const StickyActions = () => {
+  // The full-width ScrollDepthCTA bar (components/scroll-depth-cta.tsx) shows
+  // between 60%-92% scroll depth and occupies real height at the bottom of
+  // the screen. Without this check, these floating bubbles (bottom-6/8)
+  // would sit on top of / collide with that bar's own WhatsApp button.
+  const [liftForScrollBar, setLiftForScrollBar] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = total > 0 ? scrolled / total : 0;
+      setLiftForScrollBar(pct > 0.60 && pct < 0.92);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 sm:bottom-8 sm:right-8 print:hidden">
+    <div
+      className={`fixed right-6 z-50 flex flex-col items-end gap-4 sm:right-8 print:hidden transition-[bottom] duration-200 ${
+        liftForScrollBar ? "bottom-24 sm:bottom-28" : "bottom-6 sm:bottom-8"
+      }`}
+    >
       {/* 1. Ultra-High Conversion Pure Green WhatsApp Trigger */}
       <a
         href={waLink(rfqMsg)}
