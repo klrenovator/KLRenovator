@@ -9,6 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { Reveal } from "@/components/reveal";
+import { ServiceIcon } from "@/components/service-icon";
 import { title, eyebrow } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -150,9 +151,7 @@ export default function ServicesPage() {
                   className="group flex flex-col bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:border-sky-100 transition-all duration-300"
                 >
                   <div className="inline-flex p-2.5 bg-sky-50 border border-sky-100 text-sky-600 rounded-xl mb-4 w-fit group-hover:bg-sky-500 group-hover:text-white transition-all duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <ServiceIcon name={service.icon} className="h-5 w-5" />
                   </div>
                   <h3 className="font-black text-slate-900 text-sm leading-snug mb-2">{service.title}</h3>
                   <p className="text-xs text-slate-400 font-medium leading-relaxed flex-grow">{service.short}</p>
