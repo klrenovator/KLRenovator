@@ -189,7 +189,7 @@ export function ExitIntentPopup() {
               📞 {siteConfig.phoneDisplay}
             </a>
             <button
-              onClick={() => dismiss(true)}
+              onClick={() => dismiss()}
               className="text-xs text-slate-400 hover:text-slate-600 transition-colors"
             >
               No thanks
