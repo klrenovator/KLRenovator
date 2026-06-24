@@ -20,48 +20,29 @@ const LANG_OPTIONS: { code: LangCode; flag: string; label: string }[] = [
   { code: "zh", flag: "🇨🇳", label: "中文" },
 ];
 
-// Brands for dropdown — all 15
-const BRAND_ITEMS = [
-  { slug: "daikin",       name: "Daikin" },
-  { slug: "panasonic",    name: "Panasonic" },
-  { slug: "mitsubishi",   name: "Mitsubishi Electric" },
-  { slug: "york",         name: "York" },
-  { slug: "acson",        name: "Acson" },
-  { slug: "carrier",      name: "Carrier" },
-  { slug: "midea",        name: "Midea" },
-  { slug: "haier",        name: "Haier" },
-  { slug: "toshiba",      name: "Toshiba" },
-  { slug: "hitachi",      name: "Hitachi" },
-  { slug: "samsung",      name: "Samsung" },
-  { slug: "lg",           name: "LG" },
-  { slug: "sharp",        name: "Sharp" },
-  { slug: "fujitsu",      name: "Fujitsu" },
-  { slug: "gree",         name: "Gree" },
-];
+// Brands for dropdown — derived from siteConfig.brandPages (the real source
+// of truth) instead of a hardcoded list, so this never silently goes stale
+// again when a brand is added or removed (it previously listed only 15 of
+// the live 18 brand pages, missing Hisense, Aux and TCL from navigation).
+const BRAND_ITEMS = siteConfig.brandPages.map((b) => ({ slug: b.slug, name: b.name }));
 
-// Problems for dropdown — all 20, grouped into two columns
-const PROBLEM_ITEMS = [
-  { slug: "aircond-not-cold",              name: { en: "Not Cold",            ms: "Tidak Sejuk",         zh: "不冷" } },
-  { slug: "aircond-water-leaking",         name: { en: "Water Leaking",       ms: "Bocor Air",           zh: "漏水" } },
-  { slug: "aircond-making-noise",          name: { en: "Making Noise",        ms: "Bunyi Bising",        zh: "噪音" } },
-  { slug: "aircond-bad-smell",             name: { en: "Bad Smell",           ms: "Bau Busuk",           zh: "异味" } },
-  { slug: "aircond-freezing-up",           name: { en: "Freezing Up",         ms: "Membeku",             zh: "结冰" } },
-  { slug: "aircond-low-gas",               name: { en: "Low Gas",             ms: "Gas Rendah",          zh: "气体不足" } },
-  { slug: "aircond-gas-leak",              name: { en: "Gas Leak",            ms: "Kebocoran Gas",       zh: "气体泄漏" } },
-  { slug: "aircond-compressor-problem",    name: { en: "Compressor Problem",  ms: "Masalah Kompressor",  zh: "压缩机故障" } },
-  { slug: "aircond-pcb-problem",           name: { en: "PCB Problem",         ms: "Masalah PCB",         zh: "电路板故障" } },
-  { slug: "aircond-fan-not-working",       name: { en: "Fan Not Working",     ms: "Kipas Rosak",         zh: "风扇不转" } },
-  { slug: "aircond-tripping-power",        name: { en: "Tripping Power",      ms: "Terjatuh Pawa",       zh: "跳闸断电" } },
-  { slug: "aircond-remote-not-working",    name: { en: "Remote Not Working",  ms: "Remote Rosak",        zh: "遥控器失灵" } },
-  { slug: "aircond-indoor-unit-leaking",   name: { en: "Indoor Unit Leaking", ms: "Unit Dalam Bocor",    zh: "室内机漏水" } },
-  { slug: "aircond-outdoor-unit-not-running", name: { en: "Outdoor Not Running", ms: "Unit Luar Mati",   zh: "室外机不运转" } },
-  { slug: "aircond-high-electricity-bill", name: { en: "High Electricity Bill", ms: "Bil Elektrik Tinggi", zh: "电费高" } },
-  { slug: "aircond-weak-airflow",          name: { en: "Weak Airflow",        ms: "Aliran Udara Lemah",  zh: "风力弱" } },
-  { slug: "aircond-not-turning-on",        name: { en: "Not Turning On",      ms: "Tidak Hidup",         zh: "开不了机" } },
-  { slug: "aircond-blinking-light",        name: { en: "Blinking Light Error", ms: "Lampu Berkelip",     zh: "指示灯闪烁" } },
-  { slug: "aircond-water-dripping",        name: { en: "Water Dripping",      ms: "Titisan Air",         zh: "滴水" } },
-  { slug: "aircond-thermostat-problems",   name: { en: "Thermostat Problems", ms: "Masalah Termostat",   zh: "温控器问题" } },
-];
+// Problems for dropdown — derived from siteConfig.problemPages (the real
+// source of truth), same future-proofing reasoning as BRAND_ITEMS above.
+// The "Aircond " prefix is stripped since every single entry starts with
+// it — repetitive and prone to wrapping in this dropdown's tight 2-column
+// layout — leaving the original short, scannable labels (e.g. "Not Cold"
+// instead of "Aircond Not Cold").
+function shortLabel(name: string) {
+  return name.replace(/^Aircond\s+/i, "");
+}
+const PROBLEM_ITEMS = siteConfig.problemPages.map((p) => ({
+  slug: p.slug,
+  name: {
+    en: shortLabel(p.name),
+    ms: shortLabel(p.nameMS),
+    zh: p.nameZH.replace(/^冷气/, ""),
+  },
+}));
 
 const NAV_LABELS = {
   en: {
