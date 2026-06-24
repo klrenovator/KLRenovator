@@ -1,4 +1,5 @@
-import { FaSnowflake, FaTools, FaWrench, FaTriangleExclamation } from "react-icons/fa6";
+import { FaSnowflake, FaTools, FaWrench } from "react-icons/fa";
+import { FiAlertTriangle } from "react-icons/fi";
 import { GiChemicalDrop, GiGasPump } from "react-icons/gi";
 import { LuLayoutGrid, LuMove, LuPlug, LuSettings } from "react-icons/lu";
 import type { IconType } from "react-icons";
@@ -12,7 +13,7 @@ const map: Record<string, IconType> = {
   "layout-grid": LuLayoutGrid,
   move: LuMove,
   plug: LuPlug,
-  "alert-triangle": FaTriangleExclamation,
+  "alert-triangle": FiAlertTriangle,
 };
 
 export const ServiceIcon = ({
