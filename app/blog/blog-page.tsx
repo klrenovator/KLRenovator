@@ -53,7 +53,7 @@ const TRANSLATED_EXCERPTS: Record<string, Record<Lang, { title: string; excerpt:
     },
   },
 
-  "signs-your-aircond-needs-chemical-overhaul-malaysia": {
+  "signs-your-aircon-needs-chemical-overhaul-malaysia": {
     en: {
       title: "5 Signs Your Aircond Needs a Chemical Overhaul in Malaysia",
       excerpt: "Water leaking, ice forming, bad smell after a wash? Your aircond might need a chemical overhaul — not just a basic clean. Learn the 5 key signs.",
@@ -219,13 +219,10 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-          {/* Trust Signal Strip */}
+      {/* Trust Signal Strip — full-bleed dark bar, not nested inside the content container */}
       <section className="bg-slate-900 text-white py-3 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-1.5 text-xs font-bold uppercase tracking-widest">
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 19 Expert Guides</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 20 Expert Guides</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Pricing Guides Updated 2026</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Troubleshooting Guides</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Buying Guides</span>
@@ -233,7 +230,10 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Featured Post */}
+      <section className="py-16 sm:py-20 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+          {/* Featured Post */}
           {featured && (
             <Reveal>
               <NextLink href={`/blog/${featured.slug}`}
