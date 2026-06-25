@@ -298,7 +298,7 @@ export const Footer = () => {
       <div className="border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
           <p>
-            © {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamic Resources). {t("footer_rights")}
+            © {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamics Resources). {t("footer_rights")}
           </p>
           <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
             <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>
