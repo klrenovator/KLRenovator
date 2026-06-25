@@ -7,6 +7,7 @@ import { FiCheck, FiChevronRight } from "react-icons/fi";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
+import { googlePlace } from "@/config/reviews";
 import { Reveal } from "@/components/reveal";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -135,7 +136,7 @@ export default function ContactPage() {
       "@type": "HVACBusiness",
       "@id": "https://www.klrenovator.com/#business",
       name: "KL Renovator",
-      legalName: "Multicore Dynamic Resources",
+      legalName: "Multicore Dynamics Resources",
       telephone: siteConfig.phone,
       email: siteConfig.email,
       url: "https://www.klrenovator.com",
@@ -180,8 +181,8 @@ export default function ContactPage() {
       priceRange: "RM88 – RM2000",
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "500",
+        ratingValue: String(googlePlace.averageRating),
+        reviewCount: String(googlePlace.totalReviews),
         bestRating: "5",
         worstRating: "1",
       },
