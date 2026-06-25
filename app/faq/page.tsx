@@ -327,26 +327,6 @@ export default function FaqPage() {
             <p className="mt-5 text-slate-600 font-medium max-w-xl leading-relaxed">
               Quick honest answers about our aircon services, pricing, warranty, and coverage areas in KL & Selangor — in English, Bahasa Malaysia, and Chinese.
             </p>
-            <div className="mt-6 flex items-center gap-2 flex-wrap">
-              <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">FAQ available in:</span>
-              {([
-                { code: "en" as const, flag: "🇬🇧", label: "English" },
-                { code: "ms" as const, flag: "🇲🇾", label: "Bahasa Malaysia" },
-                { code: "zh" as const, flag: "🇨🇳", label: "中文" },
-              ]).map((opt) => (
-                <button
-                  key={opt.code}
-                  onClick={() => setLang(opt.code)}
-                  className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-all duration-200 ${
-                    lang === opt.code
-                      ? "bg-sky-500 border-sky-400 text-white shadow-sm"
-                      : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50 hover:border-slate-400"
-                  }`}
-                >
-                  {opt.flag} {opt.label}
-                </button>
-              ))}
-            </div>
           </Reveal>
         </div>
       </section>
