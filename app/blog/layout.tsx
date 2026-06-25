@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Aircond Tips & Expert Guides | KL Renovator Blog",
   description:
-    "Practical aircond advice from KL Renovator — chemical wash vs overhaul, why aircon not cold, how often to service, refrigerant gas types R22 R410A R32, and more.",
+    "Practical aircond advice from KL Renovator — chemical wash vs overhaul, why aircon not cold, how often to service, refrigerant gas types and more.",
   alternates: {
     canonical: "https://www.klrenovator.com/blog",
     languages: {
