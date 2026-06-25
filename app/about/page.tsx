@@ -18,7 +18,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
-    "KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 10+ years experience, 5,000+ happy customers, 500+ reviews.",
+    "KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 12+ years experience, 5,000+ happy customers, 500+ reviews.",
   alternates: {
     canonical: "https://www.klrenovator.com/about",
     languages: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
     description:
-      "KL Renovator (Multicore Dynamics Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
+      "KL Renovator (Multicore Dynamics Resources) — 12+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
     url: "https://www.klrenovator.com/about",
     type: "website",
     locale: "en_MY",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
-    description: "10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across KL & Selangor.",
+    description: "12+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across KL & Selangor.",
     images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg"],
   },
 };
@@ -71,7 +71,7 @@ const organizationSchema = {
   url: "https://www.klrenovator.com",
   logo: "https://www.klrenovator.com/logo/image.png",
   image: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg",
-  description: "Professional HVAC and air conditioning service company in Kuala Lumpur and Selangor. 10+ years experience, 5,000+ customers, 500+ 5-star reviews.",
+  description: "Professional HVAC and air conditioning service company in Kuala Lumpur and Selangor. 12+ years experience, 5,000+ customers, 500+ 5-star reviews.",
   foundingDate: "2014",
   telephone: "+60182983573",
   email: "info@klrenovator.com",
@@ -122,7 +122,7 @@ const VALUES = [
 ];
 
 const HIGHLIGHTS = [
-  "10+ years of aircon expertise",
+  "12+ years of aircon expertise",
   "5,000+ satisfied customers",
   "Licensed & insured technicians",
   "Same-day service available",
@@ -339,7 +339,7 @@ export default function AboutPage() {
               <span className="text-sky-500">Driven by trust.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
-              For over a decade we have been the aircon partner Kuala Lumpur
+              For 12+ years we have been the aircon partner Kuala Lumpur
               and Selangor turn to when comfort matters. From condos to
               commercial cassette installs — we deliver clean, careful work
               every single visit.
