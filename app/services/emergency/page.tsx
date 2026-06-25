@@ -24,7 +24,7 @@ const emergencyWaLink = waLink(emergencyMsg);
 export const metadata: Metadata = {
   title: "Emergency Aircond Repair KL & Selangor — Same-Day Urgent Service | KL Renovator",
   description:
-    "Emergency aircond repair in KL & Selangor. Same-day urgent response for aircond not working, water leaking, or complete breakdown. All brands. Call +60182983573 now.",
+    "Emergency aircond repair in KL & Selangor. Same-day urgent response for breakdowns, water leaking, or complete failure. All brands. Call +60182983573.",
   openGraph: {
     title: "Emergency Aircond Repair KL & Selangor | KL Renovator",
     description:
@@ -52,8 +52,6 @@ export const metadata: Metadata = {
     canonical: "https://www.klrenovator.com/services/emergency",
     languages: {
       "en-MY": "https://www.klrenovator.com/services/emergency",
-      "ms-MY": "https://www.klrenovator.com/services/emergency",
-      "zh-MY": "https://www.klrenovator.com/services/emergency",
       "x-default": "https://www.klrenovator.com/services/emergency",
     },
   },
