@@ -77,6 +77,14 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
       },
       {
         "@type": "Question",
+        name: "How much does gas top-up cost?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "R22 gas top-up starts from RM 120. R410A starts from RM 150. R32 starts from RM 180. Price depends on the unit's HP size. A leak check is included with every gas top-up.",
+        },
+      },
+      {
+        "@type": "Question",
         name: "What is the difference between chemical wash and chemical overhaul?",
         acceptedAnswer: {
           "@type": "Answer",
@@ -113,6 +121,22 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Check the sticker on your outdoor unit — it states the gas type (R22, R410A, or R32). Or WhatsApp us a photo of the outdoor unit sticker at +60182983573 and we will identify it for you.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you do commercial and office aircond servicing?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we handle commercial ceiling cassette units, VRF/VRV multi-split systems, and large-capacity commercial units. We also offer annual maintenance contracts for offices and commercial properties.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I book a service?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The fastest way is to WhatsApp us at +60182983573. Tell us your unit type, area, and the issue — we will confirm a service slot and price, usually within 30 minutes.",
         },
       },
       {
