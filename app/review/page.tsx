@@ -95,7 +95,7 @@ export default function ReviewPage() {
 
           {/* Google Review Button */}
           <a
-            href="https://share.google/HhXvqWDkefZ5bzNdL"
+            href={siteConfig.googleBusinessProfile}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 w-full bg-white border-2 border-slate-900 hover:bg-slate-900 hover:text-white text-slate-900 font-black uppercase tracking-wider py-4 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg mb-4 group"
