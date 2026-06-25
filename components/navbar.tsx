@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import NextLink from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { HiBars3, HiXMark, HiChevronDown } from "react-icons/hi2";
 
@@ -19,6 +19,25 @@ const LANG_OPTIONS: { code: LangCode; flag: string; label: string }[] = [
   { code: "ms", flag: "🇲🇾", label: "Melayu" },
   { code: "zh", flag: "🇨🇳", label: "中文" },
 ];
+
+// Computes the real translated URL for the current page when one exists
+// (areas, kampung pages, brands, problems, blog hub + posts all have real,
+// separate /ms/ and /zh/ routes — confirmed 100% coverage across all 39
+// areas, 158 kampungs, 18 brands, 20 problems). Returns null for pages with
+// no translated route (homepage, about, contact, faq, gallery, services),
+// in which case the caller falls back to the existing in-place setLang()
+// text-swap instead of navigating somewhere that doesn't exist.
+function getTranslatedPath(pathname: string, target: LangCode): string | null {
+  // Strip an existing /ms/ or /zh/ prefix to get the canonical (English) path
+  const enPath = pathname.replace(/^\/(ms|zh)(?=\/|$)/, "") || "/";
+
+  // Content types with full, real multilingual route coverage
+  const translatable = /^\/(areas|brands|problems|blog)(\/|$)/;
+  if (!translatable.test(enPath)) return null;
+
+  if (target === "en") return enPath;
+  return `/${target}${enPath}`;
+}
 
 // Brands for dropdown — derived from siteConfig.brandPages (the real source
 // of truth) instead of a hardcoded list, so this never silently goes stale
@@ -81,8 +100,23 @@ export const Navbar = () => {
   const [mobileProblemsOpen, setMobileProblemsOpen] = useState(false);
 
   const pathname        = usePathname();
+  const router          = useRouter();
   const { lang, setLang } = useLang();
   const lbl             = NAV_LABELS[lang];
+
+  // Single handler for both desktop and mobile language dropdowns. Navigates
+  // to the real /ms/ or /zh/ route when one exists for the current page;
+  // otherwise falls back to the in-place text-swap (setLang), since there's
+  // nowhere real to navigate to on pages like the homepage, about, contact,
+  // FAQ, gallery, or services hub.
+  function handleLangChange(code: LangCode) {
+    const translatedPath = getTranslatedPath(pathname, code);
+    if (translatedPath && translatedPath !== pathname) {
+      router.push(translatedPath);
+    }
+    setLang(code);
+    setLangOpen(false);
+  }
 
   const desktopLangRef    = useRef<HTMLDivElement>(null);
   const mobileLangRef     = useRef<HTMLDivElement>(null);
@@ -293,7 +327,7 @@ export const Navbar = () => {
                 {LANG_OPTIONS.map((opt) => (
                   <button
                     key={opt.code}
-                    onClick={() => { setLang(opt.code); setLangOpen(false); }}
+                    onClick={() => handleLangChange(opt.code)}
                     className={clsx(
                       "w-full flex items-center gap-3 px-4 py-3 text-xs font-black uppercase tracking-wider transition-colors",
                       lang === opt.code
@@ -343,7 +377,7 @@ export const Navbar = () => {
                 {LANG_OPTIONS.map((opt) => (
                   <button
                     key={opt.code}
-                    onClick={() => { setLang(opt.code); setLangOpen(false); }}
+                    onClick={() => handleLangChange(opt.code)}
                     className={clsx(
                       "w-full flex items-center gap-2 px-3 py-3 text-xs font-black uppercase tracking-wider transition-colors",
                       lang === opt.code
