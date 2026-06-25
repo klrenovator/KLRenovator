@@ -49,6 +49,15 @@ const breadcrumbSchema = {
 
 const waMsg = "Hi KL Renovator, my aircond has a problem. Can you help diagnose and fix it? My location is:";
 
+// Truncates at the last full word within the limit instead of cutting
+// mid-word (e.g. "refrigerant ga..." instead of stopping before "gas").
+function truncateAtWord(text: string, maxLength: number) {
+  if (text.length <= maxLength) return text;
+  const cut = text.slice(0, maxLength);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "...";
+}
+
 export default function ProblemsPage() {
   const problems = siteConfig.problemPages;
 
@@ -127,7 +136,7 @@ export default function ProblemsPage() {
                     </h3>
                   </div>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed flex-1">
-                    {problem.description.substring(0, 100)}...
+                    {truncateAtWord(problem.description, 100)}
                   </p>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-xs font-black text-sky-700 bg-sky-50 border border-sky-100 px-2.5 py-1 rounded-full">
