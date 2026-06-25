@@ -8,6 +8,7 @@ import { FiCheck, FiChevronRight } from "react-icons/fi";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
+import { googlePlace } from "@/config/reviews";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow, subtitle } from "@/components/primitives";
 import { StatsBand } from "@/components/sections/stats-band";
@@ -17,7 +18,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
   description:
-    "KL Renovator (Multicore Dynamic Resources) — trusted aircond specialist in KL & Selangor. 10+ years experience, 5,000+ happy customers, 500+ reviews.",
+    "KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 10+ years experience, 5,000+ happy customers, 500+ reviews.",
   alternates: {
     canonical: "https://www.klrenovator.com/about",
     languages: {
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
     description:
-      "KL Renovator (Multicore Dynamic Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
+      "KL Renovator (Multicore Dynamics Resources) — 10+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
     url: "https://www.klrenovator.com/about",
     type: "website",
     locale: "en_MY",
@@ -90,8 +91,8 @@ const organizationSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "500",
+    ratingValue: String(googlePlace.averageRating),
+    reviewCount: String(googlePlace.totalReviews),
     bestRating: "5",
     worstRating: "1",
   },
@@ -143,8 +144,6 @@ const GALLERY_IMAGES = [
   { src: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg", alt: "Aircond gas top-up R32 R410A precision balancing Selangor" },
   { src: "/hero/aircond-compressor-installation-new-kl.jpg", alt: "New outdoor compressor installation Kuala Lumpur" },
   { src: "/hero/aircond-pcb-board-replacement-kl.jpg", alt: "Daikin Panasonic aircond PCB board replacement KL" },
-  { src: "/hero/aircond-new-installation-rawang-selangor.jpg", alt: "New aircond installation Rawang Selangor" },
-  { src: "/hero/aircond-compressor-bracket-installation-kl.jpg", alt: "Compressor bracket installation outdoor unit KL" },
   { src: "/hero/aircond-installation-ampang-selangor.jpg", alt: "Aircond installation Ampang Selangor" },
   { src: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg", alt: "Aircond chemical service cleaning Selangor" },
   { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.jpg", alt: "Aircond PCB board replacement repair Kuala Lumpur" },
@@ -200,7 +199,7 @@ export default function AboutPage() {
     "@type": "Organization",
     "@id": "https://www.klrenovator.com/#organization",
     name: "KL Renovator",
-    legalName: "Multicore Dynamic Resources",
+    legalName: "Multicore Dynamics Resources",
     url: "https://www.klrenovator.com",
     logo: {
       "@type": "ImageObject",
@@ -210,7 +209,7 @@ export default function AboutPage() {
     },
     image: "https://www.klrenovator.com/logo/image.png",
     description:
-      "KL Renovator (Multicore Dynamic Resources) is a professional HVAC and aircond servicing company based in Selayang, serving all of Kuala Lumpur and Selangor since 2014. Specialized in chemical wash, chemical overhaul, gas top-up, repair, and new unit installation.",
+      "KL Renovator (Multicore Dynamics Resources) is a professional HVAC and aircond servicing company based in Selayang, serving all of Kuala Lumpur and Selangor since 2014. Specialized in chemical wash, chemical overhaul, gas top-up, repair, and new unit installation.",
     foundingDate: "2014",
     numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
     address: {
@@ -265,8 +264,8 @@ export default function AboutPage() {
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "500",
+      ratingValue: String(googlePlace.averageRating),
+      reviewCount: String(googlePlace.totalReviews),
       bestRating: "5",
       worstRating: "1",
     },
