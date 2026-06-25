@@ -115,6 +115,11 @@ const FAQS = {
       a: "Ya! 2–3 unit: diskaun 5%. 4–8 unit: diskaun 10%. 8+ unit: diskaun 15%. Diskaun terpakai untuk caj buruh. WhatsApp kami untuk pengesahan.",
     },
     {
+      category: "pricing",
+      q: "Berapa harga tambah gas?",
+      a: "Tambah gas R22 bermula dari RM 120. R410A bermula dari RM 150. R32 bermula dari RM 180. Harga bergantung kepada saiz HP unit. Pemeriksaan kebocoran disertakan dengan setiap tambah gas.",
+    },
+    {
       category: "service",
       q: "Apa beza cuci kimia dan overhaul kimia?",
       a: "Cuci kimia (dari RM 120) membersihkan unit di tempat ia terpasang — sesuai untuk penyelenggaraan biasa. Overhaul kimia (dari RM 220) menanggalkan unit sepenuhnya untuk pembersihan mendalam setiap komponen — disyorkan untuk kebocoran air, pembentukan ais, atau unit yang tidak diservis lebih 3 tahun.",
@@ -128,6 +133,21 @@ const FAQS = {
       category: "service",
       q: "Aircond saya beroperasi tetapi tidak sejuk. Apa masalahnya?",
       a: "Punca paling biasa ialah gas rendah, gegelung penyejat kotor, atau kapasitor rosak. Juruteknik kami akan mendiagnosis masalah dan memberikan sebut harga sebelum memulakan pembaikan. Yuran diagnosis RM 88 (dikecualikan jika pembaikan dilakukan).",
+    },
+    {
+      category: "service",
+      q: "Aircond saya bocor air. Apa yang perlu saya lakukan?",
+      a: "Tutup unit jika bocor dengan banyak untuk mengelakkan kerosakan. Punca paling biasa ialah paip longkang tersumbat — biasanya boleh dibaiki dengan servis asas atau cuci kimia. Jika kebocoran berterusan selepas cuci, overhaul kimia diperlukan untuk membersihkan dulang longkang dan saluran dalaman dengan lebih menyeluruh.",
+    },
+    {
+      category: "service",
+      q: "Jenis gas apa yang digunakan aircond saya?",
+      a: "Semak pelekat pada unit luar anda — ia menyatakan jenis gas (R22, R410A, atau R32). Atau WhatsApp kami gambar pelekat unit luar dan kami akan kenal pasti untuk anda.",
+    },
+    {
+      category: "service",
+      q: "Adakah anda menyediakan servis aircond komersial dan pejabat?",
+      a: "Ya, kami mengendalikan unit ceiling cassette komersial, sistem VRF/VRV multi-split, dan unit kapasiti besar komersial. Kami juga menawarkan kontrak penyelenggaraan tahunan untuk pejabat dan hartanah komersial.",
     },
     {
       category: "booking",
@@ -168,8 +188,18 @@ const FAQS = {
     },
     {
       category: "pricing",
+      q: "紧急/非营业时间服务费用是多少？",
+      a: "正常营业时间为每日上午9时至下午6时。下午6时至晚上10时之间预约的服务需缴付RM 50强制性加班附加费。非营业时间诊断费总计为RM 138。",
+    },
+    {
+      category: "pricing",
       q: "是否有多台优惠？",
       a: "有！2–3 台：九五折。4–8 台：九折。8 台以上：八五折。折扣适用于人工费用。请通过 WhatsApp 联系我们确认。",
+    },
+    {
+      category: "pricing",
+      q: "充冷媒（Gas Top-Up）费用是多少？",
+      a: "R22充气从RM 120起。R410A从RM 150起。R32从RM 180起。价格依机型匹数而定。每次充气均包含漏气检查。",
     },
     {
       category: "service",
@@ -185,6 +215,21 @@ const FAQS = {
       category: "service",
       q: "冷气机开着但不冷，是什么原因？",
       a: "最常见原因是冷媒不足、蒸发器线圈脏污或电容器故障。我们的技术员会现场诊断并报价后才开始维修。诊断费 RM 88（若进行维修则豁免）。",
+    },
+    {
+      category: "service",
+      q: "我的冷气机漏水，该怎么办？",
+      a: "若漏水严重，请先关闭机器以免造成损坏。最常见原因是排水管堵塞——通常基本保养或化学清洗即可解决。若清洗后仍持续漏水，则需要化学大修以更彻底清洁排水盘和内部通道。",
+    },
+    {
+      category: "service",
+      q: "我的冷气机使用哪种冷媒？",
+      a: "请查看室外机上的标签——上面会标明冷媒类型（R22、R410A或R32）。或通过WhatsApp发送室外机标签照片给我们，我们将为您识别。",
+    },
+    {
+      category: "service",
+      q: "是否提供商业及办公室冷气服务？",
+      a: "是的，我们处理商用吸顶式机型、VRF/VRV多联机系统及大容量商用机组。我们也为办公室及商业物业提供年度保养合约。",
     },
     {
       category: "booking",
