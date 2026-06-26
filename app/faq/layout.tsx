@@ -128,7 +128,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "Do you do commercial and office aircond servicing?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we handle commercial ceiling cassette units, VRF/VRV multi-split systems, and large-capacity commercial units. We also offer annual maintenance contracts for offices and commercial properties.",
+          text: "Yes, we handle commercial wall-mounted and ceiling cassette units for shops, retail outlets, restaurants, offices, and small-to-medium commercial premises. We also offer annual maintenance contracts for offices and commercial properties.",
         },
       },
       {
