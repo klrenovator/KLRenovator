@@ -155,17 +155,17 @@ export const siteConfig = {
         { q: "Does KL Renovator service aircond in Shah Alam?", a: "Yes — KL Renovator covers all Shah Alam sections including Section 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam and Glenmarie. WhatsApp +60182983573." },
         { q: "How much does aircond chemical wash cost in Shah Alam?", a: "Chemical wash in Shah Alam starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Transparent pricing confirmed before work." },
         { q: "Is same-day aircond repair available in Shah Alam?", a: "Yes — same-day repair and servicing slots are available in Shah Alam. WhatsApp +60182983573 early for priority scheduling." },
-        { q: "Does KL Renovator service commercial aircond in Shah Alam?", a: "Yes — KL Renovator services commercial ceiling cassette and VRF systems for offices and commercial buildings in Shah Alam industrial areas and business parks." }
+        { q: "Does KL Renovator service commercial aircond in Shah Alam?", a: "Yes — KL Renovator services commercial ceiling cassette and wall-mounted units for offices and commercial buildings in Shah Alam industrial areas and business parks." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Shah Alam?", a: "Ya — KL Renovator meliputi semua seksyen Shah Alam termasuk Seksyen 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam dan Glenmarie. WhatsApp +60182983573." },
         { q: "Berapa harga cuci kimia aircond di Shah Alam?", a: "Cuci kimia di Shah Alam bermula dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette dari RM 220. Harga disahkan sebelum kerja." },
-        { q: "Adakah servis komersial tersedia di Shah Alam?", a: "Ya — KL Renovator menservis ceiling cassette komersial dan sistem VRF untuk pejabat dan bangunan komersial di kawasan perindustrian dan taman perniagaan Shah Alam." }
+        { q: "Adakah servis komersial tersedia di Shah Alam?", a: "Ya — KL Renovator menservis ceiling cassette komersial dan unit dinding untuk pejabat dan bangunan komersial di kawasan perindustrian dan taman perniagaan Shah Alam." }
       ],
       faqsZH: [
         { q: "KL Renovator在莎亚南提供冷气服务吗？", a: "是的——KL Renovator覆盖莎亚南所有区域，包括第7、13、14、17区，Bukit Jelutong、Kota Kemuning、Setia Alam和Glenmarie。WhatsApp +60182983573。" },
         { q: "莎亚南冷气化学清洗费用是多少？", a: "莎亚南化学清洗从RM 120（1.0–1.5 HP）、RM 150（2.0–2.5 HP）、RM 180（3.0 HP）起。天花板卡式机从RM 220起。" },
-        { q: "莎亚南有商业冷气服务吗？", a: "有——KL Renovator为莎亚南工业区和商业园的办公室和商业建筑提供天花板卡式机和VRF系统服务。" }
+        { q: "莎亚南有商业冷气服务吗？", a: "有——KL Renovator为莎亚南工业区和商业园的办公室和商业建筑提供天花板卡式机和壁挂式机型服务。" }
       ],
     },
     {
@@ -631,17 +631,17 @@ export const siteConfig = {
       heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
       faqs: [
         { q: "Does KL Renovator service aircond in Cyberjaya?", a: "Yes — KL Renovator covers Cyberjaya including Shaftsbury, Tamarind Square, Cyberia and Jade Hills. We service both residential condos and commercial office units in the tech-park area." },
-        { q: "Do you service commercial office aircond systems in Cyberjaya?", a: "Yes — Cyberjaya has a high concentration of office buildings and data-centre-adjacent commercial units. We handle commercial servicing contracts and VRF/ceiling cassette systems common in this kind of building." },
+        { q: "Do you service commercial office aircond systems in Cyberjaya?", a: "Yes — Cyberjaya has a high concentration of office buildings and data-centre-adjacent commercial units. We handle commercial servicing contracts and ceiling cassette systems common in this kind of building." },
         { q: "How much does aircond servicing cost for offices in Cyberjaya?", a: "Commercial office servicing in Cyberjaya is quoted based on unit count and HP size — most single-unit ceiling cassette jobs start from RM 220 for chemical overhaul. WhatsApp +60182983573 for a tailored commercial quote." },
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Cyberjaya?", a: "Ya — KL Renovator meliputi Cyberjaya termasuk Shaftsbury, Tamarind Square, Cyberia dan Jade Hills. Kami servis kondo kediaman dan unit pejabat komersial di kawasan taman teknologi ini." },
-        { q: "Adakah anda servis sistem aircond pejabat komersial di Cyberjaya?", a: "Ya — Cyberjaya mempunyai tumpuan tinggi bangunan pejabat dan unit komersial berdekatan pusat data. Kami uruskan kontrak servis komersial dan sistem VRF/ceiling cassette." },
+        { q: "Adakah anda servis sistem aircond pejabat komersial di Cyberjaya?", a: "Ya — Cyberjaya mempunyai tumpuan tinggi bangunan pejabat dan unit komersial berdekatan pusat data. Kami uruskan kontrak servis komersial dan sistem ceiling cassette." },
         { q: "Berapa harga servis aircond untuk pejabat di Cyberjaya?", a: "Servis pejabat komersial di Cyberjaya disebut harga berdasarkan bilangan unit dan saiz HP — kebanyakan kerja ceiling cassette tunggal bermula RM 220 untuk overhaul kimia." },
       ],
       faqsZH: [
         { q: "KL Renovator在赛城（Cyberjaya）提供冷气服务吗？", a: "是的——KL Renovator覆盖Cyberjaya，包括Shaftsbury、Tamarind Square、Cyberia及Jade Hills。我们为这个科技园区的住宅公寓及商业办公单位提供服务。" },
-        { q: "你们为赛城的商业办公冷气系统提供服务吗？", a: "可以——Cyberjaya有大量办公楼及邻近数据中心的商业单位。我们处理商业服务合约以及此类建筑常见的VRF/吸顶式系统。" },
+        { q: "你们为赛城的商业办公冷气系统提供服务吗？", a: "可以——Cyberjaya有大量办公楼及邻近数据中心的商业单位。我们处理商业服务合约以及此类建筑常见的吸顶式系统。" },
         { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 220起。" },
       ],
     },
@@ -1051,17 +1051,17 @@ export const siteConfig = {
       heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
       faqs: [
         { q: "Does KL Renovator service aircond in Glenmarie?", a: "Yes — KL Renovator covers Glenmarie, including the HICOM Glenmarie industrial/commercial area, near Shah Alam and Subang Airport. WhatsApp +60182983573 for commercial or residential quotes." },
-        { q: "Do you service industrial and commercial units in HICOM Glenmarie?", a: "Yes — HICOM Glenmarie has a significant concentration of factories, warehouses and commercial offices. We handle commercial ceiling cassette and VRF-type system servicing with separate commercial contract pricing." },
+        { q: "Do you service industrial and commercial units in HICOM Glenmarie?", a: "Yes — HICOM Glenmarie has a significant concentration of factories, warehouses and commercial offices. We handle commercial ceiling cassette and wall-mounted unit servicing with separate commercial contract pricing." },
         { q: "How fast can a technician reach Glenmarie for commercial servicing?", a: "Glenmarie is on our regular Shah Alam/Subang coverage route, so same-day or next-day technician visits are usually available for commercial servicing — WhatsApp early in the day to confirm." },
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Glenmarie?", a: "Ya — KL Renovator meliputi Glenmarie, termasuk kawasan perindustrian/komersial HICOM Glenmarie, berhampiran Shah Alam dan Lapangan Terbang Subang." },
-        { q: "Adakah anda servis unit perindustrian dan komersial di HICOM Glenmarie?", a: "Ya — HICOM Glenmarie mempunyai tumpuan tinggi kilang, gudang dan pejabat komersial. Kami uruskan servis ceiling cassette komersial dan sistem jenis VRF dengan harga kontrak berasingan." },
+        { q: "Adakah anda servis unit perindustrian dan komersial di HICOM Glenmarie?", a: "Ya — HICOM Glenmarie mempunyai tumpuan tinggi kilang, gudang dan pejabat komersial. Kami uruskan servis ceiling cassette komersial dan unit dinding dengan harga kontrak berasingan." },
         { q: "Berapa cepat juruteknik boleh ke Glenmarie untuk servis komersial?", a: "Glenmarie berada di laluan liputan Shah Alam/Subang tetap kami, jadi lawatan juruteknik hari sama atau esok biasanya tersedia untuk servis komersial." },
       ],
       faqsZH: [
         { q: "KL Renovator在Glenmarie提供冷气服务吗？", a: "是的——KL Renovator覆盖Glenmarie，包括HICOM Glenmarie工商业区，靠近Shah Alam及梳邦机场（Subang Airport）。" },
-        { q: "你们为HICOM Glenmarie的工业及商业单位提供服务吗？", a: "可以——HICOM Glenmarie聚集了大量工厂、仓库及商业办公楼。我们提供商用吸顶机及VRF系统类服务，并有独立的商业合约报价。" },
+        { q: "你们为HICOM Glenmarie的工业及商业单位提供服务吗？", a: "可以——HICOM Glenmarie聚集了大量工厂、仓库及商业办公楼。我们提供商用吸顶机及壁挂式机型服务，并有独立的商业合约报价。" },
         { q: "Glenmarie的商业冷气服务能多快安排技师上门？", a: "Glenmarie位于我们Shah Alam/Subang常规服务路线上，因此商业服务通常可当天或次日安排技师上门——请尽早通过WhatsApp确认。" },
       ],
     },
@@ -1432,24 +1432,24 @@ export const siteConfig = {
       description: "KL Renovator technicians are experienced in servicing all Daikin air conditioner models across Kuala Lumpur and Selangor — including the popular iSmile, SMILE and FTKF series. We handle chemical wash, chemical overhaul, R32 gas top-up, PCB repairs and new Daikin installations.",
       descriptionMS: "Juruteknik KL Renovator berpengalaman dalam menservis semua model penghawa dingin Daikin di Kuala Lumpur dan Selangor — termasuk siri iSmile, SMILE dan FTKF yang popular. Kami mengendalikan cuci kimia, overhaul kimia, tambah gas R32, pembaikan PCB dan pemasangan Daikin baharu.",
       descriptionZH: "KL Renovator 技术人员拥有丰富的服务吉隆坡和雪兰莪所有大金空调型号的经验——包括热门的iSmile、SMILE和FTKF系列。我们提供化学清洗、化学大修、R32充气、PCB维修和全新大金安装服务。",
-      highlights: ["All Daikin iSmile & SMILE series", "R32 precision gas top-up", "Daikin error code diagnosis", "Daikin VRV/SkyAir commercial systems", "Same-day service available", "PCB board replacement"],
-      models: ["Daikin iSmile Series", "Daikin SMILE Series", "Daikin FTKF", "Daikin FTKM", "Daikin SkyAir", "Daikin VRV"],
+      highlights: ["All Daikin iSmile & SMILE series", "R32 precision gas top-up", "Daikin error code diagnosis", "Daikin SkyAir commercial systems", "Same-day service available", "PCB board replacement"],
+      models: ["Daikin iSmile Series", "Daikin SMILE Series", "Daikin FTKF", "Daikin FTKM", "Daikin SkyAir"],
       gasTypes: ["R32", "R410A"],
       faqs: [
         { q: "How much does Daikin aircond service cost in KL?", a: "Daikin chemical wash from RM 120, chemical overhaul from RM 220, R32 gas top-up from RM 180, basic service from RM 99. All prices confirmed before work begins — no hidden charges." },
-        { q: "Does KL Renovator service all Daikin models?", a: "Yes — we service all Daikin models including iSmile, SMILE Series, FTKF, FTKM, SkyAir and VRV commercial systems. Inverter and non-inverter." },
+        { q: "Does KL Renovator service all Daikin models?", a: "Yes — we service all Daikin models including iSmile, SMILE Series, FTKF, FTKM and SkyAir. Inverter and non-inverter." },
         { q: "My Daikin aircond is blinking and not cooling — what does it mean?", a: "Daikin error codes (blinking lights) indicate faults like low gas (L5), dirty filter, PCB error or sensor fault. KL Renovator reads and resolves all Daikin error codes." },
         { q: "What refrigerant gas does Daikin use?", a: "Most Daikin units from 2019 onwards use R32 refrigerant. Older Daikin models use R410A. KL Renovator carries both. We never mix refrigerant types." },
         { q: "Is Daikin better than Panasonic?", a: "Both are excellent. Daikin is preferred for whisper-quiet operation and energy efficiency. Panasonic is known for Nanoe-X air purification and durability. KL Renovator installs and services both." },
       ],
       faqsBM: [
         { q: "Berapa harga servis aircond Daikin di KL?", a: "Cuci kimia Daikin dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99. Semua harga disahkan sebelum kerja bermula." },
-        { q: "Adakah KL Renovator servis semua model Daikin?", a: "Ya — kami menservis semua model Daikin termasuk iSmile, SMILE Series, FTKF, FTKM, SkyAir dan sistem komersial VRV." },
+        { q: "Adakah KL Renovator servis semua model Daikin?", a: "Ya — kami menservis semua model Daikin termasuk iSmile, SMILE Series, FTKF, FTKM dan SkyAir." },
         { q: "Aircond Daikin saya berkelip dan tidak sejuk — apa maksudnya?", a: "Kod ralat Daikin menunjukkan kerosakan seperti gas rendah (L5), penapis kotor, ralat PCB atau kerosakan sensor. KL Renovator membaca dan menyelesaikan semua kod ralat Daikin." },
       ],
       faqsZH: [
         { q: "吉隆坡大金冷气服务费用是多少？", a: "大金化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。所有价格在施工前确认。" },
-        { q: "KL Renovator维修所有大金型号吗？", a: "是的——我们维修所有大金型号，包括iSmile、SMILE系列、FTKF、FTKM、SkyAir和VRV商用系统。" },
+        { q: "KL Renovator维修所有大金型号吗？", a: "是的——我们维修所有大金型号，包括iSmile、SMILE系列、FTKF、FTKM和SkyAir。" },
         { q: "大金冷气灯闪烁不制冷——是什么意思？", a: "大金错误代码（闪烁指示灯）表示气压低（L5）、过滤网脏污、PCB错误或传感器故障。KL Renovator读取并解决所有大金错误代码。" },
       ],
     },
@@ -1496,26 +1496,26 @@ export const siteConfig = {
       metaDescMS: "Servis aircond Mitsubishi Electric pakar di KL & Selangor. Cuci kimia, tambah gas, pembaikan & pemasangan. Hubungi +60182983573.",
       metaTitleZH: "吉隆坡及雪兰莪三菱冷气服务 | KL Renovator",
       metaDescZH: "吉隆坡及雪兰莪专业三菱电机冷气服务。化学清洗、充气、维修和安装。致电 +60182983573。",
-      description: "KL Renovator services all Mitsubishi Electric aircond models across KL and Selangor — including the MSY Series, MXY Multi-Split, City Multi VRF and Mr Slim ceiling cassette systems. Chemical wash, gas top-up, PCB repair and Mitsubishi installation handled by certified technicians.",
-      descriptionMS: "KL Renovator menservis semua model aircond Mitsubishi Electric di KL dan Selangor — termasuk MSY Series, MXY Multi-Split, City Multi VRF dan sistem ceiling cassette Mr Slim.",
-      descriptionZH: "KL Renovator 在吉隆坡和雪兰莪为所有三菱电机冷气型号提供服务——包括MSY系列、MXY多联机、City Multi VRF和Mr Slim天花板卡式机系统。",
-      highlights: ["Mitsubishi MSY & MXY series", "City Multi VRF commercial systems", "Mr Slim ceiling cassette", "R32 & R410A gas top-up", "Mitsubishi error code diagnosis", "Same-day service available"],
-      models: ["Mitsubishi MSY Series", "Mitsubishi MXY Multi-Split", "Mitsubishi City Multi VRF", "Mitsubishi MFZ Floor Standing", "Mitsubishi Mr Slim Ceiling Cassette"],
+      description: "KL Renovator services all Mitsubishi Electric aircond models across KL and Selangor — including the MSY Series, MXY Multi-Split and Mr Slim ceiling cassette systems. Chemical wash, gas top-up, PCB repair and Mitsubishi installation handled by certified technicians.",
+      descriptionMS: "KL Renovator menservis semua model aircond Mitsubishi Electric di KL dan Selangor — termasuk MSY Series, MXY Multi-Split dan sistem ceiling cassette Mr Slim.",
+      descriptionZH: "KL Renovator 在吉隆坡和雪兰莪为所有三菱电机冷气型号提供服务——包括MSY系列、MXY多联机和Mr Slim天花板卡式机系统。",
+      highlights: ["Mitsubishi MSY & MXY series", "Multi-unit commercial servicing", "Mr Slim ceiling cassette", "R32 & R410A gas top-up", "Mitsubishi error code diagnosis", "Same-day service available"],
+      models: ["Mitsubishi MSY Series", "Mitsubishi MXY Multi-Split", "Mitsubishi MFZ Floor Standing", "Mitsubishi Mr Slim Ceiling Cassette"],
       gasTypes: ["R32", "R410A"],
       faqs: [
         { q: "How much does Mitsubishi aircond service cost in KL?", a: "Mitsubishi chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 180 (R32), basic service from RM 99. All prices confirmed before work." },
-        { q: "Does KL Renovator service Mitsubishi City Multi VRF systems?", a: "Yes — KL Renovator services Mitsubishi City Multi VRF and VRV commercial systems in offices, hotels and commercial buildings across KL and Selangor." },
+        { q: "Does KL Renovator service Mitsubishi Mr Slim ceiling cassette systems?", a: "Yes — KL Renovator services Mitsubishi Mr Slim ceiling cassette and MXY multi-split systems in offices, shops and commercial buildings across KL and Selangor." },
         { q: "My Mitsubishi shows P8 or E6 error — what does it mean?", a: "Mitsubishi P8 indicates an outdoor unit protection fault (often low gas or compressor issue). E6 is a communication error. KL Renovator reads all Mitsubishi error codes." },
         { q: "What gas does Mitsubishi Electric use?", a: "Most new Mitsubishi Electric models use R32. Some older models use R410A. KL Renovator identifies the correct refrigerant from your model number before topping up." },
       ],
       faqsBM: [
         { q: "Berapa harga servis aircond Mitsubishi di KL?", a: "Cuci kimia Mitsubishi dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 180 (R32), servis asas dari RM 99." },
-        { q: "Adakah KL Renovator servis sistem Mitsubishi City Multi VRF?", a: "Ya — KL Renovator menservis sistem Mitsubishi City Multi VRF dan VRV komersial di pejabat, hotel dan bangunan komersial di KL dan Selangor." },
+        { q: "Adakah KL Renovator servis sistem Mitsubishi Mr Slim ceiling cassette?", a: "Ya — KL Renovator menservis sistem Mitsubishi Mr Slim ceiling cassette dan MXY multi-split di pejabat, kedai dan bangunan komersial di KL dan Selangor." },
         { q: "Aircond Mitsubishi saya tunjuk ralat P8 — apa maksudnya?", a: "Mitsubishi P8 menunjukkan kerosakan perlindungan unit luar (selalunya gas rendah atau masalah kompresor). KL Renovator membaca semua kod ralat Mitsubishi." },
       ],
       faqsZH: [
         { q: "吉隆坡三菱冷气服务费用是多少？", a: "三菱化学清洗从RM 120起，化学大修从RM 220起，充气从RM 180（R32）起，基本保养从RM 99起。" },
-        { q: "KL Renovator维修三菱City Multi VRF系统吗？", a: "是的——KL Renovator在吉隆坡和雪兰莪的办公室、酒店和商业建筑中维修三菱City Multi VRF和VRV商用系统。" },
+        { q: "KL Renovator维修三菱Mr Slim天花板卡式机系统吗？", a: "是的——KL Renovator在吉隆坡和雪兰莪的办公室、商铺和商业建筑中维修三菱Mr Slim天花板卡式机和MXY多联机系统。" },
         { q: "三菱冷气显示P8错误——是什么意思？", a: "三菱P8表示室外机保护故障（通常是气压低或压缩机问题）。KL Renovator读取所有三菱错误代码。" },
       ],
     },
@@ -6432,7 +6432,7 @@ export const siteConfig = {
     { slug: "gas-topup", title: "Gas Top-Up / Precision Balancing", short: "Precision refrigerant balancing and pressure level top-up for eco-friendly R32, R410A, and traditional R22 systems. Leak check included.", startPrice: 120, icon: "gauge", targetProblem: "Aircond running but blowing warm air, low gas pressure.", category: "both" as const },
     { slug: "repair", title: "Troubleshooting & Repairs", short: "Expert diagnosis and replacement of faulty aircond parts — capacitors, fan motors, sensor coils, PCB boards, or copper wiring. Quote before work.", startPrice: 88, icon: "settings", targetProblem: "Noisy outdoor unit, sudden auto shut-off, blinking timer light, wiring sparks.", category: "both" as const },
     { slug: "dismantling-relocation", title: "Dismantle & Relocation", short: "Safe and risk-free extraction of existing indoor/outdoor units with proper refrigerant pump-down and sealing. Full reinstall at new location.", startPrice: 90, icon: "move", targetProblem: "House moving, shop shifting, office renovation and AC relocation.", category: "both" as const },
-    { slug: "ceiling-cassette", title: "Ceiling Cassette Solutions", short: "Heavy-duty commercial ceiling cassette servicing, chemical wash, VRF/VRV installation and scheduled maintenance for corporate and retail layouts.", startPrice: 150, icon: "layout-grid", targetProblem: "Commercial office hot spots, VRF/VRV systems, corporate annual maintenance needs.", category: "commercial" as const },
+    { slug: "ceiling-cassette", title: "Ceiling Cassette Solutions", short: "Heavy-duty commercial ceiling cassette servicing, chemical wash, installation and scheduled maintenance for corporate and retail layouts.", startPrice: 150, icon: "layout-grid", targetProblem: "Commercial office hot spots, multi-unit ceiling cassette systems, corporate annual maintenance needs.", category: "commercial" as const },
   ],
 
   pricing: {
