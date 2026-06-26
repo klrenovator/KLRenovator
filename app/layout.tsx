@@ -190,7 +190,7 @@ export default function RootLayout({
                 "Dismantle & Relocation",
                 "Ceiling Cassette Service",
                 "Commercial HVAC Maintenance",
-                "VRF VRV System Installation",
+                "Multi-Unit Commercial Air Conditioning Services",
               ],
               "knowsAbout": [
                 "New Unit Installation",
@@ -200,7 +200,7 @@ export default function RootLayout({
                 "Aircond Water Leaking Troubleshooting",
                 "HVAC Commercial Ceiling Cassette Solutions",
                 "Capacitor Fan Motor PCB Board Repairs",
-                "VRF VRV Multi-split Commercial Systems",
+                "Commercial Ceiling Cassette Multi-Unit Systems",
               ],
               "brand": siteConfig.brandsSupported.map((brand) => ({
                 "@type": "Brand",
