@@ -602,14 +602,14 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "Ceiling Cassette Service",
     tagline: "Specialist commercial ceiling cassette servicing — chemical wash, overhaul and repair for all brands.",
     description:
-      "Ceiling cassette aircond units are the standard for offices, retail shops, restaurants and commercial spaces across KL and Selangor. KL Renovator specialises in ceiling cassette servicing, chemical wash and chemical overhaul, including VRF/VRV multi-zone systems. Technicians are trained to access and service ceiling-mounted units safely and efficiently.",
+      "Ceiling cassette aircond units are the standard for offices, retail shops, restaurants and commercial spaces across KL and Selangor. KL Renovator specialises in ceiling cassette servicing, chemical wash and chemical overhaul for shops, offices, and multi-unit commercial premises. Technicians are trained to access and service ceiling-mounted units safely and efficiently.",
     startPrice: "RM 150",
     heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
     highlights: [
       "Specialist ceiling cassette technicians",
       "Chemical wash from RM 220",
       "Chemical overhaul from RM 430",
-      "VRF / VRV multi-zone systems",
+      "Multi-unit commercial servicing",
       "All brands — Daikin, Mitsubishi, York, Carrier",
       "Drain pan and tray deep clean",
       "Blower wheel removal and wash",
@@ -635,8 +635,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         a: "Every 3–6 months for commercial premises with regular use. Quarterly servicing is recommended for food & beverage outlets or high-humidity environments.",
       },
       {
-        q: "Do you service VRF / VRV multi-zone commercial systems?",
-        a: "Yes. KL Renovator services VRF/VRV systems by Daikin, Mitsubishi, Panasonic and other brands in commercial settings.",
+        q: "Do you service multiple ceiling cassette units across a commercial premise?",
+        a: "Yes. KL Renovator services multiple ceiling cassette and wall-mounted units across shops, offices, restaurants, and larger commercial premises by Daikin, Mitsubishi, Panasonic and other brands, with coordinated scheduling for the whole site.",
       },
       {
         q: "Can you service after business hours?",
