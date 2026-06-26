@@ -65,7 +65,7 @@ const FAQS = {
     {
       category: "service",
       q: "Do you do commercial and office aircond servicing?",
-      a: "Yes, we handle commercial ceiling cassette units, VRF/VRV multi-split systems, and large-capacity commercial units. We also offer annual maintenance contracts for offices and commercial properties.",
+      a: "Yes, we handle commercial wall-mounted and ceiling cassette units for shops, retail outlets, restaurants, offices, and small-to-medium commercial premises. We also offer annual maintenance contracts for offices and commercial properties.",
     },
     {
       category: "booking",
@@ -147,7 +147,7 @@ const FAQS = {
     {
       category: "service",
       q: "Adakah anda menyediakan servis aircond komersial dan pejabat?",
-      a: "Ya, kami mengendalikan unit ceiling cassette komersial, sistem VRF/VRV multi-split, dan unit kapasiti besar komersial. Kami juga menawarkan kontrak penyelenggaraan tahunan untuk pejabat dan hartanah komersial.",
+      a: "Ya, kami mengendalikan unit dinding dan ceiling cassette komersial untuk kedai, pusat runcit, restoran, pejabat, dan premis komersial kecil hingga sederhana. Kami juga menawarkan kontrak penyelenggaraan tahunan untuk pejabat dan hartanah komersial.",
     },
     {
       category: "booking",
@@ -229,7 +229,7 @@ const FAQS = {
     {
       category: "service",
       q: "是否提供商业及办公室冷气服务？",
-      a: "是的，我们处理商用吸顶式机型、VRF/VRV多联机系统及大容量商用机组。我们也为办公室及商业物业提供年度保养合约。",
+      a: "是的，我们为商铺、零售店、餐厅、办公室及中小型商业场所提供商用壁挂式及吸顶式机型服务。我们也为办公室及商业物业提供年度保养合约。",
     },
     {
       category: "booking",
