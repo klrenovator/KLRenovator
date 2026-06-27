@@ -11,6 +11,7 @@ import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { allPosts } from "@/config/blog-posts";
+import { BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
 
 // ── Brand → Blog relevance map ───────────────────────────────────────────────
 const BRAND_BLOG_MAP: Record<string, string[]> = {
@@ -80,7 +81,6 @@ const BRAND_ERROR_CODES: Record<string, { code: string; meaning: string; fix: st
 };
 
 // ── Brand → Problem relevance map ─────────────────────────────────────────────
-import { BRAND_PROBLEM_MAP as BRAND_PROBLEM_MAP_TOPO } from "@/config/topical-authority-map";
 
 const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "daikin":             ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
@@ -774,6 +774,41 @@ export default async function BrandPage({
                   ))}
                   <NextLink href="/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
                     All Problems →
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Related Services — fills the cross-link gap: brand pages previously
+          linked to Areas, Blog posts, and Problems, but never to Services. */}
+      {(() => {
+        const serviceSlugs = BRAND_SERVICE_MAP[slug] ?? BRAND_SERVICE_MAP["_default"];
+        const relatedServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));
+        if (relatedServices.length === 0) return null;
+        return (
+          <section className="py-10 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Services · Perkhidmatan · 服务</p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  {brand.name} Services We Offer
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {relatedServices.map((s) => (
+                    <NextLink
+                      key={s.slug}
+                      href={`/services/${s.slug}`}
+                      className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-2 text-xs font-bold text-slate-700 rounded-xl transition-all"
+                    >
+                      <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
+                      {s.title} — from RM {s.startPrice}
+                    </NextLink>
+                  ))}
+                  <NextLink href="/services" className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-700 rounded-xl transition-all">
+                    All Services <FiArrowRight className="h-3 w-3" />
                   </NextLink>
                 </div>
               </Reveal>
