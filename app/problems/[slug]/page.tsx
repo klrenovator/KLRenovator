@@ -976,7 +976,7 @@ const EMERGENCY_PROBLEMS = [
 ];
 
 // ── Problem → Blog relevance map ─────────────────────────────────────────────
-import { PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
+import { PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP, PROBLEM_BRAND_MAP } from "@/config/topical-authority-map";
 
 const PROBLEM_BLOG_MAP: Record<string, string[]> = {
   "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia"],
@@ -1480,6 +1480,46 @@ export default async function ProblemPage({
           </Reveal>
         </div>
       </section>
+
+      {/* Brands — fills the cross-link gap: problem pages linked to Services,
+          Areas, and Blog posts, but never to Brand pages. */}
+      {(() => {
+        const brandSlugs = PROBLEM_BRAND_MAP[slug] ?? [];
+        const relatedBrands = siteConfig.brandPages.filter((b) => brandSlugs.includes(b.slug));
+        if (relatedBrands.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+                  Brands · Jenama · 品牌
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  {problem.name} — Common on These Brands
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {relatedBrands.map((b) => (
+                    <NextLink
+                      key={b.slug}
+                      href={`/brands/${b.slug}`}
+                      className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:text-sky-700 rounded-xl transition-all"
+                    >
+                      <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
+                      {b.name} Aircond Service
+                    </NextLink>
+                  ))}
+                  <NextLink
+                    href="/brands"
+                    className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-black text-sky-700 rounded-xl transition-all"
+                  >
+                    All Brands <FiArrowRight className="h-3 w-3" />
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* CTA */}
       {/* Related Blog Articles */}
