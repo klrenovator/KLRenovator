@@ -34,7 +34,9 @@ File: `config/site.ts`
 - `links.googleMaps`, `links.whatsapp`, socials
 
 ## ❓ FAQs
-File: `components/sections/faq.tsx` — edit the `faqs` array.
+File: `app/faq/page.tsx` — edit the `FAQS` object (separate `en`, `ms`, `zh` arrays).
+Note: FAQ schema/snippets shown on other pages (services, areas, brands, problems)
+are defined inline in each of those page files, not in a shared component.
 
 ## 🧭 Navigation links
 File: `components/navbar.tsx` → `NAV_LINKS` array.
