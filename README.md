@@ -1,42 +1,26 @@
-# Next.js & HeroUI 
-This is a template for creating apicdhsdjcnjscations using Next.js 15 (app directory) and HeroUI (v3).
-cdscscsc
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+# KL Renovator — klrenovator.com
 
-## Technologies Used
+Professional aircond / HVAC servicing website for **KL Renovator** (legal entity: Multicore Dynamics Resources), serving Kuala Lumpur and Selangor, Malaysia.
 
-- [Next.js 15](https://nextjs.org/docs/getting-started)
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org/docs/getting-started) (App Router)
 - [HeroUI v3](https://heroui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- Deployed on [Vercel](https://vercel.com/)
 
-## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+## Local Development
 
 ```bash
 npm install
-```
-
-### Run the development server
-
-```bash
 npm run dev
 ```
 
+## Where to Update Things
+
+See `WHERE_TO_UPDATE.md` for a quick reference on editing pricing, contact info, FAQs, brand colours, and navigation.
+
 ## License
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
-# KLRenovator
+Licensed under the [MIT license](./LICENSE).
