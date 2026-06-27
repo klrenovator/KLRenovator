@@ -256,6 +256,22 @@ export const BRAND_SERVICE_MAP: Record<string, string[]> = {
   "_default": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair"],
 };
 
+// ── PROBLEM → BRAND MAP (derived from BRAND_PROBLEM_MAP above) ────────────────
+// Problem pages previously linked to Services, Areas, and Blog posts but never
+// to Brand pages. Built once at module load by inverting BRAND_PROBLEM_MAP,
+// so it stays in sync automatically if brand-problem associations change.
+export const PROBLEM_BRAND_MAP: Record<string, string[]> = (() => {
+  const map: Record<string, string[]> = {};
+  for (const [brandSlug, problemSlugs] of Object.entries(BRAND_PROBLEM_MAP)) {
+    if (brandSlug === "_default") continue;
+    for (const problemSlug of problemSlugs) {
+      if (!map[problemSlug]) map[problemSlug] = [];
+      map[problemSlug].push(brandSlug);
+    }
+  }
+  return map;
+})();
+
 // ── BLOG → SERVICE MAP ────────────────────────────────────────────────────────
 // Which services to link from each blog post
 export const BLOG_SERVICE_MAP: Record<string, string[]> = {
