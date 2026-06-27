@@ -16,12 +16,11 @@ import { googlePlace } from "@/config/reviews";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
   // NOTE: no `template` here — every page (services, areas, brands, problems, blog)
-  // already includes "| KL Renovator" in its own metaTitle. Adding a template here
+  // already includes "| KL Renovator" in its own metaTitle. A template here
   // caused a double-suffix bug ("...KL Renovator | KL Renovator") across 100+ pages.
-  title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s`,
-  },
+  // `title` is set as a plain string (not the {default, template} object) since
+  // the template slot is unused — this is the cleaner way to express "no template".
+  title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description: siteConfig.metaDescription,
   verification: {
     google: "bXgZJKdBlDiVK9DsjNukmCqqicH37cqU_YdHSIVhjlg",
@@ -79,6 +78,7 @@ export const metadata: Metadata = {
     "llms-full": "https://www.klrenovator.com/llms-full.txt",
   },
   icons: { icon: "/favicon.ico" },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {
@@ -130,8 +130,8 @@ export default function RootLayout({
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://www.klrenovator.com/logo/image.png",
-                "width": 400,
-                "height": 400,
+                "width": 1536,
+                "height": 1024,
               },
               "description": siteConfig.description,
               "slogan": "Expert Aircond Servicing, Chemical Overhaul & Repair KL & Selangor",
@@ -548,6 +548,24 @@ export default function RootLayout({
                   "position": 5,
                   "name": "Cooling Test and Handover",
                   "text": "Unit is run and cooling output confirmed. Job card with warranty details handed to you. R22 from RM 120, R410A from RM 150, R32 from RM 180.",
+                },
+              ],
+            }),
+          }}
+        />
+        {/* ── 9. BreadcrumbList — Homepage ── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.klrenovator.com/",
                 },
               ],
             }),
