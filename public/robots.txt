@@ -44,6 +44,43 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+# Social Media Preview Crawlers — needed for link-preview cards (OG/Twitter tags)
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Heavy/aggressive scraper crawlers — allowed but throttled to protect server load
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 10
+
 # Sitemap
 Sitemap: https://www.klrenovator.com/sitemap.xml
 
