@@ -14,138 +14,58 @@ import NextLink from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 
 export default function Home() {
-  const localBusinessSchema = {
+  // NOTE: HVACBusiness and WebSite schema used to be duplicated here AND in
+  // app/layout.tsx (same @id, rendered twice on the homepage specifically).
+  // The layout.tsx version is the more complete one (aggregateRating, brand
+  // list, knowsAbout, dual contactPoints) and already renders on every page
+  // including this one, so the duplicate copies were removed from here.
+  // Only the pricing/offer-catalog data — which wasn't in the layout.tsx
+  // version — is kept below as its own schema block.
+  const offerCatalogSchema = {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "@id": "https://www.klrenovator.com/#business",
-    name: siteConfig.name,
-    legalName: siteConfig.parentCompany,
-    taxID: "003765188-T",
-    url: "https://www.klrenovator.com",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://www.klrenovator.com/logo/image.png",
-      width: 400,
-      height: 400,
-    },
-    image: "https://www.klrenovator.com/logo/image.png",
-    description: siteConfig.description,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    priceRange: "RM 88 – RM 2,000",
-    currenciesAccepted: "MYR",
-    paymentAccepted: "Cash, Bank Transfer, DuitNow",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.addressStreet,
-      addressLocality: siteConfig.addressCity,
-      postalCode: siteConfig.addressPostal,
-      addressRegion: siteConfig.addressState,
-      addressCountry: siteConfig.addressCountry,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: siteConfig.geoLat,
-      longitude: siteConfig.geoLng,
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday", "Tuesday", "Wednesday", "Thursday",
-          "Friday", "Saturday", "Sunday",
-        ],
-        opens: "09:00",
-        closes: "18:00",
+    "@type": "OfferCatalog",
+    "name": "Aircond Services Kuala Lumpur & Selangor",
+    "itemListElement": siteConfig.services.map((service, i) => ({
+      "@type": "Offer",
+      position: i + 1,
+      itemOffered: {
+        "@type": "Service",
+        name: service.title,
+        description: service.short,
+        url: `https://www.klrenovator.com/services/${service.slug}`,
+        provider: {
+          "@type": "HVACBusiness",
+          "@id": "https://www.klrenovator.com/#business",
+        },
       },
-    ],
-    areaServed: siteConfig.areas.map((area) => ({
-      "@type": "City",
-      name: area,
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: service.startPrice,
+        priceCurrency: "MYR",
+        description: `Starting from RM ${service.startPrice}`,
+      },
     })),
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Aircond Services Kuala Lumpur & Selangor",
-      itemListElement: siteConfig.services.map((service, i) => ({
-        "@type": "Offer",
-        position: i + 1,
-        itemOffered: {
-          "@type": "Service",
-          name: service.title,
-          description: service.short,
-          url: `https://www.klrenovator.com/services/${service.slug}`,
-          provider: {
-            "@type": "HVACBusiness",
-            "@id": "https://www.klrenovator.com/#business",
-          },
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: service.startPrice,
-          priceCurrency: "MYR",
-          description: `Starting from RM ${service.startPrice}`,
-        },
-      })),
-    },
-    sameAs: [
-      siteConfig.links.facebook,
-      siteConfig.links.instagram,
-      siteConfig.links.tiktok,
-      siteConfig.links.googleBusiness,
-    ],
-    serviceType: [
-      "Aircond Basic Servicing",
-      "Pressure Chemical Wash",
-      "Chemical Overhaul",
-      "Gas Top-Up R22 R410A R32",
-      "Aircond Repair & Troubleshooting",
-      "New Aircond Installation",
-      "Dismantle & Relocation",
-      "Ceiling Cassette Service",
-    ],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: siteConfig.phone,
-        contactType: "customer service",
-        areaServed: "MY",
-        availableLanguage: ["English", "Malay", "Chinese"],
-      },
-    ],
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.klrenovator.com/#website",
-    name: siteConfig.name,
-    url: "https://www.klrenovator.com",
-    description: siteConfig.tagline,
-    inLanguage: ["en-MY", "ms-MY", "zh-MY"],
-    publisher: {
-      "@id": "https://www.klrenovator.com/#business",
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://www.klrenovator.com/services/{search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
     <>
-      {/* LocalBusiness Schema — HVACBusiness */}
+      {/* BreadcrumbList — Homepage (single "Home" node; deeper pages add their own) */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.klrenovator.com" },
+            ],
+          }),
+        }}
       />
-      {/* WebSite Schema */}
+      {/* OfferCatalog Schema — service price list, unique to homepage */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }}
       />
 
       <Hero />
