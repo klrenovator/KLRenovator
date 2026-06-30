@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg",
+        url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Trusted Aircond Specialist Kuala Lumpur & Selangor",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
     description: "12+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across KL & Selangor.",
-    images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg"],
+    images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp"],
   },
 };
 
@@ -70,7 +70,7 @@ const organizationSchema = {
   legalName: "Multicore Dynamics Resources",
   url: "https://www.klrenovator.com",
   logo: "https://www.klrenovator.com/logo/image.png",
-  image: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.jpg",
+  image: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp",
   description: "Professional HVAC and air conditioning service company in Kuala Lumpur and Selangor. 12+ years experience, 5,000+ customers, 500+ 5-star reviews.",
   foundingDate: "2014",
   telephone: "+60182983573",
@@ -131,25 +131,25 @@ const HIGHLIGHTS = [
 ];
 
 const GALLERY_IMAGES = [
-  { src: "/hero/aircond-installation-kuala-lumpur.jpg", alt: "KL Renovator aircond installation work Kuala Lumpur" },
-  { src: "/hero/aircond-installation-wall-mounted-kl.jpg", alt: "Professional wall-mounted aircond installation KL Selangor" },
-  { src: "/hero/aircond-ceiling-cassette-installation-commercial.jpg", alt: "Ceiling cassette aircond installation commercial KL" },
-  { src: "/hero/aircond-new-installation-rawang-selangor.jpg", alt: "HVAC technician aircond installation Selayang Selangor" },
-  { src: "/hero/aircond-pressure-chemical-wash-selangor.jpg", alt: "Aircond pressure chemical wash deep cleaning Selangor" },
-  { src: "/hero/aircond-repair-technician-klang-valley.jpg", alt: "KL Renovator aircond repair technician Klang Valley" },
-  { src: "/hero/aircond-new-compressor-installation-rawang.jpg", alt: "New compressor installation Kuala Lumpur" },
-  { src: "/hero/aircond-compressor-flaring-repair-kl.jpg", alt: "Aircond compressor copper pipe flaring repair KL" },
-  { src: "/hero/aircond-compressor-bracket-installation-kl.jpg", alt: "Aircond compressor repairing service Selangor" },
-  { src: "/hero/aircond-installation-double-unit-kl.jpg", alt: "Aircond installation project Klang Valley" },
-  { src: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg", alt: "Aircond gas top-up R32 R410A precision balancing Selangor" },
-  { src: "/hero/aircond-compressor-installation-new-kl.jpg", alt: "New outdoor compressor installation Kuala Lumpur" },
-  { src: "/hero/aircond-pcb-board-replacement-kl.jpg", alt: "Daikin Panasonic aircond PCB board replacement KL" },
-  { src: "/hero/aircond-installation-ampang-selangor.jpg", alt: "Aircond installation Ampang Selangor" },
-  { src: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg", alt: "Aircond chemical service cleaning Selangor" },
-  { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.jpg", alt: "Aircond PCB board replacement repair Kuala Lumpur" },
-  { src: "/hero/aircond-bracket-installation-kl-renovator.jpg", alt: "Aircond outdoor bracket installation KL Renovator" },
-  { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg", alt: "Aircond chemical wash with canvas protection Selangor" },
-  { src: "/hero/aircond-sensor-replacement-klang-valley.jpg", alt: "KL Renovator aircond temperature sensor replacement Klang Valley" },
+  { src: "/hero/aircond-installation-kuala-lumpur.webp", alt: "KL Renovator aircond installation work Kuala Lumpur" },
+  { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Professional wall-mounted aircond installation KL Selangor" },
+  { src: "/hero/aircond-ceiling-cassette-installation-commercial.webp", alt: "Ceiling cassette aircond installation commercial KL" },
+  { src: "/hero/aircond-new-installation-rawang-selangor.webp", alt: "HVAC technician aircond installation Selayang Selangor" },
+  { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: "Aircond pressure chemical wash deep cleaning Selangor" },
+  { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "KL Renovator aircond repair technician Klang Valley" },
+  { src: "/hero/aircond-new-compressor-installation-rawang.webp", alt: "New compressor installation Kuala Lumpur" },
+  { src: "/hero/aircond-compressor-flaring-repair-kl.webp", alt: "Aircond compressor copper pipe flaring repair KL" },
+  { src: "/hero/aircond-compressor-bracket-installation-kl.webp", alt: "Aircond compressor repairing service Selangor" },
+  { src: "/hero/aircond-installation-double-unit-kl.webp", alt: "Aircond installation project Klang Valley" },
+  { src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp", alt: "Aircond gas top-up R32 R410A precision balancing Selangor" },
+  { src: "/hero/aircond-compressor-installation-new-kl.webp", alt: "New outdoor compressor installation Kuala Lumpur" },
+  { src: "/hero/aircond-pcb-board-replacement-kl.webp", alt: "Daikin Panasonic aircond PCB board replacement KL" },
+  { src: "/hero/aircond-installation-ampang-selangor.webp", alt: "Aircond installation Ampang Selangor" },
+  { src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp", alt: "Aircond chemical service cleaning Selangor" },
+  { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp", alt: "Aircond PCB board replacement repair Kuala Lumpur" },
+  { src: "/hero/aircond-bracket-installation-kl-renovator.webp", alt: "Aircond outdoor bracket installation KL Renovator" },
+  { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: "Aircond chemical wash with canvas protection Selangor" },
+  { src: "/hero/aircond-sensor-replacement-klang-valley.webp", alt: "KL Renovator aircond temperature sensor replacement Klang Valley" },
 ];
 
 // ── Meet The Team — E-E-A-T: named, real people behind the work ───────────────
@@ -162,7 +162,7 @@ const TEAM = [
     role: "Owner & Founder",
     experience: "Running KL Renovator since 2014",
     bio: "Started KL Renovator as a single-van operation servicing homes in Cheras. Personally oversees every technician's training and every job quality check.",
-    image: "/hero/aircond-installation-ampang-selangor.jpg",
+    image: "/hero/aircond-installation-ampang-selangor.webp",
     imageAlt: "Muhammad, Owner & Founder of KL Renovator, on an aircond installation job in Ampang Selangor",
   },
   {
@@ -170,7 +170,7 @@ const TEAM = [
     role: "Senior Installation Technician",
     experience: "18 years experience",
     bio: "Our most experienced installer — handles wall-mounted splits, ceiling cassettes, and multi-unit commercial installations across the Klang Valley.",
-    image: "/hero/aircond-installation-kuala-lumpur.jpg",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Shahzaib, Senior Installation Technician with 18 years experience, installing an aircond unit in Kuala Lumpur",
   },
   {
@@ -178,7 +178,7 @@ const TEAM = [
     role: "Service & Chemical Wash Technician",
     experience: "3 years experience",
     bio: "Specialist in chemical wash and chemical overhaul jobs — known for careful canvas-protected cleaning that keeps walls and floors spotless.",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
     imageAlt: "Mudassar, Service & Chemical Wash Technician with 3 years experience, performing a canvas-protected chemical wash in Kepong KL",
   },
   {
@@ -186,7 +186,7 @@ const TEAM = [
     role: "Service Technician",
     experience: "1.5 years experience",
     bio: "Handles pressure chemical washes and routine servicing across Selangor — fast, tidy, and thorough on every visit.",
-    image: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+    image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     imageAlt: "Hamzah, Service Technician with 1.5 years experience, performing a pressure chemical wash in Selangor",
   },
   // 4th technician — 6 months experience — name pending from Tauseef, do not add until provided.
@@ -322,7 +322,7 @@ export default function AboutPage() {
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/hero/aircond-pcb-board-replacement-kl.jpg"
+            src="/hero/aircond-pcb-board-replacement-kl.webp"
             alt="KL Renovator professional HVAC team at work Kuala Lumpur"
             fill
             sizes="100vw"
@@ -359,7 +359,7 @@ export default function AboutPage() {
             <Reveal>
               <div className="relative aspect-[4/5] w-full overflow-hidden shadow-xl rounded-2xl">
                 <Image
-                  src="/hero/aircond-installation-ampang-selangor.jpg"
+                  src="/hero/aircond-installation-ampang-selangor.webp"
                   alt="KL Renovator HVAC technician servicing aircond unit Selangor"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
