@@ -96,7 +96,7 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-24 bg-white relative overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-installation-kuala-lumpur.jpg"
+            src="/hero/aircond-installation-kuala-lumpur.webp"
             alt="KL Renovator professional aircond services Kuala Lumpur"
             fill
             sizes="100vw"
