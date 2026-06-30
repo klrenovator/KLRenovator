@@ -163,7 +163,7 @@ export const Hero = () => {
             <a
               href={waLink(rfqMsg)}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase text-sm tracking-widest h-14 px-6 shadow-lg shadow-green-900/40 transition-all duration-200 active:scale-[0.97]"
             >
               <FaWhatsapp className="h-5 w-5" />
