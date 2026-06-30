@@ -789,7 +789,7 @@ export const allPosts: BlogPost[] = [
       <h2>R22 Phase-Out and What It Means for Older Units</h2>
       <p>R22 is being phased out globally under the Montreal Protocol. In Malaysia, new R22 production for domestic use has already been restricted, and prices for R22 top-up have risen as supply decreases. If your unit uses R22 and is over 12 years old, consider planning for replacement in the next 2–3 years rather than continuing to invest in top-ups and repairs on an aging unit with an increasingly difficult-to-source refrigerant.</p>
       <h2>Which Gas Should You Choose When Buying New?</h2>
-      <p>Always choose R32 when buying a new aircond in 2026. All major brands — Daikin, Panasonic, Mitsubishi Electric, Samsung, LG — now use R32 in their latest inverter models. R32 has a lower global warming potential, requires less refrigerant volume for the same cooling output, and will remain readily available for many years. R410A units are still sold but represent older technology with higher environmental impact.</p>
+      <p>Always choose R32 when buying a new aircond in 2026. All major brands — Daikin, Panasonic, Mitsubishi, Samsung, LG — now use R32 in their latest inverter models. R32 has a lower global warming potential, requires less refrigerant volume for the same cooling output, and will remain readily available for many years. R410A units are still sold but represent older technology with higher environmental impact.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> to identify your gas type from a photo of your outdoor unit. See: <a href="/services/gas-topup">Gas top-up service</a></p>
     `,
     contentMS: `
@@ -812,7 +812,7 @@ export const allPosts: BlogPost[] = [
       <h2>Penghentian R22 dan Maksudnya untuk Unit Lama</h2>
       <p>R22 sedang dihentikan secara global di bawah Protokol Montreal. Di Malaysia, pengeluaran R22 baharu untuk kegunaan domestik telah dihadkan, dan harga tambah gas R22 telah meningkat apabila bekalan berkurang. Jika unit anda menggunakan R22 dan berusia lebih 12 tahun, pertimbangkan untuk merancang penggantian dalam tempoh 2–3 tahun akan datang berbanding terus melabur dalam tambah gas dan pembaikan pada unit lama dengan penyejuk yang semakin sukar diperoleh.</p>
       <h2>Gas Mana yang Perlu Anda Pilih Apabila Membeli Baru?</h2>
-      <p>Sentiasa pilih R32 apabila membeli aircond baru pada 2026. Semua jenama utama — Daikin, Panasonic, Mitsubishi Electric, Samsung, LG — kini menggunakan R32 dalam model inverter terbaru mereka. R32 mempunyai potensi pemanasan global yang lebih rendah, memerlukan jumlah penyejuk yang lebih sedikit untuk output penyejukan yang sama, dan akan kekal mudah diperoleh selama bertahun-tahun. Unit R410A masih dijual tetapi mewakili teknologi lama dengan kesan alam sekitar yang lebih tinggi.</p>
+      <p>Sentiasa pilih R32 apabila membeli aircond baru pada 2026. Semua jenama utama — Daikin, Panasonic, Mitsubishi, Samsung, LG — kini menggunakan R32 dalam model inverter terbaru mereka. R32 mempunyai potensi pemanasan global yang lebih rendah, memerlukan jumlah penyejuk yang lebih sedikit untuk output penyejukan yang sama, dan akan kekal mudah diperoleh selama bertahun-tahun. Unit R410A masih dijual tetapi mewakili teknologi lama dengan kesan alam sekitar yang lebih tinggi.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk mengenal pasti jenis gas anda daripada gambar unit luar anda. Lihat: <a href="/services/gas-topup">Perkhidmatan tambah gas</a></p>
     `,
     contentZH: `
@@ -967,7 +967,7 @@ export const allPosts: BlogPost[] = [
       <h2>Panasonic — Best Value</h2>
       <p>Excellent value for money. Nanoe-X air purification is a genuine benefit for families with allergies.</p>
       <ul><li>Best for: Value, air quality</li><li>Gas type: R32</li><li>Price range: RM 1,100 – 3,000</li></ul>
-      <h2>Mitsubishi Electric — Best for Heavy Use</h2>
+      <h2>Mitsubishi — Best for Heavy Use</h2>
       <p>Built for continuous heavy-duty operation. Often the first choice for commercial spaces.</p>
       <ul><li>Best for: Commercial, heavy residential</li><li>Price range: RM 1,400 – 4,000</li></ul>
       <h2>Midea — Best Budget Option</h2>
@@ -994,7 +994,7 @@ export const allPosts: BlogPost[] = [
       <h2>Panasonic — Nilai Terbaik</h2>
       <p>Nilai wang yang sangat baik. Penyucian udara Nanoe-X adalah faedah tulen untuk keluarga dengan alahan.</p>
       <ul><li>Julat harga: RM 1,100 – 3,000</li></ul>
-      <h2>Mitsubishi Electric — Terbaik untuk Penggunaan Berat</h2>
+      <h2>Mitsubishi — Terbaik untuk Penggunaan Berat</h2>
       <p>Dibina untuk operasi tugasan berat berterusan.</p>
       <ul><li>Julat harga: RM 1,400 – 4,000</li></ul>
       <h2>Midea — Pilihan Bajet Terbaik</h2>
@@ -2243,7 +2243,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li><strong>Daikin</strong> — most reliable, best long-term value</li>
         <li><strong>Panasonic</strong> — Nanoe-X air purification, Econavi, slightly affordable</li>
-        <li><strong>Mitsubishi Electric</strong> — premium quality, very quiet</li>
+        <li><strong>Mitsubishi</strong> — premium quality, very quiet</li>
         <li><strong>LG Dual Inverter</strong> — good value, twin rotary compressor</li>
         <li><strong>Midea</strong> — budget-friendly inverter option</li>
       </ul>
@@ -2291,7 +2291,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li><strong>Daikin</strong> — paling dipercayai</li>
         <li><strong>Panasonic</strong> — Nanoe-X, Econavi</li>
-        <li><strong>Mitsubishi Electric</strong> — premium, sangat senyap</li>
+        <li><strong>Mitsubishi</strong> — premium, sangat senyap</li>
       </ul>
       <h2>Langkah 5 — Anggaran Pemasangan + Penyelenggaraan</h2>
       <ul>
