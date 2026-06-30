@@ -24,28 +24,28 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "installation",
     title: "New Split Unit Installation — KL",
     desc: "Wall-mounted inverter unit installed with clean concealed pipe routing. Job completed same day.",
-    src: "/hero/aircond-installation-kuala-lumpur.jpg",
+    src: "/hero/aircond-installation-kuala-lumpur.webp",
   },
   {
     id: 2,
     category: "installation",
     title: "Aircond Unit Mounting — Selangor",
     desc: "Professional bracket mounting and copper pipe routing for a new split unit installation.",
-    src: "/hero/aircond-installation-wall-mounted-kl.jpg",
+    src: "/hero/aircond-installation-wall-mounted-kl.webp",
   },
   {
     id: 3,
     category: "installation",
     title: "New Installation — Petaling Jaya",
     desc: "Full installation including outdoor unit bracket, copper piping and electrical connections.",
-    src: "/hero/aircond-new-installation-petaling-jaya.jpg",
+    src: "/hero/aircond-new-installation-petaling-jaya.webp",
   },
   {
     id: 4,
     category: "installation",
     title: "Ceiling Cassette Setup — Commercial",
     desc: "Ceiling cassette installation for a commercial space with drain pump and full commissioning.",
-    src: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+    src: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
   },
   // ── CHEMICAL WASH ─────────────────────────────────────────────
   {
@@ -53,22 +53,22 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "chemical-wash",
     title: "Pressure Chemical Wash — Cheras",
     desc: "High-pressure chemical cleaning removes mould, dust and bacteria. Cooling fully restored.",
-    src: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+    src: "/hero/aircond-pressure-chemical-wash-selangor.webp",
   },
   {
     id: 6,
     category: "chemical-wash",
     title: "Chemical Wash in Progress — Subang Jaya",
     desc: "Food-safe chemical solution applied to evaporator coil and blower wheel for deep cleaning.",
-    src: "/hero/aircond-repair-technician-klang-valley.jpg",
+    src: "/hero/aircond-repair-technician-klang-valley.webp",
   },
   {
     id: 7,
     category: "chemical-wash",
     title: "Post Chemical Wash Result",
     desc: "Before and after chemical wash. Coil completely clean, airflow restored to factory standard.",
-    src: "/hero/aircond-compressor-flaring-repair-kl.jpg",
-    before: "/hero/aircond-new-compressor-installation-rawang.jpg",
+    src: "/hero/aircond-compressor-flaring-repair-kl.webp",
+    before: "/hero/aircond-new-compressor-installation-rawang.webp",
   },
   // ── CHEMICAL OVERHAUL ─────────────────────────────────────────
   {
@@ -76,22 +76,22 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "overhaul",
     title: "Chemical Overhaul — Shah Alam",
     desc: "Full unit dismantle and immersion clean. Drain pan and blower wheel completely restored.",
-    src: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+    src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
   },
   {
     id: 9,
     category: "overhaul",
     title: "Heavy Blockage Cleared — Ampang",
     desc: "Unit had years of mould buildup causing ice formation. Chemical overhaul resolved completely.",
-    src: "/hero/aircond-chemical-overhaul-ampang-selangor.jpg",
-    before: "/hero/aircond-installation-double-unit-kl.jpg",
+    src: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    before: "/hero/aircond-installation-double-unit-kl.webp",
   },
   {
     id: 10,
     category: "overhaul",
     title: "Drain Pan Deep Clean — Damansara",
     desc: "Drain pan removed, chemical soaked and flushed. Water leaking issue permanently resolved.",
-    src: "/hero/aircond-pcb-board-replacement-kl.jpg",
+    src: "/hero/aircond-pcb-board-replacement-kl.webp",
   },
   // ── REPAIRS ───────────────────────────────────────────────────
   {
@@ -99,21 +99,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "repair",
     title: "Component Diagnosis — KL",
     desc: "Multi-point electrical diagnosis to identify root cause before any repair work begins.",
-    src: "/hero/aircond-compressor-installation-new-kl.jpg",
+    src: "/hero/aircond-compressor-installation-new-kl.webp",
   },
   {
     id: 12,
     category: "repair",
     title: "PCB Board Inspection",
     desc: "Main board inspected and tested. OEM-compatible replacement fitted and unit restored to full function.",
-    src: "/hero/aircond-installation-ampang-selangor.jpg",
+    src: "/hero/aircond-installation-ampang-selangor.webp",
   },
   {
     id: 13,
     category: "repair",
     title: "Capacitor Replacement — Setapak",
     desc: "Outdoor unit capacitor identified as faulty and replaced within the hour. Cooling restored.",
-    src: "/hero/aircond-bracket-installation-kl-renovator.jpg",
+    src: "/hero/aircond-bracket-installation-kl-renovator.webp",
   },
   // ── COMMERCIAL ────────────────────────────────────────────────
   {
@@ -121,14 +121,14 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "commercial",
     title: "Office Block — Kuala Lumpur",
     desc: "Multi-unit commercial servicing. Annual maintenance contract covering quarterly visits.",
-    src: "/hero/aircond-new-installation-rawang-selangor.jpg",
+    src: "/hero/aircond-new-installation-rawang-selangor.webp",
   },
   {
     id: 15,
     category: "commercial",
     title: "Ceiling Cassette Service — Bangsar",
     desc: "Ceiling cassette chemical wash with full panel removal and drain pump inspection.",
-    src: "/hero/aircond-compressor-bracket-installation-kl.jpg",
+    src: "/hero/aircond-compressor-bracket-installation-kl.webp",
   },
   // ── TEAM ──────────────────────────────────────────────────────
   {
@@ -136,28 +136,28 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "team",
     title: "Technician at Work — Mont Kiara",
     desc: "Our certified technicians carry full PPE and proper tools on every job.",
-    src: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg",
+    src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
   },
   {
     id: 17,
     category: "team",
     title: "Installation Team — Kajang",
     desc: "Experienced two-man team ensures clean and efficient installations at any location.",
-    src: "/hero/aircond-pcb-board-replacement-2-klang-valley.jpg",
+    src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp",
   },
   {
     id: 18,
     category: "team",
     title: "Service in Progress — Puchong",
     desc: "Full service routine underway. Every visit includes a multi-point system check.",
-    src: "/hero/aircond-sensor-replacement-klang-valley.jpg",
+    src: "/hero/aircond-sensor-replacement-klang-valley.webp",
   },
   {
     id: 19,
     category: "team",
     title: "On-Site Gas Top-Up — Kepong",
     desc: "Precision gas top-up with calibrated gauges. Cooling output verified after refill.",
-    src: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+    src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
   },
 ];
 
@@ -213,7 +213,7 @@ export function GalleryClient() {
         {/* Watermark */}
         <div className="absolute inset-0 opacity-[0.07]">
           <NextImage
-            src="/hero/aircond-new-installation-rawang-selangor.jpg"
+            src="/hero/aircond-new-installation-rawang-selangor.webp"
             alt="KL Renovator aircond installation project"
             fill
             sizes="100vw"
