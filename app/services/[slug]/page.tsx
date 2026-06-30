@@ -290,7 +290,7 @@ export default async function ServicePage({
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src={data.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}
+            src={data.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}
             alt={`KL Renovator ${data.title} — KL & Selangor`}
             fill
             sizes="100vw"
