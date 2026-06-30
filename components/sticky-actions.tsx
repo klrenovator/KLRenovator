@@ -34,7 +34,7 @@ export const StickyActions = () => {
       <a
         href={waLink(rfqMsg)}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         aria-label="Book Aircond Service via WhatsApp"
         className="group relative inline-flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white shadow-[0_8px_30px_rgb(34,197,94,0.4)] ring-4 ring-white transition-all hover:scale-110 active:scale-[0.93]"
       >
