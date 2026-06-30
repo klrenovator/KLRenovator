@@ -168,7 +168,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "What aircond brands does KL Renovator service?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models. WhatsApp us if your brand is not listed.",
+          text: "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models. WhatsApp us if your brand is not listed.",
         },
       },
     ],
