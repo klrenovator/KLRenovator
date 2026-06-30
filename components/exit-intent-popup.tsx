@@ -159,7 +159,7 @@ export function ExitIntentPopup() {
                 key={s.slug}
                 href={waLink(`Hi KL Renovator 👋\n\nI'm interested in ${s.service}.\n\n📍 My Location:\n🔢 Number of units:\n\nPlease share your price. Thank you!`)}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 onClick={() => dismiss(true)}
                 className="flex flex-col bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-300 rounded-xl px-3 py-2.5 transition-all"
               >
@@ -173,7 +173,7 @@ export function ExitIntentPopup() {
           <a
             href={waLink(exitMsg)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             onClick={() => dismiss(true)}
             className="flex items-center justify-center gap-2.5 w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-green-500/20"
           >
