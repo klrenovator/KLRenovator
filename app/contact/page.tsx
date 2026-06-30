@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.jpg",
+        url: "https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp",
         width: 1200,
         height: 630,
         alt: "Contact KL Renovator — Aircond Service KL & Selangor",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact KL Renovator | Aircond Service KL & Selangor",
     description: "Fastest WhatsApp response — same-day aircond service across KL & Selangor. Chemical wash from RM 120.",
-    images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.jpg"],
+    images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp"],
   },
 };
 
@@ -239,7 +239,7 @@ export default function ContactPage() {
         {/* Watermark image — very low opacity */}
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-sensor-replacement-klang-valley.jpg"
+            src="/hero/aircond-sensor-replacement-klang-valley.webp"
             alt="KL Renovator aircond technician servicing unit Kuala Lumpur"
             fill
             sizes="100vw"
