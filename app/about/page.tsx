@@ -236,6 +236,8 @@ export default function AboutPage() {
       siteConfig.links.youtube,
       siteConfig.links.googleBusiness,
       siteConfig.links.googleMaps,
+      siteConfig.links.twitter,
+      siteConfig.links.linkedin,
     ],
     founder: {
       "@type": "Person",
