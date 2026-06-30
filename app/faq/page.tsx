@@ -307,7 +307,7 @@ export default function FaqPage() {
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-gas-topup-r32-r410a-selangor.jpg"
+            src="/hero/aircond-gas-topup-r32-r410a-selangor.webp"
             alt="HVAC technician servicing aircond unit KL Selangor"
             fill
             sizes="100vw"
