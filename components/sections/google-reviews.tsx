@@ -161,7 +161,7 @@ export const GoogleReviews = () => {
             <a
               href={googlePlace.reviewsUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2.5 border-2 px-6 py-3 text-sm font-black uppercase tracking-widest transition-all hover:opacity-90 bg-white"
               style={{ borderColor: "#4285F4" }}
             >
