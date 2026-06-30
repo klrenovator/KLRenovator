@@ -188,7 +188,7 @@ export const Navbar = () => {
             <a
               href={waLink(rfqMsg)}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-white hover:text-[#22c55e] transition-colors"
             >
               <FaWhatsapp className="h-3.5 w-3.5 text-[#22c55e]" /> WhatsApp Online
@@ -353,7 +353,7 @@ export const Navbar = () => {
           <a
             href={waLink(rfqMsg)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200"
           >
             <FaWhatsapp className="h-4 w-4" /> {lbl.book}
@@ -396,7 +396,7 @@ export const Navbar = () => {
           <a
             href={waLink(rfqMsg)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             aria-label="WhatsApp"
             className="inline-flex h-11 w-11 items-center justify-center bg-[#22c55e] text-white"
           >
@@ -523,7 +523,7 @@ export const Navbar = () => {
             <a
               href={waLink(rfqMsg)}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
             >
               <FaWhatsapp className="h-4 w-4" /> {lbl.book}
