@@ -171,7 +171,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
           <a
             href={waLink(rfqMsgForService(data.title))}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="inline-flex flex-1 items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition"
           >
             <FaWhatsapp className="h-4 w-4" /> Request a Quote
