@@ -69,7 +69,7 @@ export default function BrandsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <p className={eyebrow()}>15 Brands · All Models</p>
+            <p className={eyebrow()}>20 Brands · All Models</p>
             <h1 className="mt-4">
               <span className={title({ size: "lg" })}>Aircond Service </span>
               <span className={title({ size: "lg", color: "brand" })}>
@@ -192,8 +192,8 @@ export default function BrandsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {[
               {
-                title: "All 15 Major Brands",
-                desc: "Daikin, Panasonic, Mitsubishi Electric, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu and Gree — every major brand sold in Malaysia.",
+                title: "All 20 Major Brands",
+                desc: "Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic — every major residential and commercial brand in Malaysia.",
               },
               {
                 title: "All Gas Types: R22, R410A, R32",
@@ -425,7 +425,7 @@ export default function BrandsPage() {
               Book Your Aircond Service Today
             </h2>
             <p className="mt-3 text-sky-100 font-medium">
-              All 15 brands. Same-day available. Transparent pricing across KL
+              All 20 brands. Same-day available. Transparent pricing across KL
               & Selangor.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
