@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.jpg",
+        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp",
         width: 1200,
         height: 630,
         alt: "Emergency Aircond Repair KL Renovator Same-Day Service",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Emergency Aircond Repair KL & Selangor | KL Renovator",
     description: "Urgent aircond breakdown? Same-day dispatch. Call +60182983573.",
-    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.jpg"],
+    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
   },
   alternates: {
     canonical: "https://www.klrenovator.com/services/emergency",
