@@ -130,7 +130,7 @@ export async function generateMetadata({
       alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
-          url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`,
+          url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`,
           width: 1200,
           height: 630,
           alt: `${brand.name} Aircond Service KL & Selangor — KL Renovator`,
@@ -141,7 +141,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: brand.metaTitle,
       description: brand.metaDesc,
-      images: [`https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}`],
+      images: [`https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/brands/${slug}`,
@@ -287,7 +287,7 @@ export default async function BrandPage({
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src={brand.heroImage || "/hero/aircond-installation-kuala-lumpur.jpg"}
+            src={brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}
             alt={`${brand.name} aircond service KL & Selangor`}
             fill
             sizes="100vw"
