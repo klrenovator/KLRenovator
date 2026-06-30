@@ -4,7 +4,7 @@ import {
   FaShieldAlt, FaUserCheck, FaTools, FaHandshake,
   FaWhatsapp, FaPhoneAlt,
 } from "react-icons/fa";
-import { FiCheck, FiChevronRight } from "react-icons/fi";
+import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
@@ -131,32 +131,28 @@ const HIGHLIGHTS = [
 ];
 
 const GALLERY_IMAGES = [
-  { src: "/hero/aircond-installation-kuala-lumpur.webp", alt: "Professional Aircon Installation Kuala Lumpur by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Professional Aircon Installation Wall Mounted Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-ceiling-cassette-installation-commercial.webp", alt: "Professional Aircon Ceiling Cassette Installation Commercial by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-new-installation-rawang-selangor.webp", alt: "Professional Aircon New Installation Rawang Selangor by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: "Professional Aircon Pressure Chemical Wash Selangor by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "Professional Aircon Repair Technician Klang Valley by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-new-compressor-installation-rawang.webp", alt: "Professional Aircon New Compressor Installation Rawang by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-compressor-flaring-repair-kl.webp", alt: "Professional Aircon Compressor Flaring Repair Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-compressor-bracket-installation-kl.webp", alt: "Professional Aircon Compressor Bracket Installation Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-installation-double-unit-kl.webp", alt: "Professional Aircon Installation Double Unit Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp", alt: "Professional Aircon Gas Topup R32 R410A Selangor by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-compressor-installation-new-kl.webp", alt: "Professional Aircon Compressor Installation New Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-pcb-board-replacement-kl.webp", alt: "Professional Aircon Pcb Board Replacement Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-installation-ampang-selangor.webp", alt: "Professional Aircon Installation Ampang Selangor by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp", alt: "Professional Aircon Chemical Service Canvas Wrap Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp", alt: "Professional Aircon Pcb Board Replacement 2 Klang Valley by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-bracket-installation-kl-renovator.webp", alt: "Professional Aircon Bracket Installation Kl Renovator by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: "Professional Aircon Chemical Wash Canvas Kepong Kl by KL Renovator experts in Klang Valley",
-  { src: "/hero/aircond-sensor-replacement-klang-valley.webp", alt: "Professional Aircon Sensor Replacement Klang Valley by KL Renovator experts in Klang Valley",
-  
+  { src: "/hero/aircond-installation-kuala-lumpur.webp", alt: "Professional Aircon Installation Kuala Lumpur by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Professional Aircon Installation Wall Mounted KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-ceiling-cassette-installation-commercial.webp", alt: "Professional Aircon Ceiling Cassette Installation Commercial by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-new-installation-rawang-selangor.webp", alt: "Professional Aircon New Installation Rawang Selangor by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: "Professional Aircon Pressure Chemical Wash Selangor by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "Professional Aircon Repair Technician KLang Valley by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-new-compressor-installation-rawang.webp", alt: "Professional Aircon New Compressor Installation Rawang by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-compressor-flaring-repair-kl.webp", alt: "Professional Aircon Compressor Flaring Repair KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-compressor-bracket-installation-kl.webp", alt: "Professional Aircon Compressor Bracket Installation KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-installation-double-unit-kl.webp", alt: "Professional Aircon Installation Double Unit KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp", alt: "Professional Aircon Gas Topup R32 R410a Selangor by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-compressor-installation-new-kl.webp", alt: "Professional Aircon Compressor Installation New KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-pcb-board-replacement-kl.webp", alt: "Professional Aircon Pcb Board Replacement KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-installation-ampang-selangor.webp", alt: "Professional Aircon Installation Ampang Selangor by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp", alt: "Professional Aircon Chemical Service Canvas Wrap KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp", alt: "Professional Aircon Pcb Board Replacement 2 KLang Valley by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-bracket-installation-kl-renovator.webp", alt: "Professional Aircon Bracket Installation KL Renovator by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: "Professional Aircon Chemical Wash Canvas Kepong KL by KL Renovator experts in Klang Valley" },
+  { src: "/hero/aircond-sensor-replacement-klang-valley.webp", alt: "Professional Aircon Sensor Replacement KLang Valley by KL Renovator experts in Klang Valley" },
 ];
 
 // ── Meet The Team — E-E-A-T: named, real people behind the work ───────────────
-// NOTE for next Claude session: Technician #4's name is still missing (Tauseef
-// only gave "6 months experience" with no name as of 19 June 2026). Do not
-// invent a name — ask Tauseef for it before adding a 4th card here.
 const TEAM = [
   {
     name: "Muhammad",
@@ -190,11 +186,9 @@ const TEAM = [
     image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     imageAlt: "Hamzah, Service Technician with 1.5 years experience, performing a pressure chemical wash in Selangor",
   },
-  // 4th technician — 6 months experience — name pending from Tauseef, do not add until provided.
 ];
 
 export default function AboutPage() {
-  // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -274,7 +268,6 @@ export default function AboutPage() {
     },
   };
 
-  // BreadcrumbList Schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -309,7 +302,7 @@ export default function AboutPage() {
       {/* Breadcrumb Nav */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
             <NextLink href="/" className="hover:text-sky-600 transition">
               Home
             </NextLink>
