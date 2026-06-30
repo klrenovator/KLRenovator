@@ -35,7 +35,7 @@ export async function generateMetadata({
       url: zhUrl,
       locale: "zh_MY",
       alternateLocale: ["en_MY", "ms_MY"],
-      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.jpg", width: 1200, height: 630, alt: post.titleZH }],
+      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: post.titleZH }],
     },
     alternates: {
       canonical: zhUrl,
