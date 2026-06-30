@@ -90,7 +90,7 @@ const FAQS = {
     {
       category: "trust",
       q: "What brands do you service?",
-      a: "We service all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models. If your brand isn't listed, WhatsApp us — we likely service it.",
+      a: "We service all major brands including Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models. If your brand isn't listed, WhatsApp us — we likely service it.",
     },
   ],
   ms: [
@@ -172,7 +172,7 @@ const FAQS = {
     {
       category: "trust",
       q: "Jenama apa yang anda servis?",
-      a: "Kami servis semua jenama utama termasuk Daikin, Panasonic, Mitsubishi Electric, York, Midea, LG, Samsung, Acson, Sharp dan Haier. Jika jenama anda tidak disenaraikan, WhatsApp kami.",
+      a: "Kami servis semua jenama utama termasuk Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp dan Haier. Jika jenama anda tidak disenaraikan, WhatsApp kami.",
     },
   ],
   zh: [
