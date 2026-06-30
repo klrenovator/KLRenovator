@@ -61,7 +61,7 @@ export function ScrollDepthCTA() {
         <a
           href={waLink(rfqMsg)}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           className="inline-flex items-center gap-1.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider px-4 py-2.5 rounded-xl text-xs transition-all active:scale-[0.97] shadow-md"
         >
           <FaWhatsapp className="h-4 w-4 shrink-0" />
