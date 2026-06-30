@@ -237,7 +237,6 @@ export function getBlogsForKampung(parentSlug: string): string[] {
 export const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "daikin": ["aircond-not-cold", "aircond-blinking-light", "aircond-water-leaking", "aircond-low-gas"],
   "panasonic": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-blinking-light"],
-  "mitsubishi-electric": ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
   "mitsubishi":         ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
   "york": ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking", "aircond-low-gas"],
   "acson": ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
@@ -247,6 +246,8 @@ export const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "hisense": ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
   "aux": ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
   "tcl": ["aircond-not-cold", "aircond-bad-smell", "aircond-water-leaking", "aircond-blinking-light"],
+  "national": ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
+  "isonic": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-low-gas"],
   "_default": ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-making-noise"],
 };
 
