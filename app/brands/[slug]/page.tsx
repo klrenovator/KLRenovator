@@ -85,7 +85,6 @@ const BRAND_ERROR_CODES: Record<string, { code: string; meaning: string; fix: st
 const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "daikin":             ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
   "panasonic":          ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-blinking-light"],
-  "mitsubishi-electric": ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
   "mitsubishi":         ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
   "york":               ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking", "aircond-low-gas"],
   "acson":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
@@ -99,6 +98,11 @@ const BRAND_PROBLEM_MAP: Record<string, string[]> = {
   "sharp":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
   "fujitsu":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-pcb-problem", "aircond-blinking-light"],
   "gree":               ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
+  "hisense":            ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
+  "aux":                ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
+  "tcl":                ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
+  "national":           ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
+  "isonic":             ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-low-gas"],
 };
 
 export function generateStaticParams() {
