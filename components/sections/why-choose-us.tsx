@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   FaShieldHalved,
   FaUserCheck,
@@ -125,12 +127,13 @@ export const WhyChooseUs = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {siteConfig.brandsSupported.map((brand) => (
-                <span
+                <Link
                   key={brand}
-                  className="bg-slate-50 border border-slate-200 text-slate-700 text-xs font-black uppercase tracking-wider px-4 py-2.5 rounded-xl hover:bg-sky-50 hover:border-sky-200 hover:text-sky-700 transition-all duration-200"
+                  href={`/brands/${brand.toLowerCase()}`}
+                  className="bg-slate-50 border border-slate-200 text-slate-700 text-xs font-black uppercase tracking-wider px-4 py-2.5 rounded-xl hover:bg-sky-50 hover:border-sky-200 hover:text-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:bg-sky-50 transition-all duration-200 cursor-pointer block"
                 >
                   {brand}
-                </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -142,7 +145,7 @@ export const WhyChooseUs = () => {
             <a
               href={waLink(rfqMsg)}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-md hover:shadow-green-200 transition-all duration-200"
             >
               <FaWhatsapp className="h-5 w-5" />
