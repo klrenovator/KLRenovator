@@ -78,7 +78,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Petaling Jaya. Cuci kimia, overhaul, tambah gas, pembaikan. Semua jenama. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "八打灵再也冷气服务 | KL Renovator — 从RM 99起",
       metaDescZH: "八打灵再也专业冷气服务。化学清洗、大修、充气、维修。所有品牌。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-new-installation-petaling-jaya.jpg",
+      heroImage: "/hero/aircond-new-installation-petaling-jaya.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Petaling Jaya?", a: "Yes — KL Renovator covers all PJ zones including SS2, Damansara Utama, Tropicana, Kelana Jaya, Ara Damansara and Taman Jaya. Chemical wash from RM 120, same-day available. WhatsApp +60182983573." },
         { q: "How much does aircond chemical wash cost in Petaling Jaya?", a: "Chemical wash in PJ starts from RM 120 (1.0–1.5 HP wall-mounted), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work." },
@@ -114,7 +114,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Cheras. Cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "蕉赖冷气服务 | KL Renovator — 化学清洗从RM 120起",
       metaDescZH: "蕉赖专业冷气服务。化学清洗、大修、充气和维修，所有品牌。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Cheras?", a: "Yes — KL Renovator covers all Cheras areas including Taman Connaught, Batu 9, Batu 11, Miharja, Maluri and Taman Mutiara. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Cheras?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Cheras. All prices confirmed before work begins." },
@@ -150,7 +150,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Shah Alam. Semua seksyen diliputi. Cuci kimia, overhaul, pemasangan & pembaikan. Hubungi +60182983573.",
       metaTitleZH: "莎阿南冷气服务 | KL Renovator — 当天可用",
       metaDescZH: "莎阿南专业冷气服务。覆盖所有区域。化学清洗、大修、安装和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
+      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Shah Alam?", a: "Yes — KL Renovator covers all Shah Alam sections including Section 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam and Glenmarie. WhatsApp +60182983573." },
         { q: "How much does aircond chemical wash cost in Shah Alam?", a: "Chemical wash in Shah Alam starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Transparent pricing confirmed before work." },
@@ -186,7 +186,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Subang Jaya & USJ. Cuci kimia, overhaul, tambah gas untuk Daikin, Panasonic, Mitsubishi & lain-lain. Hubungi +60182983573.",
       metaTitleZH: "梳邦再也及USJ冷气服务 | KL Renovator — 从RM 99起",
       metaDescZH: "梳邦再也及USJ专业冷气服务。化学清洗、大修、充气，支持Daikin、Panasonic、Mitsubishi等品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Subang Jaya?", a: "Yes — KL Renovator covers all Subang Jaya areas including USJ, SS15, SS16, SS17, Putra Heights and Subang Bestari. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Subang Jaya?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Subang Jaya. No hidden charges." },
@@ -219,7 +219,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Ampang & Ampang Jaya. Cuci kimia, overhaul, pembaikan & pemasangan. Hubungi +60182983573.",
       metaTitleZH: "安邦冷气服务 | KL Renovator — 快速响应，无隐藏收费",
       metaDescZH: "安邦及Ampang Jaya专业冷气服务。化学清洗、大修、维修和安装。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-ampang-selangor.jpg",
+      heroImage: "/hero/aircond-installation-ampang-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Ampang?", a: "Yes — KL Renovator covers all Ampang areas including Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda and Ulu Klang. Same-day slots available. WhatsApp +60182983573." },
         { q: "How much does aircond chemical wash cost in Ampang?", a: "Chemical wash in Ampang from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Chemical overhaul from RM 220. All prices confirmed before work." },
@@ -252,7 +252,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond dipercayai di Puchong. Cuci kimia, tambah gas, overhaul & pembaikan semua jenama. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "蒲种冷气服务 | KL Renovator — 专业HVAC从RM 99起",
       metaDescZH: "蒲种可信赖的冷气服务。化学清洗、充气、大修和维修，所有品牌。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Puchong?", a: "Yes — KL Renovator covers all Puchong areas including IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana and Bukit Puchong. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Puchong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Puchong. Same-day available." },
@@ -285,7 +285,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Klang. Bukit Tinggi, Meru, Port Klang, Setia Alam diliputi. Cuci kimia, pembaikan & pemasangan. Hubungi +60182983573.",
       metaTitleZH: "巴生冷气服务 | KL Renovator — 所有品牌，价格透明",
       metaDescZH: "巴生专业冷气服务。覆盖Bukit Tinggi、Meru、Port Klang、Setia Alam。化学清洗、维修和安装。致电 +60182983573。",
-      heroImage: "/hero/aircond-compressor-installation-new-kl.jpg",
+      heroImage: "/hero/aircond-compressor-installation-new-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Klang?", a: "Yes — KL Renovator covers Klang including Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru and Teluk Pulai. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Klang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Klang. All prices confirmed before work." },
@@ -318,7 +318,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Kajang dan Bangi. Cuci kimia, overhaul & pembaikan semua jenama. Tindak balas pantas. Hubungi +60182983573.",
       metaTitleZH: "加影及万宜冷气服务 | KL Renovator — 当天服务",
       metaDescZH: "加影及万宜专业冷气服务。化学清洗、大修和维修，所有品牌。快速响应。致电 +60182983573。",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Kajang?", a: "Yes — KL Renovator covers Kajang including Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian and surrounding areas. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Kajang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Kajang. Same-day available." },
@@ -351,7 +351,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Batu Caves & Selayang. Cuci kimia, overhaul & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "黑风洞冷气服务 | KL Renovator — 专业HVAC团队",
       metaDescZH: "黑风洞及双溪毛糯专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.jpg",
+      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Batu Caves?", a: "Yes — KL Renovator is headquartered in Selayang, right next to Batu Caves. We cover all Batu Caves areas including Taman Batu Muda, Taman Sri Murni, Taman Sri Rajang and the Rawang corridor. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Batu Caves?", a: "Basic service from RM 99, chemical wash from RM 120 (1.0-1.5 HP), chemical overhaul from RM 220, gas top-up from RM 120 in Batu Caves. All prices confirmed before work. No hidden charges." },
@@ -387,7 +387,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Damansara. Semua zon diliputi termasuk Kota Damansara & Ara Damansara. Cuci kimia, overhaul, tambah gas. Hubungi +60182983573.",
       metaTitleZH: "白沙罗冷气服务 | KL Renovator — 公寓及有地专家",
       metaDescZH: "白沙罗专业冷气服务。覆盖所有区域，包括Kota Damansara和Ara Damansara。化学清洗、大修、充气。致电 +60182983573。",
-      heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg",
+      heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Damansara?", a: "Yes — KL Renovator covers all Damansara areas including Damansara Utama, Damansara Jaya, Damansara Perdana, Damansara Damai and One Utama vicinity. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Damansara?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Damansara. All prices confirmed before work." },
@@ -420,7 +420,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Bangsar & Bangsar South. Cuci kimia, overhaul & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "孟沙冷气服务 | KL Renovator — 公寓专家",
       metaDescZH: "孟沙及Bangsar South专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-repair-technician-klang-valley.jpg",
+      heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Bangsar?", a: "Yes — KL Renovator covers Bangsar including Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam and surrounding areas. Same-day available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Bangsar?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in Bangsar. All prices confirmed before work." },
@@ -453,7 +453,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Mont Kiara & Sri Hartamas. Cuci kimia, overhaul & pembaikan untuk kondominium. Hubungi +60182983573.",
       metaTitleZH: "蒙特基拉冷气服务 | KL Renovator — 豪华公寓专家",
       metaDescZH: "蒙特基拉及Sri Hartamas专业冷气服务。公寓化学清洗、大修和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-double-unit-kl.jpg",
+      heroImage: "/hero/aircond-installation-double-unit-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Mont Kiara?", a: "Yes — KL Renovator covers Mont Kiara, Sri Hartamas, Solaris Dutamas and Duta Nusantara. We regularly service high-rise condo units here, including coordinating lift/loading-bay access for technicians and equipment. WhatsApp +60182983573 to book." },
         { q: "Can you service aircond units in high-rise condos in Mont Kiara?", a: "Yes — most of our Mont Kiara jobs are in condominiums and serviced residences. We bring portable equipment suited for lift access and can liaise with building management or security on your behalf for technician entry passes." },
@@ -488,7 +488,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Setapak & Wangsa Maju. Cuci kimia, overhaul & pembaikan. Tindak balas pantas. Hubungi +60182983573.",
       metaTitleZH: "Setapak及Wangsa Maju冷气服务 | KL Renovator",
       metaDescZH: "Setapak及Wangsa Maju专业冷气服务。化学清洗、大修和维修。快速响应。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Setapak?", a: "Yes — KL Renovator covers Setapak, Taman Setapak, Taman Sri Rampai and the Gombak border area. Same-day technicians are usually available given our regular coverage route through Wangsa Maju and Setapak together." },
         { q: "Do you service older walk-up apartments in Setapak?", a: "Yes — Setapak has many older low-rise walk-up flats alongside newer condos. Our technicians carry the right ladder/scaffold setup for outdoor compressor units mounted on older low-rise blocks without lift access." },
@@ -523,7 +523,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Sentul KL. Cuci kimia, overhaul & pembaikan semua jenama. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "仙岛冷气服务 | KL Renovator — 当天可约",
       metaDescZH: "仙岛KL专业冷气服务。化学清洗、大修和维修，所有品牌。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-compressor-bracket-installation-kl.jpg",
+      heroImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Sentul?", a: "Yes — KL Renovator covers Sentul, Sentul Park, Jalan Ipoh and the Brickfields border area. We service both landed homes near Jalan Ipoh and the newer high-rise developments around Sentul Park." },
         { q: "Do you service the newer condos near Sentul Park?", a: "Yes — the Sentul Park area has several newer condo developments. We're familiar with the management/JMB approval process some of these buildings require for outdoor unit access, and can guide you through it before the appointment." },
@@ -558,7 +558,7 @@ export const siteConfig = {
       metaDescMS: "KL Renovator berpangkalan di Selayang. Cuci kimia pakar, overhaul, tambah gas & pembaikan. Tindak balas terpantas. Hubungi +60182983573.",
       metaTitleZH: "双溪毛糯冷气服务 | KL Renovator — 总部所在地",
       metaDescZH: "KL Renovator 总部位于双溪毛糯。专业化学清洗、大修、充气和维修。最快响应。致电 +60182983573。",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.jpg",
+      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Selayang?", a: "Yes — KL Renovator covers Selayang, Selayang Mall, Taman Selayang Baru and the Batu Caves/Gombak/Rawang corridor. This area is part of our regular northern Klang Valley route." },
         { q: "Do you service landed houses and shoplots in Selayang?", a: "Yes — Selayang has a mix of terrace houses and commercial shoplots, especially near Selayang Mall. We service both residential split units and shoplot ceiling-mounted units, with separate pricing for commercial work." },
@@ -593,7 +593,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Putrajaya. Semua presink diliputi. Cuci kimia, overhaul & pembaikan. Hubungi +60182983573.",
       metaTitleZH: "布城冷气服务 | KL Renovator — 覆盖所有区",
       metaDescZH: "布城专业冷气服务。覆盖所有区域。化学清洗、大修和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Putrajaya?", a: "Yes — KL Renovator services all Putrajaya Presincts (Presint 1 through 20), including government quarters, landed homes and commercial units. WhatsApp +60182983573 with your Presint number to confirm a slot." },
         { q: "Do you service government quarters and offices in Putrajaya?", a: "Yes — alongside residential Presincts, we service government office buildings and quarters in Putrajaya, including commercial-grade and ceiling cassette units common in administrative blocks." },
@@ -628,7 +628,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Cyberjaya. Cuci kimia, overhaul & pembaikan untuk kondominium dan pejabat. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "赛博再也冷气服务 | KL Renovator — 科技园HVAC专家",
       metaDescZH: "赛博再也专业冷气服务。公寓和办公室化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Cyberjaya?", a: "Yes — KL Renovator covers Cyberjaya including Shaftsbury, Tamarind Square, Cyberia and Jade Hills. We service both residential condos and commercial office units in the tech-park area." },
         { q: "Do you service commercial office aircond systems in Cyberjaya?", a: "Yes — Cyberjaya has a high concentration of office buildings and data-centre-adjacent commercial units. We handle commercial servicing contracts and ceiling cassette systems common in this kind of building." },
@@ -663,7 +663,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Kepong. Cuci kimia, overhaul & pembaikan semua jenama. Slot hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "甲洞冷气服务 | KL Renovator — 当天可用",
       metaDescZH: "甲洞专业冷气服务。化学清洗、大修和维修，所有品牌。当天可约。致电 +60182983573。",
-      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Kepong?", a: "Yes — KL Renovator covers Kepong, Kepong Baru, Metro Prima, Sri Damansara, Desa Jaya and Taman Ehsan. WhatsApp +60182983573 with your specific neighbourhood for fastest scheduling." },
         { q: "Do you service both older and newer housing areas in Kepong?", a: "Yes — Kepong has a mix of older landed neighbourhoods (Kepong Baru, Taman Ehsan) and newer developments (Metro Prima, Sri Damansara). Our technicians carry the right parts for both older non-inverter units and newer inverter systems." },
@@ -698,7 +698,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Sri Petaling & Bukit Jalil. Cuci kimia, overhaul & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "斯里白蒲令及武吉加里冷气服务 | KL Renovator",
       metaDescZH: "斯里白蒲令及武吉加里专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Sri Petaling?", a: "Yes — KL Renovator covers Sri Petaling, Bukit Jalil, OUG (Taman Overseas Union), Kuchai Lama and Salak South. Same-day technicians regularly cover this whole cluster together." },
         { q: "Do you service condos near Bukit Jalil sports complex?", a: "Yes — the Bukit Jalil area near the sports complex has several condo developments. We're familiar with the loading-bay and management approval process common in these buildings." },
@@ -733,7 +733,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond dipercayai di Sunway & USJ. Cuci kimia, overhaul & pembaikan semua jenama. Slot hari sama. Hubungi +60182983573.",
       metaTitleZH: "双威及USJ冷气服务 | KL Renovator — 从RM 99起",
       metaDescZH: "双威及USJ可信赖的冷气服务。化学清洗、大修和维修，所有品牌。当天可约。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
+      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Sunway?", a: "Yes — KL Renovator covers Bandar Sunway, Sunway Mentari, the area near Sunway Pyramid and Sunway Velocity, plus the USJ/Putra Heights border. WhatsApp +60182983573 to confirm coverage for your block." },
         { q: "Do you service high-rise condos near Sunway Pyramid?", a: "Yes — the high-rise condos and serviced apartments near Sunway Pyramid and Sunway Velocity are a regular part of our coverage. We coordinate lift access and management approval ahead of the appointment where needed." },
@@ -768,7 +768,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Rawang & Kundang. Cuci kimia, overhaul & pembaikan semua jenama. Hubungi +60182983573.",
       metaTitleZH: "Rawang及Kundang冷气服务 | KL Renovator",
       metaDescZH: "Rawang及Kundang专业冷气服务。化学清洗、大修和维修，所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.jpg",
+      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Rawang?", a: "Yes — KL Renovator covers Rawang, Taman Rawang Perdana, Kundang, Bandar Country Homes and Serendah. This is part of our northern Klang Valley route alongside Selayang and Batu Caves." },
         { q: "Do you service landed houses in Bandar Country Homes and Kundang?", a: "Yes — Bandar Country Homes and Kundang are mostly terrace and semi-detached landed housing. We carry standard copper piping and outdoor unit mounting equipment suited to these layouts." },
@@ -803,7 +803,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Semenyih. Cuci kimia, overhaul & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "Semenyih冷气服务 | KL Renovator — 专业HVAC",
       metaDescZH: "Semenyih专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Semenyih?", a: "Yes — KL Renovator covers Semenyih Town, Taman Pelangi, Kajang South and Bangi Lama, as part of our wider Kajang-Semenyih coverage route. WhatsApp +60182983573 to confirm a same-day slot." },
         { q: "Do you service new township developments near Semenyih?", a: "Yes — newer townships in the Semenyih corridor (including Setia Ecohill and Eco Majestic nearby) are part of our regular coverage. We're familiar with the gated-community visitor registration process common here." },
@@ -838,7 +838,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Seri Kembangan & Balakong. Cuci kimia, overhaul & pembaikan. Hubungi +60182983573.",
       metaTitleZH: "斯里肯邦安及Balakong冷气服务 | KL Renovator",
       metaDescZH: "斯里肯邦安及Balakong专业冷气服务。化学清洗、大修和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-sensor-replacement-klang-valley.jpg",
+      heroImage: "/hero/aircond-sensor-replacement-klang-valley.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Seri Kembangan?", a: "Yes — KL Renovator covers Seri Kembangan, Balakong, Taman Equine and Serdang. WhatsApp +60182983573 with your specific neighbourhood for fastest same-day scheduling." },
         { q: "Do you service the equestrian park / Taman Equine landed homes?", a: "Yes — Taman Equine and surrounding landed neighbourhoods in Seri Kembangan are regularly serviced by our technicians, who carry standard split-unit installation and repair equipment suited to this housing type." },
@@ -873,7 +873,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Desa ParkCity KL. Cuci kimia, overhaul & pembaikan kondominium dan rumah. Hubungi +60182983573.",
       metaTitleZH: "Desa ParkCity冷气服务 | KL Renovator — 高级公寓专家",
       metaDescZH: "Desa ParkCity KL专业冷气服务。公寓和有地房屋化学清洗、大修和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Desa ParkCity?", a: "Yes — KL Renovator covers Desa ParkCity including The Waterfront and the Central Park area, plus neighbouring Kepong and Sri Damansara. WhatsApp +60182983573 to book a technician." },
         { q: "Do you service premium landed homes and condos in Desa ParkCity?", a: "Yes — Desa ParkCity has a mix of premium landed bungalows/semi-Ds and condominiums around The Waterfront. We're familiar with the gated-community access procedures common throughout this township." },
@@ -908,7 +908,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Taman Melawati & Hulu Kelang. Cuci kimia, overhaul, tambah gas & pembaikan. Hubungi +60182983573.",
       metaTitleZH: "Taman Melawati冷气服务 | KL Renovator — 当天可用",
       metaDescZH: "Taman Melawati及Hulu Kelang专业冷气服务。化学清洗、大修、充气和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.jpg",
+      heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Taman Melawati?", a: "Yes — KL Renovator covers Taman Melawati, the area near Melawati Mall, and the Hulu Kelang/Ampang Jaya border. WhatsApp +60182983573 to check same-day availability." },
         { q: "Do you service landed homes near Melawati Mall?", a: "Yes — most homes in Taman Melawati are double or single-storey terrace houses. We're used to the typical pipe-run distances and outdoor unit placements in this area, which keeps quotes consistent and accurate." },
@@ -943,7 +943,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Hulu Kelang. Cuci kimia, overhaul & pembaikan semua jenama. Tindak balas pantas. Hubungi +60182983573.",
       metaTitleZH: "乌鲁雪兰莪冷气服务 | KL Renovator — 专业HVAC",
       metaDescZH: "乌鲁雪兰莪专业冷气服务。化学清洗、大修和维修，所有品牌。快速响应。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-ampang-selangor.jpg",
+      heroImage: "/hero/aircond-installation-ampang-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Hulu Kelang?", a: "Yes — KL Renovator covers Hulu Kelang, Taman Keramat, Ukay Perdana and the Taman Melawati/Taman AU border area. WhatsApp +60182983573 to book." },
         { q: "Do you service hillside bungalows in Ukay Perdana?", a: "Yes — Ukay Perdana has several hillside bungalow developments. Our technicians budget extra time for steeper driveway/compound access when servicing outdoor compressor units in these properties." },
@@ -978,7 +978,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Bandar Puteri Puchong. Cuci kimia, tambah gas, overhaul & pembaikan. Slot hari sama. Hubungi +60182983573.",
       metaTitleZH: "Bandar Puteri蒲种冷气服务 | KL Renovator",
       metaDescZH: "Bandar Puteri蒲种专业冷气服务。化学清洗、充气、大修和维修。当天可约。致电 +60182983573。",
-      heroImage: "/hero/aircond-new-installation-petaling-jaya.jpg",
+      heroImage: "/hero/aircond-new-installation-petaling-jaya.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Puteri?", a: "Yes — KL Renovator covers Bandar Puteri Puchong, including the area near IOI City Mall and Bukit Puchong. WhatsApp +60182983573 for same-day scheduling." },
         { q: "Do you service shop offices and landed homes in Bandar Puteri?", a: "Yes — Bandar Puteri has a mix of double-storey shop offices and terrace landed homes. We service both, with separate commercial pricing for shop-office ceiling cassette and split units." },
@@ -1013,7 +1013,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Bandar Botanic Klang. Cuci kimia, overhaul & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "Bandar Botanic巴生冷气服务 | KL Renovator",
       metaDescZH: "Bandar Botanic巴生专业冷气服务。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-compressor-flaring-repair-kl.jpg",
+      heroImage: "/hero/aircond-compressor-flaring-repair-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Botanic?", a: "Yes — KL Renovator covers Bandar Botanic, near the Botanic Golf Course and the Klang/Kota Kemuning border area. WhatsApp +60182983573 to book." },
         { q: "Do you service landed homes near the Botanic Golf Course?", a: "Yes — Bandar Botanic is mostly terrace and semi-detached landed housing. We carry the standard equipment suited to typical Bandar Botanic outdoor unit placements and pipe-run distances." },
@@ -1048,7 +1048,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Glenmarie. Unit perindustrian & kediaman. Cuci kimia, overhaul & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "Glenmarie莎阿南冷气服务 | KL Renovator",
       metaDescZH: "Glenmarie专业冷气服务。工业和住宅单位。化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Glenmarie?", a: "Yes — KL Renovator covers Glenmarie, including the HICOM Glenmarie industrial/commercial area, near Shah Alam and Subang Airport. WhatsApp +60182983573 for commercial or residential quotes." },
         { q: "Do you service industrial and commercial units in HICOM Glenmarie?", a: "Yes — HICOM Glenmarie has a significant concentration of factories, warehouses and commercial offices. We handle commercial ceiling cassette and wall-mounted unit servicing with separate commercial contract pricing." },
@@ -1083,7 +1083,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Kota Kemuning & Bukit Jelutong. Cuci kimia, overhaul & pembaikan. Hubungi +60182983573.",
       metaTitleZH: "Kota Kemuning莎阿南冷气服务 | KL Renovator",
       metaDescZH: "Kota Kemuning及Bukit Jelutong专业冷气服务。化学清洗、大修和维修。致电 +60182983573。",
-      heroImage: "/hero/aircond-bracket-installation-kl-renovator.jpg",
+      heroImage: "/hero/aircond-bracket-installation-kl-renovator.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Kota Kemuning?", a: "Yes — KL Renovator covers Kota Kemuning, near Shah Alam, Telok Panglima Garang and the Kemuning Utama/Bukit Jelutong border. WhatsApp +60182983573 to book." },
         { q: "Do you service gated landed communities in Kota Kemuning?", a: "Yes — Kota Kemuning has several gated terrace and semi-D communities. We're familiar with the visitor registration/security gate procedures common across this township." },
@@ -1118,7 +1118,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Bukit Jelutong Shah Alam. Cuci kimia, overhaul & pembaikan. Semua jenama. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "Bukit Jelutong莎阿南冷气服务 | KL Renovator",
       metaDescZH: "Bukit Jelutong莎阿南专业冷气服务。化学清洗、大修和维修。所有品牌。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
+      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Bukit Jelutong?", a: "Yes — KL Renovator covers Bukit Jelutong, near Shah Alam, Kota Kemuning, Glenmarie and the PKNS Bukit Jelutong commercial area. WhatsApp +60182983573 to book." },
         { q: "Do you service the PKNS commercial area in Bukit Jelutong?", a: "Yes — the PKNS Bukit Jelutong area has shop offices and small commercial units alongside residential terraces. We service both, with commercial pricing quoted separately for shop-office systems." },
@@ -1153,7 +1153,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Setia Alam. Cuci kimia, overhaul, tambah gas & pembaikan. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "Setia Alam冷气服务 | KL Renovator — 莎阿南及巴生",
       metaDescZH: "Setia Alam专业冷气服务。化学清洗、大修、充气和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-new-compressor-installation-rawang.jpg",
+      heroImage: "/hero/aircond-new-compressor-installation-rawang.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Setia Alam?", a: "Yes — KL Renovator covers Setia Alam, including the area near Setia City Mall and Eco Ardence, plus the Shah Alam/Klang border. WhatsApp +60182983573 to book." },
         { q: "Do you service newer terrace and semi-D homes in Setia Alam?", a: "Yes — Setia Alam has many newer-build terrace and semi-D homes, often still under warranty for built-in aircon units. We can advise if a job might be covered by your developer/manufacturer warranty before quoting." },
@@ -1188,7 +1188,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di SS2 PJ. Cuci kimia, overhaul & pembaikan semua jenama. Tindak balas pantas. Hubungi +60182983573.",
       metaTitleZH: "SS2八打灵再也冷气服务 | KL Renovator",
       metaDescZH: "SS2 PJ专业冷气服务。化学清洗、大修和维修，所有品牌。快速响应。致电 +60182983573。",
-      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in SS2?", a: "Yes — KL Renovator covers SS2 Petaling Jaya, including the area near SS2 Pasar Malam, Damansara Utama and Kelana Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service older shop apartments near SS2 Pasar Malam?", a: "Yes — many properties near SS2 Pasar Malam are older shop apartments with aircond units installed years ago. Our technicians check capacitor and wiring condition as standard on older units like these during every visit." },
@@ -1223,7 +1223,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Ara Damansara. Cuci kimia, overhaul & pembaikan kondominium dan rumah. Semua jenama. Hubungi +60182983573.",
       metaTitleZH: "Ara Damansara PJ冷气服务 | KL Renovator — 公寓专家",
       metaDescZH: "Ara Damansara专业冷气服务。公寓和房屋化学清洗、大修和维修。所有品牌。致电 +60182983573。",
-      heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg",
+      heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Ara Damansara?", a: "Yes — KL Renovator covers Ara Damansara, including Oasis Ara Damansara and the Subang Jaya/Glenmarie border area. WhatsApp +60182983573 to book." },
         { q: "Do you service the Oasis Ara Damansara office/condo towers?", a: "Yes — Oasis Ara Damansara has both office towers and condo developments. We service commercial office units and residential condo split systems, with separate quotes for each." },
@@ -1258,7 +1258,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Bandar Utama & kawasan One Utama. Cuci kimia, overhaul & pembaikan. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "Bandar Utama PJ冷气服务 | KL Renovator — 所有品牌",
       metaDescZH: "Bandar Utama及One Utama区域专业冷气服务。化学清洗、大修和维修。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-pcb-board-replacement-kl.jpg",
+      heroImage: "/hero/aircond-pcb-board-replacement-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Utama?", a: "Yes — KL Renovator covers Bandar Utama, including the area near One Utama Shopping Centre, Tropicana and the Damansara/Petaling Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service condos and landed homes near One Utama?", a: "Yes — Bandar Utama has both high-rise condos and landed bungalow/semi-D homes near One Utama. We service both property types with technicians familiar with each layout's typical access requirements." },
@@ -1293,7 +1293,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond profesional di Sungai Buloh. Cuci kimia, overhaul & pembaikan semua jenama. Hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "双溪毛糯冷气服务 | KL Renovator — 快速响应",
       metaDescZH: "双溪毛糯专业冷气服务。化学清洗、大修和维修，所有品牌。当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-repair-technician-klang-valley.jpg",
+      heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Sungai Buloh?", a: "Yes — KL Renovator covers Sungai Buloh, including the Kota Damansara, Rawang and Elmina border areas. WhatsApp +60182983573 to book." },
         { q: "Do you service newer township developments like Elmina?", a: "Yes — Elmina and other newer Sungai Buloh townships are part of our regular coverage. Many homes here are recently built, so we check if work might still fall under developer warranty before quoting." },
@@ -1328,7 +1328,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Wangsa Maju. Cuci kimia, overhaul, tambah gas & pembaikan. Semua jenama. Tindak balas pantas. Hubungi +60182983573.",
       metaTitleZH: "旺沙马朱冷气服务 | KL Renovator — 当天服务",
       metaDescZH: "旺沙马朱专业冷气服务。化学清洗、大修、充气和维修。所有品牌。快速响应。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Wangsa Maju?", a: "Yes — KL Renovator covers Wangsa Maju across all numbered Sections, plus the area near Wangsa Walk Mall, Taman Sri Rampai and the Gombak/Setapak border. WhatsApp +60182983573 with your Section number." },
         { q: "Do you service condos near Wangsa Walk Mall?", a: "Yes — the area around Wangsa Walk Mall has several condo developments. We're familiar with the lift access and management approval process common in these buildings." },
@@ -1363,7 +1363,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Balakong. Cuci kimia, overhaul & pembaikan semua jenama. Slot hari sama. Hubungi +60182983573.",
       metaTitleZH: "Balakong雪兰莪冷气服务 | KL Renovator",
       metaDescZH: "Balakong专业冷气服务。化学清洗、大修和维修，所有品牌。当天可约。致电 +60182983573。",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Balakong?", a: "Yes — KL Renovator covers Balakong, including the area near Taman Len Seng and the Seri Kembangan/Cheras/Pandan Indah border. WhatsApp +60182983573 to book." },
         { q: "Do you service industrial/factory units near Balakong?", a: "Yes — Balakong has a significant light-industrial and factory presence alongside residential areas. We service commercial/industrial-grade aircond units here with separate commercial pricing and contract options." },
@@ -1398,7 +1398,7 @@ export const siteConfig = {
       metaDescMS: "Servis aircond pakar di Pusat Bandar KL (Jalan Ampang, Chow Kit, Pudu, Kampung Attap). Semua jenama, hari sama tersedia. Hubungi +60182983573.",
       metaTitleZH: "吉隆坡市中心冷气服务 | KL Renovator — 化学清洗从RM 120起",
       metaDescZH: "吉隆坡市中心（安邦路、秋杰、半山芭、Kampung Attap）专业冷气服务。所有品牌，当天可用。致电 +60182983573。",
-      heroImage: "/hero/aircond-installation-double-unit-kl.jpg",
+      heroImage: "/hero/aircond-installation-double-unit-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in KL City Centre?", a: "Yes — KL Renovator covers all KL City Centre zones including Jalan Ampang, Kampung Attap, Chow Kit and Pudu. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in KL City Centre?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in KL City Centre. All prices confirmed before work begins." },
@@ -1422,7 +1422,7 @@ export const siteConfig = {
     {
       slug: "daikin",
       name: "Daikin",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
       metaTitle: "Daikin Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Daikin aircond servicing in KL & Selangor. Chemical wash from RM 120, gas top-up, repairs & installation for all Daikin models. Call +60182983573.",
       metaTitleMS: "Servis Aircond Daikin KL & Selangor | KL Renovator",
@@ -1456,7 +1456,7 @@ export const siteConfig = {
     {
       slug: "panasonic",
       name: "Panasonic",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
+      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
       metaTitle: "Panasonic Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Panasonic aircond servicing in KL & Selangor. Chemical wash from RM 120, gas top-up, repairs & install for all Panasonic models. Call +60182983573.",
       metaTitleMS: "Servis Aircond Panasonic KL & Selangor | KL Renovator",
@@ -1489,7 +1489,7 @@ export const siteConfig = {
     {
       slug: "mitsubishi",
       name: "Mitsubishi",
-      heroImage: "/hero/aircond-installation-double-unit-kl.jpg",
+      heroImage: "/hero/aircond-installation-double-unit-kl.webp",
       metaTitle: "Mitsubishi Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Mitsubishi aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Mitsubishi KL & Selangor | KL Renovator",
@@ -1522,7 +1522,7 @@ export const siteConfig = {
     {
       slug: "york",
       name: "York",
-      heroImage: "/hero/aircond-compressor-installation-new-kl.jpg",
+      heroImage: "/hero/aircond-compressor-installation-new-kl.webp",
       metaTitle: "York Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert York aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation for all York models. Call +60182983573.",
       metaTitleMS: "Servis Aircond York KL & Selangor | KL Renovator",
@@ -1552,7 +1552,7 @@ export const siteConfig = {
     {
       slug: "acson",
       name: "Acson",
-      heroImage: "/hero/aircond-installation-ampang-selangor.jpg",
+      heroImage: "/hero/aircond-installation-ampang-selangor.webp",
       metaTitle: "Acson Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Acson aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Acson KL & Selangor | KL Renovator",
@@ -1582,7 +1582,7 @@ export const siteConfig = {
     {
       slug: "carrier",
       name: "Carrier",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
       metaTitle: "Carrier Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Carrier aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & commercial HVAC. Call +60182983573.",
       metaTitleMS: "Servis Aircond Carrier KL & Selangor | KL Renovator",
@@ -1609,7 +1609,7 @@ export const siteConfig = {
     {
       slug: "midea",
       name: "Midea",
-      heroImage: "/hero/aircond-new-installation-petaling-jaya.jpg",
+      heroImage: "/hero/aircond-new-installation-petaling-jaya.webp",
       metaTitle: "Midea Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Midea aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Midea KL & Selangor | KL Renovator",
@@ -1636,7 +1636,7 @@ export const siteConfig = {
     {
       slug: "haier",
       name: "Haier",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
       metaTitle: "Haier Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Haier aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Haier KL & Selangor | KL Renovator",
@@ -1663,7 +1663,7 @@ export const siteConfig = {
     {
       slug: "toshiba",
       name: "Toshiba",
-      heroImage: "/hero/aircond-pcb-board-replacement-kl.jpg",
+      heroImage: "/hero/aircond-pcb-board-replacement-kl.webp",
       metaTitle: "Toshiba Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Toshiba aircond servicing in KL & Selangor. Chemical wash, gas top-up, PCB repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Toshiba KL & Selangor | KL Renovator",
@@ -1690,7 +1690,7 @@ export const siteConfig = {
     {
       slug: "hitachi",
       name: "Hitachi",
-      heroImage: "/hero/aircond-compressor-flaring-repair-kl.jpg",
+      heroImage: "/hero/aircond-compressor-flaring-repair-kl.webp",
       metaTitle: "Hitachi Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Hitachi aircond servicing in KL & Selangor. Chemical wash, gas top-up, compressor repair & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Hitachi KL & Selangor | KL Renovator",
@@ -1717,7 +1717,7 @@ export const siteConfig = {
     {
       slug: "samsung",
       name: "Samsung",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.jpg",
+      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
       metaTitle: "Samsung Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Samsung aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Samsung KL & Selangor | KL Renovator",
@@ -1744,7 +1744,7 @@ export const siteConfig = {
     {
       slug: "lg",
       name: "LG",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.jpg",
+      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
       metaTitle: "LG Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert LG aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond LG KL & Selangor | KL Renovator",
@@ -1771,7 +1771,7 @@ export const siteConfig = {
     {
       slug: "sharp",
       name: "Sharp",
-      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
       metaTitle: "Sharp Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Sharp aircond servicing in KL & Selangor. Chemical wash, gas top-up, Plasmacluster repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Sharp KL & Selangor | KL Renovator",
@@ -1798,7 +1798,7 @@ export const siteConfig = {
     {
       slug: "fujitsu",
       name: "Fujitsu",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
       metaTitle: "Fujitsu Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Fujitsu aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & commercial HVAC. Call +60182983573.",
       metaTitleMS: "Servis Aircond Fujitsu KL & Selangor | KL Renovator",
@@ -1825,7 +1825,7 @@ export const siteConfig = {
     {
       slug: "gree",
       name: "Gree",
-      heroImage: "/hero/aircond-installation-ampang-selangor.jpg",
+      heroImage: "/hero/aircond-installation-ampang-selangor.webp",
       metaTitle: "Gree Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Gree aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Gree KL & Selangor | KL Renovator",
@@ -1852,7 +1852,7 @@ export const siteConfig = {
     {
       slug: "hisense",
       name: "Hisense",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
       metaTitle: "Hisense Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Hisense aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Hisense KL & Selangor | KL Renovator",
@@ -1879,7 +1879,7 @@ export const siteConfig = {
     {
       slug: "aux",
       name: "Aux",
-      heroImage: "/hero/aircond-compressor-installation-new-kl.jpg",
+      heroImage: "/hero/aircond-compressor-installation-new-kl.webp",
       metaTitle: "Aux Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Aux aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Aux KL & Selangor | KL Renovator",
@@ -1906,7 +1906,7 @@ export const siteConfig = {
     {
       slug: "tcl",
       name: "TCL",
-      heroImage: "/hero/aircond-installation-double-unit-kl.jpg",
+      heroImage: "/hero/aircond-installation-double-unit-kl.webp",
       metaTitle: "TCL Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert TCL aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond TCL KL & Selangor | KL Renovator",
@@ -1933,7 +1933,7 @@ export const siteConfig = {
     {
       slug: "national",
       name: "National",
-      heroImage: "/hero/aircond-basic-service-selangor.jpg",
+      heroImage: "/hero/aircond-basic-service-selangor.webp",
       metaTitle: "National Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert National aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & maintenance. Call +60182983573.",
       metaTitleMS: "Servis Aircond National KL & Selangor | KL Renovator",
@@ -1960,7 +1960,7 @@ export const siteConfig = {
     {
       slug: "isonic",
       name: "Isonic",
-      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg",
+      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
       metaTitle: "Isonic Aircond Service KL & Selangor | KL Renovator",
       metaDesc: "Expert Isonic aircond servicing in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
       metaTitleMS: "Servis Aircond Isonic KL & Selangor | KL Renovator",
@@ -1987,26 +1987,26 @@ export const siteConfig = {
   ],
 
   problemPages: [
-    { slug: "aircond-not-cold", name: "Aircond Not Cold", nameMS: "Aircond Tidak Sejuk", nameZH: "冷气不冷", metaTitle: "Aircond Not Cold? Causes & Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond running but not cold in KL or Selangor? Find out why and get it fixed fast. KL Renovator diagnoses and repairs all brands. Call +60182983573.", metaTitleMS: "Aircond Tidak Sejuk? Punca & Perbaikan di KL & Selangor | KL Renovator", metaDescMS: "Aircond berjalan tetapi tidak sejuk di KL atau Selangor? Ketahui sebabnya dan baiki dengan cepat. Hubungi +60182983573.", metaTitleZH: "冷气不冷？吉隆坡及雪兰莪原因与解决 | KL Renovator", metaDescZH: "冷气运行但不冷？找出原因并快速修复。KL Renovator 诊断和修复所有品牌。致电 +60182983573。", h1: "Aircond Not Cold — Causes & Repair in KL & Selangor", description: "If your aircond is running but not producing cold air, the most common causes are low refrigerant gas, a dirty evaporator coil, or a faulty capacitor. KL Renovator diagnoses and fixes all aircond cooling problems across KL and Selangor.", descriptionMS: "Jika aircond anda berjalan tetapi tidak menghasilkan udara sejuk, punca paling biasa adalah gas penyejuk rendah, gegelung evaporator kotor, atau kapasitor rosak. KL Renovator mendiagnosis dan membaiki semua masalah penyejukan aircond.", descriptionZH: "如果您的冷气运行但不产生冷气，最常见的原因是冷媒不足、蒸发器盘管脏或电容器故障。KL Renovator 诊断并修复所有冷气冷却问题。", relatedService: "gas-topup", heroImage: "/hero/aircond-repair-technician-klang-valley.jpg" },
-    { slug: "aircond-water-leaking", name: "Aircond Water Leaking", nameMS: "Aircond Bocor Air", nameZH: "冷气漏水", metaTitle: "Aircond Water Leaking? Fix It Fast in KL & Selangor | KL Renovator", metaDesc: "Aircond leaking water in KL or Selangor? Don't ignore it. Get it fixed today by KL Renovator. All brands, same-day service. Call +60182983573.", metaTitleMS: "Aircond Bocor Air? Baiki Cepat di KL & Selangor | KL Renovator", metaDescMS: "Aircond bocor air di KL atau Selangor? Jangan abaikan. Baiki hari ini dengan KL Renovator. Hubungi +60182983573.", metaTitleZH: "冷气漏水？吉隆坡及雪兰莪快速修复 | KL Renovator", metaDescZH: "冷气在吉隆坡或雪兰莪漏水？不要忽视。今天就让KL Renovator修复。致电 +60182983573。", h1: "Aircond Water Leaking — Causes & Repair in KL & Selangor", description: "A leaking aircond indoor unit is usually caused by a blocked drain pipe or dirty drain pan. KL Renovator diagnoses and repairs all water leaking issues across KL and Selangor with same-day service.", descriptionMS: "Unit dalam aircond yang bocor biasanya disebabkan paip longkang tersumbat atau dulang longkang kotor. KL Renovator mendiagnosis dan membaiki semua masalah kebocoran air dengan servis hari sama.", descriptionZH: "冷气室内机漏水通常是由排水管堵塞或排水盘脏引起的。KL Renovator 当天提供诊断和修复所有漏水问题的服务。", relatedService: "chemical-overhaul", heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.jpg" },
-    { slug: "aircond-making-noise", name: "Aircond Making Noise", nameMS: "Aircond Bunyi Bising", nameZH: "冷气噪音", metaTitle: "Aircond Making Noise? Causes & Fix KL & Selangor | KL Renovator", metaDesc: "Aircond making loud noise in KL or Selangor? Rattling, buzzing or grinding sounds diagnosed and fixed. All brands. Call +60182983573.", metaTitleMS: "Aircond Bunyi Bising? Punca & Perbaikan KL & Selangor | KL Renovator", metaDescMS: "Aircond bunyi kuat di KL atau Selangor? Bunyi gemetar, berdengung atau menggigit didiagnosis dan dibaiki. Hubungi +60182983573.", metaTitleZH: "冷气噪音？吉隆坡及雪兰莪原因与解决 | KL Renovator", metaDescZH: "冷气在吉隆坡或雪兰莪发出噪音？诊断并修复嘎嘎声、嗡嗡声或研磨声。致电 +60182983573。", h1: "Aircond Making Noise — Causes & Repair in KL & Selangor", description: "Unusual noises from your aircond — rattling, buzzing, or grinding — usually indicate a loose part, dirty fan blade, or failing fan motor. KL Renovator diagnoses and fixes all aircond noise problems.", descriptionMS: "Bunyi luar biasa dari aircond anda — gemetar, berdengung, atau menggigit — biasanya menunjukkan bahagian longgar, bilah kipas kotor, atau motor kipas rosak.", descriptionZH: "冷气发出异常噪音——嘎嘎声、嗡嗡声或研磨声——通常表示零件松动、风扇叶片脏或风扇电机故障。", relatedService: "repair", heroImage: "/hero/aircond-compressor-flaring-repair-kl.jpg" },
-    { slug: "aircond-bad-smell", name: "Aircond Bad Smell", nameMS: "Aircond Bau Busuk", nameZH: "冷气异味", metaTitle: "Aircond Bad Smell? Fix Mould & Odour in KL & Selangor | KL Renovator", metaDesc: "Aircond blowing bad smell in KL or Selangor? Mould, bacteria and odour removed by chemical wash or overhaul. Call +60182983573.", metaTitleMS: "Aircond Bau Busuk? Buang Kulat & Bau di KL & Selangor | KL Renovator", metaDescMS: "Aircond menghembus bau busuk di KL atau Selangor? Kulat, bakteria dan bau dibuang dengan cuci kimia atau overhaul. Hubungi +60182983573.", metaTitleZH: "冷气异味？吉隆坡及雪兰莪去除霉菌和气味 | KL Renovator", metaDescZH: "冷气在吉隆坡或雪兰莪吹出异味？化学清洗或大修去除霉菌、细菌和气味。致电 +60182983573。", h1: "Aircond Bad Smell — Mould & Odour Fix in KL & Selangor", description: "Bad smells from your aircond are caused by mould and bacteria buildup on the evaporator coil and blower wheel. A chemical wash or chemical overhaul by KL Renovator permanently removes the smell.", descriptionMS: "Bau busuk dari aircond anda disebabkan oleh pertumbuhan kulat dan bakteria pada gegelung evaporator dan roda blower. Cuci kimia atau overhaul kimia oleh KL Renovator menghilangkan bau secara kekal.", descriptionZH: "冷气异味是由蒸发器盘管和鼓风机轮上积累的霉菌和细菌引起的。KL Renovator的化学清洗或化学大修可永久消除异味。", relatedService: "chemical-wash", heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.jpg" },
-    { slug: "aircond-freezing-up", name: "Aircond Freezing Up", nameMS: "Aircond Membeku", nameZH: "冷气结冰", metaTitle: "Aircond Freezing Up? Ice on Coil Fix KL & Selangor | KL Renovator", metaDesc: "Aircond coil freezing up in KL or Selangor? Ice formation caused by low gas or dirty coil. KL Renovator fixes it. Call +60182983573.", metaTitleMS: "Aircond Membeku? Pembetulan Ais pada Gegelung KL & Selangor | KL Renovator", metaDescMS: "Gegelung aircond membeku di KL atau Selangor? Pembentukan ais disebabkan gas rendah atau gegelung kotor. KL Renovator membaikinya. Hubungi +60182983573.", metaTitleZH: "冷气结冰？吉隆坡及雪兰莪盘管结冰修复 | KL Renovator", metaDescZH: "冷气盘管在吉隆坡或雪兰莪结冰？气体不足或盘管脏导致结冰。KL Renovator 修复它。致电 +60182983573。", h1: "Aircond Freezing Up — Ice on Coil Repair in KL & Selangor", description: "Aircond ice formation is caused by low refrigerant gas or severely blocked evaporator coils. KL Renovator diagnoses the root cause and performs the correct service — gas top-up or chemical overhaul.", descriptionMS: "Pembentukan ais aircond disebabkan oleh gas penyejuk rendah atau gegelung evaporator yang sangat tersumbat. KL Renovator mendiagnosis punca masalah dan melakukan servis yang betul.", descriptionZH: "冷气结冰是由冷媒不足或蒸发器盘管严重堵塞引起的。KL Renovator 诊断根本原因并执行正确的服务——充气或化学大修。", relatedService: "chemical-overhaul", heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg" },
-    { slug: "aircond-low-gas", name: "Aircond Low Gas", nameMS: "Aircond Gas Rendah", nameZH: "冷气气体不足", metaTitle: "Aircond Low Gas Symptoms & Top-Up KL & Selangor | KL Renovator", metaDesc: "Signs your aircond has low gas in KL or Selangor. R22, R410A, R32 gas top-up from RM 120. Leak check included. Call +60182983573.", metaTitleMS: "Simptom Aircond Gas Rendah & Tambah Gas KL & Selangor | KL Renovator", metaDescMS: "Tanda aircond anda mempunyai gas rendah di KL atau Selangor. Tambah gas R22, R410A, R32 dari RM 120. Semak kebocoran disertakan. Hubungi +60182983573.", metaTitleZH: "冷气气体不足症状和充气 KL & Selangor | KL Renovator", metaDescZH: "冷气气体不足的迹象。R22、R410A、R32充气从RM 120起。含泄漏检查。致电 +60182983573。", h1: "Aircond Low Gas — Symptoms & Gas Top-Up in KL & Selangor", description: "Low refrigerant gas causes warm air, longer cooling cycles, ice formation and high electricity bills. KL Renovator tops up R22, R410A and R32 gas with precision balancing and leak check included.", descriptionMS: "Gas penyejuk rendah menyebabkan udara panas, kitaran penyejukan lebih lama, pembentukan ais dan bil elektrik tinggi. KL Renovator menambah gas R22, R410A dan R32 dengan penimbangan tepat dan semak kebocoran.", descriptionZH: "冷媒不足会导致暖风、冷却周期延长、结冰和电费高。KL Renovator 为R22、R410A和R32充气，包含精准平衡和泄漏检查。", relatedService: "gas-topup", heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg" },
-    { slug: "aircond-gas-leak", name: "Aircond Gas Leak", nameMS: "Kebocoran Gas Aircond", nameZH: "冷气气体泄漏", metaTitle: "Aircond Gas Leak Detection & Repair KL & Selangor | KL Renovator", metaDesc: "Aircond gas leak in KL or Selangor? KL Renovator detects leaks, repairs the pipe and tops up gas. R22, R410A, R32. Call +60182983573.", metaTitleMS: "Pengesanan & Pembaikan Kebocoran Gas Aircond KL & Selangor | KL Renovator", metaDescMS: "Kebocoran gas aircond di KL atau Selangor? KL Renovator mengesan kebocoran, membaiki paip dan menambah gas. Hubungi +60182983573.", metaTitleZH: "冷气气体泄漏检测和修复 KL & Selangor | KL Renovator", metaDescZH: "冷气气体泄漏？KL Renovator 检测泄漏，修复管道并充气。R22、R410A、R32。致电 +60182983573。", h1: "Aircond Gas Leak — Detection & Repair in KL & Selangor", description: "A gas leak causes repeated cooling failure even after top-ups. KL Renovator identifies the leak source, repairs the copper pipe or valve, then tops up the refrigerant to correct pressure.", descriptionMS: "Kebocoran gas menyebabkan kegagalan penyejukan berulang walaupun selepas tambah gas. KL Renovator mengenal pasti sumber kebocoran, membaiki paip tembaga atau injap, kemudian menambah penyejuk.", descriptionZH: "气体泄漏会导致即使充气后仍反复冷却失败。KL Renovator 找出泄漏源，修复铜管或阀门，然后将冷媒充至正确压力。", relatedService: "gas-topup", heroImage: "/hero/aircond-compressor-flaring-repair-kl.jpg" },
-    { slug: "aircond-compressor-problem", name: "Aircond Compressor Problem", nameMS: "Masalah Kompressor Aircond", nameZH: "冷气压缩机故障", metaTitle: "Aircond Compressor Problem & Repair KL & Selangor | KL Renovator", metaDesc: "Aircond compressor not working in KL or Selangor? KL Renovator diagnoses and repairs or replaces compressors for all brands. Call +60182983573.", metaTitleMS: "Masalah & Pembaikan Kompressor Aircond KL & Selangor | KL Renovator", metaDescMS: "Kompressor aircond tidak berfungsi di KL atau Selangor? KL Renovator mendiagnosis dan membaiki atau mengganti kompressor. Hubungi +60182983573.", metaTitleZH: "冷气压缩机故障和维修 KL & Selangor | KL Renovator", metaDescZH: "冷气压缩机在吉隆坡或雪兰莪不工作？KL Renovator 诊断并维修或更换压缩机。致电 +60182983573。", h1: "Aircond Compressor Problem — Diagnosis & Repair in KL & Selangor", description: "A failing compressor causes the aircond to run without cooling. KL Renovator performs a full diagnosis to confirm if the compressor needs repair or replacement, with a transparent quote before work begins.", descriptionMS: "Kompressor yang rosak menyebabkan aircond berjalan tanpa penyejukan. KL Renovator melakukan diagnosis penuh untuk mengesahkan sama ada kompressor perlu dibaiki atau diganti.", descriptionZH: "压缩机故障会导致冷气运行但不制冷。KL Renovator 进行全面诊断确认压缩机是否需要维修或更换，施工前提供透明报价。", relatedService: "repair", heroImage: "/hero/aircond-new-compressor-installation-rawang.jpg" },
-    { slug: "aircond-pcb-problem", name: "Aircond PCB Problem", nameMS: "Masalah PCB Aircond", nameZH: "冷气电路板故障", metaTitle: "Aircond PCB Board Problem & Repair KL & Selangor | KL Renovator", metaDesc: "Aircond PCB board error in KL or Selangor? KL Renovator diagnoses and replaces faulty PCB boards for all brands. Call +60182983573.", metaTitleMS: "Masalah & Pembaikan PCB Aircond KL & Selangor | KL Renovator", metaDescMS: "Ralat papan PCB aircond di KL atau Selangor? KL Renovator mendiagnosis dan mengganti papan PCB rosak. Hubungi +60182983573.", metaTitleZH: "冷气PCB电路板故障和维修 KL & Selangor | KL Renovator", metaDescZH: "冷气PCB电路板错误？KL Renovator 诊断并更换故障PCB板。致电 +60182983573。", h1: "Aircond PCB Board Problem — Diagnosis & Repair in KL & Selangor", description: "A faulty PCB (printed circuit board) causes blinking error lights, erratic operation or complete shutdown. KL Renovator diagnoses PCB faults and replaces boards for all major brands.", descriptionMS: "PCB (papan litar bercetak) yang rosak menyebabkan lampu ralat berkelip, operasi tidak teratur atau mati sepenuhnya. KL Renovator mendiagnosis kerosakan PCB dan mengganti papan.", descriptionZH: "故障的PCB（印刷电路板）会导致错误灯闪烁、运行不稳定或完全关闭。KL Renovator 诊断PCB故障并更换所有主要品牌的电路板。", relatedService: "repair", heroImage: "/hero/aircond-pcb-board-replacement-kl.jpg" },
-    { slug: "aircond-fan-not-working", name: "Aircond Fan Not Working", nameMS: "Kipas Aircond Tidak Berfungsi", nameZH: "冷气风扇不转", metaTitle: "Aircond Fan Not Working? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond indoor or outdoor fan not working in KL or Selangor? Fan motor replaced same-day. All brands. Call +60182983573.", metaTitleMS: "Kipas Aircond Tidak Berfungsi? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Kipas dalam atau luar aircond tidak berfungsi? Motor kipas diganti hari sama. Semua jenama. Hubungi +60182983573.", metaTitleZH: "冷气风扇不转？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气室内或室外风扇不工作？当天更换风扇电机。所有品牌。致电 +60182983573。", h1: "Aircond Fan Not Working — Repair in KL & Selangor", description: "If your aircond indoor or outdoor fan has stopped working, the cause is usually a burnt-out fan motor or failed capacitor. KL Renovator replaces fan motors for all brands with same-day service.", descriptionMS: "Jika kipas dalam atau luar aircond anda berhenti berfungsi, puncanya biasanya motor kipas terbakar atau kapasitor gagal. KL Renovator mengganti motor kipas dengan servis hari sama.", descriptionZH: "如果冷气室内或室外风扇停止工作，原因通常是风扇电机烧坏或电容器故障。KL Renovator 当天更换所有品牌的风扇电机。", relatedService: "repair", heroImage: "/hero/aircond-repair-technician-klang-valley.jpg" },
-    { slug: "aircond-tripping-power", name: "Aircond Tripping Power", nameMS: "Aircond Terjatuh Pawa", nameZH: "冷气跳闸断电", metaTitle: "Aircond Tripping MCB / Power? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond tripping your MCB or power in KL or Selangor? Electrical fault diagnosed and fixed safely. Call +60182983573.", metaTitleMS: "Aircond Terjatuh MCB / Pawa? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond menjatuhkan MCB atau bekalan kuasa? Kerosakan elektrik didiagnosis dan dibaiki dengan selamat. Hubungi +60182983573.", metaTitleZH: "冷气跳闸？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气导致MCB或电源跳闸？安全诊断和修复电气故障。致电 +60182983573。", h1: "Aircond Tripping Power — Electrical Fault Repair in KL & Selangor", description: "An aircond that repeatedly trips the MCB or power supply has an electrical fault — usually a shorted compressor, faulty capacitor or wiring issue. KL Renovator diagnoses and repairs all electrical aircond faults.", descriptionMS: "Aircond yang berulang kali menjatuhkan MCB atau bekalan kuasa mempunyai kerosakan elektrik — biasanya kompressor terlitar pintas, kapasitor rosak atau masalah pendawaian.", descriptionZH: "反复导致MCB或电源跳闸的冷气有电气故障——通常是压缩机短路、电容器故障或接线问题。", relatedService: "repair", heroImage: "/hero/aircond-pcb-board-replacement-2-klang-valley.jpg" },
-    { slug: "aircond-remote-not-working", name: "Aircond Remote Not Working", nameMS: "Remote Aircond Tidak Berfungsi", nameZH: "冷气遥控器失灵", metaTitle: "Aircond Remote Not Working? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond remote control not working in KL or Selangor? Remote replaced or unit receiver fixed. All brands. Call +60182983573.", metaTitleMS: "Remote Aircond Tidak Berfungsi? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Remote kawalan aircond tidak berfungsi? Remote diganti atau penerima unit dibaiki. Semua jenama. Hubungi +60182983573.", metaTitleZH: "冷气遥控器失灵？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气遥控器不响应？更换遥控器或修复接收器。所有品牌。致电 +60182983573。", h1: "Aircond Remote Control Not Working — Fix in KL & Selangor", description: "If your aircond remote is not responding, the issue could be a dead battery, faulty remote, or a damaged IR receiver on the indoor unit. KL Renovator replaces remotes and repairs IR receivers for all brands.", descriptionMS: "Jika remote aircond anda tidak bertindak balas, masalahnya mungkin bateri habis, remote rosak, atau penerima IR pada unit dalam yang rosak.", descriptionZH: "如果冷气遥控器不响应，问题可能是电池耗尽、遥控器故障或室内机红外接收器损坏。", relatedService: "repair", heroImage: "/hero/aircond-sensor-replacement-klang-valley.jpg" },
-    { slug: "aircond-indoor-unit-leaking", name: "Aircond Indoor Unit Leaking", nameMS: "Unit Dalam Aircond Bocor", nameZH: "冷气室内机漏水", metaTitle: "Aircond Indoor Unit Leaking Water KL & Selangor | KL Renovator", metaDesc: "Aircond indoor unit dripping or leaking water in KL or Selangor? Fixed same-day. Chemical overhaul, drain clearing. Call +60182983573.", metaTitleMS: "Unit Dalam Aircond Bocor Air KL & Selangor | KL Renovator", metaDescMS: "Unit dalam aircond menitis atau bocor air? Dibaiki hari sama. Overhaul kimia, pembersihan longkang. Hubungi +60182983573.", metaTitleZH: "冷气室内机漏水 KL & Selangor | KL Renovator", metaDescZH: "冷气室内机滴水或漏水？当天修复。化学大修，疏通排水管。致电 +60182983573。", h1: "Aircond Indoor Unit Leaking Water — Fix in KL & Selangor", description: "Water dripping from the indoor unit is the most common aircond complaint in Malaysia. Caused by blocked drain pipes or dirty drain pan. KL Renovator clears blockages and performs overhaul to permanently fix indoor unit leaks.", descriptionMS: "Air menitis dari unit dalam adalah aduan aircond yang paling biasa di Malaysia. Disebabkan oleh paip longkang tersumbat atau dulang longkang kotor.", descriptionZH: "室内机滴水是马来西亚最常见的冷气投诉。由排水管堵塞或排水盘脏引起。KL Renovator 清除堵塞并进行大修以永久修复。", relatedService: "chemical-overhaul", heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.jpg" },
-    { slug: "aircond-outdoor-unit-not-running", name: "Aircond Outdoor Unit Not Running", nameMS: "Unit Luar Aircond Tidak Berfungsi", nameZH: "冷气室外机不运转", metaTitle: "Aircond Outdoor Unit Not Running KL & Selangor | KL Renovator", metaDesc: "Aircond outdoor unit not working in KL or Selangor? Compressor or fan motor issue diagnosed and fixed. Call +60182983573.", metaTitleMS: "Unit Luar Aircond Tidak Berfungsi KL & Selangor | KL Renovator", metaDescMS: "Unit luar aircond tidak berfungsi? Masalah kompressor atau motor kipas didiagnosis dan dibaiki. Hubungi +60182983573.", metaTitleZH: "冷气室外机不运转 KL & Selangor | KL Renovator", metaDescZH: "冷气室外机不工作？诊断并修复压缩机或风扇电机问题。致电 +60182983573。", h1: "Aircond Outdoor Unit Not Running — Diagnosis & Repair in KL & Selangor", description: "An outdoor unit that does not start or run usually indicates a compressor, fan motor or capacitor failure. KL Renovator diagnoses and repairs outdoor unit problems for all brands across KL and Selangor.", descriptionMS: "Unit luar yang tidak mula atau tidak berjalan biasanya menunjukkan kegagalan kompressor, motor kipas atau kapasitor.", descriptionZH: "室外机无法启动或运行通常表示压缩机、风扇电机或电容器故障。KL Renovator 诊断并修复所有品牌的室外机问题。", relatedService: "repair", heroImage: "/hero/aircond-compressor-bracket-installation-kl.jpg" },
-    { slug: "aircond-high-electricity-bill", name: "Aircond High Electricity Bill", nameMS: "Bil Elektrik Tinggi Aircond", nameZH: "冷气电费高", metaTitle: "Aircond Causing High Electricity Bill? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond causing high electricity bill in KL or Selangor? Dirty coils and low gas waste energy. Chemical wash from RM 120. Call +60182983573.", metaTitleMS: "Aircond Menyebabkan Bil Elektrik Tinggi? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond menyebabkan bil elektrik tinggi? Gegelung kotor dan gas rendah membazir tenaga. Cuci kimia dari RM 120. Hubungi +60182983573.", metaTitleZH: "冷气导致电费高？吉隆坡及雪兰莪解决 | KL Renovator", metaDescZH: "冷气导致电费高？脏盘管和气体不足浪费能源。化学清洗从RM 120起。致电 +60182983573。", h1: "Aircond High Electricity Bill — Causes & Fix in KL & Selangor", description: "A dirty aircond coil or low refrigerant gas forces the compressor to work harder, dramatically increasing electricity consumption. A chemical wash or gas top-up by KL Renovator can reduce your bill significantly.", descriptionMS: "Gegelung aircond yang kotor atau gas penyejuk rendah memaksa kompressor bekerja lebih keras, meningkatkan penggunaan elektrik dengan dramatik. Cuci kimia atau tambah gas boleh mengurangkan bil anda.", descriptionZH: "脏的冷气盘管或冷媒不足迫使压缩机更努力工作，大幅增加耗电量。KL Renovator的化学清洗或充气可显著降低您的电费。", relatedService: "chemical-wash", heroImage: "/hero/aircond-pressure-chemical-wash-selangor.jpg" },
-    { slug: "aircond-weak-airflow", name: "Aircond Weak Airflow", nameMS: "Aliran Udara Aircond Lemah", nameZH: "冷气风力弱", metaTitle: "Aircond Weak Airflow? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond blowing weak air in KL or Selangor? Blocked coil or fan problem. Chemical wash from RM 120 restores airflow. Call +60182983573.", metaTitleMS: "Aliran Udara Aircond Lemah? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond menghembus udara lemah? Gegelung tersumbat atau masalah kipas. Cuci kimia dari RM 120 memulihkan aliran udara. Hubungi +60182983573.", metaTitleZH: "冷气风力弱？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气吹出微弱的风？盘管堵塞或风扇问题。化学清洗从RM 120起恢复气流。致电 +60182983573。", h1: "Aircond Weak Airflow — Causes & Fix in KL & Selangor", description: "Weak or reduced airflow from your aircond is caused by a blocked evaporator coil or blower wheel. A chemical wash by KL Renovator removes the blockage and fully restores airflow.", descriptionMS: "Aliran udara yang lemah atau berkurangan dari aircond anda disebabkan oleh gegelung evaporator atau roda blower yang tersumbat. Cuci kimia menghilangkan sekatan dan memulihkan aliran udara.", descriptionZH: "冷气微弱或减少的气流是由蒸发器盘管或鼓风机轮堵塞引起的。KL Renovator的化学清洗去除堵塞并完全恢复气流。", relatedService: "chemical-wash", heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg" },
-    { slug: "aircond-not-turning-on", name: "Aircond Not Turning On", nameMS: "Aircond Tidak Hidup", nameZH: "冷气开不了机", metaTitle: "Aircond Not Turning On? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond not turning on in KL or Selangor? Power issue, PCB fault or compressor problem diagnosed fast. Call +60182983573.", metaTitleMS: "Aircond Tidak Hidup? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond tidak hidup? Masalah kuasa, kerosakan PCB atau masalah kompressor didiagnosis dengan cepat. Hubungi +60182983573.", metaTitleZH: "冷气开不了机？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气无法开机？快速诊断电源问题、PCB故障或压缩机问题。致电 +60182983573。", h1: "Aircond Not Turning On — Diagnosis & Repair in KL & Selangor", description: "If your aircond does not respond to the remote or power button, the cause could be a tripped MCB, faulty PCB, failed capacitor or wiring issue. KL Renovator performs a full diagnosis and fixes the problem.", descriptionMS: "Jika aircond anda tidak bertindak balas terhadap remote atau butang kuasa, puncanya mungkin MCB terjatuh, PCB rosak, kapasitor gagal atau masalah pendawaian.", descriptionZH: "如果冷气对遥控器或电源按钮无响应，原因可能是MCB跳闸、PCB故障、电容器故障或接线问题。KL Renovator 进行全面诊断并解决问题。", relatedService: "repair", heroImage: "/hero/aircond-pcb-board-replacement-kl.jpg" },
-    { slug: "aircond-blinking-light", name: "Aircond Blinking Light Error", nameMS: "Ralat Lampu Berkelip Aircond", nameZH: "冷气指示灯闪烁", metaTitle: "Aircond Blinking Light Error Code KL & Selangor | KL Renovator", metaDesc: "Aircond blinking light error in KL or Selangor? Error codes diagnosed and resolved for Daikin, Panasonic, Mitsubishi & more. Call +60182983573.", metaTitleMS: "Kod Ralat Lampu Berkelip Aircond KL & Selangor | KL Renovator", metaDescMS: "Ralat lampu berkelip aircond? Kod ralat didiagnosis dan diselesaikan untuk Daikin, Panasonic, Mitsubishi & lain-lain. Hubungi +60182983573.", metaTitleZH: "冷气指示灯闪烁错误代码 KL & Selangor | KL Renovator", metaDescZH: "冷气指示灯闪烁错误？诊断并解决Daikin、Panasonic、Mitsubishi等品牌的错误代码。致电 +60182983573。", h1: "Aircond Blinking Light Error — Diagnosis in KL & Selangor", description: "Blinking lights on your aircond indicate an error code. Common causes include dirty sensors, low gas, PCB faults or communication errors. KL Renovator reads error codes for all brands and resolves the root cause.", descriptionMS: "Lampu berkelip pada aircond anda menunjukkan kod ralat. Punca biasa termasuk sensor kotor, gas rendah, kerosakan PCB atau ralat komunikasi.", descriptionZH: "冷气上的指示灯闪烁表示错误代码。常见原因包括传感器脏、气体不足、PCB故障或通信错误。KL Renovator 读取所有品牌的错误代码并解决根本原因。", relatedService: "repair", heroImage: "/hero/aircond-sensor-replacement-klang-valley.jpg" },
-    { slug: "aircond-water-dripping", name: "Aircond Water Dripping", nameMS: "Aircond Menitis Air", nameZH: "冷气滴水", metaTitle: "Aircond Water Dripping Fix KL & Selangor | KL Renovator", metaDesc: "Aircond dripping water in KL or Selangor? Drain pipe blockage or frozen coil. Fixed same-day. Chemical wash from RM 120. Call +60182983573.", metaTitleMS: "Pembetulan Aircond Menitis Air KL & Selangor | KL Renovator", metaDescMS: "Aircond menitis air? Sekatan paip longkang atau gegelung beku. Dibaiki hari sama. Cuci kimia dari RM 120. Hubungi +60182983573.", metaTitleZH: "冷气滴水修复 KL & Selangor | KL Renovator", metaDescZH: "冷气滴水？排水管堵塞或盘管结冰。当天修复。化学清洗从RM 120起。致电 +60182983573。", h1: "Aircond Water Dripping — Causes & Fix in KL & Selangor", description: "Water dripping from the indoor unit is caused by a blocked drain pipe, dirty drain pan, or frozen evaporator coil. KL Renovator clears blockages and performs chemical wash or overhaul to stop the dripping.", descriptionMS: "Air menitis dari unit dalam disebabkan oleh paip longkang tersumbat, dulang longkang kotor, atau gegelung evaporator beku.", descriptionZH: "室内机滴水是由排水管堵塞、排水盘脏或蒸发器盘管结冰引起的。KL Renovator 清除堵塞并进行化学清洗或大修以停止滴水。", relatedService: "chemical-wash", heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.jpg" },
-    { slug: "aircond-thermostat-problems", name: "Aircond Thermostat Problems", nameMS: "Masalah Termostat Aircond", nameZH: "冷气温控器问题", metaTitle: "Aircond Thermostat Problem & Fix KL & Selangor | KL Renovator", metaDesc: "Aircond thermostat not working in KL or Selangor? Temperature sensor or PCB fault diagnosed and fixed. All brands. Call +60182983573.", metaTitleMS: "Masalah & Pembetulan Termostat Aircond KL & Selangor | KL Renovator", metaDescMS: "Termostat aircond tidak berfungsi? Kerosakan sensor suhu atau PCB didiagnosis dan dibaiki. Semua jenama. Hubungi +60182983573.", metaTitleZH: "冷气温控器问题修复 KL & Selangor | KL Renovator", metaDescZH: "冷气温控器不工作？诊断并修复温度传感器或PCB故障。所有品牌。致电 +60182983573。", h1: "Aircond Thermostat Problems — Diagnosis & Fix in KL & Selangor", description: "Thermostat problems cause the aircond to run non-stop, not reach the set temperature, or shut off too early. KL Renovator diagnoses temperature sensor and thermostat faults for all brands across KL and Selangor.", descriptionMS: "Masalah termostat menyebabkan aircond berjalan tanpa henti, tidak mencapai suhu yang ditetapkan, atau mati terlalu awal.", descriptionZH: "温控器问题会导致冷气不停运行、无法达到设定温度或过早关闭。KL Renovator 诊断所有品牌的温度传感器和温控器故障。", relatedService: "repair", heroImage: "/hero/aircond-sensor-replacement-klang-valley.jpg" },
+    { slug: "aircond-not-cold", name: "Aircond Not Cold", nameMS: "Aircond Tidak Sejuk", nameZH: "冷气不冷", metaTitle: "Aircond Not Cold? Causes & Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond running but not cold in KL or Selangor? Find out why and get it fixed fast. KL Renovator diagnoses and repairs all brands. Call +60182983573.", metaTitleMS: "Aircond Tidak Sejuk? Punca & Perbaikan di KL & Selangor | KL Renovator", metaDescMS: "Aircond berjalan tetapi tidak sejuk di KL atau Selangor? Ketahui sebabnya dan baiki dengan cepat. Hubungi +60182983573.", metaTitleZH: "冷气不冷？吉隆坡及雪兰莪原因与解决 | KL Renovator", metaDescZH: "冷气运行但不冷？找出原因并快速修复。KL Renovator 诊断和修复所有品牌。致电 +60182983573。", h1: "Aircond Not Cold — Causes & Repair in KL & Selangor", description: "If your aircond is running but not producing cold air, the most common causes are low refrigerant gas, a dirty evaporator coil, or a faulty capacitor. KL Renovator diagnoses and fixes all aircond cooling problems across KL and Selangor.", descriptionMS: "Jika aircond anda berjalan tetapi tidak menghasilkan udara sejuk, punca paling biasa adalah gas penyejuk rendah, gegelung evaporator kotor, atau kapasitor rosak. KL Renovator mendiagnosis dan membaiki semua masalah penyejukan aircond.", descriptionZH: "如果您的冷气运行但不产生冷气，最常见的原因是冷媒不足、蒸发器盘管脏或电容器故障。KL Renovator 诊断并修复所有冷气冷却问题。", relatedService: "gas-topup", heroImage: "/hero/aircond-repair-technician-klang-valley.webp" },
+    { slug: "aircond-water-leaking", name: "Aircond Water Leaking", nameMS: "Aircond Bocor Air", nameZH: "冷气漏水", metaTitle: "Aircond Water Leaking? Fix It Fast in KL & Selangor | KL Renovator", metaDesc: "Aircond leaking water in KL or Selangor? Don't ignore it. Get it fixed today by KL Renovator. All brands, same-day service. Call +60182983573.", metaTitleMS: "Aircond Bocor Air? Baiki Cepat di KL & Selangor | KL Renovator", metaDescMS: "Aircond bocor air di KL atau Selangor? Jangan abaikan. Baiki hari ini dengan KL Renovator. Hubungi +60182983573.", metaTitleZH: "冷气漏水？吉隆坡及雪兰莪快速修复 | KL Renovator", metaDescZH: "冷气在吉隆坡或雪兰莪漏水？不要忽视。今天就让KL Renovator修复。致电 +60182983573。", h1: "Aircond Water Leaking — Causes & Repair in KL & Selangor", description: "A leaking aircond indoor unit is usually caused by a blocked drain pipe or dirty drain pan. KL Renovator diagnoses and repairs all water leaking issues across KL and Selangor with same-day service.", descriptionMS: "Unit dalam aircond yang bocor biasanya disebabkan paip longkang tersumbat atau dulang longkang kotor. KL Renovator mendiagnosis dan membaiki semua masalah kebocoran air dengan servis hari sama.", descriptionZH: "冷气室内机漏水通常是由排水管堵塞或排水盘脏引起的。KL Renovator 当天提供诊断和修复所有漏水问题的服务。", relatedService: "chemical-overhaul", heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp" },
+    { slug: "aircond-making-noise", name: "Aircond Making Noise", nameMS: "Aircond Bunyi Bising", nameZH: "冷气噪音", metaTitle: "Aircond Making Noise? Causes & Fix KL & Selangor | KL Renovator", metaDesc: "Aircond making loud noise in KL or Selangor? Rattling, buzzing or grinding sounds diagnosed and fixed. All brands. Call +60182983573.", metaTitleMS: "Aircond Bunyi Bising? Punca & Perbaikan KL & Selangor | KL Renovator", metaDescMS: "Aircond bunyi kuat di KL atau Selangor? Bunyi gemetar, berdengung atau menggigit didiagnosis dan dibaiki. Hubungi +60182983573.", metaTitleZH: "冷气噪音？吉隆坡及雪兰莪原因与解决 | KL Renovator", metaDescZH: "冷气在吉隆坡或雪兰莪发出噪音？诊断并修复嘎嘎声、嗡嗡声或研磨声。致电 +60182983573。", h1: "Aircond Making Noise — Causes & Repair in KL & Selangor", description: "Unusual noises from your aircond — rattling, buzzing, or grinding — usually indicate a loose part, dirty fan blade, or failing fan motor. KL Renovator diagnoses and fixes all aircond noise problems.", descriptionMS: "Bunyi luar biasa dari aircond anda — gemetar, berdengung, atau menggigit — biasanya menunjukkan bahagian longgar, bilah kipas kotor, atau motor kipas rosak.", descriptionZH: "冷气发出异常噪音——嘎嘎声、嗡嗡声或研磨声——通常表示零件松动、风扇叶片脏或风扇电机故障。", relatedService: "repair", heroImage: "/hero/aircond-compressor-flaring-repair-kl.webp" },
+    { slug: "aircond-bad-smell", name: "Aircond Bad Smell", nameMS: "Aircond Bau Busuk", nameZH: "冷气异味", metaTitle: "Aircond Bad Smell? Fix Mould & Odour in KL & Selangor | KL Renovator", metaDesc: "Aircond blowing bad smell in KL or Selangor? Mould, bacteria and odour removed by chemical wash or overhaul. Call +60182983573.", metaTitleMS: "Aircond Bau Busuk? Buang Kulat & Bau di KL & Selangor | KL Renovator", metaDescMS: "Aircond menghembus bau busuk di KL atau Selangor? Kulat, bakteria dan bau dibuang dengan cuci kimia atau overhaul. Hubungi +60182983573.", metaTitleZH: "冷气异味？吉隆坡及雪兰莪去除霉菌和气味 | KL Renovator", metaDescZH: "冷气在吉隆坡或雪兰莪吹出异味？化学清洗或大修去除霉菌、细菌和气味。致电 +60182983573。", h1: "Aircond Bad Smell — Mould & Odour Fix in KL & Selangor", description: "Bad smells from your aircond are caused by mould and bacteria buildup on the evaporator coil and blower wheel. A chemical wash or chemical overhaul by KL Renovator permanently removes the smell.", descriptionMS: "Bau busuk dari aircond anda disebabkan oleh pertumbuhan kulat dan bakteria pada gegelung evaporator dan roda blower. Cuci kimia atau overhaul kimia oleh KL Renovator menghilangkan bau secara kekal.", descriptionZH: "冷气异味是由蒸发器盘管和鼓风机轮上积累的霉菌和细菌引起的。KL Renovator的化学清洗或化学大修可永久消除异味。", relatedService: "chemical-wash", heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp" },
+    { slug: "aircond-freezing-up", name: "Aircond Freezing Up", nameMS: "Aircond Membeku", nameZH: "冷气结冰", metaTitle: "Aircond Freezing Up? Ice on Coil Fix KL & Selangor | KL Renovator", metaDesc: "Aircond coil freezing up in KL or Selangor? Ice formation caused by low gas or dirty coil. KL Renovator fixes it. Call +60182983573.", metaTitleMS: "Aircond Membeku? Pembetulan Ais pada Gegelung KL & Selangor | KL Renovator", metaDescMS: "Gegelung aircond membeku di KL atau Selangor? Pembentukan ais disebabkan gas rendah atau gegelung kotor. KL Renovator membaikinya. Hubungi +60182983573.", metaTitleZH: "冷气结冰？吉隆坡及雪兰莪盘管结冰修复 | KL Renovator", metaDescZH: "冷气盘管在吉隆坡或雪兰莪结冰？气体不足或盘管脏导致结冰。KL Renovator 修复它。致电 +60182983573。", h1: "Aircond Freezing Up — Ice on Coil Repair in KL & Selangor", description: "Aircond ice formation is caused by low refrigerant gas or severely blocked evaporator coils. KL Renovator diagnoses the root cause and performs the correct service — gas top-up or chemical overhaul.", descriptionMS: "Pembentukan ais aircond disebabkan oleh gas penyejuk rendah atau gegelung evaporator yang sangat tersumbat. KL Renovator mendiagnosis punca masalah dan melakukan servis yang betul.", descriptionZH: "冷气结冰是由冷媒不足或蒸发器盘管严重堵塞引起的。KL Renovator 诊断根本原因并执行正确的服务——充气或化学大修。", relatedService: "chemical-overhaul", heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp" },
+    { slug: "aircond-low-gas", name: "Aircond Low Gas", nameMS: "Aircond Gas Rendah", nameZH: "冷气气体不足", metaTitle: "Aircond Low Gas Symptoms & Top-Up KL & Selangor | KL Renovator", metaDesc: "Signs your aircond has low gas in KL or Selangor. R22, R410A, R32 gas top-up from RM 120. Leak check included. Call +60182983573.", metaTitleMS: "Simptom Aircond Gas Rendah & Tambah Gas KL & Selangor | KL Renovator", metaDescMS: "Tanda aircond anda mempunyai gas rendah di KL atau Selangor. Tambah gas R22, R410A, R32 dari RM 120. Semak kebocoran disertakan. Hubungi +60182983573.", metaTitleZH: "冷气气体不足症状和充气 KL & Selangor | KL Renovator", metaDescZH: "冷气气体不足的迹象。R22、R410A、R32充气从RM 120起。含泄漏检查。致电 +60182983573。", h1: "Aircond Low Gas — Symptoms & Gas Top-Up in KL & Selangor", description: "Low refrigerant gas causes warm air, longer cooling cycles, ice formation and high electricity bills. KL Renovator tops up R22, R410A and R32 gas with precision balancing and leak check included.", descriptionMS: "Gas penyejuk rendah menyebabkan udara panas, kitaran penyejukan lebih lama, pembentukan ais dan bil elektrik tinggi. KL Renovator menambah gas R22, R410A dan R32 dengan penimbangan tepat dan semak kebocoran.", descriptionZH: "冷媒不足会导致暖风、冷却周期延长、结冰和电费高。KL Renovator 为R22、R410A和R32充气，包含精准平衡和泄漏检查。", relatedService: "gas-topup", heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp" },
+    { slug: "aircond-gas-leak", name: "Aircond Gas Leak", nameMS: "Kebocoran Gas Aircond", nameZH: "冷气气体泄漏", metaTitle: "Aircond Gas Leak Detection & Repair KL & Selangor | KL Renovator", metaDesc: "Aircond gas leak in KL or Selangor? KL Renovator detects leaks, repairs the pipe and tops up gas. R22, R410A, R32. Call +60182983573.", metaTitleMS: "Pengesanan & Pembaikan Kebocoran Gas Aircond KL & Selangor | KL Renovator", metaDescMS: "Kebocoran gas aircond di KL atau Selangor? KL Renovator mengesan kebocoran, membaiki paip dan menambah gas. Hubungi +60182983573.", metaTitleZH: "冷气气体泄漏检测和修复 KL & Selangor | KL Renovator", metaDescZH: "冷气气体泄漏？KL Renovator 检测泄漏，修复管道并充气。R22、R410A、R32。致电 +60182983573。", h1: "Aircond Gas Leak — Detection & Repair in KL & Selangor", description: "A gas leak causes repeated cooling failure even after top-ups. KL Renovator identifies the leak source, repairs the copper pipe or valve, then tops up the refrigerant to correct pressure.", descriptionMS: "Kebocoran gas menyebabkan kegagalan penyejukan berulang walaupun selepas tambah gas. KL Renovator mengenal pasti sumber kebocoran, membaiki paip tembaga atau injap, kemudian menambah penyejuk.", descriptionZH: "气体泄漏会导致即使充气后仍反复冷却失败。KL Renovator 找出泄漏源，修复铜管或阀门，然后将冷媒充至正确压力。", relatedService: "gas-topup", heroImage: "/hero/aircond-compressor-flaring-repair-kl.webp" },
+    { slug: "aircond-compressor-problem", name: "Aircond Compressor Problem", nameMS: "Masalah Kompressor Aircond", nameZH: "冷气压缩机故障", metaTitle: "Aircond Compressor Problem & Repair KL & Selangor | KL Renovator", metaDesc: "Aircond compressor not working in KL or Selangor? KL Renovator diagnoses and repairs or replaces compressors for all brands. Call +60182983573.", metaTitleMS: "Masalah & Pembaikan Kompressor Aircond KL & Selangor | KL Renovator", metaDescMS: "Kompressor aircond tidak berfungsi di KL atau Selangor? KL Renovator mendiagnosis dan membaiki atau mengganti kompressor. Hubungi +60182983573.", metaTitleZH: "冷气压缩机故障和维修 KL & Selangor | KL Renovator", metaDescZH: "冷气压缩机在吉隆坡或雪兰莪不工作？KL Renovator 诊断并维修或更换压缩机。致电 +60182983573。", h1: "Aircond Compressor Problem — Diagnosis & Repair in KL & Selangor", description: "A failing compressor causes the aircond to run without cooling. KL Renovator performs a full diagnosis to confirm if the compressor needs repair or replacement, with a transparent quote before work begins.", descriptionMS: "Kompressor yang rosak menyebabkan aircond berjalan tanpa penyejukan. KL Renovator melakukan diagnosis penuh untuk mengesahkan sama ada kompressor perlu dibaiki atau diganti.", descriptionZH: "压缩机故障会导致冷气运行但不制冷。KL Renovator 进行全面诊断确认压缩机是否需要维修或更换，施工前提供透明报价。", relatedService: "repair", heroImage: "/hero/aircond-new-compressor-installation-rawang.webp" },
+    { slug: "aircond-pcb-problem", name: "Aircond PCB Problem", nameMS: "Masalah PCB Aircond", nameZH: "冷气电路板故障", metaTitle: "Aircond PCB Board Problem & Repair KL & Selangor | KL Renovator", metaDesc: "Aircond PCB board error in KL or Selangor? KL Renovator diagnoses and replaces faulty PCB boards for all brands. Call +60182983573.", metaTitleMS: "Masalah & Pembaikan PCB Aircond KL & Selangor | KL Renovator", metaDescMS: "Ralat papan PCB aircond di KL atau Selangor? KL Renovator mendiagnosis dan mengganti papan PCB rosak. Hubungi +60182983573.", metaTitleZH: "冷气PCB电路板故障和维修 KL & Selangor | KL Renovator", metaDescZH: "冷气PCB电路板错误？KL Renovator 诊断并更换故障PCB板。致电 +60182983573。", h1: "Aircond PCB Board Problem — Diagnosis & Repair in KL & Selangor", description: "A faulty PCB (printed circuit board) causes blinking error lights, erratic operation or complete shutdown. KL Renovator diagnoses PCB faults and replaces boards for all major brands.", descriptionMS: "PCB (papan litar bercetak) yang rosak menyebabkan lampu ralat berkelip, operasi tidak teratur atau mati sepenuhnya. KL Renovator mendiagnosis kerosakan PCB dan mengganti papan.", descriptionZH: "故障的PCB（印刷电路板）会导致错误灯闪烁、运行不稳定或完全关闭。KL Renovator 诊断PCB故障并更换所有主要品牌的电路板。", relatedService: "repair", heroImage: "/hero/aircond-pcb-board-replacement-kl.webp" },
+    { slug: "aircond-fan-not-working", name: "Aircond Fan Not Working", nameMS: "Kipas Aircond Tidak Berfungsi", nameZH: "冷气风扇不转", metaTitle: "Aircond Fan Not Working? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond indoor or outdoor fan not working in KL or Selangor? Fan motor replaced same-day. All brands. Call +60182983573.", metaTitleMS: "Kipas Aircond Tidak Berfungsi? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Kipas dalam atau luar aircond tidak berfungsi? Motor kipas diganti hari sama. Semua jenama. Hubungi +60182983573.", metaTitleZH: "冷气风扇不转？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气室内或室外风扇不工作？当天更换风扇电机。所有品牌。致电 +60182983573。", h1: "Aircond Fan Not Working — Repair in KL & Selangor", description: "If your aircond indoor or outdoor fan has stopped working, the cause is usually a burnt-out fan motor or failed capacitor. KL Renovator replaces fan motors for all brands with same-day service.", descriptionMS: "Jika kipas dalam atau luar aircond anda berhenti berfungsi, puncanya biasanya motor kipas terbakar atau kapasitor gagal. KL Renovator mengganti motor kipas dengan servis hari sama.", descriptionZH: "如果冷气室内或室外风扇停止工作，原因通常是风扇电机烧坏或电容器故障。KL Renovator 当天更换所有品牌的风扇电机。", relatedService: "repair", heroImage: "/hero/aircond-repair-technician-klang-valley.webp" },
+    { slug: "aircond-tripping-power", name: "Aircond Tripping Power", nameMS: "Aircond Terjatuh Pawa", nameZH: "冷气跳闸断电", metaTitle: "Aircond Tripping MCB / Power? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond tripping your MCB or power in KL or Selangor? Electrical fault diagnosed and fixed safely. Call +60182983573.", metaTitleMS: "Aircond Terjatuh MCB / Pawa? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond menjatuhkan MCB atau bekalan kuasa? Kerosakan elektrik didiagnosis dan dibaiki dengan selamat. Hubungi +60182983573.", metaTitleZH: "冷气跳闸？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气导致MCB或电源跳闸？安全诊断和修复电气故障。致电 +60182983573。", h1: "Aircond Tripping Power — Electrical Fault Repair in KL & Selangor", description: "An aircond that repeatedly trips the MCB or power supply has an electrical fault — usually a shorted compressor, faulty capacitor or wiring issue. KL Renovator diagnoses and repairs all electrical aircond faults.", descriptionMS: "Aircond yang berulang kali menjatuhkan MCB atau bekalan kuasa mempunyai kerosakan elektrik — biasanya kompressor terlitar pintas, kapasitor rosak atau masalah pendawaian.", descriptionZH: "反复导致MCB或电源跳闸的冷气有电气故障——通常是压缩机短路、电容器故障或接线问题。", relatedService: "repair", heroImage: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp" },
+    { slug: "aircond-remote-not-working", name: "Aircond Remote Not Working", nameMS: "Remote Aircond Tidak Berfungsi", nameZH: "冷气遥控器失灵", metaTitle: "Aircond Remote Not Working? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond remote control not working in KL or Selangor? Remote replaced or unit receiver fixed. All brands. Call +60182983573.", metaTitleMS: "Remote Aircond Tidak Berfungsi? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Remote kawalan aircond tidak berfungsi? Remote diganti atau penerima unit dibaiki. Semua jenama. Hubungi +60182983573.", metaTitleZH: "冷气遥控器失灵？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气遥控器不响应？更换遥控器或修复接收器。所有品牌。致电 +60182983573。", h1: "Aircond Remote Control Not Working — Fix in KL & Selangor", description: "If your aircond remote is not responding, the issue could be a dead battery, faulty remote, or a damaged IR receiver on the indoor unit. KL Renovator replaces remotes and repairs IR receivers for all brands.", descriptionMS: "Jika remote aircond anda tidak bertindak balas, masalahnya mungkin bateri habis, remote rosak, atau penerima IR pada unit dalam yang rosak.", descriptionZH: "如果冷气遥控器不响应，问题可能是电池耗尽、遥控器故障或室内机红外接收器损坏。", relatedService: "repair", heroImage: "/hero/aircond-sensor-replacement-klang-valley.webp" },
+    { slug: "aircond-indoor-unit-leaking", name: "Aircond Indoor Unit Leaking", nameMS: "Unit Dalam Aircond Bocor", nameZH: "冷气室内机漏水", metaTitle: "Aircond Indoor Unit Leaking Water KL & Selangor | KL Renovator", metaDesc: "Aircond indoor unit dripping or leaking water in KL or Selangor? Fixed same-day. Chemical overhaul, drain clearing. Call +60182983573.", metaTitleMS: "Unit Dalam Aircond Bocor Air KL & Selangor | KL Renovator", metaDescMS: "Unit dalam aircond menitis atau bocor air? Dibaiki hari sama. Overhaul kimia, pembersihan longkang. Hubungi +60182983573.", metaTitleZH: "冷气室内机漏水 KL & Selangor | KL Renovator", metaDescZH: "冷气室内机滴水或漏水？当天修复。化学大修，疏通排水管。致电 +60182983573。", h1: "Aircond Indoor Unit Leaking Water — Fix in KL & Selangor", description: "Water dripping from the indoor unit is the most common aircond complaint in Malaysia. Caused by blocked drain pipes or dirty drain pan. KL Renovator clears blockages and performs overhaul to permanently fix indoor unit leaks.", descriptionMS: "Air menitis dari unit dalam adalah aduan aircond yang paling biasa di Malaysia. Disebabkan oleh paip longkang tersumbat atau dulang longkang kotor.", descriptionZH: "室内机滴水是马来西亚最常见的冷气投诉。由排水管堵塞或排水盘脏引起。KL Renovator 清除堵塞并进行大修以永久修复。", relatedService: "chemical-overhaul", heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp" },
+    { slug: "aircond-outdoor-unit-not-running", name: "Aircond Outdoor Unit Not Running", nameMS: "Unit Luar Aircond Tidak Berfungsi", nameZH: "冷气室外机不运转", metaTitle: "Aircond Outdoor Unit Not Running KL & Selangor | KL Renovator", metaDesc: "Aircond outdoor unit not working in KL or Selangor? Compressor or fan motor issue diagnosed and fixed. Call +60182983573.", metaTitleMS: "Unit Luar Aircond Tidak Berfungsi KL & Selangor | KL Renovator", metaDescMS: "Unit luar aircond tidak berfungsi? Masalah kompressor atau motor kipas didiagnosis dan dibaiki. Hubungi +60182983573.", metaTitleZH: "冷气室外机不运转 KL & Selangor | KL Renovator", metaDescZH: "冷气室外机不工作？诊断并修复压缩机或风扇电机问题。致电 +60182983573。", h1: "Aircond Outdoor Unit Not Running — Diagnosis & Repair in KL & Selangor", description: "An outdoor unit that does not start or run usually indicates a compressor, fan motor or capacitor failure. KL Renovator diagnoses and repairs outdoor unit problems for all brands across KL and Selangor.", descriptionMS: "Unit luar yang tidak mula atau tidak berjalan biasanya menunjukkan kegagalan kompressor, motor kipas atau kapasitor.", descriptionZH: "室外机无法启动或运行通常表示压缩机、风扇电机或电容器故障。KL Renovator 诊断并修复所有品牌的室外机问题。", relatedService: "repair", heroImage: "/hero/aircond-compressor-bracket-installation-kl.webp" },
+    { slug: "aircond-high-electricity-bill", name: "Aircond High Electricity Bill", nameMS: "Bil Elektrik Tinggi Aircond", nameZH: "冷气电费高", metaTitle: "Aircond Causing High Electricity Bill? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond causing high electricity bill in KL or Selangor? Dirty coils and low gas waste energy. Chemical wash from RM 120. Call +60182983573.", metaTitleMS: "Aircond Menyebabkan Bil Elektrik Tinggi? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond menyebabkan bil elektrik tinggi? Gegelung kotor dan gas rendah membazir tenaga. Cuci kimia dari RM 120. Hubungi +60182983573.", metaTitleZH: "冷气导致电费高？吉隆坡及雪兰莪解决 | KL Renovator", metaDescZH: "冷气导致电费高？脏盘管和气体不足浪费能源。化学清洗从RM 120起。致电 +60182983573。", h1: "Aircond High Electricity Bill — Causes & Fix in KL & Selangor", description: "A dirty aircond coil or low refrigerant gas forces the compressor to work harder, dramatically increasing electricity consumption. A chemical wash or gas top-up by KL Renovator can reduce your bill significantly.", descriptionMS: "Gegelung aircond yang kotor atau gas penyejuk rendah memaksa kompressor bekerja lebih keras, meningkatkan penggunaan elektrik dengan dramatik. Cuci kimia atau tambah gas boleh mengurangkan bil anda.", descriptionZH: "脏的冷气盘管或冷媒不足迫使压缩机更努力工作，大幅增加耗电量。KL Renovator的化学清洗或充气可显著降低您的电费。", relatedService: "chemical-wash", heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp" },
+    { slug: "aircond-weak-airflow", name: "Aircond Weak Airflow", nameMS: "Aliran Udara Aircond Lemah", nameZH: "冷气风力弱", metaTitle: "Aircond Weak Airflow? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond blowing weak air in KL or Selangor? Blocked coil or fan problem. Chemical wash from RM 120 restores airflow. Call +60182983573.", metaTitleMS: "Aliran Udara Aircond Lemah? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond menghembus udara lemah? Gegelung tersumbat atau masalah kipas. Cuci kimia dari RM 120 memulihkan aliran udara. Hubungi +60182983573.", metaTitleZH: "冷气风力弱？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气吹出微弱的风？盘管堵塞或风扇问题。化学清洗从RM 120起恢复气流。致电 +60182983573。", h1: "Aircond Weak Airflow — Causes & Fix in KL & Selangor", description: "Weak or reduced airflow from your aircond is caused by a blocked evaporator coil or blower wheel. A chemical wash by KL Renovator removes the blockage and fully restores airflow.", descriptionMS: "Aliran udara yang lemah atau berkurangan dari aircond anda disebabkan oleh gegelung evaporator atau roda blower yang tersumbat. Cuci kimia menghilangkan sekatan dan memulihkan aliran udara.", descriptionZH: "冷气微弱或减少的气流是由蒸发器盘管或鼓风机轮堵塞引起的。KL Renovator的化学清洗去除堵塞并完全恢复气流。", relatedService: "chemical-wash", heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp" },
+    { slug: "aircond-not-turning-on", name: "Aircond Not Turning On", nameMS: "Aircond Tidak Hidup", nameZH: "冷气开不了机", metaTitle: "Aircond Not Turning On? Fix in KL & Selangor | KL Renovator", metaDesc: "Aircond not turning on in KL or Selangor? Power issue, PCB fault or compressor problem diagnosed fast. Call +60182983573.", metaTitleMS: "Aircond Tidak Hidup? Baiki di KL & Selangor | KL Renovator", metaDescMS: "Aircond tidak hidup? Masalah kuasa, kerosakan PCB atau masalah kompressor didiagnosis dengan cepat. Hubungi +60182983573.", metaTitleZH: "冷气开不了机？吉隆坡及雪兰莪修复 | KL Renovator", metaDescZH: "冷气无法开机？快速诊断电源问题、PCB故障或压缩机问题。致电 +60182983573。", h1: "Aircond Not Turning On — Diagnosis & Repair in KL & Selangor", description: "If your aircond does not respond to the remote or power button, the cause could be a tripped MCB, faulty PCB, failed capacitor or wiring issue. KL Renovator performs a full diagnosis and fixes the problem.", descriptionMS: "Jika aircond anda tidak bertindak balas terhadap remote atau butang kuasa, puncanya mungkin MCB terjatuh, PCB rosak, kapasitor gagal atau masalah pendawaian.", descriptionZH: "如果冷气对遥控器或电源按钮无响应，原因可能是MCB跳闸、PCB故障、电容器故障或接线问题。KL Renovator 进行全面诊断并解决问题。", relatedService: "repair", heroImage: "/hero/aircond-pcb-board-replacement-kl.webp" },
+    { slug: "aircond-blinking-light", name: "Aircond Blinking Light Error", nameMS: "Ralat Lampu Berkelip Aircond", nameZH: "冷气指示灯闪烁", metaTitle: "Aircond Blinking Light Error Code KL & Selangor | KL Renovator", metaDesc: "Aircond blinking light error in KL or Selangor? Error codes diagnosed and resolved for Daikin, Panasonic, Mitsubishi & more. Call +60182983573.", metaTitleMS: "Kod Ralat Lampu Berkelip Aircond KL & Selangor | KL Renovator", metaDescMS: "Ralat lampu berkelip aircond? Kod ralat didiagnosis dan diselesaikan untuk Daikin, Panasonic, Mitsubishi & lain-lain. Hubungi +60182983573.", metaTitleZH: "冷气指示灯闪烁错误代码 KL & Selangor | KL Renovator", metaDescZH: "冷气指示灯闪烁错误？诊断并解决Daikin、Panasonic、Mitsubishi等品牌的错误代码。致电 +60182983573。", h1: "Aircond Blinking Light Error — Diagnosis in KL & Selangor", description: "Blinking lights on your aircond indicate an error code. Common causes include dirty sensors, low gas, PCB faults or communication errors. KL Renovator reads error codes for all brands and resolves the root cause.", descriptionMS: "Lampu berkelip pada aircond anda menunjukkan kod ralat. Punca biasa termasuk sensor kotor, gas rendah, kerosakan PCB atau ralat komunikasi.", descriptionZH: "冷气上的指示灯闪烁表示错误代码。常见原因包括传感器脏、气体不足、PCB故障或通信错误。KL Renovator 读取所有品牌的错误代码并解决根本原因。", relatedService: "repair", heroImage: "/hero/aircond-sensor-replacement-klang-valley.webp" },
+    { slug: "aircond-water-dripping", name: "Aircond Water Dripping", nameMS: "Aircond Menitis Air", nameZH: "冷气滴水", metaTitle: "Aircond Water Dripping Fix KL & Selangor | KL Renovator", metaDesc: "Aircond dripping water in KL or Selangor? Drain pipe blockage or frozen coil. Fixed same-day. Chemical wash from RM 120. Call +60182983573.", metaTitleMS: "Pembetulan Aircond Menitis Air KL & Selangor | KL Renovator", metaDescMS: "Aircond menitis air? Sekatan paip longkang atau gegelung beku. Dibaiki hari sama. Cuci kimia dari RM 120. Hubungi +60182983573.", metaTitleZH: "冷气滴水修复 KL & Selangor | KL Renovator", metaDescZH: "冷气滴水？排水管堵塞或盘管结冰。当天修复。化学清洗从RM 120起。致电 +60182983573。", h1: "Aircond Water Dripping — Causes & Fix in KL & Selangor", description: "Water dripping from the indoor unit is caused by a blocked drain pipe, dirty drain pan, or frozen evaporator coil. KL Renovator clears blockages and performs chemical wash or overhaul to stop the dripping.", descriptionMS: "Air menitis dari unit dalam disebabkan oleh paip longkang tersumbat, dulang longkang kotor, atau gegelung evaporator beku.", descriptionZH: "室内机滴水是由排水管堵塞、排水盘脏或蒸发器盘管结冰引起的。KL Renovator 清除堵塞并进行化学清洗或大修以停止滴水。", relatedService: "chemical-wash", heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp" },
+    { slug: "aircond-thermostat-problems", name: "Aircond Thermostat Problems", nameMS: "Masalah Termostat Aircond", nameZH: "冷气温控器问题", metaTitle: "Aircond Thermostat Problem & Fix KL & Selangor | KL Renovator", metaDesc: "Aircond thermostat not working in KL or Selangor? Temperature sensor or PCB fault diagnosed and fixed. All brands. Call +60182983573.", metaTitleMS: "Masalah & Pembetulan Termostat Aircond KL & Selangor | KL Renovator", metaDescMS: "Termostat aircond tidak berfungsi? Kerosakan sensor suhu atau PCB didiagnosis dan dibaiki. Semua jenama. Hubungi +60182983573.", metaTitleZH: "冷气温控器问题修复 KL & Selangor | KL Renovator", metaDescZH: "冷气温控器不工作？诊断并修复温度传感器或PCB故障。所有品牌。致电 +60182983573。", h1: "Aircond Thermostat Problems — Diagnosis & Fix in KL & Selangor", description: "Thermostat problems cause the aircond to run non-stop, not reach the set temperature, or shut off too early. KL Renovator diagnoses temperature sensor and thermostat faults for all brands across KL and Selangor.", descriptionMS: "Masalah termostat menyebabkan aircond berjalan tanpa henti, tidak mencapai suhu yang ditetapkan, atau mati terlalu awal.", descriptionZH: "温控器问题会导致冷气不停运行、无法达到设定温度或过早关闭。KL Renovator 诊断所有品牌的温度传感器和温控器故障。", relatedService: "repair", heroImage: "/hero/aircond-sensor-replacement-klang-valley.webp" },
   ],
 
   // ── KAMPUNG / NEIGHBOURHOOD PAGES ─────────────────────────────────────────
