@@ -150,6 +150,8 @@ export default function RootLayout({
                 siteConfig.links.facebook,
                 siteConfig.links.instagram,
                 siteConfig.links.tiktok,
+                siteConfig.links.twitter,
+                siteConfig.links.linkedin,
               ],
               "address": {
                 "@type": "PostalAddress",
@@ -251,6 +253,8 @@ export default function RootLayout({
                 siteConfig.links.facebook,
                 siteConfig.links.instagram,
                 siteConfig.links.tiktok,
+                siteConfig.links.twitter,
+                siteConfig.links.linkedin,
               ],
             }),
           }}
@@ -328,7 +332,7 @@ export default function RootLayout({
                   "name": "What aircond brands does KL Renovator service?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi Electric, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu and Gree. All inverter and non-inverter models supported.",
+                    "text": "KL Renovator services all major brands including Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic. All inverter and non-inverter models supported.",
                   },
                 },
                 {
