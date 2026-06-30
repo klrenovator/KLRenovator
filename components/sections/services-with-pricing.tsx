@@ -151,7 +151,7 @@ export const ServicesWithPricing = () => {
                     <a
                       href={waLink(`Hi KL Renovator, I want to enquire about: ${service.title}`)}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="nofollow noopener noreferrer"
                       className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl shadow-sm hover:shadow-green-200 transition-all duration-200 active:scale-[0.98]"
                     >
                       <FaWhatsapp className="h-4 w-4" />
@@ -187,7 +187,7 @@ export const ServicesWithPricing = () => {
                   <div className="mt-8 flex flex-col gap-3">
                     <Link
                       href={`/services/${service.slug}`}
-                      className="inline-flex w-full items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
+                      className="inline-flex w-full items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
                     >
                       View Details & Pricing
                       <FaArrowRight className="h-3 w-3" />
@@ -195,7 +195,7 @@ export const ServicesWithPricing = () => {
                     <a
                       href={waLink(`Hi KL Renovator, I need a commercial quote for: ${service.title}`)}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="nofollow noopener noreferrer"
                       className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-xs py-3.5 rounded-xl shadow-sm hover:shadow-green-200 transition-all duration-200 active:scale-[0.98]"
                     >
                       <FaWhatsapp className="h-4 w-4" />
@@ -230,8 +230,8 @@ export const ServicesWithPricing = () => {
                 <a
                   href={waLink("Hi KL Renovator, I need a commercial HVAC quote for my business.")}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-all duration-200"
+                  rel="nofollow noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#0284c7] hover:bg-[#0369a1] text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-all duration-200"
                 >
                   <FaWhatsapp className="h-5 w-5" />
                   Get Commercial Quote via WhatsApp
