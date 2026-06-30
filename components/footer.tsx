@@ -2,7 +2,7 @@
 
 import NextLink from "next/link";
 import {
-  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaGoogle,
+  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaGoogle, FaXTwitter, FaLinkedin,
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
@@ -90,7 +90,7 @@ export const Footer = () => {
             <a
               href={waLink(rfqMsg)}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="WhatsApp KL Renovator"
               style={{ backgroundColor: "#25D366" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
@@ -100,7 +100,7 @@ export const Footer = () => {
             <a
               href={siteConfig.links.instagram}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="KL Renovator Instagram"
               style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
@@ -110,7 +110,7 @@ export const Footer = () => {
             <a
               href={siteConfig.links.facebook}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="KL Renovator Facebook"
               style={{ backgroundColor: "#1877F2" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
@@ -120,7 +120,7 @@ export const Footer = () => {
             <a
               href={siteConfig.links.tiktok}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="KL Renovator TikTok"
               style={{ backgroundColor: "#010101" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
@@ -131,12 +131,34 @@ export const Footer = () => {
             <a
               href={siteConfig.links.googleBusiness}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="KL Renovator Google Business Profile"
               style={{ backgroundColor: "#4285F4" }}
               className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
             >
               <FaGoogle className="h-4 w-4" />
+            </a>
+            {/* X / Twitter */}
+            <a
+              href={siteConfig.links.twitter}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              aria-label="KL Renovator X / Twitter"
+              style={{ backgroundColor: "#000000" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
+            >
+              <FaXTwitter className="h-4 w-4" />
+            </a>
+            {/* LinkedIn */}
+            <a
+              href={siteConfig.links.linkedin}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              aria-label="KL Renovator LinkedIn"
+              style={{ backgroundColor: "#0A66C2" }}
+              className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"
+            >
+              <FaLinkedin className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -285,7 +307,7 @@ export const Footer = () => {
           <a
             href={waLink(rfqMsg)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             style={{ backgroundColor: "#25D366" }}
             className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"
           >
