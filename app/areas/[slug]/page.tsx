@@ -13,6 +13,116 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map";
 
+
+// Helper to match area to a real work photo from /public/hero
+function getAreaImage(areaName: string, slug: string) {
+  const imagePool = [
+    "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    "/hero/acson-aircond-chemical-overhaul-puchong-38.webp",
+    "/hero/acson-aircond-chemical-wash-shah-alam-49.webp",
+    "/hero/acson-aircond-gas-topup-r32-subang-jaya-27.webp",
+    "/hero/acson-aircond-gas-topup-r410a-petaling-jaya-16.webp",
+    "/hero/acson-aircond-pcb-board-repair-klang-71.webp",
+    "/hero/acson-aircond-water-leaking-fix-shah-alam-60.webp",
+    "/hero/aircond-bracket-installation-kl-renovator.webp",
+    "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+    "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    "/hero/aircond-compressor-bracket-installation-kl.webp",
+    "/hero/aircond-compressor-flaring-repair-kl.webp",
+    "/hero/aircond-compressor-installation-new-kl.webp",
+    "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    "/hero/aircond-installation-ampang-selangor.webp",
+    "/hero/aircond-installation-double-unit-kl.webp",
+    "/hero/aircond-installation-kuala-lumpur.webp",
+    "/hero/aircond-installation-wall-mounted-kl.webp",
+    "/hero/aircond-new-compressor-installation-rawang.webp",
+    "/hero/aircond-new-installation-petaling-jaya.webp",
+    "/hero/aircond-new-installation-rawang-selangor.webp",
+    "/hero/aircond-pcb-board-replacement-2-klang-valley.webp",
+    "/hero/aircond-pcb-board-replacement-kl.webp",
+    "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    "/hero/aircond-repair-technician-klang-valley.webp",
+    "/hero/aircond-sensor-replacement-klang-valley.webp",
+    "/hero/aux-aircond-basic-servicing-shah-alam-53.webp",
+    "/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
+    "/hero/aux-aircond-dismantle-relocation-kuala-lumpur-9.webp",
+    "/hero/aux-aircond-gas-topup-r410a-klang-64.webp",
+    "/hero/aux-aircond-new-installation-subang-jaya-31.webp",
+    "/hero/aux-aircond-troubleshooting-repair-puchong-42.webp",
+    "/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp",
+    "/hero/daikin-aircond-chemical-wash-kuala-lumpur-1.webp",
+    "/hero/daikin-aircond-compressor-replacement-subang-jaya-34.webp",
+    "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp",
+    "/hero/daikin-aircond-new-installation-klang-67.webp",
+    "/hero/daikin-aircond-pcb-board-repair-petaling-jaya-23.webp",
+    "/hero/daikin-aircond-water-leaking-fix-kuala-lumpur-12.webp",
+    "/hero/isonic-aircond-ceiling-cassette-service-puchong-44.webp",
+    "/hero/isonic-aircond-compressor-replacement-petaling-jaya-22.webp",
+    "/hero/isonic-aircond-dismantle-relocation-subang-jaya-33.webp",
+    "/hero/isonic-aircond-new-installation-shah-alam-55.webp",
+    "/hero/isonic-aircond-pcb-board-repair-kuala-lumpur-11.webp",
+    "/hero/isonic-aircond-troubleshooting-repair-klang-66.webp",
+    "/hero/lg-aircond-basic-servicing-subang-jaya-29.webp",
+    "/hero/lg-aircond-chemical-overhaul-klang-62.webp",
+    "/hero/lg-aircond-gas-topup-r32-shah-alam-51.webp",
+    "/hero/lg-aircond-gas-topup-r410a-puchong-40.webp",
+    "/hero/lg-aircond-new-installation-kuala-lumpur-7.webp",
+    "/hero/lg-aircond-troubleshooting-repair-petaling-jaya-18.webp",
+    "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp",
+    "/hero/midea-aircond-chemical-overhaul-shah-alam-50.webp",
+    "/hero/midea-aircond-chemical-wash-klang-61.webp",
+    "/hero/midea-aircond-gas-topup-r32-puchong-39.webp",
+    "/hero/midea-aircond-gas-topup-r410a-subang-jaya-28.webp",
+    "/hero/midea-aircond-troubleshooting-repair-kuala-lumpur-6.webp",
+    "/hero/midea-aircond-water-leaking-fix-klang-72.webp",
+    "/hero/mitsubishi-aircond-chemical-overhaul-petaling-jaya-14.webp",
+    "/hero/mitsubishi-aircond-chemical-wash-subang-jaya-25.webp",
+    "/hero/mitsubishi-aircond-compressor-replacement-shah-alam-58.webp",
+    "/hero/mitsubishi-aircond-dismantle-relocation-klang-69.webp",
+    "/hero/mitsubishi-aircond-gas-topup-r32-kuala-lumpur-3.webp",
+    "/hero/mitsubishi-aircond-pcb-board-repair-puchong-47.webp",
+    "/hero/mitsubishi-aircond-water-leaking-fix-subang-jaya-36.webp",
+    "/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp",
+    "/hero/panasonic-aircond-chemical-overhaul-kuala-lumpur-2.webp",
+    "/hero/panasonic-aircond-chemical-wash-petaling-jaya-13.webp",
+    "/hero/panasonic-aircond-compressor-replacement-puchong-46.webp",
+    "/hero/panasonic-aircond-dismantle-relocation-shah-alam-57.webp",
+    "/hero/panasonic-aircond-pcb-board-repair-subang-jaya-35.webp",
+    "/hero/panasonic-aircond-water-leaking-fix-petaling-jaya-24.webp",
+    "/hero/samsung-aircond-basic-servicing-puchong-41.webp",
+    "/hero/samsung-aircond-ceiling-cassette-service-kuala-lumpur-8.webp",
+    "/hero/samsung-aircond-gas-topup-r32-klang-63.webp",
+    "/hero/samsung-aircond-gas-topup-r410a-shah-alam-52.webp",
+    "/hero/samsung-aircond-new-installation-petaling-jaya-19.webp",
+    "/hero/samsung-aircond-troubleshooting-repair-subang-jaya-30.webp",
+    "/hero/tcl-aircond-basic-servicing-klang-65.webp",
+    "/hero/tcl-aircond-ceiling-cassette-service-subang-jaya-32.webp",
+    "/hero/tcl-aircond-compressor-replacement-kuala-lumpur-10.webp",
+    "/hero/tcl-aircond-dismantle-relocation-petaling-jaya-21.webp",
+    "/hero/tcl-aircond-new-installation-puchong-43.webp",
+    "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp",
+    "/hero/york-aircond-chemical-overhaul-subang-jaya-26.webp",
+    "/hero/york-aircond-chemical-wash-puchong-37.webp",
+    "/hero/york-aircond-compressor-replacement-klang-70.webp",
+    "/hero/york-aircond-gas-topup-r32-petaling-jaya-15.webp",
+    "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp",
+    "/hero/york-aircond-pcb-board-repair-shah-alam-59.webp",
+    "/hero/york-aircond-water-leaking-fix-puchong-48.webp",
+  ];
+
+  const nameLower = areaName.toLowerCase();
+  const slugLower = slug.toLowerCase();
+  
+  const matched = imagePool.find(img => 
+    img.toLowerCase().includes(nameLower) || 
+    img.toLowerCase().includes(slugLower)
+  );
+  
+  return matched || "/hero/aircond-installation-kuala-lumpur.webp";
+}
+
 export function generateStaticParams() {
   return siteConfig.areaPages.map((a) => ({ slug: a.slug }));
 }
@@ -241,8 +351,8 @@ export default async function AreaPage({
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-installation-ampang-selangor.webp"
-            alt={`KL Renovator aircond technician servicing in ${area.name}`}
+            src={getAreaImage(area.name, slug)}
+            alt={`Professional aircond service in ${area.name} by KL Renovator experts`}
             fill
             sizes="100vw"
             className="object-cover object-center"
