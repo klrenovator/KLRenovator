@@ -56,7 +56,7 @@ export const BookingButton = ({
         <a
           href={finalLink}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           className={clsx(
             "inline-flex items-center justify-center font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 shadow-md",
             variant === "primary" && "bg-slate-950 hover:bg-slate-900 text-white shadow-slate-950/10",
