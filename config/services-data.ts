@@ -31,7 +31,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "A pressure chemical wash uses a food-safe chemical solution sprayed at high pressure onto the evaporator coil and blower wheel while the unit stays mounted on the wall. It dissolves stubborn mould, bacteria, dust and allergens that a basic service cannot remove. Recommended every 12 months, or sooner if your unit smells, blows warm air, or has low airflow.",
     startPrice: "RM 120",
-    heroImage: "/hero/aircond-pressure-chemical-wash-selangor.jpg",
+    heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     highlights: [
       "High-pressure food-safe chemical spray",
       "Full evaporator coil + blower wheel treatment",
@@ -131,7 +131,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "A chemical overhaul is the most thorough aircond cleaning available. The entire indoor unit is carefully dismantled — coil, blower wheel, housing, drain pan, tray and all internal parts are removed and individually deep-cleaned with chemical solution. Recommended when the unit has persistent water leaking, ice formation, extremely bad smell, or has not been serviced in 3+ years.",
     startPrice: "RM 220",
-    heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.jpg",
+    heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
     highlights: [
       "Full indoor unit dismantled",
       "Every component chemically deep-cleaned",
@@ -223,7 +223,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Refrigerant gas is the lifeblood of your aircond. When levels are low — from a slow leak or gradual depletion — your unit cannot cool effectively regardless of how clean it is. KL Renovator uses precision manifold gauges to measure exact gas pressure before and after top-up, ensuring balanced refrigerant levels. R22, R410A and R32 all handled. Leak check included on every job.",
     startPrice: "RM 120",
-    heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.jpg",
+    heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
     highlights: [
       "R22, R410A and R32 refrigerants",
       "Precision manifold gauge measurement",
@@ -319,7 +319,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "When your aircond has an electrical fault, strange noise, blinking error code, or stops working entirely, KL Renovator's trained technicians will diagnose the exact problem and give you a transparent repair quote before any work begins. Parts carried on the van include capacitors, fan motors, contactors, sensors and PCB boards for all major brands.",
     startPrice: "RM 88",
-    heroImage: "/hero/aircond-repair-technician-klang-valley.jpg",
+    heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
     highlights: [
       "RM 88 diagnostic fee (waived if repair done same visit)",
       "All electrical faults diagnosed",
@@ -418,7 +418,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "KL Renovator installs all wall-mounted and ceiling cassette aircond units for residential and commercial properties across KL and Selangor. Every installation includes 7ft copper pipe, wiring, drainage pipe and bracket mounting. Our technicians ensure clean cable routing, correct refrigerant line sizing, and a full commissioning test before handover.",
     startPrice: "RM 199",
-    heroImage: "/hero/aircond-installation-kuala-lumpur.jpg",
+    heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
     highlights: [
       "All brands — Daikin, Panasonic, Mitsubishi, York, Acson & more",
       "Wall-mounted and ceiling cassette",
@@ -521,7 +521,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Basic servicing is the essential routine maintenance your aircond needs every 3–6 months. The technician cleans the filter and front panel, flushes the drain pipe, sprays the coil with a mild cleaner, checks electrical connections, and tests cooling output. It keeps your unit running efficiently and extends its lifespan. Not a substitute for a chemical wash when deep cleaning is needed.",
     startPrice: "RM 99",
-    heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.jpg",
+    heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
     highlights: [
       "Filter removal, wash and reinstall",
       "Front panel and casing wipe-down",
@@ -604,7 +604,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Ceiling cassette aircond units are the standard for offices, retail shops, restaurants and commercial spaces across KL and Selangor. KL Renovator specialises in ceiling cassette servicing, chemical wash and chemical overhaul for shops, offices, and multi-unit commercial premises. Technicians are trained to access and service ceiling-mounted units safely and efficiently.",
     startPrice: "RM 150",
-    heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.jpg",
+    heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
     highlights: [
       "Specialist ceiling cassette technicians",
       "Chemical wash from RM 220",
@@ -695,7 +695,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "Moving home or office? KL Renovator safely dismantles your existing aircond unit, recovers the refrigerant gas, and professionally reinstalls it at your new location. The process includes removal of the indoor unit, outdoor compressor, copper pipe and wiring — and full recommissioning at the new site.",
     startPrice: "RM 90",
-    heroImage: "/hero/aircond-compressor-bracket-installation-kl.jpg",
+    heroImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
     highlights: [
       "Safe dismantle of indoor and outdoor units",
       "Refrigerant recovery (no gas wasted)",
@@ -775,7 +775,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     description:
       "When your aircond suddenly stops working, leaks heavily, or trips the MCB, you need help today — not tomorrow. KL Renovator dispatches trained technicians across all of Kuala Lumpur and Selangor for same-day emergency diagnosis and repair. Diagnostic fee RM 88, waived if repair completed same visit. Most emergency jobs dispatched within 30–60 minutes of WhatsApp confirmation.",
     startPrice: "RM 88",
-    heroImage: "/hero/aircond-repair-technician-klang-valley.jpg",
+    heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
     highlights: [
       "Same-day dispatch across all KL & Selangor",
       "30–60 min response after confirmation",
