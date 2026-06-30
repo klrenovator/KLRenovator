@@ -29,13 +29,13 @@ export async function generateMetadata({
       url: `https://www.klrenovator.com/blog/${post.slug}`,
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
-      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.jpg", width: 1200, height: 630, alt: post.title }],
+      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.jpg"],
+      images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/blog/${slug}`,
