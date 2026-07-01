@@ -286,7 +286,7 @@ export default function ContactPage() {
 
                 <div className="mt-8 space-y-3">
                   {/* WhatsApp */}
-                  <a href={waLink(rfqMsg)} target="_blank" rel="noopener noreferrer"
+                  <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer"
                     className="flex items-center gap-4 bg-[#0284c7] hover:bg-[#0369a1] text-white p-5 transition-all group">
                     <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-[#25D366]">
                       <FaWhatsapp className="h-6 w-6 text-white" />
@@ -381,7 +381,7 @@ export default function ContactPage() {
                       key={item.label}
                       href={`https://wa.me/60182983573?text=${encodeURIComponent(item.text)}`}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="nofollow noopener noreferrer"
                       className="flex items-center justify-between gap-3 bg-white/15 hover:bg-[#25D366] border border-white/20 hover:border-[#25D366] px-5 py-4 text-sm font-black uppercase tracking-wider text-white transition-all group"
                     >
                       <span className="flex items-center gap-3">
