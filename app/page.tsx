@@ -97,7 +97,7 @@ export default function Home() {
                 "🚨 URGENT — Emergency Aircond Service Needed\n\nHi KL Renovator, I need EMERGENCY aircond help right now.\n\n📍 Location:\n❄️ Problem:\n\nPlease send a technician ASAP."
               )}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider px-6 py-3 rounded-xl text-xs transition-all hover:scale-105 active:scale-95 shadow-lg"
             >
               📲 WhatsApp Now
