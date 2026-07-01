@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer";
 import { StickyActions } from "@/components/sticky-actions";
 import { ExitIntentPopup } from "@/components/exit-intent-popup";
 import { ScrollDepthCTA } from "@/components/scroll-depth-cta";
+import { FloatingPromoWidgets } from "@/components/floating-promo-widgets";
 import { googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
@@ -604,6 +605,7 @@ export default function RootLayout({
             <StickyActions />
             <ExitIntentPopup />
             <ScrollDepthCTA />
+            <FloatingPromoWidgets />
           </div>
         </Providers>
       </body>
