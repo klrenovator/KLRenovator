@@ -352,7 +352,7 @@ export default async function AreaPage({
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
             src={getAreaImage(area.name, slug)}
-            alt={`Professional aircond service in ${area.name} by KL Renovator experts`}
+            alt={`Aircond service technician working on an air conditioning unit in ${area.name}, KL & Selangor`}
             fill
             sizes="100vw"
             className="object-cover object-center"
@@ -498,7 +498,7 @@ export default async function AreaPage({
                 <a
                   href={waLink(`Hi KL Renovator, I need aircond service in ${area.name}. Please advise.`)}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-wider text-xs px-4 py-3.5 rounded-xl transition-all"
                 >
                   <FaWhatsapp className="h-4 w-4" />
@@ -619,7 +619,7 @@ export default async function AreaPage({
                 <a
                   href={waLink(`Hi KL Renovator, I need a quote for aircond service in ${area.name}.`)}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all"
                 >
                   <FaWhatsapp className="h-3.5 w-3.5" /> Get Exact Quote
