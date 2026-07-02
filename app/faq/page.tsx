@@ -312,7 +312,7 @@ export default function FaqPage() {
             fill
             sizes="100vw"
             className="object-cover object-center"
-            priority
+            loading="lazy"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent" />
