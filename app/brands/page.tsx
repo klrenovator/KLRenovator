@@ -98,7 +98,7 @@ export default function BrandsPage() {
               <a
                 href={waLink(waMsg)}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-7 py-3.5 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
               >
                 <FaWhatsapp className="h-5 w-5" />
@@ -432,7 +432,7 @@ export default function BrandsPage() {
               <a
                 href={waLink(waMsg)}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white rounded-xl transition-all"
               >
                 <FaWhatsapp className="h-5 w-5" />
