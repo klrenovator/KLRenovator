@@ -397,7 +397,7 @@ export default function AboutPage() {
             fill
             sizes="100vw"
             className="object-cover"
-            priority
+            loading="lazy"
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
@@ -434,6 +434,7 @@ export default function AboutPage() {
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
             </Reveal>
@@ -500,6 +501,7 @@ export default function AboutPage() {
                       fill
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-5">
@@ -552,6 +554,7 @@ export default function AboutPage() {
                   fill
                   sizes="320px"
                   className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading={i < 3 ? "eager" : "lazy"}
                 />
               </div>
             ))}
