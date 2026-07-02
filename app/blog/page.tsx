@@ -210,7 +210,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
               <a
                 href={waLink(rfqMsg)}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="inline-flex items-center gap-2.5 mt-6 bg-[#25D366] hover:bg-[#1ebe5d] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" /> {ui.ctaBtn}
