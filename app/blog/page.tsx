@@ -99,7 +99,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
             fill
             sizes="100vw"
             className="object-cover"
-            priority
+            loading="eager"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
