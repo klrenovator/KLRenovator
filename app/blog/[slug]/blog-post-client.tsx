@@ -206,7 +206,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
               fill
               sizes="100vw"
               className="object-cover object-center"
-              priority
+              loading="lazy"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/70 to-white/40" />
