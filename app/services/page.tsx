@@ -75,7 +75,7 @@ function StaticPriceTable({
           <a
             href={waLink(`Hi KL Renovator, I want to enquire about: ${serviceTitle}`)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider text-xs px-4 py-2.5 rounded-xl transition-all ml-auto"
           >
             <FaWhatsapp className="h-3.5 w-3.5" />
@@ -101,7 +101,7 @@ export default function ServicesPage() {
             fill
             sizes="100vw"
             className="object-cover"
-            priority
+            loading="lazy"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
@@ -231,7 +231,7 @@ export default function ServicesPage() {
                 <a
                   href={waLink(rfqMsg)}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
                 >
                   <FaWhatsapp className="h-5 w-5" /> Get Free Quote on WhatsApp
