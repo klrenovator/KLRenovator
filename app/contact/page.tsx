@@ -244,7 +244,7 @@ export default function ContactPage() {
             fill
             sizes="100vw"
             className="object-cover object-center"
-            priority
+            loading="lazy"
           />
         </div>
         {/* Gradient for text readability */}
