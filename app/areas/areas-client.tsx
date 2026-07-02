@@ -167,7 +167,7 @@ export function AreasClient() {
                 <a
                   href={waLink(waMsg)}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#22c55e] hover:bg-[#16a34a] px-6 py-3 text-sm font-black uppercase tracking-wider text-white shadow-md transition-all"
                 >
                   <FaWhatsapp className="h-4 w-4" /> {t.waBtn}
@@ -238,7 +238,7 @@ export function AreasClient() {
               <a
                 href={waLink(waMsg)}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-black uppercase tracking-wider text-sky-700 shadow-md hover:bg-sky-50 transition-all"
               >
                 <FaWhatsapp className="h-4 w-4" /> {t.waBtn}
