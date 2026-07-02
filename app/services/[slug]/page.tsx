@@ -295,7 +295,7 @@ export default async function ServicePage({
             fill
             sizes="100vw"
             className="object-cover object-center"
-            priority
+            loading="eager"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30" />
