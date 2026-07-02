@@ -272,7 +272,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                   <a
                     href={waLink(rfqMsgForService(post.relatedService))}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow noopener noreferrer"
                     className="inline-flex w-full items-center justify-center gap-2 mt-4 bg-[#25D366] hover:bg-[#1ebe5d] px-4 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all rounded-xl"
                   >
                     <FaWhatsapp className="h-4 w-4" /> {ui.bookWA}
@@ -382,7 +382,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
             <a
               href={waLink(rfqMsgForService(post.relatedService))}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-wider px-6 py-3 rounded-xl text-xs transition-all"
             >
               <FaWhatsapp className="h-4 w-4" />
