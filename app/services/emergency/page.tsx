@@ -255,7 +255,7 @@ export default function EmergencyPage() {
             <a
               href={emergencyWaLink}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider px-8 py-4 rounded-2xl text-sm shadow-xl shadow-green-900/30 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto justify-center"
             >
               <FaWhatsapp className="h-5 w-5 shrink-0" />
@@ -323,7 +323,7 @@ export default function EmergencyPage() {
             <a
               href={emergencyWaLink}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider px-8 py-4 rounded-2xl text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
             >
               <FaWhatsapp className="h-5 w-5 shrink-0" />
@@ -494,7 +494,7 @@ export default function EmergencyPage() {
             <a
               href={emergencyWaLink}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider px-8 py-4 rounded-2xl text-sm shadow-xl transition-all hover:scale-105 active:scale-95"
             >
               <FaWhatsapp className="h-5 w-5 shrink-0" />
