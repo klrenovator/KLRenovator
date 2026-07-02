@@ -97,7 +97,7 @@ export default function ReviewPage() {
           <a
             href={siteConfig.googleBusinessProfile}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 w-full bg-white border-2 border-slate-900 hover:bg-slate-900 hover:text-white text-slate-900 font-black uppercase tracking-wider py-4 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg mb-4 group"
           >
             <FaGoogle className="h-5 w-5 text-[#4285F4] group-hover:text-white transition-colors" />
@@ -142,7 +142,7 @@ export default function ReviewPage() {
           <a
             href={waLink(reviewMsg)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="flex items-center justify-center gap-2.5 w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all shadow-lg shadow-green-500/20"
           >
             <FaWhatsapp className="h-5 w-5 shrink-0" />
@@ -167,7 +167,7 @@ export default function ReviewPage() {
           <a
             href={waLink(referMsg)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-black uppercase tracking-wider px-8 py-3.5 rounded-2xl text-xs transition-all"
           >
             <FaWhatsapp className="h-4 w-4 shrink-0" />
