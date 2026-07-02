@@ -137,7 +137,7 @@ export default async function KampungPageZH({
               <a
                 href={waLink(`Hi KL Renovator，我想在${k.name}预约冷气服务。`)}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] px-7 py-3.5 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" />
