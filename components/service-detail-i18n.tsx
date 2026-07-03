@@ -16,6 +16,124 @@ import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-autho
 
 type Lang = "ms" | "zh";
 
+type ServiceFaq = { q: string; a: string };
+
+const SUPPLEMENTAL_SERVICE_FAQS_I18N: Record<string, { ms: ServiceFaq[]; zh: ServiceFaq[] }> = {
+  "chemical-wash": {
+    ms: [
+      { q: "Adakah cuci kimia cukup jika aircond bocor air?", a: "Selalunya ya, jika puncanya paip saliran tersumbat, coil kotor atau lendir dalam tray. Jika bocor berulang, chemical overhaul mungkin lebih sesuai." },
+      { q: "Boleh duduk di rumah semasa cuci kimia?", a: "Boleh. Juruteknik menggunakan kanvas pelindung dan menguji saliran sebelum pulang. Jauhkan kanak-kanak daripada kawasan kerja semasa cucian." },
+    ],
+    zh: [
+      { q: "如果冷气漏水，化学清洗够吗？", a: "通常可以，如果原因是排水管堵塞、盘管脏或水盘有黏液。如果漏水反复出现，可能需要化学大清洗。" },
+      { q: "化学清洗时我可以留在家吗？", a: "可以。技术员会使用保护帆布，并在离开前测试排水。清洗期间请让儿童远离施工区域。" },
+    ],
+  },
+  "chemical-overhaul": {
+    ms: [
+      { q: "Bila perlu pilih chemical overhaul berbanding cuci kimia?", a: "Pilih chemical overhaul jika angin sangat lemah, bocor berulang, coil berais, bau kuat cepat kembali atau unit sudah lama tidak dibuka cuci." },
+      { q: "Adakah unit dalam akan dibuka dari dinding?", a: "Untuk chemical overhaul yang betul, unit dinding biasanya dibuka supaya bahagian tersembunyi boleh dicuci dengan lebih menyeluruh." },
+    ],
+    zh: [
+      { q: "什么时候应选择化学大清洗而不是普通化学清洗？", a: "如果风量很弱、漏水反复、盘管结冰、异味很快回来，或多年没有深洗，就更适合化学大清洗。" },
+      { q: "室内机会从墙上拆下来吗？", a: "正确的壁挂式化学大清洗通常会拆下室内机，以便更彻底清洗隐藏部位。" },
+    ],
+  },
+  "gas-topup": {
+    ms: [
+      { q: "Gas rendah semestinya perlu tambah gas?", a: "Gas rendah biasanya menandakan kemungkinan bocor. KL Renovator memeriksa tekanan dan menasihatkan sama ada leak check atau repair diperlukan." },
+      { q: "Boleh kenal pasti unit saya guna R32, R410A atau R22?", a: "Boleh. WhatsApp gambar label unit luar atau juruteknik akan semak di lokasi sebelum tambah gas." },
+    ],
+    zh: [
+      { q: "Gas低就一定要加Gas吗？", a: "Gas低通常代表可能有泄漏。KL Renovator 会检查压力，并建议是否需要查漏或维修，避免重复加Gas浪费钱。" },
+      { q: "可以确认我的冷气用R32、R410A还是R22吗？", a: "可以。您可WhatsApp室外机标签照片，或由技术员现场确认后再加Gas。" },
+    ],
+  },
+  "repair": {
+    ms: [
+      { q: "Jika aircond trip DB, patut matikan dulu?", a: "Ya. Hentikan penggunaan sehingga diperiksa kerana trip berulang boleh berpunca daripada short elektrik, kapasitor, kompressor atau air terkena komponen elektrik." },
+      { q: "Adakah harga parts disahkan sebelum tukar?", a: "Ya. Juruteknik diagnosis dahulu dan sahkan kos sebelum menukar kapasitor, motor, PCB, sensor atau wiring." },
+    ],
+    zh: [
+      { q: "冷气导致跳电时应先关掉吗？", a: "是。请停止使用直到检查，因为反复跳电可能是短路、电容、压缩机或水接触电气部件造成。" },
+      { q: "更换零件前会先报价吗？", a: "会。技术员先诊断，再确认电容、马达、PCB、传感器或电线维修费用。" },
+    ],
+  },
+  "installation": {
+    ms: [
+      { q: "Adakah pemasangan RM199 sesuai untuk semua rumah?", a: "RM199 meliputi pemasangan standard unit dinding 1.0–1.5HP dengan sehingga 7ft paip kuprum, wiring dan paip saliran. Bahan tambahan disebut harga dahulu." },
+      { q: "Adakah sistem divakum semasa pemasangan?", a: "Ya. Vakum yang betul membuang udara dan lembapan daripada paip sebelum gas dilepaskan untuk melindungi kompressor." },
+    ],
+    zh: [
+      { q: "RM199安装适合所有房子吗？", a: "RM199适用于标准1.0–1.5HP壁挂式安装，包含最多7ft铜管、电线和排水管。额外材料会先报价。" },
+      { q: "安装时会抽真空吗？", a: "会。正确抽真空可在释放冷媒前去除管内空气和水分，保护压缩机。" },
+    ],
+  },
+  "basic-servicing": {
+    ms: [
+      { q: "Berapa kerap perlu servis aircond di Malaysia?", a: "Bilik tidur dan pejabat yang digunakan setiap hari disyorkan servis setiap 3–4 bulan. Bilik jarang guna biasanya boleh setiap 6 bulan." },
+      { q: "Bila servis asas tidak mencukupi?", a: "Jika ada bocor air, bau kuat, angin lemah atau kotoran dalaman tebal, cuci kimia atau chemical overhaul mungkin lebih sesuai." },
+    ],
+    zh: [
+      { q: "马来西亚冷气多久保养一次？", a: "每天使用的卧室和办公室建议每3–4个月保养一次。少用的房间通常可每6个月一次。" },
+      { q: "什么时候基本保养不够？", a: "如果有漏水、异味、风弱或内部污垢严重，化学清洗或化学大清洗会更适合。" },
+    ],
+  },
+  "ceiling-cassette": {
+    ms: [
+      { q: "Adakah ceiling cassette perlu servis berbeza daripada unit dinding?", a: "Ya. Ceiling cassette mempunyai panel, drain tray dan akses siling yang lebih besar, jadi perlu juruteknik yang biasa dengan unit komersial/pejabat." },
+      { q: "Boleh servis ceiling cassette pejabat selepas waktu kerja?", a: "Bergantung jadual juruteknik, tetapi KL Renovator boleh menyelaras slot yang sesuai untuk mengurangkan gangguan operasi." },
+    ],
+    zh: [
+      { q: "天花卡式机和壁挂式保养不同吗？", a: "不同。天花卡式机有更大的面板、水盘和天花检修空间，需要熟悉办公室/商业机型的技术员。" },
+      { q: "办公室天花卡式机可以下班后保养吗？", a: "视技术员时间而定，KL Renovator 可协调合适时段，尽量减少营业影响。" },
+    ],
+  },
+  "dismantling-relocation": {
+    ms: [
+      { q: "Boleh guna semula aircond selepas dibuka?", a: "Boleh jika keadaan unit, kesesuaian paip dan aksesori masih baik. Juruteknik akan nasihat sama ada guna semula atau material baru lebih selamat." },
+      { q: "Adakah gas dipulihkan sebelum unit dibuka?", a: "Jika sesuai, juruteknik ikut proses pump-down/recovery yang selamat sebelum unit diputuskan." },
+    ],
+    zh: [
+      { q: "拆下来的冷气可以再用吗？", a: "可以，只要机器、铜管规格和配件状态适合。技术员会建议继续使用或更换材料哪一种更安全。" },
+      { q: "拆机前会回收Gas吗？", a: "如条件适合，技术员会按安全pump-down/recovery流程再断开机器。" },
+    ],
+  },
+  "emergency": {
+    ms: [
+      { q: "Apa dikira kecemasan aircond?", a: "Air bocor dekat elektrik, DB trip, bau hangit, unit langsung tidak hidup, kompressor tidak berjalan atau masalah cooling kritikal di premis komersial perlu diperiksa cepat." },
+      { q: "Boleh buat servis kecemasan hari sama?", a: "Slot kecemasan hari sama biasanya tersedia bergantung laluan, masa dan parts. WhatsApp lokasi dan simptom untuk triage pantas." },
+    ],
+    zh: [
+      { q: "什么情况算冷气紧急维修？", a: "漏水靠近电源、跳电、烧焦味、完全故障、压缩机不运作或商业场所制冷失效，都应尽快检查。" },
+      { q: "紧急维修可以当天处理吗？", a: "通常可安排当天紧急时段，视路线、时间和零件而定。请WhatsApp位置和症状以便快速判断。" },
+    ],
+  },
+};
+
+const GLOBAL_SERVICE_FAQS_I18N: Record<Lang, ServiceFaq[]> = {
+  ms: [
+    { q: "Adakah harga disahkan sebelum kerja bermula?", a: "Ya. KL Renovator mengesahkan skop servis, harga permulaan dan sebarang kos bahan atau repair tambahan sebelum kerja bermula." },
+    { q: "Adakah terdapat waranti kerja?", a: "Ya. Kerja yang layak dilindungi waranti kerja 1 bulan. Terma waranti diterangkan dengan jelas sebelum serahan kerja." },
+    { q: "Ada diskaun untuk banyak unit?", a: "Ya. Tempahan banyak unit yang layak boleh menerima 5% untuk 2–3 unit, 10% untuk 4–8 unit dan 15% untuk 8+ unit, disahkan sebelum tempahan." },
+  ],
+  zh: [
+    { q: "施工前会确认价格吗？", a: "会。KL Renovator 会在开工前确认服务范围、起步价，以及任何额外材料或维修费用。" },
+    { q: "是否有工艺保修？", a: "有。符合条件的施工享有1个月工艺保修，保修条款会在交付前清楚说明。" },
+    { q: "多台冷气有折扣吗？", a: "有。符合条件的多台预约可享2–3台5%、4–8台10%、8台以上15%折扣，预约前确认。" },
+  ],
+};
+
+function mergeFaqs(...groups: ServiceFaq[][]): ServiceFaq[] {
+  const seen = new Set<string>();
+  return groups.flat().filter((faq) => {
+    const key = faq.q.toLowerCase().trim();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export function ServiceDetailI18n({
   lang,
   slug,
@@ -200,7 +318,12 @@ export function ServiceDetailI18n({
   const inLang = lang === "ms" ? "ms-MY" : "zh-MY";
 
   // FAQ selection: page language is primary, the other two are secondary.
-  const faqsPrimary = lang === "ms" ? data.faqsBM : data.faqsZH;
+  const basePrimaryFaqs = lang === "ms" ? data.faqsBM : data.faqsZH;
+  const faqsPrimary = mergeFaqs(
+    basePrimaryFaqs ?? [],
+    SUPPLEMENTAL_SERVICE_FAQS_I18N[slug]?.[lang] ?? [],
+    GLOBAL_SERVICE_FAQS_I18N[lang],
+  );
   const faqsSecondary: { langTag: string; label: string; items: { q: string; a: string }[] }[] =
     lang === "ms"
       ? [
