@@ -167,15 +167,68 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
 
 // ── SERVICE → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
-  "chemical-wash": ["aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircond-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
-  "chemical-overhaul": ["chemical-wash-vs-chemical-overhaul", "signs-your-aircond-needs-chemical-overhaul-malaysia", "aircond-water-leaking-causes", "how-often-service-aircond-malaysia"],
-  "gas-topup": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "repair": ["aircond-not-cold-reasons", "aircond-water-leaking-causes", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
-  "installation": ["aircond-installation-guide-malaysia", "best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "daikin-vs-panasonic-aircond-malaysia"],
-  "basic-servicing": ["how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia", "aircond-service-price-guide-kl-2026"],
-  "ceiling-cassette": ["commercial-hvac-maintenance-kl", "aircond-service-price-guide-kl-2026"],
-  "dismantling-relocation": ["aircond-installation-guide-malaysia", "aircond-lifespan-malaysia"],
-  "emergency": ["aircond-troubleshooting-guide-malaysia", "aircond-not-cold-reasons", "aircond-water-leaking-causes"],
+  "chemical-wash": [
+    "pressure-chemical-wash-leaking-aircond-kl-selangor",
+    "smelly-aircond-foul-musty-odor-kl-selangor",
+    "aircond-chemical-wash-price-malaysia-2026",
+    "chemical-wash-vs-chemical-overhaul",
+    "how-often-service-aircond-malaysia",
+  ],
+  "chemical-overhaul": [
+    "aircond-chemical-overhaul-kl-selangor-cooling-efficiency",
+    "signs-your-aircond-needs-chemical-overhaul-malaysia",
+    "chemical-wash-vs-chemical-overhaul",
+    "aircond-water-leaking-causes",
+    "smelly-aircond-foul-musty-odor-kl-selangor",
+  ],
+  "gas-topup": [
+    "aircond-gas-topup-malaysia-r32-r410a-r22-balancing",
+    "r32-vs-r410a-vs-r22-aircond-gas-malaysia",
+    "r32-r410a-r22-gas-difference",
+    "aircond-gas-topup-myths-malaysia",
+    "aircond-not-cold-reasons",
+  ],
+  "repair": [
+    "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
+    "aircond-troubleshooting-guide-malaysia",
+    "aircond-not-cold-reasons",
+    "aircond-water-leaking-causes",
+    "aircond-lifespan-malaysia",
+  ],
+  "installation": [
+    "professional-new-aircond-installation-kl-selangor-2026",
+    "rm199-vs-rm300-aircond-installation-kl-renovator",
+    "aircond-installation-dismantling-kl-selangor-price-guide",
+    "aircond-installation-guide-malaysia",
+    "inverter-vs-non-inverter-aircond-malaysia-tnb-bill",
+  ],
+  "basic-servicing": [
+    "regular-aircond-basic-servicing-kl-selangor-2026",
+    "how-often-service-aircond-malaysia",
+    "aircond-maintenance-checklist-malaysia",
+    "how-to-reduce-aircond-electricity-bill-malaysia",
+    "aircond-service-price-guide-kl-2026",
+  ],
+  "ceiling-cassette": [
+    "commercial-hvac-maintenance-kl",
+    "aircond-service-price-guide-kl-2026",
+    "aircond-chemical-overhaul-kl-selangor-cooling-efficiency",
+    "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
+  ],
+  "dismantling-relocation": [
+    "aircond-installation-dismantling-kl-selangor-price-guide",
+    "professional-new-aircond-installation-kl-selangor-2026",
+    "rm199-vs-rm300-aircond-installation-kl-renovator",
+    "aircond-installation-guide-malaysia",
+    "aircond-lifespan-malaysia",
+  ],
+  "emergency": [
+    "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
+    "aircond-troubleshooting-guide-malaysia",
+    "aircond-not-cold-reasons",
+    "pressure-chemical-wash-leaking-aircond-kl-selangor",
+    "aircond-water-leaking-causes",
+  ],
 };
 
 // ── AREA → TOP PROBLEMS MAP ───────────────────────────────────────────────────
@@ -204,9 +257,10 @@ export const AREA_PROBLEM_MAP: Record<string, string[]> = {
 // Blog posts to feature from each area page
 export const AREA_BLOG_MAP: Record<string, string[]> = {
   "_default": [
-    "how-often-service-aircond-malaysia",
-    "aircond-chemical-wash-price-malaysia-2026",
-    "aircond-troubleshooting-guide-malaysia",
+    "regular-aircond-basic-servicing-kl-selangor-2026",
+    "pressure-chemical-wash-leaking-aircond-kl-selangor",
+    "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
+    "aircond-service-price-guide-kl-2026",
   ],
 };
 
