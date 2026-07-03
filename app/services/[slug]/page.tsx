@@ -65,6 +65,54 @@ const highlightColors = [
   "bg-rose-500", "bg-teal-500", "bg-indigo-500", "bg-orange-500",
 ];
 
+const SERVICE_PROOF_IMAGES: Record<string, { src: string; alt: string; title: string }[]> = {
+  "chemical-wash": [
+    { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: "Pressure chemical wash on a wall-mounted aircond unit in Selangor", title: "Pressure chemical wash" },
+    { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: "Chemical wash canvas setup protecting a home during aircond cleaning in Kepong KL", title: "Protected indoor cleaning" },
+    { src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp", alt: "Aircond chemical service canvas wrap used by KL Renovator technician in Kuala Lumpur", title: "Clean workflow" },
+  ],
+  "chemical-overhaul": [
+    { src: "/hero/aircond-chemical-overhaul-ampang-selangor.webp", alt: "Aircond indoor unit dismantled for chemical overhaul in Ampang Selangor", title: "Full dismantle overhaul" },
+    { src: "/hero/lg-aircond-chemical-overhaul-klang-62.webp", alt: "LG aircond indoor unit opened for chemical overhaul in Klang", title: "Deep internal cleaning" },
+    { src: "/hero/mitsubishi-aircond-chemical-overhaul-petaling-jaya-14.webp", alt: "Mitsubishi aircond chemical overhaul service in Petaling Jaya", title: "Brand-safe reassembly" },
+  ],
+  "gas-topup": [
+    { src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp", alt: "R32 and R410A aircond gas top-up with pressure balancing in Selangor", title: "Pressure-balanced gas top-up" },
+    { src: "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp", alt: "York R410A gas top-up and leak check in Kuala Lumpur", title: "R410A service" },
+    { src: "/hero/acson-aircond-gas-topup-r32-subang-jaya-27.webp", alt: "Acson R32 aircond gas top-up service in Subang Jaya", title: "R32 inverter support" },
+  ],
+  "repair": [
+    { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "KL Renovator technician diagnosing aircond repair issue in Klang Valley", title: "On-site diagnosis" },
+    { src: "/hero/aircond-pcb-board-replacement-kl.webp", alt: "Aircond PCB board replacement and repair in Kuala Lumpur", title: "PCB repair" },
+    { src: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp", alt: "TCL aircond troubleshooting and capacitor testing in Shah Alam", title: "Electrical troubleshooting" },
+  ],
+  "installation": [
+    { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Wall-mounted aircond installation with copper piping in Kuala Lumpur", title: "Wall-mounted installation" },
+    { src: "/hero/aircond-installation-double-unit-kl.webp", alt: "Double aircond installation completed by KL Renovator in KL", title: "Multi-unit installation" },
+    { src: "/hero/aircond-compressor-bracket-installation-kl.webp", alt: "Outdoor compressor bracket installation for aircond in Kuala Lumpur", title: "Outdoor bracket setup" },
+  ],
+  "basic-servicing": [
+    { src: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp", alt: "Acson aircond basic servicing and filter cleaning in Kuala Lumpur", title: "Routine basic service" },
+    { src: "/hero/samsung-aircond-basic-servicing-puchong-41.webp", alt: "Samsung aircond basic servicing and maintenance in Puchong", title: "Filter and airflow check" },
+    { src: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp", alt: "Midea aircond basic servicing in Petaling Jaya", title: "Preventive maintenance" },
+  ],
+  "ceiling-cassette": [
+    { src: "/hero/aircond-ceiling-cassette-installation-commercial.webp", alt: "Commercial ceiling cassette aircond installation in Klang Valley", title: "Ceiling cassette work" },
+    { src: "/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp", alt: "Panasonic ceiling cassette aircond service at a Klang commercial property", title: "Commercial servicing" },
+    { src: "/hero/tcl-aircond-ceiling-cassette-service-subang-jaya-32.webp", alt: "TCL ceiling cassette aircond deep service in Subang Jaya office", title: "Office cassette service" },
+  ],
+  "dismantling-relocation": [
+    { src: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp", alt: "Daikin aircond dismantle and relocation service in Puchong", title: "Careful dismantling" },
+    { src: "/hero/panasonic-aircond-dismantle-relocation-shah-alam-57.webp", alt: "Panasonic aircond dismantle for relocation in Shah Alam", title: "Safe relocation" },
+    { src: "/hero/tcl-aircond-dismantle-relocation-petaling-jaya-21.webp", alt: "TCL aircond removed for customer relocation in Petaling Jaya", title: "Move-out support" },
+  ],
+  "emergency": [
+    { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "Emergency aircond repair technician dispatched across Klang Valley", title: "Emergency diagnosis" },
+    { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp", alt: "Aircond PCB board replacement during urgent repair in Klang Valley", title: "Critical repair" },
+    { src: "/hero/aircond-sensor-replacement-klang-valley.webp", alt: "Aircond temperature sensor replacement in Klang Valley", title: "Fast fault isolation" },
+  ],
+};
+
 // ─── Trilingual static UI labels ─────────────────────────────────────────────
 const SECTION_LABELS = {
   servingAll: {
@@ -156,6 +204,7 @@ export default async function ServicePage({
   if (!data) notFound();
 
   const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
+  const proofImages = SERVICE_PROOF_IMAGES[slug] ?? SERVICE_PROOF_IMAGES["installation"];
 
   // ── Schema — fixed: HVACBusiness (not HomeAndConstructionBusiness) ──────────
   const serviceSchema = {
@@ -452,6 +501,62 @@ export default async function ServicePage({
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Real Work Proof */}
+      <section className="py-14 sm:py-16 bg-slate-50 border-y border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto">
+              <p className={eyebrow()}>Real Work Proof · Bukti Kerja · 真实施工</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>See How Our </span>
+                <span className={title({ size: "sm", color: "brand" })}>Technicians Work</span>
+              </h2>
+              <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                Real KL Renovator job photos help customers understand the workmanship standard before booking: protected indoor work, correct tools, clean handling and service-specific proof from homes, condos, offices and shoplots around KL & Selangor.
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {proofImages.map((img, i) => (
+              <Reveal key={img.src} delay={i * 80}>
+                <figure className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all">
+                  <div className="relative aspect-[4/3] bg-slate-100">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="p-4">
+                    <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{img.title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-500">{img.alt}</p>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-emerald-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-emerald-600">1-Month</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Workmanship warranty</p>
+              </div>
+              <div className="rounded-2xl border border-sky-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-sky-600">500+</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Google 5-star reviews</p>
+              </div>
+              <div className="rounded-2xl border border-amber-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-amber-600">SSM</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Registered Malaysian business</p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
