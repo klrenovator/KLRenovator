@@ -371,6 +371,65 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* ── Near Me Section ──────────────────────────────────────────────── */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
+              {data.title} Near Me — KL &amp; Selangor
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              Searching for &quot;{data.title.toLowerCase()} near me&quot;? KL Renovator operates across all KL and Selangor areas with same-day dispatch. Whether you&apos;re in Kuala Lumpur city, Petaling Jaya, Shah Alam, Subang Jaya, Klang, or any Klang Valley suburb, our technicians are already in your area today. WhatsApp your location and we&apos;ll confirm the nearest available slot.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">{data.title.toLowerCase()} near me</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">same day {data.title.toLowerCase()} near me</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">best aircond technician near me</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">aircond service near me klang valley</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Problem-Aware Block — exact symptoms this service fixes ─────── */}
+      {(() => {
+        const problemSlugs = SERVICE_PROBLEM_MAP[slug] ?? [];
+        const problems = problemSlugs.length > 0
+          ? siteConfig.problemPages.filter((p) => problemSlugs.includes(p.slug))
+          : [];
+        if (problems.length === 0) return null;
+        return (
+          <section className="py-14 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Problems We Fix</p>
+                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
+                  Does Your Aircond Have Any of These Problems? {data.title} Fixes Them.
+                </h2>
+                <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+                  Most customers find this page after searching for the exact symptoms below. If any of these sound like your unit, {data.title} is likely the right solution. KL Renovator diagnoses and fixes all of these issues across KL and Selangor with same-day service.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {problems.map((problem) => (
+                    <NextLink
+                      key={problem.slug}
+                      href={`/problems/${problem.slug}`}
+                      className="group bg-white border border-slate-200 rounded-xl p-4 hover:border-red-300 hover:bg-red-50 transition"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex h-6 w-6 items-center justify-center bg-red-100 text-red-600 rounded-full text-xs font-black">!</span>
+                        <h3 className="font-bold text-slate-900 text-sm group-hover:text-red-700 transition">{problem.name}</h3>
+                      </div>
+                      <p className="text-xs text-slate-500 leading-relaxed">{problem.description ? `${problem.description.slice(0, 120)}...` : `Learn what causes ${problem.name.toLowerCase()} and how ${data.title} fixes it.`}</p>
+                    </NextLink>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* Highlights */}
       <section className="py-14 sm:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -583,6 +642,34 @@ export default async function ServicePage({
                   {area.name} <FiArrowRight className="h-3 w-3" />
                 </NextLink>
               ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Geographic Coverage — KL, Selangor, Klang Valley ─────────────── */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
+              Aircond Service Kuala Lumpur &amp; Selangor — Klang Valley Coverage
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              We provide {data.title.toLowerCase()} across the entire Klang Valley metropolitan area. From Kuala Lumpur&apos;s CBD to every Selangor township, our mobile technicians carry the tools, parts, and refrigerant gas needed to complete most jobs in a single visit. No travel charges — you pay only for the service.
+            </p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Aircond Service Kuala Lumpur</h3>
+                <p className="text-xs text-slate-500">Full KL coverage — all townships and condo districts. Same-day slots available.</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Aircond Repair Klang Valley</h3>
+                <p className="text-xs text-slate-500">Emergency repair dispatch across the entire Klang Valley. 30–60 min response.</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Aircond Service Selangor</h3>
+                <p className="text-xs text-slate-500">All Selangor districts covered — Petaling, Gombak, Hulu Langat, Klang, Sepang.</p>
+              </div>
             </div>
           </Reveal>
         </div>
