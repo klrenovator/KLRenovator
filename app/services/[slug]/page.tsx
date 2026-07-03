@@ -65,6 +65,63 @@ const highlightColors = [
   "bg-rose-500", "bg-teal-500", "bg-indigo-500", "bg-orange-500",
 ];
 
+type ServiceFaq = { q: string; a: string };
+
+const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
+  "chemical-wash": [
+    { q: "Is chemical wash enough if my aircond is leaking water?", a: "Often yes, if the leak is caused by a blocked drain pipe, dirty evaporator coil or slime buildup. If the back tray is badly choked or leaking returns repeatedly, KL Renovator may recommend chemical overhaul instead." },
+    { q: "Can I stay at home during the chemical wash?", a: "Yes. The technician uses a protective canvas and checks drainage before leaving. Keep children away from the work area while the unit is being washed." },
+  ],
+  "chemical-overhaul": [
+    { q: "When should I choose chemical overhaul instead of chemical wash?", a: "Choose chemical overhaul when the aircond has severe weak airflow, repeated leaking, ice formation, bad smell that returns quickly, or years of heavy dirt inside the blower and back tray." },
+    { q: "Will the indoor unit be removed from the wall?", a: "For a proper wall-mounted chemical overhaul, the indoor unit is dismantled so hidden parts can be cleaned more thoroughly than a normal front chemical wash." },
+  ],
+  "gas-topup": [
+    { q: "Does low gas always mean I need a refill?", a: "Low gas usually means there may be a leak. KL Renovator checks pressure and advises whether a leak check or repair is needed before repeated top-ups waste money." },
+    { q: "Can you identify whether my unit uses R32, R410A or R22?", a: "Yes. You can WhatsApp a clear photo of the outdoor unit label, or the technician can identify the refrigerant type on-site before topping up." },
+  ],
+  "repair": [
+    { q: "Should I turn off the aircond if it trips the DB box?", a: "Yes. Stop using it until checked. Repeated tripping can point to electrical short, capacitor fault, compressor issue or water reaching electrical parts." },
+    { q: "Do you quote repair parts before replacing them?", a: "Yes. The technician diagnoses the fault and confirms the repair cost before replacing capacitor, fan motor, PCB, sensor or wiring parts." },
+  ],
+  "installation": [
+    { q: "Is RM199 installation enough for every home?", a: "RM199 covers standard wall-mounted 1.0–1.5HP installation labour with up to 7ft copper, wire and drain pipe. Extra materials such as longer copper run, bracket or power point are quoted first if needed." },
+    { q: "Do you vacuum the system during installation?", a: "Yes. Proper vacuuming removes moisture and air from the line before refrigerant release, helping protect the compressor and cooling performance." },
+  ],
+  "basic-servicing": [
+    { q: "How often should I service my aircond in Malaysia?", a: "For daily-use bedrooms and offices, every 3–4 months is recommended. Light-use rooms can often be serviced every 6 months." },
+    { q: "When is basic service not enough?", a: "If there is leaking water, strong smell, weak airflow or heavy internal dirt, chemical wash or chemical overhaul may be more suitable than basic servicing." },
+  ],
+  "ceiling-cassette": [
+    { q: "Do ceiling cassette units need different servicing from wall units?", a: "Yes. Ceiling cassette units have larger panels, drain trays and ceiling access considerations, so they need technicians trained for safe commercial or office servicing." },
+    { q: "Can you service office ceiling cassette units after business hours?", a: "Scheduling depends on technician availability, but KL Renovator can coordinate suitable slots for offices and shoplots to reduce business disruption." },
+  ],
+  "dismantling-relocation": [
+    { q: "Can you reuse my existing aircond after dismantling?", a: "Yes, if the unit, copper line compatibility and condition are suitable. The technician will advise whether reuse or new material is safer." },
+    { q: "Will gas be recovered before dismantling?", a: "Where suitable, the technician follows safe pump-down/recovery practice before disconnecting the unit to reduce refrigerant loss and protect the compressor." },
+  ],
+  "emergency": [
+    { q: "What counts as an emergency aircond repair?", a: "Water leaking near electrical points, DB tripping, burning smell, total breakdown, compressor not running or urgent commercial cooling failure should be checked quickly." },
+    { q: "Can emergency service be done same day?", a: "Same-day emergency slots are often available across KL and Selangor depending on route, time and parts needed. WhatsApp your location and symptoms for fastest triage." },
+  ],
+};
+
+const GLOBAL_SERVICE_FAQS: ServiceFaq[] = [
+  { q: "Do you confirm the price before starting work?", a: "Yes. KL Renovator confirms the service scope, starting price and any extra material or repair cost before work begins." },
+  { q: "Is there a workmanship warranty?", a: "Yes. Eligible workmanship is covered by a 1-month workmanship warranty. Warranty terms are explained clearly before handover." },
+  { q: "Do you offer discounts for multiple units?", a: "Yes. Eligible multi-unit bookings can receive 5% off for 2–3 units, 10% off for 4–8 units and 15% off for 8+ units, confirmed before booking." },
+];
+
+function mergeFaqs(...groups: ServiceFaq[][]): ServiceFaq[] {
+  const seen = new Set<string>();
+  return groups.flat().filter((faq) => {
+    const key = faq.q.toLowerCase().trim();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 const SERVICE_PROOF_IMAGES: Record<string, { src: string; alt: string; title: string }[]> = {
   "chemical-wash": [
     { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: "Pressure chemical wash on a wall-mounted aircond unit in Selangor", title: "Pressure chemical wash" },
@@ -203,6 +260,10 @@ export default async function ServicePage({
   const service = siteConfig.services.find((s) => s.slug === slug);
   if (!data) notFound();
 
+  const enhancedFaqs = mergeFaqs(data.faqs ?? [], SUPPLEMENTAL_SERVICE_FAQS[slug] ?? [], GLOBAL_SERVICE_FAQS);
+  const enhancedFaqsBM = data.faqsBM ?? [];
+  const enhancedFaqsZH = data.faqsZH ?? [];
+
   const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
   const proofImages = SERVICE_PROOF_IMAGES[slug] ?? SERVICE_PROOF_IMAGES["installation"];
 
@@ -281,11 +342,11 @@ export default async function ServicePage({
   };
 
   const faqSchema =
-    data.faqs && data.faqs.length > 0
+    enhancedFaqs && enhancedFaqs.length > 0
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: data.faqs.map((f: { q: string; a: string }) => ({
+          mainEntity: enhancedFaqs.map((f: { q: string; a: string }) => ({
             "@type": "Question",
             name: f.q,
             acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -756,7 +817,7 @@ export default async function ServicePage({
 
           {/* English FAQs */}
           <div className="mt-8 border border-slate-200 divide-y divide-slate-200">
-            {data.faqs.map((f: { q: string; a: string }, i: number) => (
+            {enhancedFaqs.map((f: { q: string; a: string }, i: number) => (
               <Reveal key={f.q} delay={i * 60}>
                 <details className="group bg-white p-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900">
@@ -770,12 +831,12 @@ export default async function ServicePage({
           </div>
 
           {/* BM FAQs */}
-          {data.faqsBM && data.faqsBM.length > 0 && (
+          {enhancedFaqsBM && enhancedFaqsBM.length > 0 && (
             <Reveal>
               <div className="mt-6 border-t border-slate-200 pt-6">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
                 <div className="space-y-3">
-                  {data.faqsBM.map((f: { q: string; a: string }, i: number) => (
+                  {enhancedFaqsBM.map((f: { q: string; a: string }, i: number) => (
                     <div key={i} className="bg-white border border-slate-200 p-4">
                       <h3 className="font-black text-sm text-slate-900 mb-2">{f.q}</h3>
                       <p className="text-sm text-slate-600 font-medium leading-relaxed">{f.a}</p>
@@ -787,12 +848,12 @@ export default async function ServicePage({
           )}
 
           {/* ZH FAQs */}
-          {data.faqsZH && data.faqsZH.length > 0 && (
+          {enhancedFaqsZH && enhancedFaqsZH.length > 0 && (
             <Reveal>
               <div className="mt-6 border-t border-slate-200 pt-6">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
                 <div className="space-y-3">
-                  {data.faqsZH.map((f: { q: string; a: string }, i: number) => (
+                  {enhancedFaqsZH.map((f: { q: string; a: string }, i: number) => (
                     <div key={i} className="bg-white border border-slate-200 p-4">
                       <h3 className="font-black text-sm text-slate-900 mb-2">{f.q}</h3>
                       <p className="text-sm text-slate-600 font-medium leading-relaxed">{f.a}</p>
