@@ -502,6 +502,34 @@ export default async function ServicePage({
             </Reveal>
           )}
 
+          <Reveal>
+            <div className="mt-6 rounded-2xl bg-slate-900 p-5 text-white shadow-lg">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-sky-300">Multi-Unit Bundle Savings</p>
+                  <h3 className="mt-1 text-lg font-black uppercase tracking-tight">Book more units in one visit and pay less</h3>
+                  <p className="mt-2 max-w-2xl text-sm text-slate-300">
+                    Perfect for condominiums, terrace houses, offices and shoplots with multiple aircond units. Discounts apply to eligible labour/service charges and are confirmed before work starts.
+                  </p>
+                </div>
+                <NextLink
+                  href="/services#materials"
+                  className="inline-flex shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-xs font-black uppercase tracking-wider text-white transition hover:bg-white/20"
+                >
+                  View all pricing →
+                </NextLink>
+              </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {siteConfig.volumeDiscounts.map((discount) => (
+                  <div key={discount.units} className="rounded-xl border border-white/15 bg-white/10 p-4 text-center">
+                    <p className="text-2xl font-black text-white">{discount.units}</p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-wider text-sky-200">{discount.off}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
           {/* Inline Materials Pricing — shown directly on installation & dismantling pages */}
           {(slug === "installation" || slug === "dismantling-relocation" || slug === "ceiling-cassette") && (
             <Reveal>
