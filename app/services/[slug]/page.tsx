@@ -305,6 +305,12 @@ export default async function ServicePage({
     name: data.title + " KL & Selangor — KL Renovator",
     description: data.tagline,
     url: `https://www.klrenovator.com/services/${slug}`,
+    dateModified: "2026-07-03",
+    reviewedBy: {
+      "@type": "Organization",
+      name: "KL Renovator's HVAC Expert Team",
+      url: "https://www.klrenovator.com/about",
+    },
     inLanguage: "en-MY",
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
     about: { "@id": "https://www.klrenovator.com/#business" },
@@ -406,6 +412,47 @@ export default async function ServicePage({
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ── Expert Review / AEO Direct Answer ─────────────────────────── */}
+      <section className="bg-white py-8 border-b border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+              <div className="rounded-2xl border border-sky-100 bg-sky-50/70 p-5 sm:p-6">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700">Direct Answer</p>
+                <h2 className="mt-2 text-xl font-black tracking-tight text-slate-950">
+                  Is {data.title} the right service for my aircond?
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate-700">
+                  Yes — if your unit matches the symptoms and pricing table on this page, {data.title} is the recommended service. KL Renovator confirms the exact issue, price and any material cost before work starts, so you can book with a clear budget and no hidden surprises.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2 text-xs font-bold text-sky-800">
+                  <span className="rounded-full border border-sky-200 bg-white px-3 py-1.5">Same-day KL & Selangor slots</span>
+                  <span className="rounded-full border border-sky-200 bg-white px-3 py-1.5">Price confirmed first</span>
+                  <span className="rounded-full border border-sky-200 bg-white px-3 py-1.5">1-month workmanship warranty</span>
+                </div>
+              </div>
+              <aside className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500">Expert reviewed</p>
+                <p className="mt-2 text-base font-black text-slate-950">KL Renovator&apos;s HVAC Expert Team</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  Reviewed for current KL & Selangor pricing, active service scope, supported brands and workmanship warranty details.
+                </p>
+                <dl className="mt-4 grid grid-cols-2 gap-3 text-xs">
+                  <div className="rounded-xl bg-slate-50 p-3">
+                    <dt className="font-bold uppercase tracking-wider text-slate-400">Last reviewed</dt>
+                    <dd className="mt-1 font-black text-slate-900">3 July 2026</dd>
+                  </div>
+                  <div className="rounded-xl bg-slate-50 p-3">
+                    <dt className="font-bold uppercase tracking-wider text-slate-400">Business</dt>
+                    <dd className="mt-1 font-black text-slate-900">SSM Registered</dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
+          </Reveal>
         </div>
       </section>
 
