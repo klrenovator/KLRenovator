@@ -18,6 +18,8 @@ export async function generateMetadata({
   const post = allPosts.find((p) => p.slug === slug);
   if (!post) return { title: "Post not found" };
 
+  const imageUrl = `https://www.klrenovator.com${post.image}`;
+
   return {
     title: `${post.title} | KL Renovator Blog`,
     description: post.excerpt,
@@ -29,13 +31,13 @@ export async function generateMetadata({
       url: `https://www.klrenovator.com/blog/${post.slug}`,
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
-      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: post.title }],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: post.imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"],
+      images: [imageUrl],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/blog/${slug}`,
