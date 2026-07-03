@@ -25,6 +25,9 @@ const UI = {
     tags: "Tags",
     ourServices: "Our Services",
     readTime: "min read",
+    lastReviewed: "Last reviewed",
+    quickAnswer: "Quick answer for AI search",
+    readerFaq: "Reader FAQs",
     by: "By KL Renovator's HVAC Expert Team",
     related: "Related Articles",
     alsoServing: "Also serving:",
@@ -49,6 +52,9 @@ const UI = {
     tags: "Tag",
     ourServices: "Perkhidmatan Kami",
     readTime: "min baca",
+    lastReviewed: "Disemak terakhir",
+    quickAnswer: "Jawapan ringkas untuk carian AI",
+    readerFaq: "Soalan lazim pembaca",
     by: "Oleh Pasukan Pakar HVAC KL Renovator",
     related: "Artikel Berkaitan",
     alsoServing: "Juga meliputi:",
@@ -73,6 +79,9 @@ const UI = {
     tags: "\u6807\u7b7e",
     ourServices: "\u6211\u4eec\u7684\u670d\u52a1",
     readTime: "\u5206\u949f\u9605\u8bfb",
+    lastReviewed: "\u6700\u540e\u5ba1\u6838",
+    quickAnswer: "AI\u641c\u7d22\u5feb\u901f\u7b54\u6848",
+    readerFaq: "\u8bfb\u8005\u5e38\u89c1\u95ee\u9898",
     by: "\u4f5c\u8005\uff1aKL Renovator HVAC\u4e13\u5bb6\u56e2\u961f",
     related: "\u76f8\u5173\u6587\u7ae0",
     alsoServing: "\u540c\u65f6\u670d\u52a1\uff1a",
@@ -112,6 +121,21 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
   const excerpt  = lang === "ms" ? post.excerptMS  : lang === "zh" ? post.excerptZH  : post.excerpt;
   const category = lang === "ms" ? post.categoryMS : lang === "zh" ? post.categoryZH : post.category;
   const content  = lang === "ms" ? post.contentMS  : lang === "zh" ? post.contentZH  : post.content;
+  const localePrefix = lang === "en" ? "" : `/${lang}`;
+  const localizedPath = (path: string) => `${localePrefix}${path}`;
+  const postUrl = `https://www.klrenovator.com${localizedPath(`/blog/${post.slug}`)}`;
+  const dateModified = post.lastReviewed ?? post.date;
+  const lastReviewedDisplay = dateModified === post.date ? post.dateDisplay : dateModified;
+
+  const quickAnswer =
+    lang === "zh"
+      ? `KL Renovator 的建议：${excerpt}`
+      : lang === "ms"
+        ? `Nasihat KL Renovator: ${excerpt}`
+        : `KL Renovator's practical answer: ${excerpt}`;
+
+  const serviceHref = localizedPath(`/services/${(BLOG_SERVICE_MAP[post.slug]?.[0] ?? "chemical-wash")}`);
+  const areasHref = localizedPath("/areas/kuala-lumpur");
 
   // BlogPosting Schema
   const blogPostingSchema = {
@@ -158,7 +182,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
       height: 630,
     },
     keywords: post.tags.join(", "),
-    articleSection: post.category,
+    articleSection: category,
     about: {
       "@type": "Service",
       name: post.relatedService,
@@ -170,9 +194,9 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.klrenovator.com/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.klrenovator.com/blog/${post.slug}` },
+      { "@type": "ListItem", position: 1, name: ui.home, item: `https://www.klrenovator.com${localizedPath("")}` },
+      { "@type": "ListItem", position: 2, name: ui.blog, item: `https://www.klrenovator.com${localizedPath("/blog")}` },
+      { "@type": "ListItem", position: 3, name: title, item: postUrl },
     ],
   };
 
@@ -186,9 +210,9 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
-            <NextLink href="/" className="hover:text-sky-600 transition font-medium">{ui.home}</NextLink>
+            <NextLink href={localizedPath("") || "/"} className="hover:text-sky-600 transition font-medium">{ui.home}</NextLink>
             <FiChevronRight className="h-3 w-3" />
-            <NextLink href="/blog" className="hover:text-sky-600 transition font-medium">{ui.blog}</NextLink>
+            <NextLink href={localizedPath("/blog")} className="hover:text-sky-600 transition font-medium">{ui.blog}</NextLink>
             <FiChevronRight className="h-3 w-3" />
             <span className="text-slate-900 font-bold truncate max-w-[200px]">{title}</span>
           </nav>
@@ -229,7 +253,9 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 </span>
                 <time dateTime={post.date}>{post.dateDisplay}</time>
                 <span className="text-slate-300">.</span>
-                <NextLink href="/about" className="hover:text-sky-600 transition-colors">
+                <time dateTime={dateModified}>{ui.lastReviewed}: {lastReviewedDisplay}</time>
+                <span className="text-slate-300">.</span>
+                <NextLink href={localizedPath("/about")} className="hover:text-sky-600 transition-colors">
                   {ui.by}
                 </NextLink>
               </div>
@@ -267,6 +293,41 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                   prose-a:text-sky-600 prose-a:font-bold prose-a:no-underline hover:prose-a:underline"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
+
+              <section className="mt-10 rounded-2xl border border-sky-100 bg-sky-50/70 p-5 not-prose">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">
+                  {ui.quickAnswer}
+                </p>
+                <p className="text-sm font-semibold leading-relaxed text-slate-700">
+                  {quickAnswer}
+                </p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  <NextLink href={serviceHref} className="rounded-xl bg-white border border-sky-100 p-3 text-xs font-black text-sky-700 hover:border-sky-300 transition">
+                    {lang === "zh" ? "查看相关服务" : lang === "ms" ? "Lihat perkhidmatan berkaitan" : "View related service"} →
+                  </NextLink>
+                  <NextLink href={areasHref} className="rounded-xl bg-white border border-sky-100 p-3 text-xs font-black text-sky-700 hover:border-sky-300 transition">
+                    {lang === "zh" ? "查看服务地区" : lang === "ms" ? "Lihat kawasan servis" : "View KL & Selangor coverage"} →
+                  </NextLink>
+                </div>
+              </section>
+
+              <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 not-prose shadow-sm">
+                <h2 className="text-lg font-black uppercase tracking-tight text-slate-950">{ui.readerFaq}</h2>
+                <div className="mt-4 space-y-4 text-sm text-slate-700">
+                  <div>
+                    <h3 className="font-black text-slate-900">{lang === "zh" ? "我可以当天预约吗？" : lang === "ms" ? "Boleh tempah servis hari sama?" : "Can I book same-day service?"}</h3>
+                    <p className="mt-1">{lang === "zh" ? "可以，视技术员路线和材料需求而定。最快方式是 WhatsApp +60182983573。" : lang === "ms" ? "Boleh, bergantung kepada laluan juruteknik dan keperluan bahan. Cara terpantas ialah WhatsApp +60182983573." : "Yes, depending on technician route and material needs. The fastest way is WhatsApp +60182983573."}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-slate-900">{lang === "zh" ? "施工前会确认价格吗？" : lang === "ms" ? "Adakah harga disahkan sebelum kerja?" : "Will the price be confirmed before work starts?"}</h3>
+                    <p className="mt-1">{lang === "zh" ? "会。KL Renovator 会先确认范围、价格和任何额外材料。" : lang === "ms" ? "Ya. KL Renovator mengesahkan skop, harga dan sebarang bahan tambahan dahulu." : "Yes. KL Renovator confirms scope, price and any extra materials first."}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-slate-900">{lang === "zh" ? "是否有保修？" : lang === "ms" ? "Adakah ada waranti?" : "Is there a warranty?"}</h3>
+                    <p className="mt-1">{lang === "zh" ? "符合条件的施工服务享有1个月工艺保修。" : lang === "ms" ? "Kerja servis yang layak dilindungi waranti kerja 1 bulan." : "Eligible workmanship is covered by a 1-month workmanship warranty."}</p>
+                  </div>
+                </div>
+              </section>
 
               {/* Sidebar */}
               <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
@@ -323,7 +384,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                       return displayServices.map((s) => (
                         <li key={s.slug}>
                           <NextLink
-                            href={`/services/${s.slug}`}
+                            href={localizedPath(`/services/${s.slug}`)}
                             className="flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
                           >
                             <FiArrowRight className="h-3 w-3 shrink-0 text-sky-400" /> {s.label}
@@ -333,7 +394,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                     })()}
                   </ul>
                   <NextLink
-                    href="/services"
+                    href={localizedPath("/services")}
                     className="block mt-3 text-xs font-black text-sky-600 hover:text-sky-800 transition-colors"
                   >
                     All Services →
@@ -350,21 +411,21 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                     {siteConfig.areaPages.slice(0, 12).map((area) => (
                       <NextLink
                         key={area.slug}
-                        href={`/areas/${area.slug}`}
+                        href={localizedPath(`/areas/${area.slug}`)}
                         className="text-[11px] font-bold text-slate-500 hover:text-sky-600 hover:underline transition-colors"
                         title={`Aircond Service ${area.name}`}
                       >
                         {area.name}
                       </NextLink>
                     ))}
-                    <NextLink href="/areas" className="text-[11px] font-black text-sky-600 hover:underline">
+                    <NextLink href={localizedPath("/areas/kuala-lumpur")} className="text-[11px] font-black text-sky-600 hover:underline">
                       All Areas →
                     </NextLink>
                   </div>
                 </div>
 
                 <NextLink
-                  href="/blog"
+                  href={localizedPath("/blog")}
                   className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-700 hover:text-sky-600 transition-colors"
                 >
                   <FiArrowLeft className="h-3.5 w-3.5" /> {ui.backToAll}
@@ -402,7 +463,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
               {lang === "zh" ? "WhatsApp\u9884\u7ea6" : lang === "ms" ? "WhatsApp Tempah" : "WhatsApp to Book"}
             </a>
             <NextLink
-              href="/services"
+              href={localizedPath("/services")}
               className="inline-flex items-center justify-center gap-1 border-2 border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 font-black uppercase tracking-wider px-6 py-3 rounded-xl text-xs transition-all"
             >
               {lang === "zh" ? "\u67e5\u770b\u6240\u6709\u670d\u52a1 \u2192" : lang === "ms" ? "Lihat Semua Perkhidmatan \u2192" : "View All Services \u2192"}
@@ -428,7 +489,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 return (
                   <Reveal key={p.slug} delay={i * 50}>
                     <NextLink
-                      href={`/blog/${p.slug}`}
+                      href={localizedPath(`/blog/${p.slug}`)}
                       className="group block overflow-hidden bg-white border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all rounded-2xl"
                     >
                       <div className="relative h-36 bg-slate-100">
