@@ -80,6 +80,38 @@ export function ServiceDetailI18n({
     allBrands: { en: "All Brands We Service", ms: "Semua Jenama yang Kami Servis", zh: "我们服务的所有品牌" },
     home: { en: "Home", ms: "Utama", zh: "首页" },
     services: { en: "Services", ms: "Perkhidmatan", zh: "服务" },
+    nearMeTitle: { en: "Near Me", ms: "Berhampiran Saya", zh: "附近服务" },
+    nearMeSub: {
+      en: "Searching for \"{service}\" near me? KL Renovator operates across all KL and Selangor areas with same-day dispatch. Whether you're in Kuala Lumpur city, Petaling Jaya, Shah Alam, Subang Jaya, Klang, or any Klang Valley suburb, our technicians are already in your area today. WhatsApp your location and we'll confirm the nearest available slot.",
+      ms: "Mencari \"{service}\" berhampiran saya? KL Renovator beroperasi di seluruh kawasan KL dan Selangor dengan penghantaran hari sama. Sama ada anda di bandar Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Klang, atau mana-mana suburb Lembah Klang, juruteknik kami sudah berada di kawasan anda hari ini. WhatsApp lokasi anda dan kami akan sahkan slot terdekat yang tersedia.",
+      zh: "搜索\"{service}附近\"？KL Renovator 在吉隆坡和雪兰莪所有地区提供当天派遣服务。无论您在吉隆坡市区、Petaling Jaya、Shah Alam、Subang Jaya、Klang 或任何吉隆坡谷郊区，我们的技术员今天已经在您的区域。WhatsApp 您的位置，我们将确认最近的可用时段。",
+    },
+    geoCoverageTitle: {
+      en: "Aircond Service Kuala Lumpur & Selangor — Klang Valley Coverage",
+      ms: "Servis Aircond Kuala Lumpur & Selangor — Liputan Lembah Klang",
+      zh: "吉隆坡和雪兰莪冷气服务 — 吉隆坡谷覆盖范围",
+    },
+    geoCoverageSub: {
+      en: "We provide {service} across the entire Klang Valley metropolitan area. From Kuala Lumpur's CBD to every Selangor township, our mobile technicians carry the tools, parts, and refrigerant gas needed to complete most jobs in a single visit. No travel charges — you pay only for the service.",
+      ms: "Kami menyediakan {service} merentasi seluruh kawasan metropolitan Lembah Klang. Dari pusat bandar Kuala Lumpur hingga ke setiap bandaraya Selangor, juruteknik mudah alih kami membawa alat, alat ganti, dan gas penyejuk yang diperlukan untuk menyelesaikan kebanyakan kerja dalam satu lawatan. Tiada caj perjalanan — anda hanya bayar untuk servis.",
+      zh: "我们在整个大吉隆坡谷都市区提供{service}。从吉隆坡中央商务区到每个雪兰莪市镇，我们的移动技术员携带完成大多数工作所需的工具、零件和制冷剂。无差旅费——您只需支付服务费。",
+    },
+    problemAwareTitle: {
+      en: "Does Your Aircond Have Any of These Problems? This Service Fixes Them.",
+      ms: "Adakah Aircond Anda Mengalami Mana-mana Masalah Ini? Perkhidmatan Ini Membaikinya.",
+      zh: "您的冷气有这些问题吗？此服务可修复它们。",
+    },
+    problemAwareSub: {
+      en: "Most customers find this page after searching for the exact symptoms below. If any of these sound like your unit, {service} is likely the right solution.",
+      ms: "Kebanyakan pelanggan menjumpai halaman ini selepas mencari simptom tepat di bawah. Jika mana-mana ini kedengaran seperti unit anda, {service} mungkin adalah penyelesaian yang betul.",
+      zh: "大多数客户在搜索以下确切症状后找到此页面。如果您的机器有任何这些症状，{service}很可能是正确的解决方案。",
+    },
+    klCoverage: { en: "Aircond Service Kuala Lumpur", ms: "Servis Aircond Kuala Lumpur", zh: "吉隆坡冷气服务" },
+    klCoverageDesc: { en: "Full KL coverage — all townships and condo districts. Same-day slots available.", ms: "Liputan penuh KL — semua bandaraya dan kawasan kondominium. Slot hari sama tersedia.", zh: "覆盖整个吉隆坡——所有市镇和公寓区。可提供当天时段。" },
+    klangValleyCoverage: { en: "Aircond Repair Klang Valley", ms: "Baiki Aircond Lembah Klang", zh: "吉隆坡谷冷气维修" },
+    klangValleyCoverageDesc: { en: "Emergency repair dispatch across the entire Klang Valley. 30–60 min response.", ms: "Penghantaran pembaikan kecemasan merentasi seluruh Lembah Klang. Respons 30–60 minit.", zh: "整个吉隆坡谷的紧急维修派遣。30-60分钟响应。" },
+    selangorCoverage: { en: "Aircond Service Selangor", ms: "Servis Aircond Selangor", zh: "雪兰莪冷气服务" },
+    selangorCoverageDesc: { en: "All Selangor districts covered — Petaling, Gombak, Hulu Langat, Klang, Sepang.", ms: "Semua daerah Selangor diliputi — Petaling, Gombak, Hulu Langat, Klang, Sepang.", zh: "覆盖所有雪兰莪地区——Petaling、Gombak、Hulu Langat、Klang、Sepang。" },
   };
 
   const pick = (key: keyof typeof LABELS) => LABELS[key][lang];
@@ -391,6 +423,26 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
+      {/* ── Near Me Section ─────────────────────────────────────────────── */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
+              {tTitle} {pick("nearMeTitle")} — KL &amp; Selangor
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              {LABELS.nearMeSub[lang].replace("{service}", tTitle.toLowerCase())}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">{tTitle.toLowerCase()} {pick("nearMeTitle")}</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">same day {tTitle.toLowerCase()} {pick("nearMeTitle")}</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">best aircond technician {pick("nearMeTitle")}</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">aircond service {pick("nearMeTitle")} klang valley</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── Trust Signal Strip ─────────────────────────────────────────── */}
       <section className="bg-slate-900 text-white py-4 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
@@ -399,6 +451,51 @@ export function ServiceDetailI18n({
           ))}
         </div>
       </section>
+
+      {/* ── Problem-Aware Block — exact symptoms this service fixes ─────── */}
+      {(() => {
+        const problemSlugs = SERVICE_PROBLEM_MAP[slug] ?? [];
+        const problems = problemSlugs.length > 0
+          ? siteConfig.problemPages.filter((p) => problemSlugs.includes(p.slug))
+          : [];
+        if (problems.length === 0) return null;
+        return (
+          <section className="py-14 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">{pick("problemsFixed")}</p>
+                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
+                  {LABELS.problemAwareTitle[lang]}
+                </h2>
+                <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+                  {LABELS.problemAwareSub[lang].replace("{service}", tTitle)}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {problems.map((problem) => (
+                    <NextLink
+                      key={problem.slug}
+                      href={`${langPrefix}/problems/${problem.slug}`}
+                      className="group bg-white border border-slate-200 rounded-xl p-4 hover:border-red-300 hover:bg-red-50 transition"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex h-6 w-6 items-center justify-center bg-red-100 text-red-600 rounded-full text-xs font-black">!</span>
+                        <h3 className="font-bold text-slate-900 text-sm group-hover:text-red-700 transition">
+                          {lang === "ms" ? (problem.nameMS ?? problem.name) : lang === "zh" ? (problem.nameZH ?? problem.name) : problem.name}
+                        </h3>
+                      </div>
+                      <p className="text-xs text-slate-500 leading-relaxed">
+                        {lang === "ms" ? (problem.descriptionMS ? `${problem.descriptionMS.slice(0, 120)}...` : problem.nameMS ?? problem.name)
+                          : lang === "zh" ? (problem.descriptionZH ? `${problem.descriptionZH.slice(0, 120)}...` : problem.nameZH ?? problem.name)
+                          : (problem.description ? `${problem.description.slice(0, 120)}...` : `Learn what causes ${problem.name.toLowerCase()} and how ${tTitle} fixes it.`)}
+                      </p>
+                    </NextLink>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Highlights */}
       <section className="py-14 sm:py-16 bg-white">
@@ -580,6 +677,34 @@ export function ServiceDetailI18n({
                   {area.name} <FiArrowRight className="h-3 w-3" />
                 </NextLink>
               ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Geographic Coverage — KL, Selangor, Klang Valley ─────────────── */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
+              {LABELS.geoCoverageTitle[lang]}
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              {LABELS.geoCoverageSub[lang].replace("{service}", tTitle.toLowerCase())}
+            </p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{LABELS.klCoverage[lang]}</h3>
+                <p className="text-xs text-slate-500">{LABELS.klCoverageDesc[lang]}</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{LABELS.klangValleyCoverage[lang]}</h3>
+                <p className="text-xs text-slate-500">{LABELS.klangValleyCoverageDesc[lang]}</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{LABELS.selangorCoverage[lang]}</h3>
+                <p className="text-xs text-slate-500">{LABELS.selangorCoverageDesc[lang]}</p>
+              </div>
             </div>
           </Reveal>
         </div>
