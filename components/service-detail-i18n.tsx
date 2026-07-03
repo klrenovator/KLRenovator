@@ -491,6 +491,57 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
+      {/* Expert Review / AEO Direct Answer */}
+      <section className="bg-white py-8 border-b border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+              <div className="rounded-2xl border border-sky-100 bg-sky-50/70 p-5 sm:p-6">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700">
+                  {lang === "zh" ? "直接答案" : "Jawapan Ringkas"}
+                </p>
+                <h2 className="mt-2 text-xl font-black tracking-tight text-slate-950">
+                  {lang === "zh" ? `${tTitle} 适合我的冷气问题吗？` : `Adakah ${tTitle} sesuai untuk masalah aircond saya?`}
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate-700">
+                  {lang === "zh"
+                    ? `如果您的冷气症状与本页说明和价格表相符，${tTitle} 通常就是合适的服务。KL Renovator 会先确认实际问题、价格和任何材料费用，再开始施工。`
+                    : `Ya — jika simptom unit anda sepadan dengan penerangan dan jadual harga di halaman ini, ${tTitle} biasanya ialah servis yang sesuai. KL Renovator mengesahkan masalah sebenar, harga dan sebarang kos bahan sebelum kerja bermula.`}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2 text-xs font-bold text-sky-800">
+                  <span className="rounded-full border border-sky-200 bg-white px-3 py-1.5">{lang === "zh" ? "吉隆坡与雪兰莪当天服务" : "Slot hari sama KL & Selangor"}</span>
+                  <span className="rounded-full border border-sky-200 bg-white px-3 py-1.5">{lang === "zh" ? "先确认价格" : "Harga disahkan dahulu"}</span>
+                  <span className="rounded-full border border-sky-200 bg-white px-3 py-1.5">{lang === "zh" ? "1个月工艺保修" : "Waranti kerja 1 bulan"}</span>
+                </div>
+              </div>
+              <aside className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500">
+                  {lang === "zh" ? "专家审核" : "Disemak Pakar"}
+                </p>
+                <p className="mt-2 text-base font-black text-slate-950">
+                  {lang === "zh" ? "KL Renovator HVAC专家团队" : "Pasukan Pakar HVAC KL Renovator"}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  {lang === "zh"
+                    ? "已根据吉隆坡与雪兰莪当前价格、服务范围、支持品牌和工艺保修详情审核。"
+                    : "Disemak berdasarkan harga semasa KL & Selangor, skop servis aktif, jenama disokong dan butiran waranti kerja."}
+                </p>
+                <dl className="mt-4 grid grid-cols-2 gap-3 text-xs">
+                  <div className="rounded-xl bg-slate-50 p-3">
+                    <dt className="font-bold uppercase tracking-wider text-slate-400">{lang === "zh" ? "最后审核" : "Disemak terakhir"}</dt>
+                    <dd className="mt-1 font-black text-slate-900">3 July 2026</dd>
+                  </div>
+                  <div className="rounded-xl bg-slate-50 p-3">
+                    <dt className="font-bold uppercase tracking-wider text-slate-400">{lang === "zh" ? "企业" : "Perniagaan"}</dt>
+                    <dd className="mt-1 font-black text-slate-900">SSM Registered</dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── Trust Signal Strip ─────────────────────────────────────────── */}
       <section className="bg-slate-900 text-white py-4 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
