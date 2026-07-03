@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiX } from "react-icons/fi";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -10,6 +10,8 @@ const STORAGE_KEY = "klr_scroll_cta_dismissed";
 export function ScrollDepthCTA() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const rafRef = useRef<number | null>(null);
+  const lastVisibleRef = useRef(false);
 
   useEffect(() => {
     try {
@@ -20,21 +22,31 @@ export function ScrollDepthCTA() {
       }
     } catch {}
 
-    const onScroll = () => {
+    const calculate = () => {
+      rafRef.current = null;
       const scrolled = window.scrollY;
       const total = document.documentElement.scrollHeight - window.innerHeight;
       const pct = total > 0 ? scrolled / total : 0;
+      const nextVisible = pct > 0.60 && pct < 0.92;
 
-      // Show between 60% and 92% scroll depth
-      if (pct > 0.60 && pct < 0.92) {
-        setVisible(true);
-      } else {
-        setVisible(false);
+      if (nextVisible !== lastVisibleRef.current) {
+        lastVisibleRef.current = nextVisible;
+        setVisible(nextVisible);
       }
     };
 
+    const onScroll = () => {
+      if (rafRef.current !== null) return;
+      rafRef.current = window.requestAnimationFrame(calculate);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    calculate();
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafRef.current !== null) window.cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
   const dismiss = () => {
