@@ -24,6 +24,8 @@ export async function generateMetadata({
   const msUrl = `https://www.klrenovator.com/ms/blog/${slug}`;
   const zhUrl = `https://www.klrenovator.com/zh/blog/${slug}`;
 
+  const imageUrl = `https://www.klrenovator.com${post.image}`;
+
   return {
     title: `${post.titleZH} | KL Renovator Blog`,
     description: post.excerptZH,
@@ -35,7 +37,7 @@ export async function generateMetadata({
       url: zhUrl,
       locale: "zh_MY",
       alternateLocale: ["en_MY", "ms_MY"],
-      images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: post.titleZH }],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: post.imageAlt }],
     },
     alternates: {
       canonical: zhUrl,
