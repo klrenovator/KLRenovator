@@ -272,6 +272,54 @@ export default async function AreaPageMS({
         </div>
       </section>
 
+      {/* Near Me — BM */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              Servis Aircond Berhampiran Saya di {area.name} — Tempahan Hari Sama
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              Jika anda mencari &quot;servis aircond berhampiran saya&quot; dan sampai ke halaman ini, anda berada di tempat yang betul. KL Renovator menghantar juruteknik terlatih ke {area.name} dan kawasan kejiranan sekitar setiap hari. Kami menangani segala-galanya dari servis asas dan cuci kimia hingga pembaikan kecemasan dan tambah gas — semua dengan harga telus dan jaminan kerjatangan 1 bulan. WhatsApp kami sekarang dan kami akan sahkan slot anda dalam beberapa minit.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">servis aircond berhampiran saya {area.name}</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">baiki aircond hari sama berdekatan</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">juruteknik aircond terbaik berhampiran</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">cuci kimia aircond berdekatan</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Geographic Coverage — BM */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              Baiki & Servis Aircond Lembah Klang — Liputan KL & Selangor
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              {area.name} terletak dalam koridor Lembah Klang yang lebih besar, dan rangkaian servis KL Renovator meliputi keseluruhan stretch dari pusat bandar Kuala Lumpur hingga ke setiap suburb Selangor. Sama ada anda memerlukan servis aircond rutin di Kuala Lumpur, baiki aircond kecemasan di Lembah Klang, atau overhaul kimia penuh di Selangor, juruteknik kami sudah berkerja di kawasan anda hari ini. Kami membawa alat ganti biasa, gas penyejuk, dan bahan kimia pembersihan dalam setiap van — jadi kebanyakan kerja diselesaikan dalam satu lawatan.
+            </p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="bg-white border border-slate-200 rounded-xl p-3">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Servis Aircond Kuala Lumpur</h3>
+                <p className="text-xs text-slate-500">Liputan penuh KL termasuk {area.name} dan semua kawasan kejiranan bersebelahan. Slot hari sama tersedia.</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-3">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Baiki Aircond Lembah Klang</h3>
+                <p className="text-xs text-slate-500">Penghantaran pembaikan kecemasan merentasi seluruh kawasan metropolitan Lembah Klang. Respons 30–60 minit.</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-3">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Servis Aircond Selangor</h3>
+                <p className="text-xs text-slate-500">Semua daerah Selangor diliputi termasuk Petaling, Gombak, Hulu Langat, Klang, dan Sepang.</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Quick pricing facts — fact-dense block for AI Overviews / GEO */}
       <section className="py-10 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -309,6 +357,33 @@ export default async function AreaPageMS({
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
                 </details>
               ))}
+            </div>
+          </Reveal>
+
+          {/* Near Me FAQs — BM */}
+          <Reveal>
+            <div className="mt-6">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">📍 Berhampiran Saya</p>
+              <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
+                <details className="group bg-white p-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    Adakah servis aircond berhampiran saya di {area.name}?
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                    Ya — KL Renovator menyediakan servis aircond hari sama berhampiran anda di {area.name}. WhatsApp +60182983573 dengan alamat anda dan kami akan hantar juruteknik terdekat. Kebanyakan temujanji di {area.name} disahkan dalam 30 minit.
+                  </p>
+                </details>
+                <details className="group bg-white p-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    Siapa juruteknik baiki aircond terbaik berhampiran saya di {area.name}?
+                  <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                    Juruteknik terlatih KL Renovator mendapat penarafan tinggi di {area.name} dan Lembah Klang. Dengan 500+ ulasan bintang 5, harga telus, dan jaminan kerjatangan 1 bulan, kami adalah pilihan dipercayai untuk baiki dan servis aircond berhampiran anda.
+                  </p>
+                </details>
+              </div>
             </div>
           </Reveal>
         </div>
