@@ -69,6 +69,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ms/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/zh/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/near-me") },
+    { url: `${BASE}/review`, lastModified: now, changeFrequency: "monthly", priority: 0.55, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
+    { url: `${BASE}/ms/review`, lastModified: now, changeFrequency: "monthly", priority: 0.50, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
+    { url: `${BASE}/zh/review`, lastModified: now, changeFrequency: "monthly", priority: 0.50, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
   ];
 
   // ── Emergency Page — trilingual twins added in Round 18.3 ──────────
