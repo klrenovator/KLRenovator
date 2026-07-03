@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GalleryClient } from "./gallery-client";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Aircond Project Gallery — Real Work by KL Renovator | KL & Selangor",
@@ -13,23 +14,25 @@ export const metadata: Metadata = {
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
-      {
-        url: "https://www.klrenovator.com/logo/image.png",
-        width: 1200,
-        height: 630,
-        alt: "KL Renovator Aircond Project Gallery",
-      },
+      { url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "KL Renovator Aircond Project Gallery" },
     ],
   },
   alternates: {
     canonical: "https://www.klrenovator.com/gallery",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/gallery",
-      "x-default": "https://www.klrenovator.com/gallery",
-    },
+    languages: { "en-MY": "https://www.klrenovator.com/gallery", "x-default": "https://www.klrenovator.com/gallery" },
   },
 };
 
 export default function GalleryPage() {
-  return <GalleryClient />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.klrenovator.com" },
+          { name: "Gallery", url: "https://www.klrenovator.com/gallery" },
+        ]}
+      />
+      <GalleryClient />
+    </>
+  );
 }
