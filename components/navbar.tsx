@@ -40,7 +40,7 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
   // Standalone static pages that now have dedicated /ms and /zh route files.
   // Add a path here ONLY after its /ms and /zh versions have been created,
   // so the switcher never navigates to a route that doesn't exist.
-  const staticPages = ["/contact", "/services", "/about", "/faq", "/gallery"];
+  const staticPages = ["/contact", "/services", "/about", "/faq", "/gallery", "/review"];
   if (staticPages.includes(enPath)) {
     return target === "en" ? enPath : `/${target}${enPath}`;
   }
