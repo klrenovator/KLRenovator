@@ -14,6 +14,8 @@ export type BlogPost = {
   dateDisplay: string; // Human readable — e.g. "May 2026"
   readTime: number;
   relatedService: string;
+  image: string;
+  imageAlt: string;
   content: string;
   contentMS: string;
   contentZH: string;
@@ -36,6 +38,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 5,
     relatedService: "Pressure Chemical Wash",
+    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    imageAlt: "KL Renovator technician preparing a protected chemical wash setup for an aircond service visit in Greater KL",
     content: `
       <h2>Aircon Servicing in Batu Caves & Selayang</h2>
       <p>Batu Caves and Selayang are among the fastest-growing residential zones in Greater KL. With dense housing, high humidity, and dusty air near limestone hills, aircond units in this area tend to accumulate mould and dust faster than in most other parts of Selangor.</p>
@@ -176,6 +180,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 4,
     relatedService: "Pressure Chemical Wash",
+    image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    imageAlt: "Pressure chemical wash on a wall-mounted aircond unit with cleaning canvas in Selangor",
     content: `
       <h2>Chemical Wash Prices in Malaysia 2026</h2>
       <p>Chemical wash prices in Malaysia vary by unit type, horsepower (HP), and company. Here's a transparent breakdown of what KL Renovator charges in 2026 — no hidden fees.</p>
@@ -349,6 +355,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2026",
     readTime: 4,
     relatedService: "Chemical Overhaul",
+    image: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    imageAlt: "Indoor aircond unit dismantled for chemical overhaul cleaning in Ampang Selangor",
     content: `
       <h2>When a Chemical Wash Is Not Enough</h2>
       <p>Many homeowners book a chemical wash expecting it to solve all aircon problems — but some issues require a full <strong>chemical overhaul</strong>, where the indoor unit is completely dismantled and deep-cleaned.</p>
@@ -450,6 +458,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "June 2025",
     readTime: 5,
     relatedService: "Chemical Overhaul",
+    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    imageAlt: "Chemical wash canvas wrapped around an indoor aircond unit during deep cleaning in Kuala Lumpur",
     content: `
       <h2>What Is a Chemical Wash?</h2>
       <p>A <strong>chemical wash</strong> (also called a pressure chemical wash) is a deep-cleaning service where a trained technician sprays a chemical cleaning solution onto the evaporator coil and blower wheel while the unit remains mounted on the wall.</p>
@@ -549,6 +559,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2025",
     readTime: 6,
     relatedService: "Troubleshooting & Repairs",
+    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    imageAlt: "KL Renovator technician diagnosing an aircond not cold problem in Klang Valley",
     content: `
       <h2>Why Is My Aircond Running But Not Cooling?</h2>
       <p>This is the most common aircond complaint in Malaysia — the unit is on, the fan is blowing, but the air is warm or barely cool. Here are the 7 most likely causes.</p>
@@ -644,6 +656,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2025",
     readTime: 4,
     relatedService: "Basic Servicing / Routine Maintenance",
+    image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    imageAlt: "Routine aircond basic servicing with filter and coil cleaning in Kuala Lumpur",
     content: `
       <h2>Why Malaysia Needs More Frequent Servicing</h2>
       <p>Unlike temperate countries where aircond is used seasonally, Malaysian aircond units run year-round — often 8–12 hours per day. Combined with high humidity, dust, and occasional haze, units accumulate dirt faster and need more regular attention.</p>
@@ -760,6 +774,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2025",
     readTime: 5,
     relatedService: "Gas Top-Up / Precision Balancing",
+    image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    imageAlt: "Aircond refrigerant gas top-up and pressure balancing for R32 and R410A units in Selangor",
     content: `
       <h2>The Three Main Refrigerant Types in Malaysia</h2>
       <p>Most aircond units in Malaysia use one of three refrigerant types: R22, R410A, or R32. Each has different properties, costs, and environmental impact.</p>
@@ -854,6 +870,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "February 2025",
     readTime: 4,
     relatedService: "Chemical Overhaul",
+    image: "/hero/panasonic-aircond-water-leaking-fix-petaling-jaya-24.webp",
+    imageAlt: "Aircond water leaking repair with drain pipe clearing in Petaling Jaya",
     content: `
       <h2>Why Is My Aircon Leaking Water?</h2>
       <p>Water leaking from your indoor unit is the most common aircond complaint in Malaysia — especially during rainy season. Here are the main causes.</p>
@@ -958,6 +976,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "January 2025",
     readTime: 7,
     relatedService: "New Unit Installation",
+    image: "/hero/daikin-aircond-new-installation-klang-67.webp",
+    imageAlt: "New Daikin wall-mounted aircond installation completed in Klang",
     content: `
       <h2>Top Aircond Brands in Malaysia 2025</h2>
       <p>Here's an honest comparison based on our technicians' real-world experience servicing thousands of units across KL and Selangor.</p>
@@ -1056,6 +1076,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "June 2026",
     readTime: 6,
     relatedService: "Basic Servicing / Routine Maintenance",
+    image: "/hero/samsung-aircond-basic-servicing-puchong-41.webp",
+    imageAlt: "Samsung aircond filter cleaning and maintenance inspection during service in Puchong",
     content: `
       <h2>Why a Maintenance Checklist Matters</h2>
       <p>In Malaysia's hot and humid climate, your aircond works harder than almost anywhere else in the world. Without regular maintenance, dust, mould and moisture accumulate rapidly — reducing efficiency, raising electricity bills, and shortening the unit's lifespan.</p>
@@ -1164,6 +1186,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "June 2026",
     readTime: 5,
     relatedService: "Pressure Chemical Wash",
+    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    imageAlt: "Aircond service visit with chemical wash canvas setup for transparent pricing guide in KL",
     content: `
       <h2>Aircond Service Pricing KL & Selangor 2026</h2>
       <p>Complete and transparent pricing from KL Renovator. All prices confirmed before work begins — no hidden charges.</p>
@@ -1317,6 +1341,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 6,
     relatedService: "New Unit Installation",
+    image: "/hero/mitsubishi-aircond-gas-topup-r32-kuala-lumpur-3.webp",
+    imageAlt: "Mitsubishi inverter aircond checked during R32 refrigerant service in Kuala Lumpur",
     content: `
       <h2>Inverter vs Non-Inverter — The Simple Explanation</h2>
       <p>A non-inverter aircond compressor runs at one speed — full power, then off. An inverter varies its speed to maintain temperature with far less electricity.</p>
@@ -1431,6 +1457,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
+    image: "/hero/daikin-aircond-pcb-board-repair-petaling-jaya-23.webp",
+    imageAlt: "Daikin aircond PCB inspection and repair by KL Renovator technician in Petaling Jaya",
     content: `
       <h2>Daikin vs Panasonic — Malaysia's Top Two Brands</h2>
       <p>Daikin and Panasonic together account for over 50% of aircond sales in Malaysia. Both are excellent, but they have different strengths.</p>
@@ -1550,6 +1578,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 6,
     relatedService: "Pressure Chemical Wash",
+    image: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp",
+    imageAlt: "Cleaned Midea aircond during basic servicing to improve cooling efficiency in Petaling Jaya",
     content: `
       <h2>Why Your Aircond Bill is High</h2>
       <p>In Malaysia, aircond typically accounts for 50–70% of a household's electricity bill. Most excessive consumption comes from preventable causes — a dirty coil, low gas, wrong temperature setting, or an old inefficient unit.</p>
@@ -1665,6 +1695,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
+    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    imageAlt: "Wall-mounted aircond installation with copper piping and bracket work in Kuala Lumpur",
     content: `
       <h2>Choosing the Right HP for Your Room</h2>
       <ul>
@@ -1796,6 +1828,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 5,
     relatedService: "Troubleshooting & Repairs",
+    image: "/hero/aircond-compressor-installation-new-kl.webp",
+    imageAlt: "Outdoor aircond compressor installation and inspection for long-term unit lifespan in KL",
     content: `
       <h2>Average Aircond Lifespan in Malaysia</h2>
       <ul>
@@ -1910,6 +1944,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2026",
     readTime: 8,
     relatedService: "Troubleshooting & Repairs",
+    image: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp",
+    imageAlt: "TCL aircond troubleshooting visit with capacitor testing in Shah Alam",
     content: `
       <h2>How to Diagnose Your Aircond Problem</h2>
       <p>Most aircond problems fall into a few predictable categories. Use this guide to identify what is wrong before calling a technician.</p>
@@ -2019,6 +2055,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2026",
     readTime: 6,
     relatedService: "Ceiling Cassette Solutions",
+    image: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+    imageAlt: "Ceiling cassette aircond service for a light commercial property in Klang Valley",
     content: `
       <h2>Why Commercial HVAC Maintenance is Different</h2>
       <p>Commercial aircond systems run longer hours, serve more people, and are more complex. A breakdown during business hours means lost productivity and unhappy customers.</p>
@@ -2130,6 +2168,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "February 2026",
     readTime: 5,
     relatedService: "Gas Top-Up / Precision Balancing",
+    image: "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp",
+    imageAlt: "York aircond R410A gas top-up performed with pressure checking in Kuala Lumpur",
     content: `
       <h2>Myth 1 — "Gas needs to be topped up every year"</h2>
       <p><strong>False.</strong> A properly installed aircond with no leaks does not lose gas. If your unit needs top-up every year, there is a leak that must be found and repaired first.</p>
@@ -2225,6 +2265,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "January 2026",
     readTime: 8,
     relatedService: "New Unit Installation",
+    image: "/hero/aircond-new-installation-petaling-jaya.webp",
+    imageAlt: "New wall-mounted aircond installation for a Malaysian home in Petaling Jaya",
     content: `
       <h2>Step 1 — Choose the Right HP</h2>
       <ul>
