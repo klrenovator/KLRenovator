@@ -61,6 +61,46 @@ export const siteConfig = {
 
   areaPages: [
     {
+      slug: "kuala-lumpur",
+      name: "Kuala Lumpur",
+      shortName: "KL",
+      state: "Kuala Lumpur",
+      lat: 3.139,
+      lng: 101.6869,
+      population: "2 million+ (8 million+ Greater Klang Valley)",
+      landmarks: ["KLCC", "Bukit Bintang", "Mont Kiara", "Bangsar", "KL Sentral", "Sentul", "Old Klang Road", "Sungai Besi"],
+      description: "Aircond service Kuala Lumpur — KL Renovator sends professional aircond technicians across the whole city, from KLCC, Bukit Bintang and Mont Kiara to Sentul, Segambut, Old Klang Road and Sungai Besi. Whether it's a wall-mounted unit in a high-rise condo, a ceiling cassette in a shoploft, or a window unit in a terrace house, our HVAC expert team handles pressure chemical wash, chemical overhaul, gas top-up, troubleshooting and new installation with transparent pricing and same-day slots. Trusted by 500+ customers across Klang Valley — WhatsApp +60182983573.",
+      descriptionMS: "Servis aircond Kuala Lumpur — KL Renovator menghantar juruteknik aircond profesional ke seluruh bandar, dari KLCC, Bukit Bintang dan Mont Kiara ke Sentul, Segambut, Old Klang Road dan Sungai Besi. Sama ada unit dinding di kondominium tinggi, ceiling cassette di shoploft, atau unit tingkap di rumah teres, pasukan pakar HVAC kami mengendalikan cuci kimia tekanan, overhaul kimia, tambah gas, penyelesaian masalah dan pemasangan baharu dengan harga telus serta slot hari sama. Dipercayai oleh 500+ pelanggan di seluruh Klang Valley — WhatsApp +60182983573.",
+      descriptionZH: "吉隆坡冷气服务 — KL Renovator 派遣专业冷气技师前往全市，从KLCC、Bukit Bintang和Mont Kiara到Sentul、Segambut、Old Klang Road和Sungai Besi。无论是高层公寓的挂壁式冷气、店屋的天花板卡式机，还是排屋的窗式冷气，我们的HVAC专家团队都能提供压力化学清洗、化学大修、充气、故障排除和新安装服务，价格透明，可当天上门。深受吉隆坡谷500多家客户信赖 — WhatsApp +60182983573。",
+      metaTitle: "Aircond Service Kuala Lumpur (KL) | KL Renovator — From RM 99",
+      metaDesc: "Professional aircond servicing in Kuala Lumpur. Chemical wash, overhaul, gas top-up, repairs & installation. All brands, high-rise & shoplots. Same-day. Call +60182983573.",
+      metaTitleMS: "Servis Aircond Kuala Lumpur (KL) | KL Renovator — Dari RM 99",
+      metaDescMS: "Servis aircond profesional di Kuala Lumpur. Cuci kimia, overhaul, tambah gas, pembaikan & pemasangan. Semua jenama, tinggi & shoploft. Hari sama. Hubungi +60182983573.",
+      metaTitleZH: "吉隆坡（KL）冷气服务 | KL Renovator — 从RM 99起",
+      metaDescZH: "吉隆坡专业冷气服务。化学清洗、大修、充气、维修和安装。所有品牌，高层公寓和店屋。可当天上门。致电 +60182983573。",
+      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+      faqs: [
+        { q: "Do you service aircond in high-rise condos and apartments across Kuala Lumpur?", a: "Yes — KL Renovator regularly services wall-mounted and ceiling-cassette units in KL high-rises including KLCC, Mont Kiara, Bangsar, Sentul and Desa ParkCity. We follow each building's security and access procedure and carry insurance coverage for peace of mind. WhatsApp +60182983573 with your unit details." },
+        { q: "How much does aircond servicing cost in Kuala Lumpur?", a: "Basic servicing from RM 99, pressure chemical wash from RM 120 (1.0–1.5 HP wall-mounted), chemical overhaul from RM 220, and gas top-up from RM 120 (R22, R410A or R32) in KL. Ceiling cassette from RM 220; window units priced on inspection. Every price is confirmed before any work begins — no hidden charges." },
+        { q: "Is same-day aircond repair available in Kuala Lumpur?", a: "Yes — KL Renovator frequently has same-day repair and servicing slots across Kuala Lumpur. WhatsApp +60182983573 early in the day with your location and the problem (not cooling, water leaking, strange noise) for the fastest response and booking." },
+        { q: "Why does my aircond smell or grow mould so fast in KL's humid weather?", a: "Kuala Lumpur's year-round humidity plus long daily runtimes let mould, bacteria and dust build up on the evaporator coil and blower wheel, causing bad smells and weak cooling. A pressure chemical wash every 12 months (or every 6–8 months if your unit runs 8+ hours a day) clears it completely." },
+        { q: "Which aircond brands do you service in Kuala Lumpur?", a: "All 20 major brands — Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic. Inverter and non-inverter, wall-mounted, ceiling cassette and window units." },
+        { q: "Do you handle commercial shoplots and office aircond in KL?", a: "Yes — we service wall-mounted and ceiling-cassette units in shoplots, offices and small commercial spaces across Kuala Lumpur (Chow Kit, Pudu, Brickfields, Old Klang Road and more). All work carries a 1-month workmanship warranty." }
+      ],
+      faqsBM: [
+        { q: "Adakah anda servis aircond di kondominium dan pangsapuri tinggi di Kuala Lumpur?", a: "Ya — KL Renovator kerap servis unit dinding dan ceiling cassette di kondominium tinggi KL termasuk KLCC, Mont Kiara, Bangsar, Sentul dan Desa ParkCity. Kami mematuhi prosedur keselamatan dan akses setiap bangunan serta mempunyai perlindungan insurans. WhatsApp +60182983573 dengan butiran unit anda." },
+        { q: "Berapa harga servis aircond di Kuala Lumpur?", a: "Servis asas dari RM 99, cuci kimia tekanan dari RM 120 (1.0–1.5 HP dinding), overhaul kimia dari RM 220, dan tambah gas dari RM 120 (R22, R410A atau R32) di KL. Ceiling cassette dari RM 220; unit tingkap berharga mengikut pemeriksaan. Setiap harga disahkan sebelum kerja dimulakan — tiada caj tersembunyi." },
+        { q: "Adakah pembaikan hari sama tersedia di Kuala Lumpur?", a: "Ya — KL Renovator kerap mempunyai slot pembaikan dan servis hari sama di seluruh Kuala Lumpur. WhatsApp +60182983573 lebih awal dengan lokasi dan masalah (tidak sejuk, air bocor, bunyi pelik) untuk tindak balas dan tempahan terpantas." },
+        { q: "Kenapa aircond saya berbau atau berbau hapak dengan cepat dalam cuaca lembap KL?", a: "Kelembapan sepanjang tahun di Kuala Lumpur ditambah penggunaan harian yang lama menyebabkan kulat, bakteria dan habuk terkumpul pada evaporator coil dan blower wheel, menyebabkan bau busuk dan penyejukan lemah. Cuci kimia tekanan setiap 12 bulan (atau 6–8 bulan jika unit berjalan 8+ jam sehari) menyelesaikannya sepenuhnya." }
+      ],
+      faqsZH: [
+        { q: "你们在吉隆坡的高层公寓和住宅提供服务吗？", a: "是的——KL Renovator定期为KL的高层公寓提供服务，包括KLCC、Mont Kiara、Bangsar、Sentul和Desa ParkCity的挂壁式和天花板卡式机。我们遵守每栋大楼的安保和进出程序，并购买保险，让您安心。请WhatsApp +60182983573告知您的单位详情。" },
+        { q: "吉隆坡冷气服务费用是多少？", a: "基本保养从RM 99起，压力化学清洗从RM 120起（1.0–1.5 HP挂壁式），化学大修从RM 220起，充气从RM 120起（R22、R410A或R32）。天花板卡式机从RM 220起；窗式机视检查结果定价。每项价格在施工前确认——无隐藏费用。" },
+        { q: "吉隆坡有当天维修服务吗？", a: "有——KL Renovator在吉隆坡全市经常有当天维修和服务名额。请尽早WhatsApp +60182983573告知您的位置和问题（不冷、漏水、异响）以获得最快的响应和预约。" },
+        { q: "为什么吉隆坡潮湿天气下冷气很快发臭或长霉？", a: "吉隆坡全年潮湿，加上每天长时间运行，会让霉菌、细菌和灰尘在蒸发器线圈和风轮上积聚，导致异味和制冷减弱。每12个月进行一次压力化学清洗（如果每天运行8小时以上则每6–8个月一次）可彻底解决。" }
+      ],
+    },
+    {
       slug: "petaling-jaya",
       name: "Petaling Jaya",
       shortName: "PJ",
