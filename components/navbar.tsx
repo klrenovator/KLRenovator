@@ -32,11 +32,20 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
   const enPath = pathname.replace(/^\/(ms|zh)(?=\/|$)/, "") || "/";
 
   // Content types with full, real multilingual route coverage
-  const translatable = /^\/(areas|brands|problems|blog)(\/|$)/;
-  if (!translatable.test(enPath)) return null;
+  const translatableCategory = /^\/(areas|brands|problems|blog)(\/|$)/;
+  if (translatableCategory.test(enPath)) {
+    return target === "en" ? enPath : `/${target}${enPath}`;
+  }
 
-  if (target === "en") return enPath;
-  return `/${target}${enPath}`;
+  // Standalone static pages that now have dedicated /ms and /zh route files.
+  // Add a path here ONLY after its /ms and /zh versions have been created,
+  // so the switcher never navigates to a route that doesn't exist.
+  const staticPages = ["/contact"];
+  if (staticPages.includes(enPath)) {
+    return target === "en" ? enPath : `/${target}${enPath}`;
+  }
+
+  return null;
 }
 
 // Brands for dropdown — derived from siteConfig.brandPages (the real source
@@ -67,7 +76,7 @@ const NAV_LABELS = {
   en: {
     home: "Home", services: "Services", areas: "Areas",
     brands: "Brands", problems: "Problems", blog: "Blog",
-    about: "About", faq: "FAQ", contact: "Contact",
+    about: "About", faq: "FAQ", contact: "Contact", near: "Near Me",
     allBrands: "All Brands", allProblems: "All Problems",
     call: "Call Support", book: "Book Now",
     topbar: "Same-day Aircond Service Across KL & Selangor",
@@ -75,7 +84,7 @@ const NAV_LABELS = {
   ms: {
     home: "Utama", services: "Perkhidmatan", areas: "Kawasan",
     brands: "Jenama", problems: "Masalah", blog: "Blog",
-    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi",
+    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi", near: "Berdekatan",
     allBrands: "Semua Jenama", allProblems: "Semua Masalah",
     call: "Hubungi Kami", book: "Tempah Sekarang",
     topbar: "Servis Aircond Hari Sama Seluruh KL & Selangor",
@@ -83,7 +92,7 @@ const NAV_LABELS = {
   zh: {
     home: "首页", services: "服务", areas: "服务地区",
     brands: "品牌", problems: "常见问题", blog: "博客",
-    about: "关于我们", faq: "常见问答", contact: "联系我们",
+    about: "关于我们", faq: "常见问答", contact: "联系我们", near: "附近服务",
     allBrands: "全部品牌", allProblems: "全部问题",
     call: "致电支持", book: "立即预约",
     topbar: "当天冷气服务，覆盖吉隆坡及雪兰莪全区",
@@ -156,6 +165,7 @@ export const Navbar = () => {
     { label: lbl.home,     href: "/" },
     { label: lbl.services, href: "/services" },
     { label: lbl.areas,    href: "/areas" },
+    { label: lbl.near,     href: "/near-me" },
     { label: lbl.blog,     href: "/blog" },
     { label: lbl.about,    href: "/about" },
     { label: lbl.faq,      href: "/faq" },
