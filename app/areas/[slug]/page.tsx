@@ -292,6 +292,22 @@ export default async function AreaPage({
           text: `KL Renovator services all major brands in ${area.name} including Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp and Haier — both inverter and non-inverter models.`,
         },
       },
+      {
+        "@type": "Question",
+        name: `Is there an aircond service near me in ${area.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Yes — KL Renovator provides same-day aircond service near you in ${area.name}. WhatsApp +60182983573 with your address and we'll dispatch the nearest technician. Most appointments in ${area.name} are confirmed within 30 minutes.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Who is the best aircond repair technician near me in ${area.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `KL Renovator's trained technicians are highly rated across ${area.name} and Klang Valley. With 500+ five-star reviews, transparent upfront pricing, and a 1-month workmanship warranty, we are the trusted choice for aircond repair and service near you.`,
+        },
+      },
     ],
   };
 
@@ -521,6 +537,62 @@ export default async function AreaPage({
         </div>
       </section>
 
+      {/* ── Near Me Section ─────────────────────────────────────────────── */}
+      <section className="py-14 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
+              Aircond Service Near Me in {area.name} — Same-Day Booking
+            </h2>
+            <p className="text-base text-slate-600 leading-relaxed max-w-3xl">
+              If you searched &quot;aircond service near me&quot; and landed here, you&apos;re in the right place. KL Renovator dispatches trained technicians to {area.name} and surrounding neighbourhoods every day. We handle everything from basic servicing and chemical wash to emergency repairs and gas top-ups — all with transparent pricing and a 1-month workmanship warranty. WhatsApp us now and we&apos;ll confirm your slot within minutes.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">
+                aircond service near me {area.name}
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">
+                same day aircond repair near me
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">
+                best aircond technician near me
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">
+                aircond chemical wash near me
+              </span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Geographic Coverage — KL, Selangor, Klang Valley ─────────────── */}
+      <section className="py-14 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
+              Klang Valley Aircond Repair & Service — KL & Selangor Coverage
+            </h2>
+            <p className="text-base text-slate-600 leading-relaxed max-w-3xl">
+              {area.name} sits within the greater Klang Valley corridor, and KL Renovator&apos;s service network covers the full stretch from Kuala Lumpur city centre through every Selangor suburb. Whether you need routine aircond service in Kuala Lumpur, urgent aircond repair in Klang Valley, or a full chemical overhaul in Selangor, our technicians are already working in your area today. We carry common spare parts, refrigerant gas, and cleaning chemicals on every van — so most jobs are completed in a single visit.
+            </p>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Aircond Service Kuala Lumpur</h3>
+                <p className="text-xs text-slate-500">Full KL coverage including {area.name} and all adjoining neighbourhoods. Same-day slots available.</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Aircond Repair Klang Valley</h3>
+                <p className="text-xs text-slate-500">Emergency repair dispatch across the entire Klang Valley metropolitan area. 30–60 min response.</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-4">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">Aircond Service Selangor</h3>
+                <p className="text-xs text-slate-500">All Selangor districts covered including Petaling, Gombak, Hulu Langat, Klang, and Sepang.</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Services Available in This Area */}
       <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -702,6 +774,42 @@ export default async function AreaPage({
               </div>
             </Reveal>
           )}
+
+          {/* Near Me FAQs — AEO/GEO targeted */}
+          <Reveal>
+            <div className="mt-6">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">📍 Near Me · Berhampiran Saya · 附近</p>
+              <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
+                <details className="group bg-white p-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    Is there an aircond service near me in {area.name}?
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                    Yes — KL Renovator provides same-day aircond service near you in {area.name}. WhatsApp +60182983573 with your address and we&apos;ll dispatch the nearest technician. Most appointments in {area.name} are confirmed within 30 minutes.
+                  </p>
+                </details>
+                <details className="group bg-white p-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    Who is the best aircond repair technician near me in {area.name}?
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                    KL Renovator&apos;s trained technicians are highly rated across {area.name} and Klang Valley. With 500+ five-star reviews, transparent upfront pricing, and a 1-month workmanship warranty, we are the trusted choice for aircond repair and service near you.
+                  </p>
+                </details>
+                <details className="group bg-white p-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    How fast is same-day aircond service near me in {area.name}?
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                    Most same-day requests in {area.name} are dispatched within 30–60 minutes of WhatsApp confirmation. We cover all of {area.name} and surrounding Klang Valley areas daily from 9AM to 10PM, including emergency repairs.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
