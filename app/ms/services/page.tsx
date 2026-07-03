@@ -64,7 +64,7 @@ function StaticPriceTable({
         <div className="border-t border-slate-100 bg-slate-50 px-6 py-4 flex flex-wrap items-center gap-3">
           {slug && (
             <Link
-              href={`/services/${slug}`}
+              href={`/ms/services/${slug}`}
               className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-700 hover:text-sky-600 transition-colors"
             >
               Lihat Butiran Servis Penuh
@@ -210,7 +210,7 @@ export default function ServicesPageMS() {
             {siteConfig.services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 40}>
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={`/ms/services/${service.slug}`}
                   className="group flex flex-col bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:border-sky-100 transition-all duration-300"
                 >
                   <div className="inline-flex p-2.5 bg-sky-50 border border-sky-100 text-sky-600 rounded-xl mb-4 w-fit group-hover:bg-sky-500 group-hover:text-white transition-all duration-300">
