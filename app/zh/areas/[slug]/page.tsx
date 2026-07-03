@@ -262,6 +262,54 @@ export default async function AreaPageZH({
         </div>
       </section>
 
+      {/* Near Me — ZH */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              {area.name} 附近冷气服务 — 当天预约
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              如果您搜索了&quot;附近冷气服务&quot;并来到这里，您来对地方了。KL Renovator 每天派遣训练有素的技术员到 {area.name} 及周边社区。我们处理从基本保养、化学清洗到紧急维修和充气的一切服务——全部价格透明，并享有一个月工艺保修。立即 WhatsApp 联系我们，我们将在几分钟内确认您的时间段。
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">{area.name} 附近冷气服务</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">当天冷气维修附近</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">附近最好的冷气技术员</span>
+              <span className="inline-flex items-center gap-1.5 bg-sky-50 text-sky-700 px-3 py-1.5 text-xs font-bold rounded-full border border-sky-200">附近化学清洗冷气</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Geographic Coverage — ZH */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              吉隆坡谷冷气维修与服务 — 覆盖 KL & 雪兰莪
+            </h2>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+              {area.name} 位于大吉隆坡谷走廊内，KL Renovator 的服务网络覆盖从吉隆坡市中心到每个雪兰莪郊区的全程。无论您需要在吉隆坡进行日常冷气服务、在吉隆坡谷进行紧急冷气维修，还是在雪兰莪进行全面化学大修，我们的技术员今天已经在您的区域工作。每辆车上都携带常用零件、制冷剂和清洁化学品——因此大多数工作可在一次上门完成。
+            </p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="bg-white border border-slate-200 rounded-xl p-3">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">吉隆坡冷气服务</h3>
+                <p className="text-xs text-slate-500">覆盖整个吉隆坡，包括 {area.name} 及所有相邻社区。可提供当天时段。</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-3">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">吉隆坡谷冷气维修</h3>
+                <p className="text-xs text-slate-500">整个吉隆坡谷都市区的紧急维修派遣。30–60 分钟响应。</p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-3">
+                <h3 className="font-bold text-slate-900 text-sm mb-1">雪兰莪冷气服务</h3>
+                <p className="text-xs text-slate-500">覆盖所有雪兰莪地区，包括 Petaling、Gombak、Hulu Langat、Klang 和 Sepang。</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Quick pricing facts — fact-dense block for AI Overviews / GEO */}
       <section className="py-10 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -299,6 +347,33 @@ export default async function AreaPageZH({
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
                 </details>
               ))}
+            </div>
+          </Reveal>
+
+          {/* Near Me FAQs — ZH */}
+          <Reveal>
+            <div className="mt-6">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">📍 附近服务</p>
+              <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
+                <details className="group bg-white p-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    {area.name} 附近有冷气服务吗？
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                    有的——KL Renovator 在 {area.name} 为您提供当天附近的冷气服务。通过 WhatsApp +60182983573 发送您的地址，我们将派遣最近的技术员。{area.name} 的大多数预约在30分钟内确认。
+                  </p>
+                </details>
+                <details className="group bg-white p-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                    {area.name} 附近最好的冷气维修技术员是谁？
+                    <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                  </summary>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                    KL Renovator 训练有素的技术员在 {area.name} 和吉隆坡谷获得高度评价。拥有500多个五星好评、透明的 upfront 定价和一个月工艺保修，我们是您附近冷气维修和服务的信赖选择。
+                  </p>
+                </details>
+              </div>
             </div>
           </Reveal>
         </div>
