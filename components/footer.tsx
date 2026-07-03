@@ -202,6 +202,13 @@ export const Footer = () => {
           >
             {fl.areas} →
           </NextLink>
+          <NextLink
+            href="/near-me"
+            className="inline-block text-xs font-medium text-slate-500 hover:text-sky-600 transition-colors"
+            title="Aircond service near me in KL & Selangor"
+          >
+            Aircond Service Near Me →
+          </NextLink>
         </div>
 
         {/* ── Quick Links — Brands / Problems / Blog ── */}
