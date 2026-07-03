@@ -87,6 +87,8 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
   const rest = allPosts.slice(1);
 
   const featuredT = featured ? localized(featured, lang) : null;
+  const localePrefix = lang === "en" ? "" : `/${lang}`;
+  const blogHref = (slug: string) => `${localePrefix}/blog/${slug}`;
 
   return (
     <>
@@ -124,7 +126,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
           {/* Featured Post */}
           {featured && (
             <Reveal>
-              <NextLink href={`/blog/${featured.slug}`}
+              <NextLink href={blogHref(featured.slug)}
                 className="group grid lg:grid-cols-2 bg-white border border-slate-200 hover:border-sky-400 transition-all duration-300 overflow-hidden mb-12 shadow-sm hover:shadow-lg rounded-2xl">
                 <div className="bg-slate-50 p-8 sm:p-12 flex flex-col justify-between min-h-[280px] border-r border-slate-100">
                   <div>
@@ -145,12 +147,23 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
                     <span>{featured.date}</span>
                   </div>
                 </div>
-                <div className="bg-sky-600 p-8 sm:p-12 flex items-center justify-between">
-                  <div>
-                    <p className="text-xs font-black uppercase tracking-widest text-sky-200 mb-2">{ui.featured}</p>
-                    <p className="text-white font-black text-lg uppercase">{ui.readFull}</p>
+                <div className="relative min-h-[280px] overflow-hidden bg-slate-900">
+                  <Image
+                    src={featured.image}
+                    alt={featured.imageAlt}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 flex items-end justify-between gap-6">
+                    <div>
+                      <p className="text-xs font-black uppercase tracking-widest text-sky-200 mb-2">{ui.featured}</p>
+                      <p className="text-white font-black text-lg uppercase drop-shadow">{ui.readFull}</p>
+                    </div>
+                    <FiArrowRight className="h-8 w-8 shrink-0 text-white group-hover:translate-x-2 transition-transform" />
                   </div>
-                  <FiArrowRight className="h-8 w-8 text-white group-hover:translate-x-2 transition-transform" />
                 </div>
               </NextLink>
             </Reveal>
@@ -172,8 +185,19 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
               const t = localized(post, lang);
               return (
                 <Reveal key={post.slug} delay={i * 50}>
-                  <NextLink href={`/blog/${post.slug}`}
+                  <NextLink href={blogHref(post.slug)}
                     className="group flex flex-col bg-white border border-slate-200 hover:border-sky-400 hover:shadow-lg transition-all duration-300 overflow-hidden h-full rounded-2xl">
+                    <div className="relative h-40 overflow-hidden bg-slate-100">
+                      <Image
+                        src={post.image}
+                        alt={post.imageAlt}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent" />
+                    </div>
                     <div className="h-2 bg-gradient-to-r from-sky-600 to-sky-500 group-hover:from-sky-500 group-hover:to-sky-400 transition-all" />
                     <div className="p-6 flex flex-col flex-grow">
                       <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-sky-600 bg-sky-50 border border-sky-100 px-2 py-0.5 mb-3 self-start rounded-full">
