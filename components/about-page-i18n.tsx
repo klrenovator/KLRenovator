@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import {
   FaShieldAlt, FaUserCheck, FaTools, FaHandshake,
   FaWhatsapp, FaPhoneAlt,
 } from "react-icons/fa";
-import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
+import { FiCheck, FiChevronRight } from "react-icons/fi";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
