@@ -25,7 +25,7 @@ const UI = {
     tags: "Tags",
     ourServices: "Our Services",
     readTime: "min read",
-    by: "By Muhammad, Owner & Founder",
+    by: "By KL Renovator's HVAC Expert Team",
     related: "Related Articles",
     alsoServing: "Also serving:",
     services: [
@@ -49,7 +49,7 @@ const UI = {
     tags: "Tag",
     ourServices: "Perkhidmatan Kami",
     readTime: "min baca",
-    by: "Oleh Muhammad, Pemilik & Pengasas",
+    by: "Oleh Pasukan Pakar HVAC KL Renovator",
     related: "Artikel Berkaitan",
     alsoServing: "Juga meliputi:",
     services: [
@@ -73,7 +73,7 @@ const UI = {
     tags: "\u6807\u7b7e",
     ourServices: "\u6211\u4eec\u7684\u670d\u52a1",
     readTime: "\u5206\u949f\u9605\u8bfb",
-    by: "\u4f5c\u8005\uff1aMuhammad\uff08\u521b\u529e\u4eba\u517c\u4e1a\u4e3b\uff09",
+    by: "\u4f5c\u8005\uff1aKL Renovator HVAC\u4e13\u5bb6\u56e2\u961f",
     related: "\u76f8\u5173\u6587\u7ae0",
     alsoServing: "\u540c\u65f6\u670d\u52a1\uff1a",
     services: [
@@ -130,11 +130,10 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
       "@id": `https://www.klrenovator.com/blog/${post.slug}`,
     },
     author: {
-      "@type": "Person",
-      name: "Muhammad",
-      jobTitle: "Owner & Founder",
+      "@type": "Organization",
+      name: "KL Renovator's HVAC Expert Team",
       url: "https://www.klrenovator.com/about",
-      worksFor: {
+      parentOrganization: {
         "@type": "Organization",
         "@id": "https://www.klrenovator.com/#business",
         name: "KL Renovator",
@@ -153,9 +152,10 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
     },
     image: {
       "@type": "ImageObject",
-      url: "https://www.klrenovator.com/logo/image.png",
-      width: 400,
-      height: 400,
+      url: `https://www.klrenovator.com${post.image}`,
+      caption: post.imageAlt,
+      width: 1200,
+      height: 630,
     },
     keywords: post.tags.join(", "),
     articleSection: post.category,
@@ -201,8 +201,8 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
         <header className="relative bg-white overflow-hidden border-b border-slate-100">
           <div className="absolute inset-0 opacity-[0.07]">
             <Image
-              src="/hero/aircond-installation-kuala-lumpur.webp"
-              alt="KL Renovator aircond technician"
+              src={post.image}
+              alt={post.imageAlt}
               fill
               sizes="100vw"
               className="object-cover object-center"
@@ -240,6 +240,19 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
         {/* Body */}
         <div className="py-12 sm:py-16 bg-white">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <figure className="relative mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm aspect-[16/9]">
+              <Image
+                src={post.image}
+                alt={post.imageAlt}
+                fill
+                sizes="(min-width: 1024px) 896px, 100vw"
+                className="object-cover"
+                loading="lazy"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-4 py-2 text-[11px] font-semibold text-white/90">
+                {post.imageAlt}
+              </figcaption>
+            </figure>
             <div className="grid lg:grid-cols-[1fr_280px] gap-12">
 
               {/* Article Content */}
@@ -416,8 +429,19 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                   <Reveal key={p.slug} delay={i * 50}>
                     <NextLink
                       href={`/blog/${p.slug}`}
-                      className="group block bg-white border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all p-5 rounded-2xl"
+                      className="group block overflow-hidden bg-white border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all rounded-2xl"
                     >
+                      <div className="relative h-36 bg-slate-100">
+                        <Image
+                          src={p.image}
+                          alt={p.imageAlt}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="p-5">
                       <span className="text-[10px] font-black uppercase tracking-widest text-sky-600">{rCat}</span>
                       <h3 className="mt-2 text-sm font-black text-slate-950 uppercase leading-snug group-hover:text-sky-700 transition-colors">
                         {rTitle}
@@ -425,6 +449,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                       <p className="mt-1.5 text-xs text-slate-500 font-medium line-clamp-2">{rExcerpt}</p>
                       <div className="flex items-center gap-2 mt-3 text-[11px] text-slate-400 font-bold">
                         <FiClock className="h-3 w-3" /> {p.readTime} {ui.readTime} . {p.dateDisplay}
+                      </div>
                       </div>
                     </NextLink>
                   </Reveal>
