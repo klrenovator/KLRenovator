@@ -343,6 +343,54 @@ export function ServiceDetailI18n({
 
   const stepColors = ["bg-sky-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500", "bg-rose-500", "bg-teal-500"];
   const highlightColors = ["bg-sky-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500", "bg-rose-500", "bg-teal-500", "bg-indigo-500", "bg-orange-500"];
+  const SERVICE_PROOF_IMAGES: Record<string, { src: string; alt: string; title: string }[]> = {
+    "chemical-wash": [
+      { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: lang === "zh" ? "雪兰莪壁挂式冷气高压化学清洗" : "Cuci kimia tekanan tinggi untuk unit dinding di Selangor", title: lang === "zh" ? "高压化学清洗" : "Cuci kimia bertekanan" },
+      { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: lang === "zh" ? "吉隆坡甲洞冷气清洗保护帆布设置" : "Set kanvas perlindungan semasa cuci kimia aircond di Kepong KL", title: lang === "zh" ? "室内保护流程" : "Kerja dalaman terlindung" },
+      { src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp", alt: lang === "zh" ? "吉隆坡冷气化学服务帆布包覆" : "Balutan kanvas servis kimia aircond di Kuala Lumpur", title: lang === "zh" ? "干净施工" : "Aliran kerja bersih" },
+    ],
+    "chemical-overhaul": [
+      { src: "/hero/aircond-chemical-overhaul-ampang-selangor.webp", alt: lang === "zh" ? "安邦雪兰莪冷气拆开进行化学大清洗" : "Unit aircond dibuka untuk chemical overhaul di Ampang Selangor", title: lang === "zh" ? "完整拆洗" : "Overhaul buka penuh" },
+      { src: "/hero/lg-aircond-chemical-overhaul-klang-62.webp", alt: lang === "zh" ? "巴生LG冷气化学大清洗" : "Chemical overhaul aircond LG di Klang", title: lang === "zh" ? "深层内部清洗" : "Cucian dalaman mendalam" },
+      { src: "/hero/mitsubishi-aircond-chemical-overhaul-petaling-jaya-14.webp", alt: lang === "zh" ? "八打灵再也Mitsubishi冷气化学大清洗" : "Chemical overhaul aircond Mitsubishi di Petaling Jaya", title: lang === "zh" ? "品牌安全重装" : "Pemasangan semula selamat" },
+    ],
+    "gas-topup": [
+      { src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp", alt: lang === "zh" ? "雪兰莪R32与R410A冷气加Gas压力平衡" : "Tambah gas R32 dan R410A dengan imbangan tekanan di Selangor", title: lang === "zh" ? "压力平衡加Gas" : "Tambah gas tepat" },
+      { src: "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp", alt: lang === "zh" ? "吉隆坡York冷气R410A加Gas" : "Tambah gas R410A York di Kuala Lumpur", title: lang === "zh" ? "R410A服务" : "Servis R410A" },
+      { src: "/hero/acson-aircond-gas-topup-r32-subang-jaya-27.webp", alt: lang === "zh" ? "梳邦再也Acson R32冷气加Gas" : "Tambah gas R32 Acson di Subang Jaya", title: lang === "zh" ? "R32变频支持" : "Sokongan inverter R32" },
+    ],
+    "repair": [
+      { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: lang === "zh" ? "巴生谷冷气维修诊断技术员" : "Juruteknik membaiki dan mendiagnosis aircond di Klang Valley", title: lang === "zh" ? "现场诊断" : "Diagnosis di lokasi" },
+      { src: "/hero/aircond-pcb-board-replacement-kl.webp", alt: lang === "zh" ? "吉隆坡冷气PCB电板维修更换" : "Penggantian dan pembaikan papan PCB aircond di KL", title: lang === "zh" ? "PCB维修" : "Pembaikan PCB" },
+      { src: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp", alt: lang === "zh" ? "莎阿南TCL冷气故障诊断" : "Troubleshooting aircond TCL di Shah Alam", title: lang === "zh" ? "电气故障排查" : "Troubleshooting elektrik" },
+    ],
+    "installation": [
+      { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: lang === "zh" ? "吉隆坡壁挂式冷气安装与铜管布线" : "Pemasangan aircond dinding dengan paip tembaga di KL", title: lang === "zh" ? "壁挂式安装" : "Pemasangan dinding" },
+      { src: "/hero/aircond-installation-double-unit-kl.webp", alt: lang === "zh" ? "吉隆坡双冷气安装项目" : "Pemasangan dua unit aircond di KL", title: lang === "zh" ? "多台安装" : "Pemasangan banyak unit" },
+      { src: "/hero/aircond-compressor-bracket-installation-kl.webp", alt: lang === "zh" ? "吉隆坡室外机支架安装" : "Pemasangan bracket kompressor luar di KL", title: lang === "zh" ? "室外支架" : "Set bracket luar" },
+    ],
+    "basic-servicing": [
+      { src: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp", alt: lang === "zh" ? "吉隆坡Acson冷气基本保养" : "Servis asas aircond Acson di Kuala Lumpur", title: lang === "zh" ? "例行保养" : "Servis asas berkala" },
+      { src: "/hero/samsung-aircond-basic-servicing-puchong-41.webp", alt: lang === "zh" ? "蒲种Samsung冷气滤网清洗" : "Servis asas aircond Samsung di Puchong", title: lang === "zh" ? "滤网和风量检查" : "Filter dan aliran angin" },
+      { src: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp", alt: lang === "zh" ? "八打灵再也Midea冷气基本保养" : "Servis asas aircond Midea di Petaling Jaya", title: lang === "zh" ? "预防性保养" : "Penyelenggaraan pencegahan" },
+    ],
+    "ceiling-cassette": [
+      { src: "/hero/aircond-ceiling-cassette-installation-commercial.webp", alt: lang === "zh" ? "巴生谷商用天花卡式冷气安装" : "Pemasangan ceiling cassette komersial di Klang Valley", title: lang === "zh" ? "天花卡式工程" : "Kerja ceiling cassette" },
+      { src: "/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp", alt: lang === "zh" ? "巴生Panasonic天花卡式冷气保养" : "Servis ceiling cassette Panasonic di Klang", title: lang === "zh" ? "商业保养" : "Servis komersial" },
+      { src: "/hero/tcl-aircond-ceiling-cassette-service-subang-jaya-32.webp", alt: lang === "zh" ? "梳邦再也办公室TCL天花卡式冷气深层保养" : "Servis mendalam ceiling cassette TCL di pejabat Subang Jaya", title: lang === "zh" ? "办公室卡式机服务" : "Servis cassette pejabat" },
+    ],
+    "dismantling-relocation": [
+      { src: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp", alt: lang === "zh" ? "蒲种Daikin冷气拆除搬迁" : "Buka dan pindah aircond Daikin di Puchong", title: lang === "zh" ? "谨慎拆除" : "Buka dengan cermat" },
+      { src: "/hero/panasonic-aircond-dismantle-relocation-shah-alam-57.webp", alt: lang === "zh" ? "莎阿南Panasonic冷气搬迁拆除" : "Buka aircond Panasonic untuk pindah di Shah Alam", title: lang === "zh" ? "安全搬迁" : "Relokasi selamat" },
+      { src: "/hero/tcl-aircond-dismantle-relocation-petaling-jaya-21.webp", alt: lang === "zh" ? "八打灵再也TCL冷气拆除" : "Buka aircond TCL untuk pindah di Petaling Jaya", title: lang === "zh" ? "搬家支援" : "Sokongan pindah" },
+    ],
+    "emergency": [
+      { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: lang === "zh" ? "巴生谷紧急冷气维修技术员" : "Juruteknik kecemasan aircond di Klang Valley", title: lang === "zh" ? "紧急诊断" : "Diagnosis kecemasan" },
+      { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp", alt: lang === "zh" ? "巴生谷紧急冷气PCB更换" : "Penggantian PCB aircond kecemasan di Klang Valley", title: lang === "zh" ? "关键维修" : "Pembaikan kritikal" },
+      { src: "/hero/aircond-sensor-replacement-klang-valley.webp", alt: lang === "zh" ? "巴生谷冷气温度传感器更换" : "Penggantian sensor suhu aircond di Klang Valley", title: lang === "zh" ? "快速故障定位" : "Kenal pasti rosak cepat" },
+    ],
+  };
+  const proofImages = SERVICE_PROOF_IMAGES[slug] ?? SERVICE_PROOF_IMAGES["installation"];
 
   // ── Render ──────────────────────────────────────────────────────────────
   return (
@@ -519,6 +567,64 @@ export function ServiceDetailI18n({
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Real Work Proof */}
+      <section className="py-14 sm:py-16 bg-slate-50 border-y border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto">
+              <p className={eyebrow()}>{lang === "zh" ? "真实施工" : "Bukti Kerja Sebenar"}</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>{lang === "zh" ? "查看我们的" : "Lihat Cara "}</span>
+                <span className={title({ size: "sm", color: "brand" })}>{lang === "zh" ? "技术员施工" : "Juruteknik Bekerja"}</span>
+              </h2>
+              <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                {lang === "zh"
+                  ? "真实KL Renovator施工照片让客户在预约前了解我们的工艺标准：保护室内环境、使用正确工具、处理干净，并展示吉隆坡与雪兰莪住宅、公寓、办公室和店铺的服务证明。"
+                  : "Foto kerja sebenar KL Renovator membantu pelanggan melihat standard kerja sebelum membuat tempahan: kerja dalaman dilindungi, alat yang betul digunakan, pengendalian bersih dan bukti servis dari rumah, kondominium, pejabat dan lot kedai sekitar KL & Selangor."}
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {proofImages.map((img, i) => (
+              <Reveal key={img.src} delay={i * 80}>
+                <figure className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all">
+                  <div className="relative aspect-[4/3] bg-slate-100">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="p-4">
+                    <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{img.title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-500">{img.alt}</p>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-emerald-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-emerald-600">1 Bulan</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "工艺保修" : "Waranti kerja"}</p>
+              </div>
+              <div className="rounded-2xl border border-sky-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-sky-600">500+</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "Google五星好评" : "Ulasan Google 5 bintang"}</p>
+              </div>
+              <div className="rounded-2xl border border-amber-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-amber-600">SSM</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "马来西亚注册企业" : "Perniagaan Malaysia berdaftar"}</p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
