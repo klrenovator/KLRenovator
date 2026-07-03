@@ -10,7 +10,8 @@ const BASE = "https://www.klrenovator.com";
 //   - Bahasa Malaysia = /ms/areas, /ms/brands, /ms/problems — LIVE.
 //   - Mandarin        = /zh/areas, /zh/brands, /zh/problems — LIVE.
 //   - Blog posts: all 21 now have real /ms/blog and /zh/blog twins.
-//   - Static pages (home, about, contact, gallery, faq, services): English only.
+//   - services index + service detail pages + contact now have real /ms/
+//     and /zh/ twins (Round 18.2 / Round 18.3).
 //
 // Coverage: 39/39 areas, 18/18 brands, 20/20 problems all have real /ms/
 // and /zh/ pages. 116 kampung/neighbourhood pages also have real /ms/
@@ -64,12 +65,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/near-me") },
   ];
 
-  // ── Emergency Page ───────────────────────────────────────────────────
+  // ── Emergency Page — trilingual twins added in Round 18.3 ──────────
   const emergencyPage: MetadataRoute.Sitemap = [
-    { url: `${BASE}/services/emergency`, lastModified: now, changeFrequency: "monthly", priority: 0.97, alternates: buildCanonicalOnly("/services/emergency") },
+    {
+      url: `${BASE}/services/emergency`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.97,
+      alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
+    },
   ];
 
-  // ── Service Detail Pages (English only — no /ms/ or /zh/ twin yet) ──
+  // ── Service Detail Pages — trilingual twins added in Round 18.3 ─────
   const servicePages: MetadataRoute.Sitemap = siteConfig.services
     .filter((s) => s.slug !== "emergency")
     .map((s) => ({
@@ -77,7 +84,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.92,
-      alternates: buildCanonicalOnly(`/services/${s.slug}`),
+      alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
 
   // ── Area Pages — all 39 areas have real /ms/ and /zh/ twins ─────────
