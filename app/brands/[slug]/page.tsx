@@ -15,21 +15,21 @@ import { BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
 
 // ── Brand → Blog relevance map ───────────────────────────────────────────────
 const BRAND_BLOG_MAP: Record<string, string[]> = {
-  "daikin":       ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
-  "panasonic":    ["best-aircond-brands-malaysia-2025", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia"],
-  "mitsubishi":   ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "york":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "aircond-lifespan-malaysia", "how-often-service-aircond-malaysia"],
-  "acson":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "carrier":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-service-price-guide-kl-2026"],
-  "midea":        ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-service-price-guide-kl-2026"],
-  "haier":        ["best-aircond-brands-malaysia-2025", "aircond-installation-guide-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "toshiba":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "hitachi":      ["best-aircond-brands-malaysia-2025", "aircond-lifespan-malaysia", "commercial-hvac-maintenance-kl", "aircond-troubleshooting-guide-malaysia"],
-  "samsung":      ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "lg":           ["best-aircond-brands-malaysia-2025", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia"],
-  "sharp":        ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "fujitsu":      ["best-aircond-brands-malaysia-2025", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "gree":         ["best-aircond-brands-malaysia-2025", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-installation-guide-malaysia"],
+  "daikin":       ["best-aircond-brands-malaysia-2026", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
+  "panasonic":    ["best-aircond-brands-malaysia-2026", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia"],
+  "mitsubishi":   ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "york":         ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "aircond-lifespan-malaysia", "how-often-service-aircond-malaysia"],
+  "acson":        ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "carrier":      ["best-aircond-brands-malaysia-2026", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-service-price-guide-kl-2026"],
+  "midea":        ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-service-price-guide-kl-2026"],
+  "haier":        ["best-aircond-brands-malaysia-2026", "aircond-installation-guide-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "toshiba":      ["best-aircond-brands-malaysia-2026", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "hitachi":      ["best-aircond-brands-malaysia-2026", "aircond-lifespan-malaysia", "commercial-hvac-maintenance-kl", "aircond-troubleshooting-guide-malaysia"],
+  "samsung":      ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "lg":           ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia"],
+  "sharp":        ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "fujitsu":      ["best-aircond-brands-malaysia-2026", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia"],
+  "gree":         ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-installation-guide-malaysia"],
 };
 
 // ── Error code reference per brand ───────────────────────────────────────────
@@ -653,7 +653,7 @@ export default async function BrandPage({
                   <p className="text-xs text-slate-500 mt-0.5">Read our independent guide to help you decide. No brand bias.</p>
                 </div>
                 <NextLink
-                  href={slug === "daikin" || slug === "panasonic" ? "/blog/daikin-vs-panasonic-aircond-malaysia" : "/blog/best-aircond-brands-malaysia-2025"}
+                  href={slug === "daikin" || slug === "panasonic" ? "/blog/daikin-vs-panasonic-aircond-malaysia" : "/blog/best-aircond-brands-malaysia-2026"}
                   className="shrink-0 inline-flex items-center gap-1.5 bg-violet-600 hover:bg-violet-700 text-white text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-xl transition-all"
                 >
                   Read Comparison <FiArrowRight className="h-3 w-3" />
