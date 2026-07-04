@@ -123,6 +123,14 @@ const UI: Record<Lang, {
   headerDesc: string;
   badgeLocation: string;
   badgeGenuine: string;
+  trustReviews: string;
+  trustWarranty: string;
+  trustSSM: string;
+  trustPrice: string;
+  beforeAfterTitle: string;
+  beforeAfterDesc: string;
+  beforeAfterCTATitle: string;
+  beforeAfterCTADesc: string;
   categories: { key: string; label: string }[];
   viewFull: string;
   beforeAfter: string;
@@ -141,6 +149,14 @@ const UI: Record<Lang, {
   en: {
     headerTitle: "Real Work Gallery",
     headerDesc: "93 genuine project photos — no stock images. Every photo is real work completed by our HVAC technicians across Klang Valley.",
+    trustReviews: "500+ 5-Star Google Reviews",
+    trustWarranty: "1-Month Workmanship Warranty",
+    trustSSM: "SSM Registered Business",
+    trustPrice: "Price Confirmed Before Work",
+    beforeAfterTitle: "Transformation Showcase",
+    beforeAfterDesc: "Real before-and-after results from KL Renovator jobs across Klang Valley. See the difference professional aircond servicing makes.",
+    beforeAfterCTATitle: "Want these results for your aircond?",
+    beforeAfterCTADesc: "WhatsApp us your unit details and we will show you what is possible for your specific aircond brand and condition.",
     badgeLocation: "🏙️ KL & Selangor",
     badgeGenuine: "✅ 100% Genuine Company Photos",
     categories: [
@@ -167,6 +183,14 @@ const UI: Record<Lang, {
   ms: {
     headerTitle: "Galeri Kerja Sebenar",
     headerDesc: "93 gambar projek sebenar — tiada gambar stok. Setiap gambar adalah kerja sebenar yang dilakukan oleh juruteknik HVAC kami di seluruh Lembah Klang.",
+    trustReviews: "500+ Ulasan 5 Bintang Google",
+    trustWarranty: "Waranti Mutu Kerja 1 Bulan",
+    trustSSM: "Perniagaan Berdaftar SSM",
+    trustPrice: "Harga Disahkan Sebelum Kerja",
+    beforeAfterTitle: "Pameran Transformasi",
+    beforeAfterDesc: "Hasil sebelum-dan-selepas sebenar dari kerja KL Renovator di seluruh Lembah Klang. Lihat perbezaan yang dihasilkan oleh servis aircond profesional.",
+    beforeAfterCTATitle: "Mahukan hasil ini untuk aircond anda?",
+    beforeAfterCTADesc: "WhatsApp kami butiran unit anda dan kami akan tunjukkan apa yang mungkin untuk jenama dan keadaan aircond khusus anda.",
     badgeLocation: "🏙️ KL & Selangor",
     badgeGenuine: "✅ 100% Gambar Syarikat Sebenar",
     categories: [
@@ -193,6 +217,14 @@ const UI: Record<Lang, {
   zh: {
     headerTitle: "真实项目画廊",
     headerDesc: "93 张真实项目照片——没有 stock 图片。每张照片都是我们 HVAC 技术员在巴生谷完成的实际工作。",
+    trustReviews: "500+ 条 Google 5 星好评",
+    trustWarranty: "1 个月工艺保修",
+    trustSSM: "SSM 注册企业",
+    trustPrice: "开工前确认价格",
+    beforeAfterTitle: "改造展示",
+    beforeAfterDesc: "KL Renovator 在巴生谷各地的真实前后对比效果。看看专业冷气服务带来的改变。",
+    beforeAfterCTATitle: "想让您的冷气也达到这个效果？",
+    beforeAfterCTADesc: "WhatsApp 我们您的机器详情，我们会针对您的具体冷气品牌和状况展示可行的效果。",
     badgeLocation: "🏙️ 吉隆坡及雪兰莪",
     badgeGenuine: "✅ 100% 公司真实照片",
     categories: [
@@ -279,6 +311,26 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
         </div>
       </div>
 
+      {/* Trust Strip */}
+      <div className="bg-white border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-700">
+              <span className="text-amber-500 text-sm">&#9733;</span> {t.trustReviews}
+            </div>
+            <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-700">
+              <span className="text-emerald-500 text-sm">&#10004;</span> {t.trustWarranty}
+            </div>
+            <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-700">
+              <span className="text-sky-500 text-sm">&#127970;</span> {t.trustSSM}
+            </div>
+            <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-700">
+              <span className="text-emerald-500 text-sm">&#128176;</span> {t.trustPrice}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Filter Tabs */}
       <section className="bg-white border-b border-slate-100 sticky top-[80px] z-30 shadow-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -349,9 +401,108 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
             </div>
           )}
 
+          {/* Before & After Showcase */}
+          <Reveal>
+            <div className="mt-16 bg-white border border-amber-200 rounded-2xl p-6 sm:p-10">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-amber-100 text-amber-700 text-xs font-black uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
+                  &#10024; {t.beforeAfterTitle}
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-black text-slate-900">{t.beforeAfterTitle}</h2>
+                <p className="mt-3 text-sm text-slate-500 max-w-lg mx-auto">{t.beforeAfterDesc}</p>
+              </div>
+              {/* Before/After Pairs Grid */}
+              <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2">
+                {/* Chemical Wash Pair */}
+                <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+                  <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/midea-aircond-chemical-wash-klang-61.webp" alt="Before chemical wash — dirty aircond coil with mould buildup" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
+                    </div>
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/daikin-aircond-chemical-wash-kuala-lumpur-1.webp" alt="After chemical wash — clean evaporator coil restored to near-new condition" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="font-black text-slate-900 text-sm">Chemical Wash Results</p>
+                    <p className="text-xs text-slate-500 mt-1">Mould, biofilm and years of dirt removed. Cooling restored to near-new levels. Customer confirmed 6&deg;C temperature drop after service.</p>
+                  </div>
+                </div>
+                {/* Installation Pair */}
+                <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+                  <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/aircond-compressor-bracket-installation-kl.webp" alt="Before installation — old equipment and disconnected outdoor unit" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
+                    </div>
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/aircond-installation-kuala-lumpur.webp" alt="After — new wall-mounted aircond professionally installed with clean cable routing" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="font-black text-slate-900 text-sm">New Installation Results</p>
+                    <p className="text-xs text-slate-500 mt-1">Professional install with correct pipe sizing, clean trunking, and full vacuum commissioning. 1-month workmanship warranty.</p>
+                  </div>
+                </div>
+                {/* Overhaul Pair */}
+                <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+                  <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/aircond-chemical-overhaul-ampang-selangor.webp" alt="Before overhaul — fully dismantled indoor unit showing severe internal dirt and biofilm" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
+                    </div>
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/panasonic-aircond-chemical-overhaul-kuala-lumpur-2.webp" alt="After overhaul — drain pan and coil scrubbed clean, all internal components restored" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="font-black text-slate-900 text-sm">Chemical Overhaul Results</p>
+                    <p className="text-xs text-slate-500 mt-1">Every component individually deep-cleaned and reassembled. Water leaking permanently fixed. Cooling restored to factory spec.</p>
+                  </div>
+                </div>
+                {/* Repair Pair */}
+                <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+                  <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/aircond-pcb-board-replacement-2-klang-valley.webp" alt="Before repair — faulty PCB board with error codes causing no cooling" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
+                    </div>
+                    <div className="relative aspect-square bg-slate-200">
+                      <NextImage src="/hero/aircond-pcb-board-replacement-kl.webp" alt="After repair — new PCB board installed, unit cooling perfectly again" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="font-black text-slate-900 text-sm">Repair & Troubleshooting Results</p>
+                    <p className="text-xs text-slate-500 mt-1">Faulty components diagnosed and replaced. 3-month parts warranty. Same-day repair completed on first visit.</p>
+                  </div>
+                </div>
+              </div>
+              {/* Before/After CTA */}
+              <div className="mt-8 text-center bg-gradient-to-r from-amber-50 to-sky-50 rounded-xl p-6 border border-amber-100">
+                <p className="font-black text-slate-900 text-lg">{t.beforeAfterCTATitle}</p>
+                <p className="text-sm text-slate-500 mt-1 mb-4">{t.beforeAfterCTADesc}</p>
+                <a
+                  href={waLink("Hi KL Renovator, I saw your before/after gallery and want similar results for my aircond. Please advise on pricing.")}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 text-white font-black uppercase tracking-widest text-xs px-7 py-4 rounded-xl shadow-md transition-all hover:bg-[#1ebe5d]"
+                  style={{ background: "#25D366" }}
+                >
+                  <FaWhatsapp className="h-4 w-4" />
+                  {t.ctaButton}
+                </a>
+              </div>
+            </div>
+          </Reveal>
+
           {/* CTA */}
           <Reveal>
-            <div className="mt-16 bg-sky-50 border border-sky-100 rounded-2xl p-8 text-center">
+            <div className="mt-12 bg-sky-50 border border-sky-100 rounded-2xl p-8 text-center">
               <p className="text-2xl mb-2">📸</p>
               <h3 className="font-black text-slate-900 mb-2">{t.ctaTitle}</h3>
               <p className="text-sm text-slate-500 mb-6 max-w-md mx-auto">
