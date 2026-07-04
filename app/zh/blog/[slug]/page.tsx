@@ -43,6 +43,12 @@ export async function generateMetadata({
       canonical: zhUrl,
       languages: { "en-MY": enUrl, "ms-MY": msUrl, "zh-MY": zhUrl, "x-default": enUrl },
     },
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
   };
 }
 
