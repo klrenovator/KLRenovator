@@ -409,6 +409,122 @@ export default async function BrandPage({
         </div>
       </section>
 
+      {/* ── Inverter vs Non-Inverter Note (brand-specific, where available) ──── */}
+      {brand.inverterNote && (
+        <section className="py-12 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-2">
+                Inverter vs Non-Inverter · Inverter vs Non-Inverter · 变频与定频
+              </p>
+              <h2 className="text-lg font-black text-slate-900 mb-4">
+                {brand.name} Inverter vs Non-Inverter — What You Should Know
+              </h2>
+              <div className="bg-violet-50 border border-violet-100 rounded-2xl p-5 mb-3">
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">{brand.inverterNote}</p>
+              </div>
+              {brand.inverterNoteMS && (
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 mb-3">
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1.5">🇲🇾 Bahasa Malaysia</p>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{brand.inverterNoteMS}</p>
+                </div>
+              )}
+              {brand.inverterNoteZH && (
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1.5">🇨🇳 中文</p>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{brand.inverterNoteZH}</p>
+                </div>
+              )}
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* ── Model-Specific Troubleshooting Tips (brand-specific, where available) ── */}
+      {brand.troubleshootingTips && brand.troubleshootingTips.length > 0 && (
+        <section className="py-14 bg-slate-50 border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-amber-600 mb-2">
+                Model-Specific Tips · Petua Model · 机型专属提示
+              </p>
+              <h2 className="text-lg font-black text-slate-900 mb-2">
+                Real {brand.name} Troubleshooting Tips From Our Technicians
+              </h2>
+              <p className="text-sm text-slate-500 mb-6 max-w-2xl">
+                Common {brand.name}-specific symptoms our HVAC expert team sees in the field across KL and Selangor — and what usually fixes them, before assuming the worst.
+              </p>
+              <div className="space-y-4">
+                {brand.troubleshootingTips.map((tip, i) => (
+                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-5">
+                    <h3 className="font-black text-sm text-slate-900 mb-2 flex items-start gap-2">
+                      <span className="shrink-0 mt-0.5 text-amber-500">⚠</span> {tip.issue}
+                    </h3>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed pl-6">{tip.tip}</p>
+                  </div>
+                ))}
+              </div>
+              {(brand.troubleshootingTipsMS?.length || brand.troubleshootingTipsZH?.length) ? (
+                <details className="mt-5 group">
+                  <summary className="cursor-pointer text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                    View in Bahasa Malaysia &amp; 中文 <span className="inline-block transition-transform group-open:rotate-90">›</span>
+                  </summary>
+                  <div className="mt-4 space-y-4">
+                    {brand.troubleshootingTipsMS?.map((tip, i) => (
+                      <div key={`ms-${i}`} className="bg-white border border-slate-200 rounded-2xl p-4">
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">🇲🇾 BM</p>
+                        <h3 className="font-black text-sm text-slate-900 mb-1.5">{tip.issue}</h3>
+                        <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip.tip}</p>
+                      </div>
+                    ))}
+                    {brand.troubleshootingTipsZH?.map((tip, i) => (
+                      <div key={`zh-${i}`} className="bg-white border border-slate-200 rounded-2xl p-4">
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">🇨🇳 中文</p>
+                        <h3 className="font-black text-sm text-slate-900 mb-1.5">{tip.issue}</h3>
+                        <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip.tip}</p>
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              ) : null}
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* ── Real Job Photo Gallery (brand-specific, where available) ─────────── */}
+      {brand.galleryImages && brand.galleryImages.length > 0 && (
+        <section className="py-14 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-2">
+                Real Job Photos · Foto Kerja Sebenar · 真实作业照片
+              </p>
+              <h2 className="text-lg font-black text-slate-900 mb-6">
+                Real {brand.name} Jobs We&apos;ve Completed Across KL &amp; Selangor
+              </h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {brand.galleryImages.map((img, i) => (
+                  <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-cover"
+                      loading={i < 2 ? "eager" : "lazy"}
+                    />
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-xs text-slate-400">
+                Real photos from actual {brand.name} service jobs completed by KL Renovator technicians — not stock images.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Services + Pricing */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
