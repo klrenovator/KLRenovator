@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
@@ -175,6 +176,65 @@ export default async function BrandPageMS({
                   </li>
                 ))}
               </ul>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {brand.inverterNoteMS && (
+        <section className="py-10 bg-violet-50 border-t border-violet-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <h2 className="text-base font-black text-slate-900 mb-3">
+                {brand.name} Inverter vs Non-Inverter
+              </h2>
+              <p className="text-sm text-slate-700 font-medium leading-relaxed">{brand.inverterNoteMS}</p>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {brand.troubleshootingTipsMS && brand.troubleshootingTipsMS.length > 0 && (
+        <section className="py-10 bg-slate-50 border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <h2 className="text-base font-black text-slate-900 mb-4">
+                Petua Menyelesaikan Masalah {brand.name}
+              </h2>
+              <div className="space-y-3">
+                {brand.troubleshootingTipsMS.map((tip: { issue: string; tip: string }, i: number) => (
+                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
+                    <h3 className="font-black text-sm text-slate-900 mb-1.5">{tip.issue}</h3>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip.tip}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {brand.galleryImages && brand.galleryImages.length > 0 && (
+        <section className="py-10 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <h2 className="text-base font-black text-slate-900 mb-4">
+                Foto Kerja Sebenar {brand.name}
+              </h2>
+              <div className="grid grid-cols-2 gap-3">
+                {brand.galleryImages.map((img: { src: string; alt: string; altMS?: string }, i: number) => (
+                  <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                    <NextImage
+                      src={img.src}
+                      alt={img.altMS || img.alt}
+                      fill
+                      sizes="50vw"
+                      className="object-cover"
+                      loading={i < 2 ? "eager" : "lazy"}
+                    />
+                  </div>
+                ))}
+              </div>
             </Reveal>
           </div>
         </section>
