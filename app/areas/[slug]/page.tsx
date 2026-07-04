@@ -222,6 +222,7 @@ export default async function AreaPage({
       ratingValue: siteConfig.reviewRating,
       reviewCount: siteConfig.reviewCount,
       bestRating: 5,
+      worstRating: 1,
     },
     priceRange: "RM 88 – RM 2,000",
     currenciesAccepted: "MYR",
@@ -234,6 +235,7 @@ export default async function AreaPage({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `https://www.klrenovator.com/areas/${slug}#breadcrumb`,
     itemListElement: [
       {
         "@type": "ListItem",
