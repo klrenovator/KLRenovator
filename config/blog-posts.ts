@@ -962,25 +962,25 @@ export const allPosts: BlogPost[] = [
     `,
   },
   {
-    slug: "best-aircond-brands-malaysia-2025",
-    title: "Best Aircond Brands in Malaysia 2025 — Daikin, Panasonic, Mitsubishi Compared",
-    titleMS: "Jenama Aircond Terbaik di Malaysia 2025 — Daikin, Panasonic, Mitsubishi Dibandingkan",
-    titleZH: "2025年马来西亚最佳冷气品牌 — 大金、松下、三菱对比",
+    slug: "best-aircond-brands-malaysia-2026",
+    title: "Best Aircond Brands in Malaysia 2026 — Daikin, Panasonic, Mitsubishi Compared",
+    titleMS: "Jenama Aircond Terbaik di Malaysia 2026 — Daikin, Panasonic, Mitsubishi Dibandingkan",
+    titleZH: "2026年马来西亚最佳冷气品牌 — 大金、松下、三菱对比",
     excerpt: "Choosing a new aircond in Malaysia? Here's an honest comparison of the top brands to help you decide.",
     excerptMS: "Memilih aircond baru di Malaysia? Berikut adalah perbandingan jujur jenama terbaik untuk membantu anda membuat keputusan.",
     excerptZH: "在马来西亚选购新冷气？以下是顶级品牌的诚实比较，帮助您做决定。",
     category: "Buying Guide",
     categoryMS: "Panduan Pembelian",
     categoryZH: "购买指南",
-    tags: ["best aircon brand Malaysia", "Daikin vs Panasonic", "Mitsubishi aircond", "inverter aircond Malaysia 2025"],
-    date: "2025-01-01",
-    dateDisplay: "January 2025",
+    tags: ["best aircon brand Malaysia", "Daikin vs Panasonic", "Mitsubishi aircond", "inverter aircond Malaysia 2026"],
+    date: "2026-07-04",
+    dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
     image: "/hero/daikin-aircond-new-installation-klang-67.webp",
     imageAlt: "New Daikin wall-mounted aircond installation completed in Klang",
     content: `
-      <h2>Top Aircond Brands in Malaysia 2025</h2>
+      <h2>Top Aircond Brands in Malaysia 2026</h2>
       <p>Here's an honest comparison based on our technicians' real-world experience servicing thousands of units across KL and Selangor.</p>
       <h2>Daikin — Best Overall</h2>
       <p>Daikin is consistently the most reliable brand we service. Japanese engineering, excellent energy efficiency, and spare parts are widely available.</p>
@@ -1007,7 +1007,7 @@ export const allPosts: BlogPost[] = [
       <p>For landlords managing rental properties, Midea or Acson inverter units offer the best balance of affordability and reasonable reliability. The lower purchase price matters for multi-unit properties, and the inverter technology reduces electricity bills for tenants — which reduces friction about utility costs. For premium rental units where tenant experience matters more, Panasonic or Daikin are worth the price premium for their quieter operation and longer lifespan.</p>
     `,
     contentMS: `
-      <h2>Jenama Aircond Terbaik di Malaysia 2025</h2>
+      <h2>Jenama Aircond Terbaik di Malaysia 2026</h2>
       <p>Berikut adalah perbandingan jujur berdasarkan pengalaman dunia sebenar juruteknik kami yang menservis ribuan unit di seluruh KL dan Selangor.</p>
       <h2>Daikin — Terbaik Keseluruhan</h2>
       <p>Daikin secara konsisten adalah jenama yang paling dipercayai yang kami servis. Kejuruteraan Jepun, kecekapan tenaga yang sangat baik.</p>
@@ -1034,7 +1034,7 @@ export const allPosts: BlogPost[] = [
       <p>Bagi pemilik yang menguruskan hartanah sewa, unit inverter Midea atau Acson menawarkan keseimbangan terbaik antara harga berpatutan dan kebolehpercayaan yang munasabah. Harga belian yang lebih rendah penting untuk hartanah pelbagai unit, dan teknologi inverter mengurangkan bil elektrik untuk penyewa — yang mengurangkan pertikaian tentang kos utiliti. Untuk unit sewa premium di mana pengalaman penyewa lebih penting, Panasonic atau Daikin berbaloi dengan premium harganya kerana operasi yang lebih senyap dan jangka hayat yang lebih panjang.</p>
     `,
     contentZH: `
-      <h2>2025年马来西亚最佳冷气品牌</h2>
+      <h2>2026年马来西亚最佳冷气品牌</h2>
       <p>以下是基于我们技术人员在吉隆坡和雪兰莪服务数千台机器的真实经验的诚实比较。</p>
       <h2>大金 — 综合最佳</h2>
       <p>大金始终是我们服务的最可靠品牌。日本工程，出色的能效。</p>
