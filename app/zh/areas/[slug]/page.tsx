@@ -100,6 +100,7 @@ export default async function AreaPageZH({
       ratingValue: siteConfig.reviewRating,
       reviewCount: siteConfig.reviewCount,
       bestRating: 5,
+      worstRating: 1,
     },
     priceRange: "RM 88 – RM 2,000",
     currenciesAccepted: "MYR",
@@ -108,6 +109,7 @@ export default async function AreaPageZH({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `https://www.klrenovator.com/areas/${slug}#breadcrumb`,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "首页", item: "https://www.klrenovator.com" },
       { "@type": "ListItem", position: 2, name: "服务区域", item: "https://www.klrenovator.com/zh/areas" },
