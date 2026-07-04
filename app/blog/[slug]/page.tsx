@@ -43,8 +43,16 @@ export async function generateMetadata({
       canonical: `https://www.klrenovator.com/blog/${slug}`,
       languages: {
         "en-MY": `https://www.klrenovator.com/blog/${slug}`,
+        "ms-MY": `https://www.klrenovator.com/ms/blog/${slug}`,
+        "zh-MY": `https://www.klrenovator.com/zh/blog/${slug}`,
         "x-default": `https://www.klrenovator.com/blog/${slug}`,
       },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
     },
   };
 }
