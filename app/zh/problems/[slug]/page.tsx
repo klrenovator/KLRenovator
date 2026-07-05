@@ -6,9 +6,11 @@ import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-ico
 
 import { siteConfig } from "@/config/site";
 import { problemContent } from "@/app/problems/[slug]/page";
+import { problemAEOContent } from "@/config/problem-aeo-content";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/problems/[slug] — Mandarin problem page. Mirrors /ms/problems/[slug].
@@ -57,6 +59,7 @@ export default async function ProblemPageZH({
   const { slug } = await params;
   const problem = siteConfig.problemPages.find((p) => p.slug === slug);
   const content = problemContent[slug];
+  const aeo = problemAEOContent[slug];
   if (!problem || !content) notFound();
 
   const enUrl = `https://www.klrenovator.com/problems/${slug}`;
@@ -66,7 +69,7 @@ export default async function ProblemPageZH({
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: content.faqsZH.map((f: { q: string; a: string }) => ({
+    mainEntity: [...content.faqsZH, ...(aeo?.extraFaqsZH ?? [])].map((f: { q: string; a: string }) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -136,6 +139,59 @@ export default async function ProblemPageZH({
         </div>
       </section>
 
+      {aeo && (
+        <section className="py-8 bg-sky-50 border-b border-sky-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">直接解答</p>
+              <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">{aeo.directAnswerZH}</p>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {aeo && (
+        <section className="py-10 bg-white border-b border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <h2 className="text-base font-black text-slate-900 mb-4">DIY自检 vs 需要技师</h2>
+            </Reveal>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Reveal>
+                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 h-full">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                    <h3 className="font-black text-xs text-emerald-800 uppercase">可自行检查</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm text-slate-700">
+                    {aeo.diyChecksZH.map((tip, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-emerald-500 font-black">•</span><span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+              <Reveal delay={60}>
+                <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 h-full">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FiUserCheck className="h-4 w-4 text-sky-400" />
+                    <h3 className="font-black text-xs text-white uppercase">需专业技师</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    {aeo.technicianChecksZH.map((tip, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-sky-400 font-black">•</span><span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-10 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -178,7 +234,7 @@ export default async function ProblemPageZH({
           <Reveal>
             <h2 className="text-base font-black text-slate-900 mb-4">常见问题</h2>
             <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-              {content.faqsZH.map((faq: { q: string; a: string }, i: number) => (
+              {[...content.faqsZH, ...(aeo?.extraFaqsZH ?? [])].map((faq: { q: string; a: string }, i: number) => (
                 <details key={i} className="group bg-white p-4">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
                     {faq.q}
