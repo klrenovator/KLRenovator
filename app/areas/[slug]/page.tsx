@@ -704,6 +704,43 @@ export default async function AreaPage({
         </div>
       </section>
 
+      {/* Contextual Guides — in-body blog links for area pages */}
+      {(() => {
+        const contextualSlugs = AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"];
+        const contextualPosts = allPosts.filter((p) => contextualSlugs.includes(p.slug)).slice(0, 3);
+        if (contextualPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Before You Book · Sebelum Tempah · 预约前先看
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-3">
+                  Helpful aircond guides people in {area.name} read before booking
+                </h2>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Customers in {area.name} often check these guides before they WhatsApp us for a quote, especially when deciding between repair, chemical wash, servicing intervals, or installation costs.
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  {contextualPosts.map((post) => (
+                    <NextLink
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-sky-400 hover:bg-white hover:shadow-sm"
+                    >
+                      <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</p>
+                      <h3 className="text-sm font-black text-slate-900 leading-snug">{post.title}</h3>
+                      <p className="mt-2 text-xs text-slate-500 line-clamp-3">{post.excerpt}</p>
+                    </NextLink>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* FAQ Section — area-specific + BM + ZH */}
       <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
