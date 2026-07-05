@@ -29,6 +29,12 @@ const UI = {
     quickAnswer: "Quick answer for AI search",
     readerFaq: "Reader FAQs",
     by: "By KL Renovator's HVAC Expert Team",
+    authorEyebrow: "Reviewed by real technicians",
+    authorTitle: "KL Renovator's HVAC Expert Team",
+    authorDesc: "This article links back to the same field team that services wall-mounted, ceiling cassette and window units across KL & Selangor. Meet the 4 real technicians behind KL Renovator, see their experience, and review our service standards before you book.",
+    authorCta: "Meet the team",
+    authorTrust: ["10+ years HVAC experience", "20 major brands serviced", "500+ Google reviews", "1-month workmanship warranty"],
+    authorSchemaDescription: "Field-reviewed by KL Renovator's HVAC Expert Team, serving wall-mounted, ceiling cassette and window units across KL & Selangor.",
     related: "Related Articles",
     alsoServing: "Also serving:",
     services: [
@@ -56,6 +62,12 @@ const UI = {
     quickAnswer: "Jawapan ringkas untuk carian AI",
     readerFaq: "Soalan lazim pembaca",
     by: "Oleh Pasukan Pakar HVAC KL Renovator",
+    authorEyebrow: "Disemak oleh juruteknik sebenar",
+    authorTitle: "Pasukan Pakar HVAC KL Renovator",
+    authorDesc: "Artikel ini berpaut terus kepada pasukan lapangan yang sama yang menservis unit dinding, ceiling cassette dan window di KL & Selangor. Lihat 4 juruteknik sebenar di sebalik KL Renovator, pengalaman mereka, dan standard kerja kami sebelum anda membuat tempahan.",
+    authorCta: "Lihat pasukan kami",
+    authorTrust: ["10+ tahun pengalaman HVAC", "20 jenama utama diservis", "500+ ulasan Google", "Waranti kerjatangan 1 bulan"],
+    authorSchemaDescription: "Disemak oleh Pasukan Pakar HVAC KL Renovator yang menservis unit dinding, ceiling cassette dan window di KL & Selangor.",
     related: "Artikel Berkaitan",
     alsoServing: "Juga meliputi:",
     services: [
@@ -83,6 +95,12 @@ const UI = {
     quickAnswer: "AI\u641c\u7d22\u5feb\u901f\u7b54\u6848",
     readerFaq: "\u8bfb\u8005\u5e38\u89c1\u95ee\u9898",
     by: "\u4f5c\u8005\uff1aKL Renovator HVAC\u4e13\u5bb6\u56e2\u961f",
+    authorEyebrow: "\u7531\u771f\u5b9e\u6280\u672f\u5458\u5ba1\u6838",
+    authorTitle: "KL Renovator HVAC\u4e13\u5bb6\u56e2\u961f",
+    authorDesc: "\u8fd9\u7bc7\u6587\u7ae0\u76f4\u63a5\u8fde\u5230\u540c\u4e00\u652f\u73b0\u573a\u56e2\u961f\uff0c\u8be5\u56e2\u961f\u5728 KL \u548c Selangor \u4e3a\u6302\u58c1\u5f0f\u3001\u5929\u82b1\u5361\u5f0f\u548c\u7a97\u5f0f\u51b7\u6c14\u63d0\u4f9b\u670d\u52a1\u3002\u9884\u7ea6\u524d\u60a8\u53ef\u4ee5\u67e5\u770b KL Renovator \u80cc\u540e 4 \u4f4d\u771f\u5b9e\u6280\u672f\u5458\u7684\u7ecf\u9a8c\u548c\u670d\u52a1\u6807\u51c6\u3002",
+    authorCta: "\u8ba4\u8bc6\u6211\u4eec\u7684\u56e2\u961f",
+    authorTrust: ["10+ \u5e74 HVAC \u7ecf\u9a8c", "\u7ef4\u4fee 20 \u4e2a\u4e3b\u6d41\u54c1\u724c", "500+ Google \u8bc4\u4ef7", "1 \u4e2a\u6708\u5de5\u827a\u4fdd\u4fee"],
+    authorSchemaDescription: "\u7531 KL Renovator HVAC \u4e13\u5bb6\u56e2\u961f\u5ba1\u6838\uff0c\u4e3a KL \u548c Selangor \u7684\u6302\u58c1\u5f0f\u3001\u5929\u82b1\u5361\u5f0f\u548c\u7a97\u5f0f\u51b7\u6c14\u63d0\u4f9b\u670d\u52a1\u3002",
     related: "\u76f8\u5173\u6587\u7ae0",
     alsoServing: "\u540c\u65f6\u670d\u52a1\uff1a",
     services: [
@@ -124,6 +142,9 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
   const localePrefix = lang === "en" ? "" : `/${lang}`;
   const localizedPath = (path: string) => `${localePrefix}${path}`;
   const postUrl = `https://www.klrenovator.com${localizedPath(`/blog/${post.slug}`)}`;
+  const aboutTeamHref = `${localizedPath("/about")}#team`;
+  const aboutTeamUrl = `https://www.klrenovator.com${aboutTeamHref}`;
+  const schemaLang = lang === "ms" ? "ms-MY" : lang === "zh" ? "zh-MY" : "en-MY";
   const dateModified = post.lastReviewed ?? post.date;
   const lastReviewedDisplay = dateModified === post.date ? post.dateDisplay : dateModified;
 
@@ -141,22 +162,32 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
   const blogPostingSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "@id": `https://www.klrenovator.com/blog/${post.slug}`,
-    headline: post.title,
-    name: post.title,
-    description: post.excerpt,
+    "@id": `${postUrl}#article`,
+    headline: title,
+    name: title,
+    description: excerpt,
     datePublished: post.date,
-    dateModified: post.date,
-    inLanguage: "en-MY",
-    url: `https://www.klrenovator.com/blog/${post.slug}`,
+    dateModified,
+    inLanguage: schemaLang,
+    url: postUrl,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.klrenovator.com/blog/${post.slug}`,
+      "@id": postUrl,
     },
     author: {
       "@type": "Organization",
-      name: "KL Renovator's HVAC Expert Team",
-      url: "https://www.klrenovator.com/about",
+      name: ui.authorTitle,
+      url: aboutTeamUrl,
+      description: ui.authorSchemaDescription,
+      sameAs: [
+        siteConfig.links.facebook,
+        siteConfig.links.instagram,
+        siteConfig.links.tiktok,
+        siteConfig.links.youtube,
+        siteConfig.links.googleBusiness,
+        siteConfig.links.twitter,
+        siteConfig.links.linkedin,
+      ],
       parentOrganization: {
         "@type": "Organization",
         "@id": "https://www.klrenovator.com/#business",
@@ -255,7 +286,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 <span className="text-slate-300">.</span>
                 <time dateTime={dateModified}>{ui.lastReviewed}: {lastReviewedDisplay}</time>
                 <span className="text-slate-300">.</span>
-                <NextLink href={localizedPath("/about")} className="hover:text-sky-600 transition-colors">
+                <NextLink href={aboutTeamHref} className="hover:text-sky-600 transition-colors">
                   {ui.by}
                 </NextLink>
               </div>
@@ -326,6 +357,42 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                     <h3 className="font-black text-slate-900">{lang === "zh" ? "是否有保修？" : lang === "ms" ? "Adakah ada waranti?" : "Is there a warranty?"}</h3>
                     <p className="mt-1">{lang === "zh" ? "符合条件的施工服务享有1个月工艺保修。" : lang === "ms" ? "Kerja servis yang layak dilindungi waranti kerja 1 bulan." : "Eligible workmanship is covered by a 1-month workmanship warranty."}</p>
                   </div>
+                </div>
+              </section>
+
+              <section className="mt-8 rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white p-6 not-prose shadow-sm">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">
+                  {ui.authorEyebrow}
+                </p>
+                <h2 className="text-xl font-black tracking-tight text-slate-950">
+                  {ui.authorTitle}
+                </h2>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-slate-700">
+                  {ui.authorDesc}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {ui.authorTrust.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-sky-200 bg-white px-3 py-1 text-[11px] font-black uppercase tracking-wider text-sky-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <NextLink
+                    href={aboutTeamHref}
+                    className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition hover:bg-sky-700"
+                  >
+                    {ui.authorCta}
+                  </NextLink>
+                  <NextLink
+                    href={localizedPath("/about")}
+                    className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-3 text-xs font-black uppercase tracking-widest text-slate-700 transition hover:border-sky-300 hover:text-sky-700"
+                  >
+                    {lang === "zh" ? "查看公司简介" : lang === "ms" ? "Lihat halaman tentang kami" : "View About page"}
+                  </NextLink>
                 </div>
               </section>
 
