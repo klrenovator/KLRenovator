@@ -2959,7 +2959,7 @@ export const allPosts: BlogPost[] = [
       <h3>Kenapa pasang ceiling cassette begitu mahal?</h3>
       <p>Ceiling cassette perlukan kerja siling tergantung, pam kondensat (RM 280-RM 450 jika perlu), biasanya laluan paip lebih panjang, dan selalunya 2 juruteknik. Harga ceiling cassette KL Renovator bermula dari RM 290 (1.0-1.5 HP).</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong>. Lihat juga panduan <a href="/ms/blog/kos-pemasangan-aircond-malaysia-2026">Kos Pemasangan Aircond Malaysia 2026</a>.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong>. Lihat juga panduan <a href="/ms/blog/aircond-installation-cost-malaysia-2026">Kos Pemasangan Aircond Malaysia 2026</a>.</p>
     `,
     contentZH: `
       <p><em>在马来西亚，冷气安装比大多数人预期的要贵，因为您不只是支付人工——您支付认证技术员、变频级铜管、公寓合规文件以及专业工具。</em></p>
@@ -3002,7 +3002,7 @@ export const allPosts: BlogPost[] = [
       <h3>为什么天花卡式安装这么贵？</h3>
       <p>天花卡式需要吊顶工作、排水泵（RM 280-RM 450如果需要）、通常较长的管道运行和经常2名技术员。KL Renovator的天花卡式定价从RM 290起（1.0-1.5 HP）。</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong>. See also our <a href="/zh/blog/冷气安装费用马来西亚2026">2026年马来西亚冷气安装费用</a> guide.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong>. See also our <a href="/zh/blog/aircond-installation-cost-malaysia-2026">2026年马来西亚冷气安装费用</a> guide.</p>
     `,
   },
 
@@ -3088,7 +3088,7 @@ export const allPosts: BlogPost[] = [
       <h3>What size aircond for a master bedroom in Malaysia?</h3>
       <p>Master bedrooms in Malaysian condos are typically 200-300 sqft. Choose 2.0 HP for 200-250 sqft or 2.5 HP for 250-300 sqft.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your room size and we will recommend the right HP and brand for your bedroom. Installation from RM 199.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your room size and we will recommend the right HP and brand for your bedroom. See our <a href="/services/installation">New Unit Installation</a> pricing or read about <a href="/blog/inverter-vs-non-inverter-aircond-malaysia">inverter vs non-inverter aircond</a> before you decide. Installation from RM 199.</p>
     `,
     contentMS: `
       <p><em>Aircond 1 HP (lebih kurang 9,000 BTU atau 0.75 kW) cukup untuk bilik tidur kecil sehingga 120 kaki persegi di Malaysia. Bilik tidur lebih besar (120-200 kaki persegi) perlukan 1.5 HP, dan bilik tidur utama (200-300 kaki persegi) biasanya perlukan 2.0 HP. Berikut panduan saiz penuh dengan kalkulator bilik dan harga pemasangan dari RM 199.</em></p>
@@ -3153,7 +3153,7 @@ export const allPosts: BlogPost[] = [
       <h3>Apakah saiz aircond untuk bilik tidur utama di Malaysia?</h3>
       <p>Bilik tidur utama dalam kondo Malaysia biasanya 200-300 kaki². Pilih 2.0 HP untuk 200-250 kaki² atau 2.5 HP untuk 250-300 kaki².</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz bilik anda dan kami akan cadangkan HP dan jenama yang betul untuk bilik tidur anda. Pasang dari RM 199.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz bilik anda dan kami akan cadangkan HP dan jenama yang betul untuk bilik tidur anda. Lihat harga <a href="/ms/services/installation">Pemasangan Unit Baharu</a> atau baca panduan <a href="/ms/blog/inverter-vs-non-inverter-aircond-malaysia">inverter vs bukan inverter</a>. Pasang dari RM 199.</p>
     `,
     contentZH: `
       <p><em>1马力冷气（约9,000 BTU或0.75 kW）足够马来西亚最多120平方英尺的小卧室。更大的卧室（120-200平方英尺）需要1.5 HP，主卧（200-300平方英尺）通常需要2.0 HP。以下是完整的尺寸指南、房间计算器和从RM 199起的安装价格。</em></p>
@@ -3218,7 +3218,7 @@ export const allPosts: BlogPost[] = [
       <h3>马来西亚主卧用多大冷气？</h3>
       <p>马来西亚公寓的主卧通常为200-300平方英尺。200-250平方英尺选择2.0 HP，250-300平方英尺选择2.5 HP。</p>
       <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知您的房间尺寸，我们将为您卧室推荐合适的HP和品牌。安装从RM 199起。</p>
+      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知您的房间尺寸，我们将为您卧室推荐合适的HP和品牌。查看<a href="/zh/services/installation">新机安装</a>价格或阅读<a href="/zh/blog/inverter-vs-non-inverter-aircond-malaysia">变频与定频冷气</a>指南。安装从RM 199起。</p>
     `,
   },
 
@@ -3321,7 +3321,7 @@ export const allPosts: BlogPost[] = [
       <h3>Can I get a written quote before work starts?</h3>
       <p>Yes. KL Renovator provides a written quote via WhatsApp before scheduling any installation. No work starts without your approval on the price.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your unit type, size, and brand. We will send a written quote within minutes. Standard installation from RM 199.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your unit type, size, and brand. We will send a written quote within minutes. See full <a href="/services/installation">New Unit Installation</a> details or check <a href="/blog/aircond-installation-time-malaysia">how long installation takes</a>. Standard installation from RM 199.</p>
     `,
     contentMS: `
       <p><em>Kos pasang unit AC di Malaysia pada 2026 bermula dari <strong>RM 199</strong> untuk unit dinding 1.0-1.5 HP (pakej asas di klrenovator.com), <strong>RM 290</strong> untuk ceiling cassette, dan <strong>RM 199</strong> untuk unit tingkap. Harga sebenar bergantung pada jenis unit, saiz, panjang paip tembaga, dan akses. Panduan ini pecahkan semua.</em></p>
@@ -3403,7 +3403,7 @@ export const allPosts: BlogPost[] = [
       <h3>Boleh saya dapat sebut harga bertulis sebelum kerja bermula?</h3>
       <p>Ya. KL Renovator menyediakan sebut harga bertulis melalui WhatsApp sebelum menjadualkan sebarang pemasangan. Tiada kerja bermula tanpa kelulusan anda tentang harga.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan jenis unit, saiz, dan jenama anda. Kami akan hantar sebut harga bertulis dalam beberapa minit. Pasang standard dari RM 199.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan jenis unit, saiz, dan jenama anda. Kami akan hantar sebut harga bertulis dalam beberapa minit. Lihat perkhidmatan <a href="/ms/services/installation">Pemasangan Unit Baharu</a> penuh. Pasang standard dari RM 199.</p>
     `,
     contentZH: `
       <p><em>2026年马来西亚AC机组安装费用从<strong>RM 199</strong>起（1.0-1.5 HP壁挂式，klrenovator.com入门配套），<strong>RM 290</strong>起天花卡式，<strong>RM 199</strong>起窗口机。实际价格取决于机组类型、尺寸、铜管长度和访问。本指南详细说明一切。</em></p>
@@ -3485,7 +3485,7 @@ export const allPosts: BlogPost[] = [
       <h3>工作开始前可以获得书面报价吗？</h3>
       <p>可以。KL Renovator在安排任何安装前通过WhatsApp提供书面报价。没有您对价格的批准，不会开始任何工作。</p>
       <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知您的机组类型、尺寸和品牌。我们将在几分钟内发送书面报价。标准安装从RM 199起。</p>
+      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知您的机组类型、尺寸和品牌。我们将在几分钟内发送书面报价。查看完整<a href="/zh/services/installation">新机安装</a>服务详情。标准安装从RM 199起。</p>
     `,
   },
 
@@ -3573,7 +3573,7 @@ export const allPosts: BlogPost[] = [
       <h3>Is the 3-minute rule only for compressor protection?</h3>
       <p>Primarily yes. The 3-minute delay prevents the compressor from starting under high pressure differential. It also protects the start capacitor and contactor from the high inrush current of a hard start.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircon is short-cycling, clicking, or not starting. Diagnostic fee RM 88, waived with same-visit repair. Installation from RM 199.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircon is short-cycling, clicking, or not starting. See our <a href="/services/repair">Troubleshooting &amp; Repairs</a> service or read about <a href="/problems/aircond-compressor-problem">common compressor problems</a>. Diagnostic fee RM 88, waived with same-visit repair. Installation from RM 199.</p>
     `,
     contentMS: `
       <p><em>Peraturan 3 minit untuk aircond bermaksud menunggu sekurang-kurangnya <strong>3 minit</strong> sebelum mula semula pemampat selepas dimatikan. Ini beri masa untuk tekanan refrigerant di dalam pemampat seimbang semula, mencegah kerosakan kitaran pendek. Abaikan peraturan ini adalah salah satu sebab utama kegagalan pemampat pramatang di rumah Malaysia.</em></p>
@@ -3640,7 +3640,7 @@ export const allPosts: BlogPost[] = [
       <h3>Adakah peraturan 3 minit hanya untuk perlindungan pemampat?</h3>
       <p>Utamanya ya. Jeda 3 minit mencegah pemampat daripada mula di bawah perbezaan tekanan tinggi. Ia juga melindungi kapasitor mula dan kontaktor dari arus masuk tinggi mula keras.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> jika aircond anda kitar pendek, mengklik, atau tidak mula. Yuran diagnostik RM 88, dikecualikan dengan pembaikan lawatan sama. Pasang dari RM 199.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> jika aircond anda kitar pendek, mengklik, atau tidak mula. Lihat perkhidmatan <a href="/ms/services/repair">Penyelesaian Masalah &amp; Pembaikan</a> kami. Yuran diagnostik RM 88, dikecualikan dengan pembaikan lawatan sama.</p>
     `,
     contentZH: `
       <p><em>冷气3分钟规则意味着在关闭后至少等待<strong>3分钟</strong>再重启压缩机。这使压缩机内的制冷剂压力有时间平衡，防止短循环损坏。忽略此规则是马来西亚家庭压缩机过早失败的主要原因之一。</em></p>
@@ -3707,7 +3707,7 @@ export const allPosts: BlogPost[] = [
       <h3>3分钟规则只保护压缩机吗？</h3>
       <p>主要是。3分钟延迟防止压缩机在高压差下启动。它还保护启动电容器和接触器免受硬启动的高浪涌电流。</p>
       <h2>准备预订？</h2>
-      <p>如果您的冷气短循环、咔哒声或不启动，请WhatsApp KL Renovator <strong>+60182983573</strong>。诊断费RM 88，同次维修免收。安装从RM 199起。</p>
+      <p>如果您的冷气短循环、咔哒声或不启动，请WhatsApp KL Renovator <strong>+60182983573</strong>。查看我们的<a href="/zh/services/repair">故障排除与维修</a>服务。诊断费RM 88，同次维修免收。</p>
     `,
   },
 
@@ -3830,7 +3830,7 @@ export const allPosts: BlogPost[] = [
       <h3>Do you service ceiling cassette units?</h3>
       <p>Yes. KL Renovator services all ceiling cassette units: basic RM 150-250, chemical wash RM 220-350, overhaul RM 430-500. Ceiling cassette service is more involved due to height and accessibility.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. Basic from RM 99, chemical wash from RM 120, overhaul from RM 220. AMC plans from RM 299/year. 1-month workmanship warranty included.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. See our full <a href="/services/basic-servicing">Basic Servicing</a> and <a href="/services/chemical-wash">Chemical Wash</a> pricing pages, or explore <a href="/services/maintenance-contract">Annual Maintenance Contract</a> plans from RM 299/year. 1-month workmanship warranty included.</p>
     `,
     contentMS: `
       <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia dari RM 220</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 120-220</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
@@ -3932,7 +3932,7 @@ export const allPosts: BlogPost[] = [
       <h3>Adakah anda servis unit ceiling cassette?</h3>
       <p>Ya. KL Renovator servis semua unit ceiling cassette: asas RM 150-250, cuci kimia RM 220-350, overhaul RM 430-500. Servis ceiling cassette lebih terlibat kerana ketinggian dan kebolehcapaian.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC. Asas dari RM 99, cuci kimia dari RM 120, overhaul dari RM 220. Pelan AMC dari RM 299/tahun. Waranti kerja 1 bulan termasuk.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC. Lihat harga penuh <a href="/ms/services/basic-servicing">Servis Asas</a> dan <a href="/ms/services/chemical-wash">Cuci Kimia</a>, atau terokai pelan <a href="/ms/services/maintenance-contract">Kontrak Penyelenggaraan Tahunan</a> dari RM 299/tahun.</p>
     `,
     contentZH: `
       <p><em>2026年马来西亚AC服务价格：<strong>基础服务从RM 99</strong>起（1.0-1.5 HP），<strong>化学清洗从RM 120</strong>起（1.0-1.5 HP），<strong>化学大修从RM 220</strong>起（1.0-1.5 HP），<strong>加气从RM 120-220</strong>每次，<strong>年度维护合同从RM 299/年</strong>起。从klrenovator.com验证已公布价格。</em></p>
@@ -4034,7 +4034,7 @@ export const allPosts: BlogPost[] = [
       <h3>你们维修天花卡式机组吗？</h3>
       <p>是的。KL Renovator维修所有天花卡式机组：基础RM 150-250，化学清洗RM 220-350，大修RM 430-500。由于高度和可达性，天花卡式服务更复杂。</p>
       <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>进行AC服务。基础从RM 99起，化学清洗从RM 120起，大修从RM 220起。AMC计划从RM 299/年起。包括1个月工艺保修。</p>
+      <p>WhatsApp KL Renovator <strong>+60182983573</strong>进行AC服务。查看完整<a href="/zh/services/basic-servicing">基础保养</a>和<a href="/zh/services/chemical-wash">化学清洗</a>价格，或了解<a href="/zh/services/maintenance-contract">年度保养合约</a>计划（从RM 299/年起）。</p>
     `,
   },
 
@@ -4171,7 +4171,7 @@ export const allPosts: BlogPost[] = [
       <h3>Does ceiling fan with AC really save electricity?</h3>
       <p>Yes. A ceiling fan uses 30-50W. Running both at 26°C feels like 24°C. You can set AC 1-2°C higher with the fan, saving 5-10% on AC electricity. Net effect: cooling costs less overall.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service to keep your unit running efficiently. Basic service from RM 99, chemical wash from RM 120, full overhaul from RM 220. Lower electricity bills start with a clean AC.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service to keep your unit running efficiently. Read more on <a href="/blog/how-to-reduce-aircond-electricity-bill-malaysia">reducing your aircond electricity bill</a> or book a <a href="/services/chemical-wash">Chemical Wash</a>. Basic service from RM 99, chemical wash from RM 120, full overhaul from RM 220.</p>
     `,
     contentMS: `
       <p><em>1 jam elektrik AC di Malaysia berharga RM 0.20-0.45 untuk unit inverter 1.0-1.5 HP, RM 0.30-0.55 untuk non-inverter. Kos bergantung pada saiz HP, inverter vs non-inverter, dan blok tarif TNB. Pecahan penuh di bawah.</em></p>
@@ -4287,7 +4287,7 @@ export const allPosts: BlogPost[] = [
       <h3>Adakah kipas siling dengan AC benar-benar jimat elektrik?</h3>
       <p>Ya. Kipas siling guna 30-50W. Menjalankan kedua-duanya pada 26°C rasa seperti 24°C. Anda boleh tetapkan AC 1-2°C lebih tinggi dengan kipas, jimat 5-10% elektrik AC. Kesan bersih: kos penyejukan kurang keseluruhan.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC supaya unit anda berjalan dengan cekap. Servis asas dari RM 99, cuci kimia dari RM 120, overhaul penuh dari RM 220. Bil elektrik yang lebih rendah bermula dengan AC yang bersih.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC supaya unit anda berjalan dengan cekap. Baca lebih lanjut tentang <a href="/ms/blog/how-to-reduce-aircond-electricity-bill-malaysia">mengurangkan bil elektrik aircond</a> atau tempah <a href="/ms/services/chemical-wash">Cuci Kimia</a>. Servis asas dari RM 99, cuci kimia dari RM 120, overhaul penuh dari RM 220.</p>
     `,
     contentZH: `
       <p><em>马来西亚1小时AC电费：1.0-1.5 HP变频机组RM 0.20-0.45，非变频RM 0.30-0.55。成本取决于HP尺寸、变频vs非变频以及TNB电价区块。完整细分如下。</em></p>
@@ -4403,7 +4403,7 @@ export const allPosts: BlogPost[] = [
       <h3>吊扇配冷气真的节省电费吗？</h3>
       <p>是的。吊扇使用30-50W。在26°C同时运行两者感觉像24°C。您可以将冷气设置高1-2°C配合风扇，节省5-10%冷气电费。净效果：总体冷却成本更低。</p>
       <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>进行冷气维修，保持机组高效运行。基础维修RM 99起，化学清洗RM 120起，完整大修RM 220起。更低的电费始于清洁的冷气。</p>
+      <p>WhatsApp KL Renovator <strong>+60182983573</strong>进行冷气维修，保持机组高效运行。阅读更多关于<a href="/zh/blog/how-to-reduce-aircond-electricity-bill-malaysia">降低冷气电费</a>的信息，或预约<a href="/zh/services/chemical-wash">化学清洗</a>。基础维修RM 99起，化学清洗RM 120起，完整大修RM 220起。</p>
     `,
   },
 
@@ -4514,7 +4514,7 @@ export const allPosts: BlogPost[] = [
       <h3>How long does it take to fix a leaking AC?</h3>
       <p>Drain pipe flush: 30-60 minutes. Gas top-up: 1-1.5 hours. Re-level: 30-60 minutes. Drain pump replacement: 1.5-2 hours. Drip tray replacement: 1-2 hours. Most leak fixes are done in a single visit.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircond is leaking water. Diagnostic fee RM 88, waived with same-visit repair. Same-day service available in KL and Selangor.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircond is leaking water. See our <a href="/problems/aircond-water-leaking">Aircond Water Leaking</a> troubleshooting guide or book a <a href="/services/chemical-overhaul">Chemical Overhaul</a> to fix it permanently. Diagnostic fee RM 88, waived with same-visit repair.</p>
     `,
     contentMS: `
       <p><em>Aircond bocor air di Malaysia adalah salah satu masalah AC paling biasa. 8 punca paling biasa adalah: paip saliran tersumbat (40% kes), penapis kotor, coil penyejat beku, refrigerant rendah, unit dalam condong, pam saliran pecah, dulang titis retak, dan dulang air penuh. Kebanyakan penyelesaian berharga RM 99-RM 350. Berikut panduan diagnosis dan penyelesaian penuh.</em></p>
@@ -4604,7 +4604,7 @@ export const allPosts: BlogPost[] = [
       <h3>Berapa lama untuk baiki AC bocor?</h3>
       <p>Flush paip saliran: 30-60 minit. Tambah gas: 1-1.5 jam. Tara semula: 30-60 minit. Ganti pam saliran: 1.5-2 jam. Ganti dulang titis: 1-2 jam. Kebanyakan pembaikan kebocoran dilakukan dalam satu lawatan.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> jika aircond anda bocor air. Yuran diagnostik RM 88, dikecualikan dengan pembaikan lawatan sama. Servis hari sama tersedia di KL dan Selangor.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> jika aircond anda bocor air. Lihat panduan <a href="/ms/problems/aircond-water-leaking">Aircond Bocor Air</a> atau tempah <a href="/ms/services/chemical-overhaul">Overhaul Kimia</a> untuk penyelesaian kekal. Yuran diagnostik RM 88, dikecualikan dengan pembaikan lawatan sama.</p>
     `,
     contentZH: `
       <p><em>马来西亚冷气漏水是最常见的冷气问题之一。最常见的8个原因是：排水管堵塞（40%的情况）、过滤网脏、蒸发器盘管结冰、制冷剂低、室内机倾斜、排水泵损坏、接水盘破裂、水盘满。大多数维修费用为RM 99-RM 350。以下是完整的诊断和维修指南。</em></p>
@@ -4694,7 +4694,7 @@ export const allPosts: BlogPost[] = [
       <h3>维修漏水冷气需要多长时间？</h3>
       <p>排水管冲洗：30-60分钟。加气：1-1.5小时。重新调平：30-60分钟。更换排水泵：1.5-2小时。更换接水盘：1-2小时。大多数漏水维修在一次访问中完成。</p>
       <h2>准备预订？</h2>
-      <p>如果您的冷气漏水，请WhatsApp KL Renovator <strong>+60182983573</strong>。诊断费RM 88，同次维修免收。吉隆坡和雪兰莪提供当日服务。</p>
+      <p>如果您的冷气漏水，请WhatsApp KL Renovator <strong>+60182983573</strong>。查看<a href="/zh/problems/aircond-water-leaking">冷气漏水</a>故障排除指南，或预约<a href="/zh/services/chemical-overhaul">化学大修</a>以彻底解决问题。诊断费RM 88，同次维修免收。</p>
     `,
   },
 
@@ -4853,7 +4853,7 @@ export const allPosts: BlogPost[] = [
       <h3>What if installation takes longer than expected?</h3>
       <p>We will inform you immediately. Common reasons: hidden pipe routing, structural issues discovered during install, additional materials needed, or weather. KL Renovator charges for additional materials only — never for our time delays.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your unit size, brand, and a photo of the install location. Standard installation from RM 199 (2-3 hours). Ceiling cassette from RM 290 (3-4 hours).</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your unit size, brand, and a photo of the install location. See our full <a href="/services/installation">New Unit Installation</a> service page or read the <a href="/blog/ac-unit-installation-cost-malaysia">AC installation cost breakdown</a>. Standard installation from RM 199 (2-3 hours). Ceiling cassette from RM 290 (3-4 hours).</p>
     `,
     contentMS: `
       <p><em>Pemasangan aircond dinding standard di Malaysia ambil masa <strong>2-3 jam</strong> pada 2026 (mengikut FAQ klrenovator.com), dari saat juruteknik tiba hingga saat kad waranti diserahkan. Pemasangan ceiling cassette ambil <strong>3-4 jam</strong> kerana kerja grid siling. Pasang berbilang unit: 2-3 jam seunit. Pecahan penuh di bawah.</em></p>
@@ -4991,7 +4991,7 @@ export const allPosts: BlogPost[] = [
       <h3>Bagaimana jika pasang ambil masa lebih lama daripada jangkaan?</h3>
       <p>Kami maklumkan anda segera. Sebab biasa: paip tersembunyi, isu struktur, bahan tambahan, cuaca. KL Renovator caj untuk bahan tambahan sahaja — tidak pernah untuk kelewatan masa kami.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz unit, jenama, dan gambar lokasi pemasangan. Pasang standard dari RM 199 (2-3 jam). Ceiling cassette dari RM 290 (3-4 jam).</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz unit, jenama, dan gambar lokasi pemasangan. Lihat perkhidmatan <a href="/ms/services/installation">Pemasangan Unit Baharu</a> penuh. Pasang standard dari RM 199 (2-3 jam). Ceiling cassette dari RM 290 (3-4 jam).</p>
     `,
     contentZH: `
       <p><em>2026年马来西亚标准壁挂式冷气安装需要<strong>2-3小时</strong>（根据klrenovator.com FAQ），从技术员到达到保修卡移交。天花卡式安装需要<strong>3-4小时</strong>，因为有吊顶工作。多台安装：每台2-3小时。按机组类型、尺寸、位置场景的完整细分，以及当日服务选项。</em></p>
@@ -5129,7 +5129,7 @@ export const allPosts: BlogPost[] = [
       <h3>如果安装时间超过预期怎么办？</h3>
       <p>我们立即通知您。常见原因：隐藏管道、安装期间发现的结构问题、额外材料或天气。KL Renovator仅对额外材料收费——从不因我们的时间延误而收费。</p>
       <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知机组尺寸、品牌和安装位置的照片。标准安装从RM 199起（2-3小时）。天花卡式从RM 290起（3-4小时）。</p>
+      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知机组尺寸、品牌和安装位置的照片。查看完整<a href="/zh/services/installation">新机安装</a>服务。标准安装从RM 199起（2-3小时）。天花卡式从RM 290起（3-4小时）。</p>
     `,
   },
 ];
