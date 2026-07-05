@@ -802,6 +802,52 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* Contextual Guides — in-body blog links, not only bottom cards */}
+      {(() => {
+        const contextualSlugs = SERVICE_BLOG_MAP_V2[slug] ?? SERVICE_BLOG_MAP[slug] ?? [];
+        const contextualPosts = allPosts.filter((p) => contextualSlugs.includes(p.slug)).slice(0, 3);
+        if (contextualPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Before You Book · Sebelum Tempah · 预约前先看
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-3">
+                  Helpful guides customers read before booking {data.title}
+                </h2>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  If you're comparing service options, pricing, or symptoms before choosing {data.title.toLowerCase()}, start with{" "}
+                  {contextualPosts.map((post, index) => (
+                    <span key={post.slug}>
+                      <NextLink href={`/blog/${post.slug}`} className="font-bold text-sky-600 hover:text-sky-800 underline underline-offset-2">
+                        {post.title}
+                      </NextLink>
+                      {index < contextualPosts.length - 2 ? ", " : index === contextualPosts.length - 2 ? " and " : ""}
+                    </span>
+                  ))}
+                  . These explain the decision points customers ask us about most on WhatsApp before confirming a booking.
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  {contextualPosts.map((post) => (
+                    <NextLink
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-sky-400 hover:bg-white hover:shadow-sm"
+                    >
+                      <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</p>
+                      <h3 className="text-sm font-black text-slate-900 leading-snug">{post.title}</h3>
+                      <p className="mt-2 text-xs text-slate-500 line-clamp-3">{post.excerpt}</p>
+                    </NextLink>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* FAQs — shown in all 3 languages */}
       <section className="py-14 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
