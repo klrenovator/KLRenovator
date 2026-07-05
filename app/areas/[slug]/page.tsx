@@ -871,6 +871,81 @@ export default async function AreaPage({
         </div>
       </section>
 
+      {/* Gallery + Near Me + Neighbourhood Links — orphan-link fix */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              Proof + Coverage · Bukti + Liputan · 真实案例 + 覆盖范围
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-6">
+              See Real Work in {area.name} and Explore Nearby Coverage
+            </h2>
+            <div className="grid gap-4 lg:grid-cols-2">
+              <NextLink
+                href="/gallery"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Before &amp; After Gallery</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  See real KL Renovator project photos before you book
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Browse real chemical wash, overhaul, installation and repair photos from homes, condos, offices and shoplots across KL &amp; Selangor.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  View Gallery <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <NextLink
+                href="/near-me"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Near Me Hub</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Check same-day aircond service availability near {area.name}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Use our Klang Valley near-me hub to compare nearby coverage areas, confirm fast technician reach, and choose the quickest WhatsApp booking path.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  Open Near Me Hub <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+            </div>
+
+            {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug).length > 0 && (
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
+                  Neighbourhoods in {area.name}
+                </p>
+                <h3 className="text-base font-black text-slate-900">
+                  More local area pages under {area.name}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  These neighbourhood pages strengthen local coverage and help residents in smaller communities find the most relevant service page faster.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {siteConfig.kampungPages
+                    .filter((k) => k.parentSlug === slug)
+                    .map((k) => (
+                      <NextLink
+                        key={k.slug}
+                        href={`/areas/${slug}/${k.slug}`}
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700"
+                      >
+                        Aircond Service {k.name}
+                        <FiArrowRight className="h-3 w-3 text-sky-400" />
+                      </NextLink>
+                    ))}
+                </div>
+              </div>
+            )}
+          </Reveal>
+        </div>
+      </section>
+
       {/* Related Blog Guides — AREA_BLOG_MAP driven */}
       {(() => {
         const blogSlugs = AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"];
