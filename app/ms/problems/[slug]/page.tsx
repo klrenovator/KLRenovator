@@ -183,6 +183,46 @@ export default async function ProblemPageMS({
         </div>
       </section>
 
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              Bukti Kerja Sebenar
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              Lihat hasil sebelum & selepas kerja aircond sebelum anda membuat tempahan
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href="/ms/gallery"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Galeri Sebelum & Selepas</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Semak foto sebenar kerja cuci kimia, pembaikan dan pemasangan
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Lihat bagaimana KL Renovator mengendalikan gegelung kotor, unit bocor, kerja pemasangan dan hasil pembaikan di seluruh KL &amp; Selangor.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  Buka Galeri <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Mengapa ini membantu</p>
+                <h3 className="text-base font-black text-slate-900">
+                  Bandingkan mutu kerja sebenar sebelum memilih pilihan pembaikan
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Pelanggan yang berdepan masalah {problem.nameMS || problem.name} biasanya mahu lihat standard kerja sebenar, cara perlindungan kawasan dan hasil kerja juruteknik di lokasi.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
