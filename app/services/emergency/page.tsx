@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { FiCheck, FiClock, FiAlertTriangle, FiZap } from "react-icons/fi";
+import { FiCheck, FiClock, FiAlertTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
@@ -222,6 +222,19 @@ export default function EmergencyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyServiceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      {/* Breadcrumb */}
+      <div className="bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+            <NextLink href="/" className="hover:text-sky-600 transition">Home</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <NextLink href="/services" className="hover:text-sky-600 transition">Services</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <span className="text-slate-900 font-semibold">Emergency Aircond Repair</span>
+          </nav>
+        </div>
+      </div>
 
       {/* ── HERO — RED URGENCY BANNER ─────────────────────────────────────── */}
       <section className="relative bg-gradient-to-br from-red-700 via-red-600 to-rose-700 text-white overflow-hidden">
