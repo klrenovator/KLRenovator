@@ -931,6 +931,47 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
+      {/* Contextual Guides — in-body blog links, not only bottom cards */}
+      {relatedPosts.length > 0 && (
+        <section className="py-10 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                {lang === "ms" ? "Sebelum Tempah" : "预约前先看"}
+              </p>
+              <h2 className="text-base font-black text-slate-900 mb-3">
+                {lang === "ms"
+                  ? `Panduan yang pelanggan selalu baca sebelum menempah ${tTitle}`
+                  : `客户预约 ${tTitle} 前最常阅读的指南`}
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                {lang === "ms"
+                  ? "Jika anda masih membandingkan harga, simptom, atau servis yang paling sesuai, mulakan dengan panduan ini dahulu. Ia merangkumi soalan yang paling kerap pelanggan tanya di WhatsApp sebelum mengesahkan tempahan."
+                  : "如果您还在比较价格、症状或最适合的服务，建议先阅读这些指南。它们涵盖了客户在 WhatsApp 确认预约前最常提出的问题。"}
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {relatedPosts.slice(0, 3).map((post) => {
+                  const postTitle = lang === "ms" ? post.titleMS : post.titleZH;
+                  const postExcerpt = lang === "ms" ? post.excerptMS : post.excerptZH;
+                  const postCategory = lang === "ms" ? post.categoryMS : post.categoryZH;
+                  return (
+                    <NextLink
+                      key={post.slug}
+                      href={blogHref(post)}
+                      className="rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-sky-400 hover:bg-white hover:shadow-sm"
+                    >
+                      <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{postCategory}</p>
+                      <h3 className="text-sm font-black text-slate-900 leading-snug">{postTitle}</h3>
+                      <p className="mt-2 text-xs text-slate-500 line-clamp-3">{postExcerpt}</p>
+                    </NextLink>
+                  );
+                })}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* FAQs — page language primary, then the other two as secondary */}
       <section className="py-14 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
