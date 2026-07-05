@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { FiCheck, FiShield, FiCalendar, FiDroplet, FiTool, FiZap, FiClock, FiStar } from "react-icons/fi";
+import { FiCheck, FiShield, FiCalendar, FiDroplet, FiTool, FiZap, FiClock, FiStar, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
@@ -96,6 +96,18 @@ export default function AMCPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      <div className="bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+            <NextLink href="/" className="hover:text-sky-600 transition">Home</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <NextLink href="/services" className="hover:text-sky-600 transition">Services</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <span className="text-slate-900 font-semibold">Aircond Maintenance Contract</span>
+          </nav>
+        </div>
+      </div>
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900 text-white py-16 sm:py-20 px-4">
