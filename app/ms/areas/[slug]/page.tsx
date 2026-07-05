@@ -6,6 +6,8 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { allPosts } from "@/config/blog-posts";
+import { AREA_BLOG_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -150,6 +152,9 @@ export default async function AreaPageMS({
   const otherMsAreas = siteConfig.areaPages
     .filter((a: any) => a.slug !== slug && a.faqsBM?.length > 0)
     .slice(0, 10);
+  const areaBlogPosts = allPosts
+    .filter((p) => (AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"] ?? []).includes(p.slug))
+    .slice(0, 3);
 
   return (
     <>
@@ -341,6 +346,38 @@ export default async function AreaPageMS({
           </Reveal>
         </div>
       </section>
+
+      {/* Contextual Guides — in-body blog links for area pages */}
+      {areaBlogPosts.length > 0 && (
+        <section className="py-10 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                Sebelum Tempah
+              </p>
+              <h2 className="text-base font-black text-slate-900 mb-3">
+                Panduan aircond yang pelanggan di {area.name} selalu baca sebelum tempah
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Ramai pelanggan di {area.name} membaca panduan ini dahulu sebelum WhatsApp kami untuk sebut harga, terutama bila mereka sedang membandingkan repair, cuci kimia, jadual servis, atau kos pemasangan.
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {areaBlogPosts.map((post) => (
+                  <NextLink
+                    key={post.slug}
+                    href={`/ms/blog/${post.slug}`}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-sky-400 hover:bg-white hover:shadow-sm"
+                  >
+                    <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.categoryMS}</p>
+                    <h3 className="text-sm font-black text-slate-900 leading-snug">{post.titleMS}</h3>
+                    <p className="mt-2 text-xs text-slate-500 line-clamp-3">{post.excerptMS}</p>
+                  </NextLink>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {/* FAQ */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
