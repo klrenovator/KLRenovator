@@ -180,6 +180,46 @@ export default async function ProblemPageZH({
         </div>
       </section>
 
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              真实作业证明
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              预约前先查看冷气前后对比作业成果
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href="/zh/gallery"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">前后对比图库</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  查看真实化学清洗、维修与安装照片
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  查看 KL Renovator 如何处理肮脏盘管、漏水机器、安装工程及维修成果，服务覆盖整个吉隆坡与雪兰莪。
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  查看图库 <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">为什么这有帮助</p>
+                <h3 className="text-base font-black text-slate-900">
+                  先比较真实施工标准，再决定维修方案
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  遇到 {problem.nameZH || problem.name} 的客户，通常都希望先看到真实施工质量、现场保护方式，以及技术员最终能做到的效果。
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
