@@ -93,6 +93,18 @@ export default async function ProblemPageMS({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
+      <div className="bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+            <NextLink href="/ms" className="hover:text-sky-600 transition font-medium">Laman Utama</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <NextLink href="/ms/problems" className="hover:text-sky-600 transition font-medium">Masalah</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <span className="text-slate-900 font-bold">{problem.nameMS || problem.name}</span>
+          </nav>
+        </div>
+      </div>
+
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
