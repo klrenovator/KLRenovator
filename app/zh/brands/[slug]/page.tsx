@@ -250,6 +250,27 @@ export default async function BrandPageZH({
         </section>
       )}
 
+      {/* ── 信任说明：我们提供维修服务，并非官方经销商 ─────────────────── */}
+      <section className="py-10 bg-emerald-50 border-y border-emerald-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-emerald-100 border border-emerald-200 rounded-xl flex items-center justify-center">
+                <FiCheck className="h-5 w-5 text-emerald-700" />
+              </div>
+              <div>
+                <h2 className="font-black text-sm text-slate-900 mb-1.5 uppercase tracking-wide">
+                  我们提供{brand.name}维修服务 — 但并非{brand.name}官方经销商
+                </h2>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  KL Renovator是一家独立的HVAC维修服务公司，并非{brand.name}的官方经销商或授权服务中心。我们为{brand.name}机型提供维修、保养和安装服务，使用来自马来西亚可信赖供应商的正品或同等OEM替换零件（电容器、PCB主板、冷媒、排水泵）——绝不使用假冒或未经验证的零件。如果您的{brand.name}机器仍在原厂保修期内，我们会事先告知维修是否可能影响保修，让您自行决定是否改由{brand.name}官方授权中心处理。我们的宗旨是诚实透明的服务——而非推销您不需要的新机器。
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {brand.faqsZH?.length > 0 && (
         <section className="py-10 bg-slate-50 border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
