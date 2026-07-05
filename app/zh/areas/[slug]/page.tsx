@@ -381,6 +381,81 @@ export default async function AreaPageZH({
         </div>
       </section>
 
+      {/* Gallery + Near Me + Neighbourhood Links — orphan-link fix */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              真实案例 + 覆盖范围
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-6">
+              查看 {area.name} 附近的真实作业照片与服务覆盖范围
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href="/zh/gallery"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">前后对比图库</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  预约前先查看 KL Renovator 的真实作业照片
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  查看来自吉隆坡与雪兰莪住宅、公寓、办公室和店铺的真实化学清洗、大修、安装与维修成果。
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  查看图库 <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <NextLink
+                href="/near-me"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">附近服务中心</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  查看您附近的当天冷气服务可用性
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  使用我们的 Klang Valley near-me 页面比较附近覆盖区域，并选择最快的 WhatsApp 预约路线。
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  打开 Near Me 页面 <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+            </div>
+
+            {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug && k.descriptionZH).length > 0 && (
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
+                  {area.name} 的社区页面
+                </p>
+                <h3 className="text-base font-black text-slate-900">
+                  {area.name} 下属更小社区的服务页面
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  这些社区页面可帮助较小住宅区的客户更快找到最相关的冷气服务信息。
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {siteConfig.kampungPages
+                    .filter((k) => k.parentSlug === slug && k.descriptionZH)
+                    .map((k) => (
+                      <NextLink
+                        key={k.slug}
+                        href={`/zh/areas/${slug}/${k.slug}`}
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700"
+                      >
+                        {k.name} 冷气服务
+                        <FiArrowRight className="h-3 w-3 text-sky-400" />
+                      </NextLink>
+                    ))}
+                </div>
+              </div>
+            )}
+          </Reveal>
+        </div>
+      </section>
+
       {/* Other ZH area pages — internal linking, avoids orphan pages */}
       {otherZhAreas.length > 0 && (
         <section className="py-12 bg-white border-t border-slate-100">
