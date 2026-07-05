@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -108,6 +109,9 @@ export default async function BrandPageZH({
     : null;
 
   const otherZhBrands = siteConfig.brandPages.filter((b) => b.slug !== slug).slice(0, 10);
+  const relatedAreasZH = siteConfig.areaPages.slice(0, 12);
+  const brandProblemSlugsZH = BRAND_PROBLEM_MAP[slug] ?? BRAND_PROBLEM_MAP["_default"];
+  const relatedProblemsZH = siteConfig.problemPages.filter((p) => brandProblemSlugsZH.includes(p.slug));
 
   return (
     <>
@@ -288,6 +292,68 @@ export default async function BrandPageZH({
                     <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
                   </details>
                 ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Related Areas — triangular cross-link (Round 10.5) */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              服务区域 · Kawasan Servis
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              吉隆坡及雪兰莪各区{brand.name}冷气服务
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {relatedAreasZH.map((area) => (
+                <NextLink
+                  key={area.slug}
+                  href={`/zh/areas/${area.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 rounded-xl transition-all"
+                >
+                  <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
+                  {area.name}{brand.name}冷气服务
+                </NextLink>
+              ))}
+              <NextLink
+                href="/zh/areas"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-xl transition-all"
+              >
+                所有区域 <FiArrowRight className="h-3 w-3" />
+              </NextLink>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Common Problems for This Brand — triangular cross-link (Round 10.5) */}
+      {relatedProblemsZH.length > 0 && (
+        <section className="py-10 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+                问题 · Masalah
+              </p>
+              <h2 className="text-base font-black text-slate-900 mb-4">
+                我们解决的{brand.name}常见问题
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {relatedProblemsZH.map((p) => (
+                  <NextLink
+                    key={p.slug}
+                    href={`/zh/problems/${p.slug}`}
+                    className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                  >
+                    {p.nameZH || p.name}
+                  </NextLink>
+                ))}
+                <NextLink href="/zh/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+                  所有问题 →
+                </NextLink>
               </div>
             </Reveal>
           </div>
