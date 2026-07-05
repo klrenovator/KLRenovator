@@ -391,6 +391,81 @@ export default async function AreaPageMS({
         </div>
       </section>
 
+      {/* Gallery + Near Me + Neighbourhood Links — orphan-link fix */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              Bukti + Liputan
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-6">
+              Lihat hasil kerja sebenar dan semak liputan berhampiran {area.name}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href="/ms/gallery"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Galeri Sebelum & Selepas</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Lihat foto kerja sebenar KL Renovator sebelum membuat tempahan
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Semak foto sebenar cuci kimia, overhaul, pemasangan dan pembaikan dari rumah, kondominium, pejabat dan lot kedai sekitar KL &amp; Selangor.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  Buka Galeri <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <NextLink
+                href="/near-me"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Hub Near Me</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Semak ketersediaan servis aircond hari sama berhampiran anda
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Gunakan hub near-me Klang Valley untuk membandingkan kawasan liputan berdekatan dan pilih laluan WhatsApp paling cepat.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  Buka Hub Near Me <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+            </div>
+
+            {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug && k.descriptionMS).length > 0 && (
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
+                  Kawasan Kejiranan di {area.name}
+                </p>
+                <h3 className="text-base font-black text-slate-900">
+                  Halaman kawasan kecil di bawah {area.name}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Halaman kejiranan ini membantu pelanggan di komuniti yang lebih kecil mencari servis aircond yang paling relevan dengan lebih cepat.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {siteConfig.kampungPages
+                    .filter((k) => k.parentSlug === slug && k.descriptionMS)
+                    .map((k) => (
+                      <NextLink
+                        key={k.slug}
+                        href={`/ms/areas/${slug}/${k.slug}`}
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700"
+                      >
+                        Servis Aircond {k.name}
+                        <FiArrowRight className="h-3 w-3 text-sky-400" />
+                      </NextLink>
+                    ))}
+                </div>
+              </div>
+            )}
+          </Reveal>
+        </div>
+      </section>
+
       {/* Other MS area pages — internal linking, avoids orphan pages */}
       {otherMsAreas.length > 0 && (
         <section className="py-12 bg-white border-t border-slate-100">
