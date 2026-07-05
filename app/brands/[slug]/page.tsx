@@ -583,6 +583,27 @@ export default async function BrandPage({
         </div>
       </section>
 
+      {/* ── Genuine Parts / No Dealership Trust Block ─────────────────────── */}
+      <section className="py-10 bg-emerald-50 border-y border-emerald-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-emerald-100 border border-emerald-200 rounded-xl flex items-center justify-center">
+                <FiCheck className="h-5 w-5 text-emerald-700" />
+              </div>
+              <div>
+                <h2 className="font-black text-sm text-slate-900 mb-1.5 uppercase tracking-wide">
+                  We Service {brand.name} — We Are Not a {brand.name} Dealer
+                </h2>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  KL Renovator is an independent HVAC servicing company, not an official {brand.name} dealership or authorized service centre. We service, repair and install {brand.name} units using genuine or OEM-equivalent replacement parts (capacitors, PCB boards, gas, drain pumps) sourced from trusted Malaysian suppliers — never counterfeit or unverified parts. If your {brand.name} unit is still under manufacturer warranty, we&apos;ll tell you upfront whether a repair might affect that warranty, so you can decide whether to go through {brand.name}&apos;s own authorized centre instead. Our job is honest, transparent servicing — not selling you a new unit you don&apos;t need.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Why Choose — reasons */}
       <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
