@@ -1172,6 +1172,67 @@ export function ServiceDetailI18n({
         </section>
       )}
 
+      {/* Gallery + Near Me Hub — orphan-link fix */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              {lang === "ms" ? "Bukti + Liputan" : "真实案例 + 覆盖范围"}
+            </p>
+            <h2 className="text-lg font-black text-slate-900 mb-6">
+              {lang === "ms"
+                ? "Lihat hasil kerja sebenar dan semak liputan hari sama berhampiran anda"
+                : "查看真实作业照片并确认您附近的当天服务覆盖范围"}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href={`${langPrefix}/gallery`}
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  {lang === "ms" ? "Galeri Sebelum & Selepas" : "前后对比图库"}
+                </p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  {lang === "ms"
+                    ? "Lihat foto kerja sebenar KL Renovator sebelum anda membuat tempahan"
+                    : "预约前先查看 KL Renovator 的真实作业照片"}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  {lang === "ms"
+                    ? "Lihat hasil sebenar untuk cuci kimia, overhaul, pemasangan dan pembaikan dari rumah, kondominium, pejabat dan lot kedai sekitar KL & Selangor."
+                    : "查看来自吉隆坡与雪兰莪住宅、公寓、办公室和店铺的真实化学清洗、大修、安装与维修成果。"}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  {lang === "ms" ? "Buka Galeri" : "查看图库"} <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <NextLink
+                href="/near-me"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  {lang === "ms" ? "Hub Near Me" : "附近服务中心"}
+                </p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  {lang === "ms"
+                    ? "Semak ketersediaan servis aircond hari sama berhampiran anda"
+                    : "查看您附近的当天冷气服务可用性"}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  {lang === "ms"
+                    ? "Gunakan hub near-me Klang Valley kami untuk semak kawasan liputan berdekatan, bandingkan area, dan pilih laluan paling cepat ke tempahan WhatsApp."
+                    : "使用我们的 Klang Valley near-me 页面查看附近覆盖范围、比较区域，并选择最快的 WhatsApp 预约路线。"}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  {lang === "ms" ? "Buka Hub Near Me" : "打开 Near Me 页面"} <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-14 sm:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
