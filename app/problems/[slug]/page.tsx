@@ -1550,6 +1550,43 @@ export default async function ProblemPage({
         );
       })()}
 
+      {/* Gallery Proof — orphan-link fix */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Real Work Proof · Bukti Kerja · 真实作业证明</p>
+            <h2 className="text-base font-black text-slate-900 mb-4">See Before &amp; After Aircond Results Before You Book</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href="/gallery"
+                className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-sky-400 hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Before &amp; After Gallery</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Browse real chemical wash, repair and installation photos
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  See how KL Renovator handles dirty coils, leaking units, installation work and repair outcomes across KL &amp; Selangor before confirming your booking.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  View Gallery <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Why this helps</p>
+                <h3 className="text-base font-black text-slate-900">
+                  Compare real field work before you choose a repair option
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Customers dealing with {problem.name.toLowerCase()} usually want to see real workmanship, clean setup standards and the type of results our technicians achieve on-site.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Related Aircond Problems */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
