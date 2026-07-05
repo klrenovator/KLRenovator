@@ -6,7 +6,7 @@ import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi"
 
 import { siteConfig } from "@/config/site";
 import { allPosts } from "@/config/blog-posts";
-import { AREA_BLOG_MAP } from "@/config/topical-authority-map";
+import { AREA_BLOG_MAP, AREA_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -430,6 +430,71 @@ export default async function AreaPageZH({
           </Reveal>
         </div>
       </section>
+
+      {/* Brands We Service in This Area — triangular cross-link (Round 10.5) */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              品牌 · Jenama
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              我们在{area.name}服务的所有冷气品牌
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.brandPages.map((brand) => (
+                <NextLink
+                  key={brand.slug}
+                  href={`/zh/brands/${brand.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
+                >
+                  {brand.name}冷气服务
+                  <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
+                </NextLink>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Common Problems Fixed in This Area — triangular cross-link (Round 10.5) */}
+      {(() => {
+        const specificSlugs = AREA_PROBLEM_MAP[slug] ?? AREA_PROBLEM_MAP["_default"];
+        const relatedProblems = siteConfig.problemPages.filter((p) => specificSlugs.includes(p.slug));
+        if (relatedProblems.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-1">
+                  问题 · Masalah
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  我们在{area.name}解决的常见冷气问题
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {relatedProblems.map((p) => (
+                    <NextLink
+                      key={p.slug}
+                      href={`/zh/problems/${p.slug}`}
+                      className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 hover:border-red-300 hover:text-red-600 hover:bg-red-50 px-3 py-1.5 text-xs font-bold text-slate-700 transition rounded-xl"
+                    >
+                      <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
+                      {p.nameZH || p.name}
+                    </NextLink>
+                  ))}
+                  <NextLink
+                    href="/zh/problems"
+                    className="inline-flex items-center gap-1.5 border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-black text-red-700 hover:bg-red-100 transition rounded-xl"
+                  >
+                    所有问题 <FiArrowRight className="h-3 w-3" />
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Gallery + Near Me + Neighbourhood Links — orphan-link fix */}
       <section className="py-12 bg-white border-t border-slate-100">
