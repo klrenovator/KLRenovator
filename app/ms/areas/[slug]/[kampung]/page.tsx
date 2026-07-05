@@ -116,7 +116,7 @@ export default async function KampungPageMS({
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <nav className="flex items-center gap-1.5 text-xs font-bold text-slate-400 mb-4">
+            <nav className="flex items-center gap-1.5 text-xs font-bold text-slate-400 mb-4" aria-label="Breadcrumb">
               <NextLink href="/ms/areas" className="hover:text-sky-600">Kawasan Servis</NextLink>
               <FiChevronRight className="h-3 w-3" />
               <NextLink href={`/ms/areas/${slug}`} className="hover:text-sky-600">{parentArea?.name}</NextLink>
