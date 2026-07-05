@@ -2650,8 +2650,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 9,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-cost-malaysia-2026.webp",
-    imageAlt: "KL Renovator aircond installation cost breakdown showing RM 199 base pricing and transparent add-ons in Malaysia 2026",
+    image: "/hero/aircond-installation-double-unit-kl.webp",
+    imageAlt: "KL Renovator double aircond installation setup in Kuala Lumpur for a Malaysia 2026 installation cost guide",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>Updated July 2026 with the latest published pricing from klrenovator.com. A standard wall-mounted aircond installation in Malaysia starts at <strong>RM 199</strong> for 1.0-1.5 HP, with transparent add-ons for copper, drainage and condo work.</em></p>
@@ -2872,8 +2872,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "New Unit Installation",
-    image: "/hero/why-aircond-installation-expensive-malaysia.webp",
-    imageAlt: "KL Renovator technician explaining the real cost components of aircond installation in Malaysia — copper pipe, labour, compliance, warranty",
+    image: "/hero/aircond-compressor-bracket-installation-kl.webp",
+    imageAlt: "KL Renovator bracket and outdoor compressor installation work in Kuala Lumpur showing real cost components behind aircond installation in Malaysia",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>Aircond installation in Malaysia costs more than most people expect because you are not just paying for labour — you are paying for certified technicians, inverter-grade copper (which has nearly doubled in price since 2020), condo compliance paperwork, and specialised tools.</em></p>
@@ -3022,8 +3022,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/1-hp-aircond-bedroom-malaysia.webp",
-    imageAlt: "1 HP wall-mounted aircond suitable for small bedrooms in Malaysia — installed by KL Renovator from RM 199",
+    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    imageAlt: "1.0 HP wall-mounted bedroom aircond installation in Kuala Lumpur by KL Renovator",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>1 HP aircond (around 9,000 BTU or 0.75 kW) is enough for a small bedroom up to 120 sqft in Malaysia. Larger bedrooms (120-200 sqft) need 1.5 HP, and master bedrooms (200-300 sqft) typically need 2.0 HP. Below is the full size guide with a room calculator and installation pricing from RM 199.</em></p>
@@ -3238,8 +3238,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/ac-unit-installation-cost-malaysia.webp",
-    imageAlt: "AC unit installation cost breakdown in Malaysia — wall-mounted, ceiling cassette, and window units with RM 199 starting price",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    imageAlt: "KL Renovator wall-mounted aircond installation in Kuala Lumpur used for Malaysia 2026 AC unit installation cost guidance",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>AC unit installation cost in Malaysia in 2026 starts at <strong>RM 199</strong> for a 1.0-1.5 HP wall-mounted unit (the entry-level package on klrenovator.com), <strong>RM 290</strong> for ceiling cassette, and <strong>RM 199</strong> for window units. The actual price depends on unit type, size, copper pipe length, and access. This guide breaks it all down.</em></p>
@@ -3505,8 +3505,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "Aircon Repair",
-    image: "/hero/3-minute-rule-aircon-malaysia.webp",
-    imageAlt: "Malaysian homeowner checking aircon remote control and waiting 3 minutes before restarting the compressor",
+    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    imageAlt: "KL Renovator technician diagnosing compressor restart behaviour on an aircond in Klang Valley",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>The 3-minute rule for aircon means waiting at least <strong>3 minutes</strong> before restarting the compressor after switching off. This gives the refrigerant pressure inside the compressor time to equalise, preventing short-cycling damage. Ignoring this rule is one of the top causes of premature compressor failure in Malaysian homes.</em></p>
@@ -3727,8 +3727,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Aircon Servicing",
-    image: "/hero/ac-service-price-malaysia-2026.webp",
-    imageAlt: "AC service price breakdown in Malaysia — basic, chemical wash, overhaul, gas top-up pricing from klrenovator.com",
+    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    imageAlt: "KL Renovator protected aircond chemical service setup in Kuala Lumpur for a Malaysia 2026 service price guide",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul from RM 220</strong> (1.0-1.5 HP), <strong>gas top-up from RM 120-220</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
@@ -4054,8 +4054,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "Aircon Servicing",
-    image: "/hero/1-hour-ac-electricity-cost-malaysia.webp",
-    imageAlt: "AC electricity cost per hour in Malaysia — inverter vs non-inverter comparison with TNB tariff rates",
+    image: "/hero/lg-aircond-basic-servicing-subang-jaya-29.webp",
+    imageAlt: "LG wall-mounted aircond servicing in Subang Jaya used for a Malaysia per-hour electricity cost and efficiency guide",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>1 hour of AC electricity in Malaysia costs RM 0.20-0.45 for 1.0-1.5 HP inverter units, RM 0.30-0.55 for non-inverter. The cost depends on HP size, inverter vs non-inverter, and TNB tariff block. Full breakdown below.</em></p>
@@ -4423,8 +4423,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "Aircon Repair",
-    image: "/hero/aircond-leaking-water-malaysia.webp",
-    imageAlt: "KL Renovator technician diagnosing aircond water leak in a Malaysian home — checking drain pipe and drip tray",
+    image: "/hero/daikin-aircond-water-leaking-fix-kuala-lumpur-12.webp",
+    imageAlt: "KL Renovator technician fixing a Daikin aircond water leak in Kuala Lumpur by clearing the drain path",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>Aircond leaking water in Malaysia is one of the most common AC problems. The 8 most common causes are: blocked drain pipe (40% of cases), dirty filter, frozen evaporator coil, low refrigerant, tilted indoor unit, broken drain pump, cracked drip tray, and full condensate tray. Most fixes cost RM 99-RM 350. Here is the full diagnosis and fix guide.</em></p>
@@ -4714,8 +4714,8 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-time-malaysia.webp",
-    imageAlt: "KL Renovator technician installing wall-mounted aircond with copper pipe — typical 2-3 hour installation in Malaysia",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    imageAlt: "KL Renovator wall-mounted aircond installation in Kuala Lumpur showing a typical 2 to 3 hour installation workflow in Malaysia",
     lastReviewed: "2026-07-05",
     content: `
       <p><em>Standard wall-mounted aircond installation in Malaysia takes <strong>2-3 hours</strong> (1.0-1.5 HP), <strong>3-4 hours</strong> for ceiling cassette. Multi-unit installs work out to 2-3 hours per unit. The time depends on unit size, location (condo vs landed), pipe length, and access. Below is the full breakdown.</em></p>
