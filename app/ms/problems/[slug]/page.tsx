@@ -7,6 +7,7 @@ import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-ico
 import { siteConfig } from "@/config/site";
 import { problemContent } from "@/app/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
+import { PROBLEM_BRAND_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -90,6 +91,9 @@ export default async function ProblemPageMS({
   };
 
   const otherMsProblems = siteConfig.problemPages.filter((p) => p.slug !== slug).slice(0, 8);
+  const relatedBrandSlugsMS = PROBLEM_BRAND_MAP[slug] ?? [];
+  const relatedBrandsMS = siteConfig.brandPages.filter((b) => relatedBrandSlugsMS.includes(b.slug));
+  const relatedAreasMSProblem = siteConfig.areaPages.slice(0, 12);
 
   return (
     <>
@@ -286,6 +290,72 @@ export default async function ProblemPageMS({
                   Pelanggan yang berdepan masalah {problem.nameMS || problem.name} biasanya mahu lihat standard kerja sebenar, cara perlindungan kawasan dan hasil kerja juruteknik di lokasi.
                 </p>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Brands — triangular cross-link (Round 10.5) */}
+      {relatedBrandsMS.length > 0 && (
+        <section className="py-10 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+                Jenama · 品牌
+              </p>
+              <h2 className="text-base font-black text-slate-900 mb-4">
+                {problem.nameMS || problem.name} — Biasa Pada Jenama Ini
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {relatedBrandsMS.map((b) => (
+                  <NextLink
+                    key={b.slug}
+                    href={`/ms/brands/${b.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:text-sky-700 rounded-xl transition-all"
+                  >
+                    <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
+                    Aircond {b.name}
+                  </NextLink>
+                ))}
+                <NextLink
+                  href="/ms/brands"
+                  className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-black text-sky-700 rounded-xl transition-all"
+                >
+                  Semua Jenama <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Areas — triangular cross-link (Round 10.5) */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              Baiki Mengikut Lokasi · 按地区修复
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              Pembaikan {problem.nameMS || problem.name} — Kawasan KL & Selangor
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {relatedAreasMSProblem.map((area) => (
+                <NextLink
+                  key={area.slug}
+                  href={`/ms/areas/${area.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 rounded-xl transition-all"
+                >
+                  <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
+                  {area.name}
+                </NextLink>
+              ))}
+              <NextLink
+                href="/ms/areas"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-xl transition-all"
+              >
+                Semua Kawasan <FiArrowRight className="h-3 w-3" />
+              </NextLink>
             </div>
           </Reveal>
         </div>
