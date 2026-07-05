@@ -7,9 +7,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { siteConfig } from "@/config/site";
 import { servicesData } from "@/config/services-data";
 import { allPosts } from "@/config/blog-posts";
+import { problemAEOContent } from "@/config/problem-aeo-content";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 
 export function generateStaticParams() {
   return siteConfig.problemPages.map((p) => ({ slug: p.slug }));
@@ -1011,6 +1013,7 @@ export default async function ProblemPage({
   if (!problem) notFound();
 
   const content = problemContent[slug] ?? getGenericContent(problem);
+  const aeo = problemAEOContent[slug];
   const relatedService = problem.relatedService ? servicesData[problem.relatedService] : null;
   const secondaryServiceSlug = PROBLEM_SERVICE_MAP[slug]?.secondary;
   const secondaryService = secondaryServiceSlug ? servicesData[secondaryServiceSlug] : null;
@@ -1031,7 +1034,7 @@ export default async function ProblemPage({
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: content.faqs.map((faq) => ({
+    mainEntity: [...content.faqs, ...(aeo?.extraFaqsEN ?? [])].map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -1185,6 +1188,24 @@ export default async function ProblemPage({
         </div>
       </section>
 
+      {/* Direct Answer — AEO quotable block, shown right at the top for AI Overviews/LLMs */}
+      {aeo && (
+        <section className="py-8 bg-sky-50 border-b border-sky-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <div className="max-w-3xl speakable">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">
+                  Direct Answer · Jawapan Terus · 直接解答
+                </p>
+                <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">{aeo.directAnswerEN}</p>
+                <p className="mt-2 text-xs text-slate-500 font-medium leading-relaxed border-l-2 border-sky-200 pl-3">{aeo.directAnswerMS}</p>
+                <p className="mt-2 text-xs text-slate-400 font-medium leading-relaxed border-l-2 border-slate-200 pl-3">{aeo.directAnswerZH}</p>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Warning */}
       <section className="py-8 bg-red-50 border-b border-red-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1201,6 +1222,92 @@ export default async function ProblemPage({
           </Reveal>
         </div>
       </section>
+
+      {/* DIY-Safe Checks vs Technician-Only Checks */}
+      {aeo && (
+        <section className="py-14 bg-white border-b border-slate-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className={eyebrow()}>Before You Book</p>
+              <h2 className="mt-3 text-xl font-black text-slate-900 uppercase mb-6">
+                DIY-Safe Checks vs What Needs a Technician
+              </h2>
+            </Reveal>
+            <div className="grid lg:grid-cols-2 gap-6 max-w-5xl">
+              <Reveal>
+                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 h-full">
+                  <div className="flex items-center gap-2 mb-4">
+                    <FiCheckCircle className="h-5 w-5 text-emerald-600" />
+                    <h3 className="font-black text-sm text-emerald-800 uppercase tracking-wide">Safe To Check Yourself</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {aeo.diyChecksEN.map((tip, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-slate-700 font-medium">
+                        <span className="w-5 h-5 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">{i + 1}</span>
+                        {tip}
+                      </li>
+                    ))}
+                  </ul>
+                  {aeo.diyChecksMS.length > 0 && (
+                    <details className="mt-4 group">
+                      <summary className="cursor-pointer text-[10px] font-black uppercase tracking-widest text-emerald-700 hover:text-emerald-900 transition">
+                        Bahasa Malaysia &amp; 中文 <span className="inline-block transition-transform group-open:rotate-90">›</span>
+                      </summary>
+                      <div className="mt-3 space-y-2">
+                        {aeo.diyChecksMS.map((tip, i) => (
+                          <p key={`ms-${i}`} className="text-xs text-slate-600 font-medium">🇲🇾 {tip}</p>
+                        ))}
+                        {aeo.diyChecksZH.map((tip, i) => (
+                          <p key={`zh-${i}`} className="text-xs text-slate-500 font-medium">🇨🇳 {tip}</p>
+                        ))}
+                      </div>
+                    </details>
+                  )}
+                </div>
+              </Reveal>
+              <Reveal delay={60}>
+                <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 h-full">
+                  <div className="flex items-center gap-2 mb-4">
+                    <FiUserCheck className="h-5 w-5 text-sky-400" />
+                    <h3 className="font-black text-sm text-white uppercase tracking-wide">Technician-Only Diagnosis</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {aeo.technicianChecksEN.map((tip, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-slate-200 font-medium">
+                        <span className="w-5 h-5 bg-sky-500/20 text-sky-300 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">{i + 1}</span>
+                        {tip}
+                      </li>
+                    ))}
+                  </ul>
+                  {aeo.technicianChecksMS.length > 0 && (
+                    <details className="mt-4 group">
+                      <summary className="cursor-pointer text-[10px] font-black uppercase tracking-widest text-sky-400 hover:text-sky-300 transition">
+                        Bahasa Malaysia &amp; 中文 <span className="inline-block transition-transform group-open:rotate-90">›</span>
+                      </summary>
+                      <div className="mt-3 space-y-2">
+                        {aeo.technicianChecksMS.map((tip, i) => (
+                          <p key={`ms-${i}`} className="text-xs text-slate-300 font-medium">🇲🇾 {tip}</p>
+                        ))}
+                        {aeo.technicianChecksZH.map((tip, i) => (
+                          <p key={`zh-${i}`} className="text-xs text-slate-400 font-medium">🇨🇳 {tip}</p>
+                        ))}
+                      </div>
+                    </details>
+                  )}
+                  <a
+                    href={waLink(waMsg)}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    className="mt-5 flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] w-full py-3 text-xs font-black uppercase tracking-widest text-white rounded-xl transition-all"
+                  >
+                    <FaWhatsapp className="h-4 w-4" /> Book a Technician
+                  </a>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Causes */}
       <section className="py-14 bg-white">
@@ -1377,7 +1484,7 @@ export default async function ProblemPage({
           </Reveal>
 
           <div className="space-y-4">
-            {content.faqs.map((faq, i) => (
+            {[...content.faqs, ...(aeo?.extraFaqsEN ?? [])].map((faq, i) => (
               <Reveal key={i} delay={i * 30}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-5">
                   <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
@@ -1387,11 +1494,11 @@ export default async function ProblemPage({
             ))}
           </div>
 
-          {content.faqsBM.length > 0 && (
+          {[...content.faqsBM, ...(aeo?.extraFaqsMS ?? [])].length > 0 && (
             <Reveal>
               <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
-                {content.faqsBM.map((faq, i) => (
+                {[...content.faqsBM, ...(aeo?.extraFaqsMS ?? [])].map((faq, i) => (
                   <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
                     <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
                     <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
@@ -1401,11 +1508,11 @@ export default async function ProblemPage({
             </Reveal>
           )}
 
-          {content.faqsZH.length > 0 && (
+          {[...content.faqsZH, ...(aeo?.extraFaqsZH ?? [])].length > 0 && (
             <Reveal>
               <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
-                {content.faqsZH.map((faq, i) => (
+                {[...content.faqsZH, ...(aeo?.extraFaqsZH ?? [])].map((faq, i) => (
                   <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
                     <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
                     <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
