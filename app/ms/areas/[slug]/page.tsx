@@ -163,6 +163,19 @@ export default async function AreaPageMS({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
+      {/* Breadcrumb */}
+      <div className="bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+            <NextLink href="/ms" className="hover:text-sky-600 transition font-medium">Laman Utama</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <NextLink href="/ms/areas" className="hover:text-sky-600 transition font-medium">Kawasan Servis</NextLink>
+            <FiChevronRight className="h-3 w-3" />
+            <span className="text-slate-900 font-bold">Servis Aircond {area.name}</span>
+          </nav>
+        </div>
+      </div>
+
       {/* Hero — direct-answer opening for AEO/GEO */}
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
