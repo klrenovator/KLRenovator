@@ -7,6 +7,7 @@ import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-ico
 import { siteConfig } from "@/config/site";
 import { problemContent } from "@/app/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
+import { PROBLEM_BRAND_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -87,6 +88,9 @@ export default async function ProblemPageZH({
   };
 
   const otherZhProblems = siteConfig.problemPages.filter((p) => p.slug !== slug).slice(0, 8);
+  const relatedBrandSlugsZH = PROBLEM_BRAND_MAP[slug] ?? [];
+  const relatedBrandsZH = siteConfig.brandPages.filter((b) => relatedBrandSlugsZH.includes(b.slug));
+  const relatedAreasZHProblem = siteConfig.areaPages.slice(0, 12);
 
   return (
     <>
@@ -283,6 +287,72 @@ export default async function ProblemPageZH({
                   遇到 {problem.nameZH || problem.name} 的客户，通常都希望先看到真实施工质量、现场保护方式，以及技术员最终能做到的效果。
                 </p>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Brands — triangular cross-link (Round 10.5) */}
+      {relatedBrandsZH.length > 0 && (
+        <section className="py-10 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+                品牌 · Jenama
+              </p>
+              <h2 className="text-base font-black text-slate-900 mb-4">
+                {problem.nameZH || problem.name} — 这些品牌常见此问题
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {relatedBrandsZH.map((b) => (
+                  <NextLink
+                    key={b.slug}
+                    href={`/zh/brands/${b.slug}`}
+                    className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:text-sky-700 rounded-xl transition-all"
+                  >
+                    <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
+                    {b.name}冷气服务
+                  </NextLink>
+                ))}
+                <NextLink
+                  href="/zh/brands"
+                  className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-black text-sky-700 rounded-xl transition-all"
+                >
+                  所有品牌 <FiArrowRight className="h-3 w-3" />
+                </NextLink>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Areas — triangular cross-link (Round 10.5) */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+              按地区修复 · Baiki Mengikut Lokasi
+            </p>
+            <h2 className="text-base font-black text-slate-900 mb-4">
+              {problem.nameZH || problem.name}维修 — 吉隆坡及雪兰莪地区
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {relatedAreasZHProblem.map((area) => (
+                <NextLink
+                  key={area.slug}
+                  href={`/zh/areas/${area.slug}`}
+                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-1.5 text-xs font-bold text-slate-700 rounded-xl transition-all"
+                >
+                  <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
+                  {area.name}
+                </NextLink>
+              ))}
+              <NextLink
+                href="/zh/areas"
+                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-xl transition-all"
+              >
+                所有区域 <FiArrowRight className="h-3 w-3" />
+              </NextLink>
             </div>
           </Reveal>
         </div>
