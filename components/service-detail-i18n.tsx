@@ -528,7 +528,7 @@ export function ServiceDetailI18n({
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500">
+          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
             <NextLink href={`${langPrefix}/`} className="hover:text-sky-600 transition">{pick("home")}</NextLink>
             <FiChevronRight className="h-3 w-3" />
             <NextLink href={`${langPrefix}/services`} className="hover:text-sky-600 transition">{pick("services")}</NextLink>
