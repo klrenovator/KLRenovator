@@ -597,7 +597,7 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
       </section>
 
       {/* Meet The Team */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section id="team" className="scroll-mt-28 py-16 sm:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-10">
