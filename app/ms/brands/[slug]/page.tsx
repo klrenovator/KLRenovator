@@ -252,6 +252,27 @@ export default async function BrandPageMS({
         </section>
       )}
 
+      {/* ── Blok Kepercayaan: Kami Servis, Bukan Wakil Rasmi ─────────────── */}
+      <section className="py-10 bg-emerald-50 border-y border-emerald-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-emerald-100 border border-emerald-200 rounded-xl flex items-center justify-center">
+                <FiCheck className="h-5 w-5 text-emerald-700" />
+              </div>
+              <div>
+                <h2 className="font-black text-sm text-slate-900 mb-1.5 uppercase tracking-wide">
+                  Kami Servis {brand.name} — Kami Bukan Wakil Rasmi {brand.name}
+                </h2>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  KL Renovator adalah syarikat servis HVAC bebas, bukan wakil rasmi atau pusat servis diberi kuasa oleh {brand.name}. Kami menservis, membaiki dan memasang unit {brand.name} menggunakan alat ganti asli atau setara OEM (kapasitor, papan PCB, gas, pam saliran) daripada pembekal Malaysia yang dipercayai — tidak sekali-kali alat ganti tiruan atau tidak disahkan. Jika unit {brand.name} anda masih dalam waranti pengeluar, kami akan maklumkan terlebih dahulu sama ada pembaikan mungkin menjejaskan waranti tersebut, supaya anda boleh memilih untuk pergi ke pusat servis rasmi {brand.name} sendiri jika perlu. Tugas kami adalah servis jujur dan telus — bukan menjual unit baharu yang anda tidak perlukan.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {brand.faqsBM?.length > 0 && (
         <section className="py-10 bg-slate-50 border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
