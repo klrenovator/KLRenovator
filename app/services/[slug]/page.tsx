@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
+import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 
 export function generateStaticParams() {
@@ -1236,6 +1237,12 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      {/* ── TikTok Vertical Video Showcase ── Round 13 / 20G.72 & 11.7 ──
+          Only shown on the chemical-wash service page since that's the
+          most-watched service in our videos. Lazy facade pattern keeps
+          initial page weight zero — real iframe only loads on click. */}
+      {slug === "chemical-wash" && <TikTokShowcase locale="en" />}
     </>
   );
 }
