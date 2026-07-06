@@ -262,6 +262,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
               sizes="100vw"
               className="object-cover object-center"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/70 to-white/40" />
@@ -305,6 +306,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 sizes="(min-width: 1024px) 896px, 100vw"
                 className="object-cover"
                 loading="lazy"
+                decoding="async"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-4 py-2 text-[11px] font-semibold text-white/90">
                 {post.imageAlt}
@@ -567,6 +569,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div className="p-5">
