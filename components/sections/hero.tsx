@@ -52,6 +52,15 @@ const HERO_IMAGES = [
   },
 ];
 
+// Round 16 / 20H.80 — keep the LCP image predictable on mobile:
+// - `svh` avoids mobile browser address-bar vh jumps.
+// - 360/414px device sizes are added in next.config.mjs, so this `sizes`
+//   string can now select a true phone-sized image instead of 640px+.
+// - tiny neutral blur placeholder prevents a blank flash without layout shift.
+const HERO_IMAGE_SIZES = "(max-width: 480px) 100vw, (max-width: 768px) 100vw, 100vw";
+const HERO_BLUR_DATA_URL =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMjgnIHZpZXdCb3g9JzAgMCAxNiAyOCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9J2cnIHgxPScwJyB5MT0nMCcgeDI9JzEnIHkyPScxJz48c3RvcCBzdG9wLWNvbG9yPScjMGYxNzJhJy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDI4NGM3Jy8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9JzE2JyBoZWlnaHQ9JzI4JyBmaWxsPSd1cmwoI2cpJy8+PC9zdmc+";
+
 export const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [previous, setPrevious] = useState<number | null>(null);
@@ -84,7 +93,7 @@ export const Hero = () => {
   const previousImage = previous === null ? null : HERO_IMAGES[previous];
 
   return (
-    <section className="relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden bg-slate-900">
+    <section className="relative w-full min-h-[calc(100svh-5rem)] sm:min-h-[calc(100svh-7rem)] flex items-center justify-center overflow-hidden bg-slate-900">
       {/* Background slideshow — CSS-only transition, no framer-motion runtime */}
       <div className="absolute inset-0 z-0">
         {previousImage && (
@@ -93,10 +102,12 @@ export const Hero = () => {
             src={previousImage.src}
             alt={previousImage.alt}
             fill
-            sizes="100vw"
+            sizes={HERO_IMAGE_SIZES}
             className="object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out"
             loading="lazy"
-            quality={82}
+            placeholder="blur"
+            blurDataURL={HERO_BLUR_DATA_URL}
+            quality={76}
           />
         )}
         <Image
@@ -106,9 +117,12 @@ export const Hero = () => {
           fill
           priority={current === 0}
           loading={current === 0 ? "eager" : "lazy"}
-          sizes="100vw"
+          fetchPriority={current === 0 ? "high" : "auto"}
+          sizes={HERO_IMAGE_SIZES}
           className="object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out"
-          quality={82}
+          placeholder="blur"
+          blurDataURL={HERO_BLUR_DATA_URL}
+          quality={76}
         />
 
         {/* Lighter overlay — images clearly visible */}
