@@ -5,6 +5,8 @@ import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+
+const DEDICATED_STATIC_SERVICE_SLUGS = new Set(["emergency", "maintenance-contract"]);
 import { servicesData } from "@/config/services-data";
 import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
@@ -16,7 +18,13 @@ import { buildServiceSchema } from "@/lib/seo";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 
 export function generateStaticParams() {
-  return siteConfig.services.map((s) => ({ slug: s.slug }));
+  // Round 22 / AMC hotfix: exclude service routes that have their own
+  // dedicated static page files. Including maintenance-contract here can
+  // let the dynamic [slug] route prerender a notFound() response because
+  // servicesData intentionally does not contain the AMC landing-page copy.
+  return siteConfig.services
+    .filter((s) => !DEDICATED_STATIC_SERVICE_SLUGS.has(s.slug))
+    .map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
