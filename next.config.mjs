@@ -18,6 +18,11 @@ const nextConfig = {
     minimumCacheTTL: 604800,
   },
   // ✅ Force non-www to www redirect (application-level)
+  // ✅ PLUS Malay URL slug aliases — Round 13 / 20F.51 (Decision Locked 2026-07-06):
+  // Friendly /servis/* Malay short-URLs permanently 301 to the canonical
+  // /ms/services/* pages. Preserves all EN/MS canonical routes and SEO
+  // equity while capturing native Bahasa Malaysia search queries like
+  // "cuci aircond KL", "servis aircond murah", "harga pasang aircond".
   async redirects() {
     return [
       {
@@ -31,6 +36,20 @@ const nextConfig = {
         destination: 'https://www.klrenovator.com/:path*',
         permanent: true,
       },
+      // ── Malay URL slug aliases (Round 13 / 20F.51) ─────────────
+      // Top-volume native search queries redirected to canonical MS pages.
+      // 301 permanent preserves full link equity.
+      { source: '/servis/cuci-aircond-kl',          destination: '/ms/services/chemical-wash',          permanent: true },
+      { source: '/servis/cuci-aircond',             destination: '/ms/services/chemical-wash',          permanent: true },
+      { source: '/cuci-aircond',                    destination: '/ms/services/chemical-wash',          permanent: true },
+      { source: '/cuci-aircond-kl',                 destination: '/ms/services/chemical-wash',          permanent: true },
+      { source: '/servis/aircond-murah',            destination: '/ms/services/basic-servicing',        permanent: true },
+      { source: '/aircond-murah',                   destination: '/ms/services/basic-servicing',        permanent: true },
+      { source: '/harga-pasang-aircond',            destination: '/ms/services/installation',           permanent: true },
+      { source: '/pasang-aircond',                  destination: '/ms/services/installation',           permanent: true },
+      { source: '/servis/baiki-aircond-kl',         destination: '/ms/services/repair',                 permanent: true },
+      { source: '/baiki-aircond',                   destination: '/ms/services/repair',                 permanent: true },
+      { source: '/kontrak-penyelenggaraan-aircond', destination: '/ms/services/maintenance-contract',   permanent: true },
     ];
   },
   // ✅ Security headers — Google trust/ranking signal + Lighthouse "Best Practices"
