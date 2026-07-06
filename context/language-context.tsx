@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 export type Lang = "en" | "ms" | "zh";
 
@@ -135,17 +135,17 @@ const LangContext = createContext<LangContextType>({
   t: (k) => translations["en"][k],
 });
 
-export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>("en");
-  const [mounted, setMounted] = useState(false);
+function getInitialLang(): Lang {
+  if (typeof window === "undefined") return "en";
+  try {
+    const saved = localStorage.getItem("klr_lang") as Lang | null;
+    if (saved && ["en", "ms", "zh"].includes(saved)) return saved;
+  } catch {}
+  return "en";
+}
 
-  useEffect(() => {
-    setMounted(true);
-    try {
-      const saved = localStorage.getItem("klr_lang") as Lang | null;
-      if (saved && ["en", "ms", "zh"].includes(saved)) setLangState(saved);
-    } catch {}
-  }, []);
+export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
+  const [lang, setLangState] = useState<Lang>(getInitialLang);
 
   const setLang = (l: Lang) => {
     setLangState(l);
@@ -156,14 +156,6 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     ((translations[lang] as Record<string, string>)[key]) ??
     ((translations["en"] as Record<string, string>)[key]) ??
     key;
-
-  if (!mounted) {
-    return (
-      <LangContext.Provider value={{ lang: "en", setLang: () => {}, t: (k) => translations["en"][k] }}>
-        {children}
-      </LangContext.Provider>
-    );
-  }
 
   return (
     <LangContext.Provider value={{ lang, setLang, t }}>
