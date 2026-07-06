@@ -12,6 +12,7 @@ import { BookingButton } from "@/components/booking-button";
 import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
+import { buildServiceSchema } from "@/lib/seo";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 
 export function generateStaticParams() {
@@ -268,50 +269,17 @@ export default async function ServicePage({
   const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
   const proofImages = SERVICE_PROOF_IMAGES[slug] ?? SERVICE_PROOF_IMAGES["installation"];
 
-  // ── Schema — fixed: HVACBusiness (not HomeAndConstructionBusiness) ──────────
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  // ── Service Schema — Round 19 / 20H.85 parity via shared builder ──
+  const serviceSchema = buildServiceSchema({
+    slug,
     name: data.title,
     description: data.tagline,
-    url: `https://www.klrenovator.com/services/${slug}`,
-    provider: {
-      "@type": "HVACBusiness",
-      "@id": "https://www.klrenovator.com/#business",
-      name: siteConfig.name,
-      telephone: siteConfig.phone,
-      url: "https://www.klrenovator.com",
-    },
-    areaServed: [
-      { "@type": "City", name: "Kuala Lumpur" },
-      { "@type": "State", name: "Selangor" },
-    ],
-    offers: {
-      "@type": "Offer",
-      price: service?.startPrice ?? 88,
-      priceCurrency: "MYR",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        price: service?.startPrice ?? 88,
-        priceCurrency: "MYR",
-        description: `Starting from RM ${service?.startPrice ?? 88}`,
-      },
-      availability: "https://schema.org/InStock",
-      areaServed: "Kuala Lumpur and Selangor, Malaysia",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `${data.title} Pricing`,
-      itemListElement: data.priceTable.map(
-        (row: { label: string; price: string }, i: number) => ({
-          "@type": "Offer",
-          position: i + 1,
-          name: row.label,
-          description: row.price,
-        }),
-      ),
-    },
-  };
+    startPrice: service?.startPrice ?? 88,
+    locale: "en",
+    priceTable: data.priceTable,
+    pricingName: `${data.title} Pricing`,
+    priceDescription: `Starting from RM ${service?.startPrice ?? 88}`,
+  });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
