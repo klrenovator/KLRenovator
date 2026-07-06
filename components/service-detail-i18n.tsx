@@ -13,6 +13,7 @@ import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-authority-map";
+import { buildServiceSchema } from "@/lib/seo";
 
 type Lang = "ms" | "zh";
 
@@ -372,47 +373,16 @@ export function ServiceDetailI18n({
   };
 
   // ── Schemas ─────────────────────────────────────────────────────────────
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = buildServiceSchema({
+    slug,
     name: tTitle,
     description: tTagline,
-    url: `https://www.klrenovator.com${langPrefix}/services/${slug}`,
-    provider: {
-      "@type": "HVACBusiness",
-      "@id": "https://www.klrenovator.com/#business",
-      name: siteConfig.name,
-      telephone: siteConfig.phone,
-      url: "https://www.klrenovator.com",
-    },
-    areaServed: [
-      { "@type": "City", name: "Kuala Lumpur" },
-      { "@type": "State", name: "Selangor" },
-    ],
-    offers: {
-      "@type": "Offer",
-      price: service?.startPrice ?? 88,
-      priceCurrency: "MYR",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        price: service?.startPrice ?? 88,
-        priceCurrency: "MYR",
-        description: `${pick("fromWord")} RM ${service?.startPrice ?? 88}`,
-      },
-      availability: "https://schema.org/InStock",
-      areaServed: "Kuala Lumpur and Selangor, Malaysia",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `${tTitle} ${pick("pricing")}`,
-      itemListElement: tPriceTable.map((row: { label: string; price: string }, i: number) => ({
-        "@type": "Offer",
-        position: i + 1,
-        name: row.label,
-        description: row.price,
-      })),
-    },
-  };
+    startPrice: service?.startPrice ?? 88,
+    locale: lang,
+    priceTable: tPriceTable,
+    pricingName: `${tTitle} ${pick("pricing")}`,
+    priceDescription: `${pick("fromWord")} RM ${service?.startPrice ?? 88}`,
+  });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
