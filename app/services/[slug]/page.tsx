@@ -381,6 +381,7 @@ export default async function ServicePage({
             sizes="100vw"
             className="object-cover object-center"
             loading="eager"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30" />
@@ -608,6 +609,7 @@ export default async function ServicePage({
                       sizes="(min-width: 1024px) 33vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <figcaption className="p-4">
