@@ -375,6 +375,7 @@ export default async function AreaPage({
             sizes="100vw"
             className="object-cover object-center"
             loading="eager"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/75 to-white/40" />
