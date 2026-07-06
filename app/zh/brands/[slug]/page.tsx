@@ -244,7 +244,8 @@ export default async function BrandPageZH({
                       fill
                       sizes="50vw"
                       className="object-cover"
-                      loading={i < 2 ? "eager" : "lazy"}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
