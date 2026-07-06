@@ -229,6 +229,7 @@ export const Navbar = () => {
             fill
             sizes="(max-width: 768px) 224px, 256px"
             loading="eager"
+            decoding="async"
             fetchPriority="low"
             className="object-contain object-left"
           />
