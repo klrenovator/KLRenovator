@@ -246,7 +246,8 @@ export default async function BrandPageMS({
                       fill
                       sizes="50vw"
                       className="object-cover"
-                      loading={i < 2 ? "eager" : "lazy"}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
