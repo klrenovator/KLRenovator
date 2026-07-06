@@ -314,7 +314,7 @@ export default function NearMeClient() {
                   key={p.src}
                   className={`relative overflow-hidden rounded-2xl border border-slate-200 ${i === 0 ? "col-span-2 aspect-[16/9]" : "aspect-square"}`}
                 >
-                  <Image src={p.src} alt={p.alt} fill loading={i === 0 ? "eager" : "lazy"} sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  <Image src={p.src} alt={p.alt} fill loading="lazy" decoding="async" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                 </div>
               ))}
             </div>
