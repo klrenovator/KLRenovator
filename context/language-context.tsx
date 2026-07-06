@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 export type Lang = "en" | "ms" | "zh";
 
@@ -135,17 +135,25 @@ const LangContext = createContext<LangContextType>({
   t: (k) => translations["en"][k],
 });
 
-function getInitialLang(): Lang {
-  if (typeof window === "undefined") return "en";
-  try {
-    const saved = localStorage.getItem("klr_lang") as Lang | null;
-    if (saved && ["en", "ms", "zh"].includes(saved)) return saved;
-  } catch {}
-  return "en";
-}
-
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>(getInitialLang);
+  // Start with "en" on server. On client, immediately correct from localStorage
+  // using a layout effect (runs synchronously before paint) — this eliminates
+  // the one-render English flash that useEffect caused.
+  const [lang, setLangState] = useState<Lang>("en");
+
+  // useLayoutEffect fires before the browser paints, so the user never sees
+  // the wrong language. Falls back to useEffect on server (SSR safe).
+  const useIsomorphicLayoutEffect =
+    typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
+
+  useIsomorphicLayoutEffect(() => {
+    try {
+      const saved = localStorage.getItem("klr_lang") as Lang | null;
+      if (saved && ["en", "ms", "zh"].includes(saved)) {
+        setLangState(saved);
+      }
+    } catch {}
+  }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
