@@ -1,87 +1,44 @@
-"use client";
-
-import {
-  useEffect,
-  useRef,
-  useState,
-  type ReactNode,
-  type ElementType,
-} from "react";
+import { type ElementType, type ReactNode } from "react";
 import clsx from "clsx";
 
 type RevealProps = {
   children: ReactNode;
+  /**
+   * Kept for backwards compatibility with existing call sites.
+   * Round 17 / 20H.81 intentionally does not run JS timers or
+   * IntersectionObserver per block, so delay is no longer executed.
+   */
   delay?: number;
   className?: string;
   as?: ElementType;
+  /**
+   * Kept for backwards compatibility with existing call sites.
+   * No client-side observer means there is no repeated animation state.
+   */
   once?: boolean;
 };
 
 /**
- * Scroll-reveal wrapper.
+ * Zero-JS reveal wrapper.
  *
- * IMPORTANT: Content is ALWAYS visible by default (no `reveal-hidden` class
- * is ever applied in SSR or before JS runs). If a supported IntersectionObserver
- * is present and the element enters the viewport, we apply the fade-up
- * animation. If anything goes wrong, the content simply stays visible.
+ * Earlier versions of this component were a Client Component that created a
+ * React state hook, timeout and IntersectionObserver for every <Reveal> block.
+ * Area and brand templates render dozens of these wrappers per page, which
+ * inflated hydration work and Total Blocking Time on crawl-heavy pages.
  *
- * This avoids any scenario where text becomes permanently invisible.
+ * Round 17 / 20H.81 converts Reveal into a plain render wrapper. Content stays
+ * visible in SSR, there is no layout shift, and heavy area/brand grids no
+ * longer pay per-card client-side observer cost. The prop API is preserved so
+ * existing pages do not need mass edits.
  */
 export const Reveal = ({
   children,
-  delay = 0,
+  delay: _delay = 0,
   className,
   as: Tag = "div",
-  once = true,
+  once: _once = true,
 }: RevealProps) => {
-  const ref = useRef<HTMLElement | null>(null);
-  const [animated, setAnimated] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const node = ref.current;
-    if (!node) return;
-
-    // Reduced motion — never animate, always visible.
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    // If IntersectionObserver isn't available, skip animation entirely.
-    if (!("IntersectionObserver" in window)) {
-      setAnimated(true);
-      return;
-    }
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setAnimated(true);
-            if (once) io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
-    );
-
-    io.observe(node);
-
-    // Safety net: if IO hasn't fired in 1.2s, just show normally.
-    const t = window.setTimeout(() => setAnimated(true), 1200);
-
-    return () => {
-      io.disconnect();
-      window.clearTimeout(t);
-    };
-  }, [once]);
-
   const Component = Tag as any;
-  return (
-    <Component
-      ref={ref as any}
-      className={clsx(animated && "reveal-visible", className)}
-      style={animated ? { animationDelay: `${delay}ms` } : undefined}
-    >
-      {children}
-    </Component>
-  );
+
+  return <Component className={clsx(className)}>{children}</Component>;
 };
