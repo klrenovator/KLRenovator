@@ -102,6 +102,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
             sizes="100vw"
             className="object-cover"
             loading="eager"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
@@ -155,6 +156,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="eager"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 flex items-end justify-between gap-6">
@@ -195,6 +197,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent" />
                     </div>
