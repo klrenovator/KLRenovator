@@ -373,7 +373,8 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading={index < 6 ? "eager" : "lazy"}
+                        loading="lazy"
+                        decoding="async"
                       />
                       {item.before && (
                         <span className="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
@@ -417,11 +418,11 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
                 <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
                   <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/midea-aircond-chemical-wash-klang-61.webp" alt="Before chemical wash — dirty aircond coil with mould buildup" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/midea-aircond-chemical-wash-klang-61.webp" alt="Before chemical wash — dirty aircond coil with mould buildup" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
                     </div>
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/daikin-aircond-chemical-wash-kuala-lumpur-1.webp" alt="After chemical wash — clean evaporator coil restored to near-new condition" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/daikin-aircond-chemical-wash-kuala-lumpur-1.webp" alt="After chemical wash — clean evaporator coil restored to near-new condition" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
                     </div>
                   </div>
@@ -434,11 +435,11 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
                 <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
                   <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/aircond-compressor-bracket-installation-kl.webp" alt="Before installation — old equipment and disconnected outdoor unit" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/aircond-compressor-bracket-installation-kl.webp" alt="Before installation — old equipment and disconnected outdoor unit" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
                     </div>
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/aircond-installation-kuala-lumpur.webp" alt="After — new wall-mounted aircond professionally installed with clean cable routing" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/aircond-installation-kuala-lumpur.webp" alt="After — new wall-mounted aircond professionally installed with clean cable routing" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
                     </div>
                   </div>
@@ -451,11 +452,11 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
                 <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
                   <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/aircond-chemical-overhaul-ampang-selangor.webp" alt="Before overhaul — fully dismantled indoor unit showing severe internal dirt and biofilm" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/aircond-chemical-overhaul-ampang-selangor.webp" alt="Before overhaul — fully dismantled indoor unit showing severe internal dirt and biofilm" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
                     </div>
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/panasonic-aircond-chemical-overhaul-kuala-lumpur-2.webp" alt="After overhaul — drain pan and coil scrubbed clean, all internal components restored" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/panasonic-aircond-chemical-overhaul-kuala-lumpur-2.webp" alt="After overhaul — drain pan and coil scrubbed clean, all internal components restored" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
                     </div>
                   </div>
@@ -468,11 +469,11 @@ export function GalleryPageI18n({ lang }: { lang: Lang }) {
                 <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
                   <div className="grid grid-cols-2 gap-0.5 bg-slate-300">
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/aircond-pcb-board-replacement-2-klang-valley.webp" alt="Before repair — faulty PCB board with error codes causing no cooling" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/aircond-pcb-board-replacement-2-klang-valley.webp" alt="Before repair — faulty PCB board with error codes causing no cooling" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 left-2 bg-red-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.before}</span>
                     </div>
                     <div className="relative aspect-square bg-slate-200">
-                      <NextImage src="/hero/aircond-pcb-board-replacement-kl.webp" alt="After repair — new PCB board installed, unit cooling perfectly again" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" />
+                      <NextImage src="/hero/aircond-pcb-board-replacement-kl.webp" alt="After repair — new PCB board installed, unit cooling perfectly again" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" loading="lazy" decoding="async" />
                       <span className="absolute bottom-2 right-2 bg-emerald-500/90 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">{t.after}</span>
                     </div>
                   </div>
