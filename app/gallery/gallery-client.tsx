@@ -236,7 +236,8 @@ export function GalleryClient() {
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading={index < 6 ? "eager" : "lazy"}
+                        loading="lazy"
+                        decoding="async"
                       />
                       {item.before && (
                         <span className="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
