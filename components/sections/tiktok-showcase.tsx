@@ -24,8 +24,8 @@ import { waLink } from "@/lib/whatsapp";
 
 // 5 LOCKED TikTok short video URLs (provided by user 2026-07-06).
 // Order matches handoff v19 Section 7. We keep the short share URLs for
-// outbound clicks, and use the resolved numeric TikTok video IDs for the
-// lazy iframe embed URLs because TikTok embed/v2 requires numeric IDs.
+// outbound clicks, and use the resolved numeric TikTok video IDs with
+// TikTok's official player/v1 iframe for reliable single-click playback.
 const TIKTOK_VIDEOS: ReadonlyArray<{
   id: string;
   videoId: string;
@@ -41,7 +41,7 @@ const TIKTOK_VIDEOS: ReadonlyArray<{
     videoId: "7638847576980065554",
     url: "https://vt.tiktok.com/ZSCteJX6e/",
     canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7638847576980065554",
-    embedUrl: "https://www.tiktok.com/embed/v2/7638847576980065554",
+    embedUrl: "https://www.tiktok.com/player/v1/7638847576980065554",
     caption: "Petaling Jaya aircond installation with neat piping",
     captionMS: "Pemasangan aircond di Petaling Jaya dengan piping kemas",
     captionZH: "八打灵再也冷气安装，管线整齐",
@@ -51,7 +51,7 @@ const TIKTOK_VIDEOS: ReadonlyArray<{
     videoId: "7636810709262781703",
     url: "https://vt.tiktok.com/ZSCtenFmj/",
     canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7636810709262781703",
-    embedUrl: "https://www.tiktok.com/embed/v2/7636810709262781703",
+    embedUrl: "https://www.tiktok.com/player/v1/7636810709262781703",
     caption: "Three aircond units installed in one day",
     captionMS: "Tiga unit aircond dipasang dalam satu hari",
     captionZH: "一天内完成三台冷气安装",
@@ -61,7 +61,7 @@ const TIKTOK_VIDEOS: ReadonlyArray<{
     videoId: "7635682478841187602",
     url: "https://vt.tiktok.com/ZSCtetdg3/",
     canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7635682478841187602",
-    embedUrl: "https://www.tiktok.com/embed/v2/7635682478841187602",
+    embedUrl: "https://www.tiktok.com/player/v1/7635682478841187602",
     caption: "Aircond servicing, chemical cleaning and new installation support",
     captionMS: "Servis aircond, cucian kimia dan sokongan pemasangan baru",
     captionZH: "冷气保养、化学清洗与新机安装服务",
@@ -71,7 +71,7 @@ const TIKTOK_VIDEOS: ReadonlyArray<{
     videoId: "7624823112177093906",
     url: "https://vt.tiktok.com/ZSCteQ3UC/",
     canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7624823112177093906",
-    embedUrl: "https://www.tiktok.com/embed/v2/7624823112177093906",
+    embedUrl: "https://www.tiktok.com/player/v1/7624823112177093906",
     caption: "Eight aircond installations completed in one day",
     captionMS: "Lapan pemasangan aircond siap dalam satu hari",
     captionZH: "一天内完成八台冷气安装",
@@ -81,7 +81,7 @@ const TIKTOK_VIDEOS: ReadonlyArray<{
     videoId: "7624113759505763591",
     url: "https://vt.tiktok.com/ZSCteu1fL/",
     canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7624113759505763591",
-    embedUrl: "https://www.tiktok.com/embed/v2/7624113759505763591",
+    embedUrl: "https://www.tiktok.com/player/v1/7624113759505763591",
     caption: "Outdoor condenser cleaning to improve cooling performance",
     captionMS: "Cucian kondenser luar untuk tingkatkan prestasi penyejukan",
     captionZH: "清洗室外冷凝器，提升制冷表现",
@@ -132,9 +132,31 @@ function captionOf(v: (typeof TIKTOK_VIDEOS)[number], loc: Locale): string {
   return v.caption;
 }
 
-function embedUrlOf(v: (typeof TIKTOK_VIDEOS)[number], loc: Locale): string {
+function embedUrlOf(
+  v: (typeof TIKTOK_VIDEOS)[number],
+  loc: Locale,
+  autoplay = false
+): string {
   const lang = loc === "ms" ? "ms-MY" : loc === "zh" ? "zh-Hans" : "en";
-  return `${v.embedUrl}?lang=${encodeURIComponent(lang)}`;
+  const params = new URLSearchParams({
+    lang,
+    autoplay: autoplay ? "1" : "0",
+    // Muted autoplay is the most reliable cross-browser behavior after a
+    // user taps the facade. Users can unmute inside the TikTok player.
+    muted: autoplay ? "1" : "0",
+    controls: "1",
+    progress_bar: "1",
+    play_button: "1",
+    volume_control: "1",
+    fullscreen_button: "1",
+    loop: "0",
+    rel: "0",
+    description: "0",
+    music_info: "0",
+    native_context_menu: "1",
+  });
+
+  return `${v.embedUrl}?${params.toString()}`;
 }
 
 function TikTokCard({
@@ -151,6 +173,7 @@ function TikTokCard({
   const [playing, setPlaying] = useState(false);
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const t = I18N[loc];
 
   useEffect(() => {
@@ -172,6 +195,26 @@ function TikTokCard({
     return () => obs.disconnect();
   }, [anyPlayed]);
 
+  const nudgeTikTokPlay = useCallback(() => {
+    const playerWindow = iframeRef.current?.contentWindow;
+    if (!playerWindow) return;
+
+    // TikTok player/v1 supports postMessage controls. We send a small
+    // delayed play nudge after the iframe loads; autoplay=1&muted=1 remains
+    // the primary mechanism, this is a safe fallback for slower mobile loads.
+    playerWindow.postMessage({ type: "play", "x-tiktok-player": true }, "https://www.tiktok.com");
+  }, []);
+
+  useEffect(() => {
+    if (!playing) return;
+    const timers = [
+      window.setTimeout(nudgeTikTokPlay, 500),
+      window.setTimeout(nudgeTikTokPlay, 1200),
+    ];
+
+    return () => timers.forEach((timer) => window.clearTimeout(timer));
+  }, [playing, nudgeTikTokPlay]);
+
   const onPlay = useCallback(() => {
     setPlaying(true);
     setAnyPlayed();
@@ -187,13 +230,15 @@ function TikTokCard({
       <div className="relative w-full" style={{ aspectRatio: "9 / 16" }}>
         {shouldRenderIframe ? (
           <iframe
-            src={embedUrlOf(v, loc)}
+            ref={iframeRef}
+            src={embedUrlOf(v, loc, playing)}
             title={captionOf(v, loc)}
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="autoplay; fullscreen; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             loading="lazy"
             className="absolute inset-0 h-full w-full border-0"
             referrerPolicy="strict-origin-when-cross-origin"
+            onLoad={playing ? nudgeTikTokPlay : undefined}
           />
         ) : (
           <button
@@ -254,7 +299,7 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
       description: `${captionOf(v, loc)} \u2014 KL Renovator real-job video. ${siteConfig.tagline}`,
       url: v.canonicalUrl,
       contentUrl: v.url,
-      embedUrl: embedUrlOf(v, loc),
+      embedUrl: embedUrlOf(v, loc, false),
       sameAs: [v.url],
       inLanguage: loc === "ms" ? "ms-MY" : loc === "zh" ? "zh-MY" : "en-MY",
       uploadDate: "2026-07-06",
