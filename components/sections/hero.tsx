@@ -105,6 +105,7 @@ export const Hero = () => {
             sizes={HERO_IMAGE_SIZES}
             className="object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out"
             loading="lazy"
+            decoding="async"
             placeholder="blur"
             blurDataURL={HERO_BLUR_DATA_URL}
             quality={76}
@@ -117,6 +118,7 @@ export const Hero = () => {
           fill
           priority={current === 0}
           loading={current === 0 ? "eager" : "lazy"}
+          decoding="async"
           fetchPriority={current === 0 ? "high" : "auto"}
           sizes={HERO_IMAGE_SIZES}
           className="object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out"
