@@ -9,7 +9,7 @@ import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { ConversionWidgets } from "@/components/conversion-widgets";
+import { ConversionWidgetsLoader } from "@/components/conversion-widgets-loader";
 import { googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
@@ -604,7 +604,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
-            <ConversionWidgets />
+            <ConversionWidgetsLoader />
           </div>
         </Providers>
       </body>
