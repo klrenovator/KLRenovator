@@ -23,19 +23,16 @@ import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
 // 5 LOCKED TikTok short video URLs (provided by user 2026-07-06).
-// Order matches handoff v19 Section 7.
-type TikTokVideo = {
+// Order matches handoff v19 Section 7. We keep them in this exact order
+// because the user already approved this curation.
+const TIKTOK_VIDEOS: ReadonlyArray<{
   id: string;
   url: string;
   embedUrl: string;
   caption: string;
   captionMS: string;
   captionZH: string;
-};
-
-type Locale = "en" | "ms" | "zh";
-
-const TIKTOK_VIDEOS: ReadonlyArray<TikTokVideo> = [
+}> = [
   {
     id: "tt-1",
     url: "https://vt.tiktok.com/ZSCteJX6e/",
@@ -78,48 +75,61 @@ const TIKTOK_VIDEOS: ReadonlyArray<TikTokVideo> = [
   },
 ];
 
+type Locale = "en" | "ms" | "zh";
+
 const I18N = {
   en: {
     eyebrow: "Real Jobs. Real Reels.",
     title: "Watch KL Renovator on TikTok",
     subtitle:
-      "Short, honest videos from real servicing jobs across Klang Valley — no studio, no scripts, just technicians doing the work.",
+      "Short, honest videos from real servicing jobs across Klang Valley \u2014 no studio, no scripts, just technicians doing the work.",
     playCta: "Play video",
     openCta: "Open on TikTok",
     followCta: "Follow @klrenovator",
-    moreCta: "More real-work videos coming every week — book a slot today",
+    moreCta: "More real-work videos coming every week \u2014 book a slot today",
     bookWa: "Book on WhatsApp",
   },
   ms: {
     eyebrow: "Kerja Sebenar. Video Sebenar.",
     title: "Tonton KL Renovator di TikTok",
     subtitle:
-      "Video pendek dan jujur dari kerja servis sebenar di sekitar Lembah Klang — tiada studio, tiada skrip, hanya juruteknik yang buat kerja.",
+      "Video pendek dan jujur dari kerja servis sebenar di sekitar Lembah Klang \u2014 tiada studio, tiada skrip, hanya juruteknik yang buat kerja.",
     playCta: "Main video",
     openCta: "Buka di TikTok",
     followCta: "Ikuti @klrenovator",
-    moreCta: "Lebih banyak video kerja sebenar setiap minggu — tempah slot hari ini",
+    moreCta: "Lebih banyak video kerja sebenar setiap minggu \u2014 tempah slot hari ini",
     bookWa: "Tempah di WhatsApp",
   },
   zh: {
-    eyebrow: "真实工作。真实短视频。",
-    title: "在 TikTok 观看 KL Renovator",
-    subtitle: "来自巴生谷真实维修工作的简短诚实视频 — 没有摄影棚，没有脚本，只有认真工作的技师。",
-    playCta: "播放视频",
-    openCta: "在 TikTok 打开",
-    followCta: "关注 @klrenovator",
-    moreCta: "每周发布更多真实工作视频 — 立即 WhatsApp 预约",
-    bookWa: "WhatsApp 预约",
+    eyebrow: "\u771f\u5b9e\u5de5\u4f5c\u3002\u771f\u5b9e\u77ed\u89c6\u9891\u3002",
+    title: "\u5728 TikTok \u89c2\u770b KL Renovator",
+    subtitle:
+      "\u6765\u81ea\u5df4\u751f\u8c37\u771f\u5b9e\u7ef4\u4fee\u5de5\u4f5c\u7684\u7b80\u77ed\u8bda\u5b9e\u89c6\u9891 \u2014 \u6ca1\u6709\u6444\u5f71\u680b\uff0c\u6ca1\u6709\u811a\u672c\uff0c\u53ea\u6709\u8ba4\u771f\u5de5\u4f5c\u7684\u6280\u5e08\u3002",
+    playCta: "\u64ad\u653e\u89c6\u9891",
+    openCta: "\u5728 TikTok \u6253\u5f00",
+    followCta: "\u5173\u6ce8 @klrenovator",
+    moreCta: "\u6bcf\u5468\u53d1\u5e03\u66f4\u591a\u771f\u5b9e\u5de5\u4f5c\u89c6\u9891 \u2014 \u7acb\u5373 WhatsApp \u9884\u7ea6",
+    bookWa: "WhatsApp \u9884\u7ea6",
   },
-};
+} as const;
 
-function captionOf(v: TikTokVideo, loc: Locale): string {
+function captionOf(v: (typeof TIKTOK_VIDEOS)[number], loc: Locale): string {
   if (loc === "ms") return v.captionMS;
   if (loc === "zh") return v.captionZH;
   return v.caption;
 }
 
-function TikTokCard({ v, loc, anyPlayed, setAnyPlayed }: { v: TikTokVideo; loc: Locale; anyPlayed: boolean; setAnyPlayed: () => void; }) {
+function TikTokCard({
+  v,
+  loc,
+  anyPlayed,
+  setAnyPlayed,
+}: {
+  v: (typeof TIKTOK_VIDEOS)[number];
+  loc: Locale;
+  anyPlayed: boolean;
+  setAnyPlayed: () => void;
+}) {
   const [playing, setPlaying] = useState(false);
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -164,6 +174,7 @@ function TikTokCard({ v, loc, anyPlayed, setAnyPlayed }: { v: TikTokVideo; loc: 
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             loading="lazy"
+            decoding="async"
             className="absolute inset-0 h-full w-full border-0"
             referrerPolicy="strict-origin-when-cross-origin"
           />
@@ -171,7 +182,7 @@ function TikTokCard({ v, loc, anyPlayed, setAnyPlayed }: { v: TikTokVideo; loc: 
           <button
             type="button"
             onClick={onPlay}
-            aria-label={t.playCta + ": " + captionOf(v, loc)}
+            aria-label={`${t.playCta}: ${captionOf(v, loc)}`}
             className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white transition hover:from-slate-800 hover:to-slate-800 focus:outline-none focus:ring-4 focus:ring-sky-400/40"
           >
             <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/15 backdrop-blur transition group-hover:scale-110 group-hover:bg-white/25">
@@ -222,7 +233,7 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
       "@type": "VideoObject",
       position: i + 1,
       name: captionOf(v, loc),
-      description: captionOf(v, loc) + " — KL Renovator real-job video. " + siteConfig.tagline,
+      description: `${captionOf(v, loc)} \u2014 KL Renovator real-job video. ${siteConfig.tagline}`,
       contentUrl: v.url,
       embedUrl: v.embedUrl,
       uploadDate: "2026-07-06",
@@ -241,7 +252,7 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
   const waMsg = loc === "ms"
     ? "Hi KL Renovator, saya nak tempah slot servis aircond."
     : loc === "zh"
-    ? "你好 KL Renovator，我想预约冷气维修。"
+    ? "\u4f60\u597d KL Renovator\uff0c\u6211\u60f3\u9884\u7ea6\u51b7\u6c14\u7ef4\u4fee\u3002"
     : "Hi KL Renovator, I'd like to book an aircond servicing slot.";
 
   return (
