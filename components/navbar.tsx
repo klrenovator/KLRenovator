@@ -227,7 +227,9 @@ export const Navbar = () => {
             src="/logo/image.png"
             alt="KL Renovator Aircon Specialist Logo"
             fill
-            priority
+            sizes="(max-width: 768px) 224px, 256px"
+            loading="eager"
+            fetchPriority="low"
             className="object-contain object-left"
           />
         </NextLink>
