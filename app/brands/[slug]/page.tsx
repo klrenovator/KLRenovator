@@ -293,6 +293,7 @@ export default async function BrandPage({
             sizes="100vw"
             className="object-cover object-center"
             loading="eager"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
@@ -512,7 +513,8 @@ export default async function BrandPage({
                       fill
                       sizes="(max-width: 768px) 50vw, 25vw"
                       className="object-cover"
-                      loading={i < 2 ? "eager" : "lazy"}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
