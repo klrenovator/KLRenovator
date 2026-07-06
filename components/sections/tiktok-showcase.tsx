@@ -174,7 +174,6 @@ function TikTokCard({
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             loading="lazy"
-            decoding="async"
             className="absolute inset-0 h-full w-full border-0"
             referrerPolicy="strict-origin-when-cross-origin"
           />
