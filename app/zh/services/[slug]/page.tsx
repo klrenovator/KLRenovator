@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { servicesData } from "@/config/services-data";
 import { serviceI18n } from "@/config/services-i18n";
 import { ServiceDetailI18n } from "@/components/service-detail-i18n";
+import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 
 export function generateStaticParams() {
   return siteConfig.services.map((s) => ({ slug: s.slug }));
@@ -47,5 +48,10 @@ export default async function ZhServicePage({
   params: Promise<{ slug: string }>;
 }): Promise<React.ReactElement> {
   const { slug } = await params;
-  return <ServiceDetailI18n lang="zh" slug={slug} />;
+  return (
+    <>
+      <ServiceDetailI18n lang="zh" slug={slug} />
+      {slug === "chemical-wash" && <TikTokShowcase locale="zh" />}
+    </>
+  );
 }
