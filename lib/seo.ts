@@ -1,13 +1,13 @@
 // ─────────────────────────────────────────────────────────────────────────
-// SEO/Schema helpers — Round 14 / 20H.84 + 20H.85
+// SEO/Schema helpers — 20H.84 + 20H.85
 // ─────────────────────────────────────────────────────────────────────────
 // Centralized builders for LocalBusiness / Service / areaServed JSON-LD
-// schema. Round 14 goal: emit properly-typed, GeoCoordinate-aware
-// areaServed array using `siteConfig.areaPages` (structured entries with
-// lat/lng/state/name) instead of the flat `siteConfig.areas` (plain
-// string list). Each entry now carries GeoCoordinates payload, which
-// Google has confirmed is a positive ranking signal for "service
-// business + local" queries.
+// schema. The 20H.84 goal is to emit a comprehensive, properly typed,
+// GeoCoordinate-aware areaServed array using `siteConfig.areaPages`
+// (40 configured Klang Valley suburbs/cities with lat/lng/state/name)
+// instead of flat strings. Round 18 extends the same full footprint to
+// every EN/MS/ZH area landing page schema, so the homepage entity and
+// area organization entities stay consistent.
 // ─────────────────────────────────────────────────────────────────────────
 
 import { siteConfig } from "@/config/site";
@@ -17,8 +17,8 @@ export type Locale = "en" | "ms" | "zh";
 /**
  * Build a comprehensive `areaServed` JSON-LD array for LocalBusiness /
  * HVACBusiness schema. Each entry uses `@type: "City"` (with embedded
- * GeoCoordinates for the city centre) so Google can match the served
- * area to a real GeoName and improve local pack ranking.
+ * GeoCoordinates for the city/suburb centre) so Google can match the
+ * served area to a real Klang Valley location.
  */
 export function buildAreaServedSchema(): Array<Record<string, unknown>> {
   const result: Array<Record<string, unknown>> = [];
