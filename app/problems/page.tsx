@@ -74,6 +74,7 @@ export default function ProblemsPage() {
             sizes="100vw"
             className="object-cover"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
