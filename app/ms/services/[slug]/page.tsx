@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+
+const DEDICATED_STATIC_SERVICE_SLUGS = new Set(["emergency", "maintenance-contract"]);
 import { servicesData } from "@/config/services-data";
 import { serviceI18n } from "@/config/services-i18n";
 import { ServiceDetailI18n } from "@/components/service-detail-i18n";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 
 export function generateStaticParams() {
-  return siteConfig.services.map((s) => ({ slug: s.slug }));
+  // Round 22 / AMC hotfix: exclude service routes that have their own
+  // dedicated static page files. Including maintenance-contract here can
+  // let the dynamic [slug] route prerender a notFound() response because
+  // servicesData intentionally does not contain the AMC landing-page copy.
+  return siteConfig.services
+    .filter((s) => !DEDICATED_STATIC_SERVICE_SLUGS.has(s.slug))
+    .map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
