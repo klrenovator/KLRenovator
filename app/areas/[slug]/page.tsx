@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map";
 
 
@@ -198,14 +199,13 @@ export default async function AreaPage({
       latitude: area.lat,
       longitude: area.lng,
     },
-    areaServed: {
-      "@type": "City",
-      name: area.name,
-      containedInPlace: {
-        "@type": "State",
-        name: area.state,
-      },
-    },
+    // Round 18 / 20H.84: keep area page LocalBusiness schema
+    // aligned with the homepage entity by listing the full Klang Valley
+    // service footprint, not only the current landing-page city.
+    areaServed: [
+      ...buildAreaServedSchema(),
+      buildServiceAreaGeoCircle(),
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
