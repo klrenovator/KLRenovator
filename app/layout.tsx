@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
+import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -176,10 +177,14 @@ export default function RootLayout({
                   "closes": "18:00",
                 },
               ],
-              "areaServed": siteConfig.areas.map((area) => ({
-                "@type": "AdministrativeArea",
-                "name": `${area}, Malaysia`,
-              })),
+              "areaServed": [
+                ...buildAreaServedSchema(),
+                // Service-radius GeoCircle tells Google the broad
+                // operational footprint (Klang Valley, ~50 km from
+                // KL centre) without forcing enumeration of every
+                // neighbourhood. Complements the per-City list above.
+                buildServiceAreaGeoCircle(),
+              ],
               "serviceType": [
                 "Aircon Installation",
                 "Aircon Basic Servicing",
