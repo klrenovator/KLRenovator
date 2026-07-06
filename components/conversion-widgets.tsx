@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
 
 const StickyActions = dynamic(
   () => import("@/components/sticky-actions").then((mod) => mod.StickyActions),
@@ -24,37 +23,13 @@ const FloatingPromoWidgets = dynamic(
 );
 
 /**
- * Defers non-critical conversion UI until after the main page has hydrated.
- * These widgets are valuable for leads, but they do not need to block LCP or
- * the first interaction bundle on every route.
+ * Non-critical conversion widgets.
+ *
+ * Round 21 / 20H.87: this component is no longer mounted directly from the
+ * root layout. `ConversionWidgetsLoader` imports it after browser idle / first
+ * user intent, and each lead widget remains split into its own client chunk.
  */
 export function ConversionWidgets() {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-    let idleId: number | undefined;
-    const win = window as Window & {
-      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
-      cancelIdleCallback?: (id: number) => void;
-    };
-
-    const show = () => setReady(true);
-
-    if (typeof win.requestIdleCallback === "function") {
-      idleId = win.requestIdleCallback(show, { timeout: 1800 });
-    } else {
-      timeoutId = setTimeout(show, 1200);
-    }
-
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-      if (idleId && typeof win.cancelIdleCallback === "function") win.cancelIdleCallback(idleId);
-    };
-  }, []);
-
-  if (!ready) return null;
-
   return (
     <>
       <StickyActions />
