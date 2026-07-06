@@ -34,22 +34,23 @@ const nextConfig = {
           },
         ],
         destination: 'https://www.klrenovator.com/:path*',
-        permanent: true,
+        // Use explicit 301. Next.js `permanent: true` emits 308 on Vercel.
+        statusCode: 301,
       },
       // ── Malay URL slug aliases (Round 13 / 20F.51) ─────────────
       // Top-volume native search queries redirected to canonical MS pages.
       // 301 permanent preserves full link equity.
-      { source: '/servis/cuci-aircond-kl',          destination: '/ms/services/chemical-wash',          permanent: true },
-      { source: '/servis/cuci-aircond',             destination: '/ms/services/chemical-wash',          permanent: true },
-      { source: '/cuci-aircond',                    destination: '/ms/services/chemical-wash',          permanent: true },
-      { source: '/cuci-aircond-kl',                 destination: '/ms/services/chemical-wash',          permanent: true },
-      { source: '/servis/aircond-murah',            destination: '/ms/services/basic-servicing',        permanent: true },
-      { source: '/aircond-murah',                   destination: '/ms/services/basic-servicing',        permanent: true },
-      { source: '/harga-pasang-aircond',            destination: '/ms/services/installation',           permanent: true },
-      { source: '/pasang-aircond',                  destination: '/ms/services/installation',           permanent: true },
-      { source: '/servis/baiki-aircond-kl',         destination: '/ms/services/repair',                 permanent: true },
-      { source: '/baiki-aircond',                   destination: '/ms/services/repair',                 permanent: true },
-      { source: '/kontrak-penyelenggaraan-aircond', destination: '/ms/services/maintenance-contract',   permanent: true },
+      { source: '/servis/cuci-aircond-kl',          destination: '/ms/services/chemical-wash',          statusCode: 301 },
+      { source: '/servis/cuci-aircond',             destination: '/ms/services/chemical-wash',          statusCode: 301 },
+      { source: '/cuci-aircond',                    destination: '/ms/services/chemical-wash',          statusCode: 301 },
+      { source: '/cuci-aircond-kl',                 destination: '/ms/services/chemical-wash',          statusCode: 301 },
+      { source: '/servis/aircond-murah',            destination: '/ms/services/basic-servicing',        statusCode: 301 },
+      { source: '/aircond-murah',                   destination: '/ms/services/basic-servicing',        statusCode: 301 },
+      { source: '/harga-pasang-aircond',            destination: '/ms/services/installation',           statusCode: 301 },
+      { source: '/pasang-aircond',                  destination: '/ms/services/installation',           statusCode: 301 },
+      { source: '/servis/baiki-aircond-kl',         destination: '/ms/services/repair',                 statusCode: 301 },
+      { source: '/baiki-aircond',                   destination: '/ms/services/repair',                 statusCode: 301 },
+      { source: '/kontrak-penyelenggaraan-aircond', destination: '/ms/services/maintenance-contract',   statusCode: 301 },
     ];
   },
   // ✅ Security headers — Google trust/ranking signal + Lighthouse "Best Practices"
