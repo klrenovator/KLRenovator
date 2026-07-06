@@ -109,39 +109,55 @@ export function buildServiceSchema(args: {
   startPrice: number;
   locale?: Locale;
   areasServed?: Array<Record<string, unknown>>;
+  priceTable?: ReadonlyArray<{ label: string; price: string }>;
+  pricingName?: string;
+  priceDescription?: string;
 }): Record<string, unknown> {
   const locale = args.locale || "en";
   const baseUrl = "https://www.klrenovator.com";
   const pathPrefix = locale === "en" ? "" : `/${locale}`;
   const url = `${baseUrl}${pathPrefix}/services/${args.slug}`;
+  const inLanguage = locale === "ms" ? "ms-MY" : locale === "zh" ? "zh-MY" : "en-MY";
+  const priceDescription = args.priceDescription || `Starting from RM ${args.startPrice}`;
+  const areaServed = args.areasServed || [
+    ...buildAreaServedSchema(),
+    buildServiceAreaGeoCircle(),
+  ];
 
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     name: args.name,
     description: args.description,
+    serviceType: args.name,
+    category: "Air conditioning service",
     url,
+    inLanguage,
     provider: {
       "@type": "HVACBusiness",
       "@id": `${baseUrl}/#business`,
       name: "KL Renovator",
       telephone: siteConfig.phone,
+      url: baseUrl,
     },
-    areaServed: args.areasServed || [
-      { "@type": "City", name: "Kuala Lumpur" },
-      { "@type": "State", name: "Selangor" },
-    ],
+    areaServed,
     offers: {
       "@type": "Offer",
+      "@id": `${url}#offer`,
+      url,
       price: args.startPrice,
       priceCurrency: "MYR",
       availability: "https://schema.org/InStock",
-      url,
+      eligibleRegion: [
+        { "@type": "City", name: "Kuala Lumpur" },
+        { "@type": "State", name: "Selangor" },
+      ],
       priceSpecification: {
         "@type": "PriceSpecification",
         price: args.startPrice,
         priceCurrency: "MYR",
-        description: `Starting from RM ${args.startPrice}`,
+        description: priceDescription,
         eligibleQuantity: {
           "@type": "QuantitativeValue",
           minValue: 1,
@@ -150,6 +166,27 @@ export function buildServiceSchema(args: {
       },
     },
   };
+
+  if (args.priceTable?.length) {
+    schema.hasOfferCatalog = {
+      "@type": "OfferCatalog",
+      name: args.pricingName || `${args.name} Pricing`,
+      itemListElement: args.priceTable.map((row, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        name: row.label,
+        description: row.price,
+        priceCurrency: "MYR",
+        itemOffered: {
+          "@type": "Service",
+          name: args.name,
+          url,
+        },
+      })),
+    };
+  }
+
+  return schema;
 }
 
 /**
