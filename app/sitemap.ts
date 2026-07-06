@@ -4,21 +4,23 @@ import { allPosts } from "@/config/blog-posts";
 
 const BASE = "https://www.klrenovator.com";
 
+// Round 14 / 20B.13 sitemap hygiene: keep <lastmod> stable and tied to
+// the latest content deployment instead of changing on every build.
+const SITEMAP_LAST_MODIFIED = new Date("2026-07-06T00:00:00.000Z");
+
 // ─────────────────────────────────────────────────────────────────────────
-// MULTILINGUAL ROUTING — current state as of June 2026:
+// MULTILINGUAL ROUTING — audited 2026-07-06 (Round 14 / 20B.13):
 //   - English = default locale, lives at the ROOT path (no /en/ prefix).
-//   - Bahasa Malaysia = /ms/areas, /ms/brands, /ms/problems — LIVE.
-//   - Mandarin        = /zh/areas, /zh/brands, /zh/problems — LIVE.
-//   - Blog posts: all 21 now have real /ms/blog and /zh/blog twins.
-//   - services index + service detail pages + contact now have real /ms/
-//     and /zh/ twins (Round 18.2 / Round 18.3).
+//   - Bahasa Malaysia = /ms/* where real pages exist.
+//   - Mandarin        = /zh/* where real pages exist.
+//   - Service indexes + service detail pages, blog indexes + blog posts,
+//     contact, FAQ, about, gallery, areas, brands, problems and kampung
+//     pages expose real trilingual URL entries with hreflang alternates.
+//   - Internal noindex conversion-only review pages are intentionally
+//     EXCLUDED from the sitemap to prevent sitemap/noindex conflict.
 //
-// Coverage: 39/39 areas, 18/18 brands, 20/20 problems all have real /ms/
-// and /zh/ pages. 116 kampung/neighbourhood pages also have real /ms/
-// and /zh/ twins wherever descriptionMS/descriptionZH exists in the data
-// (currently all 116). RULE: only add a /ms/ or /zh/ URL here once the
-// matching real page exists — this is what keeps this sitemap free of the
-// dead-URL bug that used to submit ~290 404s to Google.
+// RULE: only add /ms/ or /zh/ URLs here once the matching real page exists.
+// This keeps the sitemap free of dead URLs and crawl-budget waste.
 // ─────────────────────────────────────────────────────────────────────────
 
 const buildCanonicalOnly = (path: string) => ({
@@ -44,9 +46,10 @@ const buildTrilingual = (path: { en: string; ms: string; zh: string }) => ({
 });
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const now = SITEMAP_LAST_MODIFIED;
 
-  // ── Static Pages (English only — no /ms/ or /zh/ twin yet) ──────────
+  // ── Static / Index Pages — only URLs with real route files are listed.
+  // Review pages are noindex conversion-only routes, so they are excluded.
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: buildCanonicalOnly("") },
     { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
@@ -55,7 +58,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildCanonicalOnly("/areas") },
     { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/brands") },
     { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/problems") },
-    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildCanonicalOnly("/blog") },
+    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildTrilingual({ en: "/blog", ms: "/ms/blog", zh: "/zh/blog" }) },
+    { url: `${BASE}/ms/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.78, alternates: buildTrilingual({ en: "/blog", ms: "/ms/blog", zh: "/zh/blog" }) },
+    { url: `${BASE}/zh/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.78, alternates: buildTrilingual({ en: "/blog", ms: "/ms/blog", zh: "/zh/blog" }) },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/contact", ms: "/ms/contact", zh: "/zh/contact" }) },
     { url: `${BASE}/ms/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildTrilingual({ en: "/contact", ms: "/ms/contact", zh: "/zh/contact" }) },
     { url: `${BASE}/zh/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildTrilingual({ en: "/contact", ms: "/ms/contact", zh: "/zh/contact" }) },
@@ -69,12 +74,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ms/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/zh/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/near-me") },
-    { url: `${BASE}/review`, lastModified: now, changeFrequency: "monthly", priority: 0.55, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
-    { url: `${BASE}/ms/review`, lastModified: now, changeFrequency: "monthly", priority: 0.50, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
-    { url: `${BASE}/zh/review`, lastModified: now, changeFrequency: "monthly", priority: 0.50, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
   ];
 
-  // ── Emergency Page — trilingual twins added in Round 18.3 ──────────
+  // ── Emergency Service Page — trilingual canonical entries ───────────
   const emergencyPage: MetadataRoute.Sitemap = [
     {
       url: `${BASE}/services/emergency`,
@@ -85,7 +87,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // ── Service Detail Pages — trilingual twins added in Round 18.3 ─────
+  const msEmergencyPage: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/ms/services/emergency`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.90,
+      alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
+    },
+  ];
+
+  const zhEmergencyPage: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/zh/services/emergency`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.90,
+      alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
+    },
+  ];
+
+  // ── Service Detail Pages — EN/MS/ZH canonical entries ───────────────
   const servicePages: MetadataRoute.Sitemap = siteConfig.services
     .filter((s) => s.slug !== "emergency")
     .map((s) => ({
@@ -96,7 +118,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
 
-  // ── Area Pages — all 39 areas have real /ms/ and /zh/ twins ─────────
+  const msServicePages: MetadataRoute.Sitemap = siteConfig.services
+    .filter((s) => s.slug !== "emergency")
+    .map((s) => ({
+      url: `${BASE}/ms/services/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.84,
+      alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
+    }));
+
+  const zhServicePages: MetadataRoute.Sitemap = siteConfig.services
+    .filter((s) => s.slug !== "emergency")
+    .map((s) => ({
+      url: `${BASE}/zh/services/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.84,
+      alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
+    }));
+
+  // ── Area Pages — all configured areas with real /ms/ and /zh/ twins ──
   const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
     url: `${BASE}/areas/${area.slug}`,
     lastModified: now,
@@ -137,7 +179,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
-  // ── Brand Pages — all 18 brands have real /ms/ and /zh/ twins ───────
+  // ── Brand Pages — all configured brands with real /ms/ and /zh/ twins
   const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/brands/${b.slug}`,
     lastModified: now,
@@ -173,7 +215,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
-  // ── Problem Pages — all 20 problems have real /ms/ and /zh/ twins ───
+  // ── Problem Pages — all configured problems with real /ms/ and /zh/ twins
   const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
     url: `${BASE}/problems/${p.slug}`,
     lastModified: now,
@@ -209,8 +251,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
-  // ── Blog Post Pages — all 21 posts now have real /ms/blog and /zh/blog
-  // twins (contentMS/contentZH complete in config/blog-posts.ts).
+  // ── Blog Post Pages — all configured posts with real /ms/blog and /zh/blog
+  // twins where contentMS/contentZH exists in config/blog-posts.ts.
   const blogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
     lastModified: now,
@@ -251,10 +293,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
-  // ── Kampung/Neighbourhood Pages — 116 pages nested under their parent
-  // area, real /ms/ and /zh/ twins wherever descriptionMS/descriptionZH
-  // exists (currently all 116). New batches need zero changes here — they
-  // appear automatically the moment they're added to config/site.ts.
+  // ── Kampung/Neighbourhood Pages — nested under their parent area, with
+  // real /ms/ and /zh/ twins wherever descriptionMS/descriptionZH exists.
+  // New batches need zero changes here — they appear automatically the
+  // moment they're added to config/site.ts.
   const kampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages.map((k) => ({
     url: `${BASE}/areas/${k.parentSlug}/${k.slug}`,
     lastModified: now,
@@ -296,7 +338,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...emergencyPage,
+    ...msEmergencyPage,
+    ...zhEmergencyPage,
     ...servicePages,
+    ...msServicePages,
+    ...zhServicePages,
     ...areaPages,
     ...msAreaPages,
     ...zhAreaPages,
