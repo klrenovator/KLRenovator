@@ -11,6 +11,7 @@ import { AREA_BLOG_MAP, AREA_PROBLEM_MAP } from "@/config/topical-authority-map"
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -102,11 +103,13 @@ export default async function AreaPageMS({
       addressCountry: "MY",
     },
     geo: { "@type": "GeoCoordinates", latitude: area.lat, longitude: area.lng },
-    areaServed: {
-      "@type": "City",
-      name: area.name,
-      containedInPlace: { "@type": "State", name: area.state },
-    },
+    // Round 18 / 20H.84: keep area page LocalBusiness schema
+    // aligned with the homepage entity by listing the full Klang Valley
+    // service footprint, not only the current landing-page city.
+    areaServed: [
+      ...buildAreaServedSchema(),
+      buildServiceAreaGeoCircle(),
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: siteConfig.reviewRating,
