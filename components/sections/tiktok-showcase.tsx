@@ -23,11 +23,14 @@ import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 
 // 5 LOCKED TikTok short video URLs (provided by user 2026-07-06).
-// Order matches handoff v19 Section 7. We keep them in this exact order
-// because the user already approved this curation.
+// Order matches handoff v19 Section 7. We keep the short share URLs for
+// outbound clicks, and use the resolved numeric TikTok video IDs for the
+// lazy iframe embed URLs because TikTok embed/v2 requires numeric IDs.
 const TIKTOK_VIDEOS: ReadonlyArray<{
   id: string;
+  videoId: string;
   url: string;
+  canonicalUrl: string;
   embedUrl: string;
   caption: string;
   captionMS: string;
@@ -35,43 +38,53 @@ const TIKTOK_VIDEOS: ReadonlyArray<{
 }> = [
   {
     id: "tt-1",
+    videoId: "7638847576980065554",
     url: "https://vt.tiktok.com/ZSCteJX6e/",
-    embedUrl: "https://www.tiktok.com/embed/v2/ZSCteJX6e/?lang=en",
-    caption: "Watch real chemical wash on a clogged wall unit",
-    captionMS: "Tonton cuci kimia sebenar pada unit dinding tersumbat",
-    captionZH: "观看真实堵塞壁挂机化学清洗过程",
+    canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7638847576980065554",
+    embedUrl: "https://www.tiktok.com/embed/v2/7638847576980065554",
+    caption: "Petaling Jaya aircond installation with neat piping",
+    captionMS: "Pemasangan aircond di Petaling Jaya dengan piping kemas",
+    captionZH: "八打灵再也冷气安装，管线整齐",
   },
   {
     id: "tt-2",
+    videoId: "7636810709262781703",
     url: "https://vt.tiktok.com/ZSCtenFmj/",
-    embedUrl: "https://www.tiktok.com/embed/v2/ZSCtenFmj/?lang=en",
-    caption: "Why your aircond smells bad — 60s explainer",
-    captionMS: "Kenapa aircond anda berbau busuk — penjelasan 60 saat",
-    captionZH: "为什么冷气有异味 — 60秒讲解",
+    canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7636810709262781703",
+    embedUrl: "https://www.tiktok.com/embed/v2/7636810709262781703",
+    caption: "Three aircond units installed in one day",
+    captionMS: "Tiga unit aircond dipasang dalam satu hari",
+    captionZH: "一天内完成三台冷气安装",
   },
   {
     id: "tt-3",
+    videoId: "7635682478841187602",
     url: "https://vt.tiktok.com/ZSCtetdg3/",
-    embedUrl: "https://www.tiktok.com/embed/v2/ZSCtetdg3/?lang=en",
-    caption: "Chemical overhaul — full dismantle in 90s",
-    captionMS: "Overhaul kimia — pelepasan penuh dalam 90 saat",
-    captionZH: "化学大修 — 90秒完整拆解",
+    canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7635682478841187602",
+    embedUrl: "https://www.tiktok.com/embed/v2/7635682478841187602",
+    caption: "Aircond servicing, chemical cleaning and new installation support",
+    captionMS: "Servis aircond, cucian kimia dan sokongan pemasangan baru",
+    captionZH: "冷气保养、化学清洗与新机安装服务",
   },
   {
     id: "tt-4",
+    videoId: "7624823112177093906",
     url: "https://vt.tiktok.com/ZSCteQ3UC/",
-    embedUrl: "https://www.tiktok.com/embed/v2/ZSCteQ3UC/?lang=en",
-    caption: "Gas top-up R32 — what's the right pressure?",
-    captionMS: "Tambah gas R32 — apakah tekanan yang betul?",
-    captionZH: "R32加气 — 正确压力是多少？",
+    canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7624823112177093906",
+    embedUrl: "https://www.tiktok.com/embed/v2/7624823112177093906",
+    caption: "Eight aircond installations completed in one day",
+    captionMS: "Lapan pemasangan aircond siap dalam satu hari",
+    captionZH: "一天内完成八台冷气安装",
   },
   {
     id: "tt-5",
+    videoId: "7624113759505763591",
     url: "https://vt.tiktok.com/ZSCteu1fL/",
-    embedUrl: "https://www.tiktok.com/embed/v2/ZSCteu1fL/?lang=en",
-    caption: "Indoor unit cleaning — drain pipe cleared",
-    captionMS: "Pencucian unit dalaman — paip longkang dibersihkan",
-    captionZH: "室内机清洗 — 排水管已清理",
+    canonicalUrl: "https://www.tiktok.com/@klrenovator/video/7624113759505763591",
+    embedUrl: "https://www.tiktok.com/embed/v2/7624113759505763591",
+    caption: "Outdoor condenser cleaning to improve cooling performance",
+    captionMS: "Cucian kondenser luar untuk tingkatkan prestasi penyejukan",
+    captionZH: "清洗室外冷凝器，提升制冷表现",
   },
 ];
 
@@ -117,6 +130,11 @@ function captionOf(v: (typeof TIKTOK_VIDEOS)[number], loc: Locale): string {
   if (loc === "ms") return v.captionMS;
   if (loc === "zh") return v.captionZH;
   return v.caption;
+}
+
+function embedUrlOf(v: (typeof TIKTOK_VIDEOS)[number], loc: Locale): string {
+  const lang = loc === "ms" ? "ms-MY" : loc === "zh" ? "zh-Hans" : "en";
+  return `${v.embedUrl}?lang=${encodeURIComponent(lang)}`;
 }
 
 function TikTokCard({
@@ -169,7 +187,7 @@ function TikTokCard({
       <div className="relative w-full" style={{ aspectRatio: "9 / 16" }}>
         {shouldRenderIframe ? (
           <iframe
-            src={v.embedUrl}
+            src={embedUrlOf(v, loc)}
             title={captionOf(v, loc)}
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -231,10 +249,14 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
     itemListElement: TIKTOK_VIDEOS.map((v, i) => ({
       "@type": "VideoObject",
       position: i + 1,
+      identifier: v.videoId,
       name: captionOf(v, loc),
       description: `${captionOf(v, loc)} \u2014 KL Renovator real-job video. ${siteConfig.tagline}`,
+      url: v.canonicalUrl,
       contentUrl: v.url,
-      embedUrl: v.embedUrl,
+      embedUrl: embedUrlOf(v, loc),
+      sameAs: [v.url],
+      inLanguage: loc === "ms" ? "ms-MY" : loc === "zh" ? "zh-MY" : "en-MY",
       uploadDate: "2026-07-06",
       publisher: {
         "@type": "Organization",
