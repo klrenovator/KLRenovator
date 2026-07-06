@@ -186,6 +186,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
             sizes="100vw"
             className="object-cover object-center"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent" />
