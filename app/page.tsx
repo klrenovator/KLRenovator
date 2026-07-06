@@ -7,6 +7,7 @@ import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { GoogleReviews } from "@/components/sections/google-reviews";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
+import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { siteConfig } from "@/config/site";
 import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
@@ -307,6 +308,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── TikTok Vertical Video Showcase ── Round 13 / 20G.72 & 11.7 ──
+          Lazy facade pattern: zero TikTok JS loaded on initial page
+          render. Cards only inject the real iframe after the user
+          clicks play. Preserves LCP / TBT. 5 LOCKED user-provided URLs. */}
+      <TikTokShowcase locale="en" />
 
       <ReadyToBook />
     </>
