@@ -1351,7 +1351,7 @@ export function ServiceDetailI18n({
               </NextLink>
 
               <NextLink
-                href="/near-me"
+                href={`${langPrefix}/near-me`}
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
               >
                 <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
