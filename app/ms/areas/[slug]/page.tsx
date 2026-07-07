@@ -575,15 +575,15 @@ export default async function AreaPageMS({
               </NextLink>
 
               <NextLink
-                href="/near-me"
+                href="/ms/near-me"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
               >
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Hub Near Me</p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Hub Near Me · Pemisahan Niat</p>
                 <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
-                  Semak ketersediaan servis aircond hari sama berhampiran anda
+                  Perlukan armada penghantaran proksimiti berdekatan {area.name}?
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  Gunakan hub near-me Klang Valley untuk membandingkan kawasan liputan berdekatan dan pilih laluan WhatsApp paling cepat.
+                  Gunakan hub pengumpul proksimiti Lembah Klang kami untuk menyemak ketersediaan juruteknik mudah alih merentasi kawasan berdekatan dan laluan temujanji WhatsApp terpantas.
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
                   Buka Hub Near Me <FiArrowRight className="h-3 w-3" />
