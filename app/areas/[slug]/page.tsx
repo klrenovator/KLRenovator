@@ -1027,12 +1027,12 @@ export default async function AreaPage({
                 href="/near-me"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
               >
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Near Me Hub</p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Proximity Dispatch Hub · Intent Separation</p>
                 <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
-                  Check same-day aircond service availability near {area.name}
+                  Need rapid proximity dispatch across {area.name} or adjacent districts?
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  Use our Klang Valley near-me hub to compare nearby coverage areas, confirm fast technician reach, and choose the quickest WhatsApp booking path.
+                  Use our Greater Klang Valley proximity aggregator hub to check real-time mobile fleet reach, compare adjacent townships, and route directly to our dispatch desk.
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
                   Open Near Me Hub <FiArrowRight className="h-3 w-3" />
