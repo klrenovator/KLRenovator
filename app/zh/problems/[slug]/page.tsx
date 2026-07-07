@@ -223,7 +223,7 @@ export default async function ProblemPageZH({
 
             {relatedService && (
               <NextLink
-                href={`/services/${relatedService.slug}`}
+                href={`/zh/services/${relatedService.slug}`}
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-black text-sky-600 hover:text-sky-800"
               >
                 查看{relatedService.title}服务 <FiArrowRight className="h-3.5 w-3.5" />
