@@ -568,6 +568,93 @@ export default async function AreaPage({
         </div>
       </section>
 
+      {/* ── Aircond Not Cold / Tak Sejuk — Per-Area Intent Section — Round 28 / 20F.57 ── */}
+      <section className="py-14 bg-red-50 border-y border-red-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">
+              Troubleshooting · Diagnosis · 故障排除
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
+              Aircond Tak Sejuk di {area.name}? Here&apos;s What to Check
+            </h2>
+            <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+              &quot;Aircond tak sejuk di {area.name}&quot; is one of the most common searches from this area. If your aircond is running but not cooling, here are the top causes KL Renovator technicians find every day in {area.name} and the Klang Valley:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  problem: "Dirty Evaporator Coil",
+                  problemMS: "Gegelung Penyejat Kotor",
+                  problemZH: "蒸发器盘管脏污",
+                  desc: `The #1 cause in ${area.name}. KL's humidity and dust clog the coil fins, reducing airflow by 30–50%. Fix: pressure chemical wash from RM 120.`,
+                  fix: "Chemical Wash",
+                  price: "RM 120",
+                },
+                {
+                  problem: "Low Refrigerant Gas",
+                  problemMS: "Gas Penyejuk Rendah",
+                  problemZH: "冷媒不足",
+                  desc: "If the unit runs but blows warm air, gas may be low. This means there's a leak — simply topping up without finding the leak wastes money. Fix: leak check + gas top-up from RM 150.",
+                  fix: "Gas Top-Up",
+                  price: "RM 150",
+                },
+                {
+                  problem: "Blocked Drain Pipe",
+                  problemMS: "Paip Longkang Tersumbat",
+                  problemZH: "排水管堵塞",
+                  desc: `Common in ${area.name} during monsoon season. Biofilm buildup blocks drainage, causing water leaks and ice formation. Fix: drain flush included in basic service from RM 99.`,
+                  fix: "Basic Service",
+                  price: "RM 99",
+                },
+                {
+                  problem: "Compressor Not Running",
+                  problemMS: "Pemampat Tidak Berfungsi",
+                  problemZH: "压缩机不运转",
+                  desc: "If the indoor fan runs but outdoor unit is silent, the compressor or capacitor may have failed. This needs on-site diagnosis. Fix: repair from RM 150 + parts.",
+                  fix: "Repair",
+                  price: "RM 150+",
+                },
+                {
+                  problem: "Thermostat Miscalibrated",
+                  problemMS: "Termostat Tidak Tepat",
+                  problemZH: "温控器校准偏差",
+                  desc: "The unit thinks the room is colder than it is, so it cycles off too early. Common in older non-inverter units. Fix: thermostat recalibration during service.",
+                  fix: "Basic Service",
+                  price: "RM 99",
+                },
+                {
+                  problem: "Wrong HP for Room Size",
+                  problemMS: "HP Tidak Sesuai Saiz Bilik",
+                  problemZH: "HP与房间大小不匹配",
+                  desc: `A 1.0 HP unit in a large master bedroom will never cool properly in ${area.name}'s 33°C heat. If you just moved in, check if the previous owner undersized the unit.`,
+                  fix: "Consultation",
+                  price: "Free",
+                },
+              ].map((item) => (
+                <div key={item.problem} className="bg-white border border-red-200 rounded-xl p-5">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-black text-slate-900 text-sm">{item.problem}</h3>
+                    <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{item.price}</span>
+                  </div>
+                  <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.problemMS} · {item.problemZH}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+                  <NextLink
+                    href={`/services/${item.fix === "Chemical Wash" ? "chemical-wash" : item.fix === "Gas Top-Up" ? "gas-topup" : item.fix === "Repair" ? "repair" : "basic-servicing"}`}
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 transition"
+                  >
+                    {item.fix} Service <FiArrowRight className="h-3 w-3" />
+                  </NextLink>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6">
+              <BookingButton serviceName={`Aircond Troubleshooting ${area.name}`} size="md" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── Geographic Coverage — KL, Selangor, Klang Valley ─────────────── */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
