@@ -40,13 +40,18 @@ const nextConfig = {
         // Use explicit 301. Next.js `permanent: true` emits 308 on Vercel.
         statusCode: 301,
       },
-      // ── Malay URL slug aliases (Round 13 / 20F.51) ─────────────
-      // Top-volume native search queries redirected to canonical MS pages.
+      // ── Malay URL slug aliases (Round 13 / 20F.51 + Round 23 / 20F.50) ──
+      // 20F.50 Cuci Aircond KL dedicated landing — v30
+      // Top-volume native search queries now resolve to the dedicated
+      // trilingual /cuci-aircond-kl cluster landing pages instead of the
+      // generic /ms/services/chemical-wash service detail.
       // 301 permanent preserves full link equity.
-      { source: '/servis/cuci-aircond-kl',          destination: '/ms/services/chemical-wash',          statusCode: 301 },
-      { source: '/servis/cuci-aircond',             destination: '/ms/services/chemical-wash',          statusCode: 301 },
-      { source: '/cuci-aircond',                    destination: '/ms/services/chemical-wash',          statusCode: 301 },
-      { source: '/cuci-aircond-kl',                 destination: '/ms/services/chemical-wash',          statusCode: 301 },
+      // NOTE: /cuci-aircond-kl is now a real static page (EN primary),
+      // so the old redirect that pointed /cuci-aircond-kl → /ms/services/chemical-wash
+      // has been removed to allow the new landing to serve 200 OK.
+      { source: '/servis/cuci-aircond-kl',          destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
+      { source: '/servis/cuci-aircond',             destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
+      { source: '/cuci-aircond',                    destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
       { source: '/servis/aircond-murah',            destination: '/ms/services/basic-servicing',        statusCode: 301 },
       { source: '/aircond-murah',                   destination: '/ms/services/basic-servicing',        statusCode: 301 },
       { source: '/harga-pasang-aircond',            destination: '/ms/services/installation',           statusCode: 301 },
