@@ -6,7 +6,8 @@ const BASE = "https://www.klrenovator.com";
 
 // Round 14 / 20B.13 sitemap hygiene: keep <lastmod> stable and tied to
 // the latest content deployment instead of changing on every build.
-const SITEMAP_LAST_MODIFIED = new Date("2026-07-06T00:00:00.000Z");
+// Round 23 / 20F.50 — updated 2026-07-07 for Cuci Aircond KL landing launch.
+const SITEMAP_LAST_MODIFIED = new Date("2026-07-07T00:00:00.000Z");
 
 // ─────────────────────────────────────────────────────────────────────────
 // MULTILINGUAL ROUTING — audited 2026-07-06 (Round 14 / 20B.13):
@@ -74,6 +75,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ms/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/zh/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/near-me") },
+    // ── 20F.50 Cuci Aircond KL dedicated landing — trilingual ──────────
+    { url: `${BASE}/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.96, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
+    { url: `${BASE}/ms/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
+    { url: `${BASE}/zh/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
   ];
 
   // ── Emergency Service Page — trilingual canonical entries ───────────
