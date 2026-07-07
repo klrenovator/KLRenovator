@@ -690,6 +690,136 @@ export function ServiceDetailI18n({
         );
       })()}
 
+      {/* ── Value Proposition: Servis Aircond Murah KL — Round 24 / 20F.52 ── */}
+      {slug === "basic-servicing" && (
+        <section className="py-14 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-1">
+                {lang === "ms" ? "Servis Aircond Murah KL · Affordable Aircond Service · 便宜冷气保养" : "便宜冷气保养 · Affordable Aircond Service · Servis Aircond Murah KL"}
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
+                {lang === "ms"
+                  ? "Servis Aircond Murah KL — RM 99, Waranti 1 Bulan, 500+ Ulasan"
+                  : "便宜冷气保养吉隆坡 — RM 99，1个月保修，500+好评"}
+              </h2>
+              <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+                {lang === "ms"
+                  ? <>Cari &quot;servis aircond murah KL&quot; atau &quot;cuci aircond murah near me&quot;? Servis Asas KL Renovator bermula dari <strong>RM 99</strong> sahaja setiap unit dinding — harga telus tanpa caj tersembunyi. Setiap servis termasuk pemeriksaan diagnostik penuh, cuci penapis mendalam, bilas longkang, semburan gegelung, pemeriksaan keselamatan elektrik, dan ujian prestasi penyejukan. Disokong oleh <strong>waranti kerja 1 bulan</strong> dan lebih <strong>500 ulasan 5-bintang Google</strong>, anda mendapat nilai sebenar tanpa memotong sudut.</>
+                  : <>搜索&quot;便宜冷气保养&quot;或&quot;aircond service murah&quot;？KL Renovator的基本保养仅从<strong>RM 99</strong>起（挂壁式）——透明收费，无隐藏费用。每次服务包含全面诊断检查、滤网深度清洗、排水管冲洗、盘管抗菌喷涂、电气安全检查和制冷性能测试。凭<strong>1个月工艺保修</strong>和超过<strong>500条Google五星好评</strong>，您获得的是真正的价值，而非偷工减料。</>
+                }
+              </p>
+
+              {/* Comparison table */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                {/* KL Renovator Basic Service */}
+                <div className="bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-5 relative">
+                  <span className="absolute -top-3 left-4 bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    {lang === "ms" ? "Nilai Terbaik" : "最佳价值"}
+                  </span>
+                  <h3 className="font-black text-emerald-900 text-lg mt-1">
+                    {lang === "ms" ? "Servis Asas KL Renovator" : "KL Renovator 基本保养"}
+                  </h3>
+                  <p className="text-3xl font-black text-emerald-700 mt-2">RM 99</p>
+                  <ul className="mt-4 space-y-2 text-sm text-emerald-800">
+                    {(lang === "ms"
+                      ? ["Pemeriksaan & servis 8 titik", "Cuci penapis mendalam + bilas longkang", "Semburan anti-bakteria gegelung", "Pemeriksaan keselamatan elektrik", "Ujian suhu penyejukan", "Waranti kerja 1 bulan", "Berdaftar SSM, 500+ ulasan 5★"]
+                      : ["8项检查与保养服务", "滤网深度清洗+排水管冲洗", "盘管抗菌喷涂", "电气安全检查", "制冷温度测试", "1个月工艺保修", "SSM注册，500+五星好评"]
+                    ).map((item, i) => (
+                      <li key={i} className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> {item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Doing Nothing */}
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+                  <h3 className="font-black text-red-900 text-lg">
+                    {lang === "ms" ? "Langkau Servis Berkala" : "跳过定期保养"}
+                  </h3>
+                  <p className="text-3xl font-black text-red-400 mt-2">RM 0</p>
+                  <p className="text-xs text-red-500 font-bold mt-1">
+                    {lang === "ms" ? "(tapi kos lebih tinggi kemudian)" : "(但后期花费更高)"}
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm text-red-700">
+                    {(lang === "ms"
+                      ? ["Gegelung tersumbat secara beransur", "Bil TNB meningkat", "Longkang tersumbat → bocor air", "Kulat & bakteria merebak", "Risiko kerosakan kompressor", "Pembaikan kecemasan RM 200–500+"]
+                      : ["盘管逐渐堵塞", "TNB电费上涨", "排水管堵塞→漏水", "霉菌和细菌滋生", "压缩机损坏风险", "紧急维修RM 200–500+"]
+                    ).map((item, i) => (
+                      <li key={i} className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> {item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Chemical Wash */}
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                  <h3 className="font-black text-slate-900 text-lg">
+                    {lang === "ms" ? "Cuci Kimia (Bila Perlu)" : "化学清洗（按需）"}
+                  </h3>
+                  <p className="text-3xl font-black text-slate-600 mt-2">RM 120</p>
+                  <p className="text-xs text-slate-500 font-bold mt-1">
+                    {lang === "ms" ? "Untuk kotoran berat / bau / angin lemah" : "重度脏污/异味/风弱时使用"}
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                    {(lang === "ms"
+                      ? ["Tekanan tinggi 80–120 PSI", "Pembersihan mendalam gegelung & blower", "Larutkan kulat & biofilm", "60–75 min setiap unit", "Disyorkan setiap 12 bulan", "Terbaik selepas 12+ bulan tanpa cuci mendalam"]
+                      : ["高压80–120 PSI", "盘管与风轮深层清洁", "溶解霉菌与生物膜", "每台60–75分钟", "建议每12个月一次", "12个月以上未深洗效果最佳"]
+                    ).map((item, i) => (
+                      <li key={i} className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Value summary */}
+              <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                <h3 className="font-black text-emerald-900 text-lg mb-3">
+                  {lang === "ms"
+                    ? "Kenapa Servis Asas RM 99 adalah Pilihan Bijak"
+                    : "为什么RM 99基本保养是明智之选"}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm text-emerald-800 leading-relaxed">
+                      {lang === "ms"
+                        ? <><strong>Halang pembaikan mahal:</strong> Paip longkang tersumbat yang boleh kos RM 200–500 untuk dibaiki selepas kerosakan air boleh dikesan awal dengan bilasan longkang RM 99. Sambungan elektrik longgar yang boleh merosakkan kompressor dikesan dan diketatkan sebelum mendatangkan mudarat.</>
+                        : <><strong>预防昂贵维修：</strong>排水管堵塞导致漏水后维修费RM 200–500，但RM 99的排水管冲洗就能提前发现。可能损坏压缩机的松动电气连接也能在造成危害前被检测并拧紧。</>
+                      }
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-emerald-800 leading-relaxed">
+                      {lang === "ms"
+                        ? <><strong>Kurangkan bil elektrik:</strong> Gegelung penyejat kotor memaksa kompressor bekerja 15–30% lebih keras. Servis berkala mengekalkan kecekapan penyejukan, bermakna bil TNB bulanan lebih rendah — selalunya menjimatkan lebih daripada kos servis itu sendiri dalam 1–2 kitaran bil.</>
+                        : <><strong>降低电费：</strong>脏的蒸发器盘管迫使压缩机多做15–30%的功。定期保养保持制冷效率，月度TNB账单更低——通常1–2个账单周期就能省回保养费。</>
+                      }
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <BookingButton serviceName={tTitle} size="md" />
+                  <NextLink
+                    href={`${langPrefix}/cuci-aircond-kl`}
+                    className="inline-flex items-center justify-center rounded-xl border border-emerald-300 bg-white px-5 py-2.5 text-xs font-black uppercase tracking-wider text-emerald-700 hover:bg-emerald-100 transition"
+                  >
+                    {lang === "ms" ? "Lihat Cuci Kimia dari RM 120 →" : "查看化学清洗 RM 120 →"}
+                  </NextLink>
+                </div>
+              </div>
+
+              {/* Keyword tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {(lang === "ms"
+                  ? ["servis aircond murah KL", "cuci aircond murah selangor", "harga servis aircond 2026", "aircond service price KL"]
+                  : ["便宜冷气保养KL", "aircond service murah", "冷气保养价格2026", "吉隆坡冷气维修"]
+                ).map((kw) => (
+                  <span key={kw} className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1.5 text-xs font-bold rounded-full border border-emerald-200">{kw}</span>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Highlights */}
       <section className="py-14 sm:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
