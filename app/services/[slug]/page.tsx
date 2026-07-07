@@ -565,6 +565,108 @@ export default async function ServicePage({
         );
       })()}
 
+      {/* ── Value Proposition: Servis Aircond Murah KL — Round 24 / 20F.52 ── */}
+      {slug === "basic-servicing" && (
+        <section className="py-14 bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-1">
+                Affordable Aircond Service · Servis Aircond Murah KL · 便宜冷气保养
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
+                Affordable Aircond Service KL — RM 99, 1-Month Warranty, 500+ Reviews
+              </h2>
+              <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+                Searching &quot;servis aircond murah KL&quot; or &quot;affordable aircond cleaning near me&quot;? KL Renovator&apos;s Basic Servicing starts from just <strong>RM 99</strong> per wall-mounted unit — transparent pricing with no hidden charges. Every service includes a full diagnostic check, filter deep-wash, drain flush, coil spray, electrical safety inspection, and cooling performance test. Backed by a <strong>1-month workmanship warranty</strong> and over <strong>500 five-star Google reviews</strong>, you get genuine value without cutting corners.
+              </p>
+
+              {/* Comparison table */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                {/* KL Renovator Basic Service */}
+                <div className="bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-5 relative">
+                  <span className="absolute -top-3 left-4 bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Best Value</span>
+                  <h3 className="font-black text-emerald-900 text-lg mt-1">KL Renovator Basic Service</h3>
+                  <p className="text-3xl font-black text-emerald-700 mt-2">RM 99</p>
+                  <ul className="mt-4 space-y-2 text-sm text-emerald-800">
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> 8-point inspection &amp; service</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> Filter deep-wash + drain flush</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> Coil anti-bacterial spray</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> Electrical safety check</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> Cooling temperature test</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> 1-month workmanship warranty</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> SSM registered, 500+ 5★ reviews</li>
+                  </ul>
+                </div>
+
+                {/* Doing Nothing */}
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+                  <h3 className="font-black text-red-900 text-lg">Skipping Regular Service</h3>
+                  <p className="text-3xl font-black text-red-400 mt-2">RM 0</p>
+                  <p className="text-xs text-red-500 font-bold mt-1">(but costs more later)</p>
+                  <ul className="mt-4 space-y-2 text-sm text-red-700">
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Gradual coil clogging</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Higher TNB electricity bill</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Drain blockage → water leaks</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Mould &amp; bacteria buildup</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Risk of compressor damage</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Emergency repair RM 200–500+</li>
+                  </ul>
+                </div>
+
+                {/* Chemical Wash */}
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                  <h3 className="font-black text-slate-900 text-lg">Chemical Wash (When Needed)</h3>
+                  <p className="text-3xl font-black text-slate-600 mt-2">RM 120</p>
+                  <p className="text-xs text-slate-500 font-bold mt-1">For heavy dirt / smell / weak airflow</p>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> High-pressure 80–120 PSI</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Deep coil &amp; blower cleaning</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Dissolves mould &amp; biofilm</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> 60–75 min per unit</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Recommended every 12 months</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Best after 12+ months no deep clean</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Value summary */}
+              <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                <h3 className="font-black text-emerald-900 text-lg mb-3">Why RM 99 Basic Servicing is the Smart Choice</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm text-emerald-800 leading-relaxed">
+                      <strong>Prevents expensive repairs:</strong> A clogged drain pipe that could cost RM 200–500 to fix after water damage is caught early with a simple RM 99 drain flush. Loose electrical connections that could damage your compressor are detected and tightened before they cause harm.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-emerald-800 leading-relaxed">
+                      <strong>Reduces electricity bills:</strong> A dirty evaporator coil forces your compressor to work 15–30% harder. Regular servicing keeps cooling efficient, which means lower monthly TNB bills — often saving more than the service cost itself within 1–2 billing cycles.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <BookingButton serviceName="Basic Servicing" size="md" />
+                  <NextLink
+                    href="/cuci-aircond-kl"
+                    className="inline-flex items-center justify-center rounded-xl border border-emerald-300 bg-white px-5 py-2.5 text-xs font-black uppercase tracking-wider text-emerald-700 hover:bg-emerald-100 transition"
+                  >
+                    View Chemical Wash from RM 120 →
+                  </NextLink>
+                </div>
+              </div>
+
+              {/* Keyword tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1.5 text-xs font-bold rounded-full border border-emerald-200">servis aircond murah KL</span>
+                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1.5 text-xs font-bold rounded-full border border-emerald-200">affordable aircond service kl</span>
+                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1.5 text-xs font-bold rounded-full border border-emerald-200">aircond service price KL 2026</span>
+                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1.5 text-xs font-bold rounded-full border border-emerald-200">cuci aircond murah selangor</span>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Highlights */}
       <section className="py-14 sm:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
