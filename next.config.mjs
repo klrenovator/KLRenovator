@@ -54,8 +54,10 @@ const nextConfig = {
       { source: '/cuci-aircond',                    destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
       { source: '/servis/aircond-murah',            destination: '/ms/services/basic-servicing',        statusCode: 301 },
       { source: '/aircond-murah',                   destination: '/ms/services/basic-servicing',        statusCode: 301 },
-      { source: '/harga-pasang-aircond',            destination: '/ms/services/installation',           statusCode: 301 },
-      { source: '/pasang-aircond',                  destination: '/ms/services/installation',           statusCode: 301 },
+      // Round 25 / 20F.53: Malay aliases now point to dedicated installation price landing
+      { source: '/harga-pasang-aircond',            destination: '/ms/installation-price-malaysia',     statusCode: 301 },
+      { source: '/pasang-aircond',                  destination: '/ms/installation-price-malaysia',     statusCode: 301 },
+      { source: '/installation-price',              destination: '/installation-price-malaysia',        statusCode: 301 },
       { source: '/servis/baiki-aircond-kl',         destination: '/ms/services/repair',                 statusCode: 301 },
       { source: '/baiki-aircond',                   destination: '/ms/services/repair',                 statusCode: 301 },
       { source: '/kontrak-penyelenggaraan-aircond', destination: '/ms/services/maintenance-contract',   statusCode: 301 },
