@@ -305,6 +305,43 @@ export default async function AreaPageZH({
         </div>
       </section>
 
+      {/* Aircond不冷 — Per-Area Intent Section — Round 28 / 20F.57 */}
+      <section className="py-14 bg-red-50 border-y border-red-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">故障排除 · Diagnosis · Penyelesaian Masalah</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
+              {area.name}冷气不冷？以下是需要检查的项目
+            </h2>
+            <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+              &quot;{area.name}冷气不冷&quot;是该地区最常见的搜索之一。如果您的冷气在运行但不制冷，以下是KL Renovator技术员每天在{area.name}和巴生谷发现的最常见原因：
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { problem: "蒸发器盘管脏污", en: "Dirty Evaporator Coil", ms: "Gegelung Penyejat Kotor", desc: `${area.name}的第一大原因。吉隆坡的湿度和灰尘堵塞盘管翅片，减少30-50%的气流。修复：压力化学清洗从RM 120起。`, fix: "化学清洗", price: "RM 120" },
+                { problem: "冷媒不足", en: "Low Refrigerant Gas", ms: "Gas Penyejuk Rendah", desc: "如果机器运行但吹出暖风，冷媒可能不足。这意味着有泄漏——只加气不查漏是浪费钱。修复：查漏+加气从RM 150起。", fix: "加气", price: "RM 150" },
+                { problem: "排水管堵塞", en: "Blocked Drain Pipe", ms: "Paip Longkang Tersumbat", desc: `${area.name}雨季期间常见。生物膜堵塞排水管，导致漏水和结冰。修复：排水管冲洗包含在基本保养中，从RM 99起。`, fix: "基本保养", price: "RM 99" },
+                { problem: "压缩机不运转", en: "Compressor Not Running", ms: "Pemampat Tidak Berfungsi", desc: "如果室内风扇运转但室外机无声，压缩机或电容可能故障。需要现场诊断。修复：维修从RM 150+零件起。", fix: "维修", price: "RM 150+" },
+                { problem: "温控器校准偏差", en: "Thermostat Miscalibrated", ms: "Termostat Tidak Tepat", desc: "机器认为房间比实际更冷，所以过早停止。旧非变频机常见。修复：保养时重新校准温控器。", fix: "基本保养", price: "RM 99" },
+                { problem: "HP与房间大小不匹配", en: "Wrong HP for Room Size", ms: "HP Tidak Sesuai Saiz Bilik", desc: `1.0 HP的机器在${area.name}33°C高温下的大主卧永远无法正常制冷。如果刚搬入，请检查前业主是否选择了过小的HP。`, fix: "咨询", price: "免费" },
+              ].map((item) => (
+                <div key={item.problem} className="bg-white border border-red-200 rounded-xl p-5">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-black text-slate-900 text-sm">{item.problem}</h3>
+                    <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{item.price}</span>
+                  </div>
+                  <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.en} · {item.ms}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6">
+              <BookingButton serviceName={`${area.name}冷气故障诊断`} size="md" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Geographic Coverage — ZH */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
