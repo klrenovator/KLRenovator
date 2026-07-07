@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     canonical: "https://www.klrenovator.com/near-me",
     languages: {
       "en-MY": "https://www.klrenovator.com/near-me",
-      "ms-MY": "https://www.klrenovator.com/near-me",
-      "zh-MY": "https://www.klrenovator.com/near-me",
+      "ms-MY": "https://www.klrenovator.com/ms/near-me",
+      "zh-MY": "https://www.klrenovator.com/zh/near-me",
       "x-default": "https://www.klrenovator.com/near-me",
     },
   },
@@ -41,5 +41,5 @@ export const metadata: Metadata = {
 };
 
 export default function NearMePage() {
-  return <NearMeClient />;
+  return <NearMeClient initialLang="en" />;
 }
