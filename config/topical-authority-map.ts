@@ -208,6 +208,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-maintenance-checklist-malaysia",
     "how-to-reduce-aircond-electricity-bill-malaysia",
     "aircond-service-price-guide-kl-2026",
+    "inverter-vs-non-inverter-aircond-service-malaysia-2026",
   ],
   "ceiling-cassette": [
     "commercial-hvac-maintenance-kl",
