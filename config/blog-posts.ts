@@ -5132,4 +5132,171 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知机组尺寸、品牌和安装位置的照片。查看完整<a href="/zh/services/installation">新机安装</a>服务。标准安装从RM 199起（2-3小时）。天花卡式从RM 290起（3-4小时）。</p>
     `,
   },
+  {
+    slug: "aircond-maintenance-contract-malaysia-2026",
+    title: "Aircond Maintenance Contract Malaysia 2026 — Save 30% vs Pay-Per-Service",
+    titleMS: "Kontrak Penyelenggaraan Aircond Malaysia 2026 — Jimat 30% Berbanding Servis Individu",
+    titleZH: "2026年马来西亚冷气保养合约 — 比单次服务省30%",
+    excerpt: "Is an annual aircond maintenance contract worth it in Malaysia? We break down the real cost savings, what's included, and why 500+ KL homeowners chose AMC over pay-per-service in 2026.",
+    excerptMS: "Adakah kontrak penyelenggaraan aircond tahunan berbaloi di Malaysia? Kami huraikan penjimatan kos sebenar, apa yang termasuk, dan mengapa 500+ pemilik rumah KL memilih AMC berbanding servis individu pada 2026.",
+    excerptZH: "马来西亚的年度冷气保养合约值得吗？我们分析实际节省费用、包含内容，以及为什么500+吉隆坡业主在2026年选择AMC而非单次服务。",
+    category: "Cost Guide",
+    categoryMS: "Panduan Kos",
+    categoryZH: "费用指南",
+    tags: ["aircond maintenance contract", "AMC aircond", "annual maintenance Malaysia", "KL Renovator", "aircond service contract KL", "save aircond cost"],
+    date: "2026-07-07",
+    dateDisplay: "July 2026",
+    lastReviewed: "2026-07-07",
+    readTime: 7,
+    relatedService: "Maintenance Contract",
+    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    imageAlt: "KL Renovator technician performing scheduled annual maintenance on residential aircond units in KL",
+    content: `
+      <h2>Why an Aircond Maintenance Contract Saves You Money in 2026</h2>
+      <p>If you own 2 or more aircond units in Malaysia, an annual maintenance contract (AMC) is one of the smartest investments you can make. The math is simple: a household with 3 wall-mounted units paying for individual chemical washes each year spends around RM 360 (3 × RM 120). The same household on KL Renovator's annual AMC plan pays <strong>RM 499/year</strong> for 2–4 units — which works out to roughly <strong>RM 125 per unit per year</strong> for scheduled quarterly basic servicing plus one annual chemical wash. That's a <strong>30% saving</strong> compared to booking each service separately.</p>
+
+      <h2>What's Included in KL Renovator's Annual AMC</h2>
+      <p>Every annual maintenance contract includes:</p>
+      <ul>
+        <li><strong>Quarterly basic servicing</strong> — filter deep-wash, drain flush, coil spray, electrical check, cooling performance test (4 visits/year per unit)</li>
+        <li><strong>1× annual chemical wash per unit</strong> — high-pressure 80–120 PSI chemical cleaning of coil and blower</li>
+        <li><strong>Priority scheduling</strong> — AMC customers get same-day or next-day slots even during peak season (Chinese New Year, Hari Raya, school holidays)</li>
+        <li><strong>Written service reports</strong> — every visit documented with cooling readings, filter condition, and any recommendations</li>
+        <li><strong>1-month workmanship warranty</strong> on every service visit</li>
+        <li><strong>Volume pricing locked in</strong> — no price increase during your contract period even if market rates go up</li>
+      </ul>
+
+      <h2>AMC vs Pay-Per-Service: Real Cost Comparison</h2>
+      <p>Let's compare the actual annual cost for a typical 3-unit household in KL:</p>
+      <table>
+        <thead><tr><th>Service</th><th>Pay-Per-Service (3 units)</th><th>AMC Plan (2–4 units)</th></tr></thead>
+        <tbody>
+          <tr><td>4× basic servicing per unit/year</td><td>RM 99 × 4 × 3 = RM 1,188</td><td>Included in AMC</td></tr>
+          <tr><td>1× chemical wash per unit/year</td><td>RM 120 × 3 = RM 360</td><td>Included in AMC</td></tr>
+          <tr><td>Total annual cost</td><td><strong>RM 1,548</strong></td><td><strong>RM 499</strong></td></tr>
+          <tr><td>Savings</td><td>—</td><td><strong>RM 1,049 saved (68%)</strong></td></tr>
+        </tbody>
+      </table>
+      <p>Even if you skip the quarterly basic services and only do 1 chemical wash per unit per year, the AMC still saves you money: RM 360 pay-per-service vs RM 499 for the AMC — but the AMC includes 4 additional basic services per unit that you'd otherwise skip, leading to higher electricity bills and more frequent breakdowns.</p>
+
+      <h2>Who Should Get an AMC?</h2>
+      <ul>
+        <li><strong>Condo owners with 2+ units</strong> — the more units, the bigger the savings</li>
+        <li><strong>Landlords managing rental properties</strong> — predictable annual cost, no surprise repair bills</li>
+        <li><strong>Small offices and shoplots</strong> — commercial units running 8+ hours daily need quarterly attention</li>
+        <li><strong>Anyone tired of remembering to book</strong> — we schedule and remind you automatically</li>
+      </ul>
+
+      <h2>What Happens If I Need a Repair?</h2>
+      <p>The AMC covers scheduled maintenance (basic servicing + chemical wash). If a technician discovers a fault during a scheduled visit — such as a gas leak, capacitor failure, or PCB issue — they will diagnose and quote the repair cost separately before proceeding. AMC customers receive <strong>priority repair scheduling</strong> and the same transparent pricing as all KL Renovator customers. Parts carry a 3-month warranty; workmanship carries a 1-month warranty.</p>
+
+      <h2>How to Sign Up</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> with:</p>
+      <ol>
+        <li>Number of aircond units</li>
+        <li>Unit types (wall-mounted, ceiling cassette, window)</li>
+        <li>Your location in KL/Selangor</li>
+      </ol>
+      <p>We'll confirm the AMC plan, schedule your first quarterly visit, and send you the contract terms. No upfront payment required — invoiced after first visit.</p>
+      <p>See also: <a href="/services/maintenance-contract">Full AMC service page</a> | <a href="/services/basic-servicing">Basic servicing pricing</a> | <a href="/services/chemical-wash">Chemical wash pricing</a></p>
+    `,
+    contentMS: `
+      <h2>Kenapa Kontrak Penyelenggaraan Aircond Menjimatkan Wang Anda pada 2026</h2>
+      <p>Jika anda memiliki 2 atau lebih unit aircond di Malaysia, kontrak penyelenggaraan tahunan (AMC) adalah antara pelaburan paling bijak yang boleh anda buat. Matematiknya mudah: isi rumah dengan 3 unit dinding yang membayar cuci kimia individu setiap tahun membelanjakan kira-kira RM 360 (3 × RM 120). Isi rumah yang sama di pelan AMC tahunan KL Renovator membayar <strong>RM 499/tahun</strong> untuk 2–4 unit — yang bermaksud kira-kira <strong>RM 125 setiap unit setahun</strong> untuk servis asas suku tahunan yang dijadualkan plus satu cuci kimia tahunan. Itu <strong>penjimatan 30%</strong> berbanding menempah setiap servis secara berasingan.</p>
+
+      <h2>Apa yang Termasuk dalam AMC Tahunan KL Renovator</h2>
+      <p>Setiap kontrak penyelenggaraan tahunan termasuk:</p>
+      <ul>
+        <li><strong>Servis asas suku tahunan</strong> — cuci penapis mendalam, bilas longkang, semburan gegelung, pemeriksaan elektrik, ujian prestasi penyejukan (4 lawatan/tahun setiap unit)</li>
+        <li><strong>1× cuci kimia tahunan setiap unit</strong> — cuci kimia tekanan tinggi 80–120 PSI pada gegelung dan blower</li>
+        <li><strong>Penjadualan keutamaan</strong> — pelanggan AMC mendapat slot hari sama atau hari berikutnya walaupun semasa musim puncak</li>
+        <li><strong>Laporan servis bertulis</strong> — setiap lawatan didokumentkan dengan bacaan penyejukan, keadaan penapis, dan sebarang cadangan</li>
+        <li><strong>Waranti kerja 1 bulan</strong> untuk setiap lawatan servis</li>
+        <li><strong>Harga volum dikunci</strong> — tiada kenaikan harga semasa tempoh kontrak anda walaupun kadar pasaran meningkat</li>
+      </ul>
+
+      <h2>AMC vs Servis Individu: Perbandingan Kos Sebenar</h2>
+      <p>Mari bandingkan kos tahunan sebenar untuk isi rumah 3 unit tipikal di KL:</p>
+      <table>
+        <thead><tr><th>Servis</th><th>Servis Individu (3 unit)</th><th>Pelan AMC (2–4 unit)</th></tr></thead>
+        <tbody>
+          <tr><td>4× servis asas setiap unit/tahun</td><td>RM 99 × 4 × 3 = RM 1,188</td><td>Termasuk dalam AMC</td></tr>
+          <tr><td>1× cuci kimia setiap unit/tahun</td><td>RM 120 × 3 = RM 360</td><td>Termasuk dalam AMC</td></tr>
+          <tr><td>Jumlah kos tahunan</td><td><strong>RM 1,548</strong></td><td><strong>RM 499</strong></td></tr>
+          <tr><td>Penjimatan</td><td>—</td><td><strong>RM 1,049 dijimatkan (68%)</strong></td></tr>
+        </tbody>
+      </table>
+      <p>Walaupun anda langkau servis asas suku tahunan dan hanya buat 1 cuci kimia setiap unit setahun, AMC masih menjimatkan: RM 360 servis individu vs RM 499 AMC — tetapi AMC termasuk 4 servis asas tambahan setiap unit yang anda biasa langkau, yang menyebabkan bil elektrik lebih tinggi dan kerosakan lebih kerap.</p>
+
+      <h2>Siapa Patut Dapatkan AMC?</h2>
+      <ul>
+        <li><strong>Pemilik kondo dengan 2+ unit</strong> — lebih banyak unit, lebih besar penjimatan</li>
+        <li><strong>Tuan tanah menguruskan hartanah sewa</strong> — kos tahunan yang boleh diramal, tiada bil pembaikan mengejut</li>
+        <li><strong>Pejabat kecil dan lot kedai</strong> — unit komersial beroperasi 8+ jam sehari memerlukan perhatian suku tahunan</li>
+        <li><strong>Sesiapa yang penat mengingati untuk menempah</strong> — kami menjadualkan dan mengingatkan anda secara automatik</li>
+      </ul>
+
+      <h2>Apa Berlaku Jika Saya Perlu Pembaikan?</h2>
+      <p>AMC meliputi penyelenggaraan berjadual (servis asas + cuci kimia). Jika juruteknik menemui kerosakan semasa lawatan berjadual — seperti kebocoran gas, kegagalan kapasitor, atau masalah PCB — mereka akan mendiagnosis dan mengutip kos pembaikan secara berasingan sebelum meneruskan. Pelanggan AMC menerima <strong>penjadualan pembaikan keutamaan</strong> dan harga telus yang sama seperti semua pelanggan KL Renovator. Alat ganti dilindungi waranti 3 bulan; kerja dilindungi waranti 1 bulan.</p>
+
+      <h2>Cara Mendaftar</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> dengan:</p>
+      <ol>
+        <li>Bilangan unit aircond</li>
+        <li>Jenis unit (dinding, ceiling cassette, tingkap)</li>
+        <li>Lokasi anda di KL/Selangor</li>
+      </ol>
+      <p>Kami akan mengesahkan pelan AMC, menjadualkan lawatan suku tahunan pertama anda, dan menghantar terma kontrak. Tiada pembayaran pendahuluan diperlukan — invois dihantar selepas lawatan pertama.</p>
+      <p>Lihat juga: <a href="/ms/services/maintenance-contract">Halaman servis AMC penuh</a> | <a href="/ms/services/basic-servicing">Harga servis asas</a> | <a href="/ms/services/chemical-wash">Harga cuci kimia</a></p>
+    `,
+    contentZH: `
+      <h2>为什么2026年冷气保养合约能帮您省钱</h2>
+      <p>如果您在马来西亚拥有2台或以上冷气，年度保养合约（AMC）是最明智的投资之一。计算很简单：一个有3台挂壁式冷气的家庭，每年单独购买化学清洗约花费RM 360（3 × RM 120）。同样的家庭选择KL Renovator年度AMC计划仅需<strong>RM 499/年</strong>（2–4台）——折合每台每年约<strong>RM 125</strong>，包含每季度定期基本保养加一次年度化学清洗。与逐次预约相比<strong>节省30%</strong>。</p>
+
+      <h2>KL Renovator年度AMC包含什么</h2>
+      <p>每份年度保养合约包含：</p>
+      <ul>
+        <li><strong>每季度基本保养</strong>——滤网深度清洗、排水管冲洗、盘管喷雾、电气检查、制冷性能测试（每台每年4次上门）</li>
+        <li><strong>每台每年1次化学清洗</strong>——80–120 PSI高压化学清洗盘管和风轮</li>
+        <li><strong>优先排程</strong>——AMC客户即使在旺季（农历新年、开斋节、学校假期）也能获得当天或次日时段</li>
+        <li><strong>书面服务报告</strong>——每次上门记录制冷读数、滤网状况和任何建议</li>
+        <li><strong>每次上门1个月工艺保修</strong></li>
+        <li><strong>锁定批量价格</strong>——合同期内即使市场价格上涨也不会加价</li>
+      </ul>
+
+      <h2>AMC vs 单次服务：真实费用对比</h2>
+      <p>让我们比较KL典型3台冷气家庭的实际年度费用：</p>
+      <table>
+        <thead><tr><th>服务</th><th>单次服务（3台）</th><th>AMC计划（2–4台）</th></tr></thead>
+        <tbody>
+          <tr><td>每台每年4次基本保养</td><td>RM 99 × 4 × 3 = RM 1,188</td><td>含在AMC内</td></tr>
+          <tr><td>每台每年1次化学清洗</td><td>RM 120 × 3 = RM 360</td><td>含在AMC内</td></tr>
+          <tr><td>年度总费用</td><td><strong>RM 1,548</strong></td><td><strong>RM 499</strong></td></tr>
+          <tr><td>节省</td><td>—</td><td><strong>节省RM 1,049（68%）</strong></td></tr>
+        </tbody>
+      </table>
+      <p>即使您跳过每季度基本保养，每台每年只做1次化学清洗，AMC仍然省钱：单次RM 360 vs AMC RM 499——但AMC包含您通常会跳过的每台4次额外基本保养，这些保养能避免更高的电费和更频繁的故障。</p>
+
+      <h2>谁应该购买AMC？</h2>
+      <ul>
+        <li><strong>拥有2台以上冷气的公寓业主</strong>——机器越多，节省越大</li>
+        <li><strong>管理出租物业的房东</strong>——可预测的年度费用，无意外维修账单</li>
+        <li><strong>小型办公室和店铺</strong>——商业冷气每天运行8小时以上需要每季度关注</li>
+        <li><strong>懒得记住预约的人</strong>——我们自动安排并提醒您</li>
+      </ul>
+
+      <h2>如果需要维修怎么办？</h2>
+      <p>AMC涵盖定期保养（基本保养+化学清洗）。如技术员在定期上门时发现故障——如冷媒泄漏、电容故障或PCB问题——会先诊断并单独报价维修费用。AMC客户享有<strong>优先维修排程</strong>和与所有KL Renovator客户相同的透明价格。零件保修3个月，工艺保修1个月。</p>
+
+      <h2>如何注册</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong>，提供：</p>
+      <ol>
+        <li>冷气台数</li>
+        <li>机型（挂壁式、天花板卡式、窗式）</li>
+        <li>您在KL/Selangor的位置</li>
+      </ol>
+      <p>我们会确认AMC计划，安排首次季度上门，并发送合约条款。无需预付款——首次上门后开具发票。</p>
+      <p>另请参阅：<a href="/zh/services/maintenance-contract">AMC完整服务页</a> | <a href="/zh/services/basic-servicing">基本保养价格</a> | <a href="/zh/services/chemical-wash">化学清洗价格</a></p>
+    `,
+  },
 ];
