@@ -565,15 +565,15 @@ export default async function AreaPageZH({
               </NextLink>
 
               <NextLink
-                href="/near-me"
+                href="/zh/near-me"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
               >
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">附近服务中心</p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">邻近调度中心 · 定位提示</p>
                 <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
-                  查看您附近的当天冷气服务可用性
+                  查询 {area.name} 及周边区域的当天快速调派服务？
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  使用我们的 Klang Valley near-me 页面比较附近覆盖区域，并选择最快的 WhatsApp 预约路线。
+                  使用我们的巴生谷邻近聚合中心查看流动技术团队覆盖范围、对比相邻区域，并选择最快的 WhatsApp 预约路径。
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
                   打开 Near Me 页面 <FiArrowRight className="h-3 w-3" />
