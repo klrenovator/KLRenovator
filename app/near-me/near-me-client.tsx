@@ -53,7 +53,10 @@ const T = {
     areas_badge: "Areas we cover near you",
     areas_h2: "We service all of Kuala Lumpur & Selangor",
     areas_desc: "No matter where you are in the Klang Valley, there's a KL Renovator technician nearby.",
-    areas_btn: "See all 39 service areas",
+    areas_btn: "See all 40 service areas",
+    intent_badge: "Intent Separation · Proximity Dispatch vs Localized Technical Guides",
+    intent_h3: "Why browse our Near Me Hub vs Specific Area Landing Pages?",
+    intent_desc: "You are currently on our Klang Valley Regional Proximity Dispatch Hub (/near-me). This aggregator page coordinates our mobile technician fleet across Greater Kuala Lumpur and Selangor for rapid same-day response (30–60 minute dispatch). If you need localized technical details—such as township water leak troubleshooting, specific condo access protocols, or neighborhood pricing—click your area page below.",
     faq_badge: "Frequently asked questions",
     faq_h2: "Aircond service near me — common questions",
     faqs: [
@@ -109,7 +112,10 @@ const T = {
     areas_badge: "Kawasan yang kami liputi berdekatan anda",
     areas_h2: "Kami menyervis seluruh Kuala Lumpur & Selangor",
     areas_desc: "Di mana sahaja anda berada di Lembah Klang, ada juruteknik KL Renovator berdekatan.",
-    areas_btn: "Lihat semua 39 kawasan servis",
+    areas_btn: "Lihat semua 40 kawasan servis",
+    intent_badge: "Pemisahan Niat · Hub Penghantaran vs Panduan Teknikal Setempat",
+    intent_h3: "Mengapa layari Hub Near Me berbanding Halaman Kawasan Khusus?",
+    intent_desc: "Anda kini berada di Hub Penghantaran Proksimiti Lembah Klang (/near-me). Halaman pengumpul ini menyelaraskan armada juruteknik mudah alih kami di sekitar Kuala Lumpur dan Selangor untuk tindak balas pantas hari sama (30–60 minit tiba). Jika anda memerlukan butiran teknikal setempat—seperti penyelesaian masalah aircond di kawasan anda atau protokol akses kondominium—klik halaman kawasan anda di bawah.",
     faq_badge: "Soalan yang kerap ditanya",
     faq_h2: "Servis aircond berdekatan — soalan biasa",
     faqs: [
@@ -165,7 +171,10 @@ const T = {
     areas_badge: "我们覆盖的附近地区",
     areas_h2: "我们服务整个吉隆坡及雪兰莪",
     areas_desc: "无论您在巴生谷哪里，附近都有KL Renovator技术员。",
-    areas_btn: "查看全部39个服务地区",
+    areas_btn: "查看全部40个服务地区",
+    intent_badge: "定位与意图提示 · 调派中心与分区技术指南分类",
+    intent_h3: "浏览附近服务调度页与浏览各分区的区别？",
+    intent_desc: "您目前在我们的巴生谷邻近调派聚合页面 (/near-me)。此页面实时汇总大吉隆坡及雪兰莪各大片区的流动技术员调度，为您安排快速当天上门服务（30-60分钟响应）。如果您需要查找特定小区的详细技术参数、常见故障排除（如漏水或制冷故障）或小区门禁规定，请点击下方对应的具体地区页面查看。",
     faq_badge: "常见问题",
     faq_h2: "附近冷气服务 — 常见问题",
     faqs: [
@@ -188,11 +197,11 @@ const workPhotos = [
   { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Wall-mounted aircond installation by KL Renovator in Kuala Lumpur" },
 ];
 
-const AREAS = ["Kuala Lumpur","Petaling Jaya","Cheras","Shah Alam","Subang Jaya","Puchong","Klang","Ampang","Kajang","Setia Alam","Bangsar","Mont Kiara","Kepong","Sri Petaling","Bukit Jalil","Putrajaya","Cyberjaya","Sunway","USJ","Bandar Utama"];
-
-export default function NearMeClient() {
-  const { lang } = useLang();
+export default function NearMeClient({ initialLang }: { initialLang?: "en" | "ms" | "zh" } = {}) {
+  const { lang: ctxLang } = useLang();
+  const lang = initialLang || ctxLang;
   const tx = T[lang];
+  const prefix = lang === "en" ? "" : `/${lang}`;
 
   return (
     <>
@@ -200,7 +209,7 @@ export default function NearMeClient() {
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-1 text-xs text-slate-500">
-            <NextLink href="/" className="hover:text-sky-600 transition">
+            <NextLink href={prefix || "/"} className="hover:text-sky-600 transition">
               {lang === "en" ? "Home" : lang === "ms" ? "Utama" : "首页"}
             </NextLink>
             <FiChevronRight className="h-3 w-3" />
@@ -301,7 +310,7 @@ export default function NearMeClient() {
                 ))}
               </ul>
               <NextLink
-                href="/services"
+                href={`${prefix}/services`}
                 className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#0284c7] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0369a1]"
               >
                 {tx.what_btn}
@@ -322,8 +331,8 @@ export default function NearMeClient() {
         </div>
       </section>
 
-      {/* Areas */}
-      <section className="py-14 sm:py-18 bg-slate-50">
+      {/* Areas Aggregator Hub Grid */}
+      <section className="py-14 sm:py-18 bg-slate-50 border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="flex items-center gap-2 text-sky-700">
@@ -333,14 +342,35 @@ export default function NearMeClient() {
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">{tx.areas_h2}</h2>
             <p className="mt-2 text-slate-600">{tx.areas_desc}</p>
           </Reveal>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {AREAS.map((a) => (
-              <span key={a} className="rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-sm font-medium text-slate-600">{a}</span>
+
+          {/* Intent Separation Callout Box */}
+          <div className="mt-6 mb-8 rounded-2xl border border-sky-200 bg-sky-50/80 p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-1">{tx.intent_badge}</p>
+            <h3 className="text-base font-black text-slate-900">{tx.intent_h3}</h3>
+            <p className="mt-2 text-sm text-slate-700 leading-relaxed">{tx.intent_desc}</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {siteConfig.areaPages.map((area) => (
+              <NextLink
+                key={area.slug}
+                href={`${prefix}/areas/${area.slug}`}
+                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm hover:border-sky-400 hover:bg-sky-50 hover:shadow transition-all"
+              >
+                <div className="flex items-center gap-2">
+                  <FiMapPin className="h-3.5 w-3.5 text-sky-500 shrink-0 group-hover:text-sky-600" />
+                  <span className="font-bold text-slate-900 text-xs truncate group-hover:text-sky-800">{area.name}</span>
+                </div>
+                <span className="mt-2 text-[10px] font-semibold text-slate-400 group-hover:text-sky-600 uppercase tracking-wider">
+                  {area.state} →
+                </span>
+              </NextLink>
             ))}
           </div>
+
           <NextLink
-            href="/areas"
-            className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#0284c7] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0369a1]"
+            href={`${prefix}/areas`}
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#0284c7] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0369a1]"
           >
             {tx.areas_btn}
             <FiChevronRight className="h-4 w-4" />
@@ -349,7 +379,7 @@ export default function NearMeClient() {
       </section>
 
       {/* FAQ */}
-      <section className="py-14 sm:py-18 bg-white">
+      <section className="py-14 sm:py-18 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">{tx.faq_badge}</p>
