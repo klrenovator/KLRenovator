@@ -22,11 +22,11 @@ type ServiceFaq = { q: string; a: string };
 const SUPPLEMENTAL_SERVICE_FAQS_I18N: Record<string, { ms: ServiceFaq[]; zh: ServiceFaq[] }> = {
   "chemical-wash": {
     ms: [
-      { q: "Adakah cuci kimia cukup jika aircond bocor air?", a: "Selalunya ya, jika puncanya paip saliran tersumbat, coil kotor atau lendir dalam tray. Jika bocor berulang, chemical overhaul mungkin lebih sesuai." },
+      { q: "Apakah ujian operasi yang dilakukan selepas cuci kimia bertekanan?", a: "Selepas cucian kimia 80–120 PSI dan bilasan air bertekanan tinggi, juruteknik kami memasang semula unit anda dan menjalankan ujian operasi selama 15 minit. Kami mengukur kelajuan aliran udara dan penurunan suhu untuk memastikan kecekapan penyejukan pulih sepenuhnya sebelum penyerahan." },
       { q: "Boleh duduk di rumah semasa cuci kimia?", a: "Boleh. Juruteknik menggunakan kanvas pelindung dan menguji saliran sebelum pulang. Jauhkan kanak-kanak daripada kawasan kerja semasa cucian." },
     ],
     zh: [
-      { q: "如果冷气漏水，化学清洗够吗？", a: "通常可以，如果原因是排水管堵塞、盘管脏或水盘有黏液。如果漏水反复出现，可能需要化学大清洗。" },
+      { q: "高压化学清洗完成后会进行哪些运作测试？", a: "在完成80–120 PSI高压化学清洗与高压清水冲洗并重装机器后，技术员会进行为期15分钟的完整运作测试。我们测量送风风速与温降数据，确保制冷效率与强劲风量全面恢复后才让客户签收。" },
       { q: "化学清洗时我可以留在家吗？", a: "可以。技术员会使用保护帆布，并在离开前测试排水。清洗期间请让儿童远离施工区域。" },
     ],
   },
@@ -216,14 +216,14 @@ export function ServiceDetailI18n({
       zh: "我们在整个大吉隆坡谷都市区提供{service}。从吉隆坡中央商务区到每个雪兰莪市镇，我们的移动技术员携带完成大多数工作所需的工具、零件和制冷剂。无差旅费——您只需支付服务费。",
     },
     problemAwareTitle: {
-      en: "Does Your Aircond Have Any of These Problems? This Service Fixes Them.",
-      ms: "Adakah Aircond Anda Mengalami Mana-mana Masalah Ini? Perkhidmatan Ini Membaikinya.",
-      zh: "您的冷气有这些问题吗？此服务可修复它们。",
+      en: "Researching Aircond Symptoms? Check Our Diagnostic Guides First.",
+      ms: "Mencari Punca Simptom Aircond? Semak Panduan Diagnosis Kami Terlebih Dahulu.",
+      zh: "正在查找冷气故障原因？请先查阅故障诊断与排障指南。",
     },
     problemAwareSub: {
-      en: "Most customers find this page after searching for the exact symptoms below. If any of these sound like your unit, {service} is likely the right solution.",
-      ms: "Kebanyakan pelanggan menjumpai halaman ini selepas mencari simptom tepat di bawah. Jika mana-mana ini kedengaran seperti unit anda, {service} mungkin adalah penyelesaian yang betul.",
-      zh: "大多数客户在搜索以下确切症状后找到此页面。如果您的机器有任何这些症状，{service}很可能是正确的解决方案。",
+      en: "If you are currently troubleshooting active symptoms and want to understand the underlying technical cause before scheduling service, visit our specialized informational troubleshooting guides below. Once you have confirmed your unit requires professional maintenance or deep cleaning, book your {service} directly on this page.",
+      ms: "Jika anda sedang menyiasat masalah teknikal dan ingin memahami puncanya sebelum membuat tempahan servis, lawati panduan diagnosis penyelesaian masalah khusus di bawah. Setelah pasti unit anda memerlukan pembersihan atau penyelenggaraan profesional, tempah {service} anda terus di halaman ini.",
+      zh: "如果您目前正在排查冷气故障症状，并希望在预约施工前先深入了解底层技术原因，请查阅下方相对应的专业故障诊断指南。若已确定机器需要专业深层保养清洗，请直接在本页面在线预约{service}。",
     },
     klCoverage: { en: "Aircond Service Kuala Lumpur", ms: "Servis Aircond Kuala Lumpur", zh: "吉隆坡冷气服务" },
     klCoverageDesc: { en: "Full KL coverage — all townships and condo districts. Same-day slots available.", ms: "Liputan penuh KL — semua bandaraya dan kawasan kondominium. Slot hari sama tersedia.", zh: "覆盖整个吉隆坡——所有市镇和公寓区。可提供当天时段。" },
