@@ -315,6 +315,43 @@ export default async function AreaPageMS({
         </div>
       </section>
 
+      {/* Aircond Tak Sejuk — Per-Area Intent Section — Round 28 / 20F.57 */}
+      <section className="py-14 bg-red-50 border-y border-red-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Diagnosis · Troubleshooting · 故障排除</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
+              Aircond Tak Sejuk di {area.name}? Ini Yang Perlu Semak
+            </h2>
+            <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
+              &quot;Aircond tak sejuk di {area.name}&quot; adalah antara carian paling biasa dari kawasan ini. Jika aircond anda berjalan tetapi tidak sejuk, ini punca utama yang juruteknik KL Renovator temui setiap hari di {area.name} dan Lembah Klang:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { problem: "Gegelung Penyejat Kotor", en: "Dirty Evaporator Coil", zh: "蒸发器盘管脏污", desc: `Punca #1 di ${area.name}. Kelembapan dan habuk KL menyumbat sirip gegelung, mengurangkan aliran udara 30–50%. Baiki: cuci kimia tekanan dari RM 120.`, fix: "Cuci Kimia", price: "RM 120" },
+                { problem: "Gas Penyejuk Rendah", en: "Low Refrigerant Gas", zh: "冷媒不足", desc: "Jika unit berjalan tetapi hembus angin panas, gas mungkin rendah. Ini bermakna ada kebocoran — tambah gas sahaja tanpa mencari kebocoran membazir wang. Baiki: semak bocor + tambah gas dari RM 150.", fix: "Tambah Gas", price: "RM 150" },
+                { problem: "Paip Longkang Tersumbat", en: "Blocked Drain Pipe", zh: "排水管堵塞", desc: `Biasa di ${area.name} semasa musim monsun. Biofilm menyumbat saliran, menyebabkan bocor air dan pembentukan ais. Baiki: bilas longkang termasuk dalam servis asas dari RM 99.`, fix: "Servis Asas", price: "RM 99" },
+                { problem: "Pemampat Tidak Berfungsi", en: "Compressor Not Running", zh: "压缩机不运转", desc: "Jika kipas dalam berjalan tetapi unit luar senyap, pemampat atau kapasitor mungkin rosak. Perlu diagnosis di lokasi. Baiki: pembaikan dari RM 150 + alat ganti.", fix: "Pembaikan", price: "RM 150+" },
+                { problem: "Termostat Tidak Tepat", en: "Thermostat Miscalibrated", zh: "温控器校准偏差", desc: "Unit fikir bilik lebih sejuk dari sebenar, jadi ia mati terlalu awal. Biasa pada unit bukan inverter lama. Baiki: kalibrasi semula termostat semasa servis.", fix: "Servis Asas", price: "RM 99" },
+                { problem: "HP Tidak Sesuai Saiz Bilik", en: "Wrong HP for Room Size", zh: "HP与房间大小不匹配", desc: `Unit 1.0 HP dalam bilik utama besar tidak akan sejuk dengan betul dalam cuaca 33°C ${area.name}. Jika baru pindah, semak sama ada pemilik sebelumnya guna HP terlalu kecil.`, fix: "Perundingan", price: "Percuma" },
+              ].map((item) => (
+                <div key={item.problem} className="bg-white border border-red-200 rounded-xl p-5">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-black text-slate-900 text-sm">{item.problem}</h3>
+                    <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{item.price}</span>
+                  </div>
+                  <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.en} · {item.zh}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6">
+              <BookingButton serviceName={`Diagnosis Aircond ${area.name}`} size="md" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Geographic Coverage — BM */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
