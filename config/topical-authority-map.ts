@@ -229,6 +229,12 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "pressure-chemical-wash-leaking-aircond-kl-selangor",
     "aircond-water-leaking-causes",
   ],
+  "maintenance-contract": [
+    "aircond-maintenance-contract-malaysia-2026",
+    "how-often-service-aircond-malaysia",
+    "aircond-maintenance-checklist-malaysia",
+    "aircond-service-price-guide-kl-2026",
+  ],
 };
 
 // ── AREA → TOP PROBLEMS MAP ───────────────────────────────────────────────────
