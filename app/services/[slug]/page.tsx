@@ -79,7 +79,7 @@ type ServiceFaq = { q: string; a: string };
 
 const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
   "chemical-wash": [
-    { q: "Is chemical wash enough if my aircond is leaking water?", a: "Often yes, if the leak is caused by a blocked drain pipe, dirty evaporator coil or slime buildup. If the back tray is badly choked or leaking returns repeatedly, KL Renovator may recommend chemical overhaul instead." },
+    { q: "What post-service testing is performed after a pressure chemical wash?", a: "After the 80–120 PSI chemical wash and high-pressure water rinse, our technician reassembles your unit and conducts a 15-minute operational test. We measure the supply airflow velocity and cooling temperature drop to verify that cooling efficiency and strong airflow are fully restored before handover." },
     { q: "Can I stay at home during the chemical wash?", a: "Yes. The technician uses a protective canvas and checks drainage before leaving. Keep children away from the work area while the unit is being washed." },
   ],
   "chemical-overhaul": [
@@ -537,12 +537,12 @@ export default async function ServicePage({
           <section className="py-14 bg-white border-t border-slate-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Problems We Fix</p>
+                <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Diagnostic Router · Intent Separation</p>
                 <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
-                  Does Your Aircond Have Any of These Problems? {data.title} Fixes Them.
+                  Researching Aircond Symptoms? Check Our Diagnostic Guides First.
                 </h2>
                 <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
-                  Most customers find this page after searching for the exact symptoms below. If any of these sound like your unit, {data.title} is likely the right solution. KL Renovator diagnoses and fixes all of these issues across KL and Selangor with same-day service.
+                  If you are currently troubleshooting active symptoms and want to understand the underlying technical cause before scheduling service, visit our specialized informational troubleshooting guides below. Once you have confirmed your unit requires professional maintenance or deep cleaning, book your {data.title} directly on this page.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {problems.map((problem) => (
