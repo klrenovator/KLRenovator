@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { allPosts } from "@/config/blog-posts";
 import { AREA_BLOG_MAP, AREA_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
+import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
