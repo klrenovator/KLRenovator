@@ -226,7 +226,7 @@ export default async function ProblemPageMS({
 
             {relatedService && (
               <NextLink
-                href={`/services/${relatedService.slug}`}
+                href={`/ms/services/${relatedService.slug}`}
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-black text-sky-600 hover:text-sky-800"
               >
                 Lihat Servis {relatedService.title} <FiArrowRight className="h-3.5 w-3.5" />
