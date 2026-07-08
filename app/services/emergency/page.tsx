@@ -5,6 +5,7 @@ import { FiCheck, FiClock, FiAlertTriangle, FiZap, FiChevronRight } from "react-
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
+import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -21,6 +22,7 @@ const emergencyMsg = [
 
 const emergencyWaLink = waLink(emergencyMsg);
 const emergencyCorePolish = buildServiceCorePolishModule("emergency", "en", "Emergency Aircond Repair", 88);
+const emergencyCRO = buildServiceCRORefinementModule("emergency", "en", "Emergency Aircond Repair");
 
 // ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -341,6 +343,40 @@ export default function EmergencyPage() {
         </div>
       </section>
 
+      {/* Round 34 / 8.5: Emergency SXO / CRO — CTA placement by urgency stage */}
+      <section id="intent-stage-cta" className="py-12 px-4 bg-slate-950 text-white border-t border-slate-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-6">
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-red-300 mb-2">{emergencyCRO.eyebrow}</p>
+              <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-white">{emergencyCRO.heading}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300 max-w-3xl">{emergencyCRO.intro}</p>
+            </div>
+            <p className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-xs font-bold leading-relaxed text-slate-300 lg:max-w-xs">
+              {emergencyCRO.reassurance}
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {emergencyCRO.stages.map((stage) => (
+              <a
+                key={stage.id}
+                href={stage.href}
+                target={stage.external ? "_blank" : undefined}
+                rel={stage.external ? "nofollow noopener noreferrer" : undefined}
+                className="group rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-white/[0.09]"
+              >
+                <p className="text-[11px] font-black uppercase tracking-widest text-red-300">{stage.badge}</p>
+                <h3 className="mt-2 text-lg font-black text-white">{stage.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">{stage.description}</p>
+                <span className="mt-5 inline-flex items-center gap-1 rounded-xl bg-white px-4 py-2 text-xs font-black uppercase tracking-widest text-slate-950 transition group-hover:gap-2">
+                  {stage.actionLabel} <FiChevronRight className="h-3 w-3" />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── BREADCRUMB ───────────────────────────────────────────────────────── */}
       <nav className="bg-slate-50 border-b border-slate-100 py-3 px-4 text-xs text-slate-500 font-medium">
         <div className="max-w-5xl mx-auto flex items-center gap-1.5 flex-wrap">
@@ -353,7 +389,7 @@ export default function EmergencyPage() {
       </nav>
 
       {/* ── WHEN TO CALL ─────────────────────────────────────────────────────── */}
-      <section className="py-14 px-4 bg-white">
+      <section id="emergency-situations" className="py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-2 flex items-center justify-center gap-2">
@@ -493,7 +529,7 @@ export default function EmergencyPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────────── */}
-      <section className="py-14 px-4 bg-white">
+      <section id="emergency-faq" className="py-14 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">FAQ</p>
