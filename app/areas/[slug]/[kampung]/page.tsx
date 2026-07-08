@@ -10,6 +10,7 @@ import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
+import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /areas/[slug]/[kampung] — English kampung/neighbourhood page.
@@ -133,6 +134,8 @@ export default async function KampungPage({
     .map((bs) => allPosts.find((b) => b.slug === bs))
     .filter((b): b is NonNullable<typeof b> => Boolean(b));
 
+  const uniquenessMatrix = buildKampungUniquenessMatrix(k, parentArea, "en");
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
@@ -170,6 +173,58 @@ export default async function KampungPage({
                 <FaWhatsapp className="h-5 w-5" />
                 WhatsApp Now
               </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Round 31 / 20D.33: Area Page Uniqueness Matrix for every sub-area route */}
+      <section id={uniquenessMatrix.id} aria-labelledby={`${uniquenessMatrix.id}-heading`} className="py-12 bg-white border-b border-slate-100">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              {uniquenessMatrix.eyebrow}
+            </p>
+            <h2 id={`${uniquenessMatrix.id}-heading`} className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
+              {uniquenessMatrix.heading}
+            </h2>
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700 max-w-4xl">
+              {uniquenessMatrix.intro}
+            </p>
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {uniquenessMatrix.rows.map((row) => (
+                <div key={row.label} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                  <p className="text-[11px] font-black uppercase tracking-widest text-slate-500">{row.label}</p>
+                  <p className="mt-2 text-sm font-black text-slate-950">{row.value}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{row.detail}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-7 rounded-3xl border border-sky-100 bg-sky-50 p-5 sm:p-6">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-sky-700">{uniquenessMatrix.serviceHeading}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700 max-w-3xl">{uniquenessMatrix.serviceIntro}</p>
+                </div>
+              </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {uniquenessMatrix.serviceLinks.map((service) => (
+                  <NextLink
+                    key={service.href}
+                    href={service.href}
+                    className="group rounded-2xl border border-white bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
+                  >
+                    <span className="block text-sm font-black text-slate-950">{service.label}</span>
+                    <span className="mt-1 block text-xs font-bold text-sky-700">{service.price}</span>
+                    <span className="mt-2 block text-xs leading-relaxed text-slate-600">{service.reason}</span>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-700 group-hover:gap-2 transition-all">
+                      View service <FiArrowRight className="h-3 w-3" />
+                    </span>
+                  </NextLink>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>
