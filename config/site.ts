@@ -657,7 +657,7 @@ export const siteConfig = {
         { q: "Do you coordinate with building management for condo access in Mont Kiara?", a: "Yes — most Mont Kiara condos require security registration and sometimes a loading-bay booking for equipment. We handle this coordination directly with building management so you don\u2019t have to." },
         { q: "Does KL Renovator service aircond in Mont Kiara?", a: "Yes — KL Renovator covers Mont Kiara, Sri Hartamas, Solaris Dutamas and Duta Nusantara. We regularly service high-rise condo units here, including coordinating lift/loading-bay access for technicians and equipment. WhatsApp +60182983573 to book." },
         { q: "Can you service aircond units in high-rise condos in Mont Kiara?", a: "Yes — most of our Mont Kiara jobs are in condominiums and serviced residences. We bring portable equipment suited for lift access and can liaise with building management or security on your behalf for technician entry passes." },
-        { q: "How much does aircond chemical wash cost in Mont Kiara?", a: "Pressure chemical wash in Mont Kiara starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Many condo units here use ceiling cassette or concealed split systems, which start from RM 220 — confirmed on-site before work begins." },,
+        { q: "How much does aircond chemical wash cost in Mont Kiara?", a: "Pressure chemical wash in Mont Kiara starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Many condo units here use ceiling cassette or concealed split systems, which start from RM 220 — confirmed on-site before work begins." },
         { q: "Who is the most reliable aircond technician in Mont Kiara?", a: "KL Renovator's local Mont Kiara team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Mont Kiara?", a: "We operate from 9 AM to 10 PM daily in Mont Kiara. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
@@ -665,7 +665,7 @@ export const siteConfig = {
         { q: "Adakah anda uruskan dengan pengurusan bangunan untuk akses kondo di Mont Kiara?", a: "Ya — kebanyakan kondo Mont Kiara memerlukan pendaftaran keselamatan dan kadangkala tempahan loading bay. Kami uruskan penyelarasan ini terus dengan pengurusan bangunan." },
         { q: "Adakah KL Renovator servis aircond di Mont Kiara?", a: "Ya — KL Renovator meliputi Mont Kiara, Sri Hartamas, Solaris Dutamas dan Duta Nusantara. Kami kerap servis unit kondominium tinggi di sini, termasuk uruskan akses lif/loading bay untuk juruteknik." },
         { q: "Bolehkah anda servis aircond di kondominium tinggi di Mont Kiara?", a: "Ya — kebanyakan kerja kami di Mont Kiara adalah di kondominium dan kediaman servis. Kami bawa peralatan mudah alih sesuai untuk akses lif dan boleh berhubung dengan pengurusan bangunan bagi pihak anda." },
-        { q: "Berapa harga cuci kimia aircond di Mont Kiara?", a: "Cuci kimia bertekanan di Mont Kiara bermula RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Unit ceiling cassette bermula RM 220 — disahkan di tapak sebelum kerja bermula." },,
+        { q: "Berapa harga cuci kimia aircond di Mont Kiara?", a: "Cuci kimia bertekanan di Mont Kiara bermula RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Unit ceiling cassette bermula RM 220 — disahkan di tapak sebelum kerja bermula." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Mont Kiara?", a: "Pasukan tempatan KL Renovator di Mont Kiara dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Mont Kiara?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Mont Kiara. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
@@ -673,7 +673,7 @@ export const siteConfig = {
         { q: "你们会协调蒙特基拉公寓的大厦管理处以便进出吗？", a: "会的——大多数蒙特基拉公寓需要安保登记，有时还需预约装卸区。我们会直接与大厦管理处协调，您无需亲自处理。" },
         { q: "KL Renovator在蒙特基拉提供冷气服务吗？", a: "是的——KL Renovator覆盖Mont Kiara、Sri Hartamas、Solaris Dutamas和Duta Nusantara。我们经常为这里的高层公寓提供服务，包括协调电梯及装卸区的技师通行安排。" },
         { q: "你们能为蒙特基拉的高层公寓提供冷气服务吗？", a: "可以——我们在Mont Kiara的大部分工作都在公寓及服务式住宅。我们携带适合电梯进出的便携设备，并可代您与大厦管理处联系安排技师入门证。" },
-        { q: "蒙特基拉冷气化学清洗费用是多少？", a: "蒙特基拉的加压化学清洗从RM 120起（1.0–1.5匹），RM 150起（2.0–2.5匹）。吸顶式机型从RM 220起——动工前现场确认价格。" },,
+        { q: "蒙特基拉冷气化学清洗费用是多少？", a: "蒙特基拉的加压化学清洗从RM 120起（1.0–1.5匹），RM 150起（2.0–2.5匹）。吸顶式机型从RM 220起——动工前现场确认价格。" },
         { q: "谁是 Mont Kiara 最可靠的冷气技术员？", a: "KL Renovator 的 Mont Kiara 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Mont Kiara 提供 24 小时紧急服务吗？", a: "我们在 Mont Kiara 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -700,21 +700,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Setapak?", a: "Yes — KL Renovator covers Setapak, Taman Setapak, Taman Sri Rampai and the Gombak border area. Same-day technicians are usually available given our regular coverage route through Wangsa Maju and Setapak together." },
         { q: "Do you service older walk-up apartments in Setapak?", a: "Yes — Setapak has many older low-rise walk-up flats alongside newer condos. Our technicians carry the right ladder/scaffold setup for outdoor compressor units mounted on older low-rise blocks without lift access." },
-        { q: "How much does aircond repair cost in Setapak?", a: "Diagnostic/troubleshooting in Setapak is RM 88, waived if you proceed with the repair same visit. Common Setapak repairs (capacitor, PCB, gas top-up) range RM 120–RM 280 depending on the issue, confirmed before work starts." },,
+        { q: "How much does aircond repair cost in Setapak?", a: "Diagnostic/troubleshooting in Setapak is RM 88, waived if you proceed with the repair same visit. Common Setapak repairs (capacitor, PCB, gas top-up) range RM 120–RM 280 depending on the issue, confirmed before work starts." },
         { q: "Who is the most reliable aircond technician in Setapak?", a: "KL Renovator's local Setapak team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Setapak?", a: "We operate from 9 AM to 10 PM daily in Setapak. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Setapak?", a: "Ya — KL Renovator meliputi Setapak, Taman Setapak, Taman Sri Rampai dan kawasan sempadan Gombak. Juruteknik hari sama biasanya tersedia kerana laluan litar kami merangkumi Wangsa Maju dan Setapak bersama." },
         { q: "Adakah anda servis pangsapuri walk-up lama di Setapak?", a: "Ya — Setapak mempunyai banyak blok pangsapuri rendah lama selain kondo baharu. Juruteknik kami membawa tangga/perancah sesuai untuk unit kompresor luar di blok lama tanpa lif." },
-        { q: "Berapa harga pembaikan aircond di Setapak?", a: "Diagnostik/pemeriksaan di Setapak RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa (kapasitor, PCB, tambah gas) dari RM 120–RM 280." },,
+        { q: "Berapa harga pembaikan aircond di Setapak?", a: "Diagnostik/pemeriksaan di Setapak RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa (kapasitor, PCB, tambah gas) dari RM 120–RM 280." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Setapak?", a: "Pasukan tempatan KL Renovator di Setapak dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Setapak?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Setapak. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士达毕提供冷气服务吗？", a: "是的——KL Renovator覆盖士达毕（Setapak）、Taman Setapak、Taman Sri Rampai及Gombak边界区域。由于我们的常规路线涵盖万绕（Wangsa Maju）和士达毕，通常可安排当天上门。" },
         { q: "你们为士达毕的旧式无电梯公寓提供服务吗？", a: "可以——士达毕有许多旧式低层无电梯公寓，也有新公寓。我们的技师会携带合适的梯具，用于无电梯旧楼的室外压缩机安装位置。" },
-        { q: "士达毕冷气维修费用是多少？", a: "士达毕的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、充气）费用约RM 120–RM 280，视情况而定。" },,
+        { q: "士达毕冷气维修费用是多少？", a: "士达毕的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、充气）费用约RM 120–RM 280，视情况而定。" },
         { q: "谁是 Setapak 最可靠的冷气技术员？", a: "KL Renovator 的 Setapak 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Setapak 提供 24 小时紧急服务吗？", a: "我们在 Setapak 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -741,21 +741,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sentul?", a: "Yes — KL Renovator covers Sentul, Sentul Park, Jalan Ipoh and the Brickfields border area. We service both landed homes near Jalan Ipoh and the newer high-rise developments around Sentul Park." },
         { q: "Do you service the newer condos near Sentul Park?", a: "Yes — the Sentul Park area has several newer condo developments. We're familiar with the management/JMB approval process some of these buildings require for outdoor unit access, and can guide you through it before the appointment." },
-        { q: "Is same-day aircond service available in Sentul?", a: "Yes — Sentul is along our regular city-centre coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning with your address near Jalan Ipoh or Sentul Park to confirm timing." },,
+        { q: "Is same-day aircond service available in Sentul?", a: "Yes — Sentul is along our regular city-centre coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning with your address near Jalan Ipoh or Sentul Park to confirm timing." },
         { q: "Who is the most reliable aircond technician in Sentul?", a: "KL Renovator's local Sentul team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sentul?", a: "We operate from 9 AM to 10 PM daily in Sentul. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sentul?", a: "Ya — KL Renovator meliputi Sentul, Sentul Park, Jalan Ipoh dan kawasan sempadan Brickfields. Kami servis rumah berkembar berhampiran Jalan Ipoh dan pembangunan tinggi baharu di sekitar Sentul Park." },
         { q: "Adakah anda servis kondo baharu berhampiran Sentul Park?", a: "Ya — kawasan Sentul Park mempunyai beberapa pembangunan kondo baharu. Kami biasa dengan proses kelulusan pengurusan/JMB yang diperlukan sesetengah bangunan ini untuk akses unit luar." },
-        { q: "Adakah servis aircond hari sama tersedia di Sentul?", a: "Ya — Sentul berada di laluan litar pusat bandar kami, jadi slot hari sama biasanya tersedia. WhatsApp +60182983573 pada waktu pagi." },,
+        { q: "Adakah servis aircond hari sama tersedia di Sentul?", a: "Ya — Sentul berada di laluan litar pusat bandar kami, jadi slot hari sama biasanya tersedia. WhatsApp +60182983573 pada waktu pagi." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sentul?", a: "Pasukan tempatan KL Renovator di Sentul dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sentul?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sentul. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在仙都（Sentul）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sentul、Sentul Park、Jalan Ipoh及Brickfields边界区域。我们服务Jalan Ipoh附近的排屋，也服务Sentul Park周边较新的高层住宅。" },
         { q: "你们为Sentul Park附近的新公寓提供服务吗？", a: "可以——Sentul Park区域有几个较新的公寓项目。我们熟悉部分大厦要求的管理处/JMB批准流程，可在预约前为您指导处理。" },
-        { q: "仙都（Sentul）能安排当天冷气服务吗？", a: "可以——Sentul位于我们市中心常规服务路线上，通常可安排当天上门。请在早上通过WhatsApp +60182983573联系确认时间。" },,
+        { q: "仙都（Sentul）能安排当天冷气服务吗？", a: "可以——Sentul位于我们市中心常规服务路线上，通常可安排当天上门。请在早上通过WhatsApp +60182983573联系确认时间。" },
         { q: "谁是 Sentul 最可靠的冷气技术员？", a: "KL Renovator 的 Sentul 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sentul 提供 24 小时紧急服务吗？", a: "我们在 Sentul 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -782,21 +782,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Selayang?", a: "Yes — KL Renovator covers Selayang, Selayang Mall, Taman Selayang Baru and the Batu Caves/Gombak/Rawang corridor. This area is part of our regular northern Klang Valley route." },
         { q: "Do you service landed houses and shoplots in Selayang?", a: "Yes — Selayang has a mix of terrace houses and commercial shoplots, especially near Selayang Mall. We service both residential split units and shoplot ceiling-mounted units, with separate pricing for commercial work." },
-        { q: "How far is Selayang from Batu Caves for aircond service?", a: "Selayang sits right next to Batu Caves and Gombak, so technicians covering one area can usually reach the other within the same trip — this often means faster same-day scheduling for both areas." },,
+        { q: "How far is Selayang from Batu Caves for aircond service?", a: "Selayang sits right next to Batu Caves and Gombak, so technicians covering one area can usually reach the other within the same trip — this often means faster same-day scheduling for both areas." },
         { q: "Who is the most reliable aircond technician in Selayang?", a: "KL Renovator's local Selayang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Selayang?", a: "We operate from 9 AM to 10 PM daily in Selayang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Selayang?", a: "Ya — KL Renovator meliputi Selayang, Selayang Mall, Taman Selayang Baru dan koridor Batu Caves/Gombak/Rawang. Kawasan ini sebahagian daripada laluan litar utara Lembah Klang kami." },
         { q: "Adakah anda servis rumah berkembar dan kedai di Selayang?", a: "Ya — Selayang mempunyai gabungan rumah teres dan kedai komersial, terutamanya berhampiran Selayang Mall. Kami servis unit split kediaman dan unit kedai dengan harga komersial berasingan." },
-        { q: "Berapa jauh Selayang dari Batu Caves untuk servis aircond?", a: "Selayang terletak bersebelahan Batu Caves dan Gombak, jadi juruteknik yang meliputi satu kawasan biasanya boleh ke kawasan lain dalam perjalanan sama — ini selalunya bermakna penjadualan hari sama yang lebih pantas." },,
+        { q: "Berapa jauh Selayang dari Batu Caves untuk servis aircond?", a: "Selayang terletak bersebelahan Batu Caves dan Gombak, jadi juruteknik yang meliputi satu kawasan biasanya boleh ke kawasan lain dalam perjalanan sama — ini selalunya bermakna penjadualan hari sama yang lebih pantas." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Selayang?", a: "Pasukan tempatan KL Renovator di Selayang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Selayang?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Selayang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士拉央（Selayang）提供冷气服务吗？", a: "是的——KL Renovator覆盖Selayang、Selayang Mall、Taman Selayang Baru及Batu Caves/Gombak/Rawang一带。该区域属于我们雪隆北部常规服务路线。" },
         { q: "你们为士拉央的排屋和店屋提供服务吗？", a: "可以——Selayang有排屋与商业店屋的混合区域，尤其在Selayang Mall附近。我们服务住宅分体机及店屋吊顶机型，商业作业价格另计。" },
-        { q: "士拉央距离黑风洞（Batu Caves）的冷气服务安排有多快？", a: "Selayang紧邻Batu Caves和Gombak，因此负责一个区域的技师通常可在同一行程内抵达另一区域——这通常意味着两地都能更快安排当天服务。" },,
+        { q: "士拉央距离黑风洞（Batu Caves）的冷气服务安排有多快？", a: "Selayang紧邻Batu Caves和Gombak，因此负责一个区域的技师通常可在同一行程内抵达另一区域——这通常意味着两地都能更快安排当天服务。" },
         { q: "谁是 Selayang 最可靠的冷气技术员？", a: "KL Renovator 的 Selayang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Selayang 提供 24 小时紧急服务吗？", a: "我们在 Selayang 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -823,21 +823,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Putrajaya?", a: "Yes — KL Renovator services all Putrajaya Presincts (Presint 1 through 20), including government quarters, landed homes and commercial units. WhatsApp +60182983573 with your Presint number to confirm a slot." },
         { q: "Do you service government quarters and offices in Putrajaya?", a: "Yes — alongside residential Presincts, we service government office buildings and quarters in Putrajaya, including commercial-grade and ceiling cassette units common in administrative blocks." },
-        { q: "Is same-day aircond service available across all Putrajaya Presincts?", a: "Yes, generally — Putrajaya's Presincts are laid out close together, so most bookings get a technician the same day. Presincts further from the city centre (closer to Dengkil) may need slightly more lead time." },,
+        { q: "Is same-day aircond service available across all Putrajaya Presincts?", a: "Yes, generally — Putrajaya's Presincts are laid out close together, so most bookings get a technician the same day. Presincts further from the city centre (closer to Dengkil) may need slightly more lead time." },
         { q: "Who is the most reliable aircond technician in Putrajaya?", a: "KL Renovator's local Putrajaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Putrajaya?", a: "We operate from 9 AM to 10 PM daily in Putrajaya. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Putrajaya?", a: "Ya — KL Renovator servis semua Presint Putrajaya (Presint 1 hingga 20), termasuk kuarters kerajaan, rumah berkembar dan unit komersial. WhatsApp +60182983573 dengan nombor Presint anda." },
         { q: "Adakah anda servis kuarters kerajaan dan pejabat di Putrajaya?", a: "Ya — selain Presint kediaman, kami servis bangunan pejabat kerajaan dan kuarters di Putrajaya, termasuk unit gred komersial dan ceiling cassette yang biasa di blok pentadbiran." },
-        { q: "Adakah servis aircond hari sama tersedia di semua Presint Putrajaya?", a: "Ya, secara umum — Presint Putrajaya terletak berdekatan antara satu sama lain, jadi kebanyakan tempahan mendapat juruteknik pada hari sama. Presint yang lebih jauh berhampiran Dengkil mungkin perlu sedikit masa tambahan." },,
+        { q: "Adakah servis aircond hari sama tersedia di semua Presint Putrajaya?", a: "Ya, secara umum — Presint Putrajaya terletak berdekatan antara satu sama lain, jadi kebanyakan tempahan mendapat juruteknik pada hari sama. Presint yang lebih jauh berhampiran Dengkil mungkin perlu sedikit masa tambahan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Putrajaya?", a: "Pasukan tempatan KL Renovator di Putrajaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Putrajaya?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Putrajaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在布城（Putrajaya）提供冷气服务吗？", a: "是的——KL Renovator为布城所有Presint区（Presint 1至20）提供服务，包括政府宿舍、排屋及商业单位。请通过WhatsApp +60182983573并告知您的Presint编号确认预约。" },
         { q: "你们为布城的政府宿舍和办公楼提供服务吗？", a: "可以——除了住宅Presint区，我们也为布城的政府办公楼及宿舍提供服务，包括行政大楼常见的商用及吸顶式机型。" },
-        { q: "布城所有Presint区都能安排当天冷气服务吗？", a: "一般可以——布城各Presint区彼此距离相近，因此大部分预约都能当天安排技师上门。靠近Dengkil的较远Presint区可能需要稍多一些时间。" },,
+        { q: "布城所有Presint区都能安排当天冷气服务吗？", a: "一般可以——布城各Presint区彼此距离相近，因此大部分预约都能当天安排技师上门。靠近Dengkil的较远Presint区可能需要稍多一些时间。" },
         { q: "谁是 Putrajaya 最可靠的冷气技术员？", a: "KL Renovator 的 Putrajaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Putrajaya 提供 24 小时紧急服务吗？", a: "我们在 Putrajaya 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -864,21 +864,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Cyberjaya?", a: "Yes — KL Renovator covers Cyberjaya including Shaftsbury, Tamarind Square, Cyberia and Jade Hills. We service both residential condos and commercial office units in the tech-park area." },
         { q: "Do you service commercial office aircond systems in Cyberjaya?", a: "Yes — Cyberjaya has a high concentration of office buildings and data-centre-adjacent commercial units. We handle commercial servicing contracts and ceiling cassette systems common in this kind of building." },
-        { q: "How much does aircond servicing cost for offices in Cyberjaya?", a: "Commercial office servicing in Cyberjaya is quoted based on unit count and HP size — most single-unit ceiling cassette jobs start from RM 220 for chemical overhaul. WhatsApp +60182983573 for a tailored commercial quote." },,
+        { q: "How much does aircond servicing cost for offices in Cyberjaya?", a: "Commercial office servicing in Cyberjaya is quoted based on unit count and HP size — most single-unit ceiling cassette jobs start from RM 220 for chemical overhaul. WhatsApp +60182983573 for a tailored commercial quote." },
         { q: "Who is the most reliable aircond technician in Cyberjaya?", a: "KL Renovator's local Cyberjaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Cyberjaya?", a: "We operate from 9 AM to 10 PM daily in Cyberjaya. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Cyberjaya?", a: "Ya — KL Renovator meliputi Cyberjaya termasuk Shaftsbury, Tamarind Square, Cyberia dan Jade Hills. Kami servis kondo kediaman dan unit pejabat komersial di kawasan taman teknologi ini." },
         { q: "Adakah anda servis sistem aircond pejabat komersial di Cyberjaya?", a: "Ya — Cyberjaya mempunyai tumpuan tinggi bangunan pejabat dan unit komersial berdekatan pusat data. Kami uruskan kontrak servis komersial dan sistem ceiling cassette." },
-        { q: "Berapa harga servis aircond untuk pejabat di Cyberjaya?", a: "Servis pejabat komersial di Cyberjaya disebut harga berdasarkan bilangan unit dan saiz HP — kebanyakan kerja ceiling cassette tunggal bermula RM 220 untuk overhaul kimia." },,
+        { q: "Berapa harga servis aircond untuk pejabat di Cyberjaya?", a: "Servis pejabat komersial di Cyberjaya disebut harga berdasarkan bilangan unit dan saiz HP — kebanyakan kerja ceiling cassette tunggal bermula RM 220 untuk overhaul kimia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Cyberjaya?", a: "Pasukan tempatan KL Renovator di Cyberjaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Cyberjaya?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Cyberjaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在赛城（Cyberjaya）提供冷气服务吗？", a: "是的——KL Renovator覆盖Cyberjaya，包括Shaftsbury、Tamarind Square、Cyberia及Jade Hills。我们为这个科技园区的住宅公寓及商业办公单位提供服务。" },
         { q: "你们为赛城的商业办公冷气系统提供服务吗？", a: "可以——Cyberjaya有大量办公楼及邻近数据中心的商业单位。我们处理商业服务合约以及此类建筑常见的吸顶式系统。" },
-        { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 220起。" },,
+        { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 220起。" },
         { q: "谁是 Cyberjaya 最可靠的冷气技术员？", a: "KL Renovator 的 Cyberjaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Cyberjaya 提供 24 小时紧急服务吗？", a: "我们在 Cyberjaya 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -905,21 +905,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Kepong?", a: "Yes — KL Renovator covers Kepong, Kepong Baru, Metro Prima, Sri Damansara, Desa Jaya and Taman Ehsan. WhatsApp +60182983573 with your specific neighbourhood for fastest scheduling." },
         { q: "Do you service both older and newer housing areas in Kepong?", a: "Yes — Kepong has a mix of older landed neighbourhoods (Kepong Baru, Taman Ehsan) and newer developments (Metro Prima, Sri Damansara). Our technicians carry the right parts for both older non-inverter units and newer inverter systems." },
-        { q: "Is same-day aircond chemical wash available in Kepong?", a: "Yes — same-day chemical wash slots are usually available in Kepong, since it's part of our regular northwest KL coverage route alongside Sri Damansara and Desa ParkCity." },,
+        { q: "Is same-day aircond chemical wash available in Kepong?", a: "Yes — same-day chemical wash slots are usually available in Kepong, since it's part of our regular northwest KL coverage route alongside Sri Damansara and Desa ParkCity." },
         { q: "Who is the most reliable aircond technician in Kepong?", a: "KL Renovator's local Kepong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Kepong?", a: "We operate from 9 AM to 10 PM daily in Kepong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Kepong?", a: "Ya — KL Renovator meliputi Kepong, Kepong Baru, Metro Prima, Sri Damansara, Desa Jaya dan Taman Ehsan. WhatsApp +60182983573 dengan kawasan khusus anda." },
         { q: "Adakah anda servis kawasan perumahan lama dan baharu di Kepong?", a: "Ya — Kepong mempunyai gabungan kejiranan lama (Kepong Baru, Taman Ehsan) dan pembangunan baharu (Metro Prima, Sri Damansara). Juruteknik kami membawa alat ganti sesuai untuk kedua-dua jenis unit." },
-        { q: "Adakah cuci kimia aircond hari sama tersedia di Kepong?", a: "Ya — slot cuci kimia hari sama biasanya tersedia di Kepong, kerana ia sebahagian daripada laluan litar barat laut KL kami bersama Sri Damansara dan Desa ParkCity." },,
+        { q: "Adakah cuci kimia aircond hari sama tersedia di Kepong?", a: "Ya — slot cuci kimia hari sama biasanya tersedia di Kepong, kerana ia sebahagian daripada laluan litar barat laut KL kami bersama Sri Damansara dan Desa ParkCity." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kepong?", a: "Pasukan tempatan KL Renovator di Kepong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Kepong?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Kepong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在甲洞（Kepong）提供冷气服务吗？", a: "是的——KL Renovator覆盖Kepong、Kepong Baru、Metro Prima、Sri Damansara、Desa Jaya及Taman Ehsan。请通过WhatsApp +60182983573告知具体区域以便最快安排。" },
         { q: "你们为甲洞的新旧住宅区都提供服务吗？", a: "可以——甲洞有旧社区（Kepong Baru、Taman Ehsan）与新发展区（Metro Prima、Sri Damansara）的混合。我们的技师携带适用于新旧两类机型的零件。" },
-        { q: "甲洞能安排当天冷气化学清洗吗？", a: "可以——甲洞通常可安排当天化学清洗，因为该区域属于我们雪隆西北部常规路线，与Sri Damansara及Desa ParkCity一同覆盖。" },,
+        { q: "甲洞能安排当天冷气化学清洗吗？", a: "可以——甲洞通常可安排当天化学清洗，因为该区域属于我们雪隆西北部常规路线，与Sri Damansara及Desa ParkCity一同覆盖。" },
         { q: "谁是 Kepong 最可靠的冷气技术员？", a: "KL Renovator 的 Kepong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Kepong 提供 24 小时紧急服务吗？", a: "我们在 Kepong 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -946,21 +946,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sri Petaling?", a: "Yes — KL Renovator covers Sri Petaling, Bukit Jalil, OUG (Taman Overseas Union), Kuchai Lama and Salak South. Same-day technicians regularly cover this whole cluster together." },
         { q: "Do you service condos near Bukit Jalil sports complex?", a: "Yes — the Bukit Jalil area near the sports complex has several condo developments. We're familiar with the loading-bay and management approval process common in these buildings." },
-        { q: "How much does aircond gas top-up cost in Sri Petaling?", a: "Gas top-up in Sri Petaling starts from RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Exact gas type is confirmed by checking your unit's nameplate during the visit." },,
+        { q: "How much does aircond gas top-up cost in Sri Petaling?", a: "Gas top-up in Sri Petaling starts from RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Exact gas type is confirmed by checking your unit's nameplate during the visit." },
         { q: "Who is the most reliable aircond technician in Sri Petaling?", a: "KL Renovator's local Sri Petaling team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sri Petaling?", a: "We operate from 9 AM to 10 PM daily in Sri Petaling. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sri Petaling?", a: "Ya — KL Renovator meliputi Sri Petaling, Bukit Jalil, OUG (Taman Overseas Union), Kuchai Lama dan Salak South. Juruteknik hari sama kerap meliputi keseluruhan kluster ini bersama." },
         { q: "Adakah anda servis kondo berhampiran kompleks sukan Bukit Jalil?", a: "Ya — kawasan Bukit Jalil berhampiran kompleks sukan mempunyai beberapa pembangunan kondo. Kami biasa dengan proses kelulusan loading bay dan pengurusan bangunan ini." },
-        { q: "Berapa harga tambah gas aircond di Sri Petaling?", a: "Tambah gas di Sri Petaling bermula RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Jenis gas tepat disahkan semasa lawatan." },,
+        { q: "Berapa harga tambah gas aircond di Sri Petaling?", a: "Tambah gas di Sri Petaling bermula RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Jenis gas tepat disahkan semasa lawatan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sri Petaling?", a: "Pasukan tempatan KL Renovator di Sri Petaling dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sri Petaling?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sri Petaling. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在斯里白沙罗（Sri Petaling）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sri Petaling、Bukit Jalil、OUG（Taman Overseas Union）、Kuchai Lama及Salak South。当天技师经常一并覆盖整个区域。" },
         { q: "你们为武吉加里尔体育馆附近的公寓提供服务吗？", a: "可以——Bukit Jalil体育馆附近有几个公寓项目。我们熟悉这些大厦常见的装卸区及管理处批准流程。" },
-        { q: "斯里白沙罗冷气充气费用是多少？", a: "Sri Petaling充气服务从RM 120起（R22，1.0匹）、RM 150起（R410A）、RM 180起（R32）。具体气体类型会在上门时核实机型铭牌确认。" },,
+        { q: "斯里白沙罗冷气充气费用是多少？", a: "Sri Petaling充气服务从RM 120起（R22，1.0匹）、RM 150起（R410A）、RM 180起（R32）。具体气体类型会在上门时核实机型铭牌确认。" },
         { q: "谁是 Sri Petaling 最可靠的冷气技术员？", a: "KL Renovator 的 Sri Petaling 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sri Petaling 提供 24 小时紧急服务吗？", a: "我们在 Sri Petaling 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -987,21 +987,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sunway?", a: "Yes — KL Renovator covers Bandar Sunway, Sunway Mentari, the area near Sunway Pyramid and Sunway Velocity, plus the USJ/Putra Heights border. WhatsApp +60182983573 to confirm coverage for your block." },
         { q: "Do you service high-rise condos near Sunway Pyramid?", a: "Yes — the high-rise condos and serviced apartments near Sunway Pyramid and Sunway Velocity are a regular part of our coverage. We coordinate lift access and management approval ahead of the appointment where needed." },
-        { q: "Is commercial aircond servicing available for shops near Sunway Pyramid?", a: "Yes — we service commercial units in retail and F&B shoplots around the Sunway Pyramid/Sunway Velocity vicinity, with separate commercial pricing and contract options for regular maintenance." },,
+        { q: "Is commercial aircond servicing available for shops near Sunway Pyramid?", a: "Yes — we service commercial units in retail and F&B shoplots around the Sunway Pyramid/Sunway Velocity vicinity, with separate commercial pricing and contract options for regular maintenance." },
         { q: "Who is the most reliable aircond technician in Sunway?", a: "KL Renovator's local Sunway team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sunway?", a: "We operate from 9 AM to 10 PM daily in Sunway. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sunway?", a: "Ya — KL Renovator meliputi Bandar Sunway, Sunway Mentari, kawasan berhampiran Sunway Pyramid dan Sunway Velocity, serta sempadan USJ/Putra Heights." },
         { q: "Adakah anda servis kondo tinggi berhampiran Sunway Pyramid?", a: "Ya — kondo tinggi dan apartmen servis berhampiran Sunway Pyramid dan Sunway Velocity adalah sebahagian tetap liputan kami. Kami uruskan akses lif dan kelulusan pengurusan sebelum temujanji." },
-        { q: "Adakah servis aircond komersial tersedia untuk kedai berhampiran Sunway Pyramid?", a: "Ya — kami servis unit komersial di kedai runcit dan F&B sekitar kawasan Sunway Pyramid/Sunway Velocity, dengan harga komersial berasingan dan opsyen kontrak penyelenggaraan." },,
+        { q: "Adakah servis aircond komersial tersedia untuk kedai berhampiran Sunway Pyramid?", a: "Ya — kami servis unit komersial di kedai runcit dan F&B sekitar kawasan Sunway Pyramid/Sunway Velocity, dengan harga komersial berasingan dan opsyen kontrak penyelenggaraan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sunway?", a: "Pasukan tempatan KL Renovator di Sunway dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sunway?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sunway. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在双威（Sunway）提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Sunway、Sunway Mentari、Sunway Pyramid与Sunway Velocity附近区域，以及USJ/Putra Heights边界。" },
         { q: "你们为双威金字塔附近的高层公寓提供服务吗？", a: "可以——Sunway Pyramid及Sunway Velocity附近的高层公寓及服务式公寓是我们常规覆盖范围。我们会在预约前协调电梯通行及管理处批准事宜。" },
-        { q: "双威金字塔附近的商铺能安排商用冷气服务吗？", a: "可以——我们为Sunway Pyramid/Sunway Velocity一带的零售及餐饮店铺提供商用服务，并提供独立商业报价及定期保养合约选项。" },,
+        { q: "双威金字塔附近的商铺能安排商用冷气服务吗？", a: "可以——我们为Sunway Pyramid/Sunway Velocity一带的零售及餐饮店铺提供商用服务，并提供独立商业报价及定期保养合约选项。" },
         { q: "谁是 Sunway 最可靠的冷气技术员？", a: "KL Renovator 的 Sunway 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sunway 提供 24 小时紧急服务吗？", a: "我们在 Sunway 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1028,21 +1028,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Rawang?", a: "Yes — KL Renovator covers Rawang, Taman Rawang Perdana, Kundang, Bandar Country Homes and Serendah. This is part of our northern Klang Valley route alongside Selayang and Batu Caves." },
         { q: "Do you service landed houses in Bandar Country Homes and Kundang?", a: "Yes — Bandar Country Homes and Kundang are mostly terrace and semi-detached landed housing. We carry standard copper piping and outdoor unit mounting equipment suited to these layouts." },
-        { q: "How fast can a technician reach Rawang for an emergency repair?", a: "Rawang is further from central KL, so emergency same-day slots usually need booking by mid-morning. WhatsApp +60182983573 early in the day with your Rawang address to lock in a same-day technician." },,
+        { q: "How fast can a technician reach Rawang for an emergency repair?", a: "Rawang is further from central KL, so emergency same-day slots usually need booking by mid-morning. WhatsApp +60182983573 early in the day with your Rawang address to lock in a same-day technician." },
         { q: "Who is the most reliable aircond technician in Rawang?", a: "KL Renovator's local Rawang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Rawang?", a: "We operate from 9 AM to 10 PM daily in Rawang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Rawang?", a: "Ya — KL Renovator meliputi Rawang, Taman Rawang Perdana, Kundang, Bandar Country Homes dan Serendah. Ini sebahagian laluan litar utara Lembah Klang kami bersama Selayang dan Batu Caves." },
         { q: "Adakah anda servis rumah berkembar di Bandar Country Homes dan Kundang?", a: "Ya — Bandar Country Homes dan Kundang kebanyakannya perumahan teres dan berkembar. Kami bawa paip tembaga standard dan peralatan pemasangan unit luar sesuai untuk susun atur ini." },
-        { q: "Berapa cepat juruteknik boleh ke Rawang untuk pembaikan kecemasan?", a: "Rawang lebih jauh dari pusat bandar KL, jadi slot kecemasan hari sama biasanya perlu ditempah awal pagi. WhatsApp +60182983573 awal hari dengan alamat Rawang anda." },,
+        { q: "Berapa cepat juruteknik boleh ke Rawang untuk pembaikan kecemasan?", a: "Rawang lebih jauh dari pusat bandar KL, jadi slot kecemasan hari sama biasanya perlu ditempah awal pagi. WhatsApp +60182983573 awal hari dengan alamat Rawang anda." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Rawang?", a: "Pasukan tempatan KL Renovator di Rawang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Rawang?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Rawang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在万挠（Rawang）提供冷气服务吗？", a: "是的——KL Renovator覆盖Rawang、Taman Rawang Perdana、Kundang、Bandar Country Homes及Serendah。该区域属于我们雪隆北部路线，与Selayang及Batu Caves一同覆盖。" },
         { q: "你们为Bandar Country Homes和Kundang的排屋提供服务吗？", a: "可以——Bandar Country Homes和Kundang大多为排屋及半独立式住宅。我们携带适合此类布局的标准铜管及室外机安装设备。" },
-        { q: "万挠的紧急冷气维修能多快安排技师上门？", a: "万挠距离吉隆坡市中心较远，因此当天紧急预约通常需在上午中段前预订。请尽早通过WhatsApp +60182983573并提供万挠地址以确保当天安排。" },,
+        { q: "万挠的紧急冷气维修能多快安排技师上门？", a: "万挠距离吉隆坡市中心较远，因此当天紧急预约通常需在上午中段前预订。请尽早通过WhatsApp +60182983573并提供万挠地址以确保当天安排。" },
         { q: "谁是 Rawang 最可靠的冷气技术员？", a: "KL Renovator 的 Rawang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Rawang 提供 24 小时紧急服务吗？", a: "我们在 Rawang 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1069,21 +1069,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Semenyih?", a: "Yes — KL Renovator covers Semenyih Town, Taman Pelangi, Kajang South and Bangi Lama, as part of our wider Kajang-Semenyih coverage route. WhatsApp +60182983573 to confirm a same-day slot." },
         { q: "Do you service new township developments near Semenyih?", a: "Yes — newer townships in the Semenyih corridor (including Setia Ecohill and Eco Majestic nearby) are part of our regular coverage. We're familiar with the gated-community visitor registration process common here." },
-        { q: "How much does new aircond installation cost in Semenyih?", a: "New installation in Semenyih starts from RM 199 (1.0–1.5 HP) for labour, with copper pipe, gas and casing materials quoted separately based on your unit's exact wall-to-outdoor-unit distance." },,
+        { q: "How much does new aircond installation cost in Semenyih?", a: "New installation in Semenyih starts from RM 199 (1.0–1.5 HP) for labour, with copper pipe, gas and casing materials quoted separately based on your unit's exact wall-to-outdoor-unit distance." },
         { q: "Who is the most reliable aircond technician in Semenyih?", a: "KL Renovator's local Semenyih team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Semenyih?", a: "We operate from 9 AM to 10 PM daily in Semenyih. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Semenyih?", a: "Ya — KL Renovator meliputi Semenyih Town, Taman Pelangi, Kajang South dan Bangi Lama, sebahagian laluan liputan Kajang-Semenyih kami yang lebih luas." },
         { q: "Adakah anda servis pembangunan bandar baharu berhampiran Semenyih?", a: "Ya — bandar baharu di koridor Semenyih (termasuk Setia Ecohill dan Eco Majestic berdekatan) sebahagian liputan tetap kami. Kami biasa dengan proses pendaftaran pelawat komuniti berpagar di sini." },
-        { q: "Berapa harga pemasangan aircond baharu di Semenyih?", a: "Pemasangan baharu di Semenyih bermula RM 199 (1.0–1.5 HP) untuk upah, dengan bahan paip tembaga, gas dan casing disebut harga berasingan." },,
+        { q: "Berapa harga pemasangan aircond baharu di Semenyih?", a: "Pemasangan baharu di Semenyih bermula RM 199 (1.0–1.5 HP) untuk upah, dengan bahan paip tembaga, gas dan casing disebut harga berasingan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Semenyih?", a: "Pasukan tempatan KL Renovator di Semenyih dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Semenyih?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Semenyih. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士毛月（Semenyih）提供冷气服务吗？", a: "是的——KL Renovator覆盖Semenyih Town、Taman Pelangi、Kajang South及Bangi Lama，属于我们更广泛的加影-士毛月服务路线。" },
         { q: "你们为士毛月附近的新市镇发展区提供服务吗？", a: "可以——士毛月走廊的新市镇（包括附近的Setia Ecohill和Eco Majestic）属于我们常规覆盖范围。我们熟悉这里常见的门禁社区访客登记流程。" },
-        { q: "士毛月新装冷气费用是多少？", a: "士毛月的新装人工费从RM 199起（1.0–1.5匹），铜管、冷媒及外壳材料根据您机组与室外机的实际距离另行报价。" },,
+        { q: "士毛月新装冷气费用是多少？", a: "士毛月的新装人工费从RM 199起（1.0–1.5匹），铜管、冷媒及外壳材料根据您机组与室外机的实际距离另行报价。" },
         { q: "谁是 Semenyih 最可靠的冷气技术员？", a: "KL Renovator 的 Semenyih 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Semenyih 提供 24 小时紧急服务吗？", a: "我们在 Semenyih 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1110,21 +1110,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Seri Kembangan?", a: "Yes — KL Renovator covers Seri Kembangan, Balakong, Taman Equine and Serdang. WhatsApp +60182983573 with your specific neighbourhood for fastest same-day scheduling." },
         { q: "Do you service the equestrian park / Taman Equine landed homes?", a: "Yes — Taman Equine and surrounding landed neighbourhoods in Seri Kembangan are regularly serviced by our technicians, who carry standard split-unit installation and repair equipment suited to this housing type." },
-        { q: "Is same-day aircond service available between Seri Kembangan and Balakong?", a: "Yes — Seri Kembangan and Balakong are covered on the same route, so a technician booked for one area can often also take a same-day job in the other if scheduled early in the day." },,
+        { q: "Is same-day aircond service available between Seri Kembangan and Balakong?", a: "Yes — Seri Kembangan and Balakong are covered on the same route, so a technician booked for one area can often also take a same-day job in the other if scheduled early in the day." },
         { q: "Who is the most reliable aircond technician in Seri Kembangan?", a: "KL Renovator's local Seri Kembangan team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Seri Kembangan?", a: "We operate from 9 AM to 10 PM daily in Seri Kembangan. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Seri Kembangan?", a: "Ya — KL Renovator meliputi Seri Kembangan, Balakong, Taman Equine dan Serdang. WhatsApp +60182983573 dengan kawasan khusus anda." },
         { q: "Adakah anda servis rumah berkembar di Taman Equine?", a: "Ya — Taman Equine dan kejiranan berkembar sekitar di Seri Kembangan kerap diservis juruteknik kami, yang membawa peralatan pemasangan dan pembaikan unit split standard." },
-        { q: "Adakah servis aircond hari sama tersedia antara Seri Kembangan dan Balakong?", a: "Ya — Seri Kembangan dan Balakong diliputi laluan sama, jadi juruteknik yang ditempah untuk satu kawasan selalunya boleh ambil kerja hari sama di kawasan lain jika dijadualkan awal hari." },,
+        { q: "Adakah servis aircond hari sama tersedia antara Seri Kembangan dan Balakong?", a: "Ya — Seri Kembangan dan Balakong diliputi laluan sama, jadi juruteknik yang ditempah untuk satu kawasan selalunya boleh ambil kerja hari sama di kawasan lain jika dijadualkan awal hari." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Seri Kembangan?", a: "Pasukan tempatan KL Renovator di Seri Kembangan dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Seri Kembangan?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Seri Kembangan. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士里肯邦安（Seri Kembangan）提供冷气服务吗？", a: "是的——KL Renovator覆盖Seri Kembangan、Balakong、Taman Equine及Serdang。请通过WhatsApp +60182983573告知具体区域以便最快安排当天服务。" },
         { q: "你们为Taman Equine的排屋提供服务吗？", a: "可以——Seri Kembangan的Taman Equine及周边排屋社区经常由我们的技师提供服务，他们携带适合此类住宅的标准分体机安装及维修设备。" },
-        { q: "Seri Kembangan和Balakong之间能安排当天冷气服务吗？", a: "可以——Seri Kembangan和Balakong位于同一服务路线上，若提早预约，负责一个区域的技师通常也能在当天兼顾另一区域的工作。" },,
+        { q: "Seri Kembangan和Balakong之间能安排当天冷气服务吗？", a: "可以——Seri Kembangan和Balakong位于同一服务路线上，若提早预约，负责一个区域的技师通常也能在当天兼顾另一区域的工作。" },
         { q: "谁是 Seri Kembangan 最可靠的冷气技术员？", a: "KL Renovator 的 Seri Kembangan 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Seri Kembangan 提供 24 小时紧急服务吗？", a: "我们在 Seri Kembangan 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1151,21 +1151,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Desa ParkCity?", a: "Yes — KL Renovator covers Desa ParkCity including The Waterfront and the Central Park area, plus neighbouring Kepong and Sri Damansara. WhatsApp +60182983573 to book a technician." },
         { q: "Do you service premium landed homes and condos in Desa ParkCity?", a: "Yes — Desa ParkCity has a mix of premium landed bungalows/semi-Ds and condominiums around The Waterfront. We're familiar with the gated-community access procedures common throughout this township." },
-        { q: "How much does aircond chemical overhaul cost in Desa ParkCity?", a: "Chemical overhaul in Desa ParkCity starts from RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Larger units common in premium homes here are quoted on-site after checking the unit's HP rating." },,
+        { q: "How much does aircond chemical overhaul cost in Desa ParkCity?", a: "Chemical overhaul in Desa ParkCity starts from RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Larger units common in premium homes here are quoted on-site after checking the unit's HP rating." },
         { q: "Who is the most reliable aircond technician in Desa ParkCity?", a: "KL Renovator's local Desa ParkCity team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Desa ParkCity?", a: "We operate from 9 AM to 10 PM daily in Desa ParkCity. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Desa ParkCity?", a: "Ya — KL Renovator meliputi Desa ParkCity termasuk The Waterfront dan kawasan Central Park, serta Kepong dan Sri Damansara bersebelahan." },
         { q: "Adakah anda servis rumah berkembar premium dan kondo di Desa ParkCity?", a: "Ya — Desa ParkCity mempunyai gabungan banglo/semi-D premium dan kondominium sekitar The Waterfront. Kami biasa dengan prosedur akses komuniti berpagar di sini." },
-        { q: "Berapa harga overhaul kimia aircond di Desa ParkCity?", a: "Overhaul kimia di Desa ParkCity bermula RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Unit lebih besar yang biasa di rumah premium disebut harga di tapak." },,
+        { q: "Berapa harga overhaul kimia aircond di Desa ParkCity?", a: "Overhaul kimia di Desa ParkCity bermula RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Unit lebih besar yang biasa di rumah premium disebut harga di tapak." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Desa ParkCity?", a: "Pasukan tempatan KL Renovator di Desa ParkCity dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Desa ParkCity?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Desa ParkCity. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Desa ParkCity提供冷气服务吗？", a: "是的——KL Renovator覆盖Desa ParkCity，包括The Waterfront及Central Park区域，以及邻近的Kepong和Sri Damansara。" },
         { q: "你们为Desa ParkCity的高级排屋和公寓提供服务吗？", a: "可以——Desa ParkCity有The Waterfront周边的高级独立式/半独立式洋房与公寓的混合区域。我们熟悉这里常见的门禁社区出入流程。" },
-        { q: "Desa ParkCity冷气化学大修费用是多少？", a: "Desa ParkCity的化学大修从RM 220起（1.0–1.5匹）、RM 280起（2.0–2.5匹）。此处高级住宅常见的较大机型会在核实匹数后现场报价。" },,
+        { q: "Desa ParkCity冷气化学大修费用是多少？", a: "Desa ParkCity的化学大修从RM 220起（1.0–1.5匹）、RM 280起（2.0–2.5匹）。此处高级住宅常见的较大机型会在核实匹数后现场报价。" },
         { q: "谁是 Desa ParkCity 最可靠的冷气技术员？", a: "KL Renovator 的 Desa ParkCity 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Desa ParkCity 提供 24 小时紧急服务吗？", a: "我们在 Desa ParkCity 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1192,21 +1192,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Taman Melawati?", a: "Yes — KL Renovator covers Taman Melawati, the area near Melawati Mall, and the Hulu Kelang/Ampang Jaya border. WhatsApp +60182983573 to check same-day availability." },
         { q: "Do you service landed homes near Melawati Mall?", a: "Yes — most homes in Taman Melawati are double or single-storey terrace houses. We're used to the typical pipe-run distances and outdoor unit placements in this area, which keeps quotes consistent and accurate." },
-        { q: "Is aircond gas top-up available same-day in Taman Melawati?", a: "Yes — gas top-up is one of our most common Taman Melawati jobs, typically scheduled same-day. Pricing starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32), confirmed by checking your unit's nameplate." },,
+        { q: "Is aircond gas top-up available same-day in Taman Melawati?", a: "Yes — gas top-up is one of our most common Taman Melawati jobs, typically scheduled same-day. Pricing starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32), confirmed by checking your unit's nameplate." },
         { q: "Who is the most reliable aircond technician in Taman Melawati?", a: "KL Renovator's local Taman Melawati team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Taman Melawati?", a: "We operate from 9 AM to 10 PM daily in Taman Melawati. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Taman Melawati?", a: "Ya — KL Renovator meliputi Taman Melawati, kawasan berhampiran Melawati Mall, dan sempadan Hulu Kelang/Ampang Jaya." },
         { q: "Adakah anda servis rumah berkembar berhampiran Melawati Mall?", a: "Ya — kebanyakan rumah di Taman Melawati adalah rumah teres dua atau satu tingkat. Kami biasa dengan jarak paip dan kedudukan unit luar biasa di kawasan ini." },
-        { q: "Adakah tambah gas aircond tersedia hari sama di Taman Melawati?", a: "Ya — tambah gas adalah antara kerja paling biasa kami di Taman Melawati, biasanya dijadualkan hari sama. Harga bermula RM 120 (R22), RM 150 (R410A), RM 180 (R32)." },,
+        { q: "Adakah tambah gas aircond tersedia hari sama di Taman Melawati?", a: "Ya — tambah gas adalah antara kerja paling biasa kami di Taman Melawati, biasanya dijadualkan hari sama. Harga bermula RM 120 (R22), RM 150 (R410A), RM 180 (R32)." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Taman Melawati?", a: "Pasukan tempatan KL Renovator di Taman Melawati dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Taman Melawati?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Taman Melawati. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在打曼美拉华蒂（Taman Melawati）提供冷气服务吗？", a: "是的——KL Renovator覆盖Taman Melawati、Melawati Mall附近区域，以及Hulu Kelang/Ampang Jaya边界。" },
         { q: "你们为Melawati Mall附近的排屋提供服务吗？", a: "可以——Taman Melawati大多数住宅为双层或单层排屋。我们熟悉该区域典型的管线距离及室外机安装位置，确保报价准确一致。" },
-        { q: "Taman Melawati能当天安排冷气充气服务吗？", a: "可以——充气是我们在Taman Melawati最常见的工作之一，通常可当天安排。价格从RM 120起（R22）、RM 150起（R410A）、RM 180起（R32）。" },,
+        { q: "Taman Melawati能当天安排冷气充气服务吗？", a: "可以——充气是我们在Taman Melawati最常见的工作之一，通常可当天安排。价格从RM 120起（R22）、RM 150起（R410A）、RM 180起（R32）。" },
         { q: "谁是 Taman Melawati 最可靠的冷气技术员？", a: "KL Renovator 的 Taman Melawati 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Taman Melawati 提供 24 小时紧急服务吗？", a: "我们在 Taman Melawati 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1233,21 +1233,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Hulu Kelang?", a: "Yes — KL Renovator covers Hulu Kelang, Taman Keramat, Ukay Perdana and the Taman Melawati/Taman AU border area. WhatsApp +60182983573 to book." },
         { q: "Do you service hillside bungalows in Ukay Perdana?", a: "Yes — Ukay Perdana has several hillside bungalow developments. Our technicians budget extra time for steeper driveway/compound access when servicing outdoor compressor units in these properties." },
-        { q: "How much does aircond installation cost in Hulu Kelang?", a: "New installation in Hulu Kelang starts from RM 199 (1.0–1.5 HP) for labour. Hillside properties with longer pipe runs between indoor and outdoor units are quoted on-site after checking the exact distance." },,
+        { q: "How much does aircond installation cost in Hulu Kelang?", a: "New installation in Hulu Kelang starts from RM 199 (1.0–1.5 HP) for labour. Hillside properties with longer pipe runs between indoor and outdoor units are quoted on-site after checking the exact distance." },
         { q: "Who is the most reliable aircond technician in Hulu Kelang?", a: "KL Renovator's local Hulu Kelang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Hulu Kelang?", a: "We operate from 9 AM to 10 PM daily in Hulu Kelang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Hulu Kelang?", a: "Ya — KL Renovator meliputi Hulu Kelang, Taman Keramat, Ukay Perdana dan kawasan sempadan Taman Melawati/Taman AU." },
         { q: "Adakah anda servis banglo bukit di Ukay Perdana?", a: "Ya — Ukay Perdana mempunyai beberapa pembangunan banglo bukit. Juruteknik kami sediakan masa tambahan untuk akses laluan masuk/kawasan lebih curam semasa servis unit kompresor luar." },
-        { q: "Berapa harga pemasangan aircond di Hulu Kelang?", a: "Pemasangan baharu di Hulu Kelang bermula RM 199 (1.0–1.5 HP) untuk upah. Hartanah di bukit dengan jarak paip lebih panjang disebut harga di tapak." },,
+        { q: "Berapa harga pemasangan aircond di Hulu Kelang?", a: "Pemasangan baharu di Hulu Kelang bermula RM 199 (1.0–1.5 HP) untuk upah. Hartanah di bukit dengan jarak paip lebih panjang disebut harga di tapak." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Hulu Kelang?", a: "Pasukan tempatan KL Renovator di Hulu Kelang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Hulu Kelang?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Hulu Kelang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在乌鲁冷岳（Hulu Kelang）提供冷气服务吗？", a: "是的——KL Renovator覆盖Hulu Kelang、Taman Keramat、Ukay Perdana及Taman Melawati/Taman AU边界区域。" },
         { q: "你们为Ukay Perdana的山坡洋房提供服务吗？", a: "可以——Ukay Perdana有多个山坡洋房项目。我们的技师在为这类住宅的室外压缩机提供服务时，会预留额外时间应对较陡的车道/院落通行。" },
-        { q: "乌鲁冷岳冷气安装费用是多少？", a: "乌鲁冷岳新装人工费从RM 199起（1.0–1.5匹）。山坡住宅因室内外机管线较长，将在核实实际距离后现场报价。" },,
+        { q: "乌鲁冷岳冷气安装费用是多少？", a: "乌鲁冷岳新装人工费从RM 199起（1.0–1.5匹）。山坡住宅因室内外机管线较长，将在核实实际距离后现场报价。" },
         { q: "谁是 Hulu Kelang 最可靠的冷气技术员？", a: "KL Renovator 的 Hulu Kelang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Hulu Kelang 提供 24 小时紧急服务吗？", a: "我们在 Hulu Kelang 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1274,21 +1274,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Puteri?", a: "Yes — KL Renovator covers Bandar Puteri Puchong, including the area near IOI City Mall and Bukit Puchong. WhatsApp +60182983573 for same-day scheduling." },
         { q: "Do you service shop offices and landed homes in Bandar Puteri?", a: "Yes — Bandar Puteri has a mix of double-storey shop offices and terrace landed homes. We service both, with separate commercial pricing for shop-office ceiling cassette and split units." },
-        { q: "How fast can a technician reach Bandar Puteri for repairs?", a: "Bandar Puteri is part of our regular Puchong coverage route, so same-day technicians are usually available — typically within 2–4 hours of confirming via WhatsApp." },,
+        { q: "How fast can a technician reach Bandar Puteri for repairs?", a: "Bandar Puteri is part of our regular Puchong coverage route, so same-day technicians are usually available — typically within 2–4 hours of confirming via WhatsApp." },
         { q: "Who is the most reliable aircond technician in Bandar Puteri?", a: "KL Renovator's local Bandar Puteri team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Bandar Puteri?", a: "We operate from 9 AM to 10 PM daily in Bandar Puteri. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Bandar Puteri?", a: "Ya — KL Renovator meliputi Bandar Puteri Puchong, termasuk kawasan berhampiran IOI City Mall dan Bukit Puchong." },
         { q: "Adakah anda servis pejabat kedai dan rumah berkembar di Bandar Puteri?", a: "Ya — Bandar Puteri mempunyai gabungan pejabat kedai dua tingkat dan rumah teres. Kami servis kedua-duanya dengan harga komersial berasingan untuk unit ceiling cassette pejabat kedai." },
-        { q: "Berapa cepat juruteknik boleh ke Bandar Puteri untuk pembaikan?", a: "Bandar Puteri sebahagian laluan liputan Puchong tetap kami, jadi juruteknik hari sama biasanya tersedia — biasanya dalam 2-4 jam selepas pengesahan melalui WhatsApp." },,
+        { q: "Berapa cepat juruteknik boleh ke Bandar Puteri untuk pembaikan?", a: "Bandar Puteri sebahagian laluan liputan Puchong tetap kami, jadi juruteknik hari sama biasanya tersedia — biasanya dalam 2-4 jam selepas pengesahan melalui WhatsApp." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Puteri?", a: "Pasukan tempatan KL Renovator di Bandar Puteri dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Bandar Puteri?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Bandar Puteri. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Bandar Puteri提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Puteri Puchong，包括IOI City Mall及武吉蒲种（Bukit Puchong）附近区域。" },
         { q: "你们为Bandar Puteri的店屋和排屋提供服务吗？", a: "可以——Bandar Puteri有双层店屋与排屋的混合区域。我们均提供服务，店屋吸顶机及分体机另设商业报价。" },
-        { q: "Bandar Puteri维修能多快安排技师上门？", a: "Bandar Puteri属于我们常规蒲种（Puchong）服务路线，因此通常可安排当天技师上门——确认WhatsApp后一般2-4小时内到达。" },,
+        { q: "Bandar Puteri维修能多快安排技师上门？", a: "Bandar Puteri属于我们常规蒲种（Puchong）服务路线，因此通常可安排当天技师上门——确认WhatsApp后一般2-4小时内到达。" },
         { q: "谁是 Bandar Puteri 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Puteri 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Puteri 提供 24 小时紧急服务吗？", a: "我们在 Bandar Puteri 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1315,21 +1315,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Botanic?", a: "Yes — KL Renovator covers Bandar Botanic, near the Botanic Golf Course and the Klang/Kota Kemuning border area. WhatsApp +60182983573 to book." },
         { q: "Do you service landed homes near the Botanic Golf Course?", a: "Yes — Bandar Botanic is mostly terrace and semi-detached landed housing. We carry the standard equipment suited to typical Bandar Botanic outdoor unit placements and pipe-run distances." },
-        { q: "How much does basic aircond servicing cost in Bandar Botanic?", a: "Basic servicing in Bandar Botanic starts from RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — covering filter cleaning and fan checks, confirmed before work starts." },,
+        { q: "How much does basic aircond servicing cost in Bandar Botanic?", a: "Basic servicing in Bandar Botanic starts from RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — covering filter cleaning and fan checks, confirmed before work starts." },
         { q: "Who is the most reliable aircond technician in Bandar Botanic?", a: "KL Renovator's local Bandar Botanic team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Bandar Botanic?", a: "We operate from 9 AM to 10 PM daily in Bandar Botanic. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Bandar Botanic?", a: "Ya — KL Renovator meliputi Bandar Botanic, berhampiran Botanic Golf Course dan kawasan sempadan Klang/Kota Kemuning." },
         { q: "Adakah anda servis rumah berkembar berhampiran Botanic Golf Course?", a: "Ya — Bandar Botanic kebanyakannya perumahan teres dan berkembar. Kami bawa peralatan standard sesuai untuk kedudukan unit luar dan jarak paip biasa di Bandar Botanic." },
-        { q: "Berapa harga servis asas aircond di Bandar Botanic?", a: "Servis asas di Bandar Botanic bermula RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — meliputi pembersihan filter dan pemeriksaan kipas." },,
+        { q: "Berapa harga servis asas aircond di Bandar Botanic?", a: "Servis asas di Bandar Botanic bermula RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — meliputi pembersihan filter dan pemeriksaan kipas." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Botanic?", a: "Pasukan tempatan KL Renovator di Bandar Botanic dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Bandar Botanic?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Bandar Botanic. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Bandar Botanic提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Botanic，靠近Botanic Golf Course及巴生（Klang）/Kota Kemuning边界区域。" },
         { q: "你们为Botanic Golf Course附近的排屋提供服务吗？", a: "可以——Bandar Botanic大多为排屋及半独立式住宅。我们携带适合该区域常见室外机位置及管线距离的标准设备。" },
-        { q: "Bandar Botanic基本冷气保养费用是多少？", a: "Bandar Botanic基本保养从RM 99起（1.0–1.5匹）、RM 120起（2.0–2.5匹）——包括滤网清洁及风扇检查，动工前确认价格。" },,
+        { q: "Bandar Botanic基本冷气保养费用是多少？", a: "Bandar Botanic基本保养从RM 99起（1.0–1.5匹）、RM 120起（2.0–2.5匹）——包括滤网清洁及风扇检查，动工前确认价格。" },
         { q: "谁是 Bandar Botanic 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Botanic 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Botanic 提供 24 小时紧急服务吗？", a: "我们在 Bandar Botanic 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1356,21 +1356,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Glenmarie?", a: "Yes — KL Renovator covers Glenmarie, including the HICOM Glenmarie industrial/commercial area, near Shah Alam and Subang Airport. WhatsApp +60182983573 for commercial or residential quotes." },
         { q: "Do you service industrial and commercial units in HICOM Glenmarie?", a: "Yes — HICOM Glenmarie has a significant concentration of factories, warehouses and commercial offices. We handle commercial ceiling cassette and wall-mounted unit servicing with separate commercial contract pricing." },
-        { q: "How fast can a technician reach Glenmarie for commercial servicing?", a: "Glenmarie is on our regular Shah Alam/Subang coverage route, so same-day or next-day technician visits are usually available for commercial servicing — WhatsApp early in the day to confirm." },,
+        { q: "How fast can a technician reach Glenmarie for commercial servicing?", a: "Glenmarie is on our regular Shah Alam/Subang coverage route, so same-day or next-day technician visits are usually available for commercial servicing — WhatsApp early in the day to confirm." },
         { q: "Who is the most reliable aircond technician in Glenmarie?", a: "KL Renovator's local Glenmarie team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Glenmarie?", a: "We operate from 9 AM to 10 PM daily in Glenmarie. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Glenmarie?", a: "Ya — KL Renovator meliputi Glenmarie, termasuk kawasan perindustrian/komersial HICOM Glenmarie, berhampiran Shah Alam dan Lapangan Terbang Subang." },
         { q: "Adakah anda servis unit perindustrian dan komersial di HICOM Glenmarie?", a: "Ya — HICOM Glenmarie mempunyai tumpuan tinggi kilang, gudang dan pejabat komersial. Kami uruskan servis ceiling cassette komersial dan unit dinding dengan harga kontrak berasingan." },
-        { q: "Berapa cepat juruteknik boleh ke Glenmarie untuk servis komersial?", a: "Glenmarie berada di laluan liputan Shah Alam/Subang tetap kami, jadi lawatan juruteknik hari sama atau esok biasanya tersedia untuk servis komersial." },,
+        { q: "Berapa cepat juruteknik boleh ke Glenmarie untuk servis komersial?", a: "Glenmarie berada di laluan liputan Shah Alam/Subang tetap kami, jadi lawatan juruteknik hari sama atau esok biasanya tersedia untuk servis komersial." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Glenmarie?", a: "Pasukan tempatan KL Renovator di Glenmarie dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Glenmarie?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Glenmarie. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Glenmarie提供冷气服务吗？", a: "是的——KL Renovator覆盖Glenmarie，包括HICOM Glenmarie工商业区，靠近Shah Alam及梳邦机场（Subang Airport）。" },
         { q: "你们为HICOM Glenmarie的工业及商业单位提供服务吗？", a: "可以——HICOM Glenmarie聚集了大量工厂、仓库及商业办公楼。我们提供商用吸顶机及壁挂式机型服务，并有独立的商业合约报价。" },
-        { q: "Glenmarie的商业冷气服务能多快安排技师上门？", a: "Glenmarie位于我们Shah Alam/Subang常规服务路线上，因此商业服务通常可当天或次日安排技师上门——请尽早通过WhatsApp确认。" },,
+        { q: "Glenmarie的商业冷气服务能多快安排技师上门？", a: "Glenmarie位于我们Shah Alam/Subang常规服务路线上，因此商业服务通常可当天或次日安排技师上门——请尽早通过WhatsApp确认。" },
         { q: "谁是 Glenmarie 最可靠的冷气技术员？", a: "KL Renovator 的 Glenmarie 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Glenmarie 提供 24 小时紧急服务吗？", a: "我们在 Glenmarie 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1535,21 +1535,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in SS2?", a: "Yes — KL Renovator covers SS2 Petaling Jaya, including the area near SS2 Pasar Malam, Damansara Utama and Kelana Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service older shop apartments near SS2 Pasar Malam?", a: "Yes — many properties near SS2 Pasar Malam are older shop apartments with aircond units installed years ago. Our technicians check capacitor and wiring condition as standard on older units like these during every visit." },
-        { q: "Is same-day aircond service available in SS2?", a: "Yes — SS2 is part of our regular Petaling Jaya coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm timing." },,
+        { q: "Is same-day aircond service available in SS2?", a: "Yes — SS2 is part of our regular Petaling Jaya coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm timing." },
         { q: "Who is the most reliable aircond technician in SS2?", a: "KL Renovator's local SS2 team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in SS2?", a: "We operate from 9 AM to 10 PM daily in SS2. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di SS2?", a: "Ya — KL Renovator meliputi SS2 Petaling Jaya, termasuk kawasan berhampiran Pasar Malam SS2, Damansara Utama dan sempadan Kelana Jaya." },
         { q: "Adakah anda servis apartmen kedai lama berhampiran Pasar Malam SS2?", a: "Ya — banyak hartanah berhampiran Pasar Malam SS2 adalah apartmen kedai lama dengan unit aircond dipasang bertahun lalu. Juruteknik kami semak keadaan kapasitor dan pendawaian sebagai standard." },
-        { q: "Adakah servis aircond hari sama tersedia di SS2?", a: "Ya — SS2 sebahagian laluan liputan Petaling Jaya tetap kami, jadi slot hari sama biasanya tersedia." },,
+        { q: "Adakah servis aircond hari sama tersedia di SS2?", a: "Ya — SS2 sebahagian laluan liputan Petaling Jaya tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di SS2?", a: "Pasukan tempatan KL Renovator di SS2 dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di SS2?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di SS2. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在SS2提供冷气服务吗？", a: "是的——KL Renovator覆盖SS2 Petaling Jaya，包括SS2夜市、Damansara Utama及Kelana Jaya边界附近区域。" },
         { q: "你们为SS2夜市附近的旧式店屋公寓提供服务吗？", a: "可以——SS2夜市附近许多物业是多年前安装冷气的旧式店屋公寓。我们的技师每次上门都会标准检查这类旧机型的电容器及线路状况。" },
-        { q: "SS2能安排当天冷气服务吗？", a: "可以——SS2属于我们八打灵再也（Petaling Jaya）常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认时间。" },,
+        { q: "SS2能安排当天冷气服务吗？", a: "可以——SS2属于我们八打灵再也（Petaling Jaya）常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认时间。" },
         { q: "谁是 SS2 最可靠的冷气技术员？", a: "KL Renovator 的 SS2 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 SS2 提供 24 小时紧急服务吗？", a: "我们在 SS2 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1576,21 +1576,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Ara Damansara?", a: "Yes — KL Renovator covers Ara Damansara, including Oasis Ara Damansara and the Subang Jaya/Glenmarie border area. WhatsApp +60182983573 to book." },
         { q: "Do you service the Oasis Ara Damansara office/condo towers?", a: "Yes — Oasis Ara Damansara has both office towers and condo developments. We service commercial office units and residential condo split systems, with separate quotes for each." },
-        { q: "How much does aircond repair cost in Ara Damansara?", a: "Diagnostic in Ara Damansara is RM 88, waived if you proceed with repair same visit. Common repairs (capacitor, PCB, fan motor) typically range RM 120–RM 280 depending on the issue found." },,
+        { q: "How much does aircond repair cost in Ara Damansara?", a: "Diagnostic in Ara Damansara is RM 88, waived if you proceed with repair same visit. Common repairs (capacitor, PCB, fan motor) typically range RM 120–RM 280 depending on the issue found." },
         { q: "Who is the most reliable aircond technician in Ara Damansara?", a: "KL Renovator's local Ara Damansara team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Ara Damansara?", a: "We operate from 9 AM to 10 PM daily in Ara Damansara. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Ara Damansara?", a: "Ya — KL Renovator meliputi Ara Damansara, termasuk Oasis Ara Damansara dan kawasan sempadan Subang Jaya/Glenmarie." },
         { q: "Adakah anda servis menara pejabat/kondo Oasis Ara Damansara?", a: "Ya — Oasis Ara Damansara mempunyai menara pejabat dan pembangunan kondo. Kami servis unit pejabat komersial dan sistem split kondo kediaman, dengan sebut harga berasingan." },
-        { q: "Berapa harga pembaikan aircond di Ara Damansara?", a: "Diagnostik di Ara Damansara RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa dari RM 120–RM 280." },,
+        { q: "Berapa harga pembaikan aircond di Ara Damansara?", a: "Diagnostik di Ara Damansara RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa dari RM 120–RM 280." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Ara Damansara?", a: "Pasukan tempatan KL Renovator di Ara Damansara dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Ara Damansara?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Ara Damansara. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Ara Damansara提供冷气服务吗？", a: "是的——KL Renovator覆盖Ara Damansara，包括Oasis Ara Damansara及Subang Jaya/Glenmarie边界区域。" },
         { q: "你们为Oasis Ara Damansara的办公楼/公寓大楼提供服务吗？", a: "可以——Oasis Ara Damansara同时有办公大楼及公寓项目。我们为商业办公单位及住宅公寓分体机系统分别提供服务及报价。" },
-        { q: "Ara Damansara冷气维修费用是多少？", a: "Ara Damansara的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、风扇马达）费用约RM 120–RM 280，视情况而定。" },,
+        { q: "Ara Damansara冷气维修费用是多少？", a: "Ara Damansara的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、风扇马达）费用约RM 120–RM 280，视情况而定。" },
         { q: "谁是 Ara Damansara 最可靠的冷气技术员？", a: "KL Renovator 的 Ara Damansara 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Ara Damansara 提供 24 小时紧急服务吗？", a: "我们在 Ara Damansara 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1617,21 +1617,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Utama?", a: "Yes — KL Renovator covers Bandar Utama, including the area near One Utama Shopping Centre, Tropicana and the Damansara/Petaling Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service condos and landed homes near One Utama?", a: "Yes — Bandar Utama has both high-rise condos and landed bungalow/semi-D homes near One Utama. We service both property types with technicians familiar with each layout's typical access requirements." },
-        { q: "Is same-day aircond service available in Bandar Utama?", a: "Yes — Bandar Utama is part of our regular Damansara-area coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },,
+        { q: "Is same-day aircond service available in Bandar Utama?", a: "Yes — Bandar Utama is part of our regular Damansara-area coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },
         { q: "Who is the most reliable aircond technician in Bandar Utama?", a: "KL Renovator's local Bandar Utama team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Bandar Utama?", a: "We operate from 9 AM to 10 PM daily in Bandar Utama. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Bandar Utama?", a: "Ya — KL Renovator meliputi Bandar Utama, termasuk kawasan berhampiran One Utama Shopping Centre, Tropicana dan sempadan Damansara/Petaling Jaya." },
         { q: "Adakah anda servis kondo dan rumah berkembar berhampiran One Utama?", a: "Ya — Bandar Utama mempunyai kondo tinggi dan rumah banglo/semi-D berkembar berhampiran One Utama. Kami servis kedua-dua jenis hartanah." },
-        { q: "Adakah servis aircond hari sama tersedia di Bandar Utama?", a: "Ya — Bandar Utama sebahagian laluan liputan kawasan Damansara tetap kami, jadi slot hari sama biasanya tersedia." },,
+        { q: "Adakah servis aircond hari sama tersedia di Bandar Utama?", a: "Ya — Bandar Utama sebahagian laluan liputan kawasan Damansara tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Utama?", a: "Pasukan tempatan KL Renovator di Bandar Utama dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Bandar Utama?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Bandar Utama. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Bandar Utama提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Utama，包括One Utama购物中心附近、Tropicana及Damansara/八打灵再也边界区域。" },
         { q: "你们为One Utama附近的公寓和排屋提供服务吗？", a: "可以——Bandar Utama在One Utama附近既有高层公寓也有独立式/半独立式洋房。我们均提供服务，技师熟悉各类房型的通行要求。" },
-        { q: "Bandar Utama能安排当天冷气服务吗？", a: "可以——Bandar Utama属于我们Damansara区域常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },,
+        { q: "Bandar Utama能安排当天冷气服务吗？", a: "可以——Bandar Utama属于我们Damansara区域常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },
         { q: "谁是 Bandar Utama 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Utama 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Utama 提供 24 小时紧急服务吗？", a: "我们在 Bandar Utama 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1658,21 +1658,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sungai Buloh?", a: "Yes — KL Renovator covers Sungai Buloh, including the Kota Damansara, Rawang and Elmina border areas. WhatsApp +60182983573 to book." },
         { q: "Do you service newer township developments like Elmina?", a: "Yes — Elmina and other newer Sungai Buloh townships are part of our regular coverage. Many homes here are recently built, so we check if work might still fall under developer warranty before quoting." },
-        { q: "How fast can a technician reach Sungai Buloh for repairs?", a: "Sungai Buloh is on our regular northwest coverage route alongside Kota Damansara and Rawang, so same-day technicians are usually available — WhatsApp early in the day to confirm." },,
+        { q: "How fast can a technician reach Sungai Buloh for repairs?", a: "Sungai Buloh is on our regular northwest coverage route alongside Kota Damansara and Rawang, so same-day technicians are usually available — WhatsApp early in the day to confirm." },
         { q: "Who is the most reliable aircond technician in Sungai Buloh?", a: "KL Renovator's local Sungai Buloh team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sungai Buloh?", a: "We operate from 9 AM to 10 PM daily in Sungai Buloh. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sungai Buloh?", a: "Ya — KL Renovator meliputi Sungai Buloh, termasuk kawasan sempadan Kota Damansara, Rawang dan Elmina." },
         { q: "Adakah anda servis bandar baharu seperti Elmina?", a: "Ya — Elmina dan bandar Sungai Buloh baharu lain sebahagian liputan tetap kami. Banyak rumah di sini baharu dibina, jadi kami semak jika kerja mungkin masih diliputi waranti pemaju." },
-        { q: "Berapa cepat juruteknik boleh ke Sungai Buloh untuk pembaikan?", a: "Sungai Buloh berada di laluan liputan barat laut tetap kami bersama Kota Damansara dan Rawang, jadi juruteknik hari sama biasanya tersedia." },,
+        { q: "Berapa cepat juruteknik boleh ke Sungai Buloh untuk pembaikan?", a: "Sungai Buloh berada di laluan liputan barat laut tetap kami bersama Kota Damansara dan Rawang, jadi juruteknik hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sungai Buloh?", a: "Pasukan tempatan KL Renovator di Sungai Buloh dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sungai Buloh?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sungai Buloh. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在双溪毛糯（Sungai Buloh）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sungai Buloh，包括Kota Damansara、Rawang及Elmina边界区域。" },
         { q: "你们为Elmina等较新市镇发展区提供服务吗？", a: "可以——Elmina及其他较新的Sungai Buloh市镇属于我们常规覆盖范围。这里许多住宅为近年新建，我们会在报价前核实工程是否仍受发展商保修涵盖。" },
-        { q: "双溪毛糯的维修能多快安排技师上门？", a: "双溪毛糯位于我们雪隆西北部常规路线上，与Kota Damansara及Rawang一同覆盖，因此通常可安排当天技师上门——请尽早通过WhatsApp确认。" },,
+        { q: "双溪毛糯的维修能多快安排技师上门？", a: "双溪毛糯位于我们雪隆西北部常规路线上，与Kota Damansara及Rawang一同覆盖，因此通常可安排当天技师上门——请尽早通过WhatsApp确认。" },
         { q: "谁是 Sungai Buloh 最可靠的冷气技术员？", a: "KL Renovator 的 Sungai Buloh 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sungai Buloh 提供 24 小时紧急服务吗？", a: "我们在 Sungai Buloh 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1699,21 +1699,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Wangsa Maju?", a: "Yes — KL Renovator covers Wangsa Maju across all numbered Sections, plus the area near Wangsa Walk Mall, Taman Sri Rampai and the Gombak/Setapak border. WhatsApp +60182983573 with your Section number." },
         { q: "Do you service condos near Wangsa Walk Mall?", a: "Yes — the area around Wangsa Walk Mall has several condo developments. We're familiar with the lift access and management approval process common in these buildings." },
-        { q: "How much does aircond service cost in Wangsa Maju?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220 in Wangsa Maju — all prices confirmed on-site before work begins, regardless of which Section you're in." },,
+        { q: "How much does aircond service cost in Wangsa Maju?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220 in Wangsa Maju — all prices confirmed on-site before work begins, regardless of which Section you're in." },
         { q: "Who is the most reliable aircond technician in Wangsa Maju?", a: "KL Renovator's local Wangsa Maju team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Wangsa Maju?", a: "We operate from 9 AM to 10 PM daily in Wangsa Maju. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Wangsa Maju?", a: "Ya — KL Renovator meliputi Wangsa Maju merangkumi semua Seksyen bernombor, serta kawasan berhampiran Wangsa Walk Mall, Taman Sri Rampai dan sempadan Gombak/Setapak." },
         { q: "Adakah anda servis kondo berhampiran Wangsa Walk Mall?", a: "Ya — kawasan sekitar Wangsa Walk Mall mempunyai beberapa pembangunan kondo. Kami biasa dengan akses lif dan proses kelulusan pengurusan bangunan ini." },
-        { q: "Berapa harga servis aircond di Wangsa Maju?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220 di Wangsa Maju — semua harga disahkan di tapak sebelum kerja bermula." },,
+        { q: "Berapa harga servis aircond di Wangsa Maju?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220 di Wangsa Maju — semua harga disahkan di tapak sebelum kerja bermula." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Wangsa Maju?", a: "Pasukan tempatan KL Renovator di Wangsa Maju dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Wangsa Maju?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Wangsa Maju. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在旺莎玛珠（Wangsa Maju）提供冷气服务吗？", a: "是的——KL Renovator覆盖Wangsa Maju所有编号Section区，以及Wangsa Walk Mall、Taman Sri Rampai及Gombak/Setapak边界附近区域。请告知具体Section编号。" },
         { q: "你们为Wangsa Walk Mall附近的公寓提供服务吗？", a: "可以——Wangsa Walk Mall周边有几个公寓项目。我们熟悉这些大厦常见的电梯通行及管理处批准流程。" },
-        { q: "旺莎玛珠冷气服务费用是多少？", a: "旺莎玛珠基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起——无论您在哪个Section，动工前均现场确认价格。" },,
+        { q: "旺莎玛珠冷气服务费用是多少？", a: "旺莎玛珠基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起——无论您在哪个Section，动工前均现场确认价格。" },
         { q: "谁是 Wangsa Maju 最可靠的冷气技术员？", a: "KL Renovator 的 Wangsa Maju 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Wangsa Maju 提供 24 小时紧急服务吗？", a: "我们在 Wangsa Maju 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1740,21 +1740,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Balakong?", a: "Yes — KL Renovator covers Balakong, including the area near Taman Len Seng and the Seri Kembangan/Cheras/Pandan Indah border. WhatsApp +60182983573 to book." },
         { q: "Do you service industrial/factory units near Balakong?", a: "Yes — Balakong has a significant light-industrial and factory presence alongside residential areas. We service commercial/industrial-grade aircond units here with separate commercial pricing and contract options." },
-        { q: "Is same-day aircond service available in Balakong?", a: "Yes — Balakong is part of our regular Cheras/Seri Kembangan coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },,
+        { q: "Is same-day aircond service available in Balakong?", a: "Yes — Balakong is part of our regular Cheras/Seri Kembangan coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },
         { q: "Who is the most reliable aircond technician in Balakong?", a: "KL Renovator's local Balakong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Balakong?", a: "We operate from 9 AM to 10 PM daily in Balakong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Balakong?", a: "Ya — KL Renovator meliputi Balakong, termasuk kawasan berhampiran Taman Len Seng dan sempadan Seri Kembangan/Cheras/Pandan Indah." },
         { q: "Adakah anda servis unit perindustrian/kilang berhampiran Balakong?", a: "Ya — Balakong mempunyai kehadiran perindustrian ringan dan kilang yang ketara selain kawasan kediaman. Kami servis unit aircond gred komersial/perindustrian dengan harga berasingan." },
-        { q: "Adakah servis aircond hari sama tersedia di Balakong?", a: "Ya — Balakong sebahagian laluan liputan Cheras/Seri Kembangan tetap kami, jadi slot hari sama biasanya tersedia." },,
+        { q: "Adakah servis aircond hari sama tersedia di Balakong?", a: "Ya — Balakong sebahagian laluan liputan Cheras/Seri Kembangan tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Balakong?", a: "Pasukan tempatan KL Renovator di Balakong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Balakong?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Balakong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在巴勒贡（Balakong）提供冷气服务吗？", a: "是的——KL Renovator覆盖Balakong，包括Taman Len Seng附近区域及Seri Kembangan/蕉赖（Cheras）/Pandan Indah边界。" },
         { q: "你们为巴勒贡附近的工业/工厂单位提供服务吗？", a: "可以——除了住宅区，Balakong也有相当数量的轻工业及工厂。我们为这里提供商用/工业级冷气服务，并设独立商业报价及合约选项。" },
-        { q: "巴勒贡能安排当天冷气服务吗？", a: "可以——Balakong属于我们蕉赖/Seri Kembangan常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },,
+        { q: "巴勒贡能安排当天冷气服务吗？", a: "可以——Balakong属于我们蕉赖/Seri Kembangan常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },
         { q: "谁是 Balakong 最可靠的冷气技术员？", a: "KL Renovator 的 Balakong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Balakong 提供 24 小时紧急服务吗？", a: "我们在 Balakong 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1782,21 +1782,21 @@ export const siteConfig = {
         { q: "Does KL Renovator service aircond in KL City Centre?", a: "Yes — KL Renovator covers all KL City Centre zones including Jalan Ampang, Kampung Attap, Chow Kit and Pudu. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in KL City Centre?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in KL City Centre. All prices confirmed before work begins." },
         { q: "Do you service high-rise condos and office towers in the city centre?", a: "Yes — we regularly service condos, corporate office towers, and older shop-houses and flats across KL City Centre, each according to its own access requirements." },
-        { q: "Is same-day aircond service available in KL City Centre?", a: "Yes — KL Renovator frequently has same-day slots available in KL City Centre. WhatsApp +60182983573 with your location and unit details for fastest response." },,
+        { q: "Is same-day aircond service available in KL City Centre?", a: "Yes — KL Renovator frequently has same-day slots available in KL City Centre. WhatsApp +60182983573 with your location and unit details for fastest response." },
         { q: "Who is the most reliable aircond technician in Kuala Lumpur City Centre?", a: "KL Renovator's local Kuala Lumpur City Centre team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Kuala Lumpur City Centre?", a: "We operate from 9 AM to 10 PM daily in Kuala Lumpur City Centre. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator menservis aircond di Pusat Bandar KL?", a: "Ya — KL Renovator meliputi semua zon Pusat Bandar KL termasuk Jalan Ampang, Kampung Attap, Chow Kit dan Pudu. Servis hari sama tersedia. WhatsApp +60182983573." },
         { q: "Berapa kos servis aircond di Pusat Bandar KL?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Pusat Bandar KL." },
-        { q: "Adakah anda servis kondo bertingkat tinggi dan menara pejabat di pusat bandar?", a: "Ya — kami sering menservis kondo, menara pejabat korporat, dan rumah kedai serta flat lama di seluruh Pusat Bandar KL." },,
+        { q: "Adakah anda servis kondo bertingkat tinggi dan menara pejabat di pusat bandar?", a: "Ya — kami sering menservis kondo, menara pejabat korporat, dan rumah kedai serta flat lama di seluruh Pusat Bandar KL." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kuala Lumpur City Centre?", a: "Pasukan tempatan KL Renovator di Kuala Lumpur City Centre dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Kuala Lumpur City Centre?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Kuala Lumpur City Centre. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在吉隆坡市中心提供冷气服务吗？", a: "是的——KL Renovator覆盖吉隆坡市中心所有区域，包括安邦路、Kampung Attap、秋杰和半山芭。提供当天服务。WhatsApp +60182983573。" },
         { q: "吉隆坡市中心的冷气服务费用是多少？", a: "吉隆坡市中心基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" },
-        { q: "你们服务市中心的高层公寓和办公大楼吗？", a: "是的——我们经常为吉隆坡市中心的公寓、企业办公大楼以及老旧店屋和组屋提供服务，并根据各自的进入要求安排服务。" },,
+        { q: "你们服务市中心的高层公寓和办公大楼吗？", a: "是的——我们经常为吉隆坡市中心的公寓、企业办公大楼以及老旧店屋和组屋提供服务，并根据各自的进入要求安排服务。" },
         { q: "谁是 Kuala Lumpur City Centre 最可靠的冷气技术员？", a: "KL Renovator 的 Kuala Lumpur City Centre 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Kuala Lumpur City Centre 提供 24 小时紧急服务吗？", a: "我们在 Kuala Lumpur City Centre 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2401,7 +2401,7 @@ export const siteConfig = {
         { q: "Do you coordinate with building management for condo access in Mont Kiara?", a: "Yes — most Mont Kiara condos require security registration and sometimes a loading-bay booking for equipment. We handle this coordination directly with building management so you don\u2019t have to." },
         { q: "Does KL Renovator service aircond in Mont Kiara?", a: "Yes — KL Renovator covers Mont Kiara, Sri Hartamas, Solaris Dutamas and Duta Nusantara. We regularly service high-rise condo units here, including coordinating lift/loading-bay access for technicians and equipment. WhatsApp +60182983573 to book." },
         { q: "Can you service aircond units in high-rise condos in Mont Kiara?", a: "Yes — most of our Mont Kiara jobs are in condominiums and serviced residences. We bring portable equipment suited for lift access and can liaise with building management or security on your behalf for technician entry passes." },
-        { q: "How much does aircond chemical wash cost in Mont Kiara?", a: "Pressure chemical wash in Mont Kiara starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Many condo units here use ceiling cassette or concealed split systems, which start from RM 220 — confirmed on-site before work begins." },,
+        { q: "How much does aircond chemical wash cost in Mont Kiara?", a: "Pressure chemical wash in Mont Kiara starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Many condo units here use ceiling cassette or concealed split systems, which start from RM 220 — confirmed on-site before work begins." },
         { q: "Who is the most reliable aircond technician in Mont Kiara?", a: "KL Renovator's local Mont Kiara team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Mont Kiara?", a: "We operate from 9 AM to 10 PM daily in Mont Kiara. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
@@ -2409,7 +2409,7 @@ export const siteConfig = {
         { q: "Adakah anda uruskan dengan pengurusan bangunan untuk akses kondo di Mont Kiara?", a: "Ya — kebanyakan kondo Mont Kiara memerlukan pendaftaran keselamatan dan kadangkala tempahan loading bay. Kami uruskan penyelarasan ini terus dengan pengurusan bangunan." },
         { q: "Adakah KL Renovator servis aircond di Mont Kiara?", a: "Ya — KL Renovator meliputi Mont Kiara, Sri Hartamas, Solaris Dutamas dan Duta Nusantara. Kami kerap servis unit kondominium tinggi di sini, termasuk uruskan akses lif/loading bay untuk juruteknik." },
         { q: "Bolehkah anda servis aircond di kondominium tinggi di Mont Kiara?", a: "Ya — kebanyakan kerja kami di Mont Kiara adalah di kondominium dan kediaman servis. Kami bawa peralatan mudah alih sesuai untuk akses lif dan boleh berhubung dengan pengurusan bangunan bagi pihak anda." },
-        { q: "Berapa harga cuci kimia aircond di Mont Kiara?", a: "Cuci kimia bertekanan di Mont Kiara bermula RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Unit ceiling cassette bermula RM 220 — disahkan di tapak sebelum kerja bermula." },,
+        { q: "Berapa harga cuci kimia aircond di Mont Kiara?", a: "Cuci kimia bertekanan di Mont Kiara bermula RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP). Unit ceiling cassette bermula RM 220 — disahkan di tapak sebelum kerja bermula." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Mont Kiara?", a: "Pasukan tempatan KL Renovator di Mont Kiara dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Mont Kiara?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Mont Kiara. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
@@ -2417,7 +2417,7 @@ export const siteConfig = {
         { q: "你们会协调蒙特基拉公寓的大厦管理处以便进出吗？", a: "会的——大多数蒙特基拉公寓需要安保登记，有时还需预约装卸区。我们会直接与大厦管理处协调，您无需亲自处理。" },
         { q: "KL Renovator在蒙特基拉提供冷气服务吗？", a: "是的——KL Renovator覆盖Mont Kiara、Sri Hartamas、Solaris Dutamas和Duta Nusantara。我们经常为这里的高层公寓提供服务，包括协调电梯及装卸区的技师通行安排。" },
         { q: "你们能为蒙特基拉的高层公寓提供冷气服务吗？", a: "可以——我们在Mont Kiara的大部分工作都在公寓及服务式住宅。我们携带适合电梯进出的便携设备，并可代您与大厦管理处联系安排技师入门证。" },
-        { q: "蒙特基拉冷气化学清洗费用是多少？", a: "蒙特基拉的加压化学清洗从RM 120起（1.0–1.5匹），RM 150起（2.0–2.5匹）。吸顶式机型从RM 220起——动工前现场确认价格。" },,
+        { q: "蒙特基拉冷气化学清洗费用是多少？", a: "蒙特基拉的加压化学清洗从RM 120起（1.0–1.5匹），RM 150起（2.0–2.5匹）。吸顶式机型从RM 220起——动工前现场确认价格。" },
         { q: "谁是 Mont Kiara 最可靠的冷气技术员？", a: "KL Renovator 的 Mont Kiara 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Mont Kiara 提供 24 小时紧急服务吗？", a: "我们在 Mont Kiara 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2444,21 +2444,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Setapak?", a: "Yes — KL Renovator covers Setapak, Taman Setapak, Taman Sri Rampai and the Gombak border area. Same-day technicians are usually available given our regular coverage route through Wangsa Maju and Setapak together." },
         { q: "Do you service older walk-up apartments in Setapak?", a: "Yes — Setapak has many older low-rise walk-up flats alongside newer condos. Our technicians carry the right ladder/scaffold setup for outdoor compressor units mounted on older low-rise blocks without lift access." },
-        { q: "How much does aircond repair cost in Setapak?", a: "Diagnostic/troubleshooting in Setapak is RM 88, waived if you proceed with the repair same visit. Common Setapak repairs (capacitor, PCB, gas top-up) range RM 120–RM 280 depending on the issue, confirmed before work starts." },,
+        { q: "How much does aircond repair cost in Setapak?", a: "Diagnostic/troubleshooting in Setapak is RM 88, waived if you proceed with the repair same visit. Common Setapak repairs (capacitor, PCB, gas top-up) range RM 120–RM 280 depending on the issue, confirmed before work starts." },
         { q: "Who is the most reliable aircond technician in Setapak?", a: "KL Renovator's local Setapak team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Setapak?", a: "We operate from 9 AM to 10 PM daily in Setapak. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Setapak?", a: "Ya — KL Renovator meliputi Setapak, Taman Setapak, Taman Sri Rampai dan kawasan sempadan Gombak. Juruteknik hari sama biasanya tersedia kerana laluan litar kami merangkumi Wangsa Maju dan Setapak bersama." },
         { q: "Adakah anda servis pangsapuri walk-up lama di Setapak?", a: "Ya — Setapak mempunyai banyak blok pangsapuri rendah lama selain kondo baharu. Juruteknik kami membawa tangga/perancah sesuai untuk unit kompresor luar di blok lama tanpa lif." },
-        { q: "Berapa harga pembaikan aircond di Setapak?", a: "Diagnostik/pemeriksaan di Setapak RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa (kapasitor, PCB, tambah gas) dari RM 120–RM 280." },,
+        { q: "Berapa harga pembaikan aircond di Setapak?", a: "Diagnostik/pemeriksaan di Setapak RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa (kapasitor, PCB, tambah gas) dari RM 120–RM 280." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Setapak?", a: "Pasukan tempatan KL Renovator di Setapak dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Setapak?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Setapak. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士达毕提供冷气服务吗？", a: "是的——KL Renovator覆盖士达毕（Setapak）、Taman Setapak、Taman Sri Rampai及Gombak边界区域。由于我们的常规路线涵盖万绕（Wangsa Maju）和士达毕，通常可安排当天上门。" },
         { q: "你们为士达毕的旧式无电梯公寓提供服务吗？", a: "可以——士达毕有许多旧式低层无电梯公寓，也有新公寓。我们的技师会携带合适的梯具，用于无电梯旧楼的室外压缩机安装位置。" },
-        { q: "士达毕冷气维修费用是多少？", a: "士达毕的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、充气）费用约RM 120–RM 280，视情况而定。" },,
+        { q: "士达毕冷气维修费用是多少？", a: "士达毕的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、充气）费用约RM 120–RM 280，视情况而定。" },
         { q: "谁是 Setapak 最可靠的冷气技术员？", a: "KL Renovator 的 Setapak 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Setapak 提供 24 小时紧急服务吗？", a: "我们在 Setapak 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2485,21 +2485,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sentul?", a: "Yes — KL Renovator covers Sentul, Sentul Park, Jalan Ipoh and the Brickfields border area. We service both landed homes near Jalan Ipoh and the newer high-rise developments around Sentul Park." },
         { q: "Do you service the newer condos near Sentul Park?", a: "Yes — the Sentul Park area has several newer condo developments. We're familiar with the management/JMB approval process some of these buildings require for outdoor unit access, and can guide you through it before the appointment." },
-        { q: "Is same-day aircond service available in Sentul?", a: "Yes — Sentul is along our regular city-centre coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning with your address near Jalan Ipoh or Sentul Park to confirm timing." },,
+        { q: "Is same-day aircond service available in Sentul?", a: "Yes — Sentul is along our regular city-centre coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning with your address near Jalan Ipoh or Sentul Park to confirm timing." },
         { q: "Who is the most reliable aircond technician in Sentul?", a: "KL Renovator's local Sentul team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sentul?", a: "We operate from 9 AM to 10 PM daily in Sentul. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sentul?", a: "Ya — KL Renovator meliputi Sentul, Sentul Park, Jalan Ipoh dan kawasan sempadan Brickfields. Kami servis rumah berkembar berhampiran Jalan Ipoh dan pembangunan tinggi baharu di sekitar Sentul Park." },
         { q: "Adakah anda servis kondo baharu berhampiran Sentul Park?", a: "Ya — kawasan Sentul Park mempunyai beberapa pembangunan kondo baharu. Kami biasa dengan proses kelulusan pengurusan/JMB yang diperlukan sesetengah bangunan ini untuk akses unit luar." },
-        { q: "Adakah servis aircond hari sama tersedia di Sentul?", a: "Ya — Sentul berada di laluan litar pusat bandar kami, jadi slot hari sama biasanya tersedia. WhatsApp +60182983573 pada waktu pagi." },,
+        { q: "Adakah servis aircond hari sama tersedia di Sentul?", a: "Ya — Sentul berada di laluan litar pusat bandar kami, jadi slot hari sama biasanya tersedia. WhatsApp +60182983573 pada waktu pagi." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sentul?", a: "Pasukan tempatan KL Renovator di Sentul dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sentul?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sentul. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在仙都（Sentul）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sentul、Sentul Park、Jalan Ipoh及Brickfields边界区域。我们服务Jalan Ipoh附近的排屋，也服务Sentul Park周边较新的高层住宅。" },
         { q: "你们为Sentul Park附近的新公寓提供服务吗？", a: "可以——Sentul Park区域有几个较新的公寓项目。我们熟悉部分大厦要求的管理处/JMB批准流程，可在预约前为您指导处理。" },
-        { q: "仙都（Sentul）能安排当天冷气服务吗？", a: "可以——Sentul位于我们市中心常规服务路线上，通常可安排当天上门。请在早上通过WhatsApp +60182983573联系确认时间。" },,
+        { q: "仙都（Sentul）能安排当天冷气服务吗？", a: "可以——Sentul位于我们市中心常规服务路线上，通常可安排当天上门。请在早上通过WhatsApp +60182983573联系确认时间。" },
         { q: "谁是 Sentul 最可靠的冷气技术员？", a: "KL Renovator 的 Sentul 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sentul 提供 24 小时紧急服务吗？", a: "我们在 Sentul 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2526,21 +2526,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Selayang?", a: "Yes — KL Renovator covers Selayang, Selayang Mall, Taman Selayang Baru and the Batu Caves/Gombak/Rawang corridor. This area is part of our regular northern Klang Valley route." },
         { q: "Do you service landed houses and shoplots in Selayang?", a: "Yes — Selayang has a mix of terrace houses and commercial shoplots, especially near Selayang Mall. We service both residential split units and shoplot ceiling-mounted units, with separate pricing for commercial work." },
-        { q: "How far is Selayang from Batu Caves for aircond service?", a: "Selayang sits right next to Batu Caves and Gombak, so technicians covering one area can usually reach the other within the same trip — this often means faster same-day scheduling for both areas." },,
+        { q: "How far is Selayang from Batu Caves for aircond service?", a: "Selayang sits right next to Batu Caves and Gombak, so technicians covering one area can usually reach the other within the same trip — this often means faster same-day scheduling for both areas." },
         { q: "Who is the most reliable aircond technician in Selayang?", a: "KL Renovator's local Selayang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Selayang?", a: "We operate from 9 AM to 10 PM daily in Selayang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Selayang?", a: "Ya — KL Renovator meliputi Selayang, Selayang Mall, Taman Selayang Baru dan koridor Batu Caves/Gombak/Rawang. Kawasan ini sebahagian daripada laluan litar utara Lembah Klang kami." },
         { q: "Adakah anda servis rumah berkembar dan kedai di Selayang?", a: "Ya — Selayang mempunyai gabungan rumah teres dan kedai komersial, terutamanya berhampiran Selayang Mall. Kami servis unit split kediaman dan unit kedai dengan harga komersial berasingan." },
-        { q: "Berapa jauh Selayang dari Batu Caves untuk servis aircond?", a: "Selayang terletak bersebelahan Batu Caves dan Gombak, jadi juruteknik yang meliputi satu kawasan biasanya boleh ke kawasan lain dalam perjalanan sama — ini selalunya bermakna penjadualan hari sama yang lebih pantas." },,
+        { q: "Berapa jauh Selayang dari Batu Caves untuk servis aircond?", a: "Selayang terletak bersebelahan Batu Caves dan Gombak, jadi juruteknik yang meliputi satu kawasan biasanya boleh ke kawasan lain dalam perjalanan sama — ini selalunya bermakna penjadualan hari sama yang lebih pantas." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Selayang?", a: "Pasukan tempatan KL Renovator di Selayang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Selayang?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Selayang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士拉央（Selayang）提供冷气服务吗？", a: "是的——KL Renovator覆盖Selayang、Selayang Mall、Taman Selayang Baru及Batu Caves/Gombak/Rawang一带。该区域属于我们雪隆北部常规服务路线。" },
         { q: "你们为士拉央的排屋和店屋提供服务吗？", a: "可以——Selayang有排屋与商业店屋的混合区域，尤其在Selayang Mall附近。我们服务住宅分体机及店屋吊顶机型，商业作业价格另计。" },
-        { q: "士拉央距离黑风洞（Batu Caves）的冷气服务安排有多快？", a: "Selayang紧邻Batu Caves和Gombak，因此负责一个区域的技师通常可在同一行程内抵达另一区域——这通常意味着两地都能更快安排当天服务。" },,
+        { q: "士拉央距离黑风洞（Batu Caves）的冷气服务安排有多快？", a: "Selayang紧邻Batu Caves和Gombak，因此负责一个区域的技师通常可在同一行程内抵达另一区域——这通常意味着两地都能更快安排当天服务。" },
         { q: "谁是 Selayang 最可靠的冷气技术员？", a: "KL Renovator 的 Selayang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Selayang 提供 24 小时紧急服务吗？", a: "我们在 Selayang 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2567,21 +2567,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Putrajaya?", a: "Yes — KL Renovator services all Putrajaya Presincts (Presint 1 through 20), including government quarters, landed homes and commercial units. WhatsApp +60182983573 with your Presint number to confirm a slot." },
         { q: "Do you service government quarters and offices in Putrajaya?", a: "Yes — alongside residential Presincts, we service government office buildings and quarters in Putrajaya, including commercial-grade and ceiling cassette units common in administrative blocks." },
-        { q: "Is same-day aircond service available across all Putrajaya Presincts?", a: "Yes, generally — Putrajaya's Presincts are laid out close together, so most bookings get a technician the same day. Presincts further from the city centre (closer to Dengkil) may need slightly more lead time." },,
+        { q: "Is same-day aircond service available across all Putrajaya Presincts?", a: "Yes, generally — Putrajaya's Presincts are laid out close together, so most bookings get a technician the same day. Presincts further from the city centre (closer to Dengkil) may need slightly more lead time." },
         { q: "Who is the most reliable aircond technician in Putrajaya?", a: "KL Renovator's local Putrajaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Putrajaya?", a: "We operate from 9 AM to 10 PM daily in Putrajaya. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Putrajaya?", a: "Ya — KL Renovator servis semua Presint Putrajaya (Presint 1 hingga 20), termasuk kuarters kerajaan, rumah berkembar dan unit komersial. WhatsApp +60182983573 dengan nombor Presint anda." },
         { q: "Adakah anda servis kuarters kerajaan dan pejabat di Putrajaya?", a: "Ya — selain Presint kediaman, kami servis bangunan pejabat kerajaan dan kuarters di Putrajaya, termasuk unit gred komersial dan ceiling cassette yang biasa di blok pentadbiran." },
-        { q: "Adakah servis aircond hari sama tersedia di semua Presint Putrajaya?", a: "Ya, secara umum — Presint Putrajaya terletak berdekatan antara satu sama lain, jadi kebanyakan tempahan mendapat juruteknik pada hari sama. Presint yang lebih jauh berhampiran Dengkil mungkin perlu sedikit masa tambahan." },,
+        { q: "Adakah servis aircond hari sama tersedia di semua Presint Putrajaya?", a: "Ya, secara umum — Presint Putrajaya terletak berdekatan antara satu sama lain, jadi kebanyakan tempahan mendapat juruteknik pada hari sama. Presint yang lebih jauh berhampiran Dengkil mungkin perlu sedikit masa tambahan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Putrajaya?", a: "Pasukan tempatan KL Renovator di Putrajaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Putrajaya?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Putrajaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在布城（Putrajaya）提供冷气服务吗？", a: "是的——KL Renovator为布城所有Presint区（Presint 1至20）提供服务，包括政府宿舍、排屋及商业单位。请通过WhatsApp +60182983573并告知您的Presint编号确认预约。" },
         { q: "你们为布城的政府宿舍和办公楼提供服务吗？", a: "可以——除了住宅Presint区，我们也为布城的政府办公楼及宿舍提供服务，包括行政大楼常见的商用及吸顶式机型。" },
-        { q: "布城所有Presint区都能安排当天冷气服务吗？", a: "一般可以——布城各Presint区彼此距离相近，因此大部分预约都能当天安排技师上门。靠近Dengkil的较远Presint区可能需要稍多一些时间。" },,
+        { q: "布城所有Presint区都能安排当天冷气服务吗？", a: "一般可以——布城各Presint区彼此距离相近，因此大部分预约都能当天安排技师上门。靠近Dengkil的较远Presint区可能需要稍多一些时间。" },
         { q: "谁是 Putrajaya 最可靠的冷气技术员？", a: "KL Renovator 的 Putrajaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Putrajaya 提供 24 小时紧急服务吗？", a: "我们在 Putrajaya 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2608,21 +2608,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Cyberjaya?", a: "Yes — KL Renovator covers Cyberjaya including Shaftsbury, Tamarind Square, Cyberia and Jade Hills. We service both residential condos and commercial office units in the tech-park area." },
         { q: "Do you service commercial office aircond systems in Cyberjaya?", a: "Yes — Cyberjaya has a high concentration of office buildings and data-centre-adjacent commercial units. We handle commercial servicing contracts and ceiling cassette systems common in this kind of building." },
-        { q: "How much does aircond servicing cost for offices in Cyberjaya?", a: "Commercial office servicing in Cyberjaya is quoted based on unit count and HP size — most single-unit ceiling cassette jobs start from RM 220 for chemical overhaul. WhatsApp +60182983573 for a tailored commercial quote." },,
+        { q: "How much does aircond servicing cost for offices in Cyberjaya?", a: "Commercial office servicing in Cyberjaya is quoted based on unit count and HP size — most single-unit ceiling cassette jobs start from RM 220 for chemical overhaul. WhatsApp +60182983573 for a tailored commercial quote." },
         { q: "Who is the most reliable aircond technician in Cyberjaya?", a: "KL Renovator's local Cyberjaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Cyberjaya?", a: "We operate from 9 AM to 10 PM daily in Cyberjaya. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Cyberjaya?", a: "Ya — KL Renovator meliputi Cyberjaya termasuk Shaftsbury, Tamarind Square, Cyberia dan Jade Hills. Kami servis kondo kediaman dan unit pejabat komersial di kawasan taman teknologi ini." },
         { q: "Adakah anda servis sistem aircond pejabat komersial di Cyberjaya?", a: "Ya — Cyberjaya mempunyai tumpuan tinggi bangunan pejabat dan unit komersial berdekatan pusat data. Kami uruskan kontrak servis komersial dan sistem ceiling cassette." },
-        { q: "Berapa harga servis aircond untuk pejabat di Cyberjaya?", a: "Servis pejabat komersial di Cyberjaya disebut harga berdasarkan bilangan unit dan saiz HP — kebanyakan kerja ceiling cassette tunggal bermula RM 220 untuk overhaul kimia." },,
+        { q: "Berapa harga servis aircond untuk pejabat di Cyberjaya?", a: "Servis pejabat komersial di Cyberjaya disebut harga berdasarkan bilangan unit dan saiz HP — kebanyakan kerja ceiling cassette tunggal bermula RM 220 untuk overhaul kimia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Cyberjaya?", a: "Pasukan tempatan KL Renovator di Cyberjaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Cyberjaya?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Cyberjaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在赛城（Cyberjaya）提供冷气服务吗？", a: "是的——KL Renovator覆盖Cyberjaya，包括Shaftsbury、Tamarind Square、Cyberia及Jade Hills。我们为这个科技园区的住宅公寓及商业办公单位提供服务。" },
         { q: "你们为赛城的商业办公冷气系统提供服务吗？", a: "可以——Cyberjaya有大量办公楼及邻近数据中心的商业单位。我们处理商业服务合约以及此类建筑常见的吸顶式系统。" },
-        { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 220起。" },,
+        { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 220起。" },
         { q: "谁是 Cyberjaya 最可靠的冷气技术员？", a: "KL Renovator 的 Cyberjaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Cyberjaya 提供 24 小时紧急服务吗？", a: "我们在 Cyberjaya 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2649,21 +2649,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Kepong?", a: "Yes — KL Renovator covers Kepong, Kepong Baru, Metro Prima, Sri Damansara, Desa Jaya and Taman Ehsan. WhatsApp +60182983573 with your specific neighbourhood for fastest scheduling." },
         { q: "Do you service both older and newer housing areas in Kepong?", a: "Yes — Kepong has a mix of older landed neighbourhoods (Kepong Baru, Taman Ehsan) and newer developments (Metro Prima, Sri Damansara). Our technicians carry the right parts for both older non-inverter units and newer inverter systems." },
-        { q: "Is same-day aircond chemical wash available in Kepong?", a: "Yes — same-day chemical wash slots are usually available in Kepong, since it's part of our regular northwest KL coverage route alongside Sri Damansara and Desa ParkCity." },,
+        { q: "Is same-day aircond chemical wash available in Kepong?", a: "Yes — same-day chemical wash slots are usually available in Kepong, since it's part of our regular northwest KL coverage route alongside Sri Damansara and Desa ParkCity." },
         { q: "Who is the most reliable aircond technician in Kepong?", a: "KL Renovator's local Kepong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Kepong?", a: "We operate from 9 AM to 10 PM daily in Kepong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Kepong?", a: "Ya — KL Renovator meliputi Kepong, Kepong Baru, Metro Prima, Sri Damansara, Desa Jaya dan Taman Ehsan. WhatsApp +60182983573 dengan kawasan khusus anda." },
         { q: "Adakah anda servis kawasan perumahan lama dan baharu di Kepong?", a: "Ya — Kepong mempunyai gabungan kejiranan lama (Kepong Baru, Taman Ehsan) dan pembangunan baharu (Metro Prima, Sri Damansara). Juruteknik kami membawa alat ganti sesuai untuk kedua-dua jenis unit." },
-        { q: "Adakah cuci kimia aircond hari sama tersedia di Kepong?", a: "Ya — slot cuci kimia hari sama biasanya tersedia di Kepong, kerana ia sebahagian daripada laluan litar barat laut KL kami bersama Sri Damansara dan Desa ParkCity." },,
+        { q: "Adakah cuci kimia aircond hari sama tersedia di Kepong?", a: "Ya — slot cuci kimia hari sama biasanya tersedia di Kepong, kerana ia sebahagian daripada laluan litar barat laut KL kami bersama Sri Damansara dan Desa ParkCity." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kepong?", a: "Pasukan tempatan KL Renovator di Kepong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Kepong?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Kepong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在甲洞（Kepong）提供冷气服务吗？", a: "是的——KL Renovator覆盖Kepong、Kepong Baru、Metro Prima、Sri Damansara、Desa Jaya及Taman Ehsan。请通过WhatsApp +60182983573告知具体区域以便最快安排。" },
         { q: "你们为甲洞的新旧住宅区都提供服务吗？", a: "可以——甲洞有旧社区（Kepong Baru、Taman Ehsan）与新发展区（Metro Prima、Sri Damansara）的混合。我们的技师携带适用于新旧两类机型的零件。" },
-        { q: "甲洞能安排当天冷气化学清洗吗？", a: "可以——甲洞通常可安排当天化学清洗，因为该区域属于我们雪隆西北部常规路线，与Sri Damansara及Desa ParkCity一同覆盖。" },,
+        { q: "甲洞能安排当天冷气化学清洗吗？", a: "可以——甲洞通常可安排当天化学清洗，因为该区域属于我们雪隆西北部常规路线，与Sri Damansara及Desa ParkCity一同覆盖。" },
         { q: "谁是 Kepong 最可靠的冷气技术员？", a: "KL Renovator 的 Kepong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Kepong 提供 24 小时紧急服务吗？", a: "我们在 Kepong 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2690,21 +2690,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sri Petaling?", a: "Yes — KL Renovator covers Sri Petaling, Bukit Jalil, OUG (Taman Overseas Union), Kuchai Lama and Salak South. Same-day technicians regularly cover this whole cluster together." },
         { q: "Do you service condos near Bukit Jalil sports complex?", a: "Yes — the Bukit Jalil area near the sports complex has several condo developments. We're familiar with the loading-bay and management approval process common in these buildings." },
-        { q: "How much does aircond gas top-up cost in Sri Petaling?", a: "Gas top-up in Sri Petaling starts from RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Exact gas type is confirmed by checking your unit's nameplate during the visit." },,
+        { q: "How much does aircond gas top-up cost in Sri Petaling?", a: "Gas top-up in Sri Petaling starts from RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Exact gas type is confirmed by checking your unit's nameplate during the visit." },
         { q: "Who is the most reliable aircond technician in Sri Petaling?", a: "KL Renovator's local Sri Petaling team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sri Petaling?", a: "We operate from 9 AM to 10 PM daily in Sri Petaling. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sri Petaling?", a: "Ya — KL Renovator meliputi Sri Petaling, Bukit Jalil, OUG (Taman Overseas Union), Kuchai Lama dan Salak South. Juruteknik hari sama kerap meliputi keseluruhan kluster ini bersama." },
         { q: "Adakah anda servis kondo berhampiran kompleks sukan Bukit Jalil?", a: "Ya — kawasan Bukit Jalil berhampiran kompleks sukan mempunyai beberapa pembangunan kondo. Kami biasa dengan proses kelulusan loading bay dan pengurusan bangunan ini." },
-        { q: "Berapa harga tambah gas aircond di Sri Petaling?", a: "Tambah gas di Sri Petaling bermula RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Jenis gas tepat disahkan semasa lawatan." },,
+        { q: "Berapa harga tambah gas aircond di Sri Petaling?", a: "Tambah gas di Sri Petaling bermula RM 120 (R22, 1.0 HP), RM 150 (R410A), RM 180 (R32). Jenis gas tepat disahkan semasa lawatan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sri Petaling?", a: "Pasukan tempatan KL Renovator di Sri Petaling dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sri Petaling?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sri Petaling. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在斯里白沙罗（Sri Petaling）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sri Petaling、Bukit Jalil、OUG（Taman Overseas Union）、Kuchai Lama及Salak South。当天技师经常一并覆盖整个区域。" },
         { q: "你们为武吉加里尔体育馆附近的公寓提供服务吗？", a: "可以——Bukit Jalil体育馆附近有几个公寓项目。我们熟悉这些大厦常见的装卸区及管理处批准流程。" },
-        { q: "斯里白沙罗冷气充气费用是多少？", a: "Sri Petaling充气服务从RM 120起（R22，1.0匹）、RM 150起（R410A）、RM 180起（R32）。具体气体类型会在上门时核实机型铭牌确认。" },,
+        { q: "斯里白沙罗冷气充气费用是多少？", a: "Sri Petaling充气服务从RM 120起（R22，1.0匹）、RM 150起（R410A）、RM 180起（R32）。具体气体类型会在上门时核实机型铭牌确认。" },
         { q: "谁是 Sri Petaling 最可靠的冷气技术员？", a: "KL Renovator 的 Sri Petaling 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sri Petaling 提供 24 小时紧急服务吗？", a: "我们在 Sri Petaling 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2731,21 +2731,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sunway?", a: "Yes — KL Renovator covers Bandar Sunway, Sunway Mentari, the area near Sunway Pyramid and Sunway Velocity, plus the USJ/Putra Heights border. WhatsApp +60182983573 to confirm coverage for your block." },
         { q: "Do you service high-rise condos near Sunway Pyramid?", a: "Yes — the high-rise condos and serviced apartments near Sunway Pyramid and Sunway Velocity are a regular part of our coverage. We coordinate lift access and management approval ahead of the appointment where needed." },
-        { q: "Is commercial aircond servicing available for shops near Sunway Pyramid?", a: "Yes — we service commercial units in retail and F&B shoplots around the Sunway Pyramid/Sunway Velocity vicinity, with separate commercial pricing and contract options for regular maintenance." },,
+        { q: "Is commercial aircond servicing available for shops near Sunway Pyramid?", a: "Yes — we service commercial units in retail and F&B shoplots around the Sunway Pyramid/Sunway Velocity vicinity, with separate commercial pricing and contract options for regular maintenance." },
         { q: "Who is the most reliable aircond technician in Sunway?", a: "KL Renovator's local Sunway team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sunway?", a: "We operate from 9 AM to 10 PM daily in Sunway. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sunway?", a: "Ya — KL Renovator meliputi Bandar Sunway, Sunway Mentari, kawasan berhampiran Sunway Pyramid dan Sunway Velocity, serta sempadan USJ/Putra Heights." },
         { q: "Adakah anda servis kondo tinggi berhampiran Sunway Pyramid?", a: "Ya — kondo tinggi dan apartmen servis berhampiran Sunway Pyramid dan Sunway Velocity adalah sebahagian tetap liputan kami. Kami uruskan akses lif dan kelulusan pengurusan sebelum temujanji." },
-        { q: "Adakah servis aircond komersial tersedia untuk kedai berhampiran Sunway Pyramid?", a: "Ya — kami servis unit komersial di kedai runcit dan F&B sekitar kawasan Sunway Pyramid/Sunway Velocity, dengan harga komersial berasingan dan opsyen kontrak penyelenggaraan." },,
+        { q: "Adakah servis aircond komersial tersedia untuk kedai berhampiran Sunway Pyramid?", a: "Ya — kami servis unit komersial di kedai runcit dan F&B sekitar kawasan Sunway Pyramid/Sunway Velocity, dengan harga komersial berasingan dan opsyen kontrak penyelenggaraan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sunway?", a: "Pasukan tempatan KL Renovator di Sunway dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sunway?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sunway. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在双威（Sunway）提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Sunway、Sunway Mentari、Sunway Pyramid与Sunway Velocity附近区域，以及USJ/Putra Heights边界。" },
         { q: "你们为双威金字塔附近的高层公寓提供服务吗？", a: "可以——Sunway Pyramid及Sunway Velocity附近的高层公寓及服务式公寓是我们常规覆盖范围。我们会在预约前协调电梯通行及管理处批准事宜。" },
-        { q: "双威金字塔附近的商铺能安排商用冷气服务吗？", a: "可以——我们为Sunway Pyramid/Sunway Velocity一带的零售及餐饮店铺提供商用服务，并提供独立商业报价及定期保养合约选项。" },,
+        { q: "双威金字塔附近的商铺能安排商用冷气服务吗？", a: "可以——我们为Sunway Pyramid/Sunway Velocity一带的零售及餐饮店铺提供商用服务，并提供独立商业报价及定期保养合约选项。" },
         { q: "谁是 Sunway 最可靠的冷气技术员？", a: "KL Renovator 的 Sunway 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sunway 提供 24 小时紧急服务吗？", a: "我们在 Sunway 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2772,21 +2772,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Rawang?", a: "Yes — KL Renovator covers Rawang, Taman Rawang Perdana, Kundang, Bandar Country Homes and Serendah. This is part of our northern Klang Valley route alongside Selayang and Batu Caves." },
         { q: "Do you service landed houses in Bandar Country Homes and Kundang?", a: "Yes — Bandar Country Homes and Kundang are mostly terrace and semi-detached landed housing. We carry standard copper piping and outdoor unit mounting equipment suited to these layouts." },
-        { q: "How fast can a technician reach Rawang for an emergency repair?", a: "Rawang is further from central KL, so emergency same-day slots usually need booking by mid-morning. WhatsApp +60182983573 early in the day with your Rawang address to lock in a same-day technician." },,
+        { q: "How fast can a technician reach Rawang for an emergency repair?", a: "Rawang is further from central KL, so emergency same-day slots usually need booking by mid-morning. WhatsApp +60182983573 early in the day with your Rawang address to lock in a same-day technician." },
         { q: "Who is the most reliable aircond technician in Rawang?", a: "KL Renovator's local Rawang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Rawang?", a: "We operate from 9 AM to 10 PM daily in Rawang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Rawang?", a: "Ya — KL Renovator meliputi Rawang, Taman Rawang Perdana, Kundang, Bandar Country Homes dan Serendah. Ini sebahagian laluan litar utara Lembah Klang kami bersama Selayang dan Batu Caves." },
         { q: "Adakah anda servis rumah berkembar di Bandar Country Homes dan Kundang?", a: "Ya — Bandar Country Homes dan Kundang kebanyakannya perumahan teres dan berkembar. Kami bawa paip tembaga standard dan peralatan pemasangan unit luar sesuai untuk susun atur ini." },
-        { q: "Berapa cepat juruteknik boleh ke Rawang untuk pembaikan kecemasan?", a: "Rawang lebih jauh dari pusat bandar KL, jadi slot kecemasan hari sama biasanya perlu ditempah awal pagi. WhatsApp +60182983573 awal hari dengan alamat Rawang anda." },,
+        { q: "Berapa cepat juruteknik boleh ke Rawang untuk pembaikan kecemasan?", a: "Rawang lebih jauh dari pusat bandar KL, jadi slot kecemasan hari sama biasanya perlu ditempah awal pagi. WhatsApp +60182983573 awal hari dengan alamat Rawang anda." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Rawang?", a: "Pasukan tempatan KL Renovator di Rawang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Rawang?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Rawang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在万挠（Rawang）提供冷气服务吗？", a: "是的——KL Renovator覆盖Rawang、Taman Rawang Perdana、Kundang、Bandar Country Homes及Serendah。该区域属于我们雪隆北部路线，与Selayang及Batu Caves一同覆盖。" },
         { q: "你们为Bandar Country Homes和Kundang的排屋提供服务吗？", a: "可以——Bandar Country Homes和Kundang大多为排屋及半独立式住宅。我们携带适合此类布局的标准铜管及室外机安装设备。" },
-        { q: "万挠的紧急冷气维修能多快安排技师上门？", a: "万挠距离吉隆坡市中心较远，因此当天紧急预约通常需在上午中段前预订。请尽早通过WhatsApp +60182983573并提供万挠地址以确保当天安排。" },,
+        { q: "万挠的紧急冷气维修能多快安排技师上门？", a: "万挠距离吉隆坡市中心较远，因此当天紧急预约通常需在上午中段前预订。请尽早通过WhatsApp +60182983573并提供万挠地址以确保当天安排。" },
         { q: "谁是 Rawang 最可靠的冷气技术员？", a: "KL Renovator 的 Rawang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Rawang 提供 24 小时紧急服务吗？", a: "我们在 Rawang 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2813,21 +2813,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Semenyih?", a: "Yes — KL Renovator covers Semenyih Town, Taman Pelangi, Kajang South and Bangi Lama, as part of our wider Kajang-Semenyih coverage route. WhatsApp +60182983573 to confirm a same-day slot." },
         { q: "Do you service new township developments near Semenyih?", a: "Yes — newer townships in the Semenyih corridor (including Setia Ecohill and Eco Majestic nearby) are part of our regular coverage. We're familiar with the gated-community visitor registration process common here." },
-        { q: "How much does new aircond installation cost in Semenyih?", a: "New installation in Semenyih starts from RM 199 (1.0–1.5 HP) for labour, with copper pipe, gas and casing materials quoted separately based on your unit's exact wall-to-outdoor-unit distance." },,
+        { q: "How much does new aircond installation cost in Semenyih?", a: "New installation in Semenyih starts from RM 199 (1.0–1.5 HP) for labour, with copper pipe, gas and casing materials quoted separately based on your unit's exact wall-to-outdoor-unit distance." },
         { q: "Who is the most reliable aircond technician in Semenyih?", a: "KL Renovator's local Semenyih team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Semenyih?", a: "We operate from 9 AM to 10 PM daily in Semenyih. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Semenyih?", a: "Ya — KL Renovator meliputi Semenyih Town, Taman Pelangi, Kajang South dan Bangi Lama, sebahagian laluan liputan Kajang-Semenyih kami yang lebih luas." },
         { q: "Adakah anda servis pembangunan bandar baharu berhampiran Semenyih?", a: "Ya — bandar baharu di koridor Semenyih (termasuk Setia Ecohill dan Eco Majestic berdekatan) sebahagian liputan tetap kami. Kami biasa dengan proses pendaftaran pelawat komuniti berpagar di sini." },
-        { q: "Berapa harga pemasangan aircond baharu di Semenyih?", a: "Pemasangan baharu di Semenyih bermula RM 199 (1.0–1.5 HP) untuk upah, dengan bahan paip tembaga, gas dan casing disebut harga berasingan." },,
+        { q: "Berapa harga pemasangan aircond baharu di Semenyih?", a: "Pemasangan baharu di Semenyih bermula RM 199 (1.0–1.5 HP) untuk upah, dengan bahan paip tembaga, gas dan casing disebut harga berasingan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Semenyih?", a: "Pasukan tempatan KL Renovator di Semenyih dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Semenyih?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Semenyih. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士毛月（Semenyih）提供冷气服务吗？", a: "是的——KL Renovator覆盖Semenyih Town、Taman Pelangi、Kajang South及Bangi Lama，属于我们更广泛的加影-士毛月服务路线。" },
         { q: "你们为士毛月附近的新市镇发展区提供服务吗？", a: "可以——士毛月走廊的新市镇（包括附近的Setia Ecohill和Eco Majestic）属于我们常规覆盖范围。我们熟悉这里常见的门禁社区访客登记流程。" },
-        { q: "士毛月新装冷气费用是多少？", a: "士毛月的新装人工费从RM 199起（1.0–1.5匹），铜管、冷媒及外壳材料根据您机组与室外机的实际距离另行报价。" },,
+        { q: "士毛月新装冷气费用是多少？", a: "士毛月的新装人工费从RM 199起（1.0–1.5匹），铜管、冷媒及外壳材料根据您机组与室外机的实际距离另行报价。" },
         { q: "谁是 Semenyih 最可靠的冷气技术员？", a: "KL Renovator 的 Semenyih 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Semenyih 提供 24 小时紧急服务吗？", a: "我们在 Semenyih 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2854,21 +2854,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Seri Kembangan?", a: "Yes — KL Renovator covers Seri Kembangan, Balakong, Taman Equine and Serdang. WhatsApp +60182983573 with your specific neighbourhood for fastest same-day scheduling." },
         { q: "Do you service the equestrian park / Taman Equine landed homes?", a: "Yes — Taman Equine and surrounding landed neighbourhoods in Seri Kembangan are regularly serviced by our technicians, who carry standard split-unit installation and repair equipment suited to this housing type." },
-        { q: "Is same-day aircond service available between Seri Kembangan and Balakong?", a: "Yes — Seri Kembangan and Balakong are covered on the same route, so a technician booked for one area can often also take a same-day job in the other if scheduled early in the day." },,
+        { q: "Is same-day aircond service available between Seri Kembangan and Balakong?", a: "Yes — Seri Kembangan and Balakong are covered on the same route, so a technician booked for one area can often also take a same-day job in the other if scheduled early in the day." },
         { q: "Who is the most reliable aircond technician in Seri Kembangan?", a: "KL Renovator's local Seri Kembangan team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Seri Kembangan?", a: "We operate from 9 AM to 10 PM daily in Seri Kembangan. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Seri Kembangan?", a: "Ya — KL Renovator meliputi Seri Kembangan, Balakong, Taman Equine dan Serdang. WhatsApp +60182983573 dengan kawasan khusus anda." },
         { q: "Adakah anda servis rumah berkembar di Taman Equine?", a: "Ya — Taman Equine dan kejiranan berkembar sekitar di Seri Kembangan kerap diservis juruteknik kami, yang membawa peralatan pemasangan dan pembaikan unit split standard." },
-        { q: "Adakah servis aircond hari sama tersedia antara Seri Kembangan dan Balakong?", a: "Ya — Seri Kembangan dan Balakong diliputi laluan sama, jadi juruteknik yang ditempah untuk satu kawasan selalunya boleh ambil kerja hari sama di kawasan lain jika dijadualkan awal hari." },,
+        { q: "Adakah servis aircond hari sama tersedia antara Seri Kembangan dan Balakong?", a: "Ya — Seri Kembangan dan Balakong diliputi laluan sama, jadi juruteknik yang ditempah untuk satu kawasan selalunya boleh ambil kerja hari sama di kawasan lain jika dijadualkan awal hari." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Seri Kembangan?", a: "Pasukan tempatan KL Renovator di Seri Kembangan dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Seri Kembangan?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Seri Kembangan. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在士里肯邦安（Seri Kembangan）提供冷气服务吗？", a: "是的——KL Renovator覆盖Seri Kembangan、Balakong、Taman Equine及Serdang。请通过WhatsApp +60182983573告知具体区域以便最快安排当天服务。" },
         { q: "你们为Taman Equine的排屋提供服务吗？", a: "可以——Seri Kembangan的Taman Equine及周边排屋社区经常由我们的技师提供服务，他们携带适合此类住宅的标准分体机安装及维修设备。" },
-        { q: "Seri Kembangan和Balakong之间能安排当天冷气服务吗？", a: "可以——Seri Kembangan和Balakong位于同一服务路线上，若提早预约，负责一个区域的技师通常也能在当天兼顾另一区域的工作。" },,
+        { q: "Seri Kembangan和Balakong之间能安排当天冷气服务吗？", a: "可以——Seri Kembangan和Balakong位于同一服务路线上，若提早预约，负责一个区域的技师通常也能在当天兼顾另一区域的工作。" },
         { q: "谁是 Seri Kembangan 最可靠的冷气技术员？", a: "KL Renovator 的 Seri Kembangan 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Seri Kembangan 提供 24 小时紧急服务吗？", a: "我们在 Seri Kembangan 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2895,21 +2895,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Desa ParkCity?", a: "Yes — KL Renovator covers Desa ParkCity including The Waterfront and the Central Park area, plus neighbouring Kepong and Sri Damansara. WhatsApp +60182983573 to book a technician." },
         { q: "Do you service premium landed homes and condos in Desa ParkCity?", a: "Yes — Desa ParkCity has a mix of premium landed bungalows/semi-Ds and condominiums around The Waterfront. We're familiar with the gated-community access procedures common throughout this township." },
-        { q: "How much does aircond chemical overhaul cost in Desa ParkCity?", a: "Chemical overhaul in Desa ParkCity starts from RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Larger units common in premium homes here are quoted on-site after checking the unit's HP rating." },,
+        { q: "How much does aircond chemical overhaul cost in Desa ParkCity?", a: "Chemical overhaul in Desa ParkCity starts from RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Larger units common in premium homes here are quoted on-site after checking the unit's HP rating." },
         { q: "Who is the most reliable aircond technician in Desa ParkCity?", a: "KL Renovator's local Desa ParkCity team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Desa ParkCity?", a: "We operate from 9 AM to 10 PM daily in Desa ParkCity. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Desa ParkCity?", a: "Ya — KL Renovator meliputi Desa ParkCity termasuk The Waterfront dan kawasan Central Park, serta Kepong dan Sri Damansara bersebelahan." },
         { q: "Adakah anda servis rumah berkembar premium dan kondo di Desa ParkCity?", a: "Ya — Desa ParkCity mempunyai gabungan banglo/semi-D premium dan kondominium sekitar The Waterfront. Kami biasa dengan prosedur akses komuniti berpagar di sini." },
-        { q: "Berapa harga overhaul kimia aircond di Desa ParkCity?", a: "Overhaul kimia di Desa ParkCity bermula RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Unit lebih besar yang biasa di rumah premium disebut harga di tapak." },,
+        { q: "Berapa harga overhaul kimia aircond di Desa ParkCity?", a: "Overhaul kimia di Desa ParkCity bermula RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Unit lebih besar yang biasa di rumah premium disebut harga di tapak." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Desa ParkCity?", a: "Pasukan tempatan KL Renovator di Desa ParkCity dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Desa ParkCity?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Desa ParkCity. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Desa ParkCity提供冷气服务吗？", a: "是的——KL Renovator覆盖Desa ParkCity，包括The Waterfront及Central Park区域，以及邻近的Kepong和Sri Damansara。" },
         { q: "你们为Desa ParkCity的高级排屋和公寓提供服务吗？", a: "可以——Desa ParkCity有The Waterfront周边的高级独立式/半独立式洋房与公寓的混合区域。我们熟悉这里常见的门禁社区出入流程。" },
-        { q: "Desa ParkCity冷气化学大修费用是多少？", a: "Desa ParkCity的化学大修从RM 220起（1.0–1.5匹）、RM 280起（2.0–2.5匹）。此处高级住宅常见的较大机型会在核实匹数后现场报价。" },,
+        { q: "Desa ParkCity冷气化学大修费用是多少？", a: "Desa ParkCity的化学大修从RM 220起（1.0–1.5匹）、RM 280起（2.0–2.5匹）。此处高级住宅常见的较大机型会在核实匹数后现场报价。" },
         { q: "谁是 Desa ParkCity 最可靠的冷气技术员？", a: "KL Renovator 的 Desa ParkCity 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Desa ParkCity 提供 24 小时紧急服务吗？", a: "我们在 Desa ParkCity 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2936,21 +2936,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Taman Melawati?", a: "Yes — KL Renovator covers Taman Melawati, the area near Melawati Mall, and the Hulu Kelang/Ampang Jaya border. WhatsApp +60182983573 to check same-day availability." },
         { q: "Do you service landed homes near Melawati Mall?", a: "Yes — most homes in Taman Melawati are double or single-storey terrace houses. We're used to the typical pipe-run distances and outdoor unit placements in this area, which keeps quotes consistent and accurate." },
-        { q: "Is aircond gas top-up available same-day in Taman Melawati?", a: "Yes — gas top-up is one of our most common Taman Melawati jobs, typically scheduled same-day. Pricing starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32), confirmed by checking your unit's nameplate." },,
+        { q: "Is aircond gas top-up available same-day in Taman Melawati?", a: "Yes — gas top-up is one of our most common Taman Melawati jobs, typically scheduled same-day. Pricing starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32), confirmed by checking your unit's nameplate." },
         { q: "Who is the most reliable aircond technician in Taman Melawati?", a: "KL Renovator's local Taman Melawati team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Taman Melawati?", a: "We operate from 9 AM to 10 PM daily in Taman Melawati. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Taman Melawati?", a: "Ya — KL Renovator meliputi Taman Melawati, kawasan berhampiran Melawati Mall, dan sempadan Hulu Kelang/Ampang Jaya." },
         { q: "Adakah anda servis rumah berkembar berhampiran Melawati Mall?", a: "Ya — kebanyakan rumah di Taman Melawati adalah rumah teres dua atau satu tingkat. Kami biasa dengan jarak paip dan kedudukan unit luar biasa di kawasan ini." },
-        { q: "Adakah tambah gas aircond tersedia hari sama di Taman Melawati?", a: "Ya — tambah gas adalah antara kerja paling biasa kami di Taman Melawati, biasanya dijadualkan hari sama. Harga bermula RM 120 (R22), RM 150 (R410A), RM 180 (R32)." },,
+        { q: "Adakah tambah gas aircond tersedia hari sama di Taman Melawati?", a: "Ya — tambah gas adalah antara kerja paling biasa kami di Taman Melawati, biasanya dijadualkan hari sama. Harga bermula RM 120 (R22), RM 150 (R410A), RM 180 (R32)." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Taman Melawati?", a: "Pasukan tempatan KL Renovator di Taman Melawati dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Taman Melawati?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Taman Melawati. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在打曼美拉华蒂（Taman Melawati）提供冷气服务吗？", a: "是的——KL Renovator覆盖Taman Melawati、Melawati Mall附近区域，以及Hulu Kelang/Ampang Jaya边界。" },
         { q: "你们为Melawati Mall附近的排屋提供服务吗？", a: "可以——Taman Melawati大多数住宅为双层或单层排屋。我们熟悉该区域典型的管线距离及室外机安装位置，确保报价准确一致。" },
-        { q: "Taman Melawati能当天安排冷气充气服务吗？", a: "可以——充气是我们在Taman Melawati最常见的工作之一，通常可当天安排。价格从RM 120起（R22）、RM 150起（R410A）、RM 180起（R32）。" },,
+        { q: "Taman Melawati能当天安排冷气充气服务吗？", a: "可以——充气是我们在Taman Melawati最常见的工作之一，通常可当天安排。价格从RM 120起（R22）、RM 150起（R410A）、RM 180起（R32）。" },
         { q: "谁是 Taman Melawati 最可靠的冷气技术员？", a: "KL Renovator 的 Taman Melawati 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Taman Melawati 提供 24 小时紧急服务吗？", a: "我们在 Taman Melawati 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -2977,21 +2977,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Hulu Kelang?", a: "Yes — KL Renovator covers Hulu Kelang, Taman Keramat, Ukay Perdana and the Taman Melawati/Taman AU border area. WhatsApp +60182983573 to book." },
         { q: "Do you service hillside bungalows in Ukay Perdana?", a: "Yes — Ukay Perdana has several hillside bungalow developments. Our technicians budget extra time for steeper driveway/compound access when servicing outdoor compressor units in these properties." },
-        { q: "How much does aircond installation cost in Hulu Kelang?", a: "New installation in Hulu Kelang starts from RM 199 (1.0–1.5 HP) for labour. Hillside properties with longer pipe runs between indoor and outdoor units are quoted on-site after checking the exact distance." },,
+        { q: "How much does aircond installation cost in Hulu Kelang?", a: "New installation in Hulu Kelang starts from RM 199 (1.0–1.5 HP) for labour. Hillside properties with longer pipe runs between indoor and outdoor units are quoted on-site after checking the exact distance." },
         { q: "Who is the most reliable aircond technician in Hulu Kelang?", a: "KL Renovator's local Hulu Kelang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Hulu Kelang?", a: "We operate from 9 AM to 10 PM daily in Hulu Kelang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Hulu Kelang?", a: "Ya — KL Renovator meliputi Hulu Kelang, Taman Keramat, Ukay Perdana dan kawasan sempadan Taman Melawati/Taman AU." },
         { q: "Adakah anda servis banglo bukit di Ukay Perdana?", a: "Ya — Ukay Perdana mempunyai beberapa pembangunan banglo bukit. Juruteknik kami sediakan masa tambahan untuk akses laluan masuk/kawasan lebih curam semasa servis unit kompresor luar." },
-        { q: "Berapa harga pemasangan aircond di Hulu Kelang?", a: "Pemasangan baharu di Hulu Kelang bermula RM 199 (1.0–1.5 HP) untuk upah. Hartanah di bukit dengan jarak paip lebih panjang disebut harga di tapak." },,
+        { q: "Berapa harga pemasangan aircond di Hulu Kelang?", a: "Pemasangan baharu di Hulu Kelang bermula RM 199 (1.0–1.5 HP) untuk upah. Hartanah di bukit dengan jarak paip lebih panjang disebut harga di tapak." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Hulu Kelang?", a: "Pasukan tempatan KL Renovator di Hulu Kelang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Hulu Kelang?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Hulu Kelang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在乌鲁冷岳（Hulu Kelang）提供冷气服务吗？", a: "是的——KL Renovator覆盖Hulu Kelang、Taman Keramat、Ukay Perdana及Taman Melawati/Taman AU边界区域。" },
         { q: "你们为Ukay Perdana的山坡洋房提供服务吗？", a: "可以——Ukay Perdana有多个山坡洋房项目。我们的技师在为这类住宅的室外压缩机提供服务时，会预留额外时间应对较陡的车道/院落通行。" },
-        { q: "乌鲁冷岳冷气安装费用是多少？", a: "乌鲁冷岳新装人工费从RM 199起（1.0–1.5匹）。山坡住宅因室内外机管线较长，将在核实实际距离后现场报价。" },,
+        { q: "乌鲁冷岳冷气安装费用是多少？", a: "乌鲁冷岳新装人工费从RM 199起（1.0–1.5匹）。山坡住宅因室内外机管线较长，将在核实实际距离后现场报价。" },
         { q: "谁是 Hulu Kelang 最可靠的冷气技术员？", a: "KL Renovator 的 Hulu Kelang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Hulu Kelang 提供 24 小时紧急服务吗？", a: "我们在 Hulu Kelang 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3018,21 +3018,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Puteri?", a: "Yes — KL Renovator covers Bandar Puteri Puchong, including the area near IOI City Mall and Bukit Puchong. WhatsApp +60182983573 for same-day scheduling." },
         { q: "Do you service shop offices and landed homes in Bandar Puteri?", a: "Yes — Bandar Puteri has a mix of double-storey shop offices and terrace landed homes. We service both, with separate commercial pricing for shop-office ceiling cassette and split units." },
-        { q: "How fast can a technician reach Bandar Puteri for repairs?", a: "Bandar Puteri is part of our regular Puchong coverage route, so same-day technicians are usually available — typically within 2–4 hours of confirming via WhatsApp." },,
+        { q: "How fast can a technician reach Bandar Puteri for repairs?", a: "Bandar Puteri is part of our regular Puchong coverage route, so same-day technicians are usually available — typically within 2–4 hours of confirming via WhatsApp." },
         { q: "Who is the most reliable aircond technician in Bandar Puteri?", a: "KL Renovator's local Bandar Puteri team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Bandar Puteri?", a: "We operate from 9 AM to 10 PM daily in Bandar Puteri. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Bandar Puteri?", a: "Ya — KL Renovator meliputi Bandar Puteri Puchong, termasuk kawasan berhampiran IOI City Mall dan Bukit Puchong." },
         { q: "Adakah anda servis pejabat kedai dan rumah berkembar di Bandar Puteri?", a: "Ya — Bandar Puteri mempunyai gabungan pejabat kedai dua tingkat dan rumah teres. Kami servis kedua-duanya dengan harga komersial berasingan untuk unit ceiling cassette pejabat kedai." },
-        { q: "Berapa cepat juruteknik boleh ke Bandar Puteri untuk pembaikan?", a: "Bandar Puteri sebahagian laluan liputan Puchong tetap kami, jadi juruteknik hari sama biasanya tersedia — biasanya dalam 2-4 jam selepas pengesahan melalui WhatsApp." },,
+        { q: "Berapa cepat juruteknik boleh ke Bandar Puteri untuk pembaikan?", a: "Bandar Puteri sebahagian laluan liputan Puchong tetap kami, jadi juruteknik hari sama biasanya tersedia — biasanya dalam 2-4 jam selepas pengesahan melalui WhatsApp." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Puteri?", a: "Pasukan tempatan KL Renovator di Bandar Puteri dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Bandar Puteri?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Bandar Puteri. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Bandar Puteri提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Puteri Puchong，包括IOI City Mall及武吉蒲种（Bukit Puchong）附近区域。" },
         { q: "你们为Bandar Puteri的店屋和排屋提供服务吗？", a: "可以——Bandar Puteri有双层店屋与排屋的混合区域。我们均提供服务，店屋吸顶机及分体机另设商业报价。" },
-        { q: "Bandar Puteri维修能多快安排技师上门？", a: "Bandar Puteri属于我们常规蒲种（Puchong）服务路线，因此通常可安排当天技师上门——确认WhatsApp后一般2-4小时内到达。" },,
+        { q: "Bandar Puteri维修能多快安排技师上门？", a: "Bandar Puteri属于我们常规蒲种（Puchong）服务路线，因此通常可安排当天技师上门——确认WhatsApp后一般2-4小时内到达。" },
         { q: "谁是 Bandar Puteri 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Puteri 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Puteri 提供 24 小时紧急服务吗？", a: "我们在 Bandar Puteri 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3059,21 +3059,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Botanic?", a: "Yes — KL Renovator covers Bandar Botanic, near the Botanic Golf Course and the Klang/Kota Kemuning border area. WhatsApp +60182983573 to book." },
         { q: "Do you service landed homes near the Botanic Golf Course?", a: "Yes — Bandar Botanic is mostly terrace and semi-detached landed housing. We carry the standard equipment suited to typical Bandar Botanic outdoor unit placements and pipe-run distances." },
-        { q: "How much does basic aircond servicing cost in Bandar Botanic?", a: "Basic servicing in Bandar Botanic starts from RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — covering filter cleaning and fan checks, confirmed before work starts." },,
+        { q: "How much does basic aircond servicing cost in Bandar Botanic?", a: "Basic servicing in Bandar Botanic starts from RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — covering filter cleaning and fan checks, confirmed before work starts." },
         { q: "Who is the most reliable aircond technician in Bandar Botanic?", a: "KL Renovator's local Bandar Botanic team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Bandar Botanic?", a: "We operate from 9 AM to 10 PM daily in Bandar Botanic. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Bandar Botanic?", a: "Ya — KL Renovator meliputi Bandar Botanic, berhampiran Botanic Golf Course dan kawasan sempadan Klang/Kota Kemuning." },
         { q: "Adakah anda servis rumah berkembar berhampiran Botanic Golf Course?", a: "Ya — Bandar Botanic kebanyakannya perumahan teres dan berkembar. Kami bawa peralatan standard sesuai untuk kedudukan unit luar dan jarak paip biasa di Bandar Botanic." },
-        { q: "Berapa harga servis asas aircond di Bandar Botanic?", a: "Servis asas di Bandar Botanic bermula RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — meliputi pembersihan filter dan pemeriksaan kipas." },,
+        { q: "Berapa harga servis asas aircond di Bandar Botanic?", a: "Servis asas di Bandar Botanic bermula RM 99 (1.0–1.5 HP), RM 120 (2.0–2.5 HP) — meliputi pembersihan filter dan pemeriksaan kipas." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Botanic?", a: "Pasukan tempatan KL Renovator di Bandar Botanic dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Bandar Botanic?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Bandar Botanic. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Bandar Botanic提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Botanic，靠近Botanic Golf Course及巴生（Klang）/Kota Kemuning边界区域。" },
         { q: "你们为Botanic Golf Course附近的排屋提供服务吗？", a: "可以——Bandar Botanic大多为排屋及半独立式住宅。我们携带适合该区域常见室外机位置及管线距离的标准设备。" },
-        { q: "Bandar Botanic基本冷气保养费用是多少？", a: "Bandar Botanic基本保养从RM 99起（1.0–1.5匹）、RM 120起（2.0–2.5匹）——包括滤网清洁及风扇检查，动工前确认价格。" },,
+        { q: "Bandar Botanic基本冷气保养费用是多少？", a: "Bandar Botanic基本保养从RM 99起（1.0–1.5匹）、RM 120起（2.0–2.5匹）——包括滤网清洁及风扇检查，动工前确认价格。" },
         { q: "谁是 Bandar Botanic 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Botanic 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Botanic 提供 24 小时紧急服务吗？", a: "我们在 Bandar Botanic 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3100,21 +3100,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Glenmarie?", a: "Yes — KL Renovator covers Glenmarie, including the HICOM Glenmarie industrial/commercial area, near Shah Alam and Subang Airport. WhatsApp +60182983573 for commercial or residential quotes." },
         { q: "Do you service industrial and commercial units in HICOM Glenmarie?", a: "Yes — HICOM Glenmarie has a significant concentration of factories, warehouses and commercial offices. We handle commercial ceiling cassette and wall-mounted unit servicing with separate commercial contract pricing." },
-        { q: "How fast can a technician reach Glenmarie for commercial servicing?", a: "Glenmarie is on our regular Shah Alam/Subang coverage route, so same-day or next-day technician visits are usually available for commercial servicing — WhatsApp early in the day to confirm." },,
+        { q: "How fast can a technician reach Glenmarie for commercial servicing?", a: "Glenmarie is on our regular Shah Alam/Subang coverage route, so same-day or next-day technician visits are usually available for commercial servicing — WhatsApp early in the day to confirm." },
         { q: "Who is the most reliable aircond technician in Glenmarie?", a: "KL Renovator's local Glenmarie team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Glenmarie?", a: "We operate from 9 AM to 10 PM daily in Glenmarie. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Glenmarie?", a: "Ya — KL Renovator meliputi Glenmarie, termasuk kawasan perindustrian/komersial HICOM Glenmarie, berhampiran Shah Alam dan Lapangan Terbang Subang." },
         { q: "Adakah anda servis unit perindustrian dan komersial di HICOM Glenmarie?", a: "Ya — HICOM Glenmarie mempunyai tumpuan tinggi kilang, gudang dan pejabat komersial. Kami uruskan servis ceiling cassette komersial dan unit dinding dengan harga kontrak berasingan." },
-        { q: "Berapa cepat juruteknik boleh ke Glenmarie untuk servis komersial?", a: "Glenmarie berada di laluan liputan Shah Alam/Subang tetap kami, jadi lawatan juruteknik hari sama atau esok biasanya tersedia untuk servis komersial." },,
+        { q: "Berapa cepat juruteknik boleh ke Glenmarie untuk servis komersial?", a: "Glenmarie berada di laluan liputan Shah Alam/Subang tetap kami, jadi lawatan juruteknik hari sama atau esok biasanya tersedia untuk servis komersial." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Glenmarie?", a: "Pasukan tempatan KL Renovator di Glenmarie dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Glenmarie?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Glenmarie. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Glenmarie提供冷气服务吗？", a: "是的——KL Renovator覆盖Glenmarie，包括HICOM Glenmarie工商业区，靠近Shah Alam及梳邦机场（Subang Airport）。" },
         { q: "你们为HICOM Glenmarie的工业及商业单位提供服务吗？", a: "可以——HICOM Glenmarie聚集了大量工厂、仓库及商业办公楼。我们提供商用吸顶机及壁挂式机型服务，并有独立的商业合约报价。" },
-        { q: "Glenmarie的商业冷气服务能多快安排技师上门？", a: "Glenmarie位于我们Shah Alam/Subang常规服务路线上，因此商业服务通常可当天或次日安排技师上门——请尽早通过WhatsApp确认。" },,
+        { q: "Glenmarie的商业冷气服务能多快安排技师上门？", a: "Glenmarie位于我们Shah Alam/Subang常规服务路线上，因此商业服务通常可当天或次日安排技师上门——请尽早通过WhatsApp确认。" },
         { q: "谁是 Glenmarie 最可靠的冷气技术员？", a: "KL Renovator 的 Glenmarie 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Glenmarie 提供 24 小时紧急服务吗？", a: "我们在 Glenmarie 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3279,21 +3279,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in SS2?", a: "Yes — KL Renovator covers SS2 Petaling Jaya, including the area near SS2 Pasar Malam, Damansara Utama and Kelana Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service older shop apartments near SS2 Pasar Malam?", a: "Yes — many properties near SS2 Pasar Malam are older shop apartments with aircond units installed years ago. Our technicians check capacitor and wiring condition as standard on older units like these during every visit." },
-        { q: "Is same-day aircond service available in SS2?", a: "Yes — SS2 is part of our regular Petaling Jaya coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm timing." },,
+        { q: "Is same-day aircond service available in SS2?", a: "Yes — SS2 is part of our regular Petaling Jaya coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm timing." },
         { q: "Who is the most reliable aircond technician in SS2?", a: "KL Renovator's local SS2 team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in SS2?", a: "We operate from 9 AM to 10 PM daily in SS2. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di SS2?", a: "Ya — KL Renovator meliputi SS2 Petaling Jaya, termasuk kawasan berhampiran Pasar Malam SS2, Damansara Utama dan sempadan Kelana Jaya." },
         { q: "Adakah anda servis apartmen kedai lama berhampiran Pasar Malam SS2?", a: "Ya — banyak hartanah berhampiran Pasar Malam SS2 adalah apartmen kedai lama dengan unit aircond dipasang bertahun lalu. Juruteknik kami semak keadaan kapasitor dan pendawaian sebagai standard." },
-        { q: "Adakah servis aircond hari sama tersedia di SS2?", a: "Ya — SS2 sebahagian laluan liputan Petaling Jaya tetap kami, jadi slot hari sama biasanya tersedia." },,
+        { q: "Adakah servis aircond hari sama tersedia di SS2?", a: "Ya — SS2 sebahagian laluan liputan Petaling Jaya tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di SS2?", a: "Pasukan tempatan KL Renovator di SS2 dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di SS2?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di SS2. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在SS2提供冷气服务吗？", a: "是的——KL Renovator覆盖SS2 Petaling Jaya，包括SS2夜市、Damansara Utama及Kelana Jaya边界附近区域。" },
         { q: "你们为SS2夜市附近的旧式店屋公寓提供服务吗？", a: "可以——SS2夜市附近许多物业是多年前安装冷气的旧式店屋公寓。我们的技师每次上门都会标准检查这类旧机型的电容器及线路状况。" },
-        { q: "SS2能安排当天冷气服务吗？", a: "可以——SS2属于我们八打灵再也（Petaling Jaya）常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认时间。" },,
+        { q: "SS2能安排当天冷气服务吗？", a: "可以——SS2属于我们八打灵再也（Petaling Jaya）常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认时间。" },
         { q: "谁是 SS2 最可靠的冷气技术员？", a: "KL Renovator 的 SS2 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 SS2 提供 24 小时紧急服务吗？", a: "我们在 SS2 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3320,21 +3320,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Ara Damansara?", a: "Yes — KL Renovator covers Ara Damansara, including Oasis Ara Damansara and the Subang Jaya/Glenmarie border area. WhatsApp +60182983573 to book." },
         { q: "Do you service the Oasis Ara Damansara office/condo towers?", a: "Yes — Oasis Ara Damansara has both office towers and condo developments. We service commercial office units and residential condo split systems, with separate quotes for each." },
-        { q: "How much does aircond repair cost in Ara Damansara?", a: "Diagnostic in Ara Damansara is RM 88, waived if you proceed with repair same visit. Common repairs (capacitor, PCB, fan motor) typically range RM 120–RM 280 depending on the issue found." },,
+        { q: "How much does aircond repair cost in Ara Damansara?", a: "Diagnostic in Ara Damansara is RM 88, waived if you proceed with repair same visit. Common repairs (capacitor, PCB, fan motor) typically range RM 120–RM 280 depending on the issue found." },
         { q: "Who is the most reliable aircond technician in Ara Damansara?", a: "KL Renovator's local Ara Damansara team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Ara Damansara?", a: "We operate from 9 AM to 10 PM daily in Ara Damansara. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Ara Damansara?", a: "Ya — KL Renovator meliputi Ara Damansara, termasuk Oasis Ara Damansara dan kawasan sempadan Subang Jaya/Glenmarie." },
         { q: "Adakah anda servis menara pejabat/kondo Oasis Ara Damansara?", a: "Ya — Oasis Ara Damansara mempunyai menara pejabat dan pembangunan kondo. Kami servis unit pejabat komersial dan sistem split kondo kediaman, dengan sebut harga berasingan." },
-        { q: "Berapa harga pembaikan aircond di Ara Damansara?", a: "Diagnostik di Ara Damansara RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa dari RM 120–RM 280." },,
+        { q: "Berapa harga pembaikan aircond di Ara Damansara?", a: "Diagnostik di Ara Damansara RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa dari RM 120–RM 280." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Ara Damansara?", a: "Pasukan tempatan KL Renovator di Ara Damansara dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Ara Damansara?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Ara Damansara. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Ara Damansara提供冷气服务吗？", a: "是的——KL Renovator覆盖Ara Damansara，包括Oasis Ara Damansara及Subang Jaya/Glenmarie边界区域。" },
         { q: "你们为Oasis Ara Damansara的办公楼/公寓大楼提供服务吗？", a: "可以——Oasis Ara Damansara同时有办公大楼及公寓项目。我们为商业办公单位及住宅公寓分体机系统分别提供服务及报价。" },
-        { q: "Ara Damansara冷气维修费用是多少？", a: "Ara Damansara的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、风扇马达）费用约RM 120–RM 280，视情况而定。" },,
+        { q: "Ara Damansara冷气维修费用是多少？", a: "Ara Damansara的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、风扇马达）费用约RM 120–RM 280，视情况而定。" },
         { q: "谁是 Ara Damansara 最可靠的冷气技术员？", a: "KL Renovator 的 Ara Damansara 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Ara Damansara 提供 24 小时紧急服务吗？", a: "我们在 Ara Damansara 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3361,21 +3361,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Utama?", a: "Yes — KL Renovator covers Bandar Utama, including the area near One Utama Shopping Centre, Tropicana and the Damansara/Petaling Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service condos and landed homes near One Utama?", a: "Yes — Bandar Utama has both high-rise condos and landed bungalow/semi-D homes near One Utama. We service both property types with technicians familiar with each layout's typical access requirements." },
-        { q: "Is same-day aircond service available in Bandar Utama?", a: "Yes — Bandar Utama is part of our regular Damansara-area coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },,
+        { q: "Is same-day aircond service available in Bandar Utama?", a: "Yes — Bandar Utama is part of our regular Damansara-area coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },
         { q: "Who is the most reliable aircond technician in Bandar Utama?", a: "KL Renovator's local Bandar Utama team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Bandar Utama?", a: "We operate from 9 AM to 10 PM daily in Bandar Utama. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Bandar Utama?", a: "Ya — KL Renovator meliputi Bandar Utama, termasuk kawasan berhampiran One Utama Shopping Centre, Tropicana dan sempadan Damansara/Petaling Jaya." },
         { q: "Adakah anda servis kondo dan rumah berkembar berhampiran One Utama?", a: "Ya — Bandar Utama mempunyai kondo tinggi dan rumah banglo/semi-D berkembar berhampiran One Utama. Kami servis kedua-dua jenis hartanah." },
-        { q: "Adakah servis aircond hari sama tersedia di Bandar Utama?", a: "Ya — Bandar Utama sebahagian laluan liputan kawasan Damansara tetap kami, jadi slot hari sama biasanya tersedia." },,
+        { q: "Adakah servis aircond hari sama tersedia di Bandar Utama?", a: "Ya — Bandar Utama sebahagian laluan liputan kawasan Damansara tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Utama?", a: "Pasukan tempatan KL Renovator di Bandar Utama dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Bandar Utama?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Bandar Utama. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在Bandar Utama提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Utama，包括One Utama购物中心附近、Tropicana及Damansara/八打灵再也边界区域。" },
         { q: "你们为One Utama附近的公寓和排屋提供服务吗？", a: "可以——Bandar Utama在One Utama附近既有高层公寓也有独立式/半独立式洋房。我们均提供服务，技师熟悉各类房型的通行要求。" },
-        { q: "Bandar Utama能安排当天冷气服务吗？", a: "可以——Bandar Utama属于我们Damansara区域常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },,
+        { q: "Bandar Utama能安排当天冷气服务吗？", a: "可以——Bandar Utama属于我们Damansara区域常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },
         { q: "谁是 Bandar Utama 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Utama 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Utama 提供 24 小时紧急服务吗？", a: "我们在 Bandar Utama 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3402,21 +3402,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Sungai Buloh?", a: "Yes — KL Renovator covers Sungai Buloh, including the Kota Damansara, Rawang and Elmina border areas. WhatsApp +60182983573 to book." },
         { q: "Do you service newer township developments like Elmina?", a: "Yes — Elmina and other newer Sungai Buloh townships are part of our regular coverage. Many homes here are recently built, so we check if work might still fall under developer warranty before quoting." },
-        { q: "How fast can a technician reach Sungai Buloh for repairs?", a: "Sungai Buloh is on our regular northwest coverage route alongside Kota Damansara and Rawang, so same-day technicians are usually available — WhatsApp early in the day to confirm." },,
+        { q: "How fast can a technician reach Sungai Buloh for repairs?", a: "Sungai Buloh is on our regular northwest coverage route alongside Kota Damansara and Rawang, so same-day technicians are usually available — WhatsApp early in the day to confirm." },
         { q: "Who is the most reliable aircond technician in Sungai Buloh?", a: "KL Renovator's local Sungai Buloh team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Sungai Buloh?", a: "We operate from 9 AM to 10 PM daily in Sungai Buloh. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sungai Buloh?", a: "Ya — KL Renovator meliputi Sungai Buloh, termasuk kawasan sempadan Kota Damansara, Rawang dan Elmina." },
         { q: "Adakah anda servis bandar baharu seperti Elmina?", a: "Ya — Elmina dan bandar Sungai Buloh baharu lain sebahagian liputan tetap kami. Banyak rumah di sini baharu dibina, jadi kami semak jika kerja mungkin masih diliputi waranti pemaju." },
-        { q: "Berapa cepat juruteknik boleh ke Sungai Buloh untuk pembaikan?", a: "Sungai Buloh berada di laluan liputan barat laut tetap kami bersama Kota Damansara dan Rawang, jadi juruteknik hari sama biasanya tersedia." },,
+        { q: "Berapa cepat juruteknik boleh ke Sungai Buloh untuk pembaikan?", a: "Sungai Buloh berada di laluan liputan barat laut tetap kami bersama Kota Damansara dan Rawang, jadi juruteknik hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sungai Buloh?", a: "Pasukan tempatan KL Renovator di Sungai Buloh dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Sungai Buloh?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Sungai Buloh. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在双溪毛糯（Sungai Buloh）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sungai Buloh，包括Kota Damansara、Rawang及Elmina边界区域。" },
         { q: "你们为Elmina等较新市镇发展区提供服务吗？", a: "可以——Elmina及其他较新的Sungai Buloh市镇属于我们常规覆盖范围。这里许多住宅为近年新建，我们会在报价前核实工程是否仍受发展商保修涵盖。" },
-        { q: "双溪毛糯的维修能多快安排技师上门？", a: "双溪毛糯位于我们雪隆西北部常规路线上，与Kota Damansara及Rawang一同覆盖，因此通常可安排当天技师上门——请尽早通过WhatsApp确认。" },,
+        { q: "双溪毛糯的维修能多快安排技师上门？", a: "双溪毛糯位于我们雪隆西北部常规路线上，与Kota Damansara及Rawang一同覆盖，因此通常可安排当天技师上门——请尽早通过WhatsApp确认。" },
         { q: "谁是 Sungai Buloh 最可靠的冷气技术员？", a: "KL Renovator 的 Sungai Buloh 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sungai Buloh 提供 24 小时紧急服务吗？", a: "我们在 Sungai Buloh 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3443,21 +3443,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Wangsa Maju?", a: "Yes — KL Renovator covers Wangsa Maju across all numbered Sections, plus the area near Wangsa Walk Mall, Taman Sri Rampai and the Gombak/Setapak border. WhatsApp +60182983573 with your Section number." },
         { q: "Do you service condos near Wangsa Walk Mall?", a: "Yes — the area around Wangsa Walk Mall has several condo developments. We're familiar with the lift access and management approval process common in these buildings." },
-        { q: "How much does aircond service cost in Wangsa Maju?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220 in Wangsa Maju — all prices confirmed on-site before work begins, regardless of which Section you're in." },,
+        { q: "How much does aircond service cost in Wangsa Maju?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220 in Wangsa Maju — all prices confirmed on-site before work begins, regardless of which Section you're in." },
         { q: "Who is the most reliable aircond technician in Wangsa Maju?", a: "KL Renovator's local Wangsa Maju team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Wangsa Maju?", a: "We operate from 9 AM to 10 PM daily in Wangsa Maju. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Wangsa Maju?", a: "Ya — KL Renovator meliputi Wangsa Maju merangkumi semua Seksyen bernombor, serta kawasan berhampiran Wangsa Walk Mall, Taman Sri Rampai dan sempadan Gombak/Setapak." },
         { q: "Adakah anda servis kondo berhampiran Wangsa Walk Mall?", a: "Ya — kawasan sekitar Wangsa Walk Mall mempunyai beberapa pembangunan kondo. Kami biasa dengan akses lif dan proses kelulusan pengurusan bangunan ini." },
-        { q: "Berapa harga servis aircond di Wangsa Maju?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220 di Wangsa Maju — semua harga disahkan di tapak sebelum kerja bermula." },,
+        { q: "Berapa harga servis aircond di Wangsa Maju?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220 di Wangsa Maju — semua harga disahkan di tapak sebelum kerja bermula." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Wangsa Maju?", a: "Pasukan tempatan KL Renovator di Wangsa Maju dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Wangsa Maju?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Wangsa Maju. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在旺莎玛珠（Wangsa Maju）提供冷气服务吗？", a: "是的——KL Renovator覆盖Wangsa Maju所有编号Section区，以及Wangsa Walk Mall、Taman Sri Rampai及Gombak/Setapak边界附近区域。请告知具体Section编号。" },
         { q: "你们为Wangsa Walk Mall附近的公寓提供服务吗？", a: "可以——Wangsa Walk Mall周边有几个公寓项目。我们熟悉这些大厦常见的电梯通行及管理处批准流程。" },
-        { q: "旺莎玛珠冷气服务费用是多少？", a: "旺莎玛珠基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起——无论您在哪个Section，动工前均现场确认价格。" },,
+        { q: "旺莎玛珠冷气服务费用是多少？", a: "旺莎玛珠基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起——无论您在哪个Section，动工前均现场确认价格。" },
         { q: "谁是 Wangsa Maju 最可靠的冷气技术员？", a: "KL Renovator 的 Wangsa Maju 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Wangsa Maju 提供 24 小时紧急服务吗？", a: "我们在 Wangsa Maju 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3484,21 +3484,21 @@ export const siteConfig = {
       faqs: [
         { q: "Does KL Renovator service aircond in Balakong?", a: "Yes — KL Renovator covers Balakong, including the area near Taman Len Seng and the Seri Kembangan/Cheras/Pandan Indah border. WhatsApp +60182983573 to book." },
         { q: "Do you service industrial/factory units near Balakong?", a: "Yes — Balakong has a significant light-industrial and factory presence alongside residential areas. We service commercial/industrial-grade aircond units here with separate commercial pricing and contract options." },
-        { q: "Is same-day aircond service available in Balakong?", a: "Yes — Balakong is part of our regular Cheras/Seri Kembangan coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },,
+        { q: "Is same-day aircond service available in Balakong?", a: "Yes — Balakong is part of our regular Cheras/Seri Kembangan coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },
         { q: "Who is the most reliable aircond technician in Balakong?", a: "KL Renovator's local Balakong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Balakong?", a: "We operate from 9 AM to 10 PM daily in Balakong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Balakong?", a: "Ya — KL Renovator meliputi Balakong, termasuk kawasan berhampiran Taman Len Seng dan sempadan Seri Kembangan/Cheras/Pandan Indah." },
         { q: "Adakah anda servis unit perindustrian/kilang berhampiran Balakong?", a: "Ya — Balakong mempunyai kehadiran perindustrian ringan dan kilang yang ketara selain kawasan kediaman. Kami servis unit aircond gred komersial/perindustrian dengan harga berasingan." },
-        { q: "Adakah servis aircond hari sama tersedia di Balakong?", a: "Ya — Balakong sebahagian laluan liputan Cheras/Seri Kembangan tetap kami, jadi slot hari sama biasanya tersedia." },,
+        { q: "Adakah servis aircond hari sama tersedia di Balakong?", a: "Ya — Balakong sebahagian laluan liputan Cheras/Seri Kembangan tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Balakong?", a: "Pasukan tempatan KL Renovator di Balakong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Balakong?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Balakong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在巴勒贡（Balakong）提供冷气服务吗？", a: "是的——KL Renovator覆盖Balakong，包括Taman Len Seng附近区域及Seri Kembangan/蕉赖（Cheras）/Pandan Indah边界。" },
         { q: "你们为巴勒贡附近的工业/工厂单位提供服务吗？", a: "可以——除了住宅区，Balakong也有相当数量的轻工业及工厂。我们为这里提供商用/工业级冷气服务，并设独立商业报价及合约选项。" },
-        { q: "巴勒贡能安排当天冷气服务吗？", a: "可以——Balakong属于我们蕉赖/Seri Kembangan常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },,
+        { q: "巴勒贡能安排当天冷气服务吗？", a: "可以——Balakong属于我们蕉赖/Seri Kembangan常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },
         { q: "谁是 Balakong 最可靠的冷气技术员？", a: "KL Renovator 的 Balakong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Balakong 提供 24 小时紧急服务吗？", a: "我们在 Balakong 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3526,21 +3526,21 @@ export const siteConfig = {
         { q: "Does KL Renovator service aircond in KL City Centre?", a: "Yes — KL Renovator covers all KL City Centre zones including Jalan Ampang, Kampung Attap, Chow Kit and Pudu. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in KL City Centre?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120 in KL City Centre. All prices confirmed before work begins." },
         { q: "Do you service high-rise condos and office towers in the city centre?", a: "Yes — we regularly service condos, corporate office towers, and older shop-houses and flats across KL City Centre, each according to its own access requirements." },
-        { q: "Is same-day aircond service available in KL City Centre?", a: "Yes — KL Renovator frequently has same-day slots available in KL City Centre. WhatsApp +60182983573 with your location and unit details for fastest response." },,
+        { q: "Is same-day aircond service available in KL City Centre?", a: "Yes — KL Renovator frequently has same-day slots available in KL City Centre. WhatsApp +60182983573 with your location and unit details for fastest response." },
         { q: "Who is the most reliable aircond technician in Kuala Lumpur City Centre?", a: "KL Renovator's local Kuala Lumpur City Centre team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency 24-hour service in Kuala Lumpur City Centre?", a: "We operate from 9 AM to 10 PM daily in Kuala Lumpur City Centre. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator menservis aircond di Pusat Bandar KL?", a: "Ya — KL Renovator meliputi semua zon Pusat Bandar KL termasuk Jalan Ampang, Kampung Attap, Chow Kit dan Pudu. Servis hari sama tersedia. WhatsApp +60182983573." },
         { q: "Berapa kos servis aircond di Pusat Bandar KL?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 di Pusat Bandar KL." },
-        { q: "Adakah anda servis kondo bertingkat tinggi dan menara pejabat di pusat bandar?", a: "Ya — kami sering menservis kondo, menara pejabat korporat, dan rumah kedai serta flat lama di seluruh Pusat Bandar KL." },,
+        { q: "Adakah anda servis kondo bertingkat tinggi dan menara pejabat di pusat bandar?", a: "Ya — kami sering menservis kondo, menara pejabat korporat, dan rumah kedai serta flat lama di seluruh Pusat Bandar KL." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kuala Lumpur City Centre?", a: "Pasukan tempatan KL Renovator di Kuala Lumpur City Centre dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan 24 jam di Kuala Lumpur City Centre?", a: "Kami beroperasi dari 9 pagi hingga 10 malam setiap hari di Kuala Lumpur City Centre. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
       faqsZH: [
         { q: "KL Renovator在吉隆坡市中心提供冷气服务吗？", a: "是的——KL Renovator覆盖吉隆坡市中心所有区域，包括安邦路、Kampung Attap、秋杰和半山芭。提供当天服务。WhatsApp +60182983573。" },
         { q: "吉隆坡市中心的冷气服务费用是多少？", a: "吉隆坡市中心基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" },
-        { q: "你们服务市中心的高层公寓和办公大楼吗？", a: "是的——我们经常为吉隆坡市中心的公寓、企业办公大楼以及老旧店屋和组屋提供服务，并根据各自的进入要求安排服务。" },,
+        { q: "你们服务市中心的高层公寓和办公大楼吗？", a: "是的——我们经常为吉隆坡市中心的公寓、企业办公大楼以及老旧店屋和组屋提供服务，并根据各自的进入要求安排服务。" },
         { q: "谁是 Kuala Lumpur City Centre 最可靠的冷气技术员？", a: "KL Renovator 的 Kuala Lumpur City Centre 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Kuala Lumpur City Centre 提供 24 小时紧急服务吗？", a: "我们在 Kuala Lumpur City Centre 的营业时间为每日上午 9 点至晚上 10 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -3571,7 +3571,7 @@ export const siteConfig = {
         { q: "What refrigerant gas does Daikin use?", a: "Most Daikin units from 2019 onwards use R32 refrigerant. Older Daikin models use R410A. KL Renovator carries both. We never mix refrigerant types." },
         { q: "Is Daikin better than Panasonic?", a: "Both are excellent. Daikin is preferred for whisper-quiet operation and energy efficiency. Panasonic is known for Nanoe-X air purification and durability. KL Renovator installs and services both." },
         { q: "Can I upgrade my old non-inverter Daikin to inverter?", a: "No — inverter and non-inverter Daikin units use different compressor and PCB technology, so an existing outdoor unit cannot be 'upgraded' in place. You would need a full new inverter system installation. KL Renovator installs new Daikin inverter units from RM 199 (labour + up to 7ft copper/wiring)." },
-        { q: "How long does a Daikin chemical wash take?", a: "A standard Daikin wall-mounted chemical wash takes 45–60 minutes per unit. Ceiling cassette units or heavily soiled units (12+ months since last service) may take up to 90 minutes. We confirm the time estimate on-site before starting." },,
+        { q: "How long does a Daikin chemical wash take?", a: "A standard Daikin wall-mounted chemical wash takes 45–60 minutes per unit. Ceiling cassette units or heavily soiled units (12+ months since last service) may take up to 90 minutes. We confirm the time estimate on-site before starting." },
         { q: "How long does a Daikin aircond service take?", a: "A standard Daikin wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Daikin repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Daikin units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Daikin?", a: "KL Renovator's local Daikin team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -3582,7 +3582,7 @@ export const siteConfig = {
         { q: "Adakah KL Renovator servis semua model Daikin?", a: "Ya — kami menservis semua model Daikin termasuk iSmile, SMILE Series, FTKF, FTKM dan SkyAir." },
         { q: "Aircond Daikin saya berkelip dan tidak sejuk — apa maksudnya?", a: "Kod ralat Daikin menunjukkan kerosakan seperti gas rendah (L5), penapis kotor, ralat PCB atau kerosakan sensor. KL Renovator membaca dan menyelesaikan semua kod ralat Daikin." },
         { q: "Bolehkah saya naik taraf Daikin non-inverter lama saya kepada inverter?", a: "Tidak — unit Daikin inverter dan non-inverter menggunakan teknologi kompresor dan PCB yang berbeza, jadi unit luar sedia ada tidak boleh 'dinaik taraf'. Anda perlu memasang sistem inverter baharu sepenuhnya. KL Renovator memasang unit Daikin inverter baharu dari RM 199." },
-        { q: "Berapa lama masa diambil untuk cuci kimia Daikin?", a: "Cuci kimia Daikin dinding standard mengambil masa 45–60 minit setiap unit. Unit ceiling cassette atau yang sangat kotor mungkin mengambil masa sehingga 90 minit." },,
+        { q: "Berapa lama masa diambil untuk cuci kimia Daikin?", a: "Cuci kimia Daikin dinding standard mengambil masa 45–60 minit setiap unit. Unit ceiling cassette atau yang sangat kotor mungkin mengambil masa sehingga 90 minit." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Daikin?", a: "Cuci kimia dinding standard untuk Daikin mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Daikin?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Daikin bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Daikin?", a: "Pasukan tempatan KL Renovator di Daikin dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -3593,7 +3593,7 @@ export const siteConfig = {
         { q: "KL Renovator维修所有大金型号吗？", a: "是的——我们维修所有大金型号，包括iSmile、SMILE系列、FTKF、FTKM和SkyAir。" },
         { q: "大金冷气灯闪烁不制冷——是什么意思？", a: "大金错误代码（闪烁指示灯）表示气压低（L5）、过滤网脏污、PCB错误或传感器故障。KL Renovator读取并解决所有大金错误代码。" },
         { q: "我可以将旧的大金定频机升级为变频机吗？", a: "不可以——大金变频和定频机型使用不同的压缩机和PCB技术，因此无法\"升级\"现有室外机。您需要安装全新的变频系统。KL Renovator安装全新大金变频机型，从RM 199起。" },
-        { q: "大金化学清洗需要多长时间？", a: "标准大金挂壁式化学清洗每台机器需要45–60分钟。天花板卡式机或严重脏污的机器可能需要长达90分钟。" },,
+        { q: "大金化学清洗需要多长时间？", a: "标准大金挂壁式化学清洗每台机器需要45–60分钟。天花板卡式机或严重脏污的机器可能需要长达90分钟。" },
         { q: "Daikin 冷气机保养需要多长时间？", a: "标准 Daikin 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Daikin 时使用原装零件吗？", a: "是的。我们为所有 Daikin 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Daikin 最可靠的冷气技术员？", a: "KL Renovator 的 Daikin 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -3646,7 +3646,7 @@ export const siteConfig = {
         { q: "My Panasonic aircond shows H11 or F11 error — what is it?", a: "H11 on Panasonic indicates an outdoor unit communication fault. F11 indicates a refrigerant pressure issue. KL Renovator diagnoses and resolves all Panasonic error codes." },
         { q: "What gas does Panasonic aircond use?", a: "Panasonic units from 2019 onwards mostly use R32. Older Panasonic models use R410A. KL Renovator carries both and never mixes refrigerant types." },
         { q: "Why is the Nanoe-X light blinking on my Panasonic unit?", a: "A blinking Nanoe-X indicator usually means the ioniser cartridge is due for a clean or the internal fan sensor detects an obstruction. It is not a refrigerant fault. KL Renovator inspects and cleans the Nanoe-X unit during a standard chemical wash." },
-        { q: "Is Panasonic Econavi worth servicing regularly?", a: "Yes — the Econavi sensor (motion + sunlight detection) sits near the front grille and collects dust quickly, which can make it misread the room and run the compressor longer than needed. Regular basic servicing every 3–6 months keeps the sensor accurate and protects energy savings." },,
+        { q: "Is Panasonic Econavi worth servicing regularly?", a: "Yes — the Econavi sensor (motion + sunlight detection) sits near the front grille and collects dust quickly, which can make it misread the room and run the compressor longer than needed. Regular basic servicing every 3–6 months keeps the sensor accurate and protects energy savings." },
         { q: "How long does a Panasonic aircond service take?", a: "A standard Panasonic wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Panasonic repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Panasonic units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Panasonic?", a: "KL Renovator's local Panasonic team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -3657,7 +3657,7 @@ export const siteConfig = {
         { q: "Adakah KL Renovator servis unit Panasonic Nanoe-X?", a: "Ya — KL Renovator menservis semua model Panasonic Nanoe-X. Sistem penulenan udara Nanoe-X memerlukan pembersihan berkala yang kami kendalikan semasa cuci kimia." },
         { q: "Aircond Panasonic saya tunjuk ralat H11 — apa maksudnya?", a: "H11 pada Panasonic menunjukkan kerosakan komunikasi unit luar. KL Renovator mendiagnosis dan menyelesaikan semua kod ralat Panasonic." },
         { q: "Kenapa lampu Nanoe-X pada unit Panasonic saya berkelip?", a: "Lampu Nanoe-X berkelip biasanya bermaksud kartrij ioniser perlu dibersihkan atau sensor kipas dalaman mengesan halangan. Ini bukan kerosakan gas penyejuk. KL Renovator memeriksa dan membersihkan unit Nanoe-X semasa cuci kimia standard." },
-        { q: "Adakah Panasonic Econavi berbaloi diservis secara berkala?", a: "Ya — sensor Econavi (pengesan pergerakan + cahaya matahari) terletak berhampiran grille depan dan cepat berhabuk, yang boleh menyebabkan bacaan tidak tepat. Servis asas setiap 3–6 bulan mengekalkan ketepatan sensor." },,
+        { q: "Adakah Panasonic Econavi berbaloi diservis secara berkala?", a: "Ya — sensor Econavi (pengesan pergerakan + cahaya matahari) terletak berhampiran grille depan dan cepat berhabuk, yang boleh menyebabkan bacaan tidak tepat. Servis asas setiap 3–6 bulan mengekalkan ketepatan sensor." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Panasonic?", a: "Cuci kimia dinding standard untuk Panasonic mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Panasonic?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Panasonic bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Panasonic?", a: "Pasukan tempatan KL Renovator di Panasonic dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -3668,7 +3668,7 @@ export const siteConfig = {
         { q: "KL Renovator维修松下Nanoe-X机型吗？", a: "是的——KL Renovator维修所有松下Nanoe-X型号。Nanoe-X空气净化系统需要定期清洁，我们在化学清洗时一并处理。" },
         { q: "松下冷气显示H11错误——是什么意思？", a: "松下H11表示室外机通信故障。KL Renovator诊断并解决所有松下错误代码。" },
         { q: "为什么我的松下机器Nanoe-X指示灯闪烁？", a: "Nanoe-X指示灯闪烁通常表示离子发生器需要清洁，或内部风扇传感器检测到障碍物，并非制冷剂故障。KL Renovator在标准化学清洗时会检查并清洁Nanoe-X装置。" },
-        { q: "松下Econavi机型需要定期保养吗？", a: "需要——Econavi传感器（动作+阳光感应）位于前面板附近，容易积灰，可能导致误判房间状况并延长压缩机运行时间。每3–6个月进行一次基本保养可保持传感器准确并节省能源。" },,
+        { q: "松下Econavi机型需要定期保养吗？", a: "需要——Econavi传感器（动作+阳光感应）位于前面板附近，容易积灰，可能导致误判房间状况并延长压缩机运行时间。每3–6个月进行一次基本保养可保持传感器准确并节省能源。" },
         { q: "Panasonic 冷气机保养需要多长时间？", a: "标准 Panasonic 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Panasonic 时使用原装零件吗？", a: "是的。我们为所有 Panasonic 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Panasonic 最可靠的冷气技术员？", a: "KL Renovator 的 Panasonic 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -3721,7 +3721,7 @@ export const siteConfig = {
         { q: "My Mitsubishi shows P8 or E6 error — what does it mean?", a: "Mitsubishi P8 indicates an outdoor unit protection fault (often low gas or compressor issue). E6 is a communication error. KL Renovator reads all Mitsubishi error codes." },
         { q: "What gas does Mitsubishi use?", a: "Most new Mitsubishi models use R32. Some older models use R410A. KL Renovator identifies the correct refrigerant from your model number before topping up." },
         { q: "Why does my Mitsubishi MXY multi-split cool unevenly across rooms?", a: "Uneven cooling on MXY multi-split systems is usually one indoor unit with a dirty filter or coil restricting its airflow, not a system-wide gas issue — since all indoor units share one outdoor compressor, a single blocked unit can seem like 'weak' cooling everywhere. We check each indoor head individually." },
-        { q: "Is Mitsubishi good for commercial shoplot use?", a: "Yes — the MXY Multi-Split and Mr Slim ceiling cassette range are commonly used in shoplots and small offices because one outdoor condenser can serve multiple indoor units, saving external wall/roof space. KL Renovator services these commercial setups regularly." },,
+        { q: "Is Mitsubishi good for commercial shoplot use?", a: "Yes — the MXY Multi-Split and Mr Slim ceiling cassette range are commonly used in shoplots and small offices because one outdoor condenser can serve multiple indoor units, saving external wall/roof space. KL Renovator services these commercial setups regularly." },
         { q: "How long does a Mitsubishi aircond service take?", a: "A standard Mitsubishi wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Mitsubishi repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Mitsubishi units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Mitsubishi?", a: "KL Renovator's local Mitsubishi team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -3732,7 +3732,7 @@ export const siteConfig = {
         { q: "Adakah KL Renovator servis sistem Mitsubishi Mr Slim ceiling cassette?", a: "Ya — KL Renovator menservis sistem Mitsubishi Mr Slim ceiling cassette dan MXY multi-split di pejabat, kedai dan bangunan komersial di KL dan Selangor." },
         { q: "Aircond Mitsubishi saya tunjuk ralat P8 — apa maksudnya?", a: "Mitsubishi P8 menunjukkan kerosakan perlindungan unit luar (selalunya gas rendah atau masalah kompresor). KL Renovator membaca semua kod ralat Mitsubishi." },
         { q: "Kenapa Mitsubishi MXY multi-split saya menyejukkan tidak sekata antara bilik?", a: "Penyejukan tidak sekata pada sistem MXY multi-split biasanya disebabkan satu unit dalam mempunyai penapis atau gegelung kotor yang menghalang aliran udaranya, bukan masalah gas seluruh sistem." },
-        { q: "Adakah Mitsubishi sesuai untuk kegunaan shoplot komersial?", a: "Ya — julat MXY Multi-Split dan ceiling cassette Mr Slim biasa digunakan di shoplot dan pejabat kecil kerana satu kondenser luar boleh menampung beberapa unit dalam." },,
+        { q: "Adakah Mitsubishi sesuai untuk kegunaan shoplot komersial?", a: "Ya — julat MXY Multi-Split dan ceiling cassette Mr Slim biasa digunakan di shoplot dan pejabat kecil kerana satu kondenser luar boleh menampung beberapa unit dalam." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Mitsubishi?", a: "Cuci kimia dinding standard untuk Mitsubishi mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Mitsubishi?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Mitsubishi bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Mitsubishi?", a: "Pasukan tempatan KL Renovator di Mitsubishi dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -3743,7 +3743,7 @@ export const siteConfig = {
         { q: "KL Renovator维修三菱Mr Slim天花板卡式机系统吗？", a: "是的——KL Renovator在吉隆坡和雪兰莪的办公室、商铺和商业建筑中维修三菱Mr Slim天花板卡式机和MXY多联机系统。" },
         { q: "三菱冷气显示P8错误——是什么意思？", a: "三菱P8表示室外机保护故障（通常是气压低或压缩机问题）。KL Renovator读取所有三菱错误代码。" },
         { q: "为什么我的三菱MXY多联机各房间制冷不均？", a: "MXY多联机制冷不均通常是某一台室内机滤网或盘管脏污阻碍气流所致，并非整个系统的制冷剂问题——由于所有室内机共用一台室外压缩机，单台机器堵塞会让整体感觉制冷变弱。" },
-        { q: "三菱适合商用店屋使用吗？", a: "适合——MXY多联机和Mr Slim天花板卡式机系列常用于店屋和小型办公室，因为一台室外冷凝器可服务多台室内机，节省外墙/屋顶空间。" },,
+        { q: "三菱适合商用店屋使用吗？", a: "适合——MXY多联机和Mr Slim天花板卡式机系列常用于店屋和小型办公室，因为一台室外冷凝器可服务多台室内机，节省外墙/屋顶空间。" },
         { q: "Mitsubishi 冷气机保养需要多长时间？", a: "标准 Mitsubishi 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Mitsubishi 时使用原装零件吗？", a: "是的。我们为所有 Mitsubishi 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Mitsubishi 最可靠的冷气技术员？", a: "KL Renovator 的 Mitsubishi 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -3795,7 +3795,7 @@ export const siteConfig = {
         { q: "Does KL Renovator service older York units using R22 gas?", a: "Yes — KL Renovator carries R22, R410A and R32. Older York units still on R22 are serviced and topped up by our technicians." },
         { q: "York aircond not cold — what should I do?", a: "Common causes for York not cooling: low gas pressure, dirty evaporator coil, faulty capacitor. KL Renovator diagnoses York faults same-day. Diagnostic fee RM 88." },
         { q: "Is York good for commercial/office use?", a: "Yes — York Affinity and York Multi-Zone systems are widely used in offices and shoplots across Klang Valley for their durability under long daily runtime. KL Renovator handles both residential York units and commercial York Affinity systems, including after-hours servicing to avoid disrupting business operations." },
-        { q: "Why does my York unit take longer to cool than newer aircons?", a: "Older York YHJF/YHAF non-inverter units cool by cycling fully on and off rather than adjusting speed, so they can feel 'slower' to reach set temperature compared to newer inverter units. This is normal operation, not a fault — but a dirty coil will make the delay noticeably worse." },,
+        { q: "Why does my York unit take longer to cool than newer aircons?", a: "Older York YHJF/YHAF non-inverter units cool by cycling fully on and off rather than adjusting speed, so they can feel 'slower' to reach set temperature compared to newer inverter units. This is normal operation, not a fault — but a dirty coil will make the delay noticeably worse." },
         { q: "How long does a York aircond service take?", a: "A standard York wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for York repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all York units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in York?", a: "KL Renovator's local York team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -3805,7 +3805,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond York di KL?", a: "Cuci kimia York dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120 (R22) / RM 150 (R410A) / RM 180 (R32), servis asas dari RM 99." },
         { q: "Adakah KL Renovator servis unit York lama yang menggunakan gas R22?", a: "Ya — KL Renovator membawa R22, R410A dan R32. Unit York lama yang masih menggunakan R22 diservisi dan ditambah gas oleh juruteknik kami." },
         { q: "Adakah York sesuai untuk kegunaan komersial/pejabat?", a: "Ya — sistem York Affinity dan York Multi-Zone digunakan secara meluas di pejabat dan shoplot di seluruh Klang Valley kerana ketahanannya di bawah masa operasi harian yang panjang." },
-        { q: "Kenapa unit York saya mengambil masa lebih lama untuk menyejukkan berbanding aircond baharu?", a: "Unit York YHJF/YHAF non-inverter lama menyejukkan dengan hidup/mati sepenuhnya dan bukan melaraskan kelajuan, jadi ia mungkin terasa 'lebih perlahan' berbanding unit inverter baharu. Ini operasi normal, tetapi gegelung kotor akan memburukkan lagi kelewatan ini." },,
+        { q: "Kenapa unit York saya mengambil masa lebih lama untuk menyejukkan berbanding aircond baharu?", a: "Unit York YHJF/YHAF non-inverter lama menyejukkan dengan hidup/mati sepenuhnya dan bukan melaraskan kelajuan, jadi ia mungkin terasa 'lebih perlahan' berbanding unit inverter baharu. Ini operasi normal, tetapi gegelung kotor akan memburukkan lagi kelewatan ini." },
         { q: "Berapa lama masa yang diambil untuk servis aircond York?", a: "Cuci kimia dinding standard untuk York mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan York?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit York bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di York?", a: "Pasukan tempatan KL Renovator di York dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -3815,7 +3815,7 @@ export const siteConfig = {
         { q: "吉隆坡York冷气服务费用是多少？", a: "York化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120（R22）/RM 150（R410A）/RM 180（R32）起，基本保养从RM 99起。" },
         { q: "KL Renovator维修使用R22气体的旧York机型吗？", a: "是的——KL Renovator备有R22、R410A和R32。我们的技术员为仍使用R22的旧York机型提供保养和充气服务。" },
         { q: "York适合商用/办公室使用吗？", a: "适合——York Affinity和York Multi-Zone系统因其在长时间日常运行下的耐用性，广泛用于巴生谷各地的办公室和店屋。" },
-        { q: "为什么我的York机器制冷比新款空调慢？", a: "较旧的York YHJF/YHAF定频机型通过完全开关来制冷，而非调节速度，因此与新款变频机相比，达到设定温度可能感觉\"较慢\"。这是正常运行，但盘管脏污会明显加剧延迟。" },,
+        { q: "为什么我的York机器制冷比新款空调慢？", a: "较旧的York YHJF/YHAF定频机型通过完全开关来制冷，而非调节速度，因此与新款变频机相比，达到设定温度可能感觉\"较慢\"。这是正常运行，但盘管脏污会明显加剧延迟。" },
         { q: "York 冷气机保养需要多长时间？", a: "标准 York 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 York 时使用原装零件吗？", a: "是的。我们为所有 York 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 York 最可靠的冷气技术员？", a: "KL Renovator 的 York 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -3867,7 +3867,7 @@ export const siteConfig = {
         { q: "Does KL Renovator service Acson R32 inverter units?", a: "Yes — KL Renovator services all Acson R32 inverter models. R32 gas top-up with precision manifold gauge balancing from RM 180." },
         { q: "Acson aircond not cold — what are the common causes?", a: "Common Acson issues: low R32 gas, dirty evaporator coil or blocked drain. KL Renovator diagnoses and fixes all Acson cooling problems. Diagnostic fee RM 88." },
         { q: "Is Acson a reliable budget aircond brand in Malaysia?", a: "Yes — Acson (a Malaysian-manufactured brand under the YORK/JCI group) is a popular value option for landed houses and rental units due to competitive pricing and locally available parts. Reliability is comparable to other mid-range brands when serviced on schedule — most Acson issues we see stem from missed servicing, not brand defects." },
-        { q: "Does my Acson unit need a specific type of chemical wash?", a: "No — Acson wall-mounted and ceiling cassette units use the same chemical wash process as other brands. The A5WM Series has a slightly more compact coil, so we adjust nozzle pressure accordingly to avoid fin damage during cleaning." },,
+        { q: "Does my Acson unit need a specific type of chemical wash?", a: "No — Acson wall-mounted and ceiling cassette units use the same chemical wash process as other brands. The A5WM Series has a slightly more compact coil, so we adjust nozzle pressure accordingly to avoid fin damage during cleaning." },
         { q: "How long does a Acson aircond service take?", a: "A standard Acson wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Acson repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Acson units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Acson?", a: "KL Renovator's local Acson team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -3877,7 +3877,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Acson di KL?", a: "Cuci kimia Acson dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Adakah KL Renovator servis unit Acson R32 inverter?", a: "Ya — KL Renovator menservis semua model Acson R32 inverter. Tambah gas R32 dengan pengukur manifold tepat dari RM 180." },
         { q: "Adakah Acson jenama aircond bajet yang boleh dipercayai di Malaysia?", a: "Ya — Acson (jenama dikilangkan di Malaysia di bawah kumpulan YORK/JCI) adalah pilihan nilai popular untuk rumah teres dan unit sewa kerana harga kompetitif dan alat ganti tersedia secara tempatan." },
-        { q: "Adakah unit Acson saya memerlukan jenis cuci kimia tertentu?", a: "Tidak — unit dinding dan ceiling cassette Acson menggunakan proses cuci kimia yang sama seperti jenama lain. Siri A5WM mempunyai gegelung yang sedikit lebih padat, jadi kami melaraskan tekanan muncung dengan sewajarnya." },,
+        { q: "Adakah unit Acson saya memerlukan jenis cuci kimia tertentu?", a: "Tidak — unit dinding dan ceiling cassette Acson menggunakan proses cuci kimia yang sama seperti jenama lain. Siri A5WM mempunyai gegelung yang sedikit lebih padat, jadi kami melaraskan tekanan muncung dengan sewajarnya." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Acson?", a: "Cuci kimia dinding standard untuk Acson mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Acson?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Acson bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Acson?", a: "Pasukan tempatan KL Renovator di Acson dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -3887,7 +3887,7 @@ export const siteConfig = {
         { q: "吉隆坡Acson冷气服务费用是多少？", a: "Acson化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "KL Renovator维修Acson R32变频机型吗？", a: "是的——KL Renovator维修所有Acson R32变频型号。R32充气含精密压力表调校，从RM 180起。" },
         { q: "Acson在马来西亚是可靠的经济型冷气品牌吗？", a: "是的——Acson（YORK/JCI集团旗下马来西亚制造品牌）因价格实惠、零件容易在本地取得，是排屋和出租单位的热门经济选择。只要按时保养，可靠性与其他中端品牌相当——我们遇到的大多数Acson问题源于未按时保养，而非品牌本身缺陷。" },
-        { q: "我的Acson机器需要特定类型的化学清洗吗？", a: "不需要——Acson壁挂式和天花板卡式机采用与其他品牌相同的化学清洗流程。A5WM系列盘管稍微紧凑，因此我们会相应调整喷嘴压力，以避免清洗时损坏散热片。" },,
+        { q: "我的Acson机器需要特定类型的化学清洗吗？", a: "不需要——Acson壁挂式和天花板卡式机采用与其他品牌相同的化学清洗流程。A5WM系列盘管稍微紧凑，因此我们会相应调整喷嘴压力，以避免清洗时损坏散热片。" },
         { q: "Acson 冷气机保养需要多长时间？", a: "标准 Acson 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Acson 时使用原装零件吗？", a: "是的。我们为所有 Acson 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Acson 最可靠的冷气技术员？", a: "KL Renovator 的 Acson 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -3941,7 +3941,7 @@ export const siteConfig = {
         { q: "Can you replace a Carrier compressor with a non-original compressor?", a: "We do not recommend installing non-original compressors in Carrier units. Carrier compressors are matched to specific PCB board calibration and refrigerant oil viscosity. KL Renovator only installs OEM-spec or Carrier-approved replacement compressors, and every compressor replacement includes a 1-month workmanship warranty." },
         { q: "How long does a Carrier installation take from booking to handover?", a: "Standard Carrier wall-mounted installation (1 unit) takes 2–3 hours including copper pipe routing, bracket mounting, vacuuming, gas pressure check and commissioning. Ceiling cassette or multi-storey installations may take 4–6 hours. We confirm the time estimate during WhatsApp booking so there are no surprises on-site." },
         { q: "Is it worth servicing an old Carrier unit or should I replace it?", a: "If your Carrier unit is under 10 years old and the compressor is running normally, a chemical overhaul (from RM 220) typically restores 80–90% of original cooling performance and is far cheaper than replacement. For units over 10 years with compressor or PCB failure, we will quote both repair and new-installation options so you can decide." },
-        { q: "Does KL Renovator carry Carrier spare parts on the service van?", a: "We carry common wear parts (capacitors, contactors, drain pumps, thermistors, remote controls) and refrigerant gases R22, R410A and R32 on every job. For specific Carrier PCB boards or rare model parts we source from authorised suppliers within 3–7 working days, with a temporary loaner board if available." },,
+        { q: "Does KL Renovator carry Carrier spare parts on the service van?", a: "We carry common wear parts (capacitors, contactors, drain pumps, thermistors, remote controls) and refrigerant gases R22, R410A and R32 on every job. For specific Carrier PCB boards or rare model parts we source from authorised suppliers within 3–7 working days, with a temporary loaner board if available." },
         { q: "How long does a Carrier aircond service take?", a: "A standard Carrier wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Carrier repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Carrier units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Carrier?", a: "KL Renovator's local Carrier team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -3952,7 +3952,7 @@ export const siteConfig = {
         { q: "Adakah KL Renovator servis unit ceiling cassette Carrier komersial?", a: "Ya — KL Renovator pakar dalam servis ceiling cassette Carrier komersial, cuci kimia dan overhaul di pejabat dan premis komersial di KL dan Selangor." },
         { q: "Aircond Carrier saya bocor air — apakah punca paling biasa?", a: "Pada unit dinding Carrier, punca paling biasa air menitis ialah dulang longkang tersumbat atau penuh alga, bukan masalah refrigeran. Cuci kimia termasuk pembilasan dulang dan paip longkang biasanya membetulkannya dalam 1 lawatan." },
         { q: "Berapa lama masa yang diambil untuk pemasangan Carrier dari tempahan hingga serahan?", a: "Pemasangan dinding Carrier standard (1 unit) mengambil masa 2–3 jam termasuk pemasangan paip tembaga, kurungan, vakum, semakan tekanan gas dan pentauliahan. Pemasangan ceiling cassette atau berbilang tingkat mungkin mengambil masa 4–6 jam." },
-        { q: "Patutkah saya servis unit Carrier lama atau menggantikannya?", a: "Jika unit Carrier anda bawah 10 tahun dan kompresor berjalan normal, overhaul kimia (dari RM 220) biasanya memulihkan 80–90% prestasi penyejukan asal dan jauh lebih murah daripada penggantian. Untuk unit lebih 10 tahun dengan kegagalan kompresor atau PCB, kami akan sebut harga kedua-dua pilihan pembaikan dan pemasangan baharu." },,
+        { q: "Patutkah saya servis unit Carrier lama atau menggantikannya?", a: "Jika unit Carrier anda bawah 10 tahun dan kompresor berjalan normal, overhaul kimia (dari RM 220) biasanya memulihkan 80–90% prestasi penyejukan asal dan jauh lebih murah daripada penggantian. Untuk unit lebih 10 tahun dengan kegagalan kompresor atau PCB, kami akan sebut harga kedua-dua pilihan pembaikan dan pemasangan baharu." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Carrier?", a: "Cuci kimia dinding standard untuk Carrier mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Carrier?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Carrier bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Carrier?", a: "Pasukan tempatan KL Renovator di Carrier dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -3963,7 +3963,7 @@ export const siteConfig = {
         { q: "KL Renovator 维修商用开利天花板卡式机吗？", a: "是的——KL Renovator 专精商用开利天花板卡式机维修、化学清洗及大修，服务于吉隆坡和雪兰莪的办公室及商业场所。" },
         { q: "我的开利冷气漏水——最常见的原因是什么？", a: "开利壁挂式机型滴水最常见的原因是接水盘堵塞或充满藻类，而非制冷剂问题。包含接水盘和排水管冲洗的化学清洗通常1次上门即可解决。如果2周内再次漏水，排水管坡度可能不正确——我们的技术员会现场检查并重新调整坡度。" },
         { q: "旧的或有故障的开利冷气——维修还是更换更划算？", a: "如果您的开利机器使用不到10年且压缩机运行正常，化学大修（从RM 220起）通常能恢复80–90%的原始制冷性能，比更换便宜得多。使用超过10年且压缩机或PCB故障的机器，我们会同时提供维修和全新安装两种方案供您选择。" },
-        { q: "从预约到交付，开利冷气安装需要多长时间？", a: "标准开利壁挂式安装（1台）需要2–3小时，包括铜管布线、支架安装、抽真空、气体压力检查和调试。天花板卡式机或多层安装可能需要4–6小时。我们会在WhatsApp预约时确认时间估算，避免现场意外。" },,
+        { q: "从预约到交付，开利冷气安装需要多长时间？", a: "标准开利壁挂式安装（1台）需要2–3小时，包括铜管布线、支架安装、抽真空、气体压力检查和调试。天花板卡式机或多层安装可能需要4–6小时。我们会在WhatsApp预约时确认时间估算，避免现场意外。" },
         { q: "Carrier 冷气机保养需要多长时间？", a: "标准 Carrier 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Carrier 时使用原装零件吗？", a: "是的。我们为所有 Carrier 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Carrier 最可靠的冷气技术员？", a: "KL Renovator 的 Carrier 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4016,7 +4016,7 @@ export const siteConfig = {
         { q: "Is Midea a good aircond brand for Malaysian homes?", a: "Midea has become a popular mid-range choice in Malaysia since 2018, especially in rental units and budget-conscious new builds. The build quality is decent for the price and most Midea parts (PCB, fan motors, sensors) are readily available. The main service consideration is that Midea's R32 inverter PCBs run hotter than premium brands, so a chemical wash every 6 months (not 12) helps extend PCB life in landed houses where the outdoor unit is in direct afternoon sun." },
         { q: "How often should a Midea aircond be serviced?", a: "For Midea wall-mounted units in normal home use, we recommend a basic service every 6 months and a chemical wash once a year. For shoplot or office use (8+ hours daily operation), chemical wash every 4–6 months is better. Skipping chemical wash on Midea units for 2+ years is the most common reason we see compressor failures on this brand." },
         { q: "Can Midea aircond be converted from non-inverter to inverter?", a: "No — inverter and non-inverter Midea units use different indoor unit control boards, different outdoor compressors, and different refrigerant oil. The conversion is not technically or economically viable. If you want inverter efficiency, a full new Midea inverter installation from RM 199 (labour) is the correct path." },
-        { q: "My Midea aircond is making a clicking sound and not cooling — is it the compressor?", a: "A clicking sound with no cooling on Midea units is most often the outdoor unit's contactor or capacitor failing, not the compressor itself. A failed compressor usually makes a humming sound and draws high current (the MCB may trip). We diagnose with a multimeter and clamp meter first — typical repair is a RM 80–150 capacitor/contactor replacement, not a compressor swap." },,
+        { q: "My Midea aircond is making a clicking sound and not cooling — is it the compressor?", a: "A clicking sound with no cooling on Midea units is most often the outdoor unit's contactor or capacitor failing, not the compressor itself. A failed compressor usually makes a humming sound and draws high current (the MCB may trip). We diagnose with a multimeter and clamp meter first — typical repair is a RM 80–150 capacitor/contactor replacement, not a compressor swap." },
         { q: "How long does a Midea aircond service take?", a: "A standard Midea wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Midea repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Midea units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Midea?", a: "KL Renovator's local Midea team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4027,7 +4027,7 @@ export const siteConfig = {
         { q: "Adakah KL Renovator servis unit Midea U-Shape Inverter?", a: "Ya — KL Renovator menservis semua model Midea termasuk U-Shape Inverter unik yang membolehkan pengudaraan tingkap semasa unit beroperasi." },
         { q: "Adakah Midea jenama aircond yang baik untuk rumah di Malaysia?", a: "Midea telah menjadi pilihan jarak pertengahan popular di Malaysia sejak 2018, terutamanya di unit sewa dan pembinaan baharu yang mementingkan bajet. Kualiti pembinaan memuaskan untuk harganya dan kebanyakan alat ganti Midea (PCB, motor kipas, sensor) mudah didapati." },
         { q: "Berapa kerap aircond Midea perlu diservis?", a: "Untuk unit dinding Midea dalam penggunaan rumah biasa, kami cadangkan servis asas setiap 6 bulan dan cuci kimia setahun sekali. Untuk penggunaan kedai atau pejabat (8+ jam sehari), cuci kimia setiap 4–6 bulan lebih baik." },
-        { q: "Bolehkah aircond Midea ditukar dari non-inverter kepada inverter?", a: "Tidak — unit Midea inverter dan non-inverter menggunakan papan kawalan unit dalam, kompresor luar, dan minyak refrigeran yang berbeza. Penukaran tidak berdaya maju dari segi teknikal atau ekonomi." },,
+        { q: "Bolehkah aircond Midea ditukar dari non-inverter kepada inverter?", a: "Tidak — unit Midea inverter dan non-inverter menggunakan papan kawalan unit dalam, kompresor luar, dan minyak refrigeran yang berbeza. Penukaran tidak berdaya maju dari segi teknikal atau ekonomi." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Midea?", a: "Cuci kimia dinding standard untuk Midea mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Midea?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Midea bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Midea?", a: "Pasukan tempatan KL Renovator di Midea dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4038,7 +4038,7 @@ export const siteConfig = {
         { q: "KL Renovator 维修美的 U 型变频机吗？", a: "是的——KL Renovator 维修所有美的型号，包括独特的 U 型变频机——可以在机器运行时进行窗户通风。" },
         { q: "美的冷气适合马来西亚家庭使用吗？", a: "美的自 2018 年以来已成为马来西亚热门的中端选择，尤其在出租单位和注重预算的新建房屋中。品质对得起价格，大多数美的零件（PCB、风扇电机、传感器）都容易取得。主要保养考量是美的 R32 变频 PCB 比高端品牌运行温度更高，因此室外机在下午直晒的排屋中，每 6 个月（而非 12 个月）做一次化学清洗有助于延长 PCB 寿命。" },
         { q: "美的冷气应多久保养一次？", a: "对于普通家庭使用的美的壁挂式机型，我们建议每 6 个月做一次基本保养，每年做一次化学清洗。店屋或办公室使用（每天 8 小时以上）则每 4–6 个月化学清洗一次。2 年以上不做化学清洗的美的机型，是我们最常看到压缩机故障的原因。" },
-        { q: "我的美的冷气发出咔嗒声且不制冷——是压缩机问题吗？", a: "美的机型发出咔嗒声且不制冷最常是室外机的接触器或电容器故障，而非压缩机本身。压缩机故障通常会发出嗡嗡声并消耗大电流（MCB 可能跳闸）。我们首先用万用表和钳形表诊断——典型修法是 RM 80–150 的电容器/接触器更换，而非更换压缩机。" },,
+        { q: "我的美的冷气发出咔嗒声且不制冷——是压缩机问题吗？", a: "美的机型发出咔嗒声且不制冷最常是室外机的接触器或电容器故障，而非压缩机本身。压缩机故障通常会发出嗡嗡声并消耗大电流（MCB 可能跳闸）。我们首先用万用表和钳形表诊断——典型修法是 RM 80–150 的电容器/接触器更换，而非更换压缩机。" },
         { q: "Midea 冷气机保养需要多长时间？", a: "标准 Midea 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Midea 时使用原装零件吗？", a: "是的。我们为所有 Midea 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Midea 最可靠的冷气技术员？", a: "KL Renovator 的 Midea 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4091,7 +4091,7 @@ export const siteConfig = {
         { q: "Are Haier aircond parts easy to find in Malaysia?", a: "Yes — Haier has been distributed in Malaysia through major retailers since 2010, and common wear parts (PCBs, fan motors, sensors, valves, remote controls) are stocked by local suppliers. Specific Nebula or Flexis series parts may take 3–7 working days to source. KL Renovator maintains relationships with multiple Haier parts suppliers to minimise downtime." },
         { q: "Why does my Haier aircond smell musty even after servicing?", a: "A persistent musty smell on Haier units (especially the Flexis series with their wider evaporator fins) usually means mould has grown deep inside the blower wheel housing, beyond where a basic chemical wash reaches. A full chemical overhaul (from RM 220) that includes complete blower wheel removal and housing cleaning is the correct fix. Skipping the blower wheel means the smell returns within 4–6 weeks." },
         { q: "Is Haier a quiet aircond brand for bedrooms?", a: "Yes — the Haier Flexis Plus and Nebula series are designed for low-noise operation, with indoor unit noise levels around 21–24 dB on the lowest fan setting. For a really quiet bedroom setup, we recommend pairing a Haier Flexis inverter with proper wall insulation and a chemical wash every 6 months to keep the fan blades clean (dust buildup creates additional noise). If you already have a noisier Haier model, the noise can usually be reduced by replacing worn motor mounts (RM 60–90 part) during a service visit." },
-        { q: "How long does a Haier installation take?", a: "Standard Haier wall-mounted installation (1 unit) takes 2–3 hours, similar to other brands. Multi-split Haier systems with 3–5 indoor units can take 5–7 hours for a full day installation. We confirm the time estimate during WhatsApp booking. Haier's installation manual is clear and our technicians are trained on all current Haier wall split, cassette and multi-split models." },,
+        { q: "How long does a Haier installation take?", a: "Standard Haier wall-mounted installation (1 unit) takes 2–3 hours, similar to other brands. Multi-split Haier systems with 3–5 indoor units can take 5–7 hours for a full day installation. We confirm the time estimate during WhatsApp booking. Haier's installation manual is clear and our technicians are trained on all current Haier wall split, cassette and multi-split models." },
         { q: "How long does a Haier aircond service take?", a: "A standard Haier wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Haier repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Haier units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Haier?", a: "KL Renovator's local Haier team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4101,7 +4101,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Haier di KL?", a: "Cuci kimia Haier dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Adakah alat ganti aircond Haier mudah didapati di Malaysia?", a: "Ya — Haier telah diedarkan di Malaysia melalui peruncit utama sejak 2010, dan alat ganti haus biasa (PCB, motor kipas, sensor, injap, alat kawalan jauh) disimpan oleh pembekal tempatan. Alat ganti siri Nebula atau Flexis tertentu mungkin mengambil masa 3–7 hari kerja untuk mendapatkan." },
         { q: "Mengapa aircond Haier saya berbau apak walaupun selepas diservis?", a: "Bau apak berterusan pada unit Haier (terutama siri Flexis dengan sirip evaporator yang lebih lebar) biasanya bermaksud kulat telah tumbuh jauh di dalam perumahan roda blower, melangkaui jangkauan cuci kimia asas. Overhaul kimia penuh (dari RM 220) yang termasuk penyingkiran roda blower sepenuhnya dan pembersihan perumahan adalah pembetulan yang betul." },
-        { q: "Adakah Haier jenama aircond yang senyap untuk bilik tidur?", a: "Ya — siri Haier Flexis Plus dan Nebula direka untuk operasi bunyi rendah, dengan tahap bunyi unit dalam sekitar 21–24 dB pada tetapan kipas terendah. Untuk persediaan bilik tidur yang benar-benar senyap, kami cadangkan gandingkan Haier Flexis inverter dengan penebat dinding yang betul dan cuci kimia setiap 6 bulan." },,
+        { q: "Adakah Haier jenama aircond yang senyap untuk bilik tidur?", a: "Ya — siri Haier Flexis Plus dan Nebula direka untuk operasi bunyi rendah, dengan tahap bunyi unit dalam sekitar 21–24 dB pada tetapan kipas terendah. Untuk persediaan bilik tidur yang benar-benar senyap, kami cadangkan gandingkan Haier Flexis inverter dengan penebat dinding yang betul dan cuci kimia setiap 6 bulan." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Haier?", a: "Cuci kimia dinding standard untuk Haier mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Haier?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Haier bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Haier?", a: "Pasukan tempatan KL Renovator di Haier dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4111,7 +4111,7 @@ export const siteConfig = {
         { q: "吉隆坡海尔冷气服务费用是多少？", a: "海尔化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "海尔冷气零件在马来西亚容易找吗？", a: "是的——海尔自 2010 年起通过主要零售商在马来西亚分销，常见易损件（PCB、风扇电机、传感器、阀门、遥控器）由本地供应商备货。特定的 Nebula 或 Flexis 系列零件可能需要 3–7 个工作日才能调配。KL Renovator 与多家海尔零件供应商保持合作关系，以最大限度减少停机时间。" },
         { q: "我的海尔冷气即使保养后仍有霉味——为什么？", a: "海尔机型（尤其是蒸发器翅片更宽的 Flexis 系列）持续散发霉味，通常意味着霉菌已在鼓风机轮壳深处生长，超出基本化学清洗所能到达的范围。包含完全拆下鼓风机轮和清洁壳体的完整化学大修（从 RM 220 起）才是正确的修法。跳过鼓风机轮意味着霉味会在 4–6 周内重新出现。" },
-        { q: "海尔冷气对卧室来说安静吗？", a: "是的——海尔 Flexis Plus 和 Nebula 系列专为低噪音运行设计，在最低风速设定下室内机噪音水平约为 21–24 分贝。想要真正安静的卧室设置，我们建议将海尔 Flexis 变频机与适当的墙体隔热搭配使用，并每 6 个月进行一次化学清洗以保持风扇叶片清洁（积灰会产生额外噪音）。" },,
+        { q: "海尔冷气对卧室来说安静吗？", a: "是的——海尔 Flexis Plus 和 Nebula 系列专为低噪音运行设计，在最低风速设定下室内机噪音水平约为 21–24 分贝。想要真正安静的卧室设置，我们建议将海尔 Flexis 变频机与适当的墙体隔热搭配使用，并每 6 个月进行一次化学清洗以保持风扇叶片清洁（积灰会产生额外噪音）。" },
         { q: "Haier 冷气机保养需要多长时间？", a: "标准 Haier 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Haier 时使用原装零件吗？", a: "是的。我们为所有 Haier 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Haier 最可靠的冷气技术员？", a: "KL Renovator 的 Haier 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4164,7 +4164,7 @@ export const siteConfig = {
         { q: "Is Toshiba a reliable aircond brand in Malaysia?", a: "Toshiba has a strong reputation for compressor reliability in Malaysia — many Toshiba units installed 15+ years ago are still running today, especially the older R22 non-inverter wall splits. The current R32 inverter line (Haori, Kazumi, Seiya) is also well-regarded. The main service consideration is that Toshiba compressors run at a higher torque than most other brands, so always use OEM-spec capacitors (Toshiba or Hitachi-brand replacement) to avoid premature compressor wear." },
         { q: "What is the most common Toshiba aircond problem you see?", a: "On older Toshiba R22 units (pre-2015), the most common issue is indoor fan motor bearing wear causing rattling noise. The motor itself is repairable in most cases (bearing replacement RM 90–150) but if the motor windings have gone open, full motor replacement is RM 280–400 including labour. On newer Toshiba R32 inverter units, we see occasional PCB capacitor failures — early replacement with Rubycon-brand capacitors is the most durable fix." },
         { q: "How often should a Toshiba aircond be chemically washed?", a: "Toshiba recommends chemical wash every 12 months for residential use, but in Malaysian conditions (heat, humidity, dust), every 6–9 months is more realistic for the first 3 years. After that the evaporator builds up a protective patina that actually helps, so you can extend back to yearly once the coil is well-cleansed. We tell customers: 6 months in year 1, 9 months in year 2, 12 months from year 3 onwards." },
-        { q: "Does Toshiba use R32 refrigerant now?", a: "Yes — all current Toshiba residential wall splits sold in Malaysia from 2020 onwards use R32 refrigerant. Older Toshiba units used R22 (pre-2010) and R410A (2010–2019). KL Renovator carries all three refrigerants and we confirm the gas type from the nameplate before any work — we never mix refrigerants." },,
+        { q: "Does Toshiba use R32 refrigerant now?", a: "Yes — all current Toshiba residential wall splits sold in Malaysia from 2020 onwards use R32 refrigerant. Older Toshiba units used R22 (pre-2010) and R410A (2010–2019). KL Renovator carries all three refrigerants and we confirm the gas type from the nameplate before any work — we never mix refrigerants." },
         { q: "How long does a Toshiba aircond service take?", a: "A standard Toshiba wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Toshiba repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Toshiba units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Toshiba?", a: "KL Renovator's local Toshiba team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4174,7 +4174,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Toshiba di KL?", a: "Cuci kimia Toshiba dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Adakah Toshiba jenama aircond yang boleh dipercayai di Malaysia?", a: "Toshiba mempunyai reputasi yang kuat untuk kebolehpercayaan kompresor di Malaysia — banyak unit Toshiba yang dipasang 15+ tahun lalu masih berjalan hari ini, terutamanya dinding R22 non-inverter lama." },
         { q: "Apakah masalah aircond Toshiba paling biasa yang anda lihat?", a: "Pada unit Toshiba R22 lama (sebelum 2015), isu paling biasa ialah haus galas motor kipas dalam yang menyebabkan bunyi gemetar. Motor itu sendiri boleh dibaiki dalam kebanyakan kes (penggantian galas RM 90–150) tetapi jika lilitan motor terbuka, penggantian motor penuh adalah RM 280–400 termasuk buruh." },
-        { q: "Berapa kerap aircond Toshiba perlu dicuci kimia?", a: "Toshiba mengesyorkan cuci kimia setiap 12 bulan untuk kegunaan kediaman, tetapi dalam keadaan Malaysia (haba, kelembapan, habuk), setiap 6–9 bulan lebih realistik untuk 3 tahun pertama." },,
+        { q: "Berapa kerap aircond Toshiba perlu dicuci kimia?", a: "Toshiba mengesyorkan cuci kimia setiap 12 bulan untuk kegunaan kediaman, tetapi dalam keadaan Malaysia (haba, kelembapan, habuk), setiap 6–9 bulan lebih realistik untuk 3 tahun pertama." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Toshiba?", a: "Cuci kimia dinding standard untuk Toshiba mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Toshiba?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Toshiba bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Toshiba?", a: "Pasukan tempatan KL Renovator di Toshiba dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4184,7 +4184,7 @@ export const siteConfig = {
         { q: "吉隆坡东芝冷气服务费用是多少？", a: "东芝化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "东芝是马来西亚可靠的冷气品牌吗？", a: "东芝在马来西亚以压缩机可靠性享有盛誉——许多 15 年前安装的东芝机器至今仍在运行，尤其是较旧的 R22 定频壁挂式机型。目前的 R32 变频产品线（Haori、Kazumi、Seiya）也同样备受好评。主要保养考量是东芝压缩机的扭矩高于大多数其他品牌，因此务必使用 OEM 规格的电容器（东芝或日立品牌替换件）以避免压缩机过早磨损。" },
         { q: "您见过最常见的东芝冷气问题是什么？", a: "在较旧的东芝 R22 机型（2015 年之前）上，最常见的问题是室内风扇电机轴承磨损导致嘎嘎声。电机本身在大多数情况下可以维修（更换轴承 RM 90–150），但如果电机绕组已开路，则需要整体更换电机，费用 RM 280–400 含人工。在较新的东芝 R32 变频机型上，我们偶尔会看到 PCB 电容器故障——早期更换 Rubycon 品牌电容器是最耐用的修法。" },
-        { q: "东芝冷气应多久进行一次化学清洗？", a: "东芝建议住宅使用每 12 个月进行一次化学清洗，但在马来西亚的条件下（高温、潮湿、灰尘），前 3 年每 6–9 个月更现实。之后蒸发器会形成一层实际上有帮助的保护层，因此可以在盘管完全清洁后延长回年度清洗。我们告诉客户：第 1 年 6 个月，第 2 年 9 个月，第 3 年起 12 个月。" },,
+        { q: "东芝冷气应多久进行一次化学清洗？", a: "东芝建议住宅使用每 12 个月进行一次化学清洗，但在马来西亚的条件下（高温、潮湿、灰尘），前 3 年每 6–9 个月更现实。之后蒸发器会形成一层实际上有帮助的保护层，因此可以在盘管完全清洁后延长回年度清洗。我们告诉客户：第 1 年 6 个月，第 2 年 9 个月，第 3 年起 12 个月。" },
         { q: "Toshiba 冷气机保养需要多长时间？", a: "标准 Toshiba 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Toshiba 时使用原装零件吗？", a: "是的。我们为所有 Toshiba 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Toshiba 最可靠的冷气技术员？", a: "KL Renovator 的 Toshiba 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4237,7 +4237,7 @@ export const siteConfig = {
         { q: "Does the Hitachi Frost Wash self-cleaning feature really work?", a: "The Frost Wash feature does help reduce surface dust and ice on the evaporator coil between professional services, but it does not replace a full chemical wash. After 12–18 months of running, even Frost Wash units build up deep biofilm in the blower wheel and drain pan that only manual disassembly cleaning can reach. We recommend pairing Frost Wash with a yearly chemical wash for best results — and skipping the chemical wash on Frost Wash units is the most common reason for persistent musty smells." },
         { q: "What is the difference between Hitachi Ecosmart and Performance Series?", a: "Ecosmart is Hitachi's standard residential inverter line (R32, 5-star energy rating), suitable for most bedrooms and small living rooms. Performance Series is the higher-tier line with a wider evaporator, faster cooling and lower noise. Both are inverter R32 and use the same chemical wash process. Performance Series is more common in larger landed houses and high-end condos where the wider air throw is needed." },
         { q: "Is Hitachi aircond good for Malaysian weather?", a: "Yes — Hitachi units are designed for tropical climate operation and handle Malaysia's 32–35°C summer days comfortably. The compressor in current Hitachi models has a high-temperature tolerance rating, and the condenser coil sizing is generous. For landed houses where the outdoor unit sits in direct afternoon sun, we recommend a basic service every 6 months (instead of 12) to keep the condenser coil clean, which directly extends compressor life." },
-        { q: "Can I get a Hitachi compressor replaced in Malaysia?", a: "Yes — KL Renovator sources OEM-spec Hitachi compressors through authorised local distributors, with delivery typically 5–7 working days. We never install non-original compressors in Hitachi units because the compressor control calibration in the IPM board is tuned to specific compressor electrical characteristics. Every compressor replacement includes a 1-month workmanship warranty and a fresh vacuum + gas charge." },,
+        { q: "Can I get a Hitachi compressor replaced in Malaysia?", a: "Yes — KL Renovator sources OEM-spec Hitachi compressors through authorised local distributors, with delivery typically 5–7 working days. We never install non-original compressors in Hitachi units because the compressor control calibration in the IPM board is tuned to specific compressor electrical characteristics. Every compressor replacement includes a 1-month workmanship warranty and a fresh vacuum + gas charge." },
         { q: "How long does a Hitachi aircond service take?", a: "A standard Hitachi wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Hitachi repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Hitachi units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Hitachi?", a: "KL Renovator's local Hitachi team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4247,7 +4247,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Hitachi di KL?", a: "Cuci kimia Hitachi dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Adakah ciri pembersihan diri Hitachi Frost Wash benar-benar berkesan?", a: "Ciri Frost Wash membantu mengurangkan habuk permukaan dan ais pada gegelung evaporator antara servis profesional, tetapi ia tidak menggantikan cuci kimia penuh. Selepas 12–18 bulan berjalan, walaupun unit Frost Wash membina biofilm mendalam dalam roda blower dan dulang longkang yang hanya boleh dicapai oleh pembukaan manual." },
         { q: "Apakah perbezaan antara Hitachi Ecosmart dan Performance Series?", a: "Ecosmart adalah barisan inverter kediaman standard Hitachi (R32, penarafan tenaga 5-bintang), sesuai untuk kebanyakan bilik tidur dan ruang tamu kecil. Performance Series adalah barisan peringkat lebih tinggi dengan evaporator lebih lebar, penyejukan lebih cepat dan bunyi lebih rendah." },
-        { q: "Adakah aircond Hitachi baik untuk cuaca Malaysia?", a: "Ya — unit Hitachi direka untuk operasi iklim tropika dan mengendalikan hari musim panas Malaysia 32–35°C dengan selesa. Kami cadangkan servis asas setiap 6 bulan (bukan 12) untuk rumah teres di mana unit luar duduk di bawah cahaya matahari petang langsung, untuk memastikan gegelung kondenser bersih." },,
+        { q: "Adakah aircond Hitachi baik untuk cuaca Malaysia?", a: "Ya — unit Hitachi direka untuk operasi iklim tropika dan mengendalikan hari musim panas Malaysia 32–35°C dengan selesa. Kami cadangkan servis asas setiap 6 bulan (bukan 12) untuk rumah teres di mana unit luar duduk di bawah cahaya matahari petang langsung, untuk memastikan gegelung kondenser bersih." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Hitachi?", a: "Cuci kimia dinding standard untuk Hitachi mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Hitachi?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Hitachi bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Hitachi?", a: "Pasukan tempatan KL Renovator di Hitachi dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4257,7 +4257,7 @@ export const siteConfig = {
         { q: "吉隆坡日立冷气服务费用是多少？", a: "日立化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "日立 Frost Wash 自清洁功能真的有效吗？", a: "Frost Wash 功能确实有助于在专业保养之间减少蒸发器盘管表面的灰尘和结冰，但无法取代完整的化学清洗。运行 12–18 个月后，即使是 Frost Wash 机器也会在鼓风机轮和接水盘深处积累生物膜，只有手动拆装清洁才能触及。我们建议将 Frost Wash 与年度化学清洗搭配使用效果最佳——跳过 Hitachi Frost Wash 机型的化学清洗是持续霉味的最常见原因。" },
         { q: "日立 Ecosmart 和 Performance 系列有什么区别？", a: "Ecosmart 是日立的標準住宅变频系列（R32，5 星能效），适合大多数卧室和小型客厅。Performance 系列是更高端的系列，具有更宽的蒸发器、更快的制冷和更低的噪音。两者都是 R32 变频，采用相同的化学清洗流程。Performance 系列在需要更宽送风的大型排屋和高档公寓中更为常见。" },
-        { q: "日立冷气适合马来西亚天气吗？", a: "是的——日立机型专为热带气候运行而设计，可舒适应对马来西亚 32–35°C 的夏季日子。对于室外机处于下午直晒的排屋，我们建议每 6 个月（而非 12 个月）进行一次基本保养，以保持室外盘管清洁，这直接延长压缩机的使用寿命。" },,
+        { q: "日立冷气适合马来西亚天气吗？", a: "是的——日立机型专为热带气候运行而设计，可舒适应对马来西亚 32–35°C 的夏季日子。对于室外机处于下午直晒的排屋，我们建议每 6 个月（而非 12 个月）进行一次基本保养，以保持室外盘管清洁，这直接延长压缩机的使用寿命。" },
         { q: "Hitachi 冷气机保养需要多长时间？", a: "标准 Hitachi 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Hitachi 时使用原装零件吗？", a: "是的。我们为所有 Hitachi 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Hitachi 最可靠的冷气技术员？", a: "KL Renovator 的 Hitachi 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4310,7 +4310,7 @@ export const siteConfig = {
         { q: "What is special about the Samsung WindFree cooling technology?", a: "WindFree cooling disperses air through thousands of micro-holes in the front panel instead of blowing it directly at occupants. This eliminates the cold-draft feeling and is genuinely more comfortable for sleeping and office use. The main service consideration is that the WindFree micro-hole panel is delicate — aggressive scrubbing or high-pressure water on the panel can permanently damage the hole pattern. We use only soft brushes and low-pressure chemical spray on WindFree units." },
         { q: "Is Samsung a good aircond brand for Malaysian homes?", a: "Yes — Samsung has gained significant market share in Malaysia since 2018, especially the WindFree and Boracay series in mid-range condos. The compressor is reliable and most parts (PCBs, fan motors, sensors) are readily available. Samsung's main service weakness in Malaysia is the Wi-Fi/Bixby module, which can fail after a few years — fortunately, this doesn't affect basic cooling and the module can be disabled without impacting normal operation." },
         { q: "How often should a Samsung aircond be chemically washed?", a: "For Samsung wall-mounted units in normal home use, we recommend a chemical wash every 6 months. The Boracay series in particular has a wider evaporator that collects dust faster than average. For office or shop use (8+ hours daily), 4-month intervals are better. Skipping chemical wash on Samsung units is the most common reason for the E1 or E2 error codes that appear after 18+ months of use." },
-        { q: "Can the Samsung Wi-Fi module be replaced if it fails?", a: "Yes — the Samsung Wi-Fi module (SmartThings module) can be replaced as a standalone part for RM 180–280 including installation. The module sits in a small housing on the side of the indoor unit and is connected by a short ribbon cable. Most Samsung Wi-Fi failures are due to firmware corruption rather than hardware, so we always try a factory reset + re-pair before recommending a replacement module." },,
+        { q: "Can the Samsung Wi-Fi module be replaced if it fails?", a: "Yes — the Samsung Wi-Fi module (SmartThings module) can be replaced as a standalone part for RM 180–280 including installation. The module sits in a small housing on the side of the indoor unit and is connected by a short ribbon cable. Most Samsung Wi-Fi failures are due to firmware corruption rather than hardware, so we always try a factory reset + re-pair before recommending a replacement module." },
         { q: "How long does a Samsung aircond service take?", a: "A standard Samsung wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Samsung repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Samsung units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Samsung?", a: "KL Renovator's local Samsung team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4320,7 +4320,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Samsung di KL?", a: "Cuci kimia Samsung dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah keistimewaan teknologi penyejukan Samsung WindFree?", a: "Penyejukan WindFree menyebarkan udara melalui ribuan lubang mikro di panel hadapan dan bukan meniup terus kepada penghuni. Ini menghapuskan perasaan draf sejuk dan benar-benar lebih selesa untuk tidur dan kegunaan pejabat. Pertimbangan servis utama ialah panel lubang mikro WindFree adalah halus — penyentalan agresif atau air tekanan tinggi pada panel boleh merosakkan corak lubang secara kekal." },
         { q: "Adakah Samsung jenama aircond yang baik untuk rumah di Malaysia?", a: "Ya — Samsung telah mendapat bahagian pasaran yang ketara di Malaysia sejak 2018, terutamanya siri WindFree dan Boracay di kondominium jarak pertengahan. Kompresor boleh dipercayai dan kebanyakan alat ganti (PCB, motor kipas, sensor) mudah didapati." },
-        { q: "Berapa kerap aircond Samsung perlu dicuci kimia?", a: "Untuk unit dinding Samsung dalam penggunaan rumah biasa, kami cadangkan cuci kimia setiap 6 bulan. Siri Boracay khususnya mempunyai evaporator yang lebih lebar yang mengumpul habuk lebih cepat daripada purata." },,
+        { q: "Berapa kerap aircond Samsung perlu dicuci kimia?", a: "Untuk unit dinding Samsung dalam penggunaan rumah biasa, kami cadangkan cuci kimia setiap 6 bulan. Siri Boracay khususnya mempunyai evaporator yang lebih lebar yang mengumpul habuk lebih cepat daripada purata." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Samsung?", a: "Cuci kimia dinding standard untuk Samsung mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Samsung?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Samsung bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Samsung?", a: "Pasukan tempatan KL Renovator di Samsung dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4330,7 +4330,7 @@ export const siteConfig = {
         { q: "吉隆坡三星冷气服务费用是多少？", a: "三星化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "三星 WindFree 制冷技术有什么特别之处？", a: "WindFree 制冷通过前面板上的数千个微孔分散空气，而不是直接吹向使用者。这消除了冷风直吹感，对于睡眠和办公室使用确实更舒适。主要保养考量是 WindFree 微孔面板很精致——对面板进行激烈擦洗或高压水流会永久损坏孔洞图案。我们对 WindFree 机器仅使用软刷和低压化学喷雾。" },
         { q: "三星冷气适合马来西亚家庭使用吗？", a: "是的——三星自 2018 年以来在马来西亚市场份额显著增长，尤其是中端公寓中的 WindFree 和 Boracay 系列。压缩机可靠，大多数零件（PCB、风扇电机、传感器）都容易获得。三星在马来西亚的主要服务弱点是 Wi-Fi/Bixby 模块，该模块在几年后可能故障——幸运的是，这不影响基本制冷，并且可以禁用该模块而不影响正常运行。" },
-        { q: "我的三星冷气应多久进行一次化学清洗？", a: "对于普通家庭使用的三星壁挂式机型，我们建议每 6 个月进行一次化学清洗。Boracay 系列的蒸发器特别宽，积灰速度比平均更快。" },,
+        { q: "我的三星冷气应多久进行一次化学清洗？", a: "对于普通家庭使用的三星壁挂式机型，我们建议每 6 个月进行一次化学清洗。Boracay 系列的蒸发器特别宽，积灰速度比平均更快。" },
         { q: "Samsung 冷气机保养需要多长时间？", a: "标准 Samsung 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Samsung 时使用原装零件吗？", a: "是的。我们为所有 Samsung 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Samsung 最可靠的冷气技术员？", a: "KL Renovator 的 Samsung 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4383,7 +4383,7 @@ export const siteConfig = {
         { q: "What is the LG dual inverter compressor and is it more reliable?", a: "LG's dual inverter compressor uses a twin-rotary design (two rotors in the same housing) instead of the single-rotor design used in most other brands. This means lower vibration, lower starting current, and roughly 20–30% lower power consumption than single-rotor compressors. The reliability is genuinely better than single-rotor types — we see significantly fewer LG compressor failures compared to other brands. The trade-off is that if a dual inverter compressor does fail, the replacement part is more expensive (RM 800–1,200) than a single-rotor compressor (RM 500–800)." },
         { q: "Why is my LG aircond making a high-pitched squeal when it starts?", a: "A high-pitched squeal at start-up on LG units is almost always the indoor unit's cross-flow fan bearing slightly dry. It's not dangerous but it gets worse over 2–3 months. We open the indoor unit, lubricate the bearing with high-temperature silicone grease, and reassemble. Total cost RM 50–80 including service. If ignored, the bearing eventually seizes and the motor needs full replacement (RM 180–280)." },
         { q: "Is LG a quiet aircond brand for bedrooms?", a: "Yes — LG's dual inverter models are among the quietest wall splits in Malaysia, with indoor noise levels around 19–22 dB on the lowest fan setting. The dual inverter compressor contributes to this because the twin-rotor design has less startup and running vibration. For the quietest possible bedroom setup, pair an LG dual inverter with a chemical wash every 6 months to keep the fan blades clean (dust imbalance creates additional noise)." },
-        { q: "Can I install a new LG aircond myself?", a: "No — we strongly recommend against DIY LG installation. The dual inverter compressor is calibrated to a specific refrigerant charge and vacuum level, and any air or moisture left in the lines during a DIY install will cause compressor damage within 6–12 months. KL Renovator's standard installation (from RM 199) includes proper vacuuming (30+ minutes), leak test, and gas pressure check before commissioning — all of which are skipped in typical DIY installs." },,
+        { q: "Can I install a new LG aircond myself?", a: "No — we strongly recommend against DIY LG installation. The dual inverter compressor is calibrated to a specific refrigerant charge and vacuum level, and any air or moisture left in the lines during a DIY install will cause compressor damage within 6–12 months. KL Renovator's standard installation (from RM 199) includes proper vacuuming (30+ minutes), leak test, and gas pressure check before commissioning — all of which are skipped in typical DIY installs." },
         { q: "How long does a LG aircond service take?", a: "A standard LG wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for LG repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all LG units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in LG?", a: "KL Renovator's local LG team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4393,7 +4393,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond LG di KL?", a: "Cuci kimia LG dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah kompresor dual inverter LG dan adakah ia lebih boleh dipercayai?", a: "Kompresor dual inverter LG menggunakan reka bentuk putar berkembar (dua pemutar dalam perumahan yang sama) dan bukannya reka bentuk pemutar tunggal yang digunakan dalam kebanyakan jenama lain. Ini bermakna getaran lebih rendah, arus permulaan lebih rendah, dan penggunaan kuasa kira-kira 20–30% lebih rendah berbanding kompresor pemutar tunggal." },
         { q: "Mengapa aircond LG saya mengeluarkan bunyi nyaring apabila ia mula?", a: "Bunyi nyaring pada permulaan pada unit LG hampir sentiasa galas kipas silang unit dalam yang sedikit kering. Ia tidak berbahaya tetapi menjadi lebih teruk selama 2–3 bulan." },
-        { q: "Adakah LG jenama aircond yang senyap untuk bilik tidur?", a: "Ya — model dual inverter LG antara dinding paling senyap di Malaysia, dengan tahap bunyi dalam sekitar 19–22 dB pada tetapan kipas terendah." },,
+        { q: "Adakah LG jenama aircond yang senyap untuk bilik tidur?", a: "Ya — model dual inverter LG antara dinding paling senyap di Malaysia, dengan tahap bunyi dalam sekitar 19–22 dB pada tetapan kipas terendah." },
         { q: "Berapa lama masa yang diambil untuk servis aircond LG?", a: "Cuci kimia dinding standard untuk LG mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan LG?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit LG bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di LG?", a: "Pasukan tempatan KL Renovator di LG dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4403,7 +4403,7 @@ export const siteConfig = {
         { q: "吉隆坡LG冷气服务费用是多少？", a: "LG化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "什么是LG双转子变频压缩机，它更可靠吗？", a: "LG的双转子变频压缩机采用双转子设计（两个转子位于同一壳体内），而不是大多数其他品牌使用的单转子设计。这意味着振动更低、启动电流更低、耗电量比单转子压缩机低约 20–30%。可靠性确实优于单转子类型——我们看到的 LG 压缩机故障明显少于其他品牌。代价是如果双转子变频压缩机确实发生故障，更换零件的费用更高（RM 800–1,200）比单转子压缩机（RM 500–800）。" },
         { q: "我的LG冷气在启动时发出高频尖叫声——为什么？", a: "LG机器在启动时的高频尖叫声几乎总是室内机横流风扇轴承稍微干燥。这并不危险，但会在 2–3 个月内变得更糟。我们打开室内机，用高温硅脂润滑轴承，然后重新组装。含保养总费用 RM 50–80。如果不处理，轴承最终会卡死，电机需要整体更换（RM 180–280）。" },
-        { q: "LG冷气对卧室来说安静吗？", a: "是的——LG双转子变频机型是马来西亚最安静的壁挂机之一，在最低风速设定下室内噪音水平约为 19–22 分贝。双转子压缩机的设计有助于降低启动和运行时的振动。" },,
+        { q: "LG冷气对卧室来说安静吗？", a: "是的——LG双转子变频机型是马来西亚最安静的壁挂机之一，在最低风速设定下室内噪音水平约为 19–22 分贝。双转子压缩机的设计有助于降低启动和运行时的振动。" },
         { q: "LG 冷气机保养需要多长时间？", a: "标准 LG 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 LG 时使用原装零件吗？", a: "是的。我们为所有 LG 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 LG 最可靠的冷气技术员？", a: "KL Renovator 的 LG 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4456,7 +4456,7 @@ export const siteConfig = {
         { q: "What is the Sharp Plasmacluster ion technology and is it useful?", a: "Plasmacluster is Sharp's air-purification technology that releases positive and negative ions into the airflow to deactivate airborne mould, bacteria and allergens. In Malaysia's humid climate, the main benefit is reduced mould growth on the evaporator coil — we see less visible mould on Plasmacluster units vs non-Plasmacluster Sharp units of the same age. The ion generator itself is a replaceable module (RM 80–140 part) that should be replaced every 5–7 years as the electrodes wear." },
         { q: "Is Sharp a reliable aircond brand in Malaysia?", a: "Sharp has a long history in Malaysia (since the 1980s with TVs and appliances) and the aircond line benefits from that brand recognition. The current R32 inverter line is reliable for residential use. Sharp compressors are made in Sharp's own factories (not OEM), which means compressor replacement is more expensive than for most other brands (RM 900–1,400) but the failure rate is also lower. The main service weakness of Sharp is the Plasmacluster ion module, which is unnecessary for cooling and adds cost if it fails." },
         { q: "How long does a Sharp aircond typically last in Malaysia?", a: "Sharp aircond units in Malaysia typically last 12–15 years with regular servicing (chemical wash every 6–12 months), versus 8–12 years for many other brands. The longer lifespan is mainly due to Sharp's heavier compressor construction and the Plasmacluster coil treatment. If you service your Sharp unit on schedule, you'll likely get 15+ years out of it before needing major repair." },
-        { q: "Can the Sharp Plasmacluster ion generator be turned off?", a: "Yes — most Sharp models have a button on the remote or indoor unit to turn the Plasmacluster ion function on/off. Turning it off does not affect cooling performance. If the ion module fails and you don't want to replace it, simply leaving it off is fine — the unit will continue to cool normally. KL Renovator can also disconnect the ion module wiring as a permanent disable if requested." },,
+        { q: "Can the Sharp Plasmacluster ion generator be turned off?", a: "Yes — most Sharp models have a button on the remote or indoor unit to turn the Plasmacluster ion function on/off. Turning it off does not affect cooling performance. If the ion module fails and you don't want to replace it, simply leaving it off is fine — the unit will continue to cool normally. KL Renovator can also disconnect the ion module wiring as a permanent disable if requested." },
         { q: "How long does a Sharp aircond service take?", a: "A standard Sharp wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Sharp repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Sharp units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Sharp?", a: "KL Renovator's local Sharp team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4466,7 +4466,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Sharp di KL?", a: "Cuci kimia Sharp dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah teknologi ion Sharp Plasmacluster dan adakah ia berguna?", a: "Plasmacluster adalah teknologi pemurnian udara Sharp yang membebaskan ion positif dan negatif ke dalam aliran udara untuk menyahaktifkan kulat, bakteria dan alergen bawaan udara. Dalam iklim lembap Malaysia, faedah utama ialah pertumbuhan kulat yang berkurangan pada gegelung evaporator." },
         { q: "Adakah Sharp jenama aircond yang boleh dipercayai di Malaysia?", a: "Sharp mempunyai sejarah panjang di Malaysia (sejak 1980-an dengan TV dan perkakas) dan barisan aircond mendapat manfaat daripada pengiktirafan jenama itu. Barisan inverter R32 semasa boleh dipercayai untuk kegunaan kediaman." },
-        { q: "Berapa lama aircond Sharp biasanya tahan di Malaysia?", a: "Unit aircond Sharp di Malaysia biasanya tahan 12–15 tahun dengan servis berkala (cuci kimia setiap 6–12 bulan), berbanding 8–12 tahun untuk banyak jenama lain. Jangka hayat yang lebih panjang adalah disebabkan pembinaan kompresor Sharp yang lebih berat dan rawatan gegelung Plasmacluster." },,
+        { q: "Berapa lama aircond Sharp biasanya tahan di Malaysia?", a: "Unit aircond Sharp di Malaysia biasanya tahan 12–15 tahun dengan servis berkala (cuci kimia setiap 6–12 bulan), berbanding 8–12 tahun untuk banyak jenama lain. Jangka hayat yang lebih panjang adalah disebabkan pembinaan kompresor Sharp yang lebih berat dan rawatan gegelung Plasmacluster." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Sharp?", a: "Cuci kimia dinding standard untuk Sharp mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Sharp?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Sharp bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sharp?", a: "Pasukan tempatan KL Renovator di Sharp dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4476,7 +4476,7 @@ export const siteConfig = {
         { q: "吉隆坡夏普冷气服务费用是多少？", a: "夏普化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "什么是夏普 Plasmacluster 离子技术，它有用吗？", a: "Plasmacluster 是夏普的空气净化技术，可向气流中释放正负离子以灭活空气中的霉菌、细菌和过敏原。在马来西亚潮湿的气候中，主要好处是蒸发器盘管上的霉菌生长减少——我们看到相同使用年限的 Plasmacluster 机型与非 Plasmacluster 夏普机型相比，霉菌明显更少。离子发生器本身是一个可更换的模块（RM 80–140 零件），应每 5–7 年更换一次，因为电极会磨损。" },
         { q: "夏普是马来西亚可靠的冷气品牌吗？", a: "夏普在马来西亚有悠久的历史（自 1980 年代起生产电视和家电），其冷气产品线受益于该品牌的认可度。目前的 R32 变频产品线对于住宅使用是可靠的。夏普压缩机由夏普自己的工厂生产（而非 OEM），这意味着压缩机更换比大多数其他品牌更昂贵（RM 900–1,400），但故障率也更低。夏普的主要服务弱点是 Plasmacluster 离子模块，对制冷没有必要，如果失败会增加成本。" },
-        { q: "夏普冷气在马来西亚通常能使用多久？", a: "夏普冷气在马来西亚通过定期保养（每 6–12 个月化学清洗）通常可以使用 12–15 年，而许多其他品牌为 8–12 年。更长的使用寿命主要是由于夏普较重的压缩机构造和 Plasmacluster 盘管处理。如果您按时保养夏普机器，您很可能在使用 15 年以上后才需要进行重大维修。" },,
+        { q: "夏普冷气在马来西亚通常能使用多久？", a: "夏普冷气在马来西亚通过定期保养（每 6–12 个月化学清洗）通常可以使用 12–15 年，而许多其他品牌为 8–12 年。更长的使用寿命主要是由于夏普较重的压缩机构造和 Plasmacluster 盘管处理。如果您按时保养夏普机器，您很可能在使用 15 年以上后才需要进行重大维修。" },
         { q: "Sharp 冷气机保养需要多长时间？", a: "标准 Sharp 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Sharp 时使用原装零件吗？", a: "是的。我们为所有 Sharp 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Sharp 最可靠的冷气技术员？", a: "KL Renovator 的 Sharp 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4529,7 +4529,7 @@ export const siteConfig = {
         { q: "What is special about the Fujitsu Nocria design?", a: "The Fujitsu Nocria series is designed with a unique dual-blade louver that adjusts independently for horizontal and vertical airflow — it can direct cool air to specific people in the room rather than blowing it everywhere. This makes Nocria particularly good for offices and shared living spaces. The main service consideration is that the dual-blade louver mechanism is delicate and the small stepper motor that drives it (RM 80–120 part) can fail after 5–7 years. Replacement is straightforward and doesn't require opening the sealed refrigeration system." },
         { q: "Is Fujitsu a premium aircond brand in Malaysia?", a: "Yes — Fujitsu is positioned as a premium brand in Malaysia, often priced 20–30% higher than Daikin or Mitsubishi equivalent capacity. The premium is justified by the inverter compressor quality, build materials, and the longer standard warranty (5 years compressor on most models vs 2–3 years for most other brands). For customers who prioritise long-term reliability over upfront cost, Fujitsu is one of the best choices available in Malaysia." },
         { q: "How long does a Fujitsu aircond typically last?", a: "Fujitsu aircond units in Malaysia with regular servicing typically last 15–20 years — among the longest of any brand we service. Many Fujitsu Halcyon commercial units installed in the early 2000s are still running today in Klang Valley offices. The long lifespan is mainly due to the heavy-duty scroll compressor design (commercial models) and the high-spec inverter components. For residential wall splits, 15+ years is realistic with proper maintenance." },
-        { q: "What is the difference between Fujitsu Nocria and Halcyon?", a: "Nocria is Fujitsu's premium residential wall split line, featuring the unique dual-blade airflow design. Halcyon is Fujitsu's commercial-grade line, designed for offices, retail spaces and light commercial use — including ceiling cassette, ducted and floor-standing models. Halcyon units typically use scroll compressors (vs rotary in residential) for better part-load efficiency. KL Renovator services both ranges across all of KL and Selangor." },,
+        { q: "What is the difference between Fujitsu Nocria and Halcyon?", a: "Nocria is Fujitsu's premium residential wall split line, featuring the unique dual-blade airflow design. Halcyon is Fujitsu's commercial-grade line, designed for offices, retail spaces and light commercial use — including ceiling cassette, ducted and floor-standing models. Halcyon units typically use scroll compressors (vs rotary in residential) for better part-load efficiency. KL Renovator services both ranges across all of KL and Selangor." },
         { q: "How long does a Fujitsu aircond service take?", a: "A standard Fujitsu wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Fujitsu repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Fujitsu units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Fujitsu?", a: "KL Renovator's local Fujitsu team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4539,7 +4539,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Fujitsu di KL?", a: "Cuci kimia Fujitsu dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah keistimewaan reka bentuk Fujitsu Nocria?", a: "Siri Fujitsu Nocria direka dengan bidai bilah berkembar unik yang melaras secara bebas untuk aliran udara mendatar dan menegak — ia boleh mengarahkan udara sejuk kepada orang tertentu di dalam bilik dan bukan meniup ke mana-mana." },
         { q: "Adakah Fujitsu jenama aircond premium di Malaysia?", a: "Ya — Fujitsu diposisikan sebagai jenama premium di Malaysia, selalunya berharga 20–30% lebih tinggi daripada Daikin atau Mitsubishi kapasiti setara. Premium itu dibenarkan oleh kualiti kompresor inverter, bahan pembinaan, dan waranti standard yang lebih panjang (5 tahun kompresor pada kebanyakan model berbanding 2–3 tahun untuk kebanyakan jenama lain)." },
-        { q: "Berapa lama aircond Fujitsu biasanya tahan?", a: "Unit aircond Fujitsu di Malaysia dengan servis berkala biasanya tahan 15–20 tahun — antara yang paling lama daripada mana-mana jenama yang kami servis. Banyak unit komersial Fujitsu Halcyon yang dipasang pada awal 2000-an masih berjalan hari ini di pejabat Klang Valley." },,
+        { q: "Berapa lama aircond Fujitsu biasanya tahan?", a: "Unit aircond Fujitsu di Malaysia dengan servis berkala biasanya tahan 15–20 tahun — antara yang paling lama daripada mana-mana jenama yang kami servis. Banyak unit komersial Fujitsu Halcyon yang dipasang pada awal 2000-an masih berjalan hari ini di pejabat Klang Valley." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Fujitsu?", a: "Cuci kimia dinding standard untuk Fujitsu mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Fujitsu?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Fujitsu bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Fujitsu?", a: "Pasukan tempatan KL Renovator di Fujitsu dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4549,7 +4549,7 @@ export const siteConfig = {
         { q: "吉隆坡富士通冷气服务费用是多少？", a: "富士通化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "富士通 Nocria 设计有什么特别之处？", a: "富士通 Nocria 系列采用独特的双叶片百叶设计，可独立调节水平和垂直气流——它可以将冷气引导到房间中的特定人员，而不是到处吹送。这使得 Nocria 特别适合办公室和共享生活空间。" },
         { q: "富士通是马来西亚的高端冷气品牌吗？", a: "是的——富士通在马来西亚被定位为高端品牌，通常比大金或三菱同容量的产品贵 20–30%。这种溢价是由变频压缩机质量、建造材料以及更长的标准保修期（大多数机型压缩机 5 年，而大多数其他品牌为 2–3 年）所证明的。对于优先考虑长期可靠性而非前期成本的客户来说，富士通是马来西亚可用的最佳选择之一。" },
-        { q: "富士通冷气通常能使用多久？", a: "在马来西亚定期保养的富士通冷气通常可以使用 15–20 年——是我们所服务的任何品牌中最长的之一。许多在 2000 年代初安装的富士通 Halcyon 商用机型至今仍在巴生谷的办公室运行。超长的使用寿命主要是由于重型涡旋压缩机设计（商用机型）和高规格的变频组件。对于住宅壁挂机，正确的维护可以使用 15 年以上。" },,
+        { q: "富士通冷气通常能使用多久？", a: "在马来西亚定期保养的富士通冷气通常可以使用 15–20 年——是我们所服务的任何品牌中最长的之一。许多在 2000 年代初安装的富士通 Halcyon 商用机型至今仍在巴生谷的办公室运行。超长的使用寿命主要是由于重型涡旋压缩机设计（商用机型）和高规格的变频组件。对于住宅壁挂机，正确的维护可以使用 15 年以上。" },
         { q: "Fujitsu 冷气机保养需要多长时间？", a: "标准 Fujitsu 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Fujitsu 时使用原装零件吗？", a: "是的。我们为所有 Fujitsu 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Fujitsu 最可靠的冷气技术员？", a: "KL Renovator 的 Fujitsu 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4602,7 +4602,7 @@ export const siteConfig = {
         { q: "Is Gree a good aircond brand in Malaysia?", a: "Gree is the world's largest aircond manufacturer by volume (since 2005) and is widely sold in Malaysia through OEM partnerships with several other brands. The current R32 inverter line is reliable for residential use, and the build quality has improved significantly since 2018. Gree compressors (Gree-made) are now widely used across many brands' entry-level models, which means parts availability in Malaysia is good. The main service consideration is that Gree's PCB design has changed several times since 2017, so we maintain a database of the PCB-to-model mapping for every Gree series we service." },
         { q: "What refrigerant does Gree use?", a: "All current Gree residential wall splits sold in Malaysia from 2020 onwards use R32 refrigerant. Older Gree units used R22 (pre-2015) and R410A (2015–2019). For commercial Gree units (Gree Multi+ systems, Flexx cassette), R32 is standard from 2021 onwards. KL Renovator carries all three refrigerants and we confirm the gas type from the nameplate before any work — we never mix refrigerants." },
         { q: "How long does a Gree aircond typically last in Malaysia?", a: "Gree aircond units in Malaysia with regular servicing typically last 10–14 years, similar to other mid-range brands. The lifespan is mainly limited by the outdoor unit's exposure to humidity and heat — for landed houses where the outdoor unit is in direct afternoon sun, we recommend 6-monthly chemical wash to extend compressor life. For condo installations where the outdoor is in a covered service yard, 12-monthly intervals are fine." },
-        { q: "What is the most common Gree aircond problem you see?", a: "On older Gree R22 units (pre-2015), the most common issue is drain pipe blockage due to algae buildup in the drain pan — a chemical wash that includes drain pan removal fixes this. On newer Gree R32 inverter units, we see occasional indoor fan motor noise after 5–7 years — typically a bearing replacement (RM 90–150 part) rather than full motor replacement. For Gree Multi+ multi-split systems, the most common service call is EEV (electronic expansion valve) replacement on individual indoor units (RM 200–320 per EEV)." },,
+        { q: "What is the most common Gree aircond problem you see?", a: "On older Gree R22 units (pre-2015), the most common issue is drain pipe blockage due to algae buildup in the drain pan — a chemical wash that includes drain pan removal fixes this. On newer Gree R32 inverter units, we see occasional indoor fan motor noise after 5–7 years — typically a bearing replacement (RM 90–150 part) rather than full motor replacement. For Gree Multi+ multi-split systems, the most common service call is EEV (electronic expansion valve) replacement on individual indoor units (RM 200–320 per EEV)." },
         { q: "How long does a Gree aircond service take?", a: "A standard Gree wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Gree repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Gree units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Gree?", a: "KL Renovator's local Gree team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4612,7 +4612,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Gree di KL?", a: "Cuci kimia Gree dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Adakah Gree jenama aircond yang baik di Malaysia?", a: "Gree adalah pengeluar aircond terbesar di dunia mengikut volum (sejak 2005) dan dijual secara meluas di Malaysia melalui perkongsian OEM dengan beberapa jenama lain. Barisan inverter R32 semasa boleh dipercayai untuk kegunaan kediaman." },
         { q: "Apakah refrigeran yang Gree gunakan?", a: "Semua dinding Gree kediaman semasa yang dijual di Malaysia dari 2020 ke atas menggunakan refrigeran R32. Unit Gree lama menggunakan R22 (sebelum 2015) dan R410A (2015–2019)." },
-        { q: "Berapa lama aircond Gree biasanya tahan di Malaysia?", a: "Unit aircond Gree di Malaysia dengan servis berkala biasanya tahan 10–14 tahun, serupa dengan jenama jarak pertengahan lain." },,
+        { q: "Berapa lama aircond Gree biasanya tahan di Malaysia?", a: "Unit aircond Gree di Malaysia dengan servis berkala biasanya tahan 10–14 tahun, serupa dengan jenama jarak pertengahan lain." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Gree?", a: "Cuci kimia dinding standard untuk Gree mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Gree?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Gree bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Gree?", a: "Pasukan tempatan KL Renovator di Gree dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4622,7 +4622,7 @@ export const siteConfig = {
         { q: "吉隆坡格力冷气服务费用是多少？", a: "格力化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "格力是马来西亚好的冷气品牌吗？", a: "格力按销量计是全球最大的冷气制造商（自 2005 年起），并通过与多个其他品牌的 OEM 合作在马来西亚广泛销售。目前的 R32 变频产品线对于住宅使用是可靠的，自 2018 年以来制造质量已显著提高。" },
         { q: "格力使用什么制冷剂？", a: "所有 2020 年以后在马来西亚销售的当前格力住宅壁挂机均使用 R32 制冷剂。较旧的格力机型使用 R22（2015 年之前）和 R410A（2015–2019 年）。" },
-        { q: "格力冷气在马来西亚通常能使用多久？", a: "在马来西亚定期保养的格力冷气通常可以使用 10–14 年，与其他中端品牌相似。使用寿命主要受限于室外机暴露于湿气和热量——对于室外机处于下午直晒的排屋，我们建议每 6 个月进行一次化学清洗以延长压缩机寿命。" },,
+        { q: "格力冷气在马来西亚通常能使用多久？", a: "在马来西亚定期保养的格力冷气通常可以使用 10–14 年，与其他中端品牌相似。使用寿命主要受限于室外机暴露于湿气和热量——对于室外机处于下午直晒的排屋，我们建议每 6 个月进行一次化学清洗以延长压缩机寿命。" },
         { q: "Gree 冷气机保养需要多长时间？", a: "标准 Gree 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Gree 时使用原装零件吗？", a: "是的。我们为所有 Gree 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Gree 最可靠的冷气技术员？", a: "KL Renovator 的 Gree 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4675,7 +4675,7 @@ export const siteConfig = {
         { q: "What is the Hisense Golden Fin anti-corrosion coating?", a: "Golden Fin is Hisense's anti-corrosion coating applied to the outdoor unit's condenser coil and indoor unit's evaporator coil. The coating protects the aluminium fins from salt air, humidity, and industrial pollution that cause corrosion over time. This is especially valuable for coastal areas like Klang, Port Klang, and Penang. With Golden Fin coating, Hisense outdoor coils typically last 12–15 years before showing significant corrosion, versus 7–10 years for uncoated coils. The coating itself is not serviceable but is durable enough not to be affected by chemical wash using pH-neutral solutions." },
         { q: "Is Hisense a good aircond brand for Malaysian homes?", a: "Yes — Hisense has become a popular mid-range choice in Malaysia since 2018, especially in newly launched condos and landed houses. The build quality is solid for the price, and the Golden Fin coating is a genuine differentiator for outdoor durability. The compressor (Hisense's own design) is reliable for normal residential use. Main service consideration: the ConnectLife Wi-Fi module can occasionally lose pairing after a power surge — we reset the module and re-pair during service if needed (no charge, included in standard service)." },
         { q: "How long does a Hisense aircond last in Malaysia?", a: "Hisense aircond units in Malaysia with regular servicing typically last 10–13 years, comparable to other mid-range brands. The Golden Fin coating helps extend outdoor coil life. For landed houses where the outdoor unit is exposed to afternoon sun, we recommend 6-monthly chemical wash to maintain cooling performance. For condo installations where the outdoor is in a covered service yard, 12-monthly intervals are sufficient." },
-        { q: "Can the Hisense ConnectLife Wi-Fi module be replaced?", a: "Yes — the Hisense ConnectLife Wi-Fi module can be replaced as a standalone part (RM 160–250 including installation). The module is a small USB-style stick that plugs into the indoor PCB. Before recommending a replacement, we always try a power cycle reset (turn off the MCB for 60 seconds) and re-pair the unit with the ConnectLife app. About 70% of Wi-Fi issues are resolved by a reset rather than a hardware replacement." },,
+        { q: "Can the Hisense ConnectLife Wi-Fi module be replaced?", a: "Yes — the Hisense ConnectLife Wi-Fi module can be replaced as a standalone part (RM 160–250 including installation). The module is a small USB-style stick that plugs into the indoor PCB. Before recommending a replacement, we always try a power cycle reset (turn off the MCB for 60 seconds) and re-pair the unit with the ConnectLife app. About 70% of Wi-Fi issues are resolved by a reset rather than a hardware replacement." },
         { q: "How long does a Hisense aircond service take?", a: "A standard Hisense wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Hisense repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Hisense units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Hisense?", a: "KL Renovator's local Hisense team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4685,7 +4685,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Hisense di KL?", a: "Cuci kimia Hisense dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah salutan anti-karat Golden Fin Hisense?", a: "Golden Fin adalah salutan anti-karat Hisense yang digunakan pada gegelung kondenser unit luar dan gegelung evaporator unit dalam. Salutan melindungi sirip aluminium daripada udara masin, kelembapan, dan pencemaran industri yang menyebabkan kakisan dari semasa ke semasa." },
         { q: "Adakah Hisense jenama aircond yang baik untuk rumah di Malaysia?", a: "Ya — Hisense telah menjadi pilihan jarak pertengahan popular di Malaysia sejak 2018, terutamanya di kondominium dan rumah teres yang baru dilancarkan. Kualiti pembinaan kukuh untuk harganya, dan salutan Golden Fin adalah pembezaan tulen untuk ketahanan luar." },
-        { q: "Berapa lama aircond Hisense tahan di Malaysia?", a: "Unit aircond Hisense di Malaysia dengan servis berkala biasanya tahan 10–13 tahun, setanding dengan jenama jarak pertengahan lain. Salutan Golden Fin membantu memanjangkan hayat gegelung luar." },,
+        { q: "Berapa lama aircond Hisense tahan di Malaysia?", a: "Unit aircond Hisense di Malaysia dengan servis berkala biasanya tahan 10–13 tahun, setanding dengan jenama jarak pertengahan lain. Salutan Golden Fin membantu memanjangkan hayat gegelung luar." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Hisense?", a: "Cuci kimia dinding standard untuk Hisense mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Hisense?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Hisense bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Hisense?", a: "Pasukan tempatan KL Renovator di Hisense dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4694,7 +4694,7 @@ export const siteConfig = {
       faqsZH: [
         { q: "吉隆坡海信冷气服务费用是多少？", a: "海信化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "什么是海信 Golden Fin 防腐蚀涂层？", a: "Golden Fin 是海信应用于室外机冷凝器盘管和室内机蒸发器盘管的防腐蚀涂层。该涂层可保护铝制翅片免受盐雾、潮湿和工业污染造成的腐蚀。对于巴生、巴生港和槟城等沿海地区尤为宝贵。有了 Golden Fin 涂层，海信室外盘管通常可以使用 12–15 年才出现明显腐蚀，而未涂层的盘管为 7–10 年。涂层本身不可维修，但足够耐用，不受使用 pH 中性溶液的化学清洗影响。" },
-        { q: "海信冷气适合马来西亚家庭使用吗？", a: "是的——海信自 2018 年以来已成为马来西亚受欢迎的中端选择，尤其是在新推出的公寓和排屋中。品质对得起价格，Golden Fin 涂层是户外耐用性的真正差异化卖点。压缩机（海信自主设计）对于普通住宅使用是可靠的。主要保养考量：ConnectLife Wi-Fi 模块偶尔会在电涌后失去配对——如果需要，我们会在保养期间重置模块并重新配对（免费，包含在标准服务中）。" },,
+        { q: "海信冷气适合马来西亚家庭使用吗？", a: "是的——海信自 2018 年以来已成为马来西亚受欢迎的中端选择，尤其是在新推出的公寓和排屋中。品质对得起价格，Golden Fin 涂层是户外耐用性的真正差异化卖点。压缩机（海信自主设计）对于普通住宅使用是可靠的。主要保养考量：ConnectLife Wi-Fi 模块偶尔会在电涌后失去配对——如果需要，我们会在保养期间重置模块并重新配对（免费，包含在标准服务中）。" },
         { q: "Hisense 冷气机保养需要多长时间？", a: "标准 Hisense 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Hisense 时使用原装零件吗？", a: "是的。我们为所有 Hisense 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Hisense 最可靠的冷气技术员？", a: "KL Renovator 的 Hisense 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4747,7 +4747,7 @@ export const siteConfig = {
         { q: "What is the Aux C-Series and M-Series difference?", a: "The Aux C-Series is the standard residential line, available in 1.0HP, 1.5HP, 2.0HP and 2.5HP capacities, with R32 inverter compressor and 5-star energy rating. The M-Series is the premium residential line with a larger evaporator coil, higher CFM airflow, and additional features like turbo cooling and self-cleaning. Both series use the same Golden Fin anti-corrosion coating on the outdoor coil. For typical Malaysian bedroom and living room use, the C-Series is sufficient. For larger living rooms or shop use, the M-Series provides better cooling distribution." },
         { q: "Is Aux a reliable aircond brand in Malaysia?", a: "Aux is one of China's largest aircond manufacturers (founded 1986) and has been selling in Malaysia since 2015. The current R32 inverter line is reliable for residential use, and Aux is also an OEM manufacturer for several other Malaysian brands. The build quality is solid for the price, and the Golden Fin anti-corrosion coating is a genuine benefit for outdoor durability. The main service consideration is that Aux's Malaysian dealer network is smaller than Daikin or Panasonic, so some Aux-specific parts take 5–7 working days to source — we maintain stock of common Aux parts to minimise this delay." },
         { q: "How much electricity does an Aux aircond use per month?", a: "An Aux 1.5HP C-Series R32 inverter unit running 8 hours daily in Malaysian climate (set to 24°C) typically uses 500–700 kWh per month, which translates to roughly RM 150–220 on the TNB residential tariff. Compare this to a non-inverter 1.5HP unit (older Aux or other brand) which uses 800–1,100 kWh for the same usage. The R32 inverter premium is recovered in 2–3 years of normal use through electricity savings." },
-        { q: "Can Aux aircond be installed in condos with strict management rules?", a: "Yes — Aux units are commonly approved by Malaysian condo managements because they meet the standard dimensions and refrigerant requirements. The installation process is identical to other brands (bracket mounting, copper piping, vacuum, gas check). We handle the management approval form filling (with your unit's specifications) and coordinate with the management's appointed installer if required." },,
+        { q: "Can Aux aircond be installed in condos with strict management rules?", a: "Yes — Aux units are commonly approved by Malaysian condo managements because they meet the standard dimensions and refrigerant requirements. The installation process is identical to other brands (bracket mounting, copper piping, vacuum, gas check). We handle the management approval form filling (with your unit's specifications) and coordinate with the management's appointed installer if required." },
         { q: "How long does a Aux aircond service take?", a: "A standard Aux wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Aux repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Aux units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Aux?", a: "KL Renovator's local Aux team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4757,7 +4757,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Aux di KL?", a: "Cuci kimia Aux dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah perbezaan antara Aux C-Series dan M-Series?", a: "Aux C-Series adalah barisan kediaman standard, tersedia dalam kapasiti 1.0HP, 1.5HP, 2.0HP dan 2.5HP, dengan kompresor inverter R32 dan penarafan tenaga 5-bintang. M-Series adalah barisan kediaman premium dengan gegelung evaporator lebih besar, aliran udara CFM lebih tinggi, dan ciri tambahan seperti penyejukan turbo dan pembersihan diri." },
         { q: "Adakah Aux jenama aircond yang boleh dipercayai di Malaysia?", a: "Aux adalah salah satu pengeluar aircond terbesar di China (ditubuhkan 1986) dan telah dijual di Malaysia sejak 2015. Barisan inverter R32 semasa boleh dipercayai untuk kegunaan kediaman." },
-        { q: "Berapa elektrik yang digunakan aircond Aux sebulan?", a: "Unit Aux 1.5HP C-Series R32 inverter yang berjalan 8 jam sehari dalam iklim Malaysia (ditetapkan pada 24°C) biasanya menggunakan 500–700 kWh sebulan, yang bermaksud kira-kira RM 150–220 pada tarif kediaman TNB." },,
+        { q: "Berapa elektrik yang digunakan aircond Aux sebulan?", a: "Unit Aux 1.5HP C-Series R32 inverter yang berjalan 8 jam sehari dalam iklim Malaysia (ditetapkan pada 24°C) biasanya menggunakan 500–700 kWh sebulan, yang bermaksud kira-kira RM 150–220 pada tarif kediaman TNB." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Aux?", a: "Cuci kimia dinding standard untuk Aux mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Aux?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Aux bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Aux?", a: "Pasukan tempatan KL Renovator di Aux dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4767,7 +4767,7 @@ export const siteConfig = {
         { q: "吉隆坡奥克斯冷气服务费用是多少？", a: "奥克斯化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "奥克斯 C 系列和 M 系列有什么区别？", a: "奥克斯 C 系列是标准住宅产品线，提供 1.0HP、1.5HP、2.0HP 和 2.5HP 容量，采用 R32 变频压缩机和 5 星能效。M 系列是高端住宅产品线，具有更大的蒸发器盘管、更高的 CFM 风量以及额外的功能，如极速制冷和自清洁。两个系列在室外盘管上均使用相同的 Golden Fin 防腐蚀涂层。" },
         { q: "奥克斯是马来西亚可靠的冷气品牌吗？", a: "奥克斯是中国最大的冷气制造商之一（成立于 1986 年），自 2015 年起在马来西亚销售。目前的 R32 变频产品线对于住宅使用是可靠的，奥克斯也是几个其他马来西亚品牌的 OEM 制造商。品质对得起价格，Golden Fin 防腐蚀涂层对户外耐用性是真正的优势。" },
-        { q: "奥克斯冷气每月使用多少电？", a: "在马来西亚气候下每天运行 8 小时的奥克斯 1.5HP C 系列 R32 变频机（设定为 24°C）通常每月使用 500–700 kWh，相当于 TNB 居民电价约 RM 150–220。相比之下，同等使用的非变频 1.5HP 机器（旧款奥克斯或其他品牌）使用 800–1,100 kWh。" },,
+        { q: "奥克斯冷气每月使用多少电？", a: "在马来西亚气候下每天运行 8 小时的奥克斯 1.5HP C 系列 R32 变频机（设定为 24°C）通常每月使用 500–700 kWh，相当于 TNB 居民电价约 RM 150–220。相比之下，同等使用的非变频 1.5HP 机器（旧款奥克斯或其他品牌）使用 800–1,100 kWh。" },
         { q: "Aux 冷气机保养需要多长时间？", a: "标准 Aux 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Aux 时使用原装零件吗？", a: "是的。我们为所有 Aux 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Aux 最可靠的冷气技术员？", a: "KL Renovator 的 Aux 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4820,7 +4820,7 @@ export const siteConfig = {
         { q: "What is the TCL FreshIN 3.0 air purification system?", a: "FreshIN 3.0 is TCL's flagship air purification feature that combines a TVOC (Total Volatile Organic Compounds) air-quality sensor with a HEPA-grade filter and an active ion generator. The system automatically adjusts fan speed based on detected air quality. In Malaysian homes, FreshIN 3.0 makes a noticeable difference in rooms near the kitchen (cooking fumes) and during haze episodes. The HEPA filter is a replaceable part (RM 80–120) that should be changed every 12 months. The TVOC sensor is reliable and rarely fails." },
         { q: "Is TCL a good aircond brand in Malaysia?", a: "TCL is a major global electronics brand (also well-known for TVs) and has been selling aircond in Malaysia since 2017. The current R32 inverter line is reliable for residential use, and TCL is one of the most competitively priced quality brands in Malaysia. The build quality has improved significantly since 2020, and TCL now manufactures its own compressors (TCL-branded), which is a positive for parts availability. The main service consideration is that TCL-specific PCBs can occasionally take 5–7 working days to source for older models (pre-2020)." },
         { q: "How long does a TCL aircond last in Malaysia?", a: "TCL aircond units in Malaysia with regular servicing typically last 10–13 years, similar to other mid-range brands. The Golden Fin coating on the outdoor coil helps extend coil life in coastal or industrial areas. For typical Malaysian home use, 6-monthly chemical wash intervals are recommended for the first 3 years, then yearly intervals thereafter. After 10 years, budget for a possible compressor replacement (RM 700–1,100) if the unit has been well-maintained and you're getting 15+ years out of it." },
-        { q: "Can the TCL FreshIN 3.0 filter be cleaned instead of replaced?", a: "The HEPA-grade filter in TCL FreshIN 3.0 is technically washable but we do not recommend washing it because: (1) tap water can damage the electrostatic charge that gives HEPA filters their efficiency, and (2) the filter is not designed to be fully dried before reinstallation — moisture trapped inside the indoor unit causes mould growth. We recommend replacing the filter annually (RM 80–120) and not attempting to clean it." },,
+        { q: "Can the TCL FreshIN 3.0 filter be cleaned instead of replaced?", a: "The HEPA-grade filter in TCL FreshIN 3.0 is technically washable but we do not recommend washing it because: (1) tap water can damage the electrostatic charge that gives HEPA filters their efficiency, and (2) the filter is not designed to be fully dried before reinstallation — moisture trapped inside the indoor unit causes mould growth. We recommend replacing the filter annually (RM 80–120) and not attempting to clean it." },
         { q: "How long does a TCL aircond service take?", a: "A standard TCL wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for TCL repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all TCL units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in TCL?", a: "KL Renovator's local TCL team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4830,7 +4830,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond TCL di KL?", a: "Cuci kimia TCL dari RM 120, overhaul kimia dari RM 220, tambah gas R32 dari RM 180, servis asas dari RM 99." },
         { q: "Apakah sistem pemurnian udara TCL FreshIN 3.0?", a: "FreshIN 3.0 adalah ciri pemurnian udara utama TCL yang menggabungkan sensor kualiti udara TVOC (Sebatian Organik Meruap Total) dengan penapis gred HEPA dan penjana ion aktif. Sistem secara automatik melaraskan kelajuan kipas berdasarkan kualiti udara yang dikesan." },
         { q: "Adakah TCL jenama aircond yang baik di Malaysia?", a: "TCL adalah jenama elektronik global utama (juga terkenal untuk TV) dan telah menjual aircond di Malaysia sejak 2017. Barisan inverter R32 semasa boleh dipercayai untuk kegunaan kediaman." },
-        { q: "Berapa lama aircond TCL tahan di Malaysia?", a: "Unit aircond TCL di Malaysia dengan servis berkala biasanya tahan 10–13 tahun, serupa dengan jenama jarak pertengahan lain. Salutan Golden Fin pada gegelung luar membantu memanjangkan hayat gegelung di kawasan pesisir atau perindustrian." },,
+        { q: "Berapa lama aircond TCL tahan di Malaysia?", a: "Unit aircond TCL di Malaysia dengan servis berkala biasanya tahan 10–13 tahun, serupa dengan jenama jarak pertengahan lain. Salutan Golden Fin pada gegelung luar membantu memanjangkan hayat gegelung di kawasan pesisir atau perindustrian." },
         { q: "Berapa lama masa yang diambil untuk servis aircond TCL?", a: "Cuci kimia dinding standard untuk TCL mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan TCL?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit TCL bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di TCL?", a: "Pasukan tempatan KL Renovator di TCL dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4840,7 +4840,7 @@ export const siteConfig = {
         { q: "吉隆坡TCL冷气服务费用是多少？", a: "TCL化学清洗从RM 120起，化学大修从RM 220起，R32充气从RM 180起，基本保养从RM 99起。" },
         { q: "什么是 TCL FreshIN 3.0 空气净化系统？", a: "FreshIN 3.0 是 TCL 的旗舰空气净化功能，结合了 TVOC（总挥发性有机化合物）空气质量传感器、HEPA 级过滤器和主动离子发生器。系统根据检测到的空气质量自动调节风速。" },
         { q: "TCL 是马来西亚好的冷气品牌吗？", a: "TCL 是主要的全球电子品牌（也以电视闻名），自 2017 年起在马来西亚销售冷气。目前的 R32 变频产品线对于住宅使用是可靠的，TCL 是马来西亚性价比最高的质量品牌之一。品质自 2020 年以来显著提升，TCL 现在自主生产压缩机（TCL 品牌），这对零件供应是积极的。" },
-        { q: "TCL 冷气在马来西亚可以使用多久？", a: "在马来西亚定期保养的 TCL 冷气通常可以使用 10–13 年，与其他中端品牌相似。室外盘管上的 Golden Fin 涂层有助于延长沿海或工业区的盘管寿命。" },,
+        { q: "TCL 冷气在马来西亚可以使用多久？", a: "在马来西亚定期保养的 TCL 冷气通常可以使用 10–13 年，与其他中端品牌相似。室外盘管上的 Golden Fin 涂层有助于延长沿海或工业区的盘管寿命。" },
         { q: "TCL 冷气机保养需要多长时间？", a: "标准 TCL 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 TCL 时使用原装零件吗？", a: "是的。我们为所有 TCL 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 TCL 最可靠的冷气技术员？", a: "KL Renovator 的 TCL 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4893,7 +4893,7 @@ export const siteConfig = {
         { q: "What is the relationship between National and Panasonic aircond?", a: "National is the original brand name of what became Panasonic. The company was renamed to Panasonic globally in 2008, but the National brand name is still used in some Asian markets and on older units in Malaysia. Many National units from 1990–2008 are mechanically and electrically identical to equivalent Panasonic models of the same era. This means that Panasonic-compatible parts (capacitors, fan motors, sensors, even some PCBs) work in National units, which is fortunate because National-branded parts are now discontinued." },
         { q: "Is it worth repairing a National aircond that is 15+ years old?", a: "For National units over 15 years old, the decision between repair and replace depends on the specific fault: (1) Capacitor, contactor, drain pipe, drain pan, or sensor faults — definitely worth repairing (RM 50–300 total). (2) Fan motor bearing or full motor failure — worth repairing (RM 200–450 total). (3) Compressor failure — depends on the unit's size: 1HP/1.5HP units can be replaced for RM 700–1,000 which is borderline; 2HP+ units are usually better to replace. (4) PCB failure — depends on availability of Panasonic-compatible PCB; we assess this on a case-by-case basis. We will always give you both options and let you decide." },
         { q: "What refrigerant gas does my old National aircond use?", a: "All National wall split units sold in Malaysia before 2010 use R22 refrigerant. R22 has been phased out globally due to ozone-depletion concerns and is increasingly expensive (currently RM 100–150 per pound). For older National units, we can still top up R22 but we always discuss the long-term cost — if your National unit needs R22 top-up more than once every 2 years, the underlying leak should be located and repaired, or the unit replaced. We carry R22 in our service van for older unit servicing." },
-        { q: "Can KL Renovator install a new aircond in place of an old National one?", a: "Yes — we regularly replace old National units with new R32 inverter models from Daikin, Panasonic, Mitsubishi, or any other brand. The standard replacement installation (from RM 199) includes removal of the old National unit, bracket adjustment for the new unit (if needed), copper pipe replacement, vacuum, gas pressure check and commissioning. We dispose of the old National unit properly. Many customers choose to upgrade to a new R32 inverter unit because the electricity savings typically pay back the replacement cost in 3–4 years." },,
+        { q: "Can KL Renovator install a new aircond in place of an old National one?", a: "Yes — we regularly replace old National units with new R32 inverter models from Daikin, Panasonic, Mitsubishi, or any other brand. The standard replacement installation (from RM 199) includes removal of the old National unit, bracket adjustment for the new unit (if needed), copper pipe replacement, vacuum, gas pressure check and commissioning. We dispose of the old National unit properly. Many customers choose to upgrade to a new R32 inverter unit because the electricity savings typically pay back the replacement cost in 3–4 years." },
         { q: "How long does a National aircond service take?", a: "A standard National wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for National repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all National units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in National?", a: "KL Renovator's local National team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4903,7 +4903,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond National di KL?", a: "Servis asas National dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas R22 dari RM 120." },
         { q: "Apakah hubungan antara aircond National dan Panasonic?", a: "National adalah nama jenama asal apa yang menjadi Panasonic. Syarikat itu dinamakan semula kepada Panasonic secara global pada 2008, tetapi nama jenama National masih digunakan di beberapa pasaran Asia dan pada unit lama di Malaysia. Banyak unit National dari 1990–2008 adalah serupa secara mekanikal dan elektrik dengan model Panasonic setara pada era yang sama." },
         { q: "Adakah berbaloi untuk membaiki aircond National yang berumur 15+ tahun?", a: "Untuk unit National yang berumur lebih 15 tahun, keputusan antara pembaikan dan penggantian bergantung pada kerosakan khusus: (1) Kapasitor, kontaktor, paip longkang, dulang longkang, atau kerosakan sensor — pasti berbaloi untuk dibaiki (RM 50–300 jumlah). (2) Kegagalan galas motor kipas atau motor penuh — berbaloi untuk dibaiki (RM 200–450 jumlah). (3) Kegagalan kompresor — bergantung pada saiz unit." },
-        { q: "Apakah gas refrigeran yang aircond National lama saya gunakan?", a: "Semua unit dinding National yang dijual di Malaysia sebelum 2010 menggunakan refrigeran R22. R22 telah dihapuskan secara global disebabkan kebimbangan penipisan ozon dan semakin mahal (kini RM 100–150 per paun)." },,
+        { q: "Apakah gas refrigeran yang aircond National lama saya gunakan?", a: "Semua unit dinding National yang dijual di Malaysia sebelum 2010 menggunakan refrigeran R22. R22 telah dihapuskan secara global disebabkan kebimbangan penipisan ozon dan semakin mahal (kini RM 100–150 per paun)." },
         { q: "Berapa lama masa yang diambil untuk servis aircond National?", a: "Cuci kimia dinding standard untuk National mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan National?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit National bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di National?", a: "Pasukan tempatan KL Renovator di National dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4913,7 +4913,7 @@ export const siteConfig = {
         { q: "吉隆坡National冷气服务费用是多少？", a: "National基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，R22充气从RM 120起。" },
         { q: "National 和松下冷气之间有什么关系？", a: "National 是后来成为松下的原始品牌名称。该公司于 2008 年在全球范围内更名为松下，但 National 品牌名称仍用于一些亚洲市场以及马来西亚的旧机器上。1990–2008 年的许多 National 机器在机械和电气上与同时代的相应松下机型完全相同。" },
         { q: "维修 15 年以上的 National 冷气值得吗？", a: "对于使用超过 15 年的 National 机型，维修和更换之间的决定取决于具体故障：(1) 电容器、接触器、排水管、接水盘或传感器故障——绝对值得维修（总计 RM 50–300）。(2) 风扇电机轴承或整个电机故障——值得维修（总计 RM 200–450）。(3) 压缩机故障——取决于机器尺寸。" },
-        { q: "我旧的 National 冷气使用什么制冷剂气体？", a: "2010 年之前在马来西亚销售的所有 National 壁挂机均使用 R22 制冷剂。R22 已因臭氧消耗问题而在全球逐步淘汰，并且越来越昂贵（目前每磅 RM 100–150）。" },,
+        { q: "我旧的 National 冷气使用什么制冷剂气体？", a: "2010 年之前在马来西亚销售的所有 National 壁挂机均使用 R22 制冷剂。R22 已因臭氧消耗问题而在全球逐步淘汰，并且越来越昂贵（目前每磅 RM 100–150）。" },
         { q: "National 冷气机保养需要多长时间？", a: "标准 National 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 National 时使用原装零件吗？", a: "是的。我们为所有 National 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 National 最可靠的冷气技术员？", a: "KL Renovator 的 National 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -4966,7 +4966,7 @@ export const siteConfig = {
         { q: "Is Isonic a good budget aircond brand for Malaysian homes?", a: "Isonic is positioned as a value/entry-level brand in Malaysia, popular for rental properties, small shops, and budget-conscious homeowners. The current R32 inverter line is reliable for typical Malaysian home use, and the price is 20–30% below mid-range brands. The trade-off is that Isonic compressors are sourced from OEM manufacturers (not Isonic's own factory), and some Isonic-specific parts (especially older PCBs) can take 7–10 working days to source. For new installations, the value proposition is strong. For older units needing parts, the cost-benefit of repair vs replace should be discussed." },
         { q: "What refrigerant does Isonic use?", a: "All current Isonic wall split units sold in Malaysia from 2020 onwards use R32 refrigerant. Older Isonic units (2015–2019) used R410A, and pre-2015 units used R22. For older Isonic units, we can still top up R22 and R410A from our service van, but the long-term recommendation is usually to replace R22 units because the refrigerant is increasingly expensive. KL Renovator confirms the gas type from the nameplate before any work — we never mix refrigerants." },
         { q: "How long does an Isonic aircond last in Malaysia?", a: "Isonic aircond units in Malaysia with regular servicing typically last 8–12 years, slightly less than premium brands. The shorter lifespan is mainly due to the OEM compressor (not designed specifically for Isonic's operating profile). For Isonic units over 10 years old with major component failures (compressor, PCB), we typically recommend replacement with a new R32 inverter unit from RM 199 (labour). For typical servicing and repair work on Isonic units, KL Renovator provides the same 1-month workmanship warranty as for premium brands." },
-        { q: "Can I buy a new Isonic aircond in Malaysia?", a: "Isonic wall split units are still sold in Malaysia through major e-commerce platforms and selected electrical retailers. Prices for new Isonic 1.0HP–2.5HP R32 inverter units typically range from RM 1,200–2,800 (unit only, not including installation). KL Renovator can install any new Isonic unit you purchase, with our standard installation package (from RM 199) including bracket, copper pipe up to 7ft, wiring, vacuum and gas check." },,
+        { q: "Can I buy a new Isonic aircond in Malaysia?", a: "Isonic wall split units are still sold in Malaysia through major e-commerce platforms and selected electrical retailers. Prices for new Isonic 1.0HP–2.5HP R32 inverter units typically range from RM 1,200–2,800 (unit only, not including installation). KL Renovator can install any new Isonic unit you purchase, with our standard installation package (from RM 199) including bracket, copper pipe up to 7ft, wiring, vacuum and gas check." },
         { q: "How long does a Isonic aircond service take?", a: "A standard Isonic wall-mounted chemical wash takes 45-60 minutes. Ceiling cassette units or heavily neglected systems may require up to 90 minutes for a thorough deep clean." },
         { q: "Does KL Renovator use original parts for Isonic repairs?", a: "Yes. We use genuine or high-quality OEM-equivalent components (capacitors, sensors, PCB boards) for all Isonic units to ensure compatibility and system longevity." },
         { q: "Who is the most reliable aircond technician in Isonic?", a: "KL Renovator's local Isonic team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -4976,7 +4976,7 @@ export const siteConfig = {
         { q: "Berapa harga servis aircond Isonic di KL?", a: "Servis asas Isonic dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120." },
         { q: "Adakah Isonic jenama aircond bajet yang baik untuk rumah di Malaysia?", a: "Isonic diposisikan sebagai jenama nilai/tingkat permulaan di Malaysia, popular untuk hartanah sewa, kedai kecil, dan pemilik rumah yang mementingkan bajet. Barisan inverter R32 semasa boleh dipercayai untuk kegunaan rumah biasa Malaysia, dan harganya 20–30% di bawah jenama jarak pertengahan." },
         { q: "Apakah refrigeran yang Isonic gunakan?", a: "Semua unit dinding Isonic semasa yang dijual di Malaysia dari 2020 ke atas menggunakan refrigeran R32. Unit Isonic lama (2015–2019) menggunakan R410A, dan unit sebelum 2015 menggunakan R22." },
-        { q: "Berapa lama aircond Isonic tahan di Malaysia?", a: "Unit aircond Isonic di Malaysia dengan servis berkala biasanya tahan 8–12 tahun, sedikit kurang daripada jenama premium. Jangka hayat yang lebih pendek adalah disebabkan terutamanya oleh kompresor OEM (tidak direka khusus untuk profil operasi Isonic)." },,
+        { q: "Berapa lama aircond Isonic tahan di Malaysia?", a: "Unit aircond Isonic di Malaysia dengan servis berkala biasanya tahan 8–12 tahun, sedikit kurang daripada jenama premium. Jangka hayat yang lebih pendek adalah disebabkan terutamanya oleh kompresor OEM (tidak direka khusus untuk profil operasi Isonic)." },
         { q: "Berapa lama masa yang diambil untuk servis aircond Isonic?", a: "Cuci kimia dinding standard untuk Isonic mengambil masa 45-60 minit. Unit ceiling cassette atau sistem yang sangat kotor mungkin memerlukan sehingga 90 minit untuk pembersihan mendalam." },
         { q: "Adakah KL Renovator menggunakan alat ganti asli untuk pembaikan Isonic?", a: "Ya. Kami menggunakan komponen asli atau berkualiti tinggi setara OEM (kapasitor, penderia, papan PCB) untuk semua unit Isonic bagi memastikan keserasian dan jangka hayat sistem." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Isonic?", a: "Pasukan tempatan KL Renovator di Isonic dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -4986,7 +4986,7 @@ export const siteConfig = {
         { q: "吉隆坡Isonic冷气服务费用是多少？", a: "Isonic基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 120起。" },
         { q: "Isonic 是马来西亚家庭的良好经济型冷气品牌吗？", a: "Isonic 在马来西亚定位于价值/入门级品牌，在出租物业、小型商店和注重预算的房主中很受欢迎。目前的 R32 变频产品线对于典型的马来西亚家庭使用是可靠的，价格比中端品牌低 20–30%。" },
         { q: "Isonic 使用什么制冷剂？", a: "所有 2020 年以后在马来西亚销售的当前 Isonic 壁挂机均使用 R32 制冷剂。较旧的 Isonic 机型（2015–2019 年）使用 R410A，2015 年之前的机型使用 R22。" },
-        { q: "Isonic 冷气在马来西亚可以使用多久？", a: "在马来西亚定期保养的 Isonic 冷气通常可以使用 8–12 年，略低于高端品牌。使用寿命较短主要是由于 OEM 压缩机（不是专为 Isonic 的运行概况设计的）。" },,
+        { q: "Isonic 冷气在马来西亚可以使用多久？", a: "在马来西亚定期保养的 Isonic 冷气通常可以使用 8–12 年，略低于高端品牌。使用寿命较短主要是由于 OEM 压缩机（不是专为 Isonic 的运行概况设计的）。" },
         { q: "Isonic 冷气机保养需要多长时间？", a: "标准 Isonic 挂壁式化学清洗需要 45-60 分钟。天花板卡式机或长期未保养的系统可能需要长达 90 分钟才能完成彻底深洗。" },
         { q: "KL Renovator 在维修 Isonic 时使用原装零件吗？", a: "是的。我们为所有 Isonic 机组使用原装或高质量 OEM 等效零件（电容、传感器、PCB 电板），以确保系统兼容性和耐用性。" },
         { q: "谁是 Isonic 最可靠的冷气技术员？", a: "KL Renovator 的 Isonic 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
