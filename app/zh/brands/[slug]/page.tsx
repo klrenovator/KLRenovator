@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
+import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/brands/[slug] — Mandarin brand page. Mirrors /ms/brands/[slug].
@@ -81,8 +82,15 @@ export default async function BrandPageZH({
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: `${brand.name}冷气服务`,
-    provider: { "@type": "HVACBusiness", "@id": "https://www.klrenovator.com/#business", name: siteConfig.name },
-    areaServed: { "@type": "AdministrativeArea", name: "Kuala Lumpur & Selangor" },
+    provider: {
+      "@type": "HVACBusiness",
+      "@id": "https://www.klrenovator.com/#business",
+      name: siteConfig.name,
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Kuala Lumpur & Selangor",
+    },
     brand: { "@type": "Brand", name: brand.name },
     description: brand.descriptionZH || brand.description,
   };
@@ -91,9 +99,24 @@ export default async function BrandPageZH({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "首页", item: "https://www.klrenovator.com" },
-      { "@type": "ListItem", position: 2, name: "品牌", item: "https://www.klrenovator.com/zh/brands" },
-      { "@type": "ListItem", position: 3, name: `${brand.name}冷气`, item: zhUrl },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "首页",
+        item: "https://www.klrenovator.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "品牌",
+        item: "https://www.klrenovator.com/zh/brands",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${brand.name}冷气`,
+        item: zhUrl,
+      },
     ],
   };
 
@@ -109,25 +132,56 @@ export default async function BrandPageZH({
       }
     : null;
 
-  const otherZhBrands = siteConfig.brandPages.filter((b) => b.slug !== slug).slice(0, 10);
-  const brandAreaComboModule = buildBrandAreaComboModule(brand, siteConfig.areaPages, "zh");
-  const brandProblemSlugsZH = BRAND_PROBLEM_MAP[slug] ?? BRAND_PROBLEM_MAP["_default"];
-  const relatedProblemsZH = siteConfig.problemPages.filter((p) => brandProblemSlugsZH.includes(p.slug));
+  const otherZhBrands = siteConfig.brandPages
+    .filter((b) => b.slug !== slug)
+    .slice(0, 10);
+  const brandAreaComboModule = buildBrandAreaComboModule(
+    brand,
+    siteConfig.areaPages,
+    "zh",
+  );
+  const brandProblemSlugsZH =
+    BRAND_PROBLEM_MAP[slug] ?? BRAND_PROBLEM_MAP["_default"];
+  const relatedProblemsZH = siteConfig.problemPages.filter((p) =>
+    brandProblemSlugsZH.includes(p.slug),
+  );
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {faqSchema && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       )}
 
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
-            <NextLink href="/zh" className="hover:text-sky-600 transition font-medium">首页</NextLink>
+          <nav
+            className="flex items-center gap-1 text-xs text-slate-500"
+            aria-label="Breadcrumb"
+          >
+            <NextLink
+              href="/zh"
+              className="hover:text-sky-600 transition font-medium"
+            >
+              首页
+            </NextLink>
             <FiChevronRight className="h-3 w-3" />
-            <NextLink href="/zh/brands" className="hover:text-sky-600 transition font-medium">品牌</NextLink>
+            <NextLink
+              href="/zh/brands"
+              className="hover:text-sky-600 transition font-medium"
+            >
+              品牌
+            </NextLink>
             <FiChevronRight className="h-3 w-3" />
             <span className="text-slate-900 font-bold">{brand.name} 冷气</span>
           </nav>
@@ -142,11 +196,14 @@ export default async function BrandPageZH({
             </p>
             <h1 className="mt-1">
               <span className={title({ size: "lg" })}>{brand.name} </span>
-              <span className={title({ size: "lg", color: "brand" })}>冷气服务</span>
+              <span className={title({ size: "lg", color: "brand" })}>
+                冷气服务
+              </span>
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-              是的，KL Renovator 在吉隆坡及雪兰莪维修所有 <strong>{brand.name}</strong> 冷气型号。
-              {" "}{brand.descriptionZH || brand.description}
+              是的，KL Renovator 在吉隆坡及雪兰莪维修所有{" "}
+              <strong>{brand.name}</strong> 冷气型号。{" "}
+              {brand.descriptionZH || brand.description}
             </p>
 
             {brand.models?.length > 0 && (
@@ -185,7 +242,10 @@ export default async function BrandPageZH({
               </h2>
               <ul className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200 text-sm">
                 {brand.highlights.map((h: string, i: number) => (
-                  <li key={i} className="bg-white px-4 py-3 flex items-start gap-2">
+                  <li
+                    key={i}
+                    className="bg-white px-4 py-3 flex items-start gap-2"
+                  >
                     <FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" />
                     <span>{h}</span>
                   </li>
@@ -203,31 +263,43 @@ export default async function BrandPageZH({
               <h2 className="text-base font-black text-slate-900 mb-3">
                 {brand.name}变频与定频
               </h2>
-              <p className="text-sm text-slate-700 font-medium leading-relaxed">{brand.inverterNoteZH}</p>
+              <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                {brand.inverterNoteZH}
+              </p>
             </Reveal>
           </div>
         </section>
       )}
 
-      {brand.troubleshootingTipsZH && brand.troubleshootingTipsZH.length > 0 && (
-        <section className="py-10 bg-slate-50 border-t border-slate-100">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <Reveal>
-              <h2 className="text-base font-black text-slate-900 mb-4">
-                {brand.name}故障排除提示
-              </h2>
-              <div className="space-y-3">
-                {brand.troubleshootingTipsZH.map((tip: { issue: string; tip: string }, i: number) => (
-                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
-                    <h3 className="font-black text-sm text-slate-900 mb-1.5">{tip.issue}</h3>
-                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip.tip}</p>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      )}
+      {brand.troubleshootingTipsZH &&
+        brand.troubleshootingTipsZH.length > 0 && (
+          <section className="py-10 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  {brand.name}故障排除提示
+                </h2>
+                <div className="space-y-3">
+                  {brand.troubleshootingTipsZH.map(
+                    (tip: { issue: string; tip: string }, i: number) => (
+                      <div
+                        key={i}
+                        className="bg-white border border-slate-200 rounded-2xl p-4"
+                      >
+                        <h3 className="font-black text-sm text-slate-900 mb-1.5">
+                          {tip.issue}
+                        </h3>
+                        <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                          {tip.tip}
+                        </p>
+                      </div>
+                    ),
+                  )}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        )}
 
       {brand.galleryImages && brand.galleryImages.length > 0 && (
         <section className="py-10 bg-white border-t border-slate-100">
@@ -237,19 +309,27 @@ export default async function BrandPageZH({
                 {brand.name}真实作业照片
               </h2>
               <div className="grid grid-cols-2 gap-3">
-                {brand.galleryImages.map((img: { src: string; alt: string; altZH?: string }, i: number) => (
-                  <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
-                    <NextImage
-                      src={img.src}
-                      alt={img.altZH || img.alt}
-                      fill
-                      sizes="50vw"
-                      className="object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                ))}
+                {brand.galleryImages.map(
+                  (
+                    img: { src: string; alt: string; altZH?: string },
+                    i: number,
+                  ) => (
+                    <div
+                      key={i}
+                      className="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-100"
+                    >
+                      <NextImage
+                        src={img.src}
+                        alt={img.altZH || img.alt}
+                        fill
+                        sizes="50vw"
+                        className="object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ),
+                )}
               </div>
             </Reveal>
           </div>
@@ -269,7 +349,13 @@ export default async function BrandPageZH({
                   我们提供{brand.name}维修服务 — 但并非{brand.name}官方经销商
                 </h2>
                 <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                  KL Renovator是一家独立的HVAC维修服务公司，并非{brand.name}的官方经销商或授权服务中心。我们为{brand.name}机型提供维修、保养和安装服务，使用来自马来西亚可信赖供应商的正品或同等OEM替换零件（电容器、PCB主板、冷媒、排水泵）——绝不使用假冒或未经验证的零件。如果您的{brand.name}机器仍在原厂保修期内，我们会事先告知维修是否可能影响保修，让您自行决定是否改由{brand.name}官方授权中心处理。我们的宗旨是诚实透明的服务——而非推销您不需要的新机器。
+                  KL Renovator是一家独立的HVAC维修服务公司，并非{brand.name}
+                  的官方经销商或授权服务中心。我们为{brand.name}
+                  机型提供维修、保养和安装服务，使用来自马来西亚可信赖供应商的正品或同等OEM替换零件（电容器、PCB主板、冷媒、排水泵）——绝不使用假冒或未经验证的零件。如果您的
+                  {brand.name}
+                  机器仍在原厂保修期内，我们会事先告知维修是否可能影响保修，让您自行决定是否改由
+                  {brand.name}
+                  官方授权中心处理。我们的宗旨是诚实透明的服务——而非推销您不需要的新机器。
                 </p>
               </div>
             </div>
@@ -285,15 +371,19 @@ export default async function BrandPageZH({
                 常见问题 — {brand.name}冷气
               </h2>
               <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-                {brand.faqsZH.map((faq: { q: string; a: string }, i: number) => (
-                  <details key={i} className="group bg-white p-4">
-                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
-                      {faq.q}
-                      <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
-                    </summary>
-                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
-                  </details>
-                ))}
+                {brand.faqsZH.map(
+                  (faq: { q: string; a: string }, i: number) => (
+                    <details key={i} className="group bg-white p-4">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
+                        {faq.q}
+                        <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
+                      </summary>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                        {faq.a}
+                      </p>
+                    </details>
+                  ),
+                )}
               </div>
             </Reveal>
           </div>
@@ -320,7 +410,8 @@ export default async function BrandPageZH({
                 href={brandAreaComboModule.allAreasHref}
                 className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-sky-200 bg-sky-50 px-4 py-2 text-xs font-black uppercase tracking-widest text-sky-700 hover:bg-sky-100 transition"
               >
-                {brandAreaComboModule.allAreasLabel} <FiArrowRight className="h-3 w-3" />
+                {brandAreaComboModule.allAreasLabel}{" "}
+                <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -330,14 +421,21 @@ export default async function BrandPageZH({
                   href={combo.href}
                   className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
                 >
-                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-600">{combo.eyebrow}</p>
+                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-600">
+                    {combo.eyebrow}
+                  </p>
                   <h3 className="mt-2 text-base font-black text-slate-950 group-hover:text-sky-700 transition-colors">
                     {combo.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{combo.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {combo.description}
+                  </p>
                   <div className="mt-4 flex flex-wrap gap-1.5">
                     {combo.tags.map((tag) => (
-                      <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-bold text-slate-600">
+                      <span
+                        key={tag}
+                        className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-bold text-slate-600"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -353,6 +451,91 @@ export default async function BrandPageZH({
       </section>
 
       {/* Common Problems for This Brand — triangular cross-link (Round 10.5) */}
+      {/* ── Technical Specifications Section ───────────────────────────────── */}
+      {(() => {
+        const techSpecs =
+          BRAND_TECH_SPECS[slug] ?? BRAND_TECH_SPECS["_default"];
+        return (
+          <section className="py-12 bg-slate-50 border-t border-slate-200">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-1">
+                  技术规格
+                </p>
+                <h2 className="text-xl font-black text-slate-900 mb-2">
+                  {brand.name} 冷气技术规格
+                </h2>
+                <p className="text-sm text-slate-500 mb-6 max-w-2xl">
+                  {brand.name}冷气机在马来西亚的关键技术细节及维护要求。
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {techSpecs.map((ts, i) => (
+                    <div
+                      key={i}
+                      className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm"
+                    >
+                      <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                        {ts.specification}
+                      </div>
+                      <div className="text-sm font-semibold text-slate-800">
+                        {ts.detail}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* ── Error Code Reference Section ───────────────────────────────── */}
+      {(() => {
+        const errorCodes =
+          BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES["_default"];
+        return (
+          <section className="py-12 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-1">
+                  错误代码指南
+                </p>
+                <h2 className="text-xl font-black text-slate-900 mb-2">
+                  常见 {brand.name} 冷气错误代码
+                </h2>
+                <p className="text-sm text-slate-500 mb-6 max-w-2xl">
+                  {brand.name}{" "}
+                  冷气上的指示灯闪烁？这些是最常见的错误代码及其含义。请WhatsApp
+                  KL Renovator发送代码和型号，以便快速远程诊断。
+                </p>
+                <div className="overflow-hidden border border-slate-200 rounded-2xl">
+                  <div className="grid grid-cols-3 bg-slate-100 px-5 py-3 text-xs font-black uppercase tracking-widest text-slate-500">
+                    <span>错误代码</span>
+                    <span>含义</span>
+                    <span>修复方案</span>
+                  </div>
+                  {errorCodes.map((ec, i) => (
+                    <div
+                      key={ec.code}
+                      className={`grid grid-cols-3 px-5 py-3.5 text-xs border-t border-slate-100 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
+                    >
+                      <span className="font-black text-red-600">{ec.code}</span>
+                      <span className="font-semibold text-slate-700">
+                        {ec.meaning}
+                      </span>
+                      <span className="text-slate-500">{ec.fix}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-400 mt-3">
+                  错误代码未列出？请将您的 {brand.name} 型号及错误发送WhatsApp至
+                  +60182983573 — 我们将为您诊断。
+                </p>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
       {relatedProblemsZH.length > 0 && (
         <section className="py-10 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -373,7 +556,10 @@ export default async function BrandPageZH({
                     {p.nameZH || p.name}
                   </NextLink>
                 ))}
-                <NextLink href="/zh/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+                <NextLink
+                  href="/zh/problems"
+                  className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
+                >
                   所有问题 →
                 </NextLink>
               </div>
