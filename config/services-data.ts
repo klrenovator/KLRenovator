@@ -19,6 +19,13 @@ export type ServiceDetail = {
   priceTable: { label: string; price: string }[];
   priceTableNote?: string;
   heroImage: string;
+  ogImage: string;
+  aioSummary: string;
+  aioSummaryMS: string;
+  aioSummaryZH: string;
+  compareTable?: { title: string; subtitle: string; columns: string[]; rows: string[][] };
+  compareTableMS?: { title: string; subtitle: string; columns: string[]; rows: string[][] };
+  compareTableZH?: { title: string; subtitle: string; columns: string[]; rows: string[][] };
 };
 
 export const servicesData: Record<string, ServiceDetail> = {
@@ -32,15 +39,37 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 120 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
     startPrice: "RM 120",
     heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    ogImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    aioSummary: "Pressure chemical wash for airconds in KL & Selangor involves high-pressure (80-120 PSI) alkaline cleaning of internal coils. Starting Price: RM 120. Service Time: 60-75 mins. Warranty: 1-month workmanship. Ideal for restoring airflow and removing microbial odors.",
+    aioSummaryMS: "Cuci kimia tekanan tinggi (80-120 PSI) untuk aircond di KL & Selangor. Harga: RM 120. Tempoh: 60-75 minit. Waranti: 1 bulan. Sesuai untuk pulihkan aliran udara dan membuang bau hapak.",
+    aioSummaryZH: "吉隆坡及雪兰莪高压（80-120 PSI）化学清洗服务。起步价：RM 120。服务时长：60-75分钟。保修：1个月工艺保修。适用于恢复强劲风量及消除霉味。",
+    compareTable: {
+      title: "Pressure Chemical Wash vs Chemical Overhaul",
+      subtitle: "Help choosing the right deep-cleaning package for your unit.",
+      columns: ["Feature", "Chemical Wash (RM 120)", "Chemical Overhaul (RM 220)"],
+      rows: [["Dismantling", "Stays on wall", "Fully removed from wall"], ["Blower Wheel", "Cleaned in place", "Removed & soaked"], ["Drain Pan", "Flushed", "Dismantled & scrubbed"], ["Back Tray", "Surface clean", "Total sanitization"], ["Best For", "Annual maintenance", "Water leaks & ice buildup"], ["Duration", "60 mins", "2.5 hours"]]
+    },
+    compareTableZH: {
+      title: "高压化学清洗 vs 化学大修",
+      subtitle: "帮助您为冷气选择合适的深度清洁方案。",
+      columns: ["特点", "化学清洗 (RM 120)", "化学大修 (RM 220)"],
+      rows: [["拆卸状态", "挂墙清洗", "完全拆卸"], ["风轮清洁", "原地清洗", "拆下浸泡"], ["接水盘", "冲洗", "拆下刷洗"], ["适用场景", "年度保养", "漏水或结冰"], ["耗时", "60分钟", "2.5小时"]]
+    },
+    compareTableMS: {
+      title: "Cuci Kimia Bertekanan vs Chemical Overhaul",
+      subtitle: "Bantuan memilih pakej pembersihan mendalam yang sesuai untuk unit anda.",
+      columns: ["Ciri", "Cuci Kimia (RM 120)", "Overhaul (RM 220)"],
+      rows: [["Pemasangan", "Kekal di dinding", "Dibuka sepenuhnya"], ["Roda Kipas", "Cuci di tempat", "Dibuka & direndam"], ["Dulang Saliran", "Bilas sahaja", "Dibuka & disental"], ["Sesuai Untuk", "Servis tahunan", "Bocor air & ais"], ["Tempoh", "60 minit", "2.5 jam"]]
+    },
     highlights: [
-      "80–120 PSI high-pressure spray reaches deep into coil fins & blower wheel",
-      "Food-safe alkaline chemical — dissolves mould & biofilm, not just surface dust",
-      "Unit stays mounted — no dismantling, no wall damage, no mess",
-      "Full drain pipe flush included — clears biofilm from the drain before it clogs",
-      "Kills bacteria, dust mites & allergens that cause respiratory irritation",
-      "Cooling output typically restored to within 90–95% of new-unit performance",
-      "Takes 60–75 minutes — you can use the AC immediately after",
-      "Recommended every 12 months (every 6–8 months for ground-floor/near-road)",
+      "Industrial-grade 80–120 PSI high-pressure flushing of the internal coil & blower wheel",
+      "Non-corrosive, food-safe alkaline cleaning agents — safe for families & pets",
+      "Restores volumetric airflow by removing microbial sludge and biofilm buildup",
+      "Full-system sanitization — kills bacteria & mould colonies at the source",
+      "Mess-free execution with heavy-duty waterproof canvas protection for walls & floors",
+      "Significantly reduces TNB electricity consumption by optimizing compressor cycles",
+      "Complete drain line pressure-flush included to prevent future condensate leaks",
+      "Ideal for heavy-use units or homes near high-traffic roads and construction zones",
     ],
     process: [
       { step: "Protect Your Space", desc: "Heavy-duty waterproof drop sheets cover your floor, wall below the unit, and nearby furniture. The chemical is food-safe but we protect everything regardless." },
@@ -72,7 +101,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Is the chemical safe for my family, pets, and furniture?",
         a: "Yes. We use a food-grade alkaline degreaser that is biodegradable and phosphate-free. It does not produce toxic fumes. We cover your floor, wall, and furniture with waterproof drop sheets as an extra precaution. The chemical is rinsed away completely during the high-pressure flush — nothing is left on the coil. The unit is safe to use immediately after we finish.",
-      },
+      },,
+      { q: "Is the chemical wash process safe for the environment?", a: "Yes. KL Renovator uses biodegradable, eco-friendly cleaning agents that effectively break down biological matter without harmful environmental impact or toxic residue." }
     ],
     faqsBM: [
       {
@@ -94,7 +124,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Apakah persediaan yang diperlukan sebelum juruteknik tiba untuk cuci kimia?",
         a: "Persediaan minimum sahaja diperlukan. Pastikan terdapat ruang berjalan yang lapang di bawah unit penghawa dingin dalaman dan alihkan barang berharga atau mudah pecah ke tepi. Juruteknik kami tiba lengkap dengan beg kanvas pelindung kalis air dan alas pelindung tugas berat untuk melindungi dinding, lantai dan perabot sekeliling anda sepenuhnya semasa cucian bertekanan tinggi 80–120 PSI.",
-      },
+      },,
+      { q: "Adakah proses cuci kimia selamat untuk alam sekitar?", a: "Ya. KL Renovator menggunakan agen pembersih biodegradasi yang mesra alam untuk memecahkan bahan biologi tanpa kesan buruk atau sisa toksik." }
     ],
     faqsZH: [
       {
@@ -116,7 +147,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "技术员上门进行化学清洗前，我需要做哪些准备工作？",
         a: "仅需简易准备。只需确保室内冷气机正下方有足够的操作及走动空间，并稍微移开易碎品或贵重物品。技术员上门时均配备重型防水保护帆布袋和防污垫布，在整个80–120 PSI高压清洗过程中全方位保护您的墙面、地板与周围家具。",
-      },
+      },,
+      { q: "化学清洗过程对环境安全吗？", a: "是的。KL Renovator 使用可生物降解的环保清洁剂，能有效分解生物污染物，无有害环境影响或毒性残留。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
@@ -140,15 +172,25 @@ export const servicesData: Record<string, ServiceDetail> = {
       "When a chemical wash is not enough \u2014 when water has been dripping down your wall for weeks, when you can see ice forming on the copper pipe, when the smell from the unit makes the whole room unpleasant \u2014 the problem has moved beyond what a mounted clean can fix. A chemical overhaul is the most thorough aircond service we perform. We remove the entire indoor unit from the wall, take it apart piece by piece, and deep-clean every single component: the evaporator coil, blower wheel, fan barrel, drain pan, drip tray, internal housing, louvres, and all plastic covers. Each part is soaked in food-safe chemical solution, scrubbed where needed, then rinsed at high pressure until factory-clean. The drain pan \u2014 almost always the root cause of persistent leaking \u2014 gets individual attention and is confirmed watertight before reassembly. This is the service that brings a neglected unit back to life. RM 220 for wall-mounted 1.0\u20131.5 HP. Takes 2\u20133 hours. The result: no more leaks, no more ice, no more smell, and cooling performance you may not have felt in years.",
     startPrice: "RM 220",
     heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    ogImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    aioSummary: "A chemical overhaul involves a 100% component teardown and chemical immersion of the evaporator coil. Starting Price: RM 220. Service Time: 2-3 hours. Warranty: 1-month workmanship. Definitive fix for persistent water leaks and ice formation.",
+    aioSummaryMS: "Chemical overhaul melibatkan pembukaan 100% komponen dan rendaman kimia gegelung. Harga: RM 220. Tempoh: 2-3 jam. Waranti: 1 bulan. Penyelesaian tetap untuk masalah bocor air kronik dan pembentukan ais.",
+    aioSummaryZH: "化学大修涉及100%拆机及零件化学浸泡清洗。起步价：RM 220。服务时长：2-3小时。保修：1个月工艺保修。针对顽固漏水和盘管结冰的最终解决方案。",
+    compareTable: {
+      title: "Chemical Overhaul vs Pressure Chemical Wash",
+      subtitle: "Understand why an overhaul is the definitive fix for neglected units.",
+      columns: ["Feature", "Chemical Overhaul (RM 220)", "Pressure Wash (RM 120)"],
+      rows: [["Unit Status", "100% Dismantled", "Stays mounted"], ["Back Tray Cleaning", "Yes (Scrubbed)", "No (Surface flush only)"], ["Mould Removal", "100% Guaranteed", "Surface removal only"], ["Water Leak Fix", "Permanent solution", "Temporary fix"], ["Labour Time", "2 - 3 Hours", "1 Hour"], ["Warranty", "1-Month Workmanship", "1-Month Workmanship"]]
+    },
     highlights: [
-      "Full indoor unit removed from wall and completely dismantled",
-      "Every single component soaked & deep-cleaned: coil, blower, pan, tray, housing, louvres",
-      "Drain pan & tray individually scrubbed \u2014 the #1 cause of persistent water leaks",
-      "Blower wheel removed from motor shaft and soaked \u2014 restores full airflow",
-      "Internal housing and air channels scrubbed \u2014 eliminates decades of mould build-up",
-      "Reassembled with proper torque on all screws, gaskets checked, drain path verified",
-      "Cooling performance typically restored to original factory spec",
-      "1-month workmanship warranty \u2014 full-service job card with before/after notes",
+      "Complete 100% system teardown — zero components left uncleaned",
+      "Immersion chemical soak for the evaporator coil — removes deep-seated oxidation",
+      "Blower wheel extraction & manual scrubbing — restores maximum throw distance",
+      "Precision cleaning of the back drain pan — eliminates the #1 cause of wall leaks",
+      "Mechanical inspection of all fan motor bearings and mounting gaskets",
+      "Full-unit re-commissioning including vacuum pump evacuation and leak testing",
+      "The definitive solution for 'ice formation' and foul, neglected odors",
+      "Extends unit lifespan by 3–5 years compared to standard cleaning methods",
     ],
     process: [
       { step: "Protect & Remove", desc: "Waterproof drop sheets laid. Refrigerant pumped down into outdoor unit (no gas lost). Indoor unit carefully unbolted from wall bracket and brought to a prepared cleaning area on-site." },
@@ -180,7 +222,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Will I lose refrigerant gas during the overhaul?",
         a: "No. Our technician performs a \u2018pump-down\u2019 procedure before removing the indoor unit: the refrigerant is pumped back into the outdoor condenser unit and the service valves are closed, so no gas is lost. The unit is reconnected to the same refrigerant charge after reassembly. If your refrigerant level was already low before the overhaul (which we check during the initial diagnostic), we will inform you and quote a top-up separately. The overhaul itself does not consume or release any refrigerant.",
-      },
+      },,
+      { q: "Does a chemical overhaul include checking for refrigerant leaks?", a: "Yes. Every chemical overhaul includes a mandatory high-pressure nitrogen test or electronic leak sweep after reassembly to ensure the sealed system is 100% airtight." },
+      { q: "Will my aircond be quieter after an overhaul?", a: "Significantly. By removing heavy sludge from the blower wheel and lubricating fan motor mounts, we eliminate the imbalances that cause vibration and high-frequency noise." }
     ],
     faqsBM: [
       {
@@ -202,7 +246,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Adakah saya akan kehilangan gas bahan pendingin semasa overhaul?",
         a: "Tidak. Juruteknik kami melakukan prosedur 'pump-down' sebelum mengeluarkan unit dalaman: bahan pendingin dipam kembali ke dalam unit kondenser luar dan injap servis ditutup, jadi tiada gas hilang. Unit disambungkan semula ke cas bahan pendingin yang sama selepas pemasangan semula. Jika tahap bahan pendingin anda sudah rendah sebelum overhaul, kami akan memaklumkan anda.",
-      },
+      },,
+      { q: "Adakah overhaul kimia termasuk pemeriksaan kebocoran gas?", a: "Ya. Setiap overhaul kimia termasuk ujian tekanan nitrogen atau imbasan kebocoran elektronik selepas pemasangan semula untuk memastikan sistem kedap udara 100%." },
+      { q: "Adakah aircond saya akan menjadi lebih senyap selepas overhaul?", a: "Ya, secara ketara. Dengan membuang kotoran berat dari roda kipas dan melincirkan motor, kami menghapuskan ketidakseimbangan yang menyebabkan getaran dan bunyi bising." }
     ],
     faqsZH: [
       {
@@ -224,7 +270,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "大修过程中会损失制冷剂吗？",
         a: "不会。我们的技术员在拆卸室内机前执行\u2018泵送\u2019程序：制冷剂被泵回室外冷凝器，检修阀关闭，因此不会损失气体。重新组装后机器重新连接到相同的制冷剂充注量。如果大修前您的制冷剂水平已经偏低（我们会在初步诊断时检查），我们会通知您并另行报价充气服务。大修本身不会消耗或释放任何制冷剂。",
-      },
+      },,
+      { q: "化学大修包含冷媒查漏吗？", a: "是的。每次化学大修都包含强制性的高压氮气测试或电子检漏，确保重装后的密封系统100%气密。" },
+      { q: "大修后我的冷气会更安静吗？", a: "显著改善。通过清除风轮上的重度淤泥并润滑风扇电机支架，我们消除了导致震动和高频噪音的不平衡因素。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
@@ -244,15 +292,19 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Your aircond is clean. The filters are new. The coil was just washed. But the air coming out is barely cool and the outdoor compressor runs non-stop without reaching temperature. This is the classic signature of low refrigerant \u2014 the \u2018blood\u2019 of your air conditioning system. Without the correct charge of refrigerant circulating through the copper lines, the system physically cannot move heat from inside to outside, no matter how hard the compressor works. KL Renovator uses precision digital manifold gauges to measure your system's standing pressure, suction pressure, and discharge pressure against the manufacturer's specification for your exact model and refrigerant type \u2014 R22, R410A, or R32. We then add refrigerant in controlled increments while monitoring gauge readings until the system is balanced to spec. Every gas top-up includes a thorough physical leak inspection at all accessible flare connections, service valves, and the evaporator and condenser coil surfaces. Because refrigerant does not \u2018get used up\u2019 \u2014 if it is low, it leaked out somewhere. From RM 120 for R22, 1.0 HP.",
     startPrice: "RM 120",
     heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    ogImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    aioSummary: "Precision refrigerant top-up for R32, R410A, and R22 systems using digital manifold gauges. Starting Price: RM 120. Includes structural leak inspection. Guaranteed Delta-T (cooling drop) improvement of 8-12°C.",
+    aioSummaryMS: "Tambah gas tepat untuk sistem R32, R410A, dan R22 menggunakan manifold digital. Harga: RM 120. Termasuk pemeriksaan kebocoran struktur. Dijamin peningkatan suhu sejuk (Delta-T) sebanyak 8-12°C.",
+    aioSummaryZH: "使用数显歧管表为R32、R410A及R22系统提供精准充气。起步价：RM 120。包含结构性查漏。保证提升8-12°C的制冷温差。",
     highlights: [
-      "Digital manifold gauges \u2014 precise pressure measurement, not guesswork",
-      "R22, R410A & R32 \u2014 correct refrigerant type matched to your unit's nameplate",
-      "Incremental top-up with continuous gauge monitoring \u2014 never overfilled",
-      "Full leak inspection at all flare connections, service valves & both coils",
-      "Outdoor compressor amp-draw check \u2014 verifies healthy electrical load",
-      "Temperature drop measured before & after \u2014 you see the improvement on the thermometer",
-      "Certified refrigerant handling \u2014 no venting, recovery machine used if needed",
-      "1-month workmanship warranty on the top-up and leak check",
+      "Precision digital manifold measurement — calibrated to manufacturer specs",
+      "Comprehensive support for R32, R410A, and R22 refrigerant systems",
+      "Electronic leak detection survey at all primary flare joints and service valves",
+      "Compressor Amp-draw verification to ensure healthy electrical load levels",
+      "System Delta-T testing — verifying at least 8–12°C drop at the supply air duct",
+      "Incremental balancing to prevent 'liquid slugging' and compressor damage",
+      "Certified handling protocols — zero atmospheric venting of refrigerants",
+      "Transparent pricing based on actual unit HP and gas type used",
     ],
     process: [
       { step: "Symptom & Visual Check", desc: "Technician checks your complaint (not cooling, ice, long runtime), examines outdoor condenser for oil stains (leak indicator), checks indoor coil for ice, measures room-to-supply temperature difference with digital thermometer." },
@@ -284,7 +336,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Can I top up the gas myself?",
         a: "No. Refrigerant handling in Malaysia requires certified technicians under the Environmental Quality (Refrigerant Management) Regulations. You need: (a) a manifold gauge set, (b) the correct refrigerant cylinder, (c) a weighing scale, (d) training to read pressures correctly against ambient temperature charts, and (e) an electronic leak detector for safety. Overfilling by even 10\u201315% can cause liquid slugging that destroys the compressor. Using the wrong refrigerant type can cause a chemical reaction that corrodes the system internally. This is not a DIY job \u2014 at RM 120\u2013180 including professional leak check, it is also not expensive.",
-      },
+      },,
+      { q: "How can I tell if a leak is 'slow' or 'fast'?", a: "A slow leak takes 6-12 months to affect cooling; a fast leak results in warm air within days. KL Renovator's electronic sniffers can detect even the smallest micro-leaks in copper flare joints." }
     ],
     faqsBM: [
       {
@@ -306,7 +359,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Bolehkah saya menambah gas sendiri?",
         a: "Tidak. Pengendalian bahan pendingin di Malaysia memerlukan juruteknik bertauliah di bawah Peraturan Pengurusan Bahan Pendingin (Kualiti Alam Sekitar). Anda memerlukan peralatan khusus dan latihan profesional. Pengisian berlebihan walaupun 10\u201315% boleh menyebabkan kerosakan kompresor. Ini bukan kerja DIY.",
-      },
+      },,
+      { q: "Bagaimana saya tahu jika kebocoran itu 'perlahan' atau 'cepat'?", a: "Kebocoran perlahan mengambil masa 6-12 bulan untuk menjejaskan penyejukan; kebocoran cepat mengakibatkan angin panas dalam masa beberapa hari. Pengesan elektronik kami boleh mengesan kebocoran mikro paling kecil." }
     ],
     faqsZH: [
       {
@@ -328,7 +382,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "我可以自己充气吗？",
         a: "不可以。在马来西亚，制冷剂处理根据《环境质量（制冷剂管理）法规》需要认证技术员。充气过量即使10-15%也可能导致压缩机损坏。使用错误类型的制冷剂可能导致系统内部腐蚀的化学反应。这绝非DIY工作\u2014\u2014以RM 120-180的价格（含专业泄漏检查）也并不昂贵。",
-      },
+      },,
+      { q: "如何判断漏气是“慢漏”还是“快漏”？", a: "慢漏通常需要6-12个月才影响制冷；快漏则会在几天内排空冷媒。KL Renovator 的电子检漏仪可以检测到铜管接头中最微小的渗漏。" }
     ],
     priceTable: [
       { label: "R22 Gas · 1.0 HP", price: "RM 120" },
@@ -352,15 +407,25 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Your aircond is making a grinding noise at 2am. The timer light is blinking 5 times and the unit will not start. The MCB trips every time the compressor kicks in. These are not 'cleaning' problems \u2014 they are electrical or mechanical faults that need a trained technician with a multimeter, manifold gauges, and brand-specific error-code knowledge. KL Renovator diagnoses and repairs every common aircond fault: failed capacitors (the #1 cause of 'unit hums but fan does not spin'), seized fan motors, burnt contactors, faulty PCB control boards, broken temperature sensors and thermistors, damaged drain pumps, compressor electrical faults, and refrigerant circuit issues. We carry capacitors, contactors, fan motors, sensors, drain pumps, and universal PCB boards in every van. RM 88 diagnostic fee, waived if the repair is done same visit. 3-month parts warranty on every replacement. Before we touch a single wire, you get a clear price \u2014 and the right to say no with no hard feelings.",
     startPrice: "RM 88",
     heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
+    ogImage: "/hero/aircond-repair-technician-klang-valley.webp",
+    aioSummary: "Diagnostic-led aircond repair for all 20+ brands in Malaysia. Diagnostic Fee: RM 88 (waived if repaired). Warranty: 3-month parts warranty. Same-day repair available for capacitors, fan motors, and PCB boards.",
+    aioSummaryMS: "Pembaikan aircond berasaskan diagnosis untuk 20+ jenama di Malaysia. Kos Diagnosis: RM 88 (percuma jika baiki). Waranti: 3 bulan untuk alat ganti. Pembaikan hari sama untuk kapasitor, motor kipas, dan papan PCB.",
+    aioSummaryZH: "吉隆坡及雪兰莪所有20多个品牌的冷气维修服务。诊断费：RM 88（维修则免除）。保修：零件3个月保修。可提供电容、风扇马达和电路板的当场维修。",
+    compareTable: {
+      title: "Repair vs Replace Decision Matrix",
+      subtitle: "Is it worth fixing your aircond or should you invest in a new one?",
+      columns: ["Factor", "Repair (Wait)", "Replace (New)"],
+      rows: [["Unit Age", "< 7 years old", "> 8 years old"], ["Gas Type", "R32 / R410A", "R22 (Obsolete)"], ["Repair Cost", "< RM 500", "> RM 800"], ["Electricity", "Running well", "Bills are rising"], ["Frequency", "First major fault", "Constant breakdowns"], ["Recommendation", "Repair & maintain", "Upgrade to R32 Inverter"]]
+    },
     highlights: [
-      "RM 88 diagnostic fee \u2014 fully waived if repair completed same visit",
-      "Multimeter + manifold gauge diagnosis \u2014 not guesswork",
-      "Error code decoding for all 20 brands \u2014 Daikin, Panasonic, Mitsubishi & more",
-      "Capacitors, fan motors, contactors, sensors, PCBs stocked in every van",
-      "Compressor electrical testing \u2014 winding resistance, insulation, amp-draw",
-      "Refrigerant pressure diagnosis \u2014 distinguishes gas issue from electrical fault",
-      "Same-day repair ~85% of jobs \u2014 rare parts ordered overnight if needed",
-      "3-month parts warranty + 1-month workmanship warranty",
+      "RM 88 systematic diagnosis fee — fully waived if you proceed with the repair",
+      "Fault-finding using industrial-grade multimeters & refrigerant gauges",
+      "Rapid decoding of blink codes for all 20+ major aircond brands",
+      "Extensive van stock of capacitors, fan motors, contactors, and PCB boards",
+      "Electrical safety audits — identifying burnt wiring and loose isolator connections",
+      "Compressor winding resistance and insulation testing (Megger test)",
+      "3-month warranty on all replacement components for peace of mind",
+      "Honest 'Repair vs Replace' advice based on unit age and repair ROI",
     ],
     process: [
       { step: "Listen & Measure", desc: "You describe exactly what happened and when. Technician checks error code blink pattern, listens for unusual sounds, measures voltage at the isolator, checks MCB status, and tests the remote/thermostat signal." },
@@ -392,7 +457,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What warranty do you provide on repairs?",
         a: "3-month warranty on all replaced parts (covers manufacturing defects and premature failure). 1-month warranty on workmanship (covers installation errors, loose connections, etc.). If the same fault recurs within the warranty period, we return at no charge. If the fault is different or unrelated, a new diagnostic applies. All warranty terms are written clearly on your job card.",
-      },
+      },,
+      { q: "Can you repair airconds that are over 15 years old?", a: "We can diagnose them, but parts availability for R22-era units is declining. If parts are obsolete, we provide honest advice on whether repair is safer than an R32 upgrade." }
     ],
     faqsBM: [
       {
@@ -414,7 +480,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Apa jaminan yang anda berikan untuk pembaikan?",
         a: "Jaminan 3 bulan untuk semua bahagian yang diganti (melindungi kecacatan pembuatan dan kegagalan pramatang). Jaminan 1 bulan untuk mutu kerja (melindungi ralat pemasangan, sambungan longgar, dll.). Jika kerosakan sama berulang dalam tempoh jaminan, kami kembali tanpa caj. Semua terma jaminan ditulis dengan jelas pada kad kerja anda.",
-      },
+      },,
+      { q: "Bolehkah anda membaiki aircond yang berusia lebih 15 tahun?", a: "Kami boleh mendiagnosisnya, tetapi ketersediaan alat ganti untuk unit era R22 semakin berkurangan. Jika alat ganti sudah tiada, kami akan berikan nasihat jujur sama ada naik taraf ke R32 lebih selamat." }
     ],
     faqsZH: [
       {
@@ -432,7 +499,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "机器发出嗡嗡声但风扇不转\u2014\u2014什么问题？",
         a: "这几乎肯定是电容损坏。电容为风扇电机提供启动所需的\u2018推力\u2019。当它损坏时，电机因供电而嗡嗡响但无法启动旋转。在电容损坏的情况下继续运行机器，会在几小时内烧毁电机\u2014\u2014把RM 150的电容更换变成RM 300+的电机更换。如果听到嗡嗡声但没有转动，立即在隔离开关处关闭机器并WhatsApp联系我们。",
-      },
+      },,
+      { q: "你们能维修超过15年的老冷气吗？", a: "我们可以进行诊断，但R22时代机器的零件供应正在减少。如果零件已停产，我们会诚实建议升级至R32机型是否更明智。" }
     ],
     priceTable: [
       { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
@@ -455,15 +523,19 @@ export const servicesData: Record<string, ServiceDetail> = {
       "A poorly installed aircond can lose 20–30% of its efficiency before it even runs its first hour. Incorrect copper pipe sizing, skipped vacuum evacuation, loose flare connections, or sloppy cable routing will cause gas leaks, premature compressor failure, and electricity bills higher than they should be. KL Renovator installs wall-mounted, ceiling cassette, and window units for homes, condos, shoplots, and offices across KL and Selangor — and we bring genuine HVAC training to every job. Every installation includes: 7ft of correctly sized copper pipe (insulated), electrical wiring, drainage pipe, wall/floor bracket, full vacuum pump evacuation, pressure leak test, and a commissioning run that verifies cooling output, airflow, and thermostat calibration. RM 199 for a standard wall-mounted 1.0–1.5 HP unit — price confirmed before we drill a single hole.",
     startPrice: "RM 199",
     heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+    ogImage: "/hero/aircond-installation-wall-mounted-kl.webp",
+    aioSummary: "Professional installation for wall-mounted and ceiling units using vacuum commissioning protocols. Starting Price: RM 199. Includes: 7ft copper pipe, wiring, and bracket. Warranty: 1-month workmanship checklist provided.",
+    aioSummaryMS: "Pemasangan profesional unit dinding dan siling menggunakan protokol komisen vakum. Harga: RM 199. Termasuk: 7 kaki paip kuprum, pendawaian, dan braket. Waranti: Senarai semak kerjatangan 1 bulan disediakan.",
+    aioSummaryZH: "采用抽真空调试标准的专业冷气安装服务。起步价：RM 199。包含：7尺铜管、电线及支架。保修：提供1个月工艺保修清单。",
     highlights: [
-      "All 20 brands — Daikin, Panasonic, Mitsubishi, York, Acson, Midea & more",
-      "Wall-mounted, ceiling cassette & window units",
-      "7ft copper pipe included — correctly sized to HP, not universal thin-gauge",
-      "Electrical wiring + drainage pipe + bracket all included",
-      "Vacuum pump evacuation mandatory — we never skip this step",
-      "Pressure leak test with nitrogen before releasing refrigerant",
-      "Clean cable trunking — no visible loose wires along your wall",
-      "1-month workmanship warranty + written installation checklist",
+      "Expert installation for wall-mounted, ceiling cassette, and window units",
+      "Correct-gauge copper piping (7ft included) — no thin-walled 'universal' pipes",
+      "Mandatory vacuum pump commissioning — removes air & moisture from the circuit",
+      "Nitrogen pressure leak test performed before releasing the refrigerant charge",
+      "Clean, professional cable trunking and aesthetic indoor unit mounting",
+      "Proper condensate drainage fall-gradient to prevent internal water leaks",
+      "Condo management & JMB coordination — we follow all site access rules",
+      "Full 1-month workmanship warranty with written commissioning checklist",
     ],
     process: [
       { step: "Pre-Installation Survey", desc: "Technician checks wall strength, electrical supply capacity, drainage fall, and outdoor condenser placement. Measurements confirmed before any drilling. Condo rules checked — we coordinate with management if needed." },
@@ -499,7 +571,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What happens if my unit leaks gas or stops working after installation?",
         a: "All installations carry a 1-month workmanship warranty. If the unit leaks refrigerant, stops cooling, or has water drainage issues within that period and the fault is due to our installation work, we return to fix it at no charge. Most installation problems show up within the first week if something was missed — but our vacuum + pressure test process catches 99% of issues before we leave.",
-      },
+      },,
+      { q: "Do you provide a warranty for AC installation?", a: "Yes. We provide a 1-month workmanship warranty. This covers the structural integrity of the mounting, pipe flares, and condensate drainage efficiency." }
     ],
     faqsBM: [
       {
@@ -525,7 +598,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Pihak pengurusan kondo saya ada peraturan renovasi yang ketat — bolehkah anda mematuhinya?",
         a: "Kami memasang di kondo tinggi di seluruh KL dan Selangor setiap minggu — KLCC, Mont Kiara, Bangsar, Damansara, Sentul, dan banyak lagi. Kami mematuhi peraturan khusus setiap bangunan: waktu bekerja, penutup lantai pelindung di lif dan koridor, had bunyi, dan prosedur pelupusan sisa. Jika pihak pengurusan memerlukan permit renovasi atau borang indemniti, beritahu kami lebih awal dan kami akan sediakan dokumen yang diperlukan. Kawasan umum mesti ditinggalkan seperti keadaan asal.",
-      },
+      },,
+      { q: "Adakah anda menyediakan waranti untuk pemasangan aircond?", a: "Ya. Kami menyediakan waranti kerja selama 1 bulan. Ini meliputi integriti struktur pemasangan, flare paip, dan kecekapan saliran air." }
     ],
     faqsZH: [
       {
@@ -551,7 +625,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "我的公寓管理处有严格的装修规定——你们能遵守吗？",
         a: "我们每周在吉隆坡和雪兰莪的高层公寓安装——KLCC、Mont Kiara、Bangsar、Damansara、Sentul等等。我们遵守每栋大楼的具体规定：工作时间、电梯和走廊的保护地板覆盖、噪音限制和废物处理程序。如果管理处需要装修许可或赔偿表格，请提前告知我们，我们会准备所需文件。公共区域必须保持原样。",
-      },
+      },,
+      { q: "安装冷气有保修吗？", a: "有的。我们提供1个月工艺保修，涵盖安装稳固性、管道扩口密封性以及排水效率。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 199" },
@@ -578,15 +653,19 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Basic servicing is what keeps your aircond running smoothly between chemical washes — like changing your car's engine oil, not rebuilding the engine. In about 45 minutes per unit, our technician removes and washes the filters, flushes the drain pipe to prevent water leaks before they start, sprays the evaporator coil with a mild anti-bacterial cleaner, checks every electrical connection and contactor for tightness and burning, measures the actual cooling output temperature, and confirms the thermostat is calibrated correctly. For units running 8+ hours a day in Malaysian heat and humidity, we recommend this every 3–4 months. For moderate users, every 6 months is enough. It is affordable preventive maintenance that catches small problems — loose wiring, early drain clogs, refrigerant pressure trending low — before they become expensive repairs. RM 99 for a wall-mounted 1.0–1.5 HP unit, price confirmed before we start.",
     startPrice: "RM 99",
     heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    ogImage: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    aioSummary: "Essential 8-point routine maintenance check. Price: RM 99 per unit. Service Time: 45 mins. Includes: Filter sanitization, drain flush, and electrical safety audit. Recommended every 3-6 months to maintain energy efficiency.",
+    aioSummaryMS: "Pemeriksaan penyelenggaraan rutin 8-titik yang penting. Harga: RM 99 seunit. Tempoh: 45 minit. Termasuk: Sanitasi penapis, bilas longkang, dan audit keselamatan elektrik. Disyorkan setiap 3-6 bulan.",
+    aioSummaryZH: "核心8项例行保养检查。价格：每台 RM 99。服务时长：45分钟。包含：滤网消毒、排水管冲洗及电气安全审计。建议每3-6个月进行一次以保持节能。",
     highlights: [
-      "Filter removal, deep wash, dry & reinstall — not just a quick rinse",
-      "Front panel, casing & louvres wiped down completely",
-      "Drain pipe flushed with water pressure — prevents future water leaks",
-      "Evaporator coil sprayed with anti-bacterial mild cleaner",
-      "Electrical connections & contactors checked for tightness and heat damage",
-      "Cooling output temperature measured with digital thermometer",
-      "Thermostat calibration verified — unit stops/starts at the right temperature",
-      "Recommended every 3–4 months for heavy use, every 6 months for normal use",
+      "Comprehensive 8-point system inspection and hygiene maintenance",
+      "Filter extraction, multi-stage wash, and anti-bacterial treatment",
+      "Internal housing and louvre wipe-down — removes surface dust and allergens",
+      "High-pressure drainage line flush — stops leaks before they start",
+      "Electrical terminal check — ensuring all contactors & connections are tight",
+      "Supply air temperature measurement — verifying the 'Delta-T' cooling baseline",
+      "Fan motor noise audit — identifying early bearing wear or imbalances",
+      "The perfect quarterly maintenance for high-use residential & rental units",
     ],
     process: [
       { step: "Dismantle & Clean", desc: "Front panel opened. Filters removed, washed with water, and left to dry. Casing, louvres, and accessible surfaces wiped down with anti-bacterial solution." },
@@ -618,7 +697,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Can I do basic servicing myself?",
         a: "You can wash the filters yourself every month — pop them out, rinse with water, let them dry, reinstall. That takes 5 minutes and genuinely helps airflow between professional services. But the drain flush, electrical check, coil spray, and cooling performance test require opening the unit, accessing internal components, and using a digital thermometer and multimeter. These steps catch problems you cannot see from the outside. At RM 99, professional basic servicing is cheaper than a water-damaged ceiling or a burnt compressor.",
-      },
+      },,
+      { q: "What happens if you find a fault during a basic service?", a: "If our 8-point check reveals a faulty capacitor or sensor, we inform you immediately and provide a firm quote. Most repairs can be completed instantly during the same visit." }
     ],
     faqsBM: [
       {
@@ -640,7 +720,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Adakah servis asas termasuk tambah gas?",
         a: "Tidak — servis asas adalah perkhidmatan pembersihan dan pemeriksaan. Jika ujian penyejukan juruteknik kami menunjukkan tekanan bahan pendingin rendah (penurunan suhu kurang daripada 8°C selepas pembersihan), mereka akan memaklumkan anda dan mengkuotakan tambah gas secara berasingan (dari RM 120). Sistem aircond tidak menggunakan bahan pendingin — jika gas rendah, ada kebocoran di suatu tempat. Kami akan memeriksa titik kebocoran yang jelas (sambungan flare, injap servis) dan menasihatkan sama ada tambah gas sahaja mencukupi atau pembaikan kebocoran diperlukan.",
-      },
+      },,
+      { q: "Apa yang berlaku jika anda menemui kerosakan semasa servis asas?", a: "Jika pemeriksaan 8-titik kami menemui kapasitor atau sensor yang rosak, kami akan maklumkan segera dan berikan sebut harga tetap. Kebanyakan pembaikan boleh diselesaikan terus pada lawatan yang sama." }
     ],
     faqsZH: [
       {
@@ -662,7 +743,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "基本保养包含加气吗？",
         a: "不包含——基本保养是清洁和检查服务。如果我们技术员的制冷测试显示冷媒压力低（清洁后温差低于8°C），他们会通知您并单独报价加气服务（从RM 120起）。冷气系统不会消耗制冷剂——如果气体不足，说明某处有泄漏。我们会检查明显的泄漏点（喇叭口接头、检修阀）并建议仅加气是否足够还是需要修复泄漏。",
-      },
+      },,
+      { q: "如果在基本保养期间发现故障怎么办？", a: "如果我们的8项检查发现电容或传感器故障，我们会立即通知您并提供确定报价。大多数维修可以在同一次上门中当场完成。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 99" },
@@ -685,15 +767,19 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Ceiling cassettes are the workhorses of Malaysian commercial spaces: the 4-way unit recessed into the ceiling grid of your office, retail shop, restaurant, clinic, or salon. They are more complex than wall-mounted units \u2014 the blower is larger, the drain pan is integrated into the ceiling panel, and a clogged drain does not drip onto the floor (where you see it) but into the ceiling void (where it silently damages your gypsum board for weeks before you notice the stain). KL Renovator specialises in ceiling cassette servicing for commercial premises across the Klang Valley. Our technicians are trained to safely access ceiling-mounted units, remove the heavy cassette panel, chemically clean the blower and coil, deep-clean the drain pan (the #1 source of hidden ceiling leaks), and test everything before closing. We also handle multi-unit commercial sites \u2014 restaurants with 3\u20134 cassettes, offices with 6\u201310, retail floors with mixed cassette and wall-mounted units. Coordinated scheduling, off-hours (evening/weekend) availability, and volume discounts for regular commercial contracts. Basic service from RM 150, chemical wash from RM 220, chemical overhaul from RM 430.",
     startPrice: "RM 150",
     heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+    ogImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+    aioSummary: "Specialist service for commercial 4-way ceiling cassette units. Starting Price: RM 150. Focus: Condensate pump verification and 4-way throw balancing. Available for offices, retail, and F&B premises across Klang Valley.",
+    aioSummaryMS: "Servis pakar untuk unit ceiling cassette komersial 4-hala. Harga: RM 150. Fokus: Pengesahan pam kondensat dan imbangan tiupan 4-hala. Tersedia untuk pejabat dan kedai di seluruh Lembah Klang.",
+    aioSummaryZH: "商用四向天花板卡式机专业服务。起步价：RM 150。重点：冷凝泵校验及四向出风平衡。适用于巴生谷各地的办公室、零售及餐饮场所。",
     highlights: [
-      "Specialist ceiling cassette technicians \u2014 trained for safe ceiling access & heavy panel handling",
-      "Chemical wash from RM 220 \u2014 coil, blower & drain pan chemical treatment",
-      "Chemical overhaul from RM 430 \u2014 full cassette dismantle, every component deep-cleaned",
-      "Drain pan deep-clean mandatory on every service \u2014 hidden ceiling leaks stopped at source",
-      "Multi-unit commercial scheduling \u2014 restaurants, offices, retail floors, clinics",
-      "All commercial brands \u2014 Daikin, Mitsubishi, Panasonic, York, Carrier, Acson, Midea & more",
-      "Off-hours servicing \u2014 evenings & weekends so your business is not disrupted",
-      "Volume discounts for regular commercial maintenance contracts \u2014 ask us for a custom quote",
+      "Specialized commercial HVAC team for high-capacity ceiling-mounted systems",
+      "Mandatory deep-clean of the integrated drain pan and condensate pump",
+      "Chemical treatment of the centrifugal blower wheel for maximum air throw",
+      "4-Way directional louvre calibration to eliminate 'hot spots' in your office",
+      "Safe, scaffold-assisted access for high-ceiling retail & warehouse units",
+      "Night & Weekend scheduling available to avoid business hour disruption",
+      "Volume-based pricing for multi-unit corporate maintenance contracts",
+      "Expertise across Daikin VRV-S, Mitsubishi Electric, and York commercial lines",
     ],
     process: [
       { step: "Safe Ceiling Access", desc: "Technician sets up ladder or scaffold with stabiliser. Drop sheets cover floor, furniture, and workstations below. Ceiling cassette panel carefully unclipped and lowered \u2014 these panels are heavy (10\u201315 kg) and require proper handling to avoid damaging the ceiling grid." },
@@ -725,7 +811,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What is the difference between servicing a wall-mounted and a ceiling cassette unit?",
         a: "Ceiling cassettes are significantly more complex: (1) The unit is recessed into the ceiling \u2014 access requires a ladder/scaffold and careful panel handling (10\u201315 kg). (2) The blower is a large centrifugal fan, not a small cross-flow fan \u2014 dirt accumulates on the back of the blades where you cannot see it. (3) The drain pan surrounds the entire unit and includes a built-in condensate pump on many models \u2014 if the pump fails, water overflows inside the ceiling. (4) The ceiling void itself can be a source of contaminants (insulation fibres, pest droppings, construction dust) that enter the unit from above. This is why we recommend specialist ceiling cassette technicians, not general aircond servicers who only do wall-mounted units.",
-      },
+      },,
+      { q: "Why is my office ceiling cassette leaking into the ceiling board?", a: "This is often a failure of the internal condensate lift pump or a sludged-up internal drain pan. We perform a 'Flow Test' during service to ensure the pump is working at full capacity." }
     ],
     faqsBM: [
       {
@@ -747,7 +834,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Bolehkah anda servis unit ceiling cassette kami selepas waktu perniagaan?",
         a: "Ya \u2014 servis luar waktu (petang dari 6pm\u201310pm, hujung minggu, dan cuti umum) tersedia untuk pelanggan komersial. Kami faham bahawa restoran tidak boleh mempunyai juruteknik bekerja di atas pelanggan semasa waktu makan tengah hari. Terdapat surcaj sederhana untuk kerja luar waktu (RM 50 untuk petang). WhatsApp kami dengan jadual pilihan anda.",
-      },
+      },,
+      { q: "Kenapa unit ceiling cassette pejabat saya bocor ke atas siling?", a: "Ini selalunya disebabkan kegagalan pam air dalaman atau dulang longkang yang terlalu kotor. Kami melakukan 'Ujian Aliran' semasa servis untuk memastikan pam berfungsi pada kapasiti penuh." }
     ],
     faqsZH: [
       {
@@ -769,7 +857,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "能在营业时间之后维修天花板卡式机吗？",
         a: "可以\u2014\u2014我们为商业客户提供非工作时间服务（晚上6点-10点、周末和公共假日）。我们理解餐厅不能在午餐高峰期让技术员在顾客上方作业，零售店不能在客流高峰时段关闭空调维修。非工作时间有少量附加费（晚上RM 50）。WhatsApp我们您的首选时间安排。",
-      },
+      },,
+      { q: "为什么我办公室的天花板卡式机会漏水到吊顶板上？", a: "这通常是由于内置冷凝水泵故障或内部接水盘积满淤泥。我们在保养时会进行“流量测试”以确保水泵满负荷正常运行。" }
     ],
     priceTable: [
       { label: "Basic Service · 1.0 – 1.5 HP", price: "RM 150" },
@@ -796,15 +885,19 @@ export const servicesData: Record<string, ServiceDetail> = {
       "You are moving to a new condo in Petaling Jaya, or your office is relocating from Bangsar to Damansara. You have a perfectly good Daikin inverter unit that is only 3 years old \u2014 replacing it would cost RM 1,500+. Dismantling and relocating it makes financial sense. But this is not a job for general movers or a handyman with a spanner. An aircond relocation involves: safely pumping down the refrigerant into the outdoor condenser (so no gas is lost), disconnecting the electrical isolator, unbolting the indoor unit from the wall bracket, removing the outdoor condenser from its bracket or platform, extracting the copper pipes and wiring through the wall penetration, transporting both units securely to the new location, and then performing a full new installation: new copper pipes, new drainage, new wiring run, vacuum evacuation, and recommissioning. KL Renovator does this start to finish. Complete relocate and reinstall from RM 250 (1.0\u20131.5 HP, same building or nearby). RM 350 for a different-location relocation. Includes refrigerant recovery, 7ft new copper pipe, wiring, drainage, bracket, vacuum, and test. Same-day completion on most moves.",
     startPrice: "RM 90",
     heroImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
+    ogImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
+    aioSummary: "Safe aircond relocation involving refrigerant pump-down and re-commissioning. Starting Price: RM 250 (Full package). Includes: New 7ft copper piping and vacuum cycle at the new location. Preserves 100% compressor integrity.",
+    aioSummaryMS: "Relokasi aircond yang selamat melibatkan 'pump-down' gas dan komisen semula. Harga: RM 250 (Pakej penuh). Termasuk: Paip kuprum 7 kaki baru dan kitaran vakum di lokasi baru. Melindungi integriti kompressor.",
+    aioSummaryZH: "涉及冷媒泵送回收和重新调试的安全移机服务。起步价：RM 250（全包）。包含：新地点7尺新铜管及抽真空流程。100%保护压缩机寿命。",
     highlights: [
-      "Refrigerant pump-down before dismantle \u2014 zero gas lost, zero environmental release",
-      "Safe removal of indoor unit, outdoor condenser, and all wall-penetration materials",
-      "Full reinstallation at new location \u2014 new copper pipe, wiring, drainage, bracket included",
-      "Vacuum pump evacuation at new site \u2014 same commissioning standard as new installation",
-      "All 20 brands handled \u2014 inverter and non-inverter, R32 and R410A",
-      "Same-day dismantle + reinstall for most local moves \u2014 move in with AC working",
-      "New wall bracket and rubber pads at new location \u2014 old bracket stays with old property",
-      "1-month workmanship warranty on the full relocate",
+      "Professional Refrigerant Pump-Down — preserves 100% of the existing gas",
+      "Safe extraction of indoor & outdoor units to prevent frame damage",
+      "Full re-installation at new site — includes new copper pipe & wiring",
+      "Vacuum pump commissioning at new location to ensure moisture-free lines",
+      "Outdoor unit upright transport policy — protects compressor oil integrity",
+      "Support for same-day 'Tear Down & Reinstall' for local Klang Valley moves",
+      "New mounting brackets and vibration dampeners provided at the new address",
+      "1-month warranty covering the entire dismantling and re-installation work",
     ],
     process: [
       { step: "Pump-Down & Electrical Disconnect", desc: "Technician runs the unit in cooling mode, closes the liquid service valve on the outdoor unit to pump all refrigerant into the condenser, then closes the suction valve. Refrigerant is now safely stored in the outdoor unit. Electrical isolator switched off and verified dead. Unit fully powered down." },
@@ -836,7 +929,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Is it worth relocating an older unit, or should I buy a new one?",
         a: "Our honest guidance: (1) Unit is under 5 years old, inverter, working perfectly \u2192 relocate. It will cost you RM 250\u2013350 vs RM 1,500+ for a new unit + installation. (2) Unit is 5\u20138 years old, working well, non-inverter \u2192 relocate is still worth it if the unit has been regularly serviced. An older but well-maintained unit can serve another 3\u20135 years. (3) Unit is 8+ years old, uses R22 gas, has needed repairs \u2192 strongly consider replacing. R22 is being phased out and getting expensive. A new R32 inverter unit will cut your electricity bill by 30\u201350% and pay for itself within 2\u20133 years. If you are unsure, WhatsApp us your unit's brand, model, and age, and we will give you an honest recommendation \u2014 we do both relocation and new installation, so there is no incentive to push one over the other.",
-      },
+      },,
+      { q: "Will the relocation process damage my unit's internal seals?", a: "Not when performed by KL Renovator. We use calibrated torque wrenches on all flare connections to ensure a factory-tight seal that prevents future gas loss at the new location." }
     ],
     faqsBM: [
       {
@@ -858,7 +952,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Adakah berbaloi memindahkan unit lama, atau beli yang baharu?",
         a: "Panduan jujur kami: (1) Unit bawah 5 tahun, inverter, berfungsi sempurna \u2192 pindahkan. Kos RM 250\u2013350 vs RM 1,500+ untuk unit baharu + pemasangan. (2) Unit 5\u20138 tahun, berfungsi baik, bukan inverter \u2192 masih berbaloi jika diservis secara berkala. (3) Unit 8+ tahun, gunakan gas R22, pernah dibaiki \u2192 pertimbangkan untuk ganti. R22 sedang dihentikan dan semakin mahal. Unit inverter R32 baharu akan mengurangkan bil elektrik 30\u201350%. Jika tidak pasti, WhatsApp kami jenama, model, dan umur unit anda.",
-      },
+      },,
+      { q: "Adakah proses pemindahan akan merosakkan seal dalaman unit saya?", a: "Tidak jika dilakukan oleh KL Renovator. Kami menggunakan kunci tork bertauliah pada semua sambungan untuk memastikan kedap udara standard kilang yang menghalang kebocoran gas di lokasi baru." }
     ],
     faqsZH: [
       {
@@ -880,7 +975,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "搬迁旧机器值得吗，还是应该买新的？",
         a: "我们的诚实建议：（1）机器5年以下、变频、工作正常\u2192搬迁。费用RM 250-350 vs 新机+安装RM 1,500+。（2）机器5-8年、工作正常、非变频\u2192如果定期保养仍值得搬迁。保养良好的旧机器还可以再用3-5年。（3）机器8年以上、使用R22气体、曾维修过\u2192强烈建议更换。R22正在淘汰且越来越贵。新的R32变频机可降低电费30-50%。如果您不确定，WhatsApp我们机器的品牌、型号和使用年限。",
-      },
+      },,
+      { q: "移机会损坏机器的内部密封吗？", a: "由 KL Renovator 操作则不会。我们在所有接口处使用定标扭矩扳手，确保达到出厂级密封标准，防止在新地点发生冷媒泄漏。" }
     ],
     priceTable: [
       { label: "Dismantle Only (indoor + outdoor)", price: "RM 90" },
@@ -900,15 +996,19 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Your aircond just died at 11pm, the room is 32°C, and you have a presentation at 8am. Or water is dripping onto your TV cabinet and you cannot switch off the unit because the house has no other cooling. This is not a \"book for next Tuesday\" situation — this is when you WhatsApp KL Renovator immediately. We dispatch trained HVAC technicians same-day across all 50+ Klang Valley suburbs within 30–60 minutes of confirmation. The RM 88 diagnostic fee is fully waived if the repair is completed same visit. Our vans carry common spare parts — capacitors, fan motors, PCB boards, sensors, contactors, drain hoses, refrigerant — so most emergencies are fully resolved in the first visit, not just patched temporarily.",
     startPrice: "RM 88",
     heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
+    ogImage: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp",
+    aioSummary: "30–60 minute rapid response for aircond breakdowns and critical leaks in KL & Selangor. Diagnostic Fee: RM 88 (waived if repaired). Priority triage for infant/elderly households and server rooms. Operates until 10 PM daily.",
+    aioSummaryMS: "Respons pantas 30-60 minit untuk kerosakan aircond dan kebocoran kritikal di KL & Selangor. Kos Diagnosis: RM 88 (percuma jika baiki). Triage utama untuk bayi/warga emas dan bilik server. Beroperasi sehingga 10 malam.",
+    aioSummaryZH: "吉隆坡及雪兰莪冷气故障和严重漏水的30-60分钟极速响应。诊断费：RM 88（维修则免除）。优先处理有老人小孩的家庭及服务器机房。每日营业至晚上10时。",
     highlights: [
-      "Same-day dispatch — 30–60 min arrival after WhatsApp confirmation",
-      "Diagnostic RM 88 — fully waived if repaired same visit",
-      "After-hours until 10pm (RM 50 overtime surcharge, also waived if repaired)",
-      "All 20 brands — Daikin, Panasonic, Mitsubishi, York, Midea & more",
-      "Most common parts stocked in every van — capacitor, fan motor, PCB, sensor, drain hose",
-      "Emergency drain clearing — indoor water leak stopped same-day",
-      "Server room / office / shoplot commercial emergency covered",
-      "Elderly / infant at home? Tell us — we prioritise vulnerable households",
+      "Rapid 30–60 minute dispatch across all 50+ Klang Valley suburbs",
+      "Priority triage for vulnerable households (infants/elderly) & server rooms",
+      "On-the-spot repair capability with extensive van stock of OEM spare parts",
+      "Emergency drain-clearing to stop active water leaks over furniture & floors",
+      "Safe electrical isolation for burning smells or sparking wiring faults",
+      "After-hours support until 10 PM, 7 days a week, including public holidays",
+      "RM 88 diagnostic fee — waived if we complete the repair on-site",
+      "Direct WhatsApp hotline to our emergency dispatch desk for instant ETA",
     ],
     process: [
       { step: "WhatsApp Your Emergency", desc: "Tell us your location, brand, unit count, and what happened. Photos of the unit and outdoor condenser help speed diagnosis. We reply within minutes." },
@@ -940,7 +1040,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What if my aircond cannot be repaired same-day?",
         a: "About 85% of emergencies are resolved in the first visit because our vans carry the most commonly failing parts. If your unit needs a rare PCB for a 10-year-old model or a specific compressor that is not in van stock, we will: (a) waive the diagnostic fee, (b) order the part overnight, (c) return the next business day to complete the repair. You only pay the full repair price when the job is done. No upfront booking fees and no deposits.",
-      },
+      },,
+      { q: "What is the fastest way to get an emergency slot?", a: "WhatsApp +60182983573 with your GPS location and a short video of the symptom. This allows our dispatch desk to assign the nearest van immediately." }
     ],
     faqsBM: [
       {
@@ -966,7 +1067,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Bagaimana jika aircond saya tidak dapat dibaiki pada hari yang sama?",
         a: "Kira-kira 85% kecemasan diselesaikan dalam lawatan pertama kerana van kami membawa alat ganti yang paling kerap rosak. Jika unit anda memerlukan PCB yang jarang untuk model berusia 10 tahun atau kompressor tertentu yang tiada dalam stok van, kami akan: (a) mengecualikan caj diagnostik, (b) memesan alat ganti semalaman, (c) kembali pada hari perniagaan berikutnya untuk menyelesaikan pembaikan. Anda hanya membayar harga penuh pembaikan apabila kerja selesai. Tiada yuran tempahan pendahuluan dan tiada deposit.",
-      },
+      },,
+      { q: "Apakah cara terpantas untuk mendapatkan slot kecemasan?", a: "WhatsApp +60182983573 dengan lokasi GPS anda dan video pendek simptom tersebut. Ini membolehkan pusat panggilan kami menugaskan van terdekat dengan segera." }
     ],
     faqsZH: [
       {
@@ -992,7 +1094,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "如果我的冷气当天无法修好怎么办？",
         a: "约85%的紧急情况在第一次上门就能解决，因为我们的车辆携带最常见的故障部件。如果您的机器需要一个稀有的PCB电路板（适配10年前的型号）或特定压缩机，而车上没有库存，我们将：(a)免除诊断费，(b)隔夜订购部件，(c)次日返回完成维修。您只在工作完成时支付全额维修费用。没有预付预订费也没有押金。",
-      },
+      },,
+      { q: "获得紧急维修时段最快的方法是什么？", a: "请 WhatsApp +60182983573 并发送您的 GPS 定位和故障短视频。这能让我们的调度中心立即指派最近的服务车前往。" }
     ],
     priceTable: [
       { label: "Diagnostic Fee (Standard Hours 9am–6pm)", price: "RM 88" },
