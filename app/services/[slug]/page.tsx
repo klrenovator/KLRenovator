@@ -20,6 +20,7 @@ import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
 import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
+import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 
 export function generateStaticParams() {
   // Round 22 / AMC hotfix: exclude service routes that have their own
@@ -274,6 +275,7 @@ export default async function ServicePage({
   const service = siteConfig.services.find((s) => s.slug === slug);
   if (!data) notFound();
 
+  const schemaParity = serviceSchemaParityFields("en");
   const enhancedFaqs = mergeFaqs(data.faqs ?? [], SUPPLEMENTAL_SERVICE_FAQS[slug] ?? [], GLOBAL_SERVICE_FAQS);
   const enhancedFaqsBM = data.faqsBM ?? [];
   const enhancedFaqsZH = data.faqsZH ?? [];
@@ -309,6 +311,10 @@ export default async function ServicePage({
     "@type": "HowTo",
     name: `How to Book ${data.title} in KL & Selangor`,
     description: `Step-by-step process for ${data.title} by KL Renovator in Kuala Lumpur and Selangor`,
+    datePublished: schemaParity.datePublished,
+    dateModified: schemaParity.dateModified,
+    inLanguage: schemaParity.inLanguage,
+    publisher: schemaParity.publisher,
     estimatedCost: {
       "@type": "MonetaryAmount",
       currency: "MYR",
@@ -327,6 +333,9 @@ export default async function ServicePage({
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          datePublished: schemaParity.datePublished,
+          dateModified: schemaParity.dateModified,
+          inLanguage: schemaParity.inLanguage,
           mainEntity: enhancedFaqs.map((f: { q: string; a: string }) => ({
             "@type": "Question",
             name: f.q,
@@ -358,13 +367,11 @@ export default async function ServicePage({
     name: data.title + " KL & Selangor — KL Renovator",
     description: data.tagline,
     url: `https://www.klrenovator.com/services/${slug}`,
-    dateModified: "2026-07-03",
-    reviewedBy: {
-      "@type": "Organization",
-      name: "KL Renovator's HVAC Expert Team",
-      url: "https://www.klrenovator.com/about",
-    },
-    inLanguage: "en-MY",
+    datePublished: schemaParity.datePublished,
+    dateModified: schemaParity.dateModified,
+    reviewedBy: schemaParity.reviewedBy,
+    publisher: schemaParity.publisher,
+    inLanguage: schemaParity.inLanguage,
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
     about: { "@id": "https://www.klrenovator.com/#business" },
     speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
