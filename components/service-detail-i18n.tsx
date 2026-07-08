@@ -18,6 +18,7 @@ import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
 import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
+import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 
 type Lang = "ms" | "zh";
 
@@ -331,7 +332,8 @@ export function ServiceDetailI18n({
     startPrice: serviceStartPrice,
   });
   const hvacEntityModule = buildServiceHVACEntityModule(slug, lang, tTitle);
-  const inLang = lang === "ms" ? "ms-MY" : "zh-MY";
+  const schemaParity = serviceSchemaParityFields(lang);
+  const inLang = schemaParity.inLanguage;
 
   // FAQ selection: page language is primary, the other two are secondary.
   const basePrimaryFaqs = lang === "ms" ? data.faqsBM : data.faqsZH;
@@ -414,6 +416,10 @@ export function ServiceDetailI18n({
     "@type": "HowTo",
     name: `${lang === "ms" ? "Cara Tempah" : "如何预约"} ${tTitle} ${lang === "ms" ? "di KL & Selangor" : "（吉隆坡及雪兰莪）"}`,
     description: `${lang === "ms" ? "Langkah demi langkah untuk" : "预约"} ${tTitle} ${lang === "ms" ? "oleh KL Renovator di Kuala Lumpur dan Selangor" : "——KL Renovator 在吉隆坡与雪兰莪的服务流程"}`,
+    datePublished: schemaParity.datePublished,
+    dateModified: schemaParity.dateModified,
+    inLanguage: schemaParity.inLanguage,
+    publisher: schemaParity.publisher,
     estimatedCost: { "@type": "MonetaryAmount", currency: "MYR", value: service?.startPrice ?? "99" },
     step: tProcess.map((p: { step: string; desc: string }, i: number) => ({
       "@type": "HowToStep",
@@ -428,6 +434,9 @@ export function ServiceDetailI18n({
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          datePublished: schemaParity.datePublished,
+          dateModified: schemaParity.dateModified,
+          inLanguage: schemaParity.inLanguage,
           mainEntity: faqsPrimary.map((f: { q: string; a: string }) => ({
             "@type": "Question",
             name: f.q,
@@ -443,6 +452,10 @@ export function ServiceDetailI18n({
     name: `${tTitle} KL & Selangor — KL Renovator`,
     description: tTagline,
     url: `https://www.klrenovator.com${langPrefix}/services/${slug}`,
+    datePublished: schemaParity.datePublished,
+    dateModified: schemaParity.dateModified,
+    reviewedBy: schemaParity.reviewedBy,
+    publisher: schemaParity.publisher,
     inLanguage: inLang,
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
     about: { "@id": "https://www.klrenovator.com/#business" },
