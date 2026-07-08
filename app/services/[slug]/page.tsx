@@ -16,6 +16,7 @@ import { ServiceIcon } from "@/components/service-icon";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { title, subtitle, eyebrow } from "@/components/primitives";
+import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 
 export function generateStaticParams() {
   // Round 22 / AMC hotfix: exclude service routes that have their own
@@ -335,6 +336,7 @@ export default async function ServicePage({
   // Service pages show all 3 languages in static sections below
   // (same pattern as existing problems page — all 3 visible at once)
   const lang = "en" as const; // default for server render; labels below show all 3
+  const corePolish = buildServiceCorePolishModule(slug, "en", data.title, service?.startPrice ?? data.startPrice);
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -503,6 +505,57 @@ export default async function ServicePage({
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Google Reviews</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Same-Day Available</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> SSM Registered</span>
+        </div>
+      </section>
+
+      {/* Round 33 / 8.1: Service Pages Core Polish — scope and flow clarity */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="grid gap-6 lg:grid-cols-[0.95fr_1.45fr] lg:items-start">
+              <div className="rounded-3xl border border-sky-100 bg-sky-50 p-5 sm:p-6">
+                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">{corePolish.eyebrow}</p>
+                <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
+                  {corePolish.heading}
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-slate-700">{corePolish.intro}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="rounded-full bg-white border border-sky-200 px-3 py-1.5 text-xs font-black text-sky-700">{corePolish.priceBadge}</span>
+                  <span className="rounded-full bg-white border border-emerald-200 px-3 py-1.5 text-xs font-black text-emerald-700">{corePolish.warrantyBadge}</span>
+                </div>
+                <div className="mt-6 rounded-2xl bg-white border border-sky-100 p-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{corePolish.quickFitTitle}</p>
+                  <ul className="space-y-2">
+                    {corePolish.quickFit.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm font-semibold text-slate-700">
+                        <FiCheck className="mt-0.5 h-4 w-4 text-emerald-500 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">{corePolish.stepsTitle}</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {corePolish.steps.map((step, i) => (
+                    <div key={step.title} className="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-600 text-xs font-black text-white">{i + 1}</span>
+                        <h3 className="text-sm font-black text-slate-950">{step.title}</h3>
+                      </div>
+                      <p className="text-sm leading-relaxed text-slate-600">{step.detail}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-1">{corePolish.handoverTitle}</p>
+                  <p className="text-sm leading-relaxed text-slate-700">{corePolish.handover}</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
