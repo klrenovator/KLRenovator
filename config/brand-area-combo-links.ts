@@ -166,30 +166,30 @@ const FOCUS_COPY: Record<BrandAreaComboLocale, Record<BrandFocus, { label: strin
 
 const TEXT = {
   en: {
-    eyebrow: "20D.34 Brand + Area Combo Links",
+    eyebrow: "Brand service areas",
     heading: (brand: string) => `${brand} AC Service by Priority Area`,
     intro: (brand: string) =>
-      `Choose the closest high-intent ${brand} service route below. Each card links to a real area landing page with brand-specific anchor text, helping users and crawlers connect brand demand with local dispatch coverage.`,
+      `Choose the closest ${brand} service area below. Each card opens a local area page where you can check coverage, common service needs and booking details.`,
     allAreasLabel: "All KL & Selangor areas",
     title: (brand: string, area: string) => `${brand} AC Service ${area}`,
     description: (brand: string, area: AreaRecord, focus: string, summary: string) =>
       `${focus} for ${brand} units in ${area.name}, ${area.state}. ${summary}`,
   },
   ms: {
-    eyebrow: "20D.34 Pautan Jenama + Kawasan",
+    eyebrow: "Kawasan servis jenama",
     heading: (brand: string) => `Servis Aircond ${brand} Mengikut Kawasan Utama`,
     intro: (brand: string) =>
-      `Pilih laluan servis ${brand} yang paling dekat dan berniat tinggi di bawah. Setiap kad menghubungkan jenama dengan halaman kawasan sebenar supaya pengguna dan crawler nampak liputan dispatch tempatan dengan anchor text khusus.`,
+      `Pilih kawasan servis ${brand} yang paling dekat di bawah. Setiap kad membuka halaman kawasan tempatan untuk menyemak liputan, keperluan servis biasa dan butiran tempahan.`,
     allAreasLabel: "Semua kawasan KL & Selangor",
     title: (brand: string, area: string) => `Servis Aircond ${brand} ${area}`,
     description: (brand: string, area: AreaRecord, focus: string, summary: string) =>
       `${focus} untuk unit ${brand} di ${area.name}, ${area.state}. ${summary}`,
   },
   zh: {
-    eyebrow: "20D.34 品牌 + 区域链接",
+    eyebrow: "品牌服务区域",
     heading: (brand: string) => `${brand}冷气重点区域服务`,
     intro: (brand: string) =>
-      `从下方选择最接近、意图最高的${brand}服务路线。每张卡都链接到真实区域页面，并使用品牌+区域锚文本，帮助用户和搜索爬虫理解品牌需求与本地派工覆盖。`,
+      `从下方选择最接近的${brand}服务区域。每张卡都会打开本地区域页面，方便您查看覆盖范围、常见服务需求和预约详情。`,
     allAreasLabel: "所有KL与雪兰莪区域",
     title: (brand: string, area: string) => `${area}${brand}冷气服务`,
     description: (brand: string, area: AreaRecord, focus: string, summary: string) =>

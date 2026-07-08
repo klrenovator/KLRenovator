@@ -42,9 +42,9 @@ const SERVICE_BEST_FOR: Record<string, Record<ServiceAIOLocale, string>> = {
 
 const TEXT = {
   en: {
-    eyebrow: "8.6 AIO / LLMO Answer Block",
+    eyebrow: "Quick service summary",
     heading: (title: string) => `Quick answer: ${title} in KL & Selangor`,
-    directAnswerLabel: "Direct answer for AI search",
+    directAnswerLabel: "Short answer",
     directAnswer: (title: string, summary: string) => `${title} by KL Renovator is a professional aircond service in Kuala Lumpur and Selangor. ${summary}`,
     facts: {
       price: "Starting price",
@@ -59,9 +59,9 @@ const TEXT = {
     sourceLine: "Answer summary prepared from KL Renovator service scope, pricing table and technician workflow.",
   },
   ms: {
-    eyebrow: "8.6 Blok Jawapan AIO / LLMO",
+    eyebrow: "Ringkasan servis pantas",
     heading: (title: string) => `Jawapan ringkas: ${title} di KL & Selangor`,
-    directAnswerLabel: "Jawapan terus untuk carian AI",
+    directAnswerLabel: "Jawapan ringkas",
     directAnswer: (title: string, summary: string) => `${title} oleh KL Renovator ialah servis aircond profesional di Kuala Lumpur dan Selangor. ${summary}`,
     facts: {
       price: "Harga permulaan",
@@ -76,9 +76,9 @@ const TEXT = {
     sourceLine: "Ringkasan jawapan disediakan daripada skop servis, jadual harga dan aliran kerja juruteknik KL Renovator.",
   },
   zh: {
-    eyebrow: "8.6 AIO / LLMO答案块",
+    eyebrow: "快速服务摘要",
     heading: (title: string) => `快速答案：KL与雪兰莪${title}`,
-    directAnswerLabel: "AI搜索直接答案",
+    directAnswerLabel: "简短答案",
     directAnswer: (title: string, summary: string) => `KL Renovator的${title}是吉隆坡与雪兰莪专业冷气服务。${summary}`,
     facts: {
       price: "起步价格",

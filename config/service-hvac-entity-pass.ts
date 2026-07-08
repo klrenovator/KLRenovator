@@ -289,22 +289,22 @@ const ENTITY_COPY: Record<string, Record<ServiceHVACEntityLocale, LocalizedEntit
 
 const TEXT = {
   en: {
-    eyebrow: "8.7 Semantic HVAC Entity Pass",
-    heading: (title: string) => `${title}: HVAC entities we check and explain`,
-    validationTitle: "How these entities are validated on-site",
-    note: "This section keeps semantic SEO natural by naming real aircond components, test methods and site checks only where they apply to the service.",
+    eyebrow: "Parts and on-site checks",
+    heading: (title: string) => `${title}: aircond parts we check and explain`,
+    validationTitle: "How we confirm the issue on-site",
+    note: "We only list the parts, tools and checks that are relevant to this service, so you know what the technician will look at.",
   },
   ms: {
-    eyebrow: "8.7 Semantic HVAC Entity Pass",
-    heading: (title: string) => `${title}: Entiti HVAC yang kami semak dan jelaskan`,
-    validationTitle: "Cara entiti ini disahkan di tapak",
-    note: "Seksyen ini mengekalkan semantic SEO secara natural dengan menyebut komponen aircond, kaedah ujian dan semakan tapak hanya apabila relevan dengan servis.",
+    eyebrow: "Parts and on-site checks",
+    heading: (title: string) => `${title}: komponen aircond yang kami semak dan jelaskan`,
+    validationTitle: "Cara kami sahkan isu di tapak",
+    note: "Kami hanya menyenaraikan komponen, alat dan semakan yang relevan dengan servis ini supaya anda tahu apa yang juruteknik akan periksa.",
   },
   zh: {
-    eyebrow: "8.7 HVAC语义实体优化",
-    heading: (title: string) => `${title}：我们检查并说明的HVAC实体`,
-    validationTitle: "现场如何验证这些实体",
-    note: "此部分通过真实冷气部件、测试方法和现场检查来做自然语义SEO，只在与服务相关时出现。",
+    eyebrow: "冷气部件与现场检查",
+    heading: (title: string) => `${title}：我们检查并说明的冷气部件`,
+    validationTitle: "现场如何确认问题",
+    note: "我们只列出与此服务相关的部件、工具和检查项目，让您清楚技师会检查什么。",
   },
 } as const;
 

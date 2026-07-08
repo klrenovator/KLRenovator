@@ -280,7 +280,7 @@ const CORE_COPY: Record<string, Record<ServiceCorePolishLocale, CoreCopy>> = {
 
 const TEXT = {
   en: {
-    eyebrow: "8.1 Service Core Polish · Scope clarity",
+    eyebrow: "Service scope · Clear steps",
     heading: (title: string) => `${title}: What happens before, during and after service`,
     intro: (title: string) =>
       `This ${title} page is structured for ready-to-book users: first confirm fit, then understand our site check, actual work, testing and handover. No hidden step is left unclear before you WhatsApp KL Renovator.`,
@@ -292,7 +292,7 @@ const TEXT = {
     stepTitles: ["Before booking", "On-site inspection", "Service execution", "Testing before handover"],
   },
   ms: {
-    eyebrow: "8.1 Core Polish Servis · Skop jelas",
+    eyebrow: "Skop servis · Langkah jelas",
     heading: (title: string) => `${title}: Apa berlaku sebelum, semasa dan selepas servis`,
     intro: (title: string) =>
       `Halaman ${title} ini disusun untuk pelanggan yang sedia menempah: sahkan kesesuaian servis, faham semakan tapak, kerja sebenar, ujian dan serahan. Tiada langkah penting dibiarkan kabur sebelum anda WhatsApp KL Renovator.`,
@@ -304,7 +304,7 @@ const TEXT = {
     stepTitles: ["Sebelum tempahan", "Semakan di tapak", "Pelaksanaan servis", "Ujian sebelum serahan"],
   },
   zh: {
-    eyebrow: "8.1 服务核心优化 · 范围清楚",
+    eyebrow: "服务范围 · 步骤清楚",
     heading: (title: string) => `${title}：预约前、施工中与交工后的流程`,
     intro: (title: string) =>
       `此${title}页面面向准备预约的用户：先确认是否适合，再了解现场检查、实际施工、测试和交工。WhatsApp KL Renovator前，每个关键步骤都清楚说明。`,

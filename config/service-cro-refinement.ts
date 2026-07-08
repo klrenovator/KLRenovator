@@ -71,10 +71,10 @@ const SERVICE_CONTEXT: Record<string, Record<ServiceCROLocale, string>> = {
 
 const TEXT = {
   en: {
-    eyebrow: "8.5 SXO/CRO · Choose by intent stage",
+    eyebrow: "Choose your next step",
     heading: (title: string) => `What do you want to do next for ${title}?`,
     intro: (title: string, context: string) =>
-      `Pick the call-to-action that matches your stage. This ${title} page supports three common user intents: ready to book, checking price first, or confirming whether ${context} is the right solution.`,
+      `Pick the option that matches what you need now. This ${title} page helps you book a technician, check pricing first, or confirm whether ${context} is the right solution.`,
     reassurance: "Price, timing and any extra material cost are confirmed before dispatch or before work begins.",
     readyBadge: "Ready now",
     readyTitle: "Book the nearest technician",
@@ -91,10 +91,10 @@ const TEXT = {
     waMessage: (title: string) => `Hi KL Renovator, I want to book ${title}.\n\nLocation:\nNumber of units:\nHP / brand (if known):\nPhotos attached if needed.\n\nPlease confirm price and nearest available slot.`,
   },
   ms: {
-    eyebrow: "8.5 SXO/CRO · Pilih ikut tahap niat",
+    eyebrow: "Pilih langkah seterusnya",
     heading: (title: string) => `Apa langkah seterusnya untuk ${title}?`,
     intro: (title: string, context: string) =>
-      `Pilih CTA yang sepadan dengan tahap anda. Halaman ${title} ini menyokong tiga niat utama: sudah mahu tempah, mahu semak harga dahulu, atau mahu pastikan sama ada ${context} ialah solusi yang betul.`,
+      `Pilih pilihan yang paling sesuai dengan keperluan anda sekarang. Halaman ${title} ini membantu anda menempah juruteknik, menyemak harga dahulu, atau memastikan sama ada ${context} ialah solusi yang betul.`,
     reassurance: "Harga, masa dan sebarang kos bahan tambahan disahkan sebelum dispatch atau sebelum kerja bermula.",
     readyBadge: "Sedia tempah",
     readyTitle: "Tempah juruteknik terdekat",
@@ -111,10 +111,10 @@ const TEXT = {
     waMessage: (title: string) => `Hi KL Renovator, saya nak tempah ${title}.\n\nLokasi:\nBilangan unit:\nHP / jenama (jika tahu):\nFoto dilampirkan jika perlu.\n\nSila sahkan harga dan slot terdekat.`,
   },
   zh: {
-    eyebrow: "8.5 SXO/CRO · 按意图阶段选择",
+    eyebrow: "选择下一步",
     heading: (title: string) => `${title}下一步要做什么？`,
     intro: (title: string, context: string) =>
-      `请选择符合您当前阶段的CTA。此${title}页面支持三种常见意图：准备预约、先看价格，或先确认${context}是否是正确方案。`,
+      `请选择最符合您当前需要的选项。此${title}页面可帮助您预约技术员、先查看价格，或确认${context}是否是正确方案。`,
     reassurance: "派工或开工前会先确认价格、时间和任何额外材料费用。",
     readyBadge: "准备预约",
     readyTitle: "预约最近技术员",
