@@ -21,6 +21,7 @@ import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement
 import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
+import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 
 export function generateStaticParams() {
   // Round 22 / AMC hotfix: exclude service routes that have their own
@@ -359,6 +360,7 @@ export default async function ServicePage({
     startPrice: serviceStartPrice,
   });
   const hvacEntityModule = buildServiceHVACEntityModule(slug, "en", data.title);
+  const visualSXOModule = buildServiceVisualSXOModule(slug, "en", data.title);
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -599,6 +601,68 @@ export default async function ServicePage({
               <p className="rounded-3xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
                 {hvacEntityModule.note}
               </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Round 38 / 8.9: Visual & SXO Polish — decision tree + comparison table */}
+      <section id="visual-sxo-polish" className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="mb-7 max-w-4xl">
+              <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-2">{visualSXOModule.eyebrow}</p>
+              <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">{visualSXOModule.heading}</h2>
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700">{visualSXOModule.intro}</p>
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-[0.9fr_1.35fr]">
+              <div className="rounded-3xl border border-violet-100 bg-violet-50 p-5 sm:p-6">
+                <p className="text-xs font-black uppercase tracking-widest text-violet-700 mb-4">{visualSXOModule.decisionTitle}</p>
+                <div className="space-y-3">
+                  {visualSXOModule.decisionPaths.map((path, i) => (
+                    <div key={path.trigger} className="rounded-2xl border border-white bg-white p-4 shadow-sm">
+                      <div className="flex items-start gap-3">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-xs font-black text-white">{i + 1}</span>
+                        <div>
+                          <p className="text-sm font-bold leading-relaxed text-slate-800">{path.trigger}</p>
+                          <div className="mt-3 flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-widest">
+                            <span className="rounded-full bg-violet-100 px-3 py-1 text-violet-800">{path.action}</span>
+                            <FiArrowRight className="h-3 w-3 text-violet-500" />
+                            <span className="rounded-full bg-emerald-100 px-3 py-1 text-emerald-800">{path.outcome}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-500">{visualSXOModule.comparisonTitle}</p>
+                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-700">{visualSXOModule.compareAgainstLabel}</p>
+                </div>
+                <div className="overflow-hidden rounded-2xl border border-slate-200">
+                  <div className="grid grid-cols-4 bg-slate-900 px-4 py-3 text-[11px] font-black uppercase tracking-widest text-white">
+                    <span>Criteria</span>
+                    <span>This service</span>
+                    <span>Compare</span>
+                    <span>Decision</span>
+                  </div>
+                  {visualSXOModule.comparisonRows.map((row, i) => (
+                    <div key={row.criterion} className={`grid grid-cols-1 gap-2 border-t border-slate-200 px-4 py-4 text-sm sm:grid-cols-4 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
+                      <span className="font-black text-slate-950">{row.criterion}</span>
+                      <span className="text-slate-700">{row.thisService}</span>
+                      <span className="text-slate-600">{row.compareOption}</span>
+                      <span className="font-semibold text-sky-800">{row.decision}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 rounded-2xl border border-amber-100 bg-amber-50 p-4 text-xs font-semibold leading-relaxed text-amber-900">
+                  {visualSXOModule.note}
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
