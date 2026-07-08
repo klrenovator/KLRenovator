@@ -4,8 +4,10 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiClock, FiAlertTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
+import { servicesData } from "@/config/services-data";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
+import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -21,8 +23,16 @@ const emergencyMsg = [
 ].join("\n");
 
 const emergencyWaLink = waLink(emergencyMsg);
+const emergencyData = servicesData["emergency"];
 const emergencyCorePolish = buildServiceCorePolishModule("emergency", "en", "Emergency Aircond Repair", 88);
 const emergencyCRO = buildServiceCRORefinementModule("emergency", "en", "Emergency Aircond Repair");
+const emergencyAIO = buildServiceAIOAnswerBlock({
+  slug: "emergency",
+  locale: "en",
+  title: "Emergency Aircond Repair",
+  summary: emergencyData.aioSummary,
+  startPrice: 88,
+});
 
 // ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -292,6 +302,34 @@ export default function EmergencyPage() {
             {["⚡ Response in 30–60 min", "✅ All brands serviced", "🔍 Transparent diagnosis", "💳 Quote before work"].map((t) => (
               <span key={t} className="bg-white/15 border border-white/20 rounded-full px-3.5 py-1.5">{t}</span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Round 35 / 8.6: Emergency AIO / LLMO compact answer block */}
+      <section id="aio-answer-block" className="py-10 px-4 bg-white border-b border-slate-100">
+        <div className="max-w-6xl mx-auto rounded-3xl border border-red-100 bg-gradient-to-br from-red-50 to-white p-5 sm:p-6 shadow-sm">
+          <div className="grid gap-5 lg:grid-cols-[1.3fr_0.85fr] lg:items-start">
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-2">{emergencyAIO.eyebrow}</p>
+              <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">{emergencyAIO.heading}</h2>
+              <p className="mt-4 text-xs font-black uppercase tracking-widest text-slate-500">{emergencyAIO.directAnswerLabel}</p>
+              <p className="mt-2 text-base leading-relaxed text-slate-700">{emergencyAIO.directAnswer}</p>
+              <p className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4 text-sm font-semibold leading-relaxed text-emerald-900">
+                {emergencyAIO.quoteLine}
+              </p>
+            </div>
+            <aside className="rounded-2xl border border-slate-200 bg-white p-4">
+              <dl className="grid gap-3">
+                {emergencyAIO.facts.map((fact) => (
+                  <div key={fact.label} className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 last:border-b-0 last:pb-0">
+                    <dt className="text-[11px] font-black uppercase tracking-widest text-slate-400">{fact.label}</dt>
+                    <dd className="text-right text-sm font-black text-slate-900">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-4 text-[11px] leading-relaxed text-slate-400">{emergencyAIO.sourceLine}</p>
+            </aside>
           </div>
         </div>
       </section>
