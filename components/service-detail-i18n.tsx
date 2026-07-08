@@ -16,6 +16,7 @@ import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-autho
 import { buildServiceSchema } from "@/lib/seo";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
+import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 
 type Lang = "ms" | "zh";
 
@@ -318,8 +319,16 @@ export function ServiceDetailI18n({
   const tHighlights = lang === "ms" ? i18.highlightsMS : i18.highlightsZH;
   const tProcess = lang === "ms" ? i18.processMS : i18.processZH;
   const tPriceTable = lang === "ms" ? i18.priceTableMS : i18.priceTableZH;
-  const corePolish = buildServiceCorePolishModule(slug, lang, tTitle, service?.startPrice ?? data.startPrice);
+  const serviceStartPrice = service?.startPrice ?? data.startPrice;
+  const corePolish = buildServiceCorePolishModule(slug, lang, tTitle, serviceStartPrice);
   const croModule = buildServiceCRORefinementModule(slug, lang, tTitle);
+  const aioBlock = buildServiceAIOAnswerBlock({
+    slug,
+    locale: lang,
+    title: tTitle,
+    summary: lang === "ms" ? data.aioSummaryMS : data.aioSummaryZH,
+    startPrice: serviceStartPrice,
+  });
   const inLang = lang === "ms" ? "ms-MY" : "zh-MY";
 
   // FAQ selection: page language is primary, the other two are secondary.
@@ -664,6 +673,38 @@ export function ServiceDetailI18n({
           {TRUST[lang].map((t: string) => (
             <span key={t} className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> {t}</span>
           ))}
+        </div>
+      </section>
+
+      {/* Round 35 / 8.6: AIO / LLMO compact answer block for localized AI-quotable service summaries */}
+      <section id="aio-answer-block" className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="rounded-3xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white p-5 sm:p-6 shadow-sm">
+              <div className="grid gap-5 lg:grid-cols-[1.3fr_0.85fr] lg:items-start">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">{aioBlock.eyebrow}</p>
+                  <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">{aioBlock.heading}</h2>
+                  <p className="mt-4 text-xs font-black uppercase tracking-widest text-slate-500">{aioBlock.directAnswerLabel}</p>
+                  <p className="mt-2 text-base leading-relaxed text-slate-700">{aioBlock.directAnswer}</p>
+                  <p className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4 text-sm font-semibold leading-relaxed text-emerald-900">
+                    {aioBlock.quoteLine}
+                  </p>
+                </div>
+                <aside className="rounded-2xl border border-slate-200 bg-white p-4">
+                  <dl className="grid gap-3">
+                    {aioBlock.facts.map((fact) => (
+                      <div key={fact.label} className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 last:border-b-0 last:pb-0">
+                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-400">{fact.label}</dt>
+                        <dd className="text-right text-sm font-black text-slate-900">{fact.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <p className="mt-4 text-[11px] leading-relaxed text-slate-400">{aioBlock.sourceLine}</p>
+                </aside>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
