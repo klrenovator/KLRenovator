@@ -1033,15 +1033,15 @@ export default async function AreaPage({
                 href="/near-me"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
               >
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Proximity Dispatch Hub · Intent Separation</p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Fast Local Dispatch</p>
                 <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
-                  Need rapid proximity dispatch across {area.name} or adjacent districts?
+                  Need fast aircond service in {area.name} or nearby areas?
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  Use our Greater Klang Valley proximity aggregator hub to check real-time mobile fleet reach, compare adjacent townships, and route directly to our dispatch desk.
+                  Use our Near Me page to check nearby coverage, compare adjacent townships and request the fastest available WhatsApp appointment.
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
-                  Open Near Me Hub <FiArrowRight className="h-3 w-3" />
+                  Open Near Me Page <FiArrowRight className="h-3 w-3" />
                 </span>
               </NextLink>
             </div>
