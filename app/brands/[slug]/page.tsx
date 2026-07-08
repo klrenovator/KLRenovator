@@ -13,97 +13,225 @@ import { waLink } from "@/lib/whatsapp";
 import { allPosts } from "@/config/blog-posts";
 import { BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
 import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
+import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 
 // ── Brand → Blog relevance map ───────────────────────────────────────────────
 const BRAND_BLOG_MAP: Record<string, string[]> = {
-  "daikin":       ["best-aircond-brands-malaysia-2026", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia"],
-  "panasonic":    ["best-aircond-brands-malaysia-2026", "daikin-vs-panasonic-aircond-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia"],
-  "mitsubishi":   ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "york":         ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "aircond-lifespan-malaysia", "how-often-service-aircond-malaysia"],
-  "acson":        ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "carrier":      ["best-aircond-brands-malaysia-2026", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-service-price-guide-kl-2026"],
-  "midea":        ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-service-price-guide-kl-2026"],
-  "haier":        ["best-aircond-brands-malaysia-2026", "aircond-installation-guide-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "toshiba":      ["best-aircond-brands-malaysia-2026", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "hitachi":      ["best-aircond-brands-malaysia-2026", "aircond-lifespan-malaysia", "commercial-hvac-maintenance-kl", "aircond-troubleshooting-guide-malaysia"],
-  "samsung":      ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "lg":           ["best-aircond-brands-malaysia-2026", "inverter-vs-non-inverter-aircond-malaysia", "aircond-installation-guide-malaysia", "how-to-reduce-aircond-electricity-bill-malaysia"],
-  "sharp":        ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "fujitsu":      ["best-aircond-brands-malaysia-2026", "commercial-hvac-maintenance-kl", "aircond-lifespan-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "gree":         ["best-aircond-brands-malaysia-2026", "aircond-service-price-guide-kl-2026", "how-often-service-aircond-malaysia", "aircond-installation-guide-malaysia"],
-};
-
-// ── Error code reference per brand ───────────────────────────────────────────
-const BRAND_ERROR_CODES: Record<string, { code: string; meaning: string; fix: string }[]> = {
-  "daikin": [
-    { code: "A1", meaning: "Indoor PCB fault", fix: "PCB board inspection / replacement" },
-    { code: "C4", meaning: "Heat exchanger sensor fault", fix: "Sensor replacement" },
-    { code: "J3", meaning: "Discharge pipe sensor fault", fix: "Sensor replacement" },
-    { code: "L5", meaning: "Inverter overcurrent (low gas)", fix: "Gas top-up + leak check" },
-    { code: "U4", meaning: "Indoor/outdoor communication error", fix: "Wiring + PCB diagnosis" },
+  daikin: [
+    "best-aircond-brands-malaysia-2026",
+    "daikin-vs-panasonic-aircond-malaysia",
+    "inverter-vs-non-inverter-aircond-malaysia",
+    "aircond-installation-guide-malaysia",
   ],
-  "panasonic": [
-    { code: "H11", meaning: "Outdoor unit communication fault", fix: "PCB + wiring inspection" },
-    { code: "H15", meaning: "Outdoor fan motor fault", fix: "Fan motor replacement" },
-    { code: "H23", meaning: "Pipe temperature sensor fault", fix: "Sensor replacement" },
-    { code: "F11", meaning: "Refrigerant pressure issue", fix: "Gas top-up + leak check" },
-    { code: "E18", meaning: "Drive PCB fault", fix: "PCB board replacement" },
+  panasonic: [
+    "best-aircond-brands-malaysia-2026",
+    "daikin-vs-panasonic-aircond-malaysia",
+    "inverter-vs-non-inverter-aircond-malaysia",
+    "how-often-service-aircond-malaysia",
   ],
-  "mitsubishi": [
-    { code: "P8", meaning: "Outdoor unit error (general)", fix: "Outdoor unit diagnosis" },
-    { code: "E6", meaning: "Communication fault indoor/outdoor", fix: "Wiring + PCB check" },
-    { code: "U1", meaning: "Reverse phase / open phase", fix: "Electrical supply inspection" },
-    { code: "P4", meaning: "Drain sensor fault", fix: "Drain sensor replacement" },
-    { code: "E4", meaning: "Remote controller error", fix: "Remote controller / PCB check" },
+  mitsubishi: [
+    "best-aircond-brands-malaysia-2026",
+    "inverter-vs-non-inverter-aircond-malaysia",
+    "aircond-installation-guide-malaysia",
+    "aircond-troubleshooting-guide-malaysia",
   ],
-  "york": [
-    { code: "E1", meaning: "High pressure protection", fix: "Outdoor unit + gas pressure check" },
-    { code: "E2", meaning: "Low pressure protection", fix: "Gas top-up + leak check" },
-    { code: "E3", meaning: "Compressor overload", fix: "Compressor + capacitor diagnosis" },
-    { code: "E6", meaning: "Fan motor fault", fix: "Fan motor inspection / replacement" },
+  york: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-service-price-guide-kl-2026",
+    "aircond-lifespan-malaysia",
+    "how-often-service-aircond-malaysia",
   ],
-  "acson": [
-    { code: "E1", meaning: "Indoor fan motor fault", fix: "Fan motor replacement" },
-    { code: "E2", meaning: "Outdoor fan motor fault", fix: "Fan motor replacement" },
-    { code: "E3", meaning: "Compressor protection", fix: "Compressor + gas diagnosis" },
-    { code: "E5", meaning: "Refrigerant low pressure", fix: "Gas top-up + leak check" },
+  acson: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-service-price-guide-kl-2026",
+    "how-often-service-aircond-malaysia",
+    "aircond-maintenance-checklist-malaysia",
   ],
-  "midea": [
-    { code: "E1", meaning: "High pressure protection", fix: "Outdoor unit + condenser check" },
-    { code: "E3", meaning: "Low pressure protection / low gas", fix: "Gas top-up + leak check" },
-    { code: "P2", meaning: "Overcurrent protection (compressor)", fix: "Compressor + capacitor diagnosis" },
-    { code: "F3", meaning: "Outdoor ambient sensor fault", fix: "Sensor replacement" },
+  carrier: [
+    "best-aircond-brands-malaysia-2026",
+    "commercial-hvac-maintenance-kl",
+    "aircond-lifespan-malaysia",
+    "aircond-service-price-guide-kl-2026",
   ],
-  "_default": [
-    { code: "E1/E2/E3", meaning: "Various pressure / temperature faults", fix: "Diagnosis by KL Renovator technician" },
-    { code: "P-series", meaning: "Protection mode triggered", fix: "On-site error code reading + diagnosis" },
-    { code: "F-series", meaning: "Sensor fault codes", fix: "Sensor inspection + replacement if needed" },
+  midea: [
+    "best-aircond-brands-malaysia-2026",
+    "inverter-vs-non-inverter-aircond-malaysia",
+    "aircond-installation-guide-malaysia",
+    "aircond-service-price-guide-kl-2026",
+  ],
+  haier: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-installation-guide-malaysia",
+    "how-often-service-aircond-malaysia",
+    "aircond-maintenance-checklist-malaysia",
+  ],
+  toshiba: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-lifespan-malaysia",
+    "aircond-troubleshooting-guide-malaysia",
+    "aircond-maintenance-checklist-malaysia",
+  ],
+  hitachi: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-lifespan-malaysia",
+    "commercial-hvac-maintenance-kl",
+    "aircond-troubleshooting-guide-malaysia",
+  ],
+  samsung: [
+    "best-aircond-brands-malaysia-2026",
+    "inverter-vs-non-inverter-aircond-malaysia",
+    "aircond-installation-guide-malaysia",
+    "aircond-troubleshooting-guide-malaysia",
+  ],
+  lg: [
+    "best-aircond-brands-malaysia-2026",
+    "inverter-vs-non-inverter-aircond-malaysia",
+    "aircond-installation-guide-malaysia",
+    "how-to-reduce-aircond-electricity-bill-malaysia",
+  ],
+  sharp: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-service-price-guide-kl-2026",
+    "how-often-service-aircond-malaysia",
+    "aircond-maintenance-checklist-malaysia",
+  ],
+  fujitsu: [
+    "best-aircond-brands-malaysia-2026",
+    "commercial-hvac-maintenance-kl",
+    "aircond-lifespan-malaysia",
+    "aircond-troubleshooting-guide-malaysia",
+  ],
+  gree: [
+    "best-aircond-brands-malaysia-2026",
+    "aircond-service-price-guide-kl-2026",
+    "how-often-service-aircond-malaysia",
+    "aircond-installation-guide-malaysia",
   ],
 };
 
 // ── Brand → Problem relevance map ─────────────────────────────────────────────
 
 const BRAND_PROBLEM_MAP: Record<string, string[]> = {
-  "daikin":             ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
-  "panasonic":          ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-blinking-light"],
-  "mitsubishi":         ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
-  "york":               ["aircond-not-cold", "aircond-compressor-problem", "aircond-water-leaking", "aircond-low-gas"],
-  "acson":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
-  "carrier":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-high-electricity-bill", "aircond-water-leaking"],
-  "midea":              ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-making-noise"],
-  "haier":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
-  "toshiba":            ["aircond-not-cold", "aircond-blinking-light", "aircond-pcb-problem", "aircond-water-leaking"],
-  "hitachi":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-blinking-light", "aircond-water-leaking"],
-  "samsung":            ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-pcb-problem"],
-  "lg":                 ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-fan-not-working"],
-  "sharp":              ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
-  "fujitsu":            ["aircond-not-cold", "aircond-compressor-problem", "aircond-pcb-problem", "aircond-blinking-light"],
-  "gree":               ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
-  "hisense":            ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
-  "aux":                ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-bad-smell"],
-  "tcl":                ["aircond-not-cold", "aircond-water-leaking", "aircond-blinking-light", "aircond-low-gas"],
-  "national":           ["aircond-not-cold", "aircond-water-leaking", "aircond-making-noise", "aircond-low-gas"],
-  "isonic":             ["aircond-not-cold", "aircond-water-leaking", "aircond-bad-smell", "aircond-low-gas"],
+  daikin: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-blinking-light",
+    "aircond-low-gas",
+  ],
+  panasonic: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-bad-smell",
+    "aircond-blinking-light",
+  ],
+  mitsubishi: [
+    "aircond-not-cold",
+    "aircond-blinking-light",
+    "aircond-pcb-problem",
+    "aircond-water-leaking",
+  ],
+  york: [
+    "aircond-not-cold",
+    "aircond-compressor-problem",
+    "aircond-water-leaking",
+    "aircond-low-gas",
+  ],
+  acson: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-low-gas",
+  ],
+  carrier: [
+    "aircond-not-cold",
+    "aircond-compressor-problem",
+    "aircond-high-electricity-bill",
+    "aircond-water-leaking",
+  ],
+  midea: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-bad-smell",
+    "aircond-making-noise",
+  ],
+  haier: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-low-gas",
+  ],
+  toshiba: [
+    "aircond-not-cold",
+    "aircond-blinking-light",
+    "aircond-pcb-problem",
+    "aircond-water-leaking",
+  ],
+  hitachi: [
+    "aircond-not-cold",
+    "aircond-compressor-problem",
+    "aircond-blinking-light",
+    "aircond-water-leaking",
+  ],
+  samsung: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-blinking-light",
+    "aircond-pcb-problem",
+  ],
+  lg: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-blinking-light",
+    "aircond-fan-not-working",
+  ],
+  sharp: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-bad-smell",
+  ],
+  fujitsu: [
+    "aircond-not-cold",
+    "aircond-compressor-problem",
+    "aircond-pcb-problem",
+    "aircond-blinking-light",
+  ],
+  gree: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-bad-smell",
+  ],
+  hisense: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-low-gas",
+  ],
+  aux: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-bad-smell",
+  ],
+  tcl: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-blinking-light",
+    "aircond-low-gas",
+  ],
+  national: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-making-noise",
+    "aircond-low-gas",
+  ],
+  isonic: [
+    "aircond-not-cold",
+    "aircond-water-leaking",
+    "aircond-bad-smell",
+    "aircond-low-gas",
+  ],
 };
 
 export function generateStaticParams() {
@@ -142,7 +270,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: brand.metaTitle,
       description: brand.metaDesc,
-      images: [`https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`],
+      images: [
+        `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`,
+      ],
     },
     alternates: {
       canonical: `https://www.klrenovator.com/brands/${slug}`,
@@ -170,7 +300,11 @@ export default async function BrandPage({
   const waMsgZH = `你好 KL Renovator，我需要帮助处理我的${brand.name}冷气。请给予建议。`;
 
   const services = siteConfig.services.filter((s) => s.slug !== "emergency");
-  const brandAreaComboModule = buildBrandAreaComboModule(brand, siteConfig.areaPages, "en");
+  const brandAreaComboModule = buildBrandAreaComboModule(
+    brand,
+    siteConfig.areaPages,
+    "en",
+  );
 
   // ── Schema ────────────────────────────────────────────────────────────────
   const serviceSchema = {
@@ -206,9 +340,24 @@ export default async function BrandPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com/" },
-      { "@type": "ListItem", position: 2, name: "Brands", item: "https://www.klrenovator.com/brands" },
-      { "@type": "ListItem", position: 3, name: `${brand.name} Aircond Service`, item: `https://www.klrenovator.com/brands/${slug}` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.klrenovator.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Brands",
+        item: "https://www.klrenovator.com/brands",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${brand.name} Aircond Service`,
+        item: `https://www.klrenovator.com/brands/${slug}`,
+      },
     ],
   };
 
@@ -224,19 +373,51 @@ export default async function BrandPage({
       value: "99",
     },
     step: [
-      { "@type": "HowToStep", position: 1, name: "WhatsApp KL Renovator", text: `Send a WhatsApp to +60182983573 with your ${brand.name} model, HP size and location.` },
-      { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "Get a confirmed price before the technician is dispatched — no hidden charges." },
-      { "@type": "HowToStep", position: 3, name: "Technician Arrives", text: "Trained KL Renovator technician arrives at your location on the agreed date and time." },
-      { "@type": "HowToStep", position: 4, name: "Service Completed", text: `Your ${brand.name} aircond is serviced, tested and handed over with a job card and warranty.` },
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "WhatsApp KL Renovator",
+        text: `Send a WhatsApp to +60182983573 with your ${brand.name} model, HP size and location.`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Receive Quote",
+        text: "Get a confirmed price before the technician is dispatched — no hidden charges.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Technician Arrives",
+        text: "Trained KL Renovator technician arrives at your location on the agreed date and time.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Service Completed",
+        text: `Your ${brand.name} aircond is serviced, tested and handed over with a job card and warranty.`,
+      },
     ],
   };
 
   // Build FAQ entries — use brand-specific faqs if available, else generic fallback
   const faqItems = (brand.faqs ?? [
-    { q: `How much does ${brand.name} aircond service cost in KL?`, a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.` },
-    { q: `Does KL Renovator service all ${brand.name} models?`, a: `Yes. KL Renovator technicians are experienced in servicing all ${brand.name} residential and commercial models including ${brand.models.join(", ")}. Both inverter and non-inverter systems supported.` },
-    { q: `My ${brand.name} aircond is not cold — what should I do?`, a: `The most common causes are low refrigerant gas, a dirty coil or a faulty capacitor. WhatsApp KL Renovator at +60182983573 with your ${brand.name} model and HP size. A technician will diagnose and quote you before starting any work.` },
-    { q: `What gas does ${brand.name} aircond use?`, a: `Most ${brand.name} air conditioners use ${brand.gasTypes.join(" or ")} refrigerant. KL Renovator handles all gas types: R22, R410A and R32 with precision balancing.` },
+    {
+      q: `How much does ${brand.name} aircond service cost in KL?`,
+      a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
+    },
+    {
+      q: `Does KL Renovator service all ${brand.name} models?`,
+      a: `Yes. KL Renovator technicians are experienced in servicing all ${brand.name} residential and commercial models including ${brand.models.join(", ")}. Both inverter and non-inverter systems supported.`,
+    },
+    {
+      q: `My ${brand.name} aircond is not cold — what should I do?`,
+      a: `The most common causes are low refrigerant gas, a dirty coil or a faulty capacitor. WhatsApp KL Renovator at +60182983573 with your ${brand.name} model and HP size. A technician will diagnose and quote you before starting any work.`,
+    },
+    {
+      q: `What gas does ${brand.name} aircond use?`,
+      a: `Most ${brand.name} air conditioners use ${brand.gasTypes.join(" or ")} refrigerant. KL Renovator handles all gas types: R22, R410A and R32 with precision balancing.`,
+    },
   ]) as { q: string; a: string }[];
 
   const faqSchema = {
@@ -259,27 +440,65 @@ export default async function BrandPage({
     inLanguage: "en-MY",
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
     about: { "@id": "https://www.klrenovator.com/#business" },
-    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
   };
 
   return (
     <>
       {/* Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
 
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-slate-50 border-b border-slate-100">
+      <nav
+        aria-label="Breadcrumb"
+        className="bg-slate-50 border-b border-slate-100"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
           <ol className="flex items-center gap-1.5 text-xs text-slate-500">
-            <li><NextLink href="/" className="hover:text-sky-600 font-medium">Home</NextLink></li>
-            <li><FiChevronRight className="h-3 w-3" /></li>
-            <li><NextLink href="/brands" className="hover:text-sky-600 font-medium">Brands</NextLink></li>
-            <li><FiChevronRight className="h-3 w-3" /></li>
-            <li className="text-slate-900 font-bold">{brand.name} Aircond Service</li>
+            <li>
+              <NextLink href="/" className="hover:text-sky-600 font-medium">
+                Home
+              </NextLink>
+            </li>
+            <li>
+              <FiChevronRight className="h-3 w-3" />
+            </li>
+            <li>
+              <NextLink
+                href="/brands"
+                className="hover:text-sky-600 font-medium"
+              >
+                Brands
+              </NextLink>
+            </li>
+            <li>
+              <FiChevronRight className="h-3 w-3" />
+            </li>
+            <li className="text-slate-900 font-bold">
+              {brand.name} Aircond Service
+            </li>
           </ol>
         </div>
       </nav>
@@ -288,7 +507,9 @@ export default async function BrandPage({
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src={brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}
+            src={
+              brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"
+            }
             alt={`${brand.name} aircond service KL & Selangor`}
             fill
             sizes="100vw"
@@ -307,8 +528,7 @@ export default async function BrandPage({
               </p>
               <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 leading-tight">
                 {brand.name} Aircond{" "}
-                <span className="text-sky-500">Service KL</span>{" "}
-                &amp; Selangor
+                <span className="text-sky-500">Service KL</span> &amp; Selangor
               </h1>
               <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
                 {brand.description}
@@ -325,7 +545,13 @@ export default async function BrandPage({
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2">
-                {["Chemical Wash", "Gas Top-Up", "Repairs", "Installation", "Chemical Overhaul"].map((tag) => (
+                {[
+                  "Chemical Wash",
+                  "Gas Top-Up",
+                  "Repairs",
+                  "Installation",
+                  "Chemical Overhaul",
+                ].map((tag) => (
                   <span
                     key={tag}
                     className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-600 uppercase tracking-wider rounded-full"
@@ -360,11 +586,24 @@ export default async function BrandPage({
       {/* ── Trust Signal Strip ─────────────────────────────────────────── */}
       <section className="bg-slate-900 text-white py-4 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Workmanship Warranty</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> All {brand.name} Models Serviced</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Price Confirmed Before Work</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Same-Day Available</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Reviews</span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400">✓</span> 1-Month Workmanship
+            Warranty
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400">✓</span> All {brand.name} Models
+            Serviced
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400">✓</span> Price Confirmed Before
+            Work
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400">✓</span> Same-Day Available
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400">✓</span> 500+ 5-Star Reviews
+          </span>
         </div>
       </section>
 
@@ -379,7 +618,10 @@ export default async function BrandPage({
                 </h2>
                 <ul className="space-y-2">
                   {brand.models.map((model) => (
-                    <li key={model} className="flex items-start gap-2 text-sm text-slate-600 font-medium">
+                    <li
+                      key={model}
+                      className="flex items-start gap-2 text-sm text-slate-600 font-medium"
+                    >
                       <FiCheck className="h-4 w-4 text-sky-500 mt-0.5 shrink-0" />
                       {model}
                     </li>
@@ -394,7 +636,10 @@ export default async function BrandPage({
                 </h2>
                 <ul className="space-y-2 mb-6">
                   {brand.gasTypes.map((gas) => (
-                    <li key={gas} className="flex items-start gap-2 text-sm text-slate-600 font-medium">
+                    <li
+                      key={gas}
+                      className="flex items-start gap-2 text-sm text-slate-600 font-medium"
+                    >
                       <FiCheck className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
                       {gas} — Precision top-up with leak check
                     </li>
@@ -402,7 +647,9 @@ export default async function BrandPage({
                 </ul>
                 <div className="bg-sky-50 border border-sky-100 rounded-xl p-3">
                   <p className="text-xs font-bold text-sky-700">
-                    Not sure which gas your {brand.name} uses? WhatsApp us a photo of the outdoor unit label — we&apos;ll identify it instantly.
+                    Not sure which gas your {brand.name} uses? WhatsApp us a
+                    photo of the outdoor unit label — we&apos;ll identify it
+                    instantly.
                   </p>
                 </div>
               </div>
@@ -423,18 +670,28 @@ export default async function BrandPage({
                 {brand.name} Inverter vs Non-Inverter — What You Should Know
               </h2>
               <div className="bg-violet-50 border border-violet-100 rounded-2xl p-5 mb-3">
-                <p className="text-sm text-slate-700 font-medium leading-relaxed">{brand.inverterNote}</p>
+                <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                  {brand.inverterNote}
+                </p>
               </div>
               {brand.inverterNoteMS && (
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 mb-3">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1.5">🇲🇾 Bahasa Malaysia</p>
-                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{brand.inverterNoteMS}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1.5">
+                    🇲🇾 Bahasa Malaysia
+                  </p>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                    {brand.inverterNoteMS}
+                  </p>
                 </div>
               )}
               {brand.inverterNoteZH && (
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1.5">🇨🇳 中文</p>
-                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{brand.inverterNoteZH}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1.5">
+                    🇨🇳 中文
+                  </p>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                    {brand.inverterNoteZH}
+                  </p>
                 </div>
               )}
             </Reveal>
@@ -454,36 +711,66 @@ export default async function BrandPage({
                 Real {brand.name} Troubleshooting Tips From Our Technicians
               </h2>
               <p className="text-sm text-slate-500 mb-6 max-w-2xl">
-                Common {brand.name}-specific symptoms our HVAC expert team sees in the field across KL and Selangor — and what usually fixes them, before assuming the worst.
+                Common {brand.name}-specific symptoms our HVAC expert team sees
+                in the field across KL and Selangor — and what usually fixes
+                them, before assuming the worst.
               </p>
               <div className="space-y-4">
                 {brand.troubleshootingTips.map((tip, i) => (
-                  <div key={i} className="bg-white border border-slate-200 rounded-2xl p-5">
+                  <div
+                    key={i}
+                    className="bg-white border border-slate-200 rounded-2xl p-5"
+                  >
                     <h3 className="font-black text-sm text-slate-900 mb-2 flex items-start gap-2">
-                      <span className="shrink-0 mt-0.5 text-amber-500">⚠</span> {tip.issue}
+                      <span className="shrink-0 mt-0.5 text-amber-500">⚠</span>{" "}
+                      {tip.issue}
                     </h3>
-                    <p className="text-sm text-slate-600 font-medium leading-relaxed pl-6">{tip.tip}</p>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed pl-6">
+                      {tip.tip}
+                    </p>
                   </div>
                 ))}
               </div>
-              {(brand.troubleshootingTipsMS?.length || brand.troubleshootingTipsZH?.length) ? (
+              {brand.troubleshootingTipsMS?.length ||
+              brand.troubleshootingTipsZH?.length ? (
                 <details className="mt-5 group">
                   <summary className="cursor-pointer text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
-                    View in Bahasa Malaysia &amp; 中文 <span className="inline-block transition-transform group-open:rotate-90">›</span>
+                    View in Bahasa Malaysia &amp; 中文{" "}
+                    <span className="inline-block transition-transform group-open:rotate-90">
+                      ›
+                    </span>
                   </summary>
                   <div className="mt-4 space-y-4">
                     {brand.troubleshootingTipsMS?.map((tip, i) => (
-                      <div key={`ms-${i}`} className="bg-white border border-slate-200 rounded-2xl p-4">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">🇲🇾 BM</p>
-                        <h3 className="font-black text-sm text-slate-900 mb-1.5">{tip.issue}</h3>
-                        <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip.tip}</p>
+                      <div
+                        key={`ms-${i}`}
+                        className="bg-white border border-slate-200 rounded-2xl p-4"
+                      >
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">
+                          🇲🇾 BM
+                        </p>
+                        <h3 className="font-black text-sm text-slate-900 mb-1.5">
+                          {tip.issue}
+                        </h3>
+                        <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                          {tip.tip}
+                        </p>
                       </div>
                     ))}
                     {brand.troubleshootingTipsZH?.map((tip, i) => (
-                      <div key={`zh-${i}`} className="bg-white border border-slate-200 rounded-2xl p-4">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">🇨🇳 中文</p>
-                        <h3 className="font-black text-sm text-slate-900 mb-1.5">{tip.issue}</h3>
-                        <p className="text-sm text-slate-600 font-medium leading-relaxed">{tip.tip}</p>
+                      <div
+                        key={`zh-${i}`}
+                        className="bg-white border border-slate-200 rounded-2xl p-4"
+                      >
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">
+                          🇨🇳 中文
+                        </p>
+                        <h3 className="font-black text-sm text-slate-900 mb-1.5">
+                          {tip.issue}
+                        </h3>
+                        <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                          {tip.tip}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -503,11 +790,15 @@ export default async function BrandPage({
                 Real Job Photos · Foto Kerja Sebenar · 真实作业照片
               </p>
               <h2 className="text-lg font-black text-slate-900 mb-6">
-                Real {brand.name} Jobs We&apos;ve Completed Across KL &amp; Selangor
+                Real {brand.name} Jobs We&apos;ve Completed Across KL &amp;
+                Selangor
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {brand.galleryImages.map((img, i) => (
-                  <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+                  <div
+                    key={i}
+                    className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100"
+                  >
                     <Image
                       src={img.src}
                       alt={img.alt}
@@ -521,7 +812,8 @@ export default async function BrandPage({
                 ))}
               </div>
               <p className="mt-4 text-xs text-slate-400">
-                Real photos from actual {brand.name} service jobs completed by KL Renovator technicians — not stock images.
+                Real photos from actual {brand.name} service jobs completed by
+                KL Renovator technicians — not stock images.
               </p>
             </Reveal>
           </div>
@@ -535,8 +827,12 @@ export default async function BrandPage({
             <div className="text-center mb-10">
               <p className={eyebrow()}>Full Service Range</p>
               <h2 className="mt-3">
-                <span className={title({ size: "sm" })}>{brand.name} Aircond </span>
-                <span className={title({ size: "sm", color: "brand" })}>Services & Pricing</span>
+                <span className={title({ size: "sm" })}>
+                  {brand.name} Aircond{" "}
+                </span>
+                <span className={title({ size: "sm", color: "brand" })}>
+                  Services & Pricing
+                </span>
               </h2>
             </div>
           </Reveal>
@@ -545,8 +841,12 @@ export default async function BrandPage({
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 30}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md hover:border-sky-100 transition-all">
-                  <h3 className="font-black text-slate-900 text-sm mb-2">{service.title}</h3>
-                  <p className="text-xs text-slate-500 font-medium leading-relaxed mb-4">{service.short}</p>
+                  <h3 className="font-black text-slate-900 text-sm mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed mb-4">
+                    {service.short}
+                  </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-black text-sky-700 bg-sky-50 border border-sky-100 px-3 py-1 rounded-full">
                       From RM {service.startPrice}
@@ -565,12 +865,15 @@ export default async function BrandPage({
 
           <Reveal>
             <div className="mt-8 max-w-5xl mx-auto bg-slate-900 text-white rounded-2xl p-7 sm:p-10 text-center">
-              <p className="text-xs font-black uppercase tracking-widest text-sky-400 mb-2">Instant Quote</p>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-400 mb-2">
+                Instant Quote
+              </p>
               <h3 className="text-xl sm:text-2xl font-black uppercase text-white">
                 Get Your {brand.name} Service Quote
               </h3>
               <p className="mt-3 text-sm text-slate-300 font-medium max-w-md mx-auto">
-                WhatsApp us your {brand.name} model, HP size and area. We&apos;ll give you an accurate quote within 30 minutes.
+                WhatsApp us your {brand.name} model, HP size and area.
+                We&apos;ll give you an accurate quote within 30 minutes.
               </p>
               <a
                 href={waLink(waMsg)}
@@ -599,7 +902,18 @@ export default async function BrandPage({
                   We Service {brand.name} — We Are Not a {brand.name} Dealer
                 </h2>
                 <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                  KL Renovator is an independent HVAC servicing company, not an official {brand.name} dealership or authorized service centre. We service, repair and install {brand.name} units using genuine or OEM-equivalent replacement parts (capacitors, PCB boards, gas, drain pumps) sourced from trusted Malaysian suppliers — never counterfeit or unverified parts. If your {brand.name} unit is still under manufacturer warranty, we&apos;ll tell you upfront whether a repair might affect that warranty, so you can decide whether to go through {brand.name}&apos;s own authorized centre instead. Our job is honest, transparent servicing — not selling you a new unit you don&apos;t need.
+                  KL Renovator is an independent HVAC servicing company, not an
+                  official {brand.name} dealership or authorized service centre.
+                  We service, repair and install {brand.name} units using
+                  genuine or OEM-equivalent replacement parts (capacitors, PCB
+                  boards, gas, drain pumps) sourced from trusted Malaysian
+                  suppliers — never counterfeit or unverified parts. If your{" "}
+                  {brand.name} unit is still under manufacturer warranty,
+                  we&apos;ll tell you upfront whether a repair might affect that
+                  warranty, so you can decide whether to go through {brand.name}
+                  &apos;s own authorized centre instead. Our job is honest,
+                  transparent servicing — not selling you a new unit you
+                  don&apos;t need.
                 </p>
               </div>
             </div>
@@ -614,27 +928,53 @@ export default async function BrandPage({
             <div className="text-center mb-10">
               <p className={eyebrow()}>Why KL Renovator</p>
               <h2 className="mt-3">
-                <span className={title({ size: "sm" })}>Trusted {brand.name} Aircond </span>
-                <span className={title({ size: "sm", color: "brand" })}>Specialists</span>
+                <span className={title({ size: "sm" })}>
+                  Trusted {brand.name} Aircond{" "}
+                </span>
+                <span className={title({ size: "sm", color: "brand" })}>
+                  Specialists
+                </span>
               </h2>
             </div>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {[
-              { title: "Brand-Experienced Technicians", desc: `Our technicians have hands-on experience servicing ${brand.name} models including inverter and non-inverter wall-mounted and ceiling cassette systems.` },
-              { title: "Correct Gas Used Every Time", desc: `We use ${brand.gasTypes.join(" and ")} refrigerant with precision manifold balancing — never overfilling or underfilling, which protects your ${brand.name} compressor.` },
-              { title: "Transparent Quote Before Work", desc: `Every ${brand.name} service job includes a confirmed quote before our technician starts. No hidden charges ever.` },
-              { title: "Same-Day Service Available", desc: `Most ${brand.name} service and repair jobs can be scheduled same-day across KL and Selangor. WhatsApp to check availability.` },
-              { title: "1-Month Workmanship Warranty", desc: "All labour and parts are covered by a 1-month workmanship warranty. If the same issue recurs, we return at no extra charge." },
-              { title: "All KL & Selangor Covered", desc: "KL Renovator dispatches to all areas including Batu Caves, Cheras, Ampang, PJ, Subang, Shah Alam, Klang, Puchong, Kajang and more." },
+              {
+                title: "Brand-Experienced Technicians",
+                desc: `Our technicians have hands-on experience servicing ${brand.name} models including inverter and non-inverter wall-mounted and ceiling cassette systems.`,
+              },
+              {
+                title: "Correct Gas Used Every Time",
+                desc: `We use ${brand.gasTypes.join(" and ")} refrigerant with precision manifold balancing — never overfilling or underfilling, which protects your ${brand.name} compressor.`,
+              },
+              {
+                title: "Transparent Quote Before Work",
+                desc: `Every ${brand.name} service job includes a confirmed quote before our technician starts. No hidden charges ever.`,
+              },
+              {
+                title: "Same-Day Service Available",
+                desc: `Most ${brand.name} service and repair jobs can be scheduled same-day across KL and Selangor. WhatsApp to check availability.`,
+              },
+              {
+                title: "1-Month Workmanship Warranty",
+                desc: "All labour and parts are covered by a 1-month workmanship warranty. If the same issue recurs, we return at no extra charge.",
+              },
+              {
+                title: "All KL & Selangor Covered",
+                desc: "KL Renovator dispatches to all areas including Batu Caves, Cheras, Ampang, PJ, Subang, Shah Alam, Klang, Puchong, Kajang and more.",
+              },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 40}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-5">
                   <div className="w-8 h-8 bg-sky-50 border border-sky-100 rounded-lg flex items-center justify-center mb-3">
                     <FiCheck className="h-4 w-4 text-sky-600" />
                   </div>
-                  <h3 className="font-black text-sm text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-xs text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+                  <h3 className="font-black text-sm text-slate-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -649,8 +989,12 @@ export default async function BrandPage({
             <div className="text-center mb-10">
               <p className={eyebrow()}>FAQs · Soalan Lazim · 常见问答</p>
               <h2 className="mt-3">
-                <span className={title({ size: "sm" })}>{brand.name} Aircond </span>
-                <span className={title({ size: "sm", color: "brand" })}>Questions Answered</span>
+                <span className={title({ size: "sm" })}>
+                  {brand.name} Aircond{" "}
+                </span>
+                <span className={title({ size: "sm", color: "brand" })}>
+                  Questions Answered
+                </span>
               </h2>
             </div>
           </Reveal>
@@ -658,27 +1002,36 @@ export default async function BrandPage({
           {/* EN FAQ */}
           <Reveal>
             <div className="space-y-4 mb-6">
-              {(brand.faqs ?? [
-                {
-                  q: `How much does ${brand.name} aircond service cost in KL & Selangor?`,
-                  a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
-                },
-                {
-                  q: `Does KL Renovator service all ${brand.name} models?`,
-                  a: `Yes. KL Renovator technicians are experienced in servicing all ${brand.name} residential and commercial models including ${brand.models.join(", ")}. Both inverter and non-inverter systems supported.`,
-                },
-                {
-                  q: `My ${brand.name} aircond is not cold. What should I do?`,
-                  a: `The most common causes are low refrigerant gas, a dirty coil or a faulty capacitor. WhatsApp KL Renovator at +60182983573 with your ${brand.name} model and HP size. A technician will diagnose and quote you before starting any work.`,
-                },
-                {
-                  q: `My ${brand.name} aircond is leaking water. What should I do?`,
-                  a: `Switch off the unit if heavily leaking. Water leaking is usually caused by a blocked drain pipe or dirty drain pan. KL Renovator provides chemical wash (from RM 120) or chemical overhaul (from RM 220) to permanently resolve the issue.`,
-                },
-              ]).map((faq, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-                  <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+              {(
+                brand.faqs ?? [
+                  {
+                    q: `How much does ${brand.name} aircond service cost in KL & Selangor?`,
+                    a: `${brand.name} aircond servicing with KL Renovator starts from RM 99 for basic servicing, RM 120 for chemical wash, and RM 220 for chemical overhaul. Gas top-up starts from RM 120 (R22), RM 150 (R410A), RM 180 (R32). All prices confirmed before work begins.`,
+                  },
+                  {
+                    q: `Does KL Renovator service all ${brand.name} models?`,
+                    a: `Yes. KL Renovator technicians are experienced in servicing all ${brand.name} residential and commercial models including ${brand.models.join(", ")}. Both inverter and non-inverter systems supported.`,
+                  },
+                  {
+                    q: `My ${brand.name} aircond is not cold. What should I do?`,
+                    a: `The most common causes are low refrigerant gas, a dirty coil or a faulty capacitor. WhatsApp KL Renovator at +60182983573 with your ${brand.name} model and HP size. A technician will diagnose and quote you before starting any work.`,
+                  },
+                  {
+                    q: `My ${brand.name} aircond is leaking water. What should I do?`,
+                    a: `Switch off the unit if heavily leaking. Water leaking is usually caused by a blocked drain pipe or dirty drain pan. KL Renovator provides chemical wash (from RM 120) or chemical overhaul (from RM 220) to permanently resolve the issue.`,
+                  },
+                ]
+              ).map((faq, i) => (
+                <div
+                  key={i}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-5"
+                >
+                  <h3 className="font-black text-sm text-slate-900 mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                    {faq.a}
+                  </p>
                 </div>
               ))}
             </div>
@@ -687,24 +1040,35 @@ export default async function BrandPage({
           {/* BM FAQ */}
           <Reveal>
             <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
-              {(brand.faqsBM ?? [
-                {
-                  q: `Berapa harga servis aircond ${brand.name} di KL & Selangor?`,
-                  a: `Servis aircond ${brand.name} dengan KL Renovator bermula dari RM 99 (servis asas), RM 120 (cuci kimia), dan RM 220 (overhaul kimia). Top-up gas bermula dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Semua harga disahkan sebelum kerja bermula.`,
-                },
-                {
-                  q: `Adakah KL Renovator boleh servis aircond ${brand.name} saya?`,
-                  a: `Ya. Juruteknik KL Renovator berpengalaman menservis semua model aircond ${brand.name} termasuk ${brand.models.slice(0, 2).join(", ")} dan model lain. Hubungi +60182983573.`,
-                },
-                {
-                  q: `Aircond ${brand.name} saya tidak sejuk. Apa yang perlu saya lakukan?`,
-                  a: `Punca paling biasa adalah gas rendah, gegelung kotor atau kapasitor rosak. WhatsApp KL Renovator di +60182983573 dengan model dan saiz HP ${brand.name} anda. Juruteknik akan mendiagnosis dan memberi sebut harga sebelum memulakan kerja.`,
-                },
-              ]).map((faq, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
-                  <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                🇲🇾 Bahasa Malaysia
+              </p>
+              {(
+                brand.faqsBM ?? [
+                  {
+                    q: `Berapa harga servis aircond ${brand.name} di KL & Selangor?`,
+                    a: `Servis aircond ${brand.name} dengan KL Renovator bermula dari RM 99 (servis asas), RM 120 (cuci kimia), dan RM 220 (overhaul kimia). Top-up gas bermula dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Semua harga disahkan sebelum kerja bermula.`,
+                  },
+                  {
+                    q: `Adakah KL Renovator boleh servis aircond ${brand.name} saya?`,
+                    a: `Ya. Juruteknik KL Renovator berpengalaman menservis semua model aircond ${brand.name} termasuk ${brand.models.slice(0, 2).join(", ")} dan model lain. Hubungi +60182983573.`,
+                  },
+                  {
+                    q: `Aircond ${brand.name} saya tidak sejuk. Apa yang perlu saya lakukan?`,
+                    a: `Punca paling biasa adalah gas rendah, gegelung kotor atau kapasitor rosak. WhatsApp KL Renovator di +60182983573 dengan model dan saiz HP ${brand.name} anda. Juruteknik akan mendiagnosis dan memberi sebut harga sebelum memulakan kerja.`,
+                  },
+                ]
+              ).map((faq, i) => (
+                <div
+                  key={i}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-4"
+                >
+                  <h3 className="font-black text-sm text-slate-900 mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                    {faq.a}
+                  </p>
                 </div>
               ))}
             </div>
@@ -713,24 +1077,35 @@ export default async function BrandPage({
           {/* ZH FAQ */}
           <Reveal>
             <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
-              {(brand.faqsZH ?? [
-                {
-                  q: `KL Renovator的${brand.name}冷气服务费用是多少？`,
-                  a: `${brand.name}冷气服务费用：基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，冷媒充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。所有价格在施工前确认，无隐藏收费。`,
-                },
-                {
-                  q: `KL Renovator能维修我的${brand.name}冷气吗？`,
-                  a: `能。KL Renovator的技术员在吉隆坡和雪兰莪拥有丰富的${brand.name}冷气维修经验，包括${brand.models.slice(0, 2).join("、")}等型号。请WhatsApp +60182983573预约。`,
-                },
-                {
-                  q: `我的${brand.name}冷气不冷，该怎么办？`,
-                  a: `最常见原因是制冷剂不足、盘管脏污或电容器故障。请WhatsApp KL Renovator +60182983573，提供您的${brand.name}型号和HP大小。技术员将在开始工作前诊断并报价。`,
-                },
-              ]).map((faq, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
-                  <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-sm text-slate-600 font-medium leading-relaxed">{faq.a}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                🇨🇳 中文
+              </p>
+              {(
+                brand.faqsZH ?? [
+                  {
+                    q: `KL Renovator的${brand.name}冷气服务费用是多少？`,
+                    a: `${brand.name}冷气服务费用：基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，冷媒充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。所有价格在施工前确认，无隐藏收费。`,
+                  },
+                  {
+                    q: `KL Renovator能维修我的${brand.name}冷气吗？`,
+                    a: `能。KL Renovator的技术员在吉隆坡和雪兰莪拥有丰富的${brand.name}冷气维修经验，包括${brand.models.slice(0, 2).join("、")}等型号。请WhatsApp +60182983573预约。`,
+                  },
+                  {
+                    q: `我的${brand.name}冷气不冷，该怎么办？`,
+                    a: `最常见原因是制冷剂不足、盘管脏污或电容器故障。请WhatsApp KL Renovator +60182983573，提供您的${brand.name}型号和HP大小。技术员将在开始工作前诊断并报价。`,
+                  },
+                ]
+              ).map((faq, i) => (
+                <div
+                  key={i}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-4"
+                >
+                  <h3 className="font-black text-sm text-slate-900 mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                    {faq.a}
+                  </p>
                 </div>
               ))}
             </div>
@@ -739,8 +1114,48 @@ export default async function BrandPage({
       </section>
 
       {/* ── Error Code Reference Section ───────────────────────────────── */}
+      {/* ── Technical Specifications Section ───────────────────────────────── */}
       {(() => {
-        const errorCodes = BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES["_default"];
+        const techSpecs =
+          BRAND_TECH_SPECS[slug] ?? BRAND_TECH_SPECS["_default"];
+        return (
+          <section className="py-12 bg-slate-50 border-t border-slate-200">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-1">
+                  Technical Overview · Spesifikasi Teknikal · 技术规格
+                </p>
+                <h2 className="text-xl font-black text-slate-900 mb-2">
+                  {brand.name} Aircond Technical Specifications
+                </h2>
+                <p className="text-sm text-slate-500 mb-6 max-w-2xl">
+                  Key technical details and servicing requirements for{" "}
+                  {brand.name} units in Malaysia.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {techSpecs.map((ts, i) => (
+                    <div
+                      key={i}
+                      className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm"
+                    >
+                      <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                        {ts.specification}
+                      </div>
+                      <div className="text-sm font-semibold text-slate-800">
+                        {ts.detail}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+      {(() => {
+        const errorCodes =
+          BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES["_default"];
         return (
           <section className="py-12 bg-white border-t border-slate-100">
             <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -752,7 +1167,9 @@ export default async function BrandPage({
                   Common {brand.name} Aircond Error Codes
                 </h2>
                 <p className="text-sm text-slate-500 mb-6 max-w-2xl">
-                  Blinking lights on your {brand.name} unit? These are the most common error codes and what they mean. WhatsApp KL Renovator the code + model for fast remote diagnosis.
+                  Blinking lights on your {brand.name} unit? These are the most
+                  common error codes and what they mean. WhatsApp KL Renovator
+                  the code + model for fast remote diagnosis.
                 </p>
                 <div className="overflow-hidden border border-slate-200 rounded-2xl">
                   <div className="grid grid-cols-3 bg-slate-100 px-5 py-3 text-xs font-black uppercase tracking-widest text-slate-500">
@@ -761,15 +1178,22 @@ export default async function BrandPage({
                     <span>Fix</span>
                   </div>
                   {errorCodes.map((ec, i) => (
-                    <div key={ec.code} className={`grid grid-cols-3 px-5 py-3.5 text-xs border-t border-slate-100 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
+                    <div
+                      key={ec.code}
+                      className={`grid grid-cols-3 px-5 py-3.5 text-xs border-t border-slate-100 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
+                    >
                       <span className="font-black text-red-600">{ec.code}</span>
-                      <span className="font-semibold text-slate-700">{ec.meaning}</span>
+                      <span className="font-semibold text-slate-700">
+                        {ec.meaning}
+                      </span>
                       <span className="text-slate-500">{ec.fix}</span>
                     </div>
                   ))}
                 </div>
                 <p className="text-xs text-slate-400 mt-3">
-                  Error code not listed? WhatsApp +60182983573 with your {brand.name} model number and the error pattern — we&apos;ll diagnose it remotely.
+                  Error code not listed? WhatsApp +60182983573 with your{" "}
+                  {brand.name} model number and the error pattern — we&apos;ll
+                  diagnose it remotely.
                 </p>
               </Reveal>
             </div>
@@ -784,16 +1208,27 @@ export default async function BrandPage({
             <Reveal>
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-1">Brand Comparison Guide</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-violet-600 mb-1">
+                    Brand Comparison Guide
+                  </p>
                   <h3 className="font-black text-slate-900 text-base">
-                    {slug === "daikin" ? "Daikin vs Panasonic — Which Should You Buy?" :
-                     slug === "panasonic" ? "Panasonic vs Daikin — Complete Comparison" :
-                     "Best Aircond Brands Malaysia — Full Comparison"}
+                    {slug === "daikin"
+                      ? "Daikin vs Panasonic — Which Should You Buy?"
+                      : slug === "panasonic"
+                        ? "Panasonic vs Daikin — Complete Comparison"
+                        : "Best Aircond Brands Malaysia — Full Comparison"}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Read our independent guide to help you decide. No brand bias.</p>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Read our independent guide to help you decide. No brand
+                    bias.
+                  </p>
                 </div>
                 <NextLink
-                  href={slug === "daikin" || slug === "panasonic" ? "/blog/daikin-vs-panasonic-aircond-malaysia" : "/blog/best-aircond-brands-malaysia-2026"}
+                  href={
+                    slug === "daikin" || slug === "panasonic"
+                      ? "/blog/daikin-vs-panasonic-aircond-malaysia"
+                      : "/blog/best-aircond-brands-malaysia-2026"
+                  }
                   className="shrink-0 inline-flex items-center gap-1.5 bg-violet-600 hover:bg-violet-700 text-white text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-xl transition-all"
                 >
                   Read Comparison <FiArrowRight className="h-3 w-3" />
@@ -824,7 +1259,8 @@ export default async function BrandPage({
                 href={brandAreaComboModule.allAreasHref}
                 className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-sky-200 bg-sky-50 px-4 py-2 text-xs font-black uppercase tracking-widest text-sky-700 hover:bg-sky-100 transition"
               >
-                {brandAreaComboModule.allAreasLabel} <FiArrowRight className="h-3 w-3" />
+                {brandAreaComboModule.allAreasLabel}{" "}
+                <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -834,14 +1270,21 @@ export default async function BrandPage({
                   href={combo.href}
                   className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
                 >
-                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-600">{combo.eyebrow}</p>
+                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-600">
+                    {combo.eyebrow}
+                  </p>
                   <h3 className="mt-2 text-base font-black text-slate-950 group-hover:text-sky-700 transition-colors">
                     {combo.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{combo.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {combo.description}
+                  </p>
                   <div className="mt-4 flex flex-wrap gap-1.5">
                     {combo.tags.map((tag) => (
-                      <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-bold text-slate-600">
+                      <span
+                        key={tag}
+                        className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-bold text-slate-600"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -883,14 +1326,20 @@ export default async function BrandPage({
       {/* Related Blog Guides */}
       {(() => {
         const relatedSlugs = BRAND_BLOG_MAP[slug] ?? [];
-        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 4);
+        const relatedPosts = allPosts
+          .filter((p) => relatedSlugs.includes(p.slug))
+          .slice(0, 4);
         if (relatedPosts.length === 0) return null;
         return (
           <section className="py-12 bg-slate-50 border-t border-slate-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Expert Guides · Panduan · 指南</p>
-                <h2 className="text-base font-black text-slate-900 mb-5">Related Aircond Guides &amp; Articles</h2>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Expert Guides · Panduan · 指南
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-5">
+                  Related Aircond Guides &amp; Articles
+                </h2>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {relatedPosts.map((post) => (
                     <NextLink
@@ -898,13 +1347,22 @@ export default async function BrandPage({
                       href={`/blog/${post.slug}`}
                       className="group flex flex-col bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
                     >
-                      <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.category}</span>
-                      <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
-                      <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">
+                        {post.category}
+                      </span>
+                      <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">
+                        {post.title}
+                      </span>
+                      <span className="text-xs text-slate-500 mt-auto">
+                        {post.readTime} min read
+                      </span>
                     </NextLink>
                   ))}
                 </div>
-                <NextLink href="/blog" className="inline-flex items-center gap-1 mt-5 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">
+                <NextLink
+                  href="/blog"
+                  className="inline-flex items-center gap-1 mt-5 text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition"
+                >
                   All Aircond Guides <FiArrowRight className="h-3 w-3" />
                 </NextLink>
               </Reveal>
@@ -916,13 +1374,17 @@ export default async function BrandPage({
       {/* Common Problems for This Brand */}
       {(() => {
         const problemSlugs = BRAND_PROBLEM_MAP[slug] ?? [];
-        const relatedProblems = siteConfig.problemPages.filter((p) => problemSlugs.includes(p.slug));
+        const relatedProblems = siteConfig.problemPages.filter((p) =>
+          problemSlugs.includes(p.slug),
+        );
         if (relatedProblems.length === 0) return null;
         return (
           <section className="py-10 bg-white border-t border-slate-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Problems · Masalah · 问题</p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Problems · Masalah · 问题
+                </p>
                 <h2 className="text-base font-black text-slate-900 mb-4">
                   Common {brand.name} Aircond Problems We Fix
                 </h2>
@@ -936,7 +1398,10 @@ export default async function BrandPage({
                       {p.name}
                     </NextLink>
                   ))}
-                  <NextLink href="/problems" className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition">
+                  <NextLink
+                    href="/problems"
+                    className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
+                  >
                     All Problems →
                   </NextLink>
                 </div>
@@ -949,14 +1414,19 @@ export default async function BrandPage({
       {/* Related Services — fills the cross-link gap: brand pages previously
           linked to Areas, Blog posts, and Problems, but never to Services. */}
       {(() => {
-        const serviceSlugs = BRAND_SERVICE_MAP[slug] ?? BRAND_SERVICE_MAP["_default"];
-        const relatedServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));
+        const serviceSlugs =
+          BRAND_SERVICE_MAP[slug] ?? BRAND_SERVICE_MAP["_default"];
+        const relatedServices = siteConfig.services.filter((s) =>
+          serviceSlugs.includes(s.slug),
+        );
         if (relatedServices.length === 0) return null;
         return (
           <section className="py-10 bg-slate-50 border-t border-slate-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Services · Perkhidmatan · 服务</p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Services · Perkhidmatan · 服务
+                </p>
                 <h2 className="text-base font-black text-slate-900 mb-4">
                   {brand.name} Services We Offer
                 </h2>
@@ -971,7 +1441,10 @@ export default async function BrandPage({
                       {s.title} — from RM {s.startPrice}
                     </NextLink>
                   ))}
-                  <NextLink href="/services" className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-700 rounded-xl transition-all">
+                  <NextLink
+                    href="/services"
+                    className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-700 rounded-xl transition-all"
+                  >
                     All Services <FiArrowRight className="h-3 w-3" />
                   </NextLink>
                 </div>
@@ -989,7 +1462,8 @@ export default async function BrandPage({
               Book Your {brand.name} Aircond Service Today
             </h2>
             <p className="mt-3 text-sky-100 font-medium">
-              Same-day service available. All {brand.name} models. Transparent pricing — no hidden charges.
+              Same-day service available. All {brand.name} models. Transparent
+              pricing — no hidden charges.
             </p>
             {/* Trilingual sub-note */}
             <p className="mt-1 text-xs text-sky-200 font-medium">
