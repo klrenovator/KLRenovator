@@ -101,7 +101,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Is the chemical safe for my family, pets, and furniture?",
         a: "Yes. We use a food-grade alkaline degreaser that is biodegradable and phosphate-free. It does not produce toxic fumes. We cover your floor, wall, and furniture with waterproof drop sheets as an extra precaution. The chemical is rinsed away completely during the high-pressure flush — nothing is left on the coil. The unit is safe to use immediately after we finish.",
-      },,
+      },
       { q: "Is the chemical wash process safe for the environment?", a: "Yes. KL Renovator uses biodegradable, eco-friendly cleaning agents that effectively break down biological matter without harmful environmental impact or toxic residue." }
     ],
     faqsBM: [
@@ -124,7 +124,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Apakah persediaan yang diperlukan sebelum juruteknik tiba untuk cuci kimia?",
         a: "Persediaan minimum sahaja diperlukan. Pastikan terdapat ruang berjalan yang lapang di bawah unit penghawa dingin dalaman dan alihkan barang berharga atau mudah pecah ke tepi. Juruteknik kami tiba lengkap dengan beg kanvas pelindung kalis air dan alas pelindung tugas berat untuk melindungi dinding, lantai dan perabot sekeliling anda sepenuhnya semasa cucian bertekanan tinggi 80–120 PSI.",
-      },,
+      },
       { q: "Adakah proses cuci kimia selamat untuk alam sekitar?", a: "Ya. KL Renovator menggunakan agen pembersih biodegradasi yang mesra alam untuk memecahkan bahan biologi tanpa kesan buruk atau sisa toksik." }
     ],
     faqsZH: [
@@ -147,7 +147,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "技术员上门进行化学清洗前，我需要做哪些准备工作？",
         a: "仅需简易准备。只需确保室内冷气机正下方有足够的操作及走动空间，并稍微移开易碎品或贵重物品。技术员上门时均配备重型防水保护帆布袋和防污垫布，在整个80–120 PSI高压清洗过程中全方位保护您的墙面、地板与周围家具。",
-      },,
+      },
       { q: "化学清洗过程对环境安全吗？", a: "是的。KL Renovator 使用可生物降解的环保清洁剂，能有效分解生物污染物，无有害环境影响或毒性残留。" }
     ],
     priceTable: [
@@ -222,7 +222,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Will I lose refrigerant gas during the overhaul?",
         a: "No. Our technician performs a \u2018pump-down\u2019 procedure before removing the indoor unit: the refrigerant is pumped back into the outdoor condenser unit and the service valves are closed, so no gas is lost. The unit is reconnected to the same refrigerant charge after reassembly. If your refrigerant level was already low before the overhaul (which we check during the initial diagnostic), we will inform you and quote a top-up separately. The overhaul itself does not consume or release any refrigerant.",
-      },,
+      },
       { q: "Does a chemical overhaul include checking for refrigerant leaks?", a: "Yes. Every chemical overhaul includes a mandatory high-pressure nitrogen test or electronic leak sweep after reassembly to ensure the sealed system is 100% airtight." },
       { q: "Will my aircond be quieter after an overhaul?", a: "Significantly. By removing heavy sludge from the blower wheel and lubricating fan motor mounts, we eliminate the imbalances that cause vibration and high-frequency noise." }
     ],
@@ -246,7 +246,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Adakah saya akan kehilangan gas bahan pendingin semasa overhaul?",
         a: "Tidak. Juruteknik kami melakukan prosedur 'pump-down' sebelum mengeluarkan unit dalaman: bahan pendingin dipam kembali ke dalam unit kondenser luar dan injap servis ditutup, jadi tiada gas hilang. Unit disambungkan semula ke cas bahan pendingin yang sama selepas pemasangan semula. Jika tahap bahan pendingin anda sudah rendah sebelum overhaul, kami akan memaklumkan anda.",
-      },,
+      },
       { q: "Adakah overhaul kimia termasuk pemeriksaan kebocoran gas?", a: "Ya. Setiap overhaul kimia termasuk ujian tekanan nitrogen atau imbasan kebocoran elektronik selepas pemasangan semula untuk memastikan sistem kedap udara 100%." },
       { q: "Adakah aircond saya akan menjadi lebih senyap selepas overhaul?", a: "Ya, secara ketara. Dengan membuang kotoran berat dari roda kipas dan melincirkan motor, kami menghapuskan ketidakseimbangan yang menyebabkan getaran dan bunyi bising." }
     ],
@@ -270,7 +270,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "大修过程中会损失制冷剂吗？",
         a: "不会。我们的技术员在拆卸室内机前执行\u2018泵送\u2019程序：制冷剂被泵回室外冷凝器，检修阀关闭，因此不会损失气体。重新组装后机器重新连接到相同的制冷剂充注量。如果大修前您的制冷剂水平已经偏低（我们会在初步诊断时检查），我们会通知您并另行报价充气服务。大修本身不会消耗或释放任何制冷剂。",
-      },,
+      },
       { q: "化学大修包含冷媒查漏吗？", a: "是的。每次化学大修都包含强制性的高压氮气测试或电子检漏，确保重装后的密封系统100%气密。" },
       { q: "大修后我的冷气会更安静吗？", a: "显著改善。通过清除风轮上的重度淤泥并润滑风扇电机支架，我们消除了导致震动和高频噪音的不平衡因素。" }
     ],
@@ -336,7 +336,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Can I top up the gas myself?",
         a: "No. Refrigerant handling in Malaysia requires certified technicians under the Environmental Quality (Refrigerant Management) Regulations. You need: (a) a manifold gauge set, (b) the correct refrigerant cylinder, (c) a weighing scale, (d) training to read pressures correctly against ambient temperature charts, and (e) an electronic leak detector for safety. Overfilling by even 10\u201315% can cause liquid slugging that destroys the compressor. Using the wrong refrigerant type can cause a chemical reaction that corrodes the system internally. This is not a DIY job \u2014 at RM 120\u2013180 including professional leak check, it is also not expensive.",
-      },,
+      },
       { q: "How can I tell if a leak is 'slow' or 'fast'?", a: "A slow leak takes 6-12 months to affect cooling; a fast leak results in warm air within days. KL Renovator's electronic sniffers can detect even the smallest micro-leaks in copper flare joints." }
     ],
     faqsBM: [
@@ -359,7 +359,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Bolehkah saya menambah gas sendiri?",
         a: "Tidak. Pengendalian bahan pendingin di Malaysia memerlukan juruteknik bertauliah di bawah Peraturan Pengurusan Bahan Pendingin (Kualiti Alam Sekitar). Anda memerlukan peralatan khusus dan latihan profesional. Pengisian berlebihan walaupun 10\u201315% boleh menyebabkan kerosakan kompresor. Ini bukan kerja DIY.",
-      },,
+      },
       { q: "Bagaimana saya tahu jika kebocoran itu 'perlahan' atau 'cepat'?", a: "Kebocoran perlahan mengambil masa 6-12 bulan untuk menjejaskan penyejukan; kebocoran cepat mengakibatkan angin panas dalam masa beberapa hari. Pengesan elektronik kami boleh mengesan kebocoran mikro paling kecil." }
     ],
     faqsZH: [
@@ -382,7 +382,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "我可以自己充气吗？",
         a: "不可以。在马来西亚，制冷剂处理根据《环境质量（制冷剂管理）法规》需要认证技术员。充气过量即使10-15%也可能导致压缩机损坏。使用错误类型的制冷剂可能导致系统内部腐蚀的化学反应。这绝非DIY工作\u2014\u2014以RM 120-180的价格（含专业泄漏检查）也并不昂贵。",
-      },,
+      },
       { q: "如何判断漏气是“慢漏”还是“快漏”？", a: "慢漏通常需要6-12个月才影响制冷；快漏则会在几天内排空冷媒。KL Renovator 的电子检漏仪可以检测到铜管接头中最微小的渗漏。" }
     ],
     priceTable: [
@@ -457,7 +457,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What warranty do you provide on repairs?",
         a: "3-month warranty on all replaced parts (covers manufacturing defects and premature failure). 1-month warranty on workmanship (covers installation errors, loose connections, etc.). If the same fault recurs within the warranty period, we return at no charge. If the fault is different or unrelated, a new diagnostic applies. All warranty terms are written clearly on your job card.",
-      },,
+      },
       { q: "Can you repair airconds that are over 15 years old?", a: "We can diagnose them, but parts availability for R22-era units is declining. If parts are obsolete, we provide honest advice on whether repair is safer than an R32 upgrade." }
     ],
     faqsBM: [
@@ -480,7 +480,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Apa jaminan yang anda berikan untuk pembaikan?",
         a: "Jaminan 3 bulan untuk semua bahagian yang diganti (melindungi kecacatan pembuatan dan kegagalan pramatang). Jaminan 1 bulan untuk mutu kerja (melindungi ralat pemasangan, sambungan longgar, dll.). Jika kerosakan sama berulang dalam tempoh jaminan, kami kembali tanpa caj. Semua terma jaminan ditulis dengan jelas pada kad kerja anda.",
-      },,
+      },
       { q: "Bolehkah anda membaiki aircond yang berusia lebih 15 tahun?", a: "Kami boleh mendiagnosisnya, tetapi ketersediaan alat ganti untuk unit era R22 semakin berkurangan. Jika alat ganti sudah tiada, kami akan berikan nasihat jujur sama ada naik taraf ke R32 lebih selamat." }
     ],
     faqsZH: [
@@ -499,7 +499,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "机器发出嗡嗡声但风扇不转\u2014\u2014什么问题？",
         a: "这几乎肯定是电容损坏。电容为风扇电机提供启动所需的\u2018推力\u2019。当它损坏时，电机因供电而嗡嗡响但无法启动旋转。在电容损坏的情况下继续运行机器，会在几小时内烧毁电机\u2014\u2014把RM 150的电容更换变成RM 300+的电机更换。如果听到嗡嗡声但没有转动，立即在隔离开关处关闭机器并WhatsApp联系我们。",
-      },,
+      },
       { q: "你们能维修超过15年的老冷气吗？", a: "我们可以进行诊断，但R22时代机器的零件供应正在减少。如果零件已停产，我们会诚实建议升级至R32机型是否更明智。" }
     ],
     priceTable: [
@@ -571,7 +571,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What happens if my unit leaks gas or stops working after installation?",
         a: "All installations carry a 1-month workmanship warranty. If the unit leaks refrigerant, stops cooling, or has water drainage issues within that period and the fault is due to our installation work, we return to fix it at no charge. Most installation problems show up within the first week if something was missed — but our vacuum + pressure test process catches 99% of issues before we leave.",
-      },,
+      },
       { q: "Do you provide a warranty for AC installation?", a: "Yes. We provide a 1-month workmanship warranty. This covers the structural integrity of the mounting, pipe flares, and condensate drainage efficiency." }
     ],
     faqsBM: [
@@ -598,7 +598,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Pihak pengurusan kondo saya ada peraturan renovasi yang ketat — bolehkah anda mematuhinya?",
         a: "Kami memasang di kondo tinggi di seluruh KL dan Selangor setiap minggu — KLCC, Mont Kiara, Bangsar, Damansara, Sentul, dan banyak lagi. Kami mematuhi peraturan khusus setiap bangunan: waktu bekerja, penutup lantai pelindung di lif dan koridor, had bunyi, dan prosedur pelupusan sisa. Jika pihak pengurusan memerlukan permit renovasi atau borang indemniti, beritahu kami lebih awal dan kami akan sediakan dokumen yang diperlukan. Kawasan umum mesti ditinggalkan seperti keadaan asal.",
-      },,
+      },
       { q: "Adakah anda menyediakan waranti untuk pemasangan aircond?", a: "Ya. Kami menyediakan waranti kerja selama 1 bulan. Ini meliputi integriti struktur pemasangan, flare paip, dan kecekapan saliran air." }
     ],
     faqsZH: [
@@ -625,7 +625,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "我的公寓管理处有严格的装修规定——你们能遵守吗？",
         a: "我们每周在吉隆坡和雪兰莪的高层公寓安装——KLCC、Mont Kiara、Bangsar、Damansara、Sentul等等。我们遵守每栋大楼的具体规定：工作时间、电梯和走廊的保护地板覆盖、噪音限制和废物处理程序。如果管理处需要装修许可或赔偿表格，请提前告知我们，我们会准备所需文件。公共区域必须保持原样。",
-      },,
+      },
       { q: "安装冷气有保修吗？", a: "有的。我们提供1个月工艺保修，涵盖安装稳固性、管道扩口密封性以及排水效率。" }
     ],
     priceTable: [
@@ -697,7 +697,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Can I do basic servicing myself?",
         a: "You can wash the filters yourself every month — pop them out, rinse with water, let them dry, reinstall. That takes 5 minutes and genuinely helps airflow between professional services. But the drain flush, electrical check, coil spray, and cooling performance test require opening the unit, accessing internal components, and using a digital thermometer and multimeter. These steps catch problems you cannot see from the outside. At RM 99, professional basic servicing is cheaper than a water-damaged ceiling or a burnt compressor.",
-      },,
+      },
       { q: "What happens if you find a fault during a basic service?", a: "If our 8-point check reveals a faulty capacitor or sensor, we inform you immediately and provide a firm quote. Most repairs can be completed instantly during the same visit." }
     ],
     faqsBM: [
@@ -720,7 +720,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Adakah servis asas termasuk tambah gas?",
         a: "Tidak — servis asas adalah perkhidmatan pembersihan dan pemeriksaan. Jika ujian penyejukan juruteknik kami menunjukkan tekanan bahan pendingin rendah (penurunan suhu kurang daripada 8°C selepas pembersihan), mereka akan memaklumkan anda dan mengkuotakan tambah gas secara berasingan (dari RM 120). Sistem aircond tidak menggunakan bahan pendingin — jika gas rendah, ada kebocoran di suatu tempat. Kami akan memeriksa titik kebocoran yang jelas (sambungan flare, injap servis) dan menasihatkan sama ada tambah gas sahaja mencukupi atau pembaikan kebocoran diperlukan.",
-      },,
+      },
       { q: "Apa yang berlaku jika anda menemui kerosakan semasa servis asas?", a: "Jika pemeriksaan 8-titik kami menemui kapasitor atau sensor yang rosak, kami akan maklumkan segera dan berikan sebut harga tetap. Kebanyakan pembaikan boleh diselesaikan terus pada lawatan yang sama." }
     ],
     faqsZH: [
@@ -743,7 +743,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "基本保养包含加气吗？",
         a: "不包含——基本保养是清洁和检查服务。如果我们技术员的制冷测试显示冷媒压力低（清洁后温差低于8°C），他们会通知您并单独报价加气服务（从RM 120起）。冷气系统不会消耗制冷剂——如果气体不足，说明某处有泄漏。我们会检查明显的泄漏点（喇叭口接头、检修阀）并建议仅加气是否足够还是需要修复泄漏。",
-      },,
+      },
       { q: "如果在基本保养期间发现故障怎么办？", a: "如果我们的8项检查发现电容或传感器故障，我们会立即通知您并提供确定报价。大多数维修可以在同一次上门中当场完成。" }
     ],
     priceTable: [
@@ -811,7 +811,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What is the difference between servicing a wall-mounted and a ceiling cassette unit?",
         a: "Ceiling cassettes are significantly more complex: (1) The unit is recessed into the ceiling \u2014 access requires a ladder/scaffold and careful panel handling (10\u201315 kg). (2) The blower is a large centrifugal fan, not a small cross-flow fan \u2014 dirt accumulates on the back of the blades where you cannot see it. (3) The drain pan surrounds the entire unit and includes a built-in condensate pump on many models \u2014 if the pump fails, water overflows inside the ceiling. (4) The ceiling void itself can be a source of contaminants (insulation fibres, pest droppings, construction dust) that enter the unit from above. This is why we recommend specialist ceiling cassette technicians, not general aircond servicers who only do wall-mounted units.",
-      },,
+      },
       { q: "Why is my office ceiling cassette leaking into the ceiling board?", a: "This is often a failure of the internal condensate lift pump or a sludged-up internal drain pan. We perform a 'Flow Test' during service to ensure the pump is working at full capacity." }
     ],
     faqsBM: [
@@ -834,7 +834,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Bolehkah anda servis unit ceiling cassette kami selepas waktu perniagaan?",
         a: "Ya \u2014 servis luar waktu (petang dari 6pm\u201310pm, hujung minggu, dan cuti umum) tersedia untuk pelanggan komersial. Kami faham bahawa restoran tidak boleh mempunyai juruteknik bekerja di atas pelanggan semasa waktu makan tengah hari. Terdapat surcaj sederhana untuk kerja luar waktu (RM 50 untuk petang). WhatsApp kami dengan jadual pilihan anda.",
-      },,
+      },
       { q: "Kenapa unit ceiling cassette pejabat saya bocor ke atas siling?", a: "Ini selalunya disebabkan kegagalan pam air dalaman atau dulang longkang yang terlalu kotor. Kami melakukan 'Ujian Aliran' semasa servis untuk memastikan pam berfungsi pada kapasiti penuh." }
     ],
     faqsZH: [
@@ -857,7 +857,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "能在营业时间之后维修天花板卡式机吗？",
         a: "可以\u2014\u2014我们为商业客户提供非工作时间服务（晚上6点-10点、周末和公共假日）。我们理解餐厅不能在午餐高峰期让技术员在顾客上方作业，零售店不能在客流高峰时段关闭空调维修。非工作时间有少量附加费（晚上RM 50）。WhatsApp我们您的首选时间安排。",
-      },,
+      },
       { q: "为什么我办公室的天花板卡式机会漏水到吊顶板上？", a: "这通常是由于内置冷凝水泵故障或内部接水盘积满淤泥。我们在保养时会进行“流量测试”以确保水泵满负荷正常运行。" }
     ],
     priceTable: [
@@ -929,7 +929,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Is it worth relocating an older unit, or should I buy a new one?",
         a: "Our honest guidance: (1) Unit is under 5 years old, inverter, working perfectly \u2192 relocate. It will cost you RM 250\u2013350 vs RM 1,500+ for a new unit + installation. (2) Unit is 5\u20138 years old, working well, non-inverter \u2192 relocate is still worth it if the unit has been regularly serviced. An older but well-maintained unit can serve another 3\u20135 years. (3) Unit is 8+ years old, uses R22 gas, has needed repairs \u2192 strongly consider replacing. R22 is being phased out and getting expensive. A new R32 inverter unit will cut your electricity bill by 30\u201350% and pay for itself within 2\u20133 years. If you are unsure, WhatsApp us your unit's brand, model, and age, and we will give you an honest recommendation \u2014 we do both relocation and new installation, so there is no incentive to push one over the other.",
-      },,
+      },
       { q: "Will the relocation process damage my unit's internal seals?", a: "Not when performed by KL Renovator. We use calibrated torque wrenches on all flare connections to ensure a factory-tight seal that prevents future gas loss at the new location." }
     ],
     faqsBM: [
@@ -952,7 +952,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Adakah berbaloi memindahkan unit lama, atau beli yang baharu?",
         a: "Panduan jujur kami: (1) Unit bawah 5 tahun, inverter, berfungsi sempurna \u2192 pindahkan. Kos RM 250\u2013350 vs RM 1,500+ untuk unit baharu + pemasangan. (2) Unit 5\u20138 tahun, berfungsi baik, bukan inverter \u2192 masih berbaloi jika diservis secara berkala. (3) Unit 8+ tahun, gunakan gas R22, pernah dibaiki \u2192 pertimbangkan untuk ganti. R22 sedang dihentikan dan semakin mahal. Unit inverter R32 baharu akan mengurangkan bil elektrik 30\u201350%. Jika tidak pasti, WhatsApp kami jenama, model, dan umur unit anda.",
-      },,
+      },
       { q: "Adakah proses pemindahan akan merosakkan seal dalaman unit saya?", a: "Tidak jika dilakukan oleh KL Renovator. Kami menggunakan kunci tork bertauliah pada semua sambungan untuk memastikan kedap udara standard kilang yang menghalang kebocoran gas di lokasi baru." }
     ],
     faqsZH: [
@@ -975,7 +975,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "搬迁旧机器值得吗，还是应该买新的？",
         a: "我们的诚实建议：（1）机器5年以下、变频、工作正常\u2192搬迁。费用RM 250-350 vs 新机+安装RM 1,500+。（2）机器5-8年、工作正常、非变频\u2192如果定期保养仍值得搬迁。保养良好的旧机器还可以再用3-5年。（3）机器8年以上、使用R22气体、曾维修过\u2192强烈建议更换。R22正在淘汰且越来越贵。新的R32变频机可降低电费30-50%。如果您不确定，WhatsApp我们机器的品牌、型号和使用年限。",
-      },,
+      },
       { q: "移机会损坏机器的内部密封吗？", a: "由 KL Renovator 操作则不会。我们在所有接口处使用定标扭矩扳手，确保达到出厂级密封标准，防止在新地点发生冷媒泄漏。" }
     ],
     priceTable: [
@@ -1040,7 +1040,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "What if my aircond cannot be repaired same-day?",
         a: "About 85% of emergencies are resolved in the first visit because our vans carry the most commonly failing parts. If your unit needs a rare PCB for a 10-year-old model or a specific compressor that is not in van stock, we will: (a) waive the diagnostic fee, (b) order the part overnight, (c) return the next business day to complete the repair. You only pay the full repair price when the job is done. No upfront booking fees and no deposits.",
-      },,
+      },
       { q: "What is the fastest way to get an emergency slot?", a: "WhatsApp +60182983573 with your GPS location and a short video of the symptom. This allows our dispatch desk to assign the nearest van immediately." }
     ],
     faqsBM: [
@@ -1067,7 +1067,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "Bagaimana jika aircond saya tidak dapat dibaiki pada hari yang sama?",
         a: "Kira-kira 85% kecemasan diselesaikan dalam lawatan pertama kerana van kami membawa alat ganti yang paling kerap rosak. Jika unit anda memerlukan PCB yang jarang untuk model berusia 10 tahun atau kompressor tertentu yang tiada dalam stok van, kami akan: (a) mengecualikan caj diagnostik, (b) memesan alat ganti semalaman, (c) kembali pada hari perniagaan berikutnya untuk menyelesaikan pembaikan. Anda hanya membayar harga penuh pembaikan apabila kerja selesai. Tiada yuran tempahan pendahuluan dan tiada deposit.",
-      },,
+      },
       { q: "Apakah cara terpantas untuk mendapatkan slot kecemasan?", a: "WhatsApp +60182983573 dengan lokasi GPS anda dan video pendek simptom tersebut. Ini membolehkan pusat panggilan kami menugaskan van terdekat dengan segera." }
     ],
     faqsZH: [
@@ -1094,7 +1094,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       {
         q: "如果我的冷气当天无法修好怎么办？",
         a: "约85%的紧急情况在第一次上门就能解决，因为我们的车辆携带最常见的故障部件。如果您的机器需要一个稀有的PCB电路板（适配10年前的型号）或特定压缩机，而车上没有库存，我们将：(a)免除诊断费，(b)隔夜订购部件，(c)次日返回完成维修。您只在工作完成时支付全额维修费用。没有预付预订费也没有押金。",
-      },,
+      },
       { q: "获得紧急维修时段最快的方法是什么？", a: "请 WhatsApp +60182983573 并发送您的 GPS 定位和故障短视频。这能让我们的调度中心立即指派最近的服务车前往。" }
     ],
     priceTable: [
