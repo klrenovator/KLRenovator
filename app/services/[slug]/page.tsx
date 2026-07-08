@@ -533,7 +533,7 @@ export default async function ServicePage({
       </section>
 
       {/* Round 35 / 8.6: AIO / LLMO compact answer block for AI-quotable service summaries */}
-      <section id="aio-answer-block" className="py-10 bg-white border-t border-slate-100">
+      <section id="service-summary" className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="rounded-3xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white p-5 sm:p-6 shadow-sm">
@@ -565,7 +565,7 @@ export default async function ServicePage({
       </section>
 
       {/* Round 36 / 8.7: Semantic SEO & HVAC Entity Pass */}
-      <section id="hvac-entity-pass" className="py-12 bg-slate-50 border-t border-slate-100">
+      <section id="parts-and-checks" className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="mb-7 max-w-4xl">
@@ -609,7 +609,7 @@ export default async function ServicePage({
       </section>
 
       {/* Round 38 / 8.9: Visual & SXO Polish — decision tree + comparison table */}
-      <section id="visual-sxo-polish" className="py-12 bg-white border-t border-slate-100">
+      <section id="service-choice-guide" className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="mb-7 max-w-4xl">
@@ -722,7 +722,7 @@ export default async function ServicePage({
       </section>
 
       {/* Round 34 / 8.5: Service Page SXO / CRO — CTA placement by user intent stage */}
-      <section id="intent-stage-cta" className="py-12 bg-slate-950 text-white border-t border-slate-800">
+      <section id="booking-options" className="py-12 bg-slate-950 text-white border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-6">
@@ -788,12 +788,12 @@ export default async function ServicePage({
           <section id="diagnostic-guides" className="py-14 bg-white border-t border-slate-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Diagnostic Router · Intent Separation</p>
+                <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Symptom help before booking</p>
                 <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
-                  Researching Aircond Symptoms? Check Our Diagnostic Guides First.
+                  Still Checking Your Aircond Symptoms? Read These Guides First.
                 </h2>
                 <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
-                  If you are currently troubleshooting active symptoms and want to understand the underlying technical cause before scheduling service, visit our specialized informational troubleshooting guides below. Once you have confirmed your unit requires professional maintenance or deep cleaning, book your {data.title} directly on this page.
+                  If you are still unsure what is wrong with your aircond, read the related guides below first. They explain common causes in simple language. When you are ready for professional service, you can book {data.title} directly on this page.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {problems.map((problem) => (
@@ -1512,7 +1512,7 @@ export default async function ServicePage({
                   Use our Klang Valley near-me hub to confirm nearby coverage, compare areas, and choose the fastest route to WhatsApp booking.
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
-                  Open Near Me Hub <FiArrowRight className="h-3 w-3" />
+                  Open Near Me Page <FiArrowRight className="h-3 w-3" />
                 </span>
               </NextLink>
             </div>
