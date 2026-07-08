@@ -27,7 +27,7 @@ export function ScrollDepthCTA() {
       const scrolled = window.scrollY;
       const total = document.documentElement.scrollHeight - window.innerHeight;
       const pct = total > 0 ? scrolled / total : 0;
-      const nextVisible = pct > 0.60 && pct < 0.92;
+      const nextVisible = pct > 0.6 && pct < 0.92;
 
       if (nextVisible !== lastVisibleRef.current) {
         lastVisibleRef.current = nextVisible;
@@ -53,14 +53,17 @@ export function ScrollDepthCTA() {
     setDismissed(true);
     setVisible(false);
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ until: Date.now() + 86400_000 }));
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({ until: Date.now() + 86400_000 }),
+      );
     } catch {}
   };
 
   if (dismissed || !visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t-2 border-sky-500 shadow-2xl px-4 py-3 flex items-center justify-between gap-3 print:hidden">
+    <div className="hidden lg:flex fixed bottom-0 left-0 right-0 z-40 bg-white border-t-2 border-sky-500 shadow-2xl px-4 py-3 items-center justify-between gap-3 print:hidden">
       <div className="flex-1 min-w-0">
         <p className="text-xs font-black text-slate-900 leading-tight">
           Like what you see? Get a same-day slot.

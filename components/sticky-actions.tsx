@@ -18,7 +18,7 @@ export const StickyActions = () => {
       const scrolled = window.scrollY;
       const total = document.documentElement.scrollHeight - window.innerHeight;
       const pct = total > 0 ? scrolled / total : 0;
-      const nextLift = pct > 0.60 && pct < 0.92;
+      const nextLift = pct > 0.6 && pct < 0.92;
 
       if (nextLift !== lastLiftRef.current) {
         lastLiftRef.current = nextLift;
@@ -42,7 +42,7 @@ export const StickyActions = () => {
 
   return (
     <div
-      className={`fixed right-6 z-50 flex flex-col items-end gap-4 sm:right-8 print:hidden transition-[bottom] duration-200 ${
+      className={`hidden lg:flex fixed right-6 z-50 flex-col items-end gap-4 sm:right-8 print:hidden transition-[bottom] duration-200 ${
         liftForScrollBar ? "bottom-24 sm:bottom-28" : "bottom-6 sm:bottom-8"
       }`}
     >

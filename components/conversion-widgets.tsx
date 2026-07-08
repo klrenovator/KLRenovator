@@ -2,23 +2,34 @@
 
 import dynamic from "next/dynamic";
 
+const MobileStickyBar = dynamic(
+  () =>
+    import("@/components/mobile-sticky-bar").then((mod) => mod.MobileStickyBar),
+  { ssr: false, loading: () => null },
+);
+
 const StickyActions = dynamic(
   () => import("@/components/sticky-actions").then((mod) => mod.StickyActions),
   { ssr: false, loading: () => null },
 );
 
 const ExitIntentPopup = dynamic(
-  () => import("@/components/exit-intent-popup").then((mod) => mod.ExitIntentPopup),
+  () =>
+    import("@/components/exit-intent-popup").then((mod) => mod.ExitIntentPopup),
   { ssr: false, loading: () => null },
 );
 
 const ScrollDepthCTA = dynamic(
-  () => import("@/components/scroll-depth-cta").then((mod) => mod.ScrollDepthCTA),
+  () =>
+    import("@/components/scroll-depth-cta").then((mod) => mod.ScrollDepthCTA),
   { ssr: false, loading: () => null },
 );
 
 const FloatingPromoWidgets = dynamic(
-  () => import("@/components/floating-promo-widgets").then((mod) => mod.FloatingPromoWidgets),
+  () =>
+    import("@/components/floating-promo-widgets").then(
+      (mod) => mod.FloatingPromoWidgets,
+    ),
   { ssr: false, loading: () => null },
 );
 
@@ -33,6 +44,7 @@ export function ConversionWidgets() {
   return (
     <>
       <StickyActions />
+      <MobileStickyBar />
       <ExitIntentPopup />
       <ScrollDepthCTA />
       <FloatingPromoWidgets />
