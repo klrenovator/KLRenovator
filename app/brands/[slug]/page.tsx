@@ -12,6 +12,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { allPosts } from "@/config/blog-posts";
 import { BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
+import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 
 // ── Brand → Blog relevance map ───────────────────────────────────────────────
 const BRAND_BLOG_MAP: Record<string, string[]> = {
@@ -169,7 +170,7 @@ export default async function BrandPage({
   const waMsgZH = `你好 KL Renovator，我需要帮助处理我的${brand.name}冷气。请给予建议。`;
 
   const services = siteConfig.services.filter((s) => s.slug !== "emergency");
-  const relatedAreas = siteConfig.areaPages.slice(0, 12);
+  const brandAreaComboModule = buildBrandAreaComboModule(brand, siteConfig.areaPages, "en");
 
   // ── Schema ────────────────────────────────────────────────────────────────
   const serviceSchema = {
@@ -803,33 +804,53 @@ export default async function BrandPage({
         </section>
       )}
 
-      {/* Related Areas */}
+      {/* Round 32 / 20D.34: Brand + Area Combo Linking Module */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
-              Service Areas · Kawasan Servis · 服务区域
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              {brandAreaComboModule.eyebrow}
             </p>
-            <h2 className="text-base font-black text-slate-900 mb-5">
-              {brand.name} Aircond Service by Area in KL & Selangor
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {relatedAreas.map((area) => (
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-6">
+              <div>
+                <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
+                  {brandAreaComboModule.heading}
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 max-w-3xl">
+                  {brandAreaComboModule.intro}
+                </p>
+              </div>
+              <NextLink
+                href={brandAreaComboModule.allAreasHref}
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-sky-200 bg-sky-50 px-4 py-2 text-xs font-black uppercase tracking-widest text-sky-700 hover:bg-sky-100 transition"
+              >
+                {brandAreaComboModule.allAreasLabel} <FiArrowRight className="h-3 w-3" />
+              </NextLink>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {brandAreaComboModule.combos.map((combo) => (
                 <NextLink
-                  key={area.slug}
-                  href={`/areas/${area.slug}`}
-                  className="inline-flex items-center gap-1.5 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-3 py-2 text-xs font-bold text-slate-700 rounded-xl transition-all"
+                  key={combo.href}
+                  href={combo.href}
+                  className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
                 >
-                  <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
-                  {brand.name} Aircond Service {area.name}
+                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-600">{combo.eyebrow}</p>
+                  <h3 className="mt-2 text-base font-black text-slate-950 group-hover:text-sky-700 transition-colors">
+                    {combo.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{combo.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {combo.tags.map((tag) => (
+                      <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[11px] font-bold text-slate-600">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-700 group-hover:gap-2 transition-all">
+                    Open area route <FiArrowRight className="h-3 w-3" />
+                  </span>
                 </NextLink>
               ))}
-              <NextLink
-                href="/areas"
-                className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 hover:bg-sky-100 px-3 py-2 text-xs font-bold text-sky-700 rounded-xl transition-all"
-              >
-                All 35+ Areas <FiArrowRight className="h-3 w-3" />
-              </NextLink>
             </div>
           </Reveal>
         </div>
