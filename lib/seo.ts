@@ -11,6 +11,7 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 import { siteConfig } from "@/config/site";
+import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 
 export type Locale = "en" | "ms" | "zh";
 
@@ -119,6 +120,7 @@ export function buildServiceSchema(args: {
   const url = `${baseUrl}${pathPrefix}/services/${args.slug}`;
   const inLanguage = locale === "ms" ? "ms-MY" : locale === "zh" ? "zh-MY" : "en-MY";
   const priceDescription = args.priceDescription || `Starting from RM ${args.startPrice}`;
+  const parity = serviceSchemaParityFields(locale);
   const areaServed = args.areasServed || [
     ...buildAreaServedSchema(),
     buildServiceAreaGeoCircle(),
@@ -133,6 +135,8 @@ export function buildServiceSchema(args: {
     serviceType: args.name,
     category: "Air conditioning service",
     url,
+    datePublished: parity.datePublished,
+    dateModified: parity.dateModified,
     inLanguage,
     provider: {
       "@type": "HVACBusiness",
