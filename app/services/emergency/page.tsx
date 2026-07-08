@@ -346,7 +346,7 @@ export default function EmergencyPage() {
       </section>
 
       {/* Round 35 / 8.6: Emergency AIO / LLMO compact answer block */}
-      <section id="aio-answer-block" className="py-10 px-4 bg-white border-b border-slate-100">
+      <section id="service-summary" className="py-10 px-4 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto rounded-3xl border border-red-100 bg-gradient-to-br from-red-50 to-white p-5 sm:p-6 shadow-sm">
           <div className="grid gap-5 lg:grid-cols-[1.3fr_0.85fr] lg:items-start">
             <div>
@@ -374,7 +374,7 @@ export default function EmergencyPage() {
       </section>
 
       {/* Round 36 / 8.7: Emergency Semantic SEO & HVAC Entity Pass */}
-      <section id="hvac-entity-pass" className="py-12 px-4 bg-slate-50 border-b border-slate-100">
+      <section id="parts-and-checks" className="py-12 px-4 bg-slate-50 border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="mb-7 max-w-4xl">
             <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-2">{emergencyHVACEntityModule.eyebrow}</p>
@@ -416,7 +416,7 @@ export default function EmergencyPage() {
       </section>
 
       {/* Round 38 / 8.9: Emergency Visual & SXO Polish — urgency decision tree */}
-      <section id="visual-sxo-polish" className="py-12 px-4 bg-white border-b border-slate-100">
+      <section id="service-choice-guide" className="py-12 px-4 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="mb-7 max-w-4xl">
             <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-2">{emergencyVisualSXO.eyebrow}</p>
@@ -523,7 +523,7 @@ export default function EmergencyPage() {
       </section>
 
       {/* Round 34 / 8.5: Emergency SXO / CRO — CTA placement by urgency stage */}
-      <section id="intent-stage-cta" className="py-12 px-4 bg-slate-950 text-white border-t border-slate-800">
+      <section id="booking-options" className="py-12 px-4 bg-slate-950 text-white border-t border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-6">
             <div>
