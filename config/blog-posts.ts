@@ -25,7 +25,7 @@ export type BlogPost = {
 export const allPosts: BlogPost[] = [
   {
     slug: "aircond-service-batu-caves-selayang-2026",
-    title: "Aircon Service in Batu Caves & Selayang — What to Expect in 2026",
+    title: "Aircon Service in Batu Caves & Selayang — 2026",
     titleMS: "Servis Aircond di Batu Caves & Selayang — Apa yang Anda Perlu Tahu pada 2026",
     titleZH: "黑风洞及双溪毛糯冷气服务 — 2026年您需要了解的事项",
     excerpt: "Looking for reliable aircond servicing in Batu Caves or Selayang? Pricing, common issues, and why regular servicing matters in this area.",
@@ -342,7 +342,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "signs-your-aircon-needs-chemical-overhaul-malaysia",
-    title: "5 Signs Your Aircon Needs a Chemical Overhaul (Not Just a Wash)",
+    title: "5 Signs Your Aircon Needs a Chemical Overhaul (Not Just a...",
     titleMS: "5 Tanda Aircond Anda Memerlukan Overhaul Kimia (Bukan Sekadar Cuci)",
     titleZH: "5个迹象表明您的冷气需要化学大修（而不仅仅是清洗）",
     excerpt: "A chemical wash won't fix everything. Here are 5 clear signs that your aircond unit needs a full chemical overhaul — and what happens if you keep delaying it.",
@@ -455,8 +455,8 @@ export const allPosts: BlogPost[] = [
     categoryMS: "Panduan Perkhidmatan",
     categoryZH: "服务指南",
     tags: ["chemical wash", "chemical overhaul", "aircon cleaning", "KL Renovator", "aircond service"],
-    date: "2025-06-01",
-    dateDisplay: "June 2025",
+    date: "2026-06-01",
+    dateDisplay: "June 2026",
     readTime: 5,
     relatedService: "Chemical Overhaul",
     image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
@@ -556,8 +556,8 @@ export const allPosts: BlogPost[] = [
     categoryMS: "Penyelesaian Masalah",
     categoryZH: "故障排查",
     tags: ["aircon not cold", "aircond troubleshoot", "aircon repair KL", "gas top up", "aircond service Malaysia"],
-    date: "2025-05-01",
-    dateDisplay: "May 2025",
+    date: "2026-05-01",
+    dateDisplay: "May 2026",
     readTime: 6,
     relatedService: "Troubleshooting & Repairs",
     image: "/hero/aircond-repair-technician-klang-valley.webp",
@@ -653,8 +653,8 @@ export const allPosts: BlogPost[] = [
     categoryMS: "Penyelenggaraan",
     categoryZH: "保养维护",
     tags: ["aircon service frequency Malaysia", "how often service aircond", "aircond maintenance schedule", "KL Renovator"],
-    date: "2025-04-01",
-    dateDisplay: "April 2025",
+    date: "2026-04-01",
+    dateDisplay: "April 2026",
     readTime: 4,
     relatedService: "Basic Servicing / Routine Maintenance",
     image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
@@ -761,7 +761,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "r32-r410a-r22-gas-difference",
-    title: "R22 vs R410A vs R32 Refrigerant Gas — Which Does Your Aircon Use?",
+    title: "R22 vs R410A vs R32 Refrigerant Gas — Which Does Your Air...",
     titleMS: "Gas R22 vs R410A vs R32 — Mana yang Digunakan oleh Aircond Anda?",
     titleZH: "R22 vs R410A vs R32 制冷剂 — 您的冷气使用哪种？",
     excerpt: "Confused about refrigerant gas types? Here's a simple guide to R22, R410A, and R32 — how to identify which one your unit uses and what top-up costs to expect.",
@@ -771,8 +771,8 @@ export const allPosts: BlogPost[] = [
     categoryMS: "Panduan Teknikal",
     categoryZH: "技术指南",
     tags: ["R22 gas", "R410A gas", "R32 refrigerant", "gas top up Malaysia", "aircond gas KL"],
-    date: "2025-03-01",
-    dateDisplay: "March 2025",
+    date: "2026-03-01",
+    dateDisplay: "March 2026",
     readTime: 5,
     relatedService: "Gas Top-Up / Precision Balancing",
     image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
@@ -857,7 +857,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-water-leaking-causes",
-    title: "Aircon Water Leaking? Here Are the Most Common Causes & Fixes",
+    title: "Aircon Water Leaking? Here Are the Most Common Causes & F...",
     titleMS: "Aircond Bocor Air? Berikut Punca dan Penyelesaian Paling Biasa",
     titleZH: "冷气漏水？以下是最常见的原因和解决方法",
     excerpt: "Water dripping from your indoor aircond unit is one of the most common problems in Malaysia. Here's what causes it and how to fix it properly.",
@@ -867,8 +867,8 @@ export const allPosts: BlogPost[] = [
     categoryMS: "Penyelesaian Masalah",
     categoryZH: "故障排查",
     tags: ["aircon water leaking", "aircond leaking water Malaysia", "aircon dripping KL", "drain pipe blocked", "KL Renovator"],
-    date: "2025-02-01",
-    dateDisplay: "February 2025",
+    date: "2026-02-01",
+    dateDisplay: "February 2026",
     readTime: 4,
     relatedService: "Chemical Overhaul",
     image: "/hero/panasonic-aircond-water-leaking-fix-petaling-jaya-24.webp",
@@ -963,7 +963,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "best-aircond-brands-malaysia-2026",
-    title: "Best Aircond Brands in Malaysia 2026 — Daikin, Panasonic, Mitsubishi Compared",
+    title: "Best Aircond Brands Malaysia 2026 — Daikin, Panasonic, Mi...",
     titleMS: "Jenama Aircond Terbaik di Malaysia 2026 — Daikin, Panasonic, Mitsubishi Dibandingkan",
     titleZH: "2026年马来西亚最佳冷气品牌 — 大金、松下、三菱对比",
     excerpt: "Choosing a new aircond in Malaysia? Here's an honest comparison of the top brands to help you decide.",
@@ -1063,7 +1063,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-maintenance-checklist-malaysia",
-    title: "Aircond Maintenance Checklist Malaysia — 12 Things to Check Every Year",
+    title: "Aircond Maintenance Checklist Malaysia — 12 Things to Che...",
     titleMS: "Senarai Semak Penyelenggaraan Aircond Malaysia — 12 Perkara untuk Diperiksa Setiap Tahun",
     titleZH: "马来西亚冷气保养检查清单 — 每年需要检查的12件事",
     excerpt: "A complete aircond maintenance checklist for Malaysian homeowners and offices. Know exactly what needs to be checked, when, and why.",
@@ -1173,7 +1173,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-service-price-guide-kl-2026",
-    title: "Aircond Service Price Guide KL & Selangor 2026 — All Services Listed",
+    title: "Aircond Service Price Guide KL & Selangor 2026",
     titleMS: "Panduan Harga Servis Aircond KL & Selangor 2026 — Semua Perkhidmatan Disenaraikan",
     titleZH: "2026年吉隆坡及雪兰莪冷气服务价格指南 — 所有服务一览",
     excerpt: "Complete and transparent aircond service pricing for Kuala Lumpur and Selangor in 2026. All services, all prices, no surprises.",
@@ -1328,7 +1328,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "inverter-vs-non-inverter-aircond-malaysia",
-    title: "Inverter vs Non-Inverter Aircond Malaysia — Which Should You Buy?",
+    title: "Inverter vs Non-Inverter Aircond Malaysia",
     titleMS: "Aircond Inverter vs Bukan Inverter Malaysia — Yang Mana Perlu Anda Beli?",
     titleZH: "变频 vs 定频冷气马来西亚 — 应该买哪种？",
     excerpt: "Inverter or non-inverter? This guide explains the real difference, electricity savings, lifespan, and which is right for Malaysian homes.",
@@ -1565,7 +1565,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "how-to-reduce-aircond-electricity-bill-malaysia",
-    title: "How to Reduce Aircond Electricity Bill in Malaysia — 12 Proven Tips",
+    title: "Reduce Aircond Electricity Bill Malaysia — 12 Proven Tips",
     titleMS: "Cara Mengurangkan Bil Elektrik Aircond di Malaysia — 12 Petua Terbukti",
     titleZH: "如何降低马来西亚冷气电费 — 12个经验证的技巧",
     excerpt: "These 12 proven tips will reduce your aircond electricity bill in Malaysia without sacrificing comfort — starting from your service schedule.",
@@ -1682,7 +1682,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-installation-guide-malaysia",
-    title: "Aircond Installation Guide Malaysia — What to Expect and What to Prepare",
+    title: "Aircond Installation Guide Malaysia — ",
     titleMS: "Panduan Pemasangan Aircond Malaysia — Apa yang Dijangka dan Apa yang Perlu Disediakan",
     titleZH: "马来西亚冷气安装指南 — 预期什么以及如何准备",
     excerpt: "Everything you need to know before installing a new aircond in Malaysia — HP sizing, pipe routing, electrical points, installation costs.",
@@ -1931,7 +1931,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-troubleshooting-guide-malaysia",
-    title: "Aircond Troubleshooting Guide Malaysia — Diagnose Your Problem",
+    title: "Aircond Troubleshooting Guide Malaysia — Diagnose Your Pr...",
     titleMS: "Panduan Penyelesaian Masalah Aircond Malaysia — Diagnos Masalah Anda",
     titleZH: "马来西亚冷气故障排查指南 — 诊断您的问题",
     excerpt: "DIY aircond troubleshooting guide for Malaysia. Find out what is causing your aircond problem and whether you can fix it yourself.",
@@ -2042,7 +2042,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "commercial-hvac-maintenance-kl",
-    title: "Commercial HVAC Maintenance KL & Selangor — Office & Retail Guide",
+    title: "Commercial HVAC Maintenance KL & Selangor",
     titleMS: "Penyelenggaraan HVAC Komersial KL & Selangor — Panduan Pejabat & Runcit",
     titleZH: "吉隆坡及雪兰莪商业HVAC维护 — 办公室与零售指南",
     excerpt: "Complete guide to commercial HVAC maintenance for offices, shops & restaurants in KL and Selangor. Service schedules, contracts, ceiling cassette pricing.",
@@ -2155,7 +2155,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-gas-topup-myths-malaysia",
-    title: "Aircond Gas Top-Up Myths in Malaysia — What's True, What's Not",
+    title: "Aircond Gas Top-Up Myths Malaysia — What's True, What's Not",
     titleMS: "Mitos Top-Up Gas Aircond di Malaysia — Apa yang Benar, Apa yang Tidak",
     titleZH: "马来西亚冷气充气误区 — 什么是真的，什么是假的",
     excerpt: "Many Malaysian homeowners have been misled about aircond gas top-ups. This guide busts the most common myths.",
@@ -2252,7 +2252,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-buying-guide-malaysia-2026",
-    title: "Aircond Buying Guide Malaysia 2026 — Everything Before You Buy",
+    title: "Aircond Buying Guide Malaysia 2026 — ",
     titleMS: "Panduan Beli Aircond Malaysia 2026 — Semua yang Perlu Anda Tahu Sebelum Membeli",
     titleZH: "马来西亚2026年冷气购买完整指南 — 购买前需了解的一切",
     excerpt: "Complete aircond buying guide for Malaysia 2026. HP sizing, inverter vs non-inverter, best brands, gas types, energy ratings, installation costs.",
@@ -2383,7 +2383,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "professional-new-aircond-installation-kl-selangor-2026",
-    title: "5 Essential Rules for Professional New Aircond Installation in Kuala Lumpur & Selangor (2026 Guide)",
+    title: "5 Essential Rules for Professional New Aircond Installati...",
     titleMS: "5 Peraturan Penting untuk Pemasangan Aircond Baru Profesional di Kuala Lumpur & Selangor (Panduan 2026)",
     titleZH: "吉隆坡与雪兰莪专业新冷气安装的5个关键规则（2026指南）",
     excerpt: "Planning a new aircond installation near you in KL or Selangor? Learn sizing, copper piping, vacuuming, placement and transparent RM199 base installation pricing.",
@@ -2406,7 +2406,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "regular-aircond-basic-servicing-kl-selangor-2026",
-    title: "The Ultimate Guide to Regular Aircond Basic Servicing in KL & Selangor (2026)",
+    title: "Regular Aircond Basic Servicing in KL & Selangor (2026)",
     titleMS: "Panduan Lengkap Servis Asas Aircond Berkala di KL & Selangor (2026)",
     titleZH: "吉隆坡与雪兰莪冷气基本保养完整指南（2026）",
     excerpt: "Is your aircond weak, dusty or not cold enough? This guide explains regular basic servicing, prices from RM99 and when to upgrade to chemical wash.",
@@ -2429,7 +2429,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "pressure-chemical-wash-leaking-aircond-kl-selangor",
-    title: "Why a High-Pressure Chemical Wash is the Best Cure for Leaking Airconds in KL & Selangor",
+    title: "Why a High-Pressure Chemical Wash is Fixes Leaking Aircon...",
     titleMS: "Mengapa Cuci Kimia Bertekanan Tinggi Boleh Mengatasi Aircond Bocor di KL & Selangor",
     titleZH: "为什么高压化学清洗能解决吉隆坡与雪兰莪冷气漏水问题",
     excerpt: "Water leaking from your indoor aircond is usually caused by blocked drainage, slime and dirty coils. Learn how chemical wash fixes the root cause.",
@@ -2452,7 +2452,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-chemical-overhaul-kl-selangor-cooling-efficiency",
-    title: "The Ultimate Guide to Aircond Chemical Overhaul in Kuala Lumpur & Selangor: Restoring 100% Cooling Efficiency",
+    title: "Aircond Chemical Overhaul in KL & Selangor: ",
     titleMS: "Panduan Lengkap Chemical Overhaul Aircond di Kuala Lumpur & Selangor untuk Pulihkan Kecekapan Sejuk",
     titleZH: "吉隆坡与雪兰莪冷气化学大清洗完整指南：恢复制冷效率",
     excerpt: "When basic servicing and chemical wash are not enough, chemical overhaul dismantles the indoor unit for deep restoration. Learn signs, prices and process.",
@@ -2475,7 +2475,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-gas-topup-malaysia-r32-r410a-r22-balancing",
-    title: "The Truth About Aircond Gas Top-Up in Malaysia: R32, R410A, and R22 Precision Balancing",
+    title: "Aircond Gas Top-Up Malaysia: R32, R410A, and R22 Precisio...",
     titleMS: "Kebenaran Tentang Tambah Gas Aircond di Malaysia: Imbangan Tepat R32, R410A dan R22",
     titleZH: "马来西亚冷气加Gas真相：R32、R410A与R22精准平衡",
     excerpt: "Aircond gas does not disappear like fuel. Low gas usually means a leak. Learn honest gas top-up pricing, pressure balancing and when leak checks matter.",
@@ -2498,7 +2498,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
-    title: "Expert Aircond Troubleshooting & Repairs in KL & Selangor: Fixing Leaks, Noises, and Wiring Issues",
+    title: "Expert Aircond Troubleshooting & Repairs in KL & Selangor",
     titleMS: "Pembaikan & Troubleshooting Aircond Pakar di KL & Selangor: Bocor, Bunyi Bising dan Masalah Wiring",
     titleZH: "吉隆坡与雪兰莪冷气故障诊断维修：漏水、噪音与电线问题",
     excerpt: "Blinking lights, DB trips, loud noise or no cooling? Learn how professional troubleshooting finds the real fault before replacing parts.",
@@ -2521,7 +2521,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-installation-dismantling-kl-selangor-price-guide",
-    title: "Professional Aircond Installation & Dismantling in KL & Selangor: Step-by-Step Guide and Price Sheet",
+    title: "Professional Aircond Installation & Dismantling in KL & S...",
     titleMS: "Pemasangan & Buka Aircond Profesional di KL & Selangor: Panduan Langkah Demi Langkah dan Harga",
     titleZH: "吉隆坡与雪兰莪专业冷气安装与拆除：步骤与价格指南",
     excerpt: "Moving house or replacing an old unit? Learn safe dismantling, pump-down, installation standards and transparent pricing before booking.",
@@ -2544,7 +2544,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "inverter-vs-non-inverter-aircond-malaysia-tnb-bill",
-    title: "Inverter vs Non-Inverter Airconds in Malaysia: Which Saves More Money on Your TNB Bill?",
+    title: "Inverter vs Non-Inverter Airconds Malaysia: Saving Guide",
     titleMS: "Aircond Inverter vs Non-Inverter di Malaysia: Mana Lebih Jimat Bil TNB?",
     titleZH: "马来西亚变频与非变频冷气：哪一种更省TNB电费？",
     excerpt: "Buying a new aircond? Compare inverter vs non-inverter models, electricity savings, room usage and maintenance needs before choosing.",
@@ -2567,7 +2567,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "smelly-aircond-foul-musty-odor-kl-selangor",
-    title: "How to Fix a Smelly Aircond: Curing Foul and Musty Odors in KL & Selangor Homes",
+    title: "Fix Smelly Aircond: Foul and Musty Odors in KL & Selangor...",
     titleMS: "Cara Hilangkan Bau Busuk Aircond: Selesaikan Bau Hapak di Rumah KL & Selangor",
     titleZH: "如何解决冷气异味：吉隆坡与雪兰莪住家的霉味和臭味处理",
     excerpt: "Does your aircond smell sour, mouldy or rotten when switched on? Learn the causes and the correct service for each odor level.",
@@ -2590,7 +2590,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "r32-vs-r410a-vs-r22-aircond-gas-malaysia",
-    title: "R32 vs R410A vs R22: The Ultimate Guide to Malaysian Aircond Gas Types and Pressures",
+    title: "R32 vs R410A vs R22: Malaysian Aircond Gas Types and Pres...",
     titleMS: "R32 vs R410A vs R22: Panduan Lengkap Jenis Gas Aircond dan Tekanan di Malaysia",
     titleZH: "R32、R410A与R22：马来西亚冷气Gas类型与压力完整指南",
     excerpt: "Confused by R32, R410A and R22? Learn which gas your aircond uses, why pressures differ and why mixing refrigerants is dangerous.",
@@ -2613,7 +2613,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "rm199-vs-rm300-aircond-installation-kl-renovator",
-    title: "Why Fixed RM300 Package Sites Overcharge You: The Honest Truth About KL RENOVATOR's RM199 Transparent Aircond Installation",
+    title: "Why Fixed RM300 Package Sites Overcharge You",
     titleMS: "Mengapa Pakej Tetap RM300 Boleh Terlebih Caj: Kebenaran Harga Pemasangan Aircond RM199 KL Renovator",
     titleZH: "为什么RM300固定配套可能让您多付钱：KL Renovator RM199透明冷气安装价真相",
     excerpt: "Already have an aircon bracket or switch installed? Don't overpay for fixed RM300 packages. Learn how KL Renovator's RM199 base installation works.",
@@ -2636,7 +2636,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-installation-cost-malaysia-2026",
-    title: "Aircond Installation Cost in Malaysia 2026 — Full Price Breakdown (KL & Selangor)",
+    title: "Aircond Installation Cost Malaysia 2026 — Full Price Brea...",
     titleMS: "Kos Pemasangan Aircond di Malaysia 2026 — Panduan Harga Penuh (KL & Selangor)",
     titleZH: "2026年马来西亚冷气安装费用 — 完整价格指南（吉隆坡与雪兰莪）",
     excerpt: "Full 2026 aircond installation cost guide for Malaysia. RM 199 base install (1.0-1.5 HP wall-mounted) plus transparent add-ons, RM 25/ft extra copper, and what condo vs landed actually costs. Verified KL Renovator pricing.",
@@ -2858,7 +2858,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "why-aircond-installation-expensive-malaysia",
-    title: "Why Is Aircond Installation So Expensive in Malaysia? 7 Real Reasons (2026)",
+    title: "Why Is Aircond Installation So Expensive Malaysia? 7 Real...",
     titleMS: "Mengapa Pemasangan Aircond Mahal di Malaysia? 7 Sebab Sebenar (2026)",
     titleZH: "为什么马来西亚冷气安装这么贵？7个真实原因（2026）",
     excerpt: "Aircond installation in Malaysia costs more than most people expect. Here are 7 real reasons: certified technician shortage, copper pipe price hike, RM 25/ft extra, insurance, tools, condo compliance and warranty. KL Renovator transparent breakdown.",
@@ -3008,7 +3008,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "1-hp-aircond-bedroom-malaysia",
-    title: "Is 1 HP Aircond Enough for a Bedroom? Malaysia Room Size Guide 2026",
+    title: "Is 1 HP Aircond Enough for a Bedroom? Malaysia Room Size ...",
     titleMS: "Adakah 1 HP Aircond Cukup untuk Bilik Tidur? Panduan Saiz Bilik Malaysia 2026",
     titleZH: "1马力冷气足够卧室吗？2026年马来西亚房间尺寸指南",
     excerpt: "1 HP aircond (about 9,000 BTU / 0.75 kW) is enough for a small bedroom up to 120 sqft in Malaysia. Larger bedrooms need 1.5 HP or 2.0 HP. Full sizing chart, room calculator, and installation pricing from RM 199.",
@@ -3224,7 +3224,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "ac-unit-installation-cost-malaysia",
-    title: "AC Unit Installation Cost in Malaysia 2026 — Wall, Cassette, Window Prices",
+    title: "AC Unit Installation Cost Malaysia 2026 — Wall, Cassette,...",
     titleMS: "Kos Pasang Unit AC di Malaysia 2026 — Harga Dinding, Cassette, Tingkap",
     titleZH: "2026年马来西亚AC机组安装费用 — 壁挂、卡式、窗口机价格",
     excerpt: "AC unit installation cost in Malaysia 2026: wall-mounted from RM 199 (1.0-1.5 HP), ceiling cassette from RM 290, window units from RM 199. What is included, add-ons, and what changes the price. Verified pricing from klrenovator.com.",
@@ -3491,7 +3491,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "3-minute-rule-aircon-malaysia",
-    title: "The 3-Minute Rule for Aircon in Malaysia — Why You Should Wait 3 Minutes Before Restarting",
+    title: "The 3-Minute Rule for Aircon Malaysia — Why You Should Wa...",
     titleMS: "Peraturan 3 Minit untuk Aircond di Malaysia — Mengapa Anda Perlu Tunggu 3 Minit Sebelum Mula Semula",
     titleZH: "马来西亚冷气3分钟规则 — 为什么重启前要等3分钟",
     excerpt: "The 3-minute rule for aircon means waiting at least 3 minutes before restarting the compressor after switching off. This protects the compressor from short-cycling damage. Full guide for Malaysian homes on why this matters and what happens if you ignore it.",
@@ -3713,7 +3713,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "ac-service-price-malaysia-2026",
-    title: "AC Service Price in Malaysia 2026 — Basic, Chemical Wash, Overhaul",
+    title: "AC Service Price Malaysia 2026 — Basic, Chemical Wash, Ov...",
     titleMS: "Harga Servis AC di Malaysia 2026 — Basic, Cuci Kimia, Overhaul",
     titleZH: "2026年马来西亚AC服务价格 — 基础、化学清洗、大修",
     excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120-220, AMC from RM 299/year. Verified pricing from klrenovator.com.",
@@ -4040,7 +4040,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "1-hour-ac-electricity-cost-malaysia",
-    title: "1 Hour AC Electricity Cost in Malaysia 2026 — Per Hour & Per Day Price",
+    title: "1 Hour AC Electricity Cost Malaysia 2026",
     titleMS: "Kos Elektrik AC 1 Jam di Malaysia 2026 — Harga Setiap Jam & Setiap Hari",
     titleZH: "2026年马来西亚冷气1小时电费 — 每小时和每天价格",
     excerpt: "1 hour of AC electricity in Malaysia costs RM 0.20-0.45 for 1.0-1.5 HP inverter units, RM 0.30-0.55 for non-inverter. Per day (8 hours): RM 1.60-3.60 for 1.5 HP inverter. Full breakdown by HP, inverter vs non-inverter, with TNB tariff rates.",
@@ -4409,7 +4409,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "aircond-leaking-water-malaysia",
-    title: "Aircond Leaking Water? 8 Causes & Fixes in Malaysia (2026 Guide)",
+    title: "Aircond Leaking Water? 8 Causes & Fixes Malaysia (2026 Gu...",
     titleMS: "Aircond Bocor Air? 8 Punca & Penyelesaian di Malaysia (Panduan 2026)",
     titleZH: "冷气漏水？马来西亚8个原因和解决方法（2026指南）",
     excerpt: "Aircond leaking water in Malaysia? The 8 most common causes: blocked drain pipe, dirty filter, frozen coil, low refrigerant, tilted indoor unit, broken drain pump, damaged drip tray, full water tray. Fixes from RM 99.",
@@ -4700,7 +4700,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "aircond-installation-time-malaysia",
-    title: "How Long Does Aircond Installation Take in Malaysia? 2026 Time Guide",
+    title: "How Long Does Aircond Installation Take Malaysia? 2026 Ti...",
     titleMS: "Berapa Lama Pemasangan Aircond di Malaysia? Panduan Masa 2026",
     titleZH: "马来西亚冷气安装需要多长时间？2026年时间指南",
     excerpt: "Aircond installation in Malaysia takes 2-3 hours for a standard wall-mounted 1.0-1.5 HP unit, 3-4 hours for ceiling cassette. Multi-unit installs: 2-3 hours per unit. Full breakdown by unit type, size, location scenario, with same-day service options.",
@@ -5134,7 +5134,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-maintenance-contract-malaysia-2026",
-    title: "Aircond Maintenance Contract Malaysia 2026 — Save 30% vs Pay-Per-Service",
+    title: "Aircond Maintenance Contract Malaysia 2026",
     titleMS: "Kontrak Penyelenggaraan Aircond Malaysia 2026 — Jimat 30% Berbanding Servis Individu",
     titleZH: "2026年马来西亚冷气保养合约 — 比单次服务省30%",
     excerpt: "Is an annual aircond maintenance contract worth it in Malaysia? We break down the real cost savings, what's included, and why 500+ KL homeowners chose AMC over pay-per-service in 2026.",
