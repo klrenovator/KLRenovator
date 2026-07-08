@@ -17,6 +17,7 @@ import { buildServiceSchema } from "@/lib/seo";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
 import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
+import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
 
 type Lang = "ms" | "zh";
 
@@ -329,6 +330,7 @@ export function ServiceDetailI18n({
     summary: lang === "ms" ? data.aioSummaryMS : data.aioSummaryZH,
     startPrice: serviceStartPrice,
   });
+  const hvacEntityModule = buildServiceHVACEntityModule(slug, lang, tTitle);
   const inLang = lang === "ms" ? "ms-MY" : "zh-MY";
 
   // FAQ selection: page language is primary, the other two are secondary.
@@ -703,6 +705,50 @@ export function ServiceDetailI18n({
                   <p className="mt-4 text-[11px] leading-relaxed text-slate-400">{aioBlock.sourceLine}</p>
                 </aside>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Round 36 / 8.7: Semantic SEO & HVAC Entity Pass — localized */}
+      <section id="hvac-entity-pass" className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="mb-7 max-w-4xl">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">{hvacEntityModule.eyebrow}</p>
+              <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">{hvacEntityModule.heading}</h2>
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700">{hvacEntityModule.intro}</p>
+            </div>
+            <div className="grid gap-4 lg:grid-cols-3">
+              {hvacEntityModule.groups.map((group) => (
+                <article key={group.title} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="text-base font-black text-slate-950">{group.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{group.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {group.terms.map((term) => (
+                      <span key={term} className="rounded-full border border-sky-100 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-800">
+                        {term}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="mt-5 grid gap-4 lg:grid-cols-[1fr_0.75fr]">
+              <div className="rounded-3xl border border-emerald-100 bg-emerald-50 p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-3">{hvacEntityModule.validationTitle}</p>
+                <ul className="grid gap-2 sm:grid-cols-3">
+                  {hvacEntityModule.validationPoints.map((point) => (
+                    <li key={point} className="flex items-start gap-2 text-sm font-semibold text-emerald-950">
+                      <FiCheck className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="rounded-3xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
+                {hvacEntityModule.note}
+              </p>
             </div>
           </Reveal>
         </div>
