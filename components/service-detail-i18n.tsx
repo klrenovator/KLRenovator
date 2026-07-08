@@ -546,19 +546,37 @@ export function ServiceDetailI18n({
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="bg-white text-slate-900 p-6 sm:p-8 border-2 border-sky-100 shadow-sm">
-                <p className={eyebrow()}>{pick("overview")}</p>
-                <p className="mt-3 text-sm sm:text-base text-slate-700 leading-relaxed">{tDescription}</p>
-                <ul className="mt-6 space-y-2.5">
-                  {tHighlights.slice(0, 4).map((h: string, i: number) => (
-                    <li key={h} className="flex items-start gap-2.5">
-                      <span className={`inline-flex h-5 w-5 shrink-0 items-center justify-center ${highlightColors[i % highlightColors.length]} text-white mt-0.5`}>
-                        <FiCheck className="h-3 w-3" />
-                      </span>
-                      <span className="text-sm font-semibold text-slate-800">{h}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex flex-col gap-5">
+                {/* AIO / LLMO Answer Block — Round 33 / 8.6 */}
+                <div className="rounded-2xl border-2 border-slate-900 bg-slate-900 p-5 text-white shadow-xl relative overflow-hidden text-left">
+                  <div className="absolute top-0 right-0 opacity-10 pointer-events-none p-2">
+                    <ServiceIcon name={iconName} className="h-20 w-20" />
+                  </div>
+                  <div className="relative z-10">
+                    <p className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-sky-400 mb-3 bg-white/5 px-2 py-1 rounded">
+                      <span className="flex h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
+                      {lang === "ms" ? "Ringkasan AIO · Dioptimumkan LLM" : "AIO 摘要 · LLM 已优化"}
+                    </p>
+                    <p className="text-sm sm:text-base font-medium leading-relaxed speakable aio-summary">
+                      {lang === "ms" ? data.aioSummaryMS : data.aioSummaryZH}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white text-slate-900 p-6 sm:p-8 border-2 border-sky-100 shadow-sm">
+                  <p className={eyebrow()}>{pick("overview")}</p>
+                  <p className="mt-3 text-sm sm:text-base text-slate-700 leading-relaxed">{tDescription}</p>
+                  <ul className="mt-6 space-y-2.5">
+                    {tHighlights.slice(0, 4).map((h: string, i: number) => (
+                      <li key={h} className="flex items-start gap-2.5">
+                        <span className={`inline-flex h-5 w-5 shrink-0 items-center justify-center ${highlightColors[i % highlightColors.length]} text-white mt-0.5`}>
+                          <FiCheck className="h-3 w-3" />
+                        </span>
+                        <span className="text-sm font-semibold text-slate-800">{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -1074,6 +1092,50 @@ export function ServiceDetailI18n({
         </section>
       )}
 
+      {/* ── Comparison Table — Round 35 / 8.9 ── */}
+      {(() => {
+        const table = lang === "ms" ? data.compareTableMS : data.compareTableZH;
+        if (!table) return null;
+        return (
+          <section className="py-14 sm:py-16 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <div className="text-center mb-10">
+                  <p className={eyebrow()}>{tri("overview")}</p>
+                  <h2 className="mt-3 text-2xl sm:text-3xl font-black text-slate-900">{table.title}</h2>
+                  <p className="mt-2 text-slate-500 font-medium">{table.subtitle}</p>
+                </div>
+
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="bg-slate-50 border-b border-slate-200">
+                        {table.columns.map((col, idx) => (
+                          <th key={idx} className={`px-6 py-4 text-xs font-black uppercase tracking-wider ${idx === 0 ? "text-slate-500" : "text-sky-700"}`}>
+                            {col}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {table.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-slate-50 transition-colors">
+                          {row.map((cell, cIdx) => (
+                            <td key={cIdx} className={`px-6 py-4 text-sm ${cIdx === 0 ? "font-bold text-slate-700 bg-slate-50/30" : "text-slate-600 font-medium"}`}>
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* FAQs — page language primary, then the other two as secondary */}
       <section className="py-14 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -1395,6 +1457,14 @@ export function ServiceDetailI18n({
                 <div className="mt-10">
                   <p className={eyebrow()}>{tri("otherServices")}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
+                    {/* Link to new Pricing Guide */}
+                    <NextLink
+                      href={`${langPrefix}/aircond-service-price-malaysia`}
+                      className="inline-flex items-center gap-1.5 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-black uppercase tracking-wider text-sky-700 hover:bg-sky-100 transition shadow-sm"
+                    >
+                      {lang === "ms" ? "Senarai Harga Penuh 2026" : "2026年完整价格表"} <FiArrowRight className="h-3 w-3" />
+                    </NextLink>
+
                     {siteConfig.services
                       .filter((s) => s.slug !== slug)
                       .map((s) => (
