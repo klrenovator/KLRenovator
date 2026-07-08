@@ -432,13 +432,13 @@ export default async function AreaPageZH({
               常见问题 — {area.name} 冷气服务
             </h2>
             <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-              {area.faqsZH.map((faq: { q: string; a: string }, i: number) => (
+              {area.faqsZH.map((faq: any, i: number) => (
                 <details key={i} className="group bg-white p-4">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
-                    {faq.q}
+                    {faq?.q}
                     <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
-                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq?.a}</p>
                 </details>
               ))}
             </div>
