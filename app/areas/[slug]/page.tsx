@@ -855,14 +855,14 @@ export default async function AreaPage({
               { q: `How much does aircond chemical wash cost in ${area.name}?`, a: `Pressure chemical wash in ${area.name} starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work.` },
               { q: `Is same-day aircond service available in ${area.name}?`, a: `Yes — same-day slots are frequently available in ${area.name}. WhatsApp +60182983573 in the morning to secure your slot. Mon–Sun, 9AM–6PM.` },
               { q: `Which aircond brands do you service in ${area.name}?`, a: `All major brands in ${area.name} — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. Inverter and non-inverter.` },
-            ]).map((faq: { q: string; a: string }, i: number) => (
+            ]).map((faq: any, i: number) => (
               <Reveal key={i} delay={i * 60}>
                 <details className="group bg-white p-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
-                    {faq.q}
+                    {faq?.q}
                     <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
-                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">{faq?.a}</p>
                 </details>
               </Reveal>
             ))}
