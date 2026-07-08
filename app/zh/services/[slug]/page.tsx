@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
-const DEDICATED_STATIC_SERVICE_SLUGS = new Set(["emergency", "maintenance-contract"]);
+const DEDICATED_STATIC_SERVICE_SLUGS = new Set(["maintenance-contract"]);
 import { servicesData } from "@/config/services-data";
 import { serviceI18n } from "@/config/services-i18n";
 import { ServiceDetailI18n } from "@/components/service-detail-i18n";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
+import { buildServiceRouteAlternates } from "@/config/service-route-qa";
 
 export function generateStaticParams() {
-  // Round 22 / AMC hotfix: exclude service routes that have their own
-  // dedicated static page files. Including maintenance-contract here can
-  // let the dynamic [slug] route prerender a notFound() response because
-  // servicesData intentionally does not contain the AMC landing-page copy.
+  // Round 39 / 8.10 route QA: exclude only routes that have their own
+  // dedicated localized static page files. Emergency must remain here for
+  // Chinese route-generation parity because /zh/services/emergency is served
+  // by this localized dynamic template.
   return siteConfig.services
     .filter((s) => !DEDICATED_STATIC_SERVICE_SLUGS.has(s.slug))
     .map((s) => ({ slug: s.slug }));
@@ -40,12 +41,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical,
-      languages: {
-        "en-MY": `https://www.klrenovator.com/services/${slug}`,
-        "ms-MY": `https://www.klrenovator.com/ms/services/${slug}`,
-        "zh-MY": canonical,
-        "x-default": `https://www.klrenovator.com/services/${slug}`,
-      },
+      languages: buildServiceRouteAlternates(slug),
     },
   };
 }
