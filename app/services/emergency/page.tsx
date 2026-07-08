@@ -11,6 +11,7 @@ import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
+import { buildServiceRouteAlternates } from "@/config/service-route-qa";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -70,10 +71,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.klrenovator.com/services/emergency",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/services/emergency",
-      "x-default": "https://www.klrenovator.com/services/emergency",
-    },
+    languages: buildServiceRouteAlternates("emergency"),
   },
 };
 
