@@ -10,6 +10,7 @@ import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement
 import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
+import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -37,6 +38,7 @@ const emergencyAIO = buildServiceAIOAnswerBlock({
   startPrice: 88,
 });
 const emergencyHVACEntityModule = buildServiceHVACEntityModule("emergency", "en", "Emergency Aircond Repair");
+const emergencyVisualSXO = buildServiceVisualSXOModule("emergency", "en", "Emergency Aircond Repair");
 
 // ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -411,6 +413,66 @@ export default function EmergencyPage() {
             <p className="rounded-3xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
               {emergencyHVACEntityModule.note}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Round 38 / 8.9: Emergency Visual & SXO Polish — urgency decision tree */}
+      <section id="visual-sxo-polish" className="py-12 px-4 bg-white border-b border-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-7 max-w-4xl">
+            <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-2">{emergencyVisualSXO.eyebrow}</p>
+            <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">{emergencyVisualSXO.heading}</h2>
+            <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700">{emergencyVisualSXO.intro}</p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.35fr]">
+            <div className="rounded-3xl border border-red-100 bg-red-50 p-5 sm:p-6">
+              <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-4">{emergencyVisualSXO.decisionTitle}</p>
+              <div className="space-y-3">
+                {emergencyVisualSXO.decisionPaths.map((path, i) => (
+                  <div key={path.trigger} className="rounded-2xl border border-white bg-white p-4 shadow-sm">
+                    <div className="flex items-start gap-3">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-600 text-xs font-black text-white">{i + 1}</span>
+                      <div>
+                        <p className="text-sm font-bold leading-relaxed text-slate-800">{path.trigger}</p>
+                        <div className="mt-3 flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-widest">
+                          <span className="rounded-full bg-red-100 px-3 py-1 text-red-800">{path.action}</span>
+                          <FiChevronRight className="h-3 w-3 text-red-500" />
+                          <span className="rounded-full bg-emerald-100 px-3 py-1 text-emerald-800">{path.outcome}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-4">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500">{emergencyVisualSXO.comparisonTitle}</p>
+                <p className="text-[11px] font-black uppercase tracking-widest text-red-700">{emergencyVisualSXO.compareAgainstLabel}</p>
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-slate-200">
+                <div className="grid grid-cols-4 bg-slate-900 px-4 py-3 text-[11px] font-black uppercase tracking-widest text-white">
+                  <span>Criteria</span>
+                  <span>This service</span>
+                  <span>Compare</span>
+                  <span>Decision</span>
+                </div>
+                {emergencyVisualSXO.comparisonRows.map((row, i) => (
+                  <div key={row.criterion} className={`grid grid-cols-1 gap-2 border-t border-slate-200 px-4 py-4 text-sm sm:grid-cols-4 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
+                    <span className="font-black text-slate-950">{row.criterion}</span>
+                    <span className="text-slate-700">{row.thisService}</span>
+                    <span className="text-slate-600">{row.compareOption}</span>
+                    <span className="font-semibold text-red-800">{row.decision}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 rounded-2xl border border-amber-100 bg-amber-50 p-4 text-xs font-semibold leading-relaxed text-amber-900">
+                {emergencyVisualSXO.note}
+              </p>
+            </div>
           </div>
         </div>
       </section>
