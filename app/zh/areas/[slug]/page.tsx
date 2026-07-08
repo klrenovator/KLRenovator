@@ -12,6 +12,7 @@ import { BookingButton } from "@/components/booking-button";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
+import { getFreshDateZH } from "@/lib/dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -489,7 +490,7 @@ export default async function AreaPageZH({
                   href={`/zh/brands/${brand.slug}`}
                   className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
-                  {brand.name}冷气服务
+                  {area.name}{brand.name}冷气服务
                   <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
                 </NextLink>
               ))}
