@@ -17,6 +17,7 @@ import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
+import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
 
 export function generateStaticParams() {
   // Round 22 / AMC hotfix: exclude service routes that have their own
@@ -337,6 +338,7 @@ export default async function ServicePage({
   // (same pattern as existing problems page — all 3 visible at once)
   const lang = "en" as const; // default for server render; labels below show all 3
   const corePolish = buildServiceCorePolishModule(slug, "en", data.title, service?.startPrice ?? data.startPrice);
+  const croModule = buildServiceCRORefinementModule(slug, "en", data.title);
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -559,6 +561,42 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* Round 34 / 8.5: Service Page SXO / CRO — CTA placement by user intent stage */}
+      <section id="intent-stage-cta" className="py-12 bg-slate-950 text-white border-t border-slate-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-6">
+              <div>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-300 mb-2">{croModule.eyebrow}</p>
+                <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-white">{croModule.heading}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate-300 max-w-3xl">{croModule.intro}</p>
+              </div>
+              <p className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-xs font-bold leading-relaxed text-slate-300 lg:max-w-xs">
+                {croModule.reassurance}
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {croModule.stages.map((stage) => (
+                <a
+                  key={stage.id}
+                  href={stage.href}
+                  target={stage.external ? "_blank" : undefined}
+                  rel={stage.external ? "nofollow noopener noreferrer" : undefined}
+                  className="group rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300/60 hover:bg-white/[0.09]"
+                >
+                  <p className="text-[11px] font-black uppercase tracking-widest text-sky-300">{stage.badge}</p>
+                  <h3 className="mt-2 text-lg font-black text-white">{stage.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-300">{stage.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-1 rounded-xl bg-white px-4 py-2 text-xs font-black uppercase tracking-widest text-slate-950 transition group-hover:gap-2">
+                    {stage.actionLabel} <FiArrowRight className="h-3 w-3" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── Near Me Section ──────────────────────────────────────────────── */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -587,7 +625,7 @@ export default async function ServicePage({
           : [];
         if (problems.length === 0) return null;
         return (
-          <section className="py-14 bg-white border-t border-slate-100">
+          <section id="diagnostic-guides" className="py-14 bg-white border-t border-slate-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <p className="text-xs font-black uppercase tracking-widest text-red-500 mb-1">Diagnostic Router · Intent Separation</p>
@@ -803,7 +841,7 @@ export default async function ServicePage({
       </section>
 
       {/* Pricing */}
-      <section className="py-14 sm:py-16 bg-slate-50">
+      <section id="service-pricing" className="py-14 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center">
