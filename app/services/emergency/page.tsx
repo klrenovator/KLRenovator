@@ -4,6 +4,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiClock, FiAlertTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
+import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -19,6 +20,7 @@ const emergencyMsg = [
 ].join("\n");
 
 const emergencyWaLink = waLink(emergencyMsg);
+const emergencyCorePolish = buildServiceCorePolishModule("emergency", "en", "Emergency Aircond Repair", 88);
 
 // ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -288,6 +290,53 @@ export default function EmergencyPage() {
             {["⚡ Response in 30–60 min", "✅ All brands serviced", "🔍 Transparent diagnosis", "💳 Quote before work"].map((t) => (
               <span key={t} className="bg-white/15 border border-white/20 rounded-full px-3.5 py-1.5">{t}</span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Round 33 / 8.1: Emergency page core polish — scope and flow clarity */}
+      <section className="py-12 px-4 bg-white border-b border-slate-100">
+        <div className="max-w-6xl mx-auto grid gap-6 lg:grid-cols-[0.95fr_1.45fr] lg:items-start">
+          <div className="rounded-3xl border border-red-100 bg-red-50 p-5 sm:p-6">
+            <p className="text-xs font-black uppercase tracking-widest text-red-700 mb-2">{emergencyCorePolish.eyebrow}</p>
+            <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
+              {emergencyCorePolish.heading}
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-700">{emergencyCorePolish.intro}</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full bg-white border border-red-200 px-3 py-1.5 text-xs font-black text-red-700">{emergencyCorePolish.priceBadge}</span>
+              <span className="rounded-full bg-white border border-emerald-200 px-3 py-1.5 text-xs font-black text-emerald-700">{emergencyCorePolish.warrantyBadge}</span>
+            </div>
+            <div className="mt-6 rounded-2xl bg-white border border-red-100 p-4">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{emergencyCorePolish.quickFitTitle}</p>
+              <ul className="space-y-2">
+                {emergencyCorePolish.quickFit.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm font-semibold text-slate-700">
+                    <FiCheck className="mt-0.5 h-4 w-4 text-emerald-500 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">{emergencyCorePolish.stepsTitle}</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {emergencyCorePolish.steps.map((step, i) => (
+                <div key={step.title} className="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-red-600 text-xs font-black text-white">{i + 1}</span>
+                    <h3 className="text-sm font-black text-slate-950">{step.title}</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-slate-600">{step.detail}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+              <p className="text-xs font-black uppercase tracking-widest text-emerald-700 mb-1">{emergencyCorePolish.handoverTitle}</p>
+              <p className="text-sm leading-relaxed text-slate-700">{emergencyCorePolish.handover}</p>
+            </div>
           </div>
         </div>
       </section>
