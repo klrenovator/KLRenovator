@@ -13,6 +13,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map";
+import { getFreshDate } from "@/lib/dates";
 
 
 // Helper to match area to a real work photo from /public/hero
@@ -137,6 +138,11 @@ export async function generateMetadata({
   const area = siteConfig.areaPages.find((a) => a.slug === slug);
   if (!area) return { title: "Area not found" };
 
+  const freshDate = getFreshDate();
+  const metaTitle = area.metaTitle.includes("—") 
+    ? `${area.metaTitle.split(" — ")[0]} ${freshDate} — ${area.metaTitle.split(" — ")[1]}`
+    : `${area.metaTitle} — ${freshDate}`;
+
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
   const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}`;
@@ -144,7 +150,7 @@ export async function generateMetadata({
   const hasZh = area.faqsZH?.length > 0;
 
   return {
-    title: area.metaTitle,
+    title: metaTitle,
     description: area.metaDesc,
     openGraph: {
       title: area.metaTitle,
