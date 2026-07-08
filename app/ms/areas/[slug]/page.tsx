@@ -13,6 +13,7 @@ import { BookingButton } from "@/components/booking-button";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
+import { getFreshDateMS } from "@/lib/dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -45,13 +46,19 @@ export async function generateMetadata({
   const area = siteConfig.areaPages.find((a) => a.slug === slug);
   if (!area || !area.faqsBM?.length) return { title: "Halaman tidak dijumpai" };
 
+  const freshDate = getFreshDateMS();
+  const rawTitle = area.metaTitleMS || area.metaTitle;
+  const metaTitle = rawTitle.includes("—")
+    ? `${rawTitle.split(" — ")[0]} ${freshDate} — ${rawTitle.split(" — ")[1]}`
+    : `${rawTitle} — ${freshDate}`;
+
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
   const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}`;
   const hasZh = area.faqsZH?.length > 0;
 
   return {
-    title: area.metaTitleMS || area.metaTitle,
+    title: metaTitle,
     description: area.metaDescMS || area.metaDesc,
     openGraph: {
       title: area.metaTitleMS || area.metaTitle,
@@ -499,7 +506,7 @@ export default async function AreaPageMS({
                   href={`/ms/brands/${brand.slug}`}
                   className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
-                  Aircond {brand.name}
+                  Aircond {brand.name} {area.name}
                   <FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />
                 </NextLink>
               ))}
