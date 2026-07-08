@@ -9,6 +9,7 @@ import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
 import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
+import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -25,6 +26,7 @@ const emergencyMsg = [
 
 const emergencyWaLink = waLink(emergencyMsg);
 const emergencyData = servicesData["emergency"];
+const emergencySchemaParity = serviceSchemaParityFields("en");
 const emergencyCorePolish = buildServiceCorePolishModule("emergency", "en", "Emergency Aircond Repair", 88);
 const emergencyCRO = buildServiceCRORefinementModule("emergency", "en", "Emergency Aircond Repair");
 const emergencyAIO = buildServiceAIOAnswerBlock({
@@ -91,6 +93,9 @@ const emergencyServiceSchema = {
   description:
     "Same-day emergency aircond repair and troubleshooting service in Kuala Lumpur and Selangor. KL Renovator responds to urgent aircond breakdowns across the Klang Valley.",
   url: "https://www.klrenovator.com/services/emergency",
+  datePublished: emergencySchemaParity.datePublished,
+  dateModified: emergencySchemaParity.dateModified,
+  inLanguage: emergencySchemaParity.inLanguage,
   provider: {
     "@type": "HVACBusiness",
     "@id": "https://www.klrenovator.com/#business",
@@ -105,6 +110,17 @@ const emergencyServiceSchema = {
     "@type": "Offer",
     price: 88,
     priceCurrency: "MYR",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      price: 88,
+      priceCurrency: "MYR",
+      description: "Diagnostic from RM 88 (waived if repair done same visit)",
+      eligibleQuantity: {
+        "@type": "QuantitativeValue",
+        minValue: 1,
+        unitText: "per visit",
+      },
+    },
     description: "Diagnostic from RM 88 (waived if repair done same visit)",
     availability: "https://schema.org/InStock",
   },
@@ -119,6 +135,9 @@ const emergencyServiceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  datePublished: emergencySchemaParity.datePublished,
+  dateModified: emergencySchemaParity.dateModified,
+  inLanguage: emergencySchemaParity.inLanguage,
   mainEntity: [
     {
       "@type": "Question",
@@ -179,6 +198,23 @@ const faqSchema = {
   ],
 };
 
+const emergencyWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.klrenovator.com/services/emergency#webpage",
+  name: "Emergency Aircond Repair KL & Selangor — KL Renovator",
+  description: metadata.description,
+  url: "https://www.klrenovator.com/services/emergency",
+  datePublished: emergencySchemaParity.datePublished,
+  dateModified: emergencySchemaParity.dateModified,
+  reviewedBy: emergencySchemaParity.reviewedBy,
+  publisher: emergencySchemaParity.publisher,
+  inLanguage: emergencySchemaParity.inLanguage,
+  isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+  about: { "@id": "https://www.klrenovator.com/#business" },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
+};
+
 // ── Emergency situations ──────────────────────────────────────────────────────
 const emergencySituations = [
   { icon: "❄️", en: "Aircond completely not working", ms: "Aircond langsung tidak berfungsi", zh: "冷气完全不运转" },
@@ -237,6 +273,7 @@ export default function EmergencyPage() {
       {/* Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyWebPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
