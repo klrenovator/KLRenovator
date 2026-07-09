@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allPosts } from "@/config/blog-posts";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { BlogPostClient } from "@/app/blog/[slug]/blog-post-client";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -31,10 +32,10 @@ export async function generateMetadata({
   const imageUrl = `https://www.klrenovator.com${post.image}`;
 
   return {
-    title: `${post.titleMS} | KL Renovator Blog`,
+    title: clampMetaTitle(`${post.titleMS} | KL Renovator`),
     description: post.excerptMS,
     openGraph: {
-      title: post.titleMS,
+      title: clampMetaTitle(post.titleMS),
       description: post.excerptMS,
       type: "article",
       publishedTime: post.date,
