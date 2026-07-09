@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import BlogPage from "@/app/blog/page";
 
 export const metadata: Metadata = {
-  title: "Tips & Panduan Pakar Aircond | KL Renovator Blog",
+  title: clampMetaTitle("Tips & Panduan Pakar Aircond | KL Renovator Blog"),
   description:
     "Nasihat praktikal aircond daripada KL Renovator — cuci kimia vs overhaul, sebab aircond tidak sejuk, kekerapan servis, jenis gas R22 R410A R32, dan lebih lagi.",
   alternates: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Tips & Panduan Pakar Aircond | KL Renovator Blog",
+    title: clampMetaTitle("Tips & Panduan Pakar Aircond | KL Renovator Blog"),
     description: "Panduan penyelenggaraan aircond praktikal, petua menyelesaikan masalah, dan nasihat servis daripada pakar HVAC dipercayai Malaysia.",
     url: "https://www.klrenovator.com/ms/blog",
     type: "website",
