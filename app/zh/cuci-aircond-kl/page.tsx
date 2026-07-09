@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
@@ -12,7 +13,7 @@ const waMsg = "你好 KL Renovator，我想预约吉隆坡冷气清洗。谢谢�
 const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
-  title: "吉隆坡冷气清洗 2026 — 化学清洗 RM120 | KL Renovator",
+  title: clampMetaTitle("吉隆坡冷气清洗 2026 — 化学清洗 RM120 | KL Renovator"),
   description: "吉隆坡冷气清洗 — 化学清洗 RM120 起。KL Renovator 当天上门。全巴生谷覆盖。500+五星好评。1个月保修。WhatsApp +60182983573。",
   alternates: {
     canonical: "https://www.klrenovator.com/zh/cuci-aircond-kl",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "吉隆坡冷气清洗 — RM120 | KL Renovator",
+    title: clampMetaTitle("吉隆坡冷气清洗 — RM120 | KL Renovator"),
     url: "https://www.klrenovator.com/zh/cuci-aircond-kl",
     locale: "zh_MY",
     type: "website",
