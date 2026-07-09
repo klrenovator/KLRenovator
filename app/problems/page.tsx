@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import Image from "next/image";
 import NextLink from "next/link";
 import { FiArrowRight, FiAlertTriangle } from "react-icons/fi";
@@ -10,11 +11,11 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Aircond Problems Guide KL & Selangor | KL Renovator",
+  title: clampMetaTitle("Aircond Problems Guide KL & Selangor | KL Renovator"),
   description:
     "Complete guide to aircond problems in KL & Selangor — not cold, water leaking, noise, bad smell & more, diagnosed and fixed. Call +60182983573.",
   openGraph: {
-    title: "Aircond Problems Guide KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Problems Guide KL & Selangor | KL Renovator"),
     description:
       "Complete guide to aircond problems in KL & Selangor. All common faults diagnosed and fixed. Same-day service. Call +60182983573.",
     url: "https://www.klrenovator.com/problems",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aircond Problems Guide KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Problems Guide KL & Selangor | KL Renovator"),
     description: "Complete aircond problems guide — not cold, water leaking, noise, bad smell, blinking lights. Same-day service.",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
   },
