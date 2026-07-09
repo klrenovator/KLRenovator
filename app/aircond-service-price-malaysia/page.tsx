@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiTag, FiClock, FiShield } from "react-icons/fi";
@@ -38,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const pricingCategories = [
   {
-    title: "Cleaning Services",
+    title: clampMetaTitle("Cleaning Services"),
     rows: [
       { label: "Basic Servicing (Standard) · 1.0 – 1.5 HP", price: "RM 99" },
       { label: "Basic Servicing (Standard) · 2.0 – 2.5 HP", price: "RM 120" },
@@ -50,7 +51,7 @@ const pricingCategories = [
     ],
   },
   {
-    title: "Gas Top-Up & Refill",
+    title: clampMetaTitle("Gas Top-Up & Refill"),
     rows: [
       { label: "R22 Gas (Standard) · 1.0 HP", price: "RM 120" },
       { label: "R410A Gas (Inverter) · 1.0 HP", price: "RM 150" },
@@ -59,7 +60,7 @@ const pricingCategories = [
     ],
   },
   {
-    title: "Repairs & Spare Parts",
+    title: clampMetaTitle("Repairs & Spare Parts"),
     rows: [
       { label: "Diagnostic Fee", price: "RM 88" },
       { label: "Capacitor Replacement", price: "RM 150 – 250" },
@@ -208,9 +209,9 @@ export default function PricingPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {[
-              { icon: <FiCheck />, title: "Transparent Pricing", desc: "No hidden charges. The price we quote on WhatsApp is the price you pay at the site." },
-              { icon: <FiShield />, title: "1-Month Warranty", desc: "Every service is protected by a workmanship guarantee. If issues recur, we'll fix it for free." },
-              { icon: <FiClock />, title: "Same-Day Slots", desc: "WhatsApp us before 11 AM for the best chance of securing a same-day service appointment." },
+              { icon: <FiCheck />, title: clampMetaTitle("Transparent Pricing"), desc: "No hidden charges. The price we quote on WhatsApp is the price you pay at the site." },
+              { icon: <FiShield />, title: clampMetaTitle("1-Month Warranty"), desc: "Every service is protected by a workmanship guarantee. If issues recur, we'll fix it for free." },
+              { icon: <FiClock />, title: clampMetaTitle("Same-Day Slots"), desc: "WhatsApp us before 11 AM for the best chance of securing a same-day service appointment." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
