@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
@@ -17,15 +18,7 @@ const waHref = waLink(waMsg);
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Chemical Wash KL & Selangor 2026 — From RM120 | KL Renovator"),
   description: "Aircond chemical wash KL & Selangor — RM120. Same-day KL Renovator. 500+ 5-star Google reviews. Fix smell, leaking & weak cooling. WhatsApp +60182983573.",
-  alternates: {
-    canonical: "https://www.klrenovator.com/cuci-aircond-kl",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/cuci-aircond-kl",
-      "ms-MY": "https://www.klrenovator.com/ms/cuci-aircond-kl",
-      "zh-MY": "https://www.klrenovator.com/zh/cuci-aircond-kl",
-      "x-default": "https://www.klrenovator.com/cuci-aircond-kl",
-    },
-  },
+  alternates: buildTrilingualHreflang("/cuci-aircond-kl"),
   openGraph: {
     title: clampMetaTitle("Aircond Chemical Wash KL — RM120 | KL Renovator"),
     url: "https://www.klrenovator.com/cuci-aircond-kl",
