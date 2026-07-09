@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import Image from "next/image";
 import {
   FaPhone, FaEnvelope, FaLocationDot, FaRegClock, FaWhatsapp,
@@ -16,13 +17,7 @@ import { title, eyebrow } from "@/components/primitives";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Contact KL Renovator | Aircond Service KL & Selangor"),
-  alternates: {
-    canonical: "https://www.klrenovator.com/contact",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/contact",
-      "x-default": "https://www.klrenovator.com/contact",
-    },
-  },
+  alternates: buildTrilingualHreflang("/contact"),
   description:
     "Contact KL Renovator for aircond servicing across KL & Selangor. WhatsApp +60182983573 for a same-day quote. Transparent pricing, fast response.",
   openGraph: {
