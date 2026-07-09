@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import NearMeClient from "./near-me-client";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
   description:
     "Looking for aircond service near you? KL Renovator sends trained HVAC technicians across Kuala Lumpur & Selangor — same-day slots, transparent pricing, all brands. WhatsApp +60182983573.",
-  alternates: {
-    canonical: "https://www.klrenovator.com/near-me",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/near-me",
-      "ms-MY": "https://www.klrenovator.com/ms/near-me",
-      "zh-MY": "https://www.klrenovator.com/zh/near-me",
-      "x-default": "https://www.klrenovator.com/near-me",
-    },
-  },
+  alternates: buildTrilingualHreflang("/near-me"),
   openGraph: {
     title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
     description:
