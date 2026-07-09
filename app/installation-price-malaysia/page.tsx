@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
@@ -18,7 +20,12 @@ export const metadata: Metadata = {
     title: clampMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator"),
     description: "2026年吉隆坡及雪兰莪冷气安装价格完整指南。RM 199基础安装含7尺铜管、抽真空及测漏。",
     url: "https://www.klrenovator.com/zh/installation-price-malaysia",
+    images: getServiceOGImages("installation", "en"),
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: getServiceOGImages("installation", "en"),
   },
   alternates: {
     canonical: "https://www.klrenovator.com/zh/installation-price-malaysia",
