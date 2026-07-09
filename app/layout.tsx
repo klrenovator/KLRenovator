@@ -1,3 +1,4 @@
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
