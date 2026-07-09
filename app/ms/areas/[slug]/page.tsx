@@ -14,6 +14,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateMS } from "@/lib/dates";
+import { buildUniqueAreaFAQ_MS } from "@/config/area-faq-uniqueness";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -140,14 +141,11 @@ export default async function AreaPageMS({
     ],
   };
 
+  // 9.10 Schema Uniqueness Pass — unique FAQ schema per area with landmark-aware Near Me variants
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: area.faqsBM.map((f: { q: string; a: string }) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+    mainEntity: buildUniqueAreaFAQ_MS(area as any),
   };
 
   const webPageSchema = {
