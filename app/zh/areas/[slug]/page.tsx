@@ -14,6 +14,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
 import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -43,7 +44,7 @@ export async function generateMetadata({
   const hasMs = area.faqsBM?.length > 0;
 
   return {
-    title: area.metaTitleZH || area.metaTitle,
+    title: clampMetaTitle(area.metaTitleZH || area.metaTitle),
     description: area.metaDescZH || area.metaDesc,
     openGraph: {
       title: area.metaTitleZH || area.metaTitle,
