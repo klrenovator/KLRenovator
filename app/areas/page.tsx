@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { AreasClient } from "./areas-client";
 
 export const metadata: Metadata = {
-  title: "Aircond Service Areas — KL & Selangor | KL Renovator",
+  title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
   description:
     "KL Renovator services 39 areas across Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & more. Same-day service.",
   openGraph: {
-    title: "Aircond Service Areas — KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
     description:
       "Professional aircond servicing across all KL & Selangor areas. Same-day available. 38 areas covered.",
     url: "https://www.klrenovator.com/areas",
