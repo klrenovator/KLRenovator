@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 
 export const metadata: Metadata = {
-  title: "Aircond Tips & Expert Guides | KL Renovator Blog",
+  title: clampMetaTitle("Aircond Tips & Expert Guides | KL Renovator Blog"),
   description:
     "Practical aircond advice from KL Renovator — chemical wash vs overhaul, why aircon not cold, how often to service, refrigerant gas types and more.",
   alternates: {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Aircond Tips & Expert Guides | KL Renovator Blog",
+    title: clampMetaTitle("Aircond Tips & Expert Guides | KL Renovator Blog"),
     description:
       "Practical aircond maintenance guides, troubleshooting tips, and service advice from Malaysia's trusted HVAC specialist.",
     url: "https://www.klrenovator.com/blog",
