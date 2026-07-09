@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AboutPageI18n } from "@/components/about-page-i18n";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("About KL Renovator | Trusted Aircond Specialist KL & Selangor"),
   description:
     "KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 12+ years experience, 5,000+ happy customers, 500+ reviews.",
-  alternates: {
-    canonical: "https://www.klrenovator.com/about",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/about",
-      "ms-MY": "https://www.klrenovator.com/ms/about",
-      "zh-MY": "https://www.klrenovator.com/zh/about",
-      "x-default": "https://www.klrenovator.com/about",
-    },
-  },
+  alternates: buildTrilingualHreflang("/about"),
   openGraph: {
     title: clampMetaTitle("About KL Renovator | Trusted Aircond Specialist KL & Selangor"),
     description:
