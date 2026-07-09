@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
@@ -18,7 +20,12 @@ export const metadata: Metadata = {
     title: clampMetaTitle("Harga Pasang Aircond 2026 — Dari RM 199 | KL Renovator"),
     description: "Panduan harga pemasangan aircond lengkap untuk KL & Selangor 2026. RM 199 termasuk 7 kaki paip kuprum, vakum & ujian kebocoran.",
     url: "https://www.klrenovator.com/ms/installation-price-malaysia",
+    images: getServiceOGImages("installation", "ms"),
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: getServiceOGImages("installation", "ms"),
   },
   alternates: {
     canonical: "https://www.klrenovator.com/ms/installation-price-malaysia",
