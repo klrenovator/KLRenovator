@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 
 export const dynamic = "force-static";
 import NextLink from "next/link";
@@ -19,16 +20,16 @@ const amcMsg = [
 const amcWaLink = waLink(amcMsg);
 
 export const metadata: Metadata = {
-  title: "Aircond Maintenance Contract (AMC) KL & Selangor — Yearly Plans from RM 299 | KL Renovator",
+  title: clampMetaTitle("Aircond Maintenance Contract (AMC) KL & Selangor — Yearly Plans from RM 299 | KL Renovator"),
   description: "Annual aircond maintenance contract in KL & Selangor. Save up to 30% vs one-off bookings. Quarterly servicing, priority scheduling, free emergency checks. From RM 299/year.",
   openGraph: {
-    title: "Aircond Maintenance Contract (AMC) KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Maintenance Contract (AMC) KL & Selangor | KL Renovator"),
     description: "Save up to 30% with annual aircond maintenance plans. Quarterly servicing, priority response, free diagnostics. From RM 299/year.",
     url: "https://www.klrenovator.com/services/maintenance-contract",
     type: "website", locale: "en_MY", alternateLocale: ["ms_MY", "zh_MY"],
     images: [{ url: "https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp", width: 1200, height: 630, alt: "Aircond Maintenance Contract KL Renovator" }],
   },
-  twitter: { card: "summary_large_image", title: "Aircond Maintenance Contract KL & Selangor | KL Renovator", description: "Save up to 30% with annual plans. From RM 299/year.", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
+  twitter: { card: "summary_large_image", title: clampMetaTitle("Aircond Maintenance Contract KL & Selangor | KL Renovator"), description: "Save up to 30% with annual plans. From RM 299/year.", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
   alternates: {
     canonical: "https://www.klrenovator.com/services/maintenance-contract",
     languages: { "en-MY": "https://www.klrenovator.com/services/maintenance-contract", "ms-MY": "https://www.klrenovator.com/ms/services/maintenance-contract", "zh-MY": "https://www.klrenovator.com/zh/services/maintenance-contract", "x-default": "https://www.klrenovator.com/services/maintenance-contract" },
@@ -80,12 +81,12 @@ const plans = [
 ];
 
 const benefits = [
-  { icon: "FiCalendar", title: "Never Forget a Service Again", desc: "We schedule and remind you. Quarterly or biannual visits happen automatically — no need to track when your last service was." },
-  { icon: "FiDroplet", title: "Save 27\u201341% vs One-Off Bookings", desc: "AMC plans bundle services at a discounted rate. A Basic plan costs RM 299 vs RM 408+ if booked individually — you save RM 109+ per unit per year." },
-  { icon: "FiShield", title: "Priority Emergency Response", desc: "AMC customers skip the queue. Standard and Premium plans include free emergency diagnostics. All plans get priority dispatch over non-AMC callers." },
-  { icon: "FiClock", title: "Locked-In Pricing for 12 Months", desc: "Your price does not change for the contract year — even if our standard rates increase. Budget your aircond maintenance with certainty." },
-  { icon: "FiStar", title: "Extended Equipment Lifespan", desc: "Regular professional servicing extends your aircond lifespan by 3\u20135 years. An AMC ensures the servicing actually happens on schedule." },
-  { icon: "FiZap", title: "Lower Electricity Bills", desc: "A well-maintained aircond uses 15\u201325% less electricity. The AMC pays for itself partly through lower TNB bills, especially for units running 8+ hours daily." },
+  { icon: "FiCalendar", title: clampMetaTitle("Never Forget a Service Again"), desc: "We schedule and remind you. Quarterly or biannual visits happen automatically — no need to track when your last service was." },
+  { icon: "FiDroplet", title: clampMetaTitle("Save 27\u201341% vs One-Off Bookings"), desc: "AMC plans bundle services at a discounted rate. A Basic plan costs RM 299 vs RM 408+ if booked individually — you save RM 109+ per unit per year." },
+  { icon: "FiShield", title: clampMetaTitle("Priority Emergency Response"), desc: "AMC customers skip the queue. Standard and Premium plans include free emergency diagnostics. All plans get priority dispatch over non-AMC callers." },
+  { icon: "FiClock", title: clampMetaTitle("Locked-In Pricing for 12 Months"), desc: "Your price does not change for the contract year — even if our standard rates increase. Budget your aircond maintenance with certainty." },
+  { icon: "FiStar", title: clampMetaTitle("Extended Equipment Lifespan"), desc: "Regular professional servicing extends your aircond lifespan by 3\u20135 years. An AMC ensures the servicing actually happens on schedule." },
+  { icon: "FiZap", title: clampMetaTitle("Lower Electricity Bills"), desc: "A well-maintained aircond uses 15\u201325% less electricity. The AMC pays for itself partly through lower TNB bills, especially for units running 8+ hours daily." },
 ];
 
 const iconMap: Record<string, React.ComponentType<{className?: string}>> = {
@@ -198,9 +199,9 @@ export default function AMCPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-10">Get Covered in 3 Simple Steps</h2>
           <div className="space-y-8">
             {[
-              { step: "1", title: "Choose Your Plan", desc: "Pick Basic, Standard, or Premium based on your unit count and usage. WhatsApp us if you need help choosing — we will recommend honestly based on your situation." },
-              { step: "2", title: "We Schedule Your First Visit", desc: "First service visit confirmed within 3–5 working days. We inspect your unit(s), perform the first service, and set the quarterly schedule for the year." },
-              { step: "3", title: "Relax — We Handle the Rest", desc: "Automatic reminders before each scheduled visit. Priority emergency response if anything goes wrong between visits. Annual renewal reminder 30 days before expiry." },
+              { step: "1", title: clampMetaTitle("Choose Your Plan"), desc: "Pick Basic, Standard, or Premium based on your unit count and usage. WhatsApp us if you need help choosing — we will recommend honestly based on your situation." },
+              { step: "2", title: clampMetaTitle("We Schedule Your First Visit"), desc: "First service visit confirmed within 3–5 working days. We inspect your unit(s), perform the first service, and set the quarterly schedule for the year." },
+              { step: "3", title: clampMetaTitle("Relax — We Handle the Rest"), desc: "Automatic reminders before each scheduled visit. Priority emergency response if anything goes wrong between visits. Annual renewal reminder 30 days before expiry." },
             ].map((s, i) => (
               <div key={i} className="flex gap-5 text-left items-start">
                 <span className="shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-sky-600 text-white font-black text-lg">{s.step}</span>
