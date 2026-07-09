@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 
 export const metadata: Metadata = {
-  title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
+  title: clampMetaTitle("Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator"),
   description:
     "Frequently asked questions about KL Renovator aircond services. Chemical wash from RM 120, overhaul from RM 220, gas top-up, same-day booking & warranty.",
   alternates: {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator",
+    title: clampMetaTitle("Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator"),
     description:
       "Frequently asked questions about KL Renovator's aircond services. Chemical wash from RM 120, overhaul from RM 220, same-day service, 1-month warranty. All areas of KL & Selangor covered.",
     url: "https://www.klrenovator.com/faq",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aircond Service FAQ | KL Renovator",
+    title: clampMetaTitle("Aircond Service FAQ | KL Renovator"),
     description: "Aircond pricing, booking and service FAQs for KL & Selangor. Chemical wash from RM 120.",
     images: ["https://www.klrenovator.com/logo/image.png"],
   },
