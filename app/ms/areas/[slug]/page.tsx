@@ -16,6 +16,7 @@ import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateMS } from "@/lib/dates";
 import { buildUniqueAreaFAQ_MS } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -59,10 +60,10 @@ export async function generateMetadata({
 
   return {
     title: metaTitle,
-    description: area.metaDescMS || area.metaDesc,
+    description: clampMetaDescription(area.metaDescMS || area.metaDesc),
     openGraph: {
       title: area.metaTitleMS || area.metaTitle,
-      description: area.metaDescMS || area.metaDesc,
+      description: clampMetaDescription(area.metaDescMS || area.metaDesc),
       url: msUrl,
       type: "website",
       locale: "ms_MY",
@@ -152,7 +153,7 @@ export default async function AreaPageMS({
     "@type": "WebPage",
     "@id": `${msUrl}#webpage`,
     name: `Servis Aircond ${area.name} — KL Renovator`,
-    description: area.metaDescMS || area.metaDesc,
+    description: clampMetaDescription(area.metaDescMS || area.metaDesc),
     url: msUrl,
     inLanguage: "ms-MY",
   };
