@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { servicesData } from "@/config/services-data";
 import { allPosts } from "@/config/blog-posts";
 import { problemAEOContent } from "@/config/problem-aeo-content";
@@ -33,10 +34,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitle),
-    description: problem.metaDesc,
+    description: clampMetaDescription(problem.metaDesc),
     openGraph: {
       title: clampMetaTitle(problem.metaTitle),
-      description: problem.metaDesc,
+      description: clampMetaDescription(problem.metaDesc),
       url: enUrl,
       type: "website",
       locale: "en_MY",
@@ -1068,7 +1069,7 @@ export default async function ProblemPage({
     "@type": "WebPage",
     "@id": `https://www.klrenovator.com/problems/${slug}#webpage`,
     name: problem.metaTitle,
-    description: problem.metaDesc,
+    description: clampMetaDescription(problem.metaDesc),
     url: `https://www.klrenovator.com/problems/${slug}`,
     inLanguage: "en-MY",
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
