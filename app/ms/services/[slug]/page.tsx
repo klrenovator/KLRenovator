@@ -1,3 +1,4 @@
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
@@ -31,10 +32,10 @@ export async function generateMetadata({
   const canonical = `https://www.klrenovator.com/ms/services/${slug}`;
   const price = service?.startPrice ?? "";
   return {
-    title: `${i18.titleMS} KL & Selangor | KL Renovator — Dari RM ${price}`,
+    title: clampMetaTitle(`${i18.titleMS} KL & Selangor — Dari RM ${price}`),
     description: i18.taglineMS,
     openGraph: {
-      title: `${i18.titleMS} | KL Renovator`,
+      title: clampMetaTitle(`${i18.titleMS} | KL Renovator`),
       description: i18.taglineMS,
       url: canonical,
       type: "website",
