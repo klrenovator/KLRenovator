@@ -16,6 +16,7 @@ import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map"
 import { getFreshDate } from "@/lib/dates";
 import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
 
 // Helper to match area to a real work photo from /public/hero
@@ -154,10 +155,10 @@ export async function generateMetadata({
 
   return {
     title: metaTitle,
-    description: area.metaDesc,
+    description: clampMetaDescription(area.metaDesc),
     openGraph: {
       title: area.metaTitle,
-      description: area.metaDesc,
+      description: clampMetaDescription(area.metaDesc),
       url: enUrl,
       type: "website",
       locale: "en_MY",
@@ -281,7 +282,7 @@ export default async function AreaPage({
     "@type": "WebPage",
     "@id": `https://www.klrenovator.com/areas/${slug}#webpage`,
     name: `Aircond Service ${area.name} — KL Renovator`,
-    description: area.metaDesc,
+    description: clampMetaDescription(area.metaDesc),
     url: `https://www.klrenovator.com/areas/${slug}`,
     inLanguage: "en-MY",
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
