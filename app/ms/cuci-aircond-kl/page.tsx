@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
@@ -12,7 +13,7 @@ const waMsg = "Hi KL Renovator, saya nak tempah Cuci Aircond KL. Lokasi saya KL/
 const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
-  title: "Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator",
+  title: clampMetaTitle("Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator"),
   description: "Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. 500+ 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573.",
   alternates: {
     canonical: "https://www.klrenovator.com/ms/cuci-aircond-kl",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Cuci Aircond KL — RM120 | KL Renovator",
+    title: clampMetaTitle("Cuci Aircond KL — RM120 | KL Renovator"),
     description: "Chemical wash RM120. Same-day KL & Selangor. 500+ 5-star. Waranti 1 bulan.",
     url: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     locale: "ms_MY",
