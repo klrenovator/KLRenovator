@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
@@ -27,8 +29,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: clampMetaTitle("Aircond Chemical Wash KL — RM120 | KL Renovator"),
     url: "https://www.klrenovator.com/cuci-aircond-kl",
+    images: getServiceOGImages("chemical-wash", "en"),
     locale: "en_MY",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: getServiceOGImages("chemical-wash", "en"),
   },
 };
 
