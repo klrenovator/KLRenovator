@@ -1,4 +1,6 @@
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
@@ -33,12 +35,19 @@ export async function generateMetadata({
   const price = service?.startPrice ?? "";
   return {
     title: clampMetaTitle(`${i18.titleMS} KL & Selangor — Dari RM ${price}`),
-    description: i18.taglineMS,
+    description: clampMetaDescription(i18.taglineMS),
     openGraph: {
       title: clampMetaTitle(`${i18.titleMS} | KL Renovator`),
-      description: i18.taglineMS,
+      description: clampMetaDescription(i18.taglineMS),
       url: canonical,
       type: "website",
+      images: getServiceOGImages(slug, "ms"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: clampMetaTitle(`${i18.titleMS} | KL Renovator`),
+      description: clampMetaDescription(i18.taglineMS),
+      images: getServiceOGImages(slug, "ms"),
     },
     alternates: {
       canonical,
