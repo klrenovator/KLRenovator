@@ -13,6 +13,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
+import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -124,14 +125,11 @@ export default async function AreaPageZH({
     ],
   };
 
+  // 9.10 Schema Uniqueness Pass — unique FAQ schema per area with landmark-aware variants
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: area.faqsZH.map((f: { q: string; a: string }) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+    mainEntity: buildUniqueAreaFAQ_ZH(area as any),
   };
 
   const webPageSchema = {
