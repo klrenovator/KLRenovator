@@ -15,6 +15,7 @@ import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
 import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -45,10 +46,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(area.metaTitleZH || area.metaTitle),
-    description: area.metaDescZH || area.metaDesc,
+    description: clampMetaDescription(area.metaDescZH || area.metaDesc),
     openGraph: {
       title: area.metaTitleZH || area.metaTitle,
-      description: area.metaDescZH || area.metaDesc,
+      description: clampMetaDescription(area.metaDescZH || area.metaDesc),
       url: zhUrl,
       type: "website",
       locale: "zh_MY",
@@ -138,7 +139,7 @@ export default async function AreaPageZH({
     "@type": "WebPage",
     "@id": `${zhUrl}#webpage`,
     name: `${area.name}冷气服务 — KL Renovator`,
-    description: area.metaDescZH || area.metaDesc,
+    description: clampMetaDescription(area.metaDescZH || area.metaDesc),
     url: zhUrl,
     inLanguage: "zh-MY",
   };
