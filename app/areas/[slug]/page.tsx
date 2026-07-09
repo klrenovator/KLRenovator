@@ -15,6 +15,7 @@ import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map";
 import { getFreshDate } from "@/lib/dates";
 import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
+import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 
 
 // Helper to match area to a real work photo from /public/hero
@@ -140,9 +141,10 @@ export async function generateMetadata({
   if (!area) return { title: "Area not found" };
 
   const freshDate = getFreshDate();
-  const metaTitle = area.metaTitle.includes("—") 
+  const rawMetaTitle = area.metaTitle.includes("—") 
     ? `${area.metaTitle.split(" — ")[0]} ${freshDate} — ${area.metaTitle.split(" — ")[1]}`
     : `${area.metaTitle} — ${freshDate}`;
+  const metaTitle = clampMetaTitle(buildAreaMetaTitleWithDate(area.metaTitle, freshDate));
 
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
