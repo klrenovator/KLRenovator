@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import NextLink from "next/link";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -22,15 +23,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
   },
-  alternates: {
-    canonical: "https://www.klrenovator.com/brands",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/brands",
-      "ms-MY": "https://www.klrenovator.com/brands",
-      "zh-MY": "https://www.klrenovator.com/brands",
-      "x-default": "https://www.klrenovator.com/brands",
-    },
-  },
+  alternates: buildTrilingualHreflang("/brands"),
 };
 
 const waMsg =
