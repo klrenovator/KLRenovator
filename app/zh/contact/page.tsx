@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import Image from "next/image";
 import NextLink from "next/link";
 import {
@@ -13,7 +14,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 
 export const metadata: Metadata = {
-  title: "联系 KL Renovator | 吉隆坡及雪兰莪冷气服务",
+  title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
   description:
     "联系 KL Renovator，获取吉隆坡及雪兰莪的冷气服务。WhatsApp +60182983573 获取当天报价。价格透明，响应迅速。",
   alternates: {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "联系 KL Renovator | 吉隆坡及雪兰莪冷气服务",
+    title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
     description:
       "最快响应 via WhatsApp — 30 分钟内回复。吉隆坡及雪兰莪当天冷气服务。化学清洗从 RM 120 起。",
     url: "https://www.klrenovator.com/zh/contact",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "联系 KL Renovator | 吉隆坡及雪兰莪冷气服务",
+    title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
     description: "最快响应 via WhatsApp — 吉隆坡及雪兰莪当天冷气服务。化学清洗从 RM 120 起。",
     images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp"],
   },
