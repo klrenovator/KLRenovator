@@ -6,6 +6,7 @@ import { FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
@@ -42,10 +43,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(k.metaTitleMS || k.metaTitle),
-    description: k.metaDescMS || k.metaDesc,
+    description: clampMetaDescription(k.metaDescMS || k.metaDesc),
     openGraph: {
       title: clampMetaTitle(k.metaTitleMS || k.metaTitle),
-      description: k.metaDescMS || k.metaDesc,
+      description: clampMetaDescription(k.metaDescMS || k.metaDesc),
       url: msUrl,
       type: "website",
       locale: "ms_MY",
