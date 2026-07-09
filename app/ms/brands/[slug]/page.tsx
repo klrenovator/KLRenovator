@@ -7,6 +7,7 @@ import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
@@ -39,10 +40,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(brand.metaTitleMS || brand.metaTitle),
-    description: brand.metaDescMS || brand.metaDesc,
+    description: clampMetaDescription(brand.metaDescMS || brand.metaDesc),
     openGraph: {
       title: clampMetaTitle(brand.metaTitleMS || brand.metaTitle),
-      description: brand.metaDescMS || brand.metaDesc,
+      description: clampMetaDescription(brand.metaDescMS || brand.metaDesc),
       url: msUrl,
       type: "website",
       locale: "ms_MY",
