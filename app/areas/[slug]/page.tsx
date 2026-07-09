@@ -14,6 +14,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map";
 import { getFreshDate } from "@/lib/dates";
+import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
 
 
 // Helper to match area to a real work photo from /public/hero
@@ -264,59 +265,11 @@ export default async function AreaPage({
     ],
   };
 
+  // 9.10 Schema Uniqueness Pass — build unique FAQ schema per area using area-specific faqs + landmark-aware Near Me variants
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `Does KL Renovator service aircond in ${area.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Yes, KL Renovator provides full aircond servicing in ${area.name}, ${area.state}. We cover chemical wash, chemical overhaul, gas top-up, repairs and new installations. Call or WhatsApp +60182983573 to book.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `How much does aircond service cost in ${area.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Basic servicing starts from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, and gas top-up from RM 120 (R22) in ${area.name}. All prices are transparent with no hidden charges.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Is same-day aircond service available in ${area.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Yes, same-day service slots are available in ${area.name} subject to availability. WhatsApp us at +60182983573 to check and confirm your booking.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Which aircond brands does KL Renovator service in ${area.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `KL Renovator services all major brands in ${area.name} including Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp and Haier — both inverter and non-inverter models.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Is there an aircond service near me in ${area.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Yes — KL Renovator provides same-day aircond service near you in ${area.name}. WhatsApp +60182983573 with your address and we'll dispatch the nearest technician. Most appointments in ${area.name} are confirmed within 30 minutes.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Who is the best aircond repair technician near me in ${area.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `KL Renovator's trained technicians are highly rated across ${area.name} and Klang Valley. With 500+ five-star reviews, transparent upfront pricing, and a 1-month workmanship warranty, we are the trusted choice for aircond repair and service near you.`,
-        },
-      },
-    ],
+    mainEntity: buildUniqueAreaFAQ_EN(area as any),
   };
 
   const otherAreas = siteConfig.areaPages.filter((a) => a.slug !== slug).slice(0, 12);
