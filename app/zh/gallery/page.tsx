@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { GalleryPageI18n } from "@/components/gallery-page-i18n";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "冷气项目画廊 — KL Renovator 真实作品 | 吉隆坡及雪兰莪",
+  title: clampMetaTitle("冷气项目画廊 — KL Renovator 真实作品 | 吉隆坡及雪兰莪"),
   description:
     "KL Renovator 在吉隆坡及雪兰莪的真实冷气安装、化学清洗、大修及维修项目照片。100% 真实——无 stock 图片。",
   openGraph: {
-    title: "项目画廊 — KL Renovator 真实冷气工程",
+    title: clampMetaTitle("项目画廊 — KL Renovator 真实冷气工程"),
     description: "真实项目照片：安装、化学清洗、大修、商用 HVAC 及维修，覆盖吉隆坡及雪兰莪全区。100% 真实照片。",
     url: "https://www.klrenovator.com/zh/gallery",
     type: "website",
