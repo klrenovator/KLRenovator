@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import BlogPage from "@/app/blog/page";
 
 export const metadata: Metadata = {
-  title: "冷气小贴士及专家指南 | KL Renovator Blog",
+  title: clampMetaTitle("冷气小贴士及专家指南 | KL Renovator Blog"),
   description:
     "来自KL Renovator的实用冷气建议——化学清洗与大修对比、冷气不冷的原因、保养频率、R22 R410A R32制冷剂类型等。",
   alternates: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "冷气小贴士及专家指南 | KL Renovator Blog",
+    title: clampMetaTitle("冷气小贴士及专家指南 | KL Renovator Blog"),
     description: "马来西亚值得信赖的HVAC专家提供的实用冷气保养指南、故障排除技巧及服务建议。",
     url: "https://www.klrenovator.com/zh/blog",
     type: "website",
