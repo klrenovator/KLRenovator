@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { GalleryPageI18n } from "@/components/gallery-page-i18n";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Galeri Projek Aircond — Kerja Sebenar KL Renovator | KL & Selangor",
+  title: clampMetaTitle("Galeri Projek Aircond — Kerja Sebenar KL Renovator | KL & Selangor"),
   description:
     "Gambar projek sebenar pemasangan, cuci kimia, overhaul & pembaikan aircond oleh KL Renovator di seluruh KL & Selangor. 100% tulen — tiada gambar stok.",
   openGraph: {
-    title: "Galeri Projek — Kerja Sebenar KL Renovator",
+    title: clampMetaTitle("Galeri Projek — Kerja Sebenar KL Renovator"),
     description: "Gambar projek sebenar: pemasangan, cuci kimia, overhaul, servis HVAC & pembaikan di seluruh KL & Selangor. 100% gambar tulen.",
     url: "https://www.klrenovator.com/ms/gallery",
     type: "website",
