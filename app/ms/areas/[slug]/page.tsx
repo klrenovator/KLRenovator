@@ -15,6 +15,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateMS } from "@/lib/dates";
 import { buildUniqueAreaFAQ_MS } from "@/config/area-faq-uniqueness";
+import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -49,9 +50,7 @@ export async function generateMetadata({
 
   const freshDate = getFreshDateMS();
   const rawTitle = area.metaTitleMS || area.metaTitle;
-  const metaTitle = rawTitle.includes("—")
-    ? `${rawTitle.split(" — ")[0]} ${freshDate} — ${rawTitle.split(" — ")[1]}`
-    : `${rawTitle} — ${freshDate}`;
+  const metaTitle = clampMetaTitle(buildAreaMetaTitleWithDate(rawTitle, freshDate));
 
   const enUrl = `https://www.klrenovator.com/areas/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/areas/${slug}`;
