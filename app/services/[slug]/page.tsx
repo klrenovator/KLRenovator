@@ -1,3 +1,4 @@
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import NextLink from "next/link";
@@ -16,6 +17,7 @@ import { ServiceIcon } from "@/components/service-icon";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
@@ -47,12 +49,19 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(`${data.title} KL & Selangor — From RM ${service.startPrice}`),
-    description: data.tagline,
+    description: clampMetaDescription(data.tagline),
     openGraph: {
       title: clampMetaTitle(`${data.title} | KL Renovator`),
-      description: data.tagline,
+      description: clampMetaDescription(data.tagline),
       url: `https://www.klrenovator.com/services/${slug}`,
       type: "website",
+      images: getServiceOGImages(slug, "en"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: clampMetaTitle(`${data.title} | KL Renovator`),
+      description: clampMetaDescription(data.tagline),
+      images: getServiceOGImages(slug, "en"),
     },
     alternates: {
       canonical: `https://www.klrenovator.com/services/${slug}`,
