@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
@@ -27,15 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: getServiceOGImages("installation", "en"),
   },
-  alternates: {
-    canonical: "https://www.klrenovator.com/zh/installation-price-malaysia",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/installation-price-malaysia",
-      "ms-MY": "https://www.klrenovator.com/ms/installation-price-malaysia",
-      "zh-MY": "https://www.klrenovator.com/zh/installation-price-malaysia",
-      "x-default": "https://www.klrenovator.com/installation-price-malaysia",
-    },
-  },
+  alternates: buildTrilingualHreflang("/installation-price-malaysia"),
 };
 
 const INSTALL_PRICES = [
