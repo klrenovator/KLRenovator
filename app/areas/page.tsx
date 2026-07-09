@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AreasClient } from "./areas-client";
 
 export const metadata: Metadata = {
@@ -15,15 +16,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
   },
-  alternates: {
-    canonical: "https://www.klrenovator.com/areas",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/areas",
-      "ms-MY": "https://www.klrenovator.com/areas",
-      "zh-MY": "https://www.klrenovator.com/areas",
-      "x-default": "https://www.klrenovator.com/areas",
-    },
-  },
+  alternates: buildTrilingualHreflang("/areas"),
 };
 
 const areaHubSchema = {
