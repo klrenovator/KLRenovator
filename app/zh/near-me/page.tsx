@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NearMeClient from "@/app/near-me/near-me-client";
 
 export const metadata: Metadata = {
-  title: "附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator",
+  title: clampMetaTitle("附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator"),
   description:
     "寻找您附近的专业冷气服务？KL Renovator 派遣专业训练的空调技术团队覆盖吉隆坡与雪兰莪全区 — 提供当天上门、明码实价、服务所有冷气品牌。欢迎 WhatsApp +60182983573 咨询。",
   alternates: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator",
+    title: clampMetaTitle("附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator"),
     description:
       "吉隆坡与雪兰莪全区本地上门冷气服务。提供当天预约，挂壁式高压药水清洗从 RM 120 起，服务各品牌。欢迎 WhatsApp +60182983573。",
     url: "https://www.klrenovator.com/zh/near-me",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator",
+    title: clampMetaTitle("附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator"),
     description:
       "吉隆坡与雪兰莪全区本地上门冷气服务。当天时段可约，高压药水清洗从 RM 120 起。",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
