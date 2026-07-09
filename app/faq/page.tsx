@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("FAQ | Aircond Services KL & Selangor — KL Renovator"),
   description:
     "Frequently asked questions about aircond services, pricing, warranty & coverage areas in KL & Selangor. Chemical wash from RM 120. Same-day service available.",
-  alternates: {
-    canonical: "https://www.klrenovator.com/faq",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/faq",
-      "ms-MY": "https://www.klrenovator.com/ms/faq",
-      "zh-MY": "https://www.klrenovator.com/zh/faq",
-      "x-default": "https://www.klrenovator.com/faq",
-    },
-  },
+  alternates: buildTrilingualHreflang("/faq"),
   openGraph: {
     title: clampMetaTitle("FAQ | Aircond Services KL & Selangor — KL Renovator"),
     description:
