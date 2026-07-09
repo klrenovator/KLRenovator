@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiTag, FiClock, FiShield } from "react-icons/fi";
@@ -25,6 +27,10 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: "ms_MY",
       alternateLocale: ["en_MY", "zh_MY"],
     },
+  twitter: {
+    card: "summary_large_image",
+    images: getServiceOGImages("basic-servicing", "ms"),
+  },
     alternates: {
       canonical: "https://www.klrenovator.com/ms/aircond-service-price-malaysia",
       languages: {
