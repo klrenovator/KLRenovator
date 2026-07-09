@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
 
 export const metadata: Metadata = {
-  title: "Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator",
+  title: clampMetaTitle("Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator"),
   description:
     "Soalan lazim mengenai servis aircond, harga, waranti & kawasan liputan di KL & Selangor. Cuci kimia dari RM 120. Servis hari sama tersedia.",
   alternates: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator",
+    title: clampMetaTitle("Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator"),
     description:
       "Jawapan jujur mengenai harga servis aircond, cuci kimia, tambah gas, waranti & kawasan liputan. WhatsApp kami untuk sebut harga hari sama.",
     url: "https://www.klrenovator.com/ms/faq",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator",
+    title: clampMetaTitle("Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator"),
     description: "Jawapan jujur mengenai harga servis aircond, waranti & kawasan liputan. WhatsApp untuk sebut harga hari sama.",
     images: ["https://www.klrenovator.com/hero/aircond-gas-topup-r32-r410a-selangor.webp"],
   },
