@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
@@ -35,10 +36,10 @@ export async function generateMetadata({
   const zhUrl = `https://www.klrenovator.com/zh/brands/${slug}`;
 
   return {
-    title: brand.metaTitleZH || brand.metaTitle,
+    title: clampMetaTitle(brand.metaTitleZH || brand.metaTitle),
     description: brand.metaDescZH || brand.metaDesc,
     openGraph: {
-      title: brand.metaTitleZH || brand.metaTitle,
+      title: clampMetaTitle(brand.metaTitleZH || brand.metaTitle),
       description: brand.metaDescZH || brand.metaDesc,
       url: zhUrl,
       type: "website",
