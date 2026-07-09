@@ -6,6 +6,7 @@ import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-ico
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { problemContent } from "@/app/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
 import { PROBLEM_BRAND_MAP } from "@/config/topical-authority-map";
