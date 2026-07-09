@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 
 export const dynamic = "force-static";
 import NextLink from "next/link";
@@ -19,16 +20,16 @@ const amcMsg = [
 const amcWaLink = waLink(amcMsg);
 
 export const metadata: Metadata = {
-  title: "Kontrak Penyelenggaraan Aircond (AMC) KL & Selangor — Pelan Tahunan dari RM 299 | KL Renovator",
+  title: clampMetaTitle("Kontrak Penyelenggaraan Aircond (AMC) KL & Selangor — Pelan Tahunan dari RM 299 | KL Renovator"),
   description: "Kontrak penyelenggaraan aircond tahunan di KL & Selangor. Jimat sehingga 30% berbanding tempahan sekali-sekala. Servis suku tahunan, penjadualan keutamaan, pemeriksaan kecemasan percuma. Dari RM 299/tahun.",
   openGraph: {
-    title: "Kontrak Penyelenggaraan Aircond (AMC) KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Kontrak Penyelenggaraan Aircond (AMC) KL & Selangor | KL Renovator"),
     description: "Jimat sehingga 30% dengan pelan penyelenggaraan aircond tahunan. Servis suku tahunan, respons keutamaan, diagnostik percuma. Dari RM 299/tahun.",
     url: "https://www.klrenovator.com/ms/services/maintenance-contract",
     type: "website", locale: "ms_MY", alternateLocale: ["en_MY", "zh_MY"],
     images: [{ url: "https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp", width: 1200, height: 630, alt: "Kontrak Penyelenggaraan Aircond KL Renovator" }],
   },
-  twitter: { card: "summary_large_image", title: "Kontrak Penyelenggaraan Aircond KL & Selangor | KL Renovator", description: "Jimat sehingga 30% dengan pelan tahunan. Dari RM 299/tahun.", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
+  twitter: { card: "summary_large_image", title: clampMetaTitle("Kontrak Penyelenggaraan Aircond KL & Selangor | KL Renovator"), description: "Jimat sehingga 30% dengan pelan tahunan. Dari RM 299/tahun.", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
   alternates: {
     canonical: "https://www.klrenovator.com/ms/services/maintenance-contract",
     languages: { "en-MY": "https://www.klrenovator.com/services/maintenance-contract", "ms-MY": "https://www.klrenovator.com/ms/services/maintenance-contract", "zh-MY": "https://www.klrenovator.com/zh/services/maintenance-contract", "x-default": "https://www.klrenovator.com/services/maintenance-contract" },
