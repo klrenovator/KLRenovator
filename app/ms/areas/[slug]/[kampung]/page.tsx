@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
@@ -40,10 +41,10 @@ export async function generateMetadata({
   const zhUrl = `https://www.klrenovator.com/zh/areas/${slug}/${kampung}`;
 
   return {
-    title: k.metaTitleMS || k.metaTitle,
+    title: clampMetaTitle(k.metaTitleMS || k.metaTitle),
     description: k.metaDescMS || k.metaDesc,
     openGraph: {
-      title: k.metaTitleMS || k.metaTitle,
+      title: clampMetaTitle(k.metaTitleMS || k.metaTitle),
       description: k.metaDescMS || k.metaDesc,
       url: msUrl,
       type: "website",
