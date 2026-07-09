@@ -15,6 +15,7 @@ import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
@@ -45,10 +46,10 @@ export async function generateMetadata({
   if (!data || !service) return { title: "Service not found" };
 
   return {
-    title: `${data.title} KL & Selangor | KL Renovator — From RM ${service.startPrice}`,
+    title: clampMetaTitle(`${data.title} KL & Selangor — From RM ${service.startPrice}`),
     description: data.tagline,
     openGraph: {
-      title: `${data.title} | KL Renovator`,
+      title: clampMetaTitle(`${data.title} | KL Renovator`),
       description: data.tagline,
       url: `https://www.klrenovator.com/services/${slug}`,
       type: "website",
