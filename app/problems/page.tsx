@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import Image from "next/image";
 import NextLink from "next/link";
 import { FiArrowRight, FiAlertTriangle } from "react-icons/fi";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     description: "Complete aircond problems guide — not cold, water leaking, noise, bad smell, blinking lights. Same-day service.",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
   },
-  alternates: { canonical: "https://www.klrenovator.com/problems" },
+  alternates: buildTrilingualHreflang("/problems"),
 };
 
 // ── Schemas ─────────────────────────────────────────────────────────────────
