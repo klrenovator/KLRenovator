@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
@@ -30,7 +32,11 @@ export const metadata: Metadata = {
     url: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     locale: "ms_MY",
     type: "website",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-pressure-chemical-wash-selangor.webp", width: 1200, height: 630, alt: "Cuci Aircond KL" }],
+    images: getServiceOGImages("chemical-wash", "ms"),
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: getServiceOGImages("chemical-wash", "ms"),
   },
 };
 
