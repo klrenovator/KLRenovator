@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { ReviewPageI18n } from "@/components/review-page-i18n";
 
 export const metadata: Metadata = {
-  title: "Terima Kasih — Nilaikan Servis KL Renovator Anda | KL Renovator",
+  title: clampMetaTitle("Terima Kasih — Nilaikan Servis KL Renovator Anda | KL Renovator"),
   description:
     "Terima kasih kerana memilih KL Renovator. Kami harap aircond anda berfungsi dengan sempurna. Jika anda berpuas hati dengan servis, kami ingin ulasan Google ringkas!",
   alternates: {
