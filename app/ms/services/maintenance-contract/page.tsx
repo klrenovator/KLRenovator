@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
 export const dynamic = "force-static";
 import NextLink from "next/link";
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
     description: "Jimat sehingga 30% dengan pelan penyelenggaraan aircond tahunan. Servis suku tahunan, respons keutamaan, diagnostik percuma. Dari RM 299/tahun.",
     url: "https://www.klrenovator.com/ms/services/maintenance-contract",
     type: "website", locale: "ms_MY", alternateLocale: ["en_MY", "zh_MY"],
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp", width: 1200, height: 630, alt: "Kontrak Penyelenggaraan Aircond KL Renovator" }],
+    images: getServiceOGImages("maintenance-contract", "ms"),
   },
   twitter: { card: "summary_large_image", title: clampMetaTitle("Kontrak Penyelenggaraan Aircond KL & Selangor | KL Renovator"), description: "Jimat sehingga 30% dengan pelan tahunan. Dari RM 299/tahun.", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
   alternates: {
