@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NextLink from "next/link";
 import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
@@ -10,130 +11,91 @@ import { buildServiceSchema } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Aircond Installation Price Malaysia 2026 — From RM 199 | KL Renovator",
+  title: clampMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator"),
   description:
-    "Complete aircond installation price guide for KL & Selangor 2026. RM 199 base install includes 7ft copper pipe, wiring, vacuum & leak test. All 20 brands. Same-day available.",
+    "2026年吉隆坡及雪兰莪冷气安装价格完整指南。RM 199基础安装含7尺铜管、电线、抽真空及测漏。20大品牌。可当天安装。",
   openGraph: {
-    title: "Aircond Installation Price Malaysia 2026 — From RM 199 | KL Renovator",
-    description:
-      "Complete aircond installation price guide for KL & Selangor 2026. RM 199 base install includes 7ft copper pipe, wiring, vacuum & leak test.",
-    url: "https://www.klrenovator.com/installation-price-malaysia",
+    title: clampMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator"),
+    description: "2026年吉隆坡及雪兰莪冷气安装价格完整指南。RM 199基础安装含7尺铜管、抽真空及测漏。",
+    url: "https://www.klrenovator.com/zh/installation-price-malaysia",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.klrenovator.com/installation-price-malaysia",
+    canonical: "https://www.klrenovator.com/zh/installation-price-malaysia",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/installation-price-malaysia",
+      "ms-MY": "https://www.klrenovator.com/ms/installation-price-malaysia",
+      "zh-MY": "https://www.klrenovator.com/zh/installation-price-malaysia",
+      "x-default": "https://www.klrenovator.com/installation-price-malaysia",
+    },
   },
 };
 
 const INSTALL_PRICES = [
-  { label: "Wall-Mounted · 1.0 HP", price: "RM 199" },
-  { label: "Wall-Mounted · 1.5 HP", price: "RM 199" },
-  { label: "Wall-Mounted · 2.0 HP", price: "RM 249" },
-  { label: "Wall-Mounted · 2.5 HP", price: "RM 279" },
-  { label: "Wall-Mounted · 3.0 HP", price: "RM 329" },
-  { label: "Wall-Mounted · 4.0 HP", price: "RM 399" },
-  { label: "Wall-Mounted · 5.0 HP", price: "RM 449" },
-  { label: "Ceiling Cassette · 1.0–1.5 HP", price: "RM 290" },
-  { label: "Ceiling Cassette · 2.0–3.0 HP", price: "RM 350" },
-  { label: "Ceiling Cassette · 3.5–6.0 HP", price: "RM 400" },
-  { label: "Window Unit · 1.0–1.5 HP", price: "RM 199" },
-  { label: "Window Unit · 2.0–2.5 HP", price: "RM 249" },
+  { label: "挂壁式 · 1.0 HP", price: "RM 199" },
+  { label: "挂壁式 · 1.5 HP", price: "RM 199" },
+  { label: "挂壁式 · 2.0 HP", price: "RM 249" },
+  { label: "挂壁式 · 2.5 HP", price: "RM 279" },
+  { label: "挂壁式 · 3.0 HP", price: "RM 329" },
+  { label: "挂壁式 · 4.0 HP", price: "RM 399" },
+  { label: "挂壁式 · 5.0 HP", price: "RM 449" },
+  { label: "天花板卡式 · 1.0–1.5 HP", price: "RM 290" },
+  { label: "天花板卡式 · 2.0–3.0 HP", price: "RM 350" },
+  { label: "天花板卡式 · 3.5–6.0 HP", price: "RM 400" },
+  { label: "窗式 · 1.0–1.5 HP", price: "RM 199" },
+  { label: "窗式 · 2.0–2.5 HP", price: "RM 249" },
 ];
 
 const MATERIAL_PRICES = [
-  { label: "Copper Pipe 1.0–1.5 HP", price: "RM 17/ft" },
-  { label: "Copper Pipe 2.0–2.5 HP", price: "RM 23/ft" },
-  { label: "Copper Pipe 3.0–3.5 HP", price: "RM 27/ft" },
-  { label: "Wire", price: "RM 9/ft" },
-  { label: "Standard Outdoor Bracket", price: "RM 45" },
-  { label: "Indoor Universal Bracket", price: "RM 35" },
-  { label: "PVC Casing Wire/Copper Pipe", price: "RM 6–12/ft" },
-  { label: "Electrical Plug Point", price: "RM 100" },
-  { label: "Wall Hacking & Concealment", price: "RM 6/ft" },
-  { label: "High-Rise / Difficult Access", price: "RM 50–150" },
-  { label: "Standard Metal Cable Tray", price: "RM 15/ft" },
+  { label: "铜管 1.0–1.5 HP", price: "RM 17/尺" },
+  { label: "铜管 2.0–2.5 HP", price: "RM 23/尺" },
+  { label: "铜管 3.0–3.5 HP", price: "RM 27/尺" },
+  { label: "电线", price: "RM 9/尺" },
+  { label: "标准室外支架", price: "RM 45" },
+  { label: "室内通用支架", price: "RM 35" },
+  { label: "PVC电线/铜管槽", price: "RM 6–12/尺" },
+  { label: "电源插座安装", price: "RM 100" },
+  { label: "墙体开槽与暗装", price: "RM 6/尺" },
+  { label: "高层/难进入作业费", price: "RM 50–150" },
+  { label: "标准金属线槽", price: "RM 15/尺" },
 ];
 
 const FAQS = [
-  {
-    q: "How much does aircond installation cost in KL & Selangor 2026?",
-    a: "Wall-mounted 1.0–1.5 HP from RM 199. 2.0 HP from RM 249, 2.5 HP from RM 279, 3.0 HP from RM 329. Ceiling cassette from RM 290. Window unit from RM 199. Every price includes 7ft copper pipe, wiring, drainage, bracket, vacuum, leak test and commissioning — confirmed before we start.",
-  },
-  {
-    q: "What is included in the RM 199 base installation?",
-    a: "9-point package: (1) Site survey & wall assessment, (2) 7ft correctly sized insulated copper pipe, (3) Electrical wiring through dedicated conduit, (4) PVC drainage pipe with correct fall gradient, (5) Wall bracket with rubber vibration pads, (6) Vacuum pump evacuation minimum 15 min, (7) Nitrogen pressure leak test, (8) Full commissioning — cooling, airflow, thermostat, (9) Written job card + 1-month workmanship warranty.",
-  },
-  {
-    q: "Why does copper pipe cost extra beyond 7ft?",
-    a: "The standard 7ft covers most room layouts. Longer runs need more copper pipe, insulation, and labour. We charge per foot at transparent rates (RM 17–27/ft depending on HP). The technician measures the actual run needed and confirms the extra cost before cutting any pipe.",
-  },
-  {
-    q: "What is the difference between RM 199 basic and a full copper piping package?",
-    a: "RM 199 covers a standard straight-run installation up to 7ft copper. A 'full copper piping package' typically means longer copper runs (10–20ft+), concealed trunking, outdoor cable tray, and possibly an extra bracket — common in condos where the outdoor unit is farther from the indoor unit. Total cost depends on actual pipe length and materials. We quote exact costs on-site before starting.",
-  },
-  {
-    q: "How long does installation take?",
-    a: "Standard wall-mounted: 2–3 hours. Ceiling cassette: 3–4 hours. Two units same day: 5–6 hours. We never rush — proper vacuum evacuation alone needs 15–20 minutes minimum.",
-  },
-  {
-    q: "Do you supply the aircond unit or just install?",
-    a: "KL Renovator provides professional installation only. You buy the unit from Harvey Norman, Senheng, AEON, Lazada, Shopee, etc. If you need advice on which brand and HP suits your room size, WhatsApp us before buying — we advise based on real Malaysian room conditions.",
-  },
-  {
-    q: "Can you install in high-rise condos with strict management rules?",
-    a: "Yes — we install in KLCC, Mont Kiara, Bangsar, Damansara, Sentul condos every week. We follow each building's rules: working hours, lift protection, noise limits, waste disposal. If management needs a renovation permit or indemnity form, tell us in advance and we prepare the documents.",
-  },
-  {
-    q: "What warranty covers the installation?",
-    a: "1-month workmanship warranty on every installation. If the unit leaks refrigerant, stops cooling, or has drainage issues due to our work within that period, we return and fix at no charge. Our vacuum + pressure test catches 99% of issues before we leave.",
-  },
+  { q: "2026年吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式1.0–1.5 HP从RM 199起。2.0 HP从RM 249起，2.5 HP从RM 279起，3.0 HP从RM 329起。天花板卡式从RM 290起。窗式从RM 199起。每项价格包含7尺铜管、电线、排水管、支架、抽真空、测漏和调试——开工前确认。" },
+  { q: "RM 199基础安装具体包含什么？", a: "9项套餐：（1）现场勘查与墙体评估，（2）7尺正确管径隔热铜管，（3）通过专用线管的电线，（4）带正确下坡度的PVC排水管，（5）带橡胶减震垫的支架，（6）真空泵抽真空最少15分钟，（7）氮气压力测漏，（8）全面调试——制冷、风量、温控器，（9）书面工作卡+1个月工艺保修。" },
+  { q: "为什么超过7尺的铜管要额外收费？", a: "标准7尺覆盖大多数房间布局。更长的管路需要更多铜管、隔热材料和人工。我们按尺透明计费（RM 17–27/尺视HP而定）。技术员测量实际需要的管路长度，切割前确认额外费用。" },
+  { q: "RM 199基础安装和完整铜管套餐有什么区别？", a: "RM 199覆盖标准直管安装，最多7尺铜管。'完整铜管套餐'通常指10–20尺以上的铜管、隐蔽线槽、室外线缆架，可能还需要额外支架——常见于室外机离室内机较远的高层公寓。具体费用取决于实际管路长度和材料，我们在现场勘查后给出确切报价。" },
+  { q: "安装需要多长时间？", a: "标准挂壁式：2–3小时。天花板卡式：3–4小时。同天安装两台：5–6小时。我们从不赶工——仅正确的抽真空就需要最少15–20分钟。" },
+  { q: "你们提供冷气机器还是只安装？", a: "KL Renovator仅提供专业安装服务。您从Harvey Norman、Senheng、AEON、Lazada、Shopee等购买机器。如需购买前的品牌和HP建议，请WhatsApp我们——我们根据马来西亚实际房间条件提供建议。" },
+  { q: "可以在管理严格的高层公寓安装吗？", a: "可以——我们每周在KLCC、Mont Kiara、Bangsar、Damansara、Sentul等高层公寓安装。我们遵守每栋大楼的规定：工作时间、电梯保护、噪音限制、废物处理。如管理处需要装修许可，请提前告知，我们准备文件。" },
+  { q: "安装有什么保修？", a: "每个安装享有1个月工艺保修。如因我们的工作导致冷媒泄漏、不制冷或排水问题，我们免费返回修复。我们的抽真空+压力测试能在离开前发现99%的问题。" },
 ];
 
-export default function InstallationPriceMalaysiaPage() {
+export default function ZhInstallationPricePage() {
   const serviceSchema = buildServiceSchema({
     slug: "installation",
-    name: "Aircond Installation",
-    description:
-      "Professional aircond installation from RM 199. All 20 brands, vacuum pump evacuation, pressure leak test, 1-month warranty.",
+    name: "冷气安装",
+    description: "专业冷气安装从RM 199起。20大品牌，真空泵抽真空，压力测漏，1个月保修。",
     startPrice: 199,
-    locale: "en",
-    priceTable: INSTALL_PRICES.map((r) => ({ label: r.label, price: r.price })),
-    pricingName: "Aircond Installation Pricing 2026",
-    priceDescription: "From RM 199",
+    locale: "zh",
+    priceTable: INSTALL_PRICES,
+    pricingName: "冷气安装价格2026",
+    priceDescription: "从RM 199起",
   });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" },
-      { "@type": "ListItem", position: 2, name: "Installation Price Guide", item: "https://www.klrenovator.com/installation-price-malaysia" },
+      { "@type": "ListItem", position: 1, name: "首页", item: "https://www.klrenovator.com" },
+      { "@type": "ListItem", position: 2, name: "安装价格指南", item: "https://www.klrenovator.com/zh/installation-price-malaysia" },
     ],
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQS.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.klrenovator.com/installation-price-malaysia#webpage",
-    name: "Aircond Installation Price Malaysia 2026 — KL Renovator",
-    description:
-      "Complete aircond installation price guide for KL & Selangor 2026. RM 199 base install. All brands, all HP ratings, transparent materials pricing.",
-    url: "https://www.klrenovator.com/installation-price-malaysia",
-    dateModified: "2026-07-07",
-    inLanguage: "en-MY",
-    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
-    about: { "@id": "https://www.klrenovator.com/#business" },
-    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".speakable"] },
+    mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
 
   return (
@@ -141,15 +103,14 @@ export default function InstallationPriceMalaysiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
-            <NextLink href="/" className="hover:text-sky-600 transition">Home</NextLink>
+            <NextLink href="/zh" className="hover:text-sky-600 transition">首页</NextLink>
             <FiChevronRight className="h-3 w-3" />
-            <span className="text-slate-900 font-semibold">Aircond Installation Price Guide 2026</span>
+            <span className="text-slate-900 font-semibold">冷气安装价格指南 2026</span>
           </nav>
         </div>
       </div>
@@ -157,34 +118,24 @@ export default function InstallationPriceMalaysiaPage() {
       {/* Hero */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
-          <Image
-            src="/hero/aircond-installation-kuala-lumpur.webp"
-            alt="Aircond installation price Malaysia 2026 — KL Renovator"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            loading="eager"
-            decoding="async"
-          />
+          <Image src="/hero/aircond-installation-kuala-lumpur.webp" alt="马来西亚冷气安装价格2026" fill sizes="100vw" className="object-cover" loading="eager" decoding="async" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <Reveal>
             <div className="max-w-3xl">
-              <span className="inline-block bg-sky-500 text-white text-xs font-black px-3 py-1.5 uppercase tracking-widest mb-4">2026 Pricing Guide</span>
+              <span className="inline-block bg-sky-500 text-white text-xs font-black px-3 py-1.5 uppercase tracking-widest mb-4">2026价格指南</span>
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05] text-slate-900 speakable">
-                Aircond Installation Price Malaysia 2026 — From RM 199
+                马来西亚冷气安装价格 2026 — 从 RM 199 起
               </h1>
               <p className="mt-4 text-lg text-slate-600 max-w-2xl leading-relaxed">
-                Searching &quot;aircond installation price Malaysia&quot; or &quot;pasang aircond berapa&quot;? KL Renovator&apos;s transparent guide covers every HP rating, every unit type, and every material cost — no hidden charges. <strong>RM 199</strong> base install includes 7ft copper pipe, wiring, vacuum pump, leak test, and 1-month warranty.
+                搜索&quot;冷气安装价格&quot;或&quot;pasang aircond berapa&quot;？KL Renovator的透明指南涵盖每个HP规格、每种机型和每项材料费用——无隐藏收费。<strong>RM 199</strong>基础安装含7尺铜管、电线、真空泵、测漏和1个月保修。
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <span className="bg-sky-500 text-white px-3 py-1.5 font-bold uppercase tracking-wider text-sm">From RM 199</span>
-                <span className="text-slate-500 font-semibold uppercase tracking-wider text-xs">All 20 Brands · All KL & Selangor</span>
+                <span className="bg-sky-500 text-white px-3 py-1.5 font-bold uppercase tracking-wider text-sm">从 RM 199</span>
+                <span className="text-slate-500 font-semibold uppercase tracking-wider text-xs">20大品牌 · 全KL及雪兰莪</span>
               </div>
-              <div className="mt-8">
-                <BookingButton serviceName="Aircond Installation" size="lg" />
-              </div>
+              <div className="mt-8"><BookingButton serviceName="冷气安装" size="lg" /></div>
             </div>
           </Reveal>
         </div>
@@ -193,23 +144,21 @@ export default function InstallationPriceMalaysiaPage() {
       {/* Trust strip */}
       <section className="bg-slate-900 text-white py-4 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 7ft Copper Included</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Vacuum Pump Mandatory</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Warranty</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5★ Reviews</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> SSM Registered</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 含7尺铜管</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 强制抽真空</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1个月保修</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+五星好评</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> SSM注册</span>
         </div>
       </section>
 
-      {/* Main Installation Pricing Table */}
+      {/* Pricing Table */}
       <section className="py-14 sm:py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">Installation Pricing · Harga Pemasangan · 安装价格</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2 speakable">
-              Complete Aircond Installation Price List 2026
-            </h2>
-            <p className="text-sm text-slate-500 mb-6">All prices include 7ft copper pipe, wiring, drainage pipe, bracket, vacuum, leak test & commissioning. Confirmed before work starts.</p>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">安装价格清单</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2 speakable">2026年冷气安装完整价格表</h2>
+            <p className="text-sm text-slate-500 mb-6">所有价格含7尺铜管、电线、排水管、支架、抽真空、测漏和调试。开工前确认。</p>
           </Reveal>
           <Reveal>
             <div className="border border-slate-200 bg-white">
@@ -226,40 +175,35 @@ export default function InstallationPriceMalaysiaPage() {
           <Reveal>
             <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
               <p className="text-xs text-emerald-800 leading-relaxed">
-                <span className="font-black">✓ Included free in every installation: </span>
-                7ft copper pipe (correctly sized to HP), electrical wiring, PVC drainage pipe, wall bracket, vacuum pump evacuation, nitrogen pressure leak test, commissioning, written job card.
+                <span className="font-black">✓ 每次安装免费包含：</span>7尺铜管（按HP正确配管）、电线、PVC排水管、支架、真空泵抽真空、氮气压力测漏、调试、书面工作卡。
               </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* What You Get — RM 199 Breakdown */}
+      {/* 9-Point */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-1">What You Get · Apa Yang Anda Dapat · 包含内容</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
-              What&apos;s Included in the RM 199 Base Installation?
-            </h2>
+            <p className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-1">包含内容</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">RM 199基础安装包含哪些内容？</h2>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: "Site Survey & Wall Assessment", desc: "Technician checks wall strength, electrical supply capacity, drainage fall, and outdoor condenser placement before drilling." },
-              { title: "7ft Copper Pipe (Correctly Sized)", desc: "Pipe diameter matched to your unit's HP — not universal thin-gauge. Properly insulated to prevent condensation dripping." },
-              { title: "Electrical Wiring + Conduit", desc: "Dedicated wiring from isolator to indoor unit through proper conduit. Not shared with other circuits." },
-              { title: "PVC Drainage Pipe", desc: "Set with correct downward gradient so water flows naturally. Prevents future water leak issues." },
-              { title: "Wall Bracket + Vibration Pads", desc: "Levelled, anchored bracket with rubber pads to reduce compressor vibration noise." },
-              { title: "Vacuum Pump Evacuation", desc: "Minimum 15–20 minutes. Removes all moisture and air from the refrigerant line — protects your compressor." },
-              { title: "Nitrogen Pressure Leak Test", desc: "Confirms zero leaks before refrigerant is released. This is the step cheap installers skip." },
-              { title: "Full Commissioning", desc: "Cooling output tested at all fan speeds, thermostat calibrated, airflow verified. Written on your job card." },
-              { title: "1-Month Workmanship Warranty", desc: "If any issue recurs due to our work within 1 month, we return and fix at no charge." },
+              { title: clampMetaTitle("现场勘查与墙体评估"), desc: "技术员在钻孔前检查墙体强度、电源容量、排水坡度和室外机位置。" },
+              { title: clampMetaTitle("7尺铜管（正确管径）"), desc: "管道直径按您机器HP匹配——非通用细管。带正确隔热层防止冷凝水滴落。" },
+              { title: clampMetaTitle("电线与线管"), desc: "从隔离开关到室内机通过专用线管的独立电线。" },
+              { title: clampMetaTitle("PVC排水管"), desc: "设置正确的下坡度，让水自然流出，预防未来漏水问题。" },
+              { title: clampMetaTitle("支架与减震垫"), desc: "调平固定支架，带橡胶减震垫减少压缩机振动噪音。" },
+              { title: clampMetaTitle("真空泵抽真空"), desc: "最少15–20分钟。清除冷媒管内所有水分和空气——保护压缩机。" },
+              { title: clampMetaTitle("氮气压力测漏"), desc: "释放冷媒前确认零泄漏。便宜安装商跳过的步骤。" },
+              { title: clampMetaTitle("全面调试"), desc: "测试所有风速的制冷输出、校准温控器、验证风量。记录在工作卡上。" },
+              { title: clampMetaTitle("1个月工艺保修"), desc: "如因我们的工作导致问题在1个月内复发，我们免费返回修复。" },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-5">
                 <div className="flex items-start gap-2.5 mb-2">
-                  <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center bg-emerald-500 text-white mt-0.5">
-                    <FiCheck className="h-3 w-3" />
-                  </span>
+                  <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center bg-emerald-500 text-white mt-0.5"><FiCheck className="h-3 w-3" /></span>
                   <h3 className="font-black text-slate-900 text-sm">{item.title}</h3>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed pl-7">{item.desc}</p>
@@ -269,15 +213,13 @@ export default function InstallationPriceMalaysiaPage() {
         </div>
       </section>
 
-      {/* Materials Pricing */}
+      {/* Materials */}
       <section className="py-14 sm:py-16 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Additional Materials · Bahan Tambahan · 额外材料</p>
-            <h2 className="text-2xl font-black text-slate-900 mb-2">
-              Extra Materials & Special Charges
-            </h2>
-            <p className="text-sm text-slate-500 mb-6">Only charged when your installation needs more than the standard 7ft package. Quoted and confirmed before work begins.</p>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">额外材料</p>
+            <h2 className="text-2xl font-black text-slate-900 mb-2">额外材料与特殊费用</h2>
+            <p className="text-sm text-slate-500 mb-6">仅在您的安装超出标准7尺套餐时收取。开工前报价并确认。</p>
           </Reveal>
           <Reveal>
             <div className="border border-slate-200 bg-white">
@@ -291,61 +233,47 @@ export default function InstallationPriceMalaysiaPage() {
               </ul>
             </div>
           </Reveal>
-          <Reveal>
-            <p className="text-xs text-slate-400 mt-3">
-              All material costs are quoted and confirmed with you before work begins. No surprises.
-            </p>
-          </Reveal>
         </div>
       </section>
 
-      {/* Full Copper Piping Package Comparison */}
+      {/* Package Comparison */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">Package Comparison · Perbandingan Pakej · 套餐对比</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6">
-              RM 199 Base Install vs Full Copper Piping Package
-            </h2>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">套餐对比</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6">RM 199基础安装 vs 完整铜管套餐</h2>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Base Install */}
             <Reveal>
               <div className="bg-white border-2 border-sky-200 rounded-2xl p-6">
-                <span className="inline-block bg-sky-100 text-sky-700 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-3">Most Popular</span>
-                <h3 className="font-black text-xl text-slate-900">Standard Installation</h3>
+                <span className="inline-block bg-sky-100 text-sky-700 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-3">最受欢迎</span>
+                <h3 className="font-black text-xl text-slate-900">标准安装</h3>
                 <p className="text-3xl font-black text-sky-600 mt-2">RM 199</p>
-                <p className="text-xs text-slate-500 mt-1">1.0–1.5 HP wall-mounted</p>
+                <p className="text-xs text-slate-500 mt-1">挂壁式1.0–1.5 HP</p>
                 <ul className="mt-4 space-y-2 text-sm text-slate-700">
-                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 7ft copper pipe included</li>
-                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> Wiring + drainage + bracket</li>
-                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> Vacuum pump + leak test</li>
-                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> Commissioning + job card</li>
-                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 1-month workmanship warranty</li>
+                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 含7尺铜管</li>
+                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 电线+排水+支架</li>
+                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 真空泵+测漏</li>
+                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 调试+工作卡</li>
+                  <li className="flex items-start gap-2"><span className="text-sky-500 mt-0.5">✓</span> 1个月工艺保修</li>
                 </ul>
-                <p className="mt-4 text-xs text-slate-500 leading-relaxed">
-                  <strong>Best for:</strong> Standard room layouts where indoor and outdoor units are within 7ft copper run distance. Most terrace houses, apartments, and ground-floor rooms.
-                </p>
+                <p className="mt-4 text-xs text-slate-500 leading-relaxed"><strong>适合：</strong>室内外机铜管距离在7尺内的标准房间布局。大多数排屋、公寓和底层房间。</p>
               </div>
             </Reveal>
-
-            {/* Full Copper Package */}
             <Reveal>
               <div className="bg-white border border-slate-200 rounded-2xl p-6">
-                <span className="inline-block bg-amber-100 text-amber-700 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-3">For Long Runs</span>
-                <h3 className="font-black text-xl text-slate-900">Full Copper Piping Package</h3>
+                <span className="inline-block bg-amber-100 text-amber-700 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-3">长管路</span>
+                <h3 className="font-black text-xl text-slate-900">完整铜管套餐</h3>
                 <p className="text-3xl font-black text-slate-600 mt-2">RM 350–600+</p>
-                <p className="text-xs text-slate-500 mt-1">Depends on pipe length & materials</p>
+                <p className="text-xs text-slate-500 mt-1">视管路长度和材料</p>
                 <ul className="mt-4 space-y-2 text-sm text-slate-700">
-                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> 10–20ft+ copper pipe run</li>
-                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> Concealed PVC trunking</li>
-                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> Outdoor cable tray if needed</li>
-                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> Extra bracket (indoor/outdoor)</li>
-                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> High-rise access charge if applicable</li>
+                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> 10–20尺以上铜管</li>
+                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> 隐蔽PVC线槽</li>
+                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> 室外线缆架（如需）</li>
+                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> 额外支架</li>
+                  <li className="flex items-start gap-2"><span className="text-amber-500 mt-0.5">→</span> 高层作业费</li>
                 </ul>
-                <p className="mt-4 text-xs text-slate-500 leading-relaxed">
-                  <strong>Best for:</strong> High-rise condos where outdoor unit is on a balcony or ledge farther from the indoor unit. Offices and shoplots with long ceiling runs. Price quoted on-site after survey.
-                </p>
+                <p className="mt-4 text-xs text-slate-500 leading-relaxed"><strong>适合：</strong>室外机在阳台等较远位置的高层公寓。有较长天花板管路的办公室和店铺。现场勘查后报价。</p>
               </div>
             </Reveal>
           </div>
@@ -356,10 +284,8 @@ export default function InstallationPriceMalaysiaPage() {
       <section className="py-14 sm:py-16 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">FAQ · Soalan Lazim · 常见问答</p>
-            <h2 className="text-2xl font-black text-slate-900 mb-6 speakable">
-              Aircond Installation — Common Questions
-            </h2>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">常见问答 · FAQ · Soalan Lazim</p>
+            <h2 className="text-2xl font-black text-slate-900 mb-6 speakable">冷气安装常见问题</h2>
           </Reveal>
           <div className="border border-slate-200 divide-y divide-slate-200">
             {FAQS.map((f, i) => (
@@ -378,35 +304,27 @@ export default function InstallationPriceMalaysiaPage() {
       </section>
 
       {/* TikTok */}
-      <TikTokShowcase locale="en" />
+      <TikTokShowcase locale="zh" />
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-sky-700 to-sky-600 text-white py-10 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-xs font-black uppercase tracking-widest text-sky-200 mb-2">Book Installation Today</p>
-          <h2 className="text-2xl sm:text-3xl font-black leading-tight mb-4">
-            Get a Confirmed Installation Price — WhatsApp Us Now
-          </h2>
-          <p className="text-sky-100 text-sm mb-6 max-w-2xl mx-auto">
-            Send us your unit brand, HP, and location. We confirm the exact price and available slot within minutes. Same-day installation available Mon–Sun across all KL & Selangor.
-          </p>
-          <BookingButton serviceName="Aircond Installation" size="lg" />
+          <p className="text-xs font-black uppercase tracking-widest text-sky-200 mb-2">今天预约安装</p>
+          <h2 className="text-2xl sm:text-3xl font-black leading-tight mb-4">获取确定安装价格 — 立即WhatsApp我们</h2>
+          <p className="text-sky-100 text-sm mb-6 max-w-2xl mx-auto">发送您的机器品牌、HP和位置。我们几分钟内确认准确价格和可用时段。周一至周日全KL及雪兰莪可当天安装。</p>
+          <BookingButton serviceName="冷气安装" size="lg" />
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <NextLink href="/services/installation" className="inline-flex items-center gap-1 text-xs font-black text-sky-200 hover:text-white transition">
-              View Full Installation Service Page <FiArrowRight className="h-3 w-3" />
-            </NextLink>
-            <NextLink href="/cuci-aircond-kl" className="inline-flex items-center gap-1 text-xs font-black text-sky-200 hover:text-white transition">
-              Chemical Wash from RM 120 <FiArrowRight className="h-3 w-3" />
-            </NextLink>
+            <NextLink href="/zh/services/installation" className="inline-flex items-center gap-1 text-xs font-black text-sky-200 hover:text-white transition">查看完整安装服务页 <FiArrowRight className="h-3 w-3" /></NextLink>
+            <NextLink href="/zh/cuci-aircond-kl" className="inline-flex items-center gap-1 text-xs font-black text-sky-200 hover:text-white transition">化学清洗 RM 120 起 <FiArrowRight className="h-3 w-3" /></NextLink>
           </div>
         </div>
       </section>
 
-      {/* Keyword tags */}
+      {/* Keywords */}
       <section className="py-6 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
-            {["aircond installation price malaysia", "harga pasang aircond 2026", "pasang aircond KL", "aircond installation cost KL", "冷气安装价格马来西亚", "pemasangan aircond selangor"].map((kw) => (
+            {["冷气安装价格马来西亚", "aircond installation price Malaysia", "吉隆坡冷气安装", "冷气安装费用2026", "pasang aircond berapa", "雪兰莪冷气安装"].map((kw) => (
               <span key={kw} className="inline-flex items-center bg-white text-slate-600 px-3 py-1.5 text-xs font-bold rounded-full border border-slate-200">{kw}</span>
             ))}
           </div>
