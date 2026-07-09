@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { getServiceOGImages } from "@/config/service-og-images";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiClock, FiAlertTriangle, FiZap, FiChevronRight } from "react-icons/fi";
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Emergency Aircond Repair KL & Selangor | KL Renovator"),
     description: "Urgent aircond breakdown? Same-day dispatch. Call +60182983573.",
-    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
+    images: getServiceOGImages("emergency", "en").map(i=>i.url),
   },
   alternates: {
     canonical: "https://www.klrenovator.com/services/emergency",
