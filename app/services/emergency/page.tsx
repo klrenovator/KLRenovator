@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiClock, FiAlertTriangle, FiZap, FiChevronRight } from "react-icons/fi";
@@ -34,7 +35,7 @@ const emergencyCRO = buildServiceCRORefinementModule("emergency", "en", "Emergen
 const emergencyAIO = buildServiceAIOAnswerBlock({
   slug: "emergency",
   locale: "en",
-  title: "Emergency Aircond Repair",
+  title: clampMetaTitle("Emergency Aircond Repair"),
   summary: emergencyData.aioSummary,
   startPrice: 88,
 });
@@ -43,11 +44,11 @@ const emergencyVisualSXO = buildServiceVisualSXOModule("emergency", "en", "Emerg
 
 // ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Emergency Aircond Repair KL & Selangor — Same-Day Urgent Service | KL Renovator",
+  title: clampMetaTitle("Emergency Aircond Repair KL & Selangor — Same-Day Urgent Service | KL Renovator"),
   description:
     "Emergency aircond repair in KL & Selangor. Same-day urgent response for breakdowns, water leaking, or complete failure. All brands. Call +60182983573.",
   openGraph: {
-    title: "Emergency Aircond Repair KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Emergency Aircond Repair KL & Selangor | KL Renovator"),
     description:
       "Urgent aircond breakdown? KL Renovator dispatches same-day. All brands. Call +60182983573.",
     url: "https://www.klrenovator.com/services/emergency",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emergency Aircond Repair KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Emergency Aircond Repair KL & Selangor | KL Renovator"),
     description: "Urgent aircond breakdown? Same-day dispatch. Call +60182983573.",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
   },
@@ -230,30 +231,30 @@ const responseSteps = [
   {
     step: "1",
     color: "bg-red-500",
-    en: { title: "WhatsApp or Call Now", desc: "Send your location, unit count, and problem description to +60182983573. Response within minutes." },
-    ms: { title: "WhatsApp atau Hubungi Sekarang", desc: "Hantar lokasi, bilangan unit dan huraian masalah ke +60182983573. Respons dalam beberapa minit." },
-    zh: { title: "立即WhatsApp或致电", desc: "发送您的位置、机器数量和问题描述至 +60182983573。几分钟内回复。" },
+    en: { title: clampMetaTitle("WhatsApp or Call Now"), desc: "Send your location, unit count, and problem description to +60182983573. Response within minutes." },
+    ms: { title: clampMetaTitle("WhatsApp atau Hubungi Sekarang"), desc: "Hantar lokasi, bilangan unit dan huraian masalah ke +60182983573. Respons dalam beberapa minit." },
+    zh: { title: clampMetaTitle("立即WhatsApp或致电"), desc: "发送您的位置、机器数量和问题描述至 +60182983573。几分钟内回复。" },
   },
   {
     step: "2",
     color: "bg-amber-500",
-    en: { title: "Confirmed Quote", desc: "We confirm the diagnostic fee and estimated repair cost before dispatch. No surprises." },
-    ms: { title: "Sebut Harga Disahkan", desc: "Kami sahkan caj diagnostik dan anggaran kos pembaikan sebelum menghantar. Tiada kejutan." },
-    zh: { title: "确认报价", desc: "我们在派遣前确认诊断费和预估维修费用。无隐藏收费。" },
+    en: { title: clampMetaTitle("Confirmed Quote"), desc: "We confirm the diagnostic fee and estimated repair cost before dispatch. No surprises." },
+    ms: { title: clampMetaTitle("Sebut Harga Disahkan"), desc: "Kami sahkan caj diagnostik dan anggaran kos pembaikan sebelum menghantar. Tiada kejutan." },
+    zh: { title: clampMetaTitle("确认报价"), desc: "我们在派遣前确认诊断费和预估维修费用。无隐藏收费。" },
   },
   {
     step: "3",
     color: "bg-emerald-500",
-    en: { title: "Technician Dispatched", desc: "Our nearest trained technician is dispatched to your location. Most jobs arrived within 30–60 min." },
-    ms: { title: "Juruteknik Dihantar", desc: "Juruteknik terlatih terdekat kami dihantar ke lokasi anda. Kebanyakan kerja tiba dalam 30–60 min." },
-    zh: { title: "派遣技术员", desc: "我们最近的训练有素的技术员被派往您的位置。大多数工作30-60分钟内到达。" },
+    en: { title: clampMetaTitle("Technician Dispatched"), desc: "Our nearest trained technician is dispatched to your location. Most jobs arrived within 30–60 min." },
+    ms: { title: clampMetaTitle("Juruteknik Dihantar"), desc: "Juruteknik terlatih terdekat kami dihantar ke lokasi anda. Kebanyakan kerja tiba dalam 30–60 min." },
+    zh: { title: clampMetaTitle("派遣技术员"), desc: "我们最近的训练有素的技术员被派往您的位置。大多数工作30-60分钟内到达。" },
   },
   {
     step: "4",
     color: "bg-sky-500",
-    en: { title: "Diagnose & Fix", desc: "Full on-site diagnosis. Repair done same visit where possible. Parts quoted before installation." },
-    ms: { title: "Diagnos & Baiki", desc: "Diagnostik penuh di tapak. Pembaikan dilakukan dalam lawatan yang sama jika boleh. Bahagian dikuotakan sebelum pemasangan." },
-    zh: { title: "诊断和修复", desc: "现场全面诊断。尽可能在同一次上门完成维修。零件在安装前报价。" },
+    en: { title: clampMetaTitle("Diagnose & Fix"), desc: "Full on-site diagnosis. Repair done same visit where possible. Parts quoted before installation." },
+    ms: { title: clampMetaTitle("Diagnos & Baiki"), desc: "Diagnostik penuh di tapak. Pembaikan dilakukan dalam lawatan yang sama jika boleh. Bahagian dikuotakan sebelum pemasangan." },
+    zh: { title: clampMetaTitle("诊断和修复"), desc: "现场全面诊断。尽可能在同一次上门完成维修。零件在安装前报价。" },
   },
 ];
 
