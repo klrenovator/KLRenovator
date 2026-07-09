@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NearMeClient from "./near-me-client";
 
 export const metadata: Metadata = {
-  title: "Aircond Service Near Me — KL & Selangor | KL Renovator",
+  title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
   description:
     "Looking for aircond service near you? KL Renovator sends trained HVAC technicians across Kuala Lumpur & Selangor — same-day slots, transparent pricing, all brands. WhatsApp +60182983573.",
   alternates: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Aircond Service Near Me — KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
     description:
       "Local aircond servicing across KL & Selangor. Same-day slots, chemical wash from RM 120, all brands. WhatsApp +60182983573.",
     url: "https://www.klrenovator.com/near-me",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aircond Service Near Me — KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
     description:
       "Local aircond servicing across KL & Selangor. Same-day slots, chemical wash from RM 120, all brands.",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
