@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { GalleryPageI18n } from "@/components/gallery-page-i18n";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
@@ -18,15 +19,7 @@ export const metadata: Metadata = {
       { url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "KL Renovator Aircond Project Gallery" },
     ],
   },
-  alternates: {
-    canonical: "https://www.klrenovator.com/gallery",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/gallery",
-      "ms-MY": "https://www.klrenovator.com/ms/gallery",
-      "zh-MY": "https://www.klrenovator.com/zh/gallery",
-      "x-default": "https://www.klrenovator.com/gallery",
-    },
-  },
+  alternates: buildTrilingualHreflang("/gallery"),
 };
 
 export default function GalleryPage() {
