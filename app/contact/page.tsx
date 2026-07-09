@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import Image from "next/image";
 import {
   FaPhone, FaEnvelope, FaLocationDot, FaRegClock, FaWhatsapp,
@@ -14,7 +15,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 
 export const metadata: Metadata = {
-  title: "Contact KL Renovator | Aircond Service KL & Selangor",
+  title: clampMetaTitle("Contact KL Renovator | Aircond Service KL & Selangor"),
   alternates: {
     canonical: "https://www.klrenovator.com/contact",
     languages: {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Contact KL Renovator for aircond servicing across KL & Selangor. WhatsApp +60182983573 for a same-day quote. Transparent pricing, fast response.",
   openGraph: {
-    title: "Contact KL Renovator | Aircond Service KL & Selangor",
+    title: clampMetaTitle("Contact KL Renovator | Aircond Service KL & Selangor"),
     description:
       "Fastest response via WhatsApp — reply within 30 minutes. Same-day aircond service across KL & Selangor. Chemical wash from RM 120. Call +60182983573.",
     url: "https://www.klrenovator.com/contact",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact KL Renovator | Aircond Service KL & Selangor",
+    title: clampMetaTitle("Contact KL Renovator | Aircond Service KL & Selangor"),
     description: "Fastest WhatsApp response — same-day aircond service across KL & Selangor. Chemical wash from RM 120.",
     images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp"],
   },
