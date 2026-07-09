@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { problemContent } from "@/app/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
 import { PROBLEM_BRAND_MAP } from "@/config/topical-authority-map";
@@ -38,10 +39,10 @@ export async function generateMetadata({
   const zhUrl = `https://www.klrenovator.com/zh/problems/${slug}`;
 
   return {
-    title: problem.metaTitleMS || problem.metaTitle,
+    title: clampMetaTitle(problem.metaTitleMS || problem.metaTitle),
     description: problem.metaDescMS || problem.metaDesc,
     openGraph: {
-      title: problem.metaTitleMS || problem.metaTitle,
+      title: clampMetaTitle(problem.metaTitleMS || problem.metaTitle),
       description: problem.metaDescMS || problem.metaDesc,
       url: msUrl,
       type: "website",
