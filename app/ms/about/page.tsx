@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { AboutPageI18n } from "@/components/about-page-i18n";
 
 export const metadata: Metadata = {
-  title: "Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor",
+  title: clampMetaTitle("Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor"),
   description:
     "KL Renovator (Multicore Dynamics Resources) — pakar aircond dipercayai di KL & Selangor. 12+ tahun pengalaman, 5,000+ pelanggan gembira, 500+ ulasan.",
   alternates: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor",
+    title: clampMetaTitle("Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor"),
     description:
       "KL Renovator (Multicore Dynamics Resources) — 12+ tahun kepakaran HVAC, 5,000+ pelanggan gembira, 500+ ulasan 5 bintang. Servis aircond profesional merentasi Kuala Lumpur & Selangor.",
     url: "https://www.klrenovator.com/ms/about",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor",
+    title: clampMetaTitle("Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor"),
     description: "12+ tahun kepakaran HVAC, 5,000+ pelanggan gembira, 500+ ulasan 5 bintang. Servis aircond profesional merentasi KL & Selangor.",
     images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp"],
   },
