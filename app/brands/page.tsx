@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NextLink from "next/link";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -9,11 +10,11 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Aircond Service by Brand KL & Selangor | KL Renovator",
+  title: clampMetaTitle("Aircond Service by Brand KL & Selangor | KL Renovator"),
   description:
     "KL Renovator services all major aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, LG, Samsung, Midea, Hisense & more. Call +60182983573.",
   openGraph: {
-    title: "Aircond Service by Brand KL & Selangor | KL Renovator",
+    title: clampMetaTitle("Aircond Service by Brand KL & Selangor | KL Renovator"),
     description:
       "All major aircond brands serviced in KL & Selangor. Chemical wash, gas top-up, repairs & installation. Call +60182983573.",
     url: "https://www.klrenovator.com/brands",
