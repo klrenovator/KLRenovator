@@ -16,7 +16,7 @@ import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
-import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaTitle, buildServiceMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
@@ -48,7 +48,7 @@ export async function generateMetadata({
   if (!data || !service) return { title: "Service not found" };
 
   return {
-    title: clampMetaTitle(`${data.title} KL & Selangor — From RM ${service.startPrice}`),
+    title: buildServiceMetaTitleWithDate(`${data.title} KL & Selangor — From RM ${service.startPrice}`, "en"),
     description: clampMetaDescription(data.tagline),
     openGraph: {
       title: clampMetaTitle(`${data.title} | KL Renovator`),
