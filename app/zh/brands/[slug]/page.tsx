@@ -8,7 +8,7 @@ import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle, buildBrandMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
-import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
+import { BRAND_PROBLEM_MAP, BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -570,7 +570,46 @@ export default async function BrandPageZH({
         </section>
       )}
 
-      <section className="py-12 bg-white border-t border-slate-100">
+      
+      {/* Round 51 / 10.1–10.6: Brand → Service reverse links */}
+      {(() => {
+        const serviceSlugs = BRAND_SERVICE_MAP[slug] || BRAND_SERVICE_MAP["_default"] || [];
+        const brandServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));
+        if (brandServices.length === 0) return null;
+        return (
+          <section className="py-10 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">
+                  服务
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  {brand.name}冷气服务项目
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {brandServices.map((s) => (
+                    <NextLink
+                      key={s.slug}
+                      href={`/zh/services/${s.slug}`}
+                      className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                    >
+                      {s.title}
+                    </NextLink>
+                  ))}
+                  <NextLink
+                    href="/zh/services"
+                    className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
+                  >
+                    全部服务 →
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+<section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
