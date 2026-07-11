@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
-import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaTitle, buildBrandMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
@@ -37,26 +37,26 @@ export async function generateMetadata({
   const zhUrl = `https://www.klrenovator.com/zh/brands/${slug}`;
 
   return {
-    title: clampMetaTitle(brand.metaTitleZH || brand.metaTitle),
-    description: clampMetaDescription(brand.metaDesc),
+    title: buildBrandMetaTitleWithDate(brand.metaTitle, "en"),
+    description: brand.metaDescZH || brand.metaDesc,
     openGraph: {
-      title: clampMetaTitle(brand.metaTitleZH || brand.metaTitle),
-      description: clampMetaDescription(brand.metaDesc),
-      url: zhUrl,
+      title: buildBrandMetaTitleWithDate(brand.metaTitle, "en"),
+      description: brand.metaDescZH || brand.metaDesc,
+      url: enUrl,
       type: "website",
-      locale: "zh_MY",
+      locale: "en_MY",
       alternateLocale: ["en_MY", "ms_MY"],
       images: [
         {
           url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`,
           width: 1200,
           height: 630,
-          alt: `${brand.name}冷气服务 KL & Selangor — KL Renovator`,
+          alt: `${brand.name} Aircond Service KL & Selangor — KL Renovator`,
         },
       ],
     },
     alternates: {
-      canonical: zhUrl,
+      canonical: enUrl,
       languages: {
         "en-MY": enUrl,
         "ms-MY": msUrl,
