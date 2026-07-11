@@ -61,6 +61,12 @@ const nextConfig = {
       { source: '/servis/baiki-aircond-kl',         destination: '/ms/services/repair',                 statusCode: 301 },
       { source: '/baiki-aircond',                   destination: '/ms/services/repair',                 statusCode: 301 },
       { source: '/kontrak-penyelenggaraan-aircond', destination: '/ms/services/maintenance-contract',   statusCode: 301 },
+      // Round 50 / 20G.77: Malay aliases for Harga Servis Aircond 2026 pricing guide
+      { source: '/harga-servis-aircond',            destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
+      { source: '/harga-servis-aircond-2026',       destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
+      { source: '/servis/harga-servis-aircond',     destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
+      { source: '/senarai-harga-aircond',           destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
+      { source: '/aircond-service-price',           destination: '/aircond-service-price-malaysia',     statusCode: 301 },
     ];
   },
   // ✅ Security headers — Google trust/ranking signal + Lighthouse "Best Practices"
