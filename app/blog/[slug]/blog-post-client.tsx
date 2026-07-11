@@ -1,7 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
-import { BLOG_SERVICE_MAP } from "@/config/topical-authority-map";
+import { BLOG_SERVICE_MAP, PROBLEM_BLOG_MAP_V2 } from "@/config/topical-authority-map";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiClock, FiTag, FiChevronRight, FiArrowLeft, FiArrowRight, FiMapPin } from "react-icons/fi";
@@ -469,6 +469,40 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                     All Services →
                   </NextLink>
                 </div>
+
+
+                {/* Round 51 / 10.1–10.6: Blog → Problem reverse links */}
+                {(() => {
+                  const problemSlugs = Object.entries(PROBLEM_BLOG_MAP_V2)
+                    .filter(([, blogs]) => blogs.includes(post.slug))
+                    .map(([problemSlug]) => problemSlug)
+                    .slice(0, 4);
+                  if (problemSlugs.length === 0) return null;
+                  const problems = siteConfig.problemPages.filter((p) => problemSlugs.includes(p.slug));
+                  if (problems.length === 0) return null;
+                  return (
+                    <div className="bg-white border border-slate-200 p-5 rounded-xl">
+                      <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3">
+                        {lang === "ms" ? "Masalah Berkaitan" : lang === "zh" ? "相关故障" : "Related Problems"}
+                      </p>
+                      <ul className="space-y-1.5">
+                        {problems.map((p) => (
+                          <li key={p.slug}>
+                            <NextLink
+                              href={localizedPath(`/problems/${p.slug}`)}
+                              className="flex items-center justify-between gap-2 text-sm font-semibold text-slate-700 hover:text-sky-600 transition"
+                            >
+                              <span>
+                                {lang === "ms" ? (p.nameMS || p.name) : lang === "zh" ? (p.nameZH || p.name) : p.name}
+                              </span>
+                              <FiChevronRight className="h-3.5 w-3.5 shrink-0 text-sky-500" />
+                            </NextLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })()}
 
                 {/* Area Links - keyword-rich anchors */}
                 <div className="bg-white border border-slate-200 p-5 rounded-xl">
