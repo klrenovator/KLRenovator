@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { PROBLEM_ENTITY_HUBS } from "@/config/problem-entity-hubs";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Problems Guide KL & Selangor | KL Renovator"),
@@ -150,6 +151,75 @@ export default function ProblemsPage() {
                 </NextLink>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      
+      {/* Round 52 / 10.8 — Entity Hub clusters around core HVAC problems */}
+      <section className="py-16 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-10">
+              <p className={eyebrow()}>Problem Clusters</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>Browse by </span>
+                <span className={title({ size: "sm", color: "brand" })}>Symptom Group</span>
+              </h2>
+              <p className="mt-3 text-sm text-slate-600 max-w-2xl mx-auto font-medium">
+                Related aircond faults grouped so you can jump to the right fix, service, and guide faster.
+              </p>
+            </div>
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {PROBLEM_ENTITY_HUBS.map((hub, i) => {
+              const hubProblems = problems.filter((p) => hub.problemSlugs.includes(p.slug));
+              const primary = siteConfig.services.find((s) => s.slug === hub.primaryService);
+              return (
+                <Reveal key={hub.id} delay={i * 40}>
+                  <div className="h-full flex flex-col bg-slate-50 border border-slate-200 rounded-2xl p-5 hover:border-sky-200 hover:shadow-md transition">
+                    <h3 className="font-black text-base text-slate-900 mb-2">{hub.labels.en.title}</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{hub.labels.en.blurb}</p>
+                    <ul className="space-y-1.5 mb-4 flex-1">
+                      {hubProblems.map((p) => (
+                        <li key={p.slug}>
+                          <NextLink
+                            href={`/problems/${p.slug}`}
+                            className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-sky-600 transition"
+                          >
+                            <FiArrowRight className="h-3 w-3 text-sky-500 shrink-0" />
+                            {p.name}
+                          </NextLink>
+                        </li>
+                      ))}
+                    </ul>
+                    {primary && (
+                      <NextLink
+                        href={`/services/${primary.slug}`}
+                        className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-sky-600 hover:bg-sky-700 px-4 py-2.5 text-xs font-black uppercase tracking-widest text-white transition"
+                      >
+                        {primary.title} <FiArrowRight className="h-3 w-3" />
+                      </NextLink>
+                    )}
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {hub.secondaryServices.map((slug) => {
+                        const s = siteConfig.services.find((x) => x.slug === slug);
+                        if (!s) return null;
+                        return (
+                          <NextLink
+                            key={slug}
+                            href={`/services/${slug}`}
+                            className="text-[11px] font-bold text-sky-700 bg-sky-50 border border-sky-100 px-2 py-1 rounded-full hover:bg-sky-100 transition"
+                          >
+                            {s.title}
+                          </NextLink>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
