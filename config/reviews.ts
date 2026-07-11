@@ -20,6 +20,7 @@ export const googlePlace = {
   reviewsUrl: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   averageRating: 5,
   totalReviews: 500,
+  lastUpdated: "2026-07-11",
 };
 
 /**

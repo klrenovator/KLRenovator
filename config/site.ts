@@ -35,6 +35,7 @@ export const siteConfig = {
   googleBusinessProfile: "https://share.google/HhXvqWDkefZ5bzNdL",
   reviewCount: 500,
   reviewRating: 5,
+  reviewLastUpdated: "2026-07-11",
 
   navItems: [
     { label: "Home", href: "/" },
