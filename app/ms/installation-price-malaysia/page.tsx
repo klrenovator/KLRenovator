@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildFreshMetaTitle } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
@@ -13,11 +14,11 @@ import { buildServiceSchema } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("Harga Pasang Aircond 2026 — Dari RM 199 | KL Renovator"),
+  title: buildFreshMetaTitle("Harga Pasang Aircond 2026 — Dari RM 199 | KL Renovator", "ms"),
   description:
     "Panduan harga pemasangan aircond lengkap untuk KL & Selangor 2026. Pasang RM 199 termasuk 7 kaki paip kuprum, pendawaian, vakum & ujian kebocoran. Semua 20 jenama. Hari sama tersedia.",
   openGraph: {
-    title: clampMetaTitle("Harga Pasang Aircond 2026 — Dari RM 199 | KL Renovator"),
+    title: buildFreshMetaTitle("Harga Pasang Aircond 2026 — Dari RM 199 | KL Renovator", "ms"),
     description: "Panduan harga pemasangan aircond lengkap untuk KL & Selangor 2026. RM 199 termasuk 7 kaki paip kuprum, vakum & ujian kebocoran.",
     url: "https://www.klrenovator.com/ms/installation-price-malaysia",
     images: getServiceOGImages("installation", "ms"),
@@ -103,12 +104,12 @@ const FAQS = [
 ];
 
 const WHY_ITEMS = [
-  { title: clampMetaTitle("Harga Telus"), zh: "价格透明", desc: "Harga penuh disahkan sebelum kerja dimulakan. Tiada caj tersembunyi." },
-  { title: clampMetaTitle("Paip Kuprum Betul"), zh: "正确铜管", desc: "Diameter paip dipadankan mengikut HP unit anda — bukan saiz universal nipis." },
-  { title: clampMetaTitle("Vakum Wajib"), zh: "强制抽真空", desc: "Kami tidak pernah langkau vakum pam. Ini melindungi pemampat anda." },
-  { title: clampMetaTitle("500+ Ulasan 5★"), zh: "500+五星好评", desc: "Rekod prestasi kami bercakap sendiri di seluruh Lembah Klang." },
-  { title: clampMetaTitle("Waranti 1 Bulan"), zh: "一个月保修", desc: "Semua pemasangan dilindungi waranti kerja 1 bulan." },
-  { title: clampMetaTitle("Hari Sama Tersedia"), zh: "当天可安装", desc: "WhatsApp lokasi anda — kami sahkan slot terdekat dalam minit." },
+  { title: buildFreshMetaTitle("Harga Telus", "ms"), zh: "价格透明", desc: "Harga penuh disahkan sebelum kerja dimulakan. Tiada caj tersembunyi." },
+  { title: buildFreshMetaTitle("Paip Kuprum Betul", "ms"), zh: "正确铜管", desc: "Diameter paip dipadankan mengikut HP unit anda — bukan saiz universal nipis." },
+  { title: buildFreshMetaTitle("Vakum Wajib", "ms"), zh: "强制抽真空", desc: "Kami tidak pernah langkau vakum pam. Ini melindungi pemampat anda." },
+  { title: buildFreshMetaTitle("500+ Ulasan 5★", "ms"), zh: "500+五星好评", desc: "Rekod prestasi kami bercakap sendiri di seluruh Lembah Klang." },
+  { title: buildFreshMetaTitle("Waranti 1 Bulan", "ms"), zh: "一个月保修", desc: "Semua pemasangan dilindungi waranti kerja 1 bulan." },
+  { title: buildFreshMetaTitle("Hari Sama Tersedia", "ms"), zh: "当天可安装", desc: "WhatsApp lokasi anda — kami sahkan slot terdekat dalam minit." },
 ];
 
 export default function MsInstallationPricePage() {
@@ -232,15 +233,15 @@ export default function MsInstallationPricePage() {
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: clampMetaTitle("Tinjauan Tapak & Penilaian Dinding"), desc: "Juruteknik semak kekuatan dinding, kapasiti bekalan elektrik, kecerenan longkang dan kedudukan pemampat luar sebelum menggerudi." },
-              { title: clampMetaTitle("7 Kaki Paip Kuprum (Saiz Betul)"), desc: "Diameter paip dipadankan mengikut HP unit anda — bukan saiz universal nipis. Dengan penebat yang betul." },
-              { title: clampMetaTitle("Pendawaian + Konduit"), desc: "Pendawaian khusus dari pengasing ke unit dalaman melalui konduit yang betul." },
-              { title: clampMetaTitle("Paip Longkang PVC"), desc: "Ditetapkan dengan kecerunan jatuh yang betul supaya air mengalir secara semula jadi." },
-              { title: clampMetaTitle("Braket + Pad Getah"), desc: "Braket diratakan dan dilekatkan dengan pad getah untuk mengurangkan bunyi getaran pemampat." },
-              { title: clampMetaTitle("Evakuasi Pam Vakum"), desc: "Minimum 15–20 minit. Membuang semua kelembapan dan udara dari paip bahan pendingin." },
-              { title: clampMetaTitle("Ujian Kebocoran Nitrogen"), desc: "Mengesahkan sifar kebocoran sebelum bahan pendingin dilepaskan. Langkah yang dilangkau oleh pemasang murah." },
-              { title: clampMetaTitle("Pentauliahan Penuh"), desc: "Output penyejukan diuji pada semua kelajuan kipas, termostat dikalibrasi, aliran udara disahkan." },
-              { title: clampMetaTitle("Waranti Kerja 1 Bulan"), desc: "Jika sebarang masalah berulang kerana kerja kami dalam 1 bulan, kami kembali baiki tanpa caj." },
+              { title: buildFreshMetaTitle("Tinjauan Tapak & Penilaian Dinding", "ms"), desc: "Juruteknik semak kekuatan dinding, kapasiti bekalan elektrik, kecerenan longkang dan kedudukan pemampat luar sebelum menggerudi." },
+              { title: buildFreshMetaTitle("7 Kaki Paip Kuprum (Saiz Betul)", "ms"), desc: "Diameter paip dipadankan mengikut HP unit anda — bukan saiz universal nipis. Dengan penebat yang betul." },
+              { title: buildFreshMetaTitle("Pendawaian + Konduit", "ms"), desc: "Pendawaian khusus dari pengasing ke unit dalaman melalui konduit yang betul." },
+              { title: buildFreshMetaTitle("Paip Longkang PVC", "ms"), desc: "Ditetapkan dengan kecerunan jatuh yang betul supaya air mengalir secara semula jadi." },
+              { title: buildFreshMetaTitle("Braket + Pad Getah", "ms"), desc: "Braket diratakan dan dilekatkan dengan pad getah untuk mengurangkan bunyi getaran pemampat." },
+              { title: buildFreshMetaTitle("Evakuasi Pam Vakum", "ms"), desc: "Minimum 15–20 minit. Membuang semua kelembapan dan udara dari paip bahan pendingin." },
+              { title: buildFreshMetaTitle("Ujian Kebocoran Nitrogen", "ms"), desc: "Mengesahkan sifar kebocoran sebelum bahan pendingin dilepaskan. Langkah yang dilangkau oleh pemasang murah." },
+              { title: buildFreshMetaTitle("Pentauliahan Penuh", "ms"), desc: "Output penyejukan diuji pada semua kelajuan kipas, termostat dikalibrasi, aliran udara disahkan." },
+              { title: buildFreshMetaTitle("Waranti Kerja 1 Bulan", "ms"), desc: "Jika sebarang masalah berulang kerana kerja kami dalam 1 bulan, kami kembali baiki tanpa caj." },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-5">
                 <div className="flex items-start gap-2.5 mb-2">
