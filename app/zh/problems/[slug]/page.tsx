@@ -10,6 +10,7 @@ import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { problemContent } from "@/app/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
 import { PROBLEM_BRAND_MAP, PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
+import { getHubsForProblem } from "@/config/problem-entity-hubs";
 import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
@@ -411,6 +412,56 @@ export default async function ProblemPageZH({
         );
       })()}
 
+
+      {/* Round 52 / 10.8 — Related symptom hubs for this problem entity */}
+      {(() => {
+        const hubs = getHubsForProblem(slug);
+        if (hubs.length === 0) return null;
+        return (
+          <section className="py-12 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">相关症状分组</p>
+                <h2 className="text-base font-black text-slate-900 mb-4">同组其他故障</h2>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {hubs.map((hub) => {
+                    const label = hub.labels.zh;
+                    const others = siteConfig.problemPages.filter(
+                      (p) => hub.problemSlugs.includes(p.slug) && p.slug !== slug
+                    );
+                    const primary = siteConfig.services.find((s) => s.slug === hub.primaryService);
+                    return (
+                      <div key={hub.id} className="bg-white border border-slate-200 rounded-2xl p-5">
+                        <h3 className="font-black text-sm text-slate-900 mb-1">{label.title}</h3>
+                        <p className="text-xs text-slate-600 mb-3 leading-relaxed">{label.blurb}</p>
+                        <ul className="space-y-1 mb-3">
+                          {others.slice(0, 4).map((p) => (
+                            <li key={p.slug}>
+                              <NextLink href={`/zh/problems/${p.slug}`} className="text-sm font-semibold text-sky-700 hover:text-sky-900">
+                                {p.nameZH || p.name}
+                              </NextLink>
+                            </li>
+                          ))}
+                        </ul>
+                        <NextLink href="/zh/problems" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-sky-600">
+                          全部故障分组 →
+                        </NextLink>
+                        {primary && (
+                          <div className="mt-3">
+                            <NextLink href={`/zh/services/${primary.slug}`} className="text-xs font-bold text-sky-700 bg-sky-50 border border-sky-100 px-2.5 py-1 rounded-full">
+                              {primary.title}
+                            </NextLink>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
 <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
