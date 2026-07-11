@@ -173,6 +173,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-chemical-wash-price-malaysia-2026",
     "chemical-wash-vs-chemical-overhaul",
     "how-often-service-aircond-malaysia",
+    "harga-servis-aircond-2026-malaysia",
   ],
   "chemical-overhaul": [
     "aircond-chemical-overhaul-kl-selangor-cooling-efficiency",
@@ -209,6 +210,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "how-to-reduce-aircond-electricity-bill-malaysia",
     "aircond-service-price-guide-kl-2026",
     "inverter-vs-non-inverter-aircond-service-malaysia-2026",
+    "harga-servis-aircond-2026-malaysia",
   ],
   "ceiling-cassette": [
     "commercial-hvac-maintenance-kl",

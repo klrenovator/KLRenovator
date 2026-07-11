@@ -5861,7 +5861,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Tanggal Sahaja (tanpa pasang semula)</td><td><strong>RM 90</strong></td></tr>
           <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr>
           <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr>
-          <tr><td>Tanggal + Pasang Semula Lokasi Berbeza (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr
+          <tr><td>Tanggal + Pasang Semula Lokasi Berbeza (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr>
         </tbody>
       </table>
       <p><strong>Nota:</strong> Paip kuprum baharu 7 kaki termasuk. Tambahan RM 25/kaki melebihi 7 kaki.</p>
@@ -5879,7 +5879,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
           <tr><td>Penggantian Papan PCB</td><td><strong>RM 300 - 600</strong></td></tr>
           <tr><td>Pembersihan Paip Longkang Kecemasan</td><td><strong>RM 120</strong></td></tr>
-          <tr><td>Penggantian Kompresor (dikuotakan sebelum kerja)</td><td><strong>RM 600 - 2,000</strong></td></tr
+          <tr><td>Penggantian Kompresor (dikuotakan sebelum kerja)</td><td><strong>RM 600 - 2,000</strong></td></tr>
         </tbody>
       </table>
 
@@ -6005,7 +6005,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>温度传感器更换</td><td><strong>RM 150 - 250</strong></td></tr>
           <tr><td>接触器更换</td><td><strong>RM 150 - 200</strong></td></tr>
           <tr><td>排水泵更换</td><td><strong>RM 350 - 550</strong></td></tr>
-          <tr><td>压缩机更换</td><td><strong>RM 800 - 2,000</strong></td></tr
+          <tr><td>压缩机更换</td><td><strong>RM 800 - 2,000</strong></td></tr>
         </tbody>
       </table>
 
@@ -6021,10 +6021,10 @@ export const allPosts: BlogPost[] = [
           <tr><td>化学清洗 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
           <tr><td>化学清洗 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
           <tr><td>化学大修 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
-          <tr><td>化学大修 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr
-          <tr><td>安装 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr
-          <tr><td>安装 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr
-          <tr><td>安装 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr
+          <tr><td>化学大修 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
+          <tr><td>安装 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>安装 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>安装 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
         </tbody>
       </table>
 
@@ -6033,10 +6033,10 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>服务</th><th>价格</th></tr></thead>
         <tbody>
-          <tr><td>仅拆机（不重装）</td><td><strong>RM 90</strong></td></tr
-          <tr><td>拆机 + 同楼/就近重装 (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr
-          <tr><td>拆机 + 同楼/就近重装 (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr
-          <tr><td>拆机 + 不同地点重装 (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr
+          <tr><td>仅拆机（不重装）</td><td><strong>RM 90</strong></td></tr>
+          <tr><td>拆机 + 同楼/就近重装 (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>拆机 + 同楼/就近重装 (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>拆机 + 不同地点重装 (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr>
         </tbody>
       </table>
       <p><strong>注：</strong> 新铜管 7 尺含在内。超过 7 尺加收 RM 25/尺。</p>
@@ -6046,15 +6046,15 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>服务</th><th>价格</th></tr></thead>
         <tbody>
-          <tr><td>诊断费（标准时间 上午 9 点-下午 6 点）</td><td><strong>RM 88</strong></td></tr
-          <tr><td>诊断费（同次上门完成维修则免收）</td><td><strong>免费</strong></td></tr
-          <tr><td>非工作时间附加费 (下午 6 点-晚上 10 点)</td><td><strong>RM 50</strong></td></tr
-          <tr><td>电容更换 (最常见紧急维修)</td><td><strong>RM 180</strong></td></tr
-          <tr><td>室内风扇马达更换</td><td><strong>RM 250 - 350</strong></td></tr
-          <tr><td>室外风扇马达更换</td><td><strong>RM 300 - 450</strong></td></tr
-          <tr><td>PCB 电路板更换</td><td><strong>RM 300 - 600</strong></td></tr
-          <tr><td>排水管紧急疏通</td><td><strong>RM 120</strong></td></tr
-          <tr><td>压缩机更换 (施工前报价)</td><td><strong>RM 600 - 2,000</strong></td></tr
+          <tr><td>诊断费（标准时间 上午 9 点-下午 6 点）</td><td><strong>RM 88</strong></td></tr>
+          <tr><td>诊断费（同次上门完成维修则免收）</td><td><strong>免费</strong></td></tr>
+          <tr><td>非工作时间附加费 (下午 6 点-晚上 10 点)</td><td><strong>RM 50</strong></td></tr>
+          <tr><td>电容更换 (最常见紧急维修)</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>室内风扇马达更换</td><td><strong>RM 250 - 350</strong></td></tr>
+          <tr><td>室外风扇马达更换</td><td><strong>RM 300 - 450</strong></td></tr>
+          <tr><td>PCB 电路板更换</td><td><strong>RM 300 - 600</strong></td></tr>
+          <tr><td>排水管紧急疏通</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>压缩机更换 (施工前报价)</td><td><strong>RM 600 - 2,000</strong></td></tr>
         </tbody>
       </table>
 
