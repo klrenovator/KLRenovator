@@ -5515,9 +5515,562 @@ export const allPosts: BlogPost[] = [
       </ul>
       <p>变频机无隐藏附加费。所有价格开工前确认。</p>
 
+      <ul>
+        <li>基本保养：从<strong>RM 99</strong>起</li>
+        <li>化学清洗：从<strong>RM 120</strong>起</li>
+        <li>化学大修：从<strong>RM 220</strong>起</li>
+        <li>加气（R32/R410A）：从<strong>RM 150</strong>起</li>
+      </ul>
+      <p>变频机无隐藏附加费。所有价格开工前确认。</p>
+
       <h2>预约您的保养</h2>
       <p>WhatsApp <strong>+60 18-298 3573</strong>，提供您的机器品牌、型号（变频或非变频）和位置。我们将确认合适的服务和可用时段。周一至周日全KL及雪兰莪可当天上门。</p>
       <p>另请参阅：<a href="/zh/services/basic-servicing">基本保养价格</a> | <a href="/zh/services/chemical-wash">化学清洗价格</a> | <a href="/zh/services/gas-topup">加气价格</a> | <a href="/zh/cuci-aircond-kl">吉隆坡冷气清洗</a></p>
     `,
+  },
+  {
+    slug: "harga-servis-aircond-2026-malaysia",
+    title: "Harga Servis Aircond Malaysia 2026 - Panduan Harga Lengkap Semua Perkhidmatan",
+    titleMS: "Harga Servis Aircond Malaysia 2026 - Panduan Harga Lengkap Semua Perkhidmatan",
+    titleZH: "2026年马来西亚冷气服务价格 - 完整服务价格指南",
+    excerpt: "Complete transparent aircond service pricing for Malaysia 2026. All 9 services, all HP ranges, volume discounts, no hidden fees. Updated July 2026.",
+    excerptMS: "Harga servis aircond yang lengkap dan telus untuk Malaysia 2026. Semua 9 perkhidmatan, semua julat HP, diskaun kuantiti, tiada caj tersembunyi. Dikemas kini Julai 2026.",
+    excerptZH: "2026年马来西亚完整透明的冷气服务价格。所有9项服务，所有匹数范围，批量折扣，无隐藏费用。2026年7月更新。",
+    category: "Pricing Guide",
+    categoryMS: "Panduan Harga",
+    categoryZH: "价格指南",
+    tags: ["harga servis aircond 2026", "harga servis aircond malaysia", "harga cuci kimia aircond", "harga tambah gas aircond", "harga pasang aircond", "harga servis asas aircond", "harga overhaul kimia aircond", "harga pembaikan aircond", "harga pemindahan aircond", "KL Renovator"],
+    date: "2026-07-11",
+    dateDisplay: "July 2026",
+    lastReviewed: "2026-07-11",
+    readTime: 8,
+    relatedService: "Pressure Chemical Wash",
+    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    imageAlt: "KL Renovator transparent pricing guide for all aircond services in Malaysia 2026",
+    content: `
+      <h2>Harga Servis Aircond Malaysia 2026 - Panduan Lengkap &amp; Telus</h2>
+      <p>KL Renovator menyediakan harga telus untuk semua perkhidmatan aircond di Kuala Lumpur dan Selangor. Tiada caj tersembunyi - semua harga disahkan melalui WhatsApp sebelum juruteknik mula kerja. Harga di bawah bermula Julai 2026 dan tertakluk kepada perubahan tanpa notis awal.</p>
+
+      <h3>Diskaun Kuantiti (Volume Discounts)</h3>
+      <ul>
+        <li>2-3 unit: <strong>5% diskaun</strong></li>
+        <li>4-8 unit: <strong>10% diskaun</strong></li>
+        <li>8+ unit: <strong>15% diskaun</strong></li>
+      </ul>
+      <p>Diskaun terpakai apabila menempah berbilang unit dalam lawatan yang sama.</p>
+
+      <h2>1. Servis Asas (Basic Servicing)</h2>
+      <p><em>Pembersihan penapis, bilas paip longkang, semburan gegelung ringan, pemeriksaan elektrik, ujian penyejukan. Disyorkan setiap 3-6 bulan.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 99</strong></td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Dinding 3.0-3.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Ceiling Cassette 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Unit Tingkap 1.0-1.5 HP</td><td><strong>RM 99</strong></td></tr>
+          <tr><td>Unit Tingkap 2.0-2.5 HP</td><td><strong>RM 120</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. Cuci Kimia Bertekanan Tinggi (Pressure Chemical Wash)</h2>
+      <p><em>Semburan kimia 80-120 PSI, pembersihan gegelung &amp; blower, bilas paip longkang, ujian sistem. Disyorkan setiap 8-12 bulan untuk inverter, 12-18 bulan untuk non-inverter.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Dinding 3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>Dinding 4.0-5.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>Ceiling Cassette 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Unit Tingkap 1.0-2.0 HP</td><td><strong>RM 130</strong></td></tr>
+          <tr><td>Unit Tingkap 2.5-3.0 HP</td><td><strong>RM 160</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Overhaul Kimia (Chemical Overhaul)</h2>
+      <p><em>Pembongkaran penuh unit, rendaman kimia semua komponen, pembersihan dulang longkang, vakum &amp; ujian kebocoran. Untuk bocor air kronik, ais, atau unit 3+ tahun tidak dibersihkan.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>Dinding 3.0-3.5 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
+          <tr><td>Ceiling Cassette 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. Tambah Gas / Precision Balancing (Gas Top-Up)</h2>
+      <p><em>Pengukuran tekanan manifold digital, pemeriksaan kebocoran, pengecasan tepat mengikut berat. R22, R410A, R32.</em></p>
+      <table>
+        <thead><tr><th>Jenis Gas &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>R22 - 1.0 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>R22 - 1.5-2.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>R22 - 2.5-3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 1.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>R410A - 1.5-2.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 2.5-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>R32 - 1.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R32 - 1.5-2.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>R32 - 2.5-3.0 HP</td><td><strong>RM 220</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. Pemasangan Unit Baharu (New Unit Installation)</h2>
+      <p><em>Termasuk 7 kaki paip kuprum, pendawaian, paip longkang, braket, vakum pam, ujian kebocoran nitrogen, pentauliahan, waranti 1 bulan.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
+          <tr><td>Dinding 2.0 HP</td><td><strong>RM 249</strong></td></tr>
+          <tr><td>Dinding 2.5 HP</td><td><strong>RM 279</strong></td></tr>
+          <tr><td>Dinding 3.0 HP</td><td><strong>RM 329</strong></td></tr>
+          <tr><td>Dinding 4.0 HP</td><td><strong>RM 399</strong></td></tr>
+          <tr><td>Dinding 5.0 HP</td><td><strong>RM 449</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Ceiling Cassette 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
+          <tr><td>Unit Tingkap 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
+          <tr><td>Unit Tingkap 2.0-2.5 HP</td><td><strong>RM 249</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Nota:</strong> Paip kuprum tambahan melebihi 7 kaki: RM 25/kaki. Caj akses kondo tinggi &amp; kerja khas dikutip berasingan.</p>
+
+      <h2>6. Pembaikan &amp; Diagnostik (Troubleshooting &amp; Repairs)</h2>
+      <p><em>Diagnostik sistematik, penggantian bahagian (kapasitor, motor kipas, PCB, sensor, kontaktors, pam longkang, kompresor). Yuran diagnostik RM 88 dikecualikan jika dibaiki lawatan sama.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Yuran Diagnostik (dikecualikan dengan pembaikan)</td><td><strong>RM 88</strong></td></tr>
+          <tr><td>Penggantian Kapasitor</td><td><strong>RM 150 - 250</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 250 - 380</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
+          <tr><td>Penggantian Papan PCB</td><td><strong>RM 280 - 600</strong></td></tr>
+          <tr><td>Penggantian Sensor Suhu</td><td><strong>RM 150 - 250</strong></td></tr>
+          <tr><td>Penggantian Kontaktor</td><td><strong>RM 150 - 200</strong></td></tr>
+          <tr><td>Penggantian Pam Longkang</td><td><strong>RM 350 - 550</strong></td></tr>
+          <tr><td>Penggantian Kompresor</td><td><strong>RM 800 - 2,000</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>7. Servis Ceiling Cassette (Komersial)</h2>
+      <p><em>Khidmat pakar untuk unit ceiling cassette 4-hala - pejabat, kedai, restoran. Termasuk pembersihan pam kondensat, penyeimbangan tiupan 4-hala. Waktu luar pejabat tersedia.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Servis Asas 1.0-1.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Servis Asas 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Servis Asas 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Cuci Kimia 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>Cuci Kimia 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>Cuci Kimia 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Overhaul Kimia 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
+          <tr><td>Overhaul Kimia 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
+          <tr><td>Pemasangan 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Pemasangan 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Pemasangan 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>8. Tanggal &amp; Pemindahan (Dismantle &amp; Relocation)</h2>
+      <p><em>Pam-turun refrigerant, tanggal selamat, pengangkutan, pasang semula penuh dengan paip kuprum baharu, vakum &amp; ujian. Waranti 1 bulan.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Tanggal Sahaja (tanpa pasang semula)</td><td><strong>RM 90</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Lokasi Berbeza (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Nota:</strong> Paip kuprum baharu 7 kaki termasuk. Tambahan RM 25/kaki melebihi 7 kaki.</p>
+
+      <h2>9. Pembaikan Kecemasan (Emergency Aircond Repair)</h2>
+      <p><em>Respons 30-60 minit, 20+ jenama, bahagian biasa dalam van, operasi hingga 10 malam. Yuran diagnostik dikecualikan jika dibaiki.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Yuran Diagnostik (Waktu Standard 9am-6pm)</td><td><strong>RM 88</strong></td></tr>
+          <tr><td>Yuran Diagnostik (dikecualikan jika dibaiki lawatan sama)</td><td><strong>PERCUMA</strong></td></tr>
+          <tr><td>Surcaj Waktu Luar (6pm-10pm)</td><td><strong>RM 50</strong></td></tr>
+          <tr><td>Penggantian Kapasitor (kecemasan paling biasa)</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 250 - 350</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
+          <tr><td>Penggantian Papan PCB</td><td><strong>RM 300 - 600</strong></td></tr>
+          <tr><td>Pembersihan Paip Longkang Kecemasan</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Penggantian Kompresor (dikuotakan sebelum kerja)</td><td><strong>RM 600 - 2,000</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Liputan Perkhidmatan &amp; Cara Tempah</h2>
+      <p><strong>KL Renovator berkhidmat di:</strong> Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang, Batu Caves dan kawasan sekitar.</p>
+      <p><strong>Jenama yang dikhidmatkan:</strong> Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL, Isonic (unit dinding, ceiling cassette, tingkap sahaja).</p>
+      <p><strong>Cara Tempah:</strong> WhatsApp <strong>+60 18-298 3573</strong> dengan lokasi, jenama, HP, jenis unit &amp; perkhidmatan yang diperlukan. Kami sahkan harga &amp; slot tersedia dalam minit. Slot hari sama kerap tersedia Isnin-Ahad.</p>
+
+      <h2>Soalan Lazim (FAQ)</h2>
+      <details><summary><strong>Adakah harga di atas termasuk cukai &amp; semua caj?</strong></summary><p>Ya, harga di atas adalah harga akhir yang anda bayar - tiada cukai tersembunyi, tiada caj pemprosesan. Harga disahkan bertulis melalui WhatsApp sebelum kerja bermula.</p></details>
+      <details><summary><strong>Berapa lama tempoh waranti kerja?</strong></summary><p>Semua perkhidmatan dilindungi waranti kerja 1 bulan. Alat ganti (kapasitor, motor, PCB, dll.) dilindungi waranti 3 bulan. Jika masalah yang sama berulang dalam tempoh waranti, kami kembali tanpa caj.</p></details>
+      <details><summary><strong>Bolehkah saya membekalkan unit aircond sendiri?</strong></summary><p>Ya, KL Renovator menyediakan perkhidmatan pemasangan profesional sahaja. Anda beli unit dari Harvey Norman, Senheng, AEON, Lazada, Shopee, dll. Jika perlukan nasihat jenama &amp; HP, WhatsApp kami sebelum beli.</p></details>
+      <details><summary><strong>Adakah slot hari sama benar-benar tersedia?</strong></summary><p>Ya, slot hari sama kerap tersedia terutamanya untuk Batu Caves, Selayang, dan kawasan Lembah Klang sekitar di mana pasukan kami beribu pejabat. WhatsApp awal pagi untuk peluang terbaik.</p></details>
+      <details><summary><strong>Apa yang termasuk dalam pakej pemasangan RM 199?</strong></summary><p>Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak &amp; penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul dengan penebat, (3) Pendawaian elektrik melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum minimum 15 min, (7) Ujian kebocoran tekanan nitrogen, (8) Pentauliahan penuh, (9) Kad kerja bertulis + waranti kerja 1 bulan.</p></details>
+      <details><summary><strong>Bagaimana diskaun kuantiti dikira?</strong></summary><p>Contoh: 3 unit dinding 1.5 HP untuk cuci kimia = RM 120 x 3 = RM 360, kurang 5% = <strong>RM 342</strong>. 5 unit = RM 120 x 5 = RM 600, kurang 10% = <strong>RM 540</strong>. Diskaun dikira automatik pada sebut harga WhatsApp.</p></details>
+      <details><summary><strong>Adakah KL Renovator berdaftar SSM?</strong></summary><p>Ya, KL Renovator adalah syarikat berdaftar SSM (Multicore Dynamic Resources). Semua juruteknik berlesen &amp; berlatiah HVAC. 500+ ulasan 5 bintang di Google Maps.</p></details>
+    `,
+    contentMS: `
+      <h2>Harga Servis Aircond Malaysia 2026 - Panduan Lengkap &amp; Telus</h2>
+      <p>KL Renovator menyediakan harga telus untuk semua perkhidmatan aircond di Kuala Lumpur dan Selangor. Tiada caj tersembunyi - semua harga disahkan melalui WhatsApp sebelum juruteknik mula kerja. Harga di bawah bermula Julai 2026 dan tertakluk kepada perubahan tanpa notis awal.</p>
+
+      <h3>Diskaun Kuantiti (Volume Discounts)</h3>
+      <ul>
+        <li>2-3 unit: <strong>5% diskaun</strong></li>
+        <li>4-8 unit: <strong>10% diskaun</strong></li>
+        <li>8+ unit: <strong>15% diskaun</strong></li>
+      </ul>
+      <p>Diskaun terpakai apabila menempah berbilang unit dalam lawatan yang sama.</p>
+
+      <h2>1. Servis Asas (Basic Servicing)</h2>
+      <p><em>Pembersihan penapis, bilas paip longkang, semburan gegelung ringan, pemeriksaan elektrik, ujian penyejukan. Disyorkan setiap 3-6 bulan.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 99</strong></td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Dinding 3.0-3.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Ceiling Cassette 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Unit Tingkap 1.0-1.5 HP</td><td><strong>RM 99</strong></td></tr>
+          <tr><td>Unit Tingkap 2.0-2.5 HP</td><td><strong>RM 120</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. Cuci Kimia Bertekanan Tinggi (Pressure Chemical Wash)</h2>
+      <p><em>Semburan kimia 80-120 PSI, pembersihan gegelung &amp; blower, bilas paip longkang, ujian sistem. Disyorkan setiap 8-12 bulan untuk inverter, 12-18 bulan untuk non-inverter.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Dinding 3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>Dinding 4.0-5.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>Ceiling Cassette 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Unit Tingkap 1.0-2.0 HP</td><td><strong>RM 130</strong></td></tr>
+          <tr><td>Unit Tingkap 2.5-3.0 HP</td><td><strong>RM 160</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Overhaul Kimia (Chemical Overhaul)</h2>
+      <p><em>Pembongkaran penuh unit, rendaman kimia semua komponen, pembersihan dulang longkang, vakum &amp; ujian kebocoran. Untuk bocor air kronik, ais, atau unit 3+ tahun tidak dibersihkan.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>Dinding 3.0-3.5 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
+          <tr><td>Ceiling Cassette 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. Tambah Gas / Precision Balancing (Gas Top-Up)</h2>
+      <p><em>Pengukuran tekanan manifold digital, pemeriksaan kebocoran, pengecasan tepat mengikut berat. R22, R410A, R32.</em></p>
+      <table>
+        <thead><tr><th>Jenis Gas &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>R22 - 1.0 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>R22 - 1.5-2.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>R22 - 2.5-3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 1.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>R410A - 1.5-2.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 2.5-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>R32 - 1.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R32 - 1.5-2.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>R32 - 2.5-3.0 HP</td><td><strong>RM 220</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. Pemasangan Unit Baharu (New Unit Installation)</h2>
+      <p><em>Termasuk 7 kaki paip kuprum, pendawaian, paip longkang, braket, vakum pam, ujian kebocoran nitrogen, pentauliahan, waranti 1 bulan.</em></p>
+      <table>
+        <thead><tr><th>Jenis Unit &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
+          <tr><td>Dinding 2.0 HP</td><td><strong>RM 249</strong></td></tr>
+          <tr><td>Dinding 2.5 HP</td><td><strong>RM 279</strong></td></tr>
+          <tr><td>Dinding 3.0 HP</td><td><strong>RM 329</strong></td></tr>
+          <tr><td>Dinding 4.0 HP</td><td><strong>RM 399</strong></td></tr>
+          <tr><td>Dinding 5.0 HP</td><td><strong>RM 449</strong></td></tr>
+          <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Ceiling Cassette 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
+          <tr><td>Unit Tingkap 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
+          <tr><td>Unit Tingkap 2.0-2.5 HP</td><td><strong>RM 249</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Nota:</strong> Paip kuprum tambahan melebihi 7 kaki: RM 25/kaki. Caj akses kondo tinggi &amp; kerja khas dikutip berasingan.</p>
+
+      <h2>6. Pembaikan &amp; Diagnostik (Troubleshooting &amp; Repairs)</h2>
+      <p><em>Diagnostik sistematik, penggantian bahagian (kapasitor, motor kipas, PCB, sensor, kontaktors, pam longkang, kompresor). Yuran diagnostik RM 88 dikecualikan jika dibaiki lawatan sama.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Yuran Diagnostik (dikecualikan dengan pembaikan)</td><td><strong>RM 88</strong></td></tr>
+          <tr><td>Penggantian Kapasitor</td><td><strong>RM 150 - 250</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 250 - 380</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
+          <tr><td>Penggantian Papan PCB</td><td><strong>RM 280 - 600</strong></td></tr>
+          <tr><td>Penggantian Sensor Suhu</td><td><strong>RM 150 - 250</strong></td></tr>
+          <tr><td>Penggantian Kontaktor</td><td><strong>RM 150 - 200</strong></td></tr>
+          <tr><td>Penggantian Pam Longkang</td><td><strong>RM 350 - 550</strong></td></tr>
+          <tr><td>Penggantian Kompresor</td><td><strong>RM 800 - 2,000</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>7. Servis Ceiling Cassette (Komersial)</h2>
+      <p><em>Khidmat pakar untuk unit ceiling cassette 4-hala - pejabat, kedai, restoran. Termasuk pembersihan pam kondensat, penyeimbangan tiupan 4-hala. Waktu luar pejabat tersedia.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan &amp; HP</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Servis Asas 1.0-1.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Servis Asas 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Servis Asas 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Cuci Kimia 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>Cuci Kimia 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>Cuci Kimia 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Overhaul Kimia 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
+          <tr><td>Overhaul Kimia 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
+          <tr><td>Pemasangan 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Pemasangan 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Pemasangan 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>8. Tanggal &amp; Pemindahan (Dismantle &amp; Relocation)</h2>
+      <p><em>Pam-turun refrigerant, tanggal selamat, pengangkutan, pasang semula penuh dengan paip kuprum baharu, vakum &amp; ujian. Waranti 1 bulan.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Tanggal Sahaja (tanpa pasang semula)</td><td><strong>RM 90</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Lokasi Berbeza (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr
+        </tbody>
+      </table>
+      <p><strong>Nota:</strong> Paip kuprum baharu 7 kaki termasuk. Tambahan RM 25/kaki melebihi 7 kaki.</p>
+
+      <h2>9. Pembaikan Kecemasan (Emergency Aircond Repair)</h2>
+      <p><em>Respons 30-60 minit, 20+ jenama, bahagian biasa dalam van, operasi hingga 10 malam. Yuran diagnostik dikecualikan jika dibaiki.</em></p>
+      <table>
+        <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Yuran Diagnostik (Waktu Standard 9am-6pm)</td><td><strong>RM 88</strong></td></tr>
+          <tr><td>Yuran Diagnostik (dikecualikan jika dibaiki lawatan sama)</td><td><strong>PERCUMA</strong></td></tr>
+          <tr><td>Surcaj Waktu Luar (6pm-10pm)</td><td><strong>RM 50</strong></td></tr>
+          <tr><td>Penggantian Kapasitor (kecemasan paling biasa)</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 250 - 350</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
+          <tr><td>Penggantian Papan PCB</td><td><strong>RM 300 - 600</strong></td></tr>
+          <tr><td>Pembersihan Paip Longkang Kecemasan</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Penggantian Kompresor (dikuotakan sebelum kerja)</td><td><strong>RM 600 - 2,000</strong></td></tr
+        </tbody>
+      </table>
+
+      <h2>Liputan Perkhidmatan &amp; Cara Tempah</h2>
+      <p><strong>KL Renovator berkhidmat di:</strong> Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang, Batu Caves dan kawasan sekitar.</p>
+      <p><strong>Jenama yang dikhidmatkan:</strong> Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL, Isonic (unit dinding, ceiling cassette, tingkap sahaja).</p>
+      <p><strong>Cara Tempah:</strong> WhatsApp <strong>+60 18-298 3573</strong> dengan lokasi, jenama, HP, jenis unit &amp; perkhidmatan yang diperlukan. Kami sahkan harga &amp; slot tersedia dalam minit. Slot hari sama kerap tersedia Isnin-Ahad.</p>
+
+      <h2>Soalan Lazim (FAQ)</h2>
+      <details><summary><strong>Adakah harga di atas termasuk cukai &amp; semua caj?</strong></summary><p>Ya, harga di atas adalah harga akhir yang anda bayar - tiada cukai tersembunyi, tiada caj pemprosesan. Harga disahkan bertulis melalui WhatsApp sebelum kerja bermula.</p></details>
+      <details><summary><strong>Berapa lama tempoh waranti kerja?</strong></summary><p>Semua perkhidmatan dilindungi waranti kerja 1 bulan. Alat ganti (kapasitor, motor, PCB, dll.) dilindungi waranti 3 bulan. Jika masalah yang sama berulang dalam tempoh waranti, kami kembali tanpa caj.</p></details>
+      <details><summary><strong>Bolehkah saya membekalkan unit aircond sendiri?</strong></summary><p>Ya, KL Renovator menyediakan perkhidmatan pemasangan profesional sahaja. Anda beli unit dari Harvey Norman, Senheng, AEON, Lazada, Shopee, dll. Jika perlukan nasihat jenama &amp; HP, WhatsApp kami sebelum beli.</p></details>
+      <details><summary><strong>Adakah slot hari sama benar-benar tersedia?</strong></summary><p>Ya, slot hari sama kerap tersedia terutamanya untuk Batu Caves, Selayang, dan kawasan Lembah Klang sekitar di mana pasukan kami beribu pejabat. WhatsApp awal pagi untuk peluang terbaik.</p></details>
+      <details><summary><strong>Apa yang termasuk dalam pakej pemasangan RM 199?</strong></summary><p>Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak &amp; penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul dengan penebat, (3) Pendawaian elektrik melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum minimum 15 min, (7) Ujian kebocoran tekanan nitrogen, (8) Pentauliahan penuh, (9) Kad kerja bertulis + waranti kerja 1 bulan.</p></details>
+      <details><summary><strong>Bagaimana diskaun kuantiti dikira?</strong></summary><p>Contoh: 3 unit dinding 1.5 HP untuk cuci kimia = RM 120 x 3 = RM 360, kurang 5% = <strong>RM 342</strong>. 5 unit = RM 120 x 5 = RM 600, kurang 10% = <strong>RM 540</strong>. Diskaun dikira automatik pada sebut harga WhatsApp.</p></details>
+      <details><summary><strong>Adakah KL Renovator berdaftar SSM?</strong></summary><p>Ya, KL Renovator adalah syarikat berdaftar SSM (Multicore Dynamic Resources). Semua juruteknik berlesen &amp; berlatiah HVAC. 500+ ulasan 5 bintang di Google Maps.</p></details>
+    `,
+    contentZH: `
+      <h2>2026年马来西亚冷气服务价格 - 完整透明价格指南</h2>
+      <p>KL Renovator 为吉隆坡和雪兰莪的所有冷气服务提供透明价格。无隐藏费用 - 所有价格在技术员开始工作前通过 WhatsApp 确认。以下价格自 2026 年 7 月起生效，如有变更恕不另行通知。</p>
+
+      <h3>批量折扣</h3>
+      <ul>
+        <li>2-3 台：<strong>5% 折扣</strong></li>
+        <li>4-8 台：<strong>10% 折扣</strong></li>
+        <li>8 台以上：<strong>15% 折扣</strong></li>
+      </ul>
+      <p>同次上门预约多台机器适用折扣。</p>
+
+      <h2>1. 基本保养</h2>
+      <p><em>清洗过滤网、冲洗排水管、轻度盘管喷雾、电气检查、制冷测试。建议每 3-6 个月一次。</em></p>
+      <table>
+        <thead><tr><th>机型 &amp; HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>挂壁式 1.0-1.5 HP</td><td><strong>RM 99</strong></td></tr>
+          <tr><td>挂壁式 2.0-2.5 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>挂壁式 3.0-3.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>天花板卡式 1.0-1.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>天花板卡式 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>天花板卡式 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>窗式 1.0-1.5 HP</td><td><strong>RM 99</strong></td></tr>
+          <tr><td>窗式 2.0-2.5 HP</td><td><strong>RM 120</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. 高压化学清洗</h2>
+      <p><em>80-120 PSI 高压化学喷洗蒸发器盘管和风轮、冲洗排水管、系统测试。变频机建议每 8-12 个月，定频机每 12-18 个月。</em></p>
+      <table>
+        <thead><tr><th>机型 &amp; HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>挂壁式 1.0-1.5 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>挂壁式 2.0-2.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>挂壁式 3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>挂壁式 4.0-5.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>天花板卡式 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>天花板卡式 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>天花板卡式 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>窗式 1.0-2.0 HP</td><td><strong>RM 130</strong></td></tr>
+          <tr><td>窗式 2.5-3.0 HP</td><td><strong>RM 160</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. 化学大修</h2>
+      <p><em>完全拆机、所有零件化学浸泡清洗、排水盘清洗、抽真空 &amp; 查漏。适用于顽固漏水、结冰、或 3 年以上未深度清洗的机器。</em></p>
+      <table>
+        <thead><tr><th>机型 &amp; HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>挂壁式 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>挂壁式 2.0-2.5 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>挂壁式 3.0-3.5 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>天花板卡式 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
+          <tr><td>天花板卡式 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. 充气 / 精准平衡</h2>
+      <p><em>数显歧管表测量压力、泄漏检查、按重量精准充注。R22、R410A、R32。</em></p>
+      <table>
+        <thead><tr><th>气体类型 &amp; HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>R22 - 1.0 HP</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>R22 - 1.5-2.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>R22 - 2.5-3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 1.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>R410A - 1.5-2.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 2.5-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>R32 - 1.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R32 - 1.5-2.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>R32 - 2.5-3.0 HP</td><td><strong>RM 220</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. 新机安装</h2>
+      <p><em>含 7 尺铜管、电线、排水管、支架、抽真空、氮气查漏、调试、1 个月工艺保修。</em></p>
+      <table>
+        <thead><tr><th>机型 &amp; HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>挂壁式 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
+          <tr><td>挂壁式 2.0 HP</td><td><strong>RM 249</strong></td></tr>
+          <tr><td>挂壁式 2.5 HP</td><td><strong>RM 279</strong></td></tr>
+          <tr><td>挂壁式 3.0 HP</td><td><strong>RM 329</strong></td></tr>
+          <tr><td>挂壁式 4.0 HP</td><td><strong>RM 399</strong></td></tr>
+          <tr><td>挂壁式 5.0 HP</td><td><strong>RM 449</strong></td></tr>
+          <tr><td>天花板卡式 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>天花板卡式 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>天花板卡式 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
+          <tr><td>窗式 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
+          <tr><td>窗式 2.0-2.5 HP</td><td><strong>RM 249</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>注：</strong> 超过 7 尺的额外铜管：RM 25/尺。高层公寓进入费 &amp; 特殊作业另行收费。</p>
+
+      <h2>6. 维修 &amp; 诊断</h2>
+      <p><em>系统性诊断、更换零件（电容、风扇马达、PCB、传感器、接触器、排水泵、压缩机）。诊断费 RM 88，同次维修则免收。</em></p>
+      <table>
+        <thead><tr><th>服务</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>诊断费（维修则免收）</td><td><strong>RM 88</strong></td></tr>
+          <tr><td>电容更换</td><td><strong>RM 150 - 250</strong></td></tr>
+          <tr><td>室内风扇马达更换</td><td><strong>RM 250 - 380</strong></td></tr>
+          <tr><td>室外风扇马达更换</td><td><strong>RM 300 - 450</strong></td></tr>
+          <tr><td>PCB 电路板更换</td><td><strong>RM 280 - 600</strong></td></tr>
+          <tr><td>温度传感器更换</td><td><strong>RM 150 - 250</strong></td></tr>
+          <tr><td>接触器更换</td><td><strong>RM 150 - 200</strong></td></tr>
+          <tr><td>排水泵更换</td><td><strong>RM 350 - 550</strong></td></tr>
+          <tr><td>压缩机更换</td><td><strong>RM 800 - 2,000</strong></td></tr
+        </tbody>
+      </table>
+
+      <h2>7. 天花板卡式机服务 (商用)</h2>
+      <p><em>四向天花板卡式机专业服务 - 办公室、店铺、餐厅。含冷凝泵清洗、四向出风平衡。提供非工作时间服务。</em></p>
+      <table>
+        <thead><tr><th>服务 &amp; HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>基本保养 1.0-1.5 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>基本保养 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>基本保养 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>化学清洗 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>化学清洗 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
+          <tr><td>化学清洗 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>化学大修 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
+          <tr><td>化学大修 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr
+          <tr><td>安装 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr
+          <tr><td>安装 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr
+          <tr><td>安装 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr
+        </tbody>
+      </table>
+
+      <h2>8. 拆机 &amp; 搬迁</h2>
+      <p><em>冷媒泵送回收、安全拆机、运输、新地点全新安装（含新铜管）、抽真空 &amp; 测试。1 个月工艺保修。</em></p>
+      <table>
+        <thead><tr><th>服务</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>仅拆机（不重装）</td><td><strong>RM 90</strong></td></tr
+          <tr><td>拆机 + 同楼/就近重装 (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr
+          <tr><td>拆机 + 同楼/就近重装 (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr
+          <tr><td>拆机 + 不同地点重装 (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr
+        </tbody>
+      </table>
+      <p><strong>注：</strong> 新铜管 7 尺含在内。超过 7 尺加收 RM 25/尺。</p>
+
+      <h2>9. 紧急维修</h2>
+      <p><em>30-60 分钟极速响应，20+ 品牌，车载常用备件，每日营业至晚上 10 点。诊断费维修则免除。</em></p>
+      <table>
+        <thead><tr><th>服务</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>诊断费（标准时间 上午 9 点-下午 6 点）</td><td><strong>RM 88</strong></td></tr
+          <tr><td>诊断费（同次上门完成维修则免收）</td><td><strong>免费</strong></td></tr
+          <tr><td>非工作时间附加费 (下午 6 点-晚上 10 点)</td><td><strong>RM 50</strong></td></tr
+          <tr><td>电容更换 (最常见紧急维修)</td><td><strong>RM 180</strong></td></tr
+          <tr><td>室内风扇马达更换</td><td><strong>RM 250 - 350</strong></td></tr
+          <tr><td>室外风扇马达更换</td><td><strong>RM 300 - 450</strong></td></tr
+          <tr><td>PCB 电路板更换</td><td><strong>RM 300 - 600</strong></td></tr
+          <tr><td>排水管紧急疏通</td><td><strong>RM 120</strong></td></tr
+          <tr><td>压缩机更换 (施工前报价)</td><td><strong>RM 600 - 2,000</strong></td></tr
+        </tbody>
+      </table>
+
+      <h2>服务覆盖范围 &amp; 预订方式</h2>
+      <p><strong>KL Renovator 服务区域：</strong> 吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、万挠、士拉央、黑风洞及周边地区。</p>
+      <p><strong>服务品牌：</strong> 大金、松下、三菱、Acson、York、Carrier、美的、海尔、东芝、日立、三星、LG、夏普、富士通、格力、National、海信、Aux、TCL、Isonic（仅限挂壁式、天花卡式、窗式）。</p>
+      <p><strong>预订方式：</strong> WhatsApp <strong>+60 18-298 3573</strong>，提供位置、品牌、匹数、机型和所需服务。我们在几分钟内确认价格和可用时段。周一至周日常有当天时段。</p>
+
+      <h2>常见问题 (FAQ)</h2>
+      <details><summary><strong>上述价格是否包含税费和所有收费？</strong></summary><p>是的，上述价格为您最终支付的价格 - 无隐藏税费，无处理费。价格在施工前通过 WhatsApp 书面确认。</p></details>
+      <details><summary><strong>工艺保修期多久？</strong></summary><p>所有服务享 1 个月工艺保修。零部件（电容、马达、PCB 等）享 3 个月保修。若保修期内同一问题复发，我们免费返修。</p></details>
+      <details><summary><strong>我可以自己提供冷气机吗？</strong></summary><p>可以，KL Renovator 仅提供专业安装服务。您从 Harvey Norman、Senheng、AEON、Lazada、Shopee 等购买机器，我们负责安装。如需品牌和匹数建议，购买前 WhatsApp 咨询我们。</p></details>
+      <details><summary><strong>当天预约真的有空位吗？</strong></summary><p>有的，当天时段经常有空，特别是黑风洞、士拉央及我们团队总部所在的巴生谷周边地区。建议早上尽早 WhatsApp 以获最佳时段。</p></details>
+      <details><summary><strong>RM 199 安装套餐包含什么？</strong></summary><p>RM 199 标准挂壁式套餐包括：(1) 现场勘查和墙体评估，(2) 7 尺铜管按匹数正确配管并带正确隔热，(3) 从隔离开关到室内机通过专用线管的电线，(4) 带正确下坡度的 PVC 排水管，(5) 带橡胶减震垫的墙壁支架，(6) 真空泵抽真空（最少 15 分钟），(7) 氮气压力泄漏测试，(8) 全面调试 - 制冷、风量、温控器校准，(9) 书面工作卡和 1 个月工艺保修。</p></details>
+      <details><summary><strong>批量折扣如何计算？</strong></summary><p>例：3 台 1.5 HP 挂壁式化学清洗 = RM 120 x 3 = RM 360，减 5% = <strong>RM 342</strong>。5 台 = RM 120 x 5 = RM 600，减 10% = <strong>RM 540</strong>。折扣在 WhatsApp 报价中自动计算。</p></details>
+      <details><summary><strong>KL Renovator 是否注册了 SSM？</strong></summary><p>是的，KL Renovator 是注册公司 (Multicore Dynamic Resources)。所有技术员持证且受过 HVAC 专业培训。Google Maps 500+ 五星好评。</p></details>
+    `
   },
 ];
