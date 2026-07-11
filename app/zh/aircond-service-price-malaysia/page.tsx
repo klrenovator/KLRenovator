@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildFreshMetaTitle } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
@@ -45,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const pricingCategories = [
   {
-    title: clampMetaTitle("清洁服务"),
+    title: buildFreshMetaTitle("清洁服务", "zh"),
     rows: [
       { label: "基本保养 (标准) · 1.0 – 1.5 HP", price: "RM 99" },
       { label: "基本保养 (标准) · 2.0 – 2.5 HP", price: "RM 120" },
@@ -57,7 +58,7 @@ const pricingCategories = [
     ],
   },
   {
-    title: clampMetaTitle("加 Gas & 充冷媒"),
+    title: buildFreshMetaTitle("加 Gas & 充冷媒", "zh"),
     rows: [
       { label: "R22 Gas (标准) · 1.0 HP", price: "RM 120" },
       { label: "R410A Gas (变频) · 1.0 HP", price: "RM 150" },
@@ -66,7 +67,7 @@ const pricingCategories = [
     ],
   },
   {
-    title: clampMetaTitle("维修与零件"),
+    title: buildFreshMetaTitle("维修与零件", "zh"),
     rows: [
       { label: "诊断费", price: "RM 88" },
       { label: "更换电容 (Capacitor)", price: "RM 150 – 250" },
@@ -215,9 +216,9 @@ export default function ZhPricingPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {[
-              { icon: <FiCheck />, title: clampMetaTitle("透明且固定报价"), desc: "无隐藏费用。我们在 WhatsApp 报出的价格即为您在现场支付的价格。" },
-              { icon: <FiShield />, title: clampMetaTitle("1个月工艺保修"), desc: "每项服务均享有工艺保证。如果问题重复出现，我们免费上门修复。" },
-              { icon: <FiClock />, title: clampMetaTitle("当天上门服务"), desc: "上午 11 点前联系我们，即有极大机会预约到当天的服务时段。" },
+              { icon: <FiCheck />, title: buildFreshMetaTitle("透明且固定报价", "zh"), desc: "无隐藏费用。我们在 WhatsApp 报出的价格即为您在现场支付的价格。" },
+              { icon: <FiShield />, title: buildFreshMetaTitle("1个月工艺保修", "zh"), desc: "每项服务均享有工艺保证。如果问题重复出现，我们免费上门修复。" },
+              { icon: <FiClock />, title: buildFreshMetaTitle("当天上门服务", "zh"), desc: "上午 11 点前联系我们，即有极大机会预约到当天的服务时段。" },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
