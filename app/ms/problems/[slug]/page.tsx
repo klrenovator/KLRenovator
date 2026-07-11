@@ -9,7 +9,8 @@ import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { problemContent } from "@/app/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
-import { PROBLEM_BRAND_MAP } from "@/config/topical-authority-map";
+import { PROBLEM_BRAND_MAP, PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
+import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -71,6 +72,11 @@ export default async function ProblemPageMS({
   const enUrl = `https://www.klrenovator.com/problems/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/problems/${slug}`;
   const relatedService = siteConfig.services.find((s) => s.slug === problem.relatedService);
+  const secondaryServiceSlug = PROBLEM_SERVICE_MAP[slug]?.secondary;
+  const secondaryService = secondaryServiceSlug
+    ? siteConfig.services.find((s) => s.slug === secondaryServiceSlug)
+    : undefined;
+
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -234,6 +240,15 @@ export default async function ProblemPageMS({
                 Lihat Servis {relatedService.title} <FiArrowRight className="h-3.5 w-3.5" />
               </NextLink>
             )}
+            {secondaryService && (
+              <NextLink
+                href={`/ms/services/${secondaryService.slug}`}
+                className="inline-flex items-center gap-2 border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50 px-4 py-2.5 text-sm font-bold text-slate-700 rounded-xl transition-all"
+              >
+                Juga: {secondaryService.title}
+                <FiArrowRight className="h-3.5 w-3.5 text-sky-500" />
+              </NextLink>
+            )}
           </Reveal>
         </div>
       </section>
@@ -363,7 +378,43 @@ export default async function ProblemPageMS({
         </div>
       </section>
 
-      <section className="py-12 bg-white border-t border-slate-100">
+      
+      {/* Round 51 / 10.1–10.6: Problem → Blog reverse guides */}
+      {(() => {
+        const relatedSlugs = PROBLEM_BLOG_MAP_V2[slug] ?? [];
+        const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 3);
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-10 bg-white border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Panduan Pakar</p>
+                <h2 className="text-base font-black text-slate-900 mb-4">Panduan Berkaitan Masalah Ini</h2>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {relatedPosts.map((post) => (
+                    <NextLink
+                      key={post.slug}
+                      href={`/ms/blog/${post.slug}`}
+                      className="group flex flex-col bg-slate-50 border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition"
+                    >
+                      <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{post.categoryMS || post.category}</span>
+                      <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.titleMS || post.title}</span>
+                      <span className="text-xs text-slate-500 line-clamp-2">{post.excerptMS || post.excerpt}</span>
+                    </NextLink>
+                  ))}
+                </div>
+                <div className="mt-4">
+                  <NextLink href="/ms/blog" className="text-xs font-black uppercase tracking-widest text-sky-700 hover:text-sky-900">
+                    Semua Artikel →
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+<section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
@@ -380,7 +431,7 @@ export default async function ProblemPageMS({
                 </NextLink>
               ))}
               <NextLink
-                href="/problems"
+                href="/ms/problems"
                 className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-black text-sky-700 hover:bg-sky-100 transition rounded-xl"
               >
                 Semua Masalah <FiArrowRight className="h-3 w-3" />
