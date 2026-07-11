@@ -8,7 +8,7 @@ import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle, buildBrandMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
-import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
+import { BRAND_PROBLEM_MAP, BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
@@ -16,7 +16,9 @@ import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 
 // ─────────────────────────────────────────────────────────────────────────
-// /zh/brands/[slug] — Mandarin brand page. Mirrors /ms/brands/[slug].
+// /brands/[slug] — English brand page.
+// Round 51: restored EN body (was incorrectly serving Chinese copy) + brand→service reverse links.
+// populated in config/site.ts, so every brand gets a page (no filtering).
 // ─────────────────────────────────────────────────────────────────────────
 
 export function generateStaticParams() {
@@ -30,7 +32,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const brand = siteConfig.brandPages.find((b) => b.slug === slug);
-  if (!brand) return { title: "页面未找到" };
+  if (!brand) return { title: "Page not found" };
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/brands/${slug}`;
@@ -38,20 +40,20 @@ export async function generateMetadata({
 
   return {
     title: buildBrandMetaTitleWithDate(brand.metaTitle, "en"),
-    description: brand.metaDescZH || brand.metaDesc,
+    description: clampMetaDescription(brand.metaDesc),
     openGraph: {
       title: buildBrandMetaTitleWithDate(brand.metaTitle, "en"),
-      description: brand.metaDescZH || brand.metaDesc,
+      description: clampMetaDescription(brand.metaDesc),
       url: enUrl,
       type: "website",
       locale: "en_MY",
-      alternateLocale: ["en_MY", "ms_MY"],
+      alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
           url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`,
           width: 1200,
           height: 630,
-          alt: `${brand.name} Aircond Service KL & Selangor — KL Renovator`,
+          alt: `Aircond Service ${brand.name} KL & Selangor — KL Renovator`,
         },
       ],
     },
@@ -67,7 +69,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function BrandPageZH({
+export default async function BrandPageEN({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -77,13 +79,13 @@ export default async function BrandPageZH({
   if (!brand) notFound();
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
-  const zhUrl = `https://www.klrenovator.com/zh/brands/${slug}`;
-  const waMsg = `Hi KL Renovator，我想预约${brand.name}冷气服务。`;
+  const msUrl = `https://www.klrenovator.com/ms/brands/${slug}`;
+  const waMsg = `Hi KL Renovator, saya nak tempah servis aircond ${brand.name}.`;
 
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: `${brand.name}冷气服务`,
+    serviceType: `Aircond Service ${brand.name}`,
     provider: {
       "@type": "HVACBusiness",
       "@id": "https://www.klrenovator.com/#business",
@@ -94,7 +96,7 @@ export default async function BrandPageZH({
       name: "Kuala Lumpur & Selangor",
     },
     brand: { "@type": "Brand", name: brand.name },
-    description: brand.descriptionZH || brand.description,
+    description: brand.description,
   };
 
   const breadcrumbSchema = {
@@ -104,29 +106,29 @@ export default async function BrandPageZH({
       {
         "@type": "ListItem",
         position: 1,
-        name: "首页",
+        name: "Home",
         item: "https://www.klrenovator.com",
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "品牌",
-        item: "https://www.klrenovator.com/zh/brands",
+        name: "Brands",
+        item: "https://www.klrenovator.com/ms/brands",
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: `${brand.name}冷气`,
-        item: zhUrl,
+        name: `Aircond ${brand.name}`,
+        item: msUrl,
       },
     ],
   };
 
-  const faqSchema = brand.faqsZH?.length
+  const faqSchema = brand.faqs?.length
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: brand.faqsZH.map((f: { q: string; a: string }) => ({
+        mainEntity: brand.faqs.map((f: { q: string; a: string }) => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -134,18 +136,18 @@ export default async function BrandPageZH({
       }
     : null;
 
-  const otherZhBrands = siteConfig.brandPages
+  const otherBrands = siteConfig.brandPages
     .filter((b) => b.slug !== slug)
     .slice(0, 10);
   const brandAreaComboModule = buildBrandAreaComboModule(
     brand,
     siteConfig.areaPages,
-    "zh",
+    "ms",
   );
-  const brandProblemSlugsZH =
+  const brandProblemSlugs =
     BRAND_PROBLEM_MAP[slug] ?? BRAND_PROBLEM_MAP["_default"];
-  const relatedProblemsZH = siteConfig.problemPages.filter((p) =>
-    brandProblemSlugsZH.includes(p.slug),
+  const relatedProblems = siteConfig.problemPages.filter((p) =>
+    brandProblemSlugs.includes(p.slug),
   );
 
   return (
@@ -172,20 +174,22 @@ export default async function BrandPageZH({
             aria-label="Breadcrumb"
           >
             <NextLink
-              href="/zh"
+              href="/"
               className="hover:text-sky-600 transition font-medium"
             >
-              首页
+              Home
             </NextLink>
             <FiChevronRight className="h-3 w-3" />
             <NextLink
-              href="/zh/brands"
+              href="/brands"
               className="hover:text-sky-600 transition font-medium"
             >
-              品牌
+              Brands
             </NextLink>
             <FiChevronRight className="h-3 w-3" />
-            <span className="text-slate-900 font-bold">{brand.name} 冷气</span>
+            <span className="text-slate-900 font-bold">
+              Aircond {brand.name}
+            </span>
           </nav>
         </div>
       </div>
@@ -194,23 +198,23 @@ export default async function BrandPageZH({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
-              品牌冷气服务
+              Aircond Service Brands
             </p>
             <h1 className="mt-1">
-              <span className={title({ size: "lg" })}>{brand.name} </span>
+              <span className={title({ size: "lg" })}>Aircond Service </span>
               <span className={title({ size: "lg", color: "brand" })}>
-                冷气服务
+                {brand.name}
               </span>
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-              是的，KL Renovator 在吉隆坡及雪兰莪维修所有{" "}
-              <strong>{brand.name}</strong> 冷气型号。{" "}
-              {brand.descriptionZH || brand.description}
+              Ya, KL Renovator menservis semua model aircond{" "}
+              <strong>{brand.name}</strong> di KL &amp; Selangor.{" "}
+              {brand.description}
             </p>
 
             {brand.models?.length > 0 && (
               <p className="mt-3 text-sm text-slate-500 font-medium">
-                型号：{brand.models.join("、")}。
+                Model: {brand.models.join(", ")}.
               </p>
             )}
 
@@ -222,7 +226,7 @@ export default async function BrandPageZH({
                 className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] px-7 py-3.5 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" />
-                立即 WhatsApp
+                WhatsApp Now
               </a>
               <NextLink
                 href={enUrl}
@@ -240,7 +244,7 @@ export default async function BrandPageZH({
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                我们的{brand.name}专业服务
+                Our Expertise For {brand.name}
               </h2>
               <ul className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200 text-sm">
                 {brand.highlights.map((h: string, i: number) => (
@@ -258,31 +262,31 @@ export default async function BrandPageZH({
         </section>
       )}
 
-      {brand.inverterNoteZH && (
+      {brand.inverterNote && (
         <section className="py-10 bg-violet-50 border-t border-violet-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-3">
-                {brand.name}变频与定频
+                {brand.name} Inverter vs Non-Inverter
               </h2>
               <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                {brand.inverterNoteZH}
+                {brand.inverterNote}
               </p>
             </Reveal>
           </div>
         </section>
       )}
 
-      {brand.troubleshootingTipsZH &&
-        brand.troubleshootingTipsZH.length > 0 && (
+      {brand.troubleshootingTips &&
+        (brand.troubleshootingTips?.length ?? 0) > 0 && (
           <section className="py-10 bg-slate-50 border-t border-slate-100">
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <h2 className="text-base font-black text-slate-900 mb-4">
-                  {brand.name}故障排除提示
+                  Troubleshooting Tips For {brand.name}
                 </h2>
                 <div className="space-y-3">
-                  {brand.troubleshootingTipsZH.map(
+                  {(brand.troubleshootingTips ?? []).map(
                     (tip: { issue: string; tip: string }, i: number) => (
                       <div
                         key={i}
@@ -308,12 +312,12 @@ export default async function BrandPageZH({
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                {brand.name}真实作业照片
+                Real Job Photos — {brand.name}
               </h2>
               <div className="grid grid-cols-2 gap-3">
                 {brand.galleryImages.map(
                   (
-                    img: { src: string; alt: string; altZH?: string },
+                    img: { src: string; alt: string; altMS?: string },
                     i: number,
                   ) => (
                     <div
@@ -322,7 +326,7 @@ export default async function BrandPageZH({
                     >
                       <NextImage
                         src={img.src}
-                        alt={img.altZH || img.alt}
+                        alt={img.alt}
                         fill
                         sizes="50vw"
                         className="object-cover"
@@ -338,7 +342,7 @@ export default async function BrandPageZH({
         </section>
       )}
 
-      {/* ── 信任说明：我们提供维修服务，并非官方经销商 ─────────────────── */}
+      {/* ── Trust Block: We Service, We Are Not An Official Agent ─────────────── */}
       <section className="py-10 bg-emerald-50 border-y border-emerald-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -348,16 +352,21 @@ export default async function BrandPageZH({
               </div>
               <div>
                 <h2 className="font-black text-sm text-slate-900 mb-1.5 uppercase tracking-wide">
-                  我们提供{brand.name}维修服务 — 但并非{brand.name}官方经销商
+                  We Service {brand.name} — We Are Not An Official Agent Of {brand.name}
                 </h2>
                 <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                  KL Renovator是一家独立的HVAC维修服务公司，并非{brand.name}
-                  的官方经销商或授权服务中心。我们为{brand.name}
-                  机型提供维修、保养和安装服务，使用来自马来西亚可信赖供应商的正品或同等OEM替换零件（电容器、PCB主板、冷媒、排水泵）——绝不使用假冒或未经验证的零件。如果您的
-                  {brand.name}
-                  机器仍在原厂保修期内，我们会事先告知维修是否可能影响保修，让您自行决定是否改由
-                  {brand.name}
-                  官方授权中心处理。我们的宗旨是诚实透明的服务——而非推销您不需要的新机器。
+                  KL Renovator is an independent HVAC service company, not an official agent
+                  or authorised service centre of {brand.name}. Kami
+                  service, repair and install {brand.name} using
+                  genuine or OEM-equivalent parts (capacitors, PCB boards, gas,
+                  drain pumps) from trusted Malaysian suppliers —
+                  never counterfeit or unverified parts. If
+                  unit {brand.name} is still under manufacturer warranty, we
+                  will tell you first whether the repair may
+                  affect that warranty, so you can choose to
+                  go to the official service centre for {brand.name} yourself if needed.
+                  Our job is honest, transparent service — not selling a unit
+                  you do not need.
                 </p>
               </div>
             </div>
@@ -365,15 +374,15 @@ export default async function BrandPageZH({
         </div>
       </section>
 
-      {brand.faqsZH?.length > 0 && (
+      {brand.faqs?.length > 0 && (
         <section className="py-10 bg-slate-50 border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                常见问题 — {brand.name}冷气
+                FAQ — {brand.name}
               </h2>
               <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-                {brand.faqsZH.map(
+                {brand.faqs.map(
                   (faq: { q: string; a: string }, i: number) => (
                     <details key={i} className="group bg-white p-4">
                       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
@@ -443,7 +452,7 @@ export default async function BrandPageZH({
                     ))}
                   </div>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-700 group-hover:gap-2 transition-all">
-                    打开区域路线 <FiArrowRight className="h-3 w-3" />
+                    Open area page <FiArrowRight className="h-3 w-3" />
                   </span>
                 </NextLink>
               ))}
@@ -462,13 +471,14 @@ export default async function BrandPageZH({
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-1">
-                  技术规格
+                  Technical Specifications
                 </p>
                 <h2 className="text-xl font-black text-slate-900 mb-2">
-                  {brand.name} 冷气技术规格
+                  Technical Specifications Aircond {brand.name}
                 </h2>
                 <p className="text-sm text-slate-500 mb-6 max-w-2xl">
-                  {brand.name}冷气机在马来西亚的关键技术细节及维护要求。
+                  Key technical details and service requirements for{" "}
+                  {brand.name} in Malaysia.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {techSpecs.map((ts, i) => (
@@ -500,21 +510,21 @@ export default async function BrandPageZH({
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-1">
-                  错误代码指南
+                  Error Code Guide
                 </p>
                 <h2 className="text-xl font-black text-slate-900 mb-2">
-                  常见 {brand.name} 冷气错误代码
+                  Common Error Codes For {brand.name}
                 </h2>
                 <p className="text-sm text-slate-500 mb-6 max-w-2xl">
-                  {brand.name}{" "}
-                  冷气上的指示灯闪烁？这些是最常见的错误代码及其含义。请WhatsApp
-                  KL Renovator发送代码和型号，以便快速远程诊断。
+                  Blinking lights on your {brand.name} unit? These are common codes
+                  and what they mean. WhatsApp KL Renovator the code + model
+                  for a fast remote diagnosis.
                 </p>
                 <div className="overflow-hidden border border-slate-200 rounded-2xl">
                   <div className="grid grid-cols-3 bg-slate-100 px-5 py-3 text-xs font-black uppercase tracking-widest text-slate-500">
-                    <span>错误代码</span>
-                    <span>含义</span>
-                    <span>修复方案</span>
+                    <span>Error Code</span>
+                    <span>Meaning</span>
+                    <span>Fix</span>
                   </div>
                   {errorCodes.map((ec, i) => (
                     <div
@@ -530,39 +540,39 @@ export default async function BrandPageZH({
                   ))}
                 </div>
                 <p className="text-xs text-slate-400 mt-3">
-                  错误代码未列出？请将您的 {brand.name} 型号及错误发送WhatsApp至
-                  +60182983573 — 我们将为您诊断。
+                  Code not listed? WhatsApp +60182983573 with your
+                  model number {brand.name} — we will diagnose it.
                 </p>
               </Reveal>
             </div>
           </section>
         );
       })()}
-      {relatedProblemsZH.length > 0 && (
+      {relatedProblems.length > 0 && (
         <section className="py-10 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
-                问题 · Masalah
+                Problems
               </p>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                我们解决的{brand.name}常见问题
+                Common {brand.name} Problems We Fix
               </h2>
               <div className="flex flex-wrap gap-2">
-                {relatedProblemsZH.map((p) => (
+                {relatedProblems.map((p) => (
                   <NextLink
                     key={p.slug}
-                    href={`/zh/problems/${p.slug}`}
+                    href={`/problems/${p.slug}`}
                     className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
                   >
-                    {p.nameZH || p.name}
+                    {p.name}
                   </NextLink>
                 ))}
                 <NextLink
-                  href="/zh/problems"
+                  href="/problems"
                   className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
                 >
-                  所有问题 →
+                  All Problems →
                 </NextLink>
               </div>
             </Reveal>
@@ -570,27 +580,66 @@ export default async function BrandPageZH({
         </section>
       )}
 
-      <section className="py-12 bg-white border-t border-slate-100">
+      
+      {/* Round 51 / 10.1–10.6: Brand → Service reverse links */}
+      {(() => {
+        const serviceSlugs = BRAND_SERVICE_MAP[slug] || BRAND_SERVICE_MAP["_default"] || [];
+        const brandServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));
+        if (brandServices.length === 0) return null;
+        return (
+          <section className="py-10 bg-slate-50 border-t border-slate-100">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">
+                  Services
+                </p>
+                <h2 className="text-base font-black text-slate-900 mb-4">
+                  {brand.name} Aircond Services We Provide
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {brandServices.map((s) => (
+                    <NextLink
+                      key={s.slug}
+                      href={`/services/${s.slug}`}
+                      className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
+                    >
+                      {s.title}
+                    </NextLink>
+                  ))}
+                  <NextLink
+                    href="/services"
+                    className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
+                  >
+                    All Services →
+                  </NextLink>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })()}
+
+<section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
-              我们服务的其他品牌
+              Brands Lain Yang Kami Servis
             </p>
             <div className="flex flex-wrap gap-2">
-              {otherZhBrands.map((b) => (
+              {otherBrands.map((b) => (
                 <NextLink
                   key={b.slug}
-                  href={`/zh/brands/${b.slug}`}
+                  href={`/brands/${b.slug}`}
                   className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
-                  {b.name}冷气
+                  Aircond {b.name}
                 </NextLink>
               ))}
               <NextLink
                 href="/brands"
                 className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-black text-sky-700 hover:bg-sky-100 transition rounded-xl"
               >
-                所有品牌 <FiArrowRight className="h-3 w-3" />
+                Semua Brands <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
           </Reveal>
