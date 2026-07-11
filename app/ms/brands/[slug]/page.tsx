@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
-import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaTitle, buildBrandMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { BRAND_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
@@ -39,11 +39,11 @@ export async function generateMetadata({
   const zhUrl = `https://www.klrenovator.com/zh/brands/${slug}`;
 
   return {
-    title: clampMetaTitle(brand.metaTitleMS || brand.metaTitle),
-    description: clampMetaDescription(brand.metaDescMS || brand.metaDesc),
+    title: buildBrandMetaTitleWithDate(brand.metaTitleMS || brand.metaTitle, "ms"),
+    description: brand.metaDescMS || brand.metaDesc,
     openGraph: {
-      title: clampMetaTitle(brand.metaTitleMS || brand.metaTitle),
-      description: clampMetaDescription(brand.metaDescMS || brand.metaDesc),
+      title: buildBrandMetaTitleWithDate(brand.metaTitleMS || brand.metaTitle, "ms"),
+      description: brand.metaDescMS || brand.metaDesc,
       url: msUrl,
       type: "website",
       locale: "ms_MY",
