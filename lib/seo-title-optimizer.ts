@@ -152,18 +152,56 @@ export function buildTitle(parts: string[], separator = " — "): string {
 
 // Helper for area pages that add fresh date: ensure date addition doesn't push over max
 export function buildAreaMetaTitleWithDate(baseTitle: string, freshDate: string): string {
-  // baseTitle already like "Aircond Service Kuala Lumpur — RM 99 Same Day KL"
-  // If it contains " — ", try to insert date before last separator
-  // Example: "Aircond Service Kuala Lumpur — RM 99 Same Day KL" + "July 2026"
-  // => "Aircond Service Kuala Lumpur July 2026 — RM 99 Same Day KL" (current logic)
-  // We will build and then clamp
   const withDate = baseTitle.includes(" — ")
     ? (() => {
         const parts = baseTitle.split(" — ");
-        // Insert date into first part
         return `${parts[0]} ${freshDate} — ${parts.slice(1).join(" — ")}`;
       })()
     : `${baseTitle} — ${freshDate}`;
 
   return clampMetaTitle(withDate);
+}
+
+// 20E.44 Monthly Title Freshness Automated Pattern - generic builder for any page type
+export function buildFreshMetaTitle(baseTitle: string, locale: "en" | "ms" | "zh" = "en"): string {
+  // Import dynamically to avoid circular dep - we use simple date logic here
+  const now = new Date();
+  let freshDate: string;
+  if (locale === "ms") {
+    const monthNames = ["Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"];
+    freshDate = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+  } else if (locale === "zh") {
+    freshDate = `${now.getFullYear()}年${now.getMonth() + 1}月`;
+  } else {
+    const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    freshDate = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+  }
+
+  // If base already contains freshDate, return clamped base
+  if (baseTitle.includes(freshDate)) {
+    return clampMetaTitle(baseTitle);
+  }
+
+  // If base contains a year like 2026, replace it with freshDate to avoid duplication
+  // e.g., "Installation Price Malaysia 2026 — From RM 199" → remove 2026 then inject freshDate
+  let cleaned = baseTitle.replace(/\s*202[0-9]\s*/g, " ").replace(/\s+/g, " ").trim();
+
+  // Inject fresh date
+  const withDate = cleaned.includes(" — ")
+    ? (() => {
+        const parts = cleaned.split(" — ");
+        return `${parts[0]} ${freshDate} — ${parts.slice(1).join(" — ")}`;
+      })()
+    : `${cleaned} — ${freshDate}`;
+
+  return clampMetaTitle(withDate);
+}
+
+// Specific helpers for service pages, brand pages, etc. (wrappers around buildFreshMetaTitle)
+export function buildBrandMetaTitleWithDate(baseTitle: string, locale: "en" | "ms" | "zh" = "en"): string {
+  return buildFreshMetaTitle(baseTitle, locale);
+}
+
+export function buildServiceMetaTitleWithDate(baseTitle: string, locale: "en" | "ms" | "zh" = "en"): string {
+  return buildFreshMetaTitle(baseTitle, locale);
 }
