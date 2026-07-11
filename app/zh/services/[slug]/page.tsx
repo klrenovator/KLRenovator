@@ -1,5 +1,5 @@
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
-import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaTitle, buildServiceMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
@@ -34,10 +34,10 @@ export async function generateMetadata({
   const canonical = `https://www.klrenovator.com/zh/services/${slug}`;
   const price = service?.startPrice ?? "";
   return {
-    title: clampMetaTitle(`${i18.titleZH} KL & Selangor — From RM ${price}`),
+    title: buildServiceMetaTitleWithDate(`${i18.titleZH} KL & Selangor — From RM ${price}`, "zh"),
     description: clampMetaDescription(i18.taglineZH),
     openGraph: {
-      title: clampMetaTitle(`${i18.titleZH} KL & Selangor — From RM ${price}`),
+      title: buildServiceMetaTitleWithDate(`${i18.titleZH} KL & Selangor — From RM ${price}`, "zh"),
       description: clampMetaDescription(i18.taglineZH),
       url: canonical,
       type: "website",
