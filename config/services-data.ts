@@ -125,7 +125,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Apakah persediaan yang diperlukan sebelum juruteknik tiba untuk cuci kimia?",
         a: "Persediaan minimum sahaja diperlukan. Pastikan terdapat ruang berjalan yang lapang di bawah unit penghawa dingin dalaman dan alihkan barang berharga atau mudah pecah ke tepi. Juruteknik kami tiba lengkap dengan beg kanvas pelindung kalis air dan alas pelindung tugas berat untuk melindungi dinding, lantai dan perabot sekeliling anda sepenuhnya semasa cucian bertekanan tinggi 80–120 PSI.",
       },
-      { q: "Adakah proses cuci kimia selamat untuk alam sekitar?", a: "Ya. KL Renovator menggunakan agen pembersih biodegradasi yang mesra alam untuk memecahkan bahan biologi tanpa kesan buruk atau sisa toksik." }
+      { q: "Adakah proses cuci kimia selamat untuk alam sekitar?", a: "Ya. KL Renovator menggunakan agen pembersih biodegradasi yang mesra alam untuk memecahkan bahan biologi tanpa kesan buruk atau sisa toksik." },
+      { q: "Bolehkah saya menempah cuci kimia pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama tersedia untuk cuci kimia di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik mendapatkan slot hari yang sama." }
     ],
     faqsZH: [
       {
@@ -148,7 +149,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "技术员上门进行化学清洗前，我需要做哪些准备工作？",
         a: "仅需简易准备。只需确保室内冷气机正下方有足够的操作及走动空间，并稍微移开易碎品或贵重物品。技术员上门时均配备重型防水保护帆布袋和防污垫布，在整个80–120 PSI高压清洗过程中全方位保护您的墙面、地板与周围家具。",
       },
-      { q: "化学清洗过程对环境安全吗？", a: "是的。KL Renovator 使用可生物降解的环保清洁剂，能有效分解生物污染物，无有害环境影响或毒性残留。" }
+      { q: "化学清洗过程对环境安全吗？", a: "是的。KL Renovator 使用可生物降解的环保清洁剂，能有效分解生物污染物，无有害环境影响或毒性残留。" },
+      { q: "能否当天预约化学清洗？", a: "可以 — KL Renovator 经常有当天预约名额用于化学清洗。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
@@ -360,7 +362,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Bolehkah saya menambah gas sendiri?",
         a: "Tidak. Pengendalian bahan pendingin di Malaysia memerlukan juruteknik bertauliah di bawah Peraturan Pengurusan Bahan Pendingin (Kualiti Alam Sekitar). Anda memerlukan peralatan khusus dan latihan profesional. Pengisian berlebihan walaupun 10\u201315% boleh menyebabkan kerosakan kompresor. Ini bukan kerja DIY.",
       },
-      { q: "Bagaimana saya tahu jika kebocoran itu 'perlahan' atau 'cepat'?", a: "Kebocoran perlahan mengambil masa 6-12 bulan untuk menjejaskan penyejukan; kebocoran cepat mengakibatkan angin panas dalam masa beberapa hari. Pengesan elektronik kami boleh mengesan kebocoran mikro paling kecil." }
+      { q: "Bagaimana saya tahu jika kebocoran itu 'perlahan' atau 'cepat'?", a: "Kebocoran perlahan mengambil masa 6-12 bulan untuk menjejaskan penyejukan; kebocoran cepat mengakibatkan angin panas dalam masa beberapa hari. Pengesan elektronik kami boleh mengesan kebocoran mikro paling kecil." },
+      { q: "Bolehkah saya menempah tambah gas pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk tambah gas di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." }
     ],
     faqsZH: [
       {
@@ -383,7 +386,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "我可以自己充气吗？",
         a: "不可以。在马来西亚，制冷剂处理根据《环境质量（制冷剂管理）法规》需要认证技术员。充气过量即使10-15%也可能导致压缩机损坏。使用错误类型的制冷剂可能导致系统内部腐蚀的化学反应。这绝非DIY工作\u2014\u2014以RM 120-180的价格（含专业泄漏检查）也并不昂贵。",
       },
-      { q: "如何判断漏气是“慢漏”还是“快漏”？", a: "慢漏通常需要6-12个月才影响制冷；快漏则会在几天内排空冷媒。KL Renovator 的电子检漏仪可以检测到铜管接头中最微小的渗漏。" }
+      { q: "如何判断漏气是“慢漏”还是“快漏”？", a: "慢漏通常需要6-12个月才影响制冷；快漏则会在几天内排空冷媒。KL Renovator 的电子检漏仪可以检测到铜管接头中最微小的渗漏。" },
+      { q: "能否当天预约冷媒充注？", a: "可以 — KL Renovator 经常有当天预约名额用于充气服务。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
       { label: "R22 Gas · 1.0 HP", price: "RM 120" },
@@ -481,7 +485,9 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Apa jaminan yang anda berikan untuk pembaikan?",
         a: "Jaminan 3 bulan untuk semua bahagian yang diganti (melindungi kecacatan pembuatan dan kegagalan pramatang). Jaminan 1 bulan untuk mutu kerja (melindungi ralat pemasangan, sambungan longgar, dll.). Jika kerosakan sama berulang dalam tempoh jaminan, kami kembali tanpa caj. Semua terma jaminan ditulis dengan jelas pada kad kerja anda.",
       },
-      { q: "Bolehkah anda membaiki aircond yang berusia lebih 15 tahun?", a: "Kami boleh mendiagnosisnya, tetapi ketersediaan alat ganti untuk unit era R22 semakin berkurangan. Jika alat ganti sudah tiada, kami akan berikan nasihat jujur sama ada naik taraf ke R32 lebih selamat." }
+      { q: "Bolehkah anda membaiki aircond yang berusia lebih 15 tahun?", a: "Kami boleh mendiagnosisnya, tetapi ketersediaan alat ganti untuk unit era R22 semakin berkurangan. Jika alat ganti sudah tiada, kami akan berikan nasihat jujur sama ada naik taraf ke R32 lebih selamat." },
+      { q: "Bolehkah saya menempah pembaikan pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk pembaikan di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." },
+      { q: "Adakah juruteknik anda membawa alat ganti biasa ke van?", a: "Ya — van kami membawa kapasitor, motor kipas, papan PCB, sensor, kontaktors, paip longkang, dan refrigerant untuk kebanyakan pembaikan biasa." }
     ],
     faqsZH: [
       {
@@ -500,7 +506,9 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "机器发出嗡嗡声但风扇不转\u2014\u2014什么问题？",
         a: "这几乎肯定是电容损坏。电容为风扇电机提供启动所需的\u2018推力\u2019。当它损坏时，电机因供电而嗡嗡响但无法启动旋转。在电容损坏的情况下继续运行机器，会在几小时内烧毁电机\u2014\u2014把RM 150的电容更换变成RM 300+的电机更换。如果听到嗡嗡声但没有转动，立即在隔离开关处关闭机器并WhatsApp联系我们。",
       },
-      { q: "你们能维修超过15年的老冷气吗？", a: "我们可以进行诊断，但R22时代机器的零件供应正在减少。如果零件已停产，我们会诚实建议升级至R32机型是否更明智。" }
+      { q: "你们能维修超过15年的老冷气吗？", a: "我们可以进行诊断，但R22时代机器的零件供应正在减少。如果零件已停产，我们会诚实建议升级至R32机型是否更明智。" },
+      { q: "能否当天预约维修？", a: "可以 — KL Renovator 经常有当天预约名额用于维修服务。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" },
+      { q: "技师上门时会带常用备件吗？", a: "会 — 我们的车辆携带电容器、风扇马达、PCB板、传感器、接触器、排水管和制冷剂，可现场完成大多数常见维修。" }
     ],
     priceTable: [
       { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
@@ -721,7 +729,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Adakah servis asas termasuk tambah gas?",
         a: "Tidak — servis asas adalah perkhidmatan pembersihan dan pemeriksaan. Jika ujian penyejukan juruteknik kami menunjukkan tekanan bahan pendingin rendah (penurunan suhu kurang daripada 8°C selepas pembersihan), mereka akan memaklumkan anda dan mengkuotakan tambah gas secara berasingan (dari RM 120). Sistem aircond tidak menggunakan bahan pendingin — jika gas rendah, ada kebocoran di suatu tempat. Kami akan memeriksa titik kebocoran yang jelas (sambungan flare, injap servis) dan menasihatkan sama ada tambah gas sahaja mencukupi atau pembaikan kebocoran diperlukan.",
       },
-      { q: "Apa yang berlaku jika anda menemui kerosakan semasa servis asas?", a: "Jika pemeriksaan 8-titik kami menemui kapasitor atau sensor yang rosak, kami akan maklumkan segera dan berikan sebut harga tetap. Kebanyakan pembaikan boleh diselesaikan terus pada lawatan yang sama." }
+      { q: "Apa yang berlaku jika anda menemui kerosakan semasa servis asas?", a: "Jika pemeriksaan 8-titik kami menemui kapasitor atau sensor yang rosak, kami akan maklumkan segera dan berikan sebut harga tetap. Kebanyakan pembaikan boleh diselesaikan terus pada lawatan yang sama." },
+      { q: "Bolehkah saya menempah servis asas pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk servis asas di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." }
     ],
     faqsZH: [
       {
@@ -744,7 +753,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "基本保养包含加气吗？",
         a: "不包含——基本保养是清洁和检查服务。如果我们技术员的制冷测试显示冷媒压力低（清洁后温差低于8°C），他们会通知您并单独报价加气服务（从RM 120起）。冷气系统不会消耗制冷剂——如果气体不足，说明某处有泄漏。我们会检查明显的泄漏点（喇叭口接头、检修阀）并建议仅加气是否足够还是需要修复泄漏。",
       },
-      { q: "如果在基本保养期间发现故障怎么办？", a: "如果我们的8项检查发现电容或传感器故障，我们会立即通知您并提供确定报价。大多数维修可以在同一次上门中当场完成。" }
+      { q: "如果在基本保养期间发现故障怎么办？", a: "如果我们的8项检查发现电容或传感器故障，我们会立即通知您并提供确定报价。大多数维修可以在同一次上门中当场完成。" },
+      { q: "能否当天预约基本保养？", a: "可以 — KL Renovator 经常有当天预约名额用于基本保养。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 99" },
@@ -858,7 +868,9 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "能在营业时间之后维修天花板卡式机吗？",
         a: "可以\u2014\u2014我们为商业客户提供非工作时间服务（晚上6点-10点、周末和公共假日）。我们理解餐厅不能在午餐高峰期让技术员在顾客上方作业，零售店不能在客流高峰时段关闭空调维修。非工作时间有少量附加费（晚上RM 50）。WhatsApp我们您的首选时间安排。",
       },
-      { q: "为什么我办公室的天花板卡式机会漏水到吊顶板上？", a: "这通常是由于内置冷凝水泵故障或内部接水盘积满淤泥。我们在保养时会进行“流量测试”以确保水泵满负荷正常运行。" }
+      { q: "为什么我办公室的天花板卡式机会漏水到吊顶板上？", a: "这通常是由于内置冷凝水泵故障或内部接水盘积满淤泥。我们在保养时会进行“流量测试”以确保水泵满负荷正常运行。" },
+      { q: "Bolehkah saya menempah servis ceiling cassette pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk servis ceiling cassette di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." },
+      { q: "能否当天预约天花板卡式机保养？", a: "可以 — KL Renovator 经常有当天预约名额用于卡式机保养。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
       { label: "Basic Service · 1.0 – 1.5 HP", price: "RM 150" },
@@ -953,7 +965,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Adakah berbaloi memindahkan unit lama, atau beli yang baharu?",
         a: "Panduan jujur kami: (1) Unit bawah 5 tahun, inverter, berfungsi sempurna \u2192 pindahkan. Kos RM 250\u2013350 vs RM 1,500+ untuk unit baharu + pemasangan. (2) Unit 5\u20138 tahun, berfungsi baik, bukan inverter \u2192 masih berbaloi jika diservis secara berkala. (3) Unit 8+ tahun, gunakan gas R22, pernah dibaiki \u2192 pertimbangkan untuk ganti. R22 sedang dihentikan dan semakin mahal. Unit inverter R32 baharu akan mengurangkan bil elektrik 30\u201350%. Jika tidak pasti, WhatsApp kami jenama, model, dan umur unit anda.",
       },
-      { q: "Adakah proses pemindahan akan merosakkan seal dalaman unit saya?", a: "Tidak jika dilakukan oleh KL Renovator. Kami menggunakan kunci tork bertauliah pada semua sambungan untuk memastikan kedap udara standard kilang yang menghalang kebocoran gas di lokasi baru." }
+      { q: "Adakah proses pemindahan akan merosakkan seal dalaman unit saya?", a: "Tidak jika dilakukan oleh KL Renovator. Kami menggunakan kunci tork bertauliah pada semua sambungan untuk memastikan kedap udara standard kilang yang menghalang kebocoran gas di lokasi baru." },
+      { q: "Bolehkah saya menempah pemindahan pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk pemindahan di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." }
     ],
     faqsZH: [
       {
@@ -976,7 +989,8 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "搬迁旧机器值得吗，还是应该买新的？",
         a: "我们的诚实建议：（1）机器5年以下、变频、工作正常\u2192搬迁。费用RM 250-350 vs 新机+安装RM 1,500+。（2）机器5-8年、工作正常、非变频\u2192如果定期保养仍值得搬迁。保养良好的旧机器还可以再用3-5年。（3）机器8年以上、使用R22气体、曾维修过\u2192强烈建议更换。R22正在淘汰且越来越贵。新的R32变频机可降低电费30-50%。如果您不确定，WhatsApp我们机器的品牌、型号和使用年限。",
       },
-      { q: "移机会损坏机器的内部密封吗？", a: "由 KL Renovator 操作则不会。我们在所有接口处使用定标扭矩扳手，确保达到出厂级密封标准，防止在新地点发生冷媒泄漏。" }
+      { q: "移机会损坏机器的内部密封吗？", a: "由 KL Renovator 操作则不会。我们在所有接口处使用定标扭矩扳手，确保达到出厂级密封标准，防止在新地点发生冷媒泄漏。" },
+      { q: "能否当天预约移机服务？", a: "可以 — KL Renovator 经常有当天预约名额用于移机服务。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
       { label: "Dismantle Only (indoor + outdoor)", price: "RM 90" },
