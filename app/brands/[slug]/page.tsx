@@ -16,9 +16,8 @@ import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 
 // ─────────────────────────────────────────────────────────────────────────
-// /ms/brands/[slug] — Bahasa Malaysia brand page.
-// Same pattern as /ms/areas/[slug]. All 15 brands already have faqsBM
-// populated in config/site.ts, so every brand gets a page (no filtering).
+// /brands/[slug] — English brand page.
+// Round 52: restored true EN body (v60 upload had MS body) + Brand→Service reverse links.
 // ─────────────────────────────────────────────────────────────────────────
 
 export function generateStaticParams() {
@@ -32,33 +31,33 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const brand = siteConfig.brandPages.find((b) => b.slug === slug);
-  if (!brand) return { title: "Halaman tidak dijumpai" };
+  if (!brand) return { title: "Page not found" };
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/brands/${slug}`;
   const zhUrl = `https://www.klrenovator.com/zh/brands/${slug}`;
 
   return {
-    title: buildBrandMetaTitleWithDate(brand.metaTitleMS || brand.metaTitle, "ms"),
-    description: brand.metaDescMS || brand.metaDesc,
+    title: buildBrandMetaTitleWithDate(brand.metaTitle, "en"),
+    description: clampMetaDescription(brand.metaDesc),
     openGraph: {
-      title: buildBrandMetaTitleWithDate(brand.metaTitleMS || brand.metaTitle, "ms"),
-      description: brand.metaDescMS || brand.metaDesc,
-      url: msUrl,
+      title: buildBrandMetaTitleWithDate(brand.metaTitle, "en"),
+      description: clampMetaDescription(brand.metaDesc),
+      url: enUrl,
       type: "website",
-      locale: "ms_MY",
-      alternateLocale: ["en_MY", "zh_MY"],
+      locale: "en_MY",
+      alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
           url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`,
           width: 1200,
           height: 630,
-          alt: `Servis Aircond ${brand.name} KL & Selangor — KL Renovator`,
+          alt: `Aircond Service ${brand.name} KL & Selangor — KL Renovator`,
         },
       ],
     },
     alternates: {
-      canonical: msUrl,
+      canonical: enUrl,
       languages: {
         "en-MY": enUrl,
         "ms-MY": msUrl,
@@ -69,7 +68,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function BrandPageMS({
+export default async function BrandPageEN({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -80,12 +79,12 @@ export default async function BrandPageMS({
 
   const enUrl = `https://www.klrenovator.com/brands/${slug}`;
   const msUrl = `https://www.klrenovator.com/ms/brands/${slug}`;
-  const waMsg = `Hi KL Renovator, saya nak tempah servis aircond ${brand.name}.`;
+  const waMsg = `Hi KL Renovator, I need aircond service for my ${brand.name} unit. My location is:`;
 
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: `Servis Aircond ${brand.name}`,
+    serviceType: `Aircond Service ${brand.name}`,
     provider: {
       "@type": "HVACBusiness",
       "@id": "https://www.klrenovator.com/#business",
@@ -96,7 +95,7 @@ export default async function BrandPageMS({
       name: "Kuala Lumpur & Selangor",
     },
     brand: { "@type": "Brand", name: brand.name },
-    description: brand.descriptionMS || brand.description,
+    description: brand.description,
   };
 
   const breadcrumbSchema = {
@@ -106,13 +105,13 @@ export default async function BrandPageMS({
       {
         "@type": "ListItem",
         position: 1,
-        name: "Laman Utama",
+        name: "Home",
         item: "https://www.klrenovator.com",
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Jenama",
+        name: "Brands",
         item: "https://www.klrenovator.com/ms/brands",
       },
       {
@@ -124,11 +123,11 @@ export default async function BrandPageMS({
     ],
   };
 
-  const faqSchema = brand.faqsBM?.length
+  const faqSchema = brand.faqs?.length
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: brand.faqsBM.map((f: { q: string; a: string }) => ({
+        mainEntity: brand.faqs.map((f: { q: string; a: string }) => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -136,7 +135,7 @@ export default async function BrandPageMS({
       }
     : null;
 
-  const otherMsBrands = siteConfig.brandPages
+  const otherBrands = siteConfig.brandPages
     .filter((b) => b.slug !== slug)
     .slice(0, 10);
   const brandAreaComboModule = buildBrandAreaComboModule(
@@ -144,10 +143,10 @@ export default async function BrandPageMS({
     siteConfig.areaPages,
     "ms",
   );
-  const brandProblemSlugsMS =
+  const brandProblemSlugs =
     BRAND_PROBLEM_MAP[slug] ?? BRAND_PROBLEM_MAP["_default"];
-  const relatedProblemsMS = siteConfig.problemPages.filter((p) =>
-    brandProblemSlugsMS.includes(p.slug),
+  const relatedProblems = siteConfig.problemPages.filter((p) =>
+    brandProblemSlugs.includes(p.slug),
   );
 
   return (
@@ -174,21 +173,21 @@ export default async function BrandPageMS({
             aria-label="Breadcrumb"
           >
             <NextLink
-              href="/ms"
+              href="/"
               className="hover:text-sky-600 transition font-medium"
             >
-              Laman Utama
+              Home
             </NextLink>
             <FiChevronRight className="h-3 w-3" />
             <NextLink
-              href="/ms/brands"
+              href="/brands"
               className="hover:text-sky-600 transition font-medium"
             >
-              Jenama
+              Brands
             </NextLink>
             <FiChevronRight className="h-3 w-3" />
             <span className="text-slate-900 font-bold">
-              Aircond {brand.name}
+              {brand.name}
             </span>
           </nav>
         </div>
@@ -198,18 +197,18 @@ export default async function BrandPageMS({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
-              Servis Aircond Jenama
+              Aircond Service Brands
             </p>
             <h1 className="mt-1">
-              <span className={title({ size: "lg" })}>Servis Aircond </span>
+              <span className={title({ size: "lg" })}>Aircond Service </span>
               <span className={title({ size: "lg", color: "brand" })}>
                 {brand.name}
               </span>
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-              Ya, KL Renovator menservis semua model aircond{" "}
-              <strong>{brand.name}</strong> di KL &amp; Selangor.{" "}
-              {brand.descriptionMS || brand.description}
+              Yes — KL Renovator services all{" "}
+              <strong>{brand.name}</strong> aircond models across KL &amp; Selangor.{" "}
+              {brand.description}
             </p>
 
             {brand.models?.length > 0 && (
@@ -226,14 +225,14 @@ export default async function BrandPageMS({
                 className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] px-7 py-3.5 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FaWhatsapp className="h-5 w-5" />
-                WhatsApp Sekarang
+                WhatsApp Now
               </a>
-              <NextLink
-                href={enUrl}
+              <a
+                href={`tel:${siteConfig.phone}`}
                 className="inline-flex items-center justify-center gap-2 border border-slate-300 px-7 py-3.5 text-sm font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 transition-all rounded-xl"
               >
-                Read in English <FiArrowRight className="h-3.5 w-3.5" />
-              </NextLink>
+                Call {siteConfig.phoneDisplay}
+              </a>
             </div>
           </Reveal>
         </div>
@@ -244,7 +243,7 @@ export default async function BrandPageMS({
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                Kepakaran Kami Untuk {brand.name}
+                Our Expertise For {brand.name}
               </h2>
               <ul className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200 text-sm">
                 {brand.highlights.map((h: string, i: number) => (
@@ -262,7 +261,7 @@ export default async function BrandPageMS({
         </section>
       )}
 
-      {brand.inverterNoteMS && (
+      {brand.inverterNote && (
         <section className="py-10 bg-violet-50 border-t border-violet-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
@@ -270,23 +269,23 @@ export default async function BrandPageMS({
                 {brand.name} Inverter vs Non-Inverter
               </h2>
               <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                {brand.inverterNoteMS}
+                {brand.inverterNote}
               </p>
             </Reveal>
           </div>
         </section>
       )}
 
-      {brand.troubleshootingTipsMS &&
-        brand.troubleshootingTipsMS.length > 0 && (
+      {brand.troubleshootingTips &&
+        (brand.troubleshootingTips?.length ?? 0) > 0 && (
           <section className="py-10 bg-slate-50 border-t border-slate-100">
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <h2 className="text-base font-black text-slate-900 mb-4">
-                  Petua Menyelesaikan Masalah {brand.name}
+                  Troubleshooting Tips For {brand.name}
                 </h2>
                 <div className="space-y-3">
-                  {brand.troubleshootingTipsMS.map(
+                  {(brand.troubleshootingTips ?? []).map(
                     (tip: { issue: string; tip: string }, i: number) => (
                       <div
                         key={i}
@@ -312,7 +311,7 @@ export default async function BrandPageMS({
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                Foto Kerja Sebenar {brand.name}
+                Real Job Photos — {brand.name}
               </h2>
               <div className="grid grid-cols-2 gap-3">
                 {brand.galleryImages.map(
@@ -326,7 +325,7 @@ export default async function BrandPageMS({
                     >
                       <NextImage
                         src={img.src}
-                        alt={img.altMS || img.alt}
+                        alt={img.alt}
                         fill
                         sizes="50vw"
                         className="object-cover"
@@ -342,7 +341,7 @@ export default async function BrandPageMS({
         </section>
       )}
 
-      {/* ── Blok Kepercayaan: Kami Servis, Bukan Wakil Rasmi ─────────────── */}
+      {/* ── Trust Block: We Service, Not An Official Agent ─────────────── */}
       <section className="py-10 bg-emerald-50 border-y border-emerald-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -352,21 +351,21 @@ export default async function BrandPageMS({
               </div>
               <div>
                 <h2 className="font-black text-sm text-slate-900 mb-1.5 uppercase tracking-wide">
-                  Kami Servis {brand.name} — Kami Bukan Wakil Rasmi {brand.name}
+                  We Service {brand.name} — We Are Not An Official Agent Of {brand.name}
                 </h2>
                 <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                  KL Renovator adalah syarikat servis HVAC bebas, bukan wakil
-                  rasmi atau pusat servis diberi kuasa oleh {brand.name}. Kami
-                  menservis, membaiki dan memasang unit {brand.name} menggunakan
-                  alat ganti asli atau setara OEM (kapasitor, papan PCB, gas,
-                  pam saliran) daripada pembekal Malaysia yang dipercayai —
-                  tidak sekali-kali alat ganti tiruan atau tidak disahkan. Jika
-                  unit {brand.name} anda masih dalam waranti pengeluar, kami
-                  akan maklumkan terlebih dahulu sama ada pembaikan mungkin
-                  menjejaskan waranti tersebut, supaya anda boleh memilih untuk
-                  pergi ke pusat servis rasmi {brand.name} sendiri jika perlu.
-                  Tugas kami adalah servis jujur dan telus — bukan menjual unit
-                  baharu yang anda tidak perlukan.
+                  KL Renovator is an independent HVAC service company, not an official agent
+                  or authorised service centre of {brand.name}. We
+                  service, repair and install {brand.name} units using
+                  genuine or OEM-equivalent parts (capacitors, PCB boards, gas,
+                  drain pumps) from trusted Malaysian suppliers —
+                  never counterfeit or unverified parts. If your
+                  {brand.name} unit is still under manufacturer warranty, we
+                  will tell you first whether the repair may
+                  affect that warranty, so you can choose to
+                  go to the official {brand.name} service centre yourself if needed.
+                  Our job is honest, transparent service — not selling a unit
+                  you do not need.
                 </p>
               </div>
             </div>
@@ -374,15 +373,15 @@ export default async function BrandPageMS({
         </div>
       </section>
 
-      {brand.faqsBM?.length > 0 && (
+      {brand.faqs?.length > 0 && (
         <section className="py-10 bg-slate-50 border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                Soalan Lazim — Aircond {brand.name}
+                FAQ — {brand.name}
               </h2>
               <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-                {brand.faqsBM.map(
+                {brand.faqs.map(
                   (faq: { q: string; a: string }, i: number) => (
                     <details key={i} className="group bg-white p-4">
                       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
@@ -452,7 +451,7 @@ export default async function BrandPageMS({
                     ))}
                   </div>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-700 group-hover:gap-2 transition-all">
-                    Buka halaman kawasan <FiArrowRight className="h-3 w-3" />
+                    Open area page <FiArrowRight className="h-3 w-3" />
                   </span>
                 </NextLink>
               ))}
@@ -471,14 +470,14 @@ export default async function BrandPageMS({
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <p className="text-xs font-black uppercase tracking-widest text-blue-600 mb-1">
-                  Spesifikasi Teknikal
+                  Technical Specifications
                 </p>
                 <h2 className="text-xl font-black text-slate-900 mb-2">
-                  Spesifikasi Teknikal Aircond {brand.name}
+                  Technical Specifications {brand.name}
                 </h2>
                 <p className="text-sm text-slate-500 mb-6 max-w-2xl">
-                  Butiran teknikal utama dan keperluan servis untuk unit{" "}
-                  {brand.name} di Malaysia.
+                  Key technical details and service requirements for{" "}
+                  {brand.name} in Malaysia.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {techSpecs.map((ts, i) => (
@@ -510,21 +509,21 @@ export default async function BrandPageMS({
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <p className="text-xs font-black uppercase tracking-widest text-red-600 mb-1">
-                  Panduan Kod Ralat
+                  Error Code Guide
                 </p>
                 <h2 className="text-xl font-black text-slate-900 mb-2">
-                  Kod Ralat Biasa Aircond {brand.name}
+                  Common Error Codes For {brand.name}
                 </h2>
                 <p className="text-sm text-slate-500 mb-6 max-w-2xl">
-                  Lampu berkelip pada unit {brand.name} anda? Ini adalah kod
-                  ralat biasa dan maksudnya. WhatsApp KL Renovator kod + model
-                  untuk diagnosis jarak jauh pantas.
+                  Blinking lights on your {brand.name} unit? These are common error
+                  codes and what they mean. WhatsApp KL Renovator the code + model
+                  for a fast remote diagnosis.
                 </p>
                 <div className="overflow-hidden border border-slate-200 rounded-2xl">
                   <div className="grid grid-cols-3 bg-slate-100 px-5 py-3 text-xs font-black uppercase tracking-widest text-slate-500">
-                    <span>Kod Ralat</span>
-                    <span>Maksud</span>
-                    <span>Penyelesaian</span>
+                    <span>Error Code</span>
+                    <span>Meaning</span>
+                    <span>Fix</span>
                   </div>
                   {errorCodes.map((ec, i) => (
                     <div
@@ -540,39 +539,39 @@ export default async function BrandPageMS({
                   ))}
                 </div>
                 <p className="text-xs text-slate-400 mt-3">
-                  Kod ralat tiada dalam senarai? WhatsApp +60182983573 dengan
-                  nombor model {brand.name} anda — kami akan mendiagnosisnya.
+                  Code not listed? WhatsApp +60182983573 with your
+                  {brand.name} model number — we will diagnose it.
                 </p>
               </Reveal>
             </div>
           </section>
         );
       })()}
-      {relatedProblemsMS.length > 0 && (
+      {relatedProblems.length > 0 && (
         <section className="py-10 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
               <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
-                Masalah · 问题
+                Problems
               </p>
               <h2 className="text-base font-black text-slate-900 mb-4">
-                Masalah Biasa {brand.name} Yang Kami Selesaikan
+                Common {brand.name} Problems We Fix
               </h2>
               <div className="flex flex-wrap gap-2">
-                {relatedProblemsMS.map((p) => (
+                {relatedProblems.map((p) => (
                   <NextLink
                     key={p.slug}
-                    href={`/ms/problems/${p.slug}`}
+                    href={`/problems/${p.slug}`}
                     className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
                   >
-                    {p.nameMS || p.name}
+                    {p.name}
                   </NextLink>
                 ))}
                 <NextLink
-                  href="/ms/problems"
+                  href="/problems"
                   className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
                 >
-                  Semua Masalah →
+                  All Problems →
                 </NextLink>
               </div>
             </Reveal>
@@ -581,7 +580,7 @@ export default async function BrandPageMS({
       )}
 
       
-      {/* Round 51 / 10.1–10.6: Brand → Service reverse links */}
+      {/* Round 51/52: Brand → Service reverse links */}
       {(() => {
         const serviceSlugs = BRAND_SERVICE_MAP[slug] || BRAND_SERVICE_MAP["_default"] || [];
         const brandServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));
@@ -590,27 +589,25 @@ export default async function BrandPageMS({
           <section className="py-10 bg-slate-50 border-t border-slate-100">
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">
-                  Perkhidmatan
-                </p>
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">Services</p>
                 <h2 className="text-base font-black text-slate-900 mb-4">
-                  Servis Aircond {brand.name} Yang Kami Tawarkan
+                  {brand.name} Aircond Services We Provide
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {brandServices.map((s) => (
                     <NextLink
                       key={s.slug}
-                      href={`/ms/services/${s.slug}`}
+                      href={`/services/${s.slug}`}
                       className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
                     >
                       {s.title}
                     </NextLink>
                   ))}
                   <NextLink
-                    href="/ms/services"
+                    href="/services"
                     className="inline-flex items-center gap-1 border border-sky-400 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-700 rounded-full hover:bg-sky-100 transition"
                   >
-                    Semua Servis →
+                    All Services →
                   </NextLink>
                 </div>
               </Reveal>
@@ -623,23 +620,23 @@ export default async function BrandPageMS({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
-              Jenama Lain Yang Kami Servis
+              Other Brands We Service
             </p>
             <div className="flex flex-wrap gap-2">
-              {otherMsBrands.map((b) => (
+              {otherBrands.map((b) => (
                 <NextLink
                   key={b.slug}
-                  href={`/ms/brands/${b.slug}`}
+                  href={`/brands/${b.slug}`}
                   className="inline-flex items-center gap-1.5 border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
-                  Aircond {b.name}
+                  {b.name}
                 </NextLink>
               ))}
               <NextLink
                 href="/brands"
                 className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-black text-sky-700 hover:bg-sky-100 transition rounded-xl"
               >
-                Semua Jenama <FiArrowRight className="h-3 w-3" />
+                All Brands <FiArrowRight className="h-3 w-3" />
               </NextLink>
             </div>
           </Reveal>
