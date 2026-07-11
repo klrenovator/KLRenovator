@@ -317,6 +317,27 @@ export const BRAND_PROBLEM_MAP: Record<string, string[]> = {
 // ── BRAND → SERVICE MAP ───────────────────────────────────────────────────────
 // Key services to promote from each brand page
 export const BRAND_SERVICE_MAP: Record<string, string[]> = {
+  // Round 51 / 10.1–10.6: brand → service reverse links (triangular brand↔service↔problem)
+  "daikin": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair", "installation"],
+  "panasonic": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair", "basic-servicing"],
+  "mitsubishi": ["chemical-wash", "gas-topup", "repair", "chemical-overhaul"],
+  "york": ["chemical-wash", "gas-topup", "repair", "installation"],
+  "acson": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair"],
+  "midea": ["chemical-wash", "basic-servicing", "gas-topup", "repair"],
+  "samsung": ["chemical-wash", "repair", "gas-topup", "installation"],
+  "lg": ["chemical-wash", "repair", "gas-topup", "basic-servicing"],
+  "hisense": ["chemical-wash", "gas-topup", "basic-servicing", "repair"],
+  "aux": ["chemical-wash", "gas-topup", "repair", "basic-servicing"],
+  "tcl": ["chemical-wash", "basic-servicing", "gas-topup", "repair"],
+  "national": ["chemical-wash", "gas-topup", "repair", "chemical-overhaul"],
+  "isonic": ["chemical-wash", "basic-servicing", "gas-topup", "repair"],
+  "carrier": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair"],
+  "haier": ["chemical-wash", "basic-servicing", "gas-topup", "repair"],
+  "toshiba": ["chemical-wash", "gas-topup", "repair", "installation"],
+  "hitachi": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair"],
+  "sharp": ["chemical-wash", "basic-servicing", "gas-topup", "repair"],
+  "fujitsu": ["chemical-wash", "gas-topup", "repair", "installation"],
+  "gree": ["chemical-wash", "basic-servicing", "gas-topup", "repair"],
   "_default": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair"],
 };
 
@@ -338,27 +359,114 @@ export const PROBLEM_BRAND_MAP: Record<string, string[]> = (() => {
 
 // ── BLOG → SERVICE MAP ────────────────────────────────────────────────────────
 // Which services to link from each blog post
+// Round 51 / 10.1–10.6: complete reverse coverage for all 43 blog posts
 export const BLOG_SERVICE_MAP: Record<string, string[]> = {
-  "aircond-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul"],
-  "chemical-wash-vs-chemical-overhaul": ["chemical-wash", "chemical-overhaul"],
-  "signs-your-aircon-needs-chemical-overhaul-malaysia": ["chemical-overhaul", "chemical-wash"],
-  "aircond-not-cold-reasons": ["gas-topup", "chemical-wash", "repair"],
-  "how-often-service-aircond-malaysia": ["basic-servicing", "chemical-wash"],
-  "r32-r410a-r22-gas-difference": ["gas-topup"],
-  "aircond-water-leaking-causes": ["chemical-overhaul", "chemical-wash"],
-  "best-aircond-brands-malaysia-2026": ["installation"],
-  "aircond-maintenance-checklist-malaysia": ["basic-servicing", "chemical-wash"],
-  "aircond-service-price-guide-kl-2026": ["basic-servicing", "chemical-wash", "chemical-overhaul", "gas-topup"],
-  "inverter-vs-non-inverter-aircond-malaysia": ["installation"],
-  "daikin-vs-panasonic-aircond-malaysia": ["installation", "repair"],
-  "how-to-reduce-aircond-electricity-bill-malaysia": ["chemical-wash", "basic-servicing"],
-  "aircond-installation-guide-malaysia": ["installation"],
-  "aircond-lifespan-malaysia": ["basic-servicing", "chemical-overhaul", "repair"],
+  "aircond-service-batu-caves-selayang-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  "aircond-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  "signs-your-aircon-needs-chemical-overhaul-malaysia": ["chemical-overhaul", "chemical-wash", "repair"],
+  "chemical-wash-vs-chemical-overhaul": ["chemical-overhaul", "chemical-wash", "repair"],
+  "aircond-not-cold-reasons": ["repair", "gas-topup", "chemical-wash"],
+  "how-often-service-aircond-malaysia": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "r32-r410a-r22-gas-difference": ["gas-topup", "repair", "chemical-wash"],
+  "aircond-water-leaking-causes": ["chemical-overhaul", "chemical-wash", "repair"],
+  "best-aircond-brands-malaysia-2026": ["installation", "dismantling-relocation", "basic-servicing"],
+  "aircond-maintenance-checklist-malaysia": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "aircond-service-price-guide-kl-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  "inverter-vs-non-inverter-aircond-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "daikin-vs-panasonic-aircond-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "how-to-reduce-aircond-electricity-bill-malaysia": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  "aircond-installation-guide-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "aircond-lifespan-malaysia": ["repair", "gas-topup", "chemical-wash"],
   "aircond-troubleshooting-guide-malaysia": ["repair", "gas-topup", "chemical-wash"],
-  "commercial-hvac-maintenance-kl": ["ceiling-cassette"],
-  "aircond-gas-topup-myths-malaysia": ["gas-topup"],
-  "aircond-service-batu-caves-selayang-2026": ["chemical-wash", "basic-servicing"],
+  "commercial-hvac-maintenance-kl": ["ceiling-cassette", "chemical-wash", "maintenance-contract"],
+  "aircond-gas-topup-myths-malaysia": ["gas-topup", "repair", "chemical-wash"],
+  "aircond-buying-guide-malaysia-2026": ["installation", "dismantling-relocation", "basic-servicing"],
+  "professional-new-aircond-installation-kl-selangor-2026": ["installation", "dismantling-relocation", "basic-servicing"],
+  "regular-aircond-basic-servicing-kl-selangor-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "pressure-chemical-wash-leaking-aircond-kl-selangor": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  "aircond-chemical-overhaul-kl-selangor-cooling-efficiency": ["chemical-overhaul", "chemical-wash", "repair"],
+  "aircond-gas-topup-malaysia-r32-r410a-r22-balancing": ["gas-topup", "repair", "chemical-wash"],
+  "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring": ["repair", "gas-topup", "chemical-wash"],
+  "aircond-installation-dismantling-kl-selangor-price-guide": ["dismantling-relocation", "installation", "gas-topup"],
+  "inverter-vs-non-inverter-aircond-malaysia-tnb-bill": ["installation", "dismantling-relocation", "basic-servicing"],
+  "smelly-aircond-foul-musty-odor-kl-selangor": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  "r32-vs-r410a-vs-r22-aircond-gas-malaysia": ["gas-topup", "repair", "chemical-wash"],
+  "rm199-vs-rm300-aircond-installation-kl-renovator": ["installation", "dismantling-relocation", "basic-servicing"],
+  "aircond-installation-cost-malaysia-2026": ["installation", "dismantling-relocation", "basic-servicing"],
+  "why-aircond-installation-expensive-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "1-hp-aircond-bedroom-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "ac-unit-installation-cost-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "3-minute-rule-aircon-malaysia": ["repair", "gas-topup", "chemical-wash"],
+  "ac-service-price-malaysia-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "1-hour-ac-electricity-cost-malaysia": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "aircond-leaking-water-malaysia": ["repair", "gas-topup", "chemical-wash"],
+  "aircond-installation-time-malaysia": ["installation", "dismantling-relocation", "basic-servicing"],
+  "aircond-maintenance-contract-malaysia-2026": ["maintenance-contract", "basic-servicing", "chemical-wash"],
+  "inverter-vs-non-inverter-aircond-service-malaysia-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "harga-servis-aircond-2026-malaysia": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
 };
+
+
+
+// ── ROUND 51 / 10.1–10.6 BI-DIRECTIONAL LINKING HELPERS ───────────────────────
+// Shared builders so EN/MS/ZH templates stay in parity without duplicating map logic.
+
+export type LinkLocale = "en" | "ms" | "zh";
+
+const LOCALE_PREFIX: Record<LinkLocale, string> = {
+  en: "",
+  ms: "/ms",
+  zh: "/zh",
+};
+
+export function localePath(locale: LinkLocale, path: string): string {
+  const clean = path.startsWith("/") ? path : `/${path}`;
+  const prefix = LOCALE_PREFIX[locale];
+  if (!prefix) return clean;
+  if (clean === "/") return prefix || "/";
+  return `${prefix}${clean}`;
+}
+
+export function getServicesForBrand(brandSlug: string): string[] {
+  return BRAND_SERVICE_MAP[brandSlug] || BRAND_SERVICE_MAP["_default"] || [];
+}
+
+export function getProblemsForBrand(brandSlug: string): string[] {
+  return BRAND_PROBLEM_MAP[brandSlug] || BRAND_PROBLEM_MAP["_default"] || [];
+}
+
+export function getServicesForBlog(blogSlug: string): string[] {
+  return BLOG_SERVICE_MAP[blogSlug] || [];
+}
+
+export function getBlogsForProblem(problemSlug: string): string[] {
+  return PROBLEM_BLOG_MAP_V2[problemSlug] || [];
+}
+
+export function getServicesForProblem(problemSlug: string): { primary?: string; secondary?: string } {
+  return PROBLEM_SERVICE_MAP[problemSlug] || {};
+}
+
+export function getProblemsForService(serviceSlug: string): string[] {
+  return SERVICE_PROBLEM_MAP[serviceSlug] || [];
+}
+
+export function getBlogsForService(serviceSlug: string): string[] {
+  return SERVICE_BLOG_MAP_V2[serviceSlug] || [];
+}
+
+/** Invert SERVICE_BLOG_MAP_V2 → blog slug list that should link back to a given service */
+export function getBlogsLinkingToService(serviceSlug: string): string[] {
+  const out: string[] = [];
+  for (const [blogSlug, services] of Object.entries(BLOG_SERVICE_MAP)) {
+    if (services.includes(serviceSlug)) out.push(blogSlug);
+  }
+  // also include forward SERVICE_BLOG_MAP_V2 entries
+  for (const slug of SERVICE_BLOG_MAP_V2[serviceSlug] || []) {
+    if (!out.includes(slug)) out.push(slug);
+  }
+  return out;
+}
 
 // ── ANCHOR TEXT STRATEGY ─────────────────────────────────────────────────────
 // Approved anchor text patterns per link type (use variety — avoid exact match spam)
