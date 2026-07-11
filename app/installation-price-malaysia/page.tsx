@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildFreshMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
@@ -14,11 +15,11 @@ import { buildServiceSchema } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator"),
+  title: buildFreshMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator", "en"),
   description:
     "2026年吉隆坡及雪兰莪冷气安装价格完整指南。RM 199基础安装含7尺铜管、电线、抽真空及测漏。20大品牌。可当天安装。",
   openGraph: {
-    title: clampMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator"),
+    title: buildFreshMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator", "en"),
     description: "2026年吉隆坡及雪兰莪冷气安装价格完整指南。RM 199基础安装含7尺铜管、抽真空及测漏。",
     url: "https://www.klrenovator.com/zh/installation-price-malaysia",
     images: getServiceOGImages("installation", "en"),
@@ -191,15 +192,15 @@ export default function ZhInstallationPricePage() {
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: clampMetaTitle("现场勘查与墙体评估"), desc: "技术员在钻孔前检查墙体强度、电源容量、排水坡度和室外机位置。" },
-              { title: clampMetaTitle("7尺铜管（正确管径）"), desc: "管道直径按您机器HP匹配——非通用细管。带正确隔热层防止冷凝水滴落。" },
-              { title: clampMetaTitle("电线与线管"), desc: "从隔离开关到室内机通过专用线管的独立电线。" },
-              { title: clampMetaTitle("PVC排水管"), desc: "设置正确的下坡度，让水自然流出，预防未来漏水问题。" },
-              { title: clampMetaTitle("支架与减震垫"), desc: "调平固定支架，带橡胶减震垫减少压缩机振动噪音。" },
-              { title: clampMetaTitle("真空泵抽真空"), desc: "最少15–20分钟。清除冷媒管内所有水分和空气——保护压缩机。" },
-              { title: clampMetaTitle("氮气压力测漏"), desc: "释放冷媒前确认零泄漏。便宜安装商跳过的步骤。" },
-              { title: clampMetaTitle("全面调试"), desc: "测试所有风速的制冷输出、校准温控器、验证风量。记录在工作卡上。" },
-              { title: clampMetaTitle("1个月工艺保修"), desc: "如因我们的工作导致问题在1个月内复发，我们免费返回修复。" },
+              { title: buildFreshMetaTitle("现场勘查与墙体评估", "en"), desc: "技术员在钻孔前检查墙体强度、电源容量、排水坡度和室外机位置。" },
+              { title: buildFreshMetaTitle("7尺铜管（正确管径）", "en"), desc: "管道直径按您机器HP匹配——非通用细管。带正确隔热层防止冷凝水滴落。" },
+              { title: buildFreshMetaTitle("电线与线管", "en"), desc: "从隔离开关到室内机通过专用线管的独立电线。" },
+              { title: buildFreshMetaTitle("PVC排水管", "en"), desc: "设置正确的下坡度，让水自然流出，预防未来漏水问题。" },
+              { title: buildFreshMetaTitle("支架与减震垫", "en"), desc: "调平固定支架，带橡胶减震垫减少压缩机振动噪音。" },
+              { title: buildFreshMetaTitle("真空泵抽真空", "en"), desc: "最少15–20分钟。清除冷媒管内所有水分和空气——保护压缩机。" },
+              { title: buildFreshMetaTitle("氮气压力测漏", "en"), desc: "释放冷媒前确认零泄漏。便宜安装商跳过的步骤。" },
+              { title: buildFreshMetaTitle("全面调试", "en"), desc: "测试所有风速的制冷输出、校准温控器、验证风量。记录在工作卡上。" },
+              { title: buildFreshMetaTitle("1个月工艺保修", "en"), desc: "如因我们的工作导致问题在1个月内复发，我们免费返回修复。" },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-5">
                 <div className="flex items-start gap-2.5 mb-2">
