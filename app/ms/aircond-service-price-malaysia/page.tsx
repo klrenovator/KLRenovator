@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildFreshMetaTitle } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
@@ -45,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const pricingCategories = [
   {
-    title: clampMetaTitle("Servis Pembersihan (Cleaning)"),
+    title: buildFreshMetaTitle("Servis Pembersihan (Cleaning)", "ms"),
     rows: [
       { label: "Servis Asas (Standard) · 1.0 – 1.5 HP", price: "RM 99" },
       { label: "Servis Asas (Standard) · 2.0 – 2.5 HP", price: "RM 120" },
@@ -57,7 +58,7 @@ const pricingCategories = [
     ],
   },
   {
-    title: clampMetaTitle("Tambah Gas & Refill"),
+    title: buildFreshMetaTitle("Tambah Gas & Refill", "ms"),
     rows: [
       { label: "Gas R22 (Standard) · 1.0 HP", price: "RM 120" },
       { label: "Gas R410A (Inverter) · 1.0 HP", price: "RM 150" },
@@ -66,7 +67,7 @@ const pricingCategories = [
     ],
   },
   {
-    title: clampMetaTitle("Pembaikan & Alat Ganti"),
+    title: buildFreshMetaTitle("Pembaikan & Alat Ganti", "ms"),
     rows: [
       { label: "Yuran Diagnostik (Diagnostic Fee)", price: "RM 88" },
       { label: "Tukar Kapasitor (Capacitor)", price: "RM 150 – 250" },
@@ -215,9 +216,9 @@ export default function HargaServisPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {[
-              { icon: <FiCheck />, title: clampMetaTitle("Harga Telus & Tetap"), desc: "Tiada caj tersembunyi. Harga yang kami sebut di WhatsApp adalah harga yang anda bayar di lokasi." },
-              { icon: <FiShield />, title: clampMetaTitle("Waranti Kerja 1 Bulan"), desc: "Setiap servis dilindungi oleh jaminan workmanship. Jika ada masalah semula, kami datang betulkan percuma." },
-              { icon: <FiClock />, title: clampMetaTitle("Slot Hari Yang Sama"), desc: "WhatsApp kami sebelum jam 11 pagi untuk peluang terbaik mendapatkan slot servis pada hari yang sama." },
+              { icon: <FiCheck />, title: buildFreshMetaTitle("Harga Telus & Tetap", "ms"), desc: "Tiada caj tersembunyi. Harga yang kami sebut di WhatsApp adalah harga yang anda bayar di lokasi." },
+              { icon: <FiShield />, title: buildFreshMetaTitle("Waranti Kerja 1 Bulan", "ms"), desc: "Setiap servis dilindungi oleh jaminan workmanship. Jika ada masalah semula, kami datang betulkan percuma." },
+              { icon: <FiClock />, title: buildFreshMetaTitle("Slot Hari Yang Sama", "ms"), desc: "WhatsApp kami sebelum jam 11 pagi untuk peluang terbaik mendapatkan slot servis pada hari yang sama." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
