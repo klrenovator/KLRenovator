@@ -9,6 +9,7 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
+import { serviceAnchor, areaAnchor } from "@/config/anchor-text-diversity";
 
 const FOOTER_LINKS = {
   en: {
@@ -167,13 +168,13 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_services")}</p>
           <ul className="space-y-2">
-            {siteConfig.services.map((s) => (
+            {siteConfig.services.map((s, idx) => (
               <li key={s.slug}>
                 <NextLink
                   href={`/services/${s.slug}`}
                   className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium"
                 >
-                  {s.title}
+                  {serviceAnchor(s.slug, (lang as "en" | "ms" | "zh"), idx)}
                 </NextLink>
               </li>
             ))}
@@ -184,14 +185,13 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_areas")}</p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
-            {siteConfig.areaPages.slice(0, 16).map((area) => (
+            {siteConfig.areaPages.slice(0, 16).map((area, idx) => (
               <li key={area.slug}>
                 <NextLink
                   href={`/areas/${area.slug}`}
                   className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium"
-                  title={`Aircond Service ${area.name}`}
                 >
-                  {area.name}
+                  {areaAnchor(area.name, (lang as "en" | "ms" | "zh"), idx)}
                 </NextLink>
               </li>
             ))}
