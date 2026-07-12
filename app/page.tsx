@@ -9,6 +9,7 @@ import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { siteConfig } from "@/config/site";
+import { InstagramFeed } from "@/components/sections/instagram-feed";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
@@ -347,6 +348,7 @@ export default function Home() {
           render. Cards only inject the real iframe after the user
           clicks play. Preserves LCP / TBT. 5 LOCKED user-provided URLs. */}
       <TikTokShowcase locale="en" />
+      <InstagramFeed locale="en" />
 
       <ReadyToBook />
     </>
