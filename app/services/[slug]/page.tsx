@@ -26,6 +26,8 @@ import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass"
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 import { buildServiceRouteAlternates } from "@/config/service-route-qa";
+import { anchor } from "@/config/anchor-text-diversity";
+import { PriceComparisonUI } from "@/components/price-comparison";
 
 export function generateStaticParams() {
   // Round 22 / AMC hotfix: exclude service routes that have their own
