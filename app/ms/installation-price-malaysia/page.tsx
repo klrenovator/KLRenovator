@@ -10,6 +10,7 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
+import { PriceComparisonUI } from "@/components/price-comparison";
 
 export const dynamic = "force-static";
 
@@ -391,6 +392,7 @@ export default function MsInstallationPricePage() {
           </div>
         </div>
       </section>
+      <PriceComparisonUI locale="ms" />
     </>
   );
 }
