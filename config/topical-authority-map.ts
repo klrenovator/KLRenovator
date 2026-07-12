@@ -85,6 +85,7 @@ export const SERVICE_PROBLEM_MAP: Record<string, string[]> = {
     "aircond-high-electricity-bill",
   ],
   "repair": [
+    "baiki-vs-tukar-baru-aircond-malaysia",
     "aircond-making-noise",
     "aircond-not-turning-on",
     "aircond-tripping-power",
@@ -101,7 +102,8 @@ export const SERVICE_PROBLEM_MAP: Record<string, string[]> = {
     "aircond-weak-airflow",
     "aircond-bad-smell",
   ],
-  "installation": [],
+  "installation": [
+    "cara-pilih-hp-aircond-bilik-malaysia",],
   "dismantling-relocation": [],
   "ceiling-cassette": [
     "aircond-water-leaking",
@@ -190,6 +192,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-not-cold-reasons",
   ],
   "repair": [
+    "baiki-vs-tukar-baru-aircond-malaysia",
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
     "aircond-troubleshooting-guide-malaysia",
     "aircond-not-cold-reasons",
@@ -197,6 +200,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-lifespan-malaysia",
   ],
   "installation": [
+    "cara-pilih-hp-aircond-bilik-malaysia",
     "professional-new-aircond-installation-kl-selangor-2026",
     "rm199-vs-rm300-aircond-installation-kl-renovator",
     "aircond-installation-dismantling-kl-selangor-price-guide",
@@ -233,6 +237,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-water-leaking-causes",
   ],
   "maintenance-contract": [
+    "servis-aircond-rumah-sewa-airbnb-malaysia",
     "aircond-maintenance-contract-malaysia-2026",
     "how-often-service-aircond-malaysia",
     "aircond-maintenance-checklist-malaysia",
@@ -474,9 +479,11 @@ export const ANCHOR_TEXTS = {
   "chemical-wash": ["pressure chemical wash", "aircond chemical wash", "chemical wash service", "deep chemical clean", "chemical wash KL"],
   "chemical-overhaul": ["chemical overhaul", "full aircond overhaul", "chemical overhaul KL", "deep clean overhaul", "dismantling overhaul"],
   "gas-topup": ["gas top-up", "refrigerant top-up", "gas top-up KL", "R32 gas top-up", "R410A gas top-up"],
-  "repair": ["aircond repair", "troubleshooting & repair", "aircond troubleshooting", "fault diagnosis", "repair service KL"],
+  "repair": [
+    "baiki-vs-tukar-baru-aircond-malaysia","aircond repair", "troubleshooting & repair", "aircond troubleshooting", "fault diagnosis", "repair service KL"],
   "basic-servicing": ["basic servicing", "routine maintenance", "aircond maintenance", "regular service", "service & clean"],
-  "installation": ["new installation", "aircond installation KL", "unit installation", "professional installation"],
+  "installation": [
+    "cara-pilih-hp-aircond-bilik-malaysia","new installation", "aircond installation KL", "unit installation", "professional installation"],
   "ceiling-cassette": ["ceiling cassette service", "cassette aircond service", "commercial cassette"],
   "dismantling-relocation": ["dismantle & relocate", "aircond relocation", "unit relocation"],
   "emergency": ["emergency aircond repair", "same-day emergency repair", "urgent aircond repair", "emergency service KL"],
