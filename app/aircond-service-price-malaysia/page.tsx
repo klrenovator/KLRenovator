@@ -14,6 +14,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildServiceSchema } from "@/lib/seo";
 import { getFreshDate } from "@/lib/dates";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PriceComparisonUI } from "@/components/price-comparison";
 
 export const dynamic = "force-static";
 
@@ -462,6 +463,7 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+      <PriceComparisonUI locale="en" />
     </>
   );
 }
