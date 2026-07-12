@@ -9,7 +9,7 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
-import { serviceAnchor, areaAnchor } from "@/config/anchor-text-diversity";
+import { serviceAnchor, areaAnchor, brandAnchor, problemAnchor } from "@/config/anchor-text-diversity";
 
 const FOOTER_LINKS = {
   en: {
@@ -75,13 +75,19 @@ export const Footer = () => {
   const { t, lang } = useLang();
   const fl = FOOTER_LINKS[lang as keyof typeof FOOTER_LINKS] ?? FOOTER_LINKS.en;
 
+  const localizedPath = (path: string) => {
+    if (lang === "en") return path;
+    if (path === "/") return `/${lang}`;
+    return `/${lang}${path}`;
+  };
+
   return (
     <footer className="w-full bg-white text-slate-500 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
 
         {/* Brand Block */}
         <div className="space-y-4 lg:col-span-1">
-          <NextLink href="/" className="inline-block">
+          <NextLink href={localizedPath("/")} className="inline-block">
             <p className="text-slate-900 font-black text-xl tracking-tight uppercase">
               KL <span className="text-sky-500">RENOVATOR</span>
             </p>
@@ -105,7 +111,7 @@ export const Footer = () => {
           <ul className="space-y-2">
             {siteConfig.services.map((s, idx) => (
               <li key={s.slug}>
-                <NextLink href={`/services/${s.slug}`} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
+                <NextLink href={localizedPath(`/services/${s.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
                   {serviceAnchor(s.slug, (lang as "en" | "ms" | "zh"), idx)}
                 </NextLink>
               </li>
@@ -119,14 +125,14 @@ export const Footer = () => {
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
             {siteConfig.areaPages.slice(0, 16).map((area, idx) => (
               <li key={area.slug}>
-                <NextLink href={`/areas/${area.slug}`} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
+                <NextLink href={localizedPath(`/areas/${area.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
                   {areaAnchor(area.name, (lang as "en" | "ms" | "zh"), idx)}
                 </NextLink>
               </li>
             ))}
           </ul>
-          <NextLink href="/areas" className="inline-block text-xs font-black uppercase tracking-wider text-sky-600 hover:text-sky-700 transition-colors mt-1">{fl.areas} →</NextLink>
-          <NextLink href="/near-me" className="inline-block text-xs font-medium text-slate-500 hover:text-sky-600 transition-colors">Aircond Service Near Me →</NextLink>
+          <NextLink href={localizedPath("/areas")} className="inline-block text-xs font-black uppercase tracking-wider text-sky-600 hover:text-sky-700 transition-colors mt-1">{fl.areas} →</NextLink>
+          <NextLink href={localizedPath("/near-me")} className="inline-block text-xs font-medium text-slate-500 hover:text-sky-600 transition-colors">Aircond Service Near Me →</NextLink>
         </div>
 
         {/* Quick Links */}
@@ -136,20 +142,28 @@ export const Footer = () => {
           <div>
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.brands}</p>
             <ul className="space-y-1.5">
-              {siteConfig.brandPages.map((b) => (
-                <li key={b.slug}><NextLink href={`/brands/${b.slug}`} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{b.name}</NextLink></li>
+              {siteConfig.brandPages.map((b, idx) => (
+                <li key={b.slug}>
+                  <NextLink href={localizedPath(`/brands/${b.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
+                    {brandAnchor(b.slug, (lang as "en" | "ms" | "zh"), idx)}
+                  </NextLink>
+                </li>
               ))}
-              <li><NextLink href="/brands" className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.brands} →</NextLink></li>
+              <li><NextLink href={localizedPath("/brands")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.brands} →</NextLink></li>
             </ul>
           </div>
 
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.problems}</p>
             <ul className="space-y-1.5">
-              {siteConfig.problemPages.slice(0, 8).map((p) => (
-                <li key={p.slug}><NextLink href={`/problems/${p.slug}`} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{p.name}</NextLink></li>
+              {siteConfig.problemPages.slice(0, 8).map((p, idx) => (
+                <li key={p.slug}>
+                  <NextLink href={localizedPath(`/problems/${p.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
+                    {problemAnchor(lang === "ms" ? p.nameMS : lang === "zh" ? p.nameZH : p.name, (lang as "en" | "ms" | "zh"), idx)}
+                  </NextLink>
+                </li>
               ))}
-              <li><NextLink href="/problems" className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.problems} →</NextLink></li>
+              <li><NextLink href={localizedPath("/problems")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.problems} →</NextLink></li>
             </ul>
           </div>
 
@@ -157,15 +171,15 @@ export const Footer = () => {
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.priceGuides}</p>
             <ul className="space-y-1.5">
-              <li><NextLink href="/aircond-service-price-malaysia" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
-              <li><NextLink href="/installation-price-malaysia" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
-              <li><NextLink href="/cuci-aircond-kl" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
+              <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
+              <li><NextLink href={localizedPath("/cuci-aircond-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
             </ul>
           </div>
 
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.blog}</p>
-            <NextLink href="/blog" className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.blog} →</NextLink>
+            <NextLink href={localizedPath("/blog")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.blog} →</NextLink>
           </div>
         </div>
 
@@ -187,15 +201,15 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
           <p>© {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamics Resources). {t("footer_rights")}</p>
           <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
-            <NextLink href="/services" className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>
-            <NextLink href="/brands" className="hover:text-sky-600 transition-colors font-medium">{fl.navBrands}</NextLink>
-            <NextLink href="/problems" className="hover:text-sky-600 transition-colors font-medium">{fl.navProblems}</NextLink>
-            <NextLink href="/areas" className="hover:text-sky-600 transition-colors font-medium">{fl.navAreas}</NextLink>
-            <NextLink href="/blog" className="hover:text-sky-600 transition-colors font-medium">{fl.navBlog}</NextLink>
-            <NextLink href="/gallery" className="hover:text-sky-600 transition-colors font-medium">{fl.navGallery}</NextLink>
-            <NextLink href="/about" className="hover:text-sky-600 transition-colors font-medium">{fl.navAbout}</NextLink>
-            <NextLink href="/faq" className="hover:text-sky-600 transition-colors font-medium">{fl.navFaq}</NextLink>
-            <NextLink href="/contact" className="hover:text-sky-600 transition-colors font-medium">{fl.navContact}</NextLink>
+            <NextLink href={localizedPath("/services")} className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>
+            <NextLink href={localizedPath("/brands")} className="hover:text-sky-600 transition-colors font-medium">{fl.navBrands}</NextLink>
+            <NextLink href={localizedPath("/problems")} className="hover:text-sky-600 transition-colors font-medium">{fl.navProblems}</NextLink>
+            <NextLink href={localizedPath("/areas")} className="hover:text-sky-600 transition-colors font-medium">{fl.navAreas}</NextLink>
+            <NextLink href={localizedPath("/blog")} className="hover:text-sky-600 transition-colors font-medium">{fl.navBlog}</NextLink>
+            <NextLink href={localizedPath("/gallery")} className="hover:text-sky-600 transition-colors font-medium">{fl.navGallery}</NextLink>
+            <NextLink href={localizedPath("/about")} className="hover:text-sky-600 transition-colors font-medium">{fl.navAbout}</NextLink>
+            <NextLink href={localizedPath("/faq")} className="hover:text-sky-600 transition-colors font-medium">{fl.navFaq}</NextLink>
+            <NextLink href={localizedPath("/contact")} className="hover:text-sky-600 transition-colors font-medium">{fl.navContact}</NextLink>
           </nav>
         </div>
       </div>
