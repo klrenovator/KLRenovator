@@ -9,6 +9,7 @@ import { FiClock, FiTag, FiArrowRight } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
+import { InstagramFeed } from "@/components/sections/instagram-feed";
 import { allPosts, type BlogPost } from "@/config/blog-posts";
 
 type Lang = "en" | "ms" | "zh";
@@ -247,6 +248,7 @@ export default function BlogPage({ initialLang = "en" }: { initialLang?: Lang })
 
         </div>
       </section>
+      <InstagramFeed locale={lang as "en"|"ms"|"zh"} compact />
     </>
   );
 }
