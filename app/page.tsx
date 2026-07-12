@@ -128,6 +128,37 @@ export default function Home() {
 
       <CoverageAreas />
       {/* Topical Authority Hub — Internal Linking */}
+
+      {/* 10.10 Click-Depth: Popular Price Guides — 3 commercial landings at 1-click depth */}
+      <section className="py-12 px-4 bg-white border-t border-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-xs font-black uppercase tracking-widest text-amber-600 mb-2">Popular Price Guides</p>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900">Transparent Aircond Pricing — No Hidden Fees</h2>
+            <p className="text-slate-500 text-sm mt-1">Harga Telus Tanpa Yuran Tersembunyi | 价格透明无隐藏费用</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <NextLink href="/aircond-service-price-malaysia" className="group rounded-2xl border border-amber-200 bg-amber-50/50 p-6 hover:border-amber-400 hover:shadow-md transition-all">
+              <div className="text-2xl mb-3">💰</div>
+              <h3 className="font-black text-slate-900 text-base group-hover:text-amber-700 transition-colors">Aircond Service Price 2026</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">Full service price list — basic, chemical wash, gas, repair, installation. All prices confirmed upfront.</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-amber-600 group-hover:gap-2 transition-all">View Prices <FiArrowRight className="h-3 w-3" /></span>
+            </NextLink>
+            <NextLink href="/installation-price-malaysia" className="group rounded-2xl border border-sky-200 bg-sky-50/50 p-6 hover:border-sky-400 hover:shadow-md transition-all">
+              <div className="text-2xl mb-3">🔧</div>
+              <h3 className="font-black text-slate-900 text-base group-hover:text-sky-700 transition-colors">Installation Price Guide</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">New AC installation from RM 199. Full materials breakdown, copper piping, wall bracket &amp; warranty included.</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600 group-hover:gap-2 transition-all">View Guide <FiArrowRight className="h-3 w-3" /></span>
+            </NextLink>
+            <NextLink href="/cuci-aircond-kl" className="group rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 hover:border-emerald-400 hover:shadow-md transition-all">
+              <div className="text-2xl mb-3">🧹</div>
+              <h3 className="font-black text-slate-900 text-base group-hover:text-emerald-700 transition-colors">Chemical Wash KL Guide</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">Cuci aircond KL dari RM 120. Pressure chemical cleaning, same-day booking. Full Klang Valley coverage.</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-emerald-600 group-hover:gap-2 transition-all">Cuci Aircond KL <FiArrowRight className="h-3 w-3" /></span>
+            </NextLink>
+          </div>
+        </div>
+      </section>
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
