@@ -13,6 +13,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildServiceSchema } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
+import { PriceComparisonUI } from "@/components/price-comparison";
 
 export const dynamic = "force-static";
 
@@ -462,6 +463,7 @@ export default function ZhPricingPage() {
           </div>
         </div>
       </section>
+      <PriceComparisonUI locale="zh" />
     </>
   );
 }
