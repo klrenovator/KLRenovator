@@ -5,19 +5,17 @@ import { allPosts } from "@/config/blog-posts";
 const BASE = "https://www.klrenovator.com";
 
 // ─────────────────────────────────────────────────────────────────────────
-// MULTILINGUAL ROUTING — current state as of June 2026:
+// MULTILINGUAL ROUTING — current state as of July 2026:
 //   - English = default locale, lives at the ROOT path (no /en/ prefix).
-//   - Bahasa Malaysia = /ms/areas, /ms/brands, /ms/problems — LIVE.
-//   - Mandarin        = /zh/areas, /zh/brands, /zh/problems — LIVE.
-//   - Blog posts: all 21 now have real /ms/blog and /zh/blog twins.
-//   - Static pages (home, about, contact, gallery, faq, services): English only.
+//   - Bahasa Malaysia = /ms/* pages — LIVE across all page types.
+//   - Mandarin        = /zh/* pages — LIVE across all page types.
 //
-// Coverage: 39/39 areas, 18/18 brands, 20/20 problems all have real /ms/
-// and /zh/ pages. 116 kampung/neighbourhood pages also have real /ms/
-// and /zh/ twins wherever descriptionMS/descriptionZH exists in the data
-// (currently all 116). RULE: only add a /ms/ or /zh/ URL here once the
-// matching real page exists — this is what keeps this sitemap free of the
-// dead-URL bug that used to submit ~290 404s to Google.
+// Coverage: 40/40 areas, 20/20 brands, 20/20 problems, 43/43 blog posts,
+// 158/158 kampungs, 10/10 services, 13/13 static index pages,
+// 3/3 commercial landings — all have real /ms/ and /zh/ twins.
+//
+// RULE: only add a /ms/ or /zh/ URL here once the matching real page
+// exists — this is what keeps this sitemap free of dead-URL bugs.
 // ─────────────────────────────────────────────────────────────────────────
 
 const buildCanonicalOnly = (path: string) => ({
@@ -27,11 +25,7 @@ const buildCanonicalOnly = (path: string) => ({
   },
 });
 
-// For URL families that exist in all 3 languages at the same depth
-// (areas, brands, problems, and their kampung children), this builds the
-// real per-language alternates map so the sitemap itself — not just each
-// page's own <head> tags — tells Google which URLs are translations of
-// each other.
+// For URL families that exist in all 3 languages at the same depth.
 const buildTrilingual = (path: { en: string; ms: string; zh: string }) => ({
   canonical: `${BASE}${path.en}`,
   languages: {
@@ -45,252 +39,279 @@ const buildTrilingual = (path: { en: string; ms: string; zh: string }) => ({
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  // ── Static Pages (English only — no /ms/ or /zh/ twin yet) ──────────
+  // ═══════════════════════════════════════════════════════════════════════
+  // 1) TRILINGUAL STATIC INDEX PAGES
+  // ═══════════════════════════════════════════════════════════════════════
   const staticPages: MetadataRoute.Sitemap = [
+    // Homepage — EN only (no /ms/ or /zh/ root home pages)
     { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: buildCanonicalOnly("") },
-    { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildCanonicalOnly("/services") },
-    { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildCanonicalOnly("/areas") },
-    { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/brands") },
-    { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/problems") },
-    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildCanonicalOnly("/blog") },
-    { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/contact") },
-    { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildCanonicalOnly("/faq") },
-    { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildCanonicalOnly("/about") },
-    { url: `${BASE}/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.70, alternates: buildCanonicalOnly("/gallery") },
-    { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildCanonicalOnly("/near-me") },
+    // Index pages with full trilingual twins
+    { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
+    { url: `${BASE}/ms/services`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
+    { url: `${BASE}/zh/services`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
+    { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
+    { url: `${BASE}/ms/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.83, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
+    { url: `${BASE}/zh/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.83, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
+    { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/brands", ms: "/ms/brands", zh: "/zh/brands" }) },
+    { url: `${BASE}/ms/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.78, alternates: buildTrilingual({ en: "/brands", ms: "/ms/brands", zh: "/zh/brands" }) },
+    { url: `${BASE}/zh/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.78, alternates: buildTrilingual({ en: "/brands", ms: "/ms/brands", zh: "/zh/brands" }) },
+    { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/problems", ms: "/ms/problems", zh: "/zh/problems" }) },
+    { url: `${BASE}/ms/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.78, alternates: buildTrilingual({ en: "/problems", ms: "/ms/problems", zh: "/zh/problems" }) },
+    { url: `${BASE}/zh/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.78, alternates: buildTrilingual({ en: "/problems", ms: "/ms/problems", zh: "/zh/problems" }) },
+    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildTrilingual({ en: "/blog", ms: "/ms/blog", zh: "/zh/blog" }) },
+    { url: `${BASE}/ms/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.78, alternates: buildTrilingual({ en: "/blog", ms: "/ms/blog", zh: "/zh/blog" }) },
+    { url: `${BASE}/zh/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.78, alternates: buildTrilingual({ en: "/blog", ms: "/ms/blog", zh: "/zh/blog" }) },
+    { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/contact", ms: "/ms/contact", zh: "/zh/contact" }) },
+    { url: `${BASE}/ms/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.73, alternates: buildTrilingual({ en: "/contact", ms: "/ms/contact", zh: "/zh/contact" }) },
+    { url: `${BASE}/zh/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.73, alternates: buildTrilingual({ en: "/contact", ms: "/ms/contact", zh: "/zh/contact" }) },
+    { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildTrilingual({ en: "/faq", ms: "/ms/faq", zh: "/zh/faq" }) },
+    { url: `${BASE}/ms/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.68, alternates: buildTrilingual({ en: "/faq", ms: "/ms/faq", zh: "/zh/faq" }) },
+    { url: `${BASE}/zh/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.68, alternates: buildTrilingual({ en: "/faq", ms: "/ms/faq", zh: "/zh/faq" }) },
+    { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildTrilingual({ en: "/about", ms: "/ms/about", zh: "/zh/about" }) },
+    { url: `${BASE}/ms/about`, lastModified: now, changeFrequency: "monthly", priority: 0.63, alternates: buildTrilingual({ en: "/about", ms: "/ms/about", zh: "/zh/about" }) },
+    { url: `${BASE}/zh/about`, lastModified: now, changeFrequency: "monthly", priority: 0.63, alternates: buildTrilingual({ en: "/about", ms: "/ms/about", zh: "/zh/about" }) },
+    { url: `${BASE}/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.70, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
+    { url: `${BASE}/ms/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
+    { url: `${BASE}/zh/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
+    { url: `${BASE}/review`, lastModified: now, changeFrequency: "monthly", priority: 0.70, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
+    { url: `${BASE}/ms/review`, lastModified: now, changeFrequency: "monthly", priority: 0.63, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
+    { url: `${BASE}/zh/review`, lastModified: now, changeFrequency: "monthly", priority: 0.63, alternates: buildTrilingual({ en: "/review", ms: "/ms/review", zh: "/zh/review" }) },
+    { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
+    { url: `${BASE}/ms/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.73, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
+    { url: `${BASE}/zh/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.73, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
   ];
 
-  // ── Emergency Page ───────────────────────────────────────────────────
-  const emergencyPage: MetadataRoute.Sitemap = [
-    { url: `${BASE}/services/emergency`, lastModified: now, changeFrequency: "monthly", priority: 0.97, alternates: buildCanonicalOnly("/services/emergency") },
+  // ═══════════════════════════════════════════════════════════════════════
+  // 2) TRILINGUAL COMMERCIAL LANDING PAGES
+  // ═══════════════════════════════════════════════════════════════════════
+  const commercialLandings: MetadataRoute.Sitemap = [
+    // /cuci-aircond-kl
+    { url: `${BASE}/cuci-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
+    { url: `${BASE}/ms/cuci-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.95, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
+    { url: `${BASE}/zh/cuci-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
+    // /installation-price-malaysia
+    { url: `${BASE}/installation-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.94, alternates: buildTrilingual({ en: "/installation-price-malaysia", ms: "/ms/installation-price-malaysia", zh: "/zh/installation-price-malaysia" }) },
+    { url: `${BASE}/ms/installation-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/installation-price-malaysia", ms: "/ms/installation-price-malaysia", zh: "/zh/installation-price-malaysia" }) },
+    { url: `${BASE}/zh/installation-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/installation-price-malaysia", ms: "/ms/installation-price-malaysia", zh: "/zh/installation-price-malaysia" }) },
+    // /aircond-service-price-malaysia
+    { url: `${BASE}/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.94, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
+    { url: `${BASE}/ms/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
+    { url: `${BASE}/zh/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
   ];
 
-  // ── Service Detail Pages (English only — no /ms/ or /zh/ twin yet) ──
-  const servicePages: MetadataRoute.Sitemap = siteConfig.services
-    .filter((s) => s.slug !== "emergency")
-    .map((s) => ({
-      url: `${BASE}/services/${s.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.92,
-      alternates: buildCanonicalOnly(`/services/${s.slug}`),
-    }));
+  // ═══════════════════════════════════════════════════════════════════════
+  // 3) TRILINGUAL SERVICE DETAIL PAGES (10 services × 3 languages = 30 URLs)
+  // ═══════════════════════════════════════════════════════════════════════
+  const allServiceSlugs = siteConfig.services.map((s) => s.slug);
 
-  // ── Area Pages — all 39 areas have real /ms/ and /zh/ twins ─────────
-  const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
-    url: `${BASE}/areas/${area.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.88,
-    alternates: buildTrilingual({
-      en: `/areas/${area.slug}`,
-      ms: `/ms/areas/${area.slug}`,
-      zh: `/zh/areas/${area.slug}`,
-    }),
-  }));
+  const serviceDetailPages: MetadataRoute.Sitemap = allServiceSlugs.flatMap((slug) => {
+    const en = `/services/${slug}`;
+    const ms = `/ms/services/${slug}`;
+    const zh = `/zh/services/${slug}`;
+    const freq: "weekly" | "monthly" = slug === "emergency" ? "weekly" : "monthly";
+    const priorityEN = slug === "emergency" ? 0.97 : slug === "maintenance-contract" ? 0.90 : 0.92;
+    const priorityLocal = slug === "emergency" ? 0.88 : slug === "maintenance-contract" ? 0.78 : 0.80;
 
-  const msAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
-    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
-    .map((area) => ({
-      url: `${BASE}/ms/areas/${area.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.80,
-      alternates: buildTrilingual({
-        en: `/areas/${area.slug}`,
-        ms: `/ms/areas/${area.slug}`,
-        zh: `/zh/areas/${area.slug}`,
-      }),
-    }));
+    return [
+      { url: `${BASE}${en}`, lastModified: now, changeFrequency: freq, priority: priorityEN, alternates: buildTrilingual({ en, ms, zh }) },
+      { url: `${BASE}${ms}`, lastModified: now, changeFrequency: freq, priority: priorityLocal, alternates: buildTrilingual({ en, ms, zh }) },
+      { url: `${BASE}${zh}`, lastModified: now, changeFrequency: freq, priority: priorityLocal, alternates: buildTrilingual({ en, ms, zh }) },
+    ];
+  });
 
-  const zhAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
-    .filter((a) => a.faqsZH && a.faqsZH.length > 0)
-    .map((area) => ({
-      url: `${BASE}/zh/areas/${area.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.80,
-      alternates: buildTrilingual({
-        en: `/areas/${area.slug}`,
-        ms: `/ms/areas/${area.slug}`,
-        zh: `/zh/areas/${area.slug}`,
-      }),
-    }));
+  // ═══════════════════════════════════════════════════════════════════════
+  // 4) AREA PAGES — 40 areas × 3 languages
+  // ═══════════════════════════════════════════════════════════════════════
+  const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.flatMap((area) => {
+    const en = `/areas/${area.slug}`;
+    const ms = `/ms/areas/${area.slug}`;
+    const zh = `/zh/areas/${area.slug}`;
 
-  // ── Brand Pages — all 18 brands have real /ms/ and /zh/ twins ───────
-  const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
-    url: `${BASE}/brands/${b.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.82,
-    alternates: buildTrilingual({
-      en: `/brands/${b.slug}`,
-      ms: `/ms/brands/${b.slug}`,
-      zh: `/zh/brands/${b.slug}`,
-    }),
-  }));
+    return [
+      {
+        url: `${BASE}${en}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.88,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      {
+        url: `${BASE}${ms}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.80,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      {
+        url: `${BASE}${zh}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.80,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+    ];
+  });
 
-  const msBrandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
-    url: `${BASE}/ms/brands/${b.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
-    alternates: buildTrilingual({
-      en: `/brands/${b.slug}`,
-      ms: `/ms/brands/${b.slug}`,
-      zh: `/zh/brands/${b.slug}`,
-    }),
-  }));
-  const zhBrandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
-    url: `${BASE}/zh/brands/${b.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
-    alternates: buildTrilingual({
-      en: `/brands/${b.slug}`,
-      ms: `/ms/brands/${b.slug}`,
-      zh: `/zh/brands/${b.slug}`,
-    }),
-  }));
+  // ═══════════════════════════════════════════════════════════════════════
+  // 5) BRAND PAGES — 20 brands × 3 languages
+  // ═══════════════════════════════════════════════════════════════════════
+  const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.flatMap((b) => {
+    const en = `/brands/${b.slug}`;
+    const ms = `/ms/brands/${b.slug}`;
+    const zh = `/zh/brands/${b.slug}`;
 
-  // ── Problem Pages — all 20 problems have real /ms/ and /zh/ twins ───
-  const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
-    url: `${BASE}/problems/${p.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.80,
-    alternates: buildTrilingual({
-      en: `/problems/${p.slug}`,
-      ms: `/ms/problems/${p.slug}`,
-      zh: `/zh/problems/${p.slug}`,
-    }),
-  }));
+    return [
+      {
+        url: `${BASE}${en}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.82,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      {
+        url: `${BASE}${ms}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.75,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      {
+        url: `${BASE}${zh}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.75,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+    ];
+  });
 
-  const msProblemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
-    url: `${BASE}/ms/problems/${p.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.73,
-    alternates: buildTrilingual({
-      en: `/problems/${p.slug}`,
-      ms: `/ms/problems/${p.slug}`,
-      zh: `/zh/problems/${p.slug}`,
-    }),
-  }));
-  const zhProblemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
-    url: `${BASE}/zh/problems/${p.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.73,
-    alternates: buildTrilingual({
-      en: `/problems/${p.slug}`,
-      ms: `/ms/problems/${p.slug}`,
-      zh: `/zh/problems/${p.slug}`,
-    }),
-  }));
+  // ═══════════════════════════════════════════════════════════════════════
+  // 6) PROBLEM PAGES — 20 problems × 3 languages
+  // ═══════════════════════════════════════════════════════════════════════
+  const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.flatMap((p) => {
+    const en = `/problems/${p.slug}`;
+    const ms = `/ms/problems/${p.slug}`;
+    const zh = `/zh/problems/${p.slug}`;
 
-  // ── Blog Post Pages — all 21 posts now have real /ms/blog and /zh/blog
-  // twins (contentMS/contentZH complete in config/blog-posts.ts).
-  const blogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
-    url: `${BASE}/blog/${p.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.72,
-    alternates: buildTrilingual({
-      en: `/blog/${p.slug}`,
-      ms: `/ms/blog/${p.slug}`,
-      zh: `/zh/blog/${p.slug}`,
-    }),
-  }));
+    return [
+      {
+        url: `${BASE}${en}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.80,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      {
+        url: `${BASE}${ms}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.73,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      {
+        url: `${BASE}${zh}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.73,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+    ];
+  });
 
-  const msBlogPages: MetadataRoute.Sitemap = allPosts
-    .filter((p) => p.contentMS)
-    .map((p) => ({
-      url: `${BASE}/ms/blog/${p.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-      alternates: buildTrilingual({
-        en: `/blog/${p.slug}`,
-        ms: `/ms/blog/${p.slug}`,
-        zh: `/zh/blog/${p.slug}`,
-      }),
-    }));
+  // ═══════════════════════════════════════════════════════════════════════
+  // 7) BLOG POST PAGES — 43 posts × 3 languages
+  // ═══════════════════════════════════════════════════════════════════════
+  const blogPages: MetadataRoute.Sitemap = allPosts.flatMap((p) => {
+    const en = `/blog/${p.slug}`;
+    const ms = `/ms/blog/${p.slug}`;
+    const zh = `/zh/blog/${p.slug}`;
+    const hasMS = !!p.contentMS;
+    const hasZH = !!p.contentZH;
 
-  const zhBlogPages: MetadataRoute.Sitemap = allPosts
-    .filter((p) => p.contentZH)
-    .map((p) => ({
-      url: `${BASE}/zh/blog/${p.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-      alternates: buildTrilingual({
-        en: `/blog/${p.slug}`,
-        ms: `/ms/blog/${p.slug}`,
-        zh: `/zh/blog/${p.slug}`,
-      }),
-    }));
+    return [
+      {
+        url: `${BASE}${en}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.72,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      ...(hasMS
+        ? [
+            {
+              url: `${BASE}${ms}` as const,
+              lastModified: now,
+              changeFrequency: "monthly" as const,
+              priority: 0.65,
+              alternates: buildTrilingual({ en, ms, zh }),
+            },
+          ]
+        : []),
+      ...(hasZH
+        ? [
+            {
+              url: `${BASE}${zh}` as const,
+              lastModified: now,
+              changeFrequency: "monthly" as const,
+              priority: 0.65,
+              alternates: buildTrilingual({ en, ms, zh }),
+            },
+          ]
+        : []),
+    ];
+  });
 
-  // ── Kampung/Neighbourhood Pages — 116 pages nested under their parent
-  // area, real /ms/ and /zh/ twins wherever descriptionMS/descriptionZH
-  // exists (currently all 116). New batches need zero changes here — they
-  // appear automatically the moment they're added to config/site.ts.
-  const kampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages.map((k) => ({
-    url: `${BASE}/areas/${k.parentSlug}/${k.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.70,
-    alternates: buildTrilingual({
-      en: `/areas/${k.parentSlug}/${k.slug}`,
-      ms: `/ms/areas/${k.parentSlug}/${k.slug}`,
-      zh: `/zh/areas/${k.parentSlug}/${k.slug}`,
-    }),
-  }));
-  const msKampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => k.descriptionMS)
-    .map((k) => ({
-      url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-      alternates: buildTrilingual({
-        en: `/areas/${k.parentSlug}/${k.slug}`,
-        ms: `/ms/areas/${k.parentSlug}/${k.slug}`,
-        zh: `/zh/areas/${k.parentSlug}/${k.slug}`,
-      }),
-    }));
-  const zhKampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => k.descriptionZH)
-    .map((k) => ({
-      url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-      alternates: buildTrilingual({
-        en: `/areas/${k.parentSlug}/${k.slug}`,
-        ms: `/ms/areas/${k.parentSlug}/${k.slug}`,
-        zh: `/zh/areas/${k.parentSlug}/${k.slug}`,
-      }),
-    }));
+  // ═══════════════════════════════════════════════════════════════════════
+  // 8) KAMPUNG / NEIGHBOURHOOD PAGES — 158 kampungs × 3 languages
+  // ═══════════════════════════════════════════════════════════════════════
+  const kampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages.flatMap((k) => {
+    const en = `/areas/${k.parentSlug}/${k.slug}`;
+    const ms = `/ms/areas/${k.parentSlug}/${k.slug}`;
+    const zh = `/zh/areas/${k.parentSlug}/${k.slug}`;
+    const hasMS = !!k.descriptionMS;
+    const hasZH = !!k.descriptionZH;
+
+    return [
+      {
+        url: `${BASE}${en}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.70,
+        alternates: buildTrilingual({ en, ms, zh }),
+      },
+      ...(hasMS
+        ? [
+            {
+              url: `${BASE}${ms}` as const,
+              lastModified: now,
+              changeFrequency: "monthly" as const,
+              priority: 0.65,
+              alternates: buildTrilingual({ en, ms, zh }),
+            },
+          ]
+        : []),
+      ...(hasZH
+        ? [
+            {
+              url: `${BASE}${zh}` as const,
+              lastModified: now,
+              changeFrequency: "monthly" as const,
+              priority: 0.65,
+              alternates: buildTrilingual({ en, ms, zh }),
+            },
+          ]
+        : []),
+    ];
+  });
 
   return [
     ...staticPages,
-    ...emergencyPage,
-    ...servicePages,
+    ...commercialLandings,
+    ...serviceDetailPages,
     ...areaPages,
-    ...msAreaPages,
-    ...zhAreaPages,
-    ...kampungPages,
-    ...msKampungPages,
-    ...zhKampungPages,
     ...brandPages,
-    ...msBrandPages,
-    ...zhBrandPages,
     ...problemPages,
-    ...msProblemPages,
-    ...zhProblemPages,
     ...blogPages,
-    ...msBlogPages,
-    ...zhBlogPages,
+    ...kampungPages,
   ];
 }
