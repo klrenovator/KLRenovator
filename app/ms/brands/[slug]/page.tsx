@@ -14,6 +14,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
+import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/brands/[slug] — Bahasa Malaysia brand page.
@@ -595,13 +596,13 @@ export default async function BrandPageMS({
                   Servis Aircond {brand.name} Yang Kami Tawarkan
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {brandServices.map((s) => (
+                  {brandServices.map((s, idx) => (
                     <NextLink
                       key={s.slug}
                       href={`/ms/services/${s.slug}`}
                       className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
                     >
-                      {s.title}
+                      {serviceAnchor(s.slug, "ms", idx)}
                     </NextLink>
                   ))}
                   <NextLink
