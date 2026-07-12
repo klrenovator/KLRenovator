@@ -13,6 +13,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildServiceSchema } from "@/lib/seo";
 import { getFreshDateMS } from "@/lib/dates";
+import { PriceComparisonUI } from "@/components/price-comparison";
 
 export const dynamic = "force-static";
 
@@ -469,6 +470,7 @@ export default function HargaServisPage() {
           </div>
         </div>
       </section>
+      <PriceComparisonUI locale="ms" />
     </>
   );
 }
