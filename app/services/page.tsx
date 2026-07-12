@@ -6,6 +6,7 @@ import { FaWhatsapp, FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
+import { PriceComparisonUI } from "@/components/price-comparison";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { Reveal } from "@/components/reveal";
@@ -264,6 +265,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <PriceComparisonUI locale="en" />
       <CoverageAreas />
       <ReadyToBook />
     </>
