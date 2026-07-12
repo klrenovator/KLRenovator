@@ -249,6 +249,21 @@ export default function ServicesPage() {
         </div>
       </section>
 
+
+      {/* 10.10 Click-Depth: Quick Price Guides — ensure ≤2 clicks from /services */}
+      <section className="py-12 px-4 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-xs font-black uppercase tracking-widest text-amber-600 mb-2">Popular Price Guides</p>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900">Transparent Aircond Pricing — No Hidden Fees</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <Link href="/aircond-service-price-malaysia" className="group rounded-2xl border border-amber-200 bg-white p-6 hover:border-amber-400 hover:shadow-md transition-all"><div className="text-2xl mb-3">💰</div><h3 className="font-black text-slate-900 text-base group-hover:text-amber-700 transition-colors">Aircond Service Price 2026</h3><p className="text-sm text-slate-600 mt-2 leading-relaxed">Full service price list — basic, chemical wash, gas, repair. All prices confirmed upfront.</p><span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-amber-600 group-hover:gap-2 transition-all">View Prices <FaArrowRight className="h-3 w-3" /></span></Link>
+            <Link href="/installation-price-malaysia" className="group rounded-2xl border border-sky-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition-all"><div className="text-2xl mb-3">🔧</div><h3 className="font-black text-slate-900 text-base group-hover:text-sky-700 transition-colors">Installation Price Guide</h3><p className="text-sm text-slate-600 mt-2 leading-relaxed">New AC from RM 199. Full materials &amp; warranty. Same-day available.</p><span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600 group-hover:gap-2 transition-all">View Guide <FaArrowRight className="h-3 w-3" /></span></Link>
+            <Link href="/cuci-aircond-kl" className="group rounded-2xl border border-emerald-200 bg-white p-6 hover:border-emerald-400 hover:shadow-md transition-all"><div className="text-2xl mb-3">🧹</div><h3 className="font-black text-slate-900 text-base group-hover:text-emerald-700 transition-colors">Chemical Wash KL Guide</h3><p className="text-sm text-slate-600 mt-2 leading-relaxed">Cuci aircond KL dari RM 120. Same-day booking across Klang Valley.</p><span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-emerald-600 group-hover:gap-2 transition-all">Cuci Aircond KL <FaArrowRight className="h-3 w-3" /></span></Link>
+          </div>
+        </div>
+      </section>
       <CoverageAreas />
       <ReadyToBook />
     </>
