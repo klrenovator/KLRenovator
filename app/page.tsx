@@ -5,6 +5,7 @@ import { StatsBand } from "@/components/sections/stats-band";
 import { ServicesWithPricing } from "@/components/sections/services-with-pricing";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { GoogleReviews } from "@/components/sections/google-reviews";
+import { ReviewTrustWidget } from "@/components/review-trust-widget";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
@@ -76,6 +77,9 @@ export default function Home() {
       <ServicesWithPricing />
       <WhyChooseUs />
       <GoogleReviews />
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        <ReviewTrustWidget locale="en" />
+      </div>
       <PriceComparisonUI locale="en" />
 
       {/* ── Emergency Banner ─────────────────────────────────────────── */}
