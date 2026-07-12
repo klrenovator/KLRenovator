@@ -2,6 +2,7 @@
 
 import NextLink from "next/link";
 import { BLOG_SERVICE_MAP, PROBLEM_BLOG_MAP_V2 } from "@/config/topical-authority-map";
+import { diversifyBlogAnchors } from "@/config/anchor-text-diversity";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiClock, FiTag, FiChevronRight, FiArrowLeft, FiArrowRight, FiMapPin } from "react-icons/fi";
@@ -324,7 +325,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                   prose-strong:text-slate-900 prose-strong:font-black
                   prose-ul:my-4 prose-li:text-slate-700 prose-li:font-medium
                   prose-a:text-sky-600 prose-a:font-bold prose-a:no-underline hover:prose-a:underline"
-                dangerouslySetInnerHTML={{ __html: content }}
+                dangerouslySetInnerHTML={{ __html: diversifyBlogAnchors(content, lang) }}
               />
 
               <section className="mt-10 rounded-2xl border border-sky-100 bg-sky-50/70 p-5 not-prose">
