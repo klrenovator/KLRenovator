@@ -12,7 +12,7 @@ const BASE = "https://www.klrenovator.com";
 //
 // Coverage: 40/40 areas, 20/20 brands, 20/20 problems, 43/43 blog posts,
 // 158/158 kampungs, 10/10 services, 13/13 static index pages,
-// 3/3 commercial landings — all have real /ms/ and /zh/ twins.
+// 3/3 commercial landings, 360 brand-area combos — all have real /ms/ and /zh/ twins.
 //
 // RULE: only add a /ms/ or /zh/ URL here once the matching real page
 // exists — this is what keeps this sitemap free of dead-URL bugs.
@@ -186,6 +186,66 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // ═══════════════════════════════════════════════════════════════════════
+  // 5b) BRAND-AREA COMBO PAGES — 20 brands × 6 priority areas × 3 languages = 360 URLs
+  // ═══════════════════════════════════════════════════════════════════════
+  const PRIORITY_AREAS_BY_BRAND: Record<string, string[]> = {
+    daikin: ["petaling-jaya", "mont-kiara", "subang-jaya", "kuala-lumpur", "shah-alam", "bangsar"],
+    panasonic: ["puchong", "cheras", "petaling-jaya", "subang-jaya", "klang", "kuala-lumpur"],
+    mitsubishi: ["shah-alam", "mont-kiara", "damansara", "kuala-lumpur", "puchong", "subang-jaya"],
+    york: ["klang", "shah-alam", "kepong", "puchong", "petaling-jaya", "sentul"],
+    acson: ["cheras", "shah-alam", "klang", "puchong", "kuala-lumpur", "setapak"],
+    carrier: ["glenmarie", "shah-alam", "kuala-lumpur", "petaling-jaya", "klang", "damansara"],
+    midea: ["puchong", "cheras", "subang-jaya", "petaling-jaya", "klang", "kajang"],
+    haier: ["cheras", "ampang", "puchong", "kajang", "kepong", "setapak"],
+    toshiba: ["damansara", "petaling-jaya", "kuala-lumpur", "mont-kiara", "bangsar", "subang-jaya"],
+    hitachi: ["shah-alam", "glenmarie", "kuala-lumpur", "damansara", "petaling-jaya", "klang"],
+    samsung: ["mont-kiara", "bangsar", "petaling-jaya", "subang-jaya", "kuala-lumpur", "cyberjaya"],
+    lg: ["mont-kiara", "petaling-jaya", "subang-jaya", "puchong", "kuala-lumpur", "bangsar"],
+    sharp: ["cheras", "ampang", "kepong", "setapak", "puchong", "kajang"],
+    fujitsu: ["glenmarie", "shah-alam", "kuala-lumpur", "damansara", "cyberjaya", "petaling-jaya"],
+    gree: ["puchong", "klang", "kajang", "cheras", "ampang", "seri-kembangan"],
+    hisense: ["kajang", "balakong", "puchong", "klang", "cheras", "ampang"],
+    aux: ["shah-alam", "klang", "puchong", "subang-jaya", "rawang", "kepong"],
+    tcl: ["puchong", "cheras", "subang-jaya", "petaling-jaya", "klang", "kajang"],
+    national: ["sentul", "kepong", "cheras", "ampang", "kuala-lumpur", "petaling-jaya"],
+    isonic: ["klang", "puchong", "shah-alam", "cheras", "kajang", "rawang"],
+    _default: ["kuala-lumpur", "petaling-jaya", "cheras", "puchong", "shah-alam", "klang"],
+  };
+
+  const brandAreaComboPages: MetadataRoute.Sitemap = siteConfig.brandPages.flatMap((b) => {
+    const priority = PRIORITY_AREAS_BY_BRAND[b.slug] || PRIORITY_AREAS_BY_BRAND._default;
+    return priority.flatMap((areaSlug) => {
+      const en = `/brands/${b.slug}/${areaSlug}`;
+      const ms = `/ms/brands/${b.slug}/${areaSlug}`;
+      const zh = `/zh/brands/${b.slug}/${areaSlug}`;
+
+      return [
+        {
+          url: `${BASE}${en}`,
+          lastModified: now,
+          changeFrequency: "monthly" as const,
+          priority: 0.78,
+          alternates: buildTrilingual({ en, ms, zh }),
+        },
+        {
+          url: `${BASE}${ms}`,
+          lastModified: now,
+          changeFrequency: "monthly" as const,
+          priority: 0.70,
+          alternates: buildTrilingual({ en, ms, zh }),
+        },
+        {
+          url: `${BASE}${zh}`,
+          lastModified: now,
+          changeFrequency: "monthly" as const,
+          priority: 0.70,
+          alternates: buildTrilingual({ en, ms, zh }),
+        },
+      ];
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════
   // 6) PROBLEM PAGES — 20 problems × 3 languages
   // ═══════════════════════════════════════════════════════════════════════
   const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.flatMap((p) => {
@@ -310,6 +370,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceDetailPages,
     ...areaPages,
     ...brandPages,
+    ...brandAreaComboPages,
     ...problemPages,
     ...blogPages,
     ...kampungPages,
