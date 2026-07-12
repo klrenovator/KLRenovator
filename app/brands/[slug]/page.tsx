@@ -14,6 +14,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
+import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /brands/[slug] — English brand page.
@@ -112,7 +113,7 @@ export default async function BrandPageEN({
         "@type": "ListItem",
         position: 2,
         name: "Brands",
-        item: "https://www.klrenovator.com/ms/brands",
+        item: "https://www.klrenovator.com/brands",
       },
       {
         "@type": "ListItem",
@@ -141,7 +142,7 @@ export default async function BrandPageEN({
   const brandAreaComboModule = buildBrandAreaComboModule(
     brand,
     siteConfig.areaPages,
-    "ms",
+    "en",
   );
   const brandProblemSlugs =
     BRAND_PROBLEM_MAP[slug] ?? BRAND_PROBLEM_MAP["_default"];
@@ -594,13 +595,13 @@ export default async function BrandPageEN({
                   {brand.name} Aircond Services We Provide
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {brandServices.map((s) => (
+                  {brandServices.map((s, idx) => (
                     <NextLink
                       key={s.slug}
                       href={`/services/${s.slug}`}
                       className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
                     >
-                      {s.title}
+                      {serviceAnchor(s.slug, "en", idx)}
                     </NextLink>
                   ))}
                   <NextLink
