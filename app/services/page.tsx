@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 import { PriceComparisonUI } from "@/components/price-comparison";
+import { ReviewTrustWidget } from "@/components/review-trust-widget";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { Reveal } from "@/components/reveal";
@@ -266,6 +267,9 @@ export default function ServicesPage() {
         </div>
       </section>
       <PriceComparisonUI locale="en" />
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        <ReviewTrustWidget locale="en" />
+      </div>
       <CoverageAreas />
       <ReadyToBook />
     </>
