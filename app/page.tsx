@@ -9,6 +9,7 @@ import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { siteConfig } from "@/config/site";
+import { PriceComparisonUI } from "@/components/price-comparison";
 import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
 import NextLink from "next/link";
@@ -74,6 +75,7 @@ export default function Home() {
       <ServicesWithPricing />
       <WhyChooseUs />
       <GoogleReviews />
+      <PriceComparisonUI locale="en" />
 
       {/* ── Emergency Banner ─────────────────────────────────────────── */}
       <section className="bg-gradient-to-r from-red-700 to-rose-600 text-white py-10 px-4">
