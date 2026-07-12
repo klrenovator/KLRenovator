@@ -14,6 +14,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
+import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/brands/[slug] — Mandarin brand page. Mirrors /ms/brands/[slug].
@@ -587,13 +588,13 @@ export default async function BrandPageZH({
                   {brand.name}冷气服务项目
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {brandServices.map((s) => (
+                  {brandServices.map((s, idx) => (
                     <NextLink
                       key={s.slug}
                       href={`/zh/services/${s.slug}`}
                       className="inline-flex items-center gap-1 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 rounded-full hover:border-sky-500 hover:text-sky-600 transition"
                     >
-                      {s.title}
+                      {serviceAnchor(s.slug, "zh", idx)}
                     </NextLink>
                   ))}
                   <NextLink
