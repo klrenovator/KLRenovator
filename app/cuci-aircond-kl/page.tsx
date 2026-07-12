@@ -10,6 +10,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
 import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
+import { PriceComparisonUI } from "@/components/price-comparison";
 
 export const dynamic = "force-static";
 
@@ -125,6 +126,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <PriceComparisonUI locale="en" />
     </>
   );
 }
