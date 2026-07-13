@@ -10,7 +10,7 @@ const BASE = "https://www.klrenovator.com";
 //   - Bahasa Malaysia = /ms/* pages — LIVE across all page types.
 //   - Mandarin        = /zh/* pages — LIVE across all page types.
 //
-// Coverage: 40/40 areas, 20/20 brands, 20/20 problems, 43/43 blog posts,
+// Coverage: 40/40 areas, 20/20 brands, 20/20 problems, 54/54 blog posts,
 // 158/158 kampungs, 10/10 services, 13/13 static index pages,
 // 3/3 commercial landings, 360 brand-area combos — all have real /ms/ and /zh/ twins.
 //
