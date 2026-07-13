@@ -28,7 +28,7 @@ export default function Home() {
   const offerCatalogSchema = {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
-    "name": "Aircond Services Kuala Lumpur & Selangor",
+    "name": "Aircond Installation & Servicing Kuala Lumpur & Selangor",
     "itemListElement": siteConfig.services.map((service, i) => ({
       "@type": "Offer",
       position: i + 1,

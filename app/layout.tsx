@@ -138,7 +138,7 @@ export default function RootLayout({
               },
               description: siteConfig.description,
               slogan:
-                "Expert Aircond Servicing, Chemical Overhaul & Repair KL & Selangor",
+                "Aircond Installation, Servicing & Repair KL & Selangor",
               foundingDate: "2014",
               numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
               aggregateRating: {
@@ -492,7 +492,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebPage",
               "@id": "https://www.klrenovator.com/#webpage",
-              name: "KL Renovator — Expert Aircond Services KL & Selangor",
+              name: "KL Renovator — Aircond Installation & Servicing KL Selangor",
               url: "https://www.klrenovator.com",
               speakable: {
                 "@type": "SpeakableSpecification",
