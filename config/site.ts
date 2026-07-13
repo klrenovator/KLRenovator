@@ -6,16 +6,16 @@ export const siteConfig = {
   legalName: "Multicore Dynamics Resources",
   ssm: "003765188-T",
   ssmFull: "202503227236 (003765188-T)",
-  tagline: "Expert Aircond Servicing, Chemical Overhaul & Repair KL & Selangor",
+  tagline: "Aircond Installation, Servicing & Repair KL & Selangor",
   description:
-    "KL Renovator provides professional residential and commercial aircond servicing in Kuala Lumpur & Selangor. Serving Batu Caves, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil, Kota Damansara, Ara Damansara, Sunway, USJ, Port Klang, Bukit Tinggi, Setia Alam, Meru, Rawang, Kundang, Semenyih, Balakong, Seri Kembangan, Pandan Indah, Putrajaya, Cyberjaya & Dengkil. Specialized in Pressure Chemical Wash, Chemical Overhaul, Precision Gas Top-ups (R22, R410A, R32 balancing), Troubleshooting & New Installations for Daikin, Panasonic, Mitsubishi, York, LG, Midea & Samsung. Fast response and transparent pricing across Klang Valley.",
+    "KL Renovator provides expert aircond installation (from RM199), professional servicing, chemical wash, overhaul, gas top-up and repairs in Kuala Lumpur & Selangor. Serving Batu Caves, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil, Kota Damansara, Ara Damansara, Sunway, USJ, Port Klang, Bukit Tinggi, Setia Alam, Meru, Rawang, Kundang, Semenyih, Balakong, Seri Kembangan, Pandan Indah, Putrajaya, Cyberjaya & Dengkil. Same-day installation and servicing for Daikin, Panasonic, Mitsubishi, York, LG, Midea, Samsung & 13 more brands. Transparent pricing confirmed before work begins.",
   // Short version for HTML <meta name="description">, OG, and Twitter cards —
   // Google truncates around 155-160 characters, so the long `description`
   // above (used for JSON-LD schema, where length doesn't hurt) is NOT
   // suitable for these tags. This one is kept inside the 150-158 char
   // target range from the project's own CTR-optimization brief.
   metaDescription:
-    "Professional aircond servicing across KL & Selangor. Chemical wash, overhaul, gas top-up, repairs & installation. Same-day service, transparent pricing.",
+    "Expert aircond installation from RM199 — plus servicing, chemical wash, overhaul & repairs across KL & Selangor. Same-day, transparent pricing. 20 brands.",
 
   phone: "+60182983573",
   phoneDisplay: "+60 18-298 3573",
@@ -7769,8 +7769,8 @@ export const siteConfig = {
   ],
 
   services: [
+    { slug: "installation", title: "New Unit Installation", short: "Professional aircond installation from RM199 — wall-mounted, ceiling cassette & window units for all 20 brands. Same-day available, 1-month workmanship warranty, vacuum pump commissioning.", startPrice: 199, icon: "plug", targetProblem: "New home setup, upgrading old systems, moving into new office or condo.", category: "both" as const },
     { slug: "emergency", title: "Emergency Aircond Repair", short: "Same-day emergency response for complete aircond breakdown, heavy water leaking, outdoor unit failure, and urgent repairs across KL & Selangor.", startPrice: 88, icon: "alert-triangle", targetProblem: "Sudden complete breakdown, heavy water leak, MCB tripping, burning smell.", category: "both" as const },
-    { slug: "installation", title: "New Unit Installation", short: "Professional residential and commercial AC setup with clean cable routing. Same-day installation available for all brands and HP sizes.", startPrice: 199, icon: "plug", targetProblem: "Upgrading old non-inverter systems, moving into a new office or home.", category: "both" as const },
     { slug: "basic-servicing", title: "Basic Servicing / Routine Maintenance", short: "Regular standard aircond filter cleaning and multi-point diagnostic check to maintain peak energy efficiency and extend unit lifespan.", startPrice: 99, icon: "wrench", targetProblem: "Routine 3–6 month checkup, energy efficiency checks, preventive care.", category: "residential" as const },
     { slug: "chemical-wash", title: "Pressure Chemical Wash", short: "Deep high-pressure chemical cleaning to remove stubborn mould, dust, bacteria and dramatically improve cooling airflow and air quality.", startPrice: 120, icon: "flask-conical", targetProblem: "Slow cooling, foul smell, low airflow, dusty air extraction.", category: "both" as const },
     { slug: "chemical-overhaul", title: "Chemical Overhaul", short: "Complete dismantling of the indoor unit for the ultimate deep-clean. Permanently resolves severe water leaking, ice formation, and extreme blockage.", startPrice: 220, icon: "sparkles", targetProblem: "Water leaking, ice formation, complete blockage, system choking.", category: "both" as const },
