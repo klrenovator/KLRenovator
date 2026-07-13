@@ -14,7 +14,7 @@
  *   ├── Problem Silo       /problems → [20 problem pages]
  *   ├── Location Silo      /areas    → [39 area pages + 116 kampung pages]
  *   ├── Brand Silo         /brands   → [18 brand pages]
- *   └── Blog Silo          /blog     → [20 blog posts]
+ *   └── Blog Silo          /blog     → [54 blog posts]
  *
  * CROSS-SILO LINK FLOW:
  * Service → Problem (service fixes these problems)
@@ -176,6 +176,10 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "chemical-wash-vs-chemical-overhaul",
     "how-often-service-aircond-malaysia",
     "harga-servis-aircond-2026-malaysia",
+    "daikin-vs-panasonic-aircond-service-cost-malaysia-2026",
+    "chemical-wash-every-6-vs-12-months-malaysia-2026",
+    "shopee-aircond-service-vs-direct-booking-malaysia-2026",
+    "facebook-instagram-aircond-ads-vs-company-malaysia-2026",
   ],
   "chemical-overhaul": [
     "aircond-chemical-overhaul-kl-selangor-cooling-efficiency",
@@ -190,6 +194,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "r32-r410a-r22-gas-difference",
     "aircond-gas-topup-myths-malaysia",
     "aircond-not-cold-reasons",
+    "gas-topup-with-vs-without-leak-check-malaysia-2026",
   ],
   "repair": [
     "baiki-vs-tukar-baru-aircond-malaysia",
@@ -198,6 +203,9 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-not-cold-reasons",
     "aircond-water-leaking-causes",
     "aircond-lifespan-malaysia",
+    "inverter-vs-non-inverter-aircond-repair-cost-malaysia-2026",
+    "authorized-vs-independent-aircond-service-malaysia-2026",
+    "aircond-service-warranty-comparison-malaysia-2026",
   ],
   "installation": [
     "cara-pilih-hp-aircond-bilik-malaysia",
@@ -206,6 +214,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-installation-dismantling-kl-selangor-price-guide",
     "aircond-installation-guide-malaysia",
     "inverter-vs-non-inverter-aircond-malaysia-tnb-bill",
+    "full-copper-vs-basic-aircond-installation-malaysia-2026",
   ],
   "basic-servicing": [
     "regular-aircond-basic-servicing-kl-selangor-2026",
@@ -215,6 +224,8 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-service-price-guide-kl-2026",
     "inverter-vs-non-inverter-aircond-service-malaysia-2026",
     "harga-servis-aircond-2026-malaysia",
+    "shopee-aircond-service-vs-direct-booking-malaysia-2026",
+    "authorized-vs-independent-aircond-service-malaysia-2026",
   ],
   "ceiling-cassette": [
     "commercial-hvac-maintenance-kl",
@@ -235,6 +246,8 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-not-cold-reasons",
     "pressure-chemical-wash-leaking-aircond-kl-selangor",
     "aircond-water-leaking-causes",
+    "same-day-vs-next-day-aircond-service-malaysia-2026",
+    "online-vs-whatsapp-aircond-booking-malaysia-2026",
   ],
   "maintenance-contract": [
     "servis-aircond-rumah-sewa-airbnb-malaysia",
@@ -242,6 +255,9 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "how-often-service-aircond-malaysia",
     "aircond-maintenance-checklist-malaysia",
     "aircond-service-price-guide-kl-2026",
+    "aircond-amc-vs-one-time-service-malaysia-2026",
+    "tenant-vs-homeowner-aircond-responsibility-malaysia-2026",
+    "chemical-wash-every-6-vs-12-months-malaysia-2026",
   ],
 };
 
@@ -364,7 +380,7 @@ export const PROBLEM_BRAND_MAP: Record<string, string[]> = (() => {
 
 // ── BLOG → SERVICE MAP ────────────────────────────────────────────────────────
 // Which services to link from each blog post
-// Round 51 / 10.1–10.6: complete reverse coverage for all 43 blog posts
+// Round 51 / 10.1–10.6: complete reverse coverage for all 54 blog posts
 export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-service-batu-caves-selayang-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
   "aircond-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
@@ -409,6 +425,20 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-maintenance-contract-malaysia-2026": ["maintenance-contract", "basic-servicing", "chemical-wash"],
   "inverter-vs-non-inverter-aircond-service-malaysia-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],
   "harga-servis-aircond-2026-malaysia": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
+  // Round 60 — 13 new competitor gap-fill blog posts (6B.9–6B.21)
+  "daikin-vs-panasonic-aircond-service-cost-malaysia-2026": ["chemical-wash", "gas-topup", "repair"],
+  "authorized-vs-independent-aircond-service-malaysia-2026": ["repair", "chemical-wash", "basic-servicing"],
+  "shopee-aircond-service-vs-direct-booking-malaysia-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],
+  "facebook-instagram-aircond-ads-vs-company-malaysia-2026": ["chemical-wash", "basic-servicing", "repair"],
+  "aircond-amc-vs-one-time-service-malaysia-2026": ["maintenance-contract", "basic-servicing", "chemical-wash"],
+  "gas-topup-with-vs-without-leak-check-malaysia-2026": ["gas-topup", "repair", "basic-servicing"],
+  "inverter-vs-non-inverter-aircond-repair-cost-malaysia-2026": ["repair", "gas-topup", "chemical-wash"],
+  "same-day-vs-next-day-aircond-service-malaysia-2026": ["emergency", "basic-servicing", "chemical-wash"],
+  "full-copper-vs-basic-aircond-installation-malaysia-2026": ["installation", "dismantling-relocation", "basic-servicing"],
+  "chemical-wash-every-6-vs-12-months-malaysia-2026": ["chemical-wash", "maintenance-contract", "basic-servicing"],
+  "online-vs-whatsapp-aircond-booking-malaysia-2026": ["emergency", "basic-servicing", "maintenance-contract"],
+  "aircond-service-warranty-comparison-malaysia-2026": ["repair", "chemical-wash", "installation"],
+  "tenant-vs-homeowner-aircond-responsibility-malaysia-2026": ["maintenance-contract", "basic-servicing", "chemical-wash"],
 };
 
 
