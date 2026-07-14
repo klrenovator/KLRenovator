@@ -9,6 +9,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationCROModule } from "@/components/installation-cro-module";
+import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
   title: "Aircond Installation KL & Selangor — From RM199 | Same-Day | KL Renovator",
@@ -406,6 +407,9 @@ export default function AircondInstallationKLPage() {
         showPricingGuarantee={true}
         showUSPBlock={true}
       />
+
+      {/* Installation Trust Signals — INS-17 */}
+      <InstallationTrustSignals variant="default" />
 
       {/* FAQ Section */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
