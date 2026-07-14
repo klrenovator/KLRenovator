@@ -144,7 +144,7 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl font-black text-slate-900">Transparent Aircond Pricing — No Hidden Fees</h2>
             <p className="text-slate-500 text-sm mt-1">Harga Telus Tanpa Yuran Tersembunyi | 价格透明无隐藏费用</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
             <NextLink href="/aircond-service-price-malaysia" className="group rounded-2xl border border-amber-200 bg-amber-50/50 p-6 hover:border-amber-400 hover:shadow-md transition-all">
               <div className="text-2xl mb-3">💰</div>
               <h3 className="font-black text-slate-900 text-base group-hover:text-amber-700 transition-colors">Aircond Service Price 2026</h3>
@@ -156,6 +156,12 @@ export default function Home() {
               <h3 className="font-black text-slate-900 text-base group-hover:text-sky-700 transition-colors">Installation Price Guide</h3>
               <p className="text-sm text-slate-600 mt-2 leading-relaxed">New AC installation from RM 199. Full materials breakdown, copper piping, wall bracket &amp; warranty included.</p>
               <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600 group-hover:gap-2 transition-all">View Guide <FiArrowRight className="h-3 w-3" /></span>
+            </NextLink>
+            <NextLink href="/aircond-installation-kl" className="group rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 hover:border-emerald-400 hover:shadow-md transition-all">
+              <div className="text-2xl mb-3">🏗️</div>
+              <h3 className="font-black text-slate-900 text-base group-hover:text-emerald-700 transition-colors">Aircond Installation KL & Selangor</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">Expert installation from RM 199. 7-step process, vacuum pump, Type L copper, 1-month warranty. Same-day available.</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-emerald-600 group-hover:gap-2 transition-all">View Installation <FiArrowRight className="h-3 w-3" /></span>
             </NextLink>
             <NextLink href="/cuci-aircond-kl" className="group rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 hover:border-emerald-400 hover:shadow-md transition-all">
               <div className="text-2xl mb-3">🧹</div>
