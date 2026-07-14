@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
+import { InstallationCROModule } from "@/components/installation-cro-module";
 
 export const metadata: Metadata = {
   title: "Aircond Installation KL & Selangor — From RM199 | Same-Day | KL Renovator",
@@ -395,6 +396,16 @@ export default function AircondInstallationKLPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* CRO Module — Installation Page Conversion Optimization */}
+      <InstallationCROModule 
+        title="Why Choose KL Renovator for Installation?"
+        subtitle="Professional aircond installation from RM199 — same-day available, all 20 brands, 1-month workmanship warranty."
+        showObjectionHandling={true}
+        showTrustSignals={true}
+        showPricingGuarantee={true}
+        showUSPBlock={true}
+      />
 
       {/* FAQ Section */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
