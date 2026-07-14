@@ -7,6 +7,8 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
+import { InstallationCROModule } from "@/components/installation-cro-module";
+import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond KL & Selangor — Dari RM199 | Hari Sama | KL Renovator",
@@ -413,6 +415,19 @@ export default function PemasanganAircondKLPage() {
           </div>
         </div>
       </section>
+
+      {/* CRO Module — Installation Page Conversion Optimization */}
+      <InstallationCROModule 
+        title="Mengapa KL Renovator untuk Pemasangan?"
+        subtitle="Pemasangan aircond profesional dari RM199 — hari sama tersedia, semua 20 jenama, waranti kerja 1 bulan."
+        showObjectionHandling={true}
+        showTrustSignals={true}
+        showPricingGuarantee={true}
+        showUSPBlock={true}
+      />
+
+      {/* Installation Trust Signals — INS-17 */}
+      <InstallationTrustSignals variant="default" />
 
       {/* Final CTA */}
       <section className="py-20 sm:py-28 bg-slate-900 text-white">
