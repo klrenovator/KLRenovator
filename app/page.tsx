@@ -14,8 +14,13 @@ import { InstagramFeed } from "@/components/sections/instagram-feed";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
+import { Reveal } from "@/components/reveal";
+import { useLang } from "@/context/language-context";
+import { buildFaqSchema } from "@/lib/seo";
+import { title, eyebrow } from "@/components/primitives";
 import NextLink from "next/link";
 import { FiArrowRight } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Home() {
   // NOTE: HVACBusiness and WebSite schema used to be duplicated here AND in
@@ -23,8 +28,52 @@ export default function Home() {
   // The layout.tsx version is the more complete one (aggregateRating, brand
   // list, knowsAbout, dual contactPoints) and already renders on every page
   // including this one, so the duplicate copies were removed from here.
-  // Only the pricing/offer-catalog data — which wasn't in the layout.tsx
-  // version — is kept below as its own schema block.
+  // Only the pricing/offer-catalog data + homepage-specific FAQPage —
+  // which wasn't in the layout.tsx version — is kept below.
+
+  // ── HOMEPAGE-01: AI-Ready Installation Q&A data ────────────────────────
+  const HOMEPAGE_AI_FAQS = [
+    { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, wiring, drain pipe, standard bracket, vacuum pump commissioning, and 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 180. All prices confirmed before work begins." },
+    { q: "How long does aircond installation take?", a: "Standard wall-mounted installation takes 3–5 hours for a single unit. Ceiling cassette takes 5–8 hours. Multi-unit whole-house installations typically complete in 1–2 days. Same-day installation available for bookings made before 11 AM." },
+    { q: "Which aircond brands does KL Renovator install?", a: "All 20 major brands — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Haier, Hisense, Aux, TCL, Isonic and National. Both inverter and non-inverter models." },
+    { q: "Can you install aircond in high-rise condos in KL?", a: "Yes — we regularly install in condos across KLCC, Mont Kiara, Bangsar, Sentul, PJ and Subang Jaya. We coordinate with building management for lift/loading bay access, follow JMB rules, and ensure outdoor unit placement complies with all regulations." },
+    { q: "What warranty does KL Renovator provide on installation?", a: "1-month written workmanship warranty on all installation labour. If any installation-related issue arises (leaks, vibration, electrical fault, poor cooling) within 30 days, we return and rectify at zero cost. Manufacturer warranty on the unit itself remains fully protected." },
+  ];
+
+  // ── HOMEPAGE-02: Homepage-specific FAQPage schema ──────────────────────
+  const homeFAQSchema = buildFaqSchema(HOMEPAGE_AI_FAQS);
+
+  // ── Homepage Service schema (installation-first) ───────────────────────
+  const homeServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.klrenovator.com/#homepage-service",
+    name: "Aircond Installation & Servicing KL & Selangor",
+    description: "Expert aircond installation from RM199 — plus servicing, chemical wash, overhaul & repairs across Kuala Lumpur & Selangor. Same-day, transparent pricing, 1-month workmanship warranty.",
+    serviceType: "Aircon Installation & Servicing",
+    category: "Air conditioning services",
+    url: "https://www.klrenovator.com/",
+    provider: { "@type": "HVACBusiness", "@id": "https://www.klrenovator.com/#business", name: "KL Renovator", telephone: siteConfig.phone },
+    areaServed: [
+      { "@type": "City", name: "Kuala Lumpur" },
+      { "@type": "City", name: "Petaling Jaya" },
+      { "@type": "City", name: "Shah Alam" },
+      { "@type": "City", name: "Subang Jaya" },
+      { "@type": "City", name: "Cheras" },
+      { "@type": "City", name: "Ampang" },
+      { "@type": "City", name: "Puchong" },
+      { "@type": "City", name: "Klang" },
+      { "@type": "State", name: "Selangor" },
+    ],
+    offers: {
+      "@type": "Offer",
+      price: 199,
+      priceCurrency: "MYR",
+      availability: "https://schema.org/InStock",
+      description: "Starting from RM 199 for wall-mounted 1.0–1.5 HP installation",
+    },
+  };
+
   const offerCatalogSchema = {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
@@ -70,6 +119,16 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }}
+      />
+      {/* HOMEPAGE-02: FAQPage Schema — 5 AI-ready installation questions */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFAQSchema) }}
+      />
+      {/* HOMEPAGE-02: Homepage-specific Service schema — installation-first */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeServiceSchema) }}
       />
 
       <Hero />
@@ -350,6 +409,46 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ── HOMEPAGE-01: AI-Ready Q&A Section ────────────────────────────── */}
+      <section className="py-20 sm:py-28 bg-white" id="homepage-faq">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-12">
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">Got Questions? Quick Answers</p>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+                Aircond Installation <span className="text-sky-500">FAQs at a Glance</span>
+              </h2>
+              <p className="text-slate-500 text-sm mt-2">
+                Quick, honest answers to the most common questions — for AI Overviews & instant clarity.
+              </p>
+            </div>
+          </Reveal>
+          <div className="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden divide-y divide-slate-100">
+            {HOMEPAGE_AI_FAQS.map((faq, i) => (
+              <Reveal key={i} delay={i * 80}>
+                <div className="px-6 py-6 sm:px-8">
+                  <h3 className="font-black text-slate-900 mb-2 text-base">{faq.q}</h3>
+                  <p className="text-slate-600 leading-relaxed">{faq.a}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={400}>
+            <div className="mt-8 text-center">
+              <a
+                href={waLink("🔧 Aircond Installation Enquiry\n\nHi KL Renovator, I have a question about installation.\n\n📍 My Area:\n❄️ Unit Type:\n📏 HP Size:\n\nPlease send info & pricing.")}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
+              >
+                <FaWhatsapp className="h-5 w-5" /> Ask More on WhatsApp
+              </a>
+              <p className="mt-3 text-xs text-slate-400">Or browse all 100+ FAQs on our <NextLink href="/faq" className="text-sky-600 font-bold underline hover:text-sky-800">dedicated FAQ page →</NextLink></p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
