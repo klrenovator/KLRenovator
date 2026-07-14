@@ -230,3 +230,182 @@ export function buildFaqSchema(
     })),
   };
 }
+
+/**
+ * Build Installation Service Schema for the primary installation pillar page
+ */
+export function buildInstallationServiceSchema(): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.klrenovator.com/aircond-installation-kl#service",
+    name: "Aircond Installation KL & Selangor",
+    description: "Professional aircond installation from RM199 — wall-mounted, ceiling cassette & window units for all 20 brands. Same-day available, 1-month workmanship warranty, vacuum pump commissioning.",
+    serviceType: "Aircon Installation",
+    category: "Air conditioning installation",
+    url: "https://www.klrenovator.com/aircond-installation-kl",
+    provider: {
+      "@type": "HVACBusiness",
+      "@id": "https://www.klrenovator.com/#business",
+      name: "KL Renovator",
+      telephone: "+60182983573",
+      url: "https://www.klrenovator.com/",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "A-22-09 Magnaville Selayang",
+        postalCode: "68100",
+        addressLocality: "Batu Caves",
+        addressRegion: "Selangor",
+        addressCountry: "MY",
+      },
+      areaServed: [
+        { "@type": "State", name: "Kuala Lumpur" },
+        { "@type": "State", name: "Selangor" },
+      ],
+    },
+    offers: {
+      "@type": "Offer",
+      "@id": "https://www.klrenovator.com/aircond-installation-kl#offer",
+      url: "https://www.klrenovator.com/aircond-installation-kl",
+      price: 199,
+      priceCurrency: "MYR",
+      availability: "https://schema.org/InStock",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: 199,
+        priceCurrency: "MYR",
+        description: "Starting from RM 199 for wall-mounted 1.0–1.5 HP including 7ft copper pipe, wiring, drain pipe, standard bracket, vacuum pump commissioning, and 1-month workmanship warranty.",
+        eligibleQuantity: {
+          "@type": "QuantitativeValue",
+          minValue: 1,
+          unitText: "per unit",
+        },
+      },
+      eligibleRegion: [
+        { "@type": "City", name: "Kuala Lumpur" },
+        { "@type": "City", name: "Petaling Jaya" },
+        { "@type": "City", name: "Subang Jaya" },
+        { "@type": "City", name: "Shah Alam" },
+        { "@type": "City", name: "Klang" },
+        { "@type": "City", name: "Cheras" },
+        { "@type": "City", name: "Ampang" },
+        { "@type": "City", name: "Puchong" },
+        { "@type": "City", name: "Damansara" },
+        { "@type": "City", name: "Bangsar" },
+        { "@type": "City", name: "Mont Kiara" },
+        { "@type": "City", name: "Setapak" },
+        { "@type": "City", name: "Batu Caves" },
+        { "@type": "City", name: "Putrajaya" },
+        { "@type": "City", name: "Cyberjaya" },
+      ],
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Aircond Installation Pricing",
+      itemListElement: [
+        { "@type": "Offer", position: 1, name: "Wall-Mounted 1.0 HP", priceCurrency: "MYR", price: 199, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
+        { "@type": "Offer", position: 2, name: "Wall-Mounted 1.5 HP", priceCurrency: "MYR", price: 199, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
+        { "@type": "Offer", position: 3, name: "Wall-Mounted 2.0 HP", priceCurrency: "MYR", price: 249, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
+        { "@type": "Offer", position: 4, name: "Wall-Mounted 2.5 HP", priceCurrency: "MYR", price: 279, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
+        { "@type": "Offer", position: 5, name: "Ceiling Cassette 1.0–1.5 HP", priceCurrency: "MYR", price: 290, description: "7ft copper pipe, wiring, drain+pump, suspension kit, vacuum, warranty included" },
+        { "@type": "Offer", position: 6, name: "Window Unit 1.0–2.0 HP", priceCurrency: "MYR", price: 180, description: "Window frame mounting, wiring, vacuum, warranty included" },
+      ],
+    },
+  };
+}
+
+/**
+ * Build HowTo Schema for the 7-step installation process
+ */
+export function buildInstallationHowToSchema(): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How KL Renovator Installs Your Aircond — 7-Step Process",
+    description: "Professional aircond installation process from booking to handover. Vacuum pump commissioning, Type L copper piping, Armaflex insulation, dedicated electrical circuit, 1-month workmanship warranty.",
+    totalTime: "PT4H",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "MYR",
+      value: "199",
+    },
+    supply: [
+      { "@type": "HowToSupply", name: "Aircond unit (wall-mounted, ceiling cassette, or window unit)" },
+      { "@type": "HowToSupply", name: "Type L/Type M copper piping with Armaflex insulation" },
+      { "@type": "HowToSupply", name: "PVC drain pipe with gradient" },
+      { "@type": "HowToSupply", name: "Electrical wiring and MCB" },
+      { "@type": "HowToSupply", name: "Mounting brackets and vibration dampers" },
+    ],
+    tool: [
+      { "@type": "HowToTool", name: "Two-stage vacuum pump (500 microns)" },
+      { "@type": "HowToTool", name: "Flaring tool and torque wrench" },
+      { "@type": "HowToTool", name: "Manifold gauge set" },
+      { "@type": "HowToTool", name: "Nitrogen purging kit" },
+      { "@type": "HowToTool", name: "Digital thermometer and clamp meter" },
+    ],
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "WhatsApp Booking & Site Survey",
+        text: "Contact KL Renovator via WhatsApp at +60182983573 with your area, unit type (wall-mounted / ceiling cassette / window), and HP size. We confirm pricing and schedule a same-day or next-day site survey. Our technician assesses piping route, outdoor unit placement, and electrical requirements.",
+        url: "https://www.klrenovator.com/contact",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Technician Dispatch & Preparation",
+        text: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulation, brackets, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Copper Piping & Insulation Installation",
+        text: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Armaflex insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Drain Pipe Installation with Gradient",
+        text: "PVC drain pipe installed with minimum 1:50 gradient for gravity drainage. Anti-siphon trap prevents backflow. Condensate tested before closing up. For high-rise condos, we route to nearest floor trap or balcony drain per building management rules.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 5,
+        name: "Electrical Connection & Breaker Check",
+        text: "Dedicated circuit with correct MCB rating (16A for 1.0–1.5HP, 20A for 2.0–2.5HP, 32A for 3.0HP+). Wiring sized per Malaysian standards. Earth leakage protection verified. Outdoor unit isolator installed for safety and maintenance access.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 6,
+        name: "Vacuum Pump Commissioning (Mandatory)",
+        text: "Two-stage vacuum pump pulls system down to 500 microns or below — removing all moisture and non-condensables. This step is NON-NEGOTIABLE. Skipping vacuuming causes compressor failure, acid formation, and voids manufacturer warranty. We hold vacuum for 15+ minutes to confirm no leaks.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 7,
+        name: "Refrigerant Release, Testing & Handover",
+        text: "Factory charge released. System runs for 15+ minutes. We verify: cooling output (thermometer at supply/return), running pressures, amp draw, thermostat calibration, zero vibration, zero leaks. Written 1-month workmanship warranty card handed over. Job card with checklist signed.",
+      },
+    ],
+  };
+}
+
+/**
+ * Build FAQPage Schema for installation FAQs
+ */
+export function buildInstallationFAQSchema(faqs: ReadonlyArray<{ q: string; a: string }>): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.klrenovator.com/aircond-installation-kl#faq",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
+      },
+    })),
+  };
+}
