@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { entityPhrases } from "@/config/installation-entity-map";
 
 const DEDICATED_STATIC_SERVICE_SLUGS = new Set(["emergency", "maintenance-contract"]);
 import { servicesData } from "@/config/services-data";
@@ -116,7 +117,11 @@ const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
   ],
   "installation": [
     { q: "Is RM199 installation enough for every home?", a: "RM199 covers standard wall-mounted 1.0–1.5HP installation labour with up to 7ft copper, wire and drain pipe. Extra materials such as longer copper run, bracket or power point are quoted first if needed." },
-    { q: "Do you vacuum the system during installation?", a: "Yes. Proper vacuuming removes moisture and air from the line before refrigerant release, helping protect the compressor and cooling performance." },
+    { q: "Do you vacuum the system during installation?", a: "Yes. {entityPhrases.vacuumMandatory} Proper vacuuming removes moisture and air from the line before refrigerant release, helping protect the compressor and cooling performance." },
+    { q: "What copper pipe do you use for installation?", a: "We use {entityPhrases.copperTypeL} for 1.0–2.5HP and Type M for 3.0HP+. All piping is nitrogen-purged during brazing to prevent internal oxidation." },
+    { q: "Do you provide electrical wiring for the new unit?", a: "Yes. {entityPhrases.dedicatedCircuit} with correct MCB sizing per HP. Includes outdoor isolator switch for safety and maintenance access." },
+    { q: "What insulation do you use on the copper pipes?", a: "We use {entityPhrases.armaflexStandard} on all refrigerant lines. 13mm thickness for ceiling cassettes and long pipe runs over 15ft." },
+    { q: "Can you install in high-rise condos?", a: "Yes — we regularly install in KLCC, Mont Kiara, Bangsar, Sentul, PJ, and Subang Jaya. We coordinate with building management for lift/loading bay access and follow JMB rules. Our technicians are experienced with service-ledge and balcony installations." },
   ],
   "basic-servicing": [
     { q: "How often should I service my aircond in Malaysia?", a: "For daily-use bedrooms and offices, every 3–4 months is recommended. Light-use rooms can often be serviced every 6 months." },
