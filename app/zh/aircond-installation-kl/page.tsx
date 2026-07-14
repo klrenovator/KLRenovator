@@ -7,6 +7,8 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
+import { InstallationCROModule } from "@/components/installation-cro-module";
+import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
   title: "冷气安装 吉隆坡 & 雪兰莪 — RM199起 | 当天服务 | KL Renovator",
@@ -394,6 +396,19 @@ export default function AircondInstallationKLZHPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* CRO Module — Installation Page Conversion Optimization */}
+      <InstallationCROModule 
+        title="为何选择 KL Renovator 安装？"
+        subtitle="专业冷气安装RM199起 — 当天服务，全品牌，1个月工艺保修。"
+        showObjectionHandling={true}
+        showTrustSignals={true}
+        showPricingGuarantee={true}
+        showUSPBlock={true}
+      />
+
+      {/* Installation Trust Signals — INS-17 */}
+      <InstallationTrustSignals variant="default" />
 
       {/* FAQ Section */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
