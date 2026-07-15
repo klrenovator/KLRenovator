@@ -86,7 +86,11 @@ export function KampungInstallationLandingPage({
     name: c.h1,
     description: c.metaDescription,
     provider: { "@type": "HVACBusiness", "@id": "https://www.klrenovator.com/#business" },
-    areaServed: { "@type": "Place", name: areaName },
+    areaServed: {
+      "@type": "Place",
+      name: areaName,
+      geo: c.lat && c.lng ? { "@type": "GeoCoordinates", latitude: c.lat, longitude: c.lng } : undefined,
+    },
     offers: {
       "@type": "Offer",
       price: "199",
@@ -209,6 +213,14 @@ export function KampungInstallationLandingPage({
               </div>
             </Reveal>
           </div>
+          {c.localNoteBody && (
+            <Reveal delay={150}>
+              <div className="mt-8 bg-sky-50 border border-sky-100 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-black text-sky-900 mb-3">{c.localNoteTitle}</h3>
+                <p className="text-sky-800 leading-relaxed">{c.localNoteBody}</p>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 
@@ -357,6 +369,56 @@ export function KampungInstallationLandingPage({
                   <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
                 </div>
               </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Installation Tips */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p className={eyebrow()}>{c.tipsTitle}</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>Smarter Booking </span>
+                <span className={title({ size: "sm", color: "brand" })}>For This Neighbourhood</span>
+              </h2>
+            </div>
+          </Reveal>
+          <div className="grid gap-8 md:grid-cols-3">
+            {c.tips.map((item, i) => (
+              <Reveal key={item.title} delay={i * 60}>
+                <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-sky-200 hover:shadow-md transition-all h-full">
+                  <div className="inline-flex h-10 w-10 items-center justify-center bg-sky-50 text-sky-600 rounded-xl mb-4 font-black text-lg">
+                    {i + 1}
+                  </div>
+                  <h3 className="font-black text-slate-900 mb-2">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Nearby Areas */}
+      <section className="py-16 sm:py-20 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <p className={eyebrow()}>{c.nearbyTitle}</p>
+            </div>
+          </Reveal>
+          <div className="flex flex-wrap justify-center gap-3">
+            {c.nearbyKampungs.map((k) => (
+              <Link
+                key={`${k.parentSlug}-${k.slug}`}
+                href={`${basePath}/areas/${k.parentSlug}/${k.slug}/installation`}
+                className="inline-flex items-center gap-2 bg-white border border-slate-200 hover:border-sky-300 hover:text-sky-600 text-slate-700 px-4 py-2.5 rounded-full text-sm font-bold transition-all"
+              >
+                {k.name} <FiChevronRight className="h-4 w-4" />
+              </Link>
             ))}
           </div>
         </div>
