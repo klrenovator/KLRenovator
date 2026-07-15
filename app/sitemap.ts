@@ -194,6 +194,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
 
+  // Only genuine geographic areas (not brand entries mistakenly placed in areaPages)
+  const realAreaPages = siteConfig.areaPages.filter(
+    (a) => typeof a.lat === "number" && typeof a.lng === "number" && Array.isArray(a.landmarks) && a.landmarks.length > 0,
+  );
+
   // ── Area Pages — all configured areas with real /ms/ and /zh/ twins ──
   const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
     url: `${BASE}/areas/${area.slug}`,
@@ -232,6 +237,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
         en: `/areas/${area.slug}`,
         ms: `/ms/areas/${area.slug}`,
         zh: `/zh/areas/${area.slug}`,
+      }),
+    }));
+
+  // ── Area Installation Pages (INS-10) — per-area installation landing pages
+  const areaInstallationPages: MetadataRoute.Sitemap = realAreaPages.map((area) => ({
+    url: `${BASE}/areas/${area.slug}/installation`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.86,
+    alternates: buildTrilingual({
+      en: `/areas/${area.slug}/installation`,
+      ms: `/ms/areas/${area.slug}/installation`,
+      zh: `/zh/areas/${area.slug}/installation`,
+    }),
+  }));
+
+  const msAreaInstallationPages: MetadataRoute.Sitemap = realAreaPages
+    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
+    .map((area) => ({
+      url: `${BASE}/ms/areas/${area.slug}/installation`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.78,
+      alternates: buildTrilingual({
+        en: `/areas/${area.slug}/installation`,
+        ms: `/ms/areas/${area.slug}/installation`,
+        zh: `/zh/areas/${area.slug}/installation`,
+      }),
+    }));
+
+  const zhAreaInstallationPages: MetadataRoute.Sitemap = realAreaPages
+    .filter((a) => a.faqsZH && a.faqsZH.length > 0)
+    .map((area) => ({
+      url: `${BASE}/zh/areas/${area.slug}/installation`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.78,
+      alternates: buildTrilingual({
+        en: `/areas/${area.slug}/installation`,
+        ms: `/ms/areas/${area.slug}/installation`,
+        zh: `/zh/areas/${area.slug}/installation`,
       }),
     }));
 
@@ -403,6 +449,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaPages,
     ...msAreaPages,
     ...zhAreaPages,
+    ...areaInstallationPages,
+    ...msAreaInstallationPages,
+    ...zhAreaInstallationPages,
     ...kampungPages,
     ...msKampungPages,
     ...zhKampungPages,
