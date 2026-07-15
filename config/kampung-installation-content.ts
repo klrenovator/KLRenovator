@@ -19,6 +19,8 @@ export interface KampungInstallationContent {
   heroBadges: string[];
   introTitle: string;
   introBody: string;
+  localNoteTitle: string;
+  localNoteBody: string;
   whereTitle: string;
   whereBody: string;
   whereLandmarks: string[];
@@ -31,11 +33,17 @@ export interface KampungInstallationContent {
   extrasItems: string[];
   whyTitle: string;
   whyItems: { title: string; body: string }[];
+  tipsTitle: string;
+  tips: { title: string; body: string }[];
+  nearbyTitle: string;
+  nearbyKampungs: { name: string; slug: string; parentSlug: string }[];
   faqs: { q: string; a: string }[];
   ctaTitle: string;
   ctaBody: string;
   whatsAppLabel: string;
   breadcrumbLabel: string;
+  lat?: number;
+  lng?: number;
 }
 
 // ── Deterministic variant selection by kampung slug (stable across builds)
@@ -358,10 +366,143 @@ function getFAQs(
   locale: KampungInstallationLocale,
 ): { q: string; a: string }[] {
   const source = locale === "en" ? kampung.faqs : locale === "ms" ? kampung.faqsBM : kampung.faqsZH;
-  if (source && source.length > 0) {
-    return source.slice(0, 5);
+  const kampungSpecific = source && source.length > 0 ? source.slice(0, 5) : [];
+  const generated = getGeneratedFAQs(kampung, parent, locale);
+  // Merge: use kampung-specific FAQs first, then fill with generated until we reach 8
+  const merged = [...kampungSpecific];
+  for (const g of generated) {
+    if (merged.length >= 8) break;
+    const exists = merged.some((q) => q.q === g.q);
+    if (!exists) merged.push(g);
   }
-  return getGeneratedFAQs(kampung, parent, locale);
+  return merged;
+}
+
+function getLocalNote(
+  kampung: (typeof siteConfig.kampungPages)[number],
+  locale: KampungInstallationLocale,
+): string {
+  const raw =
+    locale === "en"
+      ? kampung.description
+      : locale === "ms"
+        ? kampung.descriptionMS
+        : kampung.descriptionZH;
+  if (!raw) return "";
+  // Re-frame existing real description for installation context without inventing facts.
+  const prefix =
+    locale === "en"
+      ? `When installing or replacing an aircond in ${kampung.name}, it helps to know the local housing profile. `
+      : locale === "ms"
+        ? `Semasa memasang atau mengganti aircond di ${kampung.name}, adalah membantu untuk memahami profil perumahan tempatan. `
+        : `在${kampung.name}安装或更换冷气时，了解当地住宅概况会很有帮助。`;
+  return prefix + raw;
+}
+
+function getInstallationTips(
+  kampung: (typeof siteConfig.kampungPages)[number],
+  locale: KampungInstallationLocale,
+): { title: string; body: string }[] {
+  const name = kampung.name;
+  const housing = getHousingTypeNote(kampung.housingNote, locale).toLowerCase();
+  const isLanded = /terrace|bungalow|semi-detached|landed|kampung|single-storey|double-storey|rumah/.test(housing);
+  const isHighRise = /apartment|condo|high-rise|pangsapuri|kondominium|tinggi|公寓/.test(housing);
+  const isShoplot = /shoplot|shop office|kedai|店屋/.test(housing);
+
+  if (locale === "en") {
+    return [
+      {
+        title: isHighRise ? "Check service-ledge access before installation day" : isShoplot ? "Plan power supply for shoplot units" : "Measure outdoor compressor placement early",
+        body: isHighRise
+          ? `Many ${name} buildings require management approval or a booked service-ledge slot. Confirm lift access and outdoor ledge timing when you book so our team arrives with the right harness and length of copper pipe.`
+          : isShoplot
+            ? `Shoplot units in ${name} often share power with ground-floor businesses. We recommend confirming a dedicated circuit or plug point before installation to avoid tripping during peak hours.`
+            : `In ${name}'s ${housing}, the outdoor compressor is usually mounted on a wall bracket or concrete pad. We check the wall strength and available pipe route before drilling to keep the install neat and safe.`,
+      },
+      {
+        title: isHighRise ? "Budget for longer pipe runs" : isShoplot ? "Allow for ceiling cassette drain pumps" : "Allow for upstairs-downstairs pipe runs",
+        body: isHighRise
+          ? `High-rise installations in ${name} can need more than the standard 7 ft of copper pipe and wiring. We quote extra footage before work begins so there are no surprises when routing from the indoor unit to the outdoor compressor.`
+          : isShoplot
+            ? `Ceiling cassette installs in ${name} shoplots usually need a drain pump because gravity drainage may not reach the nearest soil pipe. We include this in the quote when a cassette is chosen.`
+            : `Double-storey and larger landed homes in ${name} often need extended copper runs from upstairs bedrooms to the ground-level compressor. We bring extra pipe and quote the additional length up front.`,
+      },
+      {
+        title: "Book a morning slot for same-day completion",
+        body: `Same-day installation in ${name} is easiest when the booking is confirmed before 11 AM. This gives our technicians time to load the right unit size, bracket type, and copper length for your specific home or shop.`,
+      },
+    ];
+  }
+
+  if (locale === "ms") {
+    return [
+      {
+        title: isHighRise ? "Semak akses service ledge sebelum hari pemasangan" : isShoplot ? "Rancang bekalan kuasa untuk unit kedai" : "Ukur kedudukan kompressor luar lebih awal",
+        body: isHighRise
+          ? `Kebanyakan bangunan di ${name} memerlukan kelulusan pengurusan atau slot service ledge yang ditempah. Sahkan akses lif dan masa ledge luar apabila anda membuat tempahan supaya pasukan kami tiba dengan tali pinggang keselamatan dan panjang paip tembaga yang sesuai.`
+          : isShoplot
+            ? `Unit kedai di ${name} sering berkongg kuasa dengan perniagaan tingkat bawah. Kami mencadangkan mengesahkan litar atau plug point khas sebelum pemasangan untuk mengelakkan tripping semasa waktu puncak.`
+            : `Dalam ${housing} di ${name}, kompressor luar biasanya dipasang pada braket dinding atau papak konkrit. Kami menyemak kekuatan dinding dan laluan paip yang ada sebelum mengecer.`,
+      },
+      {
+        title: isHighRise ? "Bajet untuk laluan paip yang lebih panjang" : isShoplot ? "Sediakan pam saliran ceiling cassette" : "Sediakan laluan paip tingkat atas ke bawah",
+        body: isHighRise
+          ? `Pemasangan di bangunan tinggi di ${name} mungkin memerlukan lebih daripada 7 ft paip tembaga dan wayar standard. Kami menyebut harga tambahan sebelum kerja bermula.`
+          : isShoplot
+            ? `Pemasangan ceiling cassette di kedai ${name} biasanya memerlukan pam saliran kerana saliran graviti mungkin tidak sampai ke paip tanah terdekat. Kami termasuk ini dalam sebut harga apabila cassette dipilih.`
+            : `Rumah landed dua tingkat dan lebih besar di ${name} sering memerlukan laluan tembaga tambahan dari bilik tidur tingkat atas ke kompressor di paras tanah. Kami membawa paip tambahan dan menyebut harga tambahan terlebih dahulu.`,
+      },
+      {
+        title: "Tempah slot pagi untuk penyiapan hari sama",
+        body: `Pemasangan hari sama di ${name} paling mudah apabila tempahan disahkan sebelum 11 pagi. Ini memberi masa kepada juruteknik kami untuk memuatkan saiz unit, jenis braket, dan panjang paip tembaga yang sesuai.`,
+      },
+    ];
+  }
+
+  return [
+    {
+      title: isHighRise ? "安装前一天确认服务阳台通道" : isShoplot ? "提前规划店屋电源" : "尽早测量室外机位置",
+      body: isHighRise
+        ? `${name}许多大厦需要管理处批准或预约服务阳台时段。请在预约时确认电梯通道和室外阳台时间，以便我们的团队携带合适的安全带和铜管长度上门。`
+        : isShoplot
+          ? `${name}店屋单位经常与底层商铺共用电源。我们建议安装前确认专用电路或插座，避免高峰时段跳闸。`
+          : `在${name}的${housing}中，室外压缩机通常安装在墙壁支架或水泥底座上。我们会在钻孔前检查墙体强度和可用管线走向，确保安装整洁安全。`,
+    },
+    {
+      title: isHighRise ? "为更长管线预留预算" : isShoplot ? "天花板卡式机需配排水泵" : "预留楼上到楼下的管线长度",
+      body: isHighRise
+        ? `${name}高层安装可能需要超出标准7尺的铜管和电线。我们会在施工前报价额外长度，避免管线铺设时出现意外费用。`
+        : isShoplot
+          ? `${name}店屋安装天花板卡式机通常需要排水泵，因为重力排水可能无法到达最近的排污管。选择卡式机时我们会将此费用纳入报价。`
+          : `${name}双层及更大地块住宅通常需要从楼上卧室到地面压缩机的延长铜管。我们会携带额外铜管并预先报价。`,
+    },
+    {
+      title: "预约上午时段更易当天完成",
+      body: `${name}当天安装最容易在上午11点前确认预约。这给我们的技师足够时间准备适合您住宅或店铺的单位尺寸、支架类型和铜管长度。`,
+    },
+  ];
+}
+
+function getNearbyKampungs(
+  kampung: (typeof siteConfig.kampungPages)[number],
+  locale: KampungInstallationLocale,
+): { name: string; slug: string; parentSlug: string }[] {
+  const siblings = siteConfig.kampungPages.filter(
+    (k) => k.parentSlug === kampung.parentSlug && k.slug !== kampung.slug,
+  );
+  // Deterministically pick up to 4 nearby siblings using the same hash function
+  const count = Math.min(4, siblings.length);
+  const start = kampungVariant(kampung.slug, siblings.length);
+  const nearby: { name: string; slug: string; parentSlug: string }[] = [];
+  for (let i = 0; i < count; i++) {
+    const idx = (start + i) % siblings.length;
+    nearby.push({
+      name: siblings[idx].name,
+      slug: siblings[idx].slug,
+      parentSlug: siblings[idx].parentSlug,
+    });
+  }
+  return nearby;
 }
 
 const baseIncluded: Record<KampungInstallationLocale, string[]> = {
@@ -545,6 +686,13 @@ export function getKampungInstallationContent(
           ? `Pemasangan Aircond Profesional di ${name}`
           : `${name}专业冷气安装`,
     introBody: getIntroBody(kampung, parent, locale),
+    localNoteTitle:
+      locale === "en"
+        ? `What to Know About Installing in ${name}`
+        : locale === "ms"
+          ? `Yang Perlu Diketahui Semasa Memasang di ${name}`
+          : `在${name}安装冷气须知`,
+    localNoteBody: getLocalNote(kampung, locale),
     whereTitle:
       locale === "en"
         ? `Where We Install in ${name}`
@@ -583,7 +731,23 @@ export function getKampungInstallationContent(
           ? `Kenapa Pilih KL Renovator untuk Pemasangan di ${name}?`
           : `为什么选择 KL Renovator 在${name}安装冷气？`,
     whyItems: getWhyItems(kampung, parent, locale),
+    tipsTitle:
+      locale === "en"
+        ? `Installation Tips for ${name}`
+        : locale === "ms"
+          ? `Tip Pemasangan untuk ${name}`
+          : `${name}安装小贴士`,
+    tips: getInstallationTips(kampung, locale),
+    nearbyTitle:
+      locale === "en"
+        ? `Nearby Areas We Also Serve`
+        : locale === "ms"
+          ? `Kawasan Berhampiran yang Kami Layani Juga`
+          : `我们也服务的邻近区域`,
+    nearbyKampungs: getNearbyKampungs(kampung, locale),
     faqs: getFAQs(kampung, parent, locale),
+    lat: kampung.lat,
+    lng: kampung.lng,
     ctaTitle:
       locale === "en"
         ? `${l.bookInstallation} ${name} Today`
