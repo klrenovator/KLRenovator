@@ -9,22 +9,16 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
-import { serviceAnchor, areaAnchor, brandAnchor, problemAnchor } from "@/config/anchor-text-diversity";
+import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 const FOOTER_LINKS = {
   en: {
-    brands: "Brands",
-    problems: "Problems",
     blog: "Blog",
-    areas: "All Areas",
     services: "View All Services →",
     quickLinks: "Quick Links",
     priceGuides: "Price Guides",
     bookWa: "Book Via WhatsApp",
     navServices: "Services",
-    navBrands: "Brands",
-    navProblems: "Problems",
-    navAreas: "Areas",
     navBlog: "Blog",
     navGallery: "Gallery",
     navAbout: "About",
@@ -32,18 +26,12 @@ const FOOTER_LINKS = {
     navContact: "Contact",
   },
   ms: {
-    brands: "Jenama",
-    problems: "Masalah",
     blog: "Blog",
-    areas: "Semua Kawasan",
     services: "Lihat Semua Perkhidmatan →",
     quickLinks: "Pautan Pantas",
     priceGuides: "Panduan Harga",
     bookWa: "Tempah Via WhatsApp",
     navServices: "Perkhidmatan",
-    navBrands: "Jenama",
-    navProblems: "Masalah",
-    navAreas: "Kawasan",
     navBlog: "Blog",
     navGallery: "Galeri",
     navAbout: "Tentang Kami",
@@ -51,18 +39,12 @@ const FOOTER_LINKS = {
     navContact: "Hubungi",
   },
   zh: {
-    brands: "品牌",
-    problems: "常见故障",
     blog: "博客",
-    areas: "所有地区",
     services: "查看所有服务 →",
     quickLinks: "快速链接",
     priceGuides: "价格指南",
     bookWa: "通过 WhatsApp 预约",
     navServices: "服务",
-    navBrands: "品牌",
-    navProblems: "常见故障",
-    navAreas: "服务地区",
     navBlog: "博客",
     navGallery: "图库",
     navAbout: "关于我们",
@@ -83,10 +65,10 @@ export const Footer = () => {
 
   return (
     <footer className="w-full bg-white text-slate-500 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* Brand Block */}
-        <div className="space-y-4 lg:col-span-1">
+        <div className="space-y-4">
           <NextLink href={localizedPath("/")} className="inline-block">
             <p className="text-slate-900 font-black text-xl tracking-tight uppercase">
               KL <span className="text-sky-500">RENOVATOR</span>
@@ -119,56 +101,12 @@ export const Footer = () => {
           </ul>
         </div>
 
-        {/* Service Areas */}
-        <div className="space-y-4">
-          <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_areas")}</p>
-          <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
-            {siteConfig.areaPages.slice(0, 16).map((area, idx) => (
-              <li key={area.slug}>
-                <NextLink href={localizedPath(`/areas/${area.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
-                  {areaAnchor(area.name, (lang as "en" | "ms" | "zh"), idx)}
-                </NextLink>
-              </li>
-            ))}
-          </ul>
-          <NextLink href={localizedPath("/areas")} className="inline-block text-xs font-black uppercase tracking-wider text-sky-600 hover:text-sky-700 transition-colors mt-1">{fl.areas} →</NextLink>
-          <NextLink href={localizedPath("/near-me")} className="inline-block text-xs font-medium text-slate-500 hover:text-sky-600 transition-colors">Aircond Service Near Me →</NextLink>
-        </div>
-
         {/* Quick Links */}
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{fl.quickLinks}</p>
 
-          <div>
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.brands}</p>
-            <ul className="space-y-1.5">
-              {siteConfig.brandPages.map((b, idx) => (
-                <li key={b.slug}>
-                  <NextLink href={localizedPath(`/brands/${b.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
-                    {brandAnchor(b.slug, (lang as "en" | "ms" | "zh"), idx)}
-                  </NextLink>
-                </li>
-              ))}
-              <li><NextLink href={localizedPath("/brands")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.brands} →</NextLink></li>
-            </ul>
-          </div>
-
-          <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.problems}</p>
-            <ul className="space-y-1.5">
-              {siteConfig.problemPages.slice(0, 8).map((p, idx) => (
-                <li key={p.slug}>
-                  <NextLink href={localizedPath(`/problems/${p.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
-                    {problemAnchor(lang === "ms" ? p.nameMS : lang === "zh" ? p.nameZH : p.name, (lang as "en" | "ms" | "zh"), idx)}
-                  </NextLink>
-                </li>
-              ))}
-              <li><NextLink href={localizedPath("/problems")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.problems} →</NextLink></li>
-            </ul>
-          </div>
-
           {/* 10.10 Click-Depth: Price Guides — commercial landings ≤2 clicks */}
-          <div className="pt-2 border-t border-slate-100">
+          <div>
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.priceGuides}</p>
             <ul className="space-y-1.5">
               <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
@@ -202,9 +140,6 @@ export const Footer = () => {
           <p>© {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamics Resources). {t("footer_rights")}</p>
           <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
             <NextLink href={localizedPath("/services")} className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>
-            <NextLink href={localizedPath("/brands")} className="hover:text-sky-600 transition-colors font-medium">{fl.navBrands}</NextLink>
-            <NextLink href={localizedPath("/problems")} className="hover:text-sky-600 transition-colors font-medium">{fl.navProblems}</NextLink>
-            <NextLink href={localizedPath("/areas")} className="hover:text-sky-600 transition-colors font-medium">{fl.navAreas}</NextLink>
             <NextLink href={localizedPath("/blog")} className="hover:text-sky-600 transition-colors font-medium">{fl.navBlog}</NextLink>
             <NextLink href={localizedPath("/gallery")} className="hover:text-sky-600 transition-colors font-medium">{fl.navGallery}</NextLink>
             <NextLink href={localizedPath("/about")} className="hover:text-sky-600 transition-colors font-medium">{fl.navAbout}</NextLink>

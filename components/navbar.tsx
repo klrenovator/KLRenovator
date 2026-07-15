@@ -11,7 +11,6 @@ import { HiBars3, HiXMark, HiChevronDown } from "react-icons/hi2";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
-import { anchor } from "@/config/anchor-text-diversity";
 
 type LangCode = "en" | "ms" | "zh";
 
@@ -57,54 +56,24 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
   return null;
 }
 
-// Brands for dropdown — derived from siteConfig.brandPages (the real source
-// of truth) instead of a hardcoded list, so this never silently goes stale
-// again when a brand is added or removed (it previously listed only 15 of
-// the live 18 brand pages, missing Hisense, Aux and TCL from navigation).
-const BRAND_ITEMS = siteConfig.brandPages.map((b) => ({ slug: b.slug, name: b.name }));
-
-// Problems for dropdown — derived from siteConfig.problemPages (the real
-// source of truth), same future-proofing reasoning as BRAND_ITEMS above.
-// The "Aircond " prefix is stripped since every single entry starts with
-// it — repetitive and prone to wrapping in this dropdown's tight 2-column
-// layout — leaving the original short, scannable labels (e.g. "Not Cold"
-// instead of "Aircond Not Cold").
-function shortLabel(name: string) {
-  return name.replace(/^Aircond\s+/i, "");
-}
-const PROBLEM_ITEMS = siteConfig.problemPages.map((p) => ({
-  slug: p.slug,
-  name: {
-    en: shortLabel(p.name),
-    ms: shortLabel(p.nameMS),
-    zh: p.nameZH.replace(/^冷气/, ""),
-  },
-}));
-
 const NAV_LABELS = {
   en: {
-    home: "Home", services: "Services", areas: "Areas",
-    brands: "Brands", problems: "Problems", blog: "Blog",
-    about: "About", faq: "FAQ", contact: "Contact", near: "Near Me",
-    allBrands: "All Brands", allProblems: "All Problems",
+    home: "Home", services: "Services", blog: "Blog",
+    about: "About", faq: "FAQ", contact: "Contact",
     call: "Call Support", book: "Book Now",
-    topbar: "Same-day Aircond Service Across KL & Selangor",
+    topbar: "Same-Day Aircond Installation & Servicing Across KL & Selangor — From RM199",
   },
   ms: {
-    home: "Utama", services: "Perkhidmatan", areas: "Kawasan",
-    brands: "Jenama", problems: "Masalah", blog: "Blog",
-    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi", near: "Berdekatan",
-    allBrands: "Semua Jenama", allProblems: "Semua Masalah",
+    home: "Utama", services: "Perkhidmatan", blog: "Blog",
+    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi",
     call: "Hubungi Kami", book: "Tempah Sekarang",
-    topbar: "Servis Aircond Hari Sama Seluruh KL & Selangor",
+    topbar: "Pemasangan & Servis Aircond Hari Sama KL & Selangor — Dari RM199",
   },
   zh: {
-    home: "首页", services: "服务", areas: "服务地区",
-    brands: "品牌", problems: "常见问题", blog: "博客",
-    about: "关于我们", faq: "常见问答", contact: "联系我们", near: "附近服务",
-    allBrands: "全部品牌", allProblems: "全部问题",
+    home: "首页", services: "服务", blog: "博客",
+    about: "关于我们", faq: "常见问答", contact: "联系我们",
     call: "致电支持", book: "立即预约",
-    topbar: "当天冷气服务，覆盖吉隆坡及雪兰莪全区",
+    topbar: "当天冷气安装与服务，覆盖吉隆坡及雪兰莪 — RM199起",
   },
 };
 
@@ -112,10 +81,6 @@ export const Navbar = () => {
   const [open, setOpen]               = useState(false);
   const [scrolled, setScrolled]       = useState(false);
   const [langOpen, setLangOpen]       = useState(false);
-  const [brandsOpen, setBrandsOpen]   = useState(false);
-  const [problemsOpen, setProblemsOpen] = useState(false);
-  const [mobileBrandsOpen, setMobileBrandsOpen]   = useState(false);
-  const [mobileProblemsOpen, setMobileProblemsOpen] = useState(false);
 
   const pathname        = usePathname();
   const router          = useRouter();
@@ -145,15 +110,11 @@ export const Navbar = () => {
 
   const desktopLangRef    = useRef<HTMLDivElement>(null);
   const mobileLangRef     = useRef<HTMLDivElement>(null);
-  const brandsRef         = useRef<HTMLDivElement>(null);
-  const problemsRef       = useRef<HTMLDivElement>(null);
 
-  // Close all dropdowns on route change
+  // Close language dropdown on route change
   useEffect(() => {
     setOpen(false);
     setLangOpen(false);
-    setBrandsOpen(false);
-    setProblemsOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -163,13 +124,11 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Click outside to close dropdowns
+  // Click outside to close language dropdown
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       const t = e.target as Node;
       if (!desktopLangRef.current?.contains(t) && !mobileLangRef.current?.contains(t)) setLangOpen(false);
-      if (!brandsRef.current?.contains(t)) setBrandsOpen(false);
-      if (!problemsRef.current?.contains(t)) setProblemsOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -180,8 +139,6 @@ export const Navbar = () => {
   const SIMPLE_LINKS = [
     { label: lbl.home,     href: "/" },
     { label: lbl.services, href: "/services" },
-    { label: lbl.areas,    href: "/areas" },
-    { label: lbl.near,     href: "/near-me" },
     { label: lbl.blog,     href: "/blog" },
     { label: lbl.about,    href: "/about" },
     { label: lbl.faq,      href: "/faq" },
@@ -245,8 +202,6 @@ export const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
-
-          {/* Simple links */}
           {SIMPLE_LINKS.map((l) => {
             const pathHref = localizedPath(l.href);
             const active = l.href === "/"
@@ -266,78 +221,6 @@ export const Navbar = () => {
               </NextLink>
             );
           })}
-
-          {/* Brands Dropdown */}
-          <div ref={brandsRef} className="relative">
-            <button
-              onClick={() => { setBrandsOpen(!brandsOpen); setProblemsOpen(false); }}
-              className={clsx(
-                "relative inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest transition-colors px-3 py-2",
-                pathname.startsWith(localizedPath("/brands")) ? "text-[#0284c7]" : "text-slate-900 hover:text-[#0284c7]",
-              )}
-            >
-              {lbl.brands}
-              <HiChevronDown className={clsx("h-3.5 w-3.5 transition-transform duration-200", brandsOpen && "rotate-180")} />
-              {pathname.startsWith(localizedPath("/brands")) && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />}
-            </button>
-            {brandsOpen && (
-              <div className="absolute left-0 top-full mt-1 w-56 bg-white border border-slate-200 shadow-xl rounded-b-xl overflow-hidden z-50">
-                <NextLink
-                  href={localizedPath("/brands")}
-                  className="flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-wider bg-sky-50 text-[#0284c7] border-b border-slate-100 hover:bg-sky-100 transition-colors"
-                >
-                  {lbl.allBrands} →
-                </NextLink>
-                <div className="grid grid-cols-2">
-                  {BRAND_ITEMS.map((b, idx) => (
-                    <NextLink
-                      key={b.slug}
-                      href={localizedPath(`/brands/${b.slug}`)}
-                      className="px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0284c7] transition-colors border-b border-slate-50"
-                    >
-                      {anchor.brand(b.slug, lang as "en" | "ms" | "zh", idx)}
-                    </NextLink>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Problems Dropdown */}
-          <div ref={problemsRef} className="relative">
-            <button
-              onClick={() => { setProblemsOpen(!problemsOpen); setBrandsOpen(false); }}
-              className={clsx(
-                "relative inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest transition-colors px-3 py-2",
-                pathname.startsWith(localizedPath("/problems")) ? "text-[#0284c7]" : "text-slate-900 hover:text-[#0284c7]",
-              )}
-            >
-              {lbl.problems}
-              <HiChevronDown className={clsx("h-3.5 w-3.5 transition-transform duration-200", problemsOpen && "rotate-180")} />
-              {pathname.startsWith(localizedPath("/problems")) && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0284c7]" />}
-            </button>
-            {problemsOpen && (
-              <div className="absolute left-0 top-full mt-1 w-72 bg-white border border-slate-200 shadow-xl rounded-b-xl overflow-hidden z-50">
-                <NextLink
-                  href={localizedPath("/problems")}
-                  className="flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-wider bg-sky-50 text-[#0284c7] border-b border-slate-100 hover:bg-sky-100 transition-colors"
-                >
-                  {lbl.allProblems} →
-                </NextLink>
-                <div className="grid grid-cols-2">
-                  {PROBLEM_ITEMS.map((p, idx) => (
-                    <NextLink
-                      key={p.slug}
-                      href={localizedPath(`/problems/${p.slug}`)}
-                      className="px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0284c7] transition-colors border-b border-slate-50"
-                    >
-                      {anchor.problem(p.name[lang], lang as "en" | "ms" | "zh", idx)}
-                    </NextLink>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
         </nav>
 
         {/* Desktop Right */}
@@ -472,80 +355,6 @@ export const Navbar = () => {
                   </li>
                 );
               })}
-
-              {/* Mobile Brands Accordion */}
-              <li className="border-b border-slate-50">
-                <button
-                  onClick={() => setMobileBrandsOpen(!mobileBrandsOpen)}
-                  className={clsx(
-                    "w-full flex items-center justify-between px-6 py-4 text-sm font-black uppercase tracking-widest border-l-4 transition-all",
-                    pathname.startsWith(localizedPath("/brands"))
-                      ? "border-[#0284c7] text-[#0284c7] bg-blue-50/40"
-                      : "border-transparent text-slate-900",
-                  )}
-                >
-                  {lbl.brands}
-                  <HiChevronDown className={clsx("h-4 w-4 transition-transform", mobileBrandsOpen && "rotate-180")} />
-                </button>
-                {mobileBrandsOpen && (
-                  <div className="bg-slate-50 border-t border-slate-100">
-                    <NextLink
-                      href={localizedPath("/brands")}
-                      className="block px-8 py-3 text-xs font-black uppercase tracking-wider text-[#0284c7] border-b border-slate-100"
-                    >
-                      {lbl.allBrands} →
-                    </NextLink>
-                    <div className="grid grid-cols-2">
-                      {BRAND_ITEMS.map((b, idx) => (
-                        <NextLink
-                          key={b.slug}
-                          href={localizedPath(`/brands/${b.slug}`)}
-                          className="px-8 py-2.5 text-xs font-bold text-slate-700 hover:text-[#0284c7] border-b border-slate-100 transition-colors"
-                        >
-                          {anchor.brand(b.slug, lang as "en" | "ms" | "zh", idx)}
-                        </NextLink>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </li>
-
-              {/* Mobile Problems Accordion */}
-              <li className="border-b border-slate-50">
-                <button
-                  onClick={() => setMobileProblemsOpen(!mobileProblemsOpen)}
-                  className={clsx(
-                    "w-full flex items-center justify-between px-6 py-4 text-sm font-black uppercase tracking-widest border-l-4 transition-all",
-                    pathname.startsWith(localizedPath("/problems"))
-                      ? "border-[#0284c7] text-[#0284c7] bg-blue-50/40"
-                      : "border-transparent text-slate-900",
-                  )}
-                >
-                  {lbl.problems}
-                  <HiChevronDown className={clsx("h-4 w-4 transition-transform", mobileProblemsOpen && "rotate-180")} />
-                </button>
-                {mobileProblemsOpen && (
-                  <div className="bg-slate-50 border-t border-slate-100">
-                    <NextLink
-                      href={localizedPath("/problems")}
-                      className="block px-8 py-3 text-xs font-black uppercase tracking-wider text-[#0284c7] border-b border-slate-100"
-                    >
-                      {lbl.allProblems} →
-                    </NextLink>
-                    <div className="grid grid-cols-2">
-                      {PROBLEM_ITEMS.map((p, idx) => (
-                        <NextLink
-                          key={p.slug}
-                          href={localizedPath(`/problems/${p.slug}`)}
-                          className="px-8 py-2.5 text-xs font-bold text-slate-700 hover:text-[#0284c7] border-b border-slate-100 transition-colors"
-                        >
-                          {anchor.problem(p.name[lang], lang as "en" | "ms" | "zh", idx)}
-                        </NextLink>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </li>
             </ul>
           </nav>
           <div className="px-5 py-5 grid grid-cols-2 gap-3 bg-slate-50/50 border-t border-slate-100">
