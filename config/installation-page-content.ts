@@ -1012,8 +1012,8 @@ export function getInstallationPath(
     "1.5hp": { en: "/1.5hp-aircond-installation-kl", ms: "/pemasangan-aircond-1.5hp-kl", zh: "/1.5hp-aircond-installation-kl" },
     "2hp": { en: "/2hp-aircond-installation-kl", ms: "/pemasangan-aircond-2hp-kl", zh: "/2hp-aircond-installation-kl" },
     "wall-mounted": { en: "/wall-mounted-aircond-installation-kl", ms: "/pemasangan-aircond-dinding-kl", zh: "/wall-mounted-aircond-installation-kl" },
-    "ceiling-cassette": { en: "/ceiling-cassette-installation-kl", ms: "/pemasangan-ceiling-cassette-kl", zh: "/ceiling-cassette-installation-kl" },
-    "window-unit": { en: "/window-unit-installation-kl", ms: "/pemasangan-aircond-tingkap-kl", zh: "/window-unit-installation-kl" },
+    "ceiling-cassette": { en: "/ceiling-cassette-aircond-installation-kl", ms: "/pemasangan-aircond-keset-siling-kl", zh: "/ceiling-cassette-aircond-installation-kl" },
+    "window-unit": { en: "/window-unit-aircond-installation-kl", ms: "/pemasangan-aircond-tingkap-kl", zh: "/window-unit-aircond-installation-kl" },
   };
   return map[pageKey][locale];
 }
