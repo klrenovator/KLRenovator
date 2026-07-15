@@ -281,6 +281,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
+  // ── Kampung Installation Pages (INS-10 Part 2) — neighbourhood-level installation landings
+  const kampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages.map((k) => ({
+    url: `${BASE}/areas/${k.parentSlug}/${k.slug}/installation`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.74,
+    alternates: buildTrilingual({
+      en: `/areas/${k.parentSlug}/${k.slug}/installation`,
+      ms: `/ms/areas/${k.parentSlug}/${k.slug}/installation`,
+      zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
+    }),
+  }));
+
+  const msKampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages
+    .filter((k) => k.descriptionMS)
+    .map((k) => ({
+      url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}/installation`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.68,
+      alternates: buildTrilingual({
+        en: `/areas/${k.parentSlug}/${k.slug}/installation`,
+        ms: `/ms/areas/${k.parentSlug}/${k.slug}/installation`,
+        zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
+      }),
+    }));
+
+  const zhKampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages
+    .filter((k) => k.descriptionZH)
+    .map((k) => ({
+      url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}/installation`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.68,
+      alternates: buildTrilingual({
+        en: `/areas/${k.parentSlug}/${k.slug}/installation`,
+        ms: `/ms/areas/${k.parentSlug}/${k.slug}/installation`,
+        zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
+      }),
+    }));
+
   // ── Brand Pages — all configured brands with real /ms/ and /zh/ twins
   const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/brands/${b.slug}`,
@@ -452,6 +493,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaInstallationPages,
     ...msAreaInstallationPages,
     ...zhAreaInstallationPages,
+    ...kampungInstallationPages,
+    ...msKampungInstallationPages,
+    ...zhKampungInstallationPages,
     ...kampungPages,
     ...msKampungPages,
     ...zhKampungPages,
