@@ -358,6 +358,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
+  // ── Brand Installation Pages (INS-11) — per-brand installation landing pages
+  const brandInstallationPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/brands/${b.slug}/installation`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.78,
+    alternates: buildTrilingual({
+      en: `/brands/${b.slug}/installation`,
+      ms: `/ms/brands/${b.slug}/installation`,
+      zh: `/zh/brands/${b.slug}/installation`,
+    }),
+  }));
+
+  const msBrandInstallationPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/ms/brands/${b.slug}/installation`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.72,
+    alternates: buildTrilingual({
+      en: `/brands/${b.slug}/installation`,
+      ms: `/ms/brands/${b.slug}/installation`,
+      zh: `/zh/brands/${b.slug}/installation`,
+    }),
+  }));
+
+  const zhBrandInstallationPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
+    url: `${BASE}/zh/brands/${b.slug}/installation`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.72,
+    alternates: buildTrilingual({
+      en: `/brands/${b.slug}/installation`,
+      ms: `/ms/brands/${b.slug}/installation`,
+      zh: `/zh/brands/${b.slug}/installation`,
+    }),
+  }));
+
   // ── Problem Pages — all configured problems with real /ms/ and /zh/ twins
   const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
     url: `${BASE}/problems/${p.slug}`,
@@ -502,6 +539,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...brandPages,
     ...msBrandPages,
     ...zhBrandPages,
+    ...brandInstallationPages,
+    ...msBrandInstallationPages,
+    ...zhBrandInstallationPages,
     ...problemPages,
     ...msProblemPages,
     ...zhProblemPages,
