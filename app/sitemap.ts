@@ -7,7 +7,8 @@ const BASE = "https://www.klrenovator.com";
 // Round 14 / 20B.13 sitemap hygiene: keep <lastmod> stable and tied to
 // the latest content deployment instead of changing on every build.
 // Round 23 / 20F.50 — updated 2026-07-07 for Cuci Aircond KL landing launch.
-const SITEMAP_LAST_MODIFIED = new Date("2026-07-07T00:00:00.000Z");
+// Round 70 / INS-08 + INS-09 — updated 2026-07-15 for per-HP and per-type installation pages.
+const SITEMAP_LAST_MODIFIED = new Date("2026-07-15T00:00:00.000Z");
 
 // ─────────────────────────────────────────────────────────────────────────
 // MULTILINGUAL ROUTING — audited 2026-07-06 (Round 14 / 20B.13):
@@ -122,6 +123,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.90,
       alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
     },
+  ];
+
+  // ── Installation Landing Pages — EN/MS/ZH canonical entries ─────────
+  const installationPages: MetadataRoute.Sitemap = [
+    // Main installation pillar
+    { url: `${BASE}/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
+    { url: `${BASE}/zh/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
+    // Sub-pillar: new home / whole house / commercial
+    { url: `${BASE}/new-home-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/new-home-aircond-installation", ms: "/ms/pemasangan-aircond-rumah-baru", zh: "/zh/new-home-aircond-installation" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-rumah-baru`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/new-home-aircond-installation", ms: "/ms/pemasangan-aircond-rumah-baru", zh: "/zh/new-home-aircond-installation" }) },
+    { url: `${BASE}/zh/new-home-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.87, alternates: buildTrilingual({ en: "/new-home-aircond-installation", ms: "/ms/pemasangan-aircond-rumah-baru", zh: "/zh/new-home-aircond-installation" }) },
+    { url: `${BASE}/whole-house-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/whole-house-aircond-installation", ms: "/ms/pemasangan-aircond-seluruh-rumah", zh: "/zh/whole-house-aircond-installation" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-seluruh-rumah`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/whole-house-aircond-installation", ms: "/ms/pemasangan-aircond-seluruh-rumah", zh: "/zh/whole-house-aircond-installation" }) },
+    { url: `${BASE}/zh/whole-house-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.87, alternates: buildTrilingual({ en: "/whole-house-aircond-installation", ms: "/ms/pemasangan-aircond-seluruh-rumah", zh: "/zh/whole-house-aircond-installation" }) },
+    { url: `${BASE}/commercial-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/commercial-aircond-installation", ms: "/ms/pemasangan-aircond-komersial", zh: "/zh/commercial-aircond-installation" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-komersial`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/commercial-aircond-installation", ms: "/ms/pemasangan-aircond-komersial", zh: "/zh/commercial-aircond-installation" }) },
+    { url: `${BASE}/zh/commercial-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.87, alternates: buildTrilingual({ en: "/commercial-aircond-installation", ms: "/ms/pemasangan-aircond-komersial", zh: "/zh/commercial-aircond-installation" }) },
+    // INS-08: per-HP pages
+    { url: `${BASE}/1hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/1hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1hp-kl", zh: "/zh/1hp-aircond-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-1hp-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/1hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1hp-kl", zh: "/zh/1hp-aircond-installation-kl" }) },
+    { url: `${BASE}/zh/1hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/1hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1hp-kl", zh: "/zh/1hp-aircond-installation-kl" }) },
+    { url: `${BASE}/1.5hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/1.5hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1.5hp-kl", zh: "/zh/1.5hp-aircond-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-1.5hp-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/1.5hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1.5hp-kl", zh: "/zh/1.5hp-aircond-installation-kl" }) },
+    { url: `${BASE}/zh/1.5hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/1.5hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1.5hp-kl", zh: "/zh/1.5hp-aircond-installation-kl" }) },
+    { url: `${BASE}/2hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/2hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-2hp-kl", zh: "/zh/2hp-aircond-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-2hp-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/2hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-2hp-kl", zh: "/zh/2hp-aircond-installation-kl" }) },
+    { url: `${BASE}/zh/2hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/2hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-2hp-kl", zh: "/zh/2hp-aircond-installation-kl" }) },
+    // INS-09: per-type pages
+    { url: `${BASE}/wall-mounted-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/wall-mounted-aircond-installation-kl", ms: "/ms/pemasangan-aircond-dinding-kl", zh: "/zh/wall-mounted-aircond-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-dinding-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/wall-mounted-aircond-installation-kl", ms: "/ms/pemasangan-aircond-dinding-kl", zh: "/zh/wall-mounted-aircond-installation-kl" }) },
+    { url: `${BASE}/zh/wall-mounted-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/wall-mounted-aircond-installation-kl", ms: "/ms/pemasangan-aircond-dinding-kl", zh: "/zh/wall-mounted-aircond-installation-kl" }) },
+    { url: `${BASE}/ceiling-cassette-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/ceiling-cassette-installation-kl", ms: "/ms/pemasangan-ceiling-cassette-kl", zh: "/zh/ceiling-cassette-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-ceiling-cassette-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/ceiling-cassette-installation-kl", ms: "/ms/pemasangan-ceiling-cassette-kl", zh: "/zh/ceiling-cassette-installation-kl" }) },
+    { url: `${BASE}/zh/ceiling-cassette-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/ceiling-cassette-installation-kl", ms: "/ms/pemasangan-ceiling-cassette-kl", zh: "/zh/ceiling-cassette-installation-kl" }) },
+    { url: `${BASE}/window-unit-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/window-unit-installation-kl", ms: "/ms/pemasangan-aircond-tingkap-kl", zh: "/zh/window-unit-installation-kl" }) },
+    { url: `${BASE}/ms/pemasangan-aircond-tingkap-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/window-unit-installation-kl", ms: "/ms/pemasangan-aircond-tingkap-kl", zh: "/zh/window-unit-installation-kl" }) },
+    { url: `${BASE}/zh/window-unit-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/window-unit-installation-kl", ms: "/ms/pemasangan-aircond-tingkap-kl", zh: "/zh/window-unit-installation-kl" }) },
   ];
 
   // ── Service Detail Pages — EN/MS/ZH canonical entries ───────────────
@@ -357,6 +396,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...emergencyPage,
     ...msEmergencyPage,
     ...zhEmergencyPage,
+    ...installationPages,
     ...servicePages,
     ...msServicePages,
     ...zhServicePages,
