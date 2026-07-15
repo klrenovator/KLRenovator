@@ -1022,7 +1022,8 @@ export function getInstallationCanonical(
   pageKey: InstallationPageKey,
   locale: InstallationLocale,
 ): string {
-  return `https://www.klrenovator.com${getInstallationPath(pageKey, locale)}`;
+  const localePrefix = locale === "en" ? "" : `/${locale}`;
+  return `https://www.klrenovator.com${localePrefix}${getInstallationPath(pageKey, locale)}`;
 }
 
 const langLabel: Record<InstallationLocale, string> = {
