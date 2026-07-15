@@ -205,7 +205,7 @@ function getWhyItems(
 
   if (locale === "en") {
     return [
-      { title: "Local ${name} Technicians", body: `Our team knows ${name} building types, JMB procedures, and access constraints, so installations are scheduled efficiently.` },
+      { title: `Local ${name} Technicians`, body: `Our team knows ${name} building types, JMB procedures, and access constraints, so installations are scheduled efficiently.` },
       { title: "Right HP, Every Time", body: `We measure your room size, ceiling height, and sun exposure before recommending 1HP, 1.5HP, or 2HP for ${name}'s climate.` },
       { title: "Vacuum Pump Standard", body: `Every installation in ${name} includes proper evacuation to protect your compressor and keep manufacturer warranty valid.` },
       { title: "Price Confirmed First", body: `Copper pipe, wiring, brackets, and extras are quoted before drilling begins — no surprise bills in ${name}.` },
