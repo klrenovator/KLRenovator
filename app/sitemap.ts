@@ -92,6 +92,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.95, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
     { url: `${BASE}/ms/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
     { url: `${BASE}/zh/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
+    // Round 77 / INS-19: BTU Calculator — trilingual interactive tool
+    { url: `${BASE}/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
+    { url: `${BASE}/ms/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
+    { url: `${BASE}/zh/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
   ];
 
   // ── Emergency Service Page — trilingual canonical entries ───────────
