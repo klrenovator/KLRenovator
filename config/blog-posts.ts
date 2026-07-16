@@ -1,3 +1,5 @@
+import { installationBlogBatch1 } from "./installation-blog-batch1";
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -9076,5 +9078,8 @@ export const allPosts: BlogPost[] = [
       <p>考虑每年从RM 499起的年度保养合约。请WhatsApp <strong>+60 18-298 3573</strong>。</p>
     `
   },
+
+  // ─── INS-18 Blog Batch 1 (Round 78): Installation-Focused Posts ────────
+  ...installationBlogBatch1,
 
 ];
