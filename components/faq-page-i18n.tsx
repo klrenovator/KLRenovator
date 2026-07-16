@@ -1,112 +1,41 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { FaWhatsapp, FaChevronDown, FaPhone } from "react-icons/fa6";
+import { useState, useMemo } from "react";
+import { FaWhatsapp, FaChevronDown, FaPhone, FaMagnifyingGlass } from "react-icons/fa6";
 import { FaRegClock, FaShieldAlt } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
+import { masterFaqPool, FAQ_CATEGORIES, MOST_ASKED_CATEGORIES, type Lang, type MasterFaqItem } from "@/config/master-faq-pool";
 
-type Lang = "en" | "ms" | "zh";
-
-const FAQS: Record<Lang, { category: string; q: string; a: string }[]> = {
-  en: [
-    { category: "pricing", q: "How much does a chemical wash cost in KL & Selangor?", a: "Chemical wash starts from RM 120 for a standard 1.0–1.5 HP wall-mounted unit. Ceiling cassette starts from RM 220. Prices vary by unit type and HP size. All prices confirmed before work begins — no hidden charges." },
-    { category: "pricing", q: "Are there any hidden charges?", a: "No hidden charges at all. We provide a full quote before starting any work. Extra materials (copper pipe, brackets, casing) are quoted and approved by you on-site before installation." },
-    { category: "pricing", q: "What is your emergency / after-hours rate?", a: "Standard hours are 9:00 AM to 6:00 PM daily. Jobs booked between 6:00 PM and 10:00 PM carry a mandatory overtime surcharge of RM 50. Total after-hours diagnostic fee is RM 138." },
-    { category: "pricing", q: "Do you offer volume discounts?", a: "Yes! 2–3 units: 5% off. 4–8 units: 10% off. 8+ units: 15% off. Discounts apply to labour charges. WhatsApp us to confirm." },
-    { category: "pricing", q: "How much does gas top-up cost?", a: "R22 gas top-up starts from RM 120. R410A from RM 150. R32 from RM 180. Price depends on unit HP size. Leak check is included with every gas top-up." },
-    { category: "service", q: "What is the difference between chemical wash and chemical overhaul?", a: "A chemical wash (from RM 120) cleans the unit while it stays mounted on the wall — great for regular maintenance. A chemical overhaul (from RM 220) fully dismantles the unit for a deep clean of every internal component — recommended for water leaking, ice formation, or units not serviced in 3+ years." },
-    { category: "service", q: "How often should I service my aircond in Malaysia?", a: "For light use (evenings only), service every 6 months. For heavy use (8+ hours daily), every 3 months. A chemical wash is recommended annually regardless of usage. Malaysia's humidity means units accumulate dirt faster than in temperate countries." },
-    { category: "service", q: "My aircond is running but not cold. What's wrong?", a: "The most common causes are low refrigerant gas, a dirty evaporator coil, or a faulty capacitor. Our technicians diagnose the exact issue and quote you before any repair starts. Diagnostic fee is RM 88 (waived if repair is done on the same visit)." },
-    { category: "service", q: "My aircond is leaking water. What should I do?", a: "Switch off the unit if leaking heavily to prevent damage. The most common cause is a blocked drain pipe — usually fixed with a basic service or chemical wash. If leaking continues after a wash, a chemical overhaul is needed to clean the drain pan and internal channels properly." },
-    { category: "service", q: "What gas type does my aircond use?", a: "Check the sticker on your outdoor unit — it states the gas type (R22, R410A, or R32). Or WhatsApp us a photo of the outdoor unit sticker and we'll identify it for you." },
-    { category: "service", q: "Do you do commercial and office aircond servicing?", a: "Yes, we handle commercial wall-mounted and ceiling cassette units for shops, retail outlets, restaurants, offices, and small-to-medium commercial premises. We also offer annual maintenance contracts for offices and commercial properties." },
-    { category: "booking", q: "How do I book a service?", a: "The fastest way is via WhatsApp at +60 18-298 3573. Tell us your unit type (HP and brand), area, and the issue. We'll confirm availability and pricing within 30 minutes." },
-    { category: "booking", q: "Do you offer same-day service?", a: "Yes, same-day appointments are available subject to technician availability. WhatsApp us early in the morning for the best chance of a same-day slot across KL and Selangor." },
-    { category: "trust", q: "Is there a warranty on your work?", a: "Yes. All workmanship carries a 1-month warranty. Replaced parts carry a 3-month warranty. If any related issue arises within the warranty period, we return and inspect at no charge." },
-    { category: "trust", q: "What areas does KL Renovator cover?", a: "We cover the entire Klang Valley — all areas of Kuala Lumpur and Selangor including Petaling Jaya, Ampang, Batu Caves, Cheras, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Selayang, Putrajaya, and Cyberjaya." },
-    { category: "trust", q: "What brands do you service?", a: "We service all major brands including Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. All inverter and non-inverter models. If your brand isn't listed, WhatsApp us — we likely service it." },
-  ],
-  ms: [
-    { category: "pricing", q: "Berapa harga cuci kimia (chemical wash) di KL & Selangor?", a: "Cuci kimia bermula dari RM 120 untuk unit dinding 1.0–1.5 HP. Ceiling cassette bermula RM 220. Harga bergantung kepada jenis dan saiz HP unit. Semua harga disahkan sebelum kerja bermula — tiada caj tersembunyi." },
-    { category: "pricing", q: "Adakah terdapat caj tersembunyi?", a: "Tiada caj tersembunyi sama sekali. Kami berikan sebut harga penuh sebelum memulakan sebarang kerja. Bahan tambahan (paip tembaga, pendakap) akan dinyatakan dan diluluskan oleh anda terlebih dahulu." },
-    { category: "pricing", q: "Adakah terdapat kadar lebih masa?", a: "Waktu standard ialah 9:00 PG hingga 6:00 PTG setiap hari. Kerja yang ditempah antara 6:00 PTG – 10:00 malam akan dikenakan tambahan wajib RM 50. Jumlah yuran diagnosis luar waktu ialah RM 138." },
-    { category: "pricing", q: "Adakah terdapat diskaun untuk banyak unit?", a: "Ya! 2–3 unit: diskaun 5%. 4–8 unit: diskaun 10%. 8+ unit: diskaun 15%. Diskaun terpakai untuk caj buruh. WhatsApp kami untuk pengesahan." },
-    { category: "pricing", q: "Berapa harga tambah gas?", a: "Tambah gas R22 bermula dari RM 120. R410A bermula dari RM 150. R32 bermula dari RM 180. Harga bergantung kepada saiz HP unit. Pemeriksaan kebocoran disertakan dengan setiap tambah gas." },
-    { category: "service", q: "Apa beza cuci kimia dan overhaul kimia?", a: "Cuci kimia (dari RM 120) membersihkan unit di tempat ia terpasang — sesuai untuk penyelenggaraan biasa. Overhaul kimia (dari RM 220) menanggalkan unit sepenuhnya untuk pembersihan mendalam setiap komponen — disyorkan untuk kebocoran air, pembentukan ais, atau unit yang tidak diservis lebih 3 tahun." },
-    { category: "service", q: "Berapa kerap saya perlu servis aircond di Malaysia?", a: "Penggunaan ringan (waktu malam sahaja): setiap 6 bulan. Penggunaan berat (8+ jam sehari): setiap 3 bulan. Cuci kimia disyorkan setiap tahun kerana kelembapan tinggi di Malaysia menyebabkan unit kotor lebih cepat." },
-    { category: "service", q: "Aircond saya beroperasi tetapi tidak sejuk. Apa masalahnya?", a: "Punca paling biasa ialah gas rendah, gegelung penyejat kotor, atau kapasitor rosak. Juruteknik kami akan mendiagnosis masalah dan memberikan sebut harga sebelum memulakan pembaikan. Yuran diagnosis RM 88 (dikecualikan jika pembaikan dilakukan)." },
-    { category: "service", q: "Aircond saya bocor air. Apa yang perlu saya lakukan?", a: "Tutup unit jika bocor dengan banyak untuk mengelakkan kerosakan. Punca paling biasa ialah paip longkang tersumbat — biasanya boleh dibaiki dengan servis asas atau cuci kimia. Jika kebocoran berterusan selepas cuci, overhaul kimia diperlukan untuk membersihkan dulang longkang dan saluran dalaman dengan lebih menyeluruh." },
-    { category: "service", q: "Jenis gas apa yang digunakan aircond saya?", a: "Semak pelekat pada unit luar anda — ia menyatakan jenis gas (R22, R410A, atau R32). Atau WhatsApp kami gambar pelekat unit luar dan kami akan kenal pasti untuk anda." },
-    { category: "service", q: "Adakah anda menyediakan servis aircond komersial dan pejabat?", a: "Ya, kami mengendalikan unit dinding dan ceiling cassette komersial untuk kedai, pusat runcit, restoran, pejabat, dan premis komersial kecil hingga sederhana. Kami juga menawarkan kontrak penyelenggaraan tahunan untuk pejabat dan hartanah komersial." },
-    { category: "booking", q: "Bagaimana cara menempah servis?", a: "Cara paling pantas ialah melalui WhatsApp di +60 18-298 3573. Beritahu kami jenis unit, kawasan, dan masalah anda — kami akan mengesahkan ketersediaan dan harga dalam masa 30 minit." },
-    { category: "booking", q: "Adakah servis hari sama tersedia?", a: "Ya, temujanji hari sama tersedia bergantung kepada ketersediaan juruteknik. WhatsApp kami awal pagi untuk peluang terbaik mendapat slot hari sama merentasi KL dan Selangor." },
-    { category: "trust", q: "Adakah terdapat waranti untuk kerja anda?", a: "Ya. Semua kerja buruh dilindungi waranti 1 bulan. Komponen yang diganti dilindungi waranti 3 bulan. Jika masalah berkaitan timbul dalam tempoh waranti, kami akan kembali dan memeriksa tanpa sebarang bayaran." },
-    { category: "trust", q: "Kawasan mana yang KL Renovator liputi?", a: "Kami meliputi seluruh Lembah Klang — semua kawasan Kuala Lumpur dan Selangor termasuk Petaling Jaya, Ampang, Batu Caves, Cheras, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Sentul, Selayang, Putrajaya dan Cyberjaya." },
-    { category: "trust", q: "Jenama apa yang anda servis?", a: "Kami servis semua jenama utama termasuk Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp dan Haier. Jika jenama anda tidak disenaraikan, WhatsApp kami." },
-  ],
-  zh: [
-    { category: "pricing", q: "KL & 雪兰莪化学清洗（Chemical Wash）费用是多少？", a: "化学清洗起价 RM 120，适用于 1.0–1.5 HP 壁挂式冷气机。天花板卡式机起价 RM 220。价格因机型和匹数而异。所有价格在开工前确认——没有隐藏收费。" },
-    { category: "pricing", q: "是否有隐藏收费？", a: "绝对没有隐藏收费。我们在开工前提供完整报价。额外材料（铜管、支架）会在现场告知您并获得批准后才进行。" },
-    { category: "pricing", q: "紧急/非营业时间服务费用是多少？", a: "正常营业时间为每日上午9时至下午6时。下午6时至晚上10时之间预约的服务需缴付RM 50强制性加班附加费。非营业时间诊断费总计为RM 138。" },
-    { category: "pricing", q: "是否有多台优惠？", a: "有！2–3 台：九五折。4–8 台：九折。8 台以上：八五折。折扣适用于人工费用。请通过 WhatsApp 联系我们确认。" },
-    { category: "pricing", q: "充冷媒（Gas Top-Up）费用是多少？", a: "R22充气从RM 120起。R410A从RM 150起。R32从RM 180起。价格依机型匹数而定。每次充气均包含漏气检查。" },
-    { category: "service", q: "化学清洗和化学大修（Chemical Overhaul）有什么区别？", a: "化学清洗（起价 RM 120）是在机器安装状态下进行清洗，适合定期保养。化学大修（起价 RM 220）是将室内机完全拆卸进行深层清洁，适合严重漏水、结冰或超过 3 年未保养的机器。" },
-    { category: "service", q: "冷气机应该多久保养一次？", a: "轻度使用（晚间使用）：每 6 个月一次。重度使用（每天 8 小时以上）：每 3 个月一次。无论使用频率如何，建议每年进行一次化学清洗。马来西亚湿度高，冷气机积尘更快。" },
-    { category: "service", q: "冷气机开着但不冷，是什么原因？", a: "最常见原因是冷媒不足、蒸发器线圈脏污或电容器故障。我们的技术员会现场诊断并报价后才开始维修。诊断费 RM 88（若进行维修则豁免）。" },
-    { category: "service", q: "我的冷气机漏水，该怎么办？", a: "若漏水严重，请先关闭机器以免造成损坏。最常见原因是排水管堵塞——通常基本保养或化学清洗即可解决。若清洗后仍持续漏水，则需要化学大修以更彻底清洁排水盘和内部通道。" },
-    { category: "service", q: "我的冷气机使用哪种冷媒？", a: "请查看室外机上的标签——上面会标明冷媒类型（R22、R410A或R32）。或通过WhatsApp发送室外机标签照片给我们，我们将为您识别。" },
-    { category: "service", q: "是否提供商业及办公室冷气服务？", a: "是的，我们为商铺、零售店、餐厅、办公室及中小型商业场所提供商用壁挂式及吸顶式机型服务。我们也为办公室及商业物业提供年度保养合约。" },
-    { category: "booking", q: "如何预约服务？", a: "最快的方式是通过 WhatsApp 联系 +60 18-298 3573。告诉我们您的机型、地区和问题，我们将在 30 分钟内确认服务时间和价格。" },
-    { category: "booking", q: "是否提供当天服务？", a: "是的，视技术员档期而定，可提供当天服务。请尽早通过 WhatsApp 联系我们，以获得当天时段的最大机会。" },
-    { category: "trust", q: "服务是否有保固？", a: "是的。所有工艺提供 1 个月保固，更换零件提供 3 个月保固。保固期内如有相关问题，我们免费上门检查。" },
-    { category: "trust", q: "服务范围覆盖哪些地区？", a: "我们覆盖整个巴生谷地区——包括吉隆坡及雪兰莪所有地区，如八打灵再也、安邦、蕉赖、梳邦再也、普城、沙阿南、白沙罗、巴生、加影、孟沙、满家乐、武吉洞、万宜及布城等。" },
-    { category: "trust", q: "你们维修哪些品牌？", a: "我们服务所有主要品牌，包括大金（Daikin）、松下（Panasonic）、三菱（Mitsubishi）、约克（York）、美的（Midea）、LG 及三星（Samsung）。如您的品牌不在列表中，请 WhatsApp 我们询问。" },
-  ],
-};
-
-const CATEGORIES: Record<Lang, { key: string; label: string }[]> = {
-  en: [
-    { key: "all", label: "All Questions" },
-    { key: "pricing", label: "Pricing" },
-    { key: "service", label: "Services" },
-    { key: "booking", label: "Booking" },
-    { key: "trust", label: "Trust & Areas" },
-  ],
-  ms: [
-    { key: "all", label: "Semua Soalan" },
-    { key: "pricing", label: "Harga" },
-    { key: "service", label: "Perkhidmatan" },
-    { key: "booking", label: "Tempahan" },
-    { key: "trust", label: "Kawasan & Waranti" },
-  ],
-  zh: [
-    { key: "all", label: "全部问题" },
-    { key: "pricing", label: "价格" },
-    { key: "service", label: "服务" },
-    { key: "booking", label: "预约" },
-    { key: "trust", label: "保障与覆盖范围" },
-  ],
-};
-
-const HERO: Record<Lang, { eyebrow: string; title: string[]; desc: string }> = {
+const HERO: Record<Lang, { eyebrow: string; title: string[]; desc: string; searchPlaceholder: string; mostAsked: string; showingResults: string; noResults: string }> = {
   en: {
     eyebrow: "Knowledge Base",
     title: ["Frequently Asked ", "Questions"],
-    desc: "Quick honest answers about our aircon services, pricing, warranty, and coverage areas in KL & Selangor — in English, Bahasa Malaysia, and Chinese.",
+    desc: "100+ honest answers about aircond installation, servicing, chemical wash, pricing, warranty and coverage in KL & Selangor — all in one place.",
+    searchPlaceholder: "Search questions...",
+    mostAsked: "Most Asked",
+    showingResults: "questions found",
+    noResults: "No questions match your search. Try different keywords or WhatsApp us directly.",
   },
   ms: {
     eyebrow: "Pusat Pengetahuan",
     title: ["Soalan Lazim ", "Yang Sering Ditanya"],
-    desc: "Jawapan jujur dan pantas mengenai servis aircond, harga, waranti, dan kawasan liputan kami di KL & Selangor — dalam Bahasa Malaysia, English, dan Cina.",
+    desc: "100+ jawapan jujur tentang pemasangan aircond, servis, cuci kimia, harga, waranti dan liputan di KL & Selangor — semuanya di satu tempat.",
+    searchPlaceholder: "Cari soalan...",
+    mostAsked: "Paling Banyak Ditanya",
+    showingResults: "soalan ditemui",
+    noResults: "Tiada soalan sepadan dengan carian anda. Cuba kata kunci berbeza atau WhatsApp kami terus.",
   },
   zh: {
     eyebrow: "知识库",
     title: ["常见", "问答"],
-    desc: "关于我们的冷气服务、收费、保修及覆盖范围（吉隆坡及雪兰莪）的快速 honest 解答——提供英文、马来文及中文版本。",
+    desc: "100+ 关于冷气安装、保养、化学清洗、价格、保修及覆盖范围（KL & 雪兰莪）的诚实解答——全部汇聚于此。",
+    searchPlaceholder: "搜索问题...",
+    mostAsked: "热门问题",
+    showingResults: "条问题",
+    noResults: "没有找到匹配的问题。请尝试不同关键词或直接 WhatsApp 联系我们。",
   },
 };
 
@@ -143,7 +72,13 @@ const FAQ_CTA: Record<Lang, { emoji: string; title: string; desc: string; button
   zh: { emoji: "💬", title: "还有其他问题？", desc: "WhatsApp 联系我们——技术员将在 30 分钟内回复。", button: "WhatsApp 咨询我们" },
 };
 
-function FaqItem({ q, a }: { q: string; a: string }) {
+const SOURCE_LABEL: Record<Lang, string> = {
+  en: "Learn more →",
+  ms: "Ketahui lebih →",
+  zh: "了解更多 →",
+};
+
+function FaqItem({ q, a, source }: { q: string; a: string; source?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-slate-100 last:border-0">
@@ -159,6 +94,14 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-[500px] pb-5" : "max-h-0"}`}>
         <p className="text-sm text-slate-600 font-medium leading-relaxed pr-8">{a}</p>
+        {source && (
+          <a
+            href={source}
+            className="inline-block mt-2 text-xs font-bold text-sky-600 hover:text-sky-800 transition-colors"
+          >
+            {SOURCE_LABEL["en"]} {source.replace("/", "").replace(/-/g, " ")}
+          </a>
+        )}
       </div>
     </div>
   );
@@ -166,27 +109,55 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 export function FaqPageI18n({ lang }: { lang: Lang }) {
   const [activeCategory, setActiveCategory] = useState("all");
-  const faqs = FAQS[lang];
-  const categories = CATEGORIES[lang];
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showMostAsked, setShowMostAsked] = useState(true);
+
+  const faqs = masterFaqPool[lang];
+  const categories = FAQ_CATEGORIES[lang];
   const hero = HERO[lang];
   const cta = CTA[lang];
   const faqCta = FAQ_CTA[lang];
 
-  const filtered = activeCategory === "all" ? faqs : faqs.filter((f) => f.category === activeCategory);
+  // Most Asked — first question from each top category
+  const mostAsked = useMemo(() => {
+    const result: MasterFaqItem[] = [];
+    for (const cat of MOST_ASKED_CATEGORIES) {
+      const first = faqs.find((f) => f.category === cat);
+      if (first) result.push(first);
+    }
+    return result;
+  }, [faqs]);
+
+  // Filter by category + search
+  const filtered = useMemo(() => {
+    let items = faqs;
+    if (activeCategory !== "all") {
+      items = items.filter((f) => f.category === activeCategory);
+    }
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      items = items.filter(
+        (f) => f.q.toLowerCase().includes(q) || f.a.toLowerCase().includes(q)
+      );
+    }
+    return items;
+  }, [faqs, activeCategory, searchQuery]);
+
+  const isSearching = searchQuery.trim().length > 0;
+  const displayFaqs = isSearching || activeCategory !== "all" ? filtered : faqs;
+  const hideMostAsked = isSearching || activeCategory !== "all" || !showMostAsked;
 
   return (
     <>
       {/* Hero */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/hero/aircond-gas-topup-r32-r410a-selangor.webp"
             alt="HVAC technician servicing aircond unit KL Selangor"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
+            className="w-full h-full object-cover object-center"
             loading="lazy"
-            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent" />
@@ -205,16 +176,43 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* Category Filter */}
+      {/* Search + Category Filter */}
       <section className="bg-white border-b border-slate-100 sticky top-[80px] z-30 shadow-sm">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-2 py-3 overflow-x-auto">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-3">
+          {/* Search */}
+          <div className="relative mb-3">
+            <FaMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                if (e.target.value.trim()) setShowMostAsked(false);
+                else setShowMostAsked(true);
+              }}
+              placeholder={hero.searchPlaceholder}
+              className="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => { setSearchQuery(""); setShowMostAsked(true); }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 font-bold"
+              >
+                ✕
+              </button>
+            )}
+          </div>
+          {/* Categories */}
+          <div className="flex gap-2 overflow-x-auto pb-1">
             {categories.map((cat) => (
               <button
                 key={cat.key}
-                onClick={() => setActiveCategory(cat.key)}
+                onClick={() => {
+                  setActiveCategory(cat.key);
+                  setShowMostAsked(false);
+                }}
                 className={`shrink-0 px-4 py-2 text-xs font-black uppercase tracking-wider rounded-full transition-all duration-200 ${
-                  activeCategory === cat.key
+                  activeCategory === cat.key && !isSearching
                     ? "bg-sky-600 text-white shadow-sm"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
@@ -226,19 +224,55 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      {/* Most Asked Section */}
+      {!hideMostAsked && (
+        <section className="py-10 sm:py-14 bg-white border-b border-slate-100">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-amber-600 mb-6 flex items-center gap-2">
+                <span className="text-base">⭐</span> {hero.mostAsked}
+              </p>
+            </Reveal>
+            <div className="bg-amber-50 rounded-2xl border border-amber-100 px-6 sm:px-8">
+              {mostAsked.map((faq, i) => (
+                <Reveal key={i} delay={i * 30}>
+                  <FaqItem q={faq.q} a={faq.a} source={faq.source} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ Accordion */}
       <section className="py-12 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6">
-            {filtered.length} {lang === "en" ? "questions" : lang === "ms" ? "soalan" : "条问题"}
+            {displayFaqs.length} {hero.showingResults}
+            {isSearching && ` — "${searchQuery}"`}
           </p>
-          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm px-6 sm:px-8 divide-y divide-slate-100">
-            {filtered.map((faq, i) => (
-              <Reveal key={i} delay={i * 20}>
-                <FaqItem q={faq.q} a={faq.a} />
-              </Reveal>
-            ))}
-          </div>
+
+          {displayFaqs.length === 0 ? (
+            <div className="bg-white rounded-2xl border border-slate-100 p-10 text-center">
+              <p className="text-slate-500 font-medium">{hero.noResults}</p>
+              <a
+                href={waLink(rfqMsg)}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 bg-[#25D366] hover:bg-[#1ebe5d] px-6 py-3 text-xs font-black uppercase tracking-widest text-white transition-all rounded-xl"
+              >
+                <FaWhatsapp className="h-4 w-4" /> {faqCta.button}
+              </a>
+            </div>
+          ) : (
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm px-6 sm:px-8 divide-y divide-slate-100">
+              {displayFaqs.map((faq, i) => (
+                <Reveal key={`${faq.category}-${i}`} delay={Math.min(i * 15, 300)}>
+                  <FaqItem q={faq.q} a={faq.a} source={faq.source} />
+                </Reveal>
+              ))}
+            </div>
+          )}
 
           <Reveal>
             <div className="mt-10 bg-[#0284c7] text-white rounded-2xl p-8 text-center">
