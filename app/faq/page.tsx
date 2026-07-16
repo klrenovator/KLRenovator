@@ -4,9 +4,9 @@ import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("FAQ | Aircond Services KL & Selangor — KL Renovator"),
+  title: clampMetaTitle("FAQ | 100+ Aircond Questions — KL Renovator"),
   description:
-    "Frequently asked questions about aircond services, pricing, warranty & coverage areas in KL & Selangor. Chemical wash from RM 120. Same-day service available.",
+    "100+ frequently asked questions about aircond installation, servicing, chemical wash, pricing, warranty & coverage in KL & Selangor. Same-day service available.",
   alternates: buildTrilingualHreflang("/faq"),
   openGraph: {
     title: clampMetaTitle("FAQ | Aircond Services KL & Selangor — KL Renovator"),
