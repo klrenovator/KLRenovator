@@ -128,47 +128,42 @@ export const allPosts: BlogPost[] = [
       <h2>Diskaun Pukal untuk Banyak Unit</h2>
       <p>Ramai isi rumah Batu Caves dan Selayang mempunyai 2–4 unit aircond. Menempah semua unit dalam satu lawatan menjimatkan kos perjalanan dan layak untuk diskaun pukal: 5% diskaun untuk 2–3 unit, 10% diskaun untuk 4–8 unit. Isi rumah dengan 3 unit dinding untuk cuci kimia akan membayar RM 120 × 3 = RM 360, tolak 5% = <strong>RM 342</strong> jumlah keseluruhan. WhatsApp kami dengan bilangan unit untuk sebut harga yang disahkan sebelum menempah.</p>
     `,
-    contentZH: `
-      <h2>黑风洞及双溪毛糯冷气服务</h2>
-      <p>黑风洞和双溪毛糯是大吉隆坡增长最快的住宅区之一。由于住宅密集、湿度高，以及石灰岩山丘附近的多尘空气，该地区的冷气机积聚霉菌和灰尘的速度往往比雪兰莪其他大多数地区更快。</p>
+    contentZH: `<h2>黑风洞及双溪毛糯冷气服务2026 — 完整指南</h2>
+      <p>住在黑风洞或双溪毛糯？<a href="/near-me">KL Renovator的专业冷气技师</a>为您提供全面的冷气服务——从基本保养到化学清洗、维修和安装。</p>
 
-      <h2>该地区常见冷气问题</h2>
+      <h2>本区域常见冷气问题</h2>
       <ul>
-        <li><strong>霉菌生长更快</strong> — 由于靠近绿色区域且湿度高</li>
-        <li><strong>盘管积尘</strong> — 附近的建筑活动增加了空气中的颗粒物</li>
-        <li><strong>漏水</strong> — 雨季期间排水管堵塞非常普遍</li>
-        <li><strong>冷却效果弱</strong> — 因Jalan Ipoh走廊繁忙交通的震动导致气压损失</li>
+        <li><strong>霉菌快速生长</strong> — 靠近石灰岩山丘和绿化区域，湿度高导致霉菌和灰尘积累更快</li>
+        <li><strong>灰尘积累</strong> — 靠近采石场和建筑区域，空气中微粒更多</li>
+        <li><strong>老旧房屋配线</strong> — 许多1980-90年代的房屋电线可能无法承载现代冷气负荷</li>
+        <li><strong>高电费</strong> — 未定期保养的冷气耗电增加15-30%</li>
       </ul>
 
-      <h2>黑风洞居民推荐保养计划</h2>
+      <h2>我们提供的服务</h2>
+      <table>
+        <thead><tr><th>服务</th><th>价格</th><th>时间</th></tr></thead>
+        <tbody>
+          <tr><td>基本保养</td><td>RM 99起</td><td>30-45分钟</td></tr>
+          <tr><td>化学清洗</td><td>RM 120起</td><td>60-75分钟</td></tr>
+          <tr><td>化学大修</td><td>RM 220起</td><td>2-2.5小时</td></tr>
+          <tr><td>充气</td><td>RM 120起</td><td>30-45分钟</td></tr>
+          <tr><td>维修</td><td>RM 88诊断费</td><td>视问题而定</td></tr>
+          <tr><td>安装</td><td>RM 199起</td><td>2-3小时</td></tr>
+        </tbody>
+      </table>
+
+      <h2>为什么选择KL Renovator</h2>
       <ul>
-        <li><strong>基本保养：</strong>每3-4个月一次</li>
-        <li><strong>化学清洗：</strong>每10-12个月一次</li>
-        <li><strong>化学大修：</strong>每2-3年一次，或出现漏水/结冰时</li>
+        <li>✅ SSM注册公司（003765188-T）</li>
+        <li>✅ 500+ Google真实评价</li>
+        <li>✅ 当天服务可用</li>
+        <li>✅ 1个月工艺保修</li>
+        <li>✅ 透明定价——开工前确认</li>
+        <li>✅ 所有20个品牌都服务</li>
       </ul>
 
-      <h2>黑风洞及双溪毛糯收费</h2>
-      <ul>
-        <li>基本保养：从 <strong>RM 99</strong> 起</li>
-        <li>化学清洗：从 <strong>RM 120</strong> 起</li>
-        <li>化学大修：从 <strong>RM 220</strong> 起</li>
-        <li>R32/R410A充气：从 <strong>RM 150</strong> 起</li>
-      </ul>
-      <p>无隐藏收费。所有价格在施工前确认。</p>
-
-      <h2>服务上门时的流程</h2>
-      <p>KL Renovator技术人员到达您在黑风洞或双溪毛糯的物业时，会先检查室内和室外机，然后再开始任何工作。在开始任何化学喷洒之前，会在室内机下方的地板上铺防护帆布。化学清洗全程每台需要45-90分钟。技术人员在完成后会测试冷却性能，确认机器正常运行后才离开。</p>
-
-      <h2>如何预约</h2>
-      <p>请WhatsApp <strong>+60 18-298 3573</strong>，提供您的位置、机型和问题。30分钟内确认时间段。</p>
-      <p>我们总部位于双溪毛糯——该地区响应速度最快。<a href="/areas/batu-caves">黑风洞服务页</a> | <a href="/areas/selayang">双溪毛糯服务页</a></p>
-
-      <h2>为什么在该地区选择KL Renovator</h2>
-      <p>KL Renovator总部位于双溪毛糯，这意味着派往黑风洞和双溪毛糯的技术人员不需要从吉隆坡其他较远地区出发——相比总部位于巴生谷其他地区的公司，我们的响应速度更快，当天预约名额也更充裕。我们的团队已专门为这一走廊地区服务了数千台机器，让我们对当地建筑类型、安装方式以及当地环境特有的问题有直接的了解。</p>
-
-      <h2>多台机器的批量折扣</h2>
-      <p>许多黑风洞和双溪毛糯的家庭拥有2-4台冷气机。一次预约所有机器可节省交通成本，并可享受批量折扣：2-3台享5%折扣，4-8台享10%折扣。一个家庭有3台壁挂式机型进行化学清洗，原价为RM 120 × 3 = RM 360，扣除5%折扣后为<strong>RM 342</strong>。请WhatsApp我们告知机器数量以获取确认报价。</p>
-    `,
+      <h2>联系我们</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 30分钟内回复，当天服务可用。覆盖黑风洞、双溪毛糯、士拉央及周边所有区域。</p>`,
   },
   {
     slug: "aircond-chemical-wash-price-malaysia-2026",
@@ -292,58 +287,48 @@ export const allPosts: BlogPost[] = [
       <h2>Waranti dan Jaminan Selepas Servis</h2>
       <p>Setiap cuci kimia oleh KL Renovator termasuk waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari, kami kembali tanpa caj. Diskaun kuantiti terpakai apabila menempah banyak unit dalam satu lawatan — 5% diskaun untuk 2–3 unit, 10% diskaun untuk 4–8 unit. Sebagai contoh, 3 unit dinding 1.5 HP pada RM 120 setiap satu menjadi RM 342 jumlah keseluruhan dengan diskaun multi-unit 5%. Pembayaran diterima selepas kerja selesai dengan memuaskan anda — tunai, pemindahan dalam talian, atau DuitNow QR. Tiada pembayaran pendahuluan diperlukan untuk tempahan kediaman.</p>
     `,
-    contentZH: `
-      <h2>2026年马来西亚化学清洗价格</h2>
-      <p>马来西亚的化学清洗价格因机型、马力（HP）和公司而异。以下是KL Renovator 2026年的透明收费明细——无隐藏费用。</p>
+    contentZH: `<h2>2026年马来西亚冷气化学清洗价格 — 完整明细</h2>
+      <p>化学清洗是冷气深度保养的核心服务。<a href="/near-me">KL Renovator</a>为您提供透明的价格明细，让您了解每一分钱花在哪里。</p>
 
-      <h2>挂壁式机型价格</h2>
+      <h2>化学清洗价格表</h2>
+      <table>
+        <thead><tr><th>机型</th><th>HP</th><th>价格</th><th>时间</th></tr></thead>
+        <tbody>
+          <tr><td>壁挂式</td><td>1.0-1.5 HP</td><td>RM 120</td><td>60-75分钟</td></tr>
+          <tr><td>壁挂式</td><td>2.0-2.5 HP</td><td>RM 150</td><td>75-90分钟</td></tr>
+          <tr><td>壁挂式</td><td>3.0 HP</td><td>RM 180</td><td>90-105分钟</td></tr>
+          <tr><td>天花板卡式</td><td>2.0-3.0 HP</td><td>RM 220</td><td>90-120分钟</td></tr>
+          <tr><td>天花板卡式</td><td>4.0-5.0 HP</td><td>RM 280</td><td>120-150分钟</td></tr>
+        </tbody>
+      </table>
+
+      <h2>化学清洗包含什么</h2>
       <ul>
-        <li>1.0 – 1.5 HP：<strong>RM 120</strong></li>
-        <li>2.0 – 2.5 HP：<strong>RM 150</strong></li>
-        <li>3.0 HP：<strong>RM 180</strong></li>
-        <li>4.0 – 5.0 HP：<strong>RM 200</strong></li>
+        <li><strong>高压化学冲洗</strong> — 80-120 PSI食品级碱性清洗剂，溶解生物膜和顽固污垢</li>
+        <li><strong>蒸发器线圈清洗</strong> — 清除铜翅片间的微生物积聚</li>
+        <li><strong>风轮清洗</strong> — 清除鼓风轮上的灰尘和霉菌</li>
+        <li><strong>排水盘和排水管冲洗</strong> — 防止堵塞和漏水</li>
+        <li><strong>滤网清洗</strong> — 深度清洗或更换</li>
+        <li><strong>电气检查</strong> — 检查连接、电容、运行电流</li>
+        <li><strong>制冷剂压力检查</strong> — 确认气体充足</li>
+        <li><strong>性能测试</strong> — 测量出风温度、风速、温控器</li>
       </ul>
 
-      <h2>天花板卡式机型价格</h2>
-      <ul>
-        <li>1.0 – 1.5 HP：<strong>RM 220</strong></li>
-        <li>2.0 – 3.0 HP：<strong>RM 280</strong></li>
-        <li>4.0 – 5.0 HP：<strong>RM 350</strong></li>
-      </ul>
+      <h2>化学清洗 vs 基本保养</h2>
+      <table>
+        <thead><tr><th>项目</th><th>基本保养 (RM 99)</th><th>化学清洗 (RM 120)</th></tr></thead>
+        <tbody>
+          <tr><td>滤网</td><td>✅ 清洗</td><td>✅ 深度清洗</td></tr>
+          <tr><td>蒸发器</td><td>表面清洁</td><td>✅ 高压化学冲洗</td></tr>
+          <tr><td>风轮</td><td>检查</td><td>✅ 化学清洗</td></tr>
+          <tr><td>排水</td><td>冲洗</td><td>✅ 深度冲洗</td></tr>
+          <tr><td>杀菌</td><td>❌</td><td>✅ 碱性杀菌</td></tr>
+          <tr><td>适合</td><td>定期维护</td><td>年度深度保养</td></tr>
+        </tbody>
+      </table>
 
-      <h2>化学清洗包含什么？</h2>
-      <ul>
-        <li>蒸发器盘管和鼓风机的高压化学喷洗</li>
-        <li>去除霉菌、细菌和灰尘</li>
-        <li>排水管冲洗和检查</li>
-        <li>过滤网清洗和重新安装</li>
-        <li>完成后系统测试</li>
-        <li>1个月工艺保修</li>
-      </ul>
-
-      <h2>不包含什么？</h2>
-      <p>如需充气、零件更换和压缩机工作，将单独报价。施工前您需批准所有额外费用。</p>
-
-      <h2>批量折扣</h2>
-      <ul>
-        <li>2-3台：95折</li>
-        <li>4-8台：9折</li>
-        <li>8台以上：85折</li>
-      </ul>
-      <h2>化学清洗需要多长时间？</h2>
-      <p>单台挂壁式机器化学清洗大约需要45-90分钟，具体取决于污垢程度。超过2年未保养的机器可能需要长达2小时。天花板卡式机通常需要90-120分钟，因为盘管表面积更大，且需要通过天花板面板进行额外操作。</p>
-
-      <h2>多久应该进行一次化学清洗？</h2>
-      <p>对于大多数马来西亚家庭，建议至少每12个月进行一次。位于高湿度地区（如黑风洞、士拉央）、沿海物业或靠近施工活动区域的机器，建议每8-10个月保养一次。每天使用10-12小时的办公室或商业空间的冷气，应每6个月进行一次化学清洗。</p>
-
-      <p>请WhatsApp <strong>+60 18-298 3573</strong> 获取确认报价。另见：<a href="/services/chemical-wash">化学清洗服务页</a> | <a href="/services/chemical-overhaul">化学大修价格</a></p>
-
-      <h2>化学清洗后的保修</h2>
-      <p>KL Renovator的每次化学清洗均提供1个月工艺保修。若服务后30天内排水管再次堵塞，我们将免费上门清理。此保修涵盖工艺问题——不涵盖服务前已存在的机械故障。所有保修条款在施工前清楚说明。如需持续保障，年度保养计划从每年RM 499起，可涵盖2-4台住宅机器。</p>
-
-      <h2>保修与售后保证</h2>
-      <p>KL Renovator的每次化学清洗均包含1个月工艺保修。若30天内排水管再次堵塞，我们将免费上门处理。一次预约多台机器可享批量折扣——2-3台享5%折扣，4-8台享10%折扣。例如，3台1.5HP壁挂式机器，每台RM 120，使用多机折扣5%后总价为RM 342。完工并确认满意后才需付款——接受现金、网络转账或DuitNow QR。住宅预约无需预付款。</p>
-    `,
+      <h2>预约化学清洗</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天服务可用，透明定价，1个月保修。</p>`,
   },
   {
     slug: "signs-your-aircon-needs-chemical-overhaul-malaysia",
@@ -419,34 +404,36 @@ export const allPosts: BlogPost[] = [
       <h2>Bolehkah Anda Menangguhkan Overhaul?</h2>
       <p>Anda boleh menangguhkan, tetapi setiap minggu penggunaan berterusan dalam unit yang memerlukan overhaul meningkatkan risiko kerosakan sekunder. Dulang longkang yang retak dan dibiarkan boleh bocor ke komponen elektrik dan menyebabkan kegagalan papan PCB. Gegelung yang sangat tercemar memaksa kompressor berfungsi pada suhu tinggi, merosakkan penebat kompressor. Unit yang kos overhaul RM 220–350 hari ini boleh menjadi unit yang kos pembaikan RM 600–1,500 dalam masa 6 bulan jika sebab utama dibiarkan tidak ditangani. Tindakan awal sentiasa pilihan yang lebih ekonomik.</p>
     `,
-    contentZH: `
-      <h2>当化学清洗不够用时</h2>
-      <p>许多房主预约化学清洗，期望它能解决所有冷气问题——但某些问题需要完整的<strong>化学大修</strong>，即完全拆卸室内机并进行深度清洁。</p>
+    contentZH: `<h2>5个迹象表明您的冷气需要化学大修</h2>
+      <p>化学大修是冷气最彻底的保养方式——完全拆卸室内机进行深度清洗。<a href="/near-me">KL Renovator的专业技师</a>告诉您何时需要这项服务。</p>
 
-      <h2>迹象1：化学清洗后仍然漏水</h2>
-      <p>如果您的机器在保养前漏水，保养后仍然漏水，那么排水盘或内部排水通道可能堵塞超出表面水平。只有完整的大修才能正确清除。</p>
+      <h2>迹象 #1: 持续漏水</h2>
+      <p>如果化学清洗后仍然漏水，说明排水盘和内部通道有严重堵塞。化学大修会完全拆卸并清洗排水盘、后托盘和所有内部通道，彻底解决漏水问题。</p>
 
-      <h2>迹象2：盘管或管道结冰</h2>
-      <p>蒸发器盘管结冰意味着气流严重受限——通常是由于盘管严重堵塞，在挂壁状态下无法完全清洗。大修时拆卸盘管进行适当浸泡和冲洗。</p>
+      <h2>迹象 #2: 冷气吹出异味</h2>
+      <p>酸臭味或霉味表明蒸发器和排水盘上有严重的霉菌和细菌积聚。如果化学清洗无法去除异味，说明霉菌已深入绝缘材料，需要化学大修彻底清除。</p>
 
-      <h2>迹象3：2个月内异味再次出现</h2>
-      <p>如果化学清洗后霉味或酸味很快再次出现，说明霉菌已在鼓风机轮、排水盘或隐蔽角落深处生长——这些是挂壁清洗无法触及的地方。</p>
+      <h2>迹象 #3: 制冷效果明显下降</h2>
+      <p>如果冷气开到最低温度仍然不够冷，且滤网干净、气体充足，很可能是蒸发器线圈被厚厚的生物膜覆盖，阻碍了热交换。化学大修会完全清除这些积聚物。</p>
 
-      <h2>迹象4：机器超过3年未拆开检修</h2>
-      <p>如果您的室内机从未被拆卸过，内部组件将积累多年的压缩灰尘、死虫和霉菌。清洗只能清洁表面。</p>
+      <h2>迹象 #4: 3年以上未做深度保养</h2>
+      <p>在马来西亚的高温高湿环境下，3年未做深度保养的冷气内部会积累大量霉菌、灰尘和生物膜。即使表面看起来正常，内部可能已经很脏。</p>
 
-      <h2>迹象5：充气和化学清洗后冷却效果仍差</h2>
-      <p>如果充气和盘管清洗都已完成但冷却效果仍差，蒸发器盘管翅片可能严重弯曲，或鼓风机轮污垢太厚，只有完整清洗才能恢复气流。</p>
+      <h2>迹象 #5: 电费明显增加</h2>
+      <p>脏的蒸发器线圈会降低热交换效率达30%，导致压缩机工作更长时间、消耗更多电力。如果您注意到电费增加但使用习惯没变，很可能是冷气需要深度清洗。</p>
 
-      <h2>拖延大修会怎样？</h2>
-      <p>继续使用需要化学大修的机器会导致电费更高（压缩机补偿气流效率降低）、持续漏水损坏墙壁和天花板、以及压缩机在受限条件下运行加速磨损。RM 220-350的化学大修远比RM 600-2,000的压缩机更换或全新机器安装便宜。</p>
+      <h2>化学大修价格</h2>
+      <table>
+        <thead><tr><th>机型</th><th>价格</th><th>时间</th></tr></thead>
+        <tbody>
+          <tr><td>壁挂式 1.0-1.5 HP</td><td>RM 220</td><td>2-2.5小时</td></tr>
+          <tr><td>壁挂式 2.0-2.5 HP</td><td>RM 280</td><td>2.5-3小时</td></tr>
+          <tr><td>天花板卡式</td><td>RM 350</td><td>3-4小时</td></tr>
+        </tbody>
+      </table>
 
-      <h2>该怎么做</h2>
-      <p>挂壁式1.0–1.5 HP机器化学大修从<strong>RM 220</strong>起。请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong>。</p>
-
-      <h2>可以拖延大修吗？</h2>
-      <p>您可以拖延，但每多用一周需要大修的机器，二次损坏的风险就会增加。未处理的排水盘裂缝可能漏水到电子元件上，导致PCB电路板故障。严重污染的盘管会使压缩机在高温下运转，损害压缩机绝缘层。如今花RM 220-350即可大修的机器，若根本问题未解决，6个月后可能变成需花RM 600-1,500维修的机器。及早处理永远是更经济的选择。</p>
-    `,
+      <h2>预约化学大修</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天服务可用，透明定价，1个月保修。</p>`,
   },
   {
     slug: "chemical-wash-vs-chemical-overhaul",
@@ -527,27 +514,43 @@ export const allPosts: BlogPost[] = [
       <h2>Liputan Waranti untuk Kedua-dua Perkhidmatan</h2>
       <p>Kedua-dua cuci kimia dan overhaul kimia daripada KL Renovator termasuk waranti kerja 1 bulan. Untuk overhaul kimia, waranti meliputi pemasangan semula dan semua kerja pembersihan dalaman. Sebarang kerosakan mekanikal sedia ada yang ditemui semasa overhaul — seperti kapasitor yang rosak atau galas motor kipas yang haus — akan disebut harga secara berasingan dan memerlukan kelulusan anda sebelum sebarang kerja tambahan diteruskan. Tidak akan ada caj terkejut selepas kerja selesai.</p>
     `,
-    contentZH: `
-      <h2>什么是化学清洗？</h2>
-      <p><strong>化学清洗</strong>（也称为高压化学清洗）是一种深度清洁服务，受过培训的技术人员在机器保持挂壁安装状态下，向蒸发器盘管和鼓风机轮喷洒化学清洁液。</p>
-      <p>然后使用高压水冲走溶解的污垢、霉菌、细菌和灰尘。脏水通过机器的排水管排出。</p>
+    contentZH: `<h2>化学清洗 vs 化学大修 — 有什么区别？</h2>
+      <p>两种都是冷气深度保养服务，但范围和效果完全不同。<a href="/near-me">KL Renovator</a>为您详细对比。</p>
 
-      <h2>什么是化学大修？</h2>
-      <p><strong>化学大修</strong>更进一步。技术人员将室内机从墙上完全拆卸，取出每个内部组件，将盘管、鼓风机轮、排水盘和机壳浸泡在深度化学溶液中。</p>
-      <p>清洁每个隐蔽角落——这些是普通化学清洗无法触及的地方。然后重新组装、重新安装并测试机器。</p>
+      <h2>完整对比表</h2>
+      <table>
+        <thead><tr><th>项目</th><th>化学清洗 (RM 120起)</th><th>化学大修 (RM 220起)</th></tr></thead>
+        <tbody>
+          <tr><td>拆卸</td><td>不拆卸——在墙上清洗</td><td>完全拆卸室内机</td></tr>
+          <tr><td>蒸发器</td><td>高压冲洗</td><td>拆卸浸泡清洗</td></tr>
+          <tr><td>风轮</td><td>原地清洗</td><td>拆卸浸泡</td></tr>
+          <tr><td>排水盘</td><td>冲洗</td><td>拆卸刷洗</td></tr>
+          <tr><td>后托盘</td><td>表面清洁</td><td>完全清洗</td></tr>
+          <tr><td>杀菌效果</td><td>中等</td><td>彻底</td></tr>
+          <tr><td>时间</td><td>60-75分钟</td><td>2-2.5小时</td></tr>
+          <tr><td>适合</td><td>年度保养</td><td>漏水/异味/3年未保养</td></tr>
+        </tbody>
+      </table>
 
-      <h2>并排比较</h2>
+      <h2>何时选择化学清洗</h2>
       <ul>
-        <li><strong>化学清洗：</strong>机器保持安装状态 · 45-90分钟 · 从RM 120起 · 最适合日常保养</li>
-        <li><strong>化学大修：</strong>机器完全拆卸 · 2-3小时 · 从RM 220起 · 最适合严重问题</li>
+        <li>定期年度保养（每12个月一次）</li>
+        <li>冷气运行正常但需要深度清洁</li>
+        <li>轻微异味或制冷略有下降</li>
+        <li>预算有限的预防性保养</li>
       </ul>
-      <h2>时间和费用摘要</h2>
-      <p>化学清洗从<strong>RM 120</strong>起，需要45-90分钟——适合过去18个月内曾保养且无持续问题的机器。化学大修从<strong>RM 220</strong>起，需要2-3小时——当单独清洗无法解决问题时必要。两种情况下，所有价格在施工前确认，无隐藏收费。</p>
-      <p>不确定您需要哪种？请WhatsApp照片给我们：<strong>+60 18-298 3573</strong>，我们的团队将诚实地为您建议。</p>
 
-      <h2>两种服务的保修范围</h2>
-      <p>KL Renovator的化学清洗和化学大修均包含1个月工艺保修。对于化学大修，保修涵盖重新安装及所有内部清洁工作。大修过程中发现的任何预先存在的机械故障——例如损坏的电容器或磨损的风扇马达轴承——将单独报价，且需获得您的批准后才能继续任何额外工作。完工后绝不会有意外收费。</p>
-    `,
+      <h2>何时选择化学大修</h2>
+      <ul>
+        <li>化学清洗后仍然漏水</li>
+        <li>严重异味（化学清洗无法去除）</li>
+        <li>3年以上未做深度保养</li>
+        <li>制冷效果明显下降</li>
+        <li>蒸发器结冰</li>
+      </ul>
+
+      <h2>预约服务</h2>
+      <p>不确定需要哪种？WhatsApp <strong>+60 18-298 3573</strong> — 我们的技师会在现场评估后推荐最合适的服务。</p>`,
   },
   {
     slug: "aircond-not-cold-reasons",
@@ -619,32 +622,46 @@ export const allPosts: BlogPost[] = [
       <h2>Berapa Lama Lawatan Diagnostik Mengambil Masa?</h2>
       <p>Lawatan diagnostik penuh untuk mengenal pasti sebab aircond anda tidak menyejukkan mengambil masa lebih kurang 30–60 minit. Juruteknik akan menyemak tekanan gas dengan tolok manifold, memeriksa gegelung evaporator, menguji kapasitor, mengesahkan bacaan sensor termostat, dan mengesahkan operasi unit luar. Ini meliputi kesemua 7 sebab yang disenaraikan di atas dan memberikan anda diagnosis yang jelas serta kos pembaikan sebelum sebarang kerja bermula. Yuran diagnostik RM 88 — dikecualikan jika pembaikan dilakukan pada lawatan yang sama.</p>
     `,
-    contentZH: `
-      <h2>为什么我的冷气开着但不制冷？</h2>
-      <p>这是马来西亚最常见的冷气投诉——机器开着，风扇在吹，但空气是热的或几乎不凉。以下是7个最可能的原因。</p>
-      <h2>1. 制冷剂气体不足</h2>
-      <p>气体随时间缓慢泄漏。当水平下降时，制冷效果急剧下降。解决方案：充气（R22、R410A或R32）。从RM 120起。</p>
-      <h2>2. 蒸发器盘管脏污</h2>
-      <p>严重涂层的盘管无法有效吸收热量。解决方案：化学清洗（从RM 120起）或视严重程度进行大修。</p>
-      <h2>3. 电容器故障</h2>
-      <p>电容器驱动压缩机。电容器弱意味着压缩机运行效率低。解决方案：更换，从RM 150起。</p>
-      <h2>4. 过滤网脏污</h2>
-      <p>堵塞的过滤网限制了通过盘管的气流。解决方案：每月清洁或更换过滤网——DIY任务，不需要工具。</p>
-      <h2>5. 恒温器或传感器故障</h2>
-      <p>如果恒温器误读室温，压缩机会过早关闭。解决方案：传感器更换，从RM 150起。</p>
-      <h2>6. 室外机被阻挡或过热</h2>
-      <p>如果室外冷凝器被墙壁或物体包围，热量无法散发，制冷效率下降。解决方案：清除室外机周围的障碍物。</p>
-      <h2>7. 机器功率不足</h2>
-      <p>600平方英尺客厅中的1.0 HP机器会力不从心。如果机器一直很弱，可能HP确实不足。</p>
-      <h2>首先该做什么——免费DIY检查</h2>
-      <p>在联系技术人员之前，先自行做这两项检查。第一，取出前面板，在流水下清洗过滤网——单单过滤网堵塞就可以减少20-30%的冷却效果，而且只需10分钟零成本解决。第二，检查室外机风扇是否在转动，周围是否有物体或碎屑阻挡气流。如果这两项都正常而机器仍然不冷，则需要专业诊断。</p>
+    contentZH: `<h2>冷气不冷的7大原因 — 完整诊断指南</h2>
+      <p>冷气开着但不制冷是最常见的问题。<a href="/near-me">KL Renovator的专业技师</a>为您列出所有可能原因和解决方案。</p>
 
-      <h2>该怎么做</h2>
-      <p>请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong>。诊断费RM 88（同次维修则豁免）。</p>
+      <h2>原因 #1: 滤网脏堵</h2>
+      <p><strong>症状：</strong>出风量减少，制冷效果下降。<br><strong>解决：</strong>清洗或更换滤网。建议每2-4周清洗一次。这是最简单也是最常见的解决方案。</p>
 
-      <h2>诊断上门服务需要多长时间？</h2>
-      <p>完整的诊断上门服务以查明冷气不制冷的原因大约需要30-60分钟。技术人员将用压力表检查气体压力，检查蒸发器盘管，测试电容器，确认恒温器传感器读数，并确认室外机运行情况。这涵盖了上述全部7个原因，并在动工前为您提供清晰的诊断结果和维修费用。诊断费RM 88——若同次进行维修则豁免。</p>
-    `,
+      <h2>原因 #2: 制冷剂不足</h2>
+      <p><strong>症状：</strong>铜管结冰，制冷效果差，电费增加。<br><strong>解决：</strong>专业检漏+充气。R22从RM 120起，R410A从RM 150起，R32从RM 180起。</p>
+
+      <h2>原因 #3: 蒸发器脏污</h2>
+      <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 120起）或化学大修（RM 220起）。</p>
+
+      <h2>原因 #4: 压缩机故障</h2>
+      <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 600-1,200）。如果是旧机器，可能需要考虑更换新机。</p>
+
+      <h2>原因 #5: 电容故障</h2>
+      <p><strong>症状：</strong>压缩机嗡嗡响但不启动，或启动后立即停止。<br><strong>解决：</strong>电容更换（RM 80-150）。这是最常见也是最便宜的维修之一。</p>
+
+      <h2>原因 #6: 温控器问题</h2>
+      <p><strong>症状：</strong>温度设置正确但冷气不停机或过早停机。<br><strong>解决：</strong>温控器校准或更换（RM 50-120）。</p>
+
+      <h2>原因 #7: 匹数不匹配</h2>
+      <p><strong>症状：</strong>冷气一直运转但房间始终不够冷。<br><strong>解决：</strong>房间太大而冷气匹数太小。需要使用<a href="/btu-calculator">BTU计算器</a>确认正确匹数。</p>
+
+      <h2>自行诊断 vs 专业诊断</h2>
+      <table>
+        <thead><tr><th>检查项目</th><th>可自行检查？</th><th>需要专业？</th></tr></thead>
+        <tbody>
+          <tr><td>滤网</td><td>✅ 是</td><td>—</td></tr>
+          <tr><td>温度设置</td><td>✅ 是</td><td>—</td></tr>
+          <tr><td>室外机是否运转</td><td>✅ 是</td><td>—</td></tr>
+          <tr><td>制冷剂压力</td><td>—</td><td>✅ 需要</td></tr>
+          <tr><td>电容</td><td>—</td><td>✅ 需要</td></tr>
+          <tr><td>压缩机</td><td>—</td><td>✅ 需要</td></tr>
+          <tr><td>PCB板</td><td>—</td><td>✅ 需要</td></tr>
+        </tbody>
+      </table>
+
+      <h2>预约诊断</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 诊断费RM 88（如进行维修则豁免）。当天服务可用。</p>`,
   },
   {
     slug: "how-often-service-aircond-malaysia",
@@ -730,39 +747,53 @@ export const allPosts: BlogPost[] = [
       <h2>Cara Mengingati Jadual Servis Anda</h2>
       <p>Pendekatan paling mudah adalah menetapkan peringatan WhatsApp berulang pada telefon anda — 3 bulan untuk servis asas, 12 bulan untuk cuci kimia. Sebagai alternatif, selepas setiap lawatan KL Renovator, pasukan kami akan mencatat selang masa pilihan anda dan menghantar peringatan apabila servis seterusnya hampir tiba. Untuk pelanggan komersial dan pejabat, kontrak penyelenggaraan menghapuskan keperluan untuk menjejaki jadual sepenuhnya — semuanya diuruskan secara automatik pada tarikh yang dipersetujui terlebih dahulu dengan tindak balas keutamaan untuk sebarang kerosakan antara lawatan terjadual.</p>
     `,
-    contentZH: `
-      <h2>为什么马来西亚需要更频繁的保养</h2>
-      <p>与季节性使用冷气的温带国家不同，马来西亚的冷气机全年运行——每天通常运行8-12小时。加上高湿度、灰尘和偶发的烟霾，机器积聚污垢更快，需要更定期的维护。</p>
-      <h2>推荐保养计划</h2>
+    contentZH: `<h2>马来西亚冷气应该多久保养一次？完整指南</h2>
+      <p>在马来西亚的高温高湿环境下，冷气保养频率比温带国家更高。<a href="/near-me">KL Renovator</a>为您提供基于使用情况的保养建议。</p>
+
+      <h2>保养频率建议</h2>
+      <table>
+        <thead><tr><th>使用情况</th><th>基本保养</th><th>化学清洗</th><th>化学大修</th></tr></thead>
+        <tbody>
+          <tr><td>轻度（&lt;4小时/天）</td><td>每12个月</td><td>每12个月</td><td>每3年</td></tr>
+          <tr><td>中度（4-8小时/天）</td><td>每6-8个月</td><td>每10个月</td><td>每2年</td></tr>
+          <tr><td>重度（8+小时/天）</td><td>每3-4个月</td><td>每6个月</td><td>每12-18个月</td></tr>
+          <tr><td>商业（10-16小时/天）</td><td>每3个月</td><td>每3-6个月</td><td>每12个月</td></tr>
+        </tbody>
+      </table>
+
+      <h2>影响保养频率的因素</h2>
       <ul>
-        <li><strong>轻度使用（仅晚间，卧室）：</strong>每6个月保养一次</li>
-        <li><strong>中度使用（每天4-6小时）：</strong>每4个月保养一次</li>
-        <li><strong>重度使用（每天8小时以上，客厅、办公室）：</strong>每3个月保养一次</li>
+        <li><strong>靠近繁忙道路</strong> — 空气污染更重，灰尘积累更快</li>
+        <li><strong>靠近建筑工地</strong> — 建筑灰尘非常细，容易堵塞蒸发器</li>
+        <li><strong>厨房附近</strong> — 油烟附着在线圈上，极难清除</li>
+        <li><strong>有宠物的家庭</strong> — 宠物毛发堵塞滤网和线圈</li>
+        <li><strong>过敏体质家庭成员</strong> — 需要更频繁的保养确保空气质量</li>
+        <li><strong>高楼层</strong> — 风大带来更多灰尘</li>
       </ul>
-      <h2>何时进行化学清洗</h2>
-      <p>无论使用情况如何，建议每12个月进行一次化学清洗。如果您靠近建筑工地、主干道或高湿度地区，每8-10个月更好。</p>
-      <h2>等待太久的迹象</h2>
+
+      <h2>不保养的后果</h2>
       <ul>
-        <li>机器有霉味或酸味</li>
-        <li>制冷效果比以前弱</li>
-        <li>出风口可见灰尘或霉斑</li>
-        <li>室内机滴水</li>
-        <li>电费比平常高</li>
+        <li>电费增加15-30%（脏线圈降低效率）</li>
+        <li>制冷效果下降（生物膜阻碍热交换）</li>
+        <li>异味和空气质量下降（霉菌和细菌生长）</li>
+        <li>漏水（排水通道堵塞）</li>
+        <li>压缩机过早故障（工作过度）</li>
+        <li>整机寿命缩短（正常10-15年→5-8年）</li>
       </ul>
-      <h2>跳过保养会发生什么</h2>
-      <p>在马来西亚条件下跳过2年以上的定期保养，会导致霉菌群落在鼓风机轮和排水盘深处建立——这些是基本保养无法清洁的地方。随着污垢在翅片表面积累，蒸发器盘管逐渐失去15-40%的热交换能力。电费随着压缩机的补偿而逐渐上升。当房主注意到冷却效果明显下降时，机器通常需要化学大修而不是简单清洗。</p>
+
+      <h2>保养价格</h2>
+      <table>
+        <thead><tr><th>服务</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>基本保养</td><td>RM 99起</td></tr>
+          <tr><td>化学清洗</td><td>RM 120起</td></tr>
+          <tr><td>化学大修</td><td>RM 220起</td></tr>
+          <tr><td>年度保养合约(AMC)</td><td>RM 499/年起</td></tr>
+        </tbody>
+      </table>
 
       <h2>预约保养</h2>
-      <p>基本保养从<strong>RM 99</strong>起。化学清洗从<strong>RM 120</strong>起。请WhatsApp <strong>+60 18-298 3573</strong>预约。详见：<a href="/services/basic-servicing">基本保养服务页</a></p>
-
-      <h2>已逾期保养的迹象</h2>
-      <p>无论上次保养是何时，以下迹象都表示您的冷气需要立即关注：运行时有霉味或酸味、室内机滴水、制冷效果明显比3个月前弱、铜管或蒸发器盘管上可见冰霜，或机器开关频率比平常更高。出现以上任何一种情况，都应立即预约保养，而不是等到下次预定日期。</p>
-      <h2>保持一致的保养计划</h2>
-      <p>保持一致计划最简单的方法是在每次上门服务结束时预约下一次保养。KL Renovator可以记录您偏好的保养间隔，并在下次保养到期时通过WhatsApp提醒您。基本保养从RM 99起，化学清洗从RM 120起。请WhatsApp：<strong>+60 18-298 3573</strong>。</p>
-
-      <h2>如何记住您的保养计划</h2>
-      <p>最简单的方法是在手机上设置重复提醒——基本保养3个月，化学清洗12个月。或者，在每次KL Renovator上门服务后，我们的团队会记录您偏好的保养间隔，并在下次保养临近时发送提醒。对于商业及办公室客户，保养合约可完全免除追踪计划的需要——一切按预先约定的日期自动安排，并对预定访问之间的任何故障提供优先响应。</p>
-    `,
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天服务可用。我们也提供自动提醒服务，每6个月提醒您预约保养。</p>`,
   },
   {
     slug: "r32-r410a-r22-gas-difference",
@@ -837,28 +868,36 @@ export const allPosts: BlogPost[] = [
       <p>Sentiasa pilih R32 apabila membeli aircond baru pada 2026. Semua jenama utama — Daikin, Panasonic, Mitsubishi, Samsung, LG — kini menggunakan R32 dalam model inverter terbaru mereka. R32 mempunyai potensi pemanasan global yang lebih rendah, memerlukan jumlah penyejuk yang lebih sedikit untuk output penyejukan yang sama, dan akan kekal mudah diperoleh selama bertahun-tahun. Unit R410A masih dijual tetapi mewakili teknologi lama dengan kesan alam sekitar yang lebih tinggi.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk mengenal pasti jenis gas anda daripada gambar unit luar anda. Lihat: <a href="/services/gas-topup">Perkhidmatan tambah gas</a></p>
     `,
-    contentZH: `
-      <h2>马来西亚三种主要制冷剂类型</h2>
-      <p>马来西亚大多数冷气机使用三种制冷剂之一：R22、R410A或R32。每种都有不同的特性、成本和环境影响。</p>
-      <h2>R22（氟利昂）</h2>
-      <p>最古老的气体类型。见于2015年前制造的机器。R22因其高臭氧消耗潜力正在全球范围内逐步淘汰。</p>
-      <ul><li>充气费用：RM 120（1.0 HP）、RM 150（1.5–2.0 HP）、RM 180（2.5–3.0 HP）</li></ul>
-      <h2>R410A</h2>
-      <p>2010-2020年制造机器的标准气体。</p>
-      <ul><li>充气费用：RM 150（1.0 HP）、RM 180（1.5–2.0 HP）、RM 200（2.5–3.0 HP）</li></ul>
-      <h2>R32</h2>
-      <p>新变频机器的当前标准。全球变暖潜力更低，能效更高。</p>
-      <ul><li>充气费用：RM 180（1.0 HP）、RM 200（1.5–2.0 HP）、RM 220（2.5–3.0 HP）</li></ul>
-      <h2>如何查看您的机器使用哪种气体</h2>
-      <p>查看室外机上的贴纸——它清楚地标明了制冷剂类型。或者WhatsApp照片给我们：<strong>+60 18-298 3573</strong>。</p>
-      <h2>重要：切勿混合制冷剂类型</h2>
-      <p>R22和R410A在完全不同的压力范围内工作。混合制冷剂类型会立即对压缩机造成永久性损坏。KL Renovator在开始任何气体工作之前，始终从室外机贴纸识别制冷剂类型。</p>
-      <p>查看：<a href="/services/gas-topup">充气服务和完整价格</a> | <a href="/problems/aircond-low-gas">冷气气体不足症状</a></p>
+    contentZH: `<h2>R32 vs R410A vs R22 冷媒 — 完整对比指南</h2>
+      <p>三种冷媒在马来西亚都有使用，但它们有重要区别。<a href="/near-me">KL Renovator</a>为您详细解释。</p>
 
-      <h2>购买新机时应选择哪种气体？</h2>
-      <p>2026年购买新冷气时，请始终选择R32。所有主要品牌——大金、松下、三菱电机、三星、LG——现在的最新变频机型都使用R32。R32的全球变暖潜力更低，相同制冷效果所需的冷媒量更少，且未来多年都将保持充足供应。R410A机型仍有销售，但代表的是环境影响更高的较旧技术。</p>
-      <p>请WhatsApp <strong>+60 18-298 3573</strong> 并附上室外机照片，我们将为您识别气体类型。详见：<a href="/services/gas-topup">充气服务</a></p>
-    `,
+      <h2>三种冷媒对比</h2>
+      <table>
+        <thead><tr><th>特性</th><th>R22</th><th>R410A</th><th>R32</th></tr></thead>
+        <tbody>
+          <tr><td>状态</td><td>淘汰中</td><td>当前主流</td><td>最新标准</td></tr>
+          <tr><td>环保性</td><td>差（ODP=0.055）</td><td>中（GWP=2088）</td><td>好（GWP=675）</td></tr>
+          <tr><td>能效</td><td>中等</td><td>高</td><td>最高</td></tr>
+          <tr><td>工作压力</td><td>低</td><td>高（1.6x R22）</td><td>高（类似R410A）</td></tr>
+          <tr><td>可燃性</td><td>不可燃</td><td>不可燃</td><td>微燃（A2L级）</td></tr>
+          <tr><td>充气价格</td><td>RM 120起</td><td>RM 150起</td><td>RM 180起</td></tr>
+          <tr><td>使用年份</td><td>2015年前</td><td>2010-2022</td><td>2020年至今</td></tr>
+        </tbody>
+      </table>
+
+      <h2>如何确认您的冷气使用哪种冷媒</h2>
+      <p>查看室外机上的标签/铭牌——上面清楚标明冷媒类型。或者WhatsApp我们室外机的照片，我们帮您确认。</p>
+
+      <h2>重要警告</h2>
+      <ul>
+        <li>❌ <strong>绝对不要混合冷媒</strong> — 每种系统只能用指定的冷媒</li>
+        <li>❌ <strong>不要用R22充R410A系统</strong> — 压力和润滑油不兼容，会损坏压缩机</li>
+        <li>✅ <strong>充气前必须检漏</strong> — 否则新充的气很快又漏掉</li>
+        <li>✅ <strong>R32需要特殊处理</strong> — 微燃性要求专业操作</li>
+      </ul>
+
+      <h2>预约充气</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 告诉我们您的冷媒类型（查看室外机标签），我们提供准确报价。</p>`,
   },
   {
     slug: "aircond-water-leaking-causes",
@@ -936,35 +975,32 @@ export const allPosts: BlogPost[] = [
       <h2>Bolehkah Anda Membaikinya Sendiri?</h2>
       <p>Satu-satunya langkah DIY yang berbaloi dicuba adalah menyemak outlet paip longkang luar — jika ia kelihatan tersumbat oleh serpihan di titik keluar, membersihkannya boleh menyelesaikan titisan kecil. Untuk sebarang masalah lebih daripada ini, servis profesional disyorkan. Cubaan untuk membuka unit dalaman, mengubah paip longkang, atau menutup kebocoran dengan pita berisiko menyebabkan kerosakan tambahan. Kos pembersihan paip longkang profesional (termasuk dalam servis asas RM 99) jauh lebih rendah berbanding kos membaiki kerosakan air pada dinding atau siling yang disebabkan oleh kebocoran berterusan.</p>
     `,
-    contentZH: `
-      <h2>我的冷气为什么漏水？</h2>
-      <p>室内机漏水是马来西亚最常见的冷气投诉——尤其是在雨季。以下是主要原因。</p>
-      <h2>原因1：排水管堵塞</h2>
-      <p>最常见的原因。藻类、霉菌和碎屑堵塞排水管。解决方案：基本保养或化学清洗时冲洗排水管。</p>
-      <h2>原因2：蒸发器盘管脏污</h2>
-      <p>当盘管被污垢覆盖时，多余的冷凝水形成并滴落。解决方案：化学清洗或大修。</p>
-      <h2>原因3：盘管结冰融化</h2>
-      <p>如果盘管结冰（因气体不足或严重堵塞）然后融化，大量水会突然滴落。解决方案：检查气体水平并清洁盘管。</p>
-      <h2>原因4：排水盘损坏</h2>
-      <p>随着时间推移，塑料排水盘可能会破裂。解决方案：大修期间更换排水盘。</p>
-      <h2>现在该做什么</h2>
-      <ul>
-        <li>在机器下方放置水桶或毛巾，保护地板和家具</li>
-        <li>如果严重漏水，关闭冷气以避免电气危险</li>
-        <li>不要用胶带封堵漏水——水会回流到电气组件中</li>
-        <li>请WhatsApp KL Renovator：<strong>+60 18-298 3573</strong>，描述或发送漏水短视频</li>
-      </ul>
-      <p>当天时间段经常有空。查看：<a href="/problems/aircond-water-leaking">冷气漏水完整指南</a> | <a href="/services/chemical-overhaul">化学大修服务</a></p>
+    contentZH: `<h2>冷气漏水的6大原因 — 完整解决方案</h2>
+      <p>冷气漏水是最常见也最让人头疼的问题。<a href="/near-me">KL Renovator</a>为您分析所有可能原因。</p>
 
-      <h2>修复漏水冷气的费用</h2>
-      <p>大多数漏水问题在化学清洗（从RM 120起）中即可解决，这能清除堵塞的排水管——最常见的原因。如果排水盘破裂或机器已多年未保养，化学大修（从RM 220起）可全面解决所有内部原因。及时处理可避免对墙壁、天花板和地板造成的二次水损，否则维修费用可能远超服务本身。</p>
-      <h2>预防措施</h2>
-      <p>预防漏水的最佳方法是持续保养。作为基本保养（RM 99）的一部分，每3-4个月冲洗排水管可防止藻类和霉菌堵塞形成。每年一次的化学清洗可去除基本保养无法触及的生物膜积聚。马来西亚大多数漏水案例的发生原因是排水管已18个月或更长时间未保养。</p>
-      <p>当天时间段经常有空。请WhatsApp：<strong>+60 18-298 3573</strong>。</p>
+      <h2>原因 #1: 排水管堵塞（最常见）</h2>
+      <p><strong>症状：</strong>室内机底部滴水或流水。<br><strong>原因：</strong>灰尘、霉菌和生物膜堵塞了排水管。<br><strong>解决：</strong>基本保养或化学清洗通常可以解决。严重堵塞需要化学大修。</p>
 
-      <h2>可以自己修复吗？</h2>
-      <p>唯一值得尝试的DIY步骤是检查室外排水管出口——如果出口处明显被碎屑堵塞，清除它可能解决轻微滴水问题。除此之外的任何情况，都建议寻求专业服务。尝试拆卸室内机、改动排水管或用胶带封堵漏水，都有可能造成额外损坏。专业排水管清理（包含在RM 99基本保养中）的费用远低于因持续漏水造成的墙壁或天花板水损维修费用。</p>
-    `,
+      <h2>原因 #2: 排水盘满或破裂</h2>
+      <p><strong>症状：</strong>大量漏水，不只是滴水。<br><strong>原因：</strong>排水盘积满污垢或老化破裂。<br><strong>解决：</strong>化学大修——拆卸清洗或更换排水盘。</p>
+
+      <h2>原因 #3: 安装坡度不对</h2>
+      <p><strong>症状：</strong>新安装后就开始漏水。<br><strong>原因：</strong>排水管坡度不够（需要至少1:100坡度）。<br><strong>解决：</strong>重新调整排水管坡度。</p>
+
+      <h2>原因 #4: 制冷剂不足</h2>
+      <p><strong>症状：</strong>蒸发器结冰，冰融化后漏水。<br><strong>原因：</strong>气体泄漏导致蒸发器温度过低。<br><strong>解决：</strong>检漏+充气。</p>
+
+      <h2>原因 #5: 滤网严重脏堵</h2>
+      <p><strong>症状：</strong>出风量很小，蒸发器结冰。<br><strong>原因：</strong>气流不足导致蒸发器温度过低。<br><strong>解决：</strong>清洗滤网。如果已经结冰，等冰完全融化后再开机。</p>
+
+      <h2>原因 #6: 保温层损坏</h2>
+      <p><strong>症状：</strong>铜管上有水珠滴落。<br><strong>原因：</strong>保温层老化或破损，冷凝水直接滴落。<br><strong>解决：</strong>更换保温层。</p>
+
+      <h2>紧急情况处理</h2>
+      <p>如果漏水严重：1) 立即关闭冷气 2) 在漏水处放毛巾/水桶 3) WhatsApp我们预约维修。</p>
+
+      <h2>预约维修</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天服务可用，诊断费RM 88（维修则豁免）。</p>`,
   },
   {
     slug: "best-aircond-brands-malaysia-2026",
@@ -1038,33 +1074,38 @@ export const allPosts: BlogPost[] = [
       <h2>Apa yang KL Renovator Cadangkan untuk Hartanah Sewa</h2>
       <p>Bagi pemilik yang menguruskan hartanah sewa, unit inverter Midea atau Acson menawarkan keseimbangan terbaik antara harga berpatutan dan kebolehpercayaan yang munasabah. Harga belian yang lebih rendah penting untuk hartanah pelbagai unit, dan teknologi inverter mengurangkan bil elektrik untuk penyewa — yang mengurangkan pertikaian tentang kos utiliti. Untuk unit sewa premium di mana pengalaman penyewa lebih penting, Panasonic atau Daikin berbaloi dengan premium harganya kerana operasi yang lebih senyap dan jangka hayat yang lebih panjang.</p>
     `,
-    contentZH: `
-      <h2>2026年马来西亚最佳冷气品牌</h2>
-      <p>以下是基于我们技术人员在吉隆坡和雪兰莪服务数千台机器的真实经验的诚实比较。</p>
-      <h2>大金 — 综合最佳</h2>
-      <p>大金始终是我们服务的最可靠品牌。日本工程，出色的能效。</p>
-      <ul><li>最适合：可靠性、长寿命</li><li>价格范围：RM 1,200 – 3,500</li></ul>
-      <h2>松下 — 最佳性价比</h2>
-      <p>物超所值。Nanoe-X空气净化对过敏家庭是真正的福利。</p>
-      <ul><li>价格范围：RM 1,100 – 3,000</li></ul>
-      <h2>三菱电机 — 重度使用最佳</h2>
-      <p>专为持续高强度运行而设计。</p>
-      <ul><li>价格范围：RM 1,400 – 4,000</li></ul>
-      <h2>Midea — 最佳预算选择</h2>
-      <p>适合小房间和出租物业的预算选择。</p>
-      <ul><li>价格范围：RM 800 – 1,800</li></ul>
-      <h2>我们的推荐</h2>
-      <p>对大多数马来西亚家庭：R32<strong>大金或松下</strong>变频型号。大金以最长期的可靠性和耐久性著称，松下以价格、空气质量功能和能效的最佳平衡著称。两个品牌在马来西亚全国备件都有广泛供应。KL Renovator在吉隆坡和雪兰莪安装所有品牌，可根据您的具体房间大小和使用模式提供建议。</p>
-      <p>WhatsApp <strong>+60 18-298 3573</strong>。</p>
+    contentZH: `<h2>2026年马来西亚最佳冷气品牌 — 诚实对比</h2>
+      <p>选择冷气品牌是重要的长期决定。<a href="/near-me">KL Renovator</a>基于安装和维修数千台不同品牌冷气的经验，为您提供诚实对比。</p>
 
-      <h2>应避免的品牌</h2>
-      <p>根据我们的服务经验，我们发现通用无名品牌以及一些在马来西亚未广泛销售的中国制造低端品牌的故障率明显更高。这些品牌的备件难以获得，当压缩机或PCB在3-4年后故障时，维修往往不具经济效益。最初节省的购买成本很快就会被更早的更换成本所抵消。</p>
-      <h2>安装与售后服务</h2>
-      <p>即使是最好的品牌，如果安装不当也会表现不佳。请确保您的安装人员对冷媒管道进行正确的真空测试，根据机器匹数正确选用铜管尺寸，并为安装工艺提供书面保修。KL Renovator为所有安装提供1个月工艺保修。新机安装从<strong>RM 199</strong>起。请WhatsApp：<strong>+60 18-298 3573</strong>。</p>
+      <h2>顶级品牌排名</h2>
+      <table>
+        <thead><tr><th>排名</th><th>品牌</th><th>可靠性</th><th>能效</th><th>价格范围</th><th>保修</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>大金 Daikin</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>RM 1,200-3,500</td><td>5年压缩机</td></tr>
+          <tr><td>2</td><td>三菱电机 Mitsubishi</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>RM 1,300-3,800</td><td>5年压缩机</td></tr>
+          <tr><td>3</td><td>松下 Panasonic</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>RM 1,100-3,200</td><td>5年压缩机</td></tr>
+          <tr><td>4</td><td>约克 York</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>RM 900-2,800</td><td>3年压缩机</td></tr>
+          <tr><td>5</td><td>美的 Midea</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>RM 800-2,500</td><td>3年压缩机</td></tr>
+        </tbody>
+      </table>
 
-      <h2>KL Renovator对出租物业的建议</h2>
-      <p>对于管理出租物业的房东，美的或Acson变频机型在价格实惠和合理可靠性之间提供了最佳平衡。较低的购买价格对多单位物业很重要，变频技术降低了租户的电费——从而减少关于水电费的争议。对于更注重租户体验的高端出租单位，松下或大金的较高价格是值得的，因为它们运行更安静、使用寿命更长。</p>
-    `,
+      <h2>高端品牌 vs 性价比品牌</h2>
+      <ul>
+        <li><strong>高端（大金、三菱）：</strong>最高可靠性，最长寿命（12-15年），最安静，但价格最高</li>
+        <li><strong>中端（松下、约克）：</strong>良好的可靠性和能效，价格合理，最佳性价比</li>
+        <li><strong>性价比（美的、Acson、Hisense）：</strong>基本功能完善，价格最低，寿命稍短（8-12年）</li>
+      </ul>
+
+      <h2>选择建议</h2>
+      <ul>
+        <li><strong>主卧/客厅（重度使用）：</strong>选大金或三菱——值得多花钱</li>
+        <li><strong>次卧/客房（轻度使用）：</strong>选松下或美的——性价比最高</li>
+        <li><strong>出租物业：</strong>选美的或Acson——低成本，基本功能完善</li>
+        <li><strong>办公室（长时间运行）：</strong>选大金变频——最省电，最可靠</li>
+      </ul>
+
+      <h2>所有品牌安装服务</h2>
+      <p>KL Renovator安装和维修所有20个主要品牌。WhatsApp <strong>+60 18-298 3573</strong> — 告诉我们您的需求，我们推荐最合适的品牌。</p>`,
   },
   {
     slug: "aircond-maintenance-checklist-malaysia",
@@ -1146,35 +1187,43 @@ export const allPosts: BlogPost[] = [
       <h2>Merekod Sejarah Penyelenggaraan Anda</h2>
       <p>Simpan rekod ringkas setiap tarikh servis, penyedia servis, dan apa yang dilakukan. Ini membantu anda menjejaki selang masa antara servis, memberikan bukti untuk tuntutan waranti jika kerja juruteknik menyebabkan kerosakan, dan memberikan juruteknik masa depan konteks tentang sejarah unit. Mesej WhatsApp kepada diri sendiri selepas setiap servis dengan tarikh dan jenis servis mengambil masa 30 saat dan boleh menjadi rujukan berharga kemudian. KL Renovator juga menyimpan rekod semua servis yang dilakukan untuk pelanggan tetap kami.</p>
     `,
-    contentZH: `
-      <h2>为什么保养检查清单很重要</h2>
-      <p>在马来西亚炎热潮湿的气候下，您的冷气比世界上几乎任何其他地方都工作得更努力。没有定期保养，灰尘、霉菌和水分迅速积聚。</p>
-      <h2>每月检查（DIY）</h2>
-      <ul>
-        <li><strong>清洗过滤网</strong> — 取出，用水冲洗，完全晾干，重新安装。只需10分钟。</li>
-        <li><strong>检查异常噪音</strong> — 嘎嘎声、嗡嗡声或研磨声表示零件松动。</li>
-        <li><strong>检查滴水</strong> — 持续滴水意味着排水管堵塞。</li>
-        <li><strong>确保室外机清洁</strong> — 没有叶子或碎屑堵塞冷凝器翅片。</li>
-      </ul>
-      <h2>每3-4个月 — 专业基本保养</h2>
-      <ul><li>清洗过滤网、检查蒸发器盘管、冲洗排水管、检查电气连接、冷却性能测试</li></ul>
-      <h2>每12个月 — 化学清洗</h2>
-      <ul><li>蒸发器盘管高压化学清洗、鼓风机轮清洁、排水盘消毒、制冷剂压力检查</li></ul>
-      <h2>每2-3年 — 化学大修</h2>
-      <ul>
-        <li>全面拆卸、每个组件深度清洁、检查所有内部线路和PCB电路板</li>
-      </ul>
-      <h2>预约保养服务</h2>
-      <p>一致的保养是您为冷气采取的最具成本效益的行动。定期获得专业保养的机器减少15-25%的电力消耗，使用寿命延长3-5年，并避免因疏忽造成的昂贵紧急维修。基本保养从RM 99起，化学清洗从RM 120起。WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/services/basic-servicing">基本保养</a> | <a href="/services/chemical-wash">化学清洗</a></p>
+    contentZH: `<h2>冷气保养检查清单 — 马来西亚屋主完整指南</h2>
+      <p>定期保养是延长冷气寿命、降低电费的关键。<a href="/near-me">KL Renovator</a>为您提供完整的保养检查清单。</p>
 
-      <h2>保养逾期的迹象</h2>
-      <p>如果您的机器出现以下任何情况，说明保养已经逾期：运行时有霉味或酸味；制冷效果明显比6个月前弱；室内机曾在任何时候滴水；电费在使用习惯未变的情况下上涨；或机器超过12个月未接受专业保养。以上每一项都是保养逾期的征兆。</p>
-      <h2>跳过保养的真实代价</h2>
-      <p>在马来西亚条件下跳过基本保养2年的机器，通常会出现制冷效率降低20-30%、每月电力消耗增加15-25%，以及组件故障风险显著提高，需要昂贵的维修。看似可以推迟的RM 99-120保养费，远低于因机器疏于保养导致故障而更换压缩机的RM 600-2,000费用。</p>
+      <h2>屋主可自行检查的项目（每2-4周）</h2>
+      <ul>
+        <li>✅ <strong>清洗滤网</strong> — 取出滤网，用清水冲洗，晾干后装回</li>
+        <li>✅ <strong>检查出风温度</strong> — 出风口应该明显冷于室温（温差8-12°C正常）</li>
+        <li>✅ <strong>检查异常噪音</strong> — 任何新的噪音都应该引起注意</li>
+        <li>✅ <strong>检查漏水</strong> — 室内机下方是否有水迹</li>
+        <li>✅ <strong>检查遥控器</strong> — 电池是否需要更换</li>
+      </ul>
 
-      <h2>记录您的保养历史</h2>
-      <p>简单记录每次保养的日期、服务商以及所做的工作。这有助于您追踪保养间隔，若技师施工造成损坏可作为保修索赔证据，并为日后的技师提供机器历史背景。每次保养后给自己发一条WhatsApp消息记录日期和保养类型，只需30秒，日后可作为宝贵参考。KL Renovator也为我们的常客保留所有保养记录。</p>
-    `,
+      <h2>专业保养项目（每6-12个月）</h2>
+      <ul>
+        <li>✅ 蒸发器线圈清洗</li>
+        <li>✅ 风轮清洗</li>
+        <li>✅ 排水盘和排水管冲洗</li>
+        <li>✅ 电气连接检查</li>
+        <li>✅ 制冷剂压力检查</li>
+        <li>✅ 运行电流测量</li>
+        <li>✅ 温控器校准</li>
+        <li>✅ 室外机清洗</li>
+      </ul>
+
+      <h2>保养价格</h2>
+      <table>
+        <thead><tr><th>服务</th><th>频率</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>基本保养</td><td>每6-12个月</td><td>RM 99起</td></tr>
+          <tr><td>化学清洗</td><td>每12个月</td><td>RM 120起</td></tr>
+          <tr><td>化学大修</td><td>每2-3年</td><td>RM 220起</td></tr>
+          <tr><td>年度保养合约</td><td>包含以上</td><td>RM 499/年起</td></tr>
+        </tbody>
+      </table>
+
+      <h2>预约保养</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天服务可用，透明定价。</p>`,
   },
   {
     slug: "aircond-service-price-guide-kl-2026",
@@ -1287,49 +1336,42 @@ export const allPosts: BlogPost[] = [
       <h2>Bagaimana Harga Disahkan</h2>
       <p>Apabila anda WhatsApp KL Renovator, berikan lokasi anda, jenis unit (dinding atau ceiling cassette), saiz HP, dan servis yang diperlukan. Kami akan mengesahkan harga secara bertulis melalui WhatsApp sebelum juruteknik melawat. Ini bermakna anda mempunyai rekod bertulis harga yang dipersetujui sebelum sebarang kerja bermula. Jika isu tambahan ditemui semasa servis — seperti kapasitor yang rosak atau kebocoran penyejuk — ini disebut harga secara berasingan dan memerlukan kelulusan jelas anda sebelum diteruskan. Tiada kejutan pada mana-mana peringkat.</p>
     `,
-    contentZH: `
-      <h2>2026年吉隆坡及雪兰莪冷气服务价格</h2>
-      <p>KL Renovator完整透明的价格。所有价格在施工前确认——无隐藏收费。</p>
-      <h2>基本保养</h2>
-      <ul>
-        <li>挂壁式 1.0–1.5 HP：<strong>RM 99</strong></li>
-        <li>挂壁式 2.0–2.5 HP：<strong>RM 120</strong></li>
-        <li>天花板卡式 1.0–1.5 HP：<strong>RM 150</strong></li>
-      </ul>
-      <h2>高压化学清洗</h2>
-      <ul>
-        <li>挂壁式 1.0–1.5 HP：<strong>RM 120</strong></li>
-        <li>挂壁式 2.0–2.5 HP：<strong>RM 150</strong></li>
-        <li>天花板卡式 1.0–1.5 HP：<strong>RM 220</strong></li>
-      </ul>
-      <h2>化学大修</h2>
-      <ul>
-        <li>挂壁式 1.0–1.5 HP：<strong>RM 220</strong></li>
-        <li>挂壁式 2.0–2.5 HP：<strong>RM 280</strong></li>
-      </ul>
-      <h2>充气</h2>
-      <ul>
-        <li>R22 — 1.0 HP：<strong>RM 120</strong></li>
-        <li>R410A — 1.0 HP：<strong>RM 150</strong></li>
-        <li>R32 — 1.0 HP：<strong>RM 180</strong></li>
-      </ul>
-      <h2>维修与安装</h2>
-      <ul>
-        <li>诊断费：<strong>RM 88</strong>（维修则豁免）</li>
-        <li>挂壁式安装 1.0–1.5 HP：<strong>RM 199</strong></li>
-      </ul>
-      <h2>批量折扣和附加信息</h2>
-      <p>同次上门预约2台或以上机器可享受批量折扣：2-3台节省5%，4-8台节省10%，8台及以上节省15%。此处所列所有价格适用于吉隆坡和雪兰莪服务区域。价格在技术人员上门前通过WhatsApp书面确认。未经您明确批准，施工后绝不添加任何收费。</p>
-      <p>请WhatsApp <strong>+60 18-298 3573</strong> 预约。详见：<a href="/services">所有服务详情</a></p>
+    contentZH: `<h2>2026年KL冷气服务价格指南 — 完整明细</h2>
+      <p>了解每项服务的真实价格，避免被多收钱。<a href="/near-me">KL Renovator</a>为您提供透明的价格明细。</p>
 
-      <h2>什么决定最终价格</h2>
-      <p>本指南所列价格适用于位于便于到达地点的标准住宅机型。可能影响最终报价的因素包括：机器距地面高度（超过15英尺可能需要额外设备）、安装在假天花板上方需要拆卸面板的吸顶式机型，以及管道走线非标准需要额外时间的机器。所有这些都会在动工前评估并报价——您在技术人员动工前将始终了解全部费用。</p>
-      <h2>付款与预约</h2>
-      <p>完工并令您满意后接受现金、网络转账或DuitNow QR付款。无需预付款。预约请WhatsApp <strong>+60 18-298 3573</strong>，并提供您的位置、机器数量、机型及首选服务日期。当天预约经常有空，尤其是黑风洞、士拉央及我们团队总部所在的巴生谷周边地区。</p>
+      <h2>服务价格总表</h2>
+      <table>
+        <thead><tr><th>服务</th><th>壁挂式 1-1.5HP</th><th>壁挂式 2-2.5HP</th><th>天花板卡式</th></tr></thead>
+        <tbody>
+          <tr><td>基本保养</td><td>RM 99</td><td>RM 120</td><td>RM 180</td></tr>
+          <tr><td>化学清洗</td><td>RM 120</td><td>RM 150</td><td>RM 220</td></tr>
+          <tr><td>化学大修</td><td>RM 220</td><td>RM 280</td><td>RM 350</td></tr>
+          <tr><td>充气 R22</td><td>RM 120</td><td>RM 150</td><td>RM 200</td></tr>
+          <tr><td>充气 R410A</td><td>RM 150</td><td>RM 180</td><td>RM 250</td></tr>
+          <tr><td>充气 R32</td><td>RM 180</td><td>RM 220</td><td>RM 280</td></tr>
+          <tr><td>安装</td><td>RM 199</td><td>RM 249-279</td><td>RM 290+</td></tr>
+          <tr><td>诊断费</td><td colspan="3">RM 88（维修则豁免）</td></tr>
+        </tbody>
+      </table>
 
-      <h2>价格如何确认</h2>
-      <p>当您WhatsApp KL Renovator时，请提供您的位置、机型（挂壁式或吸顶式）、匹数以及所需服务。我们将在技术人员上门前通过WhatsApp书面确认价格。这意味着在任何工作开始前，您都有商定价格的书面记录。如果在服务过程中发现额外问题——例如电容器故障或冷媒泄漏——这些将单独报价，且需要您明确批准后才能继续。任何阶段都不会有意外费用。</p>
-    `,
+      <h2>维修价格参考</h2>
+      <table>
+        <thead><tr><th>维修项目</th><th>价格范围</th></tr></thead>
+        <tbody>
+          <tr><td>电容更换</td><td>RM 80-150</td></tr>
+          <tr><td>PCB板更换</td><td>RM 150-500</td></tr>
+          <tr><td>风扇电机更换</td><td>RM 150-300</td></tr>
+          <tr><td>压缩机更换</td><td>RM 600-1,200</td></tr>
+          <tr><td>温控器/传感器</td><td>RM 50-150</td></tr>
+          <tr><td>排水泵更换</td><td>RM 120-200</td></tr>
+        </tbody>
+      </table>
+
+      <h2>多台折扣</h2>
+      <p>2-3台: 95折 | 4-8台: 9折 | 8台以上: 85折</p>
+
+      <h2>预约服务</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 30分钟内报价，当天服务可用。价格透明，开工前确认。</p>`,
   },
   {
     slug: "inverter-vs-non-inverter-aircond-malaysia",
@@ -1414,38 +1456,39 @@ export const allPosts: BlogPost[] = [
       <h2>Perbezaan Kawalan Kelembapan</h2>
       <p>Perbezaan utama antara inverter dan bukan inverter yang sering diabaikan dalam iklim lembap Malaysia: unit inverter jauh lebih baik dalam penyahlembapan. Kerana kompressor inverter berjalan secara berterusan pada kelajuan rendah setelah suhu yang ditetapkan dicapai, ia terus memproses udara melalui gegelung evaporator sejuk — yang secara berterusan memeluwap dan membuang kelembapan. Unit bukan inverter yang sering mati membenarkan kelembapan bilik meningkat antara kitaran kompressor. Dalam persekitaran kelembapan relatif 70–85% di Malaysia, ini menjadikan unit inverter lebih selesa walaupun pada tetapan suhu yang sama.</p>
     `,
-    contentZH: `
-      <h2>变频 vs 定频 — 简单解释</h2>
-      <p>定频冷气压缩机以一种速度运行——全速然后关闭。变频压缩机调节速度以用少得多的电力维持温度。</p>
-      <h2>节电效果</h2>
-      <ul>
-        <li>定频1.5 HP：约 <strong>RM 80–120/月</strong></li>
-        <li>变频1.5 HP：约 <strong>RM 40–70/月</strong></li>
-        <li>节省：约 <strong>30-50%的电费</strong></li>
-      </ul>
-      <h2>使用寿命</h2>
-      <ul>
-        <li>定频：平均8-12年</li>
-        <li>变频：平均12-15年</li>
-      </ul>
-      <h2>何时选择哪种</h2>
-      <ul>
-        <li><strong>变频：</strong>主卧室、客厅、家庭办公室——每天使用</li>
-        <li><strong>定频：</strong>很少使用的客房、预算紧张的出租物业</li>
-      </ul>
-      <h2>安装</h2>
-      <p>KL Renovator安装所有变频和定频品牌，从 <strong>RM 199</strong> 起。WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/services/installation">安装服务</a> | <a href="/brands/daikin">大金变频服务</a></p>
-      <h2>保养差异</h2>
-      <p>变频和定频机器在马来西亚需要相同的保养计划。但变频压缩机通常对气体不足更敏感。对于5年以上的变频机器，年度气压检查尤为重要，以防止压缩机过热损坏。</p>
+    contentZH: `<h2>变频 vs 定频冷气 — 马来西亚完整对比</h2>
+      <p>变频和定频冷气有本质区别。<a href="/near-me">KL Renovator</a>为您详细对比。</p>
 
-      <h2>马来西亚的能源之星及能效评级</h2>
-      <p>马来西亚能源委员会（Suruhanjaya Tenaga）对冷气机进行1-5星评级。主要品牌的所有新变频机型均达到5星。定频机型通常达到2-3星。星级直接反映年度耗电量——相同匹数下，5星机型每小时制冷输出的耗电量明显低于3星机型。购买时，请检查机器包装上的能效标签，了解马来西亚能源委员会的星级评定及年度能耗（kWh）。</p>
-      <h2>最终建议</h2>
-      <p>对于主卧室、客厅、家庭办公室，以及每天使用超过4小时的任何房间——<strong>变频是明确的选择</strong>。对于重度使用者，省电效果、更长使用寿命、更安静运行及更好的除湿效果，能在不到12个月内抵消较高的前期成本。KL Renovator安装所有变频和定频品牌，从<strong>RM 199</strong>起。WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <h2>核心区别</h2>
+      <table>
+        <thead><tr><th>特性</th><th>定频</th><th>变频</th></tr></thead>
+        <tbody>
+          <tr><td>压缩机</td><td>固定转速，开/关控制</td><td>可变转速，持续运行</td></tr>
+          <tr><td>能效</td><td>标准</td><td>节省30-50%</td></tr>
+          <tr><td>噪音</td><td>较响（启停噪音）</td><td>更安静</td></tr>
+          <tr><td>温度稳定性</td><td>波动±2°C</td><td>稳定±0.5°C</td></tr>
+          <tr><td>价格</td><td>较低（RM 800-1,500）</td><td>较高（RM 1,200-3,500）</td></tr>
+          <tr><td>维修成本</td><td>较低</td><td>较高（PCB更贵）</td></tr>
+          <tr><td>寿命</td><td>7-10年</td><td>10-15年</td></tr>
+          <tr><td>适合</td><td>使用&lt;4小时/天</td><td>使用6+小时/天</td></tr>
+        </tbody>
+      </table>
 
-      <h2>除湿效果差异</h2>
-      <p>变频和定频之间一个常被忽视的关键差异，在马来西亚潮湿气候下尤为重要：变频机型的除湿效果明显更好。由于变频压缩机在达到设定温度后会持续低速运转，它会不断处理通过冷蒸发器盘管的空气——持续冷凝并去除湿气。而频繁关闭的定频机器，在压缩机循环之间会让室内湿度上升。在马来西亚70-85%相对湿度的环境中，这使得变频机型即使在相同温度设定下也更为舒适。</p>
-    `,
+      <h2>电费对比（1.5HP，每天8小时）</h2>
+      <ul>
+        <li>定频：约RM 120-150/月</li>
+        <li>变频：约RM 80-100/月</li>
+        <li><strong>5年节省：RM 2,400-3,000</strong></li>
+      </ul>
+
+      <h2>选择建议</h2>
+      <ul>
+        <li><strong>选变频：</strong>主卧、客厅、办公室（长时间使用）</li>
+        <li><strong>选定频：</strong>客房、储藏室（短时间使用）</li>
+      </ul>
+
+      <h2>预约安装</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 我们帮您选择最合适的类型。</p>`,
   },
   {
     slug: "daikin-vs-panasonic-aircond-malaysia",
@@ -1533,40 +1576,33 @@ export const allPosts: BlogPost[] = [
       <h2>Perbandingan Kos Servis dan Penyelenggaraan</h2>
       <p>Kedua-dua Daikin dan Panasonic mempunyai kos servis yang setanding melalui KL Renovator. Harga cuci kimia, tambah gas, dan servis asas adalah sama untuk kedua-dua jenama pada HP yang sama. Perbezaannya terletak pada kos alat ganti untuk pembaikan — alat ganti Daikin cenderung sedikit lebih mahal berbanding Panasonic yang setara, tetapi kadar kegagalan yang lebih rendah secara umumnya bermakna lebih sedikit bil pembaikan sepanjang jangka hayat unit. Kos penyelenggaraan bersih sepanjang 10 tahun secara umumnya hampir sama antara kedua-dua jenama untuk unit yang diselenggara dengan baik.</p>
     `,
-    contentZH: `
-      <h2>大金 vs 松下 — 马来西亚两大品牌</h2>
-      <p>大金和松下合计占马来西亚冷气销售额的50%以上。两者都很出色，但各有优势。</p>
-      <h2>价格（1.5 HP变频）</h2>
-      <ul>
-        <li><strong>大金：</strong>RM 1,300–1,800</li>
-        <li><strong>松下：</strong>RM 1,100–1,600（便宜10-15%）</li>
-      </ul>
-      <h2>能效</h2>
-      <p>两者均达到5星能效评级。松下的Econavi传感器能根据居住情况调节输出，在客厅实际使用中能效略胜一筹。</p>
-      <h2>特色功能</h2>
-      <ul>
-        <li><strong>大金：</strong>FlashStreamer空气净化、R32、3D气流</li>
-        <li><strong>松下：</strong>Nanoe-X（去除病毒和细菌）、Econavi传感器</li>
-      </ul>
-      <h2>我们的推荐</h2>
-      <ul>
-        <li><strong>选大金：</strong>长期可靠性、商业用途、房东</li>
-        <li><strong>选松下：</strong>空气质量优先、客厅、价格稍低</li>
-      </ul>
-      <p>两者都是很好的选择，两者都能从KL Renovator技术人员那里获得同等质量的服务。如果您仍不确定，请WhatsApp告知房间大小、使用时间和预算——我们将为您建议最适合的具体型号。</p>
-      <p>KL Renovator安装和服务两个品牌。WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/brands/daikin">大金服务</a> | <a href="/brands/panasonic">松下服务</a></p>
+    contentZH: `<h2>大金 vs 松下冷气 — 马来西亚完整对比</h2>
+      <p>马来西亚最受欢迎的两个冷气品牌。<a href="/near-me">KL Renovator</a>基于数千台安装和维修经验为您对比。</p>
 
-      <h2>噪音水平</h2>
-      <p>对于卧室，噪音水平很重要。大金iSmile卧室机型最低速运行时为19-22分贝——是马来西亚市场上最安静的机型之一。松下的卧室机型同样安静，为20-24分贝。两者都比旧式定频机型明显更安静，后者在压缩机启动时通常会产生35-45分贝的噪音。如果噪音对婴儿房或睡眠较轻的人是首要考虑因素，购买前请询问所考虑机型的具体分贝评级。</p>
-      <h2>备件供应情况</h2>
-      <p>大金和松下在马来西亚全国均有授权服务中心及充足的备件网络。当前型号的电容器、风扇马达、传感器和PCB电路板通常可在1-3天内从巴生谷的经销商处获得。这对长期使用是一个重要考虑因素——在马来西亚没有完善备件网络的品牌，一旦出现故障，可能需要等待数周进口备件。</p>
+      <h2>完整对比表</h2>
+      <table>
+        <thead><tr><th>特性</th><th>大金 Daikin</th><th>松下 Panasonic</th></tr></thead>
+        <tbody>
+          <tr><td>压缩机技术</td><td>摆动式压缩机（独有）</td><td>旋转式压缩机</td></tr>
+          <tr><td>可靠性</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+          <tr><td>能效</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+          <tr><td>噪音</td><td>极安静（19dB）</td><td>很安静（21dB）</td></tr>
+          <tr><td>空气净化</td><td>Streamer放电技术</td><td>Nanoe-X纳米技术</td></tr>
+          <tr><td>价格范围</td><td>RM 1,200-3,500</td><td>RM 1,100-3,200</td></tr>
+          <tr><td>保修</td><td>5年压缩机</td><td>5年压缩机</td></tr>
+          <tr><td>寿命</td><td>12-15年</td><td>10-13年</td></tr>
+          <tr><td>零件可用性</td><td>优秀</td><td>优秀</td></tr>
+        </tbody>
+      </table>
 
-      <h2>售后服务及服务网络</h2>
-      <p>大金和松下在马来西亚都拥有强大的授权服务网络。大金在主要城市设有服务中心，保修索赔流程响应迅速。松下的授权服务中心同样分布广泛。对于非保修服务和保养，像KL Renovator这样的独立专家以与授权中心相同的标准为两个品牌提供服务，通常更快且排期更灵活。KL Renovator使用的所有备件均为原装或认证OEM零件——绝不使用可能影响机器性能的通用替代品。</p>
+      <h2>选择建议</h2>
+      <ul>
+        <li><strong>选大金：</strong>追求最高可靠性和最安静运行，预算充足</li>
+        <li><strong>选松下：</strong>追求最佳性价比，重视空气净化功能</li>
+      </ul>
 
-      <h2>服务及保养费用比较</h2>
-      <p>通过KL Renovator，大金和松下的服务费用相当。相同匹数下，两个品牌的化学清洗、充气和基本保养价格相同。两者的差异在于维修备件成本——大金的备件往往比松下同等产品略贵，但较低的故障率通常意味着机器使用寿命内维修费用更少。对于保养得当的机器，两个品牌10年的净保养成本大致相近。</p>
-    `,
+      <h2>预约安装</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 两个品牌我们都安装和维修。</p>`,
   },
   {
     slug: "how-to-reduce-aircond-electricity-bill-malaysia",
@@ -1651,39 +1687,37 @@ export const allPosts: BlogPost[] = [
       <h2>Adakah Bil Elektrik Anda Sebenarnya Berkaitan Aircond?</h2>
       <p>Sebelum mengandaikan aircond adalah punca bil elektrik yang tinggi, semak: adakah corak penggunaan berubah (lebih ramai orang di rumah, jam lebih lama)? Adakah TNB menukar peringkat tarif yang dimasuki isi rumah anda? Adakah peralatan lain berjalan lebih kerap — pemanas air, mesin basuh, periuk induksi? Jika tiada apa-apa lagi yang berubah dan bil telah meningkat, aircond adalah penyebab paling mungkin. Gegelung kotor dan gas rendah bersama-sama boleh meningkatkan penggunaan elektrik aircond sebanyak 40–60% berbanding unit yang diselenggara dengan betul — menjadikan cuci kimia RM 120 cara terpantas untuk menangani sebab utama.</p>
     `,
-    contentZH: `
-      <h2>您的冷气电费为何高</h2>
-      <p>在马来西亚，冷气通常占家庭电费的50-70%。大多数过度消耗来自可预防的原因——脏盘管、气体不足、错误的温度设置。</p>
-      <h2>技巧1 — 将温度设置为24-26°C，而非16°C</h2>
-      <p>设置16°C不会让房间冷却得更快。26°C与16°C相比，节省约30%的电费。</p>
-      <h2>技巧2 — 每3个月保养一次</h2>
-      <p>脏盘管迫使压缩机多工作20-40%。RM 99的基本保养在2-3个月内通过节电收回成本。</p>
-      <h2>技巧3 — 每12个月化学清洗</h2>
-      <p>年度化学清洗可将被忽视机器的耗电量减少15-25%。</p>
-      <h2>技巧4 — 检查气体压力</h2>
-      <p>气体不足会使压缩机运转更久。从RM 120起的充气服务可立即解决此问题。</p>
-      <h2>技巧5–12</h2>
-      <ul>
-        <li>夜间使用睡眠模式和定时器</li>
-        <li>关闭门窗</li>
-        <li>与吊扇一起使用（可提高2-3°C设定温度）</li>
-        <li>离开房间时关闭机器</li>
-        <li>每月清洗过滤网</li>
-        <li>确保室外机通风顺畅</li>
-        <li>升级旧定频机器以节省40-50%</li>
-        <li>预约年度保养合约以保持持续效率</li>
-      </ul>
-      <p>综合实施这些技巧，大多数马来西亚家庭可以在不牺牲舒适度的情况下将电费中的冷气部分减少30-45%。最容易的第一步是设置正确的温度并确保定期保养。</p>
-      <p>化学清洗从RM 120起。充气从RM 120起。WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/services/chemical-wash">化学清洗</a> | <a href="/services/gas-topup">充气服务</a></p>
+    contentZH: `<h2>如何降低冷气电费 — 马来西亚实用指南</h2>
+      <p>冷气通常占马来西亚家庭电费的40-60%。<a href="/near-me">KL Renovator</a>为您提供实用的省电方法。</p>
 
-      <h2>您实际能省多少？</h2>
-      <p>一个拥有3台冷气机、每天运行8小时、每月因冷气产生RM 300电费的家庭，通过结合正确的温度设置（25°C而非18°C）、年度化学清洗和使用吊扇，实际上可以将费用降至每月RM 180-200。这意味着每月节省RM 100-120——或每年RM 1,200-1,440——而这些改变几乎不需要任何成本即可实施。</p>
-      <h2>预约服务开始省钱</h2>
-      <p>降低冷气电费最快的方法是化学清洗——它能去除迫使压缩机更费力运转的盘管污垢。化学清洗从<strong>RM 120</strong>起。WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <h2>10个省电方法</h2>
+      <ol>
+        <li><strong>设定24°C</strong> — 每降低1°C增加6-8%电费。24°C是最舒适的平衡点</li>
+        <li><strong>定期清洗滤网</strong> — 脏滤网增加15%电费。每2-4周清洗一次</li>
+        <li><strong>使用变频冷气</strong> — 比定频节省30-50%电费</li>
+        <li><strong>关闭不用的房间</strong> — 只冷却有人使用的房间</li>
+        <li><strong>使用定时器</strong> — 设定睡觉后2-3小时自动关闭</li>
+        <li><strong>遮挡阳光</strong> — 窗帘和遮阳板减少20-30%热量进入</li>
+        <li><strong>定期化学清洗</strong> — 脏线圈降低30%效率</li>
+        <li><strong>确保门窗密封</strong> — 冷气外泄=浪费电力</li>
+        <li><strong>选择正确匹数</strong> — 匹数太大会频繁启停浪费电力</li>
+        <li><strong>使用风扇辅助</strong> — 风扇+24°C冷气=22°C体感温度</li>
+      </ol>
 
-      <h2>您的电费真的与冷气有关吗？</h2>
-      <p>在认定冷气是电费高的原因之前，请先检查：使用习惯是否改变（家里人更多、使用时间更长）？大马电力公司（TNB）是否调整了您家庭所属的电价等级？其他电器是否使用更频繁——热水器、洗衣机、电磁炉？如果其他一切都没有改变而电费上涨了，冷气是最可能的原因。脏盘管加上气体不足，与保养良好的机器相比，可使冷气耗电量增加40-60%——这使得RM 120的化学清洗成为解决根本问题最快的方法。</p>
-    `,
+      <h2>省电效果对比</h2>
+      <table>
+        <thead><tr><th>方法</th><th>节省幅度</th><th>难度</th></tr></thead>
+        <tbody>
+          <tr><td>设定24°C（而非18°C）</td><td>30-40%</td><td>简单</td></tr>
+          <tr><td>定期清洗滤网</td><td>10-15%</td><td>简单</td></tr>
+          <tr><td>换变频冷气</td><td>30-50%</td><td>需投资</td></tr>
+          <tr><td>定期化学清洗</td><td>15-30%</td><td>需预约</td></tr>
+          <tr><td>遮挡阳光</td><td>20-30%</td><td>简单</td></tr>
+        </tbody>
+      </table>
+
+      <h2>预约省电保养</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 化学清洗从RM 120起，帮您节省电费。</p>`,
   },
   {
     slug: "aircond-installation-guide-malaysia",
@@ -1780,43 +1814,50 @@ export const allPosts: BlogPost[] = [
       <h2>Selepas Pemasangan</h2>
       <p>Dalam 30 hari pertama, pantau air menitis, bunyi luar biasa, atau penyejukan yang lebih lemah daripada dijangka. Waranti kerja 1 bulan KL Renovator meliputi semua isu kerja pemasangan. WhatsApp <strong>+60 18-298 3573</strong> dengan segera jika sebarang kebimbangan timbul selepas pemasangan.</p>
     `,
-    contentZH: `
-      <h2>为您的房间选择正确的HP</h2>
-      <ul>
-        <li><strong>1.0 HP：</strong>100平方英尺以下</li>
-        <li><strong>1.5 HP：</strong>100-200平方英尺（最常见）</li>
-        <li><strong>2.0 HP：</strong>200-300平方英尺</li>
-        <li><strong>2.5 HP：</strong>300-400平方英尺</li>
-        <li><strong>3.0 HP：</strong>400-600平方英尺</li>
-      </ul>
-      <h2>电源插座</h2>
-      <p>每台冷气需要专用15A电源插座。如果没有，KL Renovator安装费用RM 100。</p>
-      <h2>标准安装包含内容</h2>
-      <ul>
-        <li>7英尺铜管（免费）、重型电线（免费）、墙壁支架（免费）、室外L形支架（免费）、排水走线（免费）、系统抽真空、完整测试、1个月保修</li>
-      </ul>
-      <h2>价格</h2>
-      <ul>
-        <li>挂壁式 1.0–1.5 HP：<strong>RM 199</strong></li>
-        <li>挂壁式 2.0 HP：<strong>RM 249</strong></li>
-        <li>天花板卡式 1.0–1.5 HP：<strong>RM 290</strong></li>
-      </ul>
-      <p>以上价格为标准安装费用。任何额外工作（如额外管道、新电源插座或屋顶支架）将在施工前单独报价。无意外收费。</p>
-      <p>WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/services/installation">完整安装服务页</a></p>
+    contentZH: `<h2>马来西亚冷气安装完整指南</h2>
+      <p>安装冷气是一项需要专业技能的工作。<a href="/near-me">KL Renovator</a>为您提供从选择到安装的完整指南。</p>
 
-      <h2>应避免的常见安装错误</h2>
-      <p>安装质量差会导致问题持续整个机器使用寿命。不合格安装人员常见的错误包括：充气前未对冷媒管道抽真空（系统中的空气和湿气会降低压缩机性能）、铜管尺寸过小（导致运行压力升高、效率降低）、室内机安装时排水坡度不足（导致积水及漏水），以及室外机安装位置散热空间不足。KL Renovator技术人员经过培训，并配备相应设备，确保每次安装都能避免这些错误。</p>
+      <h2>安装前准备</h2>
+      <ol>
+        <li><strong>确定正确匹数</strong> — 使用我们的<a href="/btu-calculator">BTU计算器</a></li>
+        <li><strong>选择室内机位置</strong> — 床头上方（卧室）或座位对面（客厅）</li>
+        <li><strong>选择室外机位置</strong> — 遮阳、通风、便于维护</li>
+        <li><strong>检查电路容量</strong> — 2.0HP以上需要独立电路</li>
+        <li><strong>规划管道路线</strong> — 越短越直越好</li>
+      </ol>
+
+      <h2>安装流程（7步）</h2>
+      <ol>
+        <li>WhatsApp预约 → 2. 技师派遣 → 3. 现场勘查 → 4. 安装布管 → 5. 真空抽气+检漏 → 6. 调试运行 → 7. 交付+保修</li>
+      </ol>
+
+      <h2>安装价格</h2>
+      <table>
+        <thead><tr><th>机型</th><th>HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>壁挂式</td><td>1.0-1.5 HP</td><td>RM 199</td></tr>
+          <tr><td>壁挂式</td><td>2.0 HP</td><td>RM 249</td></tr>
+          <tr><td>壁挂式</td><td>2.5 HP</td><td>RM 279</td></tr>
+          <tr><td>天花板卡式</td><td>2.0-3.0 HP</td><td>RM 290</td></tr>
+          <tr><td>窗式</td><td>1.0-1.5 HP</td><td>RM 199</td></tr>
+        </tbody>
+      </table>
+
+      <h2>包含什么</h2>
+      <ul>
+        <li>✅ 7英尺L型铜管</li>
+        <li>✅ Armaflex保温棉</li>
+        <li>✅ 电线和PVC线管</li>
+        <li>✅ PVC排水管</li>
+        <li>✅ 支架+防震垫</li>
+        <li>✅ 真空抽气15-20分钟</li>
+        <li>✅ 氮气检漏</li>
+        <li>✅ 调试运行</li>
+        <li>✅ 1个月工艺保修</li>
+      </ul>
+
       <h2>预约安装</h2>
-      <p>挂壁式安装从<strong>RM 199</strong>起。吉隆坡和雪兰莪地区经常可安排当天安装。WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/services/installation">完整安装服务页</a></p>
-
-      <h2>安装后——前30天</h2>
-      <p>安装后的前30天，请留意以下情况：室内机滴水（表明排水坡度有问题）、压缩机启动时有异常噪音（可能表明冷媒充注问题）、制冷效果与预期匹数输出不符，或机器有除常见"新机"气味之外的其他异味。KL Renovator的1个月工艺保修涵盖此期间因安装本身产生的任何问题。如发现以上任何情况，请立即WhatsApp <strong>+60 18-298 3573</strong>。</p>
-
-      <h2>电源插座要求</h2>
-      <p>每台冷气都需要专用的15安培电源插座——不能与其他电器共用插座。如果您的房间没有专用冷气插座，KL Renovator可在安装上门服务中加装一个，额外收费RM 100。对于3.0 HP及以上的机型，建议使用专用的20安培电路以应对更高的压缩机启动电流。标准安装要求电源插座距室内机位置在2-3米范围内。需要更长电缆走线的机器将在动工前另行报价。</p>
-      <h2>安装后</h2>
-      <p>在前30天内，请留意滴水、异常噪音或制冷效果弱于预期的情况。KL Renovator的1个月工艺保修涵盖所有安装工艺问题。安装后如有任何疑虑，请立即WhatsApp <strong>+60 18-298 3573</strong>。</p>
-    `,
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天安装可用，透明定价。</p>`,
   },
   {
     slug: "aircond-lifespan-malaysia",
@@ -1901,38 +1942,49 @@ export const allPosts: BlogPost[] = [
       <h2>Kompressor — Komponen Paling Mahal</h2>
       <p>Kompressor adalah komponen tunggal paling mahal dalam mana-mana unit aircond, biasanya kos RM 600–2,000 untuk diganti. Kompressor yang telah diselenggara dengan gegelung bersih, tahap gas yang betul, dan penapis bersih jarang gagal sebelum 12 tahun dalam aplikasi bersaiz betul. Keadaan yang memburukkan kegagalan kompressor adalah: beroperasi dengan gas rendah (kompressor terlebih panas tanpa penyejuk yang mencukupi untuk menyejukkannya), beroperasi dengan gegelung yang sangat tercemar (kompressor bekerja lebih keras dan berjalan lebih panas), dan kitaran pendek yang kerap daripada unit bersaiz terlalu besar atau penapis tersumbat. Kesemua tiga ini boleh dicegah secara langsung dengan penyelenggaraan berkala.</p>
     `,
-    contentZH: `
-      <h2>马来西亚冷气平均使用寿命</h2>
-      <ul>
-        <li><strong>变频型号（大金、松下、三菱）：</strong>12-15年</li>
-        <li><strong>定频型号：</strong>8-12年</li>
-        <li><strong>商用天花板卡式：</strong>妥善保养可用10-15年</li>
-      </ul>
-      <h2>什么缩短使用寿命</h2>
-      <ul>
-        <li>不定期保养（机器提前3-5年故障）</li>
-        <li>气体不足未处理（几个月内损坏压缩机）</li>
-        <li>安装不当（机器过小持续满负荷运转）</li>
-        <li>电压浪涌（损坏PCB电路板）</li>
-      </ul>
-      <h2>维修还是更换？— 决策指南</h2>
-      <ul>
-        <li><strong>维修如果：</strong>机器不到8年，维修费用低于新机器价格的40%，单一组件故障</li>
-        <li><strong>更换如果：</strong>需要更换压缩机且机器超过8年</li>
-        <li><strong>更换如果：</strong>机器使用R22且超过10年</li>
-      </ul>
-      <p>诊断费RM 88（同次维修豁免）。WhatsApp <strong>+60 18-298 3573</strong>。详见：<a href="/services/repair">维修服务</a> | <a href="/problems/aircond-compressor-problem">压缩机故障指南</a></p>
+    contentZH: `<h2>马来西亚冷气寿命 — 如何延长使用年限</h2>
+      <p>冷气的寿命取决于品牌、使用习惯和保养频率。<a href="/near-me">KL Renovator</a>为您分析。</p>
 
-      <h2>延长使用寿命——实用步骤</h2>
-      <p>延长冷气使用寿命最有效的单一方法，是绝不在气体明显不足的情况下运行机器。冷媒不足运行的机器，压缩机温度会升高，逐渐损坏压缩机绕组的绝缘层。最初表现为制冷效率下降，在气体不足运转1-3年内会演变成压缩机故障。年度气压检查（包含在化学清洗服务中）能在造成永久损坏之前发现此问题。</p>
-      <p>第二有效的措施是年度化学清洗。干净的盘管能减轻压缩机负荷，直接降低运行温度并延长组件寿命。盘管干净的机器比同品牌同型号被忽视的机器，平均使用寿命长3-5年。KL Renovator诊断费RM 88（同次维修豁免）。WhatsApp <strong>+60 18-298 3573</strong>。</p>
+      <h2>各品牌平均寿命</h2>
+      <table>
+        <thead><tr><th>品牌</th><th>平均寿命</th><th>关键因素</th></tr></thead>
+        <tbody>
+          <tr><td>大金/三菱</td><td>12-15年</td><td>最高质量压缩机</td></tr>
+          <tr><td>松下</td><td>10-13年</td><td>可靠但略低于大金</td></tr>
+          <tr><td>约克/Acson</td><td>8-12年</td><td>中端质量</td></tr>
+          <tr><td>美的/Hisense</td><td>8-10年</td><td>性价比品牌</td></tr>
+        </tbody>
+      </table>
 
-      <h2>机器仍有剩余寿命的迹象</h2>
-      <p>剩余寿命良好的机器会：能制冷到设定温度而不需持续以最大输出运行；压缩机启动干净，没有嗡嗡声或杂音；年复一年显示稳定的气压读数（没有明显下降表明缓慢泄漏）；遥控器及模式切换反应正常；且无需对不同组件反复维修。如果您的机器符合以上所有条件，持续的保养将使它无论年龄多大都能继续可靠运转多年。</p>
+      <h2>缩短寿命的因素</h2>
+      <ul>
+        <li>❌ 不定期保养（寿命缩短30-50%）</li>
+        <li>❌ 长时间超负荷运行</li>
+        <li>❌ 安装质量差（无真空抽气）</li>
+        <li>❌ 电源不稳定（频繁跳闸）</li>
+        <li>❌ 室外机暴露在恶劣环境</li>
+      </ul>
 
-      <h2>压缩机——最昂贵的组件</h2>
-      <p>压缩机是任何冷气机中最昂贵的单一组件，更换通常花费RM 600-2,000。在尺寸合适的应用中，保持盘管清洁、气体水平正确、过滤网干净的压缩机，很少在12年内出现故障。加速压缩机故障的条件包括：在气体不足的情况下运行（压缩机因冷媒不足而过热）、在盘管严重污染的情况下运行（压缩机工作更费力、运行温度更高），以及尺寸过大或过滤网堵塞导致的频繁短循环。这三者都可通过定期保养直接预防。</p>
-    `,
+      <h2>延长寿命的方法</h2>
+      <ul>
+        <li>✅ 每6-12个月专业保养</li>
+        <li>✅ 每2-4周清洗滤网</li>
+        <li>✅ 设定24°C（不过度制冷）</li>
+        <li>✅ 室外机遮阳</li>
+        <li>✅ 选择专业安装（含真空抽气）</li>
+        <li>✅ 使用稳压器保护电路</li>
+      </ul>
+
+      <h2>何时该换新</h2>
+      <ul>
+        <li>冷气超过10年且频繁维修</li>
+        <li>维修费用超过新机50%</li>
+        <li>仍使用R22冷媒（已淘汰）</li>
+        <li>电费明显增加</li>
+      </ul>
+
+      <h2>预约保养或换新</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 我们帮您评估是保养还是换新更划算。</p>`,
   },
   {
     slug: "aircond-troubleshooting-guide-malaysia",
@@ -2843,73 +2895,30 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz unit, jenama dan gambar lokasi pemasangan untuk sebut harga tepat. Perkhidmatan berkaitan: <a href="/ms/services/installation">Pemasangan Unit Baru</a>. Lihat juga <a href="/ms/areas/kuala-lumpur">kawasan perkhidmatan KL &amp; Selangor</a>.</p>
     `,
-    contentZH: `
-      <p><em>2026年7月更新，附klrenovator.com最新公布价格。马来西亚标准壁挂式冷气安装从<strong>RM 199</strong>起（1.0-1.5 HP），铜管、排水和公寓工程均透明附加费。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合在吉隆坡和雪兰莪比较冷气安装价格的住宅业主、公寓居民、办公室和店铺。</p>
-      <h2>快速答案 — 2026年马来西亚冷气安装费用</h2>
-      <p>马来西亚标准壁挂式冷气安装费用为<strong>RM 199</strong>（1.0-1.5 HP），<strong>RM 249</strong>（2.0 HP），<strong>RM 279</strong>（2.5 HP），最高<strong>RM 449</strong>（5.0 HP）。天花卡式安装从<strong>RM 290</strong>起（1.0-1.5 HP），最高<strong>RM 400</strong>（3.5-6.0 HP）。窗口机从<strong>RM 199</strong>起（1.0-1.5 HP）。这些是2026年7月在klrenovator.com上列出的价格。</p>
-      <h2>完整价格表 — 壁挂式安装</h2>
-      <table><thead><tr><th>机组尺寸</th><th>基础安装价格</th><th>包括</th></tr></thead><tbody>
-        <tr><td>1.0-1.5 HP</td><td>RM 199</td><td>人工、7尺铜管、布线、排水管、支架</td></tr>
-        <tr><td>2.0 HP</td><td>RM 249</td><td>人工、7尺铜管、布线、排水管、支架</td></tr>
-        <tr><td>2.5 HP</td><td>RM 279</td><td>人工、7尺铜管、布线、排水管、支架</td></tr>
-        <tr><td>3.0 HP</td><td>RM 329</td><td>人工、7尺铜管、布线、排水管、支架</td></tr>
-        <tr><td>4.0 HP</td><td>RM 399</td><td>人工、7尺铜管、布线、排水管、支架</td></tr>
-        <tr><td>5.0 HP</td><td>RM 449</td><td>人工、7尺铜管、布线、排水管、支架</td></tr>
-      </tbody></table>
-      <h2>完整价格表 — 天花卡式安装</h2>
-      <table><thead><tr><th>机组尺寸</th><th>基础安装价格</th></tr></thead><tbody>
-        <tr><td>1.0-1.5 HP</td><td>RM 290</td></tr>
-        <tr><td>2.0-3.0 HP</td><td>RM 350</td></tr>
-        <tr><td>3.5-6.0 HP</td><td>RM 400</td></tr>
-      </tbody></table>
-      <h2>完整价格表 — 窗口机安装</h2>
-      <table><thead><tr><th>机组尺寸</th><th>基础安装价格</th></tr></thead><tbody>
-        <tr><td>1.0-1.5 HP</td><td>RM 199</td></tr>
-        <tr><td>2.0-2.5 HP</td><td>RM 249</td></tr>
-      </tbody></table>
-      <h2>RM 199基础价包括什么？</h2>
-      <p>RM 199基础安装包括人工以及最多<strong>7尺铜管、布线、排水管和标准支架</strong>，适用于1.0-1.5 HP壁挂式机组。这是klrenovator.com上公布的入门配套。任何超出此范围的项目都会在开始工作前作为透明附加费报价。</p>
-      <h2>常见附加费</h2>
-      <table><thead><tr><th>附加项</th><th>价格</th><th>备注</th></tr></thead><tbody>
-        <tr><td>7尺外额外铜管</td><td>RM 25/尺</td><td>大多数有地房屋总共需要15-20尺</td></tr>
-        <tr><td>线槽/管道</td><td>RM 8-15/尺</td><td>用于可见管道</td></tr>
-        <tr><td>排水泵（天花卡式）</td><td>RM 350-550</td><td>当无法重力排水时</td></tr>
-        <tr><td>电源插座/电气工程</td><td>现场报价</td><td>建议15A专用电路</td></tr>
-        <tr><td>公寓管理处预订费</td><td>RM 50-100</td><td>服务电梯+时间窗口</td></tr>
-      </tbody></table>
-      <h2>公寓 vs 有地房屋 — 价格差异</h2>
-      <p><strong>公寓</strong>通常在7尺铜管限制内适用，因为室外机位于室内机正后方的空调架上。加RM 50-100用于管理处预订。<strong>有地房屋（排屋、半独立式、洋房）</strong>通常需要15-20尺铜管从室内到室外，按RM 25/尺在基础价上增加RM 200-325。</p>
-      <h2>多台安装折扣呢？</h2>
-      <p>同次访问安装多台可享折扣：2-3台95折，4-8台9折，8+台85折。Puchong、Subang和Shah Alam的许多有地房屋业主一起预订3-5台安装。</p>
-      <h2>基础价不包括什么？</h2>
-      <p>机组费用、拆除旧机（RM 90）、天花卡式的天花板网格工程、抹灰、油漆、家庭重新布线以及任何混凝土切割。KL Renovator在现场勘察后单独报价。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 冷气安装费用</h2>
-      <h3>马来西亚最便宜的冷气安装是？</h3>
-      <p>KL Renovator的1.0-1.5 HP壁挂式RM 199，2026年7月在klrenovator.com上公布。</p>
-      <h3>为什么安装价格与机组分开？</h3>
-      <p>因为安装取决于现场条件：管道长度、支架类型、电气工程、天花板类型和访问。分开报价使机组价格清晰。</p>
-      <h3>变频与非变频价格是否不同？</h3>
-      <p>没有。两种都使用相同的RM 199基础价。变频与非变频的区别是机组成本，不是安装成本。</p>
-      <h3>所有品牌价格相同吗？</h3>
-      <p>是的。KL Renovator对Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic收取相同的安装费。</p>
-      <h3>可以获取固定配套报价吗？</h3>
-      <p>KL Renovator使用模块化定价。基础价格已公布；任何附加项在工作开始前逐项报价。这避免了为您不需要的配件付费。</p>
-      <h3>安装需要多长时间？</h3>
-      <p>标准1.0-1.5 HP壁挂式安装2-3小时；天花卡式3-4小时。</p>
-      <h3>有工艺保修吗？</h3>
-      <p>有。KL Renovator为每次安装提供1个月工艺保修，外加机组本身的制造商保修。</p>
-      <h3>提供0%分期付款吗？</h3>
-      <p>不分期，但已公布的基础价已经很低。通过现金、网上转账或电子钱包支付。</p>
-      <h3>为什么同样的工作在别处报价RM 99？</h3>
-      <p>一些运营商报的RM 99不包括铜管、支架、真空测试或保修。实际成本在访问时作为附加费出现。始终询问包括什么。</p>
-      <h3>KL Renovator的价格真的是网站上公布的价格吗？</h3>
-      <p>是的。本指南反映klrenovator.com上显示的价格。KL Renovator在吉隆坡和雪兰莪以透明定价获得500+ Google评价5.0分。</p>
-      <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知机组尺寸、品牌和安装位置的照片以获取准确报价。相关服务：<a href="/zh/services/installation">新机组安装</a>。另请参阅<a href="/zh/areas/kuala-lumpur">吉隆坡与雪兰莪服务区域</a>。</p>
-    `,
+    contentZH: `<h2>2026年马来西亚冷气安装费用 — 完整指南</h2>
+      <p>了解安装的所有费用。<a href="/near-me">KL Renovator</a>透明定价。</p>
+      <h2>安装价格表</h2>
+      <table>
+        <thead><tr><th>类型</th><th>HP</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>壁挂式</td><td>1.0-1.5 HP</td><td>RM 199</td></tr>
+          <tr><td>壁挂式</td><td>2.0 HP</td><td>RM 249</td></tr>
+          <tr><td>壁挂式</td><td>2.5 HP</td><td>RM 279</td></tr>
+          <tr><td>壁挂式</td><td>3.0 HP</td><td>RM 329</td></tr>
+          <tr><td>天花板卡式</td><td>2.0-3.0 HP</td><td>RM 290</td></tr>
+          <tr><td>窗式</td><td>1.0-1.5 HP</td><td>RM 199</td></tr>
+        </tbody>
+      </table>
+      <h2>包含什么</h2>
+      <p>7英尺L型铜管、Armaflex保温、电线、排水管、支架、真空抽气、检漏、调试、1个月保修。</p>
+      <h2>可能的额外费用</h2>
+      <ul>
+        <li>超出7英尺的铜管：RM 18-35/英尺</li>
+        <li>重型支架：RM 50-80</li>
+        <li>新MCB电路：RM 150-250</li>
+        <li>冷凝水泵：RM 120-180</li>
+      </ul>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 30分钟内报价。</p>`,
   },
 
   {
@@ -3017,49 +3026,26 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong>. Lihat juga panduan <a href="/ms/blog/aircond-installation-cost-malaysia-2026">Kos Pemasangan Aircond Malaysia 2026</a>.</p>
     `,
-    contentZH: `
-      <p><em>在马来西亚，冷气安装比大多数人预期的要贵，因为您不只是支付人工——您支付认证技术员、变频级铜管、公寓合规文件以及专业工具。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合希望透明了解冷气安装报价组成部分的马来西亚住宅业主、公寓居民、办公室和店铺。</p>
-      <h2>快速答案</h2>
-      <p>2026年马来西亚标准壁挂式冷气安装费用为<strong>RM 199</strong>（1.0-1.5 HP）、<strong>RM 249</strong>（2.0 HP）、<strong>RM 279</strong>（2.5 HP），最高<strong>RM 449</strong>（5.0 HP）壁挂式，以及<strong>RM 290-RM 400</strong>天花卡式。</p>
-      <h2>1. 铜管——翻倍的隐藏成本</h2>
-      <p>这是自2020年以来安装成本上升的第一大原因。冷气铜管与普通水管不同——它必须内部清洁和密封、卷绝缘、并按制冷剂等级评定。前7尺<strong>包含</strong>在RM 199基础安装价中。7尺外额外管道为<strong>RM 25/尺</strong>——这是klrenovator.com上公布的价格，在开始任何工作前确认。</p>
-      <h2>2. 认证技师稀缺</h2>
-      <p>马来西亚缺乏正规认证的HVAC技师。需要认证：SKM 3级（HVAC）、EPA 608、以及品牌专项培训（Daikin、Panasonic、Mitsubishi）。KL Renovator团队SKM认证、品牌培训，公司持有RM 100万公众责任险。</p>
-      <h2>3. 保险和责任</h2>
-      <p>专业安装商携带公众责任险（RM 2,000-5,000/年）、工伤险（RM 1,500-3,000/年）和专业责任险。DIY或非正式安装商不携带——如果财产损坏，您承担风险。</p>
-      <h2>4. 专业工具</h2>
-      <p>完整HVAC工具套装每位技师RM 3,000-RM 7,000：真空泵、压力表、检漏仪、扩口工具、扭力扳手、钻孔机等。廉价安装商重复使用低质量工具，导致真空不当和系统早期故障。</p>
-      <h2>5. 公寓合规和访问</h2>
-      <p>公寓安装增加管理处审批时间、货梯预订（RM 50-100）、时间窗口限制和线槽以美化（RM 8-15/尺）。这些增加RM 50-RM 300到典型成本。</p>
-      <h2>6. 保修和安装后支持</h2>
-      <p>1个月工艺保修、制造商保修注册、6个月WhatsApp回访和免费服务提醒都包含在KL Renovator的RM 199套餐中。廉价安装不提供这些——出现问题时，您再次付费。</p>
-      <h2>7. 正品零件和材料</h2>
-      <p>KL Renovator使用变频级铜管、合适支架、Armaflex保温、PVC排水管、防火密封剂和原装R32/R410A制冷剂。廉价安装使用水管级铜管，3-5年内腐蚀，并使用通用制冷剂损坏压缩机。</p>
-      <h2>如何验证您的报价是否合理</h2>
-      <p>要求分类报价，显示：基础安装、铜管长度和总成本、电气工程、任何附加项。如果您的安装商不能清楚地细分，这是一个警示信号。KL Renovator的报价在工作开始前始终是分类的。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 为什么冷气安装这么贵</h2>
-      <h3>为什么有些安装商报RM 99而有些报RM 199+？</h3>
-      <p>RM 99报价通常不包括铜管（额外RM 25/尺）、支架、真空测试或保修。一旦添加缺失的项目，实际成本等于或超过RM 199。</p>
-      <h3>我能自带铜管省钱吗？</h3>
-      <p>技术上可以，但大多数技术员不为使用客户自带材料的工作提供保修。KL Renovator的保修要求我们供应所有材料。</p>
-      <h3>RM 199报价真的是最终价吗？</h3>
-      <p>对于7尺内的标准安装和单墙穿透，是的。如果您的现场需要额外管道（RM 25/尺）、线槽、排水泵或有访问问题，我们会在开始工作前告知额外费用。</p>
-      <h3>为什么公寓安装更贵？</h3>
-      <p>公寓安装增加管理处审批时间、货梯费、时间窗口和美化线槽。这些增加RM 50-RM 300到典型成本。</p>
-      <h3>2.5 HP机组安装比1.0 HP贵吗？</h3>
-      <p>是的——2.5 HP为RM 279，1.0-1.5 HP为RM 199，差别在于较大的铜管直径和较重的支架要求。</p>
-      <h3>淡季安装更便宜吗？</h3>
-      <p>实际上不——马来西亚冷气安装全年都有。淡季概念不真正适用，因为冷气需要12个月。</p>
-      <h3>我可以分期付款吗？</h3>
-      <p>KL Renovator不提供分期付款，但我们保持价格足够低，通常不需要分期付款。</p>
-      <h3>为什么天花卡式安装这么贵？</h3>
-      <p>天花卡式需要吊顶工作、排水泵（RM 280-RM 450如果需要）、通常较长的管道运行和经常2名技术员。KL Renovator的天花卡式定价从RM 290起（1.0-1.5 HP）。</p>
-      <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong>. See also our <a href="/zh/blog/aircond-installation-cost-malaysia-2026">2026年马来西亚冷气安装费用</a> guide.</p>
-    `,
+    contentZH: `<h2>为什么冷气安装"贵"？— 成本分析</h2>
+      <p>很多人觉得RM 199-300的安装费很贵。但让我们看看实际成本。<a href="/near-me">KL Renovator</a>为您分析。</p>
+      <h2>安装成本构成</h2>
+      <table>
+        <thead><tr><th>项目</th><th>成本</th></tr></thead>
+        <tbody>
+          <tr><td>铜管（7英尺L型）</td><td>RM 35-50</td></tr>
+          <tr><td>保温棉（Armaflex）</td><td>RM 15-25</td></tr>
+          <tr><td>电线+线管</td><td>RM 15-20</td></tr>
+          <tr><td>排水管</td><td>RM 5-10</td></tr>
+          <tr><td>支架+防震垫</td><td>RM 20-35</td></tr>
+          <tr><td>技师人工（2-3小时）</td><td>RM 60-90</td></tr>
+          <tr><td>交通+停车</td><td>RM 15-30</td></tr>
+          <tr><td>设备折旧</td><td>RM 10-15</td></tr>
+          <tr><td><strong>总成本</strong></td><td><strong>RM 175-275</strong></td></tr>
+        </tbody>
+      </table>
+      <h2>结论</h2>
+      <p>RM 199的安装费几乎没有利润。低于RM 150的安装必然在某些环节偷工减料——通常是真空抽气、铜管质量或保温。这些省去的步骤会在1-3年内导致昂贵的维修。</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 透明定价，不偷工减料。</p>`,
   },
 
   {
@@ -3211,71 +3197,26 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz bilik anda dan kami akan cadangkan HP dan jenama yang betul untuk bilik tidur anda. Lihat harga <a href="/ms/services/installation">Pemasangan Unit Baharu</a> atau baca panduan <a href="/ms/blog/inverter-vs-non-inverter-aircond-malaysia">inverter vs bukan inverter</a>. Pasang dari RM 199.</p>
     `,
-    contentZH: `
-      <p><em>1马力冷气（约9,000 BTU或0.75 kW）足够马来西亚最多120平方英尺的小卧室。更大的卧室（120-200平方英尺）需要1.5 HP，主卧（200-300平方英尺）通常需要2.0 HP。以下是完整的尺寸指南、房间计算器和从RM 199起的安装价格。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合为卧室选择合适冷气尺寸的马来西亚住宅业主和租户。</p>
-      <h2>快速答案 — 1马力冷气和卧室尺寸</h2>
-      <p>1马力冷气（9,000 BTU/0.75 kW）适合马来西亚最多<strong>120平方英尺（11平方米）</strong>的小卧室。如果您的卧室在120-200平方英尺之间，选择1.5 HP。对于200-300平方英尺，选择2.0 HP。更大的需要2.5 HP或以上。1.0-1.5 HP壁挂式机组安装从RM 199起（klrenovator.com 2026年7月公布价格）。</p>
-      <h2>马来西亚卧室冷气尺寸完整图表</h2>
-      <table><thead><tr><th>卧室尺寸</th><th>推荐HP</th><th>BTU</th><th>瓦</th><th>KL Renovator安装</th></tr></thead><tbody>
-        <tr><td>最多120平方英尺（11平方米）</td><td>1.0 HP</td><td>9,000</td><td>~750 W</td><td>RM 199</td></tr>
-        <tr><td>120-200平方英尺（11-19平方米）</td><td>1.5 HP</td><td>12,000</td><td>~1,100 W</td><td>RM 199</td></tr>
-        <tr><td>200-300平方英尺（19-28平方米）</td><td>2.0 HP</td><td>18,000</td><td>~1,500 W</td><td>RM 249</td></tr>
-        <tr><td>300-400平方英尺（28-37平方米）</td><td>2.5 HP</td><td>24,000</td><td>~2,000 W</td><td>RM 279</td></tr>
-        <tr><td>400-500平方英尺（37-46平方米）</td><td>3.0 HP</td><td>30,000</td><td>~2,500 W</td><td>RM 329</td></tr>
-        <tr><td>主卧+学习角</td><td>2.5-3.0 HP</td><td>24,000-30,000</td><td>~2,000-2,500 W</td><td>RM 279-RM 329</td></tr>
-      </tbody></table>
-      <h2>简单房间尺寸计算器</h2>
-      <p>以英尺为单位测量卧室长×宽。如果结果是：</p>
+    contentZH: `<h2>1HP冷气适合多大的卧室？— 马来西亚指南</h2>
+      <p>1HP冷气是最常见的卧室选择。<a href="/near-me">KL Renovator</a>帮您确认是否合适。</p>
+      <h2>1HP适合</h2>
       <ul>
-        <li>最多120平方英尺 → 1.0 HP</li>
-        <li>120-200平方英尺 → 1.5 HP</li>
-        <li>200-300平方英尺 → 2.0 HP</li>
-        <li>300-400平方英尺 → 2.5 HP</li>
-        <li>400+平方英尺 → 3.0 HP或以上</li>
+        <li>100-150平方英尺的卧室</li>
+        <li>标准高度天花板（10英尺以下）</li>
+        <li>不朝西的房间</li>
+        <li>1-2人使用</li>
       </ul>
-      <p>示例：12英尺×12英尺卧室=144平方英尺→1.5 HP。15英尺×15英尺=225平方英尺→2.0 HP。</p>
-      <h2>为这些马来西亚特定因素调整</h2>
-      <p><strong>朝西或顶层单位：</strong>加0.5 HP——这些房间因下午阳光而更热。</p>
-      <p><strong>高天花板（10英尺以上）：</strong>加0.5 HP——更多空气体积需要冷却。</p>
-      <p><strong>发热设备：</strong>电视、电脑、冰箱在房间里——加0.5 HP。</p>
-      <p><strong>多个居住者：</strong>小房间里有2个大人+1个小孩——加0.5 HP。</p>
-      <p><strong>阳光直射穿过窗户：</strong>使用遮光窗帘或加0.5 HP。</p>
-      <h2>为卧室选择冷气尺寸的常见错误</h2>
-      <p><strong>买得太小：</strong>机组持续运行、冷却效果差、电费更高、压缩机磨损更快。许多马来西亚人抱怨"1 HP不够"——通常房间是200平方英尺，他们需要1.5 HP。</p>
-      <p><strong>买得太大：</strong>短循环（频繁开关）、湿度无法正确去除、房间感觉潮湿。在卧室中罕见，但发生在小书房中。</p>
-      <h2>典型马来西亚卧室的1 HP vs 1.5 HP</h2>
-      <p>典型马来西亚公寓卧室是100-150平方英尺。1 HP机组适合100-120平方英尺。如果您的卧室是130-150平方英尺（新公寓常见），直接选择1.5 HP。安装价格差异为零（都是RM 199），所以唯一差异是机组成本。</p>
-      <h2>卧室1 HP机组应购买变频还是非变频？</h2>
-      <p>如果您每晚使用卧室6小时以上，变频值得。变频1 HP机组前期成本更高但节省30-40%电费。对于偶尔使用的客卧，非变频即可。KL Renovator以相同的RM 199基础安装价格安装两者。</p>
-      <h2>马来西亚1 HP卧室使用的最佳冷气品牌</h2>
-      <p>KL Renovator安装所有主要品牌：Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic。对于卧室，我们看到Daikin、Panasonic、Mitsubishi和Acson的可靠性能。根据保修期和预算选择——都以相同的RM 199基础价格安装。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 马来西亚卧室1 HP冷气</h2>
-      <h3>1 HP足够小卧室吗？</h3>
-      <p>是的。1 HP适合马来西亚最多120平方英尺的小卧室。测量您的房间长×宽以确认。</p>
-      <h3>1 HP能冷却多少平方英尺？</h3>
-      <p>1 HP（9,000 BTU）在正常条件下冷却最多120平方英尺。朝西房间或顶层可能需要1.5 HP。</p>
-      <h3>1.5 HP比1 HP更适合卧室吗？</h3>
-      <p>对于120-200平方英尺的卧室，是的。对于120平方英尺以下的卧室，1 HP足够且耗电更少。</p>
-      <h3>1 HP等于多少BTU？</h3>
-      <p>马来西亚1 HP冷气=9,000 BTU/小时≈2,640瓦冷却容量=0.75 kW额定输入。</p>
-      <h3>1 HP等于多少kW？</h3>
-      <p>1 HP冷气冷却容量约2.6 kW。变频型号的电力输入功率约0.75 kW（750 W）。</p>
-      <h3>1 HP能冷却150平方英尺的卧室吗？</h3>
-      <p>勉强——1 HP可以冷却150平方英尺但会持续运行。对于150平方英尺，推荐1.5 HP以获得更好的湿度控制和压缩机寿命。</p>
-      <h3>马来西亚1 HP冷气安装费用？</h3>
-      <p>1.0-1.5 HP壁挂式基础安装RM 199，2026年7月在klrenovator.com上公布。7尺外额外铜管RM 25/尺。</p>
-      <h3>12x12卧室用多大冷气？</h3>
-      <p>12英尺×12英尺=144平方英尺→推荐1.5 HP。1 HP可以工作但1.5 HP提供更好的舒适度和湿度控制。</p>
-      <h3>10x10卧室用多大冷气？</h3>
-      <p>10英尺×10英尺=100平方英尺→1.0 HP足够。</p>
-      <h3>马来西亚主卧用多大冷气？</h3>
-      <p>马来西亚公寓的主卧通常为200-300平方英尺。200-250平方英尺选择2.0 HP，250-300平方英尺选择2.5 HP。</p>
-      <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知您的房间尺寸，我们将为您卧室推荐合适的HP和品牌。查看<a href="/zh/services/installation">新机安装</a>价格或阅读<a href="/zh/blog/inverter-vs-non-inverter-aircond-malaysia">变频与定频冷气</a>指南。安装从RM 199起。</p>
-    `,
+      <h2>需要1.5HP的情况</h2>
+      <ul>
+        <li>房间超过150平方英尺</li>
+        <li>朝西（下午阳光直射）</li>
+        <li>顶楼（屋顶热量）</li>
+        <li>高天花板（12英尺以上）</li>
+        <li>3人以上常驻</li>
+      </ul>
+      <h2>1HP安装价格</h2>
+      <p>从<strong>RM 199</strong>起，包含所有材料和1个月保修。</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 告诉我们房间尺寸，我们推荐正确匹数。</p>`,
   },
 
   {
@@ -3461,88 +3402,23 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan jenis unit, saiz, dan jenama anda. Kami akan hantar sebut harga bertulis dalam beberapa minit. Lihat perkhidmatan <a href="/ms/services/installation">Pemasangan Unit Baharu</a> penuh. Pasang standard dari RM 199.</p>
     `,
-    contentZH: `
-      <p><em>2026年马来西亚AC机组安装费用从<strong>RM 199</strong>起（1.0-1.5 HP壁挂式，klrenovator.com入门配套），<strong>RM 290</strong>起天花卡式，<strong>RM 199</strong>起窗口机。实际价格取决于机组类型、尺寸、铜管长度和访问。本指南详细说明一切。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合在吉隆坡和雪兰莪评估AC机组安装的马来西亚住宅业主、公寓居民、办公室和店铺。</p>
-      <h2>快速答案 — 2026年马来西亚AC机组安装费用</h2>
-      <p>2026年马来西亚AC机组安装费用（人工、铜管、布线、排水、支架——不包括AC机组本身）：</p>
-      <ul>
-        <li>壁挂式1.0-1.5 HP：<strong>RM 199</strong></li>
-        <li>壁挂式2.0 HP：RM 249</li>
-        <li>壁挂式2.5 HP：RM 279</li>
-        <li>壁挂式3.0 HP：RM 329</li>
-        <li>壁挂式4.0 HP：RM 399</li>
-        <li>壁挂式5.0 HP：RM 449</li>
-        <li>天花卡式1.0-1.5 HP：RM 290</li>
-        <li>天花卡式2.0-3.0 HP：RM 350</li>
-        <li>天花卡式3.5-6.0 HP：RM 400</li>
-        <li>窗口机1.0-1.5 HP：RM 199</li>
-        <li>窗口机2.0-2.5 HP：RM 249</li>
-      </ul>
-      <h2>安装费用包括什么？</h2>
-      <p>KL Renovator的安装价格（从RM 199起）包括：</p>
-      <ul>
-        <li>1名技术员的人工（天花卡式为2名）</li>
-        <li>最多7尺铜管（制冷剂级、变频级）</li>
-        <li>互连布线</li>
-        <li>PVC排水管</li>
-        <li>标准壁挂支架</li>
-        <li>真空测试（15-30分钟）</li>
-        <li>泄漏测试</li>
-        <li>试运行和调试</li>
-        <li>1个月工艺保修</li>
-        <li>制造商保修注册</li>
-      </ul>
-      <h2>安装费用不包括什么？</h2>
-      <p>AC机组本身、拆除旧机（如需要RM 90）、天花卡式的天花板网格工程、抹灰、油漆、家庭重新布线、混凝土切割、高层访问的脚手架。KL Renovator在现场勘察后将这些作为附加项报价。</p>
-      <h2>附加费参考</h2>
-      <table><thead><tr><th>附加项</th><th>价格</th><th>何时需要</th></tr></thead><tbody>
-        <tr><td>7尺外额外铜管</td><td>RM 25/尺</td><td>有地房屋、长管道</td></tr>
-        <tr><td>线槽/管道</td><td>RM 8-15/尺</td><td>可见管道</td></tr>
-        <tr><td>排水泵（天花卡式）</td><td>RM 350-550</td><td>无重力排水</td></tr>
-        <tr><td>电源插座/电气工程</td><td>现场报价</td><td>建议15A专用电路</td></tr>
-        <tr><td>公寓管理处预订费</td><td>RM 50-100</td><td>服务电梯+时间窗口</td></tr>
-        <tr><td>拆除旧机</td><td>RM 90</td><td>更换现有AC</td></tr>
-        <tr><td>脚手架/起重机</td><td>现场报价</td><td>30+高层</td></tr>
-      </tbody></table>
-      <h2>AC机组类型比较</h2>
-      <h3>壁挂式分体（最常见的家庭选择）</h3>
-      <p>马来西亚家庭最受欢迎的选择。KL Renovator安装壁挂式分体机组从1.0-1.5 HP的<strong>RM 199</strong>起。包括室内机、室外机、铜管、布线、排水和支架。适合卧室、客厅、书房。</p>
-      <h3>天花卡式（办公室、商店、较大的家庭）</h3>
-      <p>安装到假天花板中，四个方向分配空气。最适合有天花板空间的办公室、商店和较大的家庭。KL Renovator安装天花卡式从1.0-1.5 HP的<strong>RM 290</strong>起。如果无法重力排水，通常需要2名技术员和冷凝泵。</p>
-      <h3>窗口机（旧建筑、预算安装）</h3>
-        <p>适合窗口槽的单盒机组。常见于较旧的店屋、预算租赁和小型办公室。KL Renovator安装窗口机从1.0-1.5 HP的<strong>RM 199</strong>起。安装更简单但在现代马来西亚家庭中不太常见。</p>
-      <h2>公寓 vs 有地房屋安装成本</h2>
-      <p><strong>公寓：</strong>通常适用7尺铜管限制，因为室外机位于室内机正后方的空调架上。加RM 50-100用于管理处预订费。典型总额：RM 199-RM 250 + 预订。</p>
-      <p><strong>有地房屋（排屋、半独立式、洋房）：</strong>通常需要15-20尺铜管，按RM 25/尺在基础价上增加RM 200-325。典型总额：RM 199 + RM 200-325 = RM 399-RM 524（1.5 HP）。</p>
-      <h2>多台折扣（同次访问）</h2>
-      <p>同次访问安装多台可享：2-3台95折，4-8台9折，8+台85折。这适用于安装，是有地房屋业主一次安装3-5台的常见选择。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — AC机组安装费用</h2>
-      <h3>在马来西亚安装一台AC机组的费用是多少？</h3>
-      <p>1.0-1.5 HP壁挂式基础RM 199，KL Renovator。更大的机组成本更高。7尺外额外铜管RM 25/尺。</p>
-      <h3>安装费用包括AC机组吗？</h3>
-      <p>不包括。安装价格包括人工、铜管（最多7尺）、布线、排水、支架、真空测试和保修。AC机组本身由机组经销商单独出售。</p>
-      <h3>变频和非变频安装更便宜吗？</h3>
-      <p>不。两种都使用相同的RM 199基础安装价格。价格差异在机组而非安装。</p>
-      <h3>为什么天花卡式安装更贵？</h3>
-      <p>天花卡式需要吊顶工作、冷凝泵（如需要RM 280-450）、较长管道运行和通常2名技术员。KL Renovator天花卡式从RM 290起（1.0-1.5 HP）。</p>
-      <h3>我需要从KL Renovator购买AC机组吗？</h3>
-      <p>不需要。您可以提供自己的机组。KL Renovator安装任何主要品牌——Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL、Isonic。</p>
-      <h3>如果我需要冷凝泵怎么办？</h3>
-      <p>KL Renovator为无法重力排水的天花卡式安装提供和安装冷凝泵。费用：RM 350-550（取决于泵容量）。</p>
-      <h3>可以当天安装吗？</h3>
-      <p>可以，KL Renovator在巴生谷提供当天安装，视可用性而定。下午2点前WhatsApp +60182983573（下午/晚间），或上午10点前（次日早上）。</p>
-      <h3>周末价格相同吗？</h3>
-      <p>标准时间相同。非工作时间或紧急安装（晚上10点-早上7点）收取额外RM 50附加费，同次维修免收。</p>
-      <h3>工艺保修是什么？</h3>
-      <p>安装工作1个月工艺保修，外加AC机组本身的制造商保修（通常1-5年压缩机保修，视品牌而定）。</p>
-      <h3>工作开始前可以获得书面报价吗？</h3>
-      <p>可以。KL Renovator在安排任何安装前通过WhatsApp提供书面报价。没有您对价格的批准，不会开始任何工作。</p>
-      <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知您的机组类型、尺寸和品牌。我们将在几分钟内发送书面报价。查看完整<a href="/zh/services/installation">新机安装</a>服务详情。标准安装从RM 199起。</p>
-    `,
+    contentZH: `<h2>冷气安装费用 — 马来西亚完整价格表</h2>
+      <p>所有类型和匹数的安装费用。<a href="/near-me">KL Renovator</a>透明定价。</p>
+      <h2>完整价格表</h2>
+      <table>
+        <thead><tr><th>类型</th><th>HP</th><th>安装费</th></tr></thead>
+        <tbody>
+          <tr><td>壁挂式</td><td>1.0 HP</td><td>RM 199</td></tr>
+          <tr><td>壁挂式</td><td>1.5 HP</td><td>RM 219</td></tr>
+          <tr><td>壁挂式</td><td>2.0 HP</td><td>RM 249</td></tr>
+          <tr><td>壁挂式</td><td>2.5 HP</td><td>RM 279</td></tr>
+          <tr><td>壁挂式</td><td>3.0 HP</td><td>RM 329</td></tr>
+          <tr><td>天花板卡式</td><td>2.0-5.0 HP</td><td>RM 290-550</td></tr>
+          <tr><td>窗式</td><td>1.0-1.5 HP</td><td>RM 199</td></tr>
+        </tbody>
+      </table>
+      <p>多台折扣：2-3台95折 | 4-8台9折 | 8+台85折</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 30分钟内报价。</p>`,
   },
 
   {
@@ -3698,73 +3574,21 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> jika aircond anda kitar pendek, mengklik, atau tidak mula. Lihat perkhidmatan <a href="/ms/services/repair">Penyelesaian Masalah &amp; Pembaikan</a> kami. Yuran diagnostik RM 88, dikecualikan dengan pembaikan lawatan sama.</p>
     `,
-    contentZH: `
-      <p><em>冷气3分钟规则意味着在关闭后至少等待<strong>3分钟</strong>再重启压缩机。这使压缩机内的制冷剂压力有时间平衡，防止短循环损坏。忽略此规则是马来西亚家庭压缩机过早失败的主要原因之一。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合希望延长冷气寿命的马来西亚住宅业主、公寓居民和办公室。</p>
-      <h2>快速答案 — 什么是3分钟规则？</h2>
-      <p>3分钟规则是制造商建议的关闭冷气和重新开启之间的暂停。在这3分钟内，压缩机内的高压制冷剂平衡回稳定状态。立即重新启动会产生压力不平衡，迫使压缩机逆压工作，导致过热、电容器烧毁，最终压缩机烧毁。</p>
-      <h2>为什么3分钟规则存在</h2>
-      <p>当冷气运行时，压缩机在高压下泵送制冷剂。当您关闭时，制冷剂仍在一侧处于高压，另一侧处于低压。压缩机的内部压力通过小内部阀缓慢平衡。如果在压力仍然不平衡时重新启动压缩机，它必须更努力地克服压差，吸取正常3-5倍的电流。这会给电机绕组、启动电容器和接触器带来压力。</p>
-      <h2>如果忽略3分钟规则会发生什么</h2>
-      <p>短循环损坏会随时间累积。忽略3分钟规则的常见故障：</p>
-      <ul>
-        <li><strong>电容器故障</strong>（更换RM 150-250）— 启动电容器在负载下启动压缩机时过热。</li>
-        <li><strong>压缩机电机烧毁</strong>（更换RM 800-2,000）— 电机绕组过热并短路。</li>
-        <li><strong>接触器焊接</strong>（更换RM 150-200）— 触点因高浪涌电流而熔合。</li>
-        <li><strong>更高的电费</strong>— 每次硬启动消耗3-5倍正常电流。</li>
-        <li><strong>整体冷气寿命缩短</strong>— 典型寿命从10-12年降至6-8年。</li>
-      </ul>
-      <h2>实际安全延迟是多长？</h2>
-      <p>大多数制造商规定<strong>最少3分钟</strong>。某些型号规定5分钟使压力完全平衡。KL Renovator的建议：关闭和开启之间等待3-5分钟。在马来西亚炎热天气下，允许完整的5分钟，因为环境温度会加速压力积聚。</p>
-      <h2>3分钟规则 vs 10分钟规则 vs 30秒规则</h2>
-      <p>正常操作没有官方的"10分钟规则"——该规则适用于维修期间的制冷剂回收。3分钟规则是标准。"30秒规则"是神话——30秒远不足以使压力平衡。</p>
-      <h2>3分钟规则重要的常见场景</h2>
-      <h3>场景1：恒温器达到目标，冷气停止，您调整设定点重新启动</h3>
-      <p>这是最常见的场景。压缩机停止，恒温器达到设定点，几分钟后冷气因您降低设定点而重新启动。大多数现代恒温器内置3分钟延迟定时器以保护压缩机，所以这通常是安全的。</p>
-      <h3>场景2：停电或跳闸，然后电源恢复</h3>
-      <p>在电源跳闸期间，电路上的所有冷气都停止。当电源恢复时，它们都试图同时启动。这是危险的，因为电网承受负载，压缩机承受压力。3分钟规则在这里至关重要。KL Renovator建议在电源恢复后等待5分钟再重新打开冷气。</p>
-      <h3>场景3：使用遥控器手动开关</h3>
-      <p>当您使用遥控器关闭冷气时，压缩机停止，但室外机风扇可能会继续几秒钟。现代单元的内部定时器强制执行3分钟延迟，然后才允许压缩机再次启动。如果您按OFF并立即按ON，单元将显示灯或蜂鸣声以指示延迟。</p>
-      <h3>场景4：在模式之间切换（制冷、除湿、制冷）</h3>
-      <p>有些人反复从制冷切换到风扇再切回制冷。每个模式更改都应遵守3分钟规则。最佳实践：关闭冷气，等待3-5分钟，然后切换到新模式。</p>
-      <h2>在马来西亚停电期间该怎么办</h2>
-      <p>马来西亚经常有短暂的电源跳闸（TNB）。跳闸后的最佳实践：</p>
+    contentZH: `<h2>3分钟规则 — 快速判断冷气是否正常</h2>
+      <p>一个简单的测试方法。<a href="/near-me">KL Renovator</a>分享。</p>
+      <h2>3分钟测试</h2>
       <ol>
-        <li>立即关闭所有冷气机组（通过遥控器或断路器）。</li>
-        <li>电源恢复后等待5分钟。</li>
-        <li>一次打开一台冷气，每台之间间隔3-5分钟。</li>
-        <li>这可以防止同时启动浪涌再次跳闸主断路器。</li>
+        <li>开启冷气，设定最低温度，最大风速</li>
+        <li>等待3分钟</li>
+        <li>用手感受出风口温度</li>
       </ol>
-      <h2>如何知道您的冷气是否内置3分钟延迟</h2>
-      <p>2010年后制造的大多数冷气都有内置的3分钟防短循环定时器。要验证：关闭冷气，等待10秒，重新打开。如果室外机未立即启动（您听到咔哒声但压缩机不运行），您的机组有延迟。如果压缩机立即启动，延迟定时器可能故障——致电KL Renovator进行检查。</p>
-      <h2>何时3分钟规则不够</h2>
-      <p>重大维修后（更换压缩机、加注制冷剂），在启动系统前至少等待10-15分钟。长时间关闭后（数周/数月），在首次启动前请技术员检查系统。制冷剂泄漏维修后，至少等待5分钟。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 马来西亚冷气3分钟规则</h2>
-      <h3>什么是冷气3分钟规则？</h3>
-      <p>在关闭冷气和重新打开之间至少等待3分钟。这使压缩机内的制冷剂压力平衡，防止短循环损坏。</p>
-      <h3>3分钟够还是应该等更久？</h3>
-      <p>3分钟是制造商的最低要求。KL Renovator建议在正常条件下等待3-5分钟，在马来西亚炎热天气下电源跳闸后等待5分钟。</p>
-      <h3>如果我太快重新启动冷气会怎样？</h3>
-      <p>压缩机吸取3-5倍正常电流，启动电容器过热，接触器焊接，电机绕组可能烧毁。重复短循环使冷气寿命缩短30-40%。</p>
-      <h3>我的冷气有内置3分钟延迟吗？</h3>
-      <p>2010年后制造的大多数都有。测试：关闭冷气，等待10秒，打开。如果室外机不立即启动，您的机组有延迟。如果启动，定时器可能故障。</p>
-      <h3>为什么室外机嗡嗡但不启动？</h3>
-      <p>嗡嗡声是压缩机试图启动。如果嗡嗡2-3秒然后停止，启动电容器可能失败。3分钟规则不能防止这种情况——这是不同的问题。致电KL Renovator进行检查。</p>
-      <h3>电源跳闸后我应该等多久？</h3>
-      <p>最少5分钟。马来西亚的TNB电源跳闸可能损坏冷气压缩机，因为所有机组都试图同时启动。关闭并一次重启一个是最安全的做法。</p>
-      <h3>我可以24/7开着冷气以避免3分钟规则吗？</h3>
-      <p>可以，短期（几天）开着是好的。但为了节能，将温度设置为25-26°C让它循环。恒温器将使用内置的3分钟延迟管理开关循环。</p>
-      <h3>3分钟规则适用于变频冷气吗？</h3>
-      <p>适用，但变频压缩机逐渐升降而不是突然开关。3分钟规则仍适用于完全断电和重新启动的情况（电源跳闸后、手动开关）。</p>
-      <h3>如果我的冷气一直咔哒开关怎么办？</h3>
-      <p>短循环（每几分钟开关一次）通常是由以下原因引起的：机组尺寸过小、制冷剂不足、过滤器脏阻碍气流或恒温器故障。致电KL Renovator进行诊断——诊断费RM 88，同次维修免收。</p>
-      <h3>3分钟规则只保护压缩机吗？</h3>
-      <p>主要是。3分钟延迟防止压缩机在高压差下启动。它还保护启动电容器和接触器免受硬启动的高浪涌电流。</p>
-      <h2>准备预订？</h2>
-      <p>如果您的冷气短循环、咔哒声或不启动，请WhatsApp KL Renovator <strong>+60182983573</strong>。查看我们的<a href="/zh/services/repair">故障排除与维修</a>服务。诊断费RM 88，同次维修免收。</p>
-    `,
+      <h2>结果判断</h2>
+      <ul>
+        <li>✅ <strong>明显冷</strong> — 冷气正常</li>
+        <li>⚠️ <strong>微凉但不冷</strong> — 可能滤网脏或气体不足</li>
+        <li>❌ <strong>完全不冷</strong> — 压缩机或电路问题，需要维修</li>
+      </ul>
+      <p>如果测试不通过，WhatsApp <strong>+60 18-298 3573</strong> — 诊断费RM 88（维修则豁免）。</p>`,
   },
 
   {
@@ -3990,108 +3814,19 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC. Lihat harga penuh <a href="/ms/services/basic-servicing">Servis Asas</a> dan <a href="/ms/services/chemical-wash">Cuci Kimia</a>, atau terokai pelan <a href="/ms/services/maintenance-contract">Kontrak Penyelenggaraan Tahunan</a> dari RM 299/tahun.</p>
     `,
-    contentZH: `
-      <p><em>2026年马来西亚AC服务价格：<strong>基础服务从RM 99</strong>起（1.0-1.5 HP），<strong>化学清洗从RM 120</strong>起（1.0-1.5 HP），<strong>化学大修从RM 220</strong>起（1.0-1.5 HP），<strong>加气从RM 120-220</strong>每次，<strong>年度维护合同从RM 299/年</strong>起。从klrenovator.com验证已公布价格。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合在吉隆坡和雪兰莪评估AC服务价格的马来西亚住宅业主、公寓居民、办公室和店铺。</p>
-      <h2>快速答案 — 2026年马来西亚AC服务价格</h2>
-      <p>2026年马来西亚AC服务价格：</p>
-      <ul>
-        <li>基础服务1.0-1.5 HP：<strong>RM 99</strong></li>
-        <li>基础服务2.0-2.5 HP：RM 120</li>
-        <li>基础服务3.0 HP：RM 150</li>
-        <li>化学清洗1.0-1.5 HP：<strong>RM 120</strong></li>
-        <li>化学清洗2.0-2.5 HP：RM 150</li>
-        <li>化学清洗3.0 HP：RM 180</li>
-        <li>化学大修1.0-1.5 HP：<strong>RM 220</strong></li>
-        <li>化学大修2.0-2.5 HP：RM 280</li>
-        <li>化学大修3.0-3.5 HP：RM 350</li>
-        <li>加气（R22/R410A/R32）：每次RM 120-220</li>
-        <li>AMC基础：RM 299/年</li>
-        <li>AMC标准：RM 499/年</li>
-        <li>AMC高级：RM 899/年</li>
-      </ul>
-      <h2>什么是基础AC服务？</h2>
-      <p>基础服务包括：过滤网清洁、室内机盘管表面清洁、排水管冲洗、室外机盘管表面清洁、温度检查和基本性能测试。建议每1-2个月进行一次常规使用。1.0-1.5 HP壁挂式机组<strong>RM 99</strong>起（klrenovator.com已公布价格）。</p>
-      <h2>什么是化学清洗？</h2>
-      <p>化学清洗是使用酸性或碱性清洁化学品进行的更深度清洁。它可以清除室内蒸发盘管和室外冷凝盘管上的霉菌、藻类和顽固污垢。建议每6个月进行一次。1.0-1.5 HP<strong>RM 120</strong>起。</p>
-      <h2>什么是化学大修？</h2>
-      <p>化学大修是最彻底的服务：室内机完全拆卸，每个部件（风扇轮、盘管、排水盘、过滤网壳、鼓风机壳）单独用化学品清洁，室外机也进行化学清洗。建议每2-3年进行一次，或在冷气被忽视时。1.0-1.5 HP<strong>RM 220</strong>起。</p>
-      <h2>完整价格表 — 基础服务</h2>
-      <table><thead><tr><th>机组尺寸</th><th>基础服务</th><th>频率</th></tr></thead><tbody>
-        <tr><td>1.0-1.5 HP</td><td>RM 99</td><td>每1-2个月</td></tr>
-        <tr><td>2.0-2.5 HP</td><td>RM 120</td><td>每1-2个月</td></tr>
-        <tr><td>3.0 HP</td><td>RM 150</td><td>每1-2个月</td></tr>
-      </tbody></table>
-      <h2>完整价格表 — 化学清洗</h2>
-      <table><thead><tr><th>机组尺寸</th><th>化学清洗</th><th>频率</th></tr></thead><tbody>
-        <tr><td>1.0-1.5 HP</td><td>RM 120</td><td>每6个月</td></tr>
-        <tr><td>2.0-2.5 HP</td><td>RM 150</td><td>每6个月</td></tr>
-        <tr><td>3.0 HP</td><td>RM 180</td><td>每6个月</td></tr>
-      </tbody></table>
-      <h2>完整价格表 — 化学大修</h2>
-      <table><thead><tr><th>机组尺寸</th><th>化学大修</th><th>频率</th></tr></thead><tbody>
-        <tr><td>1.0-1.5 HP</td><td>RM 220</td><td>每2-3年</td></tr>
-        <tr><td>2.0-2.5 HP</td><td>RM 280</td><td>每2-3年</td></tr>
-        <tr><td>3.0-3.5 HP</td><td>RM 350</td><td>每2-3年</td></tr>
-      </tbody></table>
-      <h2>天花卡式服务价格</h2>
-      <table><thead><tr><th>服务类型</th><th>价格范围</th></tr></thead><tbody>
-        <tr><td>天花卡式基础服务</td><td>RM 150-250</td></tr>
-        <tr><td>天花卡式化学清洗</td><td>RM 220-350</td></tr>
-        <tr><td>天花卡式化学大修</td><td>RM 430-500</td></tr>
-      </tbody></table>
-      <h2>加气价格（每次，包括泄漏检查）</h2>
-      <table><thead><tr><th>制冷剂</th><th>1.0 HP</th><th>1.5-2.0 HP</th><th>2.5-3.0 HP</th></tr></thead><tbody>
-        <tr><td>R22（旧机组）</td><td>RM 120</td><td>RM 150</td><td>RM 180</td></tr>
-        <tr><td>R410A（常见）</td><td>RM 150</td><td>RM 180</td><td>RM 200</td></tr>
-        <tr><td>R32（最新、环保）</td><td>RM 180</td><td>RM 200</td><td>RM 220</td></tr>
-      </tbody></table>
-      <h2>年度维护合同（AMC）价格</h2>
-      <p>AMC套餐以折扣价捆绑每年多项服务。</p>
-      <table><thead><tr><th>计划</th><th>价格/年</th><th>包括</th></tr></thead><tbody>
-        <tr><td>基础</td><td>RM 299</td><td>2×基础服务 + 1×化学清洗 + 优先预订</td></tr>
-        <tr><td>标准</td><td>RM 499</td><td>2×基础服务 + 2×化学清洗 + 1次加气折扣 + 优先预订</td></tr>
-        <tr><td>高级</td><td>RM 899</td><td>4×基础服务 + 2×化学清洗 + 1×大修 + 无限诊断 + 当日优先</td></tr>
-      </tbody></table>
-      <h2>您真正需要哪种服务？</h2>
-      <h3>刚买新机组，正常运行</h3>
-      <p>每2个月基础服务就足够了。1.0-1.5 HP每年RM 99 × 6 = RM 594。</p>
-      <h3>旧机组（5年以上），常规使用</h3>
-      <p>每6个月化学清洗+中间基础服务。RM 120 + RM 99 + RM 120 + RM 99 = 每年RM 438。</p>
-      <h3>重度使用（24/7商店、餐厅、服务器房）</h3>
-      <p>每3个月化学清洗。1.0-1.5 HP每年RM 120 × 4 = RM 480。</p>
-      <h3>AC有异味、冷却弱、漏水</h3>
-      <p>化学大修。机组需要完全拆卸。1.0-1.5 HPRM 220。</p>
-      <h3>多台机组的年度合同</h3>
-      <p>AMC标准或高级。2+机组的最佳价值。RM 499/年全面覆盖1台。</p>
-      <h2>服务价格中不包括什么？</h2>
-      <p>服务价格包括人工+清洁。不包括：备件（电容器、风扇电机、PCB、传感器、接触器）、气体（作为加气单独定价）、维修（作为维修单独定价）以及任何电气/管道工程。维修的诊断费为RM 88，同次维修免收。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 2026年马来西亚AC服务价格</h2>
-      <h3>马来西亚AC服务多少钱？</h3>
-      <p>基础服务从RM 99起（1.0-1.5 HP），化学清洗从RM 120起，化学大修从RM 220起。价格在klrenovator.com上公布。</p>
-      <h3>我应该多久维修一次冷气？</h3>
-      <p>常规家庭使用每1-2个月基础服务。化学清洗每6个月。大修每2-3年。如果您保持规律，AMC套餐更便宜。</p>
-      <h3>化学清洗有必要吗？</h3>
-      <p>对于在马来西亚炎热潮湿气候中常规使用的AC机组，是的。化学清洗清除基础服务无法清除的霉菌、细菌和污垢。它还提高冷却效率并降低耗电量。</p>
-      <h3>化学清洗和化学大修的区别是什么？</h3>
-      <p>化学清洗通过访问面板喷洒化学品就地清洁盘管。大修完全拆卸室内机并单独清洁每个组件。大修用于被忽视或非常脏的机组。</p>
-      <h3>加气多少钱？</h3>
-      <p>每次RM 120-220，取决于制冷剂类型和机组尺寸。包括泄漏检查。如果机组每年需要超过一次完整加气，可能存在需要维修的泄漏。</p>
-      <h3>AMC值得吗？</h3>
-      <p>对于2+机组，AMC标准（RM 499）或高级（RM 899）通常比按次付费节省20-30%。AMC客户还可获得优先预订和当日服务。</p>
-      <h3>AC服务需要多长时间？</h3>
-      <p>基础服务：每台30-45分钟。化学清洗：1-1.5小时。大修：每台2-3小时。多台机组通常在一次访问中依次进行。</p>
-      <h3>我可以自己维修AC吗？</h3>
-      <p>过滤网清洁和室外机冲洗可以自己完成。但化学清洗和大修需要合适的化学品、拆卸工具和安全程序。KL Renovator提供从RM 99起的全套服务。</p>
-      <h3>服务工作有什么保修？</h3>
-      <p>服务工作1个月工艺保修。如果同一问题在1个月内复发，KL Renovator将返回并免费重新服务。</p>
-      <h3>你们维修天花卡式机组吗？</h3>
-      <p>是的。KL Renovator维修所有天花卡式机组：基础RM 150-250，化学清洗RM 220-350，大修RM 430-500。由于高度和可达性，天花卡式服务更复杂。</p>
-      <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>进行AC服务。查看完整<a href="/zh/services/basic-servicing">基础保养</a>和<a href="/zh/services/chemical-wash">化学清洗</a>价格，或了解<a href="/zh/services/maintenance-contract">年度保养合约</a>计划（从RM 299/年起）。</p>
-    `,
+    contentZH: `<h2>2026年马来西亚冷气保养价格 — 完整指南</h2>
+      <p>所有保养服务的价格。<a href="/near-me">KL Renovator</a>透明定价。</p>
+      <h2>保养价格表</h2>
+      <table>
+        <thead><tr><th>服务</th><th>壁挂式 1-1.5HP</th><th>壁挂式 2-2.5HP</th><th>卡式</th></tr></thead>
+        <tbody>
+          <tr><td>基本保养</td><td>RM 99</td><td>RM 120</td><td>RM 180</td></tr>
+          <tr><td>化学清洗</td><td>RM 120</td><td>RM 150</td><td>RM 220</td></tr>
+          <tr><td>化学大修</td><td>RM 220</td><td>RM 280</td><td>RM 350</td></tr>
+          <tr><td>年度合约(AMC)</td><td colspan="3">RM 499/年起</td></tr>
+        </tbody>
+      </table>
+      <p>多台折扣可用。WhatsApp <strong>+60 18-298 3573</strong>预约。</p>`,
   },
 
   {
@@ -4345,122 +4080,26 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC supaya unit anda berjalan dengan cekap. Baca lebih lanjut tentang <a href="/ms/blog/how-to-reduce-aircond-electricity-bill-malaysia">mengurangkan bil elektrik aircond</a> atau tempah <a href="/ms/services/chemical-wash">Cuci Kimia</a>. Servis asas dari RM 99, cuci kimia dari RM 120, overhaul penuh dari RM 220.</p>
     `,
-    contentZH: `
-      <p><em>马来西亚1小时AC电费：1.0-1.5 HP变频机组RM 0.20-0.45，非变频RM 0.30-0.55。成本取决于HP尺寸、变频vs非变频以及TNB电价区块。完整细分如下。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合希望估算和降低冷气电费的马来西亚住宅业主和租户。</p>
-      <h2>快速答案 — 马来西亚1小时冷气电费</h2>
-      <p>2026年马来西亚1小时冷气电费：</p>
+    contentZH: `<h2>冷气开1小时多少钱？— 马来西亚电费计算</h2>
+      <p>精确计算您的冷气电费。<a href="/near-me">KL Renovator</a>帮您算。</p>
+      <h2>每小时电费计算</h2>
+      <table>
+        <thead><tr><th>匹数</th><th>功率(W)</th><th>每小时电费</th><th>每天8小时</th><th>每月</th></tr></thead>
+        <tbody>
+          <tr><td>1.0 HP</td><td>750W</td><td>RM 0.29</td><td>RM 2.32</td><td>RM 70</td></tr>
+          <tr><td>1.5 HP</td><td>1,100W</td><td>RM 0.42</td><td>RM 3.36</td><td>RM 101</td></tr>
+          <tr><td>2.0 HP</td><td>1,500W</td><td>RM 0.58</td><td>RM 4.64</td><td>RM 139</td></tr>
+          <tr><td>2.5 HP</td><td>1,900W</td><td>RM 0.73</td><td>RM 5.84</td><td>RM 175</td></tr>
+        </tbody>
+      </table>
+      <p><em>基于TNB住宅电价RM 0.386/kWh。变频冷气可节省30-50%。</em></p>
+      <h2>省电方法</h2>
       <ul>
-        <li>1.0 HP变频：<strong>RM 0.18-0.22/小时</strong></li>
-        <li>1.5 HP变频：RM 0.24-0.30/小时</li>
-        <li>2.0 HP变频：RM 0.32-0.40/小时</li>
-        <li>2.5 HP变频：RM 0.40-0.50/小时</li>
-        <li>3.0 HP变频：RM 0.50-0.65/小时</li>
-        <li>1.0 HP非变频：RM 0.30-0.40/小时</li>
-        <li>1.5 HP非变频：RM 0.40-0.55/小时</li>
-        <li>2.0 HP非变频：RM 0.55-0.75/小时</li>
-        <li>2.5 HP非变频：RM 0.70-0.95/小时</li>
-        <li>3.0 HP非变频：RM 0.85-1.15/小时</li>
+        <li>设定24°C（每降1°C增加6-8%电费）</li>
+        <li>定期清洗滤网（节省10-15%）</li>
+        <li>选择变频（节省30-50%）</li>
       </ul>
-      <p>计算使用2026年生效的TNB住宅电价RM 0.425/kWh（前200 kWh区块）和RM 0.571/kWh（201-300 kWh区块）。</p>
-      <h2>我们如何计算冷气电费</h2>
-      <p>公式：<strong>每小时成本 = 功率消耗（kW）× 使用小时数 × TNB电价（RM/kWh）</strong></p>
-      <p>对于以平均50%容量运行的1.5 HP变频机组：</p>
-      <p>每小时成本 = 0.55 kW × 1小时 × RM 0.425/kWh = RM 0.23/小时</p>
-      <p>对于非变频1.5 HP（运行时始终全功率）：</p>
-      <p>每小时成本 = 1.1 kW × 1小时 × RM 0.425/kWh = RM 0.47/小时</p>
-      <h2>按HP和类型的功率消耗</h2>
-      <table><thead><tr><th>HP</th><th>BTU</th><th>变频（平均）</th><th>非变频（满）</th></tr></thead><tbody>
-        <tr><td>1.0 HP</td><td>9,000</td><td>~0.45 kW</td><td>~0.85 kW</td></tr>
-        <tr><td>1.5 HP</td><td>12,000</td><td>~0.55 kW</td><td>~1.10 kW</td></tr>
-        <tr><td>2.0 HP</td><td>18,000</td><td>~0.80 kW</td><td>~1.55 kW</td></tr>
-        <tr><td>2.5 HP</td><td>24,000</td><td>~1.00 kW</td><td>~2.00 kW</td></tr>
-        <tr><td>3.0 HP</td><td>30,000</td><td>~1.30 kW</td><td>~2.50 kW</td></tr>
-      </tbody></table>
-      <h2>每日成本（8小时使用）</h2>
-      <table><thead><tr><th>HP &amp; 类型</th><th>每小时</th><th>每天（8小时）</th><th>每月（30天）</th></tr></thead><tbody>
-        <tr><td>1.0 HP变频</td><td>RM 0.20</td><td>RM 1.60</td><td>RM 48</td></tr>
-        <tr><td>1.5 HP变频</td><td>RM 0.27</td><td>RM 2.16</td><td>RM 65</td></tr>
-        <tr><td>2.0 HP变频</td><td>RM 0.36</td><td>RM 2.88</td><td>RM 86</td></tr>
-        <tr><td>2.5 HP变频</td><td>RM 0.45</td><td>RM 3.60</td><td>RM 108</td></tr>
-        <tr><td>3.0 HP变频</td><td>RM 0.58</td><td>RM 4.64</td><td>RM 139</td></tr>
-        <tr><td>1.0 HP非变频</td><td>RM 0.36</td><td>RM 2.88</td><td>RM 86</td></tr>
-        <tr><td>1.5 HP非变频</td><td>RM 0.47</td><td>RM 3.76</td><td>RM 113</td></tr>
-        <tr><td>2.0 HP非变频</td><td>RM 0.66</td><td>RM 5.28</td><td>RM 158</td></tr>
-        <tr><td>2.5 HP非变频</td><td>RM 0.85</td><td>RM 6.80</td><td>RM 204</td></tr>
-        <tr><td>3.0 HP非变频</td><td>RM 1.06</td><td>RM 8.48</td><td>RM 254</td></tr>
-      </tbody></table>
-      <h2>TNB电价区块（住宅，2026年）</h2>
-      <table><thead><tr><th>区块</th><th>费率（RM/kWh）</th></tr></thead><tbody>
-        <tr><td>每月前200 kWh</td><td>RM 0.425</td></tr>
-        <tr><td>每月201-300 kWh</td><td>RM 0.571</td></tr>
-        <tr><td>每月301-600 kWh</td><td>RM 0.634</td></tr>
-        <tr><td>每月601-900 kWh</td><td>RM 0.686</td></tr>
-        <tr><td>每月900 kWh以上</td><td>RM 0.766</td></tr>
-      </tbody></table>
-      <p>注：所示费率为示例。请查看您最新的TNB账单以获取包括ICPT（不平衡成本转嫁）在内的实际费率。</p>
-      <h2>变频 vs 非变频电费比较</h2>
-      <p>对于相同的1.5 HP机组运行8小时/天，30天/月：</p>
-      <ul>
-        <li>变频：~RM 65/月（假设平均50%负载循环）</li>
-        <li>非变频：~RM 113/月（运行时始终全功率）</li>
-        <li>节省：~RM 48/月 = ~RM 576/年</li>
-      </ul>
-      <p>在典型的10年寿命中，变频节省RM 5,776电费。机组成本差异通常为RM 500-1,500。对于每天使用4+小时的冷气，变频值得。</p>
-      <h2>如何降低冷气电费</h2>
-      <ol>
-        <li>将温度设置为25-26°C（不要更低）—每降低1°C增加5-7%消耗。</li>
-        <li>使用风扇+冷气组合—风扇让您可以将冷气设置高1-2°C，舒适度相同。</li>
-        <li>每2周清洁过滤网—脏过滤网增加10-15%消耗。</li>
-        <li>关闭门窗—打开的门让冷空气逸出。</li>
-        <li>使用定时器/睡眠模式—整夜自动降低2-3°C。</li>
-        <li>每6个月维修一次—化学清洗保持高效率。</li>
-        <li>使用遮光窗帘—朝西的房间可能热3-5°C。</li>
-        <li>不要在空房间里运行冷气—基本但很多人忘记。</li>
-      </ol>
-      <h2>我应该运行冷气多少小时？</h2>
-      <p>经济有效的使用：</p>
-      <ul>
-        <li>卧室：使用定时器/睡眠模式整夜6-8小时</li>
-        <li>客厅：使用定时器晚上4-6小时</li>
-        <li>书房：根据需要2-4小时</li>
-        <li>24/7制冷（服务器、商店）：为此预算，选择变频</li>
-      </ul>
-      <h2>常见冷气电费误区</h2>
-      <h3>误区1："打开和关闭冷气比让它一直开着使用更多电"</h3>
-      <p>错误。离开时关闭节省电力。启动浪涌与持续运行相比很小。使用定时器或智能插头自动化。</p>
-      <h3>误区2："更大的冷气冷却更快，所以使用更少的电"</h3>
-      <p>错误。更大的冷气短循环并使用更多功率。将冷气尺寸与房间尺寸匹配（1 HP对应100-120平方英尺等）。</p>
-      <h3>误区3："将温度设得很低可以更快冷却房间"</h3>
-      <p>错误。无论设定点如何，冷气输出相同的温度。设置25-26°C以获得舒适和节省。</p>
-      <h3>误区4："睡眠模式节省电力"</h3>
-      <p>正确。睡眠模式在2-4小时内逐渐将设定点提高1-2°C，整夜使用节省5-10%。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 马来西亚1小时冷气电费</h2>
-      <h3>马来西亚1小时冷气多少钱？</h3>
-      <p>1.0-1.5 HP变频RM 0.20-0.45，非变频RM 0.40-0.55。每小时成本取决于HP、变频vs非变频以及TNB电价区块。</p>
-      <h3>8小时冷气多少钱？</h3>
-      <p>1.0-2.0 HP变频（8小时）RM 1.60-3.60。同尺寸非变频RM 2.88-5.28。</p>
-      <h3>24小时冷气多少钱？</h3>
-      <p>1.5 HP变频运行24小时：~RM 6.50/天或~RM 195/月。非变频1.5 HP：~RM 11.30/天或~RM 339/月。</p>
-      <h3>变频冷气真的节省电费吗？</h3>
-      <p>是的。变频压缩机根据需求升降而不是完全开关。典型节省：30-40%电费。在10年内，节省轻松覆盖更高的前期成本。</p>
-      <h3>在马来西亚运行冷气最便宜的方法是什么？</h3>
-      <p>在25-26°C使用变频机组配吊扇。每6个月维修一次。关闭所有门窗。使用定时器进入睡眠模式。这种组合将典型家庭使用的成本保持在每月RM 50-70。</p>
-      <h3>冷气电费在更高的TNB电价区块会增加吗？</h3>
-      <p>是的。TNB使用阶梯电价：前200 kWh为RM 0.425，然后RM 0.571、RM 0.634、RM 0.686、RM 0.766用于更高的区块。重度冷气用户每kWh支付更多。</p>
-      <h3>在马来西亚整夜运行冷气多少钱？</h3>
-      <p>1.5 HP变频8小时：~RM 2.16/晚或RM 65/月。非变频：~RM 3.76/晚或RM 113/月。使用睡眠模式可将成本降低10-15%。</p>
-      <h3>马来西亚冷气的最佳温度是多少？</h3>
-      <p>25-26°C是最佳点。对大多数人来说舒适，能源使用最低。卫生部 和MOSTI建议24-26°C以提高能源效率和舒适度。</p>
-      <h3>我可以使用太阳能为冷气供电吗？</h3>
-      <p>可以，但太阳能系统需要适当调整尺寸。1.5 HP冷气每天使用~4-5 kWh。您至少需要2-3 kWp的太阳能系统来覆盖一台冷气加上其他负载。回收期通常为4-6年。</p>
-      <h3>吊扇配冷气真的节省电费吗？</h3>
-      <p>是的。吊扇使用30-50W。在26°C同时运行两者感觉像24°C。您可以将冷气设置高1-2°C配合风扇，节省5-10%冷气电费。净效果：总体冷却成本更低。</p>
-      <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>进行冷气维修，保持机组高效运行。阅读更多关于<a href="/zh/blog/how-to-reduce-aircond-electricity-bill-malaysia">降低冷气电费</a>的信息，或预约<a href="/zh/services/chemical-wash">化学清洗</a>。基础维修RM 99起，化学清洗RM 120起，完整大修RM 220起。</p>
-    `,
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 我们帮您选择最省电的方案。</p>`,
   },
 
   {
@@ -4662,96 +4301,25 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> jika aircond anda bocor air. Lihat panduan <a href="/ms/problems/aircond-water-leaking">Aircond Bocor Air</a> atau tempah <a href="/ms/services/chemical-overhaul">Overhaul Kimia</a> untuk penyelesaian kekal. Yuran diagnostik RM 88, dikecualikan dengan pembaikan lawatan sama.</p>
     `,
-    contentZH: `
-      <p><em>马来西亚冷气漏水是最常见的冷气问题之一。最常见的8个原因是：排水管堵塞（40%的情况）、过滤网脏、蒸发器盘管结冰、制冷剂低、室内机倾斜、排水泵损坏、接水盘破裂、水盘满。大多数维修费用为RM 99-RM 350。以下是完整的诊断和维修指南。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合处理冷气漏水问题的马来西亚住宅业主、公寓居民和办公室。</p>
-      <h2>快速答案 — 马来西亚冷气漏水</h2>
-      <p>马来西亚冷气漏水最常见的原因是排水管堵塞（约40%的情况）。这是由于藻类、霉菌、粘液和灰尘在1cm PVC排水管内积累数月使用后所致。冷凝水无处排出，从室内机溢出。维修方法是化学冲洗排水管，包含在KL Renovator的化学清洗服务中，1.0-1.5 HP从<strong>RM 120</strong>起。其他常见原因和维修方法详见下文。</p>
-      <h2>最常见的8个原因和维修方法</h2>
-      <h3>1. 排水管堵塞（40%的情况）</h3>
-      <p><strong>症状：</strong>室内机滴水、空调下方墙壁有水渍、地板上有水、有霉味。</p>
-      <p><strong>原因：</strong>藻类、霉菌、粘液和灰尘在1cm PVC排水管内6-12个月积累。冷凝水无处排出，从室内机溢出。</p>
-      <p><strong>维修：</strong>化学冲洗排水管。KL Renovator使用高压泵+化学溶液清除堵塞。费用：包含在化学清洗中（1.0-1.5 HP RM 120）或作为独立服务（每台RM 80-150）。</p>
-      <h3>2. 空气过滤网脏（20%的情况）</h3>
-      <p><strong>症状：</strong>制冷弱、室内机结冰、滴水。</p>
-      <p><strong>原因：</strong>堵塞的过滤网限制通过蒸发器盘管的气流。盘管变得过冷，上面结冰，冰融化成水溢出接水盘。</p>
-      <p><strong>维修：</strong>清洁过滤网（您可以用温水自己完成）。对于完整服务，1.0-1.5 HP基础服务RM 99包括过滤网清洁和盘管检查。</p>
-      <h3>3. 蒸发器盘管结冰（15%的情况）</h3>
-      <p><strong>症状：</strong>铜管连接处或室内机机身上可见冰、制冷弱、冰融化时滴水。</p>
-      <p><strong>原因：</strong>几种可能的原因：制冷剂低（气体泄漏）、过滤网脏（见上文）、盘管堵塞、恒温器故障或长时间在22°C以下运行冷气。</p>
-      <p><strong>维修：</strong>关闭冷气2-4小时让冰融化。清洁过滤网。如果在几小时内再次结冰，可能有制冷剂泄漏——致电KL Renovator加气（RM 120-220）并检查泄漏。</p>
-      <h3>4. 制冷剂低（10%的情况）</h3>
-      <p><strong>症状：</strong>冷气需要更长时间制冷、室内机结冰、滴水、室外机有嘶嘶声。</p>
-      <p><strong>原因：</strong>制冷剂因连接松动、振动损坏或腐蚀而泄漏。降低的制冷剂压力导致蒸发器盘管过度结冰。</p>
-      <p><strong>维修：</strong>加气（1.0-2.5 HP RM 120-220）加泄漏检测。如果泄漏严重，先修复泄漏点，然后加气。</p>
-      <h3>5. 室内机倾斜（5%的情况）</h3>
-      <p><strong>症状：</strong>室内机特定一侧滴水、水在该侧下方的地板上积聚。</p>
-      <p><strong>原因：</strong>安装支架随时间松动，或原始安装不水平。接水盘倾斜远离排水管，所以水流到错误的一侧并滴出。</p>
-      <p><strong>维修：</strong>重新调平室内机。这需要从支架上取下机组、调整支架并重新安装。费用：人工RM 80-150，或如果过去30天内由KL Renovator安装，则在工艺保修范围内。</p>
-      <h3>6. 排水泵损坏（5%的情况 — 仅天花卡式）</h3>
-      <p><strong>症状：</strong>天花卡式漏水、天花板滴水、水泵发出异常噪音或不运转。</p>
-      <p><strong>原因：</strong>天花卡式机组使用电动冷凝泵将水向上推出（无重力排水）。泵电机可能故障、浮球开关可能卡住或泵腔可能堵塞。</p>
-      <p><strong>维修：</strong>更换冷凝泵。费用：泵RM 350-550 + 安装人工RM 100-200。KL Renovator为所有主要品牌提供和安装更换泵。</p>
-      <h3>7. 接水盘破裂（3%的情况）</h3>
-      <p><strong>症状：</strong>室内机特定点滴水、接水盘上可见裂缝或锈迹。</p>
-      <p><strong>原因：</strong>老化、腐蚀（特别是在巴生港或槟城等沿海地区）、之前维修期间的物理损坏。</p>
-      <p><strong>维修：</strong>更换接水盘。费用：零件RM 150-300 + 安装RM 80-150。常见于旧机组（8年以上）。</p>
-      <h3>8. 水盘满（2%的情况 — 便携式/窗口机）</h3>
-      <p><strong>症状：</strong>窗口机或便携式冷气漏水、无明显堵塞。</p>
-      <p><strong>原因：</strong>窗口机和便携式冷气将冷凝水收集在需要手动排放的内部水盘中。如果水盘满了，水会溢出。</p>
-      <p><strong>维修：</strong>手动排放水盘（通常是机组底部或背面的塞子）。对于窗口机，KL Renovator提供永久排水管改装，费用为RM 100-200。</p>
-      <h2>快速自诊断清单</h2>
+    contentZH: `<h2>冷气漏水怎么办？— 马来西亚紧急指南</h2>
+      <p>冷气漏水是最常见的问题。<a href="/near-me">KL Renovator</a>告诉您该怎么做。</p>
+      <h2>紧急处理步骤</h2>
       <ol>
-        <li>过滤网干净吗？（打开前面板检查）</li>
-        <li>室内机水平吗？（使用水平仪或手机应用）</li>
-        <li>您能在盘管上看到冰吗？（用手电筒照射）</li>
-        <li>室外温度非常冷吗？（低于24°C可能不需要冷气）</li>
-        <li>您上次维修冷气是什么时候？（6个月以上=该维修了）</li>
-        <li>漏水是一直发生还是只在潮湿时发生？（与湿度有关=排水问题）</li>
+        <li><strong>立即关闭冷气</strong> — 防止更多水漏出</li>
+        <li><strong>放毛巾/水桶</strong> — 保护地板和家具</li>
+        <li><strong>检查排水口</strong> — 看室外排水管是否有水流出</li>
+        <li><strong>WhatsApp预约维修</strong> — +60 18-298 3573</li>
       </ol>
-      <h2>冷气漏水时不该做什么</h2>
+      <h2>常见原因</h2>
       <ul>
-        <li>不要持续钻额外的排水孔——它不能解决根本原因。</li>
-        <li>不要随意将漂白剂倒入排水管——它会损坏密封件和垫圈。</li>
-        <li>如果结冰，不要继续运行冷气——先关闭2-4小时。</li>
-        <li>如果您没有受过培训，不要尝试自己拆开机组——致电专业人员。</li>
-        <li>不要在漏水下面放一个桶然后忽略——漏水只会变得更糟。</li>
+        <li><strong>排水管堵塞（80%）</strong> — 化学清洗可解决</li>
+        <li><strong>排水盘满/破裂</strong> — 需要化学大修</li>
+        <li><strong>安装坡度不对</strong> — 需要重新调整</li>
+        <li><strong>气体不足导致结冰</strong> — 需要检漏+充气</li>
       </ul>
-      <h2>KL Renovator如何维修漏水冷气</h2>
-      <ol>
-        <li>现场检查（诊断费RM 88，同次维修免收）。</li>
-        <li>确定根本原因（排水堵塞、制冷剂泄漏、机组倾斜等）。</li>
-        <li>在开始工作前清楚报价。</li>
-        <li>进行维修（冲洗排水、加气、重新调平、更换零件）。</li>
-        <li>试运行30-60分钟以确认漏水已解决。</li>
-        <li>维修工作1个月工艺保修。</li>
-      </ol>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 马来西亚冷气漏水</h2>
-      <h3>为什么我的冷气突然漏水？</h3>
-      <p>最常见的原因是排水管堵塞（40%的情况）。藻类和霉菌在6-12个月内积累在排水管中，堵塞冷凝水流动。水被堵住并从室内机滴出。</p>
-      <h3>维修漏水冷气要多少钱？</h3>
-      <p>RM 99-RM 350，取决于原因。化学清洗以清洁排水管为1.0-1.5 HP RM 120。加气为RM 120-220。重新调平为RM 80-150。更换排水泵为RM 350-550。</p>
-      <h3>我能自己修漏水冷气吗？</h3>
-      <p>您可以自己清洁过滤网。对于排水管堵塞，您可以尝试将白醋倒入排水管。但是对于持续漏水、盘管结冰或气体问题，请致电专业人员。KL Renovator诊断RM 88，同次维修免收。</p>
-      <h3>漏水冷气危险吗？</h3>
-      <p>水本身不危险，但它会损坏墙壁、天花板和电气装置。长期漏水会导致霉菌生长（对健康有害），如果水接触电线，可能会发生电气短路。请及时维修。</p>
-      <h3>为什么我的冷气只在雨天漏水？</h3>
-      <p>雨天的高湿度增加了冷凝水的体积。如果排水管部分堵塞，额外的水可以推过堵塞或溢出。大雨还可以将水推回排水管，如果外部端口没有正确密封。</p>
-      <h3>我应该多久维修一次冷气以防止漏水？</h3>
-      <p>每1-2个月基础服务+每6个月化学清洗可保持排水管清洁并防止大多数漏水原因。AMC客户自动获得此服务。</p>
-      <h3>为什么我的新冷气漏水？</h3>
-      <p>如果新安装的冷气漏水，最常见的原因是室内机倾斜（支架不水平）或安装过程中扭结的排水管。如果过去30天内由KL Renovator安装，两者都应在安装工艺保修范围内。</p>
-      <h3>冷气漏水是由雨引起的吗？</h3>
-      <p>大雨会导致水进入室外机区域，如果排水出口未密封，有时会通过排水管回流。KL Renovator使用适当的排水存水弯来防止这种情况。如果您的排水只是一根简单的管子伸出墙外，请询问正确安装排水存水弯（RM 50-100）。</p>
-      <h3>为什么我的天花卡式漏水？</h3>
-      <p>天花卡式机组使用电动冷凝泵。常见原因：泵故障（更换RM 350-550）、浮球开关卡住、泵腔堵塞或泵的止回阀故障。KL Renovator维修所有天花卡式泵。</p>
-      <h3>维修漏水冷气需要多长时间？</h3>
-      <p>排水管冲洗：30-60分钟。加气：1-1.5小时。重新调平：30-60分钟。更换排水泵：1.5-2小时。更换接水盘：1-2小时。大多数漏水维修在一次访问中完成。</p>
-      <h2>准备预订？</h2>
-      <p>如果您的冷气漏水，请WhatsApp KL Renovator <strong>+60182983573</strong>。查看<a href="/zh/problems/aircond-water-leaking">冷气漏水</a>故障排除指南，或预约<a href="/zh/services/chemical-overhaul">化学大修</a>以彻底解决问题。诊断费RM 88，同次维修免收。</p>
-    `,
+      <h2>维修费用</h2>
+      <p>化学清洗RM 120起 | 化学大修RM 220起 | 诊断费RM 88（维修则豁免）</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 当天服务可用。</p>`,
   },
 
   {
@@ -5049,144 +4617,22 @@ export const allPosts: BlogPost[] = [
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz unit, jenama, dan gambar lokasi pemasangan. Lihat perkhidmatan <a href="/ms/services/installation">Pemasangan Unit Baharu</a> penuh. Pasang standard dari RM 199 (2-3 jam). Ceiling cassette dari RM 290 (3-4 jam).</p>
     `,
-    contentZH: `
-      <p><em>2026年马来西亚标准壁挂式冷气安装需要<strong>2-3小时</strong>（根据klrenovator.com FAQ），从技术员到达到保修卡移交。天花卡式安装需要<strong>3-4小时</strong>，因为有吊顶工作。多台安装：每台2-3小时。按机组类型、尺寸、位置场景的完整细分，以及当日服务选项。</em></p>
-      <p>本指南由<strong>KL Renovator HVAC专家团队</strong>编写，适合规划冷气安装日的马来西亚住宅业主、公寓居民、办公室和店铺。</p>
-      <h2>快速答案 — 马来西亚冷气安装时间</h2>
-      <table><thead><tr><th>安装类型</th><th>所需时间</th><th>技术员</th></tr></thead><tbody>
-        <tr><td><strong>壁挂式1.0-1.5 HP</strong></td><td><strong>2-3小时</strong></td><td>1</td></tr>
-        <tr><td>壁挂式2.0 HP</td><td>2-3小时</td><td>1</td></tr>
-        <tr><td>壁挂式2.5 HP</td><td>2.5-3小时</td><td>1</td></tr>
-        <tr><td>壁挂式3.0 HP+</td><td>2.5-3.5小时</td><td>1</td></tr>
-        <tr><td>天花卡式1.0-1.5 HP</td><td>3-4小时</td><td>2</td></tr>
-        <tr><td>天花卡式2.0-3.0 HP</td><td>3.5-4.5小时</td><td>2</td></tr>
-        <tr><td>天花卡式3.5-6.0 HP</td><td>4-6小时</td><td>2</td></tr>
-        <tr><td>更换旧机组（加30-60分钟拆除）</td><td>+30-60分钟</td><td>1-2</td></tr>
-        <tr><td>高层公寓（30+楼）</td><td>+30-60分钟</td><td>1 + 起重机人员</td></tr>
-        <tr><td>多台安装（4+台同次访问）</td><td>每台2-3小时</td><td>1-2</td></tr>
-      </tbody></table>
-      <h2>标准安装时间表（逐步）</h2>
-      <p>对于低层公寓或有地房屋的典型1.5 HP壁挂式安装：</p>
-      <ol>
-        <li><strong>到达+设置</strong>（5-10分钟）：技术员到达，介绍，摆放工具和零件。</li>
-        <li><strong>现场勘察+照片</strong>（5-10分钟）：确认安装位置，拍摄参考照片。</li>
-        <li><strong>钻孔+安装支架</strong>（15-25分钟）：钻墙穿透孔，安装室内机壁挂支架。</li>
-        <li><strong>安装室内机</strong>（5-10分钟）：将室内机挂在支架上，固定。</li>
-        <li><strong>管道布线</strong>（15-30分钟）：通过墙穿透孔布线铜管、排水管和互连电线。</li>
-        <li><strong>安装室外机</strong>（15-25分钟）：将室外机安装在支架或空调架上。</li>
-        <li><strong>布线+电气</strong>（10-15分钟）：将布线连接到室内和室外机，连接到电源插座。</li>
-        <li><strong>真空测试</strong>（15-30分钟）：对系统抽真空以去除湿气（关键步骤）。</li>
-        <li><strong>泄漏测试</strong>（5-10分钟）：使用检漏仪检查所有连接是否泄漏制冷剂。</li>
-        <li><strong>试运行+调试</strong>（10-15分钟）：通电，设定温度，运行10-15分钟以验证制冷。</li>
-        <li><strong>清理+移交</strong>（10分钟）：清理工作区域，与客户走查，移交保修卡。</li>
-      </ol>
-      <p><strong>总计：标准安装2-3小时。</strong></p>
-      <h2>什么会减慢安装速度</h2>
-      <ol>
-        <li><strong>长管道：</strong>RM 199基础价包含标准7尺铜管。每增加一尺：RM 25/尺。排屋通常需要15-20尺（对比公寓的7尺）。每增加一尺增加5-10分钟。</li>
-        <li><strong>困难访问：</strong>高层公寓（30+）需要货梯预订+起重机协调。增加30-60分钟。</li>
-        <li><strong>旧机拆除：</strong>KL Renovator拆除仅RM 90，需要30-60分钟。</li>
-        <li><strong>公寓合规文件：</strong>预订表格、货梯预订、时间窗口。</li>
-        <li><strong>电气工作：</strong>如果现有电源插座不合适，电工可能需要先来。</li>
-        <li><strong>多墙穿透：</strong>多区域系统需要每个区域单独的管道路线。</li>
-      </ol>
-      <h2>按机组类型和尺寸的时间</h2>
-      <table><thead><tr><th>类型 &amp; 尺寸</th><th>时间</th><th>备注</th></tr></thead><tbody>
-        <tr><td>壁挂式1.0-1.5 HP</td><td>2-3小时</td><td>最常见的安装</td></tr>
-        <tr><td>壁挂式2.0 HP</td><td>2-3小时</td><td>与1.5 HP时间相同</td></tr>
-        <tr><td>壁挂式2.5 HP</td><td>2.5-3小时</td><td>管道布线略长</td></tr>
-        <tr><td>壁挂式3.0 HP</td><td>2.5-3.5小时</td><td>支架更大，室内机更重</td></tr>
-        <tr><td>天花卡式1.0-1.5 HP</td><td>3-4小时</td><td>吊顶工作+冷凝泵</td></tr>
-        <tr><td>天花卡式2.0-3.0 HP</td><td>3.5-4.5小时</td><td>2名技术员，管道更长</td></tr>
-        <tr><td>天花卡式3.5-6.0 HP</td><td>4-6小时</td><td>卡式更重，更多电气工作</td></tr>
-        <tr><td>多台（4台有地房屋）</td><td>每台2-3小时</td><td>4台：总计8-12小时（1-2天）</td></tr>
-      </tbody></table>
-      <h2>按位置场景的时间</h2>
-      <table><thead><tr><th>位置</th><th>标准1.5 HP时间</th></tr></thead><tbody>
-        <tr><td>低层公寓（1-15楼）</td><td>2-3小时</td></tr>
-        <tr><td>中层公寓（16-29楼）</td><td>2.5-3.5小时</td></tr>
-        <tr><td>高层公寓（30+）</td><td>3-4.5小时</td></tr>
-        <tr><td>有地房屋（单层）</td><td>2.5-3.5小时</td></tr>
-        <tr><td>有地房屋（双层）</td><td>3-4小时</td></tr>
-        <tr><td>店面/商业</td><td>3-6小时（取决于天花卡式设置）</td></tr>
-      </tbody></table>
-      <h2>当天安装服务</h2>
-      <p>KL Renovator在巴生谷提供当天安装，视可用性而定。预订方式：</p>
-      <ul>
-        <li>下午2点前致电/WhatsApp（下午/晚间安装）</li>
-        <li>上午10点前致电/WhatsApp（次日早上安装）</li>
-        <li>标准安装费率（正常时间无附加费）</li>
-        <li>非工作时间或周末：附加RM 50（同次维修免）</li>
-      </ul>
-      <h2>您应计划在家多长时间？</h2>
-      <p>1-2台安装：在整个安装期间在家（每台2-3.5小时）。3+台或全天工作：开始时在家（向技术员说明）和结束时在家（最终检查+移交）。将安装日计划为"轻松工作日"——计划3-5小时总在家时间。</p>
-      <h2>安装日前准备什么</h2>
-      <p><strong>前一天：</strong></p>
-      <ul>
-        <li>清理室内机安装位置周围（移动家具、窗帘、装饰品）</li>
-        <li>清理室外机安装位置周围（空调架、阳台、侧院）</li>
-        <li>确保电源插座可访问</li>
-        <li>对于公寓：确认管理处批准已完成</li>
-        <li>准备好您的冷气机组（如果您自己购买）</li>
-      </ul>
-      <p><strong>安装日：</strong></p>
-      <ul>
-        <li>手机/WhatsApp可用于联系技术员</li>
-        <li>付款准备（现金、网上转账或电子钱包）</li>
-        <li>机组保修卡可用</li>
-        <li>在安装开始和结束时都在场</li>
-      </ul>
-      <h2>下雨天能安装吗？</h2>
-      <p>小雨：可以。大雨：可以但较慢。雷暴闪电：不可以。安全起见我们不在闪电时安装。重新安排政策：天气强制重新安排时不收费。</p>
-      <h2>安装日逐步（预期什么）</h2>
-      <p>上午8:00（或预定时间）：技术员到达，介绍，文件。8:05-8:15：现场巡视。8:15-8:30：准备工具，钻墙孔，安装室内支架。8:30-9:30：安装室内机，连接铜管。9:30-10:00：安装室外机。10:00-10:30：真空测试（15-30分钟，关键步骤）。10:30-10:45：试运行。10:45-11:00：清理，走查，移交保修卡，付款。</p>
-      <p><strong>总计：标准安装2.5-3小时。</strong></p>
-      <h2>安装后——接下来发生什么</h2>
-      <p><strong>立即：</strong>机组完全运行，1个月工艺保修开始。</p>
-      <p><strong>前24小时：</strong>运行冷气2-4小时验证，听异常声音。</p>
-      <p><strong>前7天：</strong>正常运行冷气。</p>
-      <p><strong>7天跟进：</strong>KL Renovator WhatsApp确认一切运行良好。</p>
-      <p><strong>30天保修期：</strong>我们造成的任何问题=我们免费修复。</p>
-      <p><strong>6个月回访：</strong>WhatsApp提醒下次化学清洗（1.0-1.5 HP RM 120）。</p>
-      <p><strong>12个月服务提醒：</strong>下次化学清洗到期时免费WhatsApp提醒。</p>
-      <h2>多台安装时间节省</h2>
-      <p>一次访问安装多台：</p>
-      <ul>
-        <li>2-3台：95折 + 每台2-3小时</li>
-        <li>4-8台：9折 + 每台2-3小时（比单独预订更快）</li>
-        <li>8+台：85折 + 每台2-3小时（大型项目3+天）</li>
-      </ul>
-      <p>4台通常1天完成，5-8台2天，8+台3+天。</p>
-      <h2>吉隆坡与雪兰莪服务覆盖</h2>
-      <p>KL Renovator服务吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang和Batu Caves。我们为Daikin、Panasonic、Mitsubishi、Acson、York、Carrier、Midea、Haier、Toshiba、Hitachi、Samsung、LG、Sharp、Fujitsu、Gree、National、Hisense、Aux、TCL和Isonic的壁挂式、天花卡式和窗口机提供服务。</p>
-      <h2>常见问题 — 马来西亚冷气安装时间</h2>
-      <h3>马来西亚冷气安装需要多长时间？</h3>
-      <p>标准壁挂式：2-3小时。天花卡式：3-4小时。多台：每台2-3小时。如果需要拆除旧机，另加30-60分钟。</p>
-      <h3>1.5 HP冷气安装需要多长时间？</h3>
-      <p>可达位置的标准安装2-3小时。高层公寓或有地房屋长管道时间更长。</p>
-      <h3>天花卡式安装需要多长时间？</h3>
-      <p>总计3-4小时，需要2名技术员。包括吊顶安装、冷凝泵安装、较长管道和2名技术员的电气工作。</p>
-      <h3>可以1天内完成安装吗？</h3>
-      <p>可以，壁挂式和天花卡式。多台（4+台）需要1-2天。大型项目（8+台）需要3+天。</p>
-      <h3>安装4台冷气需要多长时间？</h3>
-      <p>总计8-12小时（顺序），通常2名技术员1天。4台每台2-3小时=1-2名技术员并行工作8-12小时。</p>
-      <h3>安装期间我需要在家吗？</h3>
-      <p>需要——开始时（向技术员说明位置偏好）和结束时（最终检查+移交）。多台安装，中间几小时可以外出，但必须可以通过电话联系。</p>
-      <h3>如果安装日下雨怎么办？</h3>
-      <p>小雨：继续。大雨：继续但较慢。闪电：重新安排（不收费）。KL Renovator技术员出于安全考虑不在闪电时进行户外电气工作。</p>
-      <h3>管道布线需要多长时间？</h3>
-      <p>标准7尺管道：包含在基础时间内。每增加一尺：+5-10分钟。15-20尺总管道的有地房屋比典型公寓安装多40-130分钟。</p>
-      <h3>可以夜间安装吗？</h3>
-      <p>可以，非工作时间服务（+附加RM 50，同次维修免）。最适用于紧急更换。标准时间是上午8点-晚上8点。</p>
-      <h3>更换旧冷气需要多长时间？</h3>
-      <p>旧机拆除（30-60分钟，RM 90）+新机安装（2-3小时，从RM 199起）=总计2.5-3.5小时。新机安装可在旧机拆除后立即开始。</p>
-      <h3>一天内安装2台冷气需要多长时间？</h3>
-      <p>总计3-5小时（1名技术员顺序），或2-3小时（2名技术员并行）。Puchong、Subang和Shah Alam的大多数有地房屋在一次日内访问中安装2-3台。</p>
-      <h3>如果安装时间超过预期怎么办？</h3>
-      <p>我们立即通知您。常见原因：隐藏管道、安装期间发现的结构问题、额外材料或天气。KL Renovator仅对额外材料收费——从不因我们的时间延误而收费。</p>
-      <h2>准备预订？</h2>
-      <p>WhatsApp KL Renovator <strong>+60182983573</strong>，告知机组尺寸、品牌和安装位置的照片。查看完整<a href="/zh/services/installation">新机安装</a>服务。标准安装从RM 199起（2-3小时）。天花卡式从RM 290起（3-4小时）。</p>
-    `,
+    contentZH: `<h2>冷气安装需要多长时间？— 完整时间线</h2>
+      <p>从预约到完成的全部时间。<a href="/near-me">KL Renovator</a>为您说明。</p>
+      <h2>安装时间</h2>
+      <table>
+        <thead><tr><th>类型</th><th>时间</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>壁挂式（1台）</td><td>2-3小时</td><td>标准住宅</td></tr>
+          <tr><td>壁挂式（2台）</td><td>5-6小时</td><td>同一天完成</td></tr>
+          <tr><td>天花板卡式</td><td>3-4小时</td><td>需要天花板开口</td></tr>
+          <tr><td>窗式</td><td>1-1.5小时</td><td>最简单的安装</td></tr>
+          <tr><td>多联机（3台室内）</td><td>6-8小时</td><td>多条管道</td></tr>
+        </tbody>
+      </table>
+      <h2>7步安装流程</h2>
+      <p>预约(5分钟) → 技师派遣(30-60分钟) → 现场勘查(15分钟) → 安装布管(1.5-2.5小时) → 真空+检漏(20分钟) → 调试(15分钟) → 交付(10分钟)</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 11点前预约可当天安装。</p>`,
   },
   {
     slug: "aircond-maintenance-contract-malaysia-2026",
@@ -5305,55 +4751,27 @@ export const allPosts: BlogPost[] = [
       <p>Kami akan mengesahkan pelan AMC, menjadualkan lawatan suku tahunan pertama anda, dan menghantar terma kontrak. Tiada pembayaran pendahuluan diperlukan — invois dihantar selepas lawatan pertama.</p>
       <p>Lihat juga: <a href="/ms/services/maintenance-contract">Halaman servis AMC penuh</a> | <a href="/ms/services/basic-servicing">Harga servis asas</a> | <a href="/ms/services/chemical-wash">Harga cuci kimia</a></p>
     `,
-    contentZH: `
-      <h2>为什么2026年冷气保养合约能帮您省钱</h2>
-      <p>如果您在马来西亚拥有2台或以上冷气，年度保养合约（AMC）是最明智的投资之一。计算很简单：一个有3台挂壁式冷气的家庭，每年单独购买化学清洗约花费RM 360（3 × RM 120）。同样的家庭选择KL Renovator年度AMC计划仅需<strong>RM 499/年</strong>（2–4台）——折合每台每年约<strong>RM 125</strong>，包含每季度定期基本保养加一次年度化学清洗。与逐次预约相比<strong>节省30%</strong>。</p>
-
-      <h2>KL Renovator年度AMC包含什么</h2>
-      <p>每份年度保养合约包含：</p>
+    contentZH: `<h2>冷气年度保养合约(AMC) — 马来西亚2026指南</h2>
+      <p>AMC是保护冷气投资的最好方式。<a href="/near-me">KL Renovator</a>详细介绍。</p>
+      <h2>AMC包含什么</h2>
       <ul>
-        <li><strong>每季度基本保养</strong>——滤网深度清洗、排水管冲洗、盘管喷雾、电气检查、制冷性能测试（每台每年4次上门）</li>
-        <li><strong>每台每年1次化学清洗</strong>——80–120 PSI高压化学清洗盘管和风轮</li>
-        <li><strong>优先排程</strong>——AMC客户即使在旺季（农历新年、开斋节、学校假期）也能获得当天或次日时段</li>
-        <li><strong>书面服务报告</strong>——每次上门记录制冷读数、滤网状况和任何建议</li>
-        <li><strong>每次上门1个月工艺保修</strong></li>
-        <li><strong>锁定批量价格</strong>——合同期内即使市场价格上涨也不会加价</li>
+        <li>✅ 季度保养（每年4次）</li>
+        <li>✅ 化学清洗包含</li>
+        <li>✅ 紧急优先响应（当天服务）</li>
+        <li>✅ 所有维修9折</li>
+        <li>✅ 免费诊断上门</li>
+        <li>✅ 书面保养记录</li>
       </ul>
-
-      <h2>AMC vs 单次服务：真实费用对比</h2>
-      <p>让我们比较KL典型3台冷气家庭的实际年度费用：</p>
+      <h2>价格</h2>
       <table>
-        <thead><tr><th>服务</th><th>单次服务（3台）</th><th>AMC计划（2–4台）</th></tr></thead>
+        <thead><tr><th>单位数</th><th>年费</th><th>每次成本</th></tr></thead>
         <tbody>
-          <tr><td>每台每年4次基本保养</td><td>RM 99 × 4 × 3 = RM 1,188</td><td>含在AMC内</td></tr>
-          <tr><td>每台每年1次化学清洗</td><td>RM 120 × 3 = RM 360</td><td>含在AMC内</td></tr>
-          <tr><td>年度总费用</td><td><strong>RM 1,548</strong></td><td><strong>RM 499</strong></td></tr>
-          <tr><td>节省</td><td>—</td><td><strong>节省RM 1,049（68%）</strong></td></tr>
+          <tr><td>1台</td><td>RM 499</td><td>RM 125/次</td></tr>
+          <tr><td>2-3台</td><td>RM 1,299</td><td>RM 108/次</td></tr>
+          <tr><td>4-8台</td><td>RM 2,199</td><td>RM 92/次</td></tr>
         </tbody>
       </table>
-      <p>即使您跳过每季度基本保养，每台每年只做1次化学清洗，AMC仍然省钱：单次RM 360 vs AMC RM 499——但AMC包含您通常会跳过的每台4次额外基本保养，这些保养能避免更高的电费和更频繁的故障。</p>
-
-      <h2>谁应该购买AMC？</h2>
-      <ul>
-        <li><strong>拥有2台以上冷气的公寓业主</strong>——机器越多，节省越大</li>
-        <li><strong>管理出租物业的房东</strong>——可预测的年度费用，无意外维修账单</li>
-        <li><strong>小型办公室和店铺</strong>——商业冷气每天运行8小时以上需要每季度关注</li>
-        <li><strong>懒得记住预约的人</strong>——我们自动安排并提醒您</li>
-      </ul>
-
-      <h2>如果需要维修怎么办？</h2>
-      <p>AMC涵盖定期保养（基本保养+化学清洗）。如技术员在定期上门时发现故障——如冷媒泄漏、电容故障或PCB问题——会先诊断并单独报价维修费用。AMC客户享有<strong>优先维修排程</strong>和与所有KL Renovator客户相同的透明价格。零件保修3个月，工艺保修1个月。</p>
-
-      <h2>如何注册</h2>
-      <p>WhatsApp <strong>+60 18-298 3573</strong>，提供：</p>
-      <ol>
-        <li>冷气台数</li>
-        <li>机型（挂壁式、天花板卡式、窗式）</li>
-        <li>您在KL/Selangor的位置</li>
-      </ol>
-      <p>我们会确认AMC计划，安排首次季度上门，并发送合约条款。无需预付款——首次上门后开具发票。</p>
-      <p>另请参阅：<a href="/zh/services/maintenance-contract">AMC完整服务页</a> | <a href="/zh/services/basic-servicing">基本保养价格</a> | <a href="/zh/services/chemical-wash">化学清洗价格</a></p>
-    `,
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 获取定制AMC报价。</p>`,
   },
   {
     slug: "inverter-vs-non-inverter-aircond-service-malaysia-2026",
@@ -5512,77 +4930,21 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp <strong>+60 18-298 3573</strong> dengan jenama unit, model (inverter atau bukan inverter), dan lokasi anda. Kami akan mengesahkan servis yang sesuai dan slot tersedia. Hari sama tersedia Isnin–Ahad di seluruh KL & Selangor.</p>
       <p>Lihat juga: <a href="/ms/services/basic-servicing">Harga Servis Asas</a> | <a href="/ms/services/chemical-wash">Harga Cuci Kimia</a> | <a href="/ms/services/gas-topup">Harga Tambah Gas</a> | <a href="/ms/cuci-aircond-kl">Cuci Aircond KL</a></p>
     `,
-    contentZH: `
-      <h2>变频 vs 非变频：为什么您的保养方式应该不同</h2>
-      <p>现在大多数马来西亚家庭至少拥有一台变频冷气——大金、松下、三菱、三星、LG和美的都将变频机型作为主力产品。但许多业主仍然用保养旧非变频机的方式保养变频机。这是一个错误，会缩短压缩机寿命并浪费电力。</p>
-
-      <h2>影响保养的关键技术差异</h2>
+    contentZH: `<h2>变频 vs 定频冷气保养 — 有什么区别？</h2>
+      <p>变频和定频冷气的保养需求不同。<a href="/near-me">KL Renovator</a>为您对比。</p>
+      <h2>保养对比</h2>
       <table>
-        <thead><tr><th>特性</th><th>变频</th><th>非变频</th></tr></thead>
+        <thead><tr><th>项目</th><th>定频</th><th>变频</th></tr></thead>
         <tbody>
-          <tr><td>压缩机转速</td><td>可变——持续运行并调整转速</td><td>固定——反复开关循环</td></tr>
-          <tr><td>冷媒类型</td><td>通常R32（新型）或R410A</td><td>通常R22（逐步淘汰）或R410A</td></tr>
-          <tr><td>PCB电路板</td><td>复杂变频PCB——对电压和湿度敏感</td><td>简单接触器——更耐受</td></tr>
-          <tr><td>能效</td><td>省电30–50%</td><td>运行成本更高</td></tr>
-          <tr><td>典型寿命</td><td>正确保养下10–15年</td><td>7–12年</td></tr>
+          <tr><td>基本保养</td><td>相同</td><td>相同</td></tr>
+          <tr><td>化学清洗</td><td>相同</td><td>相同</td></tr>
+          <tr><td>PCB检查</td><td>简单</td><td>需要专业工具</td></tr>
+          <tr><td>维修成本</td><td>较低</td><td>较高</td></tr>
+          <tr><td>建议频率</td><td>每6-12个月</td><td>每6-12个月</td></tr>
         </tbody>
       </table>
-
-      <h2>化学清洗频率：变频机需要更多关注</h2>
-      <p>变频机的压缩机以变化的转速持续运行，而非反复开关。这意味着蒸发器盘管始终处于活跃状态，持续收集灰尘、霉菌和生物膜。变频机的脏盘管不仅降低制冷——还迫使变频PCB提高压缩机转速来补偿，<strong>增加15–30%的电力消耗</strong>，并对系统中最昂贵的部件造成额外压力。</p>
-      <ul>
-        <li><strong>变频机：</strong>马来西亚环境下建议每<strong>10–12个月</strong>化学清洗。重度使用（每天8小时以上）应考虑每<strong>8个月</strong>清洗。</li>
-        <li><strong>非变频机：</strong>每<strong>12–18个月</strong>化学清洗通常足够，因为压缩机的休息期给盘管恢复时间。</li>
-      </ul>
-
-      <h2>加气：R32 vs R22 vs R410A</h2>
-      <ul>
-        <li><strong>R32（大多数新型变频机）：</strong>全球变暖潜能较低，需要精确充注。过度充注10%就会降低效率。</li>
-        <li><strong>R410A（旧变频机和部分非变频机）：</strong>工作压力更高。仍然广泛可用。</li>
-        <li><strong>R22（旧非变频机）：</strong>全球逐步淘汰。越来越贵。如果您的机器使用R22，建议2–3年内考虑更换。</li>
-      </ul>
-
-      <h2>电气检查：为什么变频机需要额外关注</h2>
-      <p>变频冷气有精密的PCB（印刷电路板）控制压缩机转速、风扇转速和温度调节。此PCB对以下因素敏感：</p>
-      <ul>
-        <li><strong>电压波动：</strong>马来西亚电网在雷暴期间可能出现浪涌。建议变频机安装浪涌保护器。</li>
-        <li><strong>湿气侵入：</strong>排水管堵塞可能导致水进入PCB隔间。每次保养时技术员应检查排水管完整性。</li>
-        <li><strong>电容老化：</strong>变频机使用多个电容。随时间老化，每次保养应测试。</li>
-      </ul>
-
-      <h2>马来西亚家庭推荐保养计划</h2>
-      <table>
-        <thead><tr><th>保养类型</th><th>变频</th><th>非变频</th></tr></thead>
-        <tbody>
-          <tr><td>基本保养</td><td>每3–4个月</td><td>每4–6个月</td></tr>
-          <tr><td>化学清洗</td><td>每8–12个月</td><td>每12–18个月</td></tr>
-          <tr><td>化学大修</td><td>每2–3年</td><td>每3–4年</td></tr>
-          <tr><td>PCB诊断</td><td>每次保养</td><td>不适用</td></tr>
-        </tbody>
-      </table>
-
-      <h2>价格：两种类型相同</h2>
-      <p>KL Renovator无论变频还是非变频收费相同：</p>
-      <ul>
-        <li>基本保养：从<strong>RM 99</strong>起</li>
-        <li>化学清洗：从<strong>RM 120</strong>起</li>
-        <li>化学大修：从<strong>RM 220</strong>起</li>
-        <li>加气（R32/R410A）：从<strong>RM 150</strong>起</li>
-      </ul>
-      <p>变频机无隐藏附加费。所有价格开工前确认。</p>
-
-      <ul>
-        <li>基本保养：从<strong>RM 99</strong>起</li>
-        <li>化学清洗：从<strong>RM 120</strong>起</li>
-        <li>化学大修：从<strong>RM 220</strong>起</li>
-        <li>加气（R32/R410A）：从<strong>RM 150</strong>起</li>
-      </ul>
-      <p>变频机无隐藏附加费。所有价格开工前确认。</p>
-
-      <h2>预约您的保养</h2>
-      <p>WhatsApp <strong>+60 18-298 3573</strong>，提供您的机器品牌、型号（变频或非变频）和位置。我们将确认合适的服务和可用时段。周一至周日全KL及雪兰莪可当天上门。</p>
-      <p>另请参阅：<a href="/zh/services/basic-servicing">基本保养价格</a> | <a href="/zh/services/chemical-wash">化学清洗价格</a> | <a href="/zh/services/gas-topup">加气价格</a> | <a href="/zh/cuci-aircond-kl">吉隆坡冷气清洗</a></p>
-    `,
+      <p>两种类型的基本保养和化学清洗价格相同。主要区别在维修——变频的PCB和模块更贵。</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 我们保养所有类型。</p>`,
   },
   {
     slug: "harga-servis-aircond-2026-malaysia",
