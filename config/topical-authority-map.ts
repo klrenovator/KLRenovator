@@ -54,10 +54,13 @@ export const PILLAR_PAGES = {
   homepage: { url: "/", keyword: "aircond service KL Selangor", priority: 1.0 },
   services: { url: "/services", keyword: "aircond services KL Selangor", priority: 0.95 },
   emergency: { url: "/services/emergency", keyword: "emergency aircond repair KL", priority: 0.97 },
+  installation: { url: "/aircond-installation-kl", keyword: "aircond installation KL Selangor", priority: 0.96 },
   problems: { url: "/problems", keyword: "aircond problems KL Selangor", priority: 0.85 },
   areas: { url: "/areas", keyword: "aircond service areas KL Selangor", priority: 0.90 },
   brands: { url: "/brands", keyword: "aircond brands KL Selangor", priority: 0.88 },
   blog: { url: "/blog", keyword: "aircond guides Malaysia", priority: 0.85 },
+  faq: { url: "/faq", keyword: "aircond FAQ Malaysia", priority: 0.80 },
+  btuCalculator: { url: "/btu-calculator", keyword: "BTU calculator aircond Malaysia", priority: 0.82 },
 };
 
 // ── SERVICE → PROBLEM MAP ─────────────────────────────────────────────────────
@@ -103,7 +106,10 @@ export const SERVICE_PROBLEM_MAP: Record<string, string[]> = {
     "aircond-bad-smell",
   ],
   "installation": [
-    "cara-pilih-hp-aircond-bilik-malaysia",],
+    "aircond-not-cold",
+    "aircond-high-electricity-bill",
+    "aircond-weak-airflow",
+  ],
   "dismantling-relocation": [],
   "ceiling-cassette": [
     "aircond-water-leaking",
@@ -145,25 +151,25 @@ export const PROBLEM_SERVICE_MAP: Record<string, { primary: string; secondary?: 
 
 // ── PROBLEM → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
-  "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia", "aircond-gas-topup-myths-malaysia"],
-  "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia", "how-often-service-aircond-malaysia"],
+  "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia", "aircond-gas-topup-myths-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026", "best-hp-aircond-bedroom-size-guide-malaysia"],
+  "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-maintenance-checklist-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
+  "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia", "how-often-service-aircond-malaysia", "aircond-outdoor-unit-placement-malaysia"],
   "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "aircond-maintenance-checklist-malaysia"],
-  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
-  "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia"],
-  "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2026"],
-  "aircond-pcb-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
+  "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
+  "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-piping-distance-maximum-malaysia"],
+  "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
+  "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2026", "10-costly-aircond-installation-mistakes-malaysia-2026"],
+  "aircond-pcb-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
   "aircond-fan-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-tripping-power": ["aircond-troubleshooting-guide-malaysia"],
+  "aircond-tripping-power": ["aircond-troubleshooting-guide-malaysia", "aircond-installation-electrical-requirements-malaysia", "aircond-installation-old-house-wiring-malaysia"],
   "aircond-remote-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "chemical-wash-vs-chemical-overhaul"],
-  "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
-  "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-weak-airflow": ["aircond-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-not-turning-on": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia"],
-  "aircond-blinking-light": ["aircond-troubleshooting-guide-malaysia"],
-  "aircond-water-dripping": ["aircond-water-leaking-causes", "aircond-chemical-wash-price-malaysia-2026", "signs-your-aircon-needs-chemical-overhaul-malaysia"],
+  "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "chemical-wash-vs-chemical-overhaul", "concealed-piping-aircond-installation-malaysia"],
+  "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-outdoor-unit-placement-malaysia", "aircond-installation-electrical-requirements-malaysia"],
+  "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "best-hp-aircond-bedroom-size-guide-malaysia"],
+  "aircond-weak-airflow": ["aircond-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "best-hp-aircond-bedroom-size-guide-malaysia"],
+  "aircond-not-turning-on": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
+  "aircond-blinking-light": ["aircond-troubleshooting-guide-malaysia", "aircond-installation-warranty-what-covers-malaysia"],
+  "aircond-water-dripping": ["aircond-water-leaking-causes", "aircond-chemical-wash-price-malaysia-2026", "signs-your-aircon-needs-chemical-overhaul-malaysia", "concealed-piping-aircond-installation-malaysia"],
   "aircond-thermostat-problems": ["aircond-troubleshooting-guide-malaysia", "how-often-service-aircond-malaysia"],
 };
 
@@ -208,6 +214,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-service-warranty-comparison-malaysia-2026",
   ],
   "installation": [
+    // Pre-INS-18 installation blogs
     "cara-pilih-hp-aircond-bilik-malaysia",
     "professional-new-aircond-installation-kl-selangor-2026",
     "rm199-vs-rm300-aircond-installation-kl-renovator",
@@ -215,6 +222,35 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-installation-guide-malaysia",
     "inverter-vs-non-inverter-aircond-malaysia-tnb-bill",
     "full-copper-vs-basic-aircond-installation-malaysia-2026",
+    "aircond-installation-cost-malaysia-2026",
+    "why-aircond-installation-expensive-malaysia",
+    "1-hp-aircond-bedroom-malaysia",
+    "ac-unit-installation-cost-malaysia",
+    "aircond-installation-time-malaysia",
+    // INS-18 Batch 1 (Round 78)
+    "10-costly-aircond-installation-mistakes-malaysia-2026",
+    "how-long-does-aircond-installation-take-malaysia",
+    "aircond-installation-condo-rules-malaysia-2026",
+    "best-hp-aircond-bedroom-size-guide-malaysia",
+    "aircond-piping-distance-maximum-malaysia",
+    // INS-18 Batch 2 (Round 79)
+    "aircond-installation-cost-kl-vs-selangor-2026",
+    "split-unit-vs-window-unit-installation-malaysia",
+    "aircond-installation-before-renovation-malaysia",
+    "concealed-piping-aircond-installation-malaysia",
+    "aircond-outdoor-unit-placement-malaysia",
+    // INS-18 Batch 3 (Round 80)
+    "aircond-installation-warranty-what-covers-malaysia",
+    "diy-vs-professional-aircond-installation-malaysia",
+    "aircond-installation-rainy-season-malaysia",
+    "aircond-installation-old-house-wiring-malaysia",
+    "aircond-installation-high-floor-condo-malaysia",
+    // INS-18 Batch 4 (Round 81)
+    "aircond-installation-shoplot-office-malaysia",
+    "aircond-installation-ceiling-cassette-malaysia",
+    "aircond-installation-multiple-units-one-compressor",
+    "aircond-installation-electrical-requirements-malaysia",
+    "aircond-installation-checklist-homeowner-malaysia",
   ],
   "basic-servicing": [
     "regular-aircond-basic-servicing-kl-selangor-2026",
@@ -291,6 +327,10 @@ export const AREA_BLOG_MAP: Record<string, string[]> = {
     "pressure-chemical-wash-leaking-aircond-kl-selangor",
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
     "aircond-service-price-guide-kl-2026",
+    // INS-21: Installation blogs for area pages (internal linking mesh)
+    "10-costly-aircond-installation-mistakes-malaysia-2026",
+    "best-hp-aircond-bedroom-size-guide-malaysia",
+    "aircond-installation-cost-kl-vs-selangor-2026",
   ],
 };
 
@@ -439,6 +479,30 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "online-vs-whatsapp-aircond-booking-malaysia-2026": ["emergency", "basic-servicing", "maintenance-contract"],
   "aircond-service-warranty-comparison-malaysia-2026": ["repair", "chemical-wash", "installation"],
   "tenant-vs-homeowner-aircond-responsibility-malaysia-2026": ["maintenance-contract", "basic-servicing", "chemical-wash"],
+  // INS-18 Batch 1 (Round 78) — Installation blog posts → service reverse links
+  "10-costly-aircond-installation-mistakes-malaysia-2026": ["installation", "repair", "basic-servicing"],
+  "how-long-does-aircond-installation-take-malaysia": ["installation", "dismantling-relocation"],
+  "aircond-installation-condo-rules-malaysia-2026": ["installation", "ceiling-cassette"],
+  "best-hp-aircond-bedroom-size-guide-malaysia": ["installation", "basic-servicing"],
+  "aircond-piping-distance-maximum-malaysia": ["installation", "repair"],
+  // INS-18 Batch 2 (Round 79)
+  "aircond-installation-cost-kl-vs-selangor-2026": ["installation", "basic-servicing"],
+  "split-unit-vs-window-unit-installation-malaysia": ["installation", "dismantling-relocation"],
+  "aircond-installation-before-renovation-malaysia": ["installation", "ceiling-cassette"],
+  "concealed-piping-aircond-installation-malaysia": ["installation", "repair"],
+  "aircond-outdoor-unit-placement-malaysia": ["installation", "basic-servicing"],
+  // INS-18 Batch 3 (Round 80)
+  "aircond-installation-warranty-what-covers-malaysia": ["installation", "repair", "basic-servicing"],
+  "diy-vs-professional-aircond-installation-malaysia": ["installation", "repair"],
+  "aircond-installation-rainy-season-malaysia": ["installation", "basic-servicing"],
+  "aircond-installation-old-house-wiring-malaysia": ["installation", "repair"],
+  "aircond-installation-high-floor-condo-malaysia": ["installation", "ceiling-cassette"],
+  // INS-18 Batch 4 (Round 81)
+  "aircond-installation-shoplot-office-malaysia": ["installation", "ceiling-cassette", "maintenance-contract"],
+  "aircond-installation-ceiling-cassette-malaysia": ["installation", "ceiling-cassette"],
+  "aircond-installation-multiple-units-one-compressor": ["installation", "basic-servicing"],
+  "aircond-installation-electrical-requirements-malaysia": ["installation", "repair"],
+  "aircond-installation-checklist-homeowner-malaysia": ["installation", "basic-servicing", "maintenance-contract"],
 };
 
 
@@ -490,6 +554,40 @@ export function getBlogsForService(serviceSlug: string): string[] {
   return SERVICE_BLOG_MAP_V2[serviceSlug] || [];
 }
 
+// ── INS-21: INSTALLATION SILO — All installation sub-pages for cross-linking ──
+// Maps installation pillar/sub-pillar pages to their cluster pages for internal linking
+export const INSTALLATION_SILO = {
+  pillar: "/aircond-installation-kl",
+  subPillars: [
+    { url: "/new-home-aircond-installation", anchor: "New Home Installation" },
+    { url: "/whole-house-aircond-installation", anchor: "Whole House Installation" },
+    { url: "/commercial-aircond-installation", anchor: "Commercial Installation" },
+    { url: "/installation-price-malaysia", anchor: "Installation Price Guide" },
+    { url: "/btu-calculator", anchor: "BTU Calculator" },
+  ],
+  perHP: [
+    { url: "/1hp-aircond-installation-kl", anchor: "1HP Installation" },
+    { url: "/1.5hp-aircond-installation-kl", anchor: "1.5HP Installation" },
+    { url: "/2hp-aircond-installation-kl", anchor: "2HP Installation" },
+  ],
+  perType: [
+    { url: "/wall-mounted-aircond-installation-kl", anchor: "Wall-Mounted Installation" },
+    { url: "/ceiling-cassette-aircond-installation-kl", anchor: "Ceiling Cassette Installation" },
+    { url: "/window-unit-aircond-installation-kl", anchor: "Window Unit Installation" },
+  ],
+  tools: [
+    { url: "/btu-calculator", anchor: "BTU Calculator" },
+    { url: "/faq", anchor: "FAQ" },
+  ],
+};
+
+/** Get all installation blog post slugs (INS-18 Batch 1-4) */
+export function getInstallationBlogSlugs(): string[] {
+  return SERVICE_BLOG_MAP_V2["installation"]?.filter(
+    (slug) => slug.includes("installation") || slug.includes("10-costly") || slug.includes("diy-vs") || slug.includes("best-hp")
+  ) || [];
+}
+
 /** Invert SERVICE_BLOG_MAP_V2 → blog slug list that should link back to a given service */
 export function getBlogsLinkingToService(serviceSlug: string): string[] {
   const out: string[] = [];
@@ -509,11 +607,9 @@ export const ANCHOR_TEXTS = {
   "chemical-wash": ["pressure chemical wash", "aircond chemical wash", "chemical wash service", "deep chemical clean", "chemical wash KL"],
   "chemical-overhaul": ["chemical overhaul", "full aircond overhaul", "chemical overhaul KL", "deep clean overhaul", "dismantling overhaul"],
   "gas-topup": ["gas top-up", "refrigerant top-up", "gas top-up KL", "R32 gas top-up", "R410A gas top-up"],
-  "repair": [
-    "baiki-vs-tukar-baru-aircond-malaysia","aircond repair", "troubleshooting & repair", "aircond troubleshooting", "fault diagnosis", "repair service KL"],
+  "repair": ["aircond repair", "troubleshooting & repair", "aircond troubleshooting", "fault diagnosis", "repair service KL"],
   "basic-servicing": ["basic servicing", "routine maintenance", "aircond maintenance", "regular service", "service & clean"],
-  "installation": [
-    "cara-pilih-hp-aircond-bilik-malaysia","new installation", "aircond installation KL", "unit installation", "professional installation"],
+  "installation": ["aircond installation KL", "professional installation", "new unit installation", "installation from RM199", "same-day installation"],
   "ceiling-cassette": ["ceiling cassette service", "cassette aircond service", "commercial cassette"],
   "dismantling-relocation": ["dismantle & relocate", "aircond relocation", "unit relocation"],
   "emergency": ["emergency aircond repair", "same-day emergency repair", "urgent aircond repair", "emergency service KL"],
@@ -572,6 +668,17 @@ export const HOMEPAGE_SILO = {
       { slug: "aircond-water-leaking-causes", anchor: "Why Aircond Leaking Water" },
       { slug: "r32-r410a-r22-gas-difference", anchor: "R32 vs R410A vs R22 Gas" },
       { slug: "aircond-service-price-guide-kl-2026", anchor: "Aircond Price Guide KL 2026" },
+    ],
+  },
+  installation: {
+    label: "Installation Guides · Pemasangan",
+    featured: [
+      { slug: "10-costly-aircond-installation-mistakes-malaysia-2026", anchor: "10 Installation Mistakes to Avoid" },
+      { slug: "best-hp-aircond-bedroom-size-guide-malaysia", anchor: "Best HP for Your Room Size" },
+      { slug: "diy-vs-professional-aircond-installation-malaysia", anchor: "DIY vs Professional Installation" },
+      { slug: "aircond-installation-condo-rules-malaysia-2026", anchor: "Condo Installation Rules" },
+      { slug: "aircond-installation-checklist-homeowner-malaysia", anchor: "Pre-Installation Checklist" },
+      { slug: "aircond-installation-electrical-requirements-malaysia", anchor: "Electrical Requirements Guide" },
     ],
   },
   emergency: {
