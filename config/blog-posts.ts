@@ -1,4 +1,5 @@
 import { installationBlogBatch1 } from "./installation-blog-batch1";
+import { installationBlogBatch2 } from "./installation-blog-batch2";
 
 export type BlogPost = {
   slug: string;
@@ -9081,5 +9082,8 @@ export const allPosts: BlogPost[] = [
 
   // ─── INS-18 Blog Batch 1 (Round 78): Installation-Focused Posts ────────
   ...installationBlogBatch1,
+
+  // ─── INS-18 Blog Batch 2 (Round 79): Installation-Focused Posts ────────
+  ...installationBlogBatch2,
 
 ];
