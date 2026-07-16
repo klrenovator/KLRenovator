@@ -408,6 +408,27 @@ export default function Home() {
               </NextLink>
             </div>
 
+            {/* Installation cluster — INS-21 internal linking mesh */}
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">Installation</p>
+              <h3 className="font-black text-slate-900 text-sm mb-3">Install Like a Pro</h3>
+              <div className="space-y-1.5">
+                {HOMEPAGE_SILO.installation.featured.map((item) => (
+                  <NextLink
+                    key={item.slug}
+                    href={`/blog/${item.slug}`}
+                    className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-sky-600 transition-colors"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-sky-400 shrink-0" />
+                    {item.anchor}
+                  </NextLink>
+                ))}
+              </div>
+              <NextLink href="/aircond-installation-kl" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-sky-600 hover:text-sky-800">
+                Installation Guide →
+              </NextLink>
+            </div>
+
           </div>
         </div>
       </section>
