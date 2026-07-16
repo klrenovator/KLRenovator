@@ -1994,31 +1994,44 @@ export const allPosts: BlogPost[] = [
       <h2>MCB Tripping — Do Not Ignore</h2>
       <p>If your aircond trips the circuit breaker (MCB) when switched on, this is an electrical fault that must be investigated by a qualified technician. Do not repeatedly reset and retry — each restart attempt while a fault exists risks further damage to the PCB board, wiring, or compressor. The most common causes of MCB tripping are: a shorted compressor winding drawing excess current, a failed capacitor, earth leakage from water ingress into the outdoor unit, or a wiring fault. All of these are diagnosed during a standard service visit. Diagnostic fee RM 88, waived when repair is carried out same visit. WhatsApp <strong>+60 18-298 3573</strong>.</p>
     `,
-    contentMS: `
-      <h2>Cara Mendiagnosis Masalah Aircond Anda</h2>
-      <p>Kebanyakan masalah aircond termasuk dalam beberapa kategori yang boleh dijangka. Gunakan panduan ini untuk mengenal pasti apa yang salah sebelum memanggil juruteknik.</p>
-      <h2>Masalah: Aircond Tidak Sejuk</h2>
-      <ul>
-        <li>Semak sama ada suhu yang ditetapkan lebih rendah daripada suhu bilik</li>
-        <li>Adakah penapis udara tersumbat? Keluarkan, bilas, pasang semula</li>
-        <li>Adakah kipas luar berjalan?</li>
-      </ul>
-      <p><strong>Pembaikan profesional:</strong> Gas rendah (RM 120+), gegelung kotor (RM 120+), kapasitor rosak (RM 180)</p>
-      <h2>Masalah: Aircond Bocor Air</h2>
-      <ul>
-        <li>Semak sama ada unit dalam dipasang dengan rata</li>
-        <li>Lihat salur longkang — adakah ia tersumbat?</li>
-      </ul>
-      <h2>Masalah: Lampu Berkelip / Kod Ralat</h2>
-      <p>Kebanyakan jenama aircond menggunakan corak kelipan untuk menyampaikan kod ralat. Kira bilangan kelipan dengan teliti dan semak manual unit anda. Atau WhatsApp video pendek kepada KL Renovator di <strong>+60 18-298 3573</strong> untuk pengenalpastian segera. Punca kod kelipan biasa termasuk: gas rendah, kerosakan sensor, ralat komunikasi antara unit dalam dan luar.</p>
-      <h2>Apa yang Boleh Anda Baiki Sendiri</h2>
-      <ul>
-        <li>Bersihkan penapis udara setiap bulan</li>
-        <li>Ganti bateri kawalan jauh</li>
-        <li>Reset MCB sekali (jika jatuh lagi, hubungi juruteknik)</li>
-      </ul>
-      <p>Yuran diagnostik RM 88 (dikecualikan dengan pembaikan). WhatsApp <strong>+60 18-298 3573</strong>.</p>
-    `,
+    contentMS: `<h2>Panduan Troubleshooting Aircond Lengkap untuk Rumah Malaysia</h2>
+      <p>Aircond anda bermasalah? Sebelum memanggil juruteknik, cuba panduan troubleshooting kami. <a href="/near-me">Pakar pembaikan kami</a> telah menyusun masalah paling biasa dan penyelesaiannya.</p>
+
+      <h2>Masalah #1: Aircond Tidak Sejuk</h2>
+      <p>Punca paling biasa: penapis kotor, gegelung penyejat tersumbat, atau gas penyejuk rendah. Penyelesaian: bersihkan penapis dahulu. Jika masih tidak sejuk, hubungi kami untuk diagnosis profesional. Yuran diagnosis RM 88 (dikecualikan jika pembaikan dilakukan).</p>
+
+      <h2>Masalah #2: Aircond Bocor Air</h2>
+      <p>Kebocoran air biasanya disebabkan paip saliran tersumbat atau dulang saliran penuh. Penyelesaian: periksa paip saliran luar — jika air tidak mengalir, paip mungkin tersumbat. Cuci kimia atau overhaul kimia biasanya menyelesaikan masalah ini.</p>
+
+      <h2>Masalah #3: Aircond Berbau Busuk</h2>
+      <p>Bau hapak atau masam menunjukkan pertumbuhan kulat dan bakteria pada gegelung penyejat atau dulang saliran. Penyelesaian: cuci kimia (dari RM 120) membunuh biofilm yang menyebabkan bau. Untuk kes teruk, overhaul kimia diperlukan.</p>
+
+      <h2>Masalah #4: Aircond Berfungsi Tapi Kompresor Tidak Hidup</h2>
+      <p>Kompresor tidak hidup boleh disebabkan kapasitor rosak, masalah PCB, atau kerosakan kompresor itu sendiri. Kapasitor ialah pembaikan paling biasa dan paling murah (RM 80-150). PCB dan kompresor lebih mahal.</p>
+
+      <h2>Masalah #5: Aircond Berbunyi Kuat</h2>
+      <p>Bunyi berbeza menunjukkan masalah berbeza: berdengung (kapasitor), berderak (kipas longgar), berdecit (bearing haus), atau berdetik (panel longgar). Kebanyakan isu bunyi diselesaikan semasa servis asas.</p>
+
+      <h2>Masalah #6: Aircond Tripping MCB</h2>
+      <p>MCB terpelantik menunjukkan litar pintas atau beban berlebihan. Punca biasa: kompresor gagal menarik arus terlalu tinggi, wayar rosak, atau MCB terlalu kecil. JANGAN terus reset MCB — hubungi juruteknik untuk diagnosis.</p>
+
+      <h2>Bila Perlu Hubungi Profesional vs Cuba Sendiri</h2>
+      <table>
+        <thead><tr><th>Masalah</th><th>DIY?</th><th>Hubungi Kami Jika...</th></tr></thead>
+        <tbody>
+          <tr><td>Penapis kotor</td><td>Ya — cuci sendiri</td><td>Tidak bantu selepas cuci</td></tr>
+          <tr><td>Tidak sejuk</td><td>Cuba cuci penapis</td><td>Masih tidak sejuk</td></tr>
+          <tr><td>Bocor air</td><td>Periksa paip saliran</td><td>Berterusan selepas检查</td></tr>
+          <tr><td>Bau busuk</td><td>Tidak — perlu cuci kimia</td><td>Hubungi terus</td></tr>
+          <tr><td>Bunyi kuat</td><td>Periksa panel longgar</td><td>Bunyi berterusan</td></tr>
+          <tr><td>MCB tripping</td><td>JANGAN — bahaya</td><td>Hubungi segera</td></tr>
+          <tr><td>Tidak hidup langsung</td><td>Periksa suis & MCB</td><td>Masih tidak hidup</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Hubungi Pakar Troubleshooting Kami</h2>
+      <p><a href="/aircond-installation-kl">Pasukan pembaikan kami</a> mendiagnosis dan membaiki semua jenama aircond di seluruh KL & Selangor. Diagnosis RM 88 (dikecualikan jika pembaikan dilakukan).</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — terbitkan masalah anda dan kami beri anggaran harga segera.</p>`,
     contentZH: `
       <h2>如何诊断您的冷气问题</h2>
       <p>大多数冷气问题属于几个可预测的类别。在联系技术人员之前，使用本指南识别问题所在。</p>
@@ -2099,35 +2112,55 @@ export const allPosts: BlogPost[] = [
       <h2>Indoor Air Quality and Staff Productivity</h2>
       <p>Commercial aircond units that are not regularly maintained become sources of airborne mould spores, bacteria, and allergens. Research consistently shows that poor indoor air quality in offices reduces cognitive performance and increases sick days. A properly maintained HVAC system — with clean coils, sterilised drain pans, and clean blower wheels — provides genuinely cleaner air than a neglected system regardless of what the thermostat reads. For businesses, the productivity cost of staff illness from poor IAQ far exceeds the cost of a maintenance contract. KL Renovator commercial maintenance contracts start from <strong>RM 1,999 per year</strong> for 5–10 units. WhatsApp <strong>+60 18-298 3573</strong> for a site survey and quote.</p>
     `,
-    contentMS: `
-      <h2>Mengapa Penyelenggaraan HVAC Komersial Berbeza</h2>
-      <p>Sistem aircond komersial beroperasi lebih lama, melayani lebih ramai orang, dan lebih kompleks. Kerosakan semasa waktu perniagaan bermakna produktiviti hilang dan pelanggan tidak berpuas hati.</p>
-      <h2>Jadual Penyelenggaraan yang Disyorkan</h2>
+    contentMS: `<h2>Penyelenggaraan HVAC Komersial di KL — Panduan Lengkap untuk Perniagaan</h2>
+      <p>Sistem HVAC komersial beroperasi 10-16 jam sehari, mengumpul kotoran 2-3x lebih cepat daripada unit kediaman. <a href="/near-me">Pakar penyelenggaraan komersial kami</a> menerangkan apa yang perniagaan anda perlukan.</p>
+
+      <h2>Kenapa Penyelenggaraan Komersial Berbeza</h2>
+      <table>
+        <thead><tr><th>Faktor</th><th>Kediaman</th><th>Komersial</th></tr></thead>
+        <tbody>
+          <tr><td>Jam operasi</td><td>8-12 jam/hari</td><td>10-16 jam/hari</td></tr>
+          <tr><td>Kekerapan servis disyorkan</td><td>6-12 bulan</td><td>3-6 bulan</td></tr>
+          <tr><td>Jenis unit biasa</td><td>Dinding 1-2.5 HP</td><td>Cassette/berdiri 2.5-5 HP</td></tr>
+          <tr><td>Kesan kerosakan</td><td>Ketidakselesaan</td><td>Hilang hasil perniagaan</td></tr>
+          <tr><td>Keutamaan penyelenggaraan</td><td>Penting</td><td>Kritikal</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Jadual Penyelenggaraan Komersial Yang Disyorkan</h2>
       <ul>
-        <li><strong>Bulanan:</strong> Pemeriksaan visual, semak penapis, semak dulang longkang</li>
-        <li><strong>Setiap 2–3 bulan:</strong> Servis asas profesional</li>
-        <li><strong>Setiap 6 bulan:</strong> Cuci kimia gegelung dan blower</li>
-        <li><strong>Tahunan:</strong> Overhaul kimia penuh, semak penyejuk, pemeriksaan elektrik</li>
+        <li><strong>Penapis:</strong> Cuci setiap 2-4 minggu (delegasi kepada staf dalaman)</li>
+        <li><strong>Servis asas:</strong> Setiap 3 bulan oleh juruteknik profesional</li>
+        <li><strong>Cuci kimia:</strong> Setiap 6 bulan untuk unit penggunaan berat</li>
+        <li><strong>Overhaul kimia:</strong> Setiap 12-18 bulan atau apabila prestasi menurun</li>
+        <li><strong>Pemeriksaan elektrik:</strong> Setiap 6 bulan — sambungan longgar, MCB, pembumian</li>
       </ul>
-      <h2>Harga Servis Ceiling Cassette</h2>
+
+      <h2>Kos Kerosakan vs Kos Penyelenggaraan</h2>
+      <table>
+        <thead><tr><th>Senario</th><th>Kos Penyelenggaraan/Tahun</th><th>Kos Kerosakan</th></tr></thead>
+        <tbody>
+          <tr><td>Pejabat 3 unit</td><td>RM 1,200-1,800 (AMC)</td><td>RM 3,000-5,000 (kompresor)</td></tr>
+          <tr><td>Restoran 5 unit</td><td>RM 2,000-3,000 (AMC)</td><td>RM 5,000-8,000 (masa henti)</td></tr>
+          <tr><td>Kedai 2 unit</td><td>RM 800-1,200 (AMC)</td><td>RM 2,000-3,500 (pembaikan)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Kontrak Penyelenggaraan Tahunan (AMC) untuk Perniagaan</h2>
+      <p>AMC kami termasuk: servis suku tahunan, tindak balas kecemasan keutamaan (hari sama), diskaun 10% pembaikan, lawatan diagnostik percuma, dan rekod servis bertulis untuk audit.</p>
+      <p>AMC bermula dari <strong>RM 499/tahun</strong> untuk satu unit — kurang daripada kos satu kerosakan kecemasan.</p>
+
+      <h2>Jenis Perniagaan Yang Kami Layani</h2>
       <ul>
-        <li>Servis Asas 1.0–1.5 HP: <strong>RM 150</strong></li>
-        <li>Cuci Kimia 1.0–1.5 HP: <strong>RM 220</strong></li>
-        <li>Overhaul Kimia 1.0–3.0 HP: <strong>RM 430</strong></li>
+        <li>🏢 Pejabat — SME, co-working, korporat</li>
+        <li>🍽️ Restoran & kafe — pengurusan haba dapur</li>
+        <li>🏥 Klinik & pergigian — persekitaran sensitif suhu</li>
+        <li>🏪 Kedai runcit — keselesaan pelanggan</li>
+        <li>🏭 Kilang kecil — keselesaan pekerja & penyejukan peralatan</li>
       </ul>
-      <h2>Kontrak Penyelenggaraan Tahunan</h2>
-      <ul>
-        <li>5–10 unit / tahun: <strong>RM 1,999</strong></li>
-        <li>10+ unit / tahun: <strong>RM 3,499</strong></li>
-      </ul>
-      <h2>Kontrak Penyelenggaraan Tahunan</h2>
-      <ul>
-        <li>5–10 unit / tahun: <strong>RM 1,999</strong></li>
-        <li>10+ unit / tahun: <strong>RM 3,499</strong></li>
-      </ul>
-      <p>Pelanggan kontrak menerima penjadualan hari yang sama yang diprioritaskan dan diskaun 10% untuk sebarang kerja pembaikan yang diperlukan di luar skop kontrak. Ini memastikan perniagaan anda tidak pernah terpaksa menunggu lama apabila sistem HVAC memerlukan perhatian segera.</p>
-      <p>WhatsApp <strong>+60 18-298 3573</strong> untuk sebutan komersial.</p>
-    `,
+
+      <h2>Dapatkan Sebut Harga Penyelenggaraan Komersial</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> dengan jenis perniagaan, bilangan unit, dan lokasi anda. <a href="/aircond-installation-kl">Pasukan komersial kami</a> akan menyediakan pelan penyelenggaraan tersuai dalam 30 minit.</p>`,
     contentZH: `
       <h2>为什么商业HVAC维护不同</h2>
       <p>商业冷气系统运行时间更长，服务人数更多，更复杂。营业时间故障意味着生产效率损失和客户不满。</p>
@@ -2204,31 +2237,36 @@ export const allPosts: BlogPost[] = [
       <h2>What a Legitimate Gas Top-Up Looks Like</h2>
       <p>A professional gas top-up takes 45–60 minutes. The technician arrives with a manifold gauge set and refrigerant cylinder, connects the gauges to the service valves, reads current suction and discharge pressure, compares to manufacturer specifications for the ambient temperature, and only then adds refrigerant if the pressure is confirmed below specification. The gauge readings before and after are shown to you. If any technician proposes to top up gas in 10 minutes without connecting gauges, this is not a professional service. Always ask to see the gauge readings before and after any gas work.</p>
     `,
-    contentMS: `
-      <h2>Mitos 1 — "Gas perlu ditambah setiap tahun"</h2>
-      <p><strong>Salah.</strong> Aircond yang dipasang dengan betul tanpa kebocoran tidak kehilangan gas. Jika unit anda memerlukan tambah gas setiap tahun, ada kebocoran yang perlu dicari dan dibaiki dahulu.</p>
-      <h2>Mitos 2 — "Mana-mana amaun gas adalah baik"</h2>
-      <p><strong>Salah.</strong> Terlalu sedikit DAN terlalu banyak penyejuk merosakkan kompressor. Juruteknik profesional menggunakan tolok manifold untuk pengukuran tekanan yang tepat.</p>
-      <h2>Mitos 3 — "R22 boleh digantikan dengan R410A"</h2>
-      <p><strong>Salah.</strong> R22 dan R410A tidak serasi. Jangan sekali-kali mencampurkan jenis penyejuk.</p>
-      <h2>Apa yang Disertakan dalam Top-Up Gas yang Betul</h2>
-      <ul>
-        <li>Semak kebocoran sebelum menambah gas</li>
-        <li>Pengukuran tekanan semasa</li>
-        <li>Amaun yang betul ditambah</li>
-        <li>Pengesahan tekanan akhir</li>
-      </ul>
-      <h2>Apa yang Disertakan dalam Top-Up Gas yang Betul</h2>
-      <ul>
-        <li>Semak kebocoran sebelum menambah gas</li>
-        <li>Pengukuran tekanan semasa</li>
-        <li>Amaun yang betul ditambah</li>
-        <li>Pengesahan tekanan akhir</li>
-        <li>Ujian prestasi penyejukan selepas selesai</li>
-      </ul>
-      <p>Ingat: jika juruteknik mencadangkan tambah gas tanpa terlebih dahulu mengukur tekanan semasa menggunakan tolok manifold, tanya mengapa. Tekanan mesti diukur terlebih dahulu — bukan agakan.</p>
-      <p>R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. Semak kebocoran disertakan. WhatsApp <strong>+60 18-298 3573</strong>.</p>
-    `,
+    contentMS: `<h2>Mitos vs Fakta: Tambah Gas Aircond di Malaysia</h2>
+      <p>Terdapat banyak salah faham tentang tambah gas aircond di kalangan pemilik rumah Malaysia. <a href="/near-me">Pakar gas top-up kami</a> membetulkan mitos paling biasa.</p>
+
+      <h2>Mitos #1: "Aircond Perlu Tambah Gas Setiap Tahun"</h2>
+      <p><strong>Fakta:</strong> TIDAK BETUL. Sistem aircond yang dipasang dengan betul adalah sistem tertutup — penyejuk tidak "habis" seperti petrol. Jika unit anda memerlukan tambah gas setiap tahun, ada kebocoran yang perlu dibaiki. Pemasangan berkualiti dengan sambungan flare yang betul dan ujian tekanan nitrogen sepatutnya tidak memerlukan tambah gas selama bertahun-tahun.</p>
+
+      <h2>Mitos #2: "Gas Rendah = Kompresor Rosak"</h2>
+      <p><strong>Fakta:</strong> TIDAK SEMESTINYA. Gas rendah boleh disebabkan kebocoran kecil di sambungan flare, injap, atau paip. Kebanyakan kebocoran boleh dibaiki tanpa menggantikan kompresor. Walau bagaimanapun, mengendalikan unit dengan gas rendah untuk masa yang lama BOLEH merosakkan kompresor — jadi jangan tunggu.</p>
+
+      <h2>Mitos #3: "Semua Gas Sama — R22, R32, R410A Boleh Dicampur"</h2>
+      <p><strong>Fakta:</strong> SANGAT BERBAHAYA. Setiap sistem direka untuk satu jenis penyejuk sahaja. Mencampur gas boleh menyebabkan kerosakan kompresor, tekanan berbahaya, dan dalam kes R32 (mudah terbakar sedikit), risiko kebakaran. Sentiasa gunakan gas yang dinyatakan pada pelekat unit luar anda.</p>
+
+      <h2>Mitos #4: "Tambah Gas Sendiri Mudah — Beli Di Shopee"</h2>
+      <p><strong>Fakta:</strong> BERBAHAYA. Menambah penyejuk memerlukan tolok manifold, peralatan vakum, dan pengetahuan tentang berat cas yang betul. Terlalu banyak gas menyebabkan tekanan tinggi dan kerosakan kompresor. Terlalu sedikit menyebabkan penyejukan lemah. R32 mudah terbakar dan memerlukan pengendalian khas.</p>
+
+      <h2>Mitos #5: "Harga Tambah Gas Patut Murah — RM 50-80"</h2>
+      <p><strong>Fakta:</strong> Harga yang sangat murah biasanya bermaksud: tiada pemeriksaan kebocoran (gas akan bocor semula dalam minggu), gas berkualiti rendah, atau jumlah gas tidak mencukupi. Harga profesional yang betul termasuk: pemeriksaan kebocoran, vakum jika diperlukan, dan jumlah gas yang tepat.</p>
+
+      <h2>Harga Tambah Gas Profesional KL Renovator</h2>
+      <table>
+        <thead><tr><th>Jenis Gas</th><th>Harga</th><th>Termasuk</th></tr></thead>
+        <tbody>
+          <tr><td>R22</td><td>Dari RM 120</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
+          <tr><td>R410A</td><td>Dari RM 150</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
+          <tr><td>R32</td><td>Dari RM 180</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Hubungi Pakar Gas Top-Up Kami</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — beritahu jenis gas unit anda (semak pelekat pada unit luar) dan kami beri sebut harga tepat. <a href="/aircond-installation-kl">Pasukan gas top-up kami</a> meliputi seluruh KL & Selangor.</p>`,
     contentZH: `
       <h2>误区1 — "气体需要每年充一次"</h2>
       <p><strong>错误。</strong>安装正确且无泄漏的冷气不会损失气体。如果您的机器每年都需要充气，说明有泄漏需要先找到并修复。</p>
@@ -2323,37 +2361,50 @@ export const allPosts: BlogPost[] = [
       <h2>Common First-Time Buyer Mistakes</h2>
       <p>The most common mistakes when buying an aircond in Malaysia: choosing the wrong HP based on price rather than room size; buying a non-inverter to save RM 200–400 upfront and paying significantly more in electricity over 5 years; choosing an unrecognised brand because spare parts availability is not considered; and not budgeting for installation cost separately from the unit price. Avoid all four and your aircond purchase will serve you well for 12–18 years with proper maintenance.</p>
     `,
-    contentMS: `
-      <h2>Langkah 1 — Pilih HP yang Betul</h2>
+    contentMS: `<h2>Panduan Membeli Aircond Malaysia 2026 — Semua Yang Anda Perlu Tahu</h2>
+      <p>Membeli aircond baru boleh mengelirukan dengan begitu banyak jenama, saiz HP, dan ciri. <a href="/near-me">Pakar pemasangan kami</a> menyediakan panduan lengkap untuk membantu anda memilih unit yang tepat.</p>
+
+      <h2>Langkah 1: Tentukan Saiz HP Yang Betul</h2>
+      <table>
+        <thead><tr><th>Saiz Bilik (kps)</th><th>HP Disyorkan</th><th>Sesuai Untuk</th></tr></thead>
+        <tbody>
+          <tr><td>100–150</td><td>1.0 HP</td><td>Bilik tidur standard</td></tr>
+          <tr><td>150–250</td><td>1.5 HP</td><td>Bilik utama, ruang tamu kecil</td></tr>
+          <tr><td>250–400</td><td>2.0 HP</td><td>Ruang tamu besar</td></tr>
+          <tr><td>400–550</td><td>2.5 HP</td><td>Kawasan pelan terbuka</td></tr>
+          <tr><td>550–700</td><td>3.0 HP</td><td>Komersial / dewan besar</td></tr>
+        </tbody>
+      </table>
+      <p>Tambah satu saiz HP jika bilik menghadap barat, tingkat atas, siling tinggi, atau 4+ penghuni. Gunakan <a href="/btu-calculator">Kalkulator BTU percuma kami</a> untuk pengiraan tepat.</p>
+
+      <h2>Langkah 2: Pilih Jenis Unit</h2>
       <ul>
-        <li>1.0 HP: Sehingga 100 kaki persegi</li>
-        <li>1.5 HP: 100–200 kaki persegi</li>
-        <li>2.0 HP: 200–300 kaki persegi</li>
-        <li>2.5 HP: 300–400 kaki persegi</li>
+        <li><strong>Dinding (Split):</strong> Paling popular, paling senyap, paling cekap — sesuai untuk kebanyakan rumah</li>
+        <li><strong>Ceiling Cassette:</strong> Aliran 4 arah — sesuai untuk pejabat dan ruang besar</li>
+        <li><strong>Unit Tingkap:</strong> Bajet rendah — sesuai untuk rumah sewa</li>
+        <li><strong>Multi-Split:</strong> Satu unit luar, 2-5 unit dalaman — sesuai untuk kondo</li>
       </ul>
-      <h2>Langkah 2 — Pilih Inverter untuk Kegunaan Harian</h2>
-      <p>Jimat 30–50% elektrik. Harga pembelian yang lebih tinggi dikembalikan dalam 2–4 tahun melalui penjimatan elektrik.</p>
-      <h2>Langkah 3 — Pilih Gas R32</h2>
-      <p>Untuk pembelian baru, sentiasa pilih R32.</p>
-      <h2>Langkah 4 — Jenama Terbaik</h2>
-      <ul>
-        <li><strong>Daikin</strong> — paling dipercayai</li>
-        <li><strong>Panasonic</strong> — Nanoe-X, Econavi</li>
-        <li><strong>Mitsubishi</strong> — premium, sangat senyap</li>
-      </ul>
-      <h2>Langkah 5 — Anggaran Pemasangan + Penyelenggaraan</h2>
-      <ul>
-        <li>Pemasangan: RM 199–449</li>
-        <li>Penyelenggaraan tahunan: lebih kurang RM 400–450 seunit</li>
-      </ul>
-      <h2>Langkah 5 — Anggaran Pemasangan + Penyelenggaraan</h2>
-      <ul>
-        <li>Pemasangan: RM 199–449</li>
-        <li>Penyelenggaraan tahunan: lebih kurang RM 400–450 seunit</li>
-      </ul>
-      <p>Jumlah kos pemilikan sepanjang 10 tahun merangkumi harga pembelian, pemasangan, dan 10 tahun penyelenggaraan. Faktorkan gambaran penuh sebelum membandingkan harga pendahuluan sahaja — penjimatan elektrik inverter biasanya melebihi premium harga dalam masa 2–3 tahun untuk pengguna harian.</p>
-      <p>KL Renovator memasang semua jenama. WhatsApp <strong>+60 18-298 3573</strong>.</p>
-    `,
+
+      <h2>Langkah 3: Inverter vs Bukan Inverter</h2>
+      <table>
+        <thead><tr><th>Faktor</th><th>Inverter</th><th>Bukan Inverter</th></tr></thead>
+        <tbody>
+          <tr><td>Harga unit</td><td>20-40% lebih mahal</td><td>Lebih murah</td></tr>
+          <tr><td>Penjimatan elektrik</td><td>30-50% lebih jimat</td><td>Penggunaan standard</td></tr>
+          <tr><td>Bunyi</td><td>Lebih senyap</td><td>Sedikit lebih bising</td></tr>
+          <tr><td>Jangka hayat</td><td>10-15 tahun</td><td>7-10 tahun</td></tr>
+          <tr><td>Sesuai untuk</td><td>Penggunaan 6+ jam/hari</td><td>Penggunaan &lt;4 jam/hari</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Langkah 4: Pilih Jenama</h2>
+      <p>Jenama premium: Daikin, Mitsubishi Electric, Panasonic — kebolehpercayaan tinggi, waranti panjang. Jenama nilai: Midea, Acson, Hisense — prestasi baik pada harga lebih rendah. Semua 20 jenama dipasang oleh pasukan kami.</p>
+
+      <h2>Langkah 5: Bajet Pemasangan</h2>
+      <p>Jangan lupa kos pemasangan! Unit murah dengan pemasangan buruk = masalah selama bertahun-tahun. Pemasangan KL Renovator dari <strong>RM 199</strong> termasuk paip tembaga Jenis L, penebat Armaflex, vakum, dan waranti 1 bulan.</p>
+
+      <h2>Dapatkan Nasihat Pembelian Percuma</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> dengan saiz bilik dan bajet anda — kami cadangkan unit terbaik untuk keperluan anda. <a href="/aircond-installation-kl">Pasukan pemasangan kami</a> memasang semua 20 jenama utama.</p>`,
     contentZH: `
       <h2>第一步 — 选择正确的HP</h2>
       <ul>
@@ -8058,36 +8109,45 @@ export const allPosts: BlogPost[] = [
 
       <p>Whichever brand you own, KL Renovator services both. WhatsApp <strong>+60 18-298 3573</strong> to book. <a href="/services/chemical-wash">Chemical wash from RM 120</a> | <a href="/brands/daikin">Daikin service</a> | <a href="/brands/panasonic">Panasonic service</a></p>
     `,
-    contentMS: `
-      <h2>Daikin vs Panasonic: Mana Lebih Murah Diselenggara di Malaysia?</h2>
-      <p>Daikin dan Panasonic adalah dua jenama aircond paling popular di Malaysia. Kedua-duanya berkejuruteraan Jepun, kedua-duanya menggunakan penyejuk R32 dalam model inverter terbaru, dan kedua-duanya mudah didapati di seluruh KL dan Selangor. Tetapi dari segi kos penyelenggaraan jangka panjang, terdapat perbezaan sebenar yang perlu diketahui oleh pemilik rumah Malaysia sebelum memilih jenama.</p>
+    contentMS: `<h2>Daikin vs Panasonic: Perbandingan Kos Servis Aircond 2026</h2>
+      <p>Dua jenama aircond paling popular di Malaysia — tetapi adakah kos penyelenggaraan berbeza? <a href="/near-me">Pakar servis kami</a> membandingkan kos sebenar berdasarkan pengalaman menservis ribuan unit kedua-dua jenama di seluruh KL dan Selangor.</p>
 
-      <h2>Perbandingan Kos Cuci Kimia</h2>
-      <ul><li><strong>Daikin 1.0–1.5 HP:</strong> RM 120</li><li><strong>Panasonic 1.0–1.5 HP:</strong> RM 120</li></ul>
-      <p>Untuk cuci kimia, kedua-dua jenama sama kosnya. Walau bagaimanapun, unit Daikin mempunyai jarak gegelung yang lebih rapat pada beberapa model baharu.</p>
+      <h2>Perbandingan Kos Servis Terperinci</h2>
+      <table>
+        <thead><tr><th>Servis</th><th>Daikin</th><th>Panasonic</th><th>Perbezaan</th></tr></thead>
+        <tbody>
+          <tr><td>Servis asas</td><td>RM 99</td><td>RM 99</td><td>Sama</td></tr>
+          <tr><td>Cuci kimia</td><td>RM 120</td><td>RM 120</td><td>Sama</td></tr>
+          <tr><td>Overhaul kimia</td><td>RM 220</td><td>RM 220</td><td>Sama</td></tr>
+          <tr><td>Tambah gas R32</td><td>RM 180</td><td>RM 180</td><td>Sama</td></tr>
+          <tr><td>Kapasitor ganti</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
+          <tr><td>PCB board</td><td>RM 200-400</td><td>RM 180-350</td><td>Daikin sedikit lebih mahal</td></tr>
+          <tr><td>Kompresor ganti</td><td>RM 600-1,200</td><td>RM 550-1,100</td><td>Daikin sedikit lebih mahal</td></tr>
+          <tr><td>Motor kipas dalaman</td><td>RM 150-280</td><td>RM 140-260</td><td>Hampir sama</td></tr>
+          <tr><td>Penderia/thermistor</td><td>RM 60-120</td><td>RM 50-100</td><td>Daikin sedikit lebih mahal</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Kesimpulan:</strong> Kos penyelenggaraan rutin adalah sama untuk kedua-dua jenama. Perbezaan hanya pada komponen ganti tertentu, dan ia kecil — biasanya RM 20-50 sahaja.</p>
 
-      <h2>Perbandingan Kos Tambah Gas</h2>
-      <ul><li><strong>Daikin:</strong> RM 180 (R32 1.0 HP), RM 200 (R32 1.5–2.0 HP)</li><li><strong>Panasonic:</strong> RM 180 (R32 1.0 HP), RM 200 (R32 1.5–2.0 HP)</li></ul>
-      <p>Kedua-dua jenama menggunakan R32. Harganya sama. Kompressor Daikin lebih toleran terhadap gas rendah sedikit, manakala Panasonic lebih cepat menunjukkan penurunan prestasi.</p>
-
-      <h2>Kos Pembaikan Biasa</h2>
+      <h2>Kebolehpercayaan Jangka Panjang</h2>
       <ul>
-        <li><strong>Ganti kapasitor Daikin:</strong> RM 150–220</li>
-        <li><strong>Ganti kapasitor Panasonic:</strong> RM 150–250</li>
-        <li><strong>PCB Daikin:</strong> RM 350–600</li>
-        <li><strong>PCB Panasonic:</strong> RM 400–650 (model nanoe-G lebih mahal)</li>
+        <li><strong>Daikin:</strong> Dikenali dengan teknologi pemampat swing yang unggul, jangka hayat 12-15 tahun dengan penyelenggaraan betul. Kompresor Daikin jarang gagal sebelum 10 tahun.</li>
+        <li><strong>Panasonic:</strong> Dikenali dengan penulenan udara Nanoe-X dan ekonomi tenaga, jangka hayat 10-13 tahun. Model ECONAVI sangat cekap tenaga.</li>
+        <li>Kedua-dua jenama sangat boleh dipercayai — perbezaan utama ialah ciri dan harga awal, bukan kos penyelenggaraan.</li>
+        <li>Penyelenggaraan berkala adalah lebih penting daripada jenama — unit yang diservis regularmente akan bertahan lebih lama tanpa mengira jenama.</li>
       </ul>
-      <p>Secara keseluruhan, alat ganti Daikin lebih mudah didapati kerana bahagian pasarannya lebih besar di Malaysia.</p>
 
-      <h2>Kos Pemasangan</h2>
-      <p>Kedua-duanya RM 199 untuk 1.0–1.5 HP. Harga unit Daikin biasanya RM 100–300 lebih mahal daripada Panasonic yang setanding.</p>
+      <h2>Isu Biasa Mengikut Jenama</h2>
+      <ul>
+        <li><strong>Daikin:</strong> Kadang-kadang isu sensor suhu (mudah dibaiki), PCB inverter sensitif lonjakan kuasa</li>
+        <li><strong>Panasonic:</strong> Kadang-kadang isu motor kipas luar (mudah diganti), penapis Nanoe perlu diganti setiap 2-3 tahun</li>
+        <li>Kedua-dua jenama mempunyai rangkaian alat ganti yang luas di Malaysia — tiada masalah ketersediaan</li>
+      </ul>
 
-      <h2>Kesimpulan</h2>
-      <p><strong>Pilih Daikin jika:</strong> Anda mahukan kebolehpercayaan maksimum dan tidak kisah bayar RM 100–300 lebih awal.</p>
-      <p><strong>Pilih Panasonic jika:</strong> Anda mahukan nilai terbaik — harga lebih rendah, kecekapan tenaga cemerlang, dan penulenan udara nanoe-X.</p>
-
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/chemical-wash">Cuci kimia dari RM 120</a> | <a href="/ms/brands/daikin">Servis Daikin</a> | <a href="/ms/brands/panasonic">Servis Panasonic</a></p>
-    `,
+      <h2>Servis Profesional untuk Kedua-dua Jenama</h2>
+      <p>KL Renovator menservis semua model Daikin dan Panasonic — inverter dan bukan inverter, semua saiz HP dari 1.0 hingga 3.0 HP, dinding dan ceiling cassette. Harga sama untuk semua jenama kerana kos penyelenggaraan asas adalah sama.</p>
+      <p>Pasukan kami berpengalaman dengan model Daikin FTKM, FTKQ, FTV, dan Panasonic CS-PU, CS-XU, CS-S — kami tahu isu biasa setiap model dan cara membaikinya dengan cepat.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — beritahu jenama dan model anda untuk sebut harga segera. Hari sama tersedia untuk kedua-dua jenama.</p>`,
     contentZH: `
       <h2>大金 vs 松下：马来西亚哪个维护更便宜？</h2>
       <p>大金和松下是马来西亚最受欢迎的两个冷气品牌。都是日本技术，都在最新变频机型中使用R32冷媒。</p>
@@ -8159,29 +8219,49 @@ export const allPosts: BlogPost[] = [
 
       <p>KL Renovator services all 20 brands across KL and Selangor. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services/repair">Troubleshooting & repair from RM 88</a> | <a href="/services">All services</a></p>
     `,
-    contentMS: `
-      <h2>Pusat Servis Sah vs Syarikat HVAC Bebas: Gambaran Sebenar</h2>
-      <p>Apabila aircond Daikin, Panasonic atau Mitsubishi anda rosak di Kuala Lumpur atau Selangor, anda ada dua pilihan: hubungi pusat servis sah jenama, atau hubungi syarikat HVAC bebas seperti KL Renovator.</p>
+    contentMS: `<h2>Servis Aircond: Juruteknik Sah Jenama vs Bebas — Mana Lebih Baik?</h2>
+      <p>Pemilik rumah sering bertanya: patutkah saya gunakan pusat servis sah jenama atau juruteknik bebas? <a href="/near-me">Pakar servis kami</a> membandingkan kedua-dua pilihan secara jujur berdasarkan pengalaman bertahun-tahun dalam industri.</p>
 
-      <h2>Perbandingan</h2>
+      <h2>Perbandingan Terperinci</h2>
       <table>
-        <thead><tr><th>Faktor</th><th>Pusat Servis Sah</th><th>Bebas (KL Renovator)</th></tr></thead>
+        <thead><tr><th>Faktor</th><th>Sah Jenama</th><th>Bebas (KL Renovator)</th></tr></thead>
         <tbody>
-          <tr><td><strong>Harga</strong></td><td>Kadar tetap jenama — 20-40% lebih tinggi</td><td>Kadar rata telus — RM 99 asas, RM 120 cuci kimia</td></tr>
-          <tr><td><strong>Masa Respons</strong></td><td>2-7 hari untuk bukan kecemasan</td><td>Hari sama tersedia, dispatch kecemasan 30-60 minit</td></tr>
-          <tr><td><strong>Waranti Kerja</strong></td><td>Biasanya 3 bulan</td><td>Waranti kerja 1 bulan, tanggungjawab terus</td></tr>
-          <tr><td><strong>Pelbagai Jenama</strong></td><td>Hanya jenama sendiri</td><td>Semua 20 jenama</td></tr>
+          <tr><td>Harga servis asas</td><td>RM 150-250</td><td>RM 99</td></tr>
+          <tr><td>Harga cuci kimia</td><td>RM 180-300</td><td>RM 120</td></tr>
+          <tr><td>Masa menunggu</td><td>3-7 hari</td><td>Hari sama tersedia</td></tr>
+          <tr><td>Jenama diservis</td><td>1 jenama sahaja</td><td>Semua 20 jenama</td></tr>
+          <tr><td>Waranti servis</td><td>30-90 hari</td><td>1 bulan bertulis</td></tr>
+          <tr><td>Alat ganti</td><td>Asal sahaja (mahal)</td><td>Asal atau OEM (lebih murah)</td></tr>
+          <tr><td>Keluaran hari sama</td><td>Jarang</td><td>Ya, biasa</td></tr>
+          <tr><td>Rekod servis</td><td>Ya (dalam sistem jenama)</td><td>Ya (kad kerja bertulis)</td></tr>
+          <tr><td>Diagnostik</td><td>Alat proprietari</td><td>Alat universal + pengalaman</td></tr>
         </tbody>
       </table>
 
-      <h2>Bila Pilih Servis Sah</h2>
-      <p>Pilih servis sah jika unit masih dalam waranti pengeluar, atau kerosakan memerlukan alat ganti eksklusif jenama.</p>
+      <h2>Bila Pilih Servis Sah Jenama</h2>
+      <ul>
+        <li>Unit masih dalam waranti pengeluar dan anda memerlukan tuntutan waranti untuk komponen mahal seperti kompresor atau PCB</li>
+        <li>Masalah khusus yang memerlukan alat diagnostik proprietari yang hanya tersedia di pusat sah</li>
+        <li>Penggantian PCB atau kompresor yang dilindungi waranti pengeluar — pusat sah boleh memproses tuntutan secara langsung</li>
+        <li>Unit model terbaru yang sangat baru di pasaran dan juruteknik bebas belum berpengalaman dengannya</li>
+      </ul>
 
-      <h2>Bila Pilih Servis Bebas</h2>
-      <p>Pilih syarikat bebas jika unit sudah luput waranti, anda perlukan servis hari sama, mahukan harga telus, atau ada pelbagai jenama di rumah.</p>
+      <h2>Bila Pilih Juruteknik Bebas (KL Renovator)</h2>
+      <ul>
+        <li>Servis rutin (cuci, penyelenggaraan, tambah gas) — kualiti sama pada harga 40-60% lebih rendah</li>
+        <li>Unit di luar waranti pengeluar — tiada sebab bayar lebih untuk pusat sah</li>
+        <li>Perlukan servis segera — hari sama tersedia vs 3-7 hari menunggu</li>
+        <li>Berbilang jenama di rumah — satu juruteknik untuk semua, bukan 3 pusat servis berbeza</li>
+        <li>Pembaikan di luar waranti — kos 30-50% lebih rendah dengan alat ganti OEM berkualiti</li>
+        <li>Unit lama yang pusat sah mungkin tidak lagi menyokong — kami servis semua model lama dan baru</li>
+      </ul>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/repair">Pembaikan dari RM 88</a></p>
-    `,
+      <h2>Mitos: "Hanya Pusat Sah Boleh Servis Dengan Betul"</h2>
+      <p>Ini tidak benar. Servis asas (cuci penapis, cuci kimia, tambah gas) adalah prosedur universal yang sama untuk semua jenama. Juruteknik bebas yang berpengalaman boleh melakukan kerja yang sama kualitinya. Perbezaan utama ialah harga dan masa menunggu, bukan kualiti kerja.</p>
+
+      <h2>Hubungi Kami</h2>
+      <p>KL Renovator menservis semua 20 jenama utama pada harga berpatutan dengan waranti bertulis. Juruteknik kami berpengalaman dengan Daikin, Panasonic, Mitsubishi, York, Midea, Samsung, LG, dan semua jenama lain.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — sebut harga dalam 30 minit, hari sama tersedia.</p>`,
     contentZH: `
       <h2>授权服务中心 vs 独立HVAC公司：真实对比</h2>
       <p>当您的大金、松下或三菱冷气在吉隆坡或雪兰莪出现故障时，您有两个选择：致电品牌的授权服务中心，或致电像KL Renovator这样的独立HVAC公司。</p>
@@ -8253,27 +8333,40 @@ export const allPosts: BlogPost[] = [
 
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a straight answer and upfront price. <a href="/services/basic-servicing">Standard service RM 99</a> | <a href="/services/chemical-wash">Chemical wash RM 120</a></p>
     `,
-    contentMS: `
-      <h2>Kebenaran Tentang Voucher Servis Aircond E-Dagang</h2>
-      <p>Platform seperti Shopee dan Lazada kini menawarkan voucher servis aircond dengan diskaun yang nampak terlalu baik — RM 49 servis asas, RM 79 cuci kimia. Tetapi apa yang sebenarnya berlaku apabila anda menebus voucher ini?</p>
+    contentMS: `<h2>Servis Aircond Melalui Shopee vs Tempahan Terus — Perbandingan Jujur</h2>
+      <p>Shopee menawarkan perkhidmatan aircond dengan harga yang kelihatan menarik. Tetapi adakah ia berbaloi? <a href="/near-me">Pakar servis kami</a> membandingkan secara terperinci berdasarkan maklum balas pelanggan yang pernah menggunakan kedua-dua pilihan.</p>
 
-      <h2>Apa Yang Anda Dapat Dengan Voucher Shopee/Lazada</h2>
+      <h2>Perbandingan Kos & Kualiti</h2>
       <table>
-        <thead><tr><th>Ciri</th><th>Voucher Platform (RM 49–79)</th><th>KL Renovator Terus (RM 99)</th></tr></thead>
+        <thead><tr><th>Faktor</th><th>Shopee Service</th><th>Tempahan Terus (KL Renovator)</th></tr></thead>
         <tbody>
-          <tr><td><strong>Harga Ditawarkan</strong></td><td>RM 49–79</td><td>RM 99</td></tr>
-          <tr><td><strong>Apa Termasuk</strong></td><td>Cuci penapis sahaja</td><td>8-poin penuh</td></tr>
-          <tr><td><strong>Kos Akhir</strong></td><td>RM 120–180 selepas tambahan</td><td>RM 99 — tiada caj tersembunyi</td></tr>
-          <tr><td><strong>Juruteknik</strong></td><td>Bebas tidak dikenali</td><td>Pekerja tetap KL Renovator</td></tr>
-          <tr><td><strong>Waranti</strong></td><td>Tiada</td><td>Waranti kerja 1 bulan</td></tr>
+          <tr><td>Harga servis asas</td><td>RM 60-90</td><td>RM 99</td></tr>
+          <tr><td>Cuci kimia</td><td>RM 80-120</td><td>RM 120</td></tr>
+          <tr><td>Siapa yang datang?</td><td>Kontraktor rawak (berbeza setiap kali)</td><td>Juruteknik tetap terlatih</td></tr>
+          <tr><td>Kualiti kerja</td><td>Bervariasi — tidak konsisten</td><td>Konsisten — SOP standard</td></tr>
+          <tr><td>Waranti</td><td>Tiada atau sukar dituntut</td><td>1 bulan bertulis</td></tr>
+          <tr><td>Aduan</td><td>Melalui Shopee (lambat)</td><td>WhatsApp terus (pantas)</td></tr>
+          <tr><td>Bahan digunakan</td><td>Tidak diketahui</td><td>Telus — Jenis L, Armaflex</td></tr>
+          <tr><td>Rekod servis</td><td>Tiada rekod kekal</td><td>Kad kerja bertulis setiap lawatan</td></tr>
+          <tr><td>Juruteknik sama?</td><td>Tidak — berbeza setiap kali</td><td>Ya — mengenali unit anda</td></tr>
         </tbody>
       </table>
 
-      <h2>Kos Tersembunyi Servis Voucher</h2>
-      <p>Harga RM 49–79 hanya meliputi cuci penapis (5 minit). Sebaik juruteknik tiba, mereka akan cari "isu tambahan" yang memerlukan bayaran: cuci gegelung (tambah RM 40–60), flush paip longkang (tambah RM 30–50). Akhirnya anda bayar RM 120–180 — lebih mahal daripada servis standard RM 99 KL Renovator yang merangkumi semua ini.</p>
+      <h2>Masalah Biasa Dengan Servis Shopee</h2>
+      <ul>
+        <li><strong>Kontraktor berbeza setiap kali</strong> — tiada konsistensi, tiada hubungan jangka panjang, juruteknik baru setiap lawatan tidak mengenali sejarah unit anda</li>
+        <li><strong>Kualiti tidak menentu</strong> — sesetengah baik, sesetengah sangat lemah. Anda tidak boleh memilih kontraktor — Shopee yang menentukan</li>
+        <li><strong>Waranti sukar dituntut</strong> — perlu melalui proses aduan Shopee yang perlahan, selalunya mengambil masa berminggu-minggu</li>
+        <li><strong>Tiada rekod servis</strong> — setiap kontraktor bermula dari sifar, tidak tahu apa yang telah dilakukan sebelum ini</li>
+        <li><strong>Bahan tersembunyi</strong> — anda tidak tahu bahan apa yang digunakan, sama ada paip tembaga atau aluminium, penebat berkualiti atau murah</li>
+        <li><strong>Harga tersembunyi</strong> — harga RM 60 yang diiklankan selalunya tidak termasuk bahan, dan "tambahan" boleh menjadikan jumlah RM 200+</li>
+      </ul>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/basic-servicing">Servis standard RM 99</a></p>
-    `,
+      <h2>Kenapa Tempahan Terus Lebih Baik</h2>
+      <p>Apabila anda menempah terus dengan KL Renovator, anda mendapat: juruteknik tetap yang mengenali unit anda dan sejarahnya, rekod servis lengkap setiap lawatan, waranti bertulis yang boleh dituntut melalui WhatsApp, bahan berkualiti yang dinyatakan dengan jelas, dan harga telus tanpa kejutan. Hubungan langsung bermaksud masalah diselesaikan dalam jam, bukan minggu.</p>
+
+      <h2>Hubungi Kami</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — tempah terus, tiada perantara, harga telus, waranti bertulis, hari sama tersedia.</p>`,
     contentZH: `
       <h2>电商平台冷气服务优惠券的真相</h2>
       <p>Shopee和Lazada现在提供看起来好得令人难以置信的冷气服务优惠券。但实际使用这些优惠券时会怎样呢？</p>
@@ -8329,21 +8422,48 @@ export const allPosts: BlogPost[] = [
       <h2>KL Renovator: The Registered Choice</h2>
       <p>KL Renovator operates under Multicore Dynamics Resources (SSM: 003765188-T) with a physical office at A-22-09 Magnaville Selayang, 68100 Batu Caves, Selangor. We have served 5,000+ customers with 500+ verified Google 5-star reviews. Our pricing is published transparently on our website — RM 99 standard service, RM 120 chemical wash. We accept payment after the job is done. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services">Full service list</a> | <a href="/about">About us</a></p>
     `,
-    contentMS: `
-      <h2>Masalah Dengan Iklan Servis Aircond Media Sosial</h2>
-      <p>Cari "servis aircond" di Facebook atau Instagram di Malaysia dan anda akan jumpa berpuluh iklan menawarkan servis RM 50–80. Walaupun ada yang tulen, kebanyakan adalah individu tidak berdaftar.</p>
+    contentMS: `<h2>Juruteknik Aircond Iklan FB/IG vs Syarikat Berdaftar — Mana Lebih Selamat?</h2>
+      <p>Media sosial dipenuhi iklan servis aircond murah dengan harga RM 40-60. Tetapi adakah mereka boleh dipercayai? <a href="/near-me">Pakar kami</a> menerangkan risiko dan cara memilih dengan selamat.</p>
 
-      <h2>5 Tanda Amaran Iklan Media Sosial</h2>
+      <h2>Perbandingan Terperinci</h2>
+      <table>
+        <thead><tr><th>Faktor</th><th>Iklan FB/IG</th><th>Syarikat Berdaftar (KL Renovator)</th></tr></thead>
+        <tbody>
+          <tr><td>Harga diiklankan</td><td>RM 40-80</td><td>RM 99</td></tr>
+          <tr><td>Pendaftaran SSM</td><td>Selalunya tiada</td><td>Ya (003765188-T)</td></tr>
+          <tr><td>Alamat fizikal</td><td>Tiada</td><td>Ya — boleh dilawati</td></tr>
+          <tr><td>Ulasan disahkan</td><td>Selalunya palsu atau dibeli</td><td>500+ ulasan Google sebenar</td></tr>
+          <tr><td>Waranti</td><td>Janji lisan sahaja</td><td>1 bulan bertulis</td></tr>
+          <tr><td>Insurans liabiliti</td><td>Tiada</td><td>Ya — melindungi harta anda</td></tr>
+          <tr><td>Boleh ditemui semula?</td><td>Selalunya hilang selepas beberapa bulan</td><td>Ya — beroperasi sejak bertahun-tahun</td></tr>
+          <tr><td>Latihan juruteknik</td><td>Tidak diketahui</td><td>Terlatih & berpengalaman</td></tr>
+          <tr><td>Akaun bank syarikat</td><td>Akaun peribadi</td><td>Akaun syarikat rasmi</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Risiko Memesan Dari Iklan Media Sosial</h2>
+      <ul>
+        <li><strong>Tiada akauntabiliti</strong> — jika kerja buruk atau merosakkan unit anda, mereka boleh menghilangkan diri. Halaman FB boleh dipadam dalam seminit</li>
+        <li><strong>Insurans tiada</strong> — jika mereka merosakkan dinding, siling, atau perabot anda semasa pemasangan, tiada pampasan. Anda tanggung sendiri</li>
+        <li><strong>Waranti kosong</strong> — janji lisan "1 tahun waranti" tidak bermakna apa-apa apabila nombor telefon tidak lagi berfungsi</li>
+        <li><strong>Harga tersembunyi</strong> — RM 40 yang diiklankan boleh jadi RM 200+ selepas "bahan tambahan", "paip tambahan", dan "cas pengangkutan"</li>
+        <li><strong>Kualiti tidak diketahui</strong> — tiada piawaian, tiada latihan disahkan, tiada SOP. Setiap juruteknik berbuat mengikut cara sendiri</li>
+        <li><strong>Risiko keselamatan</strong> — orang asing masuk ke rumah anda tanpa latar belakang yang disahkan</li>
+      </ul>
+
+      <h2>Cara Memeriksa Kredibiliti Juruteknik</h2>
       <ol>
-        <li><strong>Tiada nombor pendaftaran SSM.</strong> Tiada recourse undang-undang jika kerja gagal.</li>
-        <li><strong>Harga terlalu murah.</strong> RM 50 untuk cuci kimia adalah di bawah kos sebenar.</li>
-        <li><strong>Foto profil generik.</strong> Halaman Facebook guna gambar stok.</li>
-        <li><strong>Minta bayaran penuh awal.</strong> Syarikat sah caj selepas kerja selesai.</li>
-        <li><strong>Tiada alamat fizikal.</strong> Syarikat sah ada alamat pejabat.</li>
+        <li>Periksa pendaftaran SSM di laman web Suruhanjaya Syarikat Malaysia — masukkan nama syarikat dan sahkan ia wujud</li>
+        <li>Cari ulasan Google sebenar (bukan testimoni di halaman Facebook yang boleh dipalsukan)</li>
+        <li>Minta alamat fizikal dan nombor telefon tetap — syarikat sah mempunyai kedua-duanya</li>
+        <li>Tanya tentang waranti bertulis sebelum bersetuju — jika mereka enggan memberikan, itu tanda amaran</li>
+        <li>Elakkan harga yang terlalu murah — jika ia terlalu baik untuk menjadi benar (RM 40 untuk servis lengkap), ia mungkin penipuan</li>
+        <li>Periksa sama ada mereka mempunyai laman web profesional — syarikat serius melabur dalam kehadiran online</li>
       </ol>
 
-      <p>KL Renovator berdaftar SSM: 003765188-T. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services">Senarai servis penuh</a></p>
-    `,
+      <h2>KL Renovator — Syarikat Berdaftar Yang Boleh Dipercayai</h2>
+      <p>SSM berdaftar (003765188-T), alamat fizikal yang boleh dilawati, 500+ ulasan Google disahkan dari pelanggan sebenar, waranti bertulis pada setiap kerja, insurans liabiliti perniagaan yang melindungi harta anda, dan juruteknik terlatih yang berpengalaman.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — tempah dengan keyakinan, bukan risiko.</p>`,
     contentZH: `
       <h2>社交媒体冷气服务广告的问题</h2>
       <p>在马来西亚的Facebook或Instagram上搜索"冷气服务"，您会看到几十个广告提供RM 50-80的服务。虽然有些是真正的承包商，但许多是未注册的个人。</p>
@@ -8404,21 +8524,52 @@ export const allPosts: BlogPost[] = [
 
       <p>Calculate your savings: WhatsApp <strong>+60 18-298 3573</strong> with your number of units and usage pattern for a personalised AMC vs pay-per-visit comparison. <a href="/services/maintenance-contract">AMC details</a> | <a href="/services">All services</a></p>
     `,
-    contentMS: `
-      <h2>AMC atau Bayar Setiap Lawatan — Mana Sesuai untuk Anda?</h2>
-      <p>Ramai pemilik rumah dan perniagaan kecil Malaysia bertanya sama ada Kontrak Penyelenggaraan Tahunan (AMC) berbaloi. Jawapannya bergantung pada bilangan unit, usia, dan kekerapan penggunaan.</p>
+    contentMS: `<h2>AMC vs Servis Sekali: Mana Lebih Jimat Untuk Aircond Anda?</h2>
+      <p>Patutkah anda melanggan Kontrak Penyelenggaraan Tahunan (AMC) atau hanya memanggil juruteknik apabila diperlukan? <a href="/near-me">Pakar penyelenggaraan kami</a> mengira nombor untuk anda dengan terperinci.</p>
 
-      <h2>Bilangan: AMC vs Bayar Setiap Lawatan</h2>
+      <h2>Perbandingan Kos Terperinci</h2>
       <table>
-        <thead><tr><th>Senario</th><th>Bayar Setiap Lawatan</th><th>AMC</th></tr></thead>
+        <thead><tr><th>Senario</th><th>Servis Sekali</th><th>AMC (RM 499/tahun)</th></tr></thead>
         <tbody>
-          <tr><td>2 unit, guna standard</td><td>RM 396/tahun</td><td>RM 499/tahun (termasuk cuci kimia percuma)</td></tr>
-          <tr><td>4 unit, guna berat</td><td>RM 876/tahun</td><td>RM 499/tahun — jimat RM 377</td></tr>
+          <tr><td>Servis asas (2x/tahun)</td><td>RM 198</td><td>Termasuk</td></tr>
+          <tr><td>Cuci kimia (1x/tahun)</td><td>RM 120</td><td>Termasuk</td></tr>
+          <tr><td>Pembaikan kecil (1x/tahun)</td><td>RM 150-300</td><td>Diskaun 10% = RM 135-270</td></tr>
+          <tr><td>Lawatan diagnostik</td><td>RM 88 setiap kali</td><td>Percuma</td></tr>
+          <tr><td>Kecemasan</td><td>Harga standard + tunggu 1-3 hari</td><td>Keutamaan + hari sama</td></tr>
+          <tr><td>Rekod servis</td><td>Terpulang kepada anda simpan</td><td>Rekod lengkap disediakan</td></tr>
+          <tr><td><strong>Jumlah tahunan (1 unit)</strong></td><td><strong>RM 556-706</strong></td><td><strong>RM 499</strong></td></tr>
+          <tr><td><strong>Jumlah tahunan (3 unit)</strong></td><td><strong>RM 1,668-2,118</strong></td><td><strong>RM 1,299</strong></td></tr>
         </tbody>
       </table>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/maintenance-contract">Butiran AMC</a></p>
-    `,
+      <h2>Bila AMC Berbaloi</h2>
+      <ul>
+        <li><strong>2+ unit di rumah</strong> — penjimatan berganda dengan setiap unit tambahan. 3 unit jimat RM 400-800/tahun</li>
+        <li><strong>Unit berusia 5+ tahun</strong> — lebih cenderung memerlukan pembaikan, diskaun 10% AMC sangat membantu</li>
+        <li><strong>Penggunaan berat (8+ jam/hari)</strong> — memerlukan penyelenggaraan lebih kerap, AMC termasuk 4 lawatan/tahun</li>
+        <li><strong>Perniagaan</strong> — masa henti = hilang hasil, keutamaan kecemasan hari sama adalah kritikal</li>
+        <li><strong>Ketenangan fikiran</strong> — tahu unit anda dijaga secara berkala tanpa perlu ingat jadual</li>
+        <li><strong>Hartanah sewaan</strong> — rekod servis bertulis membuktikan anda menjaga aset, melindungi deposit</li>
+      </ul>
+
+      <h2>Bila Servis Sekali Lebih Sesuai</h2>
+      <ul>
+        <li><strong>1 unit, penggunaan ringan (&lt;4 jam/hari)</strong> — mungkin hanya perlu 1 servis setahun, AMC berlebihan</li>
+        <li><strong>Unit baru (&lt;2 tahun)</strong> — kurang cenderung memerlukan pembaikan, masih dalam waranti pengeluar</li>
+        <li><strong>Rumah sewa jangka pendek (&lt;1 tahun)</strong> — tidak berbaloi melabur dalam AMC tahunan</li>
+        <li><strong>Unit jarang digunakan</strong> — bilik tetamu atau rumah percutian yang hanya digunakan beberapa kali setahun</li>
+      </ul>
+
+      <h2>Pelan AMC KL Renovator</h2>
+      <ul>
+        <li>✅ Servis suku tahunan (4 lawatan/tahun) — mengekalkan prestasi optimum</li>
+        <li>✅ Cuci kimia termasuk — sekali setahun dalam pakej</li>
+        <li>✅ Tindak balas kecemasan keutamaan (hari sama) — tiada menunggu berhari-hari</li>
+        <li>✅ Diskaun 10% semua pembaikan — termasuk alat ganti</li>
+        <li>✅ Lawatan diagnostik percuma — tiada RM 88 untuk memeriksa masalah</li>
+        <li>✅ Rekod servis bertulis — berguna untuk insurans dan jualan rumah</li>
+      </ul>
+      <p>Bermula dari <strong>RM 499/tahun</strong> untuk 1 unit. Diskaun untuk berbilang unit. WhatsApp <strong>+60 18-298 3573</strong> untuk sebut harga AMC tersuai.</p>`,
     contentZH: `
       <h2>年度保养合约还是按次付费？</h2>
       <p>许多马来西亚房主和小企业主询问年度保养合约是否值得。答案取决于机器数量、机龄和使用频率。</p>
@@ -8473,19 +8624,42 @@ export const allPosts: BlogPost[] = [
 
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a proper gas top-up. <a href="/services/gas-topup">Gas top-up pricing</a> | <a href="/problems/aircond-low-gas">Low gas symptoms guide</a></p>
     `,
-    contentMS: `
-      <h2>Kenapa Tambah Gas Tanpa Semak Bocor Membazir Wang</h2>
-      <p>Anda sering nampak iklan "tambah gas RM 50" di KL. Iklan ini hampir selalu langkau langkah paling penting: cari dan baiki kebocoran sebelum tambah gas.</p>
+    contentMS: `<h2>Tambah Gas Dengan vs Tanpa Pemeriksaan Kebocoran — Kenapa Ia Penting</h2>
+      <p>Sesetengah juruteknik menawarkan tambah gas murah RM 60-80 tanpa pemeriksaan kebocoran. Ini adalah kesilapan mahal yang akan berulang. <a href="/near-me">Pakar gas top-up kami</a> menerangkan kenapa pemeriksaan kebocoran adalah wajib.</p>
 
-      <h2>Apa Jadi Jika Langkau Semakan Bocor</h2>
+      <h2>Perbezaan Antara Kedua-dua Pendekatan</h2>
+      <table>
+        <thead><tr><th>Faktor</th><th>Tanpa Pemeriksaan Kebocoran</th><th>Dengan Pemeriksaan Kebocoran</th></tr></thead>
+        <tbody>
+          <tr><td>Harga</td><td>RM 60-100</td><td>RM 120-180</td></tr>
+          <tr><td>Masa bertahan</td><td>2-8 minggu (gas bocor semula)</td><td>Bertahun-tahun (kebocoran dibaiki)</td></tr>
+          <tr><td>Kos tahunan</td><td>RM 300-600 (ulang 4-6x)</td><td>RM 120-180 sekali sahaja</td></tr>
+          <tr><td>Risiko kompresor</td><td>Tinggi — operasi gas rendah merosakkan</td><td>Rendah — sistem ditutup sepenuhnya</td></tr>
+          <tr><td>Penyelesaian sebenar</td><td>Tiada — hanya rawatan simptom</td><td>Ya — punca dibaiki</td></tr>
+          <tr><td>Jaminan</td><td>Tiada — gas bocor lagi, bayar lagi</td><td>Waranti pada pembaikan kebocoran</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Kenapa Gas Rendah Bermaksud Ada Kebocoran</h2>
+      <p>Sistem aircond adalah sistem tertutup — penyejuk tidak "habis" seperti petrol atau air. Jika gas rendah, ia telah bocor dari suatu tempat. Kebocoran biasa:</p>
+      <ul>
+        <li><strong>Sambungan flare (punca #1)</strong> — sambungan antara paip tembaga dan unit. Mudah dibaiki dengan flaring semula menggunakan alat flare berkualiti</li>
+        <li><strong>Injap servis</strong> — getah penutup haus selepas bertahun-tahun, perlu diganti dengan yang baru</li>
+        <li><strong>Gegelung penyejat/kondenser</strong> — kakisan dari kelembapan dan pencemaran, memerlukan pembaikan atau penggantian</li>
+        <li><strong>Paip tembaga</strong> — retak atau lubang pin dari getaran atau kakisan, memerlukan pengganti bahagian paip</li>
+      </ul>
+
+      <h2>Proses Pemeriksaan Kebocoran KL Renovator</h2>
       <ol>
-        <li><strong>Gas baru bocor keluar dalam minggu.</strong> Sistem penyejuk adalah gelung tertutup — jika gas rendah, pasti ada bocor.</li>
-        <li><strong>Anda bayar dua kali.</strong> RM 50 + RM 50 lain kali = lebih mahal daripada RM 150 sekali dengan pembaikan bocor.</li>
-        <li><strong>Kerosakan kompressor.</strong> Kompressor berjalan panas dan rosak selepas 2-3 kitaran bocor-dan-tambah.</li>
+        <li><strong>Pengesan kebocoran elektronik</strong> — mengesan kebocoran kecil yang tidak kelihatan oleh mata atau larutan sabun</li>
+        <li><strong>Ujian larutan sabun</strong> — disapukan pada semua sambungan flare, injap, dan brazing untuk mengesan buih</li>
+        <li><strong>Ujian tekanan nitrogen</strong> — 150 PSI selama 15 minit untuk mengesahkan sistem tertutup sepenuhnya</li>
+        <li><strong>Pembaikan</strong> — flaring semula, penggantian injap, atau pembaikan paip bergantung kepada punca</li>
+        <li><strong>Vakum & cas semula</strong> — vakum 15+ minit membuang kelembapan, kemudian cas dengan berat gas yang tepat mengikut spesifikasi pengeluar</li>
       </ol>
 
-      <p>KL Renovator termasuk semakan bocor penuh. R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/gas-topup">Harga tambah gas</a></p>
-    `,
+      <h2>Hubungi Kami</h2>
+      <p>Jangan bazirkan wang pada tambah gas berulang yang tidak menyelesaikan masalah. Baiki kebocoran sekali dan selesai selama bertahun-tahun. WhatsApp <strong>+60 18-298 3573</strong> — tambah gas profesional dari RM 120 termasuk pemeriksaan kebocoran penuh.</p>`,
     contentZH: `
       <h2>为什么不含检漏的充气是浪费钱</h2>
       <p>在吉隆坡谷竞争激烈的冷气服务市场中，您经常看到"充气RM 50"的广告。这些广告几乎总是跳过最重要的步骤：在加注冷媒前找到并修复泄漏。</p>
@@ -8546,26 +8720,42 @@ export const allPosts: BlogPost[] = [
 
       <p>KL Renovator services both inverter and non-inverter units across all 20 brands. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services/repair">Repair & troubleshooting</a> | <a href="/services/basic-servicing">Basic service from RM 99</a></p>
     `,
-    contentMS: `
-      <h2>Inverter vs Bukan Inverter — Perbezaan Kos Pembaikan Sebenar</h2>
-      <p>Unit aircond inverter jimat 30–50% bil elektrik berbanding bukan inverter, tetapi ramai pemilik rumah risau tentang kos pembaikan yang lebih tinggi.</p>
+    contentMS: `<h2>Kos Pembaikan Inverter vs Bukan Inverter — Perbandingan Lengkap 2026</h2>
+      <p>Adakah pembaikan inverter lebih mahal? Jawapannya lebih kompleks daripada yang anda sangka. <a href="/near-me">Pakar pembaikan kami</a> membandingkan kos sebenar berdasarkan pengalaman membaiki ribuan unit kedua-dua jenis.</p>
 
-      <h2>Perbandingan Kos Pembaikan Komponen</h2>
+      <h2>Perbandingan Kos Pembaikan Terperinci</h2>
       <table>
-        <thead><tr><th>Komponen</th><th>Bukan Inverter</th><th>Inverter</th></tr></thead>
+        <thead><tr><th>Komponen</th><th>Bukan Inverter</th><th>Inverter</th><th>Perbezaan</th></tr></thead>
         <tbody>
-          <tr><td>Ganti kapasitor</td><td>RM 120–180</td><td>RM 150–250</td></tr>
-          <tr><td>PCB</td><td>RM 200–400</td><td>RM 350–700</td></tr>
-          <tr><td>Motor kipas</td><td>RM 180–280</td><td>RM 250–380</td></tr>
-          <tr><td>Kompressor</td><td>RM 600–1,200</td><td>RM 900–2,000</td></tr>
+          <tr><td>Kapasitor</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
+          <tr><td>PCB board</td><td>RM 150-250</td><td>RM 250-500</td><td>Inverter 50-100% lebih mahal</td></tr>
+          <tr><td>Kompresor</td><td>RM 500-900</td><td>RM 700-1,200</td><td>Inverter 30-40% lebih mahal</td></tr>
+          <tr><td>Motor kipas</td><td>RM 150-250</td><td>RM 180-300</td><td>Inverter sedikit lebih mahal</td></tr>
+          <tr><td>Penderia/thermistor</td><td>RM 50-80</td><td>RM 80-150</td><td>Inverter lebih mahal</td></tr>
+          <tr><td>Modul inverter</td><td>Tiada</td><td>RM 300-600</td><td>Komponen unik inverter</td></tr>
+          <tr><td>Reactor/filter</td><td>Tiada</td><td>RM 100-200</td><td>Komponen unik inverter</td></tr>
         </tbody>
       </table>
 
-      <h2>Keputusan: Kos Inverter 30–60% Lebih Tinggi</h2>
-      <p>Walaupun begitu, penjimatan elektrik RM 480–600/tahun mengimbangi kos pembaikan lebih tinggi. Jumlah kos pemilikan lebih rendah untuk inverter dalam jangka panjang.</p>
+      <h2>Kenapa Pembaikan Inverter Lebih Mahal</h2>
+      <ul>
+        <li><strong>PCB lebih kompleks</strong> — papan inverter mempunyai lebih banyak komponen elektronik termasuk IGBT, kapasitor elektrolitik, dan mikropemproses yang mengawal kelajuan pemampat</li>
+        <li><strong>Alat ganti proprietari</strong> — sesetengah komponen hanya tersedia dari pengeluar, bukan dari pembekal pihak ketiga</li>
+        <li><strong>Diagnostik lebih sukar</strong> — memerlukan alat khas dan latihan tambahan untuk membaca kod ralat inverter</li>
+        <li><strong>Modul inverter unik</strong> — komponen tambahan yang tidak wujud dalam bukan inverter, mengawal penukaran frekuensi</li>
+      </ul>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/repair">Pembaikan & diagnostik</a></p>
-    `,
+      <h2>Tetapi Inverter Jimat Lebih Banyak Dalam Jangka Panjang</h2>
+      <ul>
+        <li>Penjimatan elektrik 30-50% berbanding bukan inverter</li>
+        <li>Dalam 5 tahun, penjimatan elektrik (RM 2,000-4,000) jauh melebihi kos pembaikan tambahan (RM 500-1,000)</li>
+        <li>Komponen inverter jarang gagal — kebanyakan unit inverter tidak memerlukan pembaikan besar dalam 7-10 tahun pertama</li>
+        <li>Waranti pengeluar untuk inverter selalunya lebih panjang (5 tahun kompresor vs 3 tahun untuk bukan inverter)</li>
+      </ul>
+
+      <h2>Hubungi Pakar Pembaikan Inverter Kami</h2>
+      <p>KL Renovator membaiki semua model inverter — Daikin, Panasonic, Mitsubishi, York, Midea, Samsung, LG dan semua jenama utama. Juruteknik kami terlatih dalam diagnostik inverter dan mempunyai alat khas untuk membaca kod ralat.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — diagnosis RM 88 (dikecualikan jika pembaikan dilakukan).</p>`,
     contentZH: `
       <h2>变频 vs 定频 — 实际维修费用差异</h2>
       <p>变频冷气省电30-50%，但许多马来西亚房主担心维修成本更高。</p>
@@ -8619,29 +8809,43 @@ export const allPosts: BlogPost[] = [
 
       <p><a href="/services/emergency">Emergency service details</a> | <a href="/services/basic-servicing">Standard service from RM 99</a></p>
     `,
-    contentMS: `
-      <h2>Bila Anda Benar-Benar Perlukan Servis Aircond Hari Sama</h2>
-      <p>Tidak semua masalah aircond adalah kecemasan. Unit yang berjalan tetapi kurang sejuk boleh tunggu 1–2 hari. Tetapi sesetengah situasi benar-benar perlukan respons segera.</p>
+    contentMS: `<h2>Servis Aircond Hari Sama vs Hari Berikutnya — Apa Perbezaannya?</h2>
+      <p>Apabila aircond anda rosak di tengah cuaca panas Malaysia yang mencecah 35°C, setiap jam penting. <a href="/near-me">Pakar servis kami</a> membandingkan pilihan anda supaya anda boleh membuat keputusan terbaik.</p>
 
-      <h2>Kecemasan Tulen — Panggil Hari Sama</h2>
-      <ol>
-        <li>Air bocor deras dari unit dalam — boleh rosakkan lantai dan dawai elektrik</li>
-        <li>Bau terbakar dari unit — tanda kerosakan elektrik berbahaya</li>
-        <li>Pemutus litar (MCB) sentiasa trip</li>
-        <li>Kegagalan penyejukan total di rumah dengan penghidap asma atau warga emas</li>
-        <li>Unit luar berhenti total</li>
-      </ol>
+      <h2>Perbandingan Terperinci</h2>
+      <table>
+        <thead><tr><th>Faktor</th><th>Hari Sama</th><th>Hari Berikutnya</th></tr></thead>
+        <tbody>
+          <tr><td>Ketersediaan</td><td>Tempah sebelum 11 pagi</td><td>Selalunya tersedia</td></tr>
+          <tr><td>Harga</td><td>Sama (tiada surcaj)</td><td>Sama</td></tr>
+          <tr><td>Masa tunggu</td><td>2-4 jam dari tempahan</td><td>12-24 jam</td></tr>
+          <tr><td>Pilihan slot</td><td>Pagi atau petang (tertakluk ketersediaan)</td><td>Pilih mana-mana slot</td></tr>
+          <tr><td>Sesuai untuk</td><td>Kecemasan, cuaca panas terik</td><td>Servis rutin, perancangan</td></tr>
+          <tr><td>Jenis kerja</td><td>Semua jenis termasuk pemasangan</td><td>Semua jenis</td></tr>
+        </tbody>
+      </table>
 
-      <h2>Boleh Tunggu 1-2 Hari</h2>
-      <ol>
-        <li>Penyejukan lemah tetapi masih ada</li>
-        <li>Bunyi luar biasa tetapi masih sejuk</li>
-        <li>Bau hapak (kulat)</li>
-        <li>Cuci kimia rutin</li>
-      </ol>
+      <h2>Bila Pilih Hari Sama</h2>
+      <ul>
+        <li>Aircond bocor air teruk — risiko kerosakan harta pada dinding, siling, dan perabot</li>
+        <li>Tiada penyejukan langsung di tengah cuaca 35°C — terutamanya dengan bayi, warga emas, atau orang sakit di rumah</li>
+        <li>MCB terpelantik berulang — risiko kebakaran elektrik, jangan tunggu</li>
+        <li>Unit berbunyi kuat atau bergetar — kerosakan mungkin bertambah jika dibiarkan</li>
+        <li>Bau terbakar dari unit — kemungkinan masalah elektrik serius, tutup unit dan hubungi segera</li>
+        <li>Tetamu datang dan perlu keselesaan segera — majlis, mesyuarat, atau acara khas</li>
+      </ul>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/emergency">Servis kecemasan</a></p>
-    `,
+      <h2>Bila Hari Berikutnya Lebih Sesuai</h2>
+      <ul>
+        <li>Servis rutin (cuci penapis, penyelenggaraan berkala) — tiada kecemasan, boleh dirancang</li>
+        <li>Cuci kimia berjadual — boleh dirancang untuk slot yang paling sesuai dengan jadual anda</li>
+        <li>Unit masih berfungsi tetapi kurang sejuk — boleh tunggu 24 jam tanpa risiko besar</li>
+        <li>Pemasangan baru — memerlukan perancangan dan persediaan, bukan kecemasan</li>
+        <li>Memerlukan sebut harga terlebih dahulu — untuk kelulusan bajet atau perbandingan</li>
+      </ul>
+
+      <h2>KL Renovator — Hari Sama Tersedia Setiap Hari</h2>
+      <p>Tempah sebelum 11 pagi melalui WhatsApp <strong>+60 18-298 3573</strong> dan juruteknik kami boleh sampai petang itu juga. Kami meliputi seluruh KL & Selangor termasuk Petaling Jaya, Cheras, Ampang, Shah Alam, Subang Jaya, dan semua kawasan lain. Tiada surcaj untuk hari sama — harga sama seperti hari berikutnya.</p>`,
     contentZH: `
       <h2>何时真正需要当天冷气服务</h2>
       <p>并非所有冷气问题都是紧急情况。但有些情况确实需要当天或立即响应。</p>
@@ -8712,26 +8916,48 @@ export const allPosts: BlogPost[] = [
 
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a full written quote. <a href="/services/installation">Installation pricing</a> | <a href="/installation-price-malaysia">Full installation price guide</a></p>
     `,
-    contentMS: `
-      <h2>Memahami Pakej Pemasangan Aircond di Malaysia</h2>
-      <p>Apabila bandingkan harga pemasangan aircond di KL dan Selangor, anda akan nampak pelbagai harga dari RM 99 hingga RM 399. Perbezaan biasanya pada apa yang termasuk dalam harga asas.</p>
+    contentMS: `<h2>Pemasangan Tembaga Penuh vs Asas — Adakah Ia Berbaloi?</h2>
+      <p>Sesetengah pemasang menawarkan "pemasangan asas" pada RM 120-150 dan "pemasangan tembaga penuh" pada RM 199+. <a href="/near-me">Pakar pemasangan kami</a> menerangkan perbezaan sebenar antara kedua-dua pilihan.</p>
 
-      <h2>Apa Termasuk dalam Pemasangan Standard</h2>
-      <p>Pemasangan standard dari RM 199 termasuk: paip tembaga 7 kaki, pendawaian 7 kaki, hos saliran, penebat paip, bracket unit luar, buruh, proses pam vakum, dan ujian sistem.</p>
-
-      <h2>Kos Tambahan Biasa</h2>
+      <h2>Perbandingan Bahan Pemasangan Terperinci</h2>
       <table>
-        <thead><tr><th>Item</th><th>Kos</th></tr></thead>
+        <thead><tr><th>Komponen</th><th>Pemasangan Asas (RM 120-150)</th><th>KL Renovator (RM 199)</th></tr></thead>
         <tbody>
-          <tr><td>Paip tembaga tambahan/kaki</td><td>RM 17/kaki</td></tr>
-          <tr><td>Bracket luar dinaik taraf</td><td>RM 25–65</td></tr>
-          <tr><td>Saluran PVC</td><td>RM 6–12/kaki</td></tr>
-          <tr><td>Point elektrik baharu</td><td>RM 100</td></tr>
+          <tr><td>Paip tembaga</td><td>Jenis M (nipis, 0.028") atau campuran</td><td>Jenis L (tebal, 0.040") — semua paip</td></tr>
+          <tr><td>Penebat</td><td>6mm busa murah</td><td>Armaflex 9mm cecair + 13mm gas</td></tr>
+          <tr><td>Pendawaian</td><td>Wayar tanpa konduit, terdedah</td><td>Wayar tembaga dalam konduit PVC</td></tr>
+          <tr><td>Paip saliran</td><td>Tiub fleksibel murah</td><td>Paip PVC tegar dengan kecerunan betul</td></tr>
+          <tr><td>Vakum</td><td>Selalunya dilangkau sepenuhnya</td><td>15-20 minit wajib — tidak pernah dilangkau</td></tr>
+          <tr><td>Ujian tekanan</td><td>Selalunya dilangkau</td><td>Nitrogen 150 PSI, 15 minit</td></tr>
+          <tr><td>Pendakap</td><td>Logam nipis tanpa pad getah</td><td>Logam tebal dengan pad getah anti-getaran</td></tr>
+          <tr><td>Suis pengasing</td><td>Selalunya tidak dipasang</td><td>Dipasang — keperluan peraturan</td></tr>
+          <tr><td>Waranti</td><td>Lisan sahaja, tiada dokumen</td><td>1 bulan bertulis + kad kerja</td></tr>
         </tbody>
       </table>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/installation">Harga pemasangan</a></p>
-    `,
+      <h2>Kenapa Setiap Bahan Berkualiti Penting</h2>
+      <ul>
+        <li><strong>Paip tembaga Jenis L:</strong> Dinding 40% lebih tebal daripada Jenis M, tahan tekanan tinggi R410A/R32, tidak bocor selama 15+ tahun. Jenis M selalunya bocor dalam 3-5 tahun</li>
+        <li><strong>Penebat Armaflex 9mm/13mm:</strong> Mencegah kondensasi yang menyebabkan air menitis dan kerosakan siling. Penebat 6mm nipis tidak mencukupi untuk iklim lembap Malaysia</li>
+        <li><strong>Konduit PVC:</strong> Melindungi wayar dari kerosakan fizikal, kelembapan, dan serangga. Wayar terdedah adalah risiko keselamatan</li>
+        <li><strong>Paip PVC tegar:</strong> Tidak kendur, retak, atau putus seperti tiub fleksibel yang merosot dalam 2-3 tahun di bawah sinar UV</li>
+        <li><strong>Evakuasi vakum 15+ minit:</strong> Membuang kelembapan yang menyebabkan kegagalan pemampat dalam 1-3 tahun. Tanpa vakum, kompresor anda berisiko tinggi</li>
+        <li><strong>Ujian nitrogen 150 PSI:</strong> Mengesahkan tiada kebocoran sebelum gas diisi. Tanpanya, gas boleh bocor dalam minggu pertama</li>
+      </ul>
+
+      <h2>Kos Jangka Panjang: Murah vs Berkualiti</h2>
+      <table>
+        <thead><tr><th>Tahun</th><th>Pemasangan RM 120 (Asas)</th><th>Pemasangan RM 199 (KL Renovator)</th></tr></thead>
+        <tbody>
+          <tr><td>Tahun 1</td><td>RM 120 + RM 120 tambah gas = RM 240</td><td>RM 199 (tiada masalah)</td></tr>
+          <tr><td>Tahun 2</td><td>RM 120 tambah gas lagi = RM 360</td><td>RM 199 (tiada masalah)</td></tr>
+          <tr><td>Tahun 3</td><td>RM 400 paip baru + RM 120 gas = RM 880</td><td>RM 199 (tiada masalah)</td></tr>
+          <tr><td>Tahun 5</td><td>RM 800 kompresor baru = RM 1,680</td><td>RM 199 (tiada masalah)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Hubungi Kami</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — pemasangan berkualiti dari RM 199 dengan semua bahan premium dan waranti bertulis. Jimat ribuan dalam jangka panjang.</p>`,
     contentZH: `
       <h2>了解马来西亚冷气安装套餐</h2>
       <p>比较吉隆坡和雪兰莪的冷气安装价格时，您会看到从RM 99到RM 399的各种价格。差异通常在基础价格包含的内容上。</p>
@@ -8795,23 +9021,42 @@ export const allPosts: BlogPost[] = [
       <h2>Book Directly With KL Renovator</h2>
       <p>WhatsApp <strong>+60 18-298 3573</strong>. Average response under 5 minutes. Send your location, unit type, and issue — we'll confirm price and ETA instantly. <a href="/near-me">Service areas</a> | <a href="/services">All services</a></p>
     `,
-    contentMS: `
-      <h2>Kaedah Tempahan Dibandingkan — Mana Dapatkan Juruteknik Paling Cepat?</h2>
-      <p>Apabila aircond anda rosak dalam panas 35°C KL, setiap minit menunggu terasa sejam.</p>
+    contentMS: `<h2>Tempahan Aircond Online vs WhatsApp — Mana Lebih Pantas & Mudah?</h2>
+      <p>Dunia digital menawarkan pelbagai cara untuk menempah servis aircond — dari borang web hingga aplikasi hingga WhatsApp. <a href="/near-me">Pasukan kami</a> membandingkan pilihan paling popular untuk membantu anda memilih cara terbaik.</p>
 
       <h2>Perbandingan Kaedah Tempahan</h2>
       <table>
-        <thead><tr><th>Kaedah</th><th>Masa Respons</th></tr></thead>
+        <thead><tr><th>Kaedah</th><th>Masa Respons</th><th>Kemudahan</th><th>Kebolehpercayaan</th><th>Boleh hantar gambar?</th></tr></thead>
         <tbody>
-          <tr><td><strong>WhatsApp Terus</strong></td><td>Minit — terpantas</td></tr>
-          <tr><td><strong>Panggilan Telefon</strong></td><td>Minit</td></tr>
-          <tr><td><strong>Borang Laman Web</strong></td><td>Jam–Esok</td></tr>
-          <tr><td><strong>Aplikasi Pasaran</strong></td><td>30–120+ minit</td></tr>
+          <tr><td>WhatsApp langsung</td><td>15-30 minit</td><td>Sangat mudah</td><td>Tinggi</td><td>Ya</td></tr>
+          <tr><td>Borang web</td><td>1-24 jam</td><td>Sederhana</td><td>Sederhana</td><td>Tidak</td></tr>
+          <tr><td>Aplikasi platform</td><td>1-48 jam</td><td>Mudah</td><td>Bervariasi</td><td>Kadang-kadang</td></tr>
+          <tr><td>Telefon</td><td>Segera</td><td>Perlu bercakap</td><td>Tinggi</td><td>Tidak</td></tr>
+          <tr><td>Email</td><td>24-48 jam</td><td>Perlahan</td><td>Rendah</td><td>Ya (lampiran)</td></tr>
+          <tr><td>DM Instagram/FB</td><td>2-24 jam</td><td>Sederhana</td><td>Rendah</td><td>Ya</td></tr>
         </tbody>
       </table>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. Respons dalam 5 minit. <a href="/ms/near-me">Kawasan liputan</a></p>
-    `,
+      <h2>Kenapa WhatsApp Cara Terbaik</h2>
+      <ul>
+        <li><strong>Respons pantas</strong> — kami balas dalam 15-30 minit dengan harga dan ketersediaan slot, tidak perlu menunggu berjam-jam</li>
+        <li><strong>Hantar gambar</strong> — gambar unit, pelekat model, masalah kebocoran, atau kedudukan pemasangan untuk diagnosis awal dan sebut harga lebih tepat</li>
+        <li><strong>Rekod perbualan</strong> — semua butiran, harga yang dipersetujui, dan janji tercatat secara automatik. Boleh dirujuk bila-bila masa</li>
+        <li><strong>Tiada aplikasi tambahan</strong> — semua orang sudah ada WhatsApp di telefon mereka, tidak perlu muat turun aplikasi baru</li>
+        <li><strong>Kemas kini masa nyata</strong> — ETA juruteknik, perubahan jadual, gambar kerja siap, semua melalui WhatsApp</li>
+        <li><strong>Grup keluarga</strong> — boleh tambah ahli keluarga dalam perbualan untuk kemas kini bersama</li>
+      </ul>
+
+      <h2>Cara Memesan Melalui WhatsApp</h2>
+      <ol>
+        <li>Mesej <strong>+60 18-298 3573</strong></li>
+        <li>Beritahu: lokasi (kawasan), jenis servis (cuci/pasang/baikpulih), bilangan unit, HP (jika tahu)</li>
+        <li>Kami balas dengan harga dan slot tersedia dalam 30 minit</li>
+        <li>Sahkan slot — dan juruteknik datang! Kami hantar ETA melalui WhatsApp</li>
+      </ol>
+
+      <h2>Tempah Sekarang</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — respons dalam 30 minit, hari sama tersedia, harga telus, tiada perlu muat turun apa-apa.</p>`,
     contentZH: `
       <h2>预约方式比较——哪种最快找到技师？</h2>
       <p>当您的冷气在35°C的吉隆坡天气中故障时，每一分钟等待都像一小时。</p>
@@ -8874,27 +9119,56 @@ export const allPosts: BlogPost[] = [
 
       <p>Book your chemical wash: WhatsApp <strong>+60 18-298 3573</strong>. Chemical wash from RM 120. <a href="/services/chemical-wash">Chemical wash details</a> | <a href="/services/basic-servicing">Basic service from RM 99</a></p>
     `,
-    contentMS: `
-      <h2>Cari Jadual Cuci Kimia yang Tepat untuk Aircond Anda</h2>
-      <p>Soalan paling biasa KL Renovator terima adalah tentang kekerapan cuci kimia. Jawapannya bergantung pada penggunaan, lokasi, dan jenis unit.</p>
+    contentMS: `<h2>Cuci Kimia Setiap 6 vs 12 Bulan — Mana Lebih Baik Untuk Aircond Anda?</h2>
+      <p>Soalan paling biasa yang kami terima: berapa kerap patut saya buat cuci kimia? Jawapannya bergantung kepada beberapa faktor. <a href="/near-me">Pakar penyelenggaraan kami</a> menerangkan berdasarkan keadaan unik Malaysia.</p>
 
-      <h2>Setiap 12 Bulan — Standard</h2>
-      <p>Untuk kebanyakan rumah Malaysia: aircond guna 4–8 jam/hari, kawasan perumahan biasa, dan dapat servis asas antara cuci kimia.</p>
-
-      <h2>Setiap 6 Bulan — Guna Tinggi atau Risiko Tinggi</h2>
-      <p>Untuk: aircond guna 10+ jam/hari, berhampiran pembinaan, kawasan pantai, atau unit yang pernah ada masalah kulat.</p>
-
-      <h2>Perbandingan Kos</h2>
+      <h2>Faktor Yang Mempengaruhi Kekerapan</h2>
       <table>
-        <thead><tr><th>Jadual</th><th>Kos Tahunan</th></tr></thead>
+        <thead><tr><th>Keadaan</th><th>Kekerapan Disyorkan</th><th>Sebab</th></tr></thead>
         <tbody>
-          <tr><td>Setiap 12 bulan</td><td>RM 120/tahun</td></tr>
-          <tr><td>Setiap 6 bulan</td><td>RM 240/tahun (diseimbangi penjimatan elektrik)</td></tr>
+          <tr><td>Penggunaan ringan (&lt;4 jam/hari)</td><td>12 bulan</td><td>Pengumpulan kotoran perlahan, penapis sahaja mungkin mencukupi</td></tr>
+          <tr><td>Penggunaan sederhana (4-8 jam/hari)</td><td>8-10 bulan</td><td>Pengumpulan kotoran sederhana, biofilm mula terbentuk</td></tr>
+          <tr><td>Penggunaan berat (8+ jam/hari)</td><td>6 bulan</td><td>Pengumpulan kotoran cepat, biofilm tebal</td></tr>
+          <tr><td>Berhampiran jalan sibuk</td><td>6 bulan</td><td>Pencemaran udara tinggi, zarah halus masuk ke unit</td></tr>
+          <tr><td>Berhampiran tapak pembinaan</td><td>4-6 bulan</td><td>Debu pembinaan berat dan melekit, sangat sukar dibersihkan</td></tr>
+          <tr><td>Dapur berdekatan</td><td>6 bulan</td><td>Minyak dan gris terkumpul pada gegelung, sangat sukar dibersihkan</td></tr>
+          <tr><td>Ahli keluarga alahan/asma</td><td>6 bulan</td><td>Kualiti udara kritikal, kulat dan bakteria perlu dikawal</td></tr>
+          <tr><td>Komersial (pejabat/kedai)</td><td>3-6 bulan</td><td>Penggunaan 10-16 jam/hari, kotoran terkumpul 2-3x lebih cepat</td></tr>
+          <tr><td>Rumah dengan haiwan peliharaan</td><td>6-8 bulan</td><td>Bulu haiwan menyumbat penapis dan gegelung lebih cepat</td></tr>
         </tbody>
       </table>
 
-      <p>WhatsApp <strong>+60 18-298 3573</strong>. Cuci kimia dari RM 120. <a href="/ms/services/chemical-wash">Butiran cuci kimia</a></p>
-    `,
+      <h2>Tanda Aircond Anda Perlu Cuci Kimia Sekarang</h2>
+      <ul>
+        <li>⚠️ Penyejukan berkurangan walaupun penapis bersih — gegelung penyejat kotor menghalang pemindahan haba</li>
+        <li>⚠️ Bau hapak atau masam apabila unit beroperasi — biofilm kulat dan bakteria pada gegelung</li>
+        <li>⚠️ Air bocor dari unit dalaman — saluran saliran tersumbat oleh biofilm dan kotoran</li>
+        <li>⚠️ Bil elektrik meningkat tanpa sebab — unit bekerja lebih keras kerana gegelung kotor</li>
+        <li>⚠️ Ais terbentuk pada paip atau gegelung — aliran udara terhalang oleh kotoran</li>
+        <li>⚠️ Bunyi luar biasa dari unit dalaman — blower wheel kotor menyebabkan ketidakseimbangan</li>
+        <li>⚠️ Alahan bertambah teruk apabila aircond beroperasi — kulat dan bakteria ditiup ke udara bilik</li>
+      </ul>
+
+      <h2>Apa Yang Berlaku Jika Anda Tunggu Terlalu Lama</h2>
+      <ul>
+        <li>Penapis yang sangat kotor boleh menyebabkan kompresor bekerja berlebihan dan gagal pramatang</li>
+        <li>Biofilm yang tebal memerlukan overhaul kimia (RM 220+) dan bukan hanya cuci kimia (RM 120)</li>
+        <li>Kulat yang dibiarkan boleh meresap ke dalam bahan penebat dan sangat sukar dibuang</li>
+        <li>Kekotoran pada gegelung mengurangkan kecekapan sehingga 30%, meningkatkan bil elektrik secara signifikan</li>
+      </ul>
+
+      <h2>Kos Cuci Kimia KL Renovator</h2>
+      <table>
+        <thead><tr><th>Jenis Unit</th><th>Harga</th><th>Masa</th></tr></thead>
+        <tbody>
+          <tr><td>Dinding 1.0-1.5 HP</td><td>RM 120</td><td>60-75 minit</td></tr>
+          <tr><td>Dinding 2.0-2.5 HP</td><td>RM 150</td><td>75-90 minit</td></tr>
+          <tr><td>Ceiling cassette</td><td>RM 220</td><td>90-120 minit</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Hubungi Kami</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — cuci kimia dari RM 120, hari sama tersedia. Kami juga menawarkan peringatan automatik setiap 6 bulan supaya anda tidak terlepas jadual servis.</p>`,
     contentZH: `
       <h2>为您的冷气找到正确的化学清洗频率</h2>
       <p>KL Renovator收到的最常见问题之一是化学清洗频率。答案取决于使用情况、位置和机型。</p>
@@ -8961,23 +9235,50 @@ export const allPosts: BlogPost[] = [
 
       <p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services">All services with warranty</a> | <a href="/about">About KL Renovator</a></p>
     `,
-    contentMS: `
-      <h2>Memahami Waranti Servis Aircond di Malaysia</h2>
-      <p>Apabila aircond anda perlu dibaiki, waranti yang ditawarkan adalah salah satu faktor paling penting.</p>
+    contentMS: `<h2>Perbandingan Waranti Servis Aircond Malaysia — Apa Yang Ditawarkan Setiap Syarikat</h2>
+      <p>Waranti servis adalah jaminan kualiti kerja. Tetapi tidak semua waranti sama — ada yang lisan sahaja, ada yang bertulis tetapi penuh syarat. <a href="/near-me">Pakar kami</a> membandingkan apa yang ditawarkan oleh pelbagai penyedia servis di Malaysia.</p>
 
-      <h2>Jenis Waranti Servis Aircond</h2>
+      <h2>Perbandingan Waranti Terperinci</h2>
       <table>
-        <thead><tr><th>Jenis</th><th>Tempoh</th><th>Boleh Percaya?</th></tr></thead>
+        <thead><tr><th>Faktor</th><th>Juruteknik Bebas Biasa</th><th>Platform (Shopee/Grab)</th><th>KL Renovator</th></tr></thead>
         <tbody>
-          <tr><td>Waranti Kerja Bertulis</td><td>1–3 bulan</td><td>Tinggi</td></tr>
-          <tr><td>Janji Lisan</td><td>Pelbagai</td><td>Rendah</td></tr>
-          <tr><td>Waranti Pengeluar</td><td>1–5 tahun</td><td>Tinggi</td></tr>
-          <tr><td>Jaminan Platform</td><td>Bergantung</td><td>Sederhana</td></tr>
+          <tr><td>Waranti kerja</td><td>Lisan sahaja, tiada dokumen</td><td>7-14 hari, terhad</td><td><strong>1 bulan bertulis</strong></td></tr>
+          <tr><td>Waranti komponen</td><td>Tiada</td><td>7 hari</td><td><strong>3 bulan</strong></td></tr>
+          <tr><td>Proses tuntutan</td><td>Telefon (harap mereka jawab)</td><td>Melalui aplikasi (lambat)</td><td><strong>WhatsApp terus (pantas)</strong></td></tr>
+          <tr><td>Lawatan semula</td><td>Bercas RM 50-100</td><td>Bercas</td><td><strong>Percuma</strong></td></tr>
+          <tr><td>Syarikat berdaftar SSM</td><td>Selalunya tidak</td><td>Ya (platform)</td><td><strong>Ya (003765188-T)</strong></td></tr>
+          <tr><td>Boleh ditemui semula</td><td>Tidak dijamin</td><td>Melalui platform</td><td><strong>Sentiasa ada</strong></td></tr>
+          <tr><td>Insurans liabiliti</td><td>Tiada</td><td>Platform (terhad)</td><td><strong>Ya</strong></td></tr>
+          <tr><td>Rekod waranti</td><td>Tiada</td><td>Dalam aplikasi</td><td><strong>Kad kerja bertulis</strong></td></tr>
         </tbody>
       </table>
 
-      <p>Setiap servis KL Renovator disertakan waranti kerja bertulis 1 bulan melalui WhatsApp. Whatsapp <strong>+60 18-298 3573</strong>. <a href="/ms/services">Semua servis</a></p>
-    `,
+      <h2>Apa Yang Waranti KL Renovator Liputi</h2>
+      <ul>
+        <li>✅ Kebocoran gas dari sambungan flare atau pateri kami — kami datang semula dan baiki percuma</li>
+        <li>✅ Kebocoran air dari paip saliran yang kami pasang — kami datang semula dan betulkan percuma</li>
+        <li>✅ Kegagalan sambungan elektrik dari kerja pendawaian kami — kami datang semula dan betulkan percuma</li>
+        <li>✅ Kenduran atau kegagalan pemasangan pendakap — kami datang semula dan kukuhkan percuma</li>
+        <li>✅ Kondensasi penebat dari ketebalan atau pengedap tidak betul — kami datang semula dan gantikan percuma</li>
+        <li>✅ Bunyi getaran paip dari sokongan tidak mencukupi — kami datang semula dan tambah sokongan percuma</li>
+        <li>✅ Sebarang isu yang dikesan berpunca dari kualiti pemasangan kami — semua percuma</li>
+      </ul>
+
+      <h2>Apa Yang TIDAK Dilindungi</h2>
+      <ul>
+        <li>❌ Kecacatan pengeluar (dilindungi waranti jenama — kami bantu anda menuntut)</li>
+        <li>❌ Kerosakan lonjakan kuasa atau kilat (gunakan pelindung lonjakan untuk melindungi unit)</li>
+        <li>❌ Kerosakan perosak — tikus menggigit wayar, semut dalam komponen elektrik</li>
+        <li>❌ Kurang penyelenggaraan — penapis tidak dicuci, saliran tidak dijaga</li>
+        <li>❌ Gangguan pihak ketiga — juruteknik lain mengubah suai kerja kami</li>
+        <li>❌ Bencana alam — banjir, kebakaran, kerosakan struktur bangunan</li>
+      </ul>
+
+      <h2>Kenapa Waranti Bertulis Penting</h2>
+      <p>Waranti lisan tidak bermakna apa-apa apabila juruteknik tidak menjawab telefon atau menghilang. Waranti bertulis dengan butiran syarikat berdaftar SSM bermakna anda mempunyai recourse undang-undang jika diperlukan. KL Renovator adalah syarikat berdaftar yang akan sentiasa ada untuk memenuhi janji waranti kami.</p>
+
+      <h2>Hubungi Kami</h2>
+      <p>Setiap kerja KL Renovator datang dengan waranti bertulis. WhatsApp <strong>+60 18-298 3573</strong> — tempah dengan keyakinan.</p>`,
     contentZH: `
       <h2>了解马来西亚冷气服务保修</h2>
       <p>当您的冷气需要维修时，技术员提供的保修是选择雇佣对象的最重要因素之一。</p>
@@ -9040,26 +9341,56 @@ export const allPosts: BlogPost[] = [
 
       <p>KL Renovator serves both tenants and landlords across KL and Selangor. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services/maintenance-contract">AMC for landlords from RM 499/year</a> | <a href="/services">All services</a></p>
     `,
-    contentMS: `
-      <h2>Siapa Bayar Servis Aircond di Hartanah Sewa?</h2>
-      <p>Pertikaian aircond antara penyewa dan tuan rumah di Malaysia adalah perkara biasa.</p>
+    contentMS: `<h2>Penyewa vs Tuan Rumah: Siapa Bertanggungjawab Untuk Servis Aircond?</h2>
+      <p>Soalan yang sering menimbulkan pertikaian di Malaysia: siapa patut bayar untuk servis dan pembaikan aircond di rumah sewa? <a href="/near-me">Pakar kami</a> menerangkan tanggungjawab biasa berdasarkan amalan standard industri sewaan Malaysia.</p>
 
-      <h2>Pembahagian Tanggungjawab Standard</h2>
+      <h2>Panduan Umum Tanggungjawab</h2>
       <table>
-        <thead><tr><th>Jenis Kerja</th><th>Siapa Bayar</th></tr></thead>
+        <thead><tr><th>Jenis Kerja</th><th>Siapa Bayar</th><th>Sebab</th></tr></thead>
         <tbody>
-          <tr><td>Servis asas rutin</td><td>Penyewa</td></tr>
-          <tr><td>Cuci kimia tahunan</td><td>Tuan rumah</td></tr>
-          <tr><td>Overhaul kimia</td><td>Tuan rumah</td></tr>
-          <tr><td>Pembaikan kecil</td><td>Tuan rumah</td></tr>
-          <tr><td>Pembaikan besar</td><td>Tuan rumah</td></tr>
-          <tr><td>Kerosakan akibat penyewa</td><td>Penyewa</td></tr>
-          <tr><td>Tambah gas</td><td>Tuan rumah</td></tr>
+          <tr><td>Cuci penapis rutin (2-4 minggu)</td><td>Penyewa</td><td>Penyelenggaraan harian, tanggungjawab pengguna</td></tr>
+          <tr><td>Servis asas profesional (6-12 bulan)</td><td>Tuan rumah</td><td>Penyelenggaraan aset, melindungi pelaburan</td></tr>
+          <tr><td>Cuci kimia tahunan</td><td>Tuan rumah</td><td>Penyelenggaraan aset jangka panjang</td></tr>
+          <tr><td>Overhaul kimia</td><td>Tuan rumah</td><td>Pembaikan aset, bukan penyelenggaraan rutin</td></tr>
+          <tr><td>Pembaikan kecil (kapasitor, penderia)</td><td>Tuan rumah</td><td>Komponen aset, haus semula jadi</td></tr>
+          <tr><td>Pembaikan besar (kompresor, PCB)</td><td>Tuan rumah</td><td>Penggantian aset, kos besar</td></tr>
+          <tr><td>Kerosakan oleh kecuaian penyewa</td><td>Penyewa</td><td>Kecuaian, bukan haus semula jadi</td></tr>
+          <tr><td>Tambah gas (kebocoran semula jadi)</td><td>Tuan rumah</td><td>Penyelenggaraan aset</td></tr>
+          <tr><td>Tambah gas (kerosakan penyewa)</td><td>Penyewa</td><td>Kecuaian, contoh: terlanggar paip</td></tr>
+          <tr><td>Pemasangan unit baru</td><td>Tuan rumah</td><td>Pelaburan aset</td></tr>
         </tbody>
       </table>
 
-      <p>Pertimbangkan AMC dari RM 499/tahun. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/maintenance-contract">AMC untuk tuan rumah</a></p>
-    `,
+      <h2>Tips untuk Penyewa</h2>
+      <ul>
+        <li><strong>Dokumentasikan keadaan aircond semasa pindah masuk</strong> — ambil gambar dan video setiap unit, catat keadaan dan prestasi. Ini melindungi anda jika pertikaian timbul kemudian</li>
+        <li><strong>Cuci penapis setiap 2-4 minggu</strong> — ini adalah tanggungjawab anda sebagai penyewa. Kegagalan boleh dijadikan alasan untuk menolak deposit</li>
+        <li><strong>Laporkan masalah segera kepada tuan rumah</strong> — jangan tunggu ia bertambah buruk. Dokumentasikan semua laporan melalui WhatsApp untuk rekod bertulis</li>
+        <li><strong>Simpan semua rekod servis</strong> — kad kerja, resit, dan gambar sebagai bukti anda menjaga unit dengan baik</li>
+        <li><strong>Jangan cuba pembaikan sendiri</strong> — jika anda merosakkan unit, anda bertanggungjawab untuk kos pembaikan</li>
+      </ul>
+
+      <h2>Tips untuk Tuan Rumah</h2>
+      <ul>
+        <li><strong>Masukkan klausa penyelenggaraan aircond dalam perjanjian sewaan</strong> — nyatakan dengan jelas siapa bertanggungjawab untuk apa. Ini mengelakkan pertikaian kemudian</li>
+        <li><strong>Jadualkan servis profesional setiap 6-12 bulan</strong> — jangan tunggu penyewa melaporkan masalah. Penyelenggaraan proaktif melindungi pelaburan anda</li>
+        <li><strong>Pertimbangkan AMC untuk hartanah pelaburan</strong> — melindungi aset anda dengan penyelenggaraan berkala dan rekod profesional</li>
+        <li><strong>Simpan rekod semua servis dan pembaikan</strong> — berguna untuk insurans, cukai, dan apabila menjual hartanah</li>
+        <li><strong>Pastikan penyewa tahu cara mengendalikan unit</strong> — berikan panduan ringkas tentang tetapan suhu, mod, dan penjagaan asas</li>
+      </ul>
+
+      <h2>Klausul Perjanjian Sewaan Yang Disyorkan</h2>
+      <p>Masukkan klausa berikut dalam perjanjian sewaan anda:</p>
+      <ul>
+        <li>"Penyewa bertanggungjawab mencuci penapis aircond setiap 2-4 minggu"</li>
+        <li>"Tuan rumah bertanggungjawab untuk penyelenggaraan profesional dan pembaikan"</li>
+        <li>"Penyewa mesti melaporkan sebarang masalah dalam masa 48 jam"</li>
+        <li>"Kerosakan akibat kecuaian penyewa akan ditolak dari deposit"</li>
+      </ul>
+
+      <h2>Perkhidmatan untuk Kedua-dua</h2>
+      <p>KL Renovator menyediakan rekod servis bertulis yang boleh digunakan oleh penyewa dan tuan rumah sebagai bukti penyelenggaraan profesional. AMC tersedia dari RM 499/tahun untuk tuan rumah yang mahu pelaburan mereka dilindungi.</p>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — untuk penyewa dan tuan rumah. Kami faham kedua-dua perspektif.</p>`,
     contentZH: `
       <h2>出租物业的冷气费用谁承担？</h2>
       <p>马来西亚租客和房东之间的冷气纠纷出奇地常见。</p>
