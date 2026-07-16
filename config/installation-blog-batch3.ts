@@ -29,7 +29,7 @@ export const installationBlogBatch3: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "KL Renovator installation warranty coverage explained for Malaysian homeowners",
     content: `
       <h2>3 Types of Aircond Warranty — Know the Difference</h2>
@@ -293,7 +293,7 @@ export const installationBlogBatch3: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "DIY vs professional aircond installation comparison by KL Renovator specialists",
     content: `
       <h2>Can You Install an Aircond Yourself?</h2>
@@ -554,7 +554,7 @@ export const installationBlogBatch3: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 4,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Aircond installation during Malaysian rainy season by KL Renovator weather-proof team",
     content: `
       <h2>Does Rain Stop Aircond Installation?</h2>
@@ -740,7 +740,7 @@ export const installationBlogBatch3: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Electrical wiring check before aircond installation in older Malaysian homes",
     content: `
       <h2>Does Your Old House Need Electrical Upgrades for Aircond?</h2>
@@ -968,7 +968,7 @@ export const installationBlogBatch3: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "High-floor condo aircond installation by KL Renovator rope-access trained technicians",
     content: `
       <h2>High-Floor Condo Installations Are Different</h2>

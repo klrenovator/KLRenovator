@@ -3,6 +3,10 @@ import { installationBlogBatch2 } from "./installation-blog-batch2";
 import { installationBlogBatch3 } from "./installation-blog-batch3";
 import { installationBlogBatch4 } from "./installation-blog-batch4";
 
+
+/** Listing-safe fields only — avoids shipping full HTML bodies to blog index client bundle */
+export type BlogPostSummary = Omit<BlogPost, "content" | "contentMS" | "contentZH">;
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -332,7 +336,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "signs-your-aircon-needs-chemical-overhaul-malaysia",
-    title: "5 Signs Your Aircon Needs a Chemical Overhaul (Not Just a...",
+    title: "5 Signs Your Aircon Needs a Chemical Overhaul (Not Just a Wash)",
     titleMS: "5 Tanda Aircond Anda Memerlukan Overhaul Kimia (Bukan Sekadar Cuci)",
     titleZH: "5个迹象表明您的冷气需要化学大修（而不仅仅是清洗）",
     excerpt: "A chemical wash won't fix everything. Here are 5 clear signs that your aircond unit needs a full chemical overhaul — and what happens if you keep delaying it.",
@@ -797,7 +801,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "r32-r410a-r22-gas-difference",
-    title: "R22 vs R410A vs R32 Refrigerant Gas — Which Does Your Air...",
+    title: "R22 vs R410A vs R32 Refrigerant Gas — Which Does Your Aircond Use?",
     titleMS: "Gas R22 vs R410A vs R32 — Mana yang Digunakan oleh Aircond Anda?",
     titleZH: "R22 vs R410A vs R32 制冷剂 — 您的冷气使用哪种？",
     excerpt: "Confused about refrigerant gas types? Here's a simple guide to R22, R410A, and R32 — how to identify which one your unit uses and what top-up costs to expect.",
@@ -901,7 +905,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-water-leaking-causes",
-    title: "Aircon Water Leaking? Here Are the Most Common Causes & F...",
+    title: "Aircon Water Leaking? Here Are the Most Common Causes & Fixes",
     titleMS: "Aircond Bocor Air? Berikut Punca dan Penyelesaian Paling Biasa",
     titleZH: "冷气漏水？以下是最常见的原因和解决方法",
     excerpt: "Water dripping from your indoor aircond unit is one of the most common problems in Malaysia. Here's what causes it and how to fix it properly.",
@@ -1004,7 +1008,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "best-aircond-brands-malaysia-2026",
-    title: "Best Aircond Brands Malaysia 2026 — Daikin, Panasonic, Mi...",
+    title: "Best Aircond Brands Malaysia 2026 — Daikin, Panasonic, Mitsubishi Compared",
     titleMS: "Jenama Aircond Terbaik di Malaysia 2026 — Daikin, Panasonic, Mitsubishi Dibandingkan",
     titleZH: "2026年马来西亚最佳冷气品牌 — 大金、松下、三菱对比",
     excerpt: "Choosing a new aircond in Malaysia? Here's an honest comparison of the top brands to help you decide.",
@@ -1109,7 +1113,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-maintenance-checklist-malaysia",
-    title: "Aircond Maintenance Checklist Malaysia — 12 Things to Che...",
+    title: "Aircond Maintenance Checklist Malaysia — 12 Things to Check Every Year",
     titleMS: "Senarai Semak Penyelenggaraan Aircond Malaysia — 12 Perkara untuk Diperiksa Setiap Tahun",
     titleZH: "马来西亚冷气保养检查清单 — 每年需要检查的12件事",
     excerpt: "A complete aircond maintenance checklist for Malaysian homeowners and offices. Know exactly what needs to be checked, when, and why.",
@@ -1336,10 +1340,11 @@ export const allPosts: BlogPost[] = [
       <h2>Bagaimana Harga Disahkan</h2>
       <p>Apabila anda WhatsApp KL Renovator, berikan lokasi anda, jenis unit (dinding atau ceiling cassette), saiz HP, dan servis yang diperlukan. Kami akan mengesahkan harga secara bertulis melalui WhatsApp sebelum juruteknik melawat. Ini bermakna anda mempunyai rekod bertulis harga yang dipersetujui sebelum sebarang kerja bermula. Jika isu tambahan ditemui semasa servis — seperti kapasitor yang rosak atau kebocoran penyejuk — ini disebut harga secara berasingan dan memerlukan kelulusan jelas anda sebelum diteruskan. Tiada kejutan pada mana-mana peringkat.</p>
     `,
-    contentZH: `<h2>2026年KL冷气服务价格指南 — 完整明细</h2>
-      <p>了解每项服务的真实价格，避免被多收钱。<a href="/near-me">KL Renovator</a>为您提供透明的价格明细。</p>
+    contentZH: `<h2>2026年吉隆坡与雪兰莪冷气服务价格指南 — 完整透明明细</h2>
+      <p>很多屋主在预约前最关心一件事：<strong>到底要花多少钱？</strong> 本指南由 <strong>KL Renovator</strong> 整理 2026 年吉隆坡与雪兰莪常用冷气服务的公开起步价，帮助您对比市场、避免隐藏收费。价格会因马力、机型、楼层与材料而略有调整，但我们坚持<strong>开工前确认总价</strong>。</p>
+      <div class="summary-block"><strong>直接答案：</strong> 壁挂式 1.0–1.5HP 基本保养从 RM 99 起，高压化学清洗从 RM 120 起，化学大修从 RM 220 起，新机安装从 RM 199 起；诊断费 RM 88（同次修好可豁免）。</div>
 
-      <h2>服务价格总表</h2>
+      <h2>核心服务价格总表（2026）</h2>
       <table>
         <thead><tr><th>服务</th><th>壁挂式 1-1.5HP</th><th>壁挂式 2-2.5HP</th><th>天花板卡式</th></tr></thead>
         <tbody>
@@ -1350,28 +1355,49 @@ export const allPosts: BlogPost[] = [
           <tr><td>充气 R410A</td><td>RM 150</td><td>RM 180</td><td>RM 250</td></tr>
           <tr><td>充气 R32</td><td>RM 180</td><td>RM 220</td><td>RM 280</td></tr>
           <tr><td>安装</td><td>RM 199</td><td>RM 249-279</td><td>RM 290+</td></tr>
-          <tr><td>诊断费</td><td colspan="3">RM 88（维修则豁免）</td></tr>
+          <tr><td>诊断费</td><td colspan="3">RM 88（同次维修则豁免）</td></tr>
         </tbody>
       </table>
+      <p>更完整的在线价目也可参考我们的 <a href="/zh/aircond-service-price-malaysia">马来西亚冷气服务价格页</a> 与 <a href="/zh/installation-price-malaysia">安装价格页</a>。</p>
 
-      <h2>维修价格参考</h2>
+      <h2>基本保养、化学清洗、化学大修怎么选？</h2>
+      <ul>
+        <li><strong>基本保养（RM 99 起）：</strong> 滤网、面板、排水初步疏通与运行检查。适合定期维护、机器仍制冷正常时。</li>
+        <li><strong>高压化学清洗（RM 120 起）：</strong> 针对盘管与风机上的霉菌、油污和生物膜。适合异味、风量变小、不够冷但仍未严重漏水。</li>
+        <li><strong>化学大修（RM 220 起）：</strong> 室内机拆卸深度清洗。适合反复漏水、结冰、严重堵塞或长期未深度保养。</li>
+      </ul>
+      <div class="summary-block"><strong>直接答案：</strong> 仍正常制冷选基本保养；有霉味/弱风选化学清洗；反复漏水或严重堵塞选化学大修。</div>
+
+      <h2>常见维修价格参考</h2>
       <table>
-        <thead><tr><th>维修项目</th><th>价格范围</th></tr></thead>
+        <thead><tr><th>维修项目</th><th>价格范围</th><th>说明</th></tr></thead>
         <tbody>
-          <tr><td>电容更换</td><td>RM 80-150</td></tr>
-          <tr><td>PCB板更换</td><td>RM 150-500</td></tr>
-          <tr><td>风扇电机更换</td><td>RM 150-300</td></tr>
-          <tr><td>压缩机更换</td><td>RM 600-1,200</td></tr>
-          <tr><td>温控器/传感器</td><td>RM 50-150</td></tr>
-          <tr><td>排水泵更换</td><td>RM 120-200</td></tr>
+          <tr><td>电容更换</td><td>RM 80-150</td><td>室外机不转/难启动常见项</td></tr>
+          <tr><td>PCB板更换</td><td>RM 150-500</td><td>视品牌与型号</td></tr>
+          <tr><td>风扇电机更换</td><td>RM 150-300</td><td>室内或室外风机</td></tr>
+          <tr><td>压缩机更换</td><td>RM 600-1,200</td><td>开工前单独报价</td></tr>
+          <tr><td>温控器/传感器</td><td>RM 50-150</td><td>乱跳温、误报错</td></tr>
+          <tr><td>排水泵更换</td><td>RM 120-200</td><td>天花机/排水扬程场景</td></tr>
         </tbody>
       </table>
+      <p>零件价格会因原厂/副厂与现场诊断结果而不同。我们不会先拆机再“突然加价”——材料与人工会在更换前说明。</p>
 
-      <h2>多台折扣</h2>
-      <p>2-3台: 95折 | 4-8台: 9折 | 8台以上: 85折</p>
+      <h2>为什么有人报价特别低？</h2>
+      <p>RM 40–60 的“全身洗”往往不含真正的高压冲洗、真空或保修，后续再以加 Gas、加零件补利润。KL Renovator 的做法是：<strong>SSM 注册公司、公开起步价、书面工艺保修 1 个月、WhatsApp 清楚确认</strong>。</p>
 
-      <h2>预约服务</h2>
-      <p>WhatsApp <strong>+60 18-298 3573</strong> — 30分钟内报价，当天服务可用。价格透明，开工前确认。</p>`,
+      <h2>多台折扣与覆盖区域</h2>
+      <p>2–3 台约 95 折，4–8 台约 9 折，8 台以上可谈 85 折（视服务类型）。我们覆盖吉隆坡、八打灵再也、莎阿南、梳邦再也、蒲种、巴生、安邦、蕉赖、加影、Setia Alam、Rawang、Selayang、Batu Caves 等雪隆主要区域。</p>
+
+      <h2>常见问题</h2>
+      <h3>价格包不包含交通费？</h3>
+      <p>标准雪隆服务范围内，起步价已包含常规出勤；特殊偏远或深夜加急会事先说明。</p>
+      <h3>一定要加 Gas 吗？</h3>
+      <p>不一定。冷媒不会像汽油一样“烧完”。我们会先量压力与温差，确认有泄漏或不足才建议加注。</p>
+      <h3>可以当天预约吗？</h3>
+      <p>可以。视技师路线与配件库存，WhatsApp <strong>+60 18-298 3573</strong> 通常能快速确认最近档期。</p>
+
+      <h2>立即获取准确报价</h2>
+      <p>发送冷气照片、品牌/匹数与所在区域，我们为您提供清楚报价。WhatsApp <strong>+60 18-298 3573</strong>。相关服务：<a href="/zh/services/basic-servicing">基本保养</a>、<a href="/zh/services/chemical-wash">化学清洗</a>、<a href="/zh/services/chemical-overhaul">化学大修</a>。</p>`,
   },
   {
     slug: "inverter-vs-non-inverter-aircond-malaysia",
@@ -1988,7 +2014,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-troubleshooting-guide-malaysia",
-    title: "Aircond Troubleshooting Guide Malaysia — Diagnose Your Pr...",
+    title: "Aircond Troubleshooting Guide Malaysia — Diagnose Your Problem First",
     titleMS: "Panduan Penyelesaian Masalah Aircond Malaysia — Diagnos Masalah Anda",
     titleZH: "马来西亚冷气故障排查指南 — 诊断您的问题",
     excerpt: "DIY aircond troubleshooting guide for Malaysia. Find out what is causing your aircond problem and whether you can fix it yourself.",
@@ -2512,7 +2538,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "professional-new-aircond-installation-kl-selangor-2026",
-    title: "5 Essential Rules for Professional New Aircond Installati...",
+    title: "5 Essential Rules for Professional New Aircond Installation in KL & Selangor",
     titleMS: "5 Peraturan Penting untuk Pemasangan Aircond Baru Profesional di Kuala Lumpur & Selangor (Panduan 2026)",
     titleZH: "吉隆坡与雪兰莪专业新冷气安装的5个关键规则（2026指南）",
     excerpt: "Planning a new aircond installation near you in KL or Selangor? Learn sizing, copper piping, vacuuming, placement and transparent RM199 base installation pricing.",
@@ -2529,8 +2555,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/aircond-installation-wall-mounted-kl.webp",
     imageAlt: "Wall-mounted aircond installation with copper piping and bracket setup by KL Renovator in Kuala Lumpur",
     lastReviewed: "2026-07-03",
-    content: "<p><em>A good installation is not just about hanging the indoor unit. Correct HP sizing, copper pipe quality, vacuuming, drainage slope and outdoor airflow decide whether your new aircond stays cold, quiet and efficient.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does correct HP sizing matter?</h2>\n<p>A room that is too large for the selected HP forces the compressor to run non-stop. A unit that is too large short-cycles and leaves the room humid. KL Renovator checks room size, ceiling height, sunlight exposure and usage before recommending wall-mounted, ceiling cassette or window units.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A room that is too large for the selected HP forces the compressor to run non-stop.</div>\n<h2>What is included in the RM199 base installation?</h2>\n<p>Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe. Extra materials are quoted before work starts, so customers do not pay for accessories they already have.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Our standard wall-mounted 1.</div>\n<h2>Transparent installation price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Wall-mounted 2.0HP</td><td>RM249</td><td>Standard installation protocol</td></tr><tr><td>Wall-mounted 2.5HP</td><td>RM279</td><td>Standard installation protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM290</td><td>Standard installation protocol</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM199</td><td>Standard installation protocol</td></tr></tbody></table>\n<h2>Why must the installer vacuum the copper line?</h2>\n<p>Vacuuming removes moisture and air before refrigerant is released. Skipping this step can create acid inside the system, damage compressor oil and shorten the life of a new inverter aircond.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Vacuuming removes moisture and air before refrigerant is released.</div>\n<h2>Where should the indoor and outdoor units be placed?</h2>\n<p>The indoor unit needs clear air intake and proper drainage slope. The outdoor condenser needs strong support, anti-vibration stability and open discharge space so hot air does not circulate back into the unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> The indoor unit needs clear air intake and proper drainage slope.</div>\n<h2>Which brands can KL Renovator install?</h2>\n<p>Juruteknik kami memasang dan menservis Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp dan banyak lagi. We focus on residential homes, condominiums, terrace houses, offices and shoplots using wall-mounted, ceiling cassette and window units.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Juruteknik kami memasang dan menservis Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp dan banyak lagi.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for a professional new aircond installation quote before work starts. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/installation\">New Unit Installation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Pemasangan yang baik bukan sekadar menggantung unit dalam. Saiz HP yang betul, kualiti paip tembaga, proses vakum, cerun saliran dan ruang udara unit luar menentukan sama ada aircond baru kekal sejuk, senyap dan jimat elektrik.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Mengapa saiz HP yang betul penting?</h2>\n<p>A room that is too large for the selected HP forces the compressor to run non-stop. A unit that is too large short-cycles and leaves the room humid. KL Renovator checks room size, ceiling height, sunlight exposure and usage before recommending wall-mounted, ceiling cassette or window units.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik yang terlalu besar untuk HP yang dipilih memaksa kompressor berjalan tanpa henti.</div>\n<h2>What is included in the RM199 base installation?</h2>\n<p>Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe. Extra materials are quoted before work starts, so customers do not pay for accessories they already have.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Pemasangan standard dinding 1.0-1.5 HP kami bermula dari RM199.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Wall-mounted 2.0HP</td><td>RM249</td><td>Standard installation protocol</td></tr><tr><td>Wall-mounted 2.5HP</td><td>RM279</td><td>Standard installation protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM290</td><td>Standard installation protocol</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM199</td><td>Standard installation protocol</td></tr></tbody></table>\n<h2>Why must the installer vacuum the copper line?</h2>\n<p>Vacuuming removes moisture and air before refrigerant is released. Skipping this step can create acid inside the system, damage compressor oil and shorten the life of a new inverter aircond.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Penyedutan vakum mengeluarkan lembapan dan udara sebelum penyejuk dilepaskan.</div>\n<h2>Where should the indoor and outdoor units be placed?</h2>\n<p>The indoor unit needs clear air intake and proper drainage slope. The outdoor condenser needs strong support, anti-vibration stability and open discharge space so hot air does not circulate back into the unit.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Unit dalam memerlukan pengambilan udara yang jelas dan cerun saliran yang betul.</div>\n<h2>Which brands can KL Renovator install?</h2>\n<p>Juruteknik kami memasang dan menservis Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp dan banyak lagi. We focus on residential homes, condominiums, terrace houses, offices and shoplots using wall-mounted, ceiling cassette and window units.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik kami memasang dan menservis Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp dan banyak lagi.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/installation\">New Unit Installation</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>A good installation is not just about hanging the indoor unit. Correct HP sizing, copper pipe quality, vacuuming, drainage slope and outdoor airflow decide whether your new aircond stays cold, quiet and efficient.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does correct HP sizing matter?</h2>\n<p>A room that is too large for the selected HP forces the compressor to run non-stop. A unit that is too large short-cycles and leaves the room humid. KL Renovator checks room size, ceiling height, sunlight exposure and usage before recommending wall-mounted, ceiling cassette or window units.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A room that is too large for the selected HP forces the compressor to run non-stop.</div>\n<h2>What is included in the RM199 base installation?</h2>\n<p>Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe. Extra materials are quoted before work starts, so customers do not pay for accessories they already have.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe.</div>\n<h2>Transparent installation price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Wall-mounted 2.0HP</td><td>RM249</td><td>Standard installation protocol</td></tr><tr><td>Wall-mounted 2.5HP</td><td>RM279</td><td>Standard installation protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM290</td><td>Standard installation protocol</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM199</td><td>Standard installation protocol</td></tr></tbody></table>\n<h2>Why must the installer vacuum the copper line?</h2>\n<p>Vacuuming removes moisture and air before refrigerant is released. Skipping this step can create acid inside the system, damage compressor oil and shorten the life of a new inverter aircond.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Vacuuming removes moisture and air before refrigerant is released.</div>\n<h2>Where should the indoor and outdoor units be placed?</h2>\n<p>The indoor unit needs clear air intake and proper drainage slope. The outdoor condenser needs strong support, anti-vibration stability and open discharge space so hot air does not circulate back into the unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> The indoor unit needs clear air intake and proper drainage slope.</div>\n<h2>Which brands can KL Renovator install?</h2>\n<p>Our technicians install and service Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp and many more brands. We focus on residential homes, condominiums, terrace houses, offices and shoplots using wall-mounted, ceiling cassette and window units.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Our technicians install and service Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp and many more brands.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for a professional new aircond installation quote before work starts. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/installation\">New Unit Installation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Pemasangan yang baik bukan sekadar menggantung unit dalam. Saiz HP yang betul, kualiti paip tembaga, proses vakum, cerun saliran dan ruang udara unit luar menentukan sama ada aircond baru kekal sejuk, senyap dan jimat elektrik.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Mengapa saiz HP yang betul penting?</h2>\n<p>A room that is too large for the selected HP forces the compressor to run non-stop. A unit that is too large short-cycles and leaves the room humid. KL Renovator checks room size, ceiling height, sunlight exposure and usage before recommending wall-mounted, ceiling cassette or window units.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik yang terlalu besar untuk HP yang dipilih memaksa kompressor berjalan tanpa henti.</div>\n<h2>What is included in the RM199 base installation?</h2>\n<p>Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe. Extra materials are quoted before work starts, so customers do not pay for accessories they already have.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Pemasangan standard dinding 1.0-1.5 HP kami bermula dari RM199.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Wall-mounted 2.0HP</td><td>RM249</td><td>Standard installation protocol</td></tr><tr><td>Wall-mounted 2.5HP</td><td>RM279</td><td>Standard installation protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM290</td><td>Standard installation protocol</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM199</td><td>Standard installation protocol</td></tr></tbody></table>\n<h2>Why must the installer vacuum the copper line?</h2>\n<p>Vacuuming removes moisture and air before refrigerant is released. Skipping this step can create acid inside the system, damage compressor oil and shorten the life of a new inverter aircond.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Penyedutan vakum mengeluarkan lembapan dan udara sebelum penyejuk dilepaskan.</div>\n<h2>Where should the indoor and outdoor units be placed?</h2>\n<p>The indoor unit needs clear air intake and proper drainage slope. The outdoor condenser needs strong support, anti-vibration stability and open discharge space so hot air does not circulate back into the unit.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Unit dalam memerlukan pengambilan udara yang jelas dan cerun saliran yang betul.</div>\n<h2>Which brands can KL Renovator install?</h2>\n<p>Juruteknik kami memasang dan menservis Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp dan banyak lagi. Kami fokus pada rumah kediaman, kondominium, rumah teres, pejabat dan premis kedai menggunakan unit dinding, ceiling cassette dan unit tingkap.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik kami memasang dan menservis Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp dan banyak lagi.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/installation\">New Unit Installation</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪 2026 专业新机安装 — 品质决定寿命</h2>
       <p>买了一台好冷气，却毁在了安装上？在马来西亚，70% 的冷气故障是由不当安装引起的。<strong>KL Renovator</strong> 作为吉隆坡领先的安装专家，坚持高标准施工，确保您的新机从第一天起就高效运行。</p>
 
@@ -2635,7 +2661,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "pressure-chemical-wash-leaking-aircond-kl-selangor",
-    title: "Why a High-Pressure Chemical Wash is Fixes Leaking Aircon...",
+    title: "Why a High-Pressure Chemical Wash Fixes Leaking Aircond in KL & Selangor",
     titleMS: "Mengapa Cuci Kimia Bertekanan Tinggi Boleh Mengatasi Aircond Bocor di KL & Selangor",
     titleZH: "为什么高压化学清洗能解决吉隆坡与雪兰莪冷气漏水问题",
     excerpt: "Water leaking from your indoor aircond is usually caused by blocked drainage, slime and dirty coils. Learn how chemical wash fixes the root cause.",
@@ -2777,7 +2803,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-gas-topup-malaysia-r32-r410a-r22-balancing",
-    title: "Aircond Gas Top-Up Malaysia: R32, R410A, and R22 Precisio...",
+    title: "Aircond Gas Top-Up Malaysia: R32, R410A, and R22 Precision Balancing",
     titleMS: "Kebenaran Tentang Tambah Gas Aircond di Malaysia: Imbangan Tepat R32, R410A dan R22",
     titleZH: "马来西亚冷气加Gas真相：R32、R410A与R22精准平衡",
     excerpt: "Aircond gas does not disappear like fuel. Low gas usually means a leak. Learn honest gas top-up pricing, pressure balancing and when leak checks matter.",
@@ -2894,7 +2920,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-installation-dismantling-kl-selangor-price-guide",
-    title: "Professional Aircond Installation & Dismantling in KL & S...",
+    title: "Professional Aircond Installation & Dismantling in KL & Selangor Price Guide",
     titleMS: "Pemasangan & Buka Aircond Profesional di KL & Selangor: Panduan Langkah Demi Langkah dan Harga",
     titleZH: "吉隆坡与雪兰莪专业冷气安装与拆除：步骤与价格指南",
     excerpt: "Moving house or replacing an old unit? Learn safe dismantling, pump-down, installation standards and transparent pricing before booking.",
@@ -3011,7 +3037,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "smelly-aircond-foul-musty-odor-kl-selangor",
-    title: "Fix Smelly Aircond: Foul and Musty Odors in KL & Selangor...",
+    title: "Fix Smelly Aircond: Foul and Musty Odors in KL & Selangor Homes",
     titleMS: "Cara Hilangkan Bau Busuk Aircond: Selesaikan Bau Hapak di Rumah KL & Selangor",
     titleZH: "如何解决冷气异味：吉隆坡与雪兰莪住家的霉味和臭味处理",
     excerpt: "Does your aircond smell sour, mouldy or rotten when switched on? Learn the causes and the correct service for each odor level.",
@@ -3072,7 +3098,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "r32-vs-r410a-vs-r22-aircond-gas-malaysia",
-    title: "R32 vs R410A vs R22: Malaysian Aircond Gas Types and Pres...",
+    title: "R32 vs R410A vs R22: Malaysian Aircond Gas Types and Pressure Guide",
     titleMS: "R32 vs R410A vs R22: Panduan Lengkap Jenis Gas Aircond dan Tekanan di Malaysia",
     titleZH: "R32、R410A与R22：马来西亚冷气Gas类型与压力完整指南",
     excerpt: "Confused by R32, R410A and R22? Learn which gas your aircond uses, why pressures differ and why mixing refrigerants is dangerous.",
@@ -3189,7 +3215,7 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "aircond-installation-cost-malaysia-2026",
-    title: "Aircond Installation Cost Malaysia 2026 — Full Price Brea...",
+    title: "Aircond Installation Cost Malaysia 2026 — Full Price Breakdown",
     titleMS: "Kos Pemasangan Aircond di Malaysia 2026 — Panduan Harga Penuh (KL & Selangor)",
     titleZH: "2026年马来西亚冷气安装费用 — 完整价格指南（吉隆坡与雪兰莪）",
     excerpt: "Full 2026 aircond installation cost guide for Malaysia. RM 199 base install (1.0-1.5 HP wall-mounted) plus transparent add-ons, RM 25/ft extra copper, and what condo vs landed actually costs. Verified KL Renovator pricing.",
@@ -3379,7 +3405,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "why-aircond-installation-expensive-malaysia",
-    title: "Why Is Aircond Installation So Expensive Malaysia? 7 Real...",
+    title: "Why Is Aircond Installation So Expensive in Malaysia? 7 Real Reasons",
     titleMS: "Mengapa Pemasangan Aircond Mahal di Malaysia? 7 Sebab Sebenar (2026)",
     titleZH: "为什么马来西亚冷气安装这么贵？7个真实原因（2026）",
     excerpt: "Aircond installation in Malaysia costs more than most people expect. Here are 7 real reasons: certified technician shortage, copper pipe price hike, RM 25/ft extra, insurance, tools, condo compliance and warranty. KL Renovator transparent breakdown.",
@@ -3508,7 +3534,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "1-hp-aircond-bedroom-malaysia",
-    title: "Is 1 HP Aircond Enough for a Bedroom? Malaysia Room Size ...",
+    title: "Is 1 HP Aircond Enough for a Bedroom? Malaysia Room Size Guide 2026",
     titleMS: "Adakah 1 HP Aircond Cukup untuk Bilik Tidur? Panduan Saiz Bilik Malaysia 2026",
     titleZH: "1马力冷气足够卧室吗？2026年马来西亚房间尺寸指南",
     excerpt: "1 HP aircond (about 9,000 BTU / 0.75 kW) is enough for a small bedroom up to 120 sqft in Malaysia. Larger bedrooms need 1.5 HP or 2.0 HP. Full sizing chart, room calculator, and installation pricing from RM 199.",
@@ -3692,7 +3718,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "ac-unit-installation-cost-malaysia",
-    title: "AC Unit Installation Cost Malaysia 2026 — Wall, Cassette,...",
+    title: "AC Unit Installation Cost Malaysia 2026 — Wall, Cassette, Window Prices",
     titleMS: "Kos Pasang Unit AC di Malaysia 2026 — Harga Dinding, Cassette, Tingkap",
     titleZH: "2026年马来西亚AC机组安装费用 — 壁挂、卡式、窗口机价格",
     excerpt: "AC unit installation cost in Malaysia 2026: wall-mounted from RM 199 (1.0-1.5 HP), ceiling cassette from RM 290, window units from RM 199. What is included, add-ons, and what changes the price. Verified pricing from klrenovator.com.",
@@ -3912,7 +3938,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "3-minute-rule-aircon-malaysia",
-    title: "The 3-Minute Rule for Aircon Malaysia — Why You Should Wa...",
+    title: "The 3-Minute Rule for Aircon Malaysia — Why You Should Wait Before Restart",
     titleMS: "Peraturan 3 Minit untuk Aircond di Malaysia — Mengapa Anda Perlu Tunggu 3 Minit Sebelum Mula Semula",
     titleZH: "马来西亚冷气3分钟规则 — 为什么重启前要等3分钟",
     excerpt: "The 3-minute rule for aircon means waiting at least 3 minutes before restarting the compressor after switching off. This protects the compressor from short-cycling damage. Full guide for Malaysian homes on why this matters and what happens if you ignore it.",
@@ -4093,7 +4119,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "ac-service-price-malaysia-2026",
-    title: "AC Service Price Malaysia 2026 — Basic, Chemical Wash, Ov...",
+    title: "AC Service Price Malaysia 2026 — Basic, Chemical Wash, Overhaul",
     titleMS: "Harga Servis AC di Malaysia 2026 — Basic, Cuci Kimia, Overhaul",
     titleZH: "2026年马来西亚AC服务价格 — 基础、化学清洗、大修",
     excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120-220, AMC from RM 299/year. Verified pricing from klrenovator.com.",
@@ -4640,7 +4666,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "aircond-leaking-water-malaysia",
-    title: "Aircond Leaking Water? 8 Causes & Fixes Malaysia (2026 Gu...",
+    title: "Aircond Leaking Water? 8 Causes & Fixes Malaysia (2026 Guide)",
     titleMS: "Aircond Bocor Air? 8 Punca & Penyelesaian di Malaysia (Panduan 2026)",
     titleZH: "冷气漏水？马来西亚8个原因和解决方法（2026指南）",
     excerpt: "Aircond leaking water in Malaysia? The 8 most common causes: blocked drain pipe, dirty filter, frozen coil, low refrigerant, tilted indoor unit, broken drain pump, damaged drip tray, full water tray. Fixes from RM 99.",
@@ -4875,7 +4901,7 @@ export const allPosts: BlogPost[] = [
 
   {
     slug: "aircond-installation-time-malaysia",
-    title: "How Long Does Aircond Installation Take Malaysia? 2026 Ti...",
+    title: "How Long Does Aircond Installation Take in Malaysia? 2026 Timeline",
     titleMS: "Berapa Lama Pemasangan Aircond di Malaysia? Panduan Masa 2026",
     titleZH: "马来西亚冷气安装需要多长时间？2026年时间指南",
     excerpt: "Aircond installation in Malaysia takes 2-3 hours for a standard wall-mounted 1.0-1.5 HP unit, 3-4 hours for ceiling cassette. Multi-unit installs: 2-3 hours per unit. Full breakdown by unit type, size, location scenario, with same-day service options.",
@@ -9511,3 +9537,9 @@ export const allPosts: BlogPost[] = [
   ...installationBlogBatch4,
 
 ];
+
+/** Lightweight list for blog index / cards — no content HTML bodies */
+export const allPostSummaries: BlogPostSummary[] = allPosts.map(
+  ({ content: _c, contentMS: _ms, contentZH: _zh, ...summary }) => summary,
+);
+

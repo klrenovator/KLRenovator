@@ -31,7 +31,7 @@ export const installationBlogBatch4: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Commercial aircond installation for shoplot and office by KL Renovator in KL Selangor",
     content: `
       <h2>Commercial Aircond Installation — What Businesses Need to Know</h2>
@@ -280,7 +280,7 @@ export const installationBlogBatch4: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Ceiling cassette aircond installation in Malaysian office by KL Renovator specialists",
     content: `
       <h2>What Is a Ceiling Cassette Aircond?</h2>
@@ -535,7 +535,7 @@ export const installationBlogBatch4: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Multi-split aircond system installation with one outdoor unit and multiple indoor units",
     content: `
       <h2>What Is a Multi-Split Aircond System?</h2>
@@ -769,7 +769,7 @@ export const installationBlogBatch4: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Electrical requirements for aircond installation including MCB and wiring by KL Renovator",
     content: `
       <h2>Why Electrical Requirements Matter for Aircond</h2>
@@ -1018,7 +1018,7 @@ export const installationBlogBatch4: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Homeowner pre-installation checklist for aircond by KL Renovator installation experts",
     content: `
       <h2>15 Things to Prepare Before Your Aircond Installation</h2>

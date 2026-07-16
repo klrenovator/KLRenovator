@@ -29,7 +29,7 @@ export const installationBlogBatch2: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "KL Renovator installation pricing comparison across KL and Selangor areas",
     content: `
       <h2>Does Location Affect Installation Cost?</h2>
@@ -220,7 +220,7 @@ export const installationBlogBatch2: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Split unit vs window unit aircond comparison by KL Renovator installation specialists",
     content: `
       <h2>Split Unit or Window Unit — Which Should You Install?</h2>
@@ -421,7 +421,7 @@ export const installationBlogBatch2: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Aircond installation timing during home renovation by KL Renovator specialists",
     content: `
       <h2>When Should You Install Aircond During Renovation?</h2>
@@ -661,7 +661,7 @@ export const installationBlogBatch2: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Concealed vs exposed aircond piping comparison by KL Renovator installation team",
     content: `
       <h2>Concealed or Exposed Piping — Which Is Right for Your Home?</h2>
@@ -862,7 +862,7 @@ export const installationBlogBatch2: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kl-selangor.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Proper outdoor unit placement for Malaysian homes by KL Renovator installation specialists",
     content: `
       <h2>Outdoor Unit Placement Matters More Than You Think</h2>
