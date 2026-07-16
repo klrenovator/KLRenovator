@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import BlogPage from "@/app/blog/page";
+import { getBlogPostSummaries } from "@/app/blog/get-blog-summaries";
+import BlogIndexClient from "@/app/blog/blog-index-client";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气小贴士及专家指南 | KL Renovator Blog"),
@@ -27,5 +28,6 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPageZH() {
-  return <BlogPage initialLang="zh" />;
+  const posts = getBlogPostSummaries();
+  return <BlogIndexClient posts={posts} initialLang="zh" />;
 }
