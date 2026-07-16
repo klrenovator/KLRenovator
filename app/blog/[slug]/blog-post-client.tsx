@@ -1,6 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
+import type { BlogPost, BlogPostSummary } from "@/config/blog-posts";
 import { BLOG_SERVICE_MAP, PROBLEM_BLOG_MAP_V2 } from "@/config/topical-authority-map";
 import { diversifyBlogAnchors } from "@/config/anchor-text-diversity";
 import Image from "next/image";
@@ -11,7 +12,6 @@ import { Reveal } from "@/components/reveal";
 import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 import { siteConfig } from "@/config/site";
 import { useLang } from "@/context/language-context";
-import type { BlogPost } from "@/config/blog-posts";
 
 // UI Labels
 const UI = {
@@ -119,7 +119,7 @@ const UI = {
 // Props
 interface Props {
   post: BlogPost;
-  related: BlogPost[];
+  related: BlogPostSummary[];
   // Optional: when rendered from a real /ms/blog/[slug] or /zh/blog/[slug]
   // route, the URL itself determines language - must NOT depend on the
   // client-side language-toggle state (that's only for the unprefixed
@@ -215,6 +215,13 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
     },
     keywords: post.tags.join(", "),
     articleSection: category,
+    wordCount: Math.max(1, content.replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length),
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `https://www.klrenovator.com${localizedPath("/blog")}#blog`,
+      name: "KL Renovator Blog",
+      publisher: { "@id": "https://www.klrenovator.com/#business" },
+    },
     about: {
       "@type": "Service",
       name: post.relatedService,

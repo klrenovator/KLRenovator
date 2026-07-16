@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allPosts } from "@/config/blog-posts";
+import { getRelatedPosts } from "@/app/blog/get-related-posts";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { BlogPostClient } from "./blog-post-client";
 
@@ -22,7 +23,7 @@ export async function generateMetadata({
   const imageUrl = `https://www.klrenovator.com${post.image}`;
 
   return {
-    title: clampMetaTitle(`${post.title} | KL Renovator`),
+    title: clampMetaTitle(post.title.length + 16 <= 60 ? `${post.title} | KL Renovator` : post.title),
     description: post.excerpt,
     openGraph: {
       title: clampMetaTitle(post.title),
@@ -68,20 +69,7 @@ export default async function BlogPostPage({
   const post = allPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  // Score posts by relevance: same category (+3), shared tags (+1 each), same relatedService (+2)
-  const related = allPosts
-    .filter((p) => p.slug !== slug)
-    .map((p) => {
-      let score = 0;
-      if (p.category === post.category) score += 3;
-      if (p.relatedService === post.relatedService) score += 2;
-      const sharedTags = p.tags?.filter((t: string) => post.tags?.includes(t)) ?? [];
-      score += sharedTags.length;
-      return { post: p, score };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3)
-    .map((x) => x.post);
+  const related = getRelatedPosts(slug);
 
   return <BlogPostClient post={post} related={related} />;
 }
