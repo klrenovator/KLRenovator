@@ -15,12 +15,12 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
-import { useLang } from "@/context/language-context";
 import { buildFaqSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import NextLink from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
+import { HomepageAeoSchemas } from "@/components/homepage-aeo-schemas";
 
 export default function Home() {
   // NOTE: HVACBusiness and WebSite schema used to be duplicated here AND in
@@ -102,6 +102,7 @@ export default function Home() {
 
   return (
     <>
+      <HomepageAeoSchemas />
       {/* BreadcrumbList — Homepage (single "Home" node; deeper pages add their own) */}
       <script
         type="application/ld+json"
