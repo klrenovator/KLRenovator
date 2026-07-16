@@ -205,3 +205,47 @@ export function buildBrandMetaTitleWithDate(baseTitle: string, locale: "en" | "m
 export function buildServiceMetaTitleWithDate(baseTitle: string, locale: "en" | "ms" | "zh" = "en"): string {
   return buildFreshMetaTitle(baseTitle, locale);
 }
+
+/**
+ * INS-22: Installation-Specific Metadata Title Optimizer
+ * Ensures title length <= 60 characters with high-converting price anchor and trust signals.
+ */
+export function buildInstallationMetaTitle(
+  baseTitleOrEntity: string,
+  locale: "en" | "ms" | "zh" = "en",
+  options?: {
+    type?: "pillar" | "hp" | "area" | "brand" | "kampung";
+    priceAnchor?: string;
+  }
+): string {
+  const price = options?.priceAnchor || "RM 199";
+  
+  if (options?.type) {
+    let raw = "";
+    const entity = baseTitleOrEntity.trim();
+    if (options.type === "pillar") {
+      if (locale === "ms") raw = `Pemasangan Aircond KL & Selangor — Dari ${price} | KL Renovator`;
+      else if (locale === "zh") raw = `吉隆坡与雪兰莪冷气安装 — ${price}起 | KL Renovator`;
+      else raw = `Aircond Installation KL Selangor — From ${price} | KL Renovator`;
+    } else if (options.type === "hp") {
+      if (locale === "ms") raw = `Pemasangan Aircond ${entity} KL — Dari ${price} | KL Renovator`;
+      else if (locale === "zh") raw = `${entity}冷气安装吉隆坡 — ${price}起 | KL Renovator`;
+      else raw = `${entity} Aircond Installation KL — From ${price} | KL Renovator`;
+    } else if (options.type === "area") {
+      if (locale === "ms") raw = `Pemasangan Aircond ${entity} — Dari ${price} | KL Renovator`;
+      else if (locale === "zh") raw = `${entity}冷气安装服务 — ${price}起 | KL Renovator`;
+      else raw = `Aircond Installation ${entity} — ${price} | KL Renovator`;
+    } else if (options.type === "brand") {
+      if (locale === "ms") raw = `Pemasangan Aircond ${entity} KL — Pakar Sebenar | KL Renovator`;
+      else if (locale === "zh") raw = `${entity}冷气安装吉隆坡 — 专业认证技师 | KL Renovator`;
+      else raw = `${entity} Aircond Installation KL — Expert Fitting | KL Renovator`;
+    } else if (options.type === "kampung") {
+      if (locale === "ms") raw = `Pemasangan Aircond ${entity} — Dari ${price} | KL Renovator`;
+      else if (locale === "zh") raw = `${entity}专业冷气安装 — ${price}起 | KL Renovator`;
+      else raw = `Aircond Installation ${entity} — From ${price} | KL Renovator`;
+    }
+    if (raw) return clampMetaTitle(raw, { max: locale === "zh" ? META_TITLE_MAX_CJK : META_TITLE_MAX });
+  }
+
+  return buildFreshMetaTitle(baseTitleOrEntity, locale);
+}

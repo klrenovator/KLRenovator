@@ -97,3 +97,73 @@ export function buildUniqueBrandMetaDesc(brand: { name: string; metaDesc?: strin
   const base = brand.metaDesc || brand.description || "";
   return clampMetaDescription(base);
 }
+
+/**
+ * INS-22: Installation-Specific Metadata Description Variations
+ * Ensures description length <= 160 chars (140-155 ideal for EN/MS, max 155 CJK).
+ * Weaves in trust signals: From RM199, Same-Day Available, 1-Month Warranty, Vacuum Pump, Type L Copper.
+ */
+export function buildInstallationMetaDesc(
+  baseOrEntity: string,
+  locale: "en" | "ms" | "zh" = "en",
+  options?: {
+    type?: "pillar" | "hp" | "area" | "brand" | "kampung";
+    priceAnchor?: string;
+    landmarks?: string[];
+  }
+): string {
+  const price = options?.priceAnchor || "RM 199";
+  const phone = "+60182983573";
+
+  if (options?.type) {
+    const entity = baseOrEntity.trim();
+    let desc = "";
+
+    if (options.type === "pillar") {
+      if (locale === "ms") {
+        desc = `Pemasangan aircond profesional dari ${price}. Unit dinding, ceiling cassette, semua jenama. Pam vakum, paip tembaga Type L, waranti 1 bulan. WhatsApp ${phone}`;
+      } else if (locale === "zh") {
+        desc = `专业冷气安装服务${price}起。涵盖挂壁式与天花板卡式机，支持各大品牌。采用抽真空工艺与Type L正品铜管，提供1个月工艺保修。WhatsApp ${phone}`;
+      } else {
+        desc = `Professional aircond installation from ${price}. Wall-mounted, ceiling cassette, all brands. Vacuum pump, copper pipe, 1-month warranty. WhatsApp ${phone}`;
+      }
+    } else if (options.type === "hp") {
+      if (locale === "ms") {
+        desc = `Pemasangan aircond ${entity} untuk bilik & pejabat di KL & Selangor. Dari ${price} termasuk 7ft paip tembaga, wayar, vakum. Slot hari sama ada. WhatsApp ${phone}`;
+      } else if (locale === "zh") {
+        desc = `${entity}冷气安装覆盖吉隆坡与雪兰莪卧室及办公室。${price}起包含7尺正品铜管、电线及抽真空规范。可安排当天上门安装。WhatsApp ${phone}`;
+      } else {
+        desc = `${entity} aircond installation for bedrooms in KL & Selangor. From ${price} including 7ft copper pipe, wiring, vacuum. Same-day available. WhatsApp ${phone}`;
+      }
+    } else if (options.type === "area") {
+      const landmarkNote = options.landmarks?.length ? ` ${options.landmarks.slice(0, 2).join(", ")} covered.` : "";
+      if (locale === "ms") {
+        desc = `Pakar pemasangan aircond di ${entity} dari ${price}. Servis hari sama, semua jenama, waranti 1 bulan. Liputan penuh kawasan setempat. WhatsApp ${phone}`;
+      } else if (locale === "zh") {
+        desc = `${entity}冷气安装专家${price}起。当天响应、支持所有品牌并附带1个月工艺保修。技师对当地住宅与商业环境了如指掌。WhatsApp ${phone}`;
+      } else {
+        desc = `Expert aircond installation in ${entity} from ${price}. Same-day service, all brands, 1-month warranty.${landmarkNote} WhatsApp ${phone}`;
+      }
+    } else if (options.type === "brand") {
+      if (locale === "ms") {
+        desc = `Pemasangan aircond ${entity} di KL & Selangor oleh juruteknik bertauliah. Dari ${price}. Semua model ${entity} disokong. Waranti kerja 1 bulan. WhatsApp ${phone}`;
+      } else if (locale === "zh") {
+        desc = `${entity}冷气由认证专业技师在吉隆坡及雪兰莪进行规范安装。${price}起支持所有${entity}型号，并附1个月工艺保修。WhatsApp ${phone}`;
+      } else {
+        desc = `${entity} aircond installation in KL & Selangor by certified technicians. From ${price}. All ${entity} models supported. 1-month workmanship warranty. WhatsApp ${phone}`;
+      }
+    } else if (options.type === "kampung") {
+      if (locale === "ms") {
+        desc = `Pakar pemasangan aircond di kawasan ${entity} dari ${price}. Vakum wajib, paip tembaga berkualiti tinggi, waranti 1 bulan. Slot hari sama ada. WhatsApp ${phone}`;
+      } else if (locale === "zh") {
+        desc = `${entity}社区冷气安装专家${price}起。严谨抽真空与正品铜管标准，提供1个月工艺保修。极速安排当天上门。WhatsApp ${phone}`;
+      } else {
+        desc = `Professional aircond installation near ${entity} from ${price}. Mandatory vacuum pump, Type L copper pipe, 1-month warranty. Same-day slots. WhatsApp ${phone}`;
+      }
+    }
+
+    if (desc) return clampMetaDescription(desc);
+  }
+
+  return clampMetaDescription(baseOrEntity);
+}
