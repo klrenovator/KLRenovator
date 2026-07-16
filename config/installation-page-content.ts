@@ -2,6 +2,8 @@
 // Imported by components/installation-landing-page.tsx and each thin page file.
 
 import { Metadata } from "next";
+import { buildInstallationMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildInstallationMetaDesc } from "@/lib/seo-description-optimizer";
 
 export type InstallationLocale = "en" | "ms" | "zh";
 export type InstallationPageKey =
@@ -1043,12 +1045,14 @@ export function getInstallationMetadata(
     ms: getInstallationPath(pageKey, "ms"),
     zh: getInstallationPath(pageKey, "zh"),
   };
+  const optimizedTitle = buildInstallationMetaTitle(c.metaTitle, locale, { type: "hp" });
+  const optimizedDesc = buildInstallationMetaDesc(c.metaDescription, locale, { type: "hp" });
   return {
-    title: c.metaTitle,
-    description: c.metaDescription,
+    title: optimizedTitle,
+    description: optimizedDesc,
     openGraph: {
-      title: c.metaTitle,
-      description: c.metaDescription,
+      title: optimizedTitle,
+      description: optimizedDesc,
       type: "website",
       locale: locale === "en" ? "en_MY" : locale === "ms" ? "ms_MY" : "zh_MY",
       url: canonical,

@@ -3,6 +3,8 @@
 // remains unique, accurate and natural across all 158 neighbourhoods.
 
 import { siteConfig } from "@/config/site";
+import { buildInstallationMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildInstallationMetaDesc } from "@/lib/seo-description-optimizer";
 
 export type KampungInstallationLocale = "en" | "ms" | "zh";
 
@@ -632,32 +634,14 @@ export function getKampungInstallationContent(
   };
 
   const l = labels[locale];
+  const metaTitle = buildInstallationMetaTitle(`${name} (${parentName})`, locale, { type: "kampung" });
+  const metaDescription = buildInstallationMetaDesc(`${name}, ${parentName}`, locale, { type: "kampung" });
 
   return {
-    metaTitle:
-      locale === "en"
-        ? `Aircond Installation ${name} (${parentName}) — From RM199 | KL Renovator`
-        : locale === "ms"
-          ? `Pemasangan Aircond ${name} (${parentName}) — Dari RM199 | KL Renovator`
-          : `${name}冷气安装（${parentName}）— RM199起 | KL Renovator`,
-    metaDescription:
-      locale === "en"
-        ? `Professional aircond installation in ${name}, ${parentName}, ${state} from RM199. Wall-mounted, ceiling cassette & window units. Same-day slots, vacuum pump, 1-month warranty. WhatsApp ${phone}.`
-        : locale === "ms"
-          ? `Pemasangan aircond profesional di ${name}, ${parentName}, ${state} dari RM199. Unit dinding, ceiling cassette & unit tingkap. Slot hari sama, pam vakum, waranti 1 bulan. WhatsApp ${phone}.`
-          : `专业冷气安装服务覆盖${name}（${parentName}、${state}），RM199起。挂壁式、天花板卡式机、窗口式冷气均可安装，当天可约，含真空泵调试与1个月保修。WhatsApp ${phone}。`,
-    ogTitle:
-      locale === "en"
-        ? `Aircond Installation ${name} (${parentName}) — From RM199 | KL Renovator`
-        : locale === "ms"
-          ? `Pemasangan Aircond ${name} (${parentName}) — Dari RM199 | KL Renovator`
-          : `${name}冷气安装（${parentName}）— RM199起 | KL Renovator`,
-    ogDescription:
-      locale === "en"
-        ? `Professional aircond installation in ${name}, ${parentName}, ${state} from RM199. Wall-mounted, ceiling cassette & window units. Same-day slots, vacuum pump, 1-month warranty.`
-        : locale === "ms"
-          ? `Pemasangan aircond profesional di ${name}, ${parentName}, ${state} dari RM199. Unit dinding, ceiling cassette & unit tingkap. Slot hari sama, pam vakum, waranti 1 bulan.`
-          : `专业冷气安装服务覆盖${name}（${parentName}、${state}），RM199起。挂壁式、天花板卡式机、窗口式冷气均可安装，当天可约。`,
+    metaTitle,
+    metaDescription,
+    ogTitle: metaTitle,
+    ogDescription: metaDescription,
     ogImage: parent.heroImage || "/hero/aircond-installation-kuala-lumpur.webp",
     ogImageAlt:
       locale === "en"
