@@ -6,6 +6,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import {
+  resolveLandmarkLink,
+  getAreaNeighbourhoodLinks,
+  getRelatedNeighbourhoodLinks,
+} from "@/config/area-internal-links";
 import { allPosts } from "@/config/blog-posts";
 import { AREA_BLOG_MAP, AREA_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
@@ -204,40 +209,12 @@ export default async function AreaPageMS({
             {area.landmarks?.length > 0 && (
               <div className="mt-5 flex flex-wrap gap-2">
                 {area.landmarks.map((lm) => {
-                  const kampungPage = siteConfig.kampungPages?.find(
-                    (k) => k.parentSlug === slug && k.name === lm
-                  );
-                  if (kampungPage && kampungPage.descriptionMS) {
+                  const resolved = resolveLandmarkLink(lm, slug, "ms");
+                  if (resolved) {
                     return (
                       <NextLink
                         key={lm}
-                        href={`/ms/areas/${slug}/${kampungPage.slug}`}
-                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
-                      >
-                        {lm}
-                      </NextLink>
-                    );
-                  }
-                  const crossArea = siteConfig.areaPages.find((a) => a.name === lm && a.slug !== slug);
-                  if (crossArea) {
-                    return (
-                      <NextLink
-                        key={lm}
-                        href={`/areas/${crossArea.slug}`}
-                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
-                      >
-                        {lm}
-                      </NextLink>
-                    );
-                  }
-                  const kampungElsewhere = siteConfig.kampungPages?.find(
-                    (k) => k.name === lm && k.parentSlug !== slug
-                  );
-                  if (kampungElsewhere) {
-                    return (
-                      <NextLink
-                        key={lm}
-                        href={`/areas/${kampungElsewhere.parentSlug}/${kampungElsewhere.slug}`}
+                        href={resolved.href}
                         className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
                       >
                         {lm}
@@ -256,29 +233,30 @@ export default async function AreaPageMS({
               </div>
             )}
 
-            {/* Dedicated neighbourhood pages for this area, if any exist */}
-            {siteConfig.kampungPages
-              ?.filter((k) => k.parentSlug === slug && k.descriptionMS)
-              .length > 0 && (
+            {(() => {
+              const neighbourhoods = getAreaNeighbourhoodLinks(slug, "ms");
+              const related = neighbourhoods.length >= 4 ? [] : getRelatedNeighbourhoodLinks(slug, "ms", 8);
+              const links = neighbourhoods.length > 0 ? neighbourhoods : related;
+              if (links.length === 0) return null;
+              return (
               <div className="mt-4">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
-                  Panduan Kawasan Kejiranan
+                  {neighbourhoods.length > 0 ? "Panduan Kawasan Kejiranan" : "Panduan Kejiranan Berhampiran"}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {siteConfig.kampungPages
-                    .filter((k) => k.parentSlug === slug && k.descriptionMS)
-                    .map((k) => (
+                  {links.map((k) => (
                       <NextLink
-                        key={k.slug}
-                        href={`/ms/areas/${slug}/${k.slug}`}
+                        key={`${k.parentSlug}-${k.slug}`}
+                        href={k.href}
                         className="inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 underline"
                       >
-                        Servis Aircond {k.name}
+                        {k.label}
                       </NextLink>
                     ))}
                 </div>
               </div>
-            )}
+              );
+            })()}
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
@@ -596,33 +574,39 @@ export default async function AreaPageMS({
               </NextLink>
             </div>
 
-            {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug && k.descriptionMS).length > 0 && (
+            {(() => {
+              const neighbourhoods = getAreaNeighbourhoodLinks(slug, "ms");
+              const related = neighbourhoods.length >= 4 ? [] : getRelatedNeighbourhoodLinks(slug, "ms", 10);
+              const links = neighbourhoods.length > 0 ? neighbourhoods : related;
+              if (links.length === 0) return null;
+              return (
               <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
-                  Kawasan Kejiranan di {area.name}
+                  {neighbourhoods.length > 0 ? `Kawasan Kejiranan di ${area.name}` : `Kejiranan berhampiran ${area.name}`}
                 </p>
                 <h3 className="text-base font-black text-slate-900">
-                  Halaman kawasan kecil di bawah {area.name}
+                  {neighbourhoods.length > 0
+                    ? `Halaman kawasan kecil di bawah ${area.name}`
+                    : `Halaman komuniti berhampiran ${area.name}`}
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                   Halaman kejiranan ini membantu pelanggan di komuniti yang lebih kecil mencari servis aircond yang paling relevan dengan lebih cepat.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {siteConfig.kampungPages
-                    .filter((k) => k.parentSlug === slug && k.descriptionMS)
-                    .map((k) => (
+                  {links.map((k) => (
                       <NextLink
-                        key={k.slug}
-                        href={`/ms/areas/${slug}/${k.slug}`}
+                        key={`${k.parentSlug}-${k.slug}`}
+                        href={k.href}
                         className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700"
                       >
-                        Servis Aircond {k.name}
+                        {k.label}
                         <FiArrowRight className="h-3 w-3 text-sky-400" />
                       </NextLink>
                     ))}
                 </div>
               </div>
-            )}
+              );
+            })()}
           </Reveal>
         </div>
       </section>
