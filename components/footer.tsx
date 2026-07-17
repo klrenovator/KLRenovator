@@ -105,8 +105,19 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{fl.quickLinks}</p>
 
-          {/* 10.10 Click-Depth: Price Guides — commercial landings ≤2 clicks */}
+          {/* Installation Hub Links */}
           <div>
+            <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-2">Aircond Installation</p>
+            <ul className="space-y-1.5">
+              <li><NextLink href={localizedPath("/aircond-installation-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation KL &amp; Selangor</NextLink></li>
+              <li><NextLink href={localizedPath("/btu-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">BTU &amp; HP Calculator</NextLink></li>
+              <li><NextLink href={localizedPath("/new-home-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">New Home Package</NextLink></li>
+              <li><NextLink href={localizedPath("/commercial-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Commercial &amp; Shoplot</NextLink></li>
+            </ul>
+          </div>
+
+          {/* Price Guides */}
+          <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.priceGuides}</p>
             <ul className="space-y-1.5">
               <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
