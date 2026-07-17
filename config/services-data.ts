@@ -34,7 +34,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "chemical-wash": {
     slug: "chemical-wash",
     title: "Pressure Chemical Wash",
-    tagline: "High-pressure 80–120 PSI chemical deep-cleaning while mounted on-wall — dissolves stubborn biofilm, clears blocked drains, and restores airflow. From RM 120.",
+    tagline: "High-pressure 80–120 PSI chemical deep-cleaning on-wall — dissolves stubborn biofilm, clears blocked drains, and restores strong airflow. From RM 120 today.",
     description:
       "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 120 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
     startPrice: "RM 120",
@@ -169,7 +169,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "chemical-overhaul": {
     slug: "chemical-overhaul",
     title: "Chemical Overhaul",
-    tagline: "Complete dismantle and deep-clean of every internal component — the definitive fix for persistent water leaks, ice build-up, and years of neglect. From RM 220.",
+    tagline: "Complete dismantle and deep-clean of internal components — the definitive fix for persistent water leaks, ice build-up, and years of neglect. From RM 220.",
     description:
       "When a chemical wash is not enough \u2014 when water has been dripping down your wall for weeks, when you can see ice forming on the copper pipe, when the smell from the unit makes the whole room unpleasant \u2014 the problem has moved beyond what a mounted clean can fix. A chemical overhaul is the most thorough aircond service we perform. We remove the entire indoor unit from the wall, take it apart piece by piece, and deep-clean every single component: the evaporator coil, blower wheel, fan barrel, drain pan, drip tray, internal housing, louvres, and all plastic covers. Each part is soaked in food-safe chemical solution, scrubbed where needed, then rinsed at high pressure until factory-clean. The drain pan \u2014 almost always the root cause of persistent leaking \u2014 gets individual attention and is confirmed watertight before reassembly. This is the service that brings a neglected unit back to life. RM 220 for wall-mounted 1.0\u20131.5 HP. Takes 2\u20133 hours. The result: no more leaks, no more ice, no more smell, and cooling performance you may not have felt in years.",
     startPrice: "RM 220",
@@ -289,7 +289,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "gas-topup": {
     slug: "gas-topup",
     title: "Gas Top-Up / Precision Balancing",
-    tagline: "Precision refrigerant top-up with manifold gauge measurement. R22, R410A & R32. Leak check included on every job. From RM 120.",
+    tagline: "Precision refrigerant gas top-up with manifold pressure check. R22, R410A & R32. Leak inspection included on every job. From RM 120. Same-day KL & Selangor.",
     description:
       "Your aircond is clean. The filters are new. The coil was just washed. But the air coming out is barely cool and the outdoor compressor runs non-stop without reaching temperature. This is the classic signature of low refrigerant \u2014 the \u2018blood\u2019 of your air conditioning system. Without the correct charge of refrigerant circulating through the copper lines, the system physically cannot move heat from inside to outside, no matter how hard the compressor works. KL Renovator uses precision digital manifold gauges to measure your system's standing pressure, suction pressure, and discharge pressure against the manufacturer's specification for your exact model and refrigerant type \u2014 R22, R410A, or R32. We then add refrigerant in controlled increments while monitoring gauge readings until the system is balanced to spec. Every gas top-up includes a thorough physical leak inspection at all accessible flare connections, service valves, and the evaporator and condenser coil surfaces. Because refrigerant does not \u2018get used up\u2019 \u2014 if it is low, it leaked out somewhere. From RM 120 for R22, 1.0 HP.",
     startPrice: "RM 120",
@@ -656,7 +656,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "basic-servicing": {
     slug: "basic-servicing",
     title: "Basic Servicing",
-    tagline: "Essential routine maintenance — filter clean, drain flush, and full diagnostic check. RM 99, 45 minutes, keeps your unit healthy between deep cleans.",
+    tagline: "Essential routine aircond maintenance — filter clean, drain flush, and full diagnostic check. RM 99, 45 mins, keeps your unit healthy between deep cleans.",
     description:
       "Basic servicing is what keeps your aircond running smoothly between chemical washes — like changing your car's engine oil, not rebuilding the engine. In about 45 minutes per unit, our technician removes and washes the filters, flushes the drain pipe to prevent water leaks before they start, sprays the evaporator coil with a mild anti-bacterial cleaner, checks every electrical connection and contactor for tightness and burning, measures the actual cooling output temperature, and confirms the thermostat is calibrated correctly. For units running 8+ hours a day in Malaysian heat and humidity, we recommend this every 3–4 months. For moderate users, every 6 months is enough. It is affordable preventive maintenance that catches small problems — loose wiring, early drain clogs, refrigerant pressure trending low — before they become expensive repairs. RM 99 for a wall-mounted 1.0–1.5 HP unit, price confirmed before we start.",
     startPrice: "RM 99",
@@ -772,7 +772,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "ceiling-cassette": {
     slug: "ceiling-cassette",
     title: "Ceiling Cassette Service",
-    tagline: "Specialist service for commercial ceiling cassette units — offices, shops, restaurants. Chemical wash, overhaul, and repair. Off-hours scheduling available.",
+    tagline: "Specialist service for commercial ceiling cassette units — offices, shops & restaurants. Chemical wash, overhaul, and repair. Off-hours scheduling in KL.",
     description:
       "Ceiling cassettes are the workhorses of Malaysian commercial spaces: the 4-way unit recessed into the ceiling grid of your office, retail shop, restaurant, clinic, or salon. They are more complex than wall-mounted units \u2014 the blower is larger, the drain pan is integrated into the ceiling panel, and a clogged drain does not drip onto the floor (where you see it) but into the ceiling void (where it silently damages your gypsum board for weeks before you notice the stain). KL Renovator specialises in ceiling cassette servicing for commercial premises across the Klang Valley. Our technicians are trained to safely access ceiling-mounted units, remove the heavy cassette panel, chemically clean the blower and coil, deep-clean the drain pan (the #1 source of hidden ceiling leaks), and test everything before closing. We also handle multi-unit commercial sites \u2014 restaurants with 3\u20134 cassettes, offices with 6\u201310, retail floors with mixed cassette and wall-mounted units. Coordinated scheduling, off-hours (evening/weekend) availability, and volume discounts for regular commercial contracts. Basic service from RM 150, chemical wash from RM 220, chemical overhaul from RM 430.",
     startPrice: "RM 150",
