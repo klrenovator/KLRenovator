@@ -8,7 +8,7 @@ const BASE = "https://www.klrenovator.com";
 // the latest content deployment instead of changing on every build.
 // Round 23 / 20F.50 — updated 2026-07-07 for Cuci Aircond KL landing launch.
 // Round 70 / INS-08 + INS-09 — updated 2026-07-15 for per-HP and per-type installation pages.
-const SITEMAP_LAST_MODIFIED = new Date("2026-07-16T00:00:00.000Z");
+const SITEMAP_LAST_MODIFIED = new Date("2026-07-17T00:00:00.000Z");
 
 // ─────────────────────────────────────────────────────────────────────────
 // MULTILINGUAL ROUTING — audited 2026-07-06 (Round 14 / 20B.13):
