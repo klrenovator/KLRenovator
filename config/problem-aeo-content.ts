@@ -22,11 +22,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Dalam kebanyakan kes, aircond yang berjalan tetapi tidak sejuk disebabkan gas penyejuk rendah — ini menyumbang lebih separuh panggilan \"tidak sejuk\" yang KL Renovator terima. Penyelesaiannya biasanya tambah gas hari sama (dari RM 120) atau cuci kimia jika gegelung kotor (dari RM 120).",
     directAnswerZH: "在大多数情况下，冷气运行但不冷是因为制冷剂不足——这占KL Renovator接到的\"不冷\"报修的一半以上。解决方法通常是当天充气（从RM 120起），若盘管脏污则需化学清洗（从RM 120起）。",
     diyChecksEN: ["Check the remote is set to \"Cool\" mode, not \"Fan\" or \"Dry\" mode", "Check and rinse the washable air filter — a clogged filter alone can cause weak, warm-feeling airflow", "Check the outdoor unit isn't blocked by leaves, boxes or furniture restricting airflow"],
-    diyChecksMS: ["Semak remote ditetapkan pada mod \"Cool\", bukan \"Fan\" atau \"Dry\"", "Semak dan bilas penapis udara boleh basuh — penapis tersumbat sahaja boleh menyebabkan aliran udara lemah dan panas"],
-    diyChecksZH: ["检查遥控器是否设为\"制冷\"模式，而非\"送风\"或\"除湿\"模式", "检查并清洗可水洗的空气过滤网——过滤网堵塞本身就会导致风力弱、感觉不冷"],
+    diyChecksMS: [
+      "Semak remote ditetapkan pada mod \"Cool\", bukan \"Fan\" atau \"Dry\"",
+      "Semak dan bilas penapis udara boleh basuh — penapis tersumbat sahaja boleh menyebabkan aliran udara lemah dan panas",
+      "Semak unit luar tidak terhalang daun, kotak atau perabot yang menyekat aliran udara"
+    ],
+    diyChecksZH: [
+      "检查遥控器是否设为\"制冷\"模式，而非\"送风\"或\"除湿\"模式",
+      "检查并清洗可水洗的空气过滤网——过滤网堵塞本身就会导致风力弱、感觉不冷",
+      "检查室外机周围是否被树叶、杂物或家具挡住，确保散热通畅"
+    ],
     technicianChecksEN: ["Refrigerant pressure reading with a manifold gauge (low gas is invisible without this tool)", "Capacitor voltage/capacitance test — a weak capacitor can look like a gas problem", "Evaporator coil internal inspection for blockage that a filter clean alone won't fix"],
-    technicianChecksMS: ["Bacaan tekanan penyejuk dengan manifold gauge (gas rendah tidak dapat dikesan tanpa alat ini)", "Ujian voltan/kapasitans kapasitor — kapasitor lemah boleh kelihatan seperti masalah gas"],
-    technicianChecksZH: ["使用压力表测量制冷剂压力（没有此工具无法察觉气体不足）", "电容器电压/电容测试——电容器老化可能表现得像气体问题"],
+    technicianChecksMS: [
+      "Bacaan tekanan penyejuk dengan manifold gauge (gas rendah tidak dapat dikesan tanpa alat ini)",
+      "Ujian voltan/kapasitans kapasitor — kapasitor lemah boleh kelihatan seperti masalah gas",
+      "Pemeriksaan gegelung evaporator dalaman untuk sumbatan yang tidak selesai hanya dengan cuci penapis"
+    ],
+    technicianChecksZH: [
+      "使用歧管压力表测量制冷剂压力（没有此工具无法察觉缺气）",
+      "电容器电压/电容测试——老化电容常被误判为缺气问题",
+      "检查蒸发器盘管内部堵塞（仅清洗过滤网无法解决）"
+    ],
     extraFaqsEN: [{ q: "Is it safe to keep running my aircond if it's not cold?", a: "Yes, short-term, but it wastes electricity — a unit low on gas still draws full power while cooling poorly, and running it for weeks with a leak can eventually damage the compressor. Get it checked within a few days rather than waiting months." }, { q: "Will a bigger aircond fix a \"not cold\" problem in a large room?", a: "Not usually — if your existing correctly-sized unit suddenly stopped cooling well, that's almost always a fault (gas, coil, capacitor), not an undersized unit." }, { q: "How do I know if it's the indoor or outdoor unit causing the problem?", a: "You usually can't tell from outside — low gas, a failing outdoor compressor, and a dirty indoor coil can all produce the exact same \"blowing but not cold\" symptom." }, { q: "Does this happen more in older non-inverter units?", a: "It can, since older non-inverter compressors work harder and show wear sooner, but low gas and dirty coils affect inverter units just as often." }],
     extraFaqsMS: [{ q: "Selamatkah terus menggunakan aircond jika tidak sejuk?", a: "Ya, buat sementara, tetapi ia membazir elektrik. Dapatkan pemeriksaan dalam beberapa hari, bukan menunggu berbulan-bulan." }, { q: "Adakah aircond lebih besar menyelesaikan masalah \"tidak sejuk\" di bilik besar?", a: "Biasanya tidak — ini hampir selalu kerosakan (gas, gegelung, kapasitor), bukan unit terlalu kecil." }],
     extraFaqsZH: [{ q: "如果冷气不冷，继续使用安全吗？", a: "短期内可以，但会浪费电力。建议几天内检查，而非拖延数月。" }, { q: "换一台更大的冷气能解决大房间\"不冷\"的问题吗？", a: "通常不能——几乎总是故障（气体、盘管、电容器）问题，而非机型太小。" }],
@@ -36,11 +52,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Kebocoran air dari unit dalam disebabkan oleh paip longkang tersumbat dalam kira-kira 7 daripada 10 kes yang KL Renovator lihat dalam iklim lembap Malaysia. Cuci kimia (dari RM 120) biasanya membersihkannya; jika bocor teruk, overhaul kimia penuh (dari RM 220) membuang sekatan secara kekal.",
     directAnswerZH: "在马来西亚潮湿气候下，KL Renovator遇到的室内机漏水案例中，约七成是排水管堵塞造成的。化学清洗（从RM 120起）通常能解决；若漏水严重或反复发生，全面化学大修（从RM 220起）可永久清除堵塞。",
     diyChecksEN: ["Place a towel or basin under the leak immediately to protect flooring/furniture", "Check if the unit is tilted — indoor units should slope slightly toward the drain outlet, a common installation fault", "Turn off the unit if leaking heavily near electrical wiring or sockets, for safety"],
-    diyChecksMS: ["Letakkan tuala atau besen di bawah kebocoran serta-merta untuk melindungi lantai/perabot", "Semak jika unit condong — unit dalam patut sedikit condong ke arah salur longkang"],
-    diyChecksZH: ["立即在漏水处下方放置毛巾或盆子，保护地板和家具", "检查机器是否倾斜——室内机应稍微向排水口倾斜，这是常见的安装缺陷"],
+    diyChecksMS: [
+      "Matikan unit dan perhatikan dari mana air menitis (panel depan, paip longkang, atau dinding belakang)",
+      "Semak penapis kotor — penapis tersumbat boleh sebabkan gegelung bekukan kemudian cair dan bocor",
+      "Jangan condongkan unit sendiri — boleh rosakkan sambungan paip penyejuk"
+    ],
+    diyChecksZH: [
+      "关机并观察漏水位置（前面板、排水管或机身后侧）",
+      "检查过滤网是否脏堵——堵塞可导致盘管结冰后融化漏水",
+      "不要自行扳动机组角度——可能损坏冷媒管连接"
+    ],
     technicianChecksEN: ["Drain pump function test on ceiling cassette or high-wall units with pump-assisted drainage", "Internal drain pan inspection for cracks or mould/slime buildup not visible externally", "Evaporator coil ice-formation check — a frozen coil melting can look identical to a drain blockage"],
-    technicianChecksMS: ["Ujian fungsi pam longkang pada unit ceiling cassette dengan saliran berbantukan pam", "Pemeriksaan dulang longkang dalaman untuk retak atau penumpukan kulat/lendir"],
-    technicianChecksZH: ["检查天花板卡式机或带水泵排水机型的排水泵功能", "检查内部排水盘是否有裂缝或霉菌/黏液堆积（外部无法看见）"],
+    technicianChecksMS: [
+      "Ujian pam longkang pada unit ceiling cassette",
+      "Pemeriksaan dulang longkang dalaman untuk retak atau lendir",
+      "Semakan cerun paip longkang dan sumbatan dalam dinding"
+    ],
+    technicianChecksZH: [
+      "检查天花卡式机排水泵功能",
+      "检查内部排水盘是否有裂缝或黏液堆积",
+      "检查排水管坡度与墙内管路是否堵塞"
+    ],
     extraFaqsEN: [{ q: "Can I just tilt the unit myself to stop the leak?", a: "We don't recommend it — the indoor unit is mounted on a wall bracket and adjusting the angle without proper tools can damage the refrigerant pipe connections or void your installation warranty." }, { q: "Is leaking water dangerous to my electrical wiring?", a: "It can be, if the leak drips onto exposed wiring, a power socket, or the unit's own PCB board. Switch off the unit and book a repair promptly." }, { q: "Why does my aircond only leak during heavy rain?", a: "This usually points to a drain pipe that runs outdoors and gets waterlogged or blocked by debris during rain, causing backflow into the unit." }, { q: "Will this keep happening after a chemical wash?", a: "Not if the root cause (usually mould/slime buildup) is fully cleared. If it leaks again within months, the drain pan is likely cracked or the pipe slope wrong." }],
     extraFaqsMS: [{ q: "Bolehkah saya condongkan unit sendiri untuk menghentikan kebocoran?", a: "Kami tidak mengesyorkan — melaraskan sudut tanpa alat yang betul boleh merosakkan sambungan paip penyejuk." }, { q: "Adakah air bocor berbahaya kepada pendawaian elektrik saya?", a: "Ya, jika bocor menitis ke wayar terdedah atau papan PCB unit. Tutup unit dan panggil pembaikan segera." }],
     extraFaqsZH: [{ q: "我可以自己调整机器角度来止漏吗？", a: "不建议——没有合适工具调整角度可能损坏冷媒管连接。" }, { q: "漏水对电线安全吗？", a: "如果漏水滴到裸露电线或机器PCB板上会有危险，应立即关闭电源并预约维修。" }],
@@ -50,11 +82,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Bau hapak atau masam dari aircond hampir selalu adalah kulat dan bakteria yang tumbuh pada gegelung evaporator dan roda blower — bukan tanda alat ganti rosak. Cuci kimia tekanan (dari RM 120) menghilangkannya sepenuhnya dalam kebanyakan kes.",
     directAnswerZH: "冷气发出霉味或酸味几乎总是因为蒸发器盘管和风轮上滋生了霉菌和细菌——通常不是零件损坏的迹象。压力化学清洗（从RM 120起）在大多数情况下能彻底去除异味。",
     diyChecksEN: ["Check and wash the air filter — a dirty filter traps dust that feeds mould growth and holds smell", "Run the unit in \"Fan\" mode for 30 minutes with the door open before switching off, to dry out internal moisture", "Check for a musty smell specifically after long idle periods (indicates internal mould, not an external source)"],
-    diyChecksMS: ["Semak dan basuh penapis udara — penapis kotor memerangkap habuk yang menyuburkan pertumbuhan kulat", "Jalankan unit pada mod \"Fan\" selama 30 minit sebelum menutup, untuk mengeringkan kelembapan dalaman"],
-    diyChecksZH: ["检查并清洗空气过滤网——脏污的过滤网会积聚灰尘，助长霉菌滋生", "关机前先以\"送风\"模式运行30分钟，帮助排出机内潮气"],
+    diyChecksMS: [
+      "Semak dan basuh penapis udara — penapis kotor memerangkap habuk yang menyuburkan kulat",
+      "Jalankan unit pada mod \"Fan\" 30 minit sebelum tutup untuk keringkan kelembapan dalaman",
+      "Perhatikan sama ada bau lebih teruk selepas unit lama tidak digunakan (tanda kulat dalaman)"
+    ],
+    diyChecksZH: [
+      "检查并清洗空气过滤网——脏过滤网积尘助长霉菌",
+      "关机前以送风模式运行约30分钟，帮助排出机内潮气",
+      "留意是否在长期闲置后异味更重（提示内部发霉）"
+    ],
     technicianChecksEN: ["Blower wheel removal and inspection — mould often builds up inside the fan blades where a filter clean can't reach", "Drain pan and drain line inspection for stagnant water that's a common smell source", "PCB and internal wiring check if the smell is \"burning\" rather than musty, which can indicate an electrical fault, not mould"],
-    technicianChecksMS: ["Pembongkaran dan pemeriksaan roda blower — kulat sering terkumpul dalam bilah kipas", "Pemeriksaan dulang dan salur longkang untuk air bertakung yang menjadi punca bau biasa"],
-    technicianChecksZH: ["拆卸并检查风轮——霉菌常积聚在过滤网清洁不到的风扇叶片内部", "检查排水盘和排水管是否有滞留水，这是常见的异味来源"],
+    technicianChecksMS: [
+      "Pembongkaran dan pemeriksaan roda blower — kulat sering terkumpul dalam bilah kipas",
+      "Pemeriksaan dulang dan salur longkang untuk air bertakung",
+      "Semakan bau terbakar vs bau hapak — bau terbakar mungkin isu elektrik/PCB, bukan kulat"
+    ],
+    technicianChecksZH: [
+      "拆卸检查风轮——霉菌常积在叶片内部",
+      "检查排水盘与排水管是否有积水",
+      "区分霉味与烧焦味——烧焦味可能是电气/PCB问题，需立即断电"
+    ],
     extraFaqsEN: [{ q: "Is the mould smell from my aircond harmful to breathe?", a: "Prolonged exposure to mould/bacteria spores circulated by an unwashed unit can aggravate allergies, asthma, and respiratory sensitivity, especially for children and elderly household members." }, { q: "Will an air purifier fix the smell instead of a chemical wash?", a: "No — an air purifier filters the room air, but the smell source (mould inside the coil/blower) keeps regenerating it. Only a proper chemical wash physically removes the buildup at the source." }, { q: "Why does the smell come back a few months after a chemical wash?", a: "This usually means the unit runs long hours in a humid room, or the wash cycle needs to be shorter — we recommend every 6-8 months if you run the unit 8+ hours daily." }, { q: "Is a burning smell the same issue as a musty smell?", a: "No — a burning smell is a different, more urgent issue usually pointing to an electrical fault (PCB, wiring, or motor), not mould. Switch off the unit immediately." }],
     extraFaqsMS: [{ q: "Adakah bau kulat dari aircond berbahaya untuk disedut?", a: "Pendedahan berpanjangan kepada spora kulat/bakteria boleh memburukkan alergi dan asma, terutamanya untuk kanak-kanak dan warga emas." }, { q: "Adakah pembersih udara menyelesaikan bau berbanding cuci kimia?", a: "Tidak — pembersih udara menapis udara bilik, tetapi punca bau terus menjana semula. Hanya cuci kimia yang membuang penumpukan pada puncanya." }],
     extraFaqsZH: [{ q: "冷气的霉味吸入体内有害吗？", a: "长期吸入未清洗机组循环的霉菌/细菌孢子可能加重过敏和哮喘，儿童及老人尤其需注意。" }, { q: "空气净化器能代替化学清洗解决异味吗？", a: "不能——空气净化器只过滤房间空气，但异味源头会持续产生异味。只有化学清洗才能从源头清除积垢。" }],
@@ -64,11 +112,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Bunyi gemetar atau bergegar biasanya panel atau skru pemasangan longgar dan murah untuk dibaiki; bunyi menggiling atau menjerit biasanya bermaksud motor kipas atau galas gagal dan memerlukan perhatian segera.",
     directAnswerZH: "咯咯作响或震动的声音通常是面板或安装螺丝松动，维修成本较低；研磨声或尖锐声通常表示风扇电机或轴承故障，需要及时处理，以免完全损坏。",
     diyChecksEN: ["Note whether the noise comes from the indoor unit, outdoor unit, or both — this narrows down the cause significantly", "Check the outdoor unit isn't sitting on a loose or unstable bracket/stand causing vibration", "Check for loose items resting against the outdoor unit casing that rattle when the fan runs"],
-    diyChecksMS: ["Perhatikan sama ada bunyi datang dari unit dalam, unit luar, atau kedua-duanya — ini membantu mengecilkan punca", "Semak unit luar tidak duduk di atas bracket/tapak longgar yang menyebabkan getaran"],
-    diyChecksZH: ["留意声音来自室内机、室外机还是两者——这有助于缩小故障范围", "检查室外机是否放置在松动或不稳固的支架上导致震动"],
+    diyChecksMS: [
+      "Perhatikan bunyi dari unit dalam, unit luar, atau kedua-duanya",
+      "Semak unit luar tidak duduk di bracket longgar yang menyebabkan getaran",
+      "Semak tiada barang longgar tersandar pada casing unit luar"
+    ],
+    diyChecksZH: [
+      "判断噪音来自室内机、室外机还是两者",
+      "检查室外机支架是否松动导致震动",
+      "检查室外机外壳是否有杂物靠着共振发声"
+    ],
     technicianChecksEN: ["Fan motor bearing inspection — a grinding sound almost always requires this to confirm before replacement", "Compressor mounting and internal vibration isolation check for the outdoor unit", "Refrigerant flow noise diagnosis — sometimes a hissing sound is gas-related, not mechanical, and needs a pressure check"],
-    technicianChecksMS: ["Pemeriksaan galas motor kipas — bunyi menggiling hampir selalu memerlukan ini sebelum penggantian", "Pemeriksaan pemasangan pekali dan pengasingan getaran dalaman unit luar"],
-    technicianChecksZH: ["检查风扇电机轴承——研磨声几乎都需要先确认此项才能更换", "检查室外机压缩机安装及内部减震情况"],
+    technicianChecksMS: [
+      "Pemeriksaan galas motor kipas sebelum ganti motor",
+      "Pemeriksaan pemasangan kompresor dan pad getaran unit luar",
+      "Diagnosis bunyi aliran penyejuk (desisan) vs bunyi mekanikal"
+    ],
+    technicianChecksZH: [
+      "检查风扇电机轴承后再决定是否更换电机",
+      "检查室外机压缩机固定与减震垫",
+      "区分冷媒流动声与机械故障声"
+    ],
     extraFaqsEN: [{ q: "Is a clicking sound when the aircond turns on/off normal?", a: "Yes — a single soft click when starting or stopping is usually just the relay switching or normal thermal expansion/contraction of plastic parts." }, { q: "Can I tighten loose panels myself to stop rattling?", a: "For the indoor unit's front cover, yes. For the outdoor unit casing, we recommend a technician since opening it incorrectly can affect weatherproofing." }, { q: "Will ignoring a grinding noise cause more expensive damage?", a: "Yes — a failing fan motor bearing will eventually seize completely, which can also damage the fan blade or motor windings." }, { q: "Does noise mean my aircond needs gas top-up?", a: "Not usually — noise is almost always mechanical (loose parts, fan, motor, bearing) rather than gas-related." }],
     extraFaqsMS: [{ q: "Adakah bunyi klik semasa aircond hidup/mati normal?", a: "Ya — satu klik lembut biasanya hanya suis geganti atau pengembangan haba biasa." }, { q: "Bolehkah saya ketatkan panel longgar sendiri untuk menghentikan bunyi gemetar?", a: "Untuk penutup depan unit dalam, ya. Untuk casing unit luar, kami syorkan juruteknik." }],
     extraFaqsZH: [{ q: "冷气开关机时的咔嗒声正常吗？", a: "正常——启动或停止时一声轻微咔嗒声通常只是继电器切换或塑料部件的正常热胀冷缩。" }, { q: "我可以自己拧紧松动面板止响吗？", a: "室内机前盖可以。室外机外壳建议由技师处理，因为错误开壳可能影响防水性能。" }],
@@ -78,11 +142,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Gas rendah menunjukkan udara panas, masa penyejukan lebih lama, dan kadangkala ais pada gegelung dalam. KL Renovator menambah gas R22, R410A atau R32 dari RM 120, tetapi kami sentiasa semak kebocoran dahulu.",
     directAnswerZH: "气体不足表现为吹暖风、制冷时间延长，有时室内盘管会结冰。KL Renovator提供R22、R410A或R32冷媒充气服务，从RM 120起，但我们会先检查是否漏气。",
     diyChecksEN: ["Check if ice or frost has formed on the indoor unit's coil or copper pipe — a clear sign of low gas", "Note how long the unit has been running without proper cooling — sudden onset points to a new leak rather than gradual loss", "Check the outdoor unit's copper pipe joints for visible oil residue, which often marks a leak point"],
-    diyChecksMS: ["Semak jika ais atau fros terbentuk pada gegelung unit dalam atau paip tembaga — tanda jelas gas rendah", "Perhatikan berapa lama unit berjalan tanpa penyejukan yang betul"],
-    diyChecksZH: ["检查室内机盘管或铜管上是否结霜结冰——这是气体不足的明显迹象", "留意机器已运行多久却无法正常制冷——突然发生通常表示新泄漏，而非渐进式损耗"],
+    diyChecksMS: [
+      "Semak sama ada ada ais/fros pada gegelung atau paip tembaga unit dalam",
+      "Catat sama ada masalah timbul tiba-tiba (bocor baru) atau beransur-ansur",
+      "Cari kesan minyak pada sambungan paip unit luar — sering tanda titik bocor"
+    ],
+    diyChecksZH: [
+      "检查室内机盘管或铜管是否结冰/结霜",
+      "记录问题是突然出现还是逐渐变差",
+      "查看室外机铜管接口是否有油渍（常为漏点）"
+    ],
     technicianChecksEN: ["Manifold gauge pressure test to confirm exact gas level against manufacturer specification", "Electronic leak detector scan along copper pipe joints, flare connections and the indoor/outdoor unit seals", "Nitrogen pressure test on the sealed system if a leak isn't found visually, to pinpoint a hidden micro-leak"],
-    technicianChecksMS: ["Ujian tekanan manifold gauge untuk mengesahkan paras gas sebenar berbanding spesifikasi pengeluar", "Imbasan pengesan kebocoran elektronik di sepanjang sambungan paip tembaga dan flare"],
-    technicianChecksZH: ["使用压力表测试确认实际气体水平是否符合制造商规格", "沿铜管接头、喇叭口和室内外机密封处进行电子检漏扫描"],
+    technicianChecksMS: [
+      "Ujian tekanan dengan manifold gauge mengikut jenis gas (R22/R410A/R32)",
+      "Pengesanan bocor sebelum top-up — elak isi gas berulang tanpa baiki bocor",
+      "Imbangan cas penyejuk ikut berat/tekanan operasi yang betul"
+    ],
+    technicianChecksZH: [
+      "按冷媒类型（R22/R410A/R32）用压力表检测",
+      "加气前先检漏——避免只加气不修漏",
+      "按正确运行压力/重量进行精准加注平衡"
+    ],
     extraFaqsEN: [{ q: "Does topping up gas without checking for a leak save money short-term?", a: "It can seem cheaper upfront, but if there's an undetected leak, the gas escapes again within weeks to months, meaning you pay for a top-up twice or more." }, { q: "How much refrigerant gas does a typical home aircond need?", a: "It varies by HP size and pipe length, but a 1.0-1.5 HP wall-mounted unit typically holds a few hundred grams of R32 or R410A." }, { q: "Can I top up the gas myself with a DIY kit?", a: "We strongly advise against it — refrigerant handling requires proper gauges, safety training, and correct gas type identification." }, { q: "Is a slow gas leak dangerous to my health?", a: "Refrigerant leaks are generally not acutely toxic in small residential quantities, but a leak means the system runs inefficiently over time." }],
     extraFaqsMS: [{ q: "Adakah menambah gas tanpa semak kebocoran menjimatkan wang jangka pendek?", a: "Ia kelihatan lebih murah pada mulanya, tetapi jika ada kebocoran tidak dikesan, gas terlepas semula dalam beberapa minggu." }, { q: "Bolehkah saya tambah gas sendiri dengan kit DIY?", a: "Kami amat tidak mengesyorkan — pengendalian penyejuk memerlukan gauge yang betul dan latihan keselamatan." }],
     extraFaqsZH: [{ q: "不检查泄漏就充气能短期省钱吗？", a: "起初看似便宜，但如果有未检测到的泄漏，几周到几个月内气体会再次流失。" }, { q: "我可以自己用DIY工具包充气吗？", a: "强烈不建议——冷媒处理需要专业压力表、安全培训和正确的气体类型识别。" }],
@@ -92,11 +172,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Ais terbentuk pada gegelung disebabkan oleh gas penyejuk rendah atau gegelung evaporator tersumbat teruk. Jangan jalankan unit berterusan apabila anda nampak ais, kerana ia boleh menolak penyejuk cecair kembali ke pekali dan merosakkannya.",
     directAnswerZH: "盘管结冰是由制冷剂不足或蒸发器盘管严重堵塞导致气流受阻引起的——一旦发现结冰切勿继续运行，否则可能将液态冷媒推回压缩机造成损坏。请切换至\"送风\"模式使其解冻，然后预约诊断。",
     diyChecksEN: ["Switch the unit to \"Fan\" mode (not off completely) to let the ice melt safely without water damage", "Check and clean the air filter — a blocked filter is one of the most common causes of coil freezing", "Place towels around the unit while it thaws, since melting ice will drip"],
-    diyChecksMS: ["Tukar unit ke mod \"Fan\" (bukan tutup sepenuhnya) untuk membiarkan ais cair dengan selamat", "Semak dan bersihkan penapis udara — penapis tersumbat adalah punca paling biasa gegelung membeku"],
-    diyChecksZH: ["将机器切换至\"送风\"模式（不要完全关闭），让冰安全融化，避免水渍损坏", "检查并清洁空气过滤网——过滤网堵塞是盘管结冰最常见的原因"],
+    diyChecksMS: [
+      "Tukar unit ke mod \"Fan\" (bukan tutup sepenuhnya) untuk membiarkan ais cair dengan selamat",
+      "Semak dan bersihkan penapis udara — penapis tersumbat adalah punca paling biasa gegelung membeku",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "将机器切换至\"送风\"模式（不要完全关闭），让冰安全融化，避免水渍损坏",
+      "检查并清洁空气过滤网——过滤网堵塞是盘管结冰最常见的原因",
+      "观察室内机盘管或铜管是否结冰，这常与气体不足或通风不良有关"
+    ],
     technicianChecksEN: ["Refrigerant pressure check once ice has fully thawed, to identify low gas versus airflow blockage", "Blower fan speed and airflow volume test — weak airflow from a failing blower motor also causes freezing", "Full evaporator coil inspection for embedded dirt that a surface clean won't remove"],
-    technicianChecksMS: ["Semakan tekanan penyejuk selepas ais cair sepenuhnya, untuk kenal pasti gas rendah berbanding sekatan aliran udara", "Ujian kelajuan kipas blower dan jumlah aliran udara"],
-    technicianChecksZH: ["待冰完全融化后检查制冷剂压力，判断是气体不足还是气流受阻", "测试鼓风机转速和风量——鼓风机电机故障导致的弱风也会造成结冰"],
+    technicianChecksMS: [
+      "Semakan tekanan penyejuk selepas ais cair sepenuhnya, untuk kenal pasti gas rendah berbanding sekatan aliran udara",
+      "Ujian kelajuan kipas blower dan jumlah aliran udara",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "待冰完全融化后检查制冷剂压力，判断是气体不足还是气流受阻",
+      "测试鼓风机转速和风量——鼓风机电机故障导致的弱风也会造成结冰",
+      "检查铜管接口是否有油渍，油渍常提示泄漏点"
+    ],
     extraFaqsEN: [{ q: "Why is it dangerous to keep running the unit when it's frozen?", a: "Ice on the coil means liquid refrigerant isn't fully evaporating before returning to the compressor, which can damage or destroy it." }, { q: "How long does it take for the ice to melt?", a: "Usually 1-3 hours in \"Fan\" mode. Don't use a hairdryer or hot water directly on the coil, as sudden temperature change can crack components." }, { q: "Will this happen again after a technician fixes it?", a: "Not if the root cause (low gas leak or coil blockage) is properly identified and fixed rather than just clearing the ice." }, { q: "Is freezing more common with certain aircond brands?", a: "No — freezing is caused by gas level and airflow, which applies equally across all brands." }],
     extraFaqsMS: [{ q: "Kenapa berbahaya untuk terus jalankan unit apabila ia beku?", a: "Ais pada gegelung bermakna penyejuk cecair tidak menyejat sepenuhnya sebelum kembali ke pekali." }, { q: "Berapa lama masa untuk ais cair?", a: "Biasanya 1-3 jam dalam mod \"Fan\". Jangan gunakan pengering rambut atau air panas terus pada gegelung." }],
     extraFaqsZH: [{ q: "为什么结冰时继续运行很危险？", a: "盘管结冰意味着液态冷媒未能在返回压缩机前完全蒸发，可能造成损坏。" }, { q: "冰需要多长时间融化？", a: "通常以\"送风\"模式需1-3小时。切勿用吹风机或热水直接冲盘管。" }],
@@ -106,11 +202,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Kebocoran gas menyebabkan penyejukan gagal berulang kali walaupun selepas tambah gas — corak berulang ini adalah tanda paling jelas. KL Renovator mengesan titik kebocoran tepat dengan pengesan elektronik sebelum membaiki paip atau injap dan mengecas semula.",
     directAnswerZH: "气体泄漏会导致即使刚充气不久也反复出现制冷失效的情况——这种反复出现的模式是最明显的迹象。KL Renovator会用电子检漏仪找出确切泄漏点，然后修复管道或阀门并重新充气。",
     diyChecksEN: ["Note the pattern: does cooling fail again within weeks of a previous top-up? This strongly suggests a leak, not normal usage", "Check exposed copper pipe sections for visible oil staining, a common leak indicator", "Avoid repeatedly asking for \"just a top-up\" if this is the 2nd or 3rd time — insist on a leak check to avoid wasting money"],
-    diyChecksMS: ["Perhatikan corak: adakah penyejukan gagal semula dalam beberapa minggu selepas tambah gas sebelumnya?", "Semak bahagian paip tembaga terdedah untuk kesan minyak, penunjuk kebocoran biasa"],
-    diyChecksZH: ["留意规律：上次充气后几周内制冷是否再次失效？这强烈暗示存在泄漏", "检查外露铜管段是否有明显油渍，这是常见的泄漏迹象"],
+    diyChecksMS: [
+      "Perhatikan corak: adakah penyejukan gagal semula dalam beberapa minggu selepas tambah gas sebelumnya?",
+      "Semak bahagian paip tembaga terdedah untuk kesan minyak, penunjuk kebocoran biasa",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "留意规律：上次充气后几周内制冷是否再次失效？这强烈暗示存在泄漏",
+      "检查外露铜管段是否有明显油渍，这是常见的泄漏迹象",
+      "检查铜管接口是否有油渍，油渍常提示泄漏点"
+    ],
     technicianChecksEN: ["Electronic refrigerant leak detector scan along all accessible joints, valves and flare connections", "Soap bubble test on suspect joints as a secondary confirmation method", "Nitrogen pressure decay test on the sealed system for leaks too small to detect electronically"],
-    technicianChecksMS: ["Imbasan pengesan kebocoran penyejuk elektronik di sepanjang semua sambungan dan injap yang boleh diakses", "Ujian buih sabun pada sambungan yang disyaki sebagai kaedah pengesahan kedua"],
-    technicianChecksZH: ["沿所有可触及的接头、阀门和喇叭口连接处进行电子冷媒检漏扫描", "在可疑接头处进行肥皂泡测试作为二次确认"],
+    technicianChecksMS: [
+      "Imbasan pengesan kebocoran penyejuk elektronik di sepanjang semua sambungan dan injap yang boleh diakses",
+      "Ujian buih sabun pada sambungan yang disyaki sebagai kaedah pengesahan kedua",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "沿所有可触及的接头、阀门和喇叭口连接处进行电子冷媒检漏扫描",
+      "在可疑接头处进行肥皂泡测试作为二次确认",
+      "检查铜管接口是否有油渍，油渍常提示泄漏点"
+    ],
     extraFaqsEN: [{ q: "How much does it cost to find and fix a refrigerant leak?", a: "Leak detection is typically included in the diagnostic visit (RM 88, waived with repair). The pipe/valve repair itself ranges RM 150-400, plus gas re-charge from RM 120-180." }, { q: "Can a leak be at the indoor unit even if I only see oil stains outside?", a: "Yes — refrigerant flows through the whole sealed loop, so a leak can occur anywhere along it." }, { q: "Is R32 gas more dangerous to have a leak with than R410A or R22?", a: "R32 is mildly flammable compared to non-flammable R410A/R22, but in small residential quantities with proper installation, the risk is low." }, { q: "Will the leak get worse over time if I don't fix it?", a: "Small leaks usually don't get dramatically worse quickly, but they don't self-heal either — cooling stops entirely once gas runs out." }],
     extraFaqsMS: [{ q: "Berapa kos untuk mengesan dan membaiki kebocoran penyejuk?", a: "Pengesanan kebocoran biasanya termasuk dalam lawatan diagnostik (RM 88). Pembaikan paip/injap dari RM 150-400." }, { q: "Bolehkah kebocoran berlaku pada unit dalam walaupun saya hanya nampak kesan minyak di luar?", a: "Ya — penyejuk mengalir melalui keseluruhan gelung tertutup." }],
     extraFaqsZH: [{ q: "查找并修复冷媒泄漏需要多少费用？", a: "检漏通常包含在诊断上门费（RM 88）内。管道/阀门维修费用约RM 150-400。" }, { q: "即使我只在室外看到油渍，室内机也可能漏气吗？", a: "是的——冷媒流经整个密闭循环系统，泄漏可能发生在任何位置。" }],
@@ -120,11 +232,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Pekali yang tidak boleh mula, berdengung tanpa berpusing, atau menyebabkan breaker trip berulang kali biasanya menunjukkan kapasitor mula yang rosak dahulu (pembaikan RM 150-200) berbanding pekali itu sendiri.",
     directAnswerZH: "压缩机无法启动、发出嗡嗡声但不转动、或反复跳闸，通常首先指向启动电容器故障（维修费约RM 150-200），而非压缩机本身。",
     diyChecksEN: ["Listen carefully: a humming sound with no spinning usually means capacitor, not compressor — note this for the technician", "Check the MCB/breaker hasn't simply tripped from an unrelated electrical issue elsewhere in the house", "Avoid repeatedly switching the unit on/off if it's humming — this can stress a weak capacitor further"],
-    diyChecksMS: ["Dengar dengan teliti: bunyi dengung tanpa berpusing biasanya bermaksud kapasitor, bukan pekali", "Semak MCB/breaker tidak trip disebabkan isu elektrik lain yang tidak berkaitan di rumah"],
-    diyChecksZH: ["仔细听：有嗡嗡声但不转动通常意味着电容器问题，而非压缩机", "检查MCB/断路器是否因家中其他无关电路问题而跳闸"],
+    diyChecksMS: [
+      "Dengar dengan teliti: bunyi dengung tanpa berpusing biasanya bermaksud kapasitor, bukan pekali",
+      "Semak MCB/breaker tidak trip disebabkan isu elektrik lain yang tidak berkaitan di rumah",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "仔细听：有嗡嗡声但不转动通常意味着电容器问题，而非压缩机",
+      "检查MCB/断路器是否因家中其他无关电路问题而跳闸",
+      "技师检测电容器容值/电压，老化电容常被误判为缺气"
+    ],
     technicianChecksEN: ["Capacitor capacitance test with a multimeter to confirm it's holding correct microfarad rating", "Compressor winding resistance test to rule out an internal short or open circuit before condemning it", "Start relay and overload protector inspection, which can mimic compressor failure symptoms when faulty"],
-    technicianChecksMS: ["Ujian kapasitans kapasitor dengan multimeter untuk mengesahkan penilaian mikrofarad yang betul", "Ujian rintangan gegelung pekali untuk menyingkirkan litar pintas dalaman"],
-    technicianChecksZH: ["用万用表测试电容器电容值，确认是否符合正确的微法拉规格", "测试压缩机绕组电阻，排除内部短路或断路问题"],
+    technicianChecksMS: [
+      "Ujian kapasitans kapasitor dengan multimeter untuk mengesahkan penilaian mikrofarad yang betul",
+      "Ujian rintangan gegelung pekali untuk menyingkirkan litar pintas dalaman",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "用万用表测试电容器电容值，确认是否符合正确的微法拉规格",
+      "测试压缩机绕组电阻，排除内部短路或断路问题",
+      "检查压缩机启动与运行电流，判断是否卡死或过载"
+    ],
     extraFaqsEN: [{ q: "How much does a compressor replacement cost versus just the capacitor?", a: "A capacitor replacement is typically RM 150-200. A full compressor replacement costs significantly more, often making a new unit installation more cost-effective for units over 8-10 years old." }, { q: "Can a compressor be repaired, or does it always need replacing?", a: "Compressors are sealed units and generally cannot be internally repaired — if the winding has failed, replacement is the only option." }, { q: "Is it worth repairing an old unit's compressor or should I replace the whole system?", a: "For units over 8 years old, we'll walk you through the real cost comparison so you can make an informed decision." }, { q: "Why does my compressor trip the MCB every time I turn the unit on?", a: "Classic symptom of a failing start capacitor (most common, cheapest fix) or excessive start-up current from internal wear." }],
     extraFaqsMS: [{ q: "Berapa kos penggantian pekali berbanding hanya kapasitor?", a: "Penggantian kapasitor biasanya RM 150-200. Penggantian pekali penuh adalah kerja besar dengan kos jauh lebih tinggi." }, { q: "Bolehkah pekali dibaiki, atau ia sentiasa perlu diganti?", a: "Pekali adalah unit tertutup dan umumnya tidak boleh dibaiki secara dalaman." }],
     extraFaqsZH: [{ q: "更换压缩机与仅更换电容器的费用相比如何？", a: "更换电容器通常约RM 150-200。更换整个压缩机费用显著更高，对于使用超过8-10年的机组，全新安装往往更划算。" }, { q: "压缩机可以维修吗，还是必须更换？", a: "压缩机是密封部件，通常无法进行内部维修。" }],
@@ -134,11 +262,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "PCB (papan kawalan) yang rosak biasanya menunjukkan lampu berkelip tidak menentu, unit tidak bertindak balas dengan betul terhadap remote, atau mati sepenuhnya walaupun kuasa ada.",
     directAnswerZH: "PCB（控制板）故障通常表现为指示灯不规律闪烁、遥控器无法正常响应，或电源正常却完全无法运行。",
     diyChecksEN: ["Note the exact blinking pattern (number of blinks, colour, interval) — this is the error code and speeds up diagnosis significantly", "Check the remote's batteries aren't the actual issue before assuming it's the unit's PCB", "Try isolating power at the MCB for 5 minutes then restoring — this resets some PCB error states caused by power surges"],
-    diyChecksMS: ["Catat corak berkelip tepat (bilangan kelip, warna, selang) — ini adalah kod ralat", "Semak bateri remote bukan punca sebenar sebelum menganggap ia PCB unit"],
-    diyChecksZH: ["记录准确的闪烁规律（次数、颜色、间隔）——这是错误代码", "在假设是PCB问题之前，先检查遥控器电池是否才是真正原因"],
+    diyChecksMS: [
+      "Catat corak berkelip tepat (bilangan kelip, warna, selang) — ini adalah kod ralat",
+      "Semak bateri remote bukan punca sebenar sebelum menganggap ia PCB unit",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "记录准确的闪烁规律（次数、颜色、间隔）——这是错误代码",
+      "在假设是PCB问题之前，先检查遥控器电池是否才是真正原因",
+      "检查电路板、接线与供电是否正常，排除电气故障"
+    ],
     technicianChecksEN: ["Component-level voltage testing on the PCB itself to identify a specific failed relay, capacitor or IC chip", "Sensor continuity test since a failed sensor can mimic PCB error codes", "Wiring harness inspection between PCB and other components for a loose connection masquerading as a board fault"],
-    technicianChecksMS: ["Ujian voltan peringkat komponen pada PCB untuk mengenal pasti geganti, kapasitor atau cip IC tertentu yang gagal", "Ujian kesinambungan sensor kerana sensor gagal boleh meniru kod ralat PCB"],
-    technicianChecksZH: ["对PCB本身进行元件级电压测试，找出具体故障的继电器、电容器或IC芯片", "测试传感器导通情况，因为传感器故障可能表现得与PCB错误代码相同"],
+    technicianChecksMS: [
+      "Ujian voltan peringkat komponen pada PCB untuk mengenal pasti geganti, kapasitor atau cip IC tertentu yang gagal",
+      "Ujian kesinambungan sensor kerana sensor gagal boleh meniru kod ralat PCB",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "对PCB本身进行元件级电压测试，找出具体故障的继电器、电容器或IC芯片",
+      "测试传感器导通情况，因为传感器故障可能表现得与PCB错误代码相同",
+      "检查电路板、接线与供电是否正常，排除电气故障"
+    ],
     extraFaqsEN: [{ q: "How much does a PCB board replacement cost?", a: "Costs vary significantly by brand and model — indoor unit boards are generally more affordable than outdoor inverter boards." }, { q: "Can a power surge cause PCB damage?", a: "Yes — voltage spikes from thunderstorms or unstable power supply are a common cause of PCB failure in Malaysia." }, { q: "Will replacing the PCB fix all my aircond's problems?", a: "Only if the PCB is genuinely the root cause. That's why our technicians test thoroughly before ordering a replacement part." }, { q: "Is it worth repairing the PCB on an old unit?", a: "For units under 6-7 years old, PCB repair is usually worthwhile. For older units, we advise honestly on repair vs replacement." }],
     extraFaqsMS: [{ q: "Berapa kos penggantian papan PCB?", a: "Kos berbeza-beza mengikut jenama dan model — papan unit dalam umumnya lebih murah." }, { q: "Bolehkah lonjakan kuasa menyebabkan kerosakan PCB?", a: "Ya — lonjakan voltan dari ribut petir adalah punca biasa kegagalan PCB di Malaysia." }],
     extraFaqsZH: [{ q: "更换PCB电路板需要多少费用？", a: "费用因品牌和型号差异很大——室内机主板通常比室外变频主板更便宜。" }, { q: "电涌会导致PCB损坏吗？", a: "会的——雷雨天气造成的电压突波是马来西亚PCB故障的常见原因。" }],
@@ -148,11 +292,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Jika kipas dalam atau luar berhenti, punca paling biasa adalah motor kipas terbakar (kira-kira 60% kes) atau kapasitor gagal (kira-kira 30%) — kedua-duanya boleh dibaiki hari sama.",
     directAnswerZH: "如果室内或室外风扇停止运转，最常见的原因是风扇电机烧坏（约60%的案例）或电容器故障（约30%）——两者都可当天修复。",
     diyChecksEN: ["Identify which fan has stopped — indoor unit fan, or the outdoor unit's fan", "Check if the outdoor unit is making a humming sound but the fan isn't spinning — this points to capacitor rather than motor", "Check nothing is physically obstructing the outdoor fan blade"],
-    diyChecksMS: ["Kenal pasti kipas mana yang berhenti — kipas unit dalam, atau kipas unit luar", "Semak jika unit luar berdengung tetapi kipas tidak berpusing"],
-    diyChecksZH: ["确认是哪个风扇停转——室内机风扇，还是室外机风扇", "检查室外机是否发出嗡嗡声但风扇不转——这通常指向电容器而非电机问题"],
+    diyChecksMS: [
+      "Kenal pasti kipas mana yang berhenti — kipas unit dalam, atau kipas unit luar",
+      "Semak jika unit luar berdengung tetapi kipas tidak berpusing",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "确认是哪个风扇停转——室内机风扇，还是室外机风扇",
+      "检查室外机是否发出嗡嗡声但风扇不转——这通常指向电容器而非电机问题",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Fan motor winding resistance test with a multimeter to confirm burnout versus a wiring fault", "Capacitor test specific to the fan circuit", "Fan blade balance and bearing check, since a physically damaged blade can also stall the motor"],
-    technicianChecksMS: ["Ujian rintangan gegelung motor kipas dengan multimeter untuk mengesahkan terbakar berbanding kerosakan pendawaian", "Ujian kapasitor khusus untuk litar kipas"],
-    technicianChecksZH: ["用万用表测试风扇电机绕组电阻，确认是烧坏还是接线故障", "测试风扇专用电容器"],
+    technicianChecksMS: [
+      "Ujian rintangan gegelung motor kipas dengan multimeter untuk mengesahkan terbakar berbanding kerosakan pendawaian",
+      "Ujian kapasitor khusus untuk litar kipas",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "用万用表测试风扇电机绕组电阻，确认是烧坏还是接线故障",
+      "测试风扇专用电容器",
+      "判断噪音来自室内机还是室外机，并检查风扇与固定螺丝"
+    ],
     extraFaqsEN: [{ q: "Is it safe to run the aircond if the outdoor fan isn't spinning?", a: "No — without the outdoor fan, the compressor can't dissipate heat properly and will overheat quickly, potentially causing permanent damage." }, { q: "How much does a fan motor replacement cost?", a: "Typically RM 150-350 depending on indoor/outdoor unit and brand/model." }, { q: "Why is my indoor fan working but blowing warm air along with the outdoor fan being silent?", a: "This combination strongly suggests the outdoor fan/motor has failed." }, { q: "Can dust cause a fan to stop working?", a: "Yes indirectly — heavy dust buildup adds friction that stresses a fan motor over time." }],
     extraFaqsMS: [{ q: "Selamatkah menjalankan aircond jika kipas luar tidak berpusing?", a: "Tidak — pekali tidak dapat melepaskan haba dengan betul dan akan cepat terlebih panas." }, { q: "Berapa kos penggantian motor kipas?", a: "Biasanya RM 150-350 bergantung sama ada unit dalam atau luar." }],
     extraFaqsZH: [{ q: "室外风扇不转时继续运行冷气安全吗？", a: "不安全——压缩机无法正常散热，会很快过热，可能导致永久损坏。" }, { q: "更换风扇电机需要多少费用？", a: "费用通常约RM 150-350，视室内或室外机及品牌型号而定。" }],
@@ -162,11 +322,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Aircond yang men-trip MCB (breaker utama) sebaik sahaja ia bermula biasanya menunjukkan litar pintas, kapasitor gagal, atau pekali menarik arus berlebihan.",
     directAnswerZH: "冷气一启动就跳MCB（主断路器）通常表示短路、电容器故障或压缩机耗电过大——这被视为紧急电气安全问题，而非常规维修。",
     diyChecksEN: ["Do not repeatedly reset the MCB and restart the unit — repeated tripping stresses the electrical circuit", "Check if other appliances on the same circuit also lose power, which would point to a house wiring issue", "Note whether it trips instantly on power-on, or only after running for a while"],
-    diyChecksMS: ["Jangan berulang kali reset MCB dan mulakan semula unit", "Semak jika peralatan lain pada litar sama turut hilang kuasa"],
-    diyChecksZH: ["不要反复重置MCB并重启机器", "检查同一电路上的其他电器是否也断电"],
+    diyChecksMS: [
+      "Jangan berulang kali reset MCB dan mulakan semula unit",
+      "Semak jika peralatan lain pada litar sama turut hilang kuasa",
+      "Perhatikan whether it trips instantly on power-on, or only after running for a while"
+    ],
+    diyChecksZH: [
+      "不要反复重置MCB并重启机器",
+      "检查同一电路上的其他电器是否也断电",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Insulation resistance (megger) test on the compressor and wiring to detect a short circuit to earth/ground", "MCB rating verification against the unit's actual current draw", "Full wiring inspection from the isolator switch to the outdoor unit for damaged insulation or loose terminals"],
-    technicianChecksMS: ["Ujian rintangan penebat (megger) pada pekali dan pendawaian untuk mengesan litar pintas ke bumi", "Pengesahan penilaian MCB berbanding penggunaan arus sebenar unit"],
-    technicianChecksZH: ["对压缩机和线路进行绝缘电阻测试，检测是否对地短路", "核实MCB额定值是否与机组实际耗电量匹配"],
+    technicianChecksMS: [
+      "Ujian rintangan penebat (megger) pada pekali dan pendawaian untuk mengesan litar pintas ke bumi",
+      "Pengesahan penilaian MCB berbanding penggunaan arus sebenar unit",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "对压缩机和线路进行绝缘电阻测试，检测是否对地短路",
+      "核实MCB额定值是否与机组实际耗电量匹配",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     extraFaqsEN: [{ q: "Is a tripping aircond a fire hazard?", a: "It can be, if the cause is a genuine short circuit or damaged wiring insulation. Don't keep resetting the breaker." }, { q: "Should I call an electrician or an aircond technician for this?", a: "Start with an aircond technician, since the fault is very often inside the unit." }, { q: "Can an undersized circuit breaker cause this even if the aircond is fine?", a: "Yes — if the MCB rating is too low for the unit's starting current, it can trip on startup even with a healthy aircond." }, { q: "How urgent is this compared to other aircond problems?", a: "One of the more urgent problems on this list — should be inspected within 24-48 hours due to the fire-safety angle." }],
     extraFaqsMS: [{ q: "Adakah aircond yang trip risiko kebakaran?", a: "Boleh, jika puncanya litar pintas sebenar. Jangan terus reset breaker." }, { q: "Patutkah saya panggil juruelektrik atau juruteknik aircond?", a: "Mulakan dengan juruteknik aircond, kerana kerosakan selalunya di dalam unit." }],
     extraFaqsZH: [{ q: "跳闸的冷气有火灾隐患吗？", a: "如果原因是真正的短路，就可能有隐患。不要反复重置断路器。" }, { q: "这种情况应该找电工还是冷气技师？", a: "先找冷气技师，因为故障通常出在机器内部。" }],
@@ -176,11 +352,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Dalam kebanyakan kes remote itu sendiri kehabisan bateri atau sentuhan butang uzur — cuba bateri baharu dahulu.",
     directAnswerZH: "大多数情况下是遥控器电池耗尽或按键接触磨损——请先更换新电池。",
     diyChecksEN: ["Replace the remote batteries first, even if they seem to have some charge left", "Use a phone camera to check if the remote's IR light blinks when you press a button", "Clean the remote's sensor window on the indoor unit, as dust buildup can block the IR signal"],
-    diyChecksMS: ["Ganti bateri remote dahulu, walaupun kelihatan masih ada cas", "Guna kamera telefon untuk semak jika lampu IR remote berkelip"],
-    diyChecksZH: ["先更换遥控器电池，即使电量看似还有剩余", "用手机摄像头检查按下按键时遥控器红外灯是否闪烁"],
+    diyChecksMS: [
+      "Ganti bateri remote dahulu, walaupun kelihatan masih ada cas",
+      "Guna kamera telefon untuk semak jika lampu IR remote berkelip",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "先更换遥控器电池，即使电量看似还有剩余",
+      "用手机摄像头检查按下按键时遥控器红外灯是否闪烁",
+      "确认遥控器模式与设定温度正确（制冷模式）"
+    ],
     technicianChecksEN: ["IR receiver module test on the indoor unit's control board to confirm it's receiving signal correctly", "Remote's internal circuit board inspection for corrosion or a failed transmit IC", "Backup manual operation test at the indoor unit itself to isolate whether the fault is unit-side or remote-side"],
-    technicianChecksMS: ["Ujian modul penerima IR pada papan kawalan unit dalam", "Pemeriksaan litar dalaman remote untuk kakisan atau kegagalan cip pemancar"],
-    technicianChecksZH: ["测试室内机控制板的红外接收模块", "检查遥控器内部电路板是否腐蚀或发射芯片故障"],
+    technicianChecksMS: [
+      "Ujian modul penerima IR pada papan kawalan unit dalam",
+      "Pemeriksaan litar dalaman remote untuk kakisan atau kegagalan cip pemancar",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "测试室内机控制板的红外接收模块",
+      "检查遥控器内部电路板是否腐蚀或发射芯片故障",
+      "确认遥控器模式与设定温度正确（制冷模式）"
+    ],
     extraFaqsEN: [{ q: "How much does a replacement remote cost?", a: "A generic universal remote is inexpensive, but a genuine brand-specific remote varies by brand." }, { q: "Is there a manual way to turn on my aircond if the remote is completely dead?", a: "Most indoor units have a small manual/auto override button hidden behind a flap on the unit itself." }, { q: "Can water damage to the remote be repaired?", a: "Sometimes — if caught quickly, drying it out can restore function." }, { q: "Why does my remote only work when pointed very close to the unit?", a: "Usually indicates weakening batteries or a partially failing IR transmitter LED." }],
     extraFaqsMS: [{ q: "Berapa kos remote ganti?", a: "Remote universal generik murah, tetapi remote khusus jenama tulen berbeza mengikut jenama." }, { q: "Adakah cara manual untuk menghidupkan aircond jika remote mati sepenuhnya?", a: "Kebanyakan unit dalam mempunyai butang manual/auto tersembunyi di sebalik flap." }],
     extraFaqsZH: [{ q: "更换遥控器需要多少费用？", a: "通用型遥控器价格便宜，但原厂专用遥控器因品牌而异。" }, { q: "如果遥控器完全失灵，有手动开机的方法吗？", a: "大多数室内机在机身盖板下方设有小型手动/自动应急按钮。" }],
@@ -190,11 +382,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Air menitis dari unit dalam adalah aduan aircond paling biasa yang KL Renovator terima di Malaysia — hampir selalu disebabkan paip longkang tersumbat atau dulang longkang kotor kerana kelembapan sepanjang tahun.",
     directAnswerZH: "室内机滴水是KL Renovator在马来西亚收到的最常见的冷气投诉——几乎总是由于全年潮湿气候导致排水管堵塞或排水盘脏污引起的。",
     diyChecksEN: ["Place a container under the drip immediately to prevent floor/ceiling damage while awaiting service", "Check if the leak worsens after rain or high-humidity days — points to drainage rather than a mechanical fault", "Do not attempt to open the indoor unit casing yourself"],
-    diyChecksMS: ["Letakkan bekas di bawah titisan serta-merta untuk mengelakkan kerosakan lantai/siling", "Semak jika kebocoran memburuk selepas hujan atau hari lembap tinggi"],
-    diyChecksZH: ["立即在滴水处下方放置容器，防止地板/天花板损坏", "留意漏水是否在下雨或高湿度天气后加重"],
+    diyChecksMS: [
+      "Letakkan bekas di bawah titisan serta-merta untuk mengelakkan kerosakan lantai/siling",
+      "Semak jika kebocoran memburuk selepas hujan atau hari lembap tinggi",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "立即在滴水处下方放置容器，防止地板/天花板损坏",
+      "留意漏水是否在下雨或高湿度天气后加重",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Drain pipe pressure-flush test to clear blockages along the entire pipe run, not just the visible end", "Drain pan removal and inspection for cracks, warping, or mould/slime buildup", "Condensate pump test to rule out pump failure"],
-    technicianChecksMS: ["Ujian bilas tekanan paip longkang untuk membersihkan sekatan sepanjang laluan paip", "Pembongkaran dan pemeriksaan dulang longkang untuk retak atau penumpukan kulat/lendir"],
-    technicianChecksZH: ["对整条排水管进行压力冲洗测试，清除堵塞", "拆卸并检查排水盘是否有裂缝、变形或霉菌/黏液堆积"],
+    technicianChecksMS: [
+      "Ujian bilas tekanan paip longkang untuk membersihkan sekatan sepanjang laluan paip",
+      "Pembongkaran dan pemeriksaan dulang longkang untuk retak atau penumpukan kulat/lendir",
+      "Condensate pump test to rule out pump failure"
+    ],
+    technicianChecksZH: [
+      "对整条排水管进行压力冲洗测试，清除堵塞",
+      "拆卸并检查排水盘是否有裂缝、变形或霉菌/黏液堆积",
+      "检查排水泵/浮球开关是否堵塞或失效（天花机常见）"
+    ],
     extraFaqsEN: [{ q: "Can I clear the drain pipe myself with a vacuum or blower?", a: "Possible for minor blockages, but incorrect technique can dislodge internal seals. A professional pressure-flush is more reliable." }, { q: "Why does this happen more in Malaysia than other countries?", a: "Malaysia's year-round high humidity means units condense significantly more water, accelerating mould/slime buildup." }, { q: "Will moving the drain pipe outlet help?", a: "Sometimes — if the original installation used a poor pipe slope, correcting this can reduce future blockages." }, { q: "Does a leaking indoor unit mean I need a completely new aircond?", a: "Almost never — this is one of the most fixable, least expensive aircond problems." }],
     extraFaqsMS: [{ q: "Bolehkah saya bersihkan paip longkang sendiri dengan vakum atau blower?", a: "Mungkin untuk sekatan kecil, tetapi teknik salah boleh menolak sekatan lebih dalam." }, { q: "Kenapa ini berlaku lebih kerap di Malaysia berbanding negara lain?", a: "Kelembapan tinggi sepanjang tahun mempercepat penumpukan kulat/lendir." }],
     extraFaqsZH: [{ q: "我可以自己用吸尘器或吹风机清理排水管吗？", a: "对于轻微堵塞或许可行，但技巧不当可能使密封件松脱。" }, { q: "为什么这种情况在马来西亚比其他国家更常见？", a: "马来西亚全年高湿度加速了排水盘和管道内的霉菌/黏液堆积。" }],
@@ -204,11 +412,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Jika unit dalam menghidupkan tetapi unit luar kekal senyap sepenuhnya, punca paling mungkin adalah overload protector trip, kapasitor mula pekali gagal, atau kerosakan geganti kontaktor.",
     directAnswerZH: "如果室内机能开启但室外机完全没有反应，最可能的原因是过载保护器跳闸、压缩机启动电容器故障或接触器继电器故障。",
     diyChecksEN: ["Confirm the indoor unit's fan and display are working normally", "Listen for any sound at all from the outdoor unit (humming, clicking) versus complete silence", "Check the outdoor unit's isolator switch hasn't been accidentally switched off"],
-    diyChecksMS: ["Sahkan kipas dan paparan unit dalam berfungsi normal", "Dengar sebarang bunyi dari unit luar berbanding senyap sepenuhnya"],
-    diyChecksZH: ["确认室内机风扇和显示屏运行正常", "留意室外机是否发出任何声音还是完全静音"],
+    diyChecksMS: [
+      "Sahkan kipas dan paparan unit dalam berfungsi normal",
+      "Dengar sebarang bunyi dari unit luar berbanding senyap sepenuhnya",
+      "Semak unit luar's isolator switch hasn't been accidentally switched off"
+    ],
+    diyChecksZH: [
+      "确认室内机风扇和显示屏运行正常",
+      "留意室外机是否发出任何声音还是完全静音",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Overload protector (thermal relay) test and reset, common cause of a silent outdoor unit after overheating", "Contactor relay inspection for burnt or stuck contacts preventing power reaching the compressor and fan", "Compressor start capacitor and run capacitor testing"],
-    technicianChecksMS: ["Ujian dan reset overload protector (geganti terma)", "Pemeriksaan geganti kontaktor untuk sentuhan terbakar atau tersekat"],
-    technicianChecksZH: ["测试并复位过载保护器（热继电器）", "检查接触器继电器是否有烧毁或卡住的触点"],
+    technicianChecksMS: [
+      "Ujian dan reset overload protector (geganti terma)",
+      "Pemeriksaan geganti kontaktor untuk sentuhan terbakar atau tersekat",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "测试并复位过载保护器（热继电器）",
+      "检查接触器继电器是否有烧毁或卡住的触点",
+      "技师检测电容器容值/电压，老化电容常被误判为缺气"
+    ],
     extraFaqsEN: [{ q: "Is a silent outdoor unit always a compressor failure?", a: "No — a capacitor, contactor, or overload protector fault can all cause complete silence, and all are cheaper to fix than compressor replacement." }, { q: "Why would the outdoor unit trip on overload specifically in hot weather?", a: "Outdoor units work harder on hot days, and added strain can push them into overload protection." }, { q: "How urgent is a silent outdoor unit?", a: "Moderately urgent — it wastes electricity and leaves you without functioning AC, but isn't a safety emergency." }, { q: "Can I reset the outdoor unit myself?", a: "You can try switching off at the MCB for a few minutes. If it trips again shortly after, the underlying fault needs a technician." }],
     extraFaqsMS: [{ q: "Adakah unit luar senyap sentiasa kegagalan pekali?", a: "Tidak — kerosakan kapasitor, kontaktor, atau overload protector semuanya boleh menyebabkan senyap sepenuhnya." }, { q: "Kenapa unit luar trip overload khususnya dalam cuaca panas?", a: "Unit luar bekerja lebih keras pada hari sangat panas, tekanan tambahan boleh menyebabkan mod perlindungan overload." }],
     extraFaqsZH: [{ q: "室外机静音一定是压缩机故障吗？", a: "不一定——电容器、接触器或过载保护器故障都可能导致完全静音，维修费用都远低于更换压缩机。" }, { q: "为什么室外机特别在炎热天气会过载跳闸？", a: "炎热天气下室外机需要更努力散热，额外负荷可能触发过载保护。" }],
@@ -218,11 +442,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Lonjakan mendadak dalam bil elektrik tanpa perubahan tabiat penggunaan paling biasa disebabkan gegelung kotor atau gas penyejuk rendah memaksa pekali bekerja lebih keras.",
     directAnswerZH: "在使用习惯没有变化的情况下电费突然上涨，最常见的原因是盘管脏污或制冷剂不足，迫使压缩机更努力工作。",
     diyChecksEN: ["Compare this month's bill against the same month last year, not last month, to account for seasonal weather differences", "Check the temperature setting hasn't been accidentally changed to a colder setting than usual", "Check when the unit was last chemical washed — over 12 months without a wash is a strong contributing factor"],
-    diyChecksMS: ["Bandingkan bil bulan ini dengan bulan sama tahun lepas", "Semak tetapan suhu tidak ditukar secara tidak sengaja ke tetapan lebih sejuk"],
-    diyChecksZH: ["将本月账单与去年同月对比，以排除季节性天气差异的影响", "检查温度设置是否被意外调至比平时更低的温度"],
+    diyChecksMS: [
+      "Bandingkan bil bulan ini dengan bulan sama tahun lepas",
+      "Semak tetapan suhu tidak ditukar secara tidak sengaja ke tetapan lebih sejuk",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "将本月账单与去年同月对比，以排除季节性天气差异的影响",
+      "检查温度设置是否被意外调至比平时更低的温度",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Compressor current draw measurement compared against the rated specification", "Full refrigerant pressure and coil condition assessment", "Inverter unit performance check — a failing inverter board can cause the compressor to run less efficiently"],
-    technicianChecksMS: ["Pengukuran arus pekali berbanding spesifikasi kadar", "Penilaian penuh tekanan penyejuk dan keadaan gegelung"],
-    technicianChecksZH: ["测量压缩机实际耗电与额定规格对比", "全面评估制冷剂压力和盘管状况"],
+    technicianChecksMS: [
+      "Pengukuran arus pekali berbanding spesifikasi kadar",
+      "Penilaian penuh tekanan penyejuk dan keadaan gegelung",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "测量压缩机实际耗电与额定规格对比",
+      "全面评估制冷剂压力和盘管状况",
+      "检查电路板、接线与供电是否正常，排除电气故障"
+    ],
     extraFaqsEN: [{ q: "How much can a chemical wash actually save on electricity?", a: "It varies, but a heavily dirty coil restored to clean condition commonly restores 15-30% of lost cooling efficiency." }, { q: "Does an inverter aircond really save money versus non-inverter?", a: "Yes, generally — inverter units adjust compressor speed to match demand, using meaningfully less electricity." }, { q: "Is TNB's tariff structure part of why my bill went up, not the aircond?", a: "It's worth checking, but we focus on the aircond-specific factors we can verify and fix." }, { q: "How often should I service my aircond to avoid rising bills?", a: "For units running 8+ hours daily, every 6-8 months is reasonable. For lighter use, 12-month cycle is usually sufficient." }],
     extraFaqsMS: [{ q: "Berapa banyak cuci kimia sebenarnya boleh jimatkan elektrik?", a: "Ia berbeza mengikut tahap keterlantaran unit, tetapi biasanya memulihkan 15-30% kecekapan penyejukan yang hilang." }, { q: "Adakah aircond inverter benar-benar jimat berbanding bukan inverter?", a: "Ya, umumnya — unit inverter menggunakan elektrik jauh kurang." }],
     extraFaqsZH: [{ q: "化学清洗实际能省多少电费？", a: "视机组疏于保养的程度而定，通常能恢复15-30%的制冷效率损失。" }, { q: "变频冷气真的比定频更省钱吗？", a: "通常是的——变频机组根据需求调节压缩机转速，能明显省电。" }],
@@ -232,11 +472,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Aliran udara lemah hampir selalu masalah sekatan, bukan isu tetapan kelajuan kipas — penapis kotor, gegelung tersumbat, atau roda blower tersumbat mengehadkan jumlah udara.",
     directAnswerZH: "风力弱几乎总是堵塞问题，而非风速设置问题——脏污的过滤网、堵塞的蒸发盘管或积垢的风轮都会限制机器能推送的风量。",
     diyChecksEN: ["Check and wash the air filter first — this is the single most common fix for weak airflow", "Check the fan speed setting on the remote isn't accidentally set to \"Low\" or \"Quiet\" mode", "Check air vents/louvres on the indoor unit aren't physically blocked by furniture, curtains, or dust buildup"],
-    diyChecksMS: ["Semak dan basuh penapis udara dahulu — ini adalah pembetulan paling biasa", "Semak tetapan kelajuan kipas pada remote tidak ditetapkan secara tidak sengaja ke mod \"Low\""],
-    diyChecksZH: ["先检查并清洗空气过滤网——这是解决风力弱最常见的方法", "检查遥控器风速设置是否被意外设为\"低速\"或\"静音\"模式"],
+    diyChecksMS: [
+      "Semak dan basuh penapis udara dahulu — ini adalah pembetulan paling biasa",
+      "Semak tetapan kelajuan kipas pada remote tidak ditetapkan secara tidak sengaja ke mod \"Low\"",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "先检查并清洗空气过滤网——这是解决风力弱最常见的方法",
+      "检查遥控器风速设置是否被意外设为\"低速\"或\"静音\"模式",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Blower wheel inspection and cleaning — dust/dirt buildup inside the fan blades reduces air volume", "Evaporator coil airflow resistance check, since a dirty coil restricts airflow", "Ductwork inspection for ceiling cassette/ducted systems"],
-    technicianChecksMS: ["Pemeriksaan dan pembersihan roda blower", "Semakan rintangan aliran udara gegelung evaporator"],
-    technicianChecksZH: ["检查并清洁风轮", "检查蒸发盘管的气流阻力"],
+    technicianChecksMS: [
+      "Pemeriksaan dan pembersihan roda blower",
+      "Semakan rintangan aliran udara gegelung evaporator",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "检查并清洁风轮",
+      "检查蒸发盘管的气流阻力",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     extraFaqsEN: [{ q: "Will a chemical wash always fix weak airflow?", a: "In most cases yes, since coil/filter blockage is the dominant cause. If still weak, next suspects are the blower wheel or ductwork." }, { q: "Is weak airflow the same problem as \"not cold\"?", a: "Related but distinct — weak airflow means less air volume, while \"not cold\" means normal airflow but warm temperature." }, { q: "Can a blocked outdoor unit cause weak indoor airflow?", a: "Indirectly — it affects heat exchange more than indoor air volume, but a severely restricted outdoor unit can eventually stress the whole system." }, { q: "How often should I clean the filter myself to prevent this?", a: "Every 2-4 weeks for units used daily, especially in dusty areas." }],
     extraFaqsMS: [{ q: "Adakah cuci kimia sentiasa membetulkan aliran udara lemah?", a: "Dalam kebanyakan kes ya, kerana sekatan gegelung/penapis adalah punca dominan." }, { q: "Adakah aliran udara lemah sama dengan masalah \"tidak sejuk\"?", a: "Ia berkaitan tetapi berbeza — aliran udara lemah bermaksud jumlah udara kurang." }],
     extraFaqsZH: [{ q: "化学清洗一定能解决风力弱的问题吗？", a: "大多数情况下可以，因为盘管/过滤网堵塞是主要原因。" }, { q: "风力弱和\"不冷\"是同一个问题吗？", a: "两者相关但不同——风力弱指整体风量减少，而\"不冷\"指风量正常但温度不冷。" }],
@@ -246,11 +502,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Jika aircond tidak bertindak balas langsung terhadap remote atau butang kuasa, semak MCB/breaker dahulu — breaker trip menyumbang bahagian besar panggilan \"tidak boleh hidup\".",
     directAnswerZH: "如果冷气对遥控器或电源按钮完全没有反应，请先检查MCB/断路器——断路器跳闸占了很大一部分\"无法开机\"报修案例。",
     diyChecksEN: ["Check the MCB/breaker for the aircond circuit hasn't tripped — this alone resolves a large share of cases", "Check the remote has working batteries and try the unit's manual override button to isolate remote vs unit fault", "Check the wall isolator switch near the outdoor unit hasn't been accidentally switched off"],
-    diyChecksMS: ["Semak MCB/breaker untuk litar aircond tidak trip", "Semak remote mempunyai bateri berfungsi dan cuba butang override manual unit"],
-    diyChecksZH: ["检查冷气电路的MCB/断路器是否跳闸", "检查遥控器电池是否正常，并尝试机器的手动应急按钮"],
+    diyChecksMS: [
+      "Semak MCB/breaker untuk litar aircond tidak trip",
+      "Semak remote mempunyai bateri berfungsi dan cuba butang override manual unit",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "检查冷气电路的MCB/断路器是否跳闸",
+      "检查遥控器电池是否正常，并尝试机器的手动应急按钮",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Full electrical continuity test from the isolator switch through to the indoor and outdoor unit terminals", "PCB power supply section test to confirm the board is receiving and processing power correctly", "Capacitor and contactor testing, since either failing can leave the unit appearing completely dead"],
-    technicianChecksMS: ["Ujian kesinambungan elektrik penuh dari suis pengasing hingga ke terminal unit dalam dan luar", "Ujian bahagian bekalan kuasa PCB"],
-    technicianChecksZH: ["从隔离开关到室内外机接线端子进行完整的电路导通测试", "测试PCB电源部分"],
+    technicianChecksMS: [
+      "Ujian kesinambungan elektrik penuh dari suis pengasing hingga ke terminal unit dalam dan luar",
+      "Ujian bahagian bekalan kuasa PCB",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "从隔离开关到室内外机接线端子进行完整的电路导通测试",
+      "测试PCB电源部分",
+      "技师检测电容器容值/电压，老化电容常被误判为缺气"
+    ],
     extraFaqsEN: [{ q: "What's the very first thing I should check if my aircond won't turn on?", a: "The MCB/breaker for that circuit — this single check resolves a surprisingly large number of \"dead unit\" calls." }, { q: "Could this be a simple fuse rather than a bigger problem?", a: "Some units have an internal fuse on the PCB that can blow from a power surge — a relatively inexpensive fix." }, { q: "Is a completely unresponsive unit worse than one with error lights blinking?", a: "Not necessarily — a blinking light gives useful diagnostic information, while total silence just means starting from the power supply forward." }, { q: "How quickly can this be diagnosed?", a: "Usually within the first 15-20 minutes, since it's a step-by-step electrical elimination process." }],
     extraFaqsMS: [{ q: "Apakah perkara pertama yang perlu saya semak jika aircond tidak boleh hidup?", a: "MCB/breaker untuk litar tersebut — semakan tunggal ini menyelesaikan sejumlah besar kes." }, { q: "Bolehkah ini fius mudah berbanding masalah lebih besar?", a: "Sesetengah unit mempunyai fius dalaman pada PCB yang boleh terbakar akibat lonjakan kuasa." }],
     extraFaqsZH: [{ q: "冷气无法开机时，第一件应该检查的事是什么？", a: "该电路的MCB/断路器——仅此一项检查就能解决相当多的情况。" }, { q: "这会不会只是简单的保险丝问题，而非更大的故障？", a: "有些机器的PCB上有内部保险丝，可能因电涌而烧断，维修费用相对较低。" }],
@@ -260,11 +532,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Lampu berkelip adalah sistem kod ralat terbina dalam aircond anda — bilangan kelip, warna, dan corak sepadan dengan kerosakan tertentu yang didokumenkan pengeluar.",
     directAnswerZH: "指示灯闪烁是冷气内置的错误代码系统——闪烁次数、颜色和规律对应制造商记录的特定故障。",
     diyChecksEN: ["Count exactly how many times the light blinks before it repeats or pauses, and note the colour if multiple LED colours", "Check your unit's manual for a basic error code reference before calling", "Take a short video of the blinking pattern to show the technician"],
-    diyChecksMS: ["Kira tepat berapa kali lampu berkelip sebelum berulang atau berhenti", "Semak manual unit anda untuk rujukan kod ralat asas sebelum menghubungi"],
-    diyChecksZH: ["准确数清指示灯闪烁几次后重复或暂停，并记录颜色", "致电前先查阅机器说明书了解基本错误代码参考"],
+    diyChecksMS: [
+      "Kira tepat berapa kali lampu berkelip sebelum berulang atau berhenti",
+      "Semak manual unit anda untuk rujukan kod ralat asas sebelum menghubungi",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "准确数清指示灯闪烁几次后重复或暂停，并记录颜色",
+      "致电前先查阅机器说明书了解基本错误代码参考",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Cross-reference the exact blink pattern against the brand's official error code chart", "Targeted diagnostic testing based on the identified error code", "Sensor-specific testing if the code points to a temperature, humidity or pressure sensor fault"],
-    technicianChecksMS: ["Rujuk silang corak kelip tepat dengan carta kod ralat rasmi jenama", "Ujian diagnostik disasarkan berdasarkan kod ralat yang dikenal pasti"],
-    technicianChecksZH: ["将确切的闪烁规律与品牌官方错误代码表对照", "根据识别出的错误代码进行针对性诊断测试"],
+    technicianChecksMS: [
+      "Rujuk silang corak kelip tepat dengan carta kod ralat rasmi jenama",
+      "Ujian diagnostik disasarkan berdasarkan kod ralat yang dikenal pasti",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "将确切的闪烁规律与品牌官方错误代码表对照",
+      "根据识别出的错误代码进行针对性诊断测试",
+      "使用歧管压力表测量系统压力，确认是否缺冷媒"
+    ],
     extraFaqsEN: [{ q: "Do all aircond brands use the same blinking code system?", a: "No — each brand has its own specific code system. This is why telling us your exact brand and model speeds up diagnosis." }, { q: "Is a blinking light always a serious problem?", a: "Not always — some codes indicate minor issues like a dirty filter reminder, others more significant faults." }, { q: "Can I find my error code meaning online myself?", a: "Sometimes, but codes vary enough between models that we recommend confirming with us." }, { q: "Should I keep the unit running while the light blinks?", a: "It depends on the code — when in doubt, switch off and book a diagnosis rather than guessing." }],
     extraFaqsMS: [{ q: "Adakah semua jenama aircond menggunakan sistem kod berkelip yang sama?", a: "Tidak — setiap jenama mempunyai sistem kod tersendiri." }, { q: "Adakah lampu berkelip sentiasa masalah serius?", a: "Tidak sentiasa — sesetengah kod menunjukkan isu kecil sahaja." }],
     extraFaqsZH: [{ q: "所有冷气品牌都使用相同的闪灯代码系统吗？", a: "不是——每个品牌都有自己独特的代码系统。" }, { q: "闪灯一定是严重问题吗？", a: "不一定——有些代码只是提醒小问题，另一些则表示较严重的故障。" }],
@@ -274,11 +562,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Menitis (berbanding kebocoran lebih teruk) biasanya tanda peringkat awal penumpukan paip atau dulang longkang — menanganinya sekarang dengan cuci kimia (dari RM 120) lebih murah.",
     directAnswerZH: "滴水（相较于更严重的漏水）通常是排水管或排水盘积垢的早期迹象——现在进行化学清洗（从RM 120起）比等到情况恶化更省钱。",
     diyChecksEN: ["Note whether it's a slow drip versus a steady trickle — this indicates how advanced the blockage is", "Place a small container to catch drips and monitor if the rate increases", "Check if dripping only happens right after the unit starts cooling versus continuously"],
-    diyChecksMS: ["Perhatikan sama ada ia titisan perlahan berbanding aliran tetap", "Letakkan bekas kecil untuk menangkap titisan dan pantau jika kadar meningkat"],
-    diyChecksZH: ["留意是偶尔几滴的缓慢滴水，还是持续的细流", "放置小容器接住水滴，观察未来几天滴水速度是否增加"],
+    diyChecksMS: [
+      "Perhatikan sama ada ia titisan perlahan berbanding aliran tetap",
+      "Letakkan bekas kecil untuk menangkap titisan dan pantau jika kadar meningkat",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "留意是偶尔几滴的缓慢滴水，还是持续的细流",
+      "放置小容器接住水滴，观察未来几天滴水速度是否增加",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     technicianChecksEN: ["Drain line flow-rate test to catch a partial blockage before it becomes complete stoppage", "Early-stage mould/slime inspection in the drain pan", "Condensation rate check against ambient humidity"],
-    technicianChecksMS: ["Ujian kadar aliran talian longkang untuk mengesan sekatan separa", "Pemeriksaan peringkat awal kulat/lendir dalam dulang longkang"],
-    technicianChecksZH: ["测试排水管流速，在完全堵塞前发现部分堵塞情况", "检查排水盘早期霉菌/黏液情况"],
+    technicianChecksMS: [
+      "Ujian kadar aliran talian longkang untuk mengesan sekatan separa",
+      "Pemeriksaan peringkat awal kulat/lendir dalam dulang longkang",
+      "Condensation rate check against ambient humidity"
+    ],
+    technicianChecksZH: [
+      "测试排水管流速，在完全堵塞前发现部分堵塞情况",
+      "检查排水盘早期霉菌/黏液情况",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     extraFaqsEN: [{ q: "Is occasional dripping normal, or should I always get it checked?", a: "A very occasional single drop can be normal condensation, but a regular or increasing pattern is worth a check." }, { q: "Will dripping stop on its own if I just wait?", a: "Rarely — drain blockages don't self-clear and get worse over time." }, { q: "Does dripping mean my unit needs a full overhaul already?", a: "Not necessarily — dripping caught early is often resolved with a standard chemical wash." }, { q: "Can dripping damage my ceiling or wall if left unaddressed?", a: "Yes, over time — continuous dripping can stain paint or promote mould growth." }],
     extraFaqsMS: [{ q: "Adakah titisan sekali-sekala normal, atau patut sentiasa disemak?", a: "Satu titisan sangat jarang boleh menjadi kondensasi normal, tetapi corak berkala patut disemak." }, { q: "Adakah titisan akan berhenti sendiri jika saya tunggu?", a: "Jarang — sekatan longkang tidak bersih sendiri." }],
     extraFaqsZH: [{ q: "偶尔滴水正常吗，还是应该一直检查？", a: "偶尔一滴属正常冷凝，但规律出现的滴水就值得检查。" }, { q: "如果不理会，滴水会自行停止吗？", a: "很少会——排水堵塞不会自行清除，反而会随时间恶化。" }],
@@ -288,11 +592,27 @@ export const problemAEOContent: Record<
     directAnswerMS: "Jika aircond anda berjalan tanpa henti tanpa mencapai suhu tetapan, atau mati terlalu awal meninggalkan bilik panas, sensor suhu adalah punca paling biasa.",
     directAnswerZH: "如果您的冷气不停运转却达不到设定温度，或过早关闭导致房间仍然温暖，温度传感器通常是最常见的原因。",
     diyChecksEN: ["Check the set temperature on the remote is actually what you intend", "Note if the discrepancy between set temperature and actual room feel is consistent, or worsens over time", "Check the remote's own temperature sensor isn't affected by direct sun or heat source"],
-    diyChecksMS: ["Semak suhu tetapan pada remote sebenarnya apa yang anda mahukan", "Perhatikan jika perbezaan antara suhu tetapan dan rasa bilik sebenar konsisten"],
-    diyChecksZH: ["检查遥控器上设定的温度是否确实是您想要的", "留意设定温度与实际室内感受的差异是否一直存在"],
+    diyChecksMS: [
+      "Semak suhu tetapan pada remote sebenarnya apa yang anda mahukan",
+      "Perhatikan jika perbezaan antara suhu tetapan dan rasa bilik sebenar konsisten",
+      "Ambil video/foto gejala dan hantar WhatsApp +60182983573 untuk diagnosis awal"
+    ],
+    diyChecksZH: [
+      "检查遥控器上设定的温度是否确实是您想要的",
+      "留意设定温度与实际室内感受的差异是否一直存在",
+      "确认遥控器模式与设定温度正确（制冷模式）"
+    ],
     technicianChecksEN: ["Temperature sensor resistance test at various temperatures against a reference thermometer", "PCB temperature-reading circuit test", "Airflow-related check, since restricted airflow past the sensor can cause inaccurate readings"],
-    technicianChecksMS: ["Ujian rintangan sensor suhu pada pelbagai suhu berbanding termometer rujukan", "Ujian litar bacaan suhu PCB"],
-    technicianChecksZH: ["在不同温度下测试温度传感器电阻", "测试PCB温度读取电路"],
+    technicianChecksMS: [
+      "Ujian rintangan sensor suhu pada pelbagai suhu berbanding termometer rujukan",
+      "Ujian litar bacaan suhu PCB",
+      "Diagnosis penuh di tapak dengan sebut harga disahkan sebelum ganti parts"
+    ],
+    technicianChecksZH: [
+      "在不同温度下测试温度传感器电阻",
+      "测试PCB温度读取电路",
+      "由技师进行针对性现场检测，确认根因后再报价维修"
+    ],
     extraFaqsEN: [{ q: "How much does a temperature sensor replacement cost?", a: "One of the more affordable aircond repairs, since the sensor is a small, inexpensive component." }, { q: "Can dirty filters cause thermostat-like symptoms even with a healthy sensor?", a: "Yes — restricted airflow past the sensor location can give a false, warmer reading." }, { q: "Is a thermostat problem the same as the unit not being cold?", a: "Related but different — \"not cold\" means reduced cooling capacity, while a sensor issue means the unit doesn't know when to stop running." }, { q: "Will a smart thermostat or WiFi control module fix this?", a: "Not directly — the sensor itself needs to be tested and fixed regardless of the control interface used." }],
     extraFaqsMS: [{ q: "Berapa kos penggantian sensor suhu?", a: "Antara pembaikan aircond yang lebih berpatutan, kerana sensor adalah komponen kecil dan murah." }, { q: "Bolehkah penapis kotor menyebabkan simptom seperti termostat walaupun sensor sihat?", a: "Ya — aliran udara terhad boleh memberikan bacaan palsu lebih panas." }],
     extraFaqsZH: [{ q: "更换温度传感器需要多少费用？", a: "这是较为实惠的冷气维修项目之一，因为传感器本身是体积小、价格便宜的部件。" }, { q: "即使传感器正常，脏过滤网会造成类似温控器的症状吗？", a: "会的——传感器位置处气流受阻会给出偏高于实际温度的错误读数。" }],
