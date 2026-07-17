@@ -5,6 +5,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import {
+  resolveLandmarkLink,
+  getAreaNeighbourhoodLinks,
+  getRelatedNeighbourhoodLinks,
+} from "@/config/area-internal-links";
 import { allPosts } from "@/config/blog-posts";
 import { AREA_BLOG_MAP, AREA_PROBLEM_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
@@ -190,40 +195,12 @@ export default async function AreaPageZH({
             {area.landmarks?.length > 0 && (
               <div className="mt-5 flex flex-wrap gap-2">
                 {area.landmarks.map((lm) => {
-                  const kampungPage = siteConfig.kampungPages?.find(
-                    (k) => k.parentSlug === slug && k.name === lm
-                  );
-                  if (kampungPage && kampungPage.descriptionZH) {
+                  const resolved = resolveLandmarkLink(lm, slug, "zh");
+                  if (resolved) {
                     return (
                       <NextLink
                         key={lm}
-                        href={`/zh/areas/${slug}/${kampungPage.slug}`}
-                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
-                      >
-                        {lm}
-                      </NextLink>
-                    );
-                  }
-                  const crossArea = siteConfig.areaPages.find((a) => a.name === lm && a.slug !== slug);
-                  if (crossArea) {
-                    return (
-                      <NextLink
-                        key={lm}
-                        href={`/areas/${crossArea.slug}`}
-                        className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
-                      >
-                        {lm}
-                      </NextLink>
-                    );
-                  }
-                  const kampungElsewhere = siteConfig.kampungPages?.find(
-                    (k) => k.name === lm && k.parentSlug !== slug
-                  );
-                  if (kampungElsewhere) {
-                    return (
-                      <NextLink
-                        key={lm}
-                        href={`/areas/${kampungElsewhere.parentSlug}/${kampungElsewhere.slug}`}
+                        href={resolved.href}
                         className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
                       >
                         {lm}
@@ -242,29 +219,30 @@ export default async function AreaPageZH({
               </div>
             )}
 
-            {/* Dedicated neighbourhood pages for this area, if any exist */}
-            {siteConfig.kampungPages
-              ?.filter((k) => k.parentSlug === slug && k.descriptionZH)
-              .length > 0 && (
+            {(() => {
+              const neighbourhoods = getAreaNeighbourhoodLinks(slug, "zh");
+              const related = neighbourhoods.length >= 4 ? [] : getRelatedNeighbourhoodLinks(slug, "zh", 8);
+              const links = neighbourhoods.length > 0 ? neighbourhoods : related;
+              if (links.length === 0) return null;
+              return (
               <div className="mt-4">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
-                  社区指南
+                  {neighbourhoods.length > 0 ? "社区指南" : "附近社区指南"}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {siteConfig.kampungPages
-                    .filter((k) => k.parentSlug === slug && k.descriptionZH)
-                    .map((k) => (
+                  {links.map((k) => (
                       <NextLink
-                        key={k.slug}
-                        href={`/zh/areas/${slug}/${k.slug}`}
+                        key={`${k.parentSlug}-${k.slug}`}
+                        href={k.href}
                         className="inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 underline"
                       >
-                        {k.name} 冷气服务
+                        {k.label}
                       </NextLink>
                     ))}
                 </div>
               </div>
-            )}
+              );
+            })()}
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
@@ -582,33 +560,39 @@ export default async function AreaPageZH({
               </NextLink>
             </div>
 
-            {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug && k.descriptionZH).length > 0 && (
+            {(() => {
+              const neighbourhoods = getAreaNeighbourhoodLinks(slug, "zh");
+              const related = neighbourhoods.length >= 4 ? [] : getRelatedNeighbourhoodLinks(slug, "zh", 10);
+              const links = neighbourhoods.length > 0 ? neighbourhoods : related;
+              if (links.length === 0) return null;
+              return (
               <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
-                  {area.name} 的社区页面
+                  {neighbourhoods.length > 0 ? `${area.name} 的社区页面` : `${area.name} 附近社区`}
                 </p>
                 <h3 className="text-base font-black text-slate-900">
-                  {area.name} 下属更小社区的服务页面
+                  {neighbourhoods.length > 0
+                    ? `${area.name} 下属更小社区的服务页面`
+                    : `${area.name} 周边值得查看的社区服务页`}
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                   这些社区页面可帮助较小住宅区的客户更快找到最相关的冷气服务信息。
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {siteConfig.kampungPages
-                    .filter((k) => k.parentSlug === slug && k.descriptionZH)
-                    .map((k) => (
+                  {links.map((k) => (
                       <NextLink
-                        key={k.slug}
-                        href={`/zh/areas/${slug}/${k.slug}`}
+                        key={`${k.parentSlug}-${k.slug}`}
+                        href={k.href}
                         className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700"
                       >
-                        {k.name} 冷气服务
+                        {k.label}
                         <FiArrowRight className="h-3 w-3 text-sky-400" />
                       </NextLink>
                     ))}
                 </div>
               </div>
-            )}
+              );
+            })()}
           </Reveal>
         </div>
       </section>
