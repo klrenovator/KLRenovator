@@ -6,6 +6,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import {
+  resolveLandmarkLink,
+  getAreaNeighbourhoodLinks,
+  getRelatedNeighbourhoodLinks,
+} from "@/config/area-internal-links";
 import { allPosts } from "@/config/blog-posts";
 import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
@@ -362,49 +367,12 @@ export default async function AreaPage({
                     top-level area page, where a real match exists */}
                 <div className="mt-5 flex flex-wrap gap-2">
                   {area.landmarks.map((lm) => {
-                    const kampungPage = siteConfig.kampungPages?.find(
-                      (k) => k.parentSlug === slug && k.name === lm
-                    );
-                    if (kampungPage) {
+                    const resolved = resolveLandmarkLink(lm, slug, "en");
+                    if (resolved) {
                       return (
                         <NextLink
                           key={lm}
-                          href={`/areas/${slug}/${kampungPage.slug}`}
-                          className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
-                        >
-                          {lm}
-                        </NextLink>
-                      );
-                    }
-                    // Fallback 1: landmark name matches one of our other
-                    // top-level service areas (e.g. "Cyberjaya" mentioned on
-                    // the Putrajaya page should link to /areas/cyberjaya)
-                    const crossArea = siteConfig.areaPages.find(
-                      (a) => a.name === lm && a.slug !== slug
-                    );
-                    if (crossArea) {
-                      return (
-                        <NextLink
-                          key={lm}
-                          href={`/areas/${crossArea.slug}`}
-                          className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
-                        >
-                          {lm}
-                        </NextLink>
-                      );
-                    }
-                    // Fallback 2: landmark matches a kampung page that exists
-                    // under a DIFFERENT parent area (boundary-spanning names
-                    // like "Ukay Perdana" mentioned on both Ampang and Hulu
-                    // Kelang pages, but only built under Hulu Kelang)
-                    const kampungElsewhere = siteConfig.kampungPages?.find(
-                      (k) => k.name === lm && k.parentSlug !== slug
-                    );
-                    if (kampungElsewhere) {
-                      return (
-                        <NextLink
-                          key={lm}
-                          href={`/areas/${kampungElsewhere.parentSlug}/${kampungElsewhere.slug}`}
+                          href={resolved.href}
                           className="text-xs font-bold bg-sky-50 text-sky-700 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-100 transition"
                         >
                           {lm}
@@ -422,27 +390,31 @@ export default async function AreaPage({
                   })}
                 </div>
 
-                {/* Dedicated neighbourhood pages for this area, if any exist */}
-                {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug).length > 0 && (
+                {/* Dedicated neighbourhood pages for this area (+ nearby if few children) */}
+                {(() => {
+                  const neighbourhoods = getAreaNeighbourhoodLinks(slug, "en");
+                  const related = neighbourhoods.length >= 4 ? [] : getRelatedNeighbourhoodLinks(slug, "en", 8);
+                  const links = neighbourhoods.length > 0 ? neighbourhoods : related;
+                  if (links.length === 0) return null;
+                  return (
                   <div className="mt-4">
                     <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
-                      Neighbourhood Guides
+                      {neighbourhoods.length > 0 ? "Neighbourhood Guides" : "Nearby Neighbourhood Guides"}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {siteConfig.kampungPages
-                        .filter((k) => k.parentSlug === slug)
-                        .map((k) => (
+                      {links.map((k) => (
                           <NextLink
-                            key={k.slug}
-                            href={`/areas/${slug}/${k.slug}`}
+                            key={`${k.parentSlug}-${k.slug}`}
+                            href={k.href}
                             className="inline-flex items-center gap-1 text-xs font-black text-sky-600 hover:text-sky-800 underline"
                           >
-                            Aircond Service {k.name}
+                            {k.label}
                           </NextLink>
                         ))}
                     </div>
                   </div>
-                )}
+                  );
+                })()}
 
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <BookingButton serviceName={`Aircond Service ${area.name}`} size="lg" />
@@ -1002,33 +974,39 @@ export default async function AreaPage({
               </NextLink>
             </div>
 
-            {siteConfig.kampungPages?.filter((k) => k.parentSlug === slug).length > 0 && (
+            {(() => {
+              const neighbourhoods = getAreaNeighbourhoodLinks(slug, "en");
+              const related = neighbourhoods.length >= 4 ? [] : getRelatedNeighbourhoodLinks(slug, "en", 10);
+              const links = neighbourhoods.length > 0 ? neighbourhoods : related;
+              if (links.length === 0) return null;
+              return (
               <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
-                  Neighbourhoods in {area.name}
+                  {neighbourhoods.length > 0 ? `Neighbourhoods in ${area.name}` : `Nearby neighbourhoods for ${area.name}`}
                 </p>
                 <h3 className="text-base font-black text-slate-900">
-                  More local area pages under {area.name}
+                  {neighbourhoods.length > 0
+                    ? `More local area pages under ${area.name}`
+                    : `Useful nearby community pages around ${area.name}`}
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                   These neighbourhood pages strengthen local coverage and help residents in smaller communities find the most relevant service page faster.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {siteConfig.kampungPages
-                    .filter((k) => k.parentSlug === slug)
-                    .map((k) => (
+                  {links.map((k) => (
                       <NextLink
-                        key={k.slug}
-                        href={`/areas/${slug}/${k.slug}`}
+                        key={`${k.parentSlug}-${k.slug}`}
+                        href={k.href}
                         className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700"
                       >
-                        Aircond Service {k.name}
+                        {k.label}
                         <FiArrowRight className="h-3 w-3 text-sky-400" />
                       </NextLink>
                     ))}
                 </div>
               </div>
-            )}
+              );
+            })()}
           </Reveal>
         </div>
       </section>
