@@ -465,13 +465,6 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
         description: lang === "ms" ? "1.5 tahun pengalaman dalam servis aircond" : lang === "zh" ? "1.5 年冷气服务经验" : "1.5 years experience in aircond servicing",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(googlePlace.averageRating),
-      reviewCount: String(googlePlace.totalReviews),
-      bestRating: "5",
-      worstRating: "1",
-    },
   };
 
   const breadcrumbSchema = {
