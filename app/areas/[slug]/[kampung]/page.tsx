@@ -88,12 +88,6 @@ export default async function KampungPage({
     address: { "@type": "PostalAddress", addressLocality: k.name, addressRegion: k.state, addressCountry: "MY" },
     geo: { "@type": "GeoCoordinates", latitude: k.lat, longitude: k.lng },
     areaServed: { "@type": "Place", name: k.name, containedInPlace: { "@type": "City", name: parentArea?.name } },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.reviewRating,
-      reviewCount: siteConfig.reviewCount,
-      bestRating: 5,
-    },
   };
 
   const breadcrumbSchema = {
