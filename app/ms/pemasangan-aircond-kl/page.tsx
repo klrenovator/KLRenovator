@@ -336,7 +336,7 @@ export default function PemasanganAircondKLPage() {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <p className={eyebrow()}>Kepakaran Pemasangan Jenama</p>
               <h2 className="mt-3"><span className={title({ size: "sm" })}>Kami Pasang Semua </span><span className={title({ size: "sm", color: "brand" })}>20 Jenama Utama</span></h2>
-              <p className="mt-4 text-slate-600 font-medium">Daripada split Daikin kompatibel VRV ke unit dinding inverter Midea — juruteknik kami kenal setiap keunikan jenama, spesifikasi tork, dan prosedur komisen.</p>
+              <p className="mt-4 text-slate-600 font-medium">Daripada sistem multi-split inverter Daikin ke unit dinding Midea — juruteknik kami kenal setiap keunikan jenama, spesifikasi tork, dan prosedur komisen.</p>
             </div>
           </Reveal>
           <Reveal delay={100}>
