@@ -78,7 +78,7 @@ const SOURCE_LABEL: Record<Lang, string> = {
   zh: "了解更多 →",
 };
 
-function FaqItem({ q, a, source }: { q: string; a: string; source?: string }) {
+function FaqItem({ q, a, source, lang = "en" }: { q: string; a: string; source?: string; lang?: Lang }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-slate-100 last:border-0">
@@ -99,7 +99,7 @@ function FaqItem({ q, a, source }: { q: string; a: string; source?: string }) {
             href={source}
             className="inline-block mt-2 text-xs font-bold text-sky-600 hover:text-sky-800 transition-colors"
           >
-            {SOURCE_LABEL["en"]} {source.replace("/", "").replace(/-/g, " ")}
+            {SOURCE_LABEL[lang]} {source.replace("/", "").replace(/-/g, " ")}
           </a>
         )}
       </div>
@@ -236,7 +236,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
             <div className="bg-amber-50 rounded-2xl border border-amber-100 px-6 sm:px-8">
               {mostAsked.map((faq, i) => (
                 <Reveal key={i} delay={i * 30}>
-                  <FaqItem q={faq.q} a={faq.a} source={faq.source} />
+                  <FaqItem q={faq.q} a={faq.a} source={faq.source} lang={lang} />
                 </Reveal>
               ))}
             </div>
@@ -268,7 +268,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
             <div className="bg-white rounded-2xl border border-slate-100 shadow-sm px-6 sm:px-8 divide-y divide-slate-100">
               {displayFaqs.map((faq, i) => (
                 <Reveal key={`${faq.category}-${i}`} delay={Math.min(i * 15, 300)}>
-                  <FaqItem q={faq.q} a={faq.a} source={faq.source} />
+                  <FaqItem q={faq.q} a={faq.a} source={faq.source} lang={lang} />
                 </Reveal>
               ))}
             </div>
