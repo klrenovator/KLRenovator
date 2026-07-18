@@ -110,13 +110,6 @@ export default async function AreaPageZH({
       ...buildAreaServedSchema(),
       buildServiceAreaGeoCircle(),
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.reviewRating,
-      reviewCount: siteConfig.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
     priceRange: "RM 88 – RM 2,000",
     currenciesAccepted: "MYR",
   };
