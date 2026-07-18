@@ -20,6 +20,10 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 604800,
   },
+  experimental: {
+    cpus: 1,
+    workerThreads: false,
+  },
   // ✅ Force non-www to www redirect (application-level)
   // ✅ PLUS Malay URL slug aliases — Round 13 / 20F.51 (Decision Locked 2026-07-06):
   // Friendly /servis/* Malay short-URLs permanently 301 to the canonical
