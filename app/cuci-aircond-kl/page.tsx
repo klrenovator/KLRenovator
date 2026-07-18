@@ -18,11 +18,11 @@ const waMsg = "Hi KL Renovator, I'd like to book Aircond Chemical Wash KL. My lo
 const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
-  title: buildFreshMetaTitle("Aircond Chemical Wash KL & Selangor 2026 — From RM120 | KL Renovator", "en"),
-  description: "Aircond chemical wash KL & Selangor — RM120. Same-day KL Renovator. 500+ 5-star Google reviews. Fix smell, leaking & weak cooling. WhatsApp +60182983573.",
+  title: buildFreshMetaTitle("Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator", "en"),
+  description: "Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. 500+ 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573.",
   alternates: buildTrilingualHreflang("/cuci-aircond-kl"),
   openGraph: {
-    title: buildFreshMetaTitle("Aircond Chemical Wash KL — RM120 | KL Renovator", "en"),
+    title: buildFreshMetaTitle("Cuci Aircond KL — RM120 | KL Renovator", "en"),
     url: "https://www.klrenovator.com/cuci-aircond-kl",
     images: getServiceOGImages("chemical-wash", "en"),
     locale: "en_MY",
