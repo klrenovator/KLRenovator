@@ -337,7 +337,7 @@ export default function AircondInstallationKLPage() {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <p className={eyebrow()}>Brand Installation Expertise</p>
               <h2 className="mt-3"><span className={title({ size: "sm" })}>We Install All </span><span className={title({ size: "sm", color: "brand" })}>20 Major Brands</span></h2>
-              <p className="mt-4 text-slate-600 font-medium">From Daikin VRV-compatible splits to Midea inverter wall units — our technicians know every brand's quirks, torque specs, and commissioning procedures.</p>
+              <p className="mt-4 text-slate-600 font-medium">From Daikin inverter multi-split systems to Midea wall-mounted units — our technicians know every brand's quirks, torque specs, and commissioning procedures.</p>
             </div>
           </Reveal>
           <Reveal delay={100}>
