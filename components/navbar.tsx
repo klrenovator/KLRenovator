@@ -195,7 +195,7 @@ export const Navbar = () => {
             sizes="(max-width: 768px) 224px, 256px"
             loading="eager"
             decoding="async"
-            fetchPriority="low"
+            fetchPriority="high"
             className="object-contain object-left"
           />
         </NextLink>
