@@ -336,7 +336,7 @@ export default function AircondInstallationKLZHPage() {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <p className={eyebrow()}>品牌安装专长</p>
               <h2 className="mt-3"><span className={title({ size: "sm" })}>我们安装全部 </span><span className={title({ size: "sm", color: "brand" })}>20大主流品牌</span></h2>
-              <p className="mt-4 text-slate-600 font-medium">从大金VRV兼容分体机到美的变频挂机 — 技师熟知每个品牌的特性、扭矩规格、调试流程。</p>
+              <p className="mt-4 text-slate-600 font-medium">从大金变频多联机到美的壁挂式冷气 — 技师熟知每个品牌的特性、扭矩规格、调试流程。</p>
             </div>
           </Reveal>
           <Reveal delay={100}>
