@@ -789,7 +789,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Safe, scaffold-assisted access for high-ceiling retail & warehouse units",
       "Night & Weekend scheduling available to avoid business hour disruption",
       "Volume-based pricing for multi-unit corporate maintenance contracts",
-      "Expertise across Daikin VRV-S, Mitsubishi Electric, and York commercial lines",
+      "Expertise across Daikin commercial multi-split, Mitsubishi Electric, and York commercial lines",
     ],
     process: [
       { step: "Safe Ceiling Access", desc: "Technician sets up ladder or scaffold with stabiliser. Drop sheets cover floor, furniture, and workstations below. Ceiling cassette panel carefully unclipped and lowered \u2014 these panels are heavy (10\u201315 kg) and require proper handling to avoid damaging the ceiling grid." },
@@ -1005,7 +1005,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "emergency": {
     slug: "emergency",
     title: "Emergency Aircond Repair",
-    tagline: "Same-day emergency response for complete breakdowns, heavy water leaks, outdoor unit failure, and urgent repairs across KL & Selangor.",
+    tagline: "Same-day rapid emergency response for complete breakdowns, heavy water leaks, outdoor unit failures, electrical faults, and urgent repairs across KL & Selangor.",
     description:
       "Your aircond just died at 11pm, the room is 32°C, and you have a presentation at 8am. Or water is dripping onto your TV cabinet and you cannot switch off the unit because the house has no other cooling. This is not a \"book for next Tuesday\" situation — this is when you WhatsApp KL Renovator immediately. We dispatch trained HVAC technicians same-day across all 50+ Klang Valley suburbs within 30–60 minutes of confirmation. The RM 88 diagnostic fee is fully waived if the repair is completed same visit. Our vans carry common spare parts — capacitors, fan motors, PCB boards, sensors, contactors, drain hoses, refrigerant — so most emergencies are fully resolved in the first visit, not just patched temporarily.",
     startPrice: "RM 88",

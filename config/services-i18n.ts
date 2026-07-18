@@ -566,9 +566,9 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     titleMS: "Pembaikan Aircond Kecemasan",
     titleZH: "紧急冷气维修",
     taglineMS:
-      "Tindak balas kecemasan hari sama untuk kerosakan sepenuhnya, kebocoran air teruk, kegagalan unit luar, dan pembaikan segera di seluruh KL & Selangor.",
+      "Tindak balas kecemasan pantas hari sama untuk kerosakan aircond sepenuhnya, kebocoran air teruk, kegagalan unit luar, litar pintas elektrik, dan pembaikan segera di seluruh KL & Selangor.",
     taglineZH:
-      "全天紧急响应，涵盖完全故障、严重漏水、室外机故障及吉隆坡和雪兰莪各地的紧急维修。",
+      "全天快速紧急响应服务，涵盖冷气完全故障、严重漏水、室外机故障、电路跳闸及吉隆坡和雪兰莪各地的即时上门维修。",
     descriptionMS:
       "Aircond anda baru sahaja rosak jam 11 malam, suhu bilik 32°C, dan anda ada pembentangan jam 8 pagi. Atau air menitis ke atas kabinet TV dan anda tidak boleh mematikan unit kerana tiada penyejukan lain di rumah. Ini bukan situasi \"tempah untuk Selasa depan\" — ini masa untuk WhatsApp KL Renovator serta-merta. Kami menghantar juruteknik HVAC terlatih hari sama ke semua 50+ subbandar Klang Valley dalam masa 30–60 minit selepas pengesahan. Caj diagnostik RM 88 dikecualikan sepenuhnya jika pembaikan diselesaikan pada lawatan yang sama. Van kami membawa alat ganti biasa — kapasitor, motor kipas, papan PCB, sensor, kontaktor, hos longkang, bahan pendingin — jadi kebanyakan kecemasan diselesaikan sepenuhnya dalam lawatan pertama, bukan hanya ditampal sementara.",
     descriptionZH:

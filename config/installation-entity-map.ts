@@ -345,8 +345,8 @@ export const installationEntities: Record<string, InstallationEntity> = {
   DaikinBrand: {
     name: "Daikin",
     type: "Brand",
-    description: "Japanese market leader. VRV/VRF pioneer. Residential: FTXS, FTXZ, FTXM series. Known for reliability, high CSPF (5.0+), and proprietary Daikin Eye service app. R32 across range.",
-    aliases: ["Daikin AC", "Daikin aircon", "Daikin inverter", "Daikin VRV"],
+    description: "Japanese market leader. Inverter multi-split pioneer. Residential: FTXS, FTXZ, FTXM series. Known for reliability, high CSPF (5.0+), and proprietary Daikin Eye service app. R32 across range.",
+    aliases: ["Daikin AC", "Daikin aircon", "Daikin inverter"],
     whereToAppear: ["brand-pages", "comparison-posts", "installation-pages", "pricing-guide"],
     relatedEntities: ["RefrigerantR32", "InverterTechnology", "EnergyEfficiencySEER", "SplitAirConditioner", "CeilingCassette", "ManufacturerWarranty"],
   },
@@ -501,7 +501,7 @@ export const entityPhrases = {
   mouldHealth: "Malaysia's humidity makes mould on AC coils a real health concern — spores circulate every time the fan runs. Annual chemical wash is preventive health care.",
 
   // Brands
-  daikinExpertise: "Daikin VRV/VRF heritage translates to reliable residential splits (FTXS, FTXM, FTXZ). R32 across range. Daikin Eye app for service history.",
+  daikinExpertise: "Daikin multi-zone inverter heritage translates to reliable residential splits (FTXS, FTXM, FTXZ). R32 across range. Daikin Eye app for service history.",
   panasonicExpertise: "Panasonic nanoe™ X purifies air while cooling — inhibits bacteria/viruses. CS/XU series popular. Good parts availability in Malaysia.",
   mitsubishiExpertise: "Mitsubishi Electric MSZ-LN (Kirigamine) with 3D i-see sensor — premium positioning. Excellent heating for rare cold snaps.",
   mideaExpertise: "World's largest AC OEM. MS11/MS12 series — value-for-money with decent specs. Rising Malaysia market share. R32 across range.",

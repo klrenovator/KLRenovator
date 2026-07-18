@@ -7509,7 +7509,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Unit Types</strong></td>
             <td>Wall-mounted split units, window units. Typically 1–5 units per home.</td>
-            <td>Ceiling cassette, ducted (concealed), floor standing, VRF multi-Split systems. Often 5–50+ units.</td>
+            <td>Ceiling cassette, ducted (concealed), floor standing, multi-zone commercial systems. Often 5–50+ units.</td>
           </tr>
           <tr>
             <td><strong>Operating Hours</strong></td>
@@ -7529,7 +7529,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Technician Expertise</strong></td>
             <td>Standard residential HVAC training. Basic to intermediate troubleshooting.</td>
-            <td>Advanced commercial HVAC certification. Refrigerant handling license, electrical systems knowledge, VRF/ducting experience.</td>
+            <td>Advanced commercial HVAC certification. Refrigerant handling license, electrical systems knowledge, commercial multi-zone/ducting experience.</td>
           </tr>
           <tr>
             <td><strong>Service Complexity</strong></td>
@@ -7554,7 +7554,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li><strong>Your office has 5 or more aircond units</strong> operating during business hours</li>
         <li><strong>You operate a retail shop, restaurant, or café</strong> where customer comfort directly affects revenue</li>
-        <li><strong>You have ceiling cassette, ducted, or VRF/VRV systems</strong> that require specialized maintenance</li>
+        <li><strong>You have ceiling cassette, ducted, or multi-zone commercial systems</strong> that require specialized maintenance</li>
         <li><strong>Your business requires compliance documentation</strong> for insurance or regulatory purposes</li>
         <li><strong>You need after-hours service</strong> to avoid disrupting operations during business hours</li>
         <li><strong>Your landlord or property management requires AMC</strong> with documented service records</li>
@@ -7602,7 +7602,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Jenis Unit</strong></td>
             <td>Unit split dinding, unit tingkap. Biasanya 1–5 unit setiap rumah.</td>
-            <td>Ceiling cassette, berpaip (tersorok), lantai berdiri, sistem VRF multi-Split. Sering 5–50+ unit.</td>
+            <td>Ceiling cassette, berpaip (tersorok), lantai berdiri, sistem komersial pelbagai zon. Sering 5–50+ unit.</td>
           </tr>
           <tr>
             <td><strong>Jam Operasi</strong></td>
@@ -7622,7 +7622,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Kepakaran Juruteknik</strong></td>
             <td>Latihan HVAC kediaman standard. Selesai asas hingga sederhana.</td>
-            <td>Sijil HVAC komersial lanjutan. Lesen pengendalian penyejuk, pengetahuan sistem elektrik, pengalaman VRF/paipan.</td>
+            <td>Sijil HVAC komersial lanjutan. Lesen pengendalian penyejuk, pengetahuan sistem elektrik, pengalaman sistem pelbagai zon komersial/paipan.</td>
           </tr>
           <tr>
             <td><strong>Kerumitan Servis</strong></td>
@@ -7637,7 +7637,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li><strong>Pejabat anda mempunyai 5 atau lebih unit aircond</strong> yang beroperasi semasa waktu pejabat</li>
         <li><strong>Anda mengendalikan kedai runcit, restoran, atau kafe</strong> di mana keselesaan pelanggan secara langsung mempengaruhi hasil</li>
-        <li><strong>Anda mempunyai sistem ceiling cassette, berpaip, atau VRF/VRV</strong> yang memerlukan penyelenggaraan khusus</li>
+        <li><strong>Anda mempunyai sistem ceiling cassette, berpaip, atau sistem komersial pelbagai zon</strong> yang memerlukan penyelenggaraan khusus</li>
         <li><strong>Perniagaan anda memerlukan dokumentasi pematuhan</strong> untuk tujuan insurans atau kawal selia</li>
       </ul>
 
@@ -7681,7 +7681,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>机组类型</strong></td>
             <td>壁挂式分体机、窗机。每个家庭通常 1–5 台机组。</td>
-            <td>天花板卡式、管道（暗装）、立式、VRF 多联机系统。通常 5–50+ 台机组。</td>
+            <td>天花板卡式、管道（暗装）、立式、多联商用系统。通常 5–50+ 台机组。</td>
           </tr>
           <tr>
             <td><strong>运行时间</strong></td>
@@ -7701,7 +7701,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>技术员专业知识</strong></td>
             <td>标准住宅 HVAC 培训。基础到中级故障排除。</td>
-            <td>高级商业 HVAC 认证。冷媒处理执照、电气系统知识、VRF/管道经验。</td>
+            <td>高级商业 HVAC 认证。冷媒处理执照、电气系统知识、商用多联/管道经验。</td>
           </tr>
           <tr>
             <td><strong>服务复杂性</strong></td>
@@ -7716,7 +7716,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li><strong>您的办公室有 5 台或更多冷气机组</strong> 在工作时间运行</li>
         <li><strong>您经营零售店、餐厅或咖啡馆</strong>，客户舒适度直接影响收入</li>
-        <li><strong>您有天花板卡式、管道或 VRF/VRV 系统</strong>，需要专业维护</li>
+        <li><strong>您有天花板卡式、管道或多联商用系统</strong>，需要专业维护</li>
         <li><strong>您的企业需要合规文档</strong> 用于保险或监管目的</li>
       </ul>
 
