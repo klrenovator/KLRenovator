@@ -175,13 +175,6 @@ export default function ContactPage() {
         },
       ],
       priceRange: "RM88 – RM2000",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: String(googlePlace.averageRating),
-        reviewCount: String(googlePlace.totalReviews),
-        bestRating: "5",
-        worstRating: "1",
-      },
     },
   };
 
