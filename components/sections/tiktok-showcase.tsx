@@ -288,34 +288,6 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
 
   const handleAnyPlayed = useCallback(() => setAnyPlayed(true), []);
 
-  const videoSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: TIKTOK_VIDEOS.map((v, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      item: {
-        "@type": "VideoObject",
-        name: captionOf(v, loc),
-        description: `${captionOf(v, loc)} \u2014 KL Renovator real-job video. ${siteConfig.tagline}`,
-        thumbnailUrl: ["https://www.klrenovator.com/logo/image.png"],
-        uploadDate: "2026-07-06",
-        contentUrl: v.url,
-        embedUrl: embedUrlOf(v, loc, false),
-        inLanguage: loc === "ms" ? "ms-MY" : loc === "zh" ? "zh-MY" : "en-MY",
-        publisher: {
-          "@type": "Organization",
-          name: "KL Renovator",
-          url: "https://www.klrenovator.com/",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://www.klrenovator.com/logo/image.png",
-          },
-        },
-      },
-    })),
-  };
-
   const waMsg = loc === "ms"
     ? "Hi KL Renovator, saya nak tempah slot servis aircond."
     : loc === "zh"
@@ -328,10 +300,6 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
       aria-labelledby="tiktok-showcase-title"
       className="bg-slate-50 py-12 sm:py-16 lg:py-20"
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
-      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
