@@ -25,7 +25,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
   const fetchAvailability = async () => {
     try {
-      const res = await fetch(\`/api/bookings/availability?date=\${selectedDate}&duration=\${durationMinutes}\`);
+      const res = await fetch(`/api/bookings/availability?date=${selectedDate}&duration=${durationMinutes}`);
       const data = await res.json();
       if (data.availableSlots) {
         setAvailableSlots(data.availableSlots);
@@ -62,9 +62,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         if (isAdmin) {
           // Generate a WhatsApp link for the admin to send
           const msg = encodeURIComponent(
-            \`Hi \${name}, your booking for \${serviceType} (x\${quantity}) is confirmed on \${new Date(selectedSlot).toLocaleString()}. Please let me know if you need to reschedule.\`
+            `Hi ${name}, your booking for ${serviceType} (x${quantity}) is confirmed on ${new Date(selectedSlot).toLocaleString()}. Please let me know if you need to reschedule.`
           );
-          setGeneratedLink(\`https://wa.me/\${phone.replace(/[^0-9]/g, "")}?text=\${msg}\`);
+          setGeneratedLink(`https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${msg}`);
         }
       } else {
         alert(data.error || "Failed to book");
@@ -178,11 +178,11 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
                   key={slot}
                   type="button"
                   onClick={() => setSelectedSlot(slot)}
-                  className={\`rounded-lg px-2 py-2 text-sm font-medium transition \${
+                  className={`rounded-lg px-2 py-2 text-sm font-medium transition ${
                     selectedSlot === slot
                       ? "bg-sky-600 text-white"
                       : "bg-sky-50 text-sky-700 hover:bg-sky-100"
-                  }\`}
+                  }`}
                 >
                   {new Date(slot).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                 </button>
