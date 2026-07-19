@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { FiX, FiGift } from "react-icons/fi";
-import Link from "next/link";
 import { waLink } from "@/lib/whatsapp";
 
 // 4 Safe zones for drifting (relative to the viewport center)
