@@ -25,10 +25,10 @@ const ScrollDepthCTA = dynamic(
   { ssr: false, loading: () => null },
 );
 
-const FloatingPromoWidgets = dynamic(
+const FloatingOfferButton = dynamic(
   () =>
-    import("@/components/floating-promo-widgets").then(
-      (mod) => mod.FloatingPromoWidgets,
+    import("@/components/floating-offer-button").then(
+      (mod) => mod.FloatingOfferButton,
     ),
   { ssr: false, loading: () => null },
 );
@@ -47,7 +47,7 @@ export function ConversionWidgets() {
       <MobileStickyBar />
       <ExitIntentPopup />
       <ScrollDepthCTA />
-      <FloatingPromoWidgets />
+      <FloatingOfferButton />
     </>
   );
 }
