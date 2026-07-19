@@ -22,22 +22,27 @@ export async function POST(req: Request) {
     const start = new Date(start_time);
     const end = new Date(start.getTime() + calculated_duration_minutes * 60000);
 
-    // Create Calendar Event
-    const eventSummary = `${service_type.toUpperCase()} - ${customer_name}`;
-    const eventDescription = `Phone: ${phone}\\nQuantity: ${quantity}\\nSource: ${source}`;
-    
     let calendar_event_id = null;
     
-    if (process.env.GOOGLE_CALENDAR_ID) {
+    // Google Calendar insertion ko Try/Catch main dala hai, agar fail hua tou database ko fail nahi karega
+    try {
+      if (process.env.GOOGLE_CALENDAR_ID) {
+        const eventSummary = `${service_type.toUpperCase()} - ${customer_name}`;
+        const eventDescription = `Phone: ${phone}\nQuantity: ${quantity}\nSource: ${source}`;
+        
         calendar_event_id = await createCalendarEvent({
-        summary: eventSummary,
-        description: eventDescription,
-        start,
-        end,
+          summary: eventSummary,
+          description: eventDescription,
+          start,
+          end,
         });
+      }
+    } catch (calError) {
+      console.error("Google Calendar Warning:", calError);
+      // We don't throw here, we just proceed to save the booking in Supabase without a calendar ID
     }
 
-    // Insert into Supabase
+    // Insert into Supabase (Sirf iski buniyad per pass/fail hoga)
     const { data: booking, error } = await supabaseAdmin
       .from("bookings")
       .insert([
@@ -57,13 +62,13 @@ export async function POST(req: Request) {
       .single();
 
     if (error) {
-      console.error("Supabase Error:", error);
-      return NextResponse.json({ error: "Failed to save booking" }, { status: 500 });
+      console.error("Supabase Database Error:", error);
+      return NextResponse.json({ error: `DB Error: ${error.message}` }, { status: 500 });
     }
 
     return NextResponse.json({ booking });
   } catch (error) {
-    console.error("Booking API Error:", error);
-    return NextResponse.json({ error: "Failed to create booking" }, { status: 500 });
+    console.error("Booking API Fatal Error:", error);
+    return NextResponse.json({ error: "System failed to process booking" }, { status: 500 });
   }
 }
