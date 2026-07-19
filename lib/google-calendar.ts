@@ -10,12 +10,11 @@ const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 export function getCalendarClient() {
   const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n");
   
-  const auth = new google.auth.JWT(
-    process.env.GOOGLE_CLIENT_EMAIL,
-    undefined,
-    privateKey,
-    SCOPES
-  );
+  const auth = new google.auth.JWT({
+    email: process.env.GOOGLE_CLIENT_EMAIL,
+    key: privateKey,
+    scopes: SCOPES,
+  });
 
   return google.calendar({ version: "v3", auth });
 }
