@@ -5,10 +5,12 @@ export const SERVICE_DURATION_RULES = {
   repair: 2,
 };
 
-// Business hours
-export const BUSINESS_HOURS = {
-  start: 9, // 9:00 AM
-  end: 18, // 6:00 PM
+// Booking hours shown to customer on the website
+// Office opens at 9, but online slots start at 10 AM.
+// System will ensure the final job ends exactly at or before 6 PM (18:00).
+export const BOOKING_HOURS = {
+  start: 10, // 10:00 AM
+  end: 18,   // 6:00 PM
 };
 
 export const MAX_RESCHEDULES = 1;
