@@ -34,15 +34,16 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
   // Content types with full, real multilingual route coverage
   const translatableCategory = /^\/(areas|brands|problems|blog)(\/|$)/;
   if (translatableCategory.test(enPath)) {
-    return target === "en" ? enPath : `/${target}${enPath}`;
+    return target === "en" ? enPath : enPath === "/" ? `/${target}` : `/${target}${enPath}`;
   }
 
   // Standalone static pages that now have dedicated /ms and /zh route files.
   // Add a path here ONLY after its /ms and /zh versions have been created,
   // so the switcher never navigates to a route that doesn't exist.
-  const staticPages = ["/contact", "/services", "/about", "/faq", "/gallery", "/review", "/near-me"];
+  // The homepage "/" is also a static page with dedicated /ms and /zh routes
+  const staticPages = ["/", "/contact", "/services", "/about", "/faq", "/gallery", "/review", "/near-me"];
   if (staticPages.includes(enPath)) {
-    return target === "en" ? enPath : `/${target}${enPath}`;
+    return target === "en" ? enPath : enPath === "/" ? `/${target}` : `/${target}${enPath}`;
   }
 
   // Dynamic service detail pages (/services/<slug>) → real /ms and /zh twins
@@ -96,9 +97,7 @@ export const Navbar = () => {
 
   // Single handler for both desktop and mobile language dropdowns. Navigates
   // to the real /ms/ or /zh/ route when one exists for the current page;
-  // otherwise falls back to the in-place text-swap (setLang), since there's
-  // nowhere real to navigate to on pages like the homepage, about, contact,
-  // FAQ, gallery, or services hub.
+  // otherwise falls back to the in-place text-swap (setLang).
   function handleLangChange(code: LangCode) {
     const translatedPath = getTranslatedPath(pathname, code);
     if (translatedPath && translatedPath !== pathname) {
@@ -143,6 +142,7 @@ export const Navbar = () => {
     { label: lbl.about,    href: "/about" },
     { label: lbl.faq,      href: "/faq" },
     { label: lbl.contact,  href: "/contact" },
+    { label: lbl.book,     href: "/book" },
   ];
 
   return (
