@@ -6,9 +6,9 @@ import { SERVICE_DURATION_RULES } from "@/lib/booking-config";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { customer_name, phone, service_type, quantity, start_time, source = "web" } = body;
+    const { customer_name, phone, address, service_type, aircond_type, quantity, start_time, source = "web" } = body;
 
-    if (!customer_name || !phone || !service_type || !quantity || !start_time) {
+    if (!customer_name || !phone || !address || !service_type || !aircond_type || !quantity || !start_time) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -24,11 +24,11 @@ export async function POST(req: Request) {
 
     let calendar_event_id = null;
     
-    // Google Calendar insertion ko Try/Catch main dala hai, agar fail hua tou database ko fail nahi karega
+    // Google Calendar insertion ko Try/Catch main dala hai
     try {
       if (process.env.GOOGLE_CALENDAR_ID) {
         const eventSummary = `${service_type.toUpperCase()} - ${customer_name}`;
-        const eventDescription = `Phone: ${phone}\nQuantity: ${quantity}\nSource: ${source}`;
+        const eventDescription = `Phone: ${phone}\nAddress: ${address}\nAircond Type: ${aircond_type}\nQuantity: ${quantity}\nSource: ${source}`;
         
         calendar_event_id = await createCalendarEvent({
           summary: eventSummary,
@@ -39,17 +39,18 @@ export async function POST(req: Request) {
       }
     } catch (calError) {
       console.error("Google Calendar Warning:", calError);
-      // We don't throw here, we just proceed to save the booking in Supabase without a calendar ID
     }
 
-    // Insert into Supabase (Sirf iski buniyad per pass/fail hoga)
+    // Insert into Supabase
     const { data: booking, error } = await supabaseAdmin
       .from("bookings")
       .insert([
         {
           customer_name,
           phone,
+          address,
           service_type,
+          aircond_type,
           quantity,
           calculated_duration_minutes,
           start_time: start.toISOString(),
