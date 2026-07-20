@@ -8,7 +8,26 @@ import { google } from "googleapis";
 const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 
 export function getCalendarClient() {
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n");
+  // Robust Private Key Formatting: Handle multiple variations of how Vercel might pass the key
+  let privateKey = process.env.GOOGLE_PRIVATE_KEY || "";
+  
+  // 1. If it was passed with literal "\n" characters, replace them
+  privateKey = privateKey.replace(/\\n/g, "\n");
+  
+  // 2. If it lost its formatting entirely (no spaces or newlines between BEGIN/END tags)
+  if (!privateKey.includes("\n") && privateKey.includes("-----BEGIN PRIVATE KEY-----")) {
+    privateKey = privateKey.replace("-----BEGIN PRIVATE KEY-----", "-----BEGIN PRIVATE KEY-----\n");
+    privateKey = privateKey.replace("-----END PRIVATE KEY-----", "\n-----END PRIVATE KEY-----\n");
+    // Replace spaces inside the base64 part with newlines (often happens if copy-pasted without quotes)
+    const parts = privateKey.split("\n");
+    if (parts.length === 3) {
+      parts[1] = parts[1].replace(/ /g, "\n");
+      privateKey = parts.join("\n");
+    }
+  }
+
+  // 3. Ensure no trailing/leading extra quotes
+  privateKey = privateKey.replace(/^"|"$/g, '').trim();
   
   const auth = new google.auth.JWT({
     email: process.env.GOOGLE_CLIENT_EMAIL,
