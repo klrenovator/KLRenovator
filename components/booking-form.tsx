@@ -9,6 +9,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [address, setAddress] = useState("");
   const [serviceType, setServiceType] = useState<keyof typeof SERVICE_DURATION_RULES>("service");
   const [aircondType, setAircondType] = useState("Wall Mounted");
+  const [aircondSize, setAircondSize] = useState("1.0 HP"); // New Field
   const [quantity, setQuantity] = useState(1);
   const [selectedDate, setSelectedDate] = useState("");
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
@@ -16,6 +17,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
+  const [fetchedOnce, setFetchedOnce] = useState(false);
 
   const durationMinutes = SERVICE_DURATION_RULES[serviceType] * quantity * 60;
 
@@ -34,6 +36,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       } else {
         setAvailableSlots([]);
       }
+      setFetchedOnce(true);
     } catch (error) {
       console.error(error);
     }
@@ -54,6 +57,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           address,
           service_type: serviceType,
           aircond_type: aircondType,
+          aircond_size: aircondSize, // Added HP/Size
           quantity,
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
@@ -64,9 +68,15 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       if (res.ok) {
         setSuccess(true);
         if (isAdmin) {
-          // Generate a WhatsApp link for the admin to send
+          // Format slot time for WhatsApp to 12-Hour AM/PM
+          const slotTime = new Date(selectedSlot).toLocaleTimeString("en-US", {
+            hour: "numeric", minute: "2-digit", hour12: true, timeZone: "Asia/Kuala_Lumpur"
+          });
+          const slotDate = new Date(selectedSlot).toLocaleDateString("en-US", {
+            timeZone: "Asia/Kuala_Lumpur"
+          });
           const msg = encodeURIComponent(
-            `Hi ${name}, your booking for ${serviceType} (${aircondType} x${quantity}) at ${address} is confirmed on ${new Date(selectedSlot).toLocaleString()}. Please let me know if you need to reschedule.`
+            `Hi ${name}, your booking for ${serviceType} (${aircondType} ${aircondSize} x${quantity}) at ${address} is confirmed on ${slotDate} at ${slotTime}. Please let me know if you need to reschedule.`
           );
           setGeneratedLink(`https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${msg}`);
         }
@@ -131,7 +141,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         <label className="block text-sm font-semibold text-slate-700">Full Address</label>
         <textarea
           required
-          rows={3}
+          rows={2}
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
@@ -169,17 +179,35 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-semibold text-slate-700">Quantity</label>
-        <input
-          type="number"
-          min="1"
-          max="10"
-          required
-          value={quantity}
-          onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
-          className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-        />
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-semibold text-slate-700">Aircond Size / HP</label>
+          <select
+            value={aircondSize}
+            onChange={(e) => setAircondSize(e.target.value)}
+            className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          >
+            <option value="1.0 HP">1.0 HP</option>
+            <option value="1.5 HP">1.5 HP</option>
+            <option value="2.0 HP">2.0 HP</option>
+            <option value="2.5 HP">2.5 HP</option>
+            <option value="3.0 HP">3.0 HP</option>
+            <option value="Not Confirmed / Don't Know">Not Confirmed / Don't Know</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-semibold text-slate-700">Quantity</label>
+          <input
+            type="number"
+            min="1"
+            max="10"
+            required
+            value={quantity}
+            onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
+            className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          />
+        </div>
       </div>
 
       <div className="rounded-lg bg-slate-50 p-3 text-sm text-slate-600">
@@ -196,33 +224,46 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           onChange={(e) => {
             setSelectedDate(e.target.value);
             setSelectedSlot("");
+            setFetchedOnce(false);
           }}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
         />
       </div>
 
-      {selectedDate && (
+      {selectedDate && fetchedOnce && (
         <div>
           <label className="block text-sm font-semibold text-slate-700 mb-2">Available Times</label>
           {availableSlots.length > 0 ? (
-            <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto pr-2">
-              {availableSlots.map((slot) => (
-                <button
-                  key={slot}
-                  type="button"
-                  onClick={() => setSelectedSlot(slot)}
-                  className={`rounded-lg px-2 py-2 text-sm font-medium transition ${
-                    selectedSlot === slot
-                      ? "bg-sky-600 text-white"
-                      : "bg-sky-50 text-sky-700 hover:bg-sky-100"
-                  }`}
-                >
-                  {new Date(slot).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                </button>
-              ))}
+            <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
+              {availableSlots.map((slot) => {
+                // Show AM/PM format (e.g., "1:30 PM")
+                const timeStr = new Date(slot).toLocaleTimeString("en-US", {
+                  hour: "numeric",
+                  minute: "2-digit",
+                  hour12: true,
+                  timeZone: "Asia/Kuala_Lumpur",
+                });
+                return (
+                  <button
+                    key={slot}
+                    type="button"
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`rounded-lg px-2 py-2 text-sm font-semibold transition ${
+                      selectedSlot === slot
+                        ? "bg-sky-600 text-white shadow-md"
+                        : "bg-sky-50 text-sky-800 hover:bg-sky-100 border border-sky-100"
+                    }`}
+                  >
+                    {timeStr}
+                  </button>
+                );
+              })}
             </div>
           ) : (
-            <p className="text-sm text-red-500">No slots available for the selected duration on this day.</p>
+            <div className="rounded-lg bg-amber-50 p-3 border border-amber-100 text-amber-800 text-sm">
+              No full slots left to complete a <strong>{durationMinutes / 60} hours</strong> job before 6:00 PM today.
+              Please select another date or WhatsApp us directly.
+            </div>
           )}
         </div>
       )}
@@ -230,7 +271,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       <button
         type="submit"
         disabled={loading || !selectedSlot}
-        className="w-full rounded-lg bg-sky-600 px-4 py-3 font-bold text-white transition hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 disabled:bg-slate-300 disabled:cursor-not-allowed mt-4"
+        className="w-full rounded-lg bg-sky-600 px-4 py-3.5 font-black text-white transition hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 disabled:bg-slate-300 disabled:cursor-not-allowed mt-4 shadow-md"
       >
         {loading ? "Processing..." : "Confirm Booking"}
       </button>
