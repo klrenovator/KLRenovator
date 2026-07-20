@@ -6,7 +6,9 @@ import { SERVICE_DURATION_RULES } from "@/lib/booking-config";
 export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   const [serviceType, setServiceType] = useState<keyof typeof SERVICE_DURATION_RULES>("service");
+  const [aircondType, setAircondType] = useState("Wall Mounted");
   const [quantity, setQuantity] = useState(1);
   const [selectedDate, setSelectedDate] = useState("");
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
@@ -49,7 +51,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         body: JSON.stringify({
           customer_name: name,
           phone,
+          address,
           service_type: serviceType,
+          aircond_type: aircondType,
           quantity,
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
@@ -62,7 +66,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         if (isAdmin) {
           // Generate a WhatsApp link for the admin to send
           const msg = encodeURIComponent(
-            `Hi ${name}, your booking for ${serviceType} (x${quantity}) is confirmed on ${new Date(selectedSlot).toLocaleString()}. Please let me know if you need to reschedule.`
+            `Hi ${name}, your booking for ${serviceType} (${aircondType} x${quantity}) at ${address} is confirmed on ${new Date(selectedSlot).toLocaleString()}. Please let me know if you need to reschedule.`
           );
           setGeneratedLink(`https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${msg}`);
         }
@@ -107,6 +111,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          placeholder="e.g. Ali bin Ahmad"
         />
       </div>
 
@@ -118,6 +123,19 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          placeholder="e.g. 0123456789"
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-semibold text-slate-700">Full Address</label>
+        <textarea
+          required
+          rows={3}
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          placeholder="Enter your full installation or service address"
         />
       </div>
 
@@ -136,17 +154,32 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700">Quantity</label>
-          <input
-            type="number"
-            min="1"
-            max="10"
-            required
-            value={quantity}
-            onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
+          <label className="block text-sm font-semibold text-slate-700">Aircond Type</label>
+          <select
+            value={aircondType}
+            onChange={(e) => setAircondType(e.target.value)}
             className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-          />
+          >
+            <option value="Wall Mounted">Wall Mounted</option>
+            <option value="Ceiling Cassette">Ceiling Cassette</option>
+            <option value="Window Unit">Window Unit</option>
+            <option value="Centralized/Ducted">Centralized/Ducted</option>
+            <option value="Portable">Portable</option>
+          </select>
         </div>
+      </div>
+
+      <div>
+        <label className="block text-sm font-semibold text-slate-700">Quantity</label>
+        <input
+          type="number"
+          min="1"
+          max="10"
+          required
+          value={quantity}
+          onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
+          className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+        />
       </div>
 
       <div className="rounded-lg bg-slate-50 p-3 text-sm text-slate-600">
