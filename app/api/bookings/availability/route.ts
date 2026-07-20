@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getBusySlots } from "@/lib/google-calendar";
-import { BUSINESS_HOURS } from "@/lib/booking-config";
+import { BOOKING_HOURS } from "@/lib/booking-config";
 
 export async function GET(req: Request) {
   try {
@@ -13,25 +13,25 @@ export async function GET(req: Request) {
     }
 
     const durationMinutes = parseInt(durationParam, 10);
-    const requestedDate = new Date(dateParam);
     
-    // Set time range for the given day
-    const startOfDay = new Date(requestedDate);
-    startOfDay.setHours(BUSINESS_HOURS.start, 0, 0, 0);
-    
-    const endOfDay = new Date(requestedDate);
-    endOfDay.setHours(BUSINESS_HOURS.end, 0, 0, 0);
+    // Convert YYYY-MM-DD to Malaysia Timezone strictly (+08:00)
+    const dateStr = dateParam.split("T")[0];
+    const startHourStr = BOOKING_HOURS.start.toString().padStart(2, "0");
+    const endHourStr = BOOKING_HOURS.end.toString().padStart(2, "0");
+
+    const startMyt = new Date(`${dateStr}T${startHourStr}:00:00+08:00`);
+    const endMyt = new Date(`${dateStr}T${endHourStr}:00:00+08:00`);
 
     // Fetch busy slots from Google Calendar
-    const busySlots = await getBusySlots(startOfDay, endOfDay);
+    const busySlots = await getBusySlots(startMyt, endMyt);
 
-    // Generate possible slots (e.g. every 30 mins)
     const availableSlots = [];
     const slotIntervalMinutes = 30;
     
-    let currentSlot = new Date(startOfDay);
+    let currentSlot = new Date(startMyt);
     
-    while (currentSlot.getTime() + durationMinutes * 60000 <= endOfDay.getTime()) {
+    // Condition: The job MUST FINISH before or exactly at the 'endMyt' (6:00 PM)
+    while (currentSlot.getTime() + durationMinutes * 60000 <= endMyt.getTime()) {
       const slotEnd = new Date(currentSlot.getTime() + durationMinutes * 60000);
       
       // Check for overlap with busy slots
@@ -39,7 +39,7 @@ export async function GET(req: Request) {
         const busyStart = new Date(busy.start).getTime();
         const busyEnd = new Date(busy.end).getTime();
         
-        // Overlap condition
+        // Overlap condition: slot starts before busy ends AND slot ends after busy starts
         return currentSlot.getTime() < busyEnd && slotEnd.getTime() > busyStart;
       });
       
