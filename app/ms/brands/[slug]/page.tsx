@@ -635,7 +635,7 @@ export default async function BrandPageMS({
                 </NextLink>
               ))}
               <NextLink
-                href="/brands"
+                href="/ms/brands"
                 className="inline-flex items-center gap-1.5 border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-black text-sky-700 hover:bg-sky-100 transition rounded-xl"
               >
                 Semua Jenama <FiArrowRight className="h-3 w-3" />
