@@ -19,8 +19,15 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [generatedLink, setGeneratedLink] = useState("");
   const [fetchedOnce, setFetchedOnce] = useState(false);
 
-  // Total actual duration
-  const totalDurationMinutes = calculateDurationMinutes(serviceType, aircondType, quantity);
+  // Admin manual override
+  const [manualHours, setManualHours] = useState("");
+
+  // Calculations
+  const baseDurationMinutes = calculateDurationMinutes(serviceType, aircondType, quantity);
+  const totalDurationMinutes = isAdmin && manualHours !== "" && !isNaN(parseFloat(manualHours))
+    ? parseFloat(manualHours) * 60
+    : baseDurationMinutes;
+    
   // Cap API slot finder to max 8 hours (480 mins) so it fits in a single day
   const apiDurationMinutes = Math.min(totalDurationMinutes, 480);
   
@@ -164,7 +171,11 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           <label className="block text-sm font-semibold text-slate-700">Service Type</label>
           <select
             value={serviceType}
-            onChange={(e) => setServiceType(e.target.value)}
+            onChange={(e) => {
+              setServiceType(e.target.value);
+              setFetchedOnce(false);
+              setSelectedSlot("");
+            }}
             className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           >
             <option value="service">Aircond Service</option>
@@ -173,6 +184,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
             <option value="gas_top_up">Gas Top Up</option>
             <option value="dismantle">Dismantle</option>
             <option value="relocate">Relocate</option>
+            <option value="conceal_piping">Copper Pipe & Wiring (Conceal/Surface)</option>
           </select>
         </div>
 
@@ -180,7 +192,11 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           <label className="block text-sm font-semibold text-slate-700">Aircond Type</label>
           <select
             value={aircondType}
-            onChange={(e) => setAircondType(e.target.value)}
+            onChange={(e) => {
+              setAircondType(e.target.value);
+              setFetchedOnce(false);
+              setSelectedSlot("");
+            }}
             className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           >
             <option value="Wall Mounted">Wall Mounted</option>
@@ -217,11 +233,35 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
             max="10"
             required
             value={quantity}
-            onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
+            onChange={(e) => {
+              setQuantity(parseInt(e.target.value, 10));
+              setFetchedOnce(false);
+              setSelectedSlot("");
+            }}
             className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           />
         </div>
       </div>
+
+      {isAdmin && (
+        <div className="rounded-lg bg-red-50 p-4 border border-red-200">
+          <label className="block text-sm font-bold text-red-700">Admin Override: Custom Duration (Hours)</label>
+          <p className="text-xs text-red-600 mb-2">Leave blank to use standard system calculation ({baseDurationMinutes / 60} hrs).</p>
+          <input
+            type="number"
+            step="0.5"
+            min="0.5"
+            value={manualHours}
+            onChange={(e) => {
+              setManualHours(e.target.value);
+              setFetchedOnce(false);
+              setSelectedSlot("");
+            }}
+            placeholder={`Default: ${baseDurationMinutes / 60} hours`}
+            className="block w-full rounded-md border border-red-300 px-3 py-2 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
+          />
+        </div>
+      )}
 
       <div className="rounded-lg bg-slate-50 p-3 text-sm text-slate-600">
         Estimated Time: <span className="font-semibold text-slate-900">{totalHours} hours</span>
