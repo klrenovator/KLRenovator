@@ -6,9 +6,19 @@ import { SERVICE_DURATION_RULES } from "@/lib/booking-config";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { customer_name, phone, address, service_type, aircond_type, quantity, start_time, source = "web" } = body;
+    const { 
+      customer_name, 
+      phone, 
+      address, 
+      service_type, 
+      aircond_type, 
+      aircond_size, // New Field
+      quantity, 
+      start_time, 
+      source = "web" 
+    } = body;
 
-    if (!customer_name || !phone || !address || !service_type || !aircond_type || !quantity || !start_time) {
+    if (!customer_name || !phone || !address || !service_type || !aircond_type || !aircond_size || !quantity || !start_time) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -28,7 +38,7 @@ export async function POST(req: Request) {
     try {
       if (process.env.GOOGLE_CALENDAR_ID) {
         const eventSummary = `${service_type.toUpperCase()} - ${customer_name}`;
-        const eventDescription = `Phone: ${phone}\nAddress: ${address}\nAircond Type: ${aircond_type}\nQuantity: ${quantity}\nSource: ${source}`;
+        const eventDescription = `Phone: ${phone}\nAddress: ${address}\nAircond Type: ${aircond_type}\nSize (HP): ${aircond_size}\nQuantity: ${quantity}\nSource: ${source}`;
         
         calendar_event_id = await createCalendarEvent({
           summary: eventSummary,
@@ -51,6 +61,7 @@ export async function POST(req: Request) {
           address,
           service_type,
           aircond_type,
+          aircond_size,
           quantity,
           calculated_duration_minutes,
           start_time: start.toISOString(),
