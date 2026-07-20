@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { SERVICE_DURATION_RULES } from "@/lib/booking-config";
+import { calculateDurationMinutes } from "@/lib/booking-config";
 
 export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [serviceType, setServiceType] = useState<keyof typeof SERVICE_DURATION_RULES>("service");
+  const [serviceType, setServiceType] = useState("service");
   const [aircondType, setAircondType] = useState("Wall Mounted");
-  const [aircondSize, setAircondSize] = useState("1.0 HP"); // New Field
+  const [aircondSize, setAircondSize] = useState("1.0 HP");
   const [quantity, setQuantity] = useState(1);
   const [selectedDate, setSelectedDate] = useState("");
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
@@ -19,17 +19,23 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [generatedLink, setGeneratedLink] = useState("");
   const [fetchedOnce, setFetchedOnce] = useState(false);
 
-  const durationMinutes = SERVICE_DURATION_RULES[serviceType] * quantity * 60;
+  // Total actual duration
+  const totalDurationMinutes = calculateDurationMinutes(serviceType, aircondType, quantity);
+  // Cap API slot finder to max 8 hours (480 mins) so it fits in a single day
+  const apiDurationMinutes = Math.min(totalDurationMinutes, 480);
+  
+  const totalHours = (totalDurationMinutes / 60).toFixed(1);
+  const daysRequired = Math.ceil(totalDurationMinutes / 480);
 
   useEffect(() => {
     if (selectedDate) {
       fetchAvailability();
     }
-  }, [selectedDate, durationMinutes]);
+  }, [selectedDate, apiDurationMinutes]);
 
   const fetchAvailability = async () => {
     try {
-      const res = await fetch(`/api/bookings/availability?date=${selectedDate}&duration=${durationMinutes}`);
+      const res = await fetch(`/api/bookings/availability?date=${selectedDate}&duration=${apiDurationMinutes}`);
       const data = await res.json();
       if (data.availableSlots) {
         setAvailableSlots(data.availableSlots);
@@ -57,7 +63,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           address,
           service_type: serviceType,
           aircond_type: aircondType,
-          aircond_size: aircondSize, // Added HP/Size
+          aircond_size: aircondSize,
           quantity,
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
@@ -68,16 +74,20 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       if (res.ok) {
         setSuccess(true);
         if (isAdmin) {
-          // Format slot time for WhatsApp to 12-Hour AM/PM
           const slotTime = new Date(selectedSlot).toLocaleTimeString("en-US", {
             hour: "numeric", minute: "2-digit", hour12: true, timeZone: "Asia/Kuala_Lumpur"
           });
           const slotDate = new Date(selectedSlot).toLocaleDateString("en-US", {
             timeZone: "Asia/Kuala_Lumpur"
           });
-          const msg = encodeURIComponent(
-            `Hi ${name}, your booking for ${serviceType} (${aircondType} ${aircondSize} x${quantity}) at ${address} is confirmed on ${slotDate} at ${slotTime}. Please let me know if you need to reschedule.`
-          );
+          
+          let msgText = `Hi ${name}, your booking for ${serviceType.replace(/_/g, " ")} (${aircondType} ${aircondSize} x${quantity}) at ${address} is confirmed on ${slotDate} at ${slotTime}.`;
+          
+          if (daysRequired > 1) {
+            msgText += `\n\nNote: As this is a large job, it will take ${daysRequired} days. The selected date is Day 1. Our team will coordinate the rest of the schedule with you.`;
+          }
+          
+          const msg = encodeURIComponent(msgText);
           setGeneratedLink(`https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${msg}`);
         }
       } else {
@@ -154,12 +164,15 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           <label className="block text-sm font-semibold text-slate-700">Service Type</label>
           <select
             value={serviceType}
-            onChange={(e) => setServiceType(e.target.value as keyof typeof SERVICE_DURATION_RULES)}
+            onChange={(e) => setServiceType(e.target.value)}
             className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           >
             <option value="service">Aircond Service</option>
             <option value="installation">Aircond Installation</option>
             <option value="repair">Repair</option>
+            <option value="gas_top_up">Gas Top Up</option>
+            <option value="dismantle">Dismantle</option>
+            <option value="relocate">Relocate</option>
           </select>
         </div>
 
@@ -211,8 +224,16 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       </div>
 
       <div className="rounded-lg bg-slate-50 p-3 text-sm text-slate-600">
-        Calculated Duration: <span className="font-semibold text-slate-900">{durationMinutes / 60} hours</span>
+        Estimated Time: <span className="font-semibold text-slate-900">{totalHours} hours</span>
       </div>
+
+      {/* Multi-day Alert */}
+      {totalDurationMinutes > 480 && (
+        <div className="rounded-lg bg-amber-50 p-3 text-sm text-amber-900 border border-amber-200 shadow-sm leading-relaxed">
+          <span className="font-bold text-amber-900">Important Note:</span> This job is large and requires <strong>{daysRequired} days</strong> to complete. 
+          The time you select below will be booked as <strong>Day 1</strong>. Our team will coordinate the rest of the schedule with you.
+        </div>
+      )}
 
       <div>
         <label className="block text-sm font-semibold text-slate-700">Select Date</label>
@@ -236,7 +257,6 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           {availableSlots.length > 0 ? (
             <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
               {availableSlots.map((slot) => {
-                // Show AM/PM format (e.g., "1:30 PM")
                 const timeStr = new Date(slot).toLocaleTimeString("en-US", {
                   hour: "numeric",
                   minute: "2-digit",
@@ -260,9 +280,8 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
               })}
             </div>
           ) : (
-            <div className="rounded-lg bg-amber-50 p-3 border border-amber-100 text-amber-800 text-sm">
-              No full slots left to complete a <strong>{durationMinutes / 60} hours</strong> job before 6:00 PM today.
-              Please select another date or WhatsApp us directly.
+            <div className="rounded-lg bg-red-50 p-3 border border-red-100 text-red-800 text-sm">
+              Not enough time left today to start this job before 6:00 PM. Please select another date.
             </div>
           )}
         </div>
