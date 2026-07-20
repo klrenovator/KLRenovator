@@ -142,7 +142,6 @@ export const Navbar = () => {
     { label: lbl.about,    href: "/about" },
     { label: lbl.faq,      href: "/faq" },
     { label: lbl.contact,  href: "/contact" },
-    { label: lbl.book,     href: "/book" },
   ];
 
   return (

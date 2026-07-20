@@ -25,6 +25,14 @@ const ScrollDepthCTA = dynamic(
   { ssr: false, loading: () => null },
 );
 
+const FloatingBookingButton = dynamic(
+  () =>
+    import("@/components/floating-booking-button").then(
+      (mod) => mod.FloatingBookingButton,
+    ),
+  { ssr: false, loading: () => null },
+);
+
 const FloatingOfferButton = dynamic(
   () =>
     import("@/components/floating-offer-button").then(
@@ -48,6 +56,7 @@ export function ConversionWidgets() {
       <ExitIntentPopup />
       <ScrollDepthCTA />
       <FloatingOfferButton />
+      <FloatingBookingButton />
     </>
   );
 }
