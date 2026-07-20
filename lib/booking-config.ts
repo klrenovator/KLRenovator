@@ -24,6 +24,8 @@ export function calculateDurationMinutes(serviceType: string, aircondType: strin
     }
   } else if (serviceType === "repair") {
     minsPerUnit = 120; // 2 hours
+  } else if (serviceType === "conceal_piping") {
+    minsPerUnit = 150; // 2.5 hours per unit
   } else {
     // service, gas_top_up, dismantle = 1.5 hours per unit (Including Ceiling Cassette)
     minsPerUnit = 90;
