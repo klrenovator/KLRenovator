@@ -21,7 +21,7 @@ export const translations = {
     services_residential: "Residential Services", services_commercial: "Commercial HVAC",
     services_from: "From", services_book: "Book This Service",
     why_eyebrow: "Why KL Renovator", why_title1: "Trusted by ", why_title2: "5,000+ Customers",
-    why_1_title: "10+ Years Experience", why_1_desc: "Decade of HVAC expertise across Klang Valley residential and commercial properties.",
+    why_1_title: "12+ Years Experience", why_1_desc: "Decade of HVAC expertise across Klang Valley residential and commercial properties.",
     why_2_title: "Same-Day Response", why_2_desc: "Emergency calls answered fast. Most jobs scheduled within hours of your booking.",
     why_3_title: "Transparent Pricing", why_3_desc: "No hidden charges. Every quote is itemized before we start any work.",
     why_4_title: "All Brands Covered", why_4_desc: "Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung — we service them all.",
