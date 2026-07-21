@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { allPosts } from "@/config/blog-posts";
 import { getRelatedPosts } from "@/app/blog/get-related-posts";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { buildFaqSchema } from "@/lib/seo";
+import { siteConfig } from "@/config/site";
 import { BlogPostClient } from "./blog-post-client";
 
 // ─── Static Params (Server Only) ─────────────────────────────────────────────
