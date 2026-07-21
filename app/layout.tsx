@@ -158,6 +158,7 @@ export default function RootLayout({
                 siteConfig.links.tiktok,
                 siteConfig.links.twitter,
                 siteConfig.links.linkedin,
+                siteConfig.links.yelp,
               ],
               address: {
                 "@type": "PostalAddress",
@@ -270,6 +271,7 @@ export default function RootLayout({
                 siteConfig.links.tiktok,
                 siteConfig.links.twitter,
                 siteConfig.links.linkedin,
+                siteConfig.links.yelp,
               ],
             }),
           }}
