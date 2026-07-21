@@ -71,6 +71,18 @@ const nextConfig = {
       { source: '/servis/harga-servis-aircond',     destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
       { source: '/senarai-harga-aircond',           destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
       { source: '/aircond-service-price',           destination: '/aircond-service-price-malaysia',     statusCode: 301 },
+      // Old WordPress/Legacy Redirects from Bing Webmaster Tools
+      { source: '/blog-2', destination: '/blog', statusCode: 301 },
+      { source: '/privacy-policy', destination: '/', statusCode: 301 },
+      // Note: Query parameter redirects like /?pagelayer-template=home-header cannot be handled purely by source matching in Next.js.
+      // Next.js handles query params in redirects using the `has` array, which we will add below.
+      { 
+        source: '/', 
+        has: [{ type: 'query', key: 'pagelayer-template', value: 'home-header' }], 
+        destination: '/', 
+        statusCode: 301 
+      },
+
     ];
   },
   // ✅ Security headers — Google trust/ranking signal + Lighthouse "Best Practices"
