@@ -57,7 +57,7 @@ const HERO_IMAGES = [
 // - 360/414px device sizes are added in next.config.mjs, so this `sizes`
 //   string can now select a true phone-sized image instead of 640px+.
 // - tiny neutral blur placeholder prevents a blank flash without layout shift.
-const HERO_IMAGE_SIZES = "(max-width: 480px) 100vw, (max-width: 768px) 100vw, 100vw";
+const HERO_IMAGE_SIZES = "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1920px";
 const HERO_BLUR_DATA_URL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMjgnIHZpZXdCb3g9JzAgMCAxNiAyOCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9J2cnIHgxPScwJyB5MT0nMCcgeDI9JzEnIHkyPScxJz48c3RvcCBzdG9wLWNvbG9yPScjMGYxNzJhJy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDI4NGM3Jy8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9JzE2JyBoZWlnaHQ9JzI4JyBmaWxsPSd1cmwoI2cpJy8+PC9zdmc+";
 
