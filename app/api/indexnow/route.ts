@@ -18,7 +18,6 @@ export async function GET(req: Request) {
     const payload = {
       host: host,
       key: key,
-      keyLocation: keyLocation,
       urlList: [
         `https://${host}/`,
         `https://${host}/book`,
