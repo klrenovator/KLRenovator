@@ -63,21 +63,39 @@ const HERO_BLUR_DATA_URL =
 
 export const Hero = () => {
   const [current, setCurrent] = useState(0);
+  // Tracks the slide we're transitioning FROM, kept mounted underneath
+  // the new image (at full opacity) so there is never a gap where nothing
+  // but the blue blur placeholder is visible — this is what caused the
+  // "blue flash" between photos.
+  const [previous, setPrevious] = useState<number | null>(null);
+  // Controls the fade-in of the new "current" image. Flipped to visible
+  // once the image has actually finished loading, so we never fade-in a
+  // half-loaded/placeholder frame.
+  const [visible, setVisible] = useState(true);
 
   const { t } = useLang();
 
   const setSlide = (next: number) => {
+    if (next === current) return;
+    setPrevious(current);
+    setVisible(false);
     setCurrent(next);
   };
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setCurrent((prev) => (prev + 1) % HERO_IMAGES.length);
+      setCurrent((prev) => {
+        const nextIndex = (prev + 1) % HERO_IMAGES.length;
+        setPrevious(prev);
+        setVisible(false);
+        return nextIndex;
+      });
     }, 5000);
     return () => window.clearInterval(timer);
   }, []);
 
-  // Simplified the logic: just cycle 'current'. No need for 'previous' state.
+  const currentImage = HERO_IMAGES[current];
+  const previousImage = previous !== null ? HERO_IMAGES[previous] : null;
 
   return (
     <section className="relative w-full min-h-[calc(100svh-5rem)] sm:min-h-[calc(100svh-7rem)] flex items-center justify-center overflow-hidden bg-slate-900">
@@ -90,7 +108,9 @@ export const Hero = () => {
             alt={previousImage.alt}
             fill
             sizes={HERO_IMAGE_SIZES}
-            className="object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out"
+            // Stays fully opaque underneath — this covers the gap while the
+            // next image loads, so no blue placeholder ever flashes through.
+            className="object-cover object-center opacity-100"
             loading="lazy"
             decoding="async"
             placeholder="blur"
@@ -108,10 +128,13 @@ export const Hero = () => {
           decoding="async"
           fetchPriority={current === 0 ? "high" : "auto"}
           sizes={HERO_IMAGE_SIZES}
-          className="object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out"
+          className={`object-cover object-center transition-opacity duration-700 ease-in-out ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
           placeholder="blur"
           blurDataURL={HERO_BLUR_DATA_URL}
           quality={76}
+          onLoad={() => setVisible(true)}
         />
 
         {/* Lighter overlay — images clearly visible */}
