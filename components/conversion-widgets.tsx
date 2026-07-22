@@ -55,7 +55,7 @@ export function ConversionWidgets() {
       <MobileStickyBar />
       <ExitIntentPopup />
       <ScrollDepthCTA />
-      <FloatingOfferButton />
+      {/* <FloatingOfferButton /> Temporarily disabled as requested */}
       <FloatingBookingButton />
     </>
   );
