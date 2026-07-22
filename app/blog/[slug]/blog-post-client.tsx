@@ -267,6 +267,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
               src={post.image}
               alt={post.imageAlt}
               fill
+              priority={true}
               sizes="100vw"
               className="object-cover object-center"
               loading="lazy"
@@ -311,6 +312,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 src={post.image}
                 alt={post.imageAlt}
                 fill
+                priority={true}
                 sizes="(min-width: 1024px) 896px, 100vw"
                 className="object-cover"
                 loading="lazy"
