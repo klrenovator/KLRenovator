@@ -63,7 +63,7 @@ const HERO_BLUR_DATA_URL =
 
 export const Hero = () => {
   const [current, setCurrent] = useState(0);
-  const [previous, setPrevious] = useState<number | null>(null);
+
   const { t } = useLang();
 
   const setSlide = (next: number) => {
@@ -75,22 +75,12 @@ export const Hero = () => {
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setCurrent((prev) => {
-        setPrevious(prev);
-        return (prev + 1) % HERO_IMAGES.length;
-      });
+      setCurrent((prev) => (prev + 1) % HERO_IMAGES.length);
     }, 5000);
     return () => window.clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    if (previous === null) return;
-    const t = window.setTimeout(() => setPrevious(null), 900);
-    return () => window.clearTimeout(t);
-  }, [previous]);
-
-  const currentImage = HERO_IMAGES[current];
-  const previousImage = previous === null ? null : HERO_IMAGES[previous];
+  // Simplified the logic: just cycle 'current'. No need for 'previous' state.
 
   return (
     <section className="relative w-full min-h-[calc(100svh-5rem)] sm:min-h-[calc(100svh-7rem)] flex items-center justify-center overflow-hidden bg-slate-900">
