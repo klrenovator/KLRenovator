@@ -16,10 +16,10 @@
   "email": "info@klrenovator.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "A-22-09 Magnaville Selayang",
-    "addressLocality": "Batu Caves",
-    "postalCode": "68100",
-    "addressRegion": "Selangor",
+    "streetAddress": "Jalan Kiara, Mont Kiara",
+    "addressLocality": "Kuala Lumpur",
+    "postalCode": "50480",
+    "addressRegion": "Wilayah Persekutuan Kuala Lumpur",
     "addressCountry": "MY"
   },
   "geo": {
@@ -41,7 +41,7 @@
     "Bangsar",
     "Mont Kiara",
     "Setapak",
-    "Batu Caves",
+    "Kuala Lumpur",
     "Selayang",
     "Kepong",
     "Sri Petaling",
