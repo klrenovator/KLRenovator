@@ -71,7 +71,7 @@ const contactPageSchema = {
     openingHours: "Mo-Su 09:00-18:00",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "A-22-09 Magnaville Selayang",
+      streetAddress: "Jalan Kiara, Mont Kiara",
       addressLocality: "Batu Caves",
       postalCode: "68100",
       addressRegion: "Selangor",
@@ -328,9 +328,10 @@ export default function ContactPage() {
                     <div className="bg-white p-5">
                       <div className="flex items-center gap-2 mb-1.5">
                         <FaLocationDot className="h-3.5 w-3.5 text-sky-500" />
-                        <p className="text-[11px] text-slate-500 font-black uppercase tracking-wider">Coverage</p>
+                        <p className="text-[11px] text-slate-500 font-black uppercase tracking-wider">Coverage &amp; HQ Address</p>
                       </div>
-                      <p className="font-black text-slate-950 text-sm">KL &amp; Selangor (Klang Valley)</p>
+                      <p className="font-black text-slate-950 text-sm mb-1">KL &amp; Selangor (Klang Valley)</p>
+                      <p className="text-xs text-slate-600 leading-snug">{siteConfig.address}</p>
                     </div>
                   </div>
                 </div>
