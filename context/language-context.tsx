@@ -31,7 +31,7 @@ export const translations = {
     cta_title1: "Ready To Book ", cta_title2: "Your Service?",
     cta_desc: "Contact us now via WhatsApp or call for same-day appointments across KL & Selangor.",
     cta_whatsapp: "Book Via WhatsApp", cta_call: "Call Now",
-    footer_desc: "Expert aircond installation, servicing & repairs across Kuala Lumpur & Selangor. From RM199, same-day available, all 20 brands. Managed under Multicore Dynamic Resources.",
+    footer_desc: "Expert aircond installation, servicing & repairs across Kuala Lumpur & Selangor. From RM199, same-day available, all 20 brands. Managed under Multicore Dynamics Resources.",
     footer_dispatch: "Direct Dispatch", footer_services: "Our Services",
     footer_areas: "Service Areas", footer_rights: "All rights reserved.",
     footer_hours: "Mon–Sun · 9:00 AM – 6:00 PM", lang_label: "Language",
@@ -83,7 +83,7 @@ export const translations = {
     cta_title1: "Bersedia Untuk Tempah ", cta_title2: "Servis Anda?",
     cta_desc: "Hubungi kami sekarang melalui WhatsApp atau telefon untuk temujanji hari sama di seluruh KL & Selangor.",
     cta_whatsapp: "Tempah Via WhatsApp", cta_call: "Hubungi Sekarang",
-    footer_desc: "Pakar pemasangan, servis & pembaikan aircond merentasi Kuala Lumpur & Selangor. Dari RM199, hari sama, semua 20 jenama. Diuruskan di bawah Multicore Dynamic Resources.",
+    footer_desc: "Pakar pemasangan, servis & pembaikan aircond merentasi Kuala Lumpur & Selangor. Dari RM199, hari sama, semua 20 jenama. Diuruskan di bawah Multicore Dynamics Resources.",
     footer_dispatch: "Hubungi Terus", footer_services: "Perkhidmatan Kami",
     footer_areas: "Kawasan Servis", footer_rights: "Hak cipta terpelihara.",
     footer_hours: "Isnin–Ahad · 9:00 PG – 6:00 PTG", lang_label: "Bahasa",
@@ -135,7 +135,7 @@ export const translations = {
     cta_title1: "准备好预约 ", cta_title2: "您的服务了吗？",
     cta_desc: "立即通过 WhatsApp 或电话联系我们，预约吉隆坡及雪兰莪当天上门服务。",
     cta_whatsapp: "通过 WhatsApp 预约", cta_call: "立即致电",
-    footer_desc: "专业冷气安装、服务与维修，覆盖吉隆坡及雪兰莪。低至RM199，当天上门，全部20个品牌。由 Multicore Dynamic Resources 管理。",
+    footer_desc: "专业冷气安装、服务与维修，覆盖吉隆坡及雪兰莪。低至RM199，当天上门，全部20个品牌。由 Multicore Dynamics Resources 管理。",
     footer_dispatch: "直接联系", footer_services: "我们的服务",
     footer_areas: "服务区域", footer_rights: "版权所有。",
     footer_hours: "周一至周日 · 上午 9:00 – 下午 6:00", lang_label: "语言",
@@ -189,6 +189,18 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
 
   useIsomorphicLayoutEffect(() => {
+    // 1. Check path first, it overrides storage for strict MS/ZH routes
+    const path = window.location.pathname;
+    let detected: Lang | null = null;
+    if (path.startsWith("/ms/") || path === "/ms") detected = "ms";
+    else if (path.startsWith("/zh/") || path === "/zh") detected = "zh";
+    
+    if (detected) {
+      setLangState(detected);
+      return;
+    }
+
+    // 2. Fallback to localStorage for English routes
     try {
       const saved = localStorage.getItem("klr_lang") as Lang | null;
       if (saved && ["en", "ms", "zh"].includes(saved)) {
