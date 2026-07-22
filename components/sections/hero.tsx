@@ -67,10 +67,7 @@ export const Hero = () => {
   const { t } = useLang();
 
   const setSlide = (next: number) => {
-    setCurrent((prev) => {
-      if (prev !== next) setPrevious(prev);
-      return next;
-    });
+    setCurrent(next);
   };
 
   useEffect(() => {
