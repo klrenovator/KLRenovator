@@ -91,7 +91,7 @@ export function HomepageAeoSchemas() {
                   name: "Is KL Renovator a registered business in Malaysia?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. KL Renovator operates under the registered entity Multicore Dynamics Resources, SSM registration number 003765188-T, registered at A-22-09 Magnaville Selayang, 68100 Batu Caves, Selangor.",
+                    text: "Yes. KL Renovator operates under the registered entity Multicore Dynamics Resources, SSM registration number 003765188-T, registered at Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur.",
                   },
                 },
                 {

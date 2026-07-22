@@ -44,7 +44,7 @@ export function ReviewTrustWidget({ locale = "en", compact = false }: ReviewTrus
         </div>
         <div>
           <div className="flex items-center gap-1.5">
-            <span className="text-3xl font-black text-emerald-700">4.9</span>
+            <span className="text-3xl font-black text-emerald-700">5.0</span>
             <span className="text-emerald-600">/ 5</span>
           </div>
           <p className="text-xs font-bold text-emerald-600">Based on 500+ reviews</p>
