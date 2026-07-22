@@ -497,6 +497,43 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {/* Team Person Schema for E-E-A-T */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Alex",
+              "jobTitle": "Lead Aircond Technician",
+              "worksFor": { "@id": "https://www.klrenovator.com/#organization" },
+              "description": "Expert in Daikin and Panasonic troubleshooting."
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ben",
+              "jobTitle": "Senior Installation Specialist",
+              "worksFor": { "@id": "https://www.klrenovator.com/#organization" }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Haziq",
+              "jobTitle": "Chemical Wash & Servicing Expert",
+              "worksFor": { "@id": "https://www.klrenovator.com/#organization" }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Chong",
+              "jobTitle": "Ceiling Cassette & Commercial HVAC Lead",
+              "worksFor": { "@id": "https://www.klrenovator.com/#organization" }
+            }
+          ])
+        }}
+      />
 
       {/* Breadcrumb Nav */}
       <div className="bg-slate-50 border-b border-slate-200">
