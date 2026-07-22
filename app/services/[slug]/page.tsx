@@ -429,6 +429,7 @@ export default async function ServicePage({
             src={data.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}
             alt={`KL Renovator ${data.title} — KL & Selangor`}
             fill
+            priority={true}
             sizes="100vw"
             className="object-cover object-center"
             loading="eager"
