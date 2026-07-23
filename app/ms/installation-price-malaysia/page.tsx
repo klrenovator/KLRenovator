@@ -15,7 +15,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: buildFreshMetaTitle("Harga Pasang Aircond 2026 — Dari RM 199 | KL Renovator", "ms"),
+  title: buildFreshMetaTitle("Harga Pemasangan Aircond 2026 — RM 199 Siap Pasang | KL Renovator", "ms"),
   description:
     "Panduan harga pemasangan aircond lengkap untuk KL & Selangor 2026. Pasang RM 199 termasuk 7 kaki paip kuprum, pendawaian, vakum & ujian kebocoran. Semua 20 jenama. Hari sama tersedia.",
   openGraph: {
