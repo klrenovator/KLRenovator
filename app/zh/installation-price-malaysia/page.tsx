@@ -15,7 +15,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: buildFreshMetaTitle("马来西亚冷气安装价格 2026 — 从 RM 199 起 | KL Renovator", "zh"),
+  title: buildFreshMetaTitle("什么牌子冷气机最好马来西亚2026? 安装价格从 RM199 | KL Renovator", "zh"),
   description:
     "2026年吉隆坡及雪兰莪冷气安装价格完整指南。RM 199基础安装含7尺铜管、电线、抽真空及测漏。20大品牌。可当天安装。",
   openGraph: {
