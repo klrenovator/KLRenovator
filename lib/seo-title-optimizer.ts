@@ -234,7 +234,7 @@ export function buildInstallationMetaTitle(
     } else if (options.type === "area") {
       if (locale === "ms") raw = `Pemasangan Aircond ${entity} — Dari ${price} | KL Renovator`;
       else if (locale === "zh") raw = `${entity}冷气安装服务 — ${price}起 | KL Renovator`;
-      else raw = `Aircond Installation ${entity} — ${price} | KL Renovator`;
+      else raw = `Aircond Installation in ${entity} — ${price} | KL Renovator`;
     } else if (options.type === "brand") {
       if (locale === "ms") raw = `Pemasangan Aircond ${entity} KL — Pakar Sebenar | KL Renovator`;
       else if (locale === "zh") raw = `${entity}冷气安装吉隆坡 — 专业认证技师 | KL Renovator`;
@@ -242,7 +242,7 @@ export function buildInstallationMetaTitle(
     } else if (options.type === "kampung") {
       if (locale === "ms") raw = `Pemasangan Aircond ${entity} — Dari ${price} | KL Renovator`;
       else if (locale === "zh") raw = `${entity}专业冷气安装 — ${price}起 | KL Renovator`;
-      else raw = `Aircond Installation ${entity} — From ${price} | KL Renovator`;
+      else raw = `Aircond Installation in ${entity} — ${price} | KL Renovator`;
     }
     if (raw) return clampMetaTitle(raw, { max: locale === "zh" ? META_TITLE_MAX_CJK : META_TITLE_MAX });
   }
