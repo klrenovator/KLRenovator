@@ -213,6 +213,76 @@ for (const r of sitemapRoutes) if (!pages.has(r)) E("sitemap-url-not-built", r);
 if (sitemapUrls.length > 50000) E("sitemap-too-large", `${sitemapUrls.length} URLs (max 50,000)`);
 
 // ─────────────────────────────────────────────────────────────────────────
+// 9b. Near-duplicate body content within a route family.
+//
+//     This is what actually drives the "Crawled/Discovered — currently not
+//     indexed" and "Duplicate without user-selected canonical" buckets in
+//     GSC. Pages can each be valid, canonical and in the sitemap and STILL
+//     not get indexed if they read the same as their siblings.
+//
+//     Measured as average pairwise Jaccard similarity over 4+ character
+//     tokens of the visible text, sampled within each family.
+// ─────────────────────────────────────────────────────────────────────────
+const FAMILIES = [
+  ["brand-area EN", /^\/brands\/[^/]+\/[^/]+$/],
+  ["brand-area MS", /^\/ms\/brands\/[^/]+\/[^/]+$/],
+  ["brand-area ZH", /^\/zh\/brands\/[^/]+\/[^/]+$/],
+  ["area-install EN", /^\/areas\/[^/]+\/installation$/],
+  ["area-install MS", /^\/ms\/areas\/[^/]+\/installation$/],
+  ["area-install ZH", /^\/zh\/areas\/[^/]+\/installation$/],
+  ["kampung-install EN", /^\/areas\/[^/]+\/[^/]+\/installation$/],
+  ["brand-install EN", /^\/brands\/[^/]+\/installation$/],
+];
+const SIMILARITY_LIMIT = 0.9; // 90%+ average overlap = duplicate risk
+
+const visibleTokens = (html) => {
+  const body = html
+    .replace(/<head>[\s\S]*?<\/head>/, "")
+    .replace(/<script[\s\S]*?<\/script>/g, "")
+    .replace(/<style[\s\S]*?<\/style>/g, "")
+    .replace(/<[^>]+>/g, " ");
+  return new Set(
+    body
+      .toLowerCase()
+      .split(/[^a-z0-9\u4e00-\u9fff]+/)
+      .filter((w) => w.length > 3),
+  );
+};
+const jaccard = (a, b) => {
+  let inter = 0;
+  for (const t of a) if (b.has(t)) inter++;
+  return inter / (a.size + b.size - inter);
+};
+
+for (const [label, re] of FAMILIES) {
+  const members = [...pages.values()].filter((p) => re.test(p.route));
+  if (members.length < 3) continue;
+  // Sample up to 10 per family — enough to detect a templated family.
+  const sample = members.slice(0, 10).map((p) => visibleTokens(p.html));
+  let total = 0;
+  let pairs = 0;
+  for (let i = 0; i < sample.length; i++) {
+    for (let j = i + 1; j < sample.length; j++) {
+      total += jaccard(sample[i], sample[j]);
+      pairs++;
+    }
+  }
+  const avg = total / pairs;
+  if (avg >= SIMILARITY_LIMIT) {
+    E(
+      "near-duplicate-family",
+      `${label}: ${members.length} pages average ${(avg * 100).toFixed(1)}% identical text ` +
+        `(limit ${SIMILARITY_LIMIT * 100}%). Google will index only one of these.`,
+    );
+  } else if (avg >= 0.8) {
+    W(
+      "near-duplicate-family",
+      `${label}: ${members.length} pages average ${(avg * 100).toFixed(1)}% identical text.`,
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────
 // 10. Title / description length (truncation in SERPs, not an index error).
 // ─────────────────────────────────────────────────────────────────────────
 let longTitle = 0, longDesc = 0, shortDesc = 0, noDesc = 0;

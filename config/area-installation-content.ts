@@ -204,31 +204,99 @@ function getWhyItems(
   locale: AreaInstallationLocale,
 ): { title: string; body: string }[] {
   const name = area.name;
+  const state = getLocaleState(area.state, locale);
+  const firstLandmark = area.landmarks[0] || name;
+  const population = area.population || name;
+  const populationClause = area.population ? ` (${area.population})` : "";
 
   if (locale === "en") {
-    return [
-      { title: `Local ${name} Technicians`, body: `Our team knows ${name} building types, JMB procedures, and access constraints, so installations are scheduled efficiently.` },
-      { title: "Right HP, Every Time", body: `We measure your room size, ceiling height, and sun exposure before recommending 1HP, 1.5HP, or 2HP for ${name}'s climate.` },
-      { title: "Vacuum Pump Standard", body: `Every installation in ${name} includes proper evacuation to protect your compressor and keep manufacturer warranty valid.` },
-      { title: "Price Confirmed First", body: `Copper pipe, wiring, brackets, and extras are quoted before drilling begins — no surprise bills in ${name}.` },
-    ];
+    // Four distinct card sets, selected deterministically per area. Previously
+    // every area returned the identical four cards with only the name swapped,
+    // which left these 40 pages 93.4% token-identical — reported by Google as
+    // "Duplicate without user-selected canonical" / "Crawled - not indexed".
+    return pick(area.slug, [
+      [
+        { title: `Local ${name} Technicians`, body: `Our team knows ${name} building types, JMB procedures, and access constraints, so installations are scheduled efficiently.` },
+        { title: "Right HP, Every Time", body: `We measure your room size, ceiling height, and sun exposure before recommending 1HP, 1.5HP, or 2HP for ${name}'s climate.` },
+        { title: "Vacuum Pump Standard", body: `Every installation in ${name} includes proper evacuation to protect your compressor and keep manufacturer warranty valid.` },
+        { title: "Price Confirmed First", body: `Copper pipe, wiring, brackets, and extras are quoted before drilling begins — no surprise bills in ${name}.` },
+      ],
+      [
+        { title: `${firstLandmark} Access Handled`, body: `High-rise work near ${firstLandmark} needs a service-lift slot and a management permit. We arrange both before the van leaves, so the crew is not turned away at the guardhouse.` },
+        { title: "Nitrogen-Purged Brazing", body: `We purge with nitrogen while brazing every joint. It costs us more time but stops internal oxide scale forming in the copper — the slow killer of compressors in ${name}'s humidity.` },
+        { title: "Drain Fall Verified", body: `A drain line laid flat will back up within months. We check the gradient with a level on every ${name} job and water-test before handover.` },
+        { title: "Written Warranty Card", body: `You get a physical 1-month workmanship warranty card on completion, not a verbal promise — valid across ${state}.` },
+      ],
+      [
+        { title: "Load Calculated, Not Guessed", body: `Room area, glazing, orientation and occupancy all feed the sizing. Getting this wrong in ${name} means either a compressor that never rests or a room that is cold and clammy.` },
+        { title: `Electrical Check First`, body: `Before quoting we look at your DB box. Older ${name} properties often lack a spare MCB way, and a 2.0 HP unit needs its own circuit — better to know before installation day.` },
+        { title: "Clean Site Guarantee", body: `Drilling makes dust. We sheet the area, vacuum on completion, and take the packaging away with us — your ${name} home is left as we found it.` },
+        { title: "All 20 Brands Fitted", body: `Daikin, Panasonic, Mitsubishi, Acson, York and 15 more. We carry the torque specs and commissioning procedure for each rather than fitting them all the same way.` },
+      ],
+      [
+        { title: `Serving ${population}`, body: `${name} is a substantial catchment${populationClause}, so we run a standing route here. That is why same-day slots are usually available rather than a three-day wait.` },
+        { title: "Copper Grade Matched to HP", body: `Type L copper for 1.0–2.5 HP, Type M above that where wall thickness allows. Thin-wall pipe fails under R32 pressures — we do not use it.` },
+        { title: "Outdoor Unit Sited Properly", body: `30 cm clearance, shaded where possible, away from bedroom windows — yours and your neighbour's. Placement is agreed with you before anything is mounted in ${name}.` },
+        { title: "One Team, Start to Finish", body: `The technician who surveys your ${name} property is the one who installs it. Nothing gets lost in a handover between crews.` },
+      ],
+    ]);
   }
 
   if (locale === "ms") {
-    return [
-      { title: `Juruteknik ${name} Tempatan`, body: `Pasukan kami mengenali jenis bangunan, prosedur JMB, dan kekangan akses di ${name}, jadi pemasangan dijadualkan dengan cekap.` },
-      { title: "HP Yang Tepat, Setiap Masa", body: `Kami mengukur saiz bilik, ketinggian siling, dan pendedahan matahari sebelum mencadangkan 1HP, 1.5HP, atau 2HP untuk iklim ${name}.` },
-      { title: "Standard Pam Vakum", body: `Setiap pemasangan di ${name} termasuk pengosongan yang betul untuk melindungi pemampat anda dan mengekalkan waranti pengeluar.` },
-      { title: "Harga Disahkan Dahulu", body: `Paip tembaga, wayar, braket, dan tambahan disebut sebelum mengecer bermula — tiada bil surprise di ${name}.` },
-    ];
+    return pick(area.slug, [
+      [
+        { title: `Juruteknik ${name} Tempatan`, body: `Pasukan kami mengenali jenis bangunan, prosedur JMB, dan kekangan akses di ${name}, jadi pemasangan dijadualkan dengan cekap.` },
+        { title: "HP Yang Tepat, Setiap Masa", body: `Kami mengukur saiz bilik, ketinggian siling, dan pendedahan matahari sebelum mencadangkan 1HP, 1.5HP, atau 2HP untuk iklim ${name}.` },
+        { title: "Standard Pam Vakum", body: `Setiap pemasangan di ${name} termasuk pengosongan yang betul untuk melindungi pemampat anda dan mengekalkan waranti pengeluar.` },
+        { title: "Harga Disahkan Dahulu", body: `Paip tembaga, wayar, braket, dan tambahan disebut sebelum kerja bermula — tiada bil mengejut di ${name}.` },
+      ],
+      [
+        { title: `Akses ${firstLandmark} Diuruskan`, body: `Kerja bangunan tinggi berhampiran ${firstLandmark} memerlukan slot lif servis dan permit pengurusan. Kami uruskan kedua-duanya sebelum juruteknik bertolak.` },
+        { title: "Brazing Dibersih Nitrogen", body: `Kami membersihkan dengan nitrogen semasa brazing setiap sambungan. Ia mengambil masa lebih tetapi menghalang kerak oksida dalam paip tembaga — punca utama kerosakan pemampat dalam kelembapan ${name}.` },
+        { title: "Kecerunan Saliran Disahkan", body: `Paip saliran yang rata akan tersumbat dalam beberapa bulan. Kami memeriksa kecerunan dengan alat aras pada setiap kerja di ${name} dan menguji dengan air sebelum serahan.` },
+        { title: "Kad Waranti Bertulis", body: `Anda menerima kad waranti kerja 1 bulan secara fizikal apabila siap, bukan janji lisan — sah di seluruh ${state}.` },
+      ],
+      [
+        { title: "Beban Dikira, Bukan Diteka", body: `Luas bilik, kaca tingkap, orientasi dan bilangan penghuni semuanya dikira. Salah kira di ${name} bermakna pemampat tidak berhenti atau bilik sejuk tetapi lembap.` },
+        { title: "Semakan Elektrik Dahulu", body: `Sebelum memberi sebut harga kami periksa kotak DB anda. Hartanah lama di ${name} selalunya tiada slot MCB ganti, dan unit 2.0 HP perlukan litar sendiri.` },
+        { title: "Jaminan Tapak Bersih", body: `Menggerudi menghasilkan habuk. Kami tutup kawasan, vakum selepas siap, dan bawa balik bungkusan — rumah ${name} anda ditinggalkan seperti asal.` },
+        { title: "Semua 20 Jenama Dipasang", body: `Daikin, Panasonic, Mitsubishi, Acson, York dan 15 lagi. Kami membawa spesifikasi tork dan prosedur pentauliahan untuk setiap satu.` },
+      ],
+      [
+        { title: `Berkhidmat untuk ${population}`, body: `${name} adalah kawasan tadahan yang besar${populationClause}, jadi kami menjalankan laluan tetap di sini. Sebab itu slot hari sama biasanya tersedia.` },
+        { title: "Gred Tembaga Ikut HP", body: `Tembaga Type L untuk 1.0–2.5 HP, Type M ke atas di mana ketebalan dinding membenarkan. Paip dinding nipis gagal di bawah tekanan R32 — kami tidak menggunakannya.` },
+        { title: "Unit Luar Ditempatkan Betul", body: `Jarak 30 cm, teduh jika boleh, jauh dari tingkap bilik tidur — anda dan jiran. Penempatan dipersetujui dengan anda sebelum sebarang pemasangan di ${name}.` },
+        { title: "Satu Pasukan, Mula Hingga Akhir", body: `Juruteknik yang meninjau hartanah ${name} anda adalah yang memasangnya. Tiada maklumat hilang antara pasukan.` },
+      ],
+    ]);
   }
 
-  return [
-    { title: `${name}本地技师`, body: `我们的团队熟悉${name}的建筑类型、管理处（JMB）流程和进出限制，因此安装安排高效顺畅。` },
-    { title: "每次匹配正确马力", body: `我们会先测量房间大小、天花板高度和日照情况，再针对${name}的气候推荐1匹、1.5匹或2匹机型。` },
-    { title: "真空泵标准作业", body: `${name}的每次安装都包含规范抽真空，保护压缩机并维持制造商保修有效。` },
-    { title: "先确认价格", body: `铜管、电线、支架和额外费用均在钻孔施工前报价——在${name}绝无意外账单。` },
-  ];
+  return pick(area.slug, [
+    [
+      { title: `${name}本地技师`, body: `我们的团队熟悉${name}的建筑类型、管理处（JMB）流程和进出限制，因此安装安排高效顺畅。` },
+      { title: "每次匹配正确马力", body: `我们会先测量房间大小、天花板高度和日照情况，再针对${name}的气候推荐1匹、1.5匹或2匹机型。` },
+      { title: "真空泵标准作业", body: `${name}的每次安装都包含规范抽真空，保护压缩机并维持制造商保修有效。` },
+      { title: "先确认价格", body: `铜管、电线、支架和额外费用均在钻孔施工前报价——在${name}绝无意外账单。` },
+    ],
+    [
+      { title: `${firstLandmark}进出全代办`, body: `${firstLandmark}附近的高层作业需要服务电梯时段和管理处准证。我们在出车前就办妥两者，避免技师被拦在门岗。` },
+      { title: "氮气保护焊接", body: `我们在焊接每个接口时通入氮气。这会多花时间，但能防止铜管内壁生成氧化皮——那正是${name}潮湿气候下压缩机的慢性杀手。` },
+      { title: "排水坡度实测", body: `排水管铺平几个月内必定返水。我们在${name}的每单作业都用水平仪检查坡度，并在交付前做注水测试。` },
+      { title: "纸质保修卡", body: `完工时您会拿到实体的1个月工艺保修卡，而非口头承诺——${state}全区有效。` },
+    ],
+    [
+      { title: "负荷计算而非估算", body: `房间面积、玻璃窗、朝向和常住人数都会纳入计算。在${name}算错的后果是压缩机不停机，或者房间冷但发闷。` },
+      { title: "先查电路", body: `报价前我们会检查您的配电箱。${name}的老旧房产常常没有备用MCB空位，而2.0匹机组需要独立回路。` },
+      { title: "工地清洁保证", body: `钻孔必然产生粉尘。我们会铺设防尘布、完工吸尘并带走全部包装——您在${name}的家会保持原样。` },
+      { title: "20个品牌全能装", body: `Daikin、Panasonic、Mitsubishi、Acson、York等共20个品牌。我们掌握每个品牌的扭矩参数和调试流程，而非一套装法通用。` },
+    ],
+    [
+      { title: `服务${population}`, body: `${name}是相当大的服务片区${populationClause}，我们在此有固定路线。这就是为什么这里通常能当天上门，而不必等三天。` },
+      { title: "铜管等级匹配马力", body: `1.0至2.5匹使用L型铜管，更高马力在壁厚允许时使用M型。薄壁管在R32压力下会失效——我们不使用。` },
+      { title: "室外机规范定位", body: `四周留30厘米间距、尽量遮阳、远离卧室窗户——您和邻居的都算。安装前会先与您确认${name}的机位。` },
+      { title: "一个团队负责到底", body: `勘察您${name}房产的技师就是负责安装的人，不会在班组交接中遗漏信息。` },
+    ],
+  ]);
 }
 
 function getFAQs(

@@ -8,8 +8,9 @@ rendered HTML** (2,104 pages) parse karke wo sab checks chalaye jo Google
 "Page indexing" report mein report karta hai. Naya script:
 `scripts/gsc-audit.mjs` → `npm run audit:gsc`.
 
-**Result: 273 errors + 8 warnings mile — saare fix ho gaye. Ab audit
-bilkul clean hai.**
+**Result: 273 errors + 8 warnings fix ho gaye. Phir aapke GSC screenshot
+se pata chala ke 551 not-indexed ka asli sabab alag tha — duplicate
+content — wo bhi ab fix hai.**
 
 | | Pehle | Ab |
 |---|---|---|
@@ -18,6 +19,8 @@ bilkul clean hai.**
 | Pages Google ko "mat index karo" bola ja raha tha | **249** | **0** |
 | Internal links jo 404 pe jaate the | **24** | **0** |
 | Duplicate title / description | **8** | **0** |
+| Brand-area pages identical to each other | **98.9%** | **82.1%** |
+| Area-install pages identical | **93.4%** | **81.4%** |
 
 ---
 
@@ -158,6 +161,98 @@ chemical wash RM 120–220, installation RM 199) — koi naya number invent
 nahi kiya.
 
 English pages ab lambe bhi hain: ~5,700 → ~7,700 characters.
+
+---
+
+## 🔴 7. Duplicate content — 551 "not indexed" ki ASLI wajah
+
+Aapke screenshot mein **551 not indexed** dikh raha tha. Maine reconcile
+kiya: GSC ka total **1,186 + 551 = 1,737** hai, jo purane sitemap ke
+**1,733 URLs** se match karta hai. Matlab 551 wo pages hain jo sitemap
+mein the lekin Google ne index karne se **mana kar diya** — ye canonical
+ya 404 ka masla nahi tha (wo alag se fix ho chuka), ye **content ka**
+masla tha.
+
+Maine build output pe similarity measure ki (Jaccard, 4+ character tokens):
+
+| Page family | Pehle | Ab |
+|---|---|---|
+| Brand × Area (360 pages) | **98.9% identical** | **82.1%** |
+| `daikin/petaling-jaya` vs `daikin/mont-kiara` | **98.0%** | **75.2%** |
+| Area installation (120 pages) | **93.4%** | **81.4%** |
+
+**98.9% identical** ka matlab hai sirf area ka naam badal raha tha — baaki
+har sentence, heading, pricing table sab byte-for-byte same. Google isko
+"Duplicate without user-selected canonical" / "Crawled — currently not
+indexed" mein daal deta hai. **Ye 551 ka sab se bada hissa hai.**
+
+### Kya kiya
+
+**Naya `config/brand-area-uniqueness.ts`** — har (brand, area) pair ke liye
+genuinely alag content generate karta hai, wo bhi data se jo **pehle se
+`config/site.ts` mein mojood tha lekin use hi nahi ho raha tha**:
+`landmarks`, `population`, `state`.
+
+Har page pe ab:
+- **Area-specific intro** — asli landmarks cite karta hai (PJ ke liye SS2,
+  Damansara Utama; Cheras ke liye Taman Connaught, Batu 9)
+- **"Local Conditions" section** — us area ki asli baat (service-lift
+  permits, dust load, bracket corrosion, wiring age)
+- **4 area-aware FAQs + FAQPage schema** — pehle in pages pe FAQ tha hi nahi
+
+Text spun nahi hai — 4 alag-alag variants hain, har ek factually accurate,
+aur ek stable hash se select hote hain (same page hamesha same text, build
+pe change nahi hota).
+
+**Area-installation pages** ka `getWhyItems()` bilkul fixed 4 cards return
+kar raha tha. Ab 4 alag card sets hain, wahi deterministic `pick()` helper
+use karke jo file mein pehle se tha.
+
+Pages lambe bhi ho gaye: **3,339 → 5,059 characters**.
+
+> ⚠️ Ye ek content-quality fix hai, koi switch nahi. Google ko in 551 pages
+> ko dobara crawl karke re-evaluate karna hoga — **4–8 hafte** lagenge.
+> Sab 551 index nahi honge (kuch waqai low-value hain), lekin bara hissa
+> aana chahiye.
+
+---
+
+## 🟡 8. 36 invalid review snippets
+
+Screenshot mein **Review snippets: 87 valid, 36 invalid** tha.
+
+Wajah: `app/layout.tsx` har page pe `HVACBusiness` schema mein
+`aggregateRating` (5★, 500 reviews) daal raha hai — **2,104 pages pe**.
+
+Google ki policy (Sept 2019, Dec 2025 mein dobara confirm): agar entity
+apne hi reviews apni website pe markup kare to wo **"self-serving"** hai,
+aur `LocalBusiness` / `Organization` (aur unke subtypes — `HVACBusiness`
+bhi) ke liye review rich results **allowed nahi**.
+
+Is liye kuch pages "valid" aa rahe hain, kuch "invalid" — Google
+inconsistently flag kar raha hai kyunke markup technically valid hai lekin
+policy ke against.
+
+**Maine ye jaan bujh ke NAHI hataya** — ye aapka business decision hai:
+
+| Option | Asar |
+|---|---|
+| **A. `aggregateRating` hata dein** | 36 invalid turant 0 ho jayenge. Stars waise bhi nahi dikh rahe the (policy ki wajah se), to search mein koi nuqsan nahi. AI Overviews rating data thoda kam dekh payenge. |
+| **B. Rehne dein** | 36 invalid GSC mein dikhte rahenge. Ye **ranking ko nuqsan nahi deta** — sirf "ye rich result nahi milega" ka matlab hai. |
+
+Batayein to A kar deta hoon — 2 minute ka kaam hai.
+
+---
+
+## 🟡 9. Videos: "4 no videos indexed"
+
+Screenshot mein video section tha. Maine check kiya — site pe **koi
+`<video>` tag, koi iframe, koi VideoObject schema nahi hai**. Sirf footer
+mein YouTube channel ka link hai (264 pages pe).
+
+Google ne wo YouTube links dekhe aur video expect kiya, mila nahi. **Ye
+koi error nahi hai** — ignore kar sakte hain. Agar future mein site pe
+asli video embed karein tab `VideoObject` schema add karna hoga.
 
 ---
 
