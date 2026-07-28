@@ -128,8 +128,8 @@ Sitemap: **1,733 → 2,099 URLs**, sab resolve karte hain ✅
 
 ## 🛡️ Ab ye dobara nahi ho sakta
 
-`scripts/gsc-audit.mjs` CI mein add ho gaya (`.github/workflows/ci.yml`).
-Har push pe fail karega agar:
+`scripts/gsc-audit.mjs` ban gaya hai — `npm run audit:gsc`.
+Ye fail karega agar:
 
 - kisi page ka canonical kahin aur point kare
 - sitemap mein koi noindex URL ho
@@ -139,6 +139,10 @@ Har push pe fail karega agar:
 - duplicate title/description (warning)
 
 Local: `npm run build && npm run audit:gsc`
+
+> ⚠️ CI mein add karne ke liye ek manual step hai — GitHub App ke paas
+> `workflows` permission nahi hai, is liye `.github/workflows/ci.yml` push
+> reject ho gaya. Steps `ci/README.md` mein likh diye hain (neeche point 3).
 
 ---
 
@@ -179,7 +183,21 @@ options hain, batayein kaunsa chahiye to main kar dunga:
 | **B. Sirf `/ms/` rakhein** | English URL ko `/ms/blog/...` pe 301 redirect | Agar in topics pe English traffic nahi chahiye |
 | **C. Waise hi chhorr dein** | Google khud ek chunega | Chalega, par ek URL ki ranking zaaya hogi |
 
-### 3. (Pehle wale audit se pending) Env vars
+### 3. CI mein audit step add karein (1 minute)
+
+GitHub App ke paas `workflows` permission nahi hai, is liye ye main push
+nahi kar saka. `.github/workflows/ci.yml` mein `Verify build output` ke
+turant baad ye add kar dein:
+
+```yaml
+      - name: Search Console audit
+        run: npm run audit:gsc
+```
+
+Poori detail `ci/README.md` mein hai. Iske bagair bhi sab fixes kaam kar
+rahe hain — ye sirf future regressions rokne ke liye hai.
+
+### 4. (Pehle wale audit se pending) Env vars
 
 Agar abhi tak set nahi kiye to Vercel → Settings → Environment Variables:
 ```bash
@@ -188,7 +206,7 @@ ADMIN_SESSION_SECRET=<openssl rand -hex 32>
 ```
 Inke bagair `/admin/bookings` pe login nahi hoga (jaan bujh ke fail-closed).
 
-### 4. Optional — 172 meta descriptions 160 chars se lambe
+### 5. Optional — 172 meta descriptions 160 chars se lambe
 
 Google inko truncate karega. Blocking nahi hai, click-through thoda
 affect hota hai. Bolen to `clampMetaDescription()` ka threshold tight
