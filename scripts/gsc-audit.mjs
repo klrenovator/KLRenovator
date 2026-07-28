@@ -213,6 +213,55 @@ for (const r of sitemapRoutes) if (!pages.has(r)) E("sitemap-url-not-built", r);
 if (sitemapUrls.length > 50000) E("sitemap-too-large", `${sitemapUrls.length} URLs (max 50,000)`);
 
 // ─────────────────────────────────────────────────────────────────────────
+// 9a. Self-serving review markup.
+//
+//     Google (Sept 2019, restated Dec 2025): when the reviewed entity
+//     controls the reviews, LocalBusiness / Organization and all subtypes
+//     are ineligible for review rich results. Emitting `review` or
+//     `aggregateRating` on those types produces "Invalid items" in the
+//     Search Console review-snippet report — it cannot ever render stars.
+// ─────────────────────────────────────────────────────────────────────────
+const SELF_SERVING_TYPES = new Set([
+  "LocalBusiness",
+  "Organization",
+  "HVACBusiness",
+  "HomeAndConstructionBusiness",
+  "ProfessionalService",
+  "Corporation",
+]);
+let selfServing = 0;
+for (const p of pages.values()) {
+  for (const m of p.html.matchAll(
+    /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,
+  )) {
+    let parsed;
+    try {
+      parsed = JSON.parse(m[1]);
+    } catch {
+      E("malformed-json-ld", p.route);
+      continue;
+    }
+    for (const node of Array.isArray(parsed) ? parsed : [parsed]) {
+      if (!node || typeof node !== "object") continue;
+      const t = node["@type"];
+      const types = Array.isArray(t) ? t : [t];
+      if (!types.some((x) => SELF_SERVING_TYPES.has(x))) continue;
+      if (node.aggregateRating || node.review) {
+        selfServing++;
+        if (selfServing <= 5)
+          E(
+            "self-serving-review-schema",
+            `${p.route}: ${types.join("/")} carries ${node.review ? "review" : "aggregateRating"} — ` +
+              `ineligible for review rich results, shows as "Invalid" in GSC.`,
+          );
+      }
+    }
+  }
+}
+if (selfServing > 5)
+  E("self-serving-review-schema", `…and ${selfServing - 5} more page(s)`);
+
+// ─────────────────────────────────────────────────────────────────────────
 // 9b. Near-duplicate body content within a route family.
 //
 //     This is what actually drives the "Crawled/Discovered — currently not

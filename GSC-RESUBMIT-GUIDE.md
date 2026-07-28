@@ -92,24 +92,22 @@ nazar rakhein:
 
 ---
 
-## 4️⃣ Review snippets — 36 invalid
+## 4️⃣ Review snippets — fix ho gaya, bas dekh lena
 
 **Direct link:**
 https://search.google.com/search-console/structured-data/review-snippet?resource_id=sitemap%3Ahttps%3A%2F%2Fwww.klrenovator.com%2F
 
-Ye 36 abhi bhi dikhenge, kyunke maine `aggregateRating` **jaan bujh ke
-nahi hataya** — ye aapka decision hai (detail `GSC-AUDIT-REPORT.md`
-section 8 mein hai).
+Maine `aggregateRating` hata diya hai (detail `GSC-AUDIT-REPORT.md` §8).
 
-Short version: aapki site har page pe apni hi 5★/500-review rating markup
-kar rahi hai. Google ki policy ke mutabiq ye "self-serving" hai aur
-`LocalBusiness`/`HVACBusiness` ke liye allowed nahi — **stars waise bhi
-kabhi nahi dikhenge**.
+**Kya expect karein:** 2–4 hafte mein **36 invalid → 0**. Sath hi 87
+"valid" bhi report se gayab ho jayenge — ye **theek hai**. Wo stars Google
+ki policy ki wajah se kabhi render hote hi nahi the; ab markup hi nahi to
+report bhi khali. **Ranking pe koi asar nahi.**
 
-- **Hata dein** → 36 invalid turant 0, search mein koi nuqsan nahi
-- **Rehne dein** → GSC mein dikhta rahega, par **ranking pe koi asar nahi**
-
-Bolen to main hata dun.
+Aapki asli 5.0★ / 500 reviews:
+- Website pe users ko **waise hi dikhti rahengi** (kuch nahi badla)
+- Google tak **Google Business Profile** se pahunchti hain — yehi supported
+  raasta hai
 
 ---
 
@@ -175,4 +173,22 @@ Phir neeche **"Commit changes"** dabayein.
 - [ ] 6 URLs request indexing (step 2)
 - [ ] CI line add karein (step 5)
 - [ ] 2 hafte baad Page Indexing report check karein
-- [ ] Batayein ke `aggregateRating` hataana hai ya nahi (step 4)
+- [ ] 2–4 hafte baad review snippets 0 invalid confirm karein (step 4)
+
+---
+
+## 🎥 YouTube channel (optional, future)
+
+`youtube.com/@klrenovator` **404 tha** — channel exist nahi karta — is liye
+maine wo link schema se hata diya (Yelp placeholder aur dead Medium link
+bhi). Yehi "4 no videos indexed" ki wajah thi.
+
+Agar aap kabhi channel banayein:
+1. Channel bana ke confirm karein ke load hota hai
+2. `config/site.ts` ke `links` block mein comment likha hai — `youtube` key
+   wapas add karein
+3. 3 files ke `sameAs` array mein add karein (comment mein listed hain)
+
+Video **rich results** ke liye us se aage bhi kaam chahiye hoga — Google ko
+dedicated "watch page" chahiye jahan video hi main content ho, plus
+`VideoObject` schema. Wo alag project hai, tab batayein.

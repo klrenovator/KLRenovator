@@ -149,11 +149,9 @@ export const sitePublic = {
     "facebook": "https://www.facebook.com/share/1DDDB3523A/",
     "instagram": "https://www.instagram.com/klrenovator?igsh=MTNqb3p1NDExZ3Boeg==",
     "tiktok": "https://www.tiktok.com/@klrenovator?_r=1&_t=ZS-96tR1k7aVU5",
-    "youtube": "https://www.youtube.com/@klrenovator",
     "googleMaps": "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
     "googleBusiness": "https://share.google/HhXvqWDkefZ5bzNdL",
     "twitter": "https://x.com/KlRenovator",
-    "yelp": "https://www.yelp.com/biz/kl-renovator-no-title",
     "linkedin": "https://www.linkedin.com/in/kl-renovator-7912b7389"
   },
   "pricing": {

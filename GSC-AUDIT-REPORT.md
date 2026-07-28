@@ -21,6 +21,8 @@ content — wo bhi ab fix hai.**
 | Duplicate title / description | **8** | **0** |
 | Brand-area pages identical to each other | **98.9%** | **82.1%** |
 | Area-install pages identical | **93.4%** | **81.4%** |
+| Invalid review snippets | **36** | **0** |
+| Dead links in `sameAs` schema | **3** | **0** |
 
 ---
 
@@ -217,42 +219,93 @@ Pages lambe bhi ho gaye: **3,339 → 5,059 characters**.
 
 ---
 
-## 🟡 8. 36 invalid review snippets
+## ✅ 8. 36 invalid review snippets — FIX HO GAYA
 
-Screenshot mein **Review snippets: 87 valid, 36 invalid** tha.
+**Wajah:** `app/layout.tsx` har page pe `HVACBusiness` schema mein
+`aggregateRating` (5.0★, 500 reviews) daal raha tha — **2,104 pages pe**.
 
-Wajah: `app/layout.tsx` har page pe `HVACBusiness` schema mein
-`aggregateRating` (5★, 500 reviews) daal raha hai — **2,104 pages pe**.
+Google ki policy (Sept 2019, Dec 2025 mein dobara confirm): jab entity
+apne hi reviews apni site pe markup kare to wo "self-serving" hai, aur
+`LocalBusiness` / `Organization` — aur unke **saare subtypes, jisme
+`HVACBusiness` bhi aata hai** — review rich results ke liye **ineligible**
+hain.
 
-Google ki policy (Sept 2019, Dec 2025 mein dobara confirm): agar entity
-apne hi reviews apni website pe markup kare to wo **"self-serving"** hai,
-aur `LocalBusiness` / `Organization` (aur unke subtypes — `HVACBusiness`
-bhi) ke liye review rich results **allowed nahi**.
+Matlab **ye stars kabhi dikh hi nahi sakte the**. Markup sirf GSC mein
+"Invalid" items paida kar raha tha.
 
-Is liye kuch pages "valid" aa rahe hain, kuch "invalid" — Google
-inconsistently flag kar raha hai kyunke markup technically valid hai lekin
-policy ke against.
+**Hata diya.** Kuch nuqsan nahi hua:
 
-**Maine ye jaan bujh ke NAHI hataya** — ye aapka business decision hai:
+- Stars pehle bhi eligible nahi the — ab bhi nahi. Koi farq nahi.
+- **Ranking pe zero asar** — ye rich-result eligibility ka rule hai,
+  quality signal nahi.
+- Asli rating ab bhi Google tak **Google Business Profile** se pahunchti
+  hai — yehi supported tareeqa hai.
+- 5.0★ / 500 reviews **website pe users ko waise hi dikhte rahenge**
+  (`components/sections/google-reviews.tsx` — wo chhua hi nahi).
 
-| Option | Asar |
-|---|---|
-| **A. `aggregateRating` hata dein** | 36 invalid turant 0 ho jayenge. Stars waise bhi nahi dikh rahe the (policy ki wajah se), to search mein koi nuqsan nahi. AI Overviews rating data thoda kam dekh payenge. |
-| **B. Rehne dein** | 36 invalid GSC mein dikhte rahenge. Ye **ranking ko nuqsan nahi deta** — sirf "ye rich result nahi milega" ka matlab hai. |
+> `review` array pehle hi isi wajah se hata diya gaya tha. Us waqt
+> `aggregateRating` ye soch ke rakha gaya tha ke wo valid hai — nahi tha.
+> Ab dono gaye.
 
-Batayein to A kar deta hoon — 2 minute ka kaam hai.
+**Expected: 36 invalid → 0**, aur 87 "valid" bhi report se nikal jayenge
+(kyunke ab koi review markup hi nahi) — ye theek hai, wo waise bhi kabhi
+render nahi hote the.
 
 ---
 
-## 🟡 9. Videos: "4 no videos indexed"
+## ✅ 9. "4 no videos indexed" — FIX HO GAYA (aur ek dead link mila)
 
-Screenshot mein video section tha. Maine check kiya — site pe **koi
-`<video>` tag, koi iframe, koi VideoObject schema nahi hai**. Sirf footer
-mein YouTube channel ka link hai (264 pages pe).
+Aap ne poocha tha ke YouTube link hataane se theek hoga ya nahi. Maine
+check kiya — aur ek asli masla mila.
 
-Google ne wo YouTube links dekhe aur video expect kiya, mila nahi. **Ye
-koi error nahi hai** — ignore kar sakte hain. Agar future mein site pe
-asli video embed karein tab `VideoObject` schema add karna hoga.
+**`https://www.youtube.com/@klrenovator` — 404 hai. Channel exist hi nahi
+karta.**
+
+Ye link 264 pages ke `sameAs` schema mein tha. `sameAs` wo jagah hai jahan
+se Google aapke business ki identity **verify** karta hai — wahan dead
+profile hona verification ko kamzor karta hai.
+
+Aur yehi site pe **ekloti cheez** thi jo video ka ishara de rahi thi.
+Maine poori build scan ki:
+
+| Signal | Count |
+|---|---|
+| `<video>` tags | **0** |
+| `<iframe>` | **0** |
+| `VideoObject` schema | **0** |
+| `og:video` / `twitter:player` | **0** |
+| YouTube embed/watch URLs | **0** |
+
+Sirf channel ka link tha `sameAs` mein. Google ne wo dekha, video expect
+kiya, mila nahi → "no videos indexed".
+
+**Hata diya.** Sath hi ek aur dead link mila:
+`yelp: "https://www.yelp.com/biz/kl-renovator-no-title"` — ye placeholder
+tha jo kabhi replace hi nahi hua ("no-title" literally). Wo bhi `sameAs`
+se nikal diya (2 jagah `app/layout.tsx` mein).
+
+Phir maine **saare** `sameAs` links ek-ek karke live check kiye. Ek aur
+dead nikla:
+
+| Link | Status | Action |
+|---|---|---|
+| `youtube.com/@klrenovator` | **404** | ❌ hata diya |
+| `yelp.com/biz/kl-renovator-no-title` | **placeholder** | ❌ hata diya |
+| `medium.com/@klrenovator` | **404** | ❌ hata diya |
+| Facebook | ✅ live | rakha |
+| Instagram | ✅ live | rakha |
+| TikTok | ✅ live | rakha |
+| X (Twitter) | ✅ live | rakha |
+| LinkedIn | ✅ live | rakha |
+| Pinterest | ✅ live | rakha |
+| Linktree | ✅ live | rakha |
+| Google Maps / Business | ✅ live | rakha |
+
+3 dead profiles `sameAs` se nikal gaye — ab **10 links, sab live**.
+
+> **Agar future mein YouTube channel banayein:** `config/site.ts` ke
+> `links` block mein comment likha hai ke kaise wapas add karna hai
+> (3 files mein `sameAs` array).
 
 ---
 
@@ -266,6 +319,9 @@ Ye fail karega agar:
 - koi internal link 404 pe jaye
 - hreflang cluster mein return tag missing ho, ya target exist na kare
 - sitemap mein aisa URL ho jiska page build hi na hua ho
+- **koi route family 90%+ duplicate ho jaye** (naya — 551 wala masla)
+- **self-serving review markup wapas aa jaye** (naya — 36 invalid wala masla)
+- malformed JSON-LD ho
 - duplicate title/description (warning)
 
 Local: `npm run build && npm run audit:gsc`
@@ -280,19 +336,13 @@ Local: `npm run build && npm run audit:gsc`
 
 ### 1. Deploy ke baad GSC mein sitemap resubmit karein
 
-Sitemap 1,733 → 2,099 URLs ho gaya hai aur 249 pages ab pehli baar
-indexable hue hain.
+**Poore step-by-step direct links `GSC-RESUBMIT-GUIDE.md` mein hain.**
 
-1. Search Console → **Sitemaps** → `sitemap.xml` resubmit
-2. **URL Inspection** se ye 3 spot-check karein → "Request Indexing":
-   - `https://www.klrenovator.com/ms`
-   - `https://www.klrenovator.com/zh`
-   - `https://www.klrenovator.com/book`
-3. 2–3 hafte baad **Page indexing** report dekhein — "Alternate page with
-   proper canonical tag" bucket **249 se ghat kar lagbhag 0** hona chahiye.
+Short version: Sitemaps → `sitemap.xml` resubmit, phir 6 URLs ko URL
+Inspection se "Request Indexing".
 
-> Ye pages mahine se excluded the, is liye Google ko recrawl karne mein
-> waqt lagega. Ek hi din mein sab index nahi hoga — normal hai.
+> ⚠️ Merge + Vercel deploy **complete hone ke baad** karein, warna Google
+> purana version dekhega.
 
 ### 2. CI mein audit step add karein (1 minute)
 

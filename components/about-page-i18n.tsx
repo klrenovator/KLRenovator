@@ -434,7 +434,6 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
       siteConfig.links.facebook,
       siteConfig.links.instagram,
       siteConfig.links.tiktok,
-      siteConfig.links.youtube,
       siteConfig.links.googleBusiness,
       siteConfig.links.googleMaps,
       siteConfig.links.twitter,

@@ -184,7 +184,6 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
         sitePublic.links.facebook,
         sitePublic.links.instagram,
         sitePublic.links.tiktok,
-        sitePublic.links.youtube,
         sitePublic.links.googleBusiness,
         sitePublic.links.twitter,
         sitePublic.links.linkedin,
