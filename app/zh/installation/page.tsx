@@ -8,7 +8,7 @@ const t = HUB_COPY.zh;
 export const metadata: Metadata = {
   title: t.metaTitle,
   description: t.metaDescription,
-  alternates: buildTrilingualHreflang("/installation"),
+  alternates: buildTrilingualHreflang("/installation", "zh"),
   openGraph: {
     title: t.metaTitle,
     description: t.metaDescription,

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Panduan masalah aircond — tak sejuk, bocor air, bising, berbau, lampu berkelip. Servis hari sama.",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
   },
-  alternates: buildTrilingualHreflang("/problems"),
+  alternates: buildTrilingualHreflang("/problems", "ms"),
 };
 
 // ── Schemas ─────────────────────────────────────────────────────────────────

@@ -10,6 +10,12 @@ import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { waLink } from "@/lib/whatsapp";
 import { normalizeHreflangUrls } from "@/lib/hreflang-canonical";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
+import { brandAreaPairs } from "@/config/brand-area-priority";
+import {
+  brandAreaIntro,
+  brandAreaLocalNote,
+  brandAreaFaqs,
+} from "@/config/brand-area-uniqueness";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -17,39 +23,11 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 // Route: /brands/[slug]/[area]
 // ─────────────────────────────────────────────────────────────────────────
 
-const PRIORITY_AREAS_BY_BRAND: Record<string, string[]> = {
-  daikin: ["petaling-jaya", "mont-kiara", "subang-jaya", "kuala-lumpur", "shah-alam", "bangsar"],
-  panasonic: ["puchong", "cheras", "petaling-jaya", "subang-jaya", "klang", "kuala-lumpur"],
-  mitsubishi: ["shah-alam", "mont-kiara", "damansara", "kuala-lumpur", "puchong", "subang-jaya"],
-  york: ["klang", "shah-alam", "kepong", "puchong", "petaling-jaya", "sentul"],
-  acson: ["cheras", "shah-alam", "klang", "puchong", "kuala-lumpur", "setapak"],
-  carrier: ["glenmarie", "shah-alam", "kuala-lumpur", "petaling-jaya", "klang", "damansara"],
-  midea: ["puchong", "cheras", "subang-jaya", "petaling-jaya", "klang", "kajang"],
-  haier: ["cheras", "ampang", "puchong", "kajang", "kepong", "setapak"],
-  toshiba: ["damansara", "petaling-jaya", "kuala-lumpur", "mont-kiara", "bangsar", "subang-jaya"],
-  hitachi: ["shah-alam", "glenmarie", "kuala-lumpur", "damansara", "petaling-jaya", "klang"],
-  samsung: ["mont-kiara", "bangsar", "petaling-jaya", "subang-jaya", "kuala-lumpur", "cyberjaya"],
-  lg: ["mont-kiara", "petaling-jaya", "subang-jaya", "puchong", "kuala-lumpur", "bangsar"],
-  sharp: ["cheras", "ampang", "kepong", "setapak", "puchong", "kajang"],
-  fujitsu: ["glenmarie", "shah-alam", "kuala-lumpur", "damansara", "cyberjaya", "petaling-jaya"],
-  gree: ["puchong", "klang", "kajang", "cheras", "ampang", "seri-kembangan"],
-  hisense: ["kajang", "balakong", "puchong", "klang", "cheras", "ampang"],
-  aux: ["shah-alam", "klang", "puchong", "subang-jaya", "rawang", "kepong"],
-  tcl: ["puchong", "cheras", "subang-jaya", "petaling-jaya", "klang", "kajang"],
-  national: ["sentul", "kepong", "cheras", "ampang", "kuala-lumpur", "petaling-jaya"],
-  isonic: ["klang", "puchong", "shah-alam", "cheras", "kajang", "rawang"],
-  _default: ["kuala-lumpur", "petaling-jaya", "cheras", "puchong", "shah-alam", "klang"],
-};
 
 export function generateStaticParams() {
-  const params: { slug: string; area: string }[] = [];
-  for (const brand of siteConfig.brandPages) {
-    const priority = PRIORITY_AREAS_BY_BRAND[brand.slug] || PRIORITY_AREAS_BY_BRAND._default;
-    for (const areaSlug of priority) {
-      params.push({ slug: brand.slug, area: areaSlug });
-    }
-  }
-  return params;
+  // Shared with app/sitemap.ts via config/brand-area-priority.ts so the
+  // generated pages and the sitemap can never drift apart again.
+  return brandAreaPairs().map(({ brand, area }) => ({ slug: brand, area }));
 }
 
 export async function generateMetadata({
@@ -129,6 +107,22 @@ export default async function BrandAreaPageEN({
     ],
   };
 
+  // Area-specific prose. These 360 pages were 98.9% token-identical to
+  // each other, which Google reports as "Duplicate without user-selected
+  // canonical" / "Crawled - currently not indexed".
+  const areaIntro = brandAreaIntro(brand, area, "en");
+  const areaLocalNote = brandAreaLocalNote(brand, area, "en");
+  const areaFaqs = brandAreaFaqs(brand, area, "en");
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: areaFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const techSpecs = BRAND_TECH_SPECS[slug] ?? BRAND_TECH_SPECS._default;
   const errorCodes = BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES._default;
 
@@ -136,6 +130,7 @@ export default async function BrandAreaPageEN({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb Navigation */}
       <div className="bg-slate-50 border-b border-slate-200">
@@ -200,9 +195,7 @@ export default async function BrandAreaPageEN({
           <h2 className="text-2xl font-black uppercase tracking-tight text-slate-950 mb-6">
             Expert {brand.name} Aircond Solutions in {area.name}
           </h2>
-          <p className="text-slate-700 font-medium leading-relaxed mb-6">
-            KL Renovator sends highly-trained technicians directly to your residential property, condominium, commercial shop, or office in {area.name}. We understand {brand.name}'s specific system boards, electronics, and pressure requirements. Whether it's a basic servicing, deep chemical overhaul, or a precision gas top-up, we've got you covered.
-          </p>
+          <p className="text-slate-700 font-medium leading-relaxed mb-6">{areaIntro}</p>
 
           {/* Pricing Table */}
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-10">
@@ -270,6 +263,33 @@ export default async function BrandAreaPageEN({
                   <span className="font-black text-red-600">{ec.code}</span>
                   <span className="text-slate-700 font-medium">{ec.meaning}</span>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Local conditions — area-specific, prevents these 360 pages
+              from being near-duplicates of one another */}
+          <div className="mb-10">
+            <h3 className="font-black text-lg text-slate-900 mb-4 uppercase flex items-center gap-2">
+              <FiMapPin className="text-sky-500" /> {`Local Conditions in ${area.name}`}
+            </h3>
+            <p className="text-slate-700 font-medium leading-relaxed">{areaLocalNote}</p>
+          </div>
+
+          {/* Area-aware FAQ */}
+          <div className="mb-10">
+            <h3 className="font-black text-lg text-slate-900 mb-4 uppercase">
+              {`Frequently Asked Questions — ${brand.name} in ${area.name}`}
+            </h3>
+            <div className="space-y-3">
+              {areaFaqs.map((f, i) => (
+                <details key={i} className="group bg-slate-50 border border-slate-200 rounded-xl p-4">
+                  <summary className="cursor-pointer list-none font-black text-sm text-slate-900 flex justify-between gap-3">
+                    <span>{f.q}</span>
+                    <FiChevronRight className="h-4 w-4 shrink-0 transition-transform group-open:rotate-90" />
+                  </summary>
+                  <p className="mt-3 text-sm text-slate-700 font-medium leading-relaxed">{f.a}</p>
+                </details>
               ))}
             </div>
           </div>

@@ -5594,7 +5594,12 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "harga-servis-aircond-2026-malaysia",
-    title: "Harga Servis Aircond Malaysia 2026 - Panduan Harga Lengkap Semua Perkhidmatan",
+    // `title` feeds the ENGLISH route /blog/... and `titleMS` feeds
+    // /ms/blog/... . Both were set to the same Malay string, so the two URLs
+    // shipped an identical <title> and competed with each other in the SERP.
+    // The English body of this post is genuinely English, so it gets a real
+    // English title.
+    title: "Aircond Service Price Malaysia 2026 — Full Price Guide",
     titleMS: "Harga Servis Aircond Malaysia 2026 - Panduan Harga Lengkap Semua Perkhidmatan",
     titleZH: "2026年马来西亚冷气服务价格 - 完整服务价格指南",
     excerpt: "Complete transparent aircond service pricing for Malaysia 2026. All 9 services, all HP ranges, volume discounts, no hidden fees. Updated July 2026.",
@@ -6010,7 +6015,11 @@ export const allPosts: BlogPost[] = [
   {
     /* ── 20K.112 Malay Content Depth Expansion #1 ── */
     slug: "cara-pilih-hp-aircond-bilik-malaysia",
-    title: "Cara Pilih HP Aircond Untuk Bilik Malaysia — Panduan Saiz & Penjimatan TNB",
+    // `title`/`excerpt`/`content` feed the ENGLISH route /blog/<slug>;
+    // the *MS fields feed /ms/blog/<slug>. All three used to hold the same
+    // Malay strings, so the two URLs shipped identical metadata and body and
+    // competed with each other. English fields are now genuinely English.
+    title: "What HP Aircond Do I Need? Room Size Guide Malaysia",
     titleMS: "Cara Pilih HP Aircond Untuk Bilik Malaysia — Panduan Saiz & Penjimatan TNB",
     titleZH: "马来西亚房间冷气匹数选择指南 — 尺寸与TNB节省攻略",
     date: "2026-07-12",
@@ -6023,10 +6032,58 @@ export const allPosts: BlogPost[] = [
     readTime: 7,
     tags: ["hp aircond", "saiz bilik", "panduan membeli", "aircond malaysia", "jimat bil TNB"],
     relatedService: "installation",
-    excerpt: "1.0 HP, 1.5 HP atau 2.0 HP? Ramai owner beli HP salah — boros bil atau tak cukup sejuk. Panduan ni guna saiz bilik Malaysia sebenar (sq ft) dan 5 faktor penting untuk pilih HP tepat.",
+    excerpt: "1.0 HP, 1.5 HP or 2.0 HP? Most Malaysian homeowners pick the wrong size and end up with high TNB bills or a room that never cools. Size it correctly using real sq ft ranges and the 5 factors that actually matter.",
     excerptMS: "1.0 HP, 1.5 HP atau 2.0 HP? Ramai owner beli HP salah — boros bil atau tak cukup sejuk. Panduan ni guna saiz bilik Malaysia sebenar (sq ft) dan 5 faktor penting untuk pilih HP tepat.",
     excerptZH: "1.0、1.5还是2.0匹？很多业主选错匹数——要么电费暴涨，要么不够冷。本指南用马来西亚真实房间尺寸和5个关键因素教您选对匹数。",
-    content: '<p>Ramai owner rumah di Malaysia beli aircond dengan HP salah — terlebih besar (boros elektrik) atau terkurang kecil (tak sejuk). Panduan ni guna saiz bilik Malaysia sebenar.</p><h2>Formula Asas: Sq Ft ke HP</h2><p>Peraturan HVAC: <strong>setiap 500-600 sq ft = 1.0 HP</strong>. Tapi Malaysia tropika, kita tambah +0.5 HP reserve.</p><table><tr><th>Saiz Bilik</th><th>HP Disyorkan</th><th>Contoh</th></tr><tr><td>80-120 sq ft</td><td>1.0 HP</td><td>Bilik kecil, bilik maid</td></tr><tr><td>120-180 sq ft</td><td>1.5 HP</td><td>Bilik tidur utama</td></tr><tr><td>180-250 sq ft</td><td>2.0 HP</td><td>Ruang tamu kecil</td></tr><tr><td>250-400 sq ft</td><td>2.5 HP</td><td>Ruang tamu standard</td></tr><tr><td>400+ sq ft</td><td>3.0 HP</td><td>Ruang tamu besar / terbuka</td></tr></table><h2>5 Faktor Kritikal</h2><p><strong>1. Ketinggian Siling:</strong> Siling >10 kaki tambah 25-30% kapasiti.</p><p><strong>2. Orientasi Matahari:</strong> Bilik menghadap barat (matahari petang) lebih panas — tambah 0.5 HP.</p><p><strong>3. Penghuni & Peralatan:</strong> Setiap orang lebih = +600 BTU. Bilik dengan PC gaming / TV besar perlu HP tinggi.</p><p><strong>4. Penebatan & Tingkap:</strong> Rumah lama dengan banyak tingkap kaca — tambah 0.5 HP.</p><p><strong>5. Inverter vs Non-Inverter:</strong> Inverter boleh operate pada kapasiti rendah — 1.5 HP inverter mungkin cukup untuk bilik yang perlukan 2.0 HP non-inverter.</p><h2>HP Salah = Masalah Besar</h2><p><strong>Terlalu Kecil:</strong> Kompressor nonstop → bil TNB melambung, bilik tak sejuk, unit cepat rosak.</p><p><strong>Terlalu Besar:</strong> Kompressor short-cycling → kelembapan tak dibuang, sejuk tapi lembap, pemampat haus.</p><p>WhatsApp <strong>+60 18-298 3573</strong> — kami syorkan HP tepat percuma. Lihat: <a href="/services/installation">Pemasangan aircond</a> | <a href="/installation-price-malaysia">Harga pasang</a></p>',
+    content: `
+      <h2>What HP Aircond Do You Need for a Malaysian Room?</h2>
+      <p>Picking the wrong horsepower is the most common and most expensive aircond mistake Malaysian homeowners make. Undersize it and the compressor never stops running; oversize it and the room turns cold and clammy while the compressor wears itself out. This guide sizes units against real Malaysian room dimensions in square feet.</p>
+      <div class="summary-block"><strong>Direct answer:</strong> As a rule of thumb — 80–120 sq ft needs 1.0 HP, 120–180 sq ft needs 1.5 HP, 180–250 sq ft needs 2.0 HP, 250–400 sq ft needs 2.5 HP, and anything above 400 sq ft needs 3.0 HP. Add half a horsepower for west-facing rooms or ceilings over 10 feet.</div>
+
+      <h2>The Basic Formula: Square Feet to Horsepower</h2>
+      <p>The standard HVAC rule is roughly <strong>500–600 sq ft per 1.0 HP</strong>. That figure assumes a temperate climate, so for Malaysia's heat and humidity we build in an extra margin rather than sizing to the bare minimum.</p>
+      <table>
+        <thead><tr><th>Room Size</th><th>Recommended HP</th><th>Typical Room</th></tr></thead>
+        <tbody>
+          <tr><td>80–120 sq ft</td><td><strong>1.0 HP</strong></td><td>Small bedroom, maid's room</td></tr>
+          <tr><td>120–180 sq ft</td><td><strong>1.5 HP</strong></td><td>Master bedroom</td></tr>
+          <tr><td>180–250 sq ft</td><td><strong>2.0 HP</strong></td><td>Small living room</td></tr>
+          <tr><td>250–400 sq ft</td><td><strong>2.5 HP</strong></td><td>Standard living room</td></tr>
+          <tr><td>400+ sq ft</td><td><strong>3.0 HP</strong></td><td>Large or open-plan living area</td></tr>
+        </tbody>
+      </table>
+      <p>Not sure of your room area? Our <a href="/btu-calculator">free BTU calculator</a> works it out from your measurements in a few seconds.</p>
+
+      <h2>5 Factors That Change the Answer</h2>
+
+      <h3>1. Ceiling Height</h3>
+      <p>The table above assumes a standard 9–10 ft ceiling. Anything higher means more air volume to cool, so add <strong>25–30% capacity</strong>. Double-volume living areas in bungalows and semi-Ds almost always need a size up.</p>
+
+      <h3>2. Sun Orientation</h3>
+      <p>West-facing rooms absorb the full afternoon sun and stay hot well into the evening. Add <strong>0.5 HP</strong> for a west-facing bedroom, especially on the top floor of a terrace house where roof heat is also a factor.</p>
+
+      <h3>3. Occupants and Equipment</h3>
+      <p>Every additional person adds roughly <strong>600 BTU</strong> of heat load. A gaming PC, a large TV or kitchen appliances add more. A bedroom that sleeps two with a desktop running needs more capacity than the floor area alone suggests.</p>
+
+      <h3>4. Insulation and Glazing</h3>
+      <p>Older homes with large single-glazed windows and no ceiling insulation lose cool air quickly. Add <strong>0.5 HP</strong> where there is a lot of exposed glass.</p>
+
+      <h3>5. Inverter vs Non-Inverter</h3>
+      <p>An inverter unit varies its output instead of cycling on and off, so it holds temperature more efficiently at part load. A <strong>1.5 HP inverter</strong> will often keep up with a room that would need a 2.0 HP non-inverter unit — and it will use noticeably less electricity doing it.</p>
+
+      <h2>Why the Wrong HP Costs You Money</h2>
+      <table>
+        <thead><tr><th>Mistake</th><th>What Happens</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Undersized</strong></td><td>Compressor runs continuously and never reaches the set temperature</td><td>High TNB bill, room still warm, shortened compressor life</td></tr>
+          <tr><td><strong>Oversized</strong></td><td>Compressor short-cycles — cools fast, shuts off before dehumidifying</td><td>Cold but clammy room, damp smell, premature compressor wear</td></tr>
+        </tbody>
+      </table>
+      <div class="summary-block"><strong>Direct answer:</strong> An oversized unit is not "safer" than an undersized one. Short-cycling leaves humidity in the room and wears the compressor out faster, which is why correct sizing matters more than simply buying the biggest unit you can afford.</div>
+
+      <h2>Get a Free Sizing Recommendation</h2>
+      <p>Send us your room dimensions on WhatsApp at <strong>+60 18-298 3573</strong> and we will recommend the right HP at no charge — including whether an inverter model is worth the difference for your usage. See also: <a href="/services/installation">aircond installation</a> | <a href="/installation-price-malaysia">installation pricing</a> | <a href="/btu-calculator">BTU calculator</a></p>
+    `,
     contentMS: '<p>Ramai owner rumah di Malaysia beli aircond dengan HP salah — terlebih besar (boros elektrik) atau terkurang kecil (tak sejuk). Panduan ni guna saiz bilik Malaysia sebenar.</p><h2>Formula Asas: Sq Ft ke HP</h2><p>Peraturan HVAC: <strong>setiap 500-600 sq ft = 1.0 HP</strong>. Tapi Malaysia tropika, kita tambah +0.5 HP reserve.</p><table><tr><th>Saiz Bilik</th><th>HP Disyorkan</th><th>Contoh</th></tr><tr><td>80-120 sq ft</td><td>1.0 HP</td><td>Bilik kecil, bilik maid</td></tr><tr><td>120-180 sq ft</td><td>1.5 HP</td><td>Bilik tidur utama</td></tr><tr><td>180-250 sq ft</td><td>2.0 HP</td><td>Ruang tamu kecil</td></tr><tr><td>250-400 sq ft</td><td>2.5 HP</td><td>Ruang tamu standard</td></tr><tr><td>400+ sq ft</td><td>3.0 HP</td><td>Ruang tamu besar / terbuka</td></tr></table><h2>5 Faktor Kritikal</h2><p><strong>1. Ketinggian Siling:</strong> Siling >10 kaki tambah 25-30% kapasiti.</p><p><strong>2. Orientasi Matahari:</strong> Bilik menghadap barat (matahari petang) lebih panas — tambah 0.5 HP.</p><p><strong>3. Penghuni & Peralatan:</strong> Setiap orang lebih = +600 BTU. Bilik dengan PC gaming / TV besar perlu HP tinggi.</p><p><strong>4. Penebatan & Tingkap:</strong> Rumah lama dengan banyak tingkap kaca — tambah 0.5 HP.</p><p><strong>5. Inverter vs Non-Inverter:</strong> Inverter boleh operate pada kapasiti rendah — 1.5 HP inverter mungkin cukup untuk bilik yang perlukan 2.0 HP non-inverter.</p><h2>HP Salah = Masalah Besar</h2><p><strong>Terlalu Kecil:</strong> Kompressor nonstop → bil TNB melambung, bilik tak sejuk, unit cepat rosak.</p><p><strong>Terlalu Besar:</strong> Kompressor short-cycling → kelembapan tak dibuang, sejuk tapi lembap, pemampat haus.</p><p>WhatsApp <strong>+60 18-298 3573</strong> — kami syorkan HP tepat percuma. Lihat: <a href="/ms/services/installation">Pemasangan aircond</a> | <a href="/ms/installation-price-malaysia">Harga pasang</a></p>',
     contentZH: '<p>很多马来西亚房主购买了匹数错误的空调——要么太大（电费暴涨），要么太小（不够冷）。本指南使用马来西亚真实房间尺寸。</p><h2>基本公式：平方英尺换算匹数</h2><p>HVAC行业规则：<strong>每500-600平方英尺=1.0 HP</strong>。但马来西亚属热带气候，我们增加+0.5 HP余量。</p><table><tr><th>房间尺寸</th><th>推荐匹数</th><th>示例</th></tr><tr><td>80-120 sq ft</td><td>1.0 HP</td><td>小卧室、佣人房</td></tr><tr><td>120-180 sq ft</td><td>1.5 HP</td><td>主卧室</td></tr><tr><td>180-250 sq ft</td><td>2.0 HP</td><td>小客厅</td></tr><tr><td>250-400 sq ft</td><td>2.5 HP</td><td>标准客厅</td></tr><tr><td>400+ sq ft</td><td>3.0 HP</td><td>大客厅/开放式</td></tr></table><h2>5个关键因素</h2><p><strong>1. 天花板高度：</strong>高于10英尺需增加25-30%容量。</p><p><strong>2. 朝向：</strong>朝西的房间（西晒）更热——增加0.5 HP。</p><p><strong>3. 人数与电器：</strong>每增加一人≈+600 BTU。有游戏电脑/大电视的房间需更高匹数。</p><p><strong>4. 隔热与窗户：</strong>老旧房屋多玻璃窗——增加0.5 HP。</p><p><strong>5. 变频vs定频：</strong>变频空调可在低容量下运行——需要2.0 HP定频的房间，1.5 HP变频可能就够。</p><h2>匹数不对=大问题</h2><p><strong>太小：</strong>压缩机不停→电费暴涨、房间不冷、设备快坏。</p><p><strong>太大：</strong>压缩机频繁启停→湿度不除、冷但闷、压缩机磨损。</p><p>WhatsApp <strong>+60 18-298 3573</strong>——我们免费建议正确匹数。查看：<a href="/zh/services/installation">冷气安装</a> | <a href="/zh/installation-price-malaysia">安装价格</a></p>',
     lastReviewed: "2026-07-12",
@@ -6034,7 +6091,9 @@ export const allPosts: BlogPost[] = [
   {
     /* ── 20K.112 Malay Content Depth Expansion #2 ── */
     slug: "baiki-vs-tukar-baru-aircond-malaysia",
-    title: "Baiki vs Tukar Baru Aircond Malaysia 2026 — Bila Masa Nak Repair & Bila Nak Ganti",
+    // English fields serve /blog/<slug>, *MS fields serve /ms/blog/<slug>.
+    // These were identical Malay strings, making the two URLs duplicates.
+    title: "Aircond Repair or Replace? Malaysia Cost Guide 2026",
     titleMS: "Baiki vs Tukar Baru Aircond Malaysia 2026 — Bila Masa Nak Repair & Bila Nak Ganti",
     titleZH: "2026年马来西亚冷气维修vs更换指南 — 何时修何时换",
     date: "2026-07-12",
@@ -6047,10 +6106,51 @@ export const allPosts: BlogPost[] = [
     readTime: 8,
     tags: ["baiki aircond", "tukar aircond", "repair vs replace", "kos aircond", "aircond rosak"],
     relatedService: "repair",
-    excerpt: "Aircond rosak lagi? Berapa kali nak repair sebelum tukar baru? Panduan ni bantu anda buat keputusan — bila repair jimat dan bila tukar baru lebih berbaloi. Dengan kalkulator perbandingan kos.",
+    excerpt: "Broken down again? Work out whether repairing your aircond still makes financial sense or whether replacing it is the cheaper long-term call — with real Malaysian repair costs and the 50% rule.",
     excerptMS: "Aircond rosak lagi? Berapa kali nak repair sebelum tukar baru? Panduan ni bantu anda buat keputusan — bila repair jimat dan bila tukar baru lebih berbaloi. Dengan kalkulator perbandingan kos.",
     excerptZH: "冷气又坏了？修多少次才该换新的？本指南帮您决策——何时维修省钱，何时换新更划算。附带成本对比计算器。",
-    content: '<p>Ini soalan paling biasa: <strong>"Baiki lagi ke atau tukar baru terus?"</strong> Jawapan bergantung pada umur unit, kos repair, jenis kerosakan, dan bil TNB semasa. Panduan ni bagi framework jelas.</p><h2>Peraturan 50%</h2><p>Peraturan paling mudah: <strong>kalau kos repair >50% daripada harga unit baru, tukar baru.</strong> Contoh: Aircond 1.5 HP baru = RM 1,200-1,800. Kalau repair RM 900+ — lebih baik tukar baru.</p><h2>Bila Repair Masih Berbaloi</h2><table><tr><th>Situasi</th><th>Kos Repair</th><th>Keputusan</th></tr><tr><td>Gas bocor sikit — cuma leak seal & top-up</td><td>RM 150-250</td><td>✅ Baiki</td></tr><tr><td>Kapasitor fan rosak</td><td>RM 120-200</td><td>✅ Baiki</td></tr><tr><td>Drain pipe tersumbat</td><td>RM 99-150</td><td>✅ Baiki — servis asas</td></tr><tr><td>PCB rosak (inverter)</td><td>RM 400-800</td><td>⚠️ Fikir — kalau unit >5 tahun</td></tr><tr><td>Kompressor mati</td><td>RM 800-1,500</td><td>❌ Tukar baru — terutama >3 tahun</td></tr><tr><td>Kebocoran refrigerant besar (coil bocor)</td><td>RM 600-1,200</td><td>❌ Tukar baru</td></tr></table><h2>4 Tanda Masa Nak Tukar Baru</h2><p><strong>1. Umur >10 tahun:</strong> Aircond moden lebih jimat 30-50% elektrik. ROI dalam 2-3 tahun.</p><p><strong>2. Bil TNB naik ketara:</strong> Unit lama tarik lebih amp — ganti ke inverter R32 jimat RM 30-60/bulan.</p><p><strong>3. Guna R22 (gas lama):</strong> R22 dah discontinued — harga gas makin mahal setiap tahun.</p><p><strong>4. Repair >2 kali setahun:</strong> Dah jadi "kereta buruk" — total kos repair dah lebih dari bayaran ansuran unit baru.</p><h2>Kalkulator Cepat</h2><p>Kos repair tahunan > RM 500? Atau unit >8 tahun dengan bil tinggi? <strong>Tukar baru lebih jimat jangka panjang.</strong></p><p>WhatsApp <strong>+60 18-298 3573</strong> — technician kami akan beri nasihat jujur (kami tak akan suruh repair kalau tukar baru lebih baik). <a href="/services/repair">Servis repair</a> | <a href="/services/installation">Pasang baru</a></p>',
+    content: `
+      <h2>Should You Repair or Replace Your Aircond?</h2>
+      <p>It is the question every Malaysian homeowner eventually faces: pay to fix the unit again, or put that money towards a new one? The honest answer depends on four things — the unit's age, the cost of the repair, what has actually failed, and what you are currently paying TNB every month. This guide gives you a clear framework.</p>
+      <div class="summary-block"><strong>Direct answer:</strong> Replace the unit if the repair quote exceeds 50% of a new unit's price, if the unit is over 10 years old, if the compressor has failed, or if it still runs on R22 gas. Repair it for capacitor faults, blocked drains and minor gas leaks.</div>
+
+      <h2>The 50% Rule</h2>
+      <p>The simplest test: <strong>if the repair costs more than half the price of an equivalent new unit, replace it.</strong> A new 1.5 HP unit runs roughly <strong>RM 1,200–1,800</strong> installed, so a repair quote of RM 900 or more on an older unit rarely makes sense — you are paying half the price of a new machine to keep an ageing one alive, with no warranty on the rest of the system.</p>
+
+      <h2>When Repair Is Still Worth It</h2>
+      <table>
+        <thead><tr><th>Fault</th><th>Typical Repair Cost</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td>Minor gas leak — seal and top-up</td><td>RM 150–250</td><td>✅ Repair</td></tr>
+          <tr><td>Faulty fan capacitor</td><td>RM 120–200</td><td>✅ Repair</td></tr>
+          <tr><td>Blocked drain pipe</td><td>RM 99–150</td><td>✅ Repair — routine servicing</td></tr>
+          <tr><td>Failed PCB (inverter)</td><td>RM 400–800</td><td>⚠️ Consider — only if under 5 years old</td></tr>
+          <tr><td>Dead compressor</td><td>RM 800–1,500</td><td>❌ Replace — especially past 3 years</td></tr>
+          <tr><td>Major refrigerant leak (pierced coil)</td><td>RM 600–1,200</td><td>❌ Replace</td></tr>
+        </tbody>
+      </table>
+      <p>Capacitors, drains and small leaks are cheap, quick wins that restore full cooling. Compressors and coils are the two components whose replacement cost approaches the value of the whole unit.</p>
+
+      <h2>4 Signs It Is Time to Replace</h2>
+
+      <h3>1. The Unit Is Over 10 Years Old</h3>
+      <p>A modern inverter unit uses <strong>30–50% less electricity</strong> than a decade-old non-inverter model. On typical Klang Valley usage that difference pays back the cost of a new unit in two to three years, and you get a fresh warranty in the bargain.</p>
+
+      <h3>2. Your TNB Bill Keeps Climbing</h3>
+      <p>Older units draw more current as the compressor degrades and the coil fouls. If your bill has crept up without a change in usage, the unit is quietly costing you <strong>RM 30–60 a month</strong> more than a modern R32 inverter would.</p>
+
+      <h3>3. It Still Runs on R22</h3>
+      <p>R22 refrigerant has been phased out, and the remaining supply gets more expensive every year. Once an R22 system develops a significant leak, topping it up is throwing good money after bad — the gas alone will keep rising in price.</p>
+
+      <h3>4. You Have Repaired It More Than Twice This Year</h3>
+      <p>Two or more callouts in twelve months usually means the system as a whole is at the end of its service life. Add up what you have spent across those visits and compare it against the monthly instalment on a new unit — the maths often favours replacing.</p>
+
+      <h2>Quick Decision Check</h2>
+      <div class="summary-block"><strong>Direct answer:</strong> If your annual repair spend is over RM 500, or the unit is more than 8 years old and your bill is high, replacing works out cheaper over the long run. Under 5 years old with a simple fault? Repair it.</div>
+
+      <h2>Get an Honest Assessment</h2>
+      <p>WhatsApp us at <strong>+60 18-298 3573</strong> with your unit's age, brand and symptoms. Our technicians will tell you straight when a repair is not worth doing — we would rather quote you honestly than take payment for a fix that buys you six months. See also: <a href="/services/repair">repair and troubleshooting</a> | <a href="/services/installation">new unit installation</a> | <a href="/aircond-service-price-malaysia">full price list</a></p>
+    `,
     contentMS: '<p>Ini soalan paling biasa: <strong>"Baiki lagi ke atau tukar baru terus?"</strong> Jawapan bergantung pada umur unit, kos repair, jenis kerosakan, dan bil TNB semasa. Panduan ni bagi framework jelas.</p><h2>Peraturan 50%</h2><p>Peraturan paling mudah: <strong>kalau kos repair >50% daripada harga unit baru, tukar baru.</strong> Contoh: Aircond 1.5 HP baru = RM 1,200-1,800. Kalau repair RM 900+ — lebih baik tukar baru.</p><h2>Bila Repair Masih Berbaloi</h2><table><tr><th>Situasi</th><th>Kos Repair</th><th>Keputusan</th></tr><tr><td>Gas bocor sikit</td><td>RM 150-250</td><td>✅ Baiki</td></tr><tr><td>Kapasitor fan rosak</td><td>RM 120-200</td><td>✅ Baiki</td></tr><tr><td>Drain pipe tersumbat</td><td>RM 99-150</td><td>✅ Baiki</td></tr><tr><td>PCB rosak (inverter)</td><td>RM 400-800</td><td>⚠️ Fikir</td></tr><tr><td>Kompressor mati</td><td>RM 800-1,500</td><td>❌ Tukar baru</td></tr><tr><td>Coil bocor besar</td><td>RM 600-1,200</td><td>❌ Tukar baru</td></tr></table><h2>4 Tanda Masa Nak Tukar</h2><p><strong>1. Umur >10 tahun:</strong> Unit baru jimat 30-50% elektrik.</p><p><strong>2. Bil TNB naik:</strong> Unit lama tarik amp lebih.</p><p><strong>3. R22 gas:</strong> Dah discontinued, harga gas naik.</p><p><strong>4. Repair >2 kali setahun:</strong> Total kos dah melebihi bayaran unit baru.</p><p>WhatsApp <strong>+60 18-298 3573</strong> — nasihat jujur. <a href="/ms/services/repair">Servis repair</a> | <a href="/ms/services/installation">Pasang baru</a></p>',
     contentZH: `<h2>冷气坏了：该修理还是换新的？— 2026 马来西亚决策指南</h2>
       <p>当您的冷气出现故障且维修费用不菲时，您可能会面临两难选择：花钱修旧机，还是直接买新机？<strong>KL Renovator</strong> 的专家为您梳理了 5 个关键判断标准，帮您做出最省钱的决定。</p>
@@ -6097,7 +6197,9 @@ export const allPosts: BlogPost[] = [
   {
     /* ── 20K.112 Malay Content Depth Expansion #3 ── */
     slug: "servis-aircond-rumah-sewa-airbnb-malaysia",
-    title: "Panduan Servis Aircond Rumah Sewa & Airbnb Malaysia — Jadual & Tanggungjawab",
+    // English fields serve /blog/<slug>, *MS fields serve /ms/blog/<slug>.
+    // These were identical Malay strings, making the two URLs duplicates.
+    title: "Rental & Airbnb Aircond Servicing Guide Malaysia",
     titleMS: "Panduan Servis Aircond Rumah Sewa & Airbnb Malaysia — Jadual & Tanggungjawab",
     titleZH: "马来西亚出租房与Airbnb冷气保养指南 — 时间表与责任",
     date: "2026-07-12",
@@ -6110,10 +6212,49 @@ export const allPosts: BlogPost[] = [
     readTime: 7,
     tags: ["airbnb aircond", "rumah sewa", "servis berkala", "tuan rumah", "aircond maintenance"],
     relatedService: "maintenance-contract",
-    excerpt: "Siapa yang patut bayar servis aircond — tuan rumah atau penyewa? Berapa kerap servis untuk Airbnb? Panduan lengkap untuk landlord, host Airbnb & penyewa di Malaysia.",
+    excerpt: "Who pays for aircond servicing — the landlord or the tenant? How often should an Airbnb unit be serviced? A complete guide for Malaysian landlords, Airbnb hosts and tenants, with a cost split table.",
     excerptMS: "Siapa yang patut bayar servis aircond — tuan rumah atau penyewa? Berapa kerap servis untuk Airbnb? Panduan lengkap untuk landlord, host Airbnb & penyewa di Malaysia.",
     excerptZH: "谁该付冷气保养费——房东还是租客？Airbnb多久保养一次？给马来西亚房东、Airbnb房东和租客的完整指南。",
-    content: '<p>Bila aircond rosak di rumah sewa, soalan pertama: <strong>Siapa yang tanggung kos?</strong> Ini bergantung pada perjanjian sewa, jenis kerosakan, dan undang-undang Malaysia. Panduan untuk landlord dan penyewa.</p><h2>Siapa Bayar Apa — Peraturan Asas</h2><table><tr><th>Item</th><th>Tanggungjawab</th><th>Anggaran Kos</th></tr><tr><td>Servis rutin (3-6 bulan)</td><td>Penyewa / Tuan Rumah (ikut perjanjian)</td><td>RM 99-120</td></tr><tr><td>Cuci kimia (tahunan)</td><td>Tuan Rumah</td><td>RM 120-220</td></tr><tr><td>Baiki kecil (kapasitor, drain)</td><td>Tuan Rumah</td><td>RM 99-200</td></tr><tr><td>Baiki besar (kompressor, PCB)</td><td>Tuan Rumah</td><td>RM 400-1,500</td></tr><tr><td>Kerosakan akibat kecuaian penyewa</td><td>Penyewa</td><td>Ikut kerosakan</td></tr></table><h2>Jadual Servis Untuk Airbnb & Homestay</h2><p>Airbnb/short-stay guna aircond lebih kerap — tetamu selalunya biar 24 jam. Cadangan: <strong>basic servicing setiap 2-3 bulan, chemical wash setiap 6-8 bulan</strong> — lebih kerap dari rumah biasa.</p><h2>AMC Untuk Landlord — Jimat & Tenang</h2><p>Kalau ada 3+ unit sewa, <strong>AMC (Annual Maintenance Contract)</strong> sangat berbaloi. RM 299/tahun/unit termasuk 4x basic servicing + 1x chemical wash + priority emergency. Tak perlu pening fikir jadual — kami uruskan semua.</p><p><strong>Benefit AMC:</strong> Tenant WhatsApp terus, kami datang — landlord tak perlu jadi middleman. Rekod servis automatik untuk audit / insurans.</p><h2>Tips Untuk Landlord</h2><p><strong>1. Tulis dalam tenancy agreement:</strong> Clause servis aircond — siapa bayar servis rutin vs repair besar.</p><p><strong>2. Ambil gambar sebelum tenant masuk:</strong> Bukti keadaan unit untuk elak dispute.</p><p><strong>3. Daftar AMC:</strong> Lebih murah dari repair kecemasan — dan rating Airbnb maintain 5-bintang.</p><p>WhatsApp <strong>+60 18-298 3573</strong> untuk daftar AMC atau servis rumah sewa. <a href="/services/maintenance-contract">Pelan AMC</a> | <a href="/services/basic-servicing">Servis asas</a></p>',
+    content: `
+      <h2>Who Pays for Aircond Servicing in a Malaysian Rental?</h2>
+      <p>When the aircond stops working in a rented property, the first question is always the same: who covers the cost? The answer comes down to what the tenancy agreement says, what actually failed, and whether the damage was down to neglect. Here is how it normally splits for landlords and tenants in Malaysia.</p>
+      <div class="summary-block"><strong>Direct answer:</strong> Tenants typically cover routine servicing every 3–6 months (RM 99–120). Landlords cover annual chemical wash, component repairs and major faults such as compressor or PCB failure. Damage caused by tenant negligence is charged to the tenant.</div>
+
+      <h2>Cost Split — The Standard Rules</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Usually Paid By</th><th>Typical Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Routine servicing (every 3–6 months)</td><td>Tenant or landlord — per agreement</td><td>RM 99–120</td></tr>
+          <tr><td>Chemical wash (annual)</td><td>Landlord</td><td>RM 120–220</td></tr>
+          <tr><td>Minor repairs (capacitor, drain)</td><td>Landlord</td><td>RM 99–200</td></tr>
+          <tr><td>Major repairs (compressor, PCB)</td><td>Landlord</td><td>RM 400–1,500</td></tr>
+          <tr><td>Damage from tenant negligence</td><td>Tenant</td><td>Depends on damage</td></tr>
+        </tbody>
+      </table>
+      <p>The logic is straightforward: routine upkeep follows whoever benefits from daily use, while the fabric of the property — the unit itself and its major components — stays with the owner.</p>
+
+      <h2>Servicing Schedule for Airbnb and Homestay</h2>
+      <p>Short-stay properties are a different case. Guests tend to run the aircond at 16°C around the clock and leave it on when they go out, so the load is far heavier than in a normal home. Two things fail early as a result: the blower wheel fouls with dust within about three months, and the drain line blocks from the sheer volume of condensate.</p>
+      <div class="summary-block"><strong>Direct answer:</strong> For Airbnb and homestay units, book basic servicing every 2–3 months and a chemical wash every 6–8 months — roughly twice the frequency of a normal residential unit.</div>
+
+      <h2>Annual Maintenance Contracts for Landlords</h2>
+      <p>If you manage three or more rental units, an <strong>Annual Maintenance Contract (AMC)</strong> is usually the cheaper route. Plans start from <strong>RM 299 per year per unit</strong> and cover quarterly basic servicing plus a chemical wash, with priority scheduling for emergencies.</p>
+      <p>The practical benefit is that the tenant contacts us directly and we attend — the landlord stops being the middleman for every complaint. You also get a documented service history, which is useful for insurance claims and for settling deposit disputes at the end of a tenancy.</p>
+
+      <h2>3 Tips for Landlords</h2>
+
+      <h3>1. Put the Servicing Clause in Writing</h3>
+      <p>Spell out in the tenancy agreement who pays for routine servicing versus major repairs, and how often servicing must happen. A clause requiring a service receipt every four months prevents the common situation where a unit is handed back after two years having never been cleaned.</p>
+
+      <h3>2. Photograph the Units Before Move-In</h3>
+      <p>Date-stamped photos of each unit's condition at handover settle almost every deposit argument about aircond damage before it starts.</p>
+
+      <h3>3. Schedule Ahead Rather Than Reacting</h3>
+      <p>Planned servicing is consistently cheaper than emergency callouts, and for short-stay hosts it protects the review score — a leaking or noisy aircond is one of the fastest routes to a one-star rating.</p>
+
+      <h2>Arrange Servicing for Your Rental</h2>
+      <p>WhatsApp <strong>+60 18-298 3573</strong> to set up an AMC or book a one-off service for a rental property. We can coordinate directly with your tenants and send before-and-after photos after each visit. See also: <a href="/services/maintenance-contract">AMC plans</a> | <a href="/services/basic-servicing">basic servicing</a> | <a href="/services/chemical-wash">chemical wash</a></p>
+    `,
     contentMS: '<p>Bila aircond rosak di rumah sewa, soalan pertama: <strong>Siapa yang tanggung kos?</strong> Panduan lengkap untuk landlord dan penyewa.</p><h2>Siapa Bayar Apa</h2><table><tr><th>Item</th><th>Tanggungjawab</th><th>Anggaran</th></tr><tr><td>Servis rutin</td><td>Penyewa/Tuan Rumah</td><td>RM 99-120</td></tr><tr><td>Cuci kimia</td><td>Tuan Rumah</td><td>RM 120-220</td></tr><tr><td>Baiki kecil</td><td>Tuan Rumah</td><td>RM 99-200</td></tr><tr><td>Baiki besar</td><td>Tuan Rumah</td><td>RM 400-1,500</td></tr><tr><td>Kecuaian penyewa</td><td>Penyewa</td><td>Ikut kerosakan</td></tr></table><h2>Jadual Airbnb</h2><p>Airbnb guna 24 jam — servis setiap 2-3 bulan, chemical wash 6-8 bulan.</p><h2>AMC Untuk Landlord</h2><p>RM 299/tahun — 4x basic + 1x chemical wash + priority. Tenant WhatsApp terus, kami urus.</p><p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/maintenance-contract">Pelan AMC</a> | <a href="/ms/services/basic-servicing">Servis asas</a></p>',
     contentZH: `<h2>出租房与 Airbnb 冷气保养指南 — 房东省钱与避坑必读</h2>
       <p>冷气坏了，谁该付钱？房东还是租客？<strong>KL Renovator</strong> 为马来西亚房东总结了 2026 年最全的冷气维护策略，帮您保护资产并提高租客满意度。</p>

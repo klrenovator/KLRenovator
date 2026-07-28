@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { allPosts } from "@/config/blog-posts";
+import { brandAreaPairs } from "@/config/brand-area-priority";
 
 const BASE = "https://www.klrenovator.com";
 
@@ -53,12 +54,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ── Static / Index Pages — only URLs with real route files are listed.
   // Review pages are noindex conversion-only routes, so they are excluded.
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: buildCanonicalOnly("") },
+    { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: buildTrilingual({ en: "", ms: "/ms", zh: "/zh" }) },
+    // The /ms and /zh homepages are real, indexable, hreflang-linked pages
+    // but were absent from the sitemap entirely — the two highest-value
+    // localized entry points on the site had no submission path.
+    { url: `${BASE}/ms`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "", ms: "/ms", zh: "/zh" }) },
+    { url: `${BASE}/zh`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "", ms: "/ms", zh: "/zh" }) },
     { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
     { url: `${BASE}/ms/services`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
     { url: `${BASE}/zh/services`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
-    { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildCanonicalOnly("/areas") },
-    { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildCanonicalOnly("/brands") },
+    // /areas and /brands index pages exist in all three languages and now
+    // carry real self-referencing canonicals, so they get real trilingual
+    // alternates here instead of an English-only entry, and the /ms + /zh
+    // twins are submitted rather than left for Google to find on its own.
+    { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
+    { url: `${BASE}/ms/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.82, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
+    { url: `${BASE}/zh/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.82, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
+    { url: `${BASE}/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/brands", ms: "/ms/brands", zh: "/zh/brands" }) },
+    { url: `${BASE}/ms/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.78, alternates: buildTrilingual({ en: "/brands", ms: "/ms/brands", zh: "/zh/brands" }) },
+    { url: `${BASE}/zh/brands`, lastModified: now, changeFrequency: "monthly", priority: 0.78, alternates: buildTrilingual({ en: "/brands", ms: "/ms/brands", zh: "/zh/brands" }) },
     { url: `${BASE}/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/problems", ms: "/ms/problems", zh: "/zh/problems" }) },
     { url: `${BASE}/ms/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/problems", ms: "/ms/problems", zh: "/zh/problems" }) },
     { url: `${BASE}/zh/problems`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/problems", ms: "/ms/problems", zh: "/zh/problems" }) },
@@ -410,6 +424,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
+  // ── Brand × Area Pages — /brands/[slug]/[area] and its /ms + /zh twins.
+  // 360 prerendered pages (120 per locale) that were built and indexable but
+  // never listed here, so Google had no submitted path to them. Driven by
+  // the same brandAreaPairs() the route files use, so this can't drift.
+  const brandAreaMatrix = brandAreaPairs();
+
+  const buildBrandAreaEntries = (
+    locale: "en" | "ms" | "zh",
+    priority: number,
+  ): MetadataRoute.Sitemap =>
+    brandAreaMatrix.map(({ brand, area }) => {
+      const prefix = locale === "en" ? "" : `/${locale}`;
+      return {
+        url: `${BASE}${prefix}/brands/${brand}/${area}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority,
+        alternates: buildTrilingual({
+          en: `/brands/${brand}/${area}`,
+          ms: `/ms/brands/${brand}/${area}`,
+          zh: `/zh/brands/${brand}/${area}`,
+        }),
+      };
+    });
+
+  const brandAreaPages = buildBrandAreaEntries("en", 0.74);
+  const msBrandAreaPages = buildBrandAreaEntries("ms", 0.68);
+  const zhBrandAreaPages = buildBrandAreaEntries("zh", 0.68);
+
   // ── Problem Pages — all configured problems with real /ms/ and /zh/ twins
   const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
     url: `${BASE}/problems/${p.slug}`,
@@ -557,6 +600,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...brandInstallationPages,
     ...msBrandInstallationPages,
     ...zhBrandInstallationPages,
+    ...brandAreaPages,
+    ...msBrandAreaPages,
+    ...zhBrandAreaPages,
     ...problemPages,
     ...msProblemPages,
     ...zhProblemPages,

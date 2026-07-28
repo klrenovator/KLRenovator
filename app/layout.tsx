@@ -13,7 +13,6 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ConversionWidgetsLoader } from "@/components/conversion-widgets-loader";
-import { googlePlace } from "@/config/reviews";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
@@ -93,17 +92,24 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-// ── NOTE: We intentionally do NOT generate a "review" schema array here.
-// Google's structured data guidelines (Sept 2019 update) mark self-serving
-// reviews — reviews about Entity A published on Entity A's own website,
-// whether typed directly or pulled from a Google/Facebook reviews widget —
-// as INVALID for LocalBusiness/Organization types (and their subtypes,
-// which includes HVACBusiness). Embedding the "review" array here caused
-// 11 invalid items in Google's Rich Results Test. aggregateRating alone is
-// kept below since it remains valid (just won't render stars on its own,
-// which is expected and harmless). The testimonials themselves stay
-// visible on-page in plain HTML for users — only the rich-result markup
-// was removed. See: https://developers.google.com/search/blog/2019/09/making-review-rich-results-more-helpful
+// ── NOTE: no "review" array and no "aggregateRating" in the business schema.
+//
+// Google's structured data guidelines (Sept 2019, restated Dec 2025) treat
+// self-serving reviews — reviews about Entity A published on Entity A's own
+// website, whether hand-written or pulled from a Google/Facebook widget — as
+// ineligible for review rich results on LocalBusiness / Organization and all
+// their subtypes, which includes HVACBusiness.
+//
+// The `review` array went first (it produced 11 invalid items in the Rich
+// Results Test). `aggregateRating` was kept at the time on the assumption it
+// was still valid — it is not: it produced the 36 invalid review snippets
+// reported in Search Console on 2026-07-28, so it has now been removed too.
+//
+// The stars were never eligible to render, so nothing is lost. Rankings are
+// unaffected — this is a rich-result eligibility rule, not a quality signal.
+// The genuine rating still reaches Google via the Google Business Profile,
+// and the testimonials remain visible on-page in plain HTML for users.
+// See: https://developers.google.com/search/blog/2019/09/making-review-rich-results-more-helpful
 
 export default function RootLayout({
   children,
@@ -166,13 +172,34 @@ export default function RootLayout({
                 "Aircond Installation, Servicing & Repair KL & Selangor",
               foundingDate: "2014",
               numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: googlePlace.averageRating,
-                reviewCount: googlePlace.totalReviews,
-                bestRating: 5,
-                worstRating: 1,
-              },
+              // ── aggregateRating REMOVED 2026-07-28 ──────────────────────
+              // This emitted our own 5.0 / 500-review rating inside
+              // HVACBusiness on all 2,104 pages, and was the cause of the
+              // "36 invalid review snippets" in Search Console.
+              //
+              // Google's self-serving review policy (Sept 2019, restated
+              // Dec 2025): when the entity being reviewed controls the
+              // reviews, LocalBusiness and Organization — and every subtype,
+              // which includes HVACBusiness — are INELIGIBLE for review rich
+              // results. So these stars could never render; the markup only
+              // ever produced invalid items in GSC.
+              //
+              // Nothing is lost by removing it:
+              //   • the stars were never eligible to show
+              //   • ranking is unaffected — this is a rich-result eligibility
+              //     rule, not a quality signal
+              //   • the real rating still reaches Google through the Google
+              //     Business Profile, which is the supported route
+              //   • the 5.0 / 500 reviews remain visible on-page for users
+              //     (components/sections/google-reviews.tsx)
+              //
+              // The `review` array was already removed for the same reason —
+              // see the note above RootLayout.
+              // sameAs = the profiles Google follows to verify this business
+              // entity. Every URL here must resolve — dead profiles weaken
+              // entity verification. Audited 2026-07-28: removed YouTube
+              // (channel 404s), Yelp ("no-title" placeholder) and Medium
+              // (404). The rest were confirmed live.
               sameAs: [
                 siteConfig.googleBusinessProfile,
                 siteConfig.links.googleMaps,
@@ -181,10 +208,8 @@ export default function RootLayout({
                 siteConfig.links.tiktok,
                 siteConfig.links.twitter,
                 siteConfig.links.linkedin,
-                siteConfig.links.yelp,
                 "https://www.pinterest.com/klrenovator/",
                 "https://linktr.ee/klrenovator",
-                "https://medium.com/@klrenovator",
               ],
               address: {
                 "@type": "PostalAddress",
@@ -297,10 +322,8 @@ export default function RootLayout({
                 siteConfig.links.tiktok,
                 siteConfig.links.twitter,
                 siteConfig.links.linkedin,
-                siteConfig.links.yelp,
                 "https://www.pinterest.com/klrenovator/",
                 "https://linktr.ee/klrenovator",
-                "https://medium.com/@klrenovator",
               ],
             }),
           }}

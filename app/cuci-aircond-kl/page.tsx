@@ -18,7 +18,12 @@ const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
   title: buildFreshMetaTitle("Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator", "en"),
-  description: "Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. 500+ 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573.",
+  // This is the ENGLISH page — it previously shipped the identical Malay
+  // description as /ms/cuci-aircond-kl, so Google saw two URLs with the same
+  // snippet and had to pick one. The page body is already English; only the
+  // meta description was copied from the Malay twin.
+  description:
+    "Aircond chemical wash KL & Selangor from RM120. Same-day slots, 80–120 PSI deep coil clean, 500+ 5★ Google reviews. Fixes musty smell, leaks & weak cooling.",
   alternates: buildTrilingualHreflang("/cuci-aircond-kl"),
   openGraph: {
     title: buildFreshMetaTitle("Cuci Aircond KL — RM120 | KL Renovator", "en"),

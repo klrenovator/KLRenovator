@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     locale: "zh_MY",
     alternateLocale: ["en_MY", "ms_MY"],
   },
-  alternates: buildTrilingualHreflang("/brands"),
+  alternates: buildTrilingualHreflang("/brands", "zh"),
 };
 
 const waMsg = "你好 KL Renovator，我需要冷气服务，请提供报价。";

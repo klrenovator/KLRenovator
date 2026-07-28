@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     locale: "ms_MY",
     alternateLocale: ["en_MY", "zh_MY"],
   },
-  alternates: buildTrilingualHreflang("/brands"),
+  alternates: buildTrilingualHreflang("/brands", "ms"),
 };
 
 const waMsg = "Hi KL Renovator, saya nak servis aircond. Tolong bagi harga.";

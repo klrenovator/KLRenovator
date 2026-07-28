@@ -42,3 +42,27 @@ On every push and pull request:
    - key installation routes still build
 
 All five also run locally with the same commands.
+
+---
+
+## Second manual step — add the Search Console audit (2026-07-28)
+
+`scripts/gsc-audit.mjs` (`npm run audit:gsc`) was added to catch the
+indexing errors documented in `GSC-AUDIT-REPORT.md`. It could not be added
+to `.github/workflows/ci.yml` from this branch for the same reason as
+above — the GitHub App has no `workflows` permission, so the push is
+rejected.
+
+Add this step to the end of the `verify` job, right after
+`Verify build output`:
+
+```yaml
+      - name: Search Console audit
+        # Reads the real rendered HTML and fails on anything Google would
+        # report as an indexing error: a canonical pointing at another URL,
+        # noindex inside the sitemap, internal links to 404s, hreflang
+        # clusters without return tags.
+        run: npm run audit:gsc
+```
+
+It runs locally with `npm run build && npm run audit:gsc`.

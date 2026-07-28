@@ -1027,7 +1027,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <h2>Before Booking (Planning Phase)</h2>
 
       <h3>✅ 1. Choose the Right HP for Each Room</h3>
-      <p>Measure your rooms (length × width) and use our <a href="/btu-calculator">free BTU Calculator</a> or <a href="/best-hp-aircond-bedroom-size-guide-malaysia">HP sizing guide</a> to determine the correct capacity. Wrong HP = poor cooling or wasted electricity.</p>
+      <p>Measure your rooms (length × width) and use our <a href="/btu-calculator">free BTU Calculator</a> or <a href="/blog/best-hp-aircond-bedroom-size-guide-malaysia">HP sizing guide</a> to determine the correct capacity. Wrong HP = poor cooling or wasted electricity.</p>
 
       <h3>✅ 2. Decide Indoor Unit Positions</h3>
       <p>For each room, choose where the indoor unit will go. Best positions are:</p>
@@ -1039,10 +1039,10 @@ export const installationBlogBatch4: BlogPost[] = [
       </ul>
 
       <h3>✅ 3. Choose the Outdoor Unit Position</h3>
-      <p>The outdoor unit needs: shade (or sun shield), 30cm+ clearance all around, accessible for maintenance, away from bedroom windows (yours and neighbours'). See our <a href="/aircond-outdoor-unit-placement-malaysia">outdoor placement guide</a>.</p>
+      <p>The outdoor unit needs: shade (or sun shield), 30cm+ clearance all around, accessible for maintenance, away from bedroom windows (yours and neighbours'). See our <a href="/blog/aircond-outdoor-unit-placement-malaysia">outdoor placement guide</a>.</p>
 
       <h3>✅ 4. Check Your Electrical Capacity</h3>
-      <p>Open your DB box and check: are there spare MCB slots? Is the main supply adequate? For 2.0 HP+ units, you'll need a dedicated circuit. See our <a href="/aircond-installation-old-house-wiring-malaysia">old wiring guide</a> if your home is pre-2005.</p>
+      <p>Open your DB box and check: are there spare MCB slots? Is the main supply adequate? For 2.0 HP+ units, you'll need a dedicated circuit. See our <a href="/blog/aircond-installation-old-house-wiring-malaysia">old wiring guide</a> if your home is pre-2005.</p>
 
       <h3>✅ 5. Plan Pipe Routing</h3>
       <p>Think about how the copper pipes will run from indoor to outdoor unit. Shorter, straighter runs = less extra pipe cost. Our technician will confirm the best route during the site survey.</p>
@@ -1056,7 +1056,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <p>Remove plants, pots, laundry, and obstacles from the outdoor unit position. Ensure the technician has clear access to the wall/ledge/balcony.</p>
 
       <h3>✅ 8. Inform Building Management (Condo)</h3>
-      <p>If you live in a condo, submit the installation application to your JMB/MC office. Most require 3-7 days advance notice. See our <a href="/aircond-installation-condo-rules-malaysia-2026">condo rules guide</a>.</p>
+      <p>If you live in a condo, submit the installation application to your JMB/MC office. Most require 3-7 days advance notice. See our <a href="/blog/aircond-installation-condo-rules-malaysia-2026">condo rules guide</a>.</p>
 
       <h3>✅ 9. Book the Service Lift (High-Rise)</h3>
       <p>For floors above 5, book the service lift for your installation time slot. Some buildings require 2-3 days advance booking.</p>
@@ -1109,7 +1109,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <h2>Sebelum Menempah (Fasa Perancangan)</h2>
 
       <h3>✅ 1. Pilih HP Betul Untuk Setiap Bilik</h3>
-      <p>Ukur bilik anda (panjang × lebar) dan gunakan <a href="/btu-calculator">Kalkulator BTU percuma kami</a> atau <a href="/best-hp-aircond-bedroom-size-guide-malaysia">panduan saiz HP</a> untuk menentukan kapasiti yang betul. HP salah = penyejukan lemah atau elektrik membazir.</p>
+      <p>Ukur bilik anda (panjang × lebar) dan gunakan <a href="/btu-calculator">Kalkulator BTU percuma kami</a> atau <a href="/blog/best-hp-aircond-bedroom-size-guide-malaysia">panduan saiz HP</a> untuk menentukan kapasiti yang betul. HP salah = penyejukan lemah atau elektrik membazir.</p>
 
       <h3>✅ 2. Tentukan Kedudukan Unit Dalaman</h3>
       <p>Untuk setiap bilik, pilih di mana unit dalaman akan diletakkan. Kedudukan terbaik ialah:</p>
@@ -1121,10 +1121,10 @@ export const installationBlogBatch4: BlogPost[] = [
       </ul>
 
       <h3>✅ 3. Pilih Kedudukan Unit Luar</h3>
-      <p>Unit luar memerlukan: teduh (atau perisai matahari), jarak 30cm+ di semua sisi, mudah diakses untuk penyelenggaraan, jauh dari tingkap bilik tidur (anda dan jiran). Lihat <a href="/aircond-outdoor-unit-placement-malaysia">panduan penempatan luar kami</a>.</p>
+      <p>Unit luar memerlukan: teduh (atau perisai matahari), jarak 30cm+ di semua sisi, mudah diakses untuk penyelenggaraan, jauh dari tingkap bilik tidur (anda dan jiran). Lihat <a href="/blog/aircond-outdoor-unit-placement-malaysia">panduan penempatan luar kami</a>.</p>
 
       <h3>✅ 4. Periksa Kapasiti Elektrik Anda</h3>
-      <p>Buka kotak DB anda dan periksa: adakah slot MCB ganti? Adakah bekalan utama mencukupi? Untuk unit 2.0 HP+, anda memerlukan litar khusus. Lihat <a href="/aircond-installation-old-house-wiring-malaysia">panduan pendawaian lama kami</a> jika rumah anda sebelum 2005.</p>
+      <p>Buka kotak DB anda dan periksa: adakah slot MCB ganti? Adakah bekalan utama mencukupi? Untuk unit 2.0 HP+, anda memerlukan litar khusus. Lihat <a href="/blog/aircond-installation-old-house-wiring-malaysia">panduan pendawaian lama kami</a> jika rumah anda sebelum 2005.</p>
 
       <h3>✅ 5. Rancang Laluan Paip</h3>
       <p>Fikirkan bagaimana paip tembaga akan berjalan dari unit dalaman ke luar. Laluan lebih pendek dan lurus = kurang kos paip tambahan. Juruteknik kami akan mengesahkan laluan terbaik semasa tinjauan tapak.</p>
@@ -1138,7 +1138,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <p>Keluarkan pokok, pasu, dobi, dan halangan dari kedudukan unit luar. Pastikan juruteknik mempunyai akses jelas ke dinding/birai/balkoni.</p>
 
       <h3>✅ 8. Maklumkan Pengurusan Bangunan (Kondo)</h3>
-      <p>Jika anda tinggal di kondo, hantar permohonan pemasangan ke pejabat JMB/MC anda. Kebanyakan memerlukan notis awal 3-7 hari. Lihat <a href="/aircond-installation-condo-rules-malaysia-2026">panduan peraturan kondo kami</a>.</p>
+      <p>Jika anda tinggal di kondo, hantar permohonan pemasangan ke pejabat JMB/MC anda. Kebanyakan memerlukan notis awal 3-7 hari. Lihat <a href="/blog/aircond-installation-condo-rules-malaysia-2026">panduan peraturan kondo kami</a>.</p>
 
       <h3>✅ 9. Tempah Lif Servis (Tingkat Tinggi)</h3>
       <p>Untuk tingkat di atas 5, tempah lif servis untuk slot masa pemasangan anda. Sesetengah bangunan memerlukan tempahan awal 2-3 hari.</p>
@@ -1191,7 +1191,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <h2>预约前（规划阶段）</h2>
 
       <h3>✅ 1. 为每个房间选择正确的匹数</h3>
-      <p>测量您的房间（长×宽），使用我们的<a href="/btu-calculator">免费BTU计算器</a>或<a href="/best-hp-aircond-bedroom-size-guide-malaysia">匹数选择指南</a>确定正确容量。匹数错误=制冷差或浪费电。</p>
+      <p>测量您的房间（长×宽），使用我们的<a href="/btu-calculator">免费BTU计算器</a>或<a href="/blog/best-hp-aircond-bedroom-size-guide-malaysia">匹数选择指南</a>确定正确容量。匹数错误=制冷差或浪费电。</p>
 
       <h3>✅ 2. 确定室内机位置</h3>
       <p>为每个房间选择室内机的位置。最佳位置是：</p>
@@ -1203,10 +1203,10 @@ export const installationBlogBatch4: BlogPost[] = [
       </ul>
 
       <h3>✅ 3. 选择室外机位置</h3>
-      <p>室外机需要：遮阳（或遮阳板）、四周30cm以上间距、便于维护、远离卧室窗户（您和邻居的）。参见我们的<a href="/aircond-outdoor-unit-placement-malaysia">室外放置指南</a>。</p>
+      <p>室外机需要：遮阳（或遮阳板）、四周30cm以上间距、便于维护、远离卧室窗户（您和邻居的）。参见我们的<a href="/blog/aircond-outdoor-unit-placement-malaysia">室外放置指南</a>。</p>
 
       <h3>✅ 4. 检查您的电气容量</h3>
-      <p>打开配电箱检查：有备用MCB槽位吗？主电源够吗？2.0匹以上机组需要独立电路。如果您的房子是2005年前的，参见我们的<a href="/aircond-installation-old-house-wiring-malaysia">旧电线指南</a>。</p>
+      <p>打开配电箱检查：有备用MCB槽位吗？主电源够吗？2.0匹以上机组需要独立电路。如果您的房子是2005年前的，参见我们的<a href="/blog/aircond-installation-old-house-wiring-malaysia">旧电线指南</a>。</p>
 
       <h3>✅ 5. 规划管道路线</h3>
       <p>考虑铜管从室内到室外的走向。更短、更直的路线=更少的额外管道费用。我们的技术员将在现场勘查时确认最佳路线。</p>
@@ -1220,7 +1220,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <p>从室外机位置移除植物、花盆、晾衣物和障碍物。确保技术员能清楚地到达墙壁/平台/阳台。</p>
 
       <h3>✅ 8. 通知物业管理（公寓）</h3>
-      <p>如果您住在公寓，向JMB/MC办公室提交安装申请。大多数需要提前3-7天通知。参见我们的<a href="/aircond-installation-condo-rules-malaysia-2026">公寓规则指南</a>。</p>
+      <p>如果您住在公寓，向JMB/MC办公室提交安装申请。大多数需要提前3-7天通知。参见我们的<a href="/blog/aircond-installation-condo-rules-malaysia-2026">公寓规则指南</a>。</p>
 
       <h3>✅ 9. 预约服务电梯（高层）</h3>
       <p>5楼以上，为您的安装时段预约服务电梯。一些建筑需要提前2-3天预约。</p>
