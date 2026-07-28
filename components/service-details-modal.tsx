@@ -7,7 +7,7 @@ import { FiX, FiCheck, FiArrowRight, FiTag, FiPlus } from "react-icons/fi";
 
 import { ServiceIcon } from "@/components/service-icon";
 import { servicesData } from "@/config/services-data";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 
 type Props = {
@@ -39,7 +39,7 @@ const iconBgMap: Record<string, string> = {
 export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
   const data = slug ? servicesData[slug] : null;
   const iconName = slug
-    ? siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles"
+    ? sitePublic.services.find((s) => s.slug === slug)?.icon ?? "sparkles"
     : "sparkles";
   const iconBg = iconBgMap[iconName] ?? "bg-sky-500";
 

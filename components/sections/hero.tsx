@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaWhatsapp, FaPhone, FaStar } from "react-icons/fa6";
 
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
@@ -83,6 +83,14 @@ export const Hero = () => {
   };
 
   useEffect(() => {
+    // Respect prefers-reduced-motion: users who ask for less motion get a
+    // single static hero rather than an endless 10-image rotation. This also
+    // saves the data and battery cost of pulling nine extra images on
+    // mobile. globals.css already honours this setting for other
+    // animations — the slideshow was the one place that ignored it.
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motionQuery.matches) return;
+
     const timer = window.setInterval(() => {
       setCurrent((prev) => {
         const nextIndex = (prev + 1) % HERO_IMAGES.length;
@@ -196,7 +204,7 @@ export const Hero = () => {
               {t("hero_whatsapp")}
             </a>
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={`tel:${sitePublic.phone}`}
               className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-black uppercase text-sm tracking-widest h-14 px-6 transition-all duration-200"
             >
               <FaPhone className="h-4 w-4 text-sky-300" />

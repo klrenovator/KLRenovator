@@ -10,10 +10,10 @@ import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
-  title: "Pemasangan Aircond Seluruh Rumah KL & Selangor — Pakej Pukal Berbilang Unit | KL Renovator",
+  title: "Pemasangan Aircond Seluruh Rumah KL — Pakej Pukal",
   description: "Pasang 3+ unit aircond di rumah KL atau Selangor anda? Tier diskaun volum, panduan BTU bilik demi bilik, pelan penyejukan seluruh rumah. Dari RM199/unit. WhatsApp +60182983573",
   openGraph: {
-    title: "Pemasangan Aircond Seluruh Rumah KL & Selangor — Pakej Pukal Berbilang Unit | KL Renovator",
+    title: "Pemasangan Aircond Seluruh Rumah KL — Pakej Pukal",
     description: "3+ unit aircond? Diskaun volum, panduan BTU bilik, pelan penyejukan seluruh rumah. Dari RM199/unit. WhatsApp +60182983573",
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah",

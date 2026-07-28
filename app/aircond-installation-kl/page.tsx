@@ -10,9 +10,10 @@ import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallatio
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationCROModule } from "@/components/installation-cro-module";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
+import { InstallationProof } from "@/components/installation-proof";
 
 export const metadata: Metadata = {
-  title: "Aircond Installation KL & Selangor — From RM199 | Same-Day | KL Renovator",
+  title: "Aircond Installation KL & Selangor — From RM199, Same-Day",
   description: "Professional aircond installation from RM199. Wall-mounted, ceiling cassette & window units for all 20 brands. Vacuum pump, copper pipe, 1-month warranty. Same-day available. WhatsApp +60182983573",
   openGraph: {
     title: "Aircond Installation KL & Selangor — From RM199 | KL Renovator",
@@ -410,6 +411,12 @@ export default function AircondInstallationKLPage() {
 
       {/* Installation Trust Signals — INS-17 */}
       <InstallationTrustSignals variant="default" />
+
+      {/* Real project photos + verified Google reviews.
+          This pillar page previously rendered only two images (logo + hero)
+          and carried no reviews at all, despite 93 real project photos
+          being available in the repo. */}
+      <InstallationProof locale="en" />
 
       {/* FAQ Section */}
       <section className="py-20 sm:py-28 bg-white" id="faq">

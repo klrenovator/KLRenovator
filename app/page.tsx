@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/hero";
+import { InstallationSpotlight } from "@/components/sections/installation-spotlight";
 import { PriceCalculator } from "@/components/price-calculator";
 import { DiagnosticTool } from "@/components/diagnostic-tool";
 import { StatsBand } from "@/components/sections/stats-band";
@@ -134,6 +135,9 @@ export default function Home() {
 
       <Hero />
       <StatsBand />
+      {/* Installation is the primary revenue service — surfaced here, right
+          under the hero, instead of as a small card ~8 sections down. */}
+      <InstallationSpotlight />
       <ServicesWithPricing />
       <WhyChooseUs />
       <GoogleReviews />

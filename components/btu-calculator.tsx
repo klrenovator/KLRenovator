@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaWhatsapp, FaCalculator, FaHome, FaSun, FaUsers, FaRulerCombined } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -212,7 +212,7 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
       .replace("{width}", width.toString())
       .replace("{roomType}", roomTypeLabel)
       .replace("{sun}", sunLabel);
-    return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/${sitePublic.whatsapp}?text=${encodeURIComponent(message)}`;
   };
 
   return (
@@ -223,9 +223,12 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
             <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3 flex items-center justify-center gap-2">
               <FaCalculator className="h-4 w-4" /> {s.eyebrow}
             </p>
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">
+            {/* This is the page's primary heading — the three /btu-calculator
+                routes (en/ms/zh) previously rendered NO <h1> at all, which
+                is a hard SEO problem for a top-of-funnel installation page. */}
+            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">
               {s.title[0]}<span className="text-sky-500">{s.title[1]}</span>
-            </h2>
+            </h1>
             <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
               {s.desc}
             </p>

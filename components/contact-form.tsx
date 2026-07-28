@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
+import { trackQuoteSubmit } from "@/lib/analytics";
 
 export const ContactForm = () => {
   const [form, setForm] = useState({
     name: "",
     area: "",
-    service: siteConfig.services.filter(s => s.slug !== "emergency")[0].title,
+    service: sitePublic.services.filter(s => s.slug !== "emergency")[0].title,
     units: "1",
     hp: "",
     message: "",
@@ -34,6 +35,7 @@ export const ContactForm = () => {
       "",
       "Please share price and available time. Thank you!",
     ].join("\n");
+    trackQuoteSubmit("contact_form", { service: form.service, area: form.area, units: form.units });
     window.open(waLink(msg), "_blank");
     setTimeout(() => setSubmitting(false), 1000);
   };
@@ -83,7 +85,7 @@ export const ContactForm = () => {
             className={inputCls}
           />
           <datalist id="areas">
-            {siteConfig.areas.map((a) => (
+            {sitePublic.areas.map((a) => (
               <option key={a} value={a} />
             ))}
           </datalist>
@@ -99,7 +101,7 @@ export const ContactForm = () => {
           onChange={(e) => setForm({ ...form, service: e.target.value })}
           className={`${inputCls} appearance-none cursor-pointer`}
         >
-          {siteConfig.services.filter(s => s.slug !== "emergency").map((s) => (
+          {sitePublic.services.filter(s => s.slug !== "emergency").map((s) => (
             <option key={s.slug} value={s.title}>
               {s.title}
             </option>
@@ -172,9 +174,9 @@ export const ContactForm = () => {
         Prefer calling? Speak with us directly —{" "}
         <a
           className="font-black text-[#0284c7] hover:text-[#0369a1] underline transition-all"
-          href={`tel:${siteConfig.phone}`}
+          href={`tel:${sitePublic.phone}`}
         >
-          {siteConfig.phoneDisplay}
+          {sitePublic.phoneDisplay}
         </a>
       </p>
     </form>

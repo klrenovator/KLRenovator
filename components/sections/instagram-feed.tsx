@@ -107,6 +107,16 @@ export function InstagramFeed({ locale = "en", compact = false }: Props) {
   // If all shortcodes are placeholders, show a "coming soon" state
   const allPlaceholder = posts.every((p) => p.shortcode.startsWith("placeholder"));
 
+  // Render nothing until real Instagram post shortcodes are filled in above.
+  //
+  // Every shortcode is still "placeholder1..5", so this section was shipping
+  // an empty dashed "coming soon" box to real visitors on the homepage and
+  // the blog index — which reads as an unfinished site rather than social
+  // proof. Hiding it is strictly better until the real posts are added; the
+  // moment a genuine shortcode is set, the grid appears automatically with
+  // no other code change.
+  if (allPlaceholder) return null;
+
   return (
     <section className="py-12 sm:py-16 bg-gradient-to-br from-pink-50 via-rose-50 to-orange-50 border-t border-pink-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

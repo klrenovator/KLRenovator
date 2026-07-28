@@ -1,11 +1,24 @@
-"use client";
+// Server component — no state or handlers here. This also lets the route
+// export its own `metadata`; previously it was a client component with no
+// metadata at all, so it silently inherited the root layout's title and
+// description (duplicate-title signal across the site).
 
-import { siteConfig } from "@/config/site";
+import type { Metadata } from "next";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+
+import { sitePublic } from "@/config/site-public";
 import NextLink from "next/link";
 import { Reveal } from "@/components/reveal";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { anchor } from "@/config/anchor-text-diversity";
 import { BookingButton } from "@/components/booking-button";
+
+export const metadata: Metadata = {
+  title: "Aircond Brands We Install & Service — KL & Selangor",
+  description:
+    "We install and service all 20 aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung and more. Same-day, from RM 99.",
+  alternates: buildTrilingualHreflang("/brands"),
+};
 
 export default function BrandsIndex() {
   return (
@@ -95,7 +108,7 @@ export default function BrandsIndex() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {siteConfig.brandPages.map((brand, index) => (
+          {sitePublic.brandPagesLite.map((brand, index) => (
             <Reveal key={brand.slug} delay={index * 25}>
               <NextLink
                 href={`/brands/${brand.slug}`}

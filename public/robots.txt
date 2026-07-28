@@ -1,6 +1,14 @@
 User-agent: *
 Allow: /
 
+# Private / non-content routes — no crawl value, and /admin is a login gate
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /review
+Disallow: /ms/review
+Disallow: /zh/review
+
 # Search and preview bots — full access
 User-agent: GPTBot
 Allow: /

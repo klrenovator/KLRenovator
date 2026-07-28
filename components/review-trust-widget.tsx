@@ -1,7 +1,7 @@
 "use client";
 
 import { FiStar, FiMapPin } from "react-icons/fi";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 
 interface ReviewTrustWidgetProps {
   locale?: "en" | "ms" | "zh";

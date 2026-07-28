@@ -3,7 +3,7 @@
 import { FaCheck, FaShield, FaClock, FaTruck, FaWrench, FaBolt, FaSnowflake, FaBuilding, FaLocationDot, FaAward, FaCertificate, FaUserCheck, FaHandshake, FaMagnifyingGlass, FaHouse } from "react-icons/fa6";
 import { FiArrowRight, FiPhone } from "react-icons/fi";
 import NextLink from "next/link";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
 
 interface InstallationTrustSignalsProps {
@@ -176,7 +176,7 @@ export function InstallationTrustSignals({
               <a href={waLink("🔧 Installation Quote Request\n\nHi KL Renovator, I want a confirmed price for aircond installation.\n\n📍 Area:\n❄️ Unit Type:\n📏 HP Size:\n🏠 Property Type:\n\nPlease send full breakdown.")} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
                 <FiArrowRight className="h-4 w-4" /> Get Confirmed Price on WhatsApp
               </a>
-              <a href={`tel:${siteConfig.phone}`} className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
+              <a href={`tel:${sitePublic.phone}`} className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
                 <FiPhone className="h-4 w-4" /> Call +60 18-298 3573
               </a>
             </div>

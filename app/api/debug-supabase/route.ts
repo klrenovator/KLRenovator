@@ -1,16 +1,51 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { supabaseAdmin } from "@/lib/supabase";
 
-export async function GET(req: Request) {
+import { ADMIN_COOKIE, verifySession } from "@/lib/admin-session";
+
+// ─────────────────────────────────────────────────────────────────────────
+// SECURITY: this route previously returned five full `bookings` rows —
+// customer names, phone numbers and home addresses — to ANY anonymous
+// visitor who guessed the URL. That is a PDPA (Malaysia) exposure.
+//
+// It is now (a) admin-session gated and (b) returns only a connectivity
+// check plus row count — never customer PII.
+// ─────────────────────────────────────────────────────────────────────────
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  const secret = process.env.ADMIN_SESSION_SECRET;
+  const store = await cookies();
+
+  if (!secret || !verifySession(store.get(ADMIN_COOKIE)?.value, secret)) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
   try {
-    const { data, error } = await supabaseAdmin.from("bookings").select("*").limit(5);
+    const { count, error } = await supabaseAdmin
+      .from("bookings")
+      .select("*", { count: "exact", head: true });
 
     if (error) {
-      return NextResponse.json({ error: "Supabase DB Error", details: error.message }, { status: 500 });
+      return NextResponse.json(
+        { ok: false, error: "Supabase DB error", details: error.message },
+        { status: 500 },
+      );
     }
 
-    return NextResponse.json({ success: true, count: data.length, rows: data });
-  } catch (error: any) {
-    return NextResponse.json({ error: "Supabase Connection Failed", details: error.message || String(error) }, { status: 500 });
+    // Deliberately no row payload — count only.
+    return NextResponse.json({ ok: true, message: "Supabase connection healthy", count });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Supabase connection failed",
+        details: error instanceof Error ? error.message : String(error),
+      },
+      { status: 500 },
+    );
   }
 }

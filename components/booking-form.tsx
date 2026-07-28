@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { calculateDurationMinutes } from "@/lib/booking-config";
 import { useLang } from "@/context/language-context";
+import { trackBookingSubmit } from "@/lib/analytics";
 
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────
 const FORM_TXT = {
@@ -31,6 +32,14 @@ const FORM_TXT = {
     multiDayAlert: "Important Note: This job is large and requires {X} days to complete. The time you select below will be booked as Day 1. Our team will coordinate the rest of the schedule with you.",
     adminOverride: "Admin Override: Custom Duration (Hours)",
     adminDefault: "Default:",
+    propertyType: "Property Type",
+    propertyHelp: "Condo installs may need building management approval — telling us now avoids a wasted trip.",
+    floorLevel: "Floor Level",
+    floorPh: "e.g. Ground, 5th, 21st",
+    pipeRun: "Approx. copper pipe run",
+    pipeHelp: "First 7 ft is included. Rough guess is fine — we confirm on site.",
+    unitSupply: "Aircond unit",
+    honeypot: "Company website",
     sendWa: "Send WhatsApp Confirmation",
   },
   ms: {
@@ -58,6 +67,14 @@ const FORM_TXT = {
     multiDayAlert: "Nota Penting: Kerja ini besar dan memerlukan {X} hari untuk disiapkan. Masa yang anda pilih di bawah akan ditempah sebagai Hari 1. Pasukan kami akan menyelaraskan baki jadual dengan anda.",
     adminOverride: "Admin Ganti: Anggaran Masa Khas (Jam)",
     adminDefault: "Asal:",
+    propertyType: "Jenis Hartanah",
+    propertyHelp: "Pemasangan kondominium mungkin perlu kelulusan pengurusan bangunan — beritahu kami sekarang untuk elak lawatan sia-sia.",
+    floorLevel: "Aras Tingkat",
+    floorPh: "cth. Tingkat Bawah, Tingkat 5, Tingkat 21",
+    pipeRun: "Anggaran panjang paip kuprum",
+    pipeHelp: "7 kaki pertama disertakan. Anggaran kasar memadai — kami sahkan di tapak.",
+    unitSupply: "Unit aircond",
+    honeypot: "Laman web syarikat",
     sendWa: "Hantar Pengesahan WhatsApp",
   },
   zh: {
@@ -85,6 +102,14 @@ const FORM_TXT = {
     multiDayAlert: "重要提示：此项工作规模较大，需要 {X} 天才能完成。您在下方选择的时间将作为第一天。我们的团队将与您协调剩余的日程安排。",
     adminOverride: "管理员：自定义时间（小时）",
     adminDefault: "默认：",
+    propertyType: "物业类型",
+    propertyHelp: "公寓安装可能需要管理层批准 — 现在告知可避免白跑一趟。",
+    floorLevel: "楼层",
+    floorPh: "例如：地面层、5楼、21楼",
+    pipeRun: "铜管大约长度",
+    pipeHelp: "首 7 英尺已包含。大概估算即可 — 我们会在现场确认。",
+    unitSupply: "冷气机",
+    honeypot: "公司网站",
     sendWa: "发送WhatsApp确认",
   }
 };
@@ -105,6 +130,32 @@ const AIRCOND_OPTS = [
   { val: "Window Unit", en: "Window Unit", ms: "Unit Tingkap", zh: "窗式机" },
   { val: "Centralized/Ducted", en: "Centralized/Ducted", ms: "Berpusat/Saluran", zh: "中央空调/管道机" },
   { val: "Portable", en: "Portable", ms: "Mudah Alih", zh: "移动式冷气" },
+];
+
+// Installation-specific option lists. The audit noted the booking form
+// captured none of the variables that actually drive an installation quote
+// or site visit — property type (condo jobs need JMB/management approval),
+// floor level (high-rise access charge), copper pipe run (largest price
+// variable), and whether the customer already owns the unit.
+const PROPERTY_OPTS = [
+  { val: "Condo / Apartment", en: "Condo / Apartment", ms: "Kondo / Apartmen", zh: "公寓 / 组屋" },
+  { val: "Landed House", en: "Landed House", ms: "Rumah Berkembar / Teres", zh: "有地住宅" },
+  { val: "Office", en: "Office", ms: "Pejabat", zh: "办公室" },
+  { val: "Shoplot / Retail", en: "Shoplot / Retail", ms: "Kedai / Runcit", zh: "店铺 / 零售" },
+  { val: "Other", en: "Other", ms: "Lain-lain", zh: "其他" },
+];
+
+const PIPE_RUN_OPTS = [
+  { val: "Up to 7 ft (included)", en: "Up to 7 ft (included)", ms: "Sehingga 7 kaki (termasuk)", zh: "7 英尺以内（已含）" },
+  { val: "8 – 15 ft", en: "8 – 15 ft", ms: "8 – 15 kaki", zh: "8 – 15 英尺" },
+  { val: "16 – 30 ft", en: "16 – 30 ft", ms: "16 – 30 kaki", zh: "16 – 30 英尺" },
+  { val: "Over 30 ft", en: "Over 30 ft", ms: "Melebihi 30 kaki", zh: "超过 30 英尺" },
+  { val: "Not sure", en: "Not sure", ms: "Tidak pasti", zh: "不确定" },
+];
+
+const UNIT_SUPPLY_OPTS = [
+  { val: "I already have the unit", en: "I already have the unit", ms: "Saya sudah ada unit", zh: "我已有机器" },
+  { val: "Please quote me a unit", en: "Please quote me a unit", ms: "Sila sebut harga unit", zh: "请为我报价机器" },
 ];
 
 const SIZE_OPTS = [
@@ -129,6 +180,14 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [aircondType, setAircondType] = useState("Wall Mounted");
   const [aircondSize, setAircondSize] = useState("1.0 HP");
   const [quantity, setQuantity] = useState(1);
+  // Installation-only extras (sent through in the notes/description)
+  const [propertyType, setPropertyType] = useState("Condo / Apartment");
+  const [floorLevel, setFloorLevel] = useState("");
+  const [pipeRun, setPipeRun] = useState("Up to 7 ft (included)");
+  const [unitSupply, setUnitSupply] = useState("I already have the unit");
+  // Honeypot — real users never see or fill this. Server treats a filled
+  // value as a bot and silently discards the submission.
+  const [companyWebsite, setCompanyWebsite] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
   const [selectedSlot, setSelectedSlot] = useState("");
@@ -152,26 +211,30 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const totalHours = (totalDurationMinutes / 60).toFixed(1);
   const daysRequired = Math.ceil(totalDurationMinutes / 480);
 
+  // Fetch availability whenever the date or the computed job length changes.
+  // The request is abortable so a fast date change can't let a slow earlier
+  // response overwrite the newer one (stale-response race).
   useEffect(() => {
-    if (selectedDate) {
-      fetchAvailability();
-    }
-  }, [selectedDate, apiDurationMinutes]);
+    if (!selectedDate) return;
 
-  const fetchAvailability = async () => {
-    try {
-      const res = await fetch(`/api/bookings/availability?date=${selectedDate}&duration=${apiDurationMinutes}`);
-      const data = await res.json();
-      if (data.availableSlots) {
-        setAvailableSlots(data.availableSlots);
-      } else {
-        setAvailableSlots([]);
+    const controller = new AbortController();
+
+    (async () => {
+      try {
+        const res = await fetch(
+          `/api/bookings/availability?date=${selectedDate}&duration=${apiDurationMinutes}`,
+          { signal: controller.signal },
+        );
+        const data = await res.json();
+        setAvailableSlots(data.availableSlots ?? []);
+        setFetchedOnce(true);
+      } catch (error) {
+        if ((error as Error)?.name !== "AbortError") console.error(error);
       }
-      setFetchedOnce(true);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    })();
+
+    return () => controller.abort();
+  }, [selectedDate, apiDurationMinutes]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -192,12 +255,35 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           quantity,
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
+          // Honeypot — server discards the submission if this is non-empty.
+          company_website: companyWebsite,
+          // Installation-only context, appended to the address so it reaches
+          // the technician and the calendar event without a schema change.
+          ...(serviceType === "installation" || serviceType === "relocate"
+            ? {
+                address: [
+                  address,
+                  `Property: ${propertyType}`,
+                  floorLevel ? `Floor: ${floorLevel}` : null,
+                  `Pipe run: ${pipeRun}`,
+                  `Unit: ${unitSupply}`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              }
+            : {}),
         }),
       });
 
       const data = await res.json();
       if (res.ok) {
         setSuccess(true);
+        trackBookingSubmit({
+          service_type: serviceType,
+          aircond_type: aircondType,
+          quantity,
+          source: isAdmin ? "whatsapp_manual" : "web",
+        });
         if (isAdmin) {
           const slotTime = new Date(selectedSlot).toLocaleTimeString("en-US", {
             hour: "numeric", minute: "2-digit", hour12: true, timeZone: "Asia/Kuala_Lumpur"
@@ -284,6 +370,19 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         />
       </div>
 
+      {/* Honeypot — visually hidden, never focusable. Bots fill it, humans don't. */}
+      <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="company_website">{t.honeypot}</label>
+        <input
+          id="company_website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={companyWebsite}
+          onChange={(e) => setCompanyWebsite(e.target.value)}
+        />
+      </div>
+
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-semibold text-slate-700">{t.serviceType}</label>
@@ -357,6 +456,91 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           />
         </div>
       </div>
+
+      {/* ── Installation-only details ───────────────────────────────────
+          Shown only for installation / relocation jobs. These are the
+          variables that actually determine the on-site quote and whether
+          the technician needs building approval before arriving. */}
+      {(serviceType === "installation" || serviceType === "relocate") && (
+        <div className="space-y-4 rounded-xl border border-sky-100 bg-sky-50/40 p-4">
+          <p className="text-xs font-black uppercase tracking-widest text-sky-700">
+            {t.propertyType}
+          </p>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label htmlFor="property-type" className="block text-sm font-semibold text-slate-700">
+                {t.propertyType}
+              </label>
+              <select
+                id="property-type"
+                value={propertyType}
+                onChange={(e) => setPropertyType(e.target.value)}
+                className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              >
+                {PROPERTY_OPTS.map((opt) => (
+                  <option key={opt.val} value={opt.val}>
+                    {opt[lang as "en" | "ms" | "zh"] || opt.en}
+                  </option>
+                ))}
+              </select>
+              <p className="mt-1 text-[11px] leading-snug text-slate-500">{t.propertyHelp}</p>
+            </div>
+
+            <div>
+              <label htmlFor="floor-level" className="block text-sm font-semibold text-slate-700">
+                {t.floorLevel}
+              </label>
+              <input
+                id="floor-level"
+                type="text"
+                value={floorLevel}
+                onChange={(e) => setFloorLevel(e.target.value)}
+                placeholder={t.floorPh}
+                className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="pipe-run" className="block text-sm font-semibold text-slate-700">
+                {t.pipeRun}
+              </label>
+              <select
+                id="pipe-run"
+                value={pipeRun}
+                onChange={(e) => setPipeRun(e.target.value)}
+                className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              >
+                {PIPE_RUN_OPTS.map((opt) => (
+                  <option key={opt.val} value={opt.val}>
+                    {opt[lang as "en" | "ms" | "zh"] || opt.en}
+                  </option>
+                ))}
+              </select>
+              <p className="mt-1 text-[11px] leading-snug text-slate-500">{t.pipeHelp}</p>
+            </div>
+
+            <div>
+              <label htmlFor="unit-supply" className="block text-sm font-semibold text-slate-700">
+                {t.unitSupply}
+              </label>
+              <select
+                id="unit-supply"
+                value={unitSupply}
+                onChange={(e) => setUnitSupply(e.target.value)}
+                className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              >
+                {UNIT_SUPPLY_OPTS.map((opt) => (
+                  <option key={opt.val} value={opt.val}>
+                    {opt[lang as "en" | "ms" | "zh"] || opt.en}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+      )}
+
 
       {isAdmin && (
         <div className="rounded-lg bg-red-50 p-4 border border-red-200">

@@ -2,6 +2,8 @@
 
 import dynamic from "next/dynamic";
 
+import { ConversionTracking } from "@/components/conversion-tracking";
+
 const MobileStickyBar = dynamic(
   () =>
     import("@/components/mobile-sticky-bar").then((mod) => mod.MobileStickyBar),
@@ -51,6 +53,8 @@ const FloatingOfferButton = dynamic(
 export function ConversionWidgets() {
   return (
     <>
+      {/* Global WhatsApp / tel: click attribution — see lib/analytics.ts */}
+      <ConversionTracking />
       <StickyActions />
       <MobileStickyBar />
       <ExitIntentPopup />

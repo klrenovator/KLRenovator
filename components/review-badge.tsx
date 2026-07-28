@@ -1,12 +1,12 @@
 "use client";
 
 import { FaStar, FaGoogle } from "react-icons/fa6";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 
 export const ReviewBadge = ({ className = "" }: { className?: string }) => {
   return (
     <a
-      href={siteConfig.links.googleBusiness}
+      href={sitePublic.links.googleBusiness}
       target="_blank"
       rel="nofollow noopener noreferrer"
       className={`inline-flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-sky-300 transition-all group ${className}`}
@@ -20,11 +20,11 @@ export const ReviewBadge = ({ className = "" }: { className?: string }) => {
             <FaStar key={i} className="h-3 w-3 fill-current" />
           ))}
           <span className="ml-1.5 text-xs font-black text-slate-900">
-            {siteConfig.reviewRating}.0
+            {sitePublic.reviewRating}.0
           </span>
         </div>
         <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 group-hover:text-sky-600 transition-colors">
-          {siteConfig.reviewCount}+ Google Reviews
+          {sitePublic.reviewCount}+ Google Reviews
         </p>
       </div>
     </a>

@@ -1,11 +1,31 @@
 import { NextResponse } from "next/server";
+import { hit, clientIp } from "@/lib/rate-limit";
+
+export const dynamic = "force-dynamic";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const trigger = searchParams.get("trigger");
-  
-  if (trigger !== "auto" && trigger !== "manual") {
+
+  // The old `?trigger=auto|manual` check was not authentication — the value
+  // is guessable and was visible in this file. Require a shared secret when
+  // one is configured, and rate limit regardless so this can't be used to
+  // spam IndexNow from our domain.
+  const expected = process.env.INDEXNOW_TRIGGER_SECRET;
+  if (expected) {
+    if (searchParams.get("key") !== expected) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+  } else if (trigger !== "auto" && trigger !== "manual") {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const limit = hit(`indexnow:${clientIp(req)}`, 3, 60 * 60 * 1000);
+  if (!limit.allowed) {
+    return NextResponse.json(
+      { error: "Rate limited" },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfterSeconds) } },
+    );
   }
 
   try {

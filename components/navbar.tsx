@@ -8,7 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { HiBars3, HiXMark, HiChevronDown } from "react-icons/hi2";
 
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
@@ -27,9 +27,92 @@ const LANG_OPTIONS: { code: LangCode; flag: string; label: string }[] = [
 // no translated route (homepage, about, contact, faq, gallery, services),
 // in which case the caller falls back to the existing in-place setLang()
 // text-swap instead of navigating somewhere that doesn't exist.
+// Installation landings do NOT follow the "/ms" + same-slug pattern: the
+// Malay versions live on native Malay slugs (/ms/pemasangan-aircond-kl,
+// /ms/pemasangan-aircond-dinding-kl, ...) which is good for Malay search,
+// but meant the switcher could not find them. Without this map, a visitor
+// on an English installation page who picked "Melayu" was dumped on the
+// /ms homepage instead of the Malay installation page.
+//
+// Keyed by the canonical English path. Chinese keeps the English slug.
+const INSTALLATION_SLUG_MAP: Record<string, { ms: string; zh: string }> = {
+  "/installation": { ms: "/ms/installation", zh: "/zh/installation" },
+  "/aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-kl",
+    zh: "/zh/aircond-installation-kl",
+  },
+  "/1hp-aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-1hp-kl",
+    zh: "/zh/1hp-aircond-installation-kl",
+  },
+  "/1.5hp-aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-1.5hp-kl",
+    zh: "/zh/1.5hp-aircond-installation-kl",
+  },
+  "/2hp-aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-2hp-kl",
+    zh: "/zh/2hp-aircond-installation-kl",
+  },
+  "/wall-mounted-aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-dinding-kl",
+    zh: "/zh/wall-mounted-aircond-installation-kl",
+  },
+  "/ceiling-cassette-aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-keset-siling-kl",
+    zh: "/zh/ceiling-cassette-aircond-installation-kl",
+  },
+  "/window-unit-aircond-installation-kl": {
+    ms: "/ms/pemasangan-aircond-tingkap-kl",
+    zh: "/zh/window-unit-aircond-installation-kl",
+  },
+  "/new-home-aircond-installation": {
+    ms: "/ms/pemasangan-aircond-rumah-baru",
+    zh: "/zh/new-home-aircond-installation",
+  },
+  "/whole-house-aircond-installation": {
+    ms: "/ms/pemasangan-aircond-seluruh-rumah",
+    zh: "/zh/whole-house-aircond-installation",
+  },
+  "/commercial-aircond-installation": {
+    ms: "/ms/pemasangan-aircond-komersial",
+    zh: "/zh/commercial-aircond-installation",
+  },
+  "/installation-price-malaysia": {
+    ms: "/ms/installation-price-malaysia",
+    zh: "/zh/installation-price-malaysia",
+  },
+  "/aircond-service-price-malaysia": {
+    ms: "/ms/aircond-service-price-malaysia",
+    zh: "/zh/aircond-service-price-malaysia",
+  },
+  "/cuci-aircond-kl": { ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" },
+  "/btu-calculator": { ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" },
+};
+
+/** Reverse lookup: any localised installation URL back to its English path. */
+const LOCALISED_TO_EN: Record<string, string> = Object.entries(
+  INSTALLATION_SLUG_MAP,
+).reduce<Record<string, string>>((acc, [en, alt]) => {
+  acc[alt.ms] = en;
+  acc[alt.zh] = en;
+  return acc;
+}, {});
+
 function getTranslatedPath(pathname: string, target: LangCode): string | null {
+  // A localised installation slug won't survive the generic prefix strip
+  // below (e.g. "/ms/pemasangan-aircond-kl" has no English twin by prefix),
+  // so resolve those back to their English path first.
+  const mappedEn = LOCALISED_TO_EN[pathname];
+  if (mappedEn) {
+    return target === "en" ? mappedEn : INSTALLATION_SLUG_MAP[mappedEn][target];
+  }
+
   // Strip an existing /ms/ or /zh/ prefix to get the canonical (English) path
   const enPath = pathname.replace(/^\/(ms|zh)(?=\/|$)/, "") || "/";
+
+  if (INSTALLATION_SLUG_MAP[enPath]) {
+    return target === "en" ? enPath : INSTALLATION_SLUG_MAP[enPath][target];
+  }
 
   // Content types with full, real multilingual route coverage
   const translatableCategory = /^\/(areas|brands|problems|blog)(\/|$)/;
@@ -59,19 +142,19 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
 
 const NAV_LABELS = {
   en: {
-    home: "Home", services: "Services", blog: "Blog",
+    home: "Home", installation: "Installation", services: "Services", blog: "Blog",
     about: "About", faq: "FAQ", contact: "Contact",
     call: "Call Support", book: "Book Now",
     topbar: "Same-Day Aircond Installation & Servicing Across KL & Selangor — From RM199",
   },
   ms: {
-    home: "Utama", services: "Perkhidmatan", blog: "Blog",
+    home: "Utama", installation: "Pemasangan", services: "Perkhidmatan", blog: "Blog",
     about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi",
     call: "Hubungi Kami", book: "Tempah Sekarang",
     topbar: "Pemasangan & Servis Aircond Hari Sama KL & Selangor — Dari RM199",
   },
   zh: {
-    home: "首页", services: "服务", blog: "博客",
+    home: "首页", installation: "冷气安装", services: "服务", blog: "博客",
     about: "关于我们", faq: "常见问答", contact: "联系我们",
     call: "致电支持", book: "立即预约",
     topbar: "当天冷气安装与服务，覆盖吉隆坡及雪兰莪 — RM199起",
@@ -136,8 +219,9 @@ export const Navbar = () => {
   const currentLang = LANG_OPTIONS.find((l) => l.code === lang) ?? LANG_OPTIONS[0];
 
   const SIMPLE_LINKS = [
-    { label: lbl.home,     href: "/" },
-    { label: lbl.services, href: "/services" },
+    { label: lbl.home,         href: "/" },
+    { label: lbl.installation, href: "/installation" },
+    { label: lbl.services,     href: "/services" },
     { label: lbl.blog,     href: "/blog" },
     { label: lbl.about,    href: "/about" },
     { label: lbl.faq,      href: "/faq" },
@@ -162,10 +246,10 @@ export const Navbar = () => {
           </span>
           <div className="flex items-center gap-6">
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={`tel:${sitePublic.phone}`}
               className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-slate-200 hover:text-[#0284c7] transition-colors"
             >
-              <FaPhone className="h-3 w-3 text-[#0284c7]" /> {siteConfig.phoneDisplay}
+              <FaPhone className="h-3 w-3 text-[#0284c7]" /> {sitePublic.phoneDisplay}
             </a>
             <a
               href={waLink(rfqMsg)}
@@ -185,13 +269,16 @@ export const Navbar = () => {
         <NextLink
           href={localizedPath("/")}
           aria-label="KL Renovator Home"
-          className="relative inline-block h-48 w-56 md:w-64 mt-2 shrink-0"
+          // Logo box was h-48 (192px) inside an h-20 (80px) header — 2.4x
+          // taller than its container, so it overflowed and relied on the
+          // image's transparent padding to look right. Now sized to fit.
+          className="relative inline-block h-14 w-44 shrink-0 sm:h-16 sm:w-52 md:w-56"
         >
           <Image
             src="/logo/image.png"
             alt="KL Renovator Aircon Specialist Logo"
             fill
-            sizes="(max-width: 768px) 224px, 256px"
+            sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, 224px"
             loading="eager"
             decoding="async"
             fetchPriority="high"
@@ -259,7 +346,7 @@ export const Navbar = () => {
           </div>
 
           <a
-            href={`tel:${siteConfig.phone}`}
+            href={`tel:${sitePublic.phone}`}
             className="inline-flex items-center gap-2 border-2 border-slate-900 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-200"
           >
             <FaPhone className="h-3.5 w-3.5" /> {lbl.call}
@@ -358,7 +445,7 @@ export const Navbar = () => {
           </nav>
           <div className="px-5 py-5 grid grid-cols-2 gap-3 bg-slate-50/50 border-t border-slate-100">
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={`tel:${sitePublic.phone}`}
               className="inline-flex items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all"
             >
               <FaPhone className="h-3.5 w-3.5 text-white" /> {lbl.call}

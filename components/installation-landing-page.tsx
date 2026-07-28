@@ -1,4 +1,10 @@
-"use client";
+// Server component on purpose.
+//
+// This file was marked "use client" but uses no state, effects, refs or
+// event handlers — it is pure presentational markup plus JSON-LD. The
+// "use client" directive was dragging lib/seo (and through it the full
+// 1.1 MB config/site.ts) into the browser bundle for every installation
+// route. Rendering on the server keeps all of that out of the client graph.
 
 import {
   FaWhatsapp,
@@ -18,7 +24,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import {
   buildBreadcrumbSchema,
@@ -26,6 +32,7 @@ import {
   buildInstallationFAQSchema,
 } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
+import { InstallationProof } from "@/components/installation-proof";
 import {
   getInstallationContent,
   getInstallationCanonical,
@@ -171,7 +178,7 @@ export function InstallationLandingPage({
                 <FaWhatsapp className="h-5 w-5" /> {c.whatsAppLabel}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-black uppercase text-sm tracking-widest h-14 px-6 transition-all"
               >
                 <FiPhone className="h-4 w-4 text-sky-300" /> {c.callLabel}
@@ -303,6 +310,11 @@ export function InstallationLandingPage({
         </div>
       </section>
 
+      {/* Real project photos + verified reviews.
+          These pages previously rendered only two images (logo + hero) and
+          carried no social proof at all — see components/installation-proof.tsx */}
+      <InstallationProof locale={locale} />
+
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-slate-50" id="faq">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -343,7 +355,7 @@ export function InstallationLandingPage({
                 <FaWhatsapp className="h-5 w-5" /> {c.whatsAppLabel}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
                 <FiPhone className="h-4 w-4" /> {c.callLabel}

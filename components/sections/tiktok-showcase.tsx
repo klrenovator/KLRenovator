@@ -19,7 +19,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { FaTiktok, FaPlay, FaWhatsapp } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
 
 // 5 LOCKED TikTok short video URLs (provided by user 2026-07-06).
@@ -319,7 +319,7 @@ export function TikTokShowcase({ locale = "en" }: { locale?: Locale }) {
             </p>
           </div>
           <a
-            href={siteConfig.links.tiktok}
+            href={sitePublic.links.tiktok}
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-sky-400 hover:text-sky-700"

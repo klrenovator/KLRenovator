@@ -1,4 +1,6 @@
-"use client";
+// Server component — this page has no state, effects or event handlers.
+// It was marked "use client", which pulled the shared UI/config chunk into
+// the browser for all three locale variants.
 
 import Image from "next/image";
 
@@ -14,7 +16,7 @@ import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { Reveal } from "@/components/reveal";
 import { ServiceIcon } from "@/components/service-icon";
 import { title, eyebrow } from "@/components/primitives";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 function StaticPriceTable({
@@ -91,7 +93,7 @@ function StaticPriceTable({
 }
 
 export default function ServicesPage() {
-  const p = siteConfig.pricing;
+  const p = sitePublic.pricing;
 
   return (
     <>
@@ -148,7 +150,7 @@ export default function ServicesPage() {
           </Reveal>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {siteConfig.services.map((service, i) => (
+            {sitePublic.services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 40}>
                 <Link
                   href={`/services/${service.slug}`}
@@ -209,7 +211,7 @@ export default function ServicesPage() {
                 🎯 Volume Booking Discounts
               </h3>
               <div className="grid sm:grid-cols-3 gap-4">
-                {siteConfig.volumeDiscounts.map((d) => (
+                {sitePublic.volumeDiscounts.map((d) => (
                   <div key={d.units} className="bg-white/10 border border-white/20 rounded-xl p-4 text-center">
                     <p className="text-xl font-black text-white">{d.units}</p>
                     <p className="text-xs font-bold text-sky-200 uppercase tracking-wider mt-1">{d.off}</p>
@@ -241,10 +243,10 @@ export default function ServicesPage() {
                   <FaWhatsapp className="h-5 w-5" /> Get Free Quote on WhatsApp
                 </a>
                 <a
-                  href={`tel:${siteConfig.phone}`}
+                  href={`tel:${sitePublic.phone}`}
                   className="inline-flex items-center gap-2.5 border-2 border-white/40 hover:border-white px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
                 >
-                  Call {siteConfig.phoneDisplay}
+                  Call {sitePublic.phoneDisplay}
                 </a>
               </div>
             </div>

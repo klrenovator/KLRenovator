@@ -4,7 +4,7 @@ import { useState } from "react";
 import NextImage from "next/image";
 import { FaWhatsapp, FaXmark, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
 
 export type GalleryItem = {

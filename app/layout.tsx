@@ -22,7 +22,10 @@ export const metadata: Metadata = {
   // caused a double-suffix bug ("...KL Renovator | KL Renovator") across 100+ pages.
   // `title` is set as a plain string (not the {default, template} object) since
   // the template slot is unused — this is the cleaner way to express "no template".
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  // Kept under 60 chars: this exact string is what /_not-found, /brands and
+  // any page without its own `title` renders. `siteConfig.tagline` on its
+  // own pushed it to 69 characters, which Google truncates.
+  title: "KL Renovator — Aircond Installation & Service KL",
   description: siteConfig.metaDescription,
   verification: {
     google: "bXgZJKdBlDiVK9DsjNukmCqqicH37cqU_YdHSIVhjlg",
@@ -110,6 +113,26 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* ── <html lang> correction ──────────────────────────────────
+            Architecture note: English lives unprefixed at the root and
+            ms/zh are literal folder trees, so there is no [lang] segment
+            and only ONE root <html> — which is statically rendered as
+            lang="en" for every locale. Previously this was corrected in a
+            useEffect (app/providers.tsx), i.e. only AFTER hydration, so
+            the initial HTML that crawlers parse declared Malay and Chinese
+            pages as English.
+
+            This script is parser-blocking and runs before first paint and
+            before the DOM snapshot a rendering crawler takes, so the
+            attribute is right by the time anything reads it — without
+            forcing the whole site out of static generation (which reading
+            headers() in the root layout would do). providers.tsx still
+            syncs the attribute on client-side language switches. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var p=location.pathname;var l=p==="/ms"||p.indexOf("/ms/")===0?"ms-MY":p==="/zh"||p.indexOf("/zh/")===0?"zh-MY":"en-MY";document.documentElement.lang=l;}catch(e){}})();`,
+          }}
+        />
         {/* ── 1. Primary Local Business — HVACBusiness ── */}
         <script
           type="application/ld+json"
@@ -159,9 +182,6 @@ export default function RootLayout({
                 siteConfig.links.twitter,
                 siteConfig.links.linkedin,
                 siteConfig.links.yelp,
-                "https://www.pinterest.com/klrenovator/",
-                "https://linktr.ee/klrenovator",
-                "https://medium.com/@klrenovator",
                 "https://www.pinterest.com/klrenovator/",
                 "https://linktr.ee/klrenovator",
                 "https://medium.com/@klrenovator",
@@ -281,9 +301,6 @@ export default function RootLayout({
                 "https://www.pinterest.com/klrenovator/",
                 "https://linktr.ee/klrenovator",
                 "https://medium.com/@klrenovator",
-                "https://www.pinterest.com/klrenovator/",
-                "https://linktr.ee/klrenovator",
-                "https://medium.com/@klrenovator",
               ],
             }),
           }}
@@ -356,10 +373,19 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Skip link — keyboard users previously had to tab through the
+            entire utility bar, logo, 7 nav links and language switcher on
+            every single page before reaching content. */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-sky-600 focus:px-5 focus:py-3 focus:text-sm focus:font-black focus:uppercase focus:tracking-wider focus:text-white focus:shadow-xl"
+        >
+          Skip to main content
+        </a>
         <Providers>
           <div className="relative flex min-h-screen flex-col pb-16 lg:pb-0">
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <Footer />
             <ConversionWidgetsLoader />
           </div>
