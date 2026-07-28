@@ -165,9 +165,13 @@ hi nahi kar raha tha**. Fix karte hi 2 asli bugs pakde gaye:
 
 ---
 
-## ⚠️ Aapko 2 Kaam Karne Hain
+## ✅ Aapke Kaam Ho Chuke Hain (Historical Record)
 
-### 1. Env vars set karein (Vercel → Settings → Environment Variables)
+> Pehle in dono manual kaam ki zaroorat thi; dono ho chuke hain — env vars
+> Vercel pe set hain, aur CI workflow ab `.github/workflows/ci.yml` mein
+> live chal raha hai. Niche sirf record ke liye rakha gaya hai.
+
+### 1. Env vars set karne the (✅ ho chuka — Vercel → Settings → Environment Variables)
 
 ```bash
 ADMIN_PASSWORD=<naya strong password>
@@ -178,16 +182,8 @@ ADMIN_SESSION_SECRET=<openssl rand -hex 32>
 (safety ke liye jaan bujh ke aisa rakha hai). Purana password `KLadmin2026` ab
 kaam nahi karega — aur wo git history mein hai, is liye **naya password rakhein**.
 
-### 2. CI workflow activate karein
-
-GitHub App ke paas `workflows` permission nahi thi, is liye workflow file
-`ci/` folder mein rakhi hai:
-
-```bash
-mkdir -p .github/workflows
-git mv ci/github-actions-ci.yml .github/workflows/ci.yml
-git commit -m "Add CI workflow" && git push
-```
+> ✅ **Status:** Ye env vars ab Vercel pe set ho chuke hain — manual action
+> ki zaroorat nahi rahi.
 
 ---
 

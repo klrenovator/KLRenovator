@@ -111,67 +111,21 @@ Aapki asli 5.0★ / 500 reviews:
 
 ---
 
-## 5️⃣ CI mein ye line add karein
+## 5️⃣ CI mein audit step (✅ mukammal)
 
-Ye main push nahi kar saka kyunke GitHub App ke paas `workflows`
-permission nahi hai (GitHub ne push reject kar diya).
-
-**File:** `.github/workflows/ci.yml`
-
-**Direct edit link:**
-https://github.com/klrenovator/KLRenovator/edit/main/.github/workflows/ci.yml
-
-> Note: ye link `main` branch pe edit karega. PR merge karne ke **baad**
-> karein.
-
-**Kahan add karna hai:** file ke bilkul aakhir mein, `Verify build output`
-step ke turant baad. File ka aakhri hissa abhi aisa hai:
-
-```yaml
-      - name: Verify build output
-        # Guards the regressions this repo has actually had: giant client
-        # chunks, sitemap URLs with no page, missing/duplicate <h1>.
-        run: npm run verify:build
-```
-
-**Iske neeche ye add karein** (indentation exactly aisi hi rakhein — 6
-spaces `- name:` se pehle):
-
-```yaml
-
-      - name: Search Console audit
-        # Fails on anything Google would report as an indexing error:
-        # canonical pointing elsewhere, noindex in sitemap, internal 404s,
-        # hreflang without return tags, near-duplicate page families.
-        run: npm run audit:gsc
-```
-
-**Complete file ka aakhri hissa aise dikhna chahiye:**
-
-```yaml
-      - name: Verify build output
-        # Guards the regressions this repo has actually had: giant client
-        # chunks, sitemap URLs with no page, missing/duplicate <h1>.
-        run: npm run verify:build
-
-      - name: Search Console audit
-        # Fails on anything Google would report as an indexing error:
-        # canonical pointing elsewhere, noindex in sitemap, internal 404s,
-        # hreflang without return tags, near-duplicate page families.
-        run: npm run audit:gsc
-```
-
-Phir neeche **"Commit changes"** dabayein.
+`audit:gsc` ab `.github/workflows/ci.yml` mein live chal raha hai — har push/PR
+pe `Verify build output` ke turant baad run hota hai. Manual edit ki zaroorat
+nahi rahi.
 
 ---
 
 ## ✅ Checklist
 
-- [ ] PR #4 merge karein
-- [ ] Vercel deploy "Ready" hone ka intezar karein
-- [ ] Sitemap resubmit (step 1)
-- [ ] 6 URLs request indexing (step 2)
-- [ ] CI line add karein (step 5)
+- [x] PR #4 merge karein ✅
+- [x] Vercel deploy "Ready" hone ka intezar karein ✅
+- [x] Sitemap resubmit (step 1) ✅
+- [x] 6 URLs request indexing (step 2) ✅
+- [x] CI line add karein (step 5) ✅
 - [ ] 2 hafte baad Page Indexing report check karein
 - [ ] 2–4 hafte baad review snippets 0 invalid confirm karein (step 4)
 
