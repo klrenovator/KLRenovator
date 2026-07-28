@@ -11,7 +11,8 @@
 		"lint:fix": "eslint . --fix",
 		"typecheck": "tsc --noEmit",
 		"gen:site-public": "node scripts/gen-site-public.mjs",
-		"verify:build": "node scripts/verify-build.mjs"
+		"verify:build": "node scripts/verify-build.mjs",
+		"audit:gsc": "node scripts/gsc-audit.mjs"
 	},
 	"dependencies": {
 		"@heroui/react": "3.0.3",

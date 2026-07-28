@@ -1,0 +1,211 @@
+# Google Search Console — Audit & Fixes
+
+**Branch:** `arena/019fa7f0-klrenovator` · **Date:** 28 July 2026
+**Status:** Lint ✅ · Typecheck ✅ · Build ✅ 2,104 pages · `verify:build` ✅ · `audit:gsc` ✅ 0 errors
+
+Aapke paas GSC ka export attach nahi tha, is liye maine **build ka asli
+rendered HTML** (2,104 pages) parse karke wo sab checks chalaye jo Google
+"Page indexing" report mein report karta hai. Naya script:
+`scripts/gsc-audit.mjs` → `npm run audit:gsc`.
+
+**Result: 273 errors mile, saare fix ho gaye. 3 warnings bache hain jo
+aapka content decision hain (neeche "Aapke Karne Ke Kaam").**
+
+| | Pehle | Ab |
+|---|---|---|
+| Indexing-blocking errors | **273** | **0** |
+| Sitemap URLs | 1,733 | **2,099** |
+| Pages Google ko "mat index karo" bola ja raha tha | **249** | **0** |
+| Internal links jo 404 pe jaate the | **24** | **0** |
+
+---
+
+## 🔴 1. 249 pages khud ko de-index karwa rahe the (sab se bara issue)
+
+`lib/hreflang-canonical.ts` ke do helpers — `buildTrilingualHreflang()` aur
+`normalizeHreflangUrls()` — **canonical hamesha ENGLISH URL pe hard-code**
+kar rahe the, chahe page MS ka ho ya ZH ka.
+
+Matlab har `/ms/*` aur `/zh/*` page Google ko keh raha tha:
+> "mera asli version English page hai, mujhe index mat karo"
+
+GSC mein ye aise dikhta hai:
+- **"Alternate page with proper canonical tag"** → excluded, kabhi index nahi hoga
+- **"Duplicate, Google chose a different canonical than user"**
+
+Sath hi hreflang bhi silently toot raha tha — Google demand karta hai ke
+canonical aur self-referencing hreflang aapas mein agree karein; jab
+disagree karein to poora language cluster discard ho jata hai.
+
+**Kitne pages affected the:**
+
+| Route family | Pages |
+|---|---|
+| `/ms/brands/[brand]/[area]` | 121 |
+| `/zh/brands/[brand]/[area]` | 121 |
+| `/ms/brands`, `/ms/btu-calculator`, `/ms/installation`, `/ms/problems` | 4 |
+| `/zh/brands`, `/zh/btu-calculator`, `/zh/installation`, `/zh/problems` | 4 |
+| **Total** | **250** |
+
+**Fix:** dono helpers ab `locale` parameter lete hain aur us locale ka apna
+URL canonical banate hain. `x-default` English pe hi rehta hai — wo sahi
+hai, x-default fallback hota hai canonical nahi.
+
+```ts
+buildTrilingualHreflang("/brands")        // canonical → /brands
+buildTrilingualHreflang("/brands", "ms")  // canonical → /ms/brands   ✅
+```
+
+Verify (asli build output se):
+```
+/ms/brands/daikin/petaling-jaya → canonical https://www.klrenovator.com/ms/brands/daikin/petaling-jaya ✅
+/zh/brands                      → canonical https://www.klrenovator.com/zh/brands ✅
+```
+
+---
+
+## 🔴 2. `/book` homepage ka duplicate ban raha tha
+
+`app/book/page.tsx` mein `alternates` tha hi nahi, to root layout ka
+canonical inherit ho gaya — jo homepage (`https://www.klrenovator.com`) pe
+point karta hai. Sitemap mein `/book` submitted tha, lekin khud ko homepage
+ka duplicate declare kar raha tha → **kabhi index nahi hota**.
+
+Fix: apna self-canonical + proper OG tags.
+
+---
+
+## 🔴 3. 24 internal links 404 pe ja rahe the
+
+| Kitne | Link | Masla | Fix |
+|---|---|---|---|
+| 20 | `/ms/brands/{brand}/pemasangan` | Malay pillar page 20 brand cards link kar raha tha, lekin route `/installation` hai — `/pemasangan` exist hi nahi karta | `/installation` |
+| 4 | `/best-hp-aircond-bedroom-size-guide-malaysia` etc. | Blog body mein `/blog/` prefix reh gaya tha (3-3 baar EN/MS/ZH mein) | `/blog/...` |
+
+Ye GSC mein **"Not found (404)"** deta hai, crawl budget waste karta hai,
+aur target pages ka PageRank rok deta hai. Ab poore `config/` folder mein
+scan kiya — koi bare blog-slug link nahi bacha.
+
+---
+
+## 🟠 4. 366 indexable pages sitemap mein the hi nahi
+
+| Pages | Kya |
+|---|---|
+| 360 | `/brands/[brand]/[area]` + `/ms` + `/zh` twins (120 per locale) |
+| 2 | `/ms` aur `/zh` **homepages** — site ke 2 sab se valuable localized entry points |
+| 4 | `/ms/areas`, `/zh/areas`, `/ms/brands`, `/zh/brands` |
+
+Ye sab real, prerendered, indexable pages hain — bas Google ko submit hi
+nahi ho rahe the. GSC mein **"Discovered — currently not indexed"**.
+
+**Root cause:** `PRIORITY_AREAS_BY_BRAND` map 3 route files mein
+copy-paste tha aur sitemap uska koi reference hi nahi rakhta tha.
+
+**Fix:** naya `config/brand-area-priority.ts` — single source of truth.
+Ab teeno route files ka `generateStaticParams()` aur `app/sitemap.ts`
+dono wahin se derive karte hain, to dobara drift ho hi nahi sakta. Helper
+sirf wahi (brand, area) pair deta hai jiska area `siteConfig.areaPages`
+mein actually maujood ho — warna sitemap mein 404 chala jata.
+
+Sitemap: **1,733 → 2,099 URLs**, sab resolve karte hain ✅
+
+---
+
+## 🟠 5. Baaki chhoti cheezein
+
+| Issue | Fix |
+|---|---|
+| `/ms/btu-calculator`, `/zh/btu-calculator`, `/ms/review`, `/zh/review` pe `og:locale` = `en_MY` | Sahi locale set kiya — WhatsApp/Facebook previews galat language announce kar rahe the |
+| `/cuci-aircond-kl` (English page) pe Malay meta description — `/ms/` twin se bilkul same | Real English description likhi |
+| `/blog/harga-servis-aircond-2026-malaysia` — English body pe Malay title, MS twin se identical | English title diya |
+| IndexNow: `https://www.www.klrenovator.com/...` (double www) aur `keyLocation` compute hoke discard ho raha tha | Fix + payload mein actually bheja |
+| `robots.txt` mein `site-summary.json` line 2 baar | Dedupe |
+| `public/site-summary.json` "10+ years" jabke baaki site "12+ years" | 12+ kiya (schema `foundingDate: 2014` ke mutabiq) |
+| `app/zh/commercial-aircond-installation/page tsx` — 1-byte stray file | Delete |
+
+---
+
+## 🛡️ Ab ye dobara nahi ho sakta
+
+`scripts/gsc-audit.mjs` CI mein add ho gaya (`.github/workflows/ci.yml`).
+Har push pe fail karega agar:
+
+- kisi page ka canonical kahin aur point kare
+- sitemap mein koi noindex URL ho
+- koi internal link 404 pe jaye
+- hreflang cluster mein return tag missing ho, ya target exist na kare
+- sitemap mein aisa URL ho jiska page build hi na hua ho
+- duplicate title/description (warning)
+
+Local: `npm run build && npm run audit:gsc`
+
+---
+
+## ⚠️ Aapke Karne Ke Kaam
+
+### 1. Deploy ke baad GSC mein sitemap resubmit karein
+
+Sitemap 1,733 → 2,099 URLs ho gaya hai aur 249 pages ab pehli baar
+indexable hue hain.
+
+1. Search Console → **Sitemaps** → `sitemap.xml` resubmit
+2. **URL Inspection** se ye 3 spot-check karein → "Request Indexing":
+   - `https://www.klrenovator.com/ms`
+   - `https://www.klrenovator.com/zh`
+   - `https://www.klrenovator.com/book`
+3. 2–3 hafte baad **Page indexing** report dekhein — "Alternate page with
+   proper canonical tag" bucket **249 se ghat kar lagbhag 0** hona chahiye.
+
+> Ye pages mahine se excluded the, is liye Google ko recrawl karne mein
+> waqt lagega. Ek hi din mein sab index nahi hoga — normal hai.
+
+### 2. Teen blog posts ka content decision (main ye khud fix nahi kar sakta)
+
+In 3 posts ka **English URL pe Malay body** hai — title, excerpt aur poora
+article Malay mein hai, jabke ye `/blog/...` (English route) pe serve ho
+rahe hain, aur `/ms/blog/...` twin bilkul same content deta hai:
+
+- `/blog/baiki-vs-tukar-baru-aircond-malaysia`
+- `/blog/cara-pilih-hp-aircond-bilik-malaysia`
+- `/blog/servis-aircond-rumah-sewa-airbnb-malaysia`
+
+Do URLs, ek hi content — aapas mein compete kar rahe hain. Aapke paas 3
+options hain, batayein kaunsa chahiye to main kar dunga:
+
+| Option | Kya hoga | Kab behtar |
+|---|---|---|
+| **A. English translate karein** | `content` field ko sach mein English kar dein | Best — EN + MS dono keywords capture honge |
+| **B. Sirf `/ms/` rakhein** | English URL ko `/ms/blog/...` pe 301 redirect | Agar in topics pe English traffic nahi chahiye |
+| **C. Waise hi chhorr dein** | Google khud ek chunega | Chalega, par ek URL ki ranking zaaya hogi |
+
+### 3. (Pehle wale audit se pending) Env vars
+
+Agar abhi tak set nahi kiye to Vercel → Settings → Environment Variables:
+```bash
+ADMIN_PASSWORD=<naya strong password>
+ADMIN_SESSION_SECRET=<openssl rand -hex 32>
+```
+Inke bagair `/admin/bookings` pe login nahi hoga (jaan bujh ke fail-closed).
+
+### 4. Optional — 172 meta descriptions 160 chars se lambe
+
+Google inko truncate karega. Blocking nahi hai, click-through thoda
+affect hota hai. Bolen to `clampMetaDescription()` ka threshold tight
+karke bulk fix kar sakta hoon.
+
+---
+
+## Verification
+
+```
+✓ npm run lint        — clean
+✓ npm run typecheck   — clean
+✓ npm run build       — 2,104 pages
+✓ npm run verify:build
+      sitemap: 2099 URLs, all resolve ✓
+      h1 coverage: 2104/2104
+✓ npm run audit:gsc
+      ✓ No indexing-blocking errors found
+      3 warnings (upar wala content decision)
+```

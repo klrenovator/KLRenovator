@@ -10,6 +10,7 @@ import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { waLink } from "@/lib/whatsapp";
 import { normalizeHreflangUrls } from "@/lib/hreflang-canonical";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
+import { brandAreaPairs } from "@/config/brand-area-priority";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -17,39 +18,11 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 // Route: /zh/brands/[slug]/[area]
 // ─────────────────────────────────────────────────────────────────────────
 
-const PRIORITY_AREAS_BY_BRAND: Record<string, string[]> = {
-  daikin: ["petaling-jaya", "mont-kiara", "subang-jaya", "kuala-lumpur", "shah-alam", "bangsar"],
-  panasonic: ["puchong", "cheras", "petaling-jaya", "subang-jaya", "klang", "kuala-lumpur"],
-  mitsubishi: ["shah-alam", "mont-kiara", "damansara", "kuala-lumpur", "puchong", "subang-jaya"],
-  york: ["klang", "shah-alam", "kepong", "puchong", "petaling-jaya", "sentul"],
-  acson: ["cheras", "shah-alam", "klang", "puchong", "kuala-lumpur", "setapak"],
-  carrier: ["glenmarie", "shah-alam", "kuala-lumpur", "petaling-jaya", "klang", "damansara"],
-  midea: ["puchong", "cheras", "subang-jaya", "petaling-jaya", "klang", "kajang"],
-  haier: ["cheras", "ampang", "puchong", "kajang", "kepong", "setapak"],
-  toshiba: ["damansara", "petaling-jaya", "kuala-lumpur", "mont-kiara", "bangsar", "subang-jaya"],
-  hitachi: ["shah-alam", "glenmarie", "kuala-lumpur", "damansara", "petaling-jaya", "klang"],
-  samsung: ["mont-kiara", "bangsar", "petaling-jaya", "subang-jaya", "kuala-lumpur", "cyberjaya"],
-  lg: ["mont-kiara", "petaling-jaya", "subang-jaya", "puchong", "kuala-lumpur", "bangsar"],
-  sharp: ["cheras", "ampang", "kepong", "setapak", "puchong", "kajang"],
-  fujitsu: ["glenmarie", "shah-alam", "kuala-lumpur", "damansara", "cyberjaya", "petaling-jaya"],
-  gree: ["puchong", "klang", "kajang", "cheras", "ampang", "seri-kembangan"],
-  hisense: ["kajang", "balakong", "puchong", "klang", "cheras", "ampang"],
-  aux: ["shah-alam", "klang", "puchong", "subang-jaya", "rawang", "kepong"],
-  tcl: ["puchong", "cheras", "subang-jaya", "petaling-jaya", "klang", "kajang"],
-  national: ["sentul", "kepong", "cheras", "ampang", "kuala-lumpur", "petaling-jaya"],
-  isonic: ["klang", "puchong", "shah-alam", "cheras", "kajang", "rawang"],
-  _default: ["kuala-lumpur", "petaling-jaya", "cheras", "puchong", "shah-alam", "klang"],
-};
 
 export function generateStaticParams() {
-  const params: { slug: string; area: string }[] = [];
-  for (const brand of siteConfig.brandPages) {
-    const priority = PRIORITY_AREAS_BY_BRAND[brand.slug] || PRIORITY_AREAS_BY_BRAND._default;
-    for (const areaSlug of priority) {
-      params.push({ slug: brand.slug, area: areaSlug });
-    }
-  }
-  return params;
+  // Shared with app/sitemap.ts via config/brand-area-priority.ts so the
+  // generated pages and the sitemap can never drift apart again.
+  return brandAreaPairs().map(({ brand, area }) => ({ slug: brand, area }));
 }
 
 export async function generateMetadata({
@@ -84,6 +57,10 @@ export async function generateMetadata({
       en: enUrl,
       ms: msUrl,
       zh: zhUrl,
+      // Self-canonical: this is the ZH page, so it must point at itself.
+      // Defaulting to the EN url made Google treat all of these as
+      // "Alternate page with proper canonical tag" and drop them.
+      locale: "zh",
     }),
   };
 }

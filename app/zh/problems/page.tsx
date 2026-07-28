@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "冷气故障指南——不冷、漏水、噪音、异味、闪灯。当天服务。",
     images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
   },
-  alternates: buildTrilingualHreflang("/problems"),
+  alternates: buildTrilingualHreflang("/problems", "zh"),
 };
 
 // ── Schemas ─────────────────────────────────────────────────────────────────

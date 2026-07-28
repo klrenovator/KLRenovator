@@ -3,7 +3,26 @@ import { BookingForm } from "@/components/booking-form";
 
 export const metadata: Metadata = {
   title: "Book an Appointment | KL Renovator",
-  description: "Schedule your aircond servicing, repair, or installation online with KL Renovator.",
+  description:
+    "Book aircond servicing, repair or installation online in KL & Selangor. Pick your service and time slot — instant confirmation, no deposit.",
+  // Without this the page inherited the root layout's canonical, which points
+  // at the homepage. Google reported /book as a duplicate of "/" and never
+  // indexed it, even though it is in the sitemap.
+  alternates: {
+    canonical: "https://www.klrenovator.com/book",
+    languages: {
+      "en-MY": "https://www.klrenovator.com/book",
+      "x-default": "https://www.klrenovator.com/book",
+    },
+  },
+  openGraph: {
+    title: "Book an Aircond Appointment Online | KL Renovator",
+    description:
+      "Pick your service and time slot online. Aircond servicing, repair and installation across KL & Selangor.",
+    url: "https://www.klrenovator.com/book",
+    type: "website",
+    locale: "en_MY",
+  },
 };
 
 export default function BookPage() {

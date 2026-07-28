@@ -4,8 +4,31 @@
 // - No trailing slash (except root "/" canonical is https://www.klrenovator.com)
 // - Domain always https://www.klrenovator.com
 // - Trilingual alternates: en-MY, ms-MY, zh-MY, x-default
+//
+// ─────────────────────────────────────────────────────────────────────────
+// GSC FIX (2026-07-28) — canonical must be SELF-referencing.
+//
+// Both `buildTrilingualHreflang()` and `normalizeHreflangUrls()` used to
+// hard-code `canonical` to the ENGLISH url, no matter which locale's page
+// was rendering it. Every /ms/* and /zh/* page that used these helpers was
+// therefore telling Google "the real version of me is the English page".
+//
+// In Search Console that is reported as:
+//   • "Alternate page with proper canonical tag"  → excluded, never indexed
+//   • "Duplicate, Google chose a different canonical than user"
+//
+// It also silently breaks hreflang, because Google requires the canonical
+// and the self-referencing hreflang to agree; when they disagree the whole
+// language cluster is discarded.
+//
+// The helpers now take a `locale` and emit that locale's own URL as the
+// canonical. `x-default` stays on English, which is correct — x-default is
+// the fallback for unmatched languages, not the cluster's canonical.
+// ─────────────────────────────────────────────────────────────────────────
 
 const BASE = "https://www.klrenovator.com";
+
+export type HreflangLocale = "en" | "ms" | "zh";
 
 function normalizePath(path: string): string {
   if (!path) return "";
@@ -26,66 +49,113 @@ function buildUrl(path: string): string {
   return `${BASE}${normalized}`;
 }
 
-export function buildTrilingualHreflang(enPath: string) {
+/**
+ * Build canonical + hreflang alternates for a page that exists in all three
+ * languages at the same path depth (EN at the root, MS under /ms, ZH under /zh).
+ *
+ * @param enPath  The ENGLISH path, e.g. "/brands" or "/btu-calculator".
+ * @param locale  Which locale's page is calling this. This determines the
+ *                canonical. Defaults to "en" so existing English callers are
+ *                unaffected.
+ *
+ * @example
+ *   // app/brands/page.tsx      → canonical https://www.klrenovator.com/brands
+ *   buildTrilingualHreflang("/brands")
+ *   // app/ms/brands/page.tsx   → canonical https://www.klrenovator.com/ms/brands
+ *   buildTrilingualHreflang("/brands", "ms")
+ */
+export function buildTrilingualHreflang(enPath: string, locale: HreflangLocale = "en") {
+  const suffix = enPath === "/" ? "" : enPath;
   const en = buildUrl(enPath);
-  const ms = buildUrl(`/ms${enPath === "/" ? "" : enPath}`);
-  const zh = buildUrl(`/zh${enPath === "/" ? "" : enPath}`);
-  
-  // Special cases for index pages that have dedicated MS/ZH routes
-  // enPath "/" => ms "/ms", zh "/zh" (not "/ms/" or "/zh/")
-  // For "/areas" => "/ms/areas", "/zh/areas" etc.
+  const ms = buildUrl(`/ms${suffix}`);
+  const zh = buildUrl(`/zh${suffix}`);
+
+  const self = locale === "ms" ? ms : locale === "zh" ? zh : en;
 
   return {
-    canonical: en,
+    // Self-referencing: the page is its own canonical. Pointing /ms/* at the
+    // English URL removes it from the index entirely.
+    canonical: self,
     languages: {
       "en-MY": en,
       "ms-MY": ms,
       "zh-MY": zh,
+      // x-default = the version served to users whose language we don't
+      // target. English is the right fallback; this is NOT the canonical.
       "x-default": en,
     },
   };
 }
 
-export function buildBilingualHreflang(enPath: string, hasMs = true, hasZh = true) {
+/**
+ * Same as {@link buildTrilingualHreflang} but for pages that only exist in
+ * some of the three languages.
+ */
+export function buildBilingualHreflang(
+  enPath: string,
+  hasMs = true,
+  hasZh = true,
+  locale: HreflangLocale = "en",
+) {
+  const suffix = enPath === "/" ? "" : enPath;
   const en = buildUrl(enPath);
-  const result: Record<string, string> = { "en-MY": en };
-  if (hasMs) result["ms-MY"] = buildUrl(`/ms${enPath === "/" ? "" : enPath}`);
-  if (hasZh) result["zh-MY"] = buildUrl(`/zh${enPath === "/" ? "" : enPath}`);
-  result["x-default"] = en;
+  const ms = hasMs ? buildUrl(`/ms${suffix}`) : undefined;
+  const zh = hasZh ? buildUrl(`/zh${suffix}`) : undefined;
+
+  const languages: Record<string, string> = { "en-MY": en };
+  if (ms) languages["ms-MY"] = ms;
+  if (zh) languages["zh-MY"] = zh;
+  languages["x-default"] = en;
+
+  const self = locale === "ms" ? (ms ?? en) : locale === "zh" ? (zh ?? en) : en;
+
   return {
-    canonical: en,
-    languages: result,
+    canonical: self,
+    languages,
   };
 }
 
-// Helper for dynamic routes where we already have en/ms/zh URLs built
-export function normalizeHreflangUrls(urls: { en: string; ms?: string; zh?: string; xDefault?: string }) {
-  const en = urls.en.replace(/\/$/, "") || BASE;
-  const ms = urls.ms ? urls.ms.replace(/\/$/, "") : undefined;
-  const zh = urls.zh ? urls.zh.replace(/\/$/, "") : undefined;
-  const xDefault = urls.xDefault ? urls.xDefault.replace(/\/$/, "") : en;
+function canonicalize(url: string): string {
+  let out = url;
+  // Force https and www
+  out = out.replace(/^http:\/\/www\./, "https://www.");
+  out = out.replace(/^http:\/\/klrenovator\.com/, "https://www.klrenovator.com");
+  out = out.replace(/^https:\/\/klrenovator\.com/, "https://www.klrenovator.com");
+  // Remove trailing slash
+  if (out !== BASE && out.endsWith("/")) {
+    out = out.slice(0, -1);
+  }
+  return out;
+}
+
+/**
+ * Helper for dynamic routes where the en/ms/zh URLs are already built.
+ *
+ * @param urls.locale  Which locale is rendering. Determines the canonical.
+ *                     Defaults to "en" for backwards compatibility.
+ */
+export function normalizeHreflangUrls(urls: {
+  en: string;
+  ms?: string;
+  zh?: string;
+  xDefault?: string;
+  locale?: HreflangLocale;
+}) {
+  const en = canonicalize(urls.en) || BASE;
+  const ms = urls.ms ? canonicalize(urls.ms) : undefined;
+  const zh = urls.zh ? canonicalize(urls.zh) : undefined;
+  const xDefault = urls.xDefault ? canonicalize(urls.xDefault) : en;
 
   const languages: Record<string, string> = { "en-MY": en };
   if (ms) languages["ms-MY"] = ms;
   if (zh) languages["zh-MY"] = zh;
   languages["x-default"] = xDefault;
 
-  // Ensure all use www.klrenovator.com and https
-  for (const key of Object.keys(languages)) {
-    let url = languages[key];
-    // Force https and www
-    url = url.replace(/^http:\/\/www\./, "https://www.");
-    url = url.replace(/^http:\/\/klrenovator\.com/, "https://www.klrenovator.com");
-    url = url.replace(/^https:\/\/klrenovator\.com/, "https://www.klrenovator.com");
-    // Remove trailing slash
-    if (url !== BASE && url.endsWith("/")) {
-      url = url.slice(0, -1);
-    }
-    languages[key] = url;
-  }
+  const locale = urls.locale ?? "en";
+  const self = locale === "ms" ? (ms ?? en) : locale === "zh" ? (zh ?? en) : en;
 
   return {
-    canonical: languages["en-MY"],
+    canonical: self,
     languages,
   };
 }

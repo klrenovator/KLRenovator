@@ -7,7 +7,15 @@ export const metadata: Metadata = {
   title: clampMetaTitle("马来西亚冷气马力计算器 | BTU 计算工具"),
   description:
     "免费马来西亚冷气马力（HP）与 BTU 尺寸计算器。根据房间大小、西晒情况及人数，精准计算您所需要的冷气大小与安装价格估算。",
-  alternates: buildTrilingualHreflang("/btu-calculator"),
+  alternates: buildTrilingualHreflang("/btu-calculator", "zh"),
+  // og:locale was inherited from the root layout as en_MY, so Facebook,
+  // WhatsApp and LinkedIn previews announced this localized page as English.
+  openGraph: {
+    url: "https://www.klrenovator.com/zh/btu-calculator",
+    type: "website",
+    locale: "zh_MY",
+    alternateLocale: ["en_MY", "ms_MY"],
+  },
 };
 
 export default function BtuCalculatorPageZH() {

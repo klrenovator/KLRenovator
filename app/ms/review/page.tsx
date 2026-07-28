@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     },
   },
   robots: { index: false },
+  // og:locale was inherited from the root layout as en_MY, so Facebook,
+  // WhatsApp and LinkedIn previews announced this localized page as English.
+  openGraph: {
+    url: "https://www.klrenovator.com/ms/review",
+    type: "website",
+    locale: "ms_MY",
+    alternateLocale: ["en_MY", "zh_MY"],
+  },
 };
 
 export default function ReviewPageMS() {

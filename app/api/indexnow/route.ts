@@ -32,12 +32,18 @@ export async function GET(req: Request) {
     // We send a ping to IndexNow (which notifies Bing, Yahoo, Yandex, etc.)
     const host = "www.klrenovator.com";
     // We will create this key file in the public folder so Search Engines can verify it
-    const key = "e7492c813de342fca1deeb6b05df8445"; 
-    const keyLocation = `https://www.${host}/${key}.txt`;
+    const key = "e7492c813de342fca1deeb6b05df8445";
+    // `host` already includes the www. — the old template added a second one
+    // and produced https://www.www.klrenovator.com/<key>.txt, which does not
+    // resolve. It is now also actually sent in the payload; previously it was
+    // computed and thrown away, so IndexNow fell back to guessing the key
+    // location and rejected the submission when the guess missed.
+    const keyLocation = `https://${host}/${key}.txt`;
 
     const payload = {
       host: host,
       key: key,
+      keyLocation,
       urlList: [
         `https://${host}/`,
         `https://${host}/book`,

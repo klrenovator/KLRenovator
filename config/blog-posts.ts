@@ -5594,7 +5594,12 @@ export const allPosts: BlogPost[] = [
   },
   {
     slug: "harga-servis-aircond-2026-malaysia",
-    title: "Harga Servis Aircond Malaysia 2026 - Panduan Harga Lengkap Semua Perkhidmatan",
+    // `title` feeds the ENGLISH route /blog/... and `titleMS` feeds
+    // /ms/blog/... . Both were set to the same Malay string, so the two URLs
+    // shipped an identical <title> and competed with each other in the SERP.
+    // The English body of this post is genuinely English, so it gets a real
+    // English title.
+    title: "Aircond Service Price Malaysia 2026 — Full Price Guide",
     titleMS: "Harga Servis Aircond Malaysia 2026 - Panduan Harga Lengkap Semua Perkhidmatan",
     titleZH: "2026年马来西亚冷气服务价格 - 完整服务价格指南",
     excerpt: "Complete transparent aircond service pricing for Malaysia 2026. All 9 services, all HP ranges, volume discounts, no hidden fees. Updated July 2026.",
