@@ -56,3 +56,10 @@ jobs:
         # Guards the regressions this repo has actually had: giant client
         # chunks, sitemap URLs with no page, missing/duplicate <h1>.
         run: npm run verify:build
+
+      - name: Search Console audit
+        # Fails on anything Google would report as an indexing error:
+        # canonical pointing elsewhere, noindex in sitemap, internal 404s,
+        # hreflang without return tags, near-duplicate page families,
+        # self-serving review markup.
+        run: npm run audit:gsc
