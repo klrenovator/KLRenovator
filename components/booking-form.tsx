@@ -181,15 +181,29 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   
-  // Multi-service line items state
+  // Multi-service line items state.
+  // `quantity` is intentionally `number | ""`: while the customer is retyping
+  // the value (e.g. clearing "1" to type "4") the input is momentarily empty.
+  // Coercing that back to 1 on every keystroke made the field fight the user,
+  // so an empty string is allowed in state and normalised via `resolveQuantity`
+  // wherever a real number is needed (duration maths, submission, messaging).
   const [lineItems, setLineItems] = useState<Array<{
     service_type: string;
     aircond_type: string;
     aircond_size: string;
-    quantity: number;
+    quantity: number | "";
   }>>([
     { service_type: "service", aircond_type: "Wall Mounted", aircond_size: "1.0 HP", quantity: 1 }
   ]);
+
+  // Safe fallback: an in-progress empty field counts as a single unit.
+  const resolveQuantity = (quantity: number | "") =>
+    typeof quantity === "number" && Number.isFinite(quantity) && quantity >= 1 ? quantity : 1;
+
+  const normalisedLineItems = lineItems.map((item) => ({
+    ...item,
+    quantity: resolveQuantity(item.quantity),
+  }));
 
   const [propertyType, setPropertyType] = useState("Condo / Apartment");
   const [floorLevel, setFloorLevel] = useState("");
@@ -213,7 +227,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   );
 
   // Calculations using lineItems total
-  const baseDurationMinutes = calculateTotalDurationMinutes(lineItems);
+  const baseDurationMinutes = calculateTotalDurationMinutes(normalisedLineItems);
   const totalDurationMinutes = isAdmin && manualHours !== "" && !isNaN(parseFloat(manualHours))
     ? parseFloat(manualHours) * 60
     : baseDurationMinutes;
@@ -290,7 +304,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           customer_name: name,
           phone,
           address,
-          line_items: lineItems,
+          line_items: normalisedLineItems,
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
           company_website: companyWebsite,
@@ -316,7 +330,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         setSuccess(true);
         trackBookingSubmit({
           line_items_count: lineItems.length,
-          total_quantity: lineItems.reduce((acc, item) => acc + item.quantity, 0),
+          total_quantity: normalisedLineItems.reduce((acc, item) => acc + item.quantity, 0),
           source: isAdmin ? "whatsapp_manual" : "web",
         });
 
@@ -329,7 +343,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           });
           
           let msgText = `Hi ${name}, your booking for services:`;
-          lineItems.forEach((item) => {
+          normalisedLineItems.forEach((item) => {
             const itemLabel = SERVICE_OPTS.find(o => o.val === item.service_type)?.en || item.service_type;
             msgText += `\n- ${itemLabel} (${item.aircond_type} ${item.aircond_size} x${item.quantity})`;
           });
@@ -499,7 +513,24 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
                   max="15"
                   required
                   value={item.quantity}
-                  onChange={(e) => updateLineItem(idx, "quantity", parseInt(e.target.value, 10) || 1)}
+                  onChange={(e) => {
+                    const raw = e.target.value;
+
+                    // Let the box sit empty while the customer types a new
+                    // number; don't snap back to 1 on every keystroke.
+                    if (raw === "") {
+                      updateLineItem(idx, "quantity", "");
+                      return;
+                    }
+
+                    const parsed = parseInt(raw, 10);
+                    if (Number.isNaN(parsed)) return;
+                    updateLineItem(idx, "quantity", Math.min(Math.max(parsed, 1), 15));
+                  }}
+                  onBlur={() => {
+                    // Leaving the field empty commits the safe fallback of 1.
+                    if (item.quantity === "") updateLineItem(idx, "quantity", 1);
+                  }}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
                 />
               </div>
