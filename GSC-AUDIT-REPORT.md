@@ -1,15 +1,15 @@
 # Google Search Console — Audit & Fixes
 
 **Branch:** `arena/019fa7f0-klrenovator` · **Date:** 28 July 2026
-**Status:** Lint ✅ · Typecheck ✅ · Build ✅ 2,104 pages · `verify:build` ✅ · `audit:gsc` ✅ 0 errors
+**Status:** Lint ✅ · Typecheck ✅ · Build ✅ 2,104 pages · `verify:build` ✅ · `audit:gsc` ✅ **0 errors, 0 warnings**
 
 Aapke paas GSC ka export attach nahi tha, is liye maine **build ka asli
 rendered HTML** (2,104 pages) parse karke wo sab checks chalaye jo Google
 "Page indexing" report mein report karta hai. Naya script:
 `scripts/gsc-audit.mjs` → `npm run audit:gsc`.
 
-**Result: 273 errors mile, saare fix ho gaye. 3 warnings bache hain jo
-aapka content decision hain (neeche "Aapke Karne Ke Kaam").**
+**Result: 273 errors + 8 warnings mile — saare fix ho gaye. Ab audit
+bilkul clean hai.**
 
 | | Pehle | Ab |
 |---|---|---|
@@ -17,6 +17,7 @@ aapka content decision hain (neeche "Aapke Karne Ke Kaam").**
 | Sitemap URLs | 1,733 | **2,099** |
 | Pages Google ko "mat index karo" bola ja raha tha | **249** | **0** |
 | Internal links jo 404 pe jaate the | **24** | **0** |
+| Duplicate title / description | **8** | **0** |
 
 ---
 
@@ -126,6 +127,40 @@ Sitemap: **1,733 → 2,099 URLs**, sab resolve karte hain ✅
 
 ---
 
+## 🟢 6. Chaar blog posts — English URL pe Malay content
+
+In 4 posts ka `title`, `excerpt` aur poora `content` **Malay mein tha,
+jabke ye English route `/blog/<slug>` pe serve ho rahe the** — aur
+`/ms/blog/<slug>` twin bilkul same bytes de raha tha. Do URLs, ek hi
+content, aapas mein compete kar rahe the.
+
+Ab teeno languages alag hain — baaki blogs jaisa:
+
+| URL | Pehle | Ab |
+|---|---|---|
+| `/blog/harga-servis-aircond-2026-malaysia` | Malay title, English body | "Aircond Service Price Malaysia 2026 — Full Price Guide" |
+| `/blog/cara-pilih-hp-aircond-bilik-malaysia` | Poora Malay | "What HP Aircond Do I Need? Room Size Guide Malaysia" |
+| `/blog/baiki-vs-tukar-baru-aircond-malaysia` | Poora Malay | "Aircond Repair or Replace? Malaysia Cost Guide 2026" |
+| `/blog/servis-aircond-rumah-sewa-airbnb-malaysia` | Poora Malay | "Rental & Airbnb Aircond Servicing Guide Malaysia" |
+
+**Zaroori:** sirf English fields (`title`, `excerpt`, `content`) badle hain.
+`titleMS` / `excerptMS` / `contentMS` aur saare ZH fields **bilkul waise ke
+waise hain** — Malay aur Chinese pages pe koi farq nahi.
+
+Naya English content baaki EN posts ka hi format follow karta hai:
+`<h2>` structure, `summary-block` "Direct answer" boxes (AEO/featured
+snippet ke liye), comparison tables, aur English internal links
+(`/services/repair`, `/btu-calculator`, `/aircond-service-price-malaysia`
+— sab verify kiye, koi 404 nahi).
+
+Saari pricing site config se match ki hai (AMC RM 299/year, basic RM 99,
+chemical wash RM 120–220, installation RM 199) — koi naya number invent
+nahi kiya.
+
+English pages ab lambe bhi hain: ~5,700 → ~7,700 characters.
+
+---
+
 ## 🛡️ Ab ye dobara nahi ho sakta
 
 `scripts/gsc-audit.mjs` ban gaya hai — `npm run audit:gsc`.
@@ -164,26 +199,7 @@ indexable hue hain.
 > Ye pages mahine se excluded the, is liye Google ko recrawl karne mein
 > waqt lagega. Ek hi din mein sab index nahi hoga — normal hai.
 
-### 2. Teen blog posts ka content decision (main ye khud fix nahi kar sakta)
-
-In 3 posts ka **English URL pe Malay body** hai — title, excerpt aur poora
-article Malay mein hai, jabke ye `/blog/...` (English route) pe serve ho
-rahe hain, aur `/ms/blog/...` twin bilkul same content deta hai:
-
-- `/blog/baiki-vs-tukar-baru-aircond-malaysia`
-- `/blog/cara-pilih-hp-aircond-bilik-malaysia`
-- `/blog/servis-aircond-rumah-sewa-airbnb-malaysia`
-
-Do URLs, ek hi content — aapas mein compete kar rahe hain. Aapke paas 3
-options hain, batayein kaunsa chahiye to main kar dunga:
-
-| Option | Kya hoga | Kab behtar |
-|---|---|---|
-| **A. English translate karein** | `content` field ko sach mein English kar dein | Best — EN + MS dono keywords capture honge |
-| **B. Sirf `/ms/` rakhein** | English URL ko `/ms/blog/...` pe 301 redirect | Agar in topics pe English traffic nahi chahiye |
-| **C. Waise hi chhorr dein** | Google khud ek chunega | Chalega, par ek URL ki ranking zaaya hogi |
-
-### 3. CI mein audit step add karein (1 minute)
+### 2. CI mein audit step add karein (1 minute)
 
 GitHub App ke paas `workflows` permission nahi hai, is liye ye main push
 nahi kar saka. `.github/workflows/ci.yml` mein `Verify build output` ke
@@ -197,7 +213,7 @@ turant baad ye add kar dein:
 Poori detail `ci/README.md` mein hai. Iske bagair bhi sab fixes kaam kar
 rahe hain — ye sirf future regressions rokne ke liye hai.
 
-### 4. (Pehle wale audit se pending) Env vars
+### 3. (Pehle wale audit se pending) Env vars
 
 Agar abhi tak set nahi kiye to Vercel → Settings → Environment Variables:
 ```bash
@@ -206,7 +222,7 @@ ADMIN_SESSION_SECRET=<openssl rand -hex 32>
 ```
 Inke bagair `/admin/bookings` pe login nahi hoga (jaan bujh ke fail-closed).
 
-### 5. Optional — 172 meta descriptions 160 chars se lambe
+### 4. Optional — 172 meta descriptions 160 chars se lambe
 
 Google inko truncate karega. Blocking nahi hai, click-through thoda
 affect hota hai. Bolen to `clampMetaDescription()` ka threshold tight
@@ -225,5 +241,5 @@ karke bulk fix kar sakta hoon.
       h1 coverage: 2104/2104
 ✓ npm run audit:gsc
       ✓ No indexing-blocking errors found
-      3 warnings (upar wala content decision)
+      0 warnings
 ```
