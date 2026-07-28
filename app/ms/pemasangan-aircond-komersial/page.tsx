@@ -10,10 +10,10 @@ import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
-  title: "Pemasangan Aircond Komersial KL & Selangor — Pejabat, Kedai, B2B | KL Renovator",
+  title: "Pemasangan Aircond Komersial KL — Pejabat & Kedai",
   description: "Pemasangan aircond komersial untuk pejabat, kedai, restoran, klinik & bilik server di KL & Selangor. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573",
   openGraph: {
-    title: "Pemasangan Aircond Komersial KL & Selangor — Pejabat, Kedai, B2B | KL Renovator",
+    title: "Pemasangan Aircond Komersial KL — Pejabat & Kedai",
     description: "Pemasangan aircond untuk pejabat, kedai, restoran, klinik & bilik server. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573",
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-komersial",

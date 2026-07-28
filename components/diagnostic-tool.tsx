@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface DiagnosticStep {
@@ -560,7 +560,7 @@ export function DiagnosticTool() {
 
             {result.urgency === "emergency" && (
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all shadow-lg"
               >
                 📞 Call Emergency Line Now

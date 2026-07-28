@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 export const StickyActions = () => {
@@ -61,13 +61,13 @@ export const StickyActions = () => {
       </a>
 
       <a
-        href={`tel:${siteConfig.phone}`}
+        href={`tel:${sitePublic.phone}`}
         aria-label="Call KL Renovator HVAC Support Now"
         className="group relative inline-flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white shadow-[0_8px_30px_rgb(2,132,199,0.4)] ring-4 ring-white transition-all hover:scale-110 active:scale-[0.93]"
       >
         <FaPhone className="h-5 w-5 sm:h-6 sm:w-6" />
         <span className="pointer-events-none absolute right-full mr-4 tracking-wide whitespace-nowrap bg-slate-900 px-3.5 py-2 text-xs font-black uppercase text-white opacity-0 transition-opacity rounded-lg group-hover:opacity-100 shadow-xl border border-slate-700">
-          📞 Call Now: {siteConfig.phoneDisplay}
+          📞 Call Now: {sitePublic.phoneDisplay}
         </span>
       </a>
     </div>

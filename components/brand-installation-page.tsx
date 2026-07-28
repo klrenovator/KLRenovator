@@ -1,4 +1,7 @@
-"use client";
+// Server component on purpose — no state, effects or event handlers here.
+// Marking it "use client" pulled its whole import graph (including the
+// 1.1 MB config/site.ts, via lib/whatsapp) into the browser bundle for
+// every one of these routes.
 
 import { FaWhatsapp, FaCheck, FaHouseChimney, FaBuilding, FaSquare } from "react-icons/fa6";
 import { FiPhone, FiChevronRight } from "react-icons/fi";
@@ -6,9 +9,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
+import { InstallationProof } from "@/components/installation-proof";
 import {
   getBrandInstallationContent,
   type BrandInstallationLocale,
@@ -165,10 +169,10 @@ export function BrandInstallationLandingPage({
                 <FaWhatsapp className="h-5 w-5" /> {c.whatsAppLabel}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-black uppercase text-sm tracking-widest h-14 px-6 transition-all rounded-xl"
               >
-                <FiPhone className="h-4 w-4 text-sky-300" /> {callLabel} {siteConfig.phoneDisplay}
+                <FiPhone className="h-4 w-4 text-sky-300" /> {callLabel} {sitePublic.phoneDisplay}
               </a>
             </div>
           </Reveal>
@@ -360,6 +364,10 @@ export function BrandInstallationLandingPage({
         </div>
       </section>
 
+      {/* Real project photos + verified reviews — these pages previously
+          shipped zero social proof and only two images. */}
+      <InstallationProof locale={locale} photoCount={3} reviewCount={3} />
+
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -400,10 +408,10 @@ export function BrandInstallationLandingPage({
                 <FaWhatsapp className="h-5 w-5" /> {c.whatsAppLabel}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
               >
-                <FiPhone className="h-4 w-4" /> {callLabel} {siteConfig.phoneDisplay}
+                <FiPhone className="h-4 w-4" /> {callLabel} {sitePublic.phoneDisplay}
               </a>
             </div>
           </Reveal>

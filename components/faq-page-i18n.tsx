@@ -5,7 +5,7 @@ import { FaWhatsapp, FaChevronDown, FaPhone, FaMagnifyingGlass } from "react-ico
 import { FaRegClock, FaShieldAlt } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { masterFaqPool, FAQ_CATEGORIES, MOST_ASKED_CATEGORIES, type Lang, type MasterFaqItem } from "@/config/master-faq-pool";
 
@@ -323,11 +323,11 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
                 {cta.whatsapp}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-white hover:bg-slate-100 px-8 py-4 text-sm font-black uppercase tracking-widest text-slate-900 transition-all rounded-xl"
               >
                 <FaPhone className="h-4 w-4" />
-                {cta.call} {siteConfig.phoneDisplay}
+                {cta.call} {sitePublic.phoneDisplay}
               </a>
             </div>
           </Reveal>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaWhatsapp, FaCheck, FaSnowflake, FaBuilding } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 import { useLang } from "@/context/language-context";
@@ -47,10 +47,10 @@ export const ServicesWithPricing = () => {
   const { t } = useLang();
 
   // ✅ SSR both tabs — Google can crawl commercial content too
-  const residentialServices = siteConfig.services.filter(
+  const residentialServices = sitePublic.services.filter(
     (s) => s.slug !== "emergency" && (s.category === "residential" || s.category === "both")
   );
-  const commercialServices = siteConfig.services.filter(
+  const commercialServices = sitePublic.services.filter(
     (s) => s.slug !== "emergency" && (s.category === "commercial" || s.category === "both")
   );
 

@@ -8,7 +8,7 @@ const BASE = "https://www.klrenovator.com";
 // the latest content deployment instead of changing on every build.
 // Round 23 / 20F.50 — updated 2026-07-07 for Cuci Aircond KL landing launch.
 // Round 70 / INS-08 + INS-09 — updated 2026-07-15 for per-HP and per-type installation pages.
-const SITEMAP_LAST_MODIFIED = new Date("2026-07-17T00:00:00.000Z");
+const SITEMAP_LAST_MODIFIED = new Date("2026-07-28T00:00:00.000Z");
 
 // ─────────────────────────────────────────────────────────────────────────
 // MULTILINGUAL ROUTING — audited 2026-07-06 (Round 14 / 20B.13):
@@ -78,6 +78,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ms/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/zh/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
+    // Online booking page — real, indexable route. It was previously absent
+    // from the sitemap AND unlinked from the navbar/footer, so the only way
+    // to reach it was a single floating button.
+    { url: `${BASE}/book`, lastModified: now, changeFrequency: "monthly", priority: 0.82, alternates: buildCanonicalOnly("/book") },
+    { url: `${BASE}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.25, alternates: buildCanonicalOnly("/privacy-policy") },
     { url: `${BASE}/ms/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
     { url: `${BASE}/zh/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
     // ── 20F.50 Cuci Aircond KL dedicated landing — trilingual ──────────
@@ -131,6 +136,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Installation Landing Pages — EN/MS/ZH canonical entries ─────────
   const installationPages: MetadataRoute.Sitemap = [
+    // Installation HUB — parent node of the whole installation cluster.
+    // Added because 768 installation URLs existed with no hub tying them
+    // together and no navbar entry.
+    { url: `${BASE}/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.97, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
+    { url: `${BASE}/ms/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
+    { url: `${BASE}/zh/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
     // Main installation pillar
     { url: `${BASE}/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
     { url: `${BASE}/ms/pemasangan-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },

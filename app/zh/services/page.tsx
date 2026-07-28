@@ -1,4 +1,6 @@
-"use client";
+// Server component — this page has no state, effects or event handlers.
+// It was marked "use client", which pulled the shared UI/config chunk into
+// the browser for all three locale variants.
 
 import Image from "next/image";
 import { FaWhatsapp, FaCheck } from "react-icons/fa6";
@@ -10,7 +12,7 @@ import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { Reveal } from "@/components/reveal";
 import { ServiceIcon } from "@/components/service-icon";
 import { title, eyebrow } from "@/components/primitives";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 
 function StaticPriceTable({
@@ -208,7 +210,7 @@ export default function ServicesPageZH() {
           </Reveal>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {siteConfig.services.map((service, i) => (
+            {sitePublic.services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 40}>
                 <Link
                   href={`/zh/services/${service.slug}`}
@@ -301,10 +303,10 @@ export default function ServicesPageZH() {
                   <FaWhatsapp className="h-5 w-5" /> 通过 WhatsApp 免费获取报价
                 </a>
                 <a
-                  href={`tel:${siteConfig.phone}`}
+                  href={`tel:${sitePublic.phone}`}
                   className="inline-flex items-center gap-2.5 border-2 border-white/40 hover:border-white px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"
                 >
-                  致电 {siteConfig.phoneDisplay}
+                  致电 {sitePublic.phoneDisplay}
                 </a>
               </div>
             </div>

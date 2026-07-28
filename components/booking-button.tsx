@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg, rfqMsgForService } from "@/lib/whatsapp";
 
 interface BookingButtonProps {
@@ -40,7 +40,7 @@ export const BookingButton = ({
     <div className={clsx("flex flex-wrap items-center gap-3", fullWidth && "w-full", className)}>
       {variant === "phone" ? (
         <a
-          href={`tel:${siteConfig.phone}`}
+          href={`tel:${sitePublic.phone}`}
           className={clsx(
             "inline-flex items-center justify-center font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white shadow-sm",
             size === "sm" && "px-3.5 py-2 text-[11px]",

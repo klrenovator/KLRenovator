@@ -77,9 +77,9 @@ const faqSchema = {
 };
 
 const plans = [
-  { name: "Basic", price: "299", period: "/year", color: "bg-slate-700", border: "border-slate-300", badging: "Most Affordable", services: "3 visits/year", includes: ["2 Basic Servicing visits (RM 99 each value)", "1 Pressure Chemical Wash (RM 120 value)", "Priority scheduling over non-AMC", "Locked-in pricing for 12 months", "WhatsApp direct line for AMC customers"], icon: "\U0001f6e1\ufe0f" },
+  { name: "Basic", price: "299", period: "/year", color: "bg-slate-700", border: "border-slate-300", badging: "Most Affordable", services: "3 visits/year", includes: ["2 Basic Servicing visits (RM 99 each value)", "1 Pressure Chemical Wash (RM 120 value)", "Priority scheduling over non-AMC", "Locked-in pricing for 12 months", "WhatsApp direct line for AMC customers"], icon: "\ud83d\udee1\ufe0f" },
   { name: "Standard", price: "499", period: "/year", color: "bg-sky-600", border: "border-sky-300", badging: "Best Value", services: "4 visits/year", includes: ["2 Basic Servicing visits", "2 Pressure Chemical Washes", "1 Free Emergency Diagnostic (RM 88 value)", "Priority scheduling + same-day response", "Locked-in pricing for 12 months", "10% off any additional repair labour"], icon: "\u2b50" },
-  { name: "Premium", price: "899", period: "/year", color: "bg-amber-600", border: "border-amber-300", badging: "Maximum Protection", services: "7 visits/year", includes: ["4 Basic Servicing visits (quarterly)", "2 Pressure Chemical Washes", "1 Chemical Overhaul (RM 220 value)", "2 Free Emergency Diagnostics (RM 176 value)", "Priority + same-day + after-hours response", "15% off any additional repair labour", "Free gas pressure check on every visit"], icon: "\U0001f451" },
+  { name: "Premium", price: "899", period: "/year", color: "bg-amber-600", border: "border-amber-300", badging: "Maximum Protection", services: "7 visits/year", includes: ["4 Basic Servicing visits (quarterly)", "2 Pressure Chemical Washes", "1 Chemical Overhaul (RM 220 value)", "2 Free Emergency Diagnostics (RM 176 value)", "Priority + same-day + after-hours response", "15% off any additional repair labour", "Free gas pressure check on every visit"], icon: "\ud83d\udc51" },
 ];
 
 const benefits = [

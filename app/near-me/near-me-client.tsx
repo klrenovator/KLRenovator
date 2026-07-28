@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiChevronRight, FiClock, FiMapPin } from "react-icons/fi";
 
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 import { useLang } from "@/context/language-context";
@@ -234,11 +234,11 @@ export default function NearMeClient({ initialLang }: { initialLang?: "en" | "ms
                 {tx.hero_wa}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-6 py-3.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-white/20"
               >
                 <FaPhone className="h-5 w-5" />
-                {tx.hero_call} {siteConfig.phoneDisplay}
+                {tx.hero_call} {sitePublic.phoneDisplay}
               </a>
             </div>
             <p className="mt-4 flex items-center gap-2 text-sm text-slate-300">
@@ -351,7 +351,7 @@ export default function NearMeClient({ initialLang }: { initialLang?: "en" | "ms
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            {siteConfig.areaPages.map((area) => (
+            {sitePublic.areaPagesLite.map((area) => (
               <NextLink
                 key={area.slug}
                 href={`${prefix}/areas/${area.slug}`}
@@ -410,11 +410,11 @@ export default function NearMeClient({ initialLang }: { initialLang?: "en" | "ms
               {tx.cta_wa}
             </a>
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={`tel:${sitePublic.phone}`}
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-6 py-3.5 text-sm font-bold text-white ring-1 ring-white/30 transition hover:bg-white/20"
             >
               <FaPhone className="h-5 w-5" />
-              {tx.hero_call} {siteConfig.phoneDisplay}
+              {tx.hero_call} {sitePublic.phoneDisplay}
             </a>
           </div>
         </div>

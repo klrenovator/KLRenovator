@@ -10,17 +10,17 @@ import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
-  title: "New Home Aircond Installation KL & Selangor — Whole-House Packages | KL Renovator",
+  title: "New Home Aircond Installation KL — Full House Package",
   description: "Moving into a new home in KL or Selangor? Complete aircond installation packages for 1BR, 2BR, 3BR & 4BR homes. From RM199/unit. Same-day, transparent pricing, 1-month warranty. WhatsApp +60182983573",
   openGraph: {
-    title: "New Home Aircond Installation KL & Selangor — Whole-House Packages | KL Renovator",
+    title: "New Home Aircond Installation KL — Full House Package",
     description: "Moving into a new home? Complete aircond installation packages for 1BR–4BR homes. From RM199/unit, same-day, 1-month warranty. WhatsApp +60182983573",
     type: "website", locale: "en_MY",
     url: "https://www.klrenovator.com/new-home-aircond-installation",
     siteName: "KL Renovator",
     images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: "New Home Aircond Installation KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "New Home Aircond Installation KL & Selangor — Whole-House Packages | KL Renovator", description: "Complete aircond installation for new homes. 1BR–4BR packages, condo & landed expertise, 48-hour timeline. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"] },
+  twitter: { card: "summary_large_image", title: "New Home Aircond Installation KL — Full House Package", description: "Complete aircond installation for new homes. 1BR–4BR packages, condo & landed expertise, 48-hour timeline. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/new-home-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/new-home-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", "zh-MY": "https://www.klrenovator.com/zh/new-home-aircond-installation", "x-default": "https://www.klrenovator.com/new-home-aircond-installation" } },
 };

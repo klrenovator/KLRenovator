@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ESLint's build-time runner crashes on this project's flat-config +
-  // FlatCompat combination ("Converting circular structure to JSON",
-  // thrown inside eslint-plugin-react's plugin object) — a known
-  // compatibility gap between this eslint-config-next/eslint pairing.
-  // This does NOT disable ESLint itself: `npm run lint` still works
-  // standalone, and editor/CI lint integrations are unaffected. Only
-  // Next's internal lint-during-build step is skipped. TypeScript build
-  // errors (the real type-safety net) are NOT suppressed — see below.
+  // Lint runs in CI (`npm run lint`) rather than inside `next build`.
+  // Keeping it out of the build avoids the FlatCompat/eslint-plugin-react
+  // "Converting circular structure to JSON" crash that this
+  // eslint-config-next pairing hits, while still gating every push —
+  // see .github/workflows/ci.yml, which runs lint + typecheck + build.
+  // NOTE: the flat config previously matched no .ts/.tsx files at all, so
+  // linting was silently a no-op. That is fixed in eslint.config.mjs.
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -73,7 +72,10 @@ const nextConfig = {
       { source: '/aircond-service-price',           destination: '/aircond-service-price-malaysia',     statusCode: 301 },
       // Old WordPress/Legacy Redirects from Bing Webmaster Tools
       { source: '/blog-2', destination: '/blog', statusCode: 301 },
-      { source: '/privacy-policy', destination: '/', statusCode: 301 },
+      // NOTE: /privacy-policy used to 301 to the homepage. It is now a real
+      // page (app/privacy-policy/page.tsx) — required because the booking
+      // form collects names, phone numbers and addresses (PDPA 2010).
+      // The redirect has been removed so the page can serve 200 OK.
       // Note: Query parameter redirects like /?pagelayer-template=home-header cannot be handled purely by source matching in Next.js.
       // Next.js handles query params in redirects using the `has` array, which we will add below.
       { 

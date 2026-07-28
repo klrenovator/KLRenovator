@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiX, FiClock, FiStar } from "react-icons/fi";
 import { waLink } from "@/lib/whatsapp";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 
 const EXIT_STORAGE_KEY = "klr_exit_dismissed";
 const DISMISS_DAYS = 3; // don't show again for 3 days after dismiss
@@ -178,10 +178,10 @@ export function ExitIntentPopup() {
 
           <div className="mt-3 flex items-center justify-between">
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={`tel:${sitePublic.phone}`}
               className="text-xs font-black text-slate-500 hover:text-sky-600 transition-colors"
             >
-              📞 {siteConfig.phoneDisplay}
+              📞 {sitePublic.phoneDisplay}
             </a>
             <button
               onClick={() => dismiss()}

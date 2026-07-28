@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa6";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
@@ -78,12 +78,12 @@ export const Footer = () => {
 
           <div className="flex items-center gap-2.5 pt-1 flex-wrap">
             <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp KL Renovator" style={{ backgroundColor: "#25D366" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaWhatsapp className="h-4 w-4" /></a>
-            <a href={siteConfig.links.instagram} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Instagram" style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaInstagram className="h-4 w-4" /></a>
-            <a href={siteConfig.links.facebook} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Facebook" style={{ backgroundColor: "#1877F2" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaFacebook className="h-4 w-4" /></a>
-            <a href={siteConfig.links.tiktok} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator TikTok" style={{ backgroundColor: "#010101" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaTiktok className="h-4 w-4" /></a>
-            <a href={siteConfig.links.googleBusiness} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Google Business Profile" style={{ backgroundColor: "#4285F4" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaGoogle className="h-4 w-4" /></a>
-            <a href={siteConfig.links.twitter} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator X / Twitter" style={{ backgroundColor: "#000000" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaXTwitter className="h-4 w-4" /></a>
-            <a href={siteConfig.links.linkedin} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator LinkedIn" style={{ backgroundColor: "#0A66C2" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaLinkedin className="h-4 w-4" /></a>
+            <a href={sitePublic.links.instagram} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Instagram" style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaInstagram className="h-4 w-4" /></a>
+            <a href={sitePublic.links.facebook} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Facebook" style={{ backgroundColor: "#1877F2" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaFacebook className="h-4 w-4" /></a>
+            <a href={sitePublic.links.tiktok} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator TikTok" style={{ backgroundColor: "#010101" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaTiktok className="h-4 w-4" /></a>
+            <a href={sitePublic.links.googleBusiness} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Google Business Profile" style={{ backgroundColor: "#4285F4" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaGoogle className="h-4 w-4" /></a>
+            <a href={sitePublic.links.twitter} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator X / Twitter" style={{ backgroundColor: "#000000" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaXTwitter className="h-4 w-4" /></a>
+            <a href={sitePublic.links.linkedin} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator LinkedIn" style={{ backgroundColor: "#0A66C2" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaLinkedin className="h-4 w-4" /></a>
           </div>
         </div>
 
@@ -91,7 +91,7 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_services")}</p>
           <ul className="space-y-2">
-            {siteConfig.services.map((s, idx) => (
+            {sitePublic.services.map((s, idx) => (
               <li key={s.slug}>
                 <NextLink href={localizedPath(`/services/${s.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
                   {serviceAnchor(s.slug, (lang as "en" | "ms" | "zh"), idx)}
@@ -109,6 +109,7 @@ export const Footer = () => {
           <div>
             <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-2">Aircond Installation</p>
             <ul className="space-y-1.5">
+              <li><NextLink href={localizedPath("/installation")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">All Installation Services →</NextLink></li>
               <li><NextLink href={localizedPath("/aircond-installation-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation KL &amp; Selangor</NextLink></li>
               <li><NextLink href={localizedPath("/btu-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">BTU &amp; HP Calculator</NextLink></li>
               <li><NextLink href={localizedPath("/new-home-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">New Home Package</NextLink></li>
@@ -123,6 +124,7 @@ export const Footer = () => {
               <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
               <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
               <li><NextLink href={localizedPath("/cuci-aircond-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
+              <li><NextLink href="/book" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Book a Slot Online</NextLink></li>
             </ul>
           </div>
 
@@ -136,8 +138,8 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_dispatch")}</p>
           <ul className="space-y-3 text-xs">
-            <li><a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><FaPhone className="h-3.5 w-3.5 text-sky-500 shrink-0" />{siteConfig.phoneDisplay}</a></li>
-            <li><a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><FaEnvelope className="h-3.5 w-3.5 text-sky-500 shrink-0" />{siteConfig.email}</a></li>
+            <li><a href={`tel:${sitePublic.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><FaPhone className="h-3.5 w-3.5 text-sky-500 shrink-0" />{sitePublic.phoneDisplay}</a></li>
+            <li><a href={`mailto:${sitePublic.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><FaEnvelope className="h-3.5 w-3.5 text-sky-500 shrink-0" />{sitePublic.email}</a></li>
             <li className="flex items-start gap-2.5"><FaLocationDot className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><span className="font-medium">KL &amp; Selangor (Klang Valley)</span></li>
             <li className="flex items-start gap-2.5"><FaClock className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-400">Emergency bookings accepted</p></div></li>
           </ul>
@@ -156,6 +158,7 @@ export const Footer = () => {
             <NextLink href={localizedPath("/about")} className="hover:text-sky-600 transition-colors font-medium">{fl.navAbout}</NextLink>
             <NextLink href={localizedPath("/faq")} className="hover:text-sky-600 transition-colors font-medium">{fl.navFaq}</NextLink>
             <NextLink href={localizedPath("/contact")} className="hover:text-sky-600 transition-colors font-medium">{fl.navContact}</NextLink>
+            <NextLink href="/privacy-policy" className="hover:text-sky-600 transition-colors font-medium">Privacy Policy</NextLink>
           </nav>
         </div>
       </div>

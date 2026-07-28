@@ -11,7 +11,7 @@ import { InstallationCROModule } from "@/components/installation-cro-module";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
-  title: "Pemasangan Aircond KL & Selangor — Dari RM199 | Hari Sama | KL Renovator",
+  title: "Pemasangan Aircond KL & Selangor — Dari RM199, Hari Sama",
   description: "Pemasangan aircond pakar dari RM199 — dinding, ceiling cassette & unit tingkap untuk 20 jenama. Vacuum pump, paip tembaga, waranti 1 bulan. Servis hari sama. WhatsApp +60182983573",
   openGraph: {
     title: "Pemasangan Aircond KL & Selangor — Dari RM199 | KL Renovator",

@@ -7,7 +7,11 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint --fix"
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"typecheck": "tsc --noEmit",
+		"gen:site-public": "node scripts/gen-site-public.mjs",
+		"verify:build": "node scripts/verify-build.mjs"
 	},
 	"dependencies": {
 		"@heroui/react": "3.0.3",

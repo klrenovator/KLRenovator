@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { waLink } from "@/lib/whatsapp";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 type ServiceType = "basic-servicing" | "chemical-wash" | "chemical-overhaul" | "gas-topup" | "installation" | "repair";
@@ -729,10 +729,10 @@ export function PriceCalculator() {
               WhatsApp This Quote — Book Now
             </a>
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={`tel:${sitePublic.phone}`}
               className="flex items-center justify-center w-full border-2 border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 font-black uppercase tracking-wider py-3 rounded-2xl text-xs transition-all"
             >
-              Or Call {siteConfig.phoneDisplay}
+              Or Call {sitePublic.phoneDisplay}
             </a>
           </div>
         )}

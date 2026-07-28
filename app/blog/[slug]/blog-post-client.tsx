@@ -10,7 +10,7 @@ import { FiClock, FiTag, FiChevronRight, FiArrowLeft, FiArrowRight, FiMapPin } f
 
 import { Reveal } from "@/components/reveal";
 import { waLink, rfqMsgForService } from "@/lib/whatsapp";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { useLang } from "@/context/language-context";
 
 // UI Labels
@@ -181,13 +181,13 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
       url: aboutTeamUrl,
       description: ui.authorSchemaDescription,
       sameAs: [
-        siteConfig.links.facebook,
-        siteConfig.links.instagram,
-        siteConfig.links.tiktok,
-        siteConfig.links.youtube,
-        siteConfig.links.googleBusiness,
-        siteConfig.links.twitter,
-        siteConfig.links.linkedin,
+        sitePublic.links.facebook,
+        sitePublic.links.instagram,
+        sitePublic.links.tiktok,
+        sitePublic.links.youtube,
+        sitePublic.links.googleBusiness,
+        sitePublic.links.twitter,
+        sitePublic.links.linkedin,
       ],
       parentOrganization: {
         "@type": "Organization",
@@ -488,7 +488,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                     .map(([problemSlug]) => problemSlug)
                     .slice(0, 4);
                   if (problemSlugs.length === 0) return null;
-                  const problems = siteConfig.problemPages.filter((p) => problemSlugs.includes(p.slug));
+                  const problems = sitePublic.problemPagesLite.filter((p) => problemSlugs.includes(p.slug));
                   if (problems.length === 0) return null;
                   return (
                     <div className="bg-white border border-slate-200 p-5 rounded-xl">
@@ -521,7 +521,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                     {ui.alsoServing}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {siteConfig.areaPages.slice(0, 12).map((area) => (
+                    {sitePublic.areaPagesLite.slice(0, 12).map((area) => (
                       <NextLink
                         key={area.slug}
                         href={localizedPath(`/areas/${area.slug}`)}

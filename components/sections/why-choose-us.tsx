@@ -14,7 +14,7 @@ import {
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { useLang } from "@/context/language-context";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { FaWhatsapp } from "react-icons/fa6";
 
@@ -126,7 +126,7 @@ export const WhyChooseUs = () => {
               All Brands We Service
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {siteConfig.brandsSupported.map((brand) => (
+              {sitePublic.brandsSupported.map((brand) => (
                 <Link
                   key={brand}
                   href={`/brands/${brand.toLowerCase()}`}

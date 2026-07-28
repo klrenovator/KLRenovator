@@ -3,7 +3,7 @@
 import { FaCheck, FaShield, FaClock, FaTruck, FaWrench, FaBolt, FaSnowflake, FaBuilding, FaLocationDot, FaPhone, FaCommentDots } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 import NextLink from "next/link";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
 
 interface InstallationCROModuleProps {

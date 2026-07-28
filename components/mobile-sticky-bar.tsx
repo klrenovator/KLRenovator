@@ -1,7 +1,7 @@
 "use client";
 
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { useLang } from "@/context/language-context";
 
@@ -44,7 +44,7 @@ export const MobileStickyBar = () => {
 
         {/* Call Button */}
         <a
-          href={`tel:${siteConfig.phone}`}
+          href={`tel:${sitePublic.phone}`}
           className="flex flex-1 items-center justify-center gap-2 bg-slate-900 text-white transition-colors hover:bg-slate-800 active:bg-black"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
@@ -55,7 +55,7 @@ export const MobileStickyBar = () => {
               {tx.call}
             </span>
             <span className="text-sm font-black">
-              {siteConfig.phoneDisplay}
+              {sitePublic.phoneDisplay}
             </span>
           </div>
         </a>

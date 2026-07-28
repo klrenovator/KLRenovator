@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { allPosts } from "@/config/blog-posts";
 import { getRelatedPosts } from "@/app/blog/get-related-posts";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildFaqSchema } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { BlogPostClient } from "./blog-post-client";
@@ -26,10 +27,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(post.title.length + 16 <= 60 ? `${post.title} | KL Renovator` : post.title),
-    description: post.excerpt,
+    description: clampMetaDescription(post.excerpt),
     openGraph: {
       title: clampMetaTitle(post.title),
-      description: post.excerpt,
+      description: clampMetaDescription(post.excerpt),
       type: "article",
       publishedTime: post.date,
       url: `https://www.klrenovator.com/blog/${post.slug}`,
@@ -40,7 +41,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: clampMetaTitle(post.title),
-      description: post.excerpt,
+      description: clampMetaDescription(post.excerpt),
       images: [imageUrl],
     },
     alternates: {

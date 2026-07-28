@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import { FiMapPin, FiArrowRight, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 
-import { siteConfig } from "@/config/site";
+import { sitePublic } from "@/config/site-public";
 import { useLang } from "@/context/language-context";
 import { waLink } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
@@ -85,9 +85,9 @@ export function AreasClient() {
   const { lang } = useLang();
   const t = T[lang];
 
-  const klAreas = siteConfig.areaPages.filter((a) => KL_SLUGS.includes(a.slug));
-  const putrajayaAreas = siteConfig.areaPages.filter((a) => PUTRAJAYA_SLUGS.includes(a.slug));
-  const selangorAreas = siteConfig.areaPages.filter(
+  const klAreas = sitePublic.areaPagesLite.filter((a) => KL_SLUGS.includes(a.slug));
+  const putrajayaAreas = sitePublic.areaPagesLite.filter((a) => PUTRAJAYA_SLUGS.includes(a.slug));
+  const selangorAreas = sitePublic.areaPagesLite.filter(
     (a) => !KL_SLUGS.includes(a.slug) && !PUTRAJAYA_SLUGS.includes(a.slug),
   );
 
@@ -101,7 +101,7 @@ export function AreasClient() {
   const areaCardClasses =
     "group flex items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm hover:border-sky-400 hover:bg-sky-50 hover:shadow-md transition-all duration-200";
 
-  const renderAreaGroup = (areas: typeof siteConfig.areaPages, heading: string) => (
+  const renderAreaGroup = (areas: typeof sitePublic.areaPagesLite, heading: string) => (
     <div>
       <h2 className="mb-4 flex items-center gap-2 text-sm font-black uppercase tracking-widest text-slate-500">
         <span className="h-px flex-1 bg-slate-200" />
@@ -173,7 +173,7 @@ export function AreasClient() {
                   <FaWhatsapp className="h-4 w-4" /> {t.waBtn}
                 </a>
                 <a
-                  href={`tel:${siteConfig.phone}`}
+                  href={`tel:${sitePublic.phone}`}
                   className="inline-flex items-center gap-2 rounded-xl border-2 border-slate-900 px-6 py-3 text-sm font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white transition-all"
                 >
                   <FiPhone className="h-4 w-4" /> {t.callBtn}
@@ -244,10 +244,10 @@ export function AreasClient() {
                 <FaWhatsapp className="h-4 w-4" /> {t.waBtn}
               </a>
               <a
-                href={`tel:${siteConfig.phone}`}
+                href={`tel:${sitePublic.phone}`}
                 className="inline-flex items-center gap-2 rounded-xl border-2 border-white px-7 py-3.5 text-sm font-black uppercase tracking-wider text-white hover:bg-white hover:text-sky-700 transition-all"
               >
-                <FiPhone className="h-4 w-4" /> {siteConfig.phoneDisplay}
+                <FiPhone className="h-4 w-4" /> {sitePublic.phoneDisplay}
               </a>
             </div>
           </Reveal>
@@ -262,7 +262,7 @@ export function AreasClient() {
               {lang === "zh" ? "我们的服务" : lang === "ms" ? "Perkhidmatan Kami" : "Our Services"}
             </p>
             <div className="flex flex-wrap gap-2">
-              {siteConfig.services.map((s) => (
+              {sitePublic.services.map((s) => (
                 <NextLink
                   key={s.slug}
                   href={`/services/${s.slug}`}

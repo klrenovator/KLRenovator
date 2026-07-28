@@ -1,28 +1,47 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { getCalendarClient } from "@/lib/google-calendar";
 
-export async function GET(req: Request) {
+import { ADMIN_COOKIE, verifySession } from "@/lib/admin-session";
+
+// Admin-gated connectivity probe. Previously public, and its error branch
+// echoed raw Google API messages (which can include the service-account
+// email and calendar ID) to anonymous callers.
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  const secret = process.env.ADMIN_SESSION_SECRET;
+  const store = await cookies();
+
+  if (!secret || !verifySession(store.get(ADMIN_COOKIE)?.value, secret)) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  const calendarId = process.env.GOOGLE_CALENDAR_ID;
+  if (!calendarId) {
+    return NextResponse.json({ ok: false, error: "GOOGLE_CALENDAR_ID is not set" }, { status: 400 });
+  }
+
   try {
     const calendar = getCalendarClient();
-    const calendarId = process.env.GOOGLE_CALENDAR_ID;
-
-    if (!calendarId) {
-      return NextResponse.json({ error: "No Calendar ID set in Vercel" }, { status: 400 });
-    }
-
-    // Try a simple read request to check auth
-    const response = await calendar.events.list({
+    await calendar.events.list({
       calendarId,
       timeMin: new Date().toISOString(),
       maxResults: 1,
       singleEvents: true,
     });
 
-    return NextResponse.json({ success: true, message: "Calendar Auth is working!" });
-  } catch (error: any) {
-    return NextResponse.json({ 
-      error: "Calendar Auth Failed", 
-      details: error.message || String(error)
-    }, { status: 500 });
+    return NextResponse.json({ ok: true, message: "Calendar auth is working" });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Calendar auth failed",
+        details: error instanceof Error ? error.message : String(error),
+      },
+      { status: 500 },
+    );
   }
 }
