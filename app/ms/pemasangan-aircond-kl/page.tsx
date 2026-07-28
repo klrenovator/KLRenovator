@@ -12,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond KL & Selangor — Dari RM199, Hari Sama",
-  description: "Pemasangan aircond pakar dari RM199 — dinding, ceiling cassette & unit tingkap untuk 20 jenama. Vacuum pump, paip tembaga, waranti 1 bulan. Servis hari sama. WhatsApp +60182983573",
+  description: "Pemasangan aircond pakar dari RM199 — dinding, ceiling cassette & unit tingkap, 20 jenama. Vacuum pump, paip tembaga, waranti 1 bulan. Servis hari sama.",
   openGraph: {
     title: "Pemasangan Aircond KL & Selangor — Dari RM199 | KL Renovator",
     description: "Pemasangan aircond profesional dari RM199. Dinding, ceiling cassette, semua jenama. Vacuum pump, paip tembaga, waranti 1 bulan. WhatsApp +60182983573",

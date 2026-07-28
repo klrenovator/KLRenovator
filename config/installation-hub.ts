@@ -282,7 +282,7 @@ export const HUB_COPY: Record<
   en: {
     metaTitle: "Aircond Installation KL & Selangor — From RM199",
     metaDescription:
-      "Aircond installation hub — browse by HP size, unit type or property. Wall-mounted from RM199, ceiling cassette from RM290. Same-day, 20 brands, 1-month warranty.",
+      "Aircond installation hub — browse by HP, unit type or property. Wall-mounted from RM199, ceiling cassette from RM290. Same-day, 20 brands, 1-month warranty.",
     eyebrow: "Installation Hub",
     h1: "Aircond Installation in KL & Selangor",
     intro:

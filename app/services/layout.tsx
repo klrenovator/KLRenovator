@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp", width: 1200, height: 630, alt: "KL Renovator aircond services & price list KL Selangor" }],
   },
 };
 

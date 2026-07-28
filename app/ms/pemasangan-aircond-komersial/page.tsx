@@ -11,7 +11,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond Komersial KL — Pejabat & Kedai",
-  description: "Pemasangan aircond komersial untuk pejabat, kedai, restoran, klinik & bilik server di KL & Selangor. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573",
+  description: "Pemasangan aircond komersial untuk pejabat, kedai, restoran, klinik & bilik server di KL & Selangor. Ceiling cassette & multi-split. AMC tersedia.",
   openGraph: {
     title: "Pemasangan Aircond Komersial KL — Pejabat & Kedai",
     description: "Pemasangan aircond untuk pejabat, kedai, restoran, klinik & bilik server. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573",

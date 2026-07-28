@@ -11,7 +11,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "New Home Aircond Installation KL — Full House Package",
-  description: "Moving into a new home in KL or Selangor? Complete aircond installation packages for 1BR, 2BR, 3BR & 4BR homes. From RM199/unit. Same-day, transparent pricing, 1-month warranty. WhatsApp +60182983573",
+  description: "New home aircond installation in KL & Selangor. Complete packages for 1BR–4BR homes from RM199/unit. Same-day, transparent pricing, 1-month warranty.",
   openGraph: {
     title: "New Home Aircond Installation KL — Full House Package",
     description: "Moving into a new home? Complete aircond installation packages for 1BR–4BR homes. From RM199/unit, same-day, 1-month warranty. WhatsApp +60182983573",

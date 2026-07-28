@@ -18,7 +18,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: buildFreshMetaTitle("Aircond Installation Price Malaysia 2026 — From RM 199 | KL Renovator", "en"),
   description:
-    "Complete 2026 aircond installation price guide for Kuala Lumpur & Selangor. RM 199 base install includes 7ft copper pipe, wiring, vacuum pump & leak test. 20 top brands. Same-day installation available.",
+    "Complete 2026 aircond installation price guide for KL & Selangor. RM 199 base install includes 7ft copper pipe, wiring, vacuum pump & leak test. 20 brands.",
   openGraph: {
     title: buildFreshMetaTitle("Aircond Installation Price Malaysia 2026 — From RM 199 | KL Renovator", "en"),
     description: "Complete 2026 aircond installation price guide for KL & Selangor. RM 199 base install includes 7ft copper pipe, wiring, vacuum & leak test.",

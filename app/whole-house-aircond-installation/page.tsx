@@ -11,7 +11,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Whole-House Aircond Installation KL — Multi-Unit Packages",
-  description: "Installing 3+ aircond units in your KL or Selangor home? Volume discount tiers, room-by-room BTU guide, full-house cooling plan. From RM199/unit. Bulk quote via WhatsApp +60182983573",
+  description: "Whole-house aircond installation in KL & Selangor — 3+ units. Volume discounts, room-by-room BTU guide, full-house cooling plan. From RM199/unit.",
   openGraph: {
     title: "Whole-House Aircond Installation KL — Multi-Unit Packages",
     description: "3+ aircond units? Volume discounts, BTU room guide, full-house cooling plan. From RM199/unit. Bulk quote via WhatsApp +60182983573",

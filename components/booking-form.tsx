@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { calculateDurationMinutes, calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { useLang } from "@/context/language-context";
 import { trackBookingSubmit } from "@/lib/analytics";
+import { sitePublic } from "@/config/site-public";
+import { FaWhatsapp } from "react-icons/fa6";
 
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────
 const FORM_TXT = {
@@ -341,20 +343,38 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           const slotDate = new Date(selectedSlot).toLocaleDateString("en-US", {
             timeZone: "Asia/Kuala_Lumpur"
           });
-          
-          let msgText = `Hi ${name}, your booking for services:`;
-          normalisedLineItems.forEach((item) => {
+
+          const serviceLines = normalisedLineItems.map((item) => {
             const itemLabel = SERVICE_OPTS.find(o => o.val === item.service_type)?.en || item.service_type;
-            msgText += `\n- ${itemLabel} (${item.aircond_type} ${item.aircond_size} x${item.quantity})`;
-          });
-          msgText += `\n\nat Address: ${address} is confirmed on ${slotDate} at ${slotTime}.`;
-          
+            return `- ${itemLabel} (${item.aircond_type} ${item.aircond_size} x${item.quantity})`;
+          }).join("\n");
+
+          // Admin sends a confirmation TO the customer's WhatsApp.
+          let msgText = `Hi ${name}, your booking for services:\n${serviceLines}\n\nat Address: ${address} is confirmed on ${slotDate} at ${slotTime}.`;
           if (daysRequired > 1) {
             msgText += `\n\nNote: As this is a large job, it will take ${daysRequired} days. The selected date is Day 1. Our team will coordinate the rest of the schedule with you.`;
           }
-          
-          const msg = encodeURIComponent(msgText);
-          setGeneratedLink(`https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${msg}`);
+          setGeneratedLink(`https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(msgText)}`);
+        } else {
+          // Public customer opens WhatsApp to the BUSINESS with a booking
+          // summary so they can confirm / ask questions straight after booking.
+          const slotTime = new Date(selectedSlot).toLocaleTimeString("en-US", {
+            hour: "numeric", minute: "2-digit", hour12: true, timeZone: "Asia/Kuala_Lumpur"
+          });
+          const slotDate = new Date(selectedSlot).toLocaleDateString("en-US", {
+            timeZone: "Asia/Kuala_Lumpur"
+          });
+          const serviceLines = normalisedLineItems.map((item) => {
+            const itemLabel = SERVICE_OPTS.find(o => o.val === item.service_type)?.en || item.service_type;
+            return `- ${itemLabel} (${item.aircond_type} ${item.aircond_size} x${item.quantity})`;
+          }).join("\n");
+
+          let pubMsg = `Hi KL Renovator, I just booked online. My details:\n\nName: ${name}\nServices:\n${serviceLines}\nAddress: ${address}\nDate: ${slotDate}\nTime: ${slotTime}`;
+          if (daysRequired > 1) {
+            pubMsg += `\n\nNote: I understand this is a ${daysRequired}-day job.`;
+          }
+          pubMsg += `\n\nPlease confirm my booking. Thank you!`;
+          setGeneratedLink(`https://wa.me/${sitePublic.whatsapp}?text=${encodeURIComponent(pubMsg)}`);
         }
       } else {
         alert(data.error || "Failed to book");
@@ -371,15 +391,27 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       <div className="rounded-2xl border border-sky-100 bg-sky-50 p-6 text-center shadow-lg">
         <h3 className="mb-2 text-xl font-bold text-sky-900">{t.successTitle}</h3>
         <p className="text-slate-600 mb-4">{t.successDesc}</p>
-        {isAdmin && generatedLink && (
-          <a
-            href={generatedLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-green-500 px-4 py-2 font-semibold text-white transition hover:bg-green-600"
-          >
-            {t.sendWa}
-          </a>
+        {generatedLink && (
+          <>
+            <p className="text-sm text-slate-500 mb-3">
+              {isAdmin
+                ? ""
+                : (lang === "ms"
+                    ? "Hantar pengesahan WhatsApp untuk sahkan tempahan anda dengan pasukan kami."
+                    : lang === "zh"
+                      ? "发送WhatsApp确认以与我们的团队核实您的预约。"
+                      : "Send a quick WhatsApp to confirm your booking with our team.")}
+            </p>
+            <a
+              href={generatedLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-4 py-2 font-semibold text-white transition hover:bg-green-600"
+            >
+              <FaWhatsapp className="h-5 w-5" />
+              {t.sendWa}
+            </a>
+          </>
         )}
       </div>
     );

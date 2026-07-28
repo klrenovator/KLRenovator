@@ -8964,7 +8964,7 @@ export const allPosts: BlogPost[] = [
     category: "Service Guide",
     categoryMS: "Panduan Servis",
     categoryZH: "服务指南",
-    tags: ["same-day aircond service KL", "emergency aircond repair Malaysia", "24 hour aircond service Selangor", "aircond urgent repair", "KL Renovator"],
+    tags: ["same-day aircond service KL", "emergency aircond repair Malaysia", "same-day aircond service Selangor", "aircond urgent repair", "KL Renovator"],
     date: "2026-07-13",
     dateDisplay: "July 2026",
     readTime: 5,

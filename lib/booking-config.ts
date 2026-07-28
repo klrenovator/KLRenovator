@@ -1,5 +1,5 @@
 export const BOOKING_HOURS = {
-  start: 10, // 10:00 AM
+  start: 9, // 9:00 AM
   end: 18,   // 6:00 PM
 };
 

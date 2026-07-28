@@ -21,6 +21,25 @@ import NextLink from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { HomepageAeoSchemas } from "@/components/homepage-aeo-schemas";
+import type { Metadata } from "next";
+
+// Homepage-specific OG/Twitter image (the layout default is the logo).
+// Deep-merges with the root layout's openGraph — only the image is overridden.
+export const metadata: Metadata = {
+  openGraph: {
+    images: [
+      {
+        url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+        width: 1200,
+        height: 630,
+        alt: "KL Renovator — Expert aircond installation & servicing across Kuala Lumpur & Selangor",
+      },
+    ],
+  },
+  twitter: {
+    images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"],
+  },
+};
 
 export default function Home() {
   // NOTE: HVACBusiness and WebSite schema used to be duplicated here AND in

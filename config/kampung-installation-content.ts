@@ -21,6 +21,8 @@ export interface KampungInstallationContent {
   heroBadges: string[];
   introTitle: string;
   introBody: string;
+  localContextTitle: string;
+  localContextParagraphs: string[];
   localNoteTitle: string;
   localNoteBody: string;
   whereTitle: string;
@@ -401,6 +403,144 @@ function getLocalNote(
   return prefix + raw;
 }
 
+// ── Geo position phrase from a kampung's own lat/lng, for unique tokens.
+function getPositionPhrase(
+  lat: number | undefined,
+  lng: number | undefined,
+  locale: KampungInstallationLocale,
+): string {
+  const la = typeof lat === "number" ? lat : 3.14;
+  const ln = typeof lng === "number" ? lng : 101.69;
+  const ns = la >= 3.2 ? "north" : la <= 3.0 ? "south" : "central";
+  const ew = ln >= 101.7 ? "east" : "west";
+  const key = `${ns}${ew}`;
+  const map: Record<string, { en: string; ms: string; zh: string }> = {
+    northeast: { en: "the northeast of the corridor", ms: "timur laut koridor", zh: "走廊东北部" },
+    northwest: { en: "the north of the corridor", ms: "utara koridor", zh: "走廊北部" },
+    southeast: { en: "the southeast of the corridor", ms: "tenggara koridor", zh: "走廊东南部" },
+    southwest: { en: "the south of the corridor", ms: "selatan koridor", zh: "走廊南部" },
+    centraleast: { en: "the centre-east of the corridor", ms: "tengah-timur koridor", zh: "走廊中东部" },
+    centralwest: { en: "the centre of the corridor", ms: "tengah koridor", zh: "走廊中部" },
+  };
+  return (map[key] || map.centralwest)[locale];
+}
+
+// ── Substantial, installation-specific, unique-per-kampung context.
+// Siblings inside the same parent share parent landmarks, so we ROTATE the
+// landmark subset per kampung (deterministic) and lean on each kampung's own
+// name + housing note + geo position to break the 82% family similarity.
+function getLocalContext(
+  kampung: (typeof siteConfig.kampungPages)[number],
+  parent: (typeof siteConfig.areaPages)[number],
+  locale: KampungInstallationLocale,
+): string[] {
+  const name = kampung.name;
+  const parentName = parent.name;
+  const housing = getHousingTypeNote(kampung.housingNote, locale);
+  const landmarks = (parent.landmarks || []).filter(Boolean);
+  const offset = landmarks.length ? kampungVariant(kampung.slug, landmarks.length) : 0;
+  const L = (n: number) =>
+    landmarks.length ? landmarks[(offset + n) % landmarks.length] : parentName;
+  const joined = landmarks.length
+    ? joinLandmarks([L(0), L(1), L(2), L(3)].filter((x, i, a) => a.indexOf(x) === i), locale, 4)
+    : parentName;
+  const position = getPositionPhrase(kampung.lat, kampung.lng, locale);
+  const housingClause = housing ? ` — ${housing} —` : "";
+
+  if (locale === "en") {
+    const variants: string[][] = [
+      [
+        `${name} is a distinct pocket within ${parentName}${housingClause}, and an aircond installation here is planned around exactly that. The homes around ${L(0)} and ${L(1)} tend to need a different bracket, copper-pipe run and drainage approach than units going into the ${L(2)} stretch, so our crew surveys the specific unit position before quoting. That is the difference between an install that runs quietly for years and one that drips or trips within months.`,
+        `Because ${name} sits in ${position}, it falls on a standing route from our base, which is why confirmed bookings usually get a same-day or next-day slot. We arrive with Type L copper for the common 1.0–2.5 HP units here, vacuum pumps for correct commissioning, and the torque data for all 20 brands — so a Daikin, Panasonic, Mitsubishi or Midea installed in ${name} is fitted to the manufacturer standard the first time.`,
+      ],
+      [
+        `Installing or replacing an aircond in ${name} (${parentName}) means accounting for how this specific neighbourhood is built${housingClause}. Units near ${L(0)} and ${L(2)} often face longer pipe runs or shared-ledge access, while those closer to ${L(3)} are usually straightforward landed installs. We confirm the run length, bracket type and any management access in one visit, then quote before drilling — no surprise charges on the day.`,
+        `KL Renovator has fitted units throughout ${parentName}, including the ${joined} area, so the ${name} installation crew already knows the common pitfalls here: which DB boards lack a spare MCB way, where the outdoor unit can legally sit, and which buildings need a service-ledge booking. Getting these right up front is why our ${name} installations rarely need a callback.`,
+      ],
+      [
+        `From ${L(0)} through ${L(1)} to the ${L(2)} end, ${name} covers a mix of property types${housingClause}, and the aircond detail that matters at one address barely applies at another. A unit going into a home near ${L(3)} needs a wall penetration and bracket alignment checked against sun and neighbour noise; a unit for a higher floor needs loading-bay timing. Our ${name} team plans for both before the van leaves.`,
+        `We keep ${name} installation honest and transparent: the RM 199 wall-mounted price covers 7 ft of copper pipe, wiring, drain pipe and a standard bracket, with anything beyond that quoted and approved on site. After commissioning we run a 15-minute cooling test and hand over a 1-month workmanship warranty card — valid whether you are in central ${name} or toward ${position}.`,
+      ],
+    ];
+    return pick(kampung.slug, variants);
+  }
+
+  if (locale === "ms") {
+    const variants: string[][] = [
+      [
+        `${name} ialah kawasan berbeza dalam ${parentName}${housingClause}, dan pemasangan aircond di sini dirancang mengikut keadaan tersebut. Rumah sekitar ${L(0)} dan ${L(1)} selalunya memerlukan braket, laluan paip tembaga dan pendekatan saliran berbeza daripada unit di kawasan ${L(2)}, jadi pasukan kami meninjau kedudukan unit sebelum sebut harga. Itulah perbezaan antara pemasangan yang senyap bertahun-tahun dengan yang menitis atau tercabar dalam beberapa bulan.`,
+        `Oleh ker ${name} berada di ${position}, ia berada dalam laluan tetap dari pangkalan kami, sebab itulah tempahan yang disahkan biasanya mendapat slot hari sama atau hari berikutnya. Kami tiba dengan tembaga Type L untuk unit 1.0–2.5 HP biasa di sini, pam vakum untuk pentauliahan betul, dan data tork untuk semua 20 jenama — jadi Daikin, Panasonic, Mitsubishi atau Midea yang dipasang di ${name} dipasang mengikut standard pengeluar pada kali pertama.`,
+      ],
+      [
+        `Memasang atau mengganti aircond di ${name} (${parentName}) bermakna mengambil kira pembinaan kawasan ini${housingClause}. Unit berhampiran ${L(0)} dan ${L(2)} sering menghadapi laluan paip lebih panjang atau akses service ledge berkongsi, manakala yang lebih dekat ke ${L(3)} biasanya pemasangan landed mudah. Kami sahkan panjang laluan, jenis braket dan apa-apa akses pengurusan dalam satu lawatan, kemudian sebut harga sebelum menggerudi — tiada caj mengejut pada hari tersebut.`,
+        `KL Renovator telah memasang unit di seluruh ${parentName}, termasuk kawasan ${joined}, jadi pasukan pemasangan ${name} sudah tahu masalah biasa di sini: kotak DB mana tanpa ruang MCB ganti, di mana unit luar boleh diletakkan secara sah, dan bangunan mana perlukan tempahan service ledge. Menyelesaikan ini awal sebabkan pemasangan di ${name} kami jarang perlukan panggilan semula.`,
+      ],
+      [
+        `Dari ${L(0)} merentasi ${L(1)} hingga ke hujung ${L(2)}, ${name} merangkumi pelbagai jenis hartanah${housingClause}, dan butiran aircond yang penting di satu alamat hampir tidak relevan di alamat lain. Unit untuk rumah berhampiran ${L(3)} perlukan tembusan dinding dan penjajaran braket mengikut matahari dan bunyi jiran; unit untuk tingkat lebih tinggi perlukan masa loading bay. Pasukan ${name} kami merancang kedua-duanya sebelum bertolak.`,
+        `Kami kekalkan pemasangan di ${name} jujur dan telus: harga RM 199 untuk dinding merangkumi 7 ft paip tembaga, wayar, paip saliran dan braket standard, dengan apa-apa selepas itu disebut dan diluluskan di tapak. Selepas pentauliahan kami jalankan ujian penyejukan 15 minit dan serahkan kad waranti kerja 1 bulan — sah sama ada anda di tengah ${name} atau ke arah ${position}.`,
+      ],
+    ];
+    return pick(kampung.slug, variants);
+  }
+
+  const variants: string[][] = [
+    [
+      `${name}是${parentName}内一个独特的社区${housingClause}，这里的冷气安装正是围绕这一点来规划的。${L(0)}与${L(1)}周边的住宅通常需要不同的支架、铜管走管和排水方案，与${L(2)}地段的机组不同，因此我们的团队会在报价前勘察具体机位。这正是安静运行多年的安装与几个月就滴水或跳闸的安装之间的差别。`,
+      `由于${name}位于${position}，它属于我们基地的固定路线，因此确认的预约通常能当天或次日上门。我们为本区常见的1.0–2.5匹机组携带Type L铜管、用于规范调试的真空泵，以及全部20个品牌的扭矩数据——所以在${name}安装的Daikin、Panasonic、Mitsubishi或Midea都能一次到位按厂商标准安装。`,
+    ],
+    [
+      `在${name}（${parentName}）安装或更换冷气，意味着要考虑这个社区的建造方式${housingClause}。${L(0)}与${L(2)}附近的机组常面临更长的管线或共用阳台通道，而靠近${L(3)}的通常是有地住宅的简单安装。我们会在一次上门中确认走管长度、支架类型及任何物业通道，然后钻孔前报价——当天绝无意外费用。`,
+      `KL Renovator已在${parentName}全区安装过机组，包括${joined}一带，因此${name}安装团队早已熟悉这里的常见问题：哪些配电箱没有备用MCB空位、室外机合法位置在哪、哪些建筑需要预约服务阳台。前期处理好这些，正是我们的${name}安装极少需要返工的原因。`,
+    ],
+    [
+      `从${L(0)}穿过${L(1)}到${L(2)}端，${name}涵盖多种物业类型${housingClause}，而某处至关重要的冷气细节在另一处几乎不适用。${L(3)}附近住宅的机组需要墙体开孔并根据日照和邻里噪音校准支架；较高楼层的机组则需要协调装卸时段。我们的${name}团队在出车前就把两种情况都规划好。`,
+      `我们把${name}的安装做得诚实透明：RM199挂壁价含7尺铜管、电线、排水管与标准支架，超出部分在现场报价并经您确认。调试后我们会运行15分钟制冷测试，并交付1个月工艺保修卡——无论您身处${name}中心还是${position}方向均同样有效。`,
+    ],
+  ];
+  return pick(kampung.slug, variants);
+}
+
+// Variant-rotated third paragraph with distinct vocabulary per angle so
+// sibling kampungs spread across different word sets (lowers token overlap).
+function getLocalContextExtra(
+  kampung: (typeof siteConfig.kampungPages)[number],
+  parent: (typeof siteConfig.areaPages)[number],
+  locale: KampungInstallationLocale,
+): string[] {
+  const name = kampung.name;
+  const parentName = parent.name;
+  const landmarks = (parent.landmarks || []).filter(Boolean);
+  const offset = landmarks.length ? kampungVariant(kampung.slug, landmarks.length) : 0;
+  const L = (n: number) =>
+    landmarks.length ? landmarks[(offset + n + 1) % landmarks.length] : parentName;
+
+  if (locale === "en") {
+    return [
+      pick(kampung.slug, [
+        `Where ${name} has high-rise blocks — near ${L(0)} and ${L(2)} — we book the service lift and sort the JMB permit before the crew leaves, so the day is not lost at the guardhouse. For the landed homes that make up most of this ${parentName} pocket, it is bracket placement and copper routing that decide whether the install runs quietly for years or drips within months.`,
+        `Getting the HP right is the single biggest factor in a happy ${name} installation: too small and the compressor never rests, too large and an inverter short-cycles into a cold, clammy room. We size from room area, glazing and sun exposure rather than a rule of thumb, which is why units we fit in ${name} cool properly without running up the bill.`,
+        `The failure nobody warns ${name} homeowners about is drainage — a condensate line laid flat backs up and stains the wall within months. We set every drain to a measured gradient, water-test before handover, and insulate the copper so the unit near ${L(1)} stays dry and quiet through ${parentName}'s humidity.`,
+      ]),
+    ];
+  }
+  if (locale === "ms") {
+    return [
+      pick(kampung.slug, [
+        `Jika ${name} ada blok bangunan tinggi — berhampiran ${L(0)} dan ${L(2)} — kami tempah lif servis dan susun permit JMB sebelum pasukan bertolak, supaya hari tidak terbuang di pondok pengawal. Bagi rumah landed yang membentuk kebanyakan kawasan ${parentName} ini, kedudukan braket dan laluan tembaga menentukan sama ada pemasangan senyap bertahun atau menitis dalam beberapa bulan.`,
+        `Memilih HP yang betul ialah faktor terbesar dalam pemasangan ${name} yang memuaskan: terlalu kecil dan pemampat tidak rehat, terlalu besar dan inverter kitaran pendek menjadi bilik sejuk lembap. Kami menentukan saiz dari luas bilik, kaca dan pendedahan matahari bukan secara agakan, sebab itulah unit yang kami pasang di ${name} sejuk dengan betul tanpa membengkakkan bil.`,
+        `Kegagalan yang tidak diberitahu kepada pemilik rumah di ${name} ialah saliran — paip kondensat yang rata akan tersumbat dan mengotorkan dinding dalam beberapa bulan. Kami menetapkan setiap saliran pada kecerunan terukur, menguji air sebelum serahan, dan memenebat tembaga supaya unit berhampiran ${L(1)} kekal kering dan senyap dalam kelembapan ${parentName}.`,
+      ]),
+    ];
+  }
+  return [
+    pick(kampung.slug, [
+      `在${name}有高层楼宇的地方——靠近${L(0)}与${L(2)}——我们会在出车前预约服务电梯并办妥JMB准证，避免当天在门岗浪费时间。而这个${parentName}片区中以有地住宅为主，支架位置与铜管走向才是决定安装能否安静运行多年、还是数月内就漏水的关键。`,
+      `匹数选对是${name}安装满意与否的最大因素：过小则压缩机不停机，过大则变频机短循环导致房间冷而闷湿。我们根据房间面积、玻璃与日照来匹配，而非凭经验估算，因此我们在${name}安装的机组制冷到位又不会让电费飙升。`,
+      `${name}业主最常被忽视的隐患是排水——铺平的冷凝水管数月内就会堵塞并在墙面留下水渍。我们按实测坡度铺设每条排水管，交付前注水测试，并为铜管保温，使${L(1)}附近的机组在${parentName}的潮湿中保持干爽安静。`,
+    ]),
+  ];
+}
+
 function getInstallationTips(
   kampung: (typeof siteConfig.kampungPages)[number],
   locale: KampungInstallationLocale,
@@ -670,6 +810,13 @@ export function getKampungInstallationContent(
           ? `Pemasangan Aircond Profesional di ${name}`
           : `${name}专业冷气安装`,
     introBody: getIntroBody(kampung, parent, locale),
+    localContextTitle:
+      locale === "en"
+        ? `Installing Airconds in ${name}: Local Know-How`
+        : locale === "ms"
+          ? `Memasang Aircond di ${name}: kepakaran tempatan`
+          : `在${name}安装冷气：本地经验`,
+    localContextParagraphs: [...getLocalContext(kampung, parent, locale), ...getLocalContextExtra(kampung, parent, locale)],
     localNoteTitle:
       locale === "en"
         ? `What to Know About Installing in ${name}`

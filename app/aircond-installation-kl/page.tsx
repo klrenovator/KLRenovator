@@ -14,7 +14,7 @@ import { InstallationProof } from "@/components/installation-proof";
 
 export const metadata: Metadata = {
   title: "Aircond Installation KL & Selangor — From RM199, Same-Day",
-  description: "Professional aircond installation from RM199. Wall-mounted, ceiling cassette & window units for all 20 brands. Vacuum pump, copper pipe, 1-month warranty. Same-day available. WhatsApp +60182983573",
+  description: "Aircond installation KL & Selangor from RM199. Wall-mounted, ceiling cassette & window units, all 20 brands. Vacuum pump, 1-month warranty. Same-day.",
   openGraph: {
     title: "Aircond Installation KL & Selangor — From RM199 | KL Renovator",
     description: "Expert aircond installation from RM199. Wall-mounted, ceiling cassette, all brands. Vacuum pump, copper pipe, 1-month warranty. WhatsApp +60182983573",

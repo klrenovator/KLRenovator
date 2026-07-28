@@ -51,6 +51,14 @@ export async function generateMetadata({
       type: "website",
       locale: "ms_MY",
       alternateLocale: ["en_MY", "zh_MY"],
+      images: [
+        {
+          url: `https://www.klrenovator.com${problem.heroImage}`,
+          width: 1200,
+          height: 630,
+          alt: problem.nameMS || problem.name,
+        },
+      ],
     },
     alternates: {
       canonical: msUrl,
