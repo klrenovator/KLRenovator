@@ -4,7 +4,7 @@ Professional aircond / HVAC servicing website for **KL Renovator** (legal entity
 
 ## Tech Stack
 
-- [Next.js 15](https://nextjs.org/docs/getting-started) (App Router)
+- [Next.js 16](https://nextjs.org/docs/getting-started) (App Router)
 - [HeroUI v3](https://heroui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
