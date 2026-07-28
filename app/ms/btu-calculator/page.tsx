@@ -4,9 +4,9 @@ import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("Kalkulator BTU | Cari Saiz Aircond Sempurna — KL Renovator"),
+  title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia | Kira HP Bilik"),
   description:
-    "Kalkulator BTU percuma — cari HP aircond yang tepat untuk bilik anda. Dapatkan anggaran kos pemasangan serta-merta. Pemasangan hari sama dari RM 199.",
+    "Kalkulator saiz aircond Malaysia percuma. Kira keperluan BTU & ketahui 'berapa HP aircond untuk bilik' anda dengan cepat & tepat secara online.",
   alternates: buildTrilingualHreflang("/btu-calculator"),
 };
 

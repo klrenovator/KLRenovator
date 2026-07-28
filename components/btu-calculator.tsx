@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { FaWhatsapp, FaCalculator, FaHome, FaSun, FaUsers, FaRulerCombined } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaWhatsapp, FaCalculator, FaHome, FaSun, FaUsers, FaRulerCombined, FaShareAlt } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
 import { sitePublic } from "@/config/site-public";
+import { trackToolUse } from "@/lib/analytics";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -34,6 +35,9 @@ interface CalculatorStrings {
   feet: string;
   meters: string;
   people: string;
+  shareResult: string;
+  copyLink: string;
+  copied: string;
 }
 
 const STRINGS: Record<Lang, CalculatorStrings> = {
@@ -74,6 +78,9 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
     feet: "ft",
     meters: "m",
     people: "people",
+    shareResult: "Share Result",
+    copyLink: "Copy Link & Share",
+    copied: "Copied!",
   },
   ms: {
     eyebrow: "Kalkulator BTU",
@@ -112,6 +119,9 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
     feet: "ka",
     meters: "m",
     people: "orang",
+    shareResult: "Kongsi Keputusan",
+    copyLink: "Salin Pautan & Kongsi",
+    copied: "Disalin!",
   },
   zh: {
     eyebrow: "BTU 计算器",
@@ -150,6 +160,9 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
     feet: "英尺",
     meters: "米",
     people: "人",
+    shareResult: "分享结果",
+    copyLink: "复制链接并分享",
+    copied: "已复制！",
   },
 };
 
@@ -173,6 +186,31 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
   const [sunExposure, setSunExposure] = useState<string>("medium");
   const [occupants, setOccupants] = useState<number>(2);
   const [showResult, setShowResult] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  // Extract from query parameters on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const l = params.get("l");
+      const w = params.get("w");
+      const h = params.get("h");
+      const rt = params.get("rt");
+      const se = params.get("s");
+      const o = params.get("o");
+      const c = params.get("c");
+
+      if (l) setLength(Number(l));
+      if (w) setWidth(Number(w));
+      if (h) setHeight(Number(h));
+      if (rt) setRoomType(rt);
+      if (se) setSunExposure(se);
+      if (o) setOccupants(Number(o));
+      if (c === "1" || l || w) {
+        setShowResult(true);
+      }
+    }
+  }, []);
 
   // Calculate BTU
   const calculateBTU = () => {
@@ -200,6 +238,51 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
 
   const handleCalculate = () => {
     setShowResult(true);
+    trackToolUse("btu-calculator", { action: "calculate", btu, hp: hpRecommendation.hp });
+
+    // Update URL query parameters
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams();
+      params.set("l", length.toString());
+      params.set("w", width.toString());
+      params.set("h", height.toString());
+      params.set("rt", roomType);
+      params.set("s", sunExposure);
+      params.set("o", occupants.toString());
+      params.set("c", "1");
+      const newUrl = `${window.location.pathname}?${params.toString()}`;
+      window.history.replaceState({ path: newUrl }, "", newUrl);
+    }
+  };
+
+  const handleShare = async () => {
+    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+    trackToolUse("btu-calculator", { action: "share", url: currentUrl, hp: hpRecommendation.hp });
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: s.title.join(""),
+          text: lang === "ms" 
+            ? `Bilik saya perlukan kira-kira ${btu} BTU (${hpRecommendation.hp} HP). Kira BTU anda di sini:`
+            : lang === "zh"
+            ? `我的房间大约需要 ${btu} BTU（${hpRecommendation.hp} 马力）。在这里计算您的冷气尺寸：`
+            : `My room needs approximately ${btu} BTU (${hpRecommendation.hp} HP). Calculate yours here:`,
+          url: currentUrl,
+        });
+        return;
+      } catch (err) {
+        // Fallback to clipboard if share sheet fails or is dismissed
+      }
+    }
+
+    try {
+      await navigator.clipboard.writeText(currentUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Clipboard copy failed:", err);
+    }
   };
 
   const getWhatsAppLink = () => {
@@ -215,192 +298,381 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
     return `https://wa.me/${sitePublic.whatsapp}?text=${encodeURIComponent(message)}`;
   };
 
-  return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-slate-50 to-white">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <div className="text-center mb-12">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3 flex items-center justify-center gap-2">
-              <FaCalculator className="h-4 w-4" /> {s.eyebrow}
-            </p>
-            {/* This is the page's primary heading — the three /btu-calculator
-                routes (en/ms/zh) previously rendered NO <h1> at all, which
-                is a hard SEO problem for a top-of-funnel installation page. */}
-            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">
-              {s.title[0]}<span className="text-sky-500">{s.title[1]}</span>
-            </h1>
-            <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
-              {s.desc}
-            </p>
-          </div>
-        </Reveal>
+  // Generate JSON-LD schemas
+  const webAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": lang === "ms" 
+      ? "Kalkulator BTU KL Renovator" 
+      : lang === "zh" 
+      ? "KL Renovator BTU 计算器" 
+      : "KL Renovator BTU Calculator",
+    "url": `https://www.klrenovator.com/${lang === "en" ? "" : lang + "/"}btu-calculator`,
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "MYR"
+    }
+  };
 
-        <Reveal>
-          <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 sm:p-10">
-            {/* Room Dimensions */}
-            <div className="mb-8">
-              <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
-                <FaRulerCombined className="h-4 w-4 text-sky-600" />
-                {s.roomDimensions}
-              </label>
-              <div className="grid grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-xs font-bold text-slate-600 mb-2">{s.length} ({s.feet})</label>
-                  <input
-                    type="number"
-                    value={length}
-                    onChange={(e) => { setLength(Number(e.target.value)); setShowResult(false); }}
-                    min="5"
-                    max="50"
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-600 mb-2">{s.width} ({s.feet})</label>
-                  <input
-                    type="number"
-                    value={width}
-                    onChange={(e) => { setWidth(Number(e.target.value)); setShowResult(false); }}
-                    min="5"
-                    max="50"
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-600 mb-2">{s.height} ({s.feet})</label>
-                  <input
-                    type="number"
-                    value={height}
-                    onChange={(e) => { setHeight(Number(e.target.value)); setShowResult(false); }}
-                    min="8"
-                    max="20"
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
-                  />
-                </div>
-              </div>
-              <p className="mt-2 text-xs text-slate-500">
-                {length} × {width} = <strong>{length * width}</strong> sqft
+  const faqData = lang === "ms" ? [
+    {
+      q: "1 HP aircond sesuai untuk berapa square feet?",
+      a: "Aircond 1 HP (Kuasa Kuda) biasanya sesuai untuk menyejukkan bilik bersaiz 100 hingga 150 kaki persegi. Ia sangat sesuai untuk bilik tidur biasa atau bilik belajar di Malaysia."
+    },
+    {
+      q: "Berapakah saiz bilik yang sesuai untuk aircond 1.5 HP di Malaysia?",
+      a: "Aircond 1.5 HP amat sesuai untuk ruang antara 150 hingga 250 kaki persegi. Ia sering digunakan untuk bilik tidur utama yang lebih besar, ruang tamu kecil, atau pejabat rumah."
+    },
+    {
+      q: "Bagaimana cara kira BTU aircond untuk bilik?",
+      a: "Formula asasnya ialah Panjang Bilik (kaki) × Lebar Bilik (kaki) × 25 BTU. Anda boleh melaraskan pengiraan ini mengikut jenis bilik, tinggi siling, pendedahan matahari, dan bilangan orang."
+    }
+  ] : lang === "zh" ? [
+    {
+      q: "1马力（1 HP）的冷气适合多少平方英尺的房间？",
+      a: "一台 1马力（1 HP）的冷气通常适合冷却 100 到 150 平方英尺的房间。这对于马来西亚的标准卧室或书房非常理想。"
+    },
+    {
+      q: "在马来西亚，1.5马力（1.5 HP）冷气适合多大的房间？",
+      a: "一台 1.5马力（1.5 HP）的冷气非常适合 150 到 250 平方英尺的房间。它通常用于较大的主卧室、小型客厅或家庭办公室。"
+    },
+    {
+      q: "如何计算房间所需的冷气 BTU？",
+      a: "基本公式为：房间长度（英尺）× 房间宽度（英尺）× 25 BTU。您可以根据房间类型（例如厨房需要更多冷却）、阳光照射情况以及房间人数来进行调整。"
+    }
+  ] : [
+    {
+      q: "How many square feet can a 1 HP aircond cool?",
+      a: "A 1 HP (Horsepower) aircond is typically suitable for cooling a room size of 100 to 150 square feet. This is ideal for standard bedrooms or study rooms in Malaysia."
+    },
+    {
+      q: "What is the perfect room size for a 1.5 HP aircond in Malaysia?",
+      a: "A 1.5 HP aircond is perfect for rooms ranging from 150 to 250 square feet. It is commonly used for larger master bedrooms, small living rooms, or home offices."
+    },
+    {
+      q: "How do you calculate BTU for an air conditioner?",
+      a: "The basic formula is Room Length (ft) × Room Width (ft) × 25 BTU. You can adjust this by multiplying for room type (bedrooms need less cooling, kitchens need more), sun exposure (west-facing or top floors need extra BTU), and number of occupants."
+    }
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.a
+      }
+    }))
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": lang === "ms"
+      ? "Cara Mengira Saiz Aircond (BTU) Yang Sempurna Untuk Bilik Anda"
+      : lang === "zh"
+      ? "如何为您的房间计算合适的冷气尺寸 (BTU)"
+      : "How to Calculate the Right Aircond Size (BTU) for Your Room",
+    "step": (lang === "ms" ? [
+      "Ukur panjang dan lebar bilik dalam unit kaki.",
+      "Darabkan panjang dengan lebar untuk mendapatkan luas bilik dalam kaki persegi.",
+      "Darabkan luas bilik dengan 25 untuk mendapatkan BTU asas yang diperlukan.",
+      "Laras pengiraan mengikut faktor jenis bilik, tinggi siling, pendedahan matahari, dan bilangan orang.",
+      "Padankan jumlah BTU akhir dengan Horsepower (HP) aircond yang disyorkan."
+    ] : lang === "zh" ? [
+      "以英尺为单位测量房间的长度和宽度。",
+      "将长度乘以宽度，计算出房间的平方英尺面积。",
+      "将面积乘以 25，得到基础的 BTU 需求。",
+      "根据房间类型、挑高天花板、阳光照射和人数等因素进行调整。",
+      "将最终的 BTU 与推荐的冷气马力 (HP) 进行匹配。"
+    ] : [
+      "Measure the length and width of the room in feet.",
+      "Multiply length by width to find the room area in square feet.",
+      "Multiply the area by 25 to get the base BTU requirement.",
+      "Adjust based on factors like room type, high ceilings, sun exposure, and occupants.",
+      "Match the final BTU with the recommended Aircond Horsepower (HP)."
+    ]).map((stepText, idx) => ({
+      "@type": "HowToStep",
+      "position": idx + 1,
+      "text": stepText,
+      "name": `${lang === "ms" ? "Langkah" : lang === "zh" ? "步骤" : "Step"} ${idx + 1}`
+    }))
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-slate-50 to-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-12">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3 flex items-center justify-center gap-2">
+                <FaCalculator className="h-4 w-4" /> {s.eyebrow}
+              </p>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">
+                {s.title[0]}<span className="text-sky-500">{s.title[1]}</span>
+              </h1>
+              <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
+                {s.desc}
               </p>
             </div>
+          </Reveal>
 
-            {/* Room Type */}
-            <div className="mb-8">
-              <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
-                <FaHome className="h-4 w-4 text-sky-600" />
-                {s.roomType}
-              </label>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {s.roomTypes.map((room) => (
-                  <button
-                    key={room.value}
-                    onClick={() => { setRoomType(room.value); setShowResult(false); }}
-                    className={`px-4 py-3 rounded-xl text-sm font-bold transition-all ${
-                      roomType === room.value
-                        ? "bg-sky-600 text-white shadow-lg scale-105"
-                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                    }`}
-                  >
-                    {room.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Sun Exposure */}
-            <div className="mb-8">
-              <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
-                <FaSun className="h-4 w-4 text-amber-500" />
-                {s.sunExposure}
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {s.sunLevels.map((sun) => (
-                  <button
-                    key={sun.value}
-                    onClick={() => { setSunExposure(sun.value); setShowResult(false); }}
-                    className={`px-4 py-3 rounded-xl text-sm font-bold transition-all ${
-                      sunExposure === sun.value
-                        ? "bg-amber-500 text-white shadow-lg scale-105"
-                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                    }`}
-                  >
-                    {sun.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Occupants */}
-            <div className="mb-8">
-              <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
-                <FaUsers className="h-4 w-4 text-sky-600" />
-                {s.occupants}
-              </label>
-              <input
-                type="number"
-                value={occupants}
-                onChange={(e) => { setOccupants(Number(e.target.value)); setShowResult(false); }}
-                min="1"
-                max="10"
-                className="w-full max-w-xs px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
-              />
-            </div>
-
-            {/* Calculate Button */}
-            <button
-              onClick={handleCalculate}
-              className="w-full bg-sky-600 hover:bg-sky-700 text-white font-black uppercase tracking-widest text-sm py-4 rounded-xl transition-all shadow-lg hover:shadow-xl"
-            >
-              {s.calculate}
-            </button>
-          </div>
-        </Reveal>
-
-        {/* Result */}
-        {showResult && (
           <Reveal>
-            <div className="mt-8 bg-gradient-to-br from-sky-600 to-sky-700 rounded-3xl shadow-2xl p-8 sm:p-10 text-white">
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-6 text-center">
-                {s.result}
-              </h3>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
-                  <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.btuRequired}</p>
-                  <p className="text-4xl font-black text-white">{btu.toLocaleString()}</p>
-                  <p className="text-sky-200 text-sm font-bold mt-1">BTU</p>
+            <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 sm:p-10">
+              {/* Room Dimensions */}
+              <div className="mb-8">
+                <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
+                  <FaRulerCombined className="h-4 w-4 text-sky-600" />
+                  {s.roomDimensions}
+                </label>
+                <div className="grid grid-cols-3 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">{s.length} ({s.feet})</label>
+                    <input
+                      type="number"
+                      value={length}
+                      onChange={(e) => { setLength(Number(e.target.value)); setShowResult(false); }}
+                      min="5"
+                      max="50"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">{s.width} ({s.feet})</label>
+                    <input
+                      type="number"
+                      value={width}
+                      onChange={(e) => { setWidth(Number(e.target.value)); setShowResult(false); }}
+                      min="5"
+                      max="50"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">{s.height} ({s.feet})</label>
+                    <input
+                      type="number"
+                      value={height}
+                      onChange={(e) => { setHeight(Number(e.target.value)); setShowResult(false); }}
+                      min="8"
+                      max="20"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
+                    />
+                  </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
-                  <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.recommendedHP}</p>
-                  <p className="text-4xl font-black text-white">{hpRecommendation.hp}</p>
-                  <p className="text-sky-200 text-sm font-bold mt-1">HP</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
-                  <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.estimatedCost}</p>
-                  <p className="text-4xl font-black text-white">RM {hpRecommendation.price}</p>
-                  <p className="text-sky-200 text-sm font-bold mt-1">{s.installationFrom}</p>
-                </div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur rounded-xl p-4 mb-6">
-                <p className="text-xs text-sky-100 font-medium leading-relaxed">
-                  <FiCheckCircle className="inline h-4 w-4 mr-2" />
-                  {s.disclaimer}
+                <p className="mt-2 text-xs text-slate-500">
+                  {length} × {width} = <strong>{length * width}</strong> sqft
                 </p>
               </div>
 
-              <a
-                href={getWhatsAppLink()}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="block w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-widest text-sm py-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-center"
+              {/* Room Type */}
+              <div className="mb-8">
+                <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
+                  <FaHome className="h-4 w-4 text-sky-600" />
+                  {s.roomType}
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {s.roomTypes.map((room) => (
+                    <button
+                      key={room.value}
+                      onClick={() => { setRoomType(room.value); setShowResult(false); }}
+                      className={`px-4 py-3 rounded-xl text-sm font-bold transition-all ${
+                        roomType === room.value
+                          ? "bg-sky-600 text-white shadow-lg scale-105"
+                          : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                      }`}
+                    >
+                      {room.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sun Exposure */}
+              <div className="mb-8">
+                <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
+                  <FaSun className="h-4 w-4 text-amber-500" />
+                  {s.sunExposure}
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {s.sunLevels.map((sun) => (
+                    <button
+                      key={sun.value}
+                      onClick={() => { setSunExposure(sun.value); setShowResult(false); }}
+                      className={`px-4 py-3 rounded-xl text-sm font-bold transition-all ${
+                        sunExposure === sun.value
+                          ? "bg-amber-500 text-white shadow-lg scale-105"
+                          : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                      }`}
+                    >
+                      {sun.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Occupants */}
+              <div className="mb-8">
+                <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
+                  <FaUsers className="h-4 w-4 text-sky-600" />
+                  {s.occupants}
+                </label>
+                <input
+                  type="number"
+                  value={occupants}
+                  onChange={(e) => { setOccupants(Number(e.target.value)); setShowResult(false); }}
+                  min="1"
+                  max="10"
+                  className="w-full max-w-xs px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
+                />
+              </div>
+
+              {/* Calculate Button */}
+              <button
+                onClick={handleCalculate}
+                className="w-full bg-sky-600 hover:bg-sky-700 text-white font-black uppercase tracking-widest text-sm py-4 rounded-xl transition-all shadow-lg hover:shadow-xl cursor-pointer"
               >
-                <FaWhatsapp className="inline h-5 w-5 mr-2" />
-                {s.bookNow}
-              </a>
+                {s.calculate}
+              </button>
             </div>
           </Reveal>
-        )}
-      </div>
-    </section>
+
+          {/* Result */}
+          {showResult && (
+            <Reveal>
+              <div className="mt-8 bg-gradient-to-br from-sky-600 to-sky-700 rounded-3xl shadow-2xl p-8 sm:p-10 text-white">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-6 text-center">
+                  {s.result}
+                </h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                    <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.btuRequired}</p>
+                    <p className="text-4xl font-black text-white">{btu.toLocaleString()}</p>
+                    <p className="text-sky-200 text-sm font-bold mt-1">BTU</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                    <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.recommendedHP}</p>
+                    <p className="text-4xl font-black text-white">{hpRecommendation.hp}</p>
+                    <p className="text-sky-200 text-sm font-bold mt-1">HP</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                    <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.estimatedCost}</p>
+                    <p className="text-4xl font-black text-white">RM {hpRecommendation.price}</p>
+                    <p className="text-sky-200 text-sm font-bold mt-1">{s.installationFrom}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur rounded-xl p-4 mb-6">
+                  <p className="text-xs text-sky-100 font-medium leading-relaxed">
+                    <FiCheckCircle className="inline h-4 w-4 mr-2" />
+                    {s.disclaimer}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <a
+                    href={getWhatsAppLink()}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    className="block bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-widest text-xs sm:text-sm py-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-center"
+                  >
+                    <FaWhatsapp className="inline h-5 w-5 mr-2 align-middle" />
+                    {s.bookNow}
+                  </a>
+
+                  <button
+                    onClick={handleShare}
+                    className="block bg-white hover:bg-slate-100 text-sky-700 font-black uppercase tracking-widest text-xs sm:text-sm py-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-center cursor-pointer"
+                  >
+                    <FaShareAlt className="inline h-4 w-4 mr-2 align-middle" />
+                    {copied ? s.copied : s.copyLink}
+                  </button>
+                </div>
+              </div>
+            </Reveal>
+          )}
+
+          {/* Visible FAQ & How-To Section for SEO */}
+          <Reveal>
+            <div className="mt-16 border-t border-slate-200 pt-16">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">
+                {lang === "ms" 
+                  ? "Panduan Pengiraan BTU & FAQ Aircond" 
+                  : lang === "zh" 
+                  ? "BTU 计算指南与冷气常见问答" 
+                  : "Aircond BTU Calculation Guide & FAQs"}
+              </h2>
+
+              {/* How-To Steps */}
+              <div className="mb-12 bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
+                <h3 className="text-lg font-black text-slate-900 mb-6 uppercase tracking-wider flex items-center gap-2">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-100 text-sky-600 text-sm">✓</span>
+                  {lang === "ms"
+                    ? "Cara Kira Saiz Aircond (Langkah demi Langkah)"
+                    : lang === "zh"
+                    ? "冷气马力计算步骤 (Step-by-Step)"
+                    : "How to Calculate Aircond Size (Step-by-Step)"}
+                </h3>
+                <ol className="space-y-4">
+                  {(lang === "ms" ? [
+                    "Sila ukur panjang dan lebar bilik anda dalam unit kaki (ft).",
+                    "Darabkan panjang x lebar untuk mengetahui luas bilik dalam kaki persegi (sqft).",
+                    "Darabkan luas bilik tersebut dengan 25 untuk mendapatkan keperluan BTU asas.",
+                    "Laras pengiraan mengikut jenis bilik (cth., bilik tidur utama perlukan lebih 10%), pendedahan matahari, tinggi siling, dan bilangan orang.",
+                    "Bandingkan jumlah BTU akhir dengan Horsepower (HP) aircond: 9,000 BTU bersamaan dengan 1.0 HP."
+                  ] : lang === "zh" ? [
+                    "以英尺 (ft) 为单位测量房间的长度和宽度。",
+                    "长度乘以宽度得到房间的平方英尺 (sqft) 面积。",
+                    "将面积乘以 25，得到所需的基本 BTU 数量。",
+                    "根据房间类型（例如主卧室、客厅）、阳光照射程度（西晒等）和人数对计算进行微调。",
+                    "将最终的 BTU 数值与冷气马力 (HP) 进行匹配：9,000 BTU 约等于 1.0 HP。"
+                  ] : [
+                    "Measure your room's length and width in feet (ft).",
+                    "Multiply length x width to calculate the room's area in square feet (sqft).",
+                    "Multiply the area by 25 to get the base BTU cooling power required.",
+                    "Adjust for room type (e.g. master bedrooms need +10%), sun exposure (west-facing rooms), high ceilings, and occupants.",
+                    "Match your final calculated BTU to the required Horsepower (HP): 9,000 BTU is approx. 1.0 HP."
+                  ]).map((stepText, idx) => (
+                    <li key={idx} className="flex gap-4">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sky-50 text-sky-600 text-xs font-bold">
+                        {idx + 1}
+                      </span>
+                      <p className="text-slate-600 text-sm font-medium leading-relaxed">{stepText}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* FAQs */}
+              <div className="space-y-6">
+                {faqData.map((faq, idx) => (
+                  <div key={idx} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                    <h3 className="text-base font-bold text-slate-900 flex gap-2">
+                      <span className="text-sky-600 font-extrabold">Q:</span>
+                      {faq.q}
+                    </h3>
+                    <p className="mt-3 text-sm text-slate-600 font-medium leading-relaxed pl-6 border-l-2 border-sky-500">
+                      {faq.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
   );
 }

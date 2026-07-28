@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { calculateDurationMinutes } from "@/lib/booking-config";
+import { calculateDurationMinutes, calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { useLang } from "@/context/language-context";
 import { trackBookingSubmit } from "@/lib/analytics";
 
@@ -41,6 +41,9 @@ const FORM_TXT = {
     unitSupply: "Aircond unit",
     honeypot: "Company website",
     sendWa: "Send WhatsApp Confirmation",
+    addService: "+ Add Another Service / Unit",
+    removeService: "Remove",
+    itemHeader: "Service Item #{N}",
   },
   ms: {
     title: "Tempah Temujanji",
@@ -76,6 +79,9 @@ const FORM_TXT = {
     unitSupply: "Unit aircond",
     honeypot: "Laman web syarikat",
     sendWa: "Hantar Pengesahan WhatsApp",
+    addService: "+ Tambah Servis / Unit Lain",
+    removeService: "Buang",
+    itemHeader: "Item Servis #{N}",
   },
   zh: {
     title: "预约时间",
@@ -111,6 +117,9 @@ const FORM_TXT = {
     unitSupply: "冷气机",
     honeypot: "公司网站",
     sendWa: "发送WhatsApp确认",
+    addService: "+ 添加其他服务 / 机器",
+    removeService: "删除",
+    itemHeader: "服务项目 #{N}",
   }
 };
 
@@ -132,11 +141,6 @@ const AIRCOND_OPTS = [
   { val: "Portable", en: "Portable", ms: "Mudah Alih", zh: "移动式冷气" },
 ];
 
-// Installation-specific option lists. The audit noted the booking form
-// captured none of the variables that actually drive an installation quote
-// or site visit — property type (condo jobs need JMB/management approval),
-// floor level (high-rise access charge), copper pipe run (largest price
-// variable), and whether the customer already owns the unit.
 const PROPERTY_OPTS = [
   { val: "Condo / Apartment", en: "Condo / Apartment", ms: "Kondo / Apartmen", zh: "公寓 / 组屋" },
   { val: "Landed House", en: "Landed House", ms: "Rumah Berkembar / Teres", zh: "有地住宅" },
@@ -176,17 +180,22 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [serviceType, setServiceType] = useState("service");
-  const [aircondType, setAircondType] = useState("Wall Mounted");
-  const [aircondSize, setAircondSize] = useState("1.0 HP");
-  const [quantity, setQuantity] = useState(1);
-  // Installation-only extras (sent through in the notes/description)
+  
+  // Multi-service line items state
+  const [lineItems, setLineItems] = useState<Array<{
+    service_type: string;
+    aircond_type: string;
+    aircond_size: string;
+    quantity: number;
+  }>>([
+    { service_type: "service", aircond_type: "Wall Mounted", aircond_size: "1.0 HP", quantity: 1 }
+  ]);
+
   const [propertyType, setPropertyType] = useState("Condo / Apartment");
   const [floorLevel, setFloorLevel] = useState("");
   const [pipeRun, setPipeRun] = useState("Up to 7 ft (included)");
   const [unitSupply, setUnitSupply] = useState("I already have the unit");
-  // Honeypot — real users never see or fill this. Server treats a filled
-  // value as a bot and silently discards the submission.
+  
   const [companyWebsite, setCompanyWebsite] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
@@ -199,8 +208,12 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   // Admin manual override
   const [manualHours, setManualHours] = useState("");
 
-  // Calculations
-  const baseDurationMinutes = calculateDurationMinutes(serviceType, aircondType, quantity);
+  const hasInstallationOrRelocate = lineItems.some(
+    (item) => item.service_type === "installation" || item.service_type === "relocate"
+  );
+
+  // Calculations using lineItems total
+  const baseDurationMinutes = calculateTotalDurationMinutes(lineItems);
   const totalDurationMinutes = isAdmin && manualHours !== "" && !isNaN(parseFloat(manualHours))
     ? parseFloat(manualHours) * 60
     : baseDurationMinutes;
@@ -211,9 +224,37 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const totalHours = (totalDurationMinutes / 60).toFixed(1);
   const daysRequired = Math.ceil(totalDurationMinutes / 480);
 
-  // Fetch availability whenever the date or the computed job length changes.
-  // The request is abortable so a fast date change can't let a slow earlier
-  // response overwrite the newer one (stale-response race).
+  // Manage lineItems array helper functions
+  const addLineItem = () => {
+    if (lineItems.length >= 15) return;
+    setLineItems([
+      ...lineItems,
+      { service_type: "service", aircond_type: "Wall Mounted", aircond_size: "1.0 HP", quantity: 1 }
+    ]);
+    setFetchedOnce(false);
+    setSelectedSlot("");
+  };
+
+  const removeLineItem = (index: number) => {
+    if (lineItems.length <= 1) return;
+    setLineItems(lineItems.filter((_, i) => i !== index));
+    setFetchedOnce(false);
+    setSelectedSlot("");
+  };
+
+  const updateLineItem = (index: number, key: string, value: any) => {
+    const updated = lineItems.map((item, i) => {
+      if (i === index) {
+        return { ...item, [key]: value };
+      }
+      return item;
+    });
+    setLineItems(updated);
+    setFetchedOnce(false);
+    setSelectedSlot("");
+  };
+
+  // Fetch availability whenever the date or computed job length changes.
   useEffect(() => {
     if (!selectedDate) return;
 
@@ -249,17 +290,12 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           customer_name: name,
           phone,
           address,
-          service_type: serviceType,
-          aircond_type: aircondType,
-          aircond_size: aircondSize,
-          quantity,
+          line_items: lineItems,
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
-          // Honeypot — server discards the submission if this is non-empty.
           company_website: companyWebsite,
-          // Installation-only context, appended to the address so it reaches
-          // the technician and the calendar event without a schema change.
-          ...(serviceType === "installation" || serviceType === "relocate"
+          // Installation details formatting
+          ...(hasInstallationOrRelocate
             ? {
                 address: [
                   address,
@@ -279,11 +315,11 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       if (res.ok) {
         setSuccess(true);
         trackBookingSubmit({
-          service_type: serviceType,
-          aircond_type: aircondType,
-          quantity,
+          line_items_count: lineItems.length,
+          total_quantity: lineItems.reduce((acc, item) => acc + item.quantity, 0),
           source: isAdmin ? "whatsapp_manual" : "web",
         });
+
         if (isAdmin) {
           const slotTime = new Date(selectedSlot).toLocaleTimeString("en-US", {
             hour: "numeric", minute: "2-digit", hour12: true, timeZone: "Asia/Kuala_Lumpur"
@@ -292,7 +328,12 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
             timeZone: "Asia/Kuala_Lumpur"
           });
           
-          let msgText = `Hi ${name}, your booking for ${serviceType.replace(/_/g, " ")} (${aircondType} ${aircondSize} x${quantity}) at ${address} is confirmed on ${slotDate} at ${slotTime}.`;
+          let msgText = `Hi ${name}, your booking for services:`;
+          lineItems.forEach((item) => {
+            const itemLabel = SERVICE_OPTS.find(o => o.val === item.service_type)?.en || item.service_type;
+            msgText += `\n- ${itemLabel} (${item.aircond_type} ${item.aircond_size} x${item.quantity})`;
+          });
+          msgText += `\n\nat Address: ${address} is confirmed on ${slotDate} at ${slotTime}.`;
           
           if (daysRequired > 1) {
             msgText += `\n\nNote: As this is a large job, it will take ${daysRequired} days. The selected date is Day 1. Our team will coordinate the rest of the schedule with you.`;
@@ -383,85 +424,102 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">{t.serviceType}</label>
-          <select
-            value={serviceType}
-            onChange={(e) => {
-              setServiceType(e.target.value);
-              setFetchedOnce(false);
-              setSelectedSlot("");
-            }}
-            className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-          >
-            {SERVICE_OPTS.map(opt => (
-              <option key={opt.val} value={opt.val}>
-                {(opt as any)[lang] || opt.en}
-              </option>
-            ))}
-          </select>
-        </div>
+      {/* Multi-service line items list */}
+      <div className="space-y-4">
+        {lineItems.map((item, idx) => (
+          <div key={idx} className="relative rounded-xl border border-slate-200 bg-slate-50/50 p-4 space-y-3 shadow-sm">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+              <span className="text-xs font-black uppercase tracking-wider text-slate-500">
+                {t.itemHeader.replace("{N}", (idx + 1).toString())}
+              </span>
+              {lineItems.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => removeLineItem(idx)}
+                  className="text-xs font-semibold text-red-600 hover:text-red-700 transition cursor-pointer"
+                >
+                  {t.removeService}
+                </button>
+              )}
+            </div>
 
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">{t.aircondType}</label>
-          <select
-            value={aircondType}
-            onChange={(e) => {
-              setAircondType(e.target.value);
-              setFetchedOnce(false);
-              setSelectedSlot("");
-            }}
-            className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-          >
-            {AIRCOND_OPTS.map(opt => (
-              <option key={opt.val} value={opt.val}>
-                {(opt as any)[lang] || opt.en}
-              </option>
-            ))}
-          </select>
-        </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.serviceType}</label>
+                <select
+                  value={item.service_type}
+                  onChange={(e) => updateLineItem(idx, "service_type", e.target.value)}
+                  className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
+                >
+                  {SERVICE_OPTS.map(opt => (
+                    <option key={opt.val} value={opt.val}>
+                      {(opt as any)[lang] || opt.en}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondType}</label>
+                <select
+                  value={item.aircond_type}
+                  onChange={(e) => updateLineItem(idx, "aircond_type", e.target.value)}
+                  className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
+                >
+                  {AIRCOND_OPTS.map(opt => (
+                    <option key={opt.val} value={opt.val}>
+                      {(opt as any)[lang] || opt.en}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondSize}</label>
+                <select
+                  value={item.aircond_size}
+                  onChange={(e) => updateLineItem(idx, "aircond_size", e.target.value)}
+                  className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
+                >
+                  {SIZE_OPTS.map(opt => (
+                    <option key={opt.val} value={opt.val}>
+                      {(opt as any)[lang] || opt.en}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.quantity}</label>
+                <input
+                  type="number"
+                  min="1"
+                  max="15"
+                  required
+                  value={item.quantity}
+                  onChange={(e) => updateLineItem(idx, "quantity", parseInt(e.target.value, 10) || 1)}
+                  className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">{t.aircondSize}</label>
-          <select
-            value={aircondSize}
-            onChange={(e) => setAircondSize(e.target.value)}
-            className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-          >
-            {SIZE_OPTS.map(opt => (
-              <option key={opt.val} value={opt.val}>
-                {(opt as any)[lang] || opt.en}
-              </option>
-            ))}
-          </select>
-        </div>
+      {lineItems.length < 15 && (
+        <button
+          type="button"
+          onClick={addLineItem}
+          className="w-full py-2.5 px-4 rounded-xl border-2 border-dashed border-sky-300 hover:border-sky-400 text-sky-600 hover:text-sky-700 text-sm font-bold transition-all text-center flex items-center justify-center gap-1 cursor-pointer bg-sky-50/10 hover:bg-sky-50/30"
+        >
+          {t.addService}
+        </button>
+      )}
 
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">{t.quantity}</label>
-          <input
-            type="number"
-            min="1"
-            max="10"
-            required
-            value={quantity}
-            onChange={(e) => {
-              setQuantity(parseInt(e.target.value, 10));
-              setFetchedOnce(false);
-              setSelectedSlot("");
-            }}
-            className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-          />
-        </div>
-      </div>
-
-      {/* ── Installation-only details ───────────────────────────────────
-          Shown only for installation / relocation jobs. These are the
-          variables that actually determine the on-site quote and whether
-          the technician needs building approval before arriving. */}
-      {(serviceType === "installation" || serviceType === "relocate") && (
+      {/* ── Installation-only details ─────────────────────────────────── */}
+      {hasInstallationOrRelocate && (
         <div className="space-y-4 rounded-xl border border-sky-100 bg-sky-50/40 p-4">
           <p className="text-xs font-black uppercase tracking-widest text-sky-700">
             {t.propertyType}
@@ -540,7 +598,6 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           </div>
         </div>
       )}
-
 
       {isAdmin && (
         <div className="rounded-lg bg-red-50 p-4 border border-red-200">
@@ -628,7 +685,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       <button
         type="submit"
         disabled={loading || !selectedSlot}
-        className="w-full rounded-lg bg-sky-600 px-4 py-3.5 font-black text-white transition hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 disabled:bg-slate-300 disabled:cursor-not-allowed mt-4 shadow-md"
+        className="w-full rounded-lg bg-sky-600 px-4 py-3.5 font-black text-white transition hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 disabled:bg-slate-300 disabled:cursor-not-allowed mt-4 shadow-md cursor-pointer"
       >
         {loading ? t.processing : t.confirmBtn}
       </button>

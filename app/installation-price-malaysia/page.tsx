@@ -9,7 +9,6 @@ import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
-import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { entityPhrases } from "@/config/installation-entity-map";
@@ -305,9 +304,6 @@ export default function EnInstallationPricePage() {
           </div>
         </div>
       </section>
-
-      {/* TikTok */}
-      <TikTokShowcase locale="en" />
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-sky-700 to-sky-600 text-white py-10 px-4">

@@ -7,7 +7,6 @@ import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
-import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 
@@ -134,8 +133,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      <TikTokShowcase locale="ms" />
 
       <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

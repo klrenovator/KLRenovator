@@ -7,7 +7,6 @@ import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
-import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 
@@ -111,7 +110,6 @@ export default function Page() {
           <p>我们每天在KL解决的常见问题：<em>冷气不冷</em>、<em>漏水</em>、<em>异味</em>、<em>风弱</em>、<em>电费升高</em>。60–75分钟完成，机器保持挂墙，立即可以使用。覆盖：<strong>KLCC、Bangsar、Mont Kiara、Damansara、PJ、Subang Jaya、Shah Alam、Klang、Puchong、Cheras、Ampang、Kajang、Kepong、Setapak、Gombak、Rawang</strong> —— 全巴生谷。立即WhatsApp — <strong>当天</strong>可约。</p>
         </div>
       </section>
-      <TikTokShowcase locale="zh" />
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-black text-center text-slate-950">吉隆坡冷气清洗 — 常见问答</h2>
