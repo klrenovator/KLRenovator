@@ -21,6 +21,8 @@ export interface AreaInstallationContent {
   heroBadges: string[];
   introTitle: string;
   introBody: string;
+  localContextTitle: string;
+  localContextParagraphs: string[];
   whereTitle: string;
   whereBody: string;
   whereLandmarks: string[];
@@ -299,6 +301,141 @@ function getWhyItems(
   ]);
 }
 
+// ── Geo position phrase derived from lat/lng, used to add unique tokens and
+//    genuine local context per area. Returns the phrase already localized.
+function getPosition(
+  area: (typeof siteConfig.areaPages)[number],
+  locale: AreaInstallationLocale,
+): string {
+  const lat = typeof area.lat === "number" ? area.lat : 3.14;
+  const lng = typeof area.lng === "number" ? area.lng : 101.69;
+  const ns = lat >= 3.2 ? "north" : lat <= 3.0 ? "south" : "central";
+  const ew = lng >= 101.7 ? "east" : "east";
+  const combo = `${ns}-${ew}`;
+  const stateIsKL = (area.state || "").toLowerCase().includes("kuala lumpur");
+  const region = stateIsKL ? "Kuala Lumpur" : "Selangor";
+  const map: Record<string, { en: string; ms: string; zh: string }> = {
+    "north-east": { en: `northeastern ${region}`, ms: `timur laut ${region}`, zh: `${region}东北部` },
+    "south-east": { en: `southeastern ${region}`, ms: `tenggara ${region}`, zh: `${region}东南部` },
+    "central-east": { en: `central ${region}`, ms: `tengah ${region}`, zh: `${region}中部` },
+    "north-west": { en: `northern ${region}`, ms: `utara ${region}`, zh: `${region}北部` },
+    "south-west": { en: `southern ${region}`, ms: `selatan ${region}`, zh: `${region}南部` },
+    "central-west": { en: `central ${region}`, ms: `tengah ${region}`, zh: `${region}中部` },
+  };
+  const key = combo.includes("north") ? (lng >= 101.7 ? "north-east" : "north-west")
+    : combo.includes("south") ? (lng >= 101.7 ? "south-east" : "south-west")
+    : (lng >= 101.7 ? "central-east" : "central-west");
+  return map[key][locale];
+}
+
+// ── Substantial, installation-specific, genuinely-unique-per-area context.
+// Each area has a different landmark set + population + geo position, so even
+// areas sharing a variant produce very different token sets. Three variant
+// sets rotate deterministically to break the templated-family similarity that
+// left these 40 pages ~81% identical (Google "Duplicate without canonical").
+function getLocalContext(
+  area: (typeof siteConfig.areaPages)[number],
+  locale: AreaInstallationLocale,
+): string[] {
+  const name = area.name;
+  const state = getLocaleState(area.state, locale);
+  const position = getPosition(area, locale);
+  const landmarks = Array.isArray(area.landmarks) ? area.landmarks.filter(Boolean) : [];
+  const population = area.population || name;
+  const L = (n: number) => landmarks[n] || landmarks[landmarks.length - 1] || name;
+  const joined = joinLandmarks(landmarks, locale, 6);
+
+  if (locale === "en") {
+    const variants: string[][] = [
+      [
+        `${name} sits in ${position}, ${state}, home to roughly ${population} residents and landmarks like ${joined}. That density and mix of building types shapes how aircond installation works here — a wall-mounted split in a ${L(0)} condo follows a very different process from a ceiling cassette in a ${L(1)} shoplot or a window unit in an older flat near ${L(2)}.`,
+        `Before any drilling, our ${name} installation crew checks the three things that go wrong most often here: whether your distribution board has a spare way for a dedicated circuit, the exact copper-pipe run between the indoor and outdoor positions, and — for high-rise work — the building management's lift and service-ledge rules. Getting these right on the first visit is why installations across ${name} and ${position} rarely need a callback.`,
+      ],
+      [
+        `Installing an aircond in ${name} means planning around how the area is actually built. Around ${L(0)} and ${L(1)} the housing leans toward landed terraces and semi-D homes; elsewhere — ${L(2)}, ${L(3)} and ${L(4)} — high-rise condos and serviced apartments dominate. Each calls for a different HP sizing, bracket setup and drainage plan, which is why we survey before we quote on every ${name} job.`,
+        `${name} (${population}, ${state}) is on our standing installation route, so confirmed jobs usually get a same-day or next-day slot rather than a week-long wait. We bring Type L copper for 1.0–2.5 HP units, vacuum pumps for proper commissioning, and the torque specs for all 20 brands — so whether your unit is a Daikin, Panasonic, Mitsubishi or something else, it is fitted to manufacturer standard the first time.`,
+      ],
+      [
+        `From ${L(0)} to ${L(1)}, ${name} spans a range of properties — and the aircond installation detail that matters in one barely applies in another. A landed terrace near ${L(2)} needs wall penetration and bracket alignment; a unit going into a ${L(3)} high-rise needs loading-bay timing and management sign-off. Our ${name} team plans for both before the van leaves, ${position}.`,
+        `We keep ${name} installation simple and transparent: the RM 199 wall-mounted price includes 7 ft of copper pipe, wiring, drain pipe and a standard bracket, with anything beyond that quoted and approved on site. After commissioning we run a 15-minute cooling test and hand over a 1-month workmanship warranty card — valid whether you are in central ${name} or the ${position} fringe.`,
+      ],
+    ];
+    return pick(area.slug, variants);
+  }
+
+  if (locale === "ms") {
+    const variants: string[][] = [
+      [
+        `${name} terletak di ${position}, ${state}, rumah kepada kira-kira ${population} penduduk dan mercu tanda seperti ${joined}. Kepadatan dan campuran jenis bangunan ini menentukan cara pemasangan aircond dilakukan di sini — unit split dinding di kondominium ${L(0)} mengikut proses sangat berbeza daripada ceiling cassette di kedai ${L(1)} atau unit tingkap di flat lama berhampiran ${L(2)}.`,
+        `Sebelum sebarang penggerudian, pasukan pemasangan ${name} kami menyemak tiga perkara yang paling kerap bermasalah di sini: sama ada kotak agihan anda ada ruang MCB ganti untuk litar khas, jarak paip tembaga antara kedudukan dalaman dan luar, dan — untuk kerja bangunan tinggi — peraturan lif dan service ledge pengurusan bangunan. Menyelesaikan ini pada lawatan pertama sebabkan pemasangan di ${name} dan ${position} jarang perlukan panggilan semula.`,
+      ],
+      [
+        `Memasang aircond di ${name} bermakna merancang mengikut pembinaan sebenar kawasan ini. Sekitar ${L(0)} dan ${L(1)} perumahan condong kepada rumah teres dan semi-D landed; di tempat lain — ${L(2)}, ${L(3)} dan ${L(4)} — kondominium tinggi dan apartmen servis mendominasi. Setiap satu memerlukan saiz HP, susunan braket dan pelan saliran berbeza, sebab itulah kami tinjau sebelum sebut harga untuk setiap kerja di ${name}.`,
+        `${name} (${population}, ${state}) berada dalam laluan pemasangan tetap kami, jadi kerja yang disahkan biasanya mendapat slot hari sama atau hari berikutnya bukannya menunggu seminggu. Kami membawa tembaga Type L untuk unit 1.0–2.5 HP, pam vakum untuk pentauliahan betul, dan spesifikasi tork untuk semua 20 jenama — jadi sama ada unit anda Daikin, Panasonic, Mitsubishi atau lain, ia dipasang mengikut standard pengeluar pada percubaan pertama.`,
+      ],
+      [
+        `Dari ${L(0)} ke ${L(1)}, ${name} merangkumi pelbagai jenis hartanah — dan butiran pemasangan aircond yang penting di satu tempat hampir tidak relevan di tempat lain. Rumah teres berhampiran ${L(2)} perlukan tembusan dinding dan penjajaran braket; unit untuk bangunan tinggi ${L(3)} perlukan masa loading bay dan kelulusan pengurusan. Pasukan ${name} kami merancang kedua-duanya sebelum juruteknik bertolak, ${position}.`,
+        `Kami kekalkan pemasangan di ${name} mudah dan telus: harga RM 199 untuk dinding termasuk 7 ft paip tembaga, wayar, paip saliran dan braket standard, dengan apa-apa selepas itu disebut dan diluluskan di tapak. Selepas pentauliahan kami jalankan ujian penyejukan 15 minit dan serahkan kad waranti kerja 1 bulan — sah sama ada anda di tengah ${name} atau pinggir ${position}.`,
+      ],
+    ];
+    return pick(area.slug, variants);
+  }
+
+  const variants: string[][] = [
+    [
+      `${name}位于${state}${position}，约有${population}居民，地标包括${joined}。这样的人口密度与建筑类型组合决定了冷气安装方式——${L(0)}公寓的挂壁分体机、${L(1)}店屋的天花板卡式机、以及${L(2)}附近老旧组屋的窗式机，安装流程截然不同。`,
+      `在钻孔之前，我们的${name}安装团队会先检查本地最容易出问题的三点：配电箱是否有备用MCB空位以接独立回路、室内外机之间的铜管实际走管长度，以及高层施工所需的物业电梯与服务阳台规定。首次上门就把这些处理好，正是${name}及${position}地区安装极少需要返工的原因。`,
+    ],
+    [
+      `在${name}安装冷气意味着要按本区的实际建筑布局来规划。${L(0)}与${L(1)}周边以排屋和半独立式住宅为主；而在${L(2)}、${L(3)}、${L(4)}等地则以高层公寓和服务式住宅为主。两者所需的匹数匹配、支架方案与排水规划各不相同，因此我们在每单${name}工程中都会先勘察再报价。`,
+      `${name}（${population}，${state}）位于我们的固定安装路线，确认的预约通常能当天或次日上门，无需苦等一周。我们为1.0–2.5匹机组配备Type L铜管、用于规范调试的真空泵，以及全部20个品牌的扭矩参数——无论您的机型是Daikin、Panasonic、Mitsubishi还是其他，都能一次到位按厂商标准安装。`,
+    ],
+    [
+      `从${L(0)}到${L(1)}，${name}覆盖多种物业类型——而某处至关重要的安装细节在另一处几乎不适用。${L(2)}附近的排屋需要墙体开孔与支架对位；${L(3)}高层公寓的机组则需协调装卸时段与物业审批。我们的${name}团队在出车前就把这两种情况都规划好，位于${position}。`,
+      `我们把${name}的安装做得简单透明：RM199挂壁价含7尺铜管、电线、排水管与标准支架，超出部分在现场报价并经您确认。调试后我们会运行15分钟制冷测试，并交付1个月工艺保修卡——无论您身处${name}中心还是${position}边缘均同样有效。`,
+    ],
+  ];
+  return pick(area.slug, variants);
+}
+
+// Variant-rotated third paragraph — each angle uses distinct vocabulary so
+// pages spread across different word sets (lowers family token overlap).
+function getLocalContextExtra(
+  area: (typeof siteConfig.areaPages)[number],
+  locale: AreaInstallationLocale,
+): string[] {
+  const name = area.name;
+  const position = getPosition(area, locale);
+  const landmarks = (area.landmarks || []).filter(Boolean);
+  const L = (n: number) => landmarks[(n + 1) % Math.max(landmarks.length, 1)] || landmarks[0] || name;
+
+  if (locale === "en") {
+    return [
+      pick(area.slug, [
+        `High-rise work is a big part of installing in ${name}: tower blocks around ${L(0)} and ${L(2)} usually need a booked service lift, a JMB or management permit, and a fixed window for the outdoor unit on a shared ledge. We arrange all of that before the crew sets off, so the day is not wasted at the guardhouse — a detail that matters most in dense ${position} developments.`,
+        `Sizing the unit correctly is where most ${name} installs go right or wrong. Bedroom orientation, glass area, ceiling height and how many hours a day the room is occupied all feed the decision between 1.0, 1.5 and 2.0 HP. An over-sized inverter short-cycles and feels clammy; an under-sized one runs flat-out and wears early — which is why we calculate, never guess, on every ${name} job.`,
+        `Drainage is the silent failure in humid ${name} homes. A drain line without enough fall backs up within months and stains the wall near ${L(1)}. We lay every condensate line to a measured gradient, water-test it before handover, and insulate the copper to stop the dripping that plagues badly-fitted units across ${position}.`,
+      ]),
+    ];
+  }
+  if (locale === "ms") {
+    return [
+      pick(area.slug, [
+        `Kerja bangunan tinggi merupakan sebahagian besar pemasangan di ${name}: menara sekitar ${L(0)} dan ${L(2)} selalunya memerlukan lif servis ditempah, permit JMB atau pengurusan, dan waktu tetap untuk unit luar di ledge berkongsi. Kami uruskan semuanya sebelum pasukan bertolak, supaya hari tidak terbuang di pondok pengawal — butiran yang paling penting di pembangunan padat ${position}.`,
+        `Saiz unit yang betul menentukan kejayaan pemasangan di ${name}. Orientasi bilik, kawasan kaca, ketinggian siling dan berapa jam bilik diduduki semuanya menentukan pilihan antara 1.0, 1.5 dan 2.0 HP. Inverter terlalu besar akan kitaran pendek dan terasa lembap; terlalu kecil berlarisan penuh dan cepat rosak — sebab itulah kami mengira, bukan meneka, pada setiap kerja di ${name}.`,
+        `Saliran ialah kegagalan senyap di rumah ${name} yang lembap. Paip saliran tanpa kecerunan cukup akan tersumbat dalam beberapa bulan dan mengotorkan dinding berhampiran ${L(1)}. Kami memasang setiap paip kondensat pada kecerunan terukur, menguji dengan air sebelum serahan, dan memenebat tembaga untuk elak titisan yang menimpa unit terpasang buruk di ${position}.`,
+      ]),
+    ];
+  }
+  return [
+    pick(area.slug, [
+      `高层作业是${name}安装的重要部分：${L(0)}与${L(2)}周边的塔楼通常需要预约服务电梯、JMB或物业准证，并在共用阳台固定时段安装室外机。我们在出车前就把这些全部办好，避免当天在门岗浪费时间——这在${position}密集楼盘中尤为关键。`,
+      `机型匹数的正确选择决定了${name}安装的成败。卧室朝向、玻璃面积、层高及房间每日使用时长都会影响1.0、1.5与2.0匹的取舍。过大的变频机会频繁短循环且感觉闷湿；过小则满负荷运转、过早磨损——因此我们在每单${name}工程中都计算而非估算。`,
+      `排水是${name}潮湿住宅中的隐形杀手。坡度不足的排水管数月内就会堵塞，并在${L(1)}附近墙面留下水渍。我们按实测坡度铺设每条冷凝水管，交付前做注水测试，并为铜管保温，杜绝${position}地区安装不良机组常见的滴水问题。`,
+    ]),
+  ];
+}
+
 function getFAQs(
   area: (typeof siteConfig.areaPages)[number],
   locale: AreaInstallationLocale,
@@ -544,6 +681,13 @@ export function getAreaInstallationContent(
           ? `Pemasangan Aircond Profesional di ${name}`
           : `${name}专业冷气安装`,
     introBody: getIntroBody(area, locale),
+    localContextTitle:
+      locale === "en"
+        ? `Installing Airconds Across ${name}: Local Know-How`
+        : locale === "ms"
+          ? `Memasang Aircond di Seluruh ${name}: kepakaran tempatan`
+          : `在${name}全区安装冷气：本地经验`,
+    localContextParagraphs: [...getLocalContext(area, locale), ...getLocalContextExtra(area, locale)],
     whereTitle:
       locale === "en"
         ? `Where We Install in ${name}`

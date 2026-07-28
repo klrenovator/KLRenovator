@@ -6,7 +6,7 @@ import NearMeClient from "./near-me-client";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
   description:
-    "Looking for aircond service near you? KL Renovator sends trained HVAC technicians across Kuala Lumpur & Selangor — same-day slots, transparent pricing, all brands. WhatsApp +60182983573.",
+    "Aircond service near you in KL & Selangor. Trained HVAC technicians, same-day slots, transparent pricing, all 20 brands. Chemical wash from RM 120. WhatsApp us.",
   alternates: buildTrilingualHreflang("/near-me"),
   openGraph: {
     title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),

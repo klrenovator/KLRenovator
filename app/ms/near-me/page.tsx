@@ -5,7 +5,7 @@ import NearMeClient from "@/app/near-me/near-me-client";
 export const metadata: Metadata = {
   title: clampMetaTitle("Servis Aircond Berdekatan — KL & Selangor | KL Renovator"),
   description:
-    "Mencari servis aircond berdekatan anda? KL Renovator menghantar juruteknik HVAC terlatih ke seluruh Kuala Lumpur & Selangor — slot hari sama, harga telus, semua jenama. WhatsApp +60182983573.",
+    "Servis aircond berdekatan anda di KL & Selangor. Juruteknik HVAC terlatih, slot hari sama, harga telus, semua 20 jenama. Cuci kimia dari RM 120. WhatsApp kami.",
   alternates: {
     canonical: "https://www.klrenovator.com/ms/near-me",
     languages: {

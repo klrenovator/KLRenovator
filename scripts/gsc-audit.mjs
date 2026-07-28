@@ -36,8 +36,14 @@ const routeOf = (f) => {
 // ── Parse every built page ───────────────────────────────────────────────
 const pages = new Map();
 for (const file of htmlFiles) {
-  const html = fs.readFileSync(file, "utf8");
   const route = routeOf(file);
+  // Skip Next.js internal/system routes (global-error, error, not-found, etc.).
+  // These are framework error boundaries — never indexed, never in the sitemap,
+  // and never have a canonical. Next 16 began prerendering _global-error.html,
+  // which otherwise trips no-canonical / not-in-sitemap checks here.
+  if (route.startsWith("/_")) continue;
+
+  const html = fs.readFileSync(file, "utf8");
 
   const canonical =
     (html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/) ||

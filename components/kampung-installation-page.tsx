@@ -228,6 +228,24 @@ export function KampungInstallationLandingPage({
         </div>
       </section>
 
+      {/* Local context — genuinely unique per-kampung installation know-how */}
+      <section className="py-20 sm:py-28 bg-slate-50">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className={eyebrow()}>{c.localContextTitle}</p>
+            <h2 className="mt-3 mb-6">
+              <span className={title({ size: "sm" })}>What Installation Here </span>
+              <span className={title({ size: "sm", color: "brand" })}>Actually Involves</span>
+            </h2>
+            <div className="space-y-5">
+              {c.localContextParagraphs.map((p, i) => (
+                <p key={i} className="text-slate-700 leading-relaxed text-lg">{p}</p>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Installation Types */}
       <section className="py-20 sm:py-28 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

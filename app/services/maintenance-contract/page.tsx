@@ -23,7 +23,7 @@ const amcWaLink = waLink(amcMsg);
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Maintenance Contract (AMC) KL & Selangor — Yearly Plans from RM 299 | KL Renovator"),
-  description: "Annual aircond maintenance contract in KL & Selangor. Save up to 30% vs one-off bookings. Quarterly servicing, priority scheduling, free emergency checks. From RM 299/year.",
+  description: "Annual aircond maintenance contract in KL & Selangor. Save 30% vs one-off. Quarterly servicing, priority scheduling, free checks. From RM 299/yr.",
   openGraph: {
     title: clampMetaTitle("Aircond Maintenance Contract (AMC) KL & Selangor | KL Renovator"),
     description: "Save up to 30% with annual aircond maintenance plans. Quarterly servicing, priority response, free diagnostics. From RM 299/year.",
