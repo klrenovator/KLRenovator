@@ -326,15 +326,14 @@ Ye fail karega agar:
 
 Local: `npm run build && npm run audit:gsc`
 
-> ⚠️ CI mein add karne ke liye ek manual step hai — GitHub App ke paas
-> `workflows` permission nahi hai, is liye `.github/workflows/ci.yml` push
-> reject ho gaya. Steps `ci/README.md` mein likh diye hain (neeche point 3).
+> ✅ **Update (ho chuka):** `audit:gsc` ab `.github/workflows/ci.yml` mein live
+> chal raha hai — har push/PR pe run hota hai. Manual step ki zaroorat nahi rahi.
 
 ---
 
-## ⚠️ Aapke Karne Ke Kaam
+## ✅ Aapke Karne Ke Kaam (Status)
 
-### 1. Deploy ke baad GSC mein sitemap resubmit karein
+### 1. Deploy ke baad GSC mein sitemap resubmit karein (✅ ho chuka)
 
 **Poore step-by-step direct links `GSC-RESUBMIT-GUIDE.md` mein hain.**
 
@@ -344,21 +343,7 @@ Inspection se "Request Indexing".
 > ⚠️ Merge + Vercel deploy **complete hone ke baad** karein, warna Google
 > purana version dekhega.
 
-### 2. CI mein audit step add karein (1 minute)
-
-GitHub App ke paas `workflows` permission nahi hai, is liye ye main push
-nahi kar saka. `.github/workflows/ci.yml` mein `Verify build output` ke
-turant baad ye add kar dein:
-
-```yaml
-      - name: Search Console audit
-        run: npm run audit:gsc
-```
-
-Poori detail `ci/README.md` mein hai. Iske bagair bhi sab fixes kaam kar
-rahe hain — ye sirf future regressions rokne ke liye hai.
-
-### 3. (Pehle wale audit se pending) Env vars
+### 2. Env vars (✅ ho chuka — Vercel pe set)
 
 Agar abhi tak set nahi kiye to Vercel → Settings → Environment Variables:
 ```bash
@@ -367,7 +352,7 @@ ADMIN_SESSION_SECRET=<openssl rand -hex 32>
 ```
 Inke bagair `/admin/bookings` pe login nahi hoga (jaan bujh ke fail-closed).
 
-### 4. Optional — 172 meta descriptions 160 chars se lambe
+### 3. Optional — 172 meta descriptions 160 chars se lambe
 
 Google inko truncate karega. Blocking nahi hai, click-through thoda
 affect hota hai. Bolen to `clampMetaDescription()` ka threshold tight
