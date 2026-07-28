@@ -33,3 +33,11 @@ export function calculateDurationMinutes(serviceType: string, aircondType: strin
   
   return minsPerUnit * quantity;
 }
+
+export function calculateTotalDurationMinutes(lineItems: { service_type: string; aircond_type: string; quantity: number }[]): number {
+  let totalMins = 0;
+  for (const item of lineItems) {
+    totalMins += calculateDurationMinutes(item.service_type, item.aircond_type, item.quantity);
+  }
+  return totalMins;
+}

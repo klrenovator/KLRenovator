@@ -272,13 +272,13 @@ export const Navbar = () => {
           // Logo box was h-48 (192px) inside an h-20 (80px) header — 2.4x
           // taller than its container, so it overflowed and relied on the
           // image's transparent padding to look right. Now sized to fit.
-          className="relative inline-block h-14 w-44 shrink-0 sm:h-16 sm:w-52 md:w-56"
+          className="relative inline-block h-16 w-52 shrink-0 sm:w-56 md:w-60"
         >
           <Image
             src="/logo/image.png"
             alt="KL Renovator Aircon Specialist Logo"
             fill
-            sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, 224px"
+            sizes="(max-width: 640px) 208px, (max-width: 768px) 224px, 240px"
             loading="eager"
             decoding="async"
             fetchPriority="high"

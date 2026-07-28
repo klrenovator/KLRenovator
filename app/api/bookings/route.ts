@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 import { createCalendarEvent, getBusySlots } from "@/lib/google-calendar";
-import { calculateDurationMinutes } from "@/lib/booking-config";
+import { calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { validateBooking } from "@/lib/booking-validation";
 import { hit, clientIp } from "@/lib/rate-limit";
 
@@ -48,11 +48,7 @@ export async function POST(req: Request) {
     const input = parsed.value;
 
     // ── 3. Duration ─────────────────────────────────────────────────────
-    const calculated_duration_minutes = calculateDurationMinutes(
-      input.service_type,
-      input.aircond_type,
-      input.quantity,
-    );
+    const calculated_duration_minutes = calculateTotalDurationMinutes(input.line_items);
 
     const start = new Date(input.start_time);
     // Calendar events are capped at one working day (480 min) so a large
@@ -62,9 +58,6 @@ export async function POST(req: Request) {
     const end = new Date(start.getTime() + eventDurationMinutes * 60000);
 
     // ── 4. Re-check availability SERVER-SIDE ────────────────────────────
-    // Previously availability was only checked by the browser before
-    // submitting, so two people loading the form at the same time could
-    // both book the same slot. Re-checking here closes that race.
     if (process.env.GOOGLE_CALENDAR_ID) {
       try {
         const busy = await getBusySlots(start, end);
@@ -105,6 +98,7 @@ export async function POST(req: Request) {
           end_time: end.toISOString(),
           source: input.source,
           calendar_event_id: null,
+          line_items: input.line_items,
         },
       ])
       .select()
@@ -123,14 +117,18 @@ export async function POST(req: Request) {
     // Runs after the DB write so a Calendar outage never costs us the lead.
     if (process.env.GOOGLE_CALENDAR_ID) {
       try {
+        const itemsDescription = input.line_items.map((item, idx) => {
+          const typeFormatted = item.service_type.replace(/_/g, " ").toUpperCase();
+          return `${idx + 1}. ${typeFormatted} - ${item.aircond_type} (${item.aircond_size}) x${item.quantity}`;
+        }).join("\n");
+
         const calendar_event_id = await createCalendarEvent({
-          summary: `${input.service_type.toUpperCase()} - ${input.customer_name}`,
+          summary: `${input.service_type.toUpperCase()} (${input.line_items.length} items) - ${input.customer_name}`,
           description: [
             `Phone: ${input.phone}`,
             `Address: ${input.address}`,
-            `Aircond Type: ${input.aircond_type}`,
-            `Size (HP): ${input.aircond_size}`,
-            `Quantity: ${input.quantity}`,
+            `Requested Services:`,
+            itemsDescription,
             `Source: ${input.source}`,
             `Total Est. Time: ${calculated_duration_minutes / 60} hours`,
           ].join("\n"),

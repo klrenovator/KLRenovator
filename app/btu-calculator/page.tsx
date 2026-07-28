@@ -4,14 +4,14 @@ import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("BTU Calculator | Find Your Perfect Aircond Size — KL Renovator"),
+  title: clampMetaTitle("Aircond Size Calculator Malaysia | BTU Calculator"),
   description:
-    "Free BTU calculator — find the exact HP aircond you need for your room. Get instant installation cost estimate. Same-day installation from RM 199.",
+    "Free aircond size calculator Malaysia. Calculate the exact BTU & HP you need for your room size. Find 'berapa HP aircond untuk bilik' instantly.",
   alternates: buildTrilingualHreflang("/btu-calculator"),
   openGraph: {
-    title: clampMetaTitle("BTU Calculator | Find Your Perfect Aircond Size — KL Renovator"),
+    title: clampMetaTitle("Aircond Size Calculator Malaysia | BTU Calculator"),
     description:
-      "Free BTU calculator for Malaysian homes. Input room size, get exact HP recommendation + installation cost. From RM 199, same-day available.",
+      "Free aircond size calculator Malaysia. Input room dimensions & find the exact aircond HP needed. Accurate BTU calculation & installation costs.",
     url: "https://www.klrenovator.com/btu-calculator",
     type: "website",
     locale: "en_MY",

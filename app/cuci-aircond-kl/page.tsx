@@ -8,7 +8,6 @@ import NextLink from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
-import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 
@@ -107,8 +106,6 @@ export default function Page() {
           <p>Daily KL issues we fix: <em>not cold</em>, <em>water leaking</em>, <em>musty smell</em>, <em>weak airflow</em>, <em>high TNB bill</em>. 60–75 min per unit, stays mounted, use immediately. Full coverage: <strong>KLCC, Bangsar, Mont Kiara, Damansara, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Ampang, Kajang, Kepong, Setapak, Gombak, Rawang</strong> — all Klang Valley. WhatsApp now — <strong>same-day</strong> slots.</p>
         </div>
       </section>
-
-      <TikTokShowcase locale="en" />
 
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

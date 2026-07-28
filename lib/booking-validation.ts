@@ -25,19 +25,29 @@ export const SERVICE_TYPES = [
 export const AIRCOND_TYPES = ["Wall Mounted", "Ceiling Cassette", "Window Unit", "Portable"] as const;
 
 export const MAX_QUANTITY = 30;
+export const MAX_LINE_ITEMS = 15;
 /** How far ahead a customer may self-book. */
 export const MAX_LEAD_DAYS = 180;
+
+export type BookingLineItem = {
+  service_type: string;
+  aircond_type: string;
+  aircond_size: string;
+  quantity: number;
+};
 
 export type BookingInput = {
   customer_name: string;
   phone: string;
   address: string;
+  line_items: BookingLineItem[];
+  start_time: string;
+  source: string;
+  // Fallbacks for older DB columns / queries
   service_type: string;
   aircond_type: string;
   aircond_size: string;
   quantity: number;
-  start_time: string;
-  source: string;
 };
 
 export type ValidationResult =
@@ -52,9 +62,9 @@ const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
  */
 export function normalisePhone(raw: string): string | null {
   const digits = raw.replace(/[\s()\-.]/g, "");
-  const m = /^(?:\+?60|0)(\d{8,10})$/.exec(digits);
+  const m = /^((?:\+?60|0))(\d{8,10})$/.exec(digits);
   if (!m) return null;
-  return `+60${m[1]}`;
+  return `+60${m[2]}`;
 }
 
 export function validateBooking(body: unknown): ValidationResult {
@@ -78,25 +88,83 @@ export function validateBooking(body: unknown): ValidationResult {
     return { ok: false, error: "Please enter a full address (10–500 characters)." };
   }
 
-  const service_type = str(b.service_type);
-  if (!(SERVICE_TYPES as readonly string[]).includes(service_type)) {
-    return { ok: false, error: "Unknown service type." };
+  let parsedLineItems: BookingLineItem[] = [];
+
+  // Parse multi-service line items if present, otherwise fallback to single fields
+  if (Array.isArray(b.line_items) && b.line_items.length > 0) {
+    if (b.line_items.length > MAX_LINE_ITEMS) {
+      return { ok: false, error: `Maximum ${MAX_LINE_ITEMS} different services can be booked at once.` };
+    }
+
+    let totalQty = 0;
+    for (const rawItem of b.line_items) {
+      if (typeof rawItem !== "object" || rawItem === null) {
+        return { ok: false, error: "Invalid item format." };
+      }
+      const item = rawItem as Record<string, unknown>;
+      const sType = str(item.service_type);
+      if (!(SERVICE_TYPES as readonly string[]).includes(sType)) {
+        return { ok: false, error: `Unknown service type: "${sType}".` };
+      }
+
+      const aType = str(item.aircond_type);
+      if (aType.length < 2 || aType.length > 60) {
+        return { ok: false, error: "Please select an aircond type for all items." };
+      }
+
+      const aSize = str(item.aircond_size);
+      if (aSize.length < 1 || aSize.length > 30) {
+        return { ok: false, error: "Please select an aircond size for all items." };
+      }
+
+      const qty = Number(item.quantity);
+      if (!Number.isInteger(qty) || qty < 1) {
+        return { ok: false, error: "Quantity for all items must be a whole number of at least 1." };
+      }
+
+      totalQty += qty;
+      parsedLineItems.push({
+        service_type: sType,
+        aircond_type: aType,
+        aircond_size: aSize,
+        quantity: qty,
+      });
+    }
+
+    if (totalQty > MAX_QUANTITY) {
+      return { ok: false, error: `Total units of airconds across all selected services cannot exceed ${MAX_QUANTITY}.` };
+    }
+  } else {
+    // Fallback to old format fields
+    const service_type = str(b.service_type);
+    if (!(SERVICE_TYPES as readonly string[]).includes(service_type)) {
+      return { ok: false, error: "Unknown service type." };
+    }
+
+    const aircond_type = str(b.aircond_type);
+    if (aircond_type.length < 2 || aircond_type.length > 60) {
+      return { ok: false, error: "Please select an aircond type." };
+    }
+
+    const aircond_size = str(b.aircond_size);
+    if (aircond_size.length < 1 || aircond_size.length > 30) {
+      return { ok: false, error: "Please select an aircond size." };
+    }
+
+    const quantity = Number(b.quantity);
+    if (!Number.isInteger(quantity) || quantity < 1 || quantity > MAX_QUANTITY) {
+      return { ok: false, error: `Quantity must be a whole number between 1 and ${MAX_QUANTITY}.` };
+    }
+
+    parsedLineItems.push({
+      service_type,
+      aircond_type,
+      aircond_size,
+      quantity,
+    });
   }
 
-  const aircond_type = str(b.aircond_type);
-  if (aircond_type.length < 2 || aircond_type.length > 60) {
-    return { ok: false, error: "Please select an aircond type." };
-  }
-
-  const aircond_size = str(b.aircond_size);
-  if (aircond_size.length < 1 || aircond_size.length > 30) {
-    return { ok: false, error: "Please select an aircond size." };
-  }
-
-  const quantity = Number(b.quantity);
-  if (!Number.isInteger(quantity) || quantity < 1 || quantity > MAX_QUANTITY) {
-    return { ok: false, error: `Quantity must be a whole number between 1 and ${MAX_QUANTITY}.` };
-  }
+  const firstItem = parsedLineItems[0];
 
   const startRaw = str(b.start_time);
   const start = new Date(startRaw);
@@ -138,12 +206,14 @@ export function validateBooking(body: unknown): ValidationResult {
       customer_name,
       phone,
       address,
-      service_type,
-      aircond_type,
-      aircond_size,
-      quantity,
+      line_items: parsedLineItems,
       start_time: start.toISOString(),
       source,
+      // Fallback details for database backwards compatibility
+      service_type: firstItem.service_type,
+      aircond_type: firstItem.aircond_type,
+      aircond_size: firstItem.aircond_size,
+      quantity: firstItem.quantity,
     },
   };
 }

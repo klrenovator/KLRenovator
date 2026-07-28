@@ -8,7 +8,6 @@ const DEDICATED_STATIC_SERVICE_SLUGS = new Set(["maintenance-contract"]);
 import { servicesData } from "@/config/services-data";
 import { serviceI18n } from "@/config/services-i18n";
 import { ServiceDetailI18n } from "@/components/service-detail-i18n";
-import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { buildServiceRouteAlternates } from "@/config/service-route-qa";
 
 export function generateStaticParams() {
@@ -65,7 +64,6 @@ export default async function ZhServicePage({
   return (
     <>
       <ServiceDetailI18n lang="zh" slug={slug} />
-      {slug === "chemical-wash" && <TikTokShowcase locale="zh" />}
     </>
   );
 }

@@ -9,7 +9,6 @@ import { GoogleReviews } from "@/components/sections/google-reviews";
 import { ReviewTrustWidget } from "@/components/review-trust-widget";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
-import { TikTokShowcase } from "@/components/sections/tiktok-showcase";
 import { siteConfig } from "@/config/site";
 import { InstagramFeed } from "@/components/sections/instagram-feed";
 import { PriceComparisonUI } from "@/components/price-comparison";
@@ -478,11 +477,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TikTok Vertical Video Showcase ── Round 13 / 20G.72 & 11.7 ──
-          Lazy facade pattern: zero TikTok JS loaded on initial page
-          render. Cards only inject the real iframe after the user
-          clicks play. Preserves LCP / TBT. 5 LOCKED user-provided URLs. */}
-      <TikTokShowcase locale="en" />
       <InstagramFeed locale="en" />
 
       <ReadyToBook />
