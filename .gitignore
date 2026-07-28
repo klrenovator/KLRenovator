@@ -34,9 +34,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Lockfiles for package managers this project does NOT use.
+# package-lock.json is intentionally NOT ignored — it is committed and is
+# what `npm ci` (CI + Vercel) relies on for reproducible installs.
 pnpm-lock.yaml
 yarn.lock
-package-lock.json
 bun.lockb
 
 # Original image backups (pre-optimization)
