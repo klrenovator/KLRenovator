@@ -39,6 +39,7 @@ export async function GET(req: Request) {
       
       // Check for overlap with busy slots
       const isOverlapping = busySlots.some((busy) => {
+        if (!busy.start || !busy.end) return false;
         const busyStart = new Date(busy.start).getTime();
         const busyEnd = new Date(busy.end).getTime();
         
