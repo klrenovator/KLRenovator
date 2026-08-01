@@ -157,7 +157,7 @@ export default async function AreaPageMS({
   };
 
   const otherMsAreas = siteConfig.areaPages
-    .filter((a: any) => a.slug !== slug && a.faqsBM?.length > 0)
+    .filter((a) => a.slug !== slug && a.faqsBM?.length > 0)
     .slice(0, 10);
   const areaBlogPosts = allPosts
     .filter((p) => (AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"] ?? []).includes(p.slug))
@@ -417,7 +417,7 @@ export default async function AreaPageMS({
               Soalan Lazim — Servis Aircond {area.name}
             </h2>
             <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-              {area.faqsBM.map((faq: any, i: number) => (
+              {area.faqsBM.map((faq: { q: string; a: string }, i: number) => (
                 <details key={i} className="group bg-white p-4">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
                     {faq?.q}
@@ -613,7 +613,7 @@ export default async function AreaPageMS({
                 Kawasan Lain Yang Kami Liputi
               </p>
               <div className="flex flex-wrap gap-2">
-                {otherMsAreas.map((a: any) => (
+                {otherMsAreas.map((a) => (
                   <NextLink
                     key={a.slug}
                     href={`/ms/areas/${a.slug}`}
