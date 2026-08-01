@@ -13,6 +13,9 @@ export async function GET(req: Request) {
     }
 
     const durationMinutes = parseInt(durationParam, 10);
+    if (!Number.isFinite(durationMinutes) || durationMinutes <= 0) {
+      return NextResponse.json({ error: "Invalid duration" }, { status: 400 });
+    }
     
     // Convert YYYY-MM-DD to Malaysia Timezone strictly (+08:00)
     const dateStr = dateParam.split("T")[0];
@@ -35,7 +38,7 @@ export async function GET(req: Request) {
       const slotEnd = new Date(currentSlot.getTime() + durationMinutes * 60000);
       
       // Check for overlap with busy slots
-      const isOverlapping = busySlots.some((busy: any) => {
+      const isOverlapping = busySlots.some((busy) => {
         const busyStart = new Date(busy.start).getTime();
         const busyEnd = new Date(busy.end).getTime();
         
