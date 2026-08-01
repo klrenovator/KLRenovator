@@ -135,6 +135,12 @@ export function brandAreaLocalNote(brand: Brand, area: Area, locale: BrandAreaLo
 }
 
 // ── Area-aware FAQ — replaces the identical block on every page ───────────
+// Previously a single fixed array: every one of the 360 brand×area pages
+// carried byte-identical Q&A text (only ${b}/${a} swapped). Since the
+// duplicate-content measure is Jaccard similarity over tokens (a set, not a
+// sequence), reordering questions does nothing — the actual wording has to
+// differ. Salted with "faq:" so the FAQ variant picked doesn't line up with
+// whichever intro/local-note variant the same (brand, area) pair got.
 export function brandAreaFaqs(
   brand: Brand,
   area: Area,
@@ -144,65 +150,183 @@ export function brandAreaFaqs(
   const a = area.name;
   const first = (area.landmarks || [])[0] || a;
   const state = localeState(area.state || "Selangor", locale);
+  const variant = pairVariant(`faq:${brand.slug}`, area.slug, 3);
 
   if (locale === "en") {
-    return [
-      {
-        q: `Do you service ${b} aircond in ${a} on the same day?`,
-        a: `Yes, for bookings confirmed before 11am we can usually reach ${a} the same day. Our dispatch route already covers ${first} and the surrounding neighbourhoods, so travel time is short. Same-day availability is confirmed on WhatsApp before you commit.`,
-      },
-      {
-        q: `How much does ${b} aircond service cost in ${a}?`,
-        a: `Basic servicing starts at RM 99, pressure chemical wash at RM 120, chemical overhaul at RM 220 and gas top-up at RM 120 — the same published rates across ${state}, with no travel surcharge for ${a}. The final figure is confirmed in writing on WhatsApp before the technician starts.`,
-      },
-      {
-        q: `Can you handle high-rise ${b} installations around ${first}?`,
-        a: `Yes. We regularly work in high-rise buildings in ${a}, including service-lift bookings, building management permits and safe outdoor-unit placement on service ledges. Let us know the building name when you message and we will handle the access paperwork.`,
-      },
-      {
-        q: `Do you carry genuine ${b} parts for jobs in ${a}?`,
-        a: `We stock common ${b} consumables — capacitors, sensors and standard fan motors — on the van. Model-specific PCBs and compressors are ordered against your unit's serial number and typically arrive within 2–5 working days, with the quote confirmed before we order anything.`,
-      },
+    const sets: { q: string; a: string }[][] = [
+      [
+        {
+          q: `Do you service ${b} aircond in ${a} on the same day?`,
+          a: `Yes, for bookings confirmed before 11am we can usually reach ${a} the same day. Our dispatch route already covers ${first} and the surrounding neighbourhoods, so travel time is short. Same-day availability is confirmed on WhatsApp before you commit.`,
+        },
+        {
+          q: `How much does ${b} aircond service cost in ${a}?`,
+          a: `Basic servicing starts at RM 99, pressure chemical wash at RM 120, chemical overhaul at RM 220 and gas top-up at RM 120 — the same published rates across ${state}, with no travel surcharge for ${a}. The final figure is confirmed in writing on WhatsApp before the technician starts.`,
+        },
+        {
+          q: `Can you handle high-rise ${b} installations around ${first}?`,
+          a: `Yes. We regularly work in high-rise buildings in ${a}, including service-lift bookings, building management permits and safe outdoor-unit placement on service ledges. Let us know the building name when you message and we will handle the access paperwork.`,
+        },
+        {
+          q: `Do you carry genuine ${b} parts for jobs in ${a}?`,
+          a: `We stock common ${b} consumables — capacitors, sensors and standard fan motors — on the van. Model-specific PCBs and compressors are ordered against your unit's serial number and typically arrive within 2–5 working days, with the quote confirmed before we order anything.`,
+        },
+      ],
+      [
+        {
+          q: `How fast can a ${b} technician reach ${a}?`,
+          a: `Most ${a} addresses get a same-day slot if you message us before 11am — our regular route already runs through ${first}, so we're not adding a special trip just for your booking. Anything later than that, we'll offer the next available slot on WhatsApp.`,
+        },
+        {
+          q: `What's the price list for ${b} servicing in ${a}?`,
+          a: `RM 99 for a basic service, RM 120 for a pressure chemical wash, RM 220 for a full chemical overhaul, and RM 120 to top up gas. These rates hold across all of ${state} — nobody in ${a} pays extra for location. You'll get the exact number in writing before we start work.`,
+        },
+        {
+          q: `We're in a high-rise near ${first} — can you still install a ${b} unit?`,
+          a: `Yes, that's routine for us in ${a}. We handle the service-lift booking, get the building management permit sorted, and mount the outdoor unit somewhere secure on the service ledge. Just tell us the building name up front so we can start the paperwork early.`,
+        },
+        {
+          q: `If a part breaks, do you have ${b} spares on hand in ${a}?`,
+          a: `Capacitors, sensors and standard fan motors — the parts that fail most — stay stocked on the van. Anything unit-specific like a PCB or compressor gets ordered against your serial number, usually landing in 2–5 working days. We confirm the cost before placing that order, not after.`,
+        },
+      ],
+      [
+        {
+          q: `Same-day ${b} service in ${a} — is that actually possible?`,
+          a: `Usually, yes. Confirm before 11am and we can generally fit ${a} into the same day's route, since ${first} and the neighbourhoods around it are already on our regular run. We'll tell you straight on WhatsApp if that day is full.`,
+        },
+        {
+          q: `${b} aircond servicing in ${a} — what does it cost?`,
+          a: `Basic service from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120. One rate card for the whole of ${state}, ${a} included — no hidden travel fee. You'll see the final price on WhatsApp before anyone touches the unit.`,
+        },
+        {
+          q: `Got a high-rise unit near ${first}? Can you install ${b} there?`,
+          a: `Yes — high-rise ${b} installs around ${a} are something we do often. That covers arranging the service-lift, sorting the building management permit, and finding a safe spot on the service ledge for the outdoor unit. Send us the building name and we'll get the access sorted.`,
+        },
+        {
+          q: `Do your ${b} vans in ${a} actually carry real parts?`,
+          a: `The common ones, yes — capacitors, sensors and standard fan motors ride in the van at all times. Model-specific PCBs and compressors get ordered once we have your unit's serial number, typically arriving within 2–5 working days, quote confirmed before we order.`,
+        },
+      ],
     ];
+    return sets[variant];
   }
 
   if (locale === "ms") {
-    return [
-      {
-        q: `Adakah anda menservis aircond ${b} di ${a} pada hari yang sama?`,
-        a: `Ya, untuk tempahan yang disahkan sebelum 11 pagi kami biasanya boleh sampai ke ${a} pada hari yang sama. Laluan penghantaran kami sudah meliputi ${first} dan kawasan sekitarnya.`,
-      },
-      {
-        q: `Berapa kos servis aircond ${b} di ${a}?`,
-        a: `Servis asas bermula RM 99, cuci kimia tekanan RM 120, overhaul kimia RM 220 dan tambah gas RM 120 — kadar yang sama di seluruh ${state}, tiada caj tambahan perjalanan untuk ${a}. Harga akhir disahkan secara bertulis melalui WhatsApp.`,
-      },
-      {
-        q: `Bolehkah anda mengendalikan pemasangan ${b} bangunan tinggi sekitar ${first}?`,
-        a: `Ya. Kami kerap bekerja di bangunan tinggi di ${a}, termasuk tempahan lif servis, permit pengurusan bangunan dan penempatan unit luar yang selamat di tebing servis.`,
-      },
-      {
-        q: `Adakah anda membawa alat ganti ${b} tulen untuk kerja di ${a}?`,
-        a: `Kami menyimpan barang guna habis ${b} biasa — kapasitor, sensor dan motor kipas standard — di dalam van. PCB dan kompressor khusus model ditempah mengikut nombor siri unit anda, biasanya tiba dalam 2–5 hari bekerja.`,
-      },
+    const sets: { q: string; a: string }[][] = [
+      [
+        {
+          q: `Adakah anda menservis aircond ${b} di ${a} pada hari yang sama?`,
+          a: `Ya, untuk tempahan yang disahkan sebelum 11 pagi kami biasanya boleh sampai ke ${a} pada hari yang sama. Laluan penghantaran kami sudah meliputi ${first} dan kawasan sekitarnya.`,
+        },
+        {
+          q: `Berapa kos servis aircond ${b} di ${a}?`,
+          a: `Servis asas bermula RM 99, cuci kimia tekanan RM 120, overhaul kimia RM 220 dan tambah gas RM 120 — kadar yang sama di seluruh ${state}, tiada caj tambahan perjalanan untuk ${a}. Harga akhir disahkan secara bertulis melalui WhatsApp.`,
+        },
+        {
+          q: `Bolehkah anda mengendalikan pemasangan ${b} bangunan tinggi sekitar ${first}?`,
+          a: `Ya. Kami kerap bekerja di bangunan tinggi di ${a}, termasuk tempahan lif servis, permit pengurusan bangunan dan penempatan unit luar yang selamat di tebing servis.`,
+        },
+        {
+          q: `Adakah anda membawa alat ganti ${b} tulen untuk kerja di ${a}?`,
+          a: `Kami menyimpan barang guna habis ${b} biasa — kapasitor, sensor dan motor kipas standard — di dalam van. PCB dan kompressor khusus model ditempah mengikut nombor siri unit anda, biasanya tiba dalam 2–5 hari bekerja.`,
+        },
+      ],
+      [
+        {
+          q: `Berapa cepat juruteknik ${b} boleh sampai ke ${a}?`,
+          a: `Kebanyakan alamat di ${a} boleh dapat slot hari yang sama jika anda mesej sebelum 11 pagi — laluan biasa kami sudah melalui ${first}. Selepas waktu itu, kami tawarkan slot seterusnya yang ada melalui WhatsApp.`,
+        },
+        {
+          q: `Apakah senarai harga servis ${b} di ${a}?`,
+          a: `RM 99 untuk servis asas, RM 120 untuk cuci kimia tekanan, RM 220 untuk overhaul kimia penuh, dan RM 120 untuk tambah gas. Kadar ini sama di seluruh ${state} — tiada sesiapa di ${a} bayar lebih atas sebab lokasi.`,
+        },
+        {
+          q: `Kami di bangunan tinggi berhampiran ${first} — bolehkah anda pasang unit ${b}?`,
+          a: `Ya, ini perkara biasa bagi kami di ${a}. Kami uruskan tempahan lif servis, dapatkan permit pengurusan bangunan, dan pasang unit luar di tempat yang selamat di tebing servis.`,
+        },
+        {
+          q: `Jika alat ganti rosak, adakah anda ada alat ganti ${b} di ${a}?`,
+          a: `Kapasitor, sensor dan motor kipas standard — bahagian yang paling kerap rosak — sentiasa ada dalam van. Bahagian khusus model seperti PCB atau kompresor ditempah mengikut nombor siri, biasanya tiba dalam 2–5 hari bekerja.`,
+        },
+      ],
+      [
+        {
+          q: `Servis ${b} hari sama di ${a} — realistikkah?`,
+          a: `Kebiasaannya ya. Sahkan sebelum 11 pagi dan kami biasanya boleh masukkan ${a} dalam laluan hari itu, memandangkan ${first} dan kawasan sekitarnya sudah dalam laluan biasa kami.`,
+        },
+        {
+          q: `Servis aircond ${b} di ${a} — berapa kosnya?`,
+          a: `Servis asas dari RM 99, cuci kimia tekanan dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120. Satu kad harga untuk seluruh ${state}, termasuk ${a} — tiada caj perjalanan tersembunyi.`,
+        },
+        {
+          q: `Ada unit bangunan tinggi berhampiran ${first}? Bolehkah anda pasang ${b}?`,
+          a: `Ya — pemasangan ${b} bangunan tinggi di sekitar ${a} adalah kerja yang kerap kami buat. Ini termasuk uruskan lif servis, permit pengurusan bangunan, dan cari tempat selamat di tebing servis untuk unit luar.`,
+        },
+        {
+          q: `Adakah van ${b} anda di ${a} benar-benar membawa alat ganti sebenar?`,
+          a: `Yang biasa, ya — kapasitor, sensor dan motor kipas standard sentiasa ada dalam van. PCB dan kompresor khusus model ditempah selepas kami dapat nombor siri unit anda, biasanya tiba dalam 2–5 hari bekerja.`,
+        },
+      ],
     ];
+    return sets[variant];
   }
 
-  return [
-    {
-      q: `你们在${a}提供${b}冷气的当天服务吗？`,
-      a: `可以。上午11点前确认的预约，我们通常能当天抵达${a}。我们的派工路线已覆盖${first}及周边社区，车程很短。当天时段会在WhatsApp上确认后才安排。`,
-    },
-    {
-      q: `在${a}做${b}冷气服务需要多少钱？`,
-      a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气RM 120起——${state}全区统一价，${a}不加收车马费。最终价格会在技师开工前通过WhatsApp书面确认。`,
-    },
-    {
-      q: `你们能处理${first}一带高层建筑的${b}安装吗？`,
-      a: `可以。我们经常在${a}的高层建筑作业，包括预约服务电梯、办理管理处施工准证，以及在服务台安全安装室外机。联系我们时请告知楼盘名称。`,
-    },
-    {
-      q: `在${a}施工时你们有${b}原厂配件吗？`,
-      a: `车上常备${b}通用耗材——电容、传感器和标准风扇马达。特定型号的主板和压缩机需根据机器序列号订购，通常2至5个工作日到货，订货前会先确认报价。`,
-    },
+  const sets: { q: string; a: string }[][] = [
+    [
+      {
+        q: `你们在${a}提供${b}冷气的当天服务吗？`,
+        a: `可以。上午11点前确认的预约，我们通常能当天抵达${a}。我们的派工路线已覆盖${first}及周边社区，车程很短。当天时段会在WhatsApp上确认后才安排。`,
+      },
+      {
+        q: `在${a}做${b}冷气服务需要多少钱？`,
+        a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气RM 120起——${state}全区统一价，${a}不加收车马费。最终价格会在技师开工前通过WhatsApp书面确认。`,
+      },
+      {
+        q: `你们能处理${first}一带高层建筑的${b}安装吗？`,
+        a: `可以。我们经常在${a}的高层建筑作业，包括预约服务电梯、办理管理处施工准证，以及在服务台安全安装室外机。联系我们时请告知楼盘名称。`,
+      },
+      {
+        q: `在${a}施工时你们有${b}原厂配件吗？`,
+        a: `车上常备${b}通用耗材——电容、传感器和标准风扇马达。特定型号的主板和压缩机需根据机器序列号订购，通常2至5个工作日到货，订货前会先确认报价。`,
+      },
+    ],
+    [
+      {
+        q: `${b}技师最快多久能到${a}？`,
+        a: `上午11点前留言，${a}大部分地址都能安排当天上门——我们的常规路线本来就经过${first}。超过这个时间，我们会在WhatsApp上给出下一个可用时段。`,
+      },
+      {
+        q: `${a}的${b}保养价目表是怎样的？`,
+        a: `基本保养RM 99，压力化学清洗RM 120，全面化学大修RM 220，充气RM 120。这个价格适用于整个${state}，${a}也不例外，不会因地点加价。开工前会以文字确认最终金额。`,
+      },
+      {
+        q: `我们住在${first}附近的高层楼盘，还能安装${b}机吗？`,
+        a: `可以，这在${a}是家常便饭。我们会处理服务电梯预约、办理管理处施工准证，并在服务台找到安全位置安装室外机。提前告知楼盘名称，我们就能尽早准备文件。`,
+      },
+      {
+        q: `${a}的${b}维修车上真的有备件吗？`,
+        a: `常用件——电容、传感器、标准风扇马达——车上一直有备货。特定型号的主板或压缩机会在拿到机器序列号后才订购，一般2至5个工作日到货，订购前先确认报价。`,
+      },
+    ],
+    [
+      {
+        q: `${a}的${b}当天服务，真的能做到吗？`,
+        a: `一般可以。上午11点前确认，我们通常能把${a}排进当天路线，因为${first}及周边一直在我们的常规派工范围内。若当天已满，我们会在WhatsApp上如实告知。`,
+      },
+      {
+        q: `${b}冷气服务在${a}怎么收费？`,
+        a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气RM 120起。整个${state}统一价格，${a}也一样，没有隐藏车马费。开工前会在WhatsApp上确认最终价格。`,
+      },
+      {
+        q: `${first}附近有高层机组，你们能安装${b}吗？`,
+        a: `可以——${a}一带的高层${b}安装我们做得不少，包括安排服务电梯、办理管理处准证，以及在服务台找到安全位置安装室外机。把楼盘名称发给我们，方便提前安排。`,
+      },
+      {
+        q: `${a}的${b}服务车上是不是真的有配件？`,
+        a: `常见的有——电容、传感器和标准风扇马达一直备在车上。特定型号的主板和压缩机需要序列号才能订购，一般2至5个工作日到货，订购前先确认报价。`,
+      },
+    ],
   ];
+  return sets[variant];
 }
