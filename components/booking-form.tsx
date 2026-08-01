@@ -7,6 +7,19 @@ import { trackBookingSubmit } from "@/lib/analytics";
 import { sitePublic } from "@/config/site-public";
 import { FaWhatsapp } from "react-icons/fa6";
 
+// Multi-service line item shape. `quantity` is intentionally `number | ""`:
+// while the customer is retyping the value (e.g. clearing "1" to type "4")
+// the input is momentarily empty. Coercing that back to 1 on every
+// keystroke made the field fight the user, so an empty string is allowed
+// in state and normalised via `resolveQuantity` wherever a real number is
+// needed (duration maths, submission, messaging).
+type LineItem = {
+  service_type: string;
+  aircond_type: string;
+  aircond_size: string;
+  quantity: number | "";
+};
+
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────
 const FORM_TXT = {
   en: {
@@ -183,18 +196,8 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   
-  // Multi-service line items state.
-  // `quantity` is intentionally `number | ""`: while the customer is retyping
-  // the value (e.g. clearing "1" to type "4") the input is momentarily empty.
-  // Coercing that back to 1 on every keystroke made the field fight the user,
-  // so an empty string is allowed in state and normalised via `resolveQuantity`
-  // wherever a real number is needed (duration maths, submission, messaging).
-  const [lineItems, setLineItems] = useState<Array<{
-    service_type: string;
-    aircond_type: string;
-    aircond_size: string;
-    quantity: number | "";
-  }>>([
+  // Multi-service line items state — see LineItem type above for field notes.
+  const [lineItems, setLineItems] = useState<LineItem[]>([
     { service_type: "service", aircond_type: "Wall Mounted", aircond_size: "1.0 HP", quantity: 1 }
   ]);
 
@@ -258,7 +261,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
     setSelectedSlot("");
   };
 
-  const updateLineItem = (index: number, key: string, value: any) => {
+  const updateLineItem = <K extends keyof LineItem>(index: number, key: K, value: LineItem[K]) => {
     const updated = lineItems.map((item, i) => {
       if (i === index) {
         return { ...item, [key]: value };
