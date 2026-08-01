@@ -143,7 +143,7 @@ export default async function AreaPageZH({
   };
 
   const otherZhAreas = siteConfig.areaPages
-    .filter((a: any) => a.slug !== slug && a.faqsZH?.length > 0)
+    .filter((a) => a.slug !== slug && a.faqsZH?.length > 0)
     .slice(0, 10);
   const areaBlogPosts = allPosts
     .filter((p) => (AREA_BLOG_MAP[slug] ?? AREA_BLOG_MAP["_default"] ?? []).includes(p.slug))
@@ -403,7 +403,7 @@ export default async function AreaPageZH({
               常见问题 — {area.name} 冷气服务
             </h2>
             <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
-              {area.faqsZH.map((faq: any, i: number) => (
+              {area.faqsZH.map((faq: { q: string; a: string }, i: number) => (
                 <details key={i} className="group bg-white p-4">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
                     {faq?.q}
@@ -599,7 +599,7 @@ export default async function AreaPageZH({
                 我们服务的其他区域
               </p>
               <div className="flex flex-wrap gap-2">
-                {otherZhAreas.map((a: any) => (
+                {otherZhAreas.map((a) => (
                   <NextLink
                     key={a.slug}
                     href={`/zh/areas/${a.slug}`}
