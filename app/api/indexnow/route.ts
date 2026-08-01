@@ -66,7 +66,10 @@ export async function GET(req: Request) {
     } else {
       return NextResponse.json({ success: false, error: await response.text() });
     }
-  } catch (error: any) {
-    return NextResponse.json({ error: "Failed to send IndexNow ping", details: error.message }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to send IndexNow ping", details: error instanceof Error ? error.message : String(error) },
+      { status: 500 },
+    );
   }
 }
