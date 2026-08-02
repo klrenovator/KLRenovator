@@ -124,6 +124,15 @@ const REQUIRED = [
   "/btu-calculator",
   "/book",
   "/privacy-policy",
+  // Interactive tools & calculators (2026-08)
+  "/tools",
+  "/aircond-installation-cost-calculator",
+  "/aircond-gas-topup-cost-calculator",
+  "/which-aircond-service-do-i-need",
+  "/aircond-size-calculator",
+  "/aircond-electricity-cost-calculator",
+  "/aircond-savings-calculator",
+  "/aircond-assistant",
 ];
 const builtSet = new Set(htmlFiles.map(routeOf));
 for (const route of REQUIRED) {

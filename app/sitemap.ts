@@ -115,6 +115,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
     { url: `${BASE}/ms/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
     { url: `${BASE}/zh/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
+    // ── 2026-08: Interactive tools & smart calculators (EN-only tools) ──
+    { url: `${BASE}/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildCanonicalOnly("/tools") },
+    { url: `${BASE}/aircond-installation-cost-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildCanonicalOnly("/aircond-installation-cost-calculator") },
+    { url: `${BASE}/aircond-gas-topup-cost-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildCanonicalOnly("/aircond-gas-topup-cost-calculator") },
+    { url: `${BASE}/which-aircond-service-do-i-need`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildCanonicalOnly("/which-aircond-service-do-i-need") },
+    { url: `${BASE}/aircond-size-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildCanonicalOnly("/aircond-size-calculator") },
+    { url: `${BASE}/aircond-electricity-cost-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildCanonicalOnly("/aircond-electricity-cost-calculator") },
+    { url: `${BASE}/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildCanonicalOnly("/aircond-savings-calculator") },
+    { url: `${BASE}/aircond-assistant`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildCanonicalOnly("/aircond-assistant") },
   ];
 
   // ── Emergency Service Page — trilingual canonical entries ───────────

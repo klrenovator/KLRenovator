@@ -9,6 +9,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationCROModule } from "@/components/installation-cro-module";
+import { ToolLinks } from "@/components/calculators/tool-links";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 import { InstallationProof } from "@/components/installation-proof";
 
@@ -454,6 +455,13 @@ export default function AircondInstallationKLPage() {
             </div>
             <p className="mt-6 text-slate-500 text-sm">We serve all KL & Selangor areas — Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya & more.</p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Free calculator tools — internal linking */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks />
         </div>
       </section>
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Services & Price List KL Selangor | KL Renovator"),
@@ -35,6 +36,12 @@ export default function ServicesLayout({ children }: { children: React.ReactNode
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
+      {/* Free calculator tools — internal linking on every service page */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks />
+        </div>
+      </section>
     </>
   );
 }

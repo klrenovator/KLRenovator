@@ -28,6 +28,28 @@ Replace the `googleReviews` array with your real reviews.
 File: `config/site.ts` → `siteConfig.pricing.*`
 Or: `config/services-data.ts` → `priceTable` for detailed service pages.
 
+After changing any price in `site.ts`, run `npm run gen:site-public` — every
+calculator and the AI assistant reads prices from `config/site-public.ts`
+(which is generated from `site.ts`), so they stay in sync automatically.
+
+## 🧮 Calculators & AI assistant (shared logic)
+- `lib/aircond-math.ts` — ALL calculation logic + non-published assumptions
+  (wattage per HP, typical gas PSI, inverter savings %, drain pipe estimate
+  rate). Every calculator and the AI assistant import from here.
+- `config/tools.ts` — registry of tool URLs (used by the `/tools` hub,
+  footer, navbar, and every `ToolLinks` strip). Add a tool here and it
+  appears everywhere.
+- `components/calculators/` — shared calculator UI + page layout + link strips.
+- `lib/aircond-assistant.ts` — AI assistant engine (knowledge base + intent
+  matching). It reads prices live from `sitePublic.pricing`.
+- `app/aircond-assistant/page.tsx` — AI assistant page.
+
+## 📚 Tool pages (SEO content)
+Each calculator page (`app/aircond-*-calculator/page.tsx`, `/tools`,
+`/which-aircond-service-do-i-need`, `/aircond-assistant`) is content in
+`ToolPageLayout` props: FAQs, how-it-works steps, factors, intro. The layout
+generates the WebApplication / FAQPage / HowTo / Breadcrumb JSON-LD automatically.
+
 ## 📞 Contact & brand info
 File: `config/site.ts`
 - `phone`, `phoneDisplay`, `whatsapp`, `email`, `address`, `hours`

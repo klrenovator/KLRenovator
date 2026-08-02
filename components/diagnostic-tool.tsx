@@ -56,6 +56,10 @@ const STEPS: Record<string, DiagnosticStep> = {
         next: "smell",
       },
       {
+        label: { en: "😮💨 Weak airflow / dusty air", ms: "Aliran udara lemah / udara berhabuk", zh: "风量弱 / 空气有灰尘" },
+        next: "weak-airflow",
+      },
+      {
         label: { en: "🔴 Not turning on at all", ms: "Langsung tidak hidup", zh: "完全无法开机" },
         next: "not-on",
       },
@@ -132,6 +136,53 @@ const STEPS: Record<string, DiagnosticStep> = {
           serviceSlug: "chemical-wash",
           serviceName: "Pressure Chemical Wash",
           problemSlug: "aircond-not-cold",
+        },
+      },
+    ],
+  },
+
+  "weak-airflow": {
+    id: "weak-airflow",
+    question: {
+      en: "When was the last chemical wash / deep service?",
+      ms: "Bilakah kali terakhir cuci kimia / servis menyeluruh?",
+      zh: "上次化学清洗/深度保养是什么时候？",
+    },
+    options: [
+      {
+        label: { en: "More than 12 months ago / never", ms: "Lebih 12 bulan lalu / tidak pernah", zh: "超过12个月/从未做过" },
+        result: {
+          title: { en: "Dust & Biofilm Blocking the Blower Wheel", ms: "Habuk & Biofilem Menyekat Roda Blower", zh: "灰尘和生物膜堵塞风轮" },
+          cause: { en: "Weak airflow with a clean filter usually means the blower wheel and evaporator coil are coated with dust and biofilm. This reduces airflow volume and cooling efficiency by up to 40%.", ms: "Aliran udara lemah dengan penapis bersih biasanya bermakna roda blower dan gegelung evaporator disaluti habuk dan biofilem.", zh: "滤网干净但风量弱通常意味着风轮和蒸发器盘管被灰尘和生物膜覆盖，风量和制冷效率下降高达40%。" },
+          solution: { en: "A pressure chemical wash (from RM 120) cleans the blower wheel and coil in place and restores strong airflow. Recommended every 12 months — or every 6–8 months if the unit runs 8+ hours a day.", ms: "Cuci kimia bertekanan (dari RM 120) membersihkan roda blower dan gegelung serta memulihkan aliran udara yang kuat. Disyorkan setiap 12 bulan.", zh: "压力化学清洗（从RM 120起）可清洁风轮和盘管并恢复强劲风量。建议每12个月一次——每天运行8小时以上则每6–8个月一次。" },
+          urgency: "medium",
+          serviceSlug: "chemical-wash",
+          serviceName: "Pressure Chemical Wash",
+          problemSlug: "aircond-weak-airflow",
+        },
+      },
+      {
+        label: { en: "Within the last 6–12 months", ms: "Dalam 6–12 bulan terakhir", zh: "最近6–12个月内" },
+        result: {
+          title: { en: "Filter or Routine Maintenance Needed", ms: "Penapis atau Penyelenggaraan Rutin Diperlukan", zh: "需要清洗滤网或进行例行保养" },
+          cause: { en: "If the unit was chemically washed within the last year, weak airflow is most likely just a clogged filter or accumulated dust on the intake grille — a quick routine issue.", ms: "Jika unit telah dicuci kimia dalam tahun terakhir, aliran udara lemah kemungkinan besar hanya penapis tersumbat atau habuk pada gril masuk.", zh: "如果机器在一年内做过化学清洗，风量弱很可能只是滤网堵塞或进风口积尘——属于常规小问题。" },
+          solution: { en: "Clean the air filter yourself first (remove, vacuum or rinse, dry, reinstall). If airflow stays weak, book a basic service (RM 99) — the technician will clean the filters, check the blower and do a multi-point diagnostic.", ms: "Cuci penapis udara dahulu (tanggalkan, vakum atau bilas, keringkan, pasang semula). Jika aliran udara masih lemah, tempah servis asas (RM 99).", zh: "先自行清洗空气滤网（取下、吸尘或冲洗、晾干、装回）。如果风量仍然弱，预约基本保养（RM 99）。" },
+          urgency: "low",
+          serviceSlug: "basic-servicing",
+          serviceName: "Basic Servicing / Routine Maintenance",
+          problemSlug: "aircond-weak-airflow",
+        },
+      },
+      {
+        label: { en: "Not sure / just moved in", ms: "Tidak pasti / baru pindah", zh: "不确定/刚搬进来" },
+        result: {
+          title: { en: "Inspection Recommended", ms: "Pemeriksaan Disyorkan", zh: "建议进行检测" },
+          cause: { en: "If you don't know the unit's service history, weak airflow could be a simple filter issue or a deep internal buildup — an inspection gives you a clear answer before spending on services.", ms: "Jika anda tidak tahu sejarah servis unit, aliran udara lemah mungkin isu penapis mudah atau pengumpulan dalaman — pemeriksaan memberi jawapan yang jelas.", zh: "如果不了解机器的保养历史，风量弱可能是简单的滤网问题或内部积垢——先检测再决定，避免花冤枉钱。" },
+          solution: { en: "Book an inspection with KL Renovator. The technician checks the filter, blower wheel, coil condition and drain line, then gives you a transparent recommendation and quote — basic service RM 99, chemical wash from RM 120.", ms: "Tempah pemeriksaan dengan KL Renovator. Juruteknik memeriksa penapis, roda blower, keadaan gegelung dan saliran, kemudian memberi cadangan telus.", zh: "预约KL Renovator检测。技术员检查滤网、风轮、盘管状况和排水管，然后给出透明的建议和报价——基本保养RM 99，化学清洗从RM 120起。" },
+          urgency: "low",
+          serviceSlug: "basic-servicing",
+          serviceName: "Inspection & Maintenance Check",
+          problemSlug: "aircond-weak-airflow",
         },
       },
     ],

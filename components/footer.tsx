@@ -128,6 +128,20 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Free Calculators (EN-only tools — never localized) */}
+          <div className="pt-2 border-t border-slate-100">
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Free Calculators &amp; AI</p>
+            <ul className="space-y-1.5">
+              <li><NextLink href="/aircond-installation-cost-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Cost Calculator</NextLink></li>
+              <li><NextLink href="/aircond-gas-topup-cost-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Gas Top-up Cost Estimator</NextLink></li>
+              <li><NextLink href="/aircond-size-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Size Calculator</NextLink></li>
+              <li><NextLink href="/aircond-electricity-cost-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Electricity Cost Calculator</NextLink></li>
+              <li><NextLink href="/aircond-savings-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Inverter Savings Calculator</NextLink></li>
+              <li><NextLink href="/which-aircond-service-do-i-need" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Which Service Do I Need?</NextLink></li>
+              <li><NextLink href="/aircond-assistant" className="text-xs font-black text-violet-600 hover:text-violet-800 transition-colors">🤖 AI Aircond Expert Assistant</NextLink></li>
+            </ul>
+          </div>
+
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.blog}</p>
             <NextLink href={localizedPath("/blog")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.blog} →</NextLink>

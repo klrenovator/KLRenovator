@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Size Calculator Malaysia | BTU Calculator"),
@@ -20,5 +21,14 @@ export const metadata: Metadata = {
 };
 
 export default function BtuCalculatorPage() {
-  return <BtuCalculator lang="en" />;
+  return (
+    <>
+      <BtuCalculator lang="en" />
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks />
+        </div>
+      </section>
+    </>
+  );
 }
