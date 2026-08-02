@@ -174,6 +174,59 @@ export default function PemasanganAircondKLPage() {
         </div>
       </section>
 
+      {/* Pricing Transparency Table */}
+      <section className="py-20 sm:py-28 bg-slate-50" id="pricing">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <p className={eyebrow()}>Harga Pemasangan Telus</p>
+              <h2 className="mt-3"><span className={title({ size: "sm" })}>Tiada Caj Tersembunyi — </span><span className={title({ size: "sm", color: "brand" })}>Harga Disahkan Sebelum Kami Borong</span></h2>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
+              <div className="min-w-[900px]">
+                <PricingRow type="Jenis" hp="HP" price="Buruh" pipe="Paip Tembaga" bracket="Braket" wire="Wayar" drain="Paip Saliran" isHeader />
+                {PRICING_TABLE.map((row) => (
+                  <PricingRow key={`${row.type}-${row.hp}`} {...row} />
+                ))}
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
+              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> Apa Yang Termasuk Dalam Harga Buruh</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Survei tapak & sebut harga (percuma)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki paip tembaga (cecair + gas)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki wayar elektrik</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki paip PVC saliran</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket standard luar</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Komisen vacuum pump</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Pelucahan refrigeran & ujian</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Kad waranti kerja 1 bulan</li>
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
+              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Caj Tambahan (Hanya Jika Perlu)</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Paip tembaga melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar elektrik melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Casing PVC/penyembunyian: RM 6–12/kaki</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran standard: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran heavy-duty: RM 70</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Soket elektrik baharu: RM 100</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Borong dinding/penyembunyian: RM 6/kaki</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Akses kondo tinggi/sukar: RM 50–150</li>
+              </ul>
+              <p className="mt-4 text-xs text-amber-600">Semua tambahan dikutip & diluluskan di tapak SEBELUM kerja bermula. Tiada kejutan.</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Why Choose KL Renovator for Installation */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -274,59 +327,6 @@ export default function PemasanganAircondKLPage() {
               </div>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* Pricing Transparency Table */}
-      <section className="py-20 sm:py-28 bg-slate-50" id="pricing">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-10">
-              <p className={eyebrow()}>Harga Pemasangan Telus</p>
-              <h2 className="mt-3"><span className={title({ size: "sm" })}>Tiada Caj Tersembunyi — </span><span className={title({ size: "sm", color: "brand" })}>Harga Disahkan Sebelum Kami Borong</span></h2>
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
-              <div className="min-w-[900px]">
-                <PricingRow type="Jenis" hp="HP" price="Buruh" pipe="Paip Tembaga" bracket="Braket" wire="Wayar" drain="Paip Saliran" isHeader />
-                {PRICING_TABLE.map((row) => (
-                  <PricingRow key={`${row.type}-${row.hp}`} {...row} />
-                ))}
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
-              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> Apa Yang Termasuk Dalam Harga Buruh</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Survei tapak & sebut harga (percuma)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki paip tembaga (cecair + gas)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki wayar elektrik</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki paip PVC saliran</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket standard luar</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Komisen vacuum pump</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Pelucahan refrigeran & ujian</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Kad waranti kerja 1 bulan</li>
-              </ul>
-            </div>
-          </Reveal>
-          <Reveal delay={300}>
-            <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
-              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Caj Tambahan (Hanya Jika Perlu)</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Paip tembaga melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar elektrik melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Casing PVC/penyembunyian: RM 6–12/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran standard: RM 45</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran heavy-duty: RM 70</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Soket elektrik baharu: RM 100</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Borong dinding/penyembunyian: RM 6/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Akses kondo tinggi/sukar: RM 50–150</li>
-              </ul>
-              <p className="mt-4 text-xs text-amber-600">Semua tambahan dikutip & diluluskan di tapak SEBELUM kerja bermula. Tiada kejutan.</p>
-            </div>
-          </Reveal>
         </div>
       </section>
 

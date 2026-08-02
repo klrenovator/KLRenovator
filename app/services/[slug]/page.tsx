@@ -497,6 +497,110 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* Pricing */}
+      <section id="service-pricing" className="py-14 sm:py-16 bg-slate-50">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center">
+              <p className={eyebrow()}>Pricing · Harga · 收费</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>Transparent </span>
+                <span className={title({ size: "sm", color: "brand" })}>pricing.</span>
+              </h2>
+              <p className="mt-2 text-xs text-slate-500">
+                {t("pricingNote", "en")}
+              </p>
+              <p className="text-xs text-slate-400 mt-0.5">
+                {t("pricingNote", "ms")} · {t("pricingNote", "zh")}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="mt-8 border border-slate-200 bg-white">
+              <ul className="divide-y divide-slate-200">
+                {data.priceTable.map((p: { label: string; price: string }) => (
+                  <li key={p.label} className="flex items-center justify-between gap-3 px-5 py-4">
+                    <span className="text-sm text-slate-700">{p.label}</span>
+                    <span className="text-base font-bold text-sky-600 whitespace-nowrap">{p.price}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+          {data.priceTableNote && (
+            <Reveal>
+              <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                <p className="text-xs text-emerald-800 leading-relaxed">
+                  <span className="font-black">✓ Included free: </span>
+                  {data.priceTableNote}
+                </p>
+                <NextLink
+                  href="/services#materials"
+                  className="inline-flex items-center gap-1 mt-2 text-xs font-black text-sky-600 hover:text-sky-800 transition-colors"
+                >
+                  View Full Materials Pricing & Special Charges →
+                </NextLink>
+              </div>
+            </Reveal>
+          )}
+
+          <Reveal>
+            <div className="mt-6 rounded-2xl bg-slate-900 p-5 text-white shadow-lg">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-sky-300">Multi-Unit Bundle Savings</p>
+                  <h3 className="mt-1 text-lg font-black uppercase tracking-tight">Book more units in one visit and pay less</h3>
+                  <p className="mt-2 max-w-2xl text-sm text-slate-300">
+                    Perfect for condominiums, terrace houses, offices and shoplots with multiple aircond units. Discounts apply to eligible labour/service charges and are confirmed before work starts.
+                  </p>
+                </div>
+                <NextLink
+                  href="/services#materials"
+                  className="inline-flex shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-xs font-black uppercase tracking-wider text-white transition hover:bg-white/20"
+                >
+                  View all pricing →
+                </NextLink>
+              </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {siteConfig.volumeDiscounts.map((discount) => (
+                  <div key={discount.units} className="rounded-xl border border-white/15 bg-white/10 p-4 text-center">
+                    <p className="text-2xl font-black text-white">{discount.units}</p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-wider text-sky-200">{discount.off}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Inline Materials Pricing — shown directly on installation & dismantling pages */}
+          {(slug === "installation" || slug === "dismantling-relocation" || slug === "ceiling-cassette") && (
+            <Reveal>
+              <div className="mt-10">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
+                  Materials Pricing
+                </p>
+                <h3 className="text-base font-black text-slate-900 mb-4">
+                  Additional Materials & Special Charges
+                </h3>
+                <div className="border border-slate-200 bg-white">
+                  <ul className="divide-y divide-slate-200">
+                    {siteConfig.pricing.materials.rows.map((row: { label: string; price: string }) => (
+                      <li key={row.label} className="flex items-center justify-between gap-3 px-5 py-3.5">
+                        <span className="text-sm text-slate-700">{row.label}</span>
+                        <span className="text-sm font-bold text-sky-600 whitespace-nowrap">{row.price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="text-xs text-slate-400 mt-3">
+                  All material costs are quoted and confirmed with you before work begins. No surprises.
+                </p>
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </section>
+
       {/* ── Expert Review / AEO Direct Answer ─────────────────────────── */}
       <section className="bg-white py-8 border-b border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -934,110 +1038,6 @@ export default async function ServicePage({
           </div>
         </section>
       )}
-
-      {/* Pricing */}
-      <section id="service-pricing" className="py-14 sm:py-16 bg-slate-50">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center">
-              <p className={eyebrow()}>Pricing · Harga · 收费</p>
-              <h2 className="mt-3">
-                <span className={title({ size: "sm" })}>Transparent </span>
-                <span className={title({ size: "sm", color: "brand" })}>pricing.</span>
-              </h2>
-              <p className="mt-2 text-xs text-slate-500">
-                {t("pricingNote", "en")}
-              </p>
-              <p className="text-xs text-slate-400 mt-0.5">
-                {t("pricingNote", "ms")} · {t("pricingNote", "zh")}
-              </p>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="mt-8 border border-slate-200 bg-white">
-              <ul className="divide-y divide-slate-200">
-                {data.priceTable.map((p: { label: string; price: string }) => (
-                  <li key={p.label} className="flex items-center justify-between gap-3 px-5 py-4">
-                    <span className="text-sm text-slate-700">{p.label}</span>
-                    <span className="text-base font-bold text-sky-600 whitespace-nowrap">{p.price}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-          {data.priceTableNote && (
-            <Reveal>
-              <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-                <p className="text-xs text-emerald-800 leading-relaxed">
-                  <span className="font-black">✓ Included free: </span>
-                  {data.priceTableNote}
-                </p>
-                <NextLink
-                  href="/services#materials"
-                  className="inline-flex items-center gap-1 mt-2 text-xs font-black text-sky-600 hover:text-sky-800 transition-colors"
-                >
-                  View Full Materials Pricing & Special Charges →
-                </NextLink>
-              </div>
-            </Reveal>
-          )}
-
-          <Reveal>
-            <div className="mt-6 rounded-2xl bg-slate-900 p-5 text-white shadow-lg">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-sky-300">Multi-Unit Bundle Savings</p>
-                  <h3 className="mt-1 text-lg font-black uppercase tracking-tight">Book more units in one visit and pay less</h3>
-                  <p className="mt-2 max-w-2xl text-sm text-slate-300">
-                    Perfect for condominiums, terrace houses, offices and shoplots with multiple aircond units. Discounts apply to eligible labour/service charges and are confirmed before work starts.
-                  </p>
-                </div>
-                <NextLink
-                  href="/services#materials"
-                  className="inline-flex shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-xs font-black uppercase tracking-wider text-white transition hover:bg-white/20"
-                >
-                  View all pricing →
-                </NextLink>
-              </div>
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {siteConfig.volumeDiscounts.map((discount) => (
-                  <div key={discount.units} className="rounded-xl border border-white/15 bg-white/10 p-4 text-center">
-                    <p className="text-2xl font-black text-white">{discount.units}</p>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-wider text-sky-200">{discount.off}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Inline Materials Pricing — shown directly on installation & dismantling pages */}
-          {(slug === "installation" || slug === "dismantling-relocation" || slug === "ceiling-cassette") && (
-            <Reveal>
-              <div className="mt-10">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">
-                  Materials Pricing
-                </p>
-                <h3 className="text-base font-black text-slate-900 mb-4">
-                  Additional Materials & Special Charges
-                </h3>
-                <div className="border border-slate-200 bg-white">
-                  <ul className="divide-y divide-slate-200">
-                    {siteConfig.pricing.materials.rows.map((row: { label: string; price: string }) => (
-                      <li key={row.label} className="flex items-center justify-between gap-3 px-5 py-3.5">
-                        <span className="text-sm text-slate-700">{row.label}</span>
-                        <span className="text-sm font-bold text-sky-600 whitespace-nowrap">{row.price}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <p className="text-xs text-slate-400 mt-3">
-                  All material costs are quoted and confirmed with you before work begins. No surprises.
-                </p>
-              </div>
-            </Reveal>
-          )}
-        </div>
-      </section>
 
       {/* Highlights */}
       <section className="py-14 sm:py-16 bg-white">

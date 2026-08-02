@@ -176,6 +176,59 @@ export default function AircondInstallationKLPage() {
         </div>
       </section>
 
+      {/* Pricing Transparency Table */}
+      <section className="py-20 sm:py-28 bg-slate-50" id="pricing">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <p className={eyebrow()}>Transparent Installation Pricing</p>
+              <h2 className="mt-3"><span className={title({ size: "sm" })}>No Hidden Fees — </span><span className={title({ size: "sm", color: "brand" })}>Price Confirmed Before We Drill</span></h2>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
+              <div className="min-w-[900px]">
+                <PricingRow type="Type" hp="HP" price="Labour" pipe="Copper Pipe" bracket="Bracket" wire="Wiring" drain="Drain Pipe" isHeader />
+                {PRICING_TABLE.map((row) => (
+                  <PricingRow key={`${row.type}-${row.hp}`} {...row} />
+                ))}
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
+              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> What's Included in the Labour Price</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Site survey & quotation (free)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft copper pipe (liquid + gas lines)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft electrical wiring</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft PVC drain pipe</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard outdoor bracket</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Vacuum pump commissioning</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Refrigerant release & testing</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 1-month workmanship warranty card</li>
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
+              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Additional Charges (Only If Needed)</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC casing/concealment: RM 6–12/ft</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard compressor / outdoor bracket: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Heavy-duty compressor / outdoor bracket: RM 70</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> New electrical plug point: RM 100</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wall hacking/concealment: RM 6/ft</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> High-rise/difficult access: RM 50–150</li>
+              </ul>
+              <p className="mt-4 text-xs text-amber-600">All extras quoted & approved on-site BEFORE work starts. No surprises.</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Why Choose KL Renovator for Installation */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -276,59 +329,6 @@ export default function AircondInstallationKLPage() {
               </div>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* Pricing Transparency Table */}
-      <section className="py-20 sm:py-28 bg-slate-50" id="pricing">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-10">
-              <p className={eyebrow()}>Transparent Installation Pricing</p>
-              <h2 className="mt-3"><span className={title({ size: "sm" })}>No Hidden Fees — </span><span className={title({ size: "sm", color: "brand" })}>Price Confirmed Before We Drill</span></h2>
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
-              <div className="min-w-[900px]">
-                <PricingRow type="Type" hp="HP" price="Labour" pipe="Copper Pipe" bracket="Bracket" wire="Wiring" drain="Drain Pipe" isHeader />
-                {PRICING_TABLE.map((row) => (
-                  <PricingRow key={`${row.type}-${row.hp}`} {...row} />
-                ))}
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
-              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> What's Included in the Labour Price</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Site survey & quotation (free)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft copper pipe (liquid + gas lines)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft electrical wiring</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft PVC drain pipe</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard outdoor bracket</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Vacuum pump commissioning</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Refrigerant release & testing</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 1-month workmanship warranty card</li>
-              </ul>
-            </div>
-          </Reveal>
-          <Reveal delay={300}>
-            <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
-              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Additional Charges (Only If Needed)</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC casing/concealment: RM 6–12/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard compressor / outdoor bracket: RM 45</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Heavy-duty compressor / outdoor bracket: RM 70</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> New electrical plug point: RM 100</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wall hacking/concealment: RM 6/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> High-rise/difficult access: RM 50–150</li>
-              </ul>
-              <p className="mt-4 text-xs text-amber-600">All extras quoted & approved on-site BEFORE work starts. No surprises.</p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
