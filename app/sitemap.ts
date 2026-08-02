@@ -137,9 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/aircond-savings-calculator", ms: "/ms/aircond-savings-calculator", zh: "/zh/aircond-savings-calculator" }) },
     { url: `${BASE}/ms/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.83, alternates: buildTrilingual({ en: "/aircond-savings-calculator", ms: "/ms/aircond-savings-calculator", zh: "/zh/aircond-savings-calculator" }) },
     { url: `${BASE}/zh/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.83, alternates: buildTrilingual({ en: "/aircond-savings-calculator", ms: "/ms/aircond-savings-calculator", zh: "/zh/aircond-savings-calculator" }) },
-    { url: `${BASE}/aircond-assistant`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/aircond-assistant", ms: "/ms/aircond-assistant", zh: "/zh/aircond-assistant" }) },
-    { url: `${BASE}/ms/aircond-assistant`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildTrilingual({ en: "/aircond-assistant", ms: "/ms/aircond-assistant", zh: "/zh/aircond-assistant" }) },
-    { url: `${BASE}/zh/aircond-assistant`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildTrilingual({ en: "/aircond-assistant", ms: "/ms/aircond-assistant", zh: "/zh/aircond-assistant" }) },
+
   ];
 
   // ── Emergency Service Page — trilingual canonical entries ───────────

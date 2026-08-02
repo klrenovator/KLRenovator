@@ -8,7 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 import NextLink from "next/link";
-import { TOOLS, AI_ASSISTANT_TOOL } from "@/config/tools";
+import { TOOLS } from "@/config/tools";
 
 export type ToolLinksLang = "en" | "ms" | "zh";
 
@@ -19,15 +19,13 @@ function labelFor(tool: (typeof TOOLS)[number], lang: ToolLinksLang): string {
 }
 
 export function ToolLinks({
-  showAssistant = true,
   heading = "Free Aircond Calculators",
   lang = "en",
 }: {
-  showAssistant?: boolean;
   heading?: string;
   lang?: ToolLinksLang;
 }) {
-  const items = showAssistant ? [...TOOLS, AI_ASSISTANT_TOOL] : TOOLS;
+  const items = TOOLS;
   return (
     <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8">
       <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-4">{heading}</h3>

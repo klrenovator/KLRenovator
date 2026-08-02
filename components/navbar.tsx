@@ -139,7 +139,6 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
     "/aircond-size-calculator",
     "/aircond-electricity-cost-calculator",
     "/aircond-savings-calculator",
-    "/aircond-assistant",
   ];
   if (toolPages.includes(enPath)) {
     return target === "en" ? enPath : `/${target}${enPath}`;

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: clampMetaTitle("免费冷气计算器与工具"),
     description:
-      "7个免费冷气计算器 + AI助手：安装费用、加气、BTU/匹数、尺寸、电费和变频节省。即时、准确、移动端友好。",
+      "6个免费冷气计算器：安装费用、加气、BTU/匹数、尺寸、电费和变频节省。即时、准确、移动端友好。",
     url: PAGE_URL,
     type: "website",
     locale: "zh_MY",

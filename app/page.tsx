@@ -235,11 +235,7 @@ export default function Home() {
                 View All Tools →
               </NextLink>
             </div>
-            <div className="mt-4 text-center">
-              <NextLink href="/aircond-assistant" className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-violet-600 hover:text-violet-800 transition-colors">
-                🤖 Or ask the AI Aircond Expert Assistant — instant pricing &amp; quotes →
-              </NextLink>
-            </div>
+
           </div>
         </div>
       </section>

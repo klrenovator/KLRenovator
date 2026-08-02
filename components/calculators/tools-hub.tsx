@@ -1,15 +1,14 @@
 // ─────────────────────────────────────────────────────────────────────────
 // Tools hub page content — trilingual (en/ms/zh). Renders the full hub:
-// hero, AI assistant feature card, tool grid, how-it-works, price links,
-// FAQs and CTA. The /tools, /ms/tools and /zh/tools pages are thin wrappers
-// that pass metadata + lang.
+// hero, tool grid, how-it-works, price links, FAQs and CTA. The /tools,
+// /ms/tools and /zh/tools pages are thin wrappers that pass metadata + lang.
 // ─────────────────────────────────────────────────────────────────────────
 
 import NextLink from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
-import { TOOLS, AI_ASSISTANT_TOOL } from "@/config/tools";
+import { TOOLS } from "@/config/tools";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildFaqSchema } from "@/lib/seo";
 
@@ -20,11 +19,6 @@ const HUB_STRINGS: Record<Lang, {
   h1a: string;
   h1b: string;
   intro: string;
-  aiEyebrow: string;
-  aiTitle: string;
-  aiDesc: string;
-  aiCta: string;
-  aiCtaLabel: string;
   bottomNote: string;
   worksTitle: string;
   worksBody: string;
@@ -39,12 +33,7 @@ const HUB_STRINGS: Record<Lang, {
     h1a: "Aircond Calculators &",
     h1b: "Tools",
     intro:
-      "Seven free, mobile-friendly calculators built on KL Renovator's published 2026 pricing — get an instant estimate for installation, gas top-up, aircond sizing, electricity cost and inverter savings, or ask the AI assistant anything.",
-    aiEyebrow: "New — Ask Anything",
-    aiTitle: "AI Aircond Expert Assistant",
-    aiDesc: "Instant pricing, quotations, HP recommendations and booking help — trained on KL Renovator's real service information.",
-    aiCta: "Chat Now",
-    aiCtaLabel: "Chat with the AI assistant",
+      "Six free, mobile-friendly calculators built on KL Renovator's published 2026 pricing — get an instant estimate for installation, gas top-up, aircond sizing, electricity cost and inverter savings.",
     bottomNote: "Also on our homepage: Price Calculator and Problem Diagnostic Tool — quick cost & diagnosis cards with WhatsApp booking.",
     worksTitle: "How the Estimates Work",
     worksBody:
@@ -65,12 +54,7 @@ const HUB_STRINGS: Record<Lang, {
     h1a: "Kalkulator Aircond &",
     h1b: "Alat",
     intro:
-      "Tujuh kalkulator percuma mesra mudah alih dibina berdasarkan harga 2026 KL Renovator yang diterbitkan — dapatkan anggaran segera untuk pemasangan, tambah gas, saiz aircond, kos elektrik dan penjimatan inverter, atau tanya pembantu AI apa sahaja.",
-    aiEyebrow: "Baharu — Tanya Apa Sahaja",
-    aiTitle: "Pembantu Pakar Aircond AI",
-    aiDesc: "Harga segera, sebut harga, cadangan HP dan bantuan tempahan — dilatih dengan maklumat servis sebenar KL Renovator.",
-    aiCta: "Bual Sekarang",
-    aiCtaLabel: "Bual dengan pembantu AI",
+      "Enam kalkulator percuma mesra mudah alih dibina berdasarkan harga 2026 KL Renovator yang diterbitkan — dapatkan anggaran segera untuk pemasangan, tambah gas, saiz aircond, kos elektrik dan penjimatan inverter.",
     bottomNote: "Juga di laman utama kami: Kalkulator Harga dan Alat Diagnostik Masalah — kad kos & diagnosis pantas dengan tempahan WhatsApp.",
     worksTitle: "Macam Mana Anggaran Berfungsi",
     worksBody:
@@ -91,12 +75,7 @@ const HUB_STRINGS: Record<Lang, {
     h1a: "冷气计算器与",
     h1b: "工具",
     intro:
-      "七个基于KL Renovator已公布2026年定价构建的免费移动端计算器 — 立即获取安装、加气、冷气尺寸、电费和变频节省的估算，或向AI助手提问任何问题。",
-    aiEyebrow: "全新 — 随便问",
-    aiTitle: "AI 冷气专家助手",
-    aiDesc: "即时价格、报价、匹数推荐和预约帮助 — 基于KL Renovator真实服务信息训练。",
-    aiCta: "立即对话",
-    aiCtaLabel: "与AI助手对话",
+      "六个基于KL Renovator已公布2026年定价构建的免费移动端计算器 — 立即获取安装、加气、冷气尺寸、电费和变频节省的估算。",
     bottomNote: "首页还有：价格计算器和问题诊断工具 — 带WhatsApp预约的快速费用与诊断卡片。",
     worksTitle: "估价原理",
     worksBody:
@@ -155,31 +134,6 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
               {t.h1a} <span className="text-sky-500">{t.h1b}</span>
             </h1>
             <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">{t.intro}</p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* AI Assistant feature card */}
-      <section className="pb-4 px-4">
-        <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <NextLink
-              href={`${localePrefix}${AI_ASSISTANT_TOOL.slug}`}
-              aria-label={t.aiCtaLabel}
-              className="group block rounded-3xl bg-gradient-to-r from-violet-700 via-violet-600 to-sky-600 text-white p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.01]"
-            >
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                <span className="text-5xl" aria-hidden="true">{AI_ASSISTANT_TOOL.icon}</span>
-                <div className="flex-1">
-                  <p className="text-xs font-black uppercase tracking-widest text-violet-200 mb-2">{t.aiEyebrow}</p>
-                  <h2 className="text-2xl sm:text-3xl font-black leading-tight">{t.aiTitle}</h2>
-                  <p className="text-violet-100 text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">{t.aiDesc}</p>
-                </div>
-                <span className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 rounded-xl px-5 py-3 text-sm font-black uppercase tracking-widest transition-colors shrink-0">
-                  {t.aiCta} <FiArrowRight className="h-4 w-4" />
-                </span>
-              </div>
-            </NextLink>
           </Reveal>
         </div>
       </section>
