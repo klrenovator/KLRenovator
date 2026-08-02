@@ -297,45 +297,22 @@ export const sitePublic = {
       ]
     },
     "gasTopup": {
-      "title": "Gas Top-Up / Precision Balancing",
+      "title": "Gas Top-Up & Refill (Per PSI)",
       "rows": [
         {
-          "label": "R22 · 1.0 HP",
-          "price": "RM 120"
+          "label": "R22 Gas Refill",
+          "price": "RM 2.50 / PSI"
         },
         {
-          "label": "R22 · 1.5 – 2.0 HP",
-          "price": "RM 150"
+          "label": "R410A Gas Refill",
+          "price": "RM 3.00 / PSI"
         },
         {
-          "label": "R22 · 2.5 – 3.0 HP",
-          "price": "RM 180"
-        },
-        {
-          "label": "R410A · 1.0 HP",
-          "price": "RM 150"
-        },
-        {
-          "label": "R410A · 1.5 – 2.0 HP",
-          "price": "RM 180"
-        },
-        {
-          "label": "R410A · 2.5 – 3.0 HP",
-          "price": "RM 200"
-        },
-        {
-          "label": "R32 · 1.0 HP",
-          "price": "RM 180"
-        },
-        {
-          "label": "R32 · 1.5 – 2.0 HP",
-          "price": "RM 200"
-        },
-        {
-          "label": "R32 · 2.5 – 3.0 HP",
-          "price": "RM 220"
+          "label": "R32 Gas Refill",
+          "price": "RM 3.00 / PSI"
         }
-      ]
+      ],
+      "note": "Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges."
     },
     "repair": {
       "title": "Troubleshooting & Component Repair",
@@ -516,8 +493,8 @@ export const sitePublic = {
     {
       "slug": "gas-topup",
       "title": "Gas Top-Up / Precision Balancing",
-      "short": "Precision refrigerant balancing and pressure level top-up for eco-friendly R32, R410A, and traditional R22 systems. Leak check included.",
-      "startPrice": 120,
+      "short": "Precision refrigerant balancing and pressure level top-up. Charged per PSI: R32 (RM3), R410A (RM3), R22 (RM2.50). Leak check included.",
+      "startPrice": 2.5,
       "icon": "gauge",
       "targetProblem": "Aircond running but blowing warm air, low gas pressure.",
       "category": "both"
