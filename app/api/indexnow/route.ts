@@ -1,7 +1,37 @@
 import { NextResponse } from "next/server";
 import { hit, clientIp } from "@/lib/rate-limit";
+import sitemap from "@/app/sitemap";
 
 export const dynamic = "force-dynamic";
+
+const HOST = "www.klrenovator.com";
+const BASE = `https://${HOST}`;
+
+// Build the full URL list from the single source of truth — the sitemap.
+// The old handler hardcoded only 5 URLs (/, /book, /ms, /zh, /blog), which
+// is why Bing Webmaster Tools' "IndexNow submitted URLs" report never showed
+// more than 5 URLs no matter how many times the endpoint was triggered.
+// Every canonical sitemap entry plus its hreflang language alternates are
+// included (deduped), so all ~hundreds of indexable pages across EN/MS/ZH
+// get submitted. IndexNow accepts up to 10,000 URLs per POST; we are far
+// below that, so a single request is enough.
+function buildUrlList(): string[] {
+  const seen = new Set<string>();
+  for (const entry of sitemap()) {
+    if (entry.url.startsWith(BASE)) seen.add(entry.url);
+    const languages = entry.alternates?.languages as
+      | Record<string, string>
+      | undefined;
+    if (languages) {
+      for (const langUrl of Object.values(languages)) {
+        if (typeof langUrl === "string" && langUrl.startsWith(BASE)) {
+          seen.add(langUrl);
+        }
+      }
+    }
+  }
+  return Array.from(seen);
+}
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -30,27 +60,20 @@ export async function GET(req: Request) {
 
   try {
     // We send a ping to IndexNow (which notifies Bing, Yahoo, Yandex, etc.)
-    const host = "www.klrenovator.com";
-    // We will create this key file in the public folder so Search Engines can verify it
     const key = "e7492c813de342fca1deeb6b05df8445";
     // `host` already includes the www. — the old template added a second one
     // and produced https://www.www.klrenovator.com/<key>.txt, which does not
     // resolve. It is now also actually sent in the payload; previously it was
     // computed and thrown away, so IndexNow fell back to guessing the key
     // location and rejected the submission when the guess missed.
-    const keyLocation = `https://${host}/${key}.txt`;
+    const keyLocation = `${BASE}/${key}.txt`;
+    const urlList = buildUrlList();
 
     const payload = {
-      host: host,
+      host: HOST,
       key: key,
       keyLocation,
-      urlList: [
-        `https://${host}/`,
-        `https://${host}/book`,
-        `https://${host}/ms`,
-        `https://${host}/zh`,
-        `https://${host}/blog`
-      ]
+      urlList,
     };
 
     const response = await fetch("https://api.indexnow.org/indexnow", {
@@ -62,7 +85,11 @@ export async function GET(req: Request) {
     });
 
     if (response.ok || response.status === 200 || response.status === 202) {
-      return NextResponse.json({ success: true, message: "IndexNow Ping Sent to Bing/Yahoo!" });
+      return NextResponse.json({
+        success: true,
+        message: "IndexNow Ping Sent to Bing/Yahoo!",
+        submitted: urlList.length,
+      });
     } else {
       return NextResponse.json({ success: false, error: await response.text() });
     }
