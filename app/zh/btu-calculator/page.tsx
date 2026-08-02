@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("马来西亚冷气马力计算器 | BTU 计算工具"),
@@ -19,5 +20,14 @@ export const metadata: Metadata = {
 };
 
 export default function BtuCalculatorPageZH() {
-  return <BtuCalculator lang="zh" />;
+  return (
+    <>
+      <BtuCalculator lang="zh" />
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks lang="zh" heading="免费冷气计算工具" />
+        </div>
+      </section>
+    </>
+  );
 }

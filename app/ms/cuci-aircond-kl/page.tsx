@@ -9,6 +9,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const dynamic = "force-static";
 
@@ -172,6 +173,13 @@ export default function Page() {
           </p>
         </div>
       </section>
+      {/* Free calculator tools — internal linking */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks lang="ms" heading="Kalkulator Aircond Percuma" />
+        </div>
+      </section>
+
       <PriceComparisonUI locale="ms" />
     </>
   );

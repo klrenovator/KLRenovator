@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Senarai Harga Servis Aircond KL & Selangor | KL Renovator"),
@@ -25,5 +26,15 @@ export const metadata: Metadata = {
 };
 
 export default function MsServicesLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      {/* Free calculator tools — internal linking on every service page */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks lang="ms" heading="Kalkulator Aircond Percuma" />
+        </div>
+      </section>
+    </>
+  );
 }

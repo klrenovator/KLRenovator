@@ -14,6 +14,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildServiceSchema } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
 import { PriceComparisonUI } from "@/components/price-comparison";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const dynamic = "force-static";
 
@@ -465,6 +466,13 @@ export default function ZhPricingPage() {
           </div>
         </div>
       </section>
+      {/* Free calculator tools — internal linking */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks lang="zh" heading="免费冷气计算工具" />
+        </div>
+      </section>
+
       <PriceComparisonUI locale="zh" />
     </>
   );

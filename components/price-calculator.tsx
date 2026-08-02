@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { waLink } from "@/lib/whatsapp";
 import { sitePublic } from "@/config/site-public";
+import { getBundleDiscount } from "@/lib/aircond-math";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 type ServiceType = "basic-servicing" | "chemical-wash" | "chemical-overhaul" | "gas-topup" | "installation" | "repair";
@@ -210,22 +211,9 @@ const GAS_LABELS: Record<GasType, string> = {
   r32: "R32 (newer inverter)",
 };
 
-const DISCOUNT: Record<number, { pct: number; label: string }> = {
-  1: { pct: 0, label: "" },
-  2: { pct: 0, label: "" },
-  3: { pct: 0, label: "" },
-  4: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-  5: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-  6: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-  7: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-  8: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-  9: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-  10: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
-};
-function getDiscount(units: number) {
-  if (units > 10) return { pct: 10, label: "10% OFF Instant Booking Discount (10+ units)" };
-  return DISCOUNT[units] || { pct: 0, label: "" };
-}
+// Bundle discount logic lives in lib/aircond-math.ts (single source of
+// truth — mirrors siteConfig.volumeDiscounts): 4–10 units → 5%, 11+ → 10%.
+const getDiscount = getBundleDiscount;
 
 // Helper: get copper pipe rate for current HP size
 function getCopperRatePerFoot(hpSize: string): number {

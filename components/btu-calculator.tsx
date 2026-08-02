@@ -2,10 +2,18 @@
 
 import { useState, useEffect } from "react";
 import { FaWhatsapp, FaCalculator, FaHome, FaSun, FaUsers, FaRulerCombined, FaShareAlt } from "react-icons/fa";
+import { FaRegWindowRestore } from "react-icons/fa6";
 import { FiCheckCircle } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
 import { sitePublic } from "@/config/site-public";
 import { trackToolUse } from "@/lib/analytics";
+import {
+  calculateBtu,
+  recommendHpFromBtu,
+  heightMultiplier,
+  peopleBtu,
+  windowsBtu,
+} from "@/lib/aircond-math";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -23,6 +31,8 @@ interface CalculatorStrings {
   sunExposure: string;
   sunLevels: { value: string; label: string; multiplier: number }[];
   occupants: string;
+  windows: string;
+  standardHeight: string;
   calculate: string;
   result: string;
   recommendedHP: string;
@@ -44,7 +54,7 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
   en: {
     eyebrow: "BTU Calculator",
     title: ["Find Your Perfect ", "Aircond Size"],
-    desc: "Answer 4 quick questions and we'll recommend the exact HP you need — plus the installation cost. No guesswork, no oversizing.",
+    desc: "Answer 5 quick questions and we'll recommend the exact HP you need — plus the installation cost. No guesswork, no oversizing.",
     roomDimensions: "Room Dimensions",
     length: "Length",
     width: "Width",
@@ -66,6 +76,8 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
       { value: "high", label: "High (west-facing / top floor)", multiplier: 1.25 },
     ],
     occupants: "Number of People",
+    windows: "Number of Windows",
+    standardHeight: "Use standard ceiling height (10 ft)",
     calculate: "Calculate My BTU",
     result: "Your Recommendation",
     recommendedHP: "Recommended HP",
@@ -74,7 +86,7 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
     installationFrom: "from",
     bookNow: "Book This Installation",
     disclaimer: "This is an estimate. Actual requirements may vary based on insulation, window size, and other factors. Our technician will confirm during the site survey.",
-    whatsappMessage: "Hi KL Renovator, I used your BTU calculator. My room needs approximately {btu} BTU ({hp} HP). I'd like to book an installation. Room: {length}ft x {width}ft, type: {roomType}, sun: {sun}.",
+    whatsappMessage: "Hi KL Renovator, I used your BTU calculator. My room needs approximately {btu} BTU ({hp} HP). I'd like to book an installation. Room: {length}ft x {width}ft, type: {roomType}, sun: {sun}, windows: {windows}.",
     feet: "ft",
     meters: "m",
     people: "people",
@@ -107,6 +119,8 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
       { value: "high", label: "Tinggi (menghadap barat / tingkat atas)", multiplier: 1.25 },
     ],
     occupants: "Bilangan Orang",
+    windows: "Bilangan Tingkap",
+    standardHeight: "Guna ketinggian siling standard (10 kaki)",
     calculate: "Kira BTU Saya",
     result: "Cadangan Anda",
     recommendedHP: "HP Disyorkan",
@@ -115,7 +129,7 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
     installationFrom: "dari",
     bookNow: "Tempah Pemasangan Ini",
     disclaimer: "Ini adalah anggaran. Keperluan sebenar mungkin berbeza berdasarkan penebat, saiz tingkap, dan faktor lain. Juruteknik kami akan mengesahkan semasa tinjauan tapak.",
-    whatsappMessage: "Hi KL Renovator, saya guna kalkulator BTU anda. Bilik saya perlukan kira-kira {btu} BTU ({hp} HP). Saya ingin menempah pemasangan. Bilik: {length}ka x {width}ka, jenis: {roomType}, matahari: {sun}.",
+    whatsappMessage: "Hi KL Renovator, saya guna kalkulator BTU anda. Bilik saya perlukan kira-kira {btu} BTU ({hp} HP). Saya ingin menempah pemasangan. Bilik: {length}ka x {width}ka, jenis: {roomType}, matahari: {sun}, tingkap: {windows}.",
     feet: "ka",
     meters: "m",
     people: "orang",
@@ -148,6 +162,8 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
       { value: "high", label: "高（朝西/顶楼）", multiplier: 1.25 },
     ],
     occupants: "人数",
+    windows: "窗户数量",
+    standardHeight: "使用标准天花板高度（10英尺）",
     calculate: "计算我的 BTU",
     result: "您的推荐",
     recommendedHP: "推荐匹数",
@@ -156,7 +172,7 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
     installationFrom: "起价",
     bookNow: "预约此安装",
     disclaimer: "此为估算值。实际需求可能因保温、窗户尺寸和其他因素而异。我们的技术员将在现场勘查时确认。",
-    whatsappMessage: "你好 KL Renovator，我使用了你们的 BTU 计算器。我的房间大约需要 {btu} BTU（{hp} 匹）。我想预约安装。房间：{length}英尺 x {width}英尺，类型：{roomType}，阳光：{sun}。",
+    whatsappMessage: "你好 KL Renovator，我使用了你们的 BTU 计算器。我的房间大约需要 {btu} BTU（{hp} 匹）。我想预约安装。房间：{length}英尺 x {width}英尺，类型：{roomType}，阳光：{sun}，窗户：{windows}。",
     feet: "英尺",
     meters: "米",
     people: "人",
@@ -166,25 +182,17 @@ const STRINGS: Record<Lang, CalculatorStrings> = {
   },
 };
 
-// HP recommendation table based on BTU
-const HP_TABLE = [
-  { minBTU: 0, maxBTU: 9000, hp: "1.0", price: 199 },
-  { minBTU: 9001, maxBTU: 12000, hp: "1.5", price: 219 },
-  { minBTU: 12001, maxBTU: 18000, hp: "2.0", price: 249 },
-  { minBTU: 18001, maxBTU: 24000, hp: "2.5", price: 279 },
-  { minBTU: 24001, maxBTU: 30000, hp: "3.0", price: 329 },
-  { minBTU: 30001, maxBTU: 99999, hp: "3.0+", price: 379 },
-];
-
 export function BtuCalculator({ lang }: { lang: Lang }) {
   const s = STRINGS[lang];
 
   const [length, setLength] = useState<number>(12);
   const [width, setWidth] = useState<number>(10);
   const [height, setHeight] = useState<number>(10);
+  const [useStandardHeight, setUseStandardHeight] = useState<boolean>(true);
   const [roomType, setRoomType] = useState<string>("bedroom");
   const [sunExposure, setSunExposure] = useState<string>("medium");
   const [occupants, setOccupants] = useState<number>(2);
+  const [windows, setWindows] = useState<number>(1);
   const [showResult, setShowResult] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -212,43 +220,40 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
     }
   }, []);
 
-  // Calculate BTU
+  // Effective ceiling height — the site-standard 10 ft unless the user opts out
+  const effectiveHeight = useStandardHeight ? 10 : height;
+
+  // Calculate BTU — shared formula from lib/aircond-math (single source of truth)
   const calculateBTU = () => {
-    const area = length * width;
-    const baseBTU = area * 25; // 25 BTU per sqft base
-
-    // Room type multiplier
     const roomMultiplier = s.roomTypes.find((r) => r.value === roomType)?.multiplier || 1.0;
-
-    // Sun exposure multiplier
-    const sunMultiplier = s.sunLevels.find((s) => s.value === sunExposure)?.multiplier || 1.0;
-
-    // Height adjustment (add 10% per foot above 10ft)
-    const heightMultiplier = height > 10 ? 1 + (height - 10) * 0.1 : 1.0;
-
-    // Occupant adjustment (add 600 BTU per person beyond 2)
-    const occupantBTU = occupants > 2 ? (occupants - 2) * 600 : 0;
-
-    const totalBTU = Math.round(baseBTU * roomMultiplier * sunMultiplier * heightMultiplier + occupantBTU);
-    return totalBTU;
+    const sunMultiplier = s.sunLevels.find((x) => x.value === sunExposure)?.multiplier || 1.0;
+    return calculateBtu({
+      areaSqft: Math.max(0, length) * Math.max(0, width),
+      roomTypeMultiplier: roomMultiplier,
+      sunMultiplier,
+      heightMultiplier: heightMultiplier(effectiveHeight),
+      peopleBTU: peopleBtu(occupants),
+      windowsBTU: windowsBtu(windows),
+    });
   };
 
   const btu = calculateBTU();
-  const hpRecommendation = HP_TABLE.find((h) => btu >= h.minBTU && btu <= h.maxBTU) || HP_TABLE[HP_TABLE.length - 1];
+  const hpRecommendation = recommendHpFromBtu(btu);
 
   const handleCalculate = () => {
     setShowResult(true);
-    trackToolUse("btu-calculator", { action: "calculate", btu, hp: hpRecommendation.hp });
+    trackToolUse("btu-calculator", { action: "calculate", btu, hp: hpRecommendation.hp, windows, standard_height: useStandardHeight });
 
     // Update URL query parameters
     if (typeof window !== "undefined") {
       const params = new URLSearchParams();
       params.set("l", length.toString());
       params.set("w", width.toString());
-      params.set("h", height.toString());
+      if (!useStandardHeight) params.set("h", height.toString());
       params.set("rt", roomType);
       params.set("s", sunExposure);
       params.set("o", occupants.toString());
+      params.set("wd", windows.toString());
       params.set("c", "1");
       const newUrl = `${window.location.pathname}?${params.toString()}`;
       window.history.replaceState({ path: newUrl }, "", newUrl);
@@ -294,7 +299,8 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
       .replace("{length}", length.toString())
       .replace("{width}", width.toString())
       .replace("{roomType}", roomTypeLabel)
-      .replace("{sun}", sunLabel);
+      .replace("{sun}", sunLabel)
+      .replace("{windows}", windows.toString());
     return `https://wa.me/${sitePublic.whatsapp}?text=${encodeURIComponent(message)}`;
   };
 
@@ -436,7 +442,7 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                   <FaRulerCombined className="h-4 w-4 text-sky-600" />
                   {s.roomDimensions}
                 </label>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-slate-600 mb-2">{s.length} ({s.feet})</label>
                     <input
@@ -459,7 +465,23 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                       className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
                     />
                   </div>
-                  <div>
+                </div>
+                <p className="mt-2 text-xs text-slate-500">
+                  {length} × {width} = <strong>{length * width}</strong> sqft
+                </p>
+
+                {/* Optional ceiling height */}
+                <label className="mt-4 flex items-center gap-2.5 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={useStandardHeight}
+                    onChange={(e) => { setUseStandardHeight(e.target.checked); setShowResult(false); }}
+                    className="h-4 w-4 accent-sky-600"
+                  />
+                  <span className="text-sm font-bold text-slate-700">{s.standardHeight} ({s.heightDefault})</span>
+                </label>
+                {!useStandardHeight && (
+                  <div className="mt-3 max-w-[160px]">
                     <label className="block text-xs font-bold text-slate-600 mb-2">{s.height} ({s.feet})</label>
                     <input
                       type="number"
@@ -470,10 +492,7 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                       className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
                     />
                   </div>
-                </div>
-                <p className="mt-2 text-xs text-slate-500">
-                  {length} × {width} = <strong>{length * width}</strong> sqft
-                </p>
+                )}
               </div>
 
               {/* Room Type */}
@@ -522,20 +541,36 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                 </div>
               </div>
 
-              {/* Occupants */}
-              <div className="mb-8">
-                <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
-                  <FaUsers className="h-4 w-4 text-sky-600" />
-                  {s.occupants}
-                </label>
-                <input
-                  type="number"
-                  value={occupants}
-                  onChange={(e) => { setOccupants(Number(e.target.value)); setShowResult(false); }}
-                  min="1"
-                  max="10"
-                  className="w-full max-w-xs px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
-                />
+              {/* Occupants + Windows */}
+              <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
+                    <FaUsers className="h-4 w-4 text-sky-600" />
+                    {s.occupants}
+                  </label>
+                  <input
+                    type="number"
+                    value={occupants}
+                    onChange={(e) => { setOccupants(Number(e.target.value)); setShowResult(false); }}
+                    min="1"
+                    max="10"
+                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
+                  />
+                </div>
+                <div>
+                  <label className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-slate-900 mb-4">
+                    <FaRegWindowRestore className="h-4 w-4 text-sky-600" />
+                    {s.windows}
+                  </label>
+                  <input
+                    type="number"
+                    value={windows}
+                    onChange={(e) => { setWindows(Number(e.target.value)); setShowResult(false); }}
+                    min="0"
+                    max="10"
+                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-sky-500 focus:outline-none transition-colors text-lg font-bold"
+                  />
+                </div>
               </div>
 
               {/* Calculate Button */}
@@ -569,7 +604,7 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                   </div>
                   <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
                     <p className="text-sky-100 text-xs font-bold uppercase tracking-wider mb-2">{s.estimatedCost}</p>
-                    <p className="text-4xl font-black text-white">RM {hpRecommendation.price}</p>
+                    <p className="text-4xl font-black text-white">RM {hpRecommendation.installFrom}</p>
                     <p className="text-sky-200 text-sm font-bold mt-1">{s.installationFrom}</p>
                   </div>
                 </div>
@@ -630,19 +665,19 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                     "Sila ukur panjang dan lebar bilik anda dalam unit kaki (ft).",
                     "Darabkan panjang x lebar untuk mengetahui luas bilik dalam kaki persegi (sqft).",
                     "Darabkan luas bilik tersebut dengan 25 untuk mendapatkan keperluan BTU asas.",
-                    "Laras pengiraan mengikut jenis bilik (cth., bilik tidur utama perlukan lebih 10%), pendedahan matahari, tinggi siling, dan bilangan orang.",
+                    "Laras pengiraan mengikut jenis bilik (cth., bilik tidur utama perlukan lebih 10%), pendedahan matahari, tinggi siling, bilangan orang, dan bilangan tingkap.",
                     "Bandingkan jumlah BTU akhir dengan Horsepower (HP) aircond: 9,000 BTU bersamaan dengan 1.0 HP."
                   ] : lang === "zh" ? [
                     "以英尺 (ft) 为单位测量房间的长度和宽度。",
                     "长度乘以宽度得到房间的平方英尺 (sqft) 面积。",
                     "将面积乘以 25，得到所需的基本 BTU 数量。",
-                    "根据房间类型（例如主卧室、客厅）、阳光照射程度（西晒等）和人数对计算进行微调。",
+                    "根据房间类型（例如主卧室、客厅）、阳光照射程度（西晒等）、天花板高度、人数和窗户数量对计算进行微调。",
                     "将最终的 BTU 数值与冷气马力 (HP) 进行匹配：9,000 BTU 约等于 1.0 HP。"
                   ] : [
                     "Measure your room's length and width in feet (ft).",
                     "Multiply length x width to calculate the room's area in square feet (sqft).",
                     "Multiply the area by 25 to get the base BTU cooling power required.",
-                    "Adjust for room type (e.g. master bedrooms need +10%), sun exposure (west-facing rooms), high ceilings, and occupants.",
+                    "Adjust for room type (e.g. master bedrooms need +10%), sun exposure (west-facing rooms), ceiling height, occupants, and number of windows.",
                     "Match your final calculated BTU to the required Horsepower (HP): 9,000 BTU is approx. 1.0 HP."
                   ]).map((stepText, idx) => (
                     <li key={idx} className="flex gap-4">

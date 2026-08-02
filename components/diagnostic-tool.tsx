@@ -56,6 +56,10 @@ const STEPS: Record<string, DiagnosticStep> = {
         next: "smell",
       },
       {
+        label: { en: "😮💨 Weak airflow / dusty air", ms: "Aliran udara lemah / udara berhabuk", zh: "风量弱 / 空气有灰尘" },
+        next: "weak-airflow",
+      },
+      {
         label: { en: "🔴 Not turning on at all", ms: "Langsung tidak hidup", zh: "完全无法开机" },
         next: "not-on",
       },
@@ -132,6 +136,53 @@ const STEPS: Record<string, DiagnosticStep> = {
           serviceSlug: "chemical-wash",
           serviceName: "Pressure Chemical Wash",
           problemSlug: "aircond-not-cold",
+        },
+      },
+    ],
+  },
+
+  "weak-airflow": {
+    id: "weak-airflow",
+    question: {
+      en: "When was the last chemical wash / deep service?",
+      ms: "Bilakah kali terakhir cuci kimia / servis menyeluruh?",
+      zh: "上次化学清洗/深度保养是什么时候？",
+    },
+    options: [
+      {
+        label: { en: "More than 12 months ago / never", ms: "Lebih 12 bulan lalu / tidak pernah", zh: "超过12个月/从未做过" },
+        result: {
+          title: { en: "Dust & Biofilm Blocking the Blower Wheel", ms: "Habuk & Biofilem Menyekat Roda Blower", zh: "灰尘和生物膜堵塞风轮" },
+          cause: { en: "Weak airflow with a clean filter usually means the blower wheel and evaporator coil are coated with dust and biofilm. This reduces airflow volume and cooling efficiency by up to 40%.", ms: "Aliran udara lemah dengan penapis bersih biasanya bermakna roda blower dan gegelung evaporator disaluti habuk dan biofilem.", zh: "滤网干净但风量弱通常意味着风轮和蒸发器盘管被灰尘和生物膜覆盖，风量和制冷效率下降高达40%。" },
+          solution: { en: "A pressure chemical wash (from RM 120) cleans the blower wheel and coil in place and restores strong airflow. Recommended every 12 months — or every 6–8 months if the unit runs 8+ hours a day.", ms: "Cuci kimia bertekanan (dari RM 120) membersihkan roda blower dan gegelung serta memulihkan aliran udara yang kuat. Disyorkan setiap 12 bulan.", zh: "压力化学清洗（从RM 120起）可清洁风轮和盘管并恢复强劲风量。建议每12个月一次——每天运行8小时以上则每6–8个月一次。" },
+          urgency: "medium",
+          serviceSlug: "chemical-wash",
+          serviceName: "Pressure Chemical Wash",
+          problemSlug: "aircond-weak-airflow",
+        },
+      },
+      {
+        label: { en: "Within the last 6–12 months", ms: "Dalam 6–12 bulan terakhir", zh: "最近6–12个月内" },
+        result: {
+          title: { en: "Filter or Routine Maintenance Needed", ms: "Penapis atau Penyelenggaraan Rutin Diperlukan", zh: "需要清洗滤网或进行例行保养" },
+          cause: { en: "If the unit was chemically washed within the last year, weak airflow is most likely just a clogged filter or accumulated dust on the intake grille — a quick routine issue.", ms: "Jika unit telah dicuci kimia dalam tahun terakhir, aliran udara lemah kemungkinan besar hanya penapis tersumbat atau habuk pada gril masuk.", zh: "如果机器在一年内做过化学清洗，风量弱很可能只是滤网堵塞或进风口积尘——属于常规小问题。" },
+          solution: { en: "Clean the air filter yourself first (remove, vacuum or rinse, dry, reinstall). If airflow stays weak, book a basic service (RM 99) — the technician will clean the filters, check the blower and do a multi-point diagnostic.", ms: "Cuci penapis udara dahulu (tanggalkan, vakum atau bilas, keringkan, pasang semula). Jika aliran udara masih lemah, tempah servis asas (RM 99).", zh: "先自行清洗空气滤网（取下、吸尘或冲洗、晾干、装回）。如果风量仍然弱，预约基本保养（RM 99）。" },
+          urgency: "low",
+          serviceSlug: "basic-servicing",
+          serviceName: "Basic Servicing / Routine Maintenance",
+          problemSlug: "aircond-weak-airflow",
+        },
+      },
+      {
+        label: { en: "Not sure / just moved in", ms: "Tidak pasti / baru pindah", zh: "不确定/刚搬进来" },
+        result: {
+          title: { en: "Inspection Recommended", ms: "Pemeriksaan Disyorkan", zh: "建议进行检测" },
+          cause: { en: "If you don't know the unit's service history, weak airflow could be a simple filter issue or a deep internal buildup — an inspection gives you a clear answer before spending on services.", ms: "Jika anda tidak tahu sejarah servis unit, aliran udara lemah mungkin isu penapis mudah atau pengumpulan dalaman — pemeriksaan memberi jawapan yang jelas.", zh: "如果不了解机器的保养历史，风量弱可能是简单的滤网问题或内部积垢——先检测再决定，避免花冤枉钱。" },
+          solution: { en: "Book an inspection with KL Renovator. The technician checks the filter, blower wheel, coil condition and drain line, then gives you a transparent recommendation and quote — basic service RM 99, chemical wash from RM 120.", ms: "Tempah pemeriksaan dengan KL Renovator. Juruteknik memeriksa penapis, roda blower, keadaan gegelung dan saliran, kemudian memberi cadangan telus.", zh: "预约KL Renovator检测。技术员检查滤网、风轮、盘管状况和排水管，然后给出透明的建议和报价——基本保养RM 99，化学清洗从RM 120起。" },
+          urgency: "low",
+          serviceSlug: "basic-servicing",
+          serviceName: "Inspection & Maintenance Check",
+          problemSlug: "aircond-weak-airflow",
         },
       },
     ],
@@ -401,7 +452,57 @@ function buildDiagnosticWaMsg(result: DiagnosticResult, path: string[]): string 
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
-export function DiagnosticTool() {
+type DiagLang = "en" | "ms" | "zh";
+
+/** Localized UI chrome (labels/buttons) for the diagnostic tool. */
+const UI_TEXT: Record<DiagLang, {
+  headerSub: string;
+  likelyCause: string;
+  recommendedAction: string;
+  recommendedService: string;
+  viewService: string;
+  readGuide: string;
+  waBook: string;
+  startNew: string;
+  goBack: string;
+}> = {
+  en: {
+    headerSub: "Alat Diagnostik Masalah Aircond  |  冷气问题诊断工具",
+    likelyCause: "Likely Cause",
+    recommendedAction: "Recommended Action",
+    recommendedService: "Recommended Service",
+    viewService: "View Service →",
+    readGuide: "Read full guide for this problem →",
+    waBook: "WhatsApp My Diagnosis — Book Fix",
+    startNew: "↺ Start New Diagnosis",
+    goBack: "← Go back",
+  },
+  ms: {
+    headerSub: "Diagnostik masalah aircond dalam beberapa saat",
+    likelyCause: "Punca Kemungkinan",
+    recommendedAction: "Tindakan Disyorkan",
+    recommendedService: "Servis Disyorkan",
+    viewService: "Lihat Servis →",
+    readGuide: "Baca panduan penuh untuk masalah ini →",
+    waBook: "WhatsApp Diagnosis Saya — Tempah Pembaikan",
+    startNew: "↺ Mulakan Diagnosis Baharu",
+    goBack: "← Kembali",
+  },
+  zh: {
+    headerSub: "几秒钟内诊断冷气问题",
+    likelyCause: "可能的原因",
+    recommendedAction: "建议采取的措施",
+    recommendedService: "推荐服务",
+    viewService: "查看服务 →",
+    readGuide: "阅读此问题的完整指南 →",
+    waBook: "WhatsApp发送诊断 — 预约维修",
+    startNew: "↺ 重新诊断",
+    goBack: "← 返回",
+  },
+};
+
+export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
+  const ui = UI_TEXT[lang];
   const [currentStep, setCurrentStep] = useState<string>("start");
   const [result, setResult] = useState<DiagnosticResult | null>(null);
   const [path, setPath] = useState<string[]>([]);
@@ -446,10 +547,10 @@ export function DiagnosticTool() {
       <div className="bg-gradient-to-r from-violet-600 to-violet-500 px-6 py-5 text-white">
         <p className="text-xs font-black uppercase tracking-widest opacity-80 mb-1">Free Instant Diagnosis</p>
         <h3 className="text-xl font-black leading-tight">
-          Aircond Problem Diagnostic Tool
+          {lang === "ms" ? "Alat Diagnostik Masalah Aircond" : lang === "zh" ? "冷气问题诊断工具" : "Aircond Problem Diagnostic Tool"}
         </h3>
         <p className="text-violet-200 text-xs mt-1">
-          Alat Diagnostik Masalah Aircond &nbsp;|&nbsp; 冷气问题诊断工具
+          {ui.headerSub}
         </p>
       </div>
 
@@ -469,29 +570,33 @@ export function DiagnosticTool() {
         {!result && step && (
           <div className="space-y-4">
             <div>
-              <p className="font-black text-slate-900 text-base sm:text-lg leading-snug mb-1">{step.question.en}</p>
-              <p className="text-xs text-slate-400">{step.question.ms} &nbsp;|&nbsp; {step.question.zh}</p>
+              <p className="font-black text-slate-900 text-base sm:text-lg leading-snug mb-1">{step.question[lang]}</p>
+              {lang === "en" && (
+                <p className="text-xs text-slate-400">{step.question.ms} &nbsp;|&nbsp; {step.question.zh}</p>
+              )}
             </div>
             <div className="space-y-2.5">
               {step.options.map((option, i) => (
                 <button
                   key={i}
-                  onClick={() => handleOption(option, option.label.en)}
+                  onClick={() => handleOption(option, option.label[lang])}
                   className="w-full text-left px-4 py-3.5 rounded-2xl border border-slate-200 hover:border-violet-400 hover:bg-violet-50 text-slate-800 hover:text-violet-900 text-sm font-semibold transition-all active:scale-[0.98] group"
                 >
                   <span className="flex items-center justify-between">
-                    <span>{option.label.en}</span>
+                    <span>{option.label[lang]}</span>
                     <span className="text-slate-300 group-hover:text-violet-400 transition-colors text-lg shrink-0 ml-2">›</span>
                   </span>
-                  <span className="text-xs text-slate-400 font-normal block mt-0.5">
-                    {option.label.ms} &nbsp;|&nbsp; {option.label.zh}
-                  </span>
+                  {lang === "en" && (
+                    <span className="text-xs text-slate-400 font-normal block mt-0.5">
+                      {option.label.ms} &nbsp;|&nbsp; {option.label.zh}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
             {history.length > 0 && (
               <button onClick={handleBack} className="text-xs text-slate-400 hover:text-slate-600 font-semibold transition-colors">
-                ← Go back
+                {ui.goBack}
               </button>
             )}
           </div>
@@ -502,23 +607,27 @@ export function DiagnosticTool() {
           <div className="space-y-4">
             {/* Urgency badge */}
             <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black ${urgencyConfig.badge}`}>
-              {urgencyConfig.label}
+              {lang === "ms" ? urgencyConfig.labelMS : lang === "zh" ? urgencyConfig.labelZH : urgencyConfig.label}
             </div>
 
             {/* Result card */}
             <div className={`border rounded-2xl p-5 ${urgencyConfig.color}`}>
-              <h4 className="font-black text-slate-900 text-base mb-3">{result.title.en}</h4>
+              <h4 className="font-black text-slate-900 text-base mb-3">{result.title[lang]}</h4>
 
               <div className="space-y-3">
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Likely Cause</p>
-                  <p className="text-sm text-slate-700 leading-relaxed">{result.cause.en}</p>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{result.cause.ms}</p>
-                  <p className="text-xs text-slate-400 leading-relaxed">{result.cause.zh}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{ui.likelyCause}</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">{result.cause[lang]}</p>
+                  {lang === "en" && (
+                    <>
+                      <p className="text-xs text-slate-400 mt-1 leading-relaxed">{result.cause.ms}</p>
+                      <p className="text-xs text-slate-400 leading-relaxed">{result.cause.zh}</p>
+                    </>
+                  )}
                 </div>
                 <div className="border-t border-slate-200 pt-3">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Recommended Action</p>
-                  <p className="text-sm text-slate-700 leading-relaxed font-medium">{result.solution.en}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{ui.recommendedAction}</p>
+                  <p className="text-sm text-slate-700 leading-relaxed font-medium">{result.solution[lang]}</p>
                 </div>
               </div>
             </div>
@@ -526,24 +635,24 @@ export function DiagnosticTool() {
             {/* Service link */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs text-slate-500 font-medium mb-0.5">Recommended Service</p>
+                <p className="text-xs text-slate-500 font-medium mb-0.5">{ui.recommendedService}</p>
                 <p className="font-black text-slate-900 text-sm">{result.serviceName}</p>
               </div>
               <Link
-                href={`/services/${result.serviceSlug}`}
+                href={lang === "en" ? `/services/${result.serviceSlug}` : `/${lang}/services/${result.serviceSlug}`}
                 className="text-xs font-black text-sky-600 hover:text-sky-800 border border-sky-200 hover:border-sky-400 px-3 py-2 rounded-xl transition-all whitespace-nowrap ml-3"
               >
-                View Service →
+                {ui.viewService}
               </Link>
             </div>
 
             {/* Problem page link */}
             {result.problemSlug && (
               <Link
-                href={`/problems/${result.problemSlug}`}
+                href={lang === "en" ? `/problems/${result.problemSlug}` : `/${lang}/problems/${result.problemSlug}`}
                 className="block text-xs font-semibold text-violet-600 hover:text-violet-800 transition-colors text-center"
               >
-                Read full guide for this problem →
+                {ui.readGuide}
               </Link>
             )}
 
@@ -555,7 +664,7 @@ export function DiagnosticTool() {
               className="flex items-center justify-center gap-2.5 w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-green-500/20"
             >
               <FaWhatsapp className="h-5 w-5 shrink-0" />
-              WhatsApp My Diagnosis — Book Fix
+              {ui.waBook}
             </a>
 
             {result.urgency === "emergency" && (
@@ -563,7 +672,7 @@ export function DiagnosticTool() {
                 href={`tel:${sitePublic.phone}`}
                 className="flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all shadow-lg"
               >
-                📞 Call Emergency Line Now
+                📞 {lang === "ms" ? "Panggil Talian Kecemasan Sekarang" : lang === "zh" ? "立即致电紧急热线" : "Call Emergency Line Now"}
               </a>
             )}
 
@@ -571,7 +680,7 @@ export function DiagnosticTool() {
               onClick={handleReset}
               className="w-full text-xs text-slate-400 hover:text-slate-600 font-semibold py-2 transition-colors"
             >
-              ↺ Start New Diagnosis
+              {ui.startNew}
             </button>
           </div>
         )}

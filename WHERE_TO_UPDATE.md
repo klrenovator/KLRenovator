@@ -28,6 +28,38 @@ Replace the `googleReviews` array with your real reviews.
 File: `config/site.ts` → `siteConfig.pricing.*`
 Or: `config/services-data.ts` → `priceTable` for detailed service pages.
 
+After changing any price in `site.ts`, run `npm run gen:site-public` — every
+calculator and the AI assistant reads prices from `config/site-public.ts`
+(which is generated from `site.ts`), so they stay in sync automatically.
+
+## 🧮 Calculators & AI assistant (shared logic)
+- `lib/aircond-math.ts` — ALL calculation logic + non-published assumptions
+  (wattage per HP, typical gas PSI, inverter savings %, drain pipe estimate
+  rate). Every calculator and the AI assistant import from here.
+- `config/tools.ts` — registry of tool URLs + trilingual display names
+  (used by the `/tools` hub, footer, navbar, and every `ToolLinks` strip).
+- `components/calculators/` — shared calculator UI + page layout + link strips.
+  Every calculator component accepts a `lang` prop (`"en" | "ms" | "zh"`).
+- `config/tool-content.ts` — trilingual SEO copy (h1, intro, how-it-works,
+  factors, FAQs) for all 7 tools + the AI assistant page. EN/MS/ZH page
+  files are thin wrappers around `getToolContent(key, lang)`.
+- `lib/aircond-assistant.ts` — trilingual AI assistant engine (knowledge
+  base + intent matching). `answer(input, context, lang)` reads prices live
+  from `sitePublic.pricing`.
+- `app/aircond-assistant/page.tsx` + `/ms/aircond-assistant` + `/zh/aircond-assistant`.
+
+## 🌐 Multilingual tool URLs
+Every tool exists in 3 languages under the same slug:
+- EN: `/aircond-installation-cost-calculator`
+- MS: `/ms/aircond-installation-cost-calculator`
+- ZH: `/zh/aircond-installation-cost-calculator`
+Same pattern for `/tools`, `/aircond-gas-topup-cost-calculator`,
+`/which-aircond-service-do-i-need`, `/aircond-size-calculator`,
+`/aircond-electricity-cost-calculator`, `/aircond-savings-calculator`,
+`/aircond-assistant`. Add a new ms/zh page to `app/sitemap.ts` (trilingual
+alternates) and to the `toolPages` array in `components/navbar.tsx`
+(getTranslatedPath) when creating new tools.
+
 ## 📞 Contact & brand info
 File: `config/site.ts`
 - `phone`, `phoneDisplay`, `whatsapp`, `email`, `address`, `hours`

@@ -90,9 +90,19 @@ KL Renovator provides same-day emergency aircond repair across all of KL and Sel
 
 ## FREE TOOLS ON WEBSITE
 
+- Tools hub: https://www.klrenovator.com/tools — all calculators in one place
 - Price Calculator: https://www.klrenovator.com/#tools — estimates cost by service, unit type, HP, units count
 - Diagnostic Tool: https://www.klrenovator.com/#tools — interactive problem→cause→solution guide
-- Both tools pre-fill WhatsApp with quote/diagnosis details for seamless booking
+- Installation Cost Calculator: https://www.klrenovator.com/aircond-installation-cost-calculator — labour + copper pipe, wire, drain pipe, PVC casing, bracket, switch, water pump + bundle discounts (4–10 units 5% OFF, 10+ units 10% OFF)
+- Gas Top-up Cost Estimator: https://www.klrenovator.com/aircond-gas-topup-cost-calculator — R22 RM 2.50/PSI, R410A & R32 RM 3.00/PSI, by HP and gas condition
+- Which Aircond Service Do I Need?: https://www.klrenovator.com/which-aircond-service-do-i-need — symptom-based service recommendation (basic service, chemical wash, overhaul, gas top-up, repair, inspection)
+- BTU / HP Calculator: https://www.klrenovator.com/btu-calculator — room size → BTU & HP (trilingual: /ms/btu-calculator, /zh/btu-calculator)
+- Aircond Size Calculator: https://www.klrenovator.com/aircond-size-calculator — room size + type + usage + heat exposure → HP, BTU, capacity
+- Electricity Cost Calculator: https://www.klrenovator.com/aircond-electricity-cost-calculator — monthly cost by HP, usage hours, editable TNB rate
+- Inverter Savings Calculator: https://www.klrenovator.com/aircond-savings-calculator — non-inverter vs inverter: monthly/yearly savings + payback period
+- AI Aircond Expert Assistant: https://www.klrenovator.com/aircond-assistant — answers pricing, HP recommendations, installation quotes, gas type, service advice, troubleshooting & booking questions using the published 2026 price list
+- All tools are trilingual — Bahasa Malaysia and Mandarin versions exist for every calculator under the same slug with /ms/ and /zh/ prefixes (e.g. https://www.klrenovator.com/ms/aircond-installation-cost-calculator and https://www.klrenovator.com/zh/aircond-installation-cost-calculator). The AI assistant also chats in Bahasa Malaysia and Mandarin.
+- All tools pre-fill WhatsApp with quote/diagnosis details for seamless booking
 
 ## CORE SERVICES & PRICING
 
@@ -123,6 +133,8 @@ Full hierarchical list with every neighbourhood: https://www.klrenovator.com/llm
 ## TOPICAL AUTHORITY — KEY PAGES
 
 - Services hub: https://www.klrenovator.com/services
+- Free calculators & tools: https://www.klrenovator.com/tools
+- AI Aircond Expert Assistant: https://www.klrenovator.com/aircond-assistant
 - All areas: https://www.klrenovator.com/areas
 - All brands: https://www.klrenovator.com/brands
 - Problems guide: https://www.klrenovator.com/problems

@@ -343,20 +343,55 @@ J: Ya. KL Renovator menyediakan URL Bahasa Malaysia sebenar dan berasingan untuk
 
 ## FREE INTERACTIVE TOOLS
 
-KL Renovator offers two free interactive tools on the homepage (https://www.klrenovator.com/#tools):
+KL Renovator offers free interactive tools on the homepage and dedicated tool pages (hub: https://www.klrenovator.com/tools). All estimates use the published 2026 price list.
 
-### Price Calculator
+### Price Calculator (homepage)
 - Estimates aircond service cost by: service type, unit type (wall/cassette/window), HP size, number of units
-- Applies volume discounts automatically (5% for 2-3 units, 10% for 4-8, 15% for 8+)
+- Applies the published instant booking discount automatically: 5% OFF for 4–10 units, 10% OFF for 10+ units
 - Outputs pre-filled WhatsApp quote message
 - URL: https://www.klrenovator.com/#tools
 
-### Aircond Problem Diagnostic Tool
-- Interactive decision tree: 8 problem categories, 20+ branches
-- Identifies: likely cause, recommended service, urgency level (low/medium/high/emergency)
-- Links to relevant service page and problem page
-- Pre-fills WhatsApp with full diagnosis for booking
-- URL: https://www.klrenovator.com/#tools
+### Aircond Problem Diagnostic Tool (homepage + dedicated page)
+- Interactive decision tree: problem categories including not cold, water leaking, noise, bad smell, weak airflow, not turning on, tripping MCB, ice formation, remote issues
+- Asks follow-up questions (severity, timing, last service date) and identifies: likely cause, recommended service, urgency level (low/medium/high/emergency)
+- Recommends: Basic Service (RM 99), Chemical Wash (RM 120+), Chemical Overhaul (RM 220+), Gas Top-up (RM 2.50–3.00/PSI), Repair (diagnostic RM 88 waived with repair) or Inspection
+- Links to relevant service page and problem page; pre-fills WhatsApp with full diagnosis
+- URL: https://www.klrenovator.com/which-aircond-service-do-i-need
+
+### Installation Cost Calculator
+- Inputs: number of units, HP, aircond type (wall/cassette/window), copper pipe length, electrical wire length, drain pipe length, PVC casing, outdoor bracket, aircond switch, water pump
+- Outputs: labour cost (published per-HP rates RM 199–449 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9–17/ft, drain ~RM 5/ft estimate, PVC RM 6–12/ft, brackets RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 4–10 units, 10% for 10+ units), grand total
+- URL: https://www.klrenovator.com/aircond-installation-cost-calculator
+
+### Gas Top-up Cost Estimator
+- Inputs: HP, gas type (R22/R410A/R32), estimated gas condition, number of units
+- Outputs: estimated cost range based on published per-PSI rates (R22 RM 2.50/PSI, R410A & R32 RM 3.00/PSI); final quantity and charges confirmed by the technician after on-site inspection
+- URL: https://www.klrenovator.com/aircond-gas-topup-cost-calculator
+
+### BTU / HP Calculator (trilingual)
+- Inputs: room length, width, optional ceiling height, room type, sun exposure, occupants, number of windows
+- Outputs: recommended BTU and HP plus installation starting price
+- URL: https://www.klrenovator.com/btu-calculator (also /ms/btu-calculator and /zh/btu-calculator)
+
+### Aircond Size Calculator
+- Inputs: room size (L×W), room type, usage intensity, heat exposure
+- Outputs: recommended HP, BTU and suitable aircond capacity (~25 BTU per sqft with adjustments)
+- URL: https://www.klrenovator.com/aircond-size-calculator
+
+### Electricity Cost Calculator
+- Inputs: HP, daily usage hours, days per month, editable electricity rate (default RM 0.509/kWh TNB average)
+- Outputs: estimated monthly cost in RM and kWh
+- URL: https://www.klrenovator.com/aircond-electricity-cost-calculator
+
+### Inverter Savings Calculator
+- Compares old non-inverter vs new inverter aircond (inverter uses ~35% less electricity)
+- Outputs: monthly savings, yearly savings, estimated payback period, visual kWh comparison
+- URL: https://www.klrenovator.com/aircond-savings-calculator
+
+### AI Aircond Expert Assistant
+- Answers pricing questions using the published 2026 price list, recommends HP by room size, generates installation quotations, estimates materials, advises on gas type (R22/R410A/R32), recommends services from symptoms, troubleshoots common problems, answers FAQs and guides booking
+- Never invents prices; anything requiring inspection is confirmed on-site
+- URL: https://www.klrenovator.com/aircond-assistant
 
 ## FULL SITEMAP
 

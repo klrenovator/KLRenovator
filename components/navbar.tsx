@@ -129,6 +129,22 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
     return target === "en" ? enPath : enPath === "/" ? `/${target}` : `/${target}${enPath}`;
   }
 
+  // Free tools & calculators — /ms and /zh twins exist (2026-08), same slug
+  // under the locale prefix.
+  const toolPages = [
+    "/tools",
+    "/aircond-installation-cost-calculator",
+    "/aircond-gas-topup-cost-calculator",
+    "/which-aircond-service-do-i-need",
+    "/aircond-size-calculator",
+    "/aircond-electricity-cost-calculator",
+    "/aircond-savings-calculator",
+    "/aircond-assistant",
+  ];
+  if (toolPages.includes(enPath)) {
+    return target === "en" ? enPath : `/${target}${enPath}`;
+  }
+
   // Dynamic service detail pages (/services/<slug>) → real /ms and /zh twins
   // created in Round 18.3 (app/ms/services/[slug], app/zh/services/[slug]).
   // Add this ONLY after those route files exist, so the switcher never
@@ -143,19 +159,19 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
 const NAV_LABELS = {
   en: {
     home: "Home", installation: "Installation", services: "Services", blog: "Blog",
-    about: "About", faq: "FAQ", contact: "Contact",
+    about: "About", faq: "FAQ", contact: "Contact", tools: "Tools",
     call: "Call Support", book: "Book Now",
     topbar: "Same-Day Aircond Installation & Servicing Across KL & Selangor — From RM199",
   },
   ms: {
     home: "Utama", installation: "Pemasangan", services: "Perkhidmatan", blog: "Blog",
-    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi",
+    about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi", tools: "Alat",
     call: "Hubungi Kami", book: "Tempah Sekarang",
     topbar: "Pemasangan & Servis Aircond Hari Sama KL & Selangor — Dari RM199",
   },
   zh: {
     home: "首页", installation: "冷气安装", services: "服务", blog: "博客",
-    about: "关于我们", faq: "常见问答", contact: "联系我们",
+    about: "关于我们", faq: "常见问答", contact: "联系我们", tools: "计算工具",
     call: "致电支持", book: "立即预约",
     topbar: "当天冷气安装与服务，覆盖吉隆坡及雪兰莪 — RM199起",
   },
@@ -219,13 +235,14 @@ export const Navbar = () => {
   const currentLang = LANG_OPTIONS.find((l) => l.code === lang) ?? LANG_OPTIONS[0];
 
   const SIMPLE_LINKS = [
-    { label: lbl.home,         href: "/" },
-    { label: lbl.installation, href: "/installation" },
-    { label: lbl.services,     href: "/services" },
-    { label: lbl.blog,     href: "/blog" },
-    { label: lbl.about,    href: "/about" },
-    { label: lbl.faq,      href: "/faq" },
-    { label: lbl.contact,  href: "/contact" },
+    { label: lbl.home,         href: "/",          localize: true },
+    { label: lbl.installation, href: "/installation", localize: true },
+    { label: lbl.services,     href: "/services",  localize: true },
+    { label: lbl.tools,        href: "/tools",     localize: true },
+    { label: lbl.blog,         href: "/blog",      localize: true },
+    { label: lbl.about,        href: "/about",     localize: true },
+    { label: lbl.faq,          href: "/faq",       localize: true },
+    { label: lbl.contact,      href: "/contact",   localize: true },
   ];
 
   return (
@@ -289,7 +306,7 @@ export const Navbar = () => {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
           {SIMPLE_LINKS.map((l) => {
-            const pathHref = localizedPath(l.href);
+            const pathHref = l.localize === false ? l.href : localizedPath(l.href);
             const active = l.href === "/"
               ? pathname === pathHref
               : pathname === pathHref || pathname.startsWith(pathHref + "/");
@@ -421,7 +438,7 @@ export const Navbar = () => {
             <ul>
               {/* Simple links */}
               {SIMPLE_LINKS.map((l) => {
-                const pathHref = localizedPath(l.href);
+                const pathHref = l.localize === false ? l.href : localizedPath(l.href);
                 const active = l.href === "/"
                   ? pathname === pathHref
                   : pathname === pathHref || pathname.startsWith(pathHref + "/");

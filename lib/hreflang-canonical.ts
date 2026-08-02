@@ -160,4 +160,20 @@ export function normalizeHreflangUrls(urls: {
   };
 }
 
+/**
+ * For pages that exist ONLY in English (e.g. the calculator tools): a
+ * self-referencing canonical with a single en-MY alternate. Emits no /ms/
+ * or /zh/ URLs so no dead translation links are ever exposed.
+ */
+export function buildCanonicalOnly(enPath: string) {
+  const url = buildUrl(enPath);
+  return {
+    canonical: url,
+    languages: {
+      "en-MY": url,
+      "x-default": url,
+    },
+  };
+}
+
 export { BASE as CANONICAL_BASE, buildUrl as buildCanonicalUrl };

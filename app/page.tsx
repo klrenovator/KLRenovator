@@ -212,6 +212,35 @@ export default function Home() {
             <DiagnosticTool />
             <PriceCalculator />
           </div>
+
+          {/* All calculator tools — internal linking hub */}
+          <div className="mt-8">
+            <div className="flex flex-wrap justify-center gap-2.5">
+              <NextLink href="/aircond-installation-cost-calculator" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:shadow-sm transition-all">
+                🔧 Installation Cost Calculator
+              </NextLink>
+              <NextLink href="/aircond-gas-topup-cost-calculator" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:shadow-sm transition-all">
+                ⛽ Gas Top-up Cost Estimator
+              </NextLink>
+              <NextLink href="/aircond-size-calculator" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:shadow-sm transition-all">
+                📏 Aircond Size Calculator
+              </NextLink>
+              <NextLink href="/aircond-electricity-cost-calculator" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:shadow-sm transition-all">
+                ⚡ Electricity Cost Calculator
+              </NextLink>
+              <NextLink href="/aircond-savings-calculator" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:shadow-sm transition-all">
+                💰 Inverter Savings Calculator
+              </NextLink>
+              <NextLink href="/tools" className="inline-flex items-center gap-2 rounded-full bg-sky-600 text-white px-4 py-2 text-xs font-black hover:bg-sky-700 hover:shadow-md transition-all">
+                View All Tools →
+              </NextLink>
+            </div>
+            <div className="mt-4 text-center">
+              <NextLink href="/aircond-assistant" className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-violet-600 hover:text-violet-800 transition-colors">
+                🤖 Or ask the AI Aircond Expert Assistant — instant pricing &amp; quotes →
+              </NextLink>
+            </div>
+          </div>
         </div>
       </section>
 

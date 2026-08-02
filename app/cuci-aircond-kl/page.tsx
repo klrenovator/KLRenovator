@@ -10,6 +10,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { waLink } from "@/lib/whatsapp";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const dynamic = "force-static";
 
@@ -126,6 +127,12 @@ export default function Page() {
           <div className="mt-10 text-center">
             <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 rounded-2xl bg-[#22c55e] px-8 py-4 text-sm font-black uppercase tracking-wider text-white shadow-lg hover:bg-[#16a34a]"><FaWhatsapp className="h-5 w-5"/> Book Chemical Wash KL Now</a>
           </div>
+        </div>
+      </section>
+      {/* Free calculator tools — internal linking */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks />
         </div>
       </section>
       <PriceComparisonUI locale="en" />
