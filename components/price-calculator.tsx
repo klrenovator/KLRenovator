@@ -70,9 +70,28 @@ const COPPER_PIPE_RATE: Record<string, number> = {
   "1.0-3.0": 23,
 };
 
-const WIRE_RATE_PER_FOOT = 9;
+// Electrical wire rates per foot (HP-wise, standardized)
+const WIRE_RATE: Record<string, number> = {
+  "1.0-1.5": 9,
+  "1.0": 9,
+  "1.5": 9,
+  "1.5-2.0": 13,
+  "2.0-2.5": 13,
+  "2.0": 13,
+  "2.5": 13,
+  "2.5-3.0": 17,
+  "3.0": 17,
+  "3.0-3.5": 17,
+  "3.5-5.0": 17,
+  "3.5-6.0": 17,
+  "4.0": 17,
+  "4.0-5.0": 17,
+  "5.0": 17,
+  "1.0-3.0": 13,
+};
 const FREE_PIPE_FEET = 7;
-const OUTDOOR_BRACKET_PRICE = 45;
+const STANDARD_OUTDOOR_BRACKET_PRICE = 45;
+const HEAVY_DUTY_OUTDOOR_BRACKET_PRICE = 70;
 const INDOOR_BRACKET_PRICE = 35;
 const SWITCH_PRICE = 100;
 const PVC_INDOOR_RATE = 8;  // RM per foot (mid of RM 6-12 range for wire casing)
@@ -193,22 +212,29 @@ const GAS_LABELS: Record<GasType, string> = {
 
 const DISCOUNT: Record<number, { pct: number; label: string }> = {
   1: { pct: 0, label: "" },
-  2: { pct: 5, label: "5% off (2–3 units)" },
-  3: { pct: 5, label: "5% off (2–3 units)" },
-  4: { pct: 10, label: "10% off (4–8 units)" },
-  5: { pct: 10, label: "10% off (4–8 units)" },
-  6: { pct: 10, label: "10% off (4–8 units)" },
-  7: { pct: 10, label: "10% off (4–8 units)" },
-  8: { pct: 10, label: "10% off (4–8 units)" },
+  2: { pct: 0, label: "" },
+  3: { pct: 0, label: "" },
+  4: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
+  5: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
+  6: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
+  7: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
+  8: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
+  9: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
+  10: { pct: 5, label: "5% OFF Instant Booking Discount (4–10 units)" },
 };
 function getDiscount(units: number) {
-  if (units >= 8) return { pct: 15, label: "15% off (8+ units)" };
+  if (units > 10) return { pct: 10, label: "10% OFF Instant Booking Discount (10+ units)" };
   return DISCOUNT[units] || { pct: 0, label: "" };
 }
 
 // Helper: get copper pipe rate for current HP size
 function getCopperRatePerFoot(hpSize: string): number {
   return COPPER_PIPE_RATE[hpSize] ?? 17;
+}
+
+// Helper: get electrical wire rate for current HP size (HP-wise, standardized)
+function getWireRatePerFoot(hpSize: string): number {
+  return WIRE_RATE[hpSize] ?? 9;
 }
 
 // Shared select styling — matches the house input style used in contact-form.tsx
@@ -255,6 +281,7 @@ export function PriceCalculator() {
   // ── Add-on states (installation only) ───────────────────────────────────────
   const [extraCopperFeet, setExtraCopperFeet] = useState<number>(0);
   const [hasOutdoorBracket, setHasOutdoorBracket] = useState<boolean | null>(null);
+  const [outdoorBracketType, setOutdoorBracketType] = useState<"standard" | "heavy">("standard");
   const [hasSwitch, setHasSwitch] = useState<boolean | null>(null);
   const [wantsPvcIndoor, setWantsPvcIndoor] = useState<boolean | null>(null);
   const [pvcIndoorFeet, setPvcIndoorFeet] = useState<number>(0);
@@ -281,10 +308,13 @@ export function PriceCalculator() {
 
   // ── Add-on cost calculation (installation only) ───────────────────────────
   const copperRate = getCopperRatePerFoot(hpSize);
+  const wireRate = getWireRatePerFoot(hpSize);
   const copperExtraCost = isInstallation && extraCopperFeet > 0
-    ? extraCopperFeet * copperRate + extraCopperFeet * WIRE_RATE_PER_FOOT
+    ? extraCopperFeet * copperRate + extraCopperFeet * wireRate
     : 0;
-  const outdoorBracketCost = isInstallation && hasOutdoorBracket === false ? OUTDOOR_BRACKET_PRICE : 0;
+  const outdoorBracketCost = isInstallation && hasOutdoorBracket === false
+    ? (outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE)
+    : 0;
   const switchCost = isInstallation && hasSwitch === false ? SWITCH_PRICE : 0;
   const pvcIndoorCost = isInstallation && wantsPvcIndoor === true && pvcIndoorFeet > 0 ? pvcIndoorFeet * PVC_INDOOR_RATE : 0;
   const pvcOutdoorCost = isInstallation && wantsPvcOutdoor === true && pvcOutdoorFeet > 0 ? pvcOutdoorFeet * PVC_OUTDOOR_RATE : 0;
@@ -297,11 +327,15 @@ export function PriceCalculator() {
   const addOnLines: string[] = [];
   if (isInstallation) {
     if (extraCopperFeet > 0) {
-      addOnLines.push(`📦 Extra Copper Pipe & Wire: ${extraCopperFeet} ft beyond free 7 ft = RM ${copperExtraCost.toLocaleString()} (copper RM ${copperRate}/ft + wire RM ${WIRE_RATE_PER_FOOT}/ft)`);
+      addOnLines.push(`📦 Extra Copper Pipe & Wire: ${extraCopperFeet} ft beyond free 7 ft = RM ${copperExtraCost.toLocaleString()} (copper RM ${copperRate}/ft + wire RM ${wireRate}/ft for ${hpSize} HP)`);
     } else {
       addOnLines.push(`📦 Copper Pipe & Wire: Using standard 7 ft (free included)`);
     }
-    if (hasOutdoorBracket === false) addOnLines.push(`🔩 Outdoor Compressor Bracket: RM ${OUTDOOR_BRACKET_PRICE} (not available, to be supplied)`);
+    if (hasOutdoorBracket === false) {
+      const bracketPrice = outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE;
+      const bracketLabel = outdoorBracketType === "heavy" ? "Heavy Duty Compressor / Outdoor Bracket" : "Standard Compressor / Outdoor Bracket";
+      addOnLines.push(`🔩 ${bracketLabel}: RM ${bracketPrice} (not available, to be supplied)`);
+    }
     if (hasSwitch === false) addOnLines.push(`🔌 Aircond Switch / Plug Point: RM ${SWITCH_PRICE} (installation required)`);
     if (wantsPvcIndoor === true && pvcIndoorFeet > 0) addOnLines.push(`📏 PVC Casing (Indoor – wire section): ${pvcIndoorFeet} ft × RM ${PVC_INDOOR_RATE}/ft = RM ${pvcIndoorCost.toLocaleString()}`);
     if (wantsPvcOutdoor === true && pvcOutdoorFeet > 0) addOnLines.push(`📏 PVC Casing (Outdoor – copper pipe section): ${pvcOutdoorFeet} ft × RM ${PVC_OUTDOOR_RATE}/ft = RM ${pvcOutdoorCost.toLocaleString()}`);
@@ -494,10 +528,15 @@ export function PriceCalculator() {
             {/* Copper Pipe & Wire */}
             <div className="bg-sky-50 border border-sky-100 rounded-2xl p-4 space-y-2.5">
               <div>
-                <p className="text-xs font-black text-sky-800 mb-0.5">Copper Pipe &amp; Wire</p>
+                <p className="text-xs font-black text-sky-800 mb-0.5">Copper Pipe &amp; Wire (HP-wise rates)</p>
                 <p className="text-[11px] text-sky-600 leading-relaxed">
-                  ✅ First <strong>7 ft are FREE</strong>. Extra footage is charged per foot based on HP size.
+                  ✅ First <strong>7 ft are FREE</strong>. Extra footage uses HP-specific rates for copper & wire.
                 </p>
+                <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-0.5 text-[10px] text-sky-800 font-bold">
+                  <span>• Copper: RM {copperRate}/ft</span>
+                  <span>• Wire: RM {wireRate}/ft</span>
+                </div>
+                <p className="text-[10px] text-sky-700 mt-1">For {hpSize} HP unit</p>
               </div>
               <div>
                 <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
@@ -534,7 +573,24 @@ export function PriceCalculator() {
               </p>
               <YesNoSelect value={hasOutdoorBracket} onChange={(v) => { setHasOutdoorBracket(v); setShowResult(false); }} />
               {hasOutdoorBracket === false && (
-                <p className="text-[11px] text-amber-700 mt-1 font-semibold">+RM {OUTDOOR_BRACKET_PRICE} added to estimate</p>
+                <div className="mt-2 space-y-1.5">
+                  <p className="text-[11px] font-semibold text-slate-700">Choose bracket type:</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => { setOutdoorBracketType("standard"); setShowResult(false); }}
+                      className={`px-2 py-2 text-[11px] font-bold rounded-lg border transition ${outdoorBracketType === "standard" ? "border-sky-500 bg-sky-50 text-sky-800" : "border-slate-200 bg-white text-slate-700 hover:border-sky-300"}`}
+                    >
+                      Standard — RM {STANDARD_OUTDOOR_BRACKET_PRICE}
+                    </button>
+                    <button
+                      onClick={() => { setOutdoorBracketType("heavy"); setShowResult(false); }}
+                      className={`px-2 py-2 text-[11px] font-bold rounded-lg border transition ${outdoorBracketType === "heavy" ? "border-sky-500 bg-sky-50 text-sky-800" : "border-slate-200 bg-white text-slate-700 hover:border-sky-300"}`}
+                    >
+                      Heavy Duty — RM {HEAVY_DUTY_OUTDOOR_BRACKET_PRICE}
+                    </button>
+                  </div>
+                  <p className="text-[11px] text-amber-700 font-semibold">+RM {outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE} added to estimate ({outdoorBracketType === "heavy" ? "Heavy Duty" : "Standard"})</p>
+                </div>
               )}
             </div>
 
@@ -680,8 +736,12 @@ export function PriceCalculator() {
             )}
             {isInstallation && hasOutdoorBracket === false && (
               <div className="flex justify-between text-sm">
-                <span className="text-slate-600">Outdoor compressor bracket</span>
-                <span className="font-bold text-slate-800">RM {OUTDOOR_BRACKET_PRICE}</span>
+                <span className="text-slate-600">
+                  {outdoorBracketType === "heavy" ? "Heavy Duty Compressor / Outdoor Bracket" : "Standard Compressor / Outdoor Bracket"}
+                </span>
+                <span className="font-bold text-slate-800">
+                  RM {outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE}
+                </span>
               </div>
             )}
             {isInstallation && hasSwitch === false && (

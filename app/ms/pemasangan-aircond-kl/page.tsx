@@ -315,10 +315,11 @@ export default function PemasanganAircondKLPage() {
             <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
               <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Caj Tambahan (Hanya Jika Perlu)</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Paip tembaga melebihi 7 kaki: RM 17–27/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar melebihi 7 kaki: RM 9/kaki</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Paip tembaga melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar elektrik melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP)</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Casing PVC/penyembunyian: RM 6–12/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Naik taraf braket heavy-duty: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran standard: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran heavy-duty: RM 70</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Soket elektrik baharu: RM 100</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Borong dinding/penyembunyian: RM 6/kaki</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Akses kondo tinggi/sukar: RM 50–150</li>

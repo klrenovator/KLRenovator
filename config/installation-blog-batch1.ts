@@ -584,7 +584,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Not sure about your room size? Use our free <a href="/btu-calculator">BTU Calculator</a> — enter your room dimensions, room type, and sun exposure to get an instant HP recommendation with installation cost.</p>
 
       <h2>Installation Cost by HP Size</h2>
-      <p>KL Renovator's <a href="/aircond-installation-kl">expert installation team</a> offers transparent per-HP pricing from RM 199. Volume discount: 2-3 units 5% off, 4-8 units 10% off. WhatsApp <strong>+60 18-298 3573</strong> — tell us your room size and we'll recommend the perfect HP.</p>
+      <p>KL Renovator's <a href="/aircond-installation-kl">expert installation team</a> offers transparent per-HP pricing from RM 199. Volume discount: 4–10 units 5% OFF Instant Booking Discount, 10+ units 10% OFF Instant Booking Discount. WhatsApp <strong>+60 18-298 3573</strong> — tell us your room size and we'll recommend the perfect HP.</p>
     `,
     contentMS: `
       <h2>HP Aircond Mana Yang Sesuai Untuk Bilik Anda?</h2>
@@ -620,7 +620,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Tidak pasti saiz bilik anda? Gunakan <a href="/btu-calculator">Kalkulator BTU</a> percuma kami — masukkan dimensi bilik, jenis bilik, dan pendedahan matahari untuk mendapatkan cadangan HP serta-merta dengan kos pemasangan.</p>
 
       <h2>Kos Pemasangan Mengikut Saiz HP</h2>
-      <p><a href="/aircond-installation-kl">Pasukan pemasangan pakar KL Renovator</a> menawarkan harga telus per-HP dari RM 199. Diskaun volum: 2-3 unit 5%, 4-8 unit 10%. WhatsApp <strong>+60 18-298 3573</strong> — beritahu saiz bilik anda dan kami cadangkan HP yang sempurna.</p>
+      <p><a href="/aircond-installation-kl">Pasukan pemasangan pakar KL Renovator</a> menawarkan harga telus per-HP dari RM 199. Diskaun volum: 4–10 unit Diskaun Tempahan Segera 5%, 10+ unit Diskaun Tempahan Segera 10%. WhatsApp <strong>+60 18-298 3573</strong> — beritahu saiz bilik anda dan kami cadangkan HP yang sempurna.</p>
     `,
     contentZH: `
       <h2>哪种匹数冷气适合您的房间？</h2>

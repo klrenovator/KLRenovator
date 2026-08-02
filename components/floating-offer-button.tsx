@@ -92,13 +92,13 @@ export function FloatingOfferButton() {
             <button
               onClick={() => setIsOpen(true)}
               className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-sky-900 shadow-xl ring-1 ring-sky-100 transition-all hover:scale-105 hover:bg-sky-50 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
-              aria-label="Open 10% Off Offer"
+              aria-label="Open First-Time Customer Offer"
             >
               <span className="flex items-center justify-center rounded-full bg-sky-500 p-1.5 text-white shadow-inner transition-transform group-hover:rotate-12">
                 <FiGift className="h-4 w-4" />
               </span>
-              <span className="pr-1 tracking-tight">10% Off</span>
-              
+              <span className="pr-1 tracking-tight">First Booking 10% Off</span>
+
               {/* Subtle pulse effect */}
               <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-sky-400 opacity-20 duration-1000"></span>
             </button>
@@ -136,11 +136,11 @@ export function FloatingOfferButton() {
               </div>
               
               <h3 className="mb-2 text-xl font-bold tracking-tight text-slate-900">
-                Get 10% Off Your First Service
+                First-Time Customer 10% Off
               </h3>
-              
+
               <p className="mb-6 text-sm leading-relaxed text-slate-600">
-                Welcome to KL Renovator! We&apos;re offering new customers a special 10% discount on any standard aircond servicing or repair. Experience our premium service today.
+                Welcome to KL Renovator! We&apos;re offering new customers a special 10% discount on any standard aircond servicing or repair. This is a separate first-time customer offer — distinct from our Multi-Unit Bundle Savings. Experience our premium service today.
               </p>
               
               <div className="mb-6 rounded-lg bg-slate-50 p-3 text-xs text-slate-500">

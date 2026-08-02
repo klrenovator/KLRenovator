@@ -72,7 +72,7 @@ export const installationBlogBatch4: BlogPost[] = [
           <tr><td>Multi-split (2-4 indoor)</td><td>Various</td><td>RM 600+</td><td>Multiple rooms, one outdoor unit</td></tr>
         </tbody>
       </table>
-      <p><strong>Volume discounts:</strong> 2-3 units 5% off, 4-8 units 10% off, 8+ units 15% off on labour.</p>
+      <p><strong>Volume discounts:</strong> 4–10 units 5% OFF Instant Booking Discount, 10+ units 10% OFF Instant Booking Discount on labour.</p>
 
       <h2>After-Hours & Weekend Installation</h2>
       <p>We understand your business can't shut down during operating hours. Our <a href="/near-me">commercial installation specialists near you</a> offer:</p>
@@ -147,7 +147,7 @@ export const installationBlogBatch4: BlogPost[] = [
           <tr><td>Multi-split (2-4 dalaman)</td><td>Pelbagai</td><td>RM 600+</td><td>Berbilang bilik, satu unit luar</td></tr>
         </tbody>
       </table>
-      <p><strong>Diskaun volum:</strong> 2-3 unit 5%, 4-8 unit 10%, 8+ unit 15% untuk buruh.</p>
+      <p><strong>Diskaun volum:</strong> 4–10 unit Diskaun Tempahan Segera 5%, 10+ unit Diskaun Tempahan Segera 10% untuk buruh.</p>
 
       <h2>Pemasangan Luar Waktu & Hujung Minggu</h2>
       <p>Kami faham perniagaan anda tidak boleh ditutup semasa waktu operasi. <a href="/near-me">Pakar pemasangan komersial berhampiran anda</a> menawarkan:</p>

@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: "Boleh saya dapat diskaun jika servis banyak unit?",
-    a: "Ya. Diskaun 5% untuk 2–3 unit, 10% untuk 4–8 unit, dan 15% untuk 8 unit ke atas dalam satu lawatan yang sama.",
+    a: "Ya. Diskaun Tempahan Segera 5% untuk 4–10 unit, dan Diskaun Tempahan Segera 10% untuk 10+ unit dalam satu lawatan yang sama.",
   },
   {
     q: "Kenapa harga overhaul lebih mahal dari cuci kimia?",
@@ -324,20 +324,18 @@ export default function HargaServisPage() {
 
           <Reveal delay={200}>
             <div className="mt-12 bg-sky-600 rounded-2xl p-8 text-white text-center shadow-lg shadow-sky-900/20">
-              <h3 className="text-xl sm:text-2xl font-black uppercase">Pakej Diskaun Banyak Unit</h3>
+              <h3 className="text-xl sm:text-2xl font-black uppercase">Penjimatan Pakej Banyak Unit</h3>
               <p className="mt-2 text-sky-100 font-medium">Servis lebih banyak unit dalam satu lawatan untuk penjimatan lebih besar.</p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3 text-center">
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">5% Off</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">2 – 3 Unit</p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 text-center max-w-2xl mx-auto">
+                <div className="bg-white/10 rounded-xl p-5 border border-white/20">
+                  <p className="text-3xl font-black">5% OFF</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 10 Unit</p>
+                  <p className="text-[10px] text-sky-100 mt-1">Diskaun Tempahan Segera</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">10% Off</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 8 Unit</p>
-                </div>
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">15% Off</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">8+ Unit</p>
+                <div className="bg-white/10 rounded-xl p-5 border border-white/20">
+                  <p className="text-3xl font-black">10% OFF</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">10+ Unit</p>
+                  <p className="text-[10px] text-sky-100 mt-1">Diskaun Tempahan Segera</p>
                 </div>
               </div>
             </div>

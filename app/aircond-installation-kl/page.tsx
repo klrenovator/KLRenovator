@@ -56,7 +56,7 @@ const PRICING_TABLE = [
 const BRANDS = siteConfig.brandsSupported;
 
 const FAQS = [
-  { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, wiring, drain pipe, and standard bracket. Ceiling cassette from RM 290. Window unit from RM 180. Extra materials beyond 7 ft are charged per foot — copper pipe RM 17–27/ft, wire RM 9/ft, casing RM 6–12/ft. All prices confirmed before work begins." },
+  { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, wiring, drain pipe, and standard bracket. Ceiling cassette from RM 290. Window unit from RM 180. Extra materials beyond 7 ft are charged per foot using HP-wise rates: Copper pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Wire RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). Casing RM 6–12/ft. All prices confirmed before work begins." },
   { q: "How long does aircond installation take?", a: "Standard wall-mounted installation takes 3–5 hours for a single unit. Ceiling cassette takes 5–8 hours due to ceiling suspension and drain pump wiring. Multi-unit whole-house installations typically complete in 1–2 days. Same-day installation available for bookings made before 11 AM." },
   { q: "Do you install aircond in high-rise condos in KL?", a: "Yes — we regularly install in condos across KLCC, Mont Kiara, Bangsar, Sentul, PJ, and Subang Jaya. We coordinate with building management for lift/loading bay access, follow security procedures, and ensure outdoor unit placement complies with JMB rules. Our technicians are experienced with service-ledge and balcony installations." },
   { q: "What copper pipe grade do you use for installation?", a: "We use Type L copper pipe for 1.0–2.5 HP wall-mounted units and Type M for 3.0 HP+ where wall thickness permits. All pipes are nitrogen-purged during brazing to prevent oxidation. Armaflex insulation (9–13mm) is standard. This exceeds the minimum Malaysian standard and ensures long-term reliability." },
@@ -317,10 +317,11 @@ export default function AircondInstallationKLPage() {
             <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
               <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Additional Charges (Only If Needed)</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Copper pipe beyond 7 ft: RM 17–27/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC casing/concealment: RM 6–12/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Heavy-duty bracket upgrade: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard compressor / outdoor bracket: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Heavy-duty compressor / outdoor bracket: RM 70</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> New electrical plug point: RM 100</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wall hacking/concealment: RM 6/ft</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> High-rise/difficult access: RM 50–150</li>

@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: "多台机组有折扣吗？",
-    a: "有。同次上门 2–3 台享 5% 折扣，4–8 台 10%，8 台以上 15%。",
+    a: "有。同次上门 4–10 台享 5% OFF 即时预订折扣 (5% OFF Instant Booking Discount)，10 台以上享 10% OFF 即时预订折扣 (10% OFF Instant Booking Discount)。",
   },
   {
     q: "为什么化学大修比普通化学清洗贵？",
@@ -320,20 +320,18 @@ export default function ZhPricingPage() {
 
           <Reveal delay={200}>
             <div className="mt-12 bg-sky-600 rounded-2xl p-8 text-white text-center shadow-lg shadow-sky-900/20">
-              <h3 className="text-xl sm:text-2xl font-black uppercase">多台机组套餐优惠</h3>
+              <h3 className="text-xl sm:text-2xl font-black uppercase">多台机组优惠</h3>
               <p className="mt-2 text-sky-100 font-medium">一次性预约更多机组，享受更高折扣。</p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3 text-center">
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">5% 折扣</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">2 – 3 台</p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 text-center max-w-2xl mx-auto">
+                <div className="bg-white/10 rounded-xl p-5 border border-white/20">
+                  <p className="text-3xl font-black">5% OFF</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 10 台</p>
+                  <p className="text-[10px] text-sky-100 mt-1">即时预订折扣</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">10% 折扣</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 8 台</p>
-                </div>
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">15% 折扣</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">8+ 台</p>
+                <div className="bg-white/10 rounded-xl p-5 border border-white/20">
+                  <p className="text-3xl font-black">10% OFF</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">10+ 台</p>
+                  <p className="text-[10px] text-sky-100 mt-1">即时预订折扣</p>
                 </div>
               </div>
             </div>

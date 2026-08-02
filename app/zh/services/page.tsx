@@ -149,9 +149,8 @@ const CONTRACT_ROWS = [
 ];
 
 const VOLUME_DISCOUNTS = [
-  { units: "2 – 3 台", off: "即时预订 5% 折扣" },
-  { units: "4 – 8 台", off: "即时预订 10% 折扣" },
-  { units: "8+ 台", off: "即时预订 15% 折扣" },
+  { units: "4 – 10 台", off: "5% OFF 即时预订折扣 (5% OFF Instant Booking Discount)" },
+  { units: "10+ 台", off: "10% OFF 即时预订折扣 (10% OFF Instant Booking Discount)" },
 ];
 
 export default function ServicesPageZH() {

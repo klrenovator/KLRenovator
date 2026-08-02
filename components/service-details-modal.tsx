@@ -100,20 +100,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
 
         {/* Body */}
         <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-5 sm:px-6 py-6 space-y-7 bg-white">
-          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{data.description}</p>
-
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-sky-600 mb-3">What&apos;s included</h4>
-            <ul className="grid gap-px bg-slate-100 sm:grid-cols-2 border border-slate-200">
-              {data.highlights.map((h, i) => (
-                <li key={h} className="flex items-start gap-2.5 bg-white px-3 py-2.5">
-                  <FiCheck className={`mt-0.5 h-4 w-4 shrink-0 ${highlightColors[i % highlightColors.length]}`} />
-                  <span className="text-sm text-slate-800">{h}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+          {/* 1. Transparent Pricing (FIRST) */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-sky-600 mb-3">Transparent pricing</h4>
             <div className="border border-slate-200">
@@ -129,6 +116,23 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
             <p className="mt-2 text-xs text-slate-400">Material costs (gas, copper, brackets) quoted separately.</p>
           </div>
 
+          {/* 2. Service Description */}
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{data.description}</p>
+
+          {/* 3. Benefits (What's included) */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-sky-600 mb-3">What&apos;s included</h4>
+            <ul className="grid gap-px bg-slate-100 sm:grid-cols-2 border border-slate-200">
+              {data.highlights.map((h, i) => (
+                <li key={h} className="flex items-start gap-2.5 bg-white px-3 py-2.5">
+                  <FiCheck className={`mt-0.5 h-4 w-4 shrink-0 ${highlightColors[i % highlightColors.length]}`} />
+                  <span className="text-sm text-slate-800">{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 4. Process */}
           {data.process?.length > 0 && (
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-sky-600 mb-3">How it works</h4>
@@ -148,6 +152,7 @@ export const ServiceDetailsModal = ({ slug, onClose }: Props) => {
             </div>
           )}
 
+          {/* 5. FAQs */}
           {data.faqs?.length > 0 && (
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-sky-600 mb-3">Common questions</h4>

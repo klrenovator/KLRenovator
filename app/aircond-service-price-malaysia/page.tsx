@@ -142,7 +142,7 @@ const faqs = [
   },
   {
     q: "Can I get a discount for servicing multiple units?",
-    a: "Yes. We offer 5% off for 2–3 units, 10% for 4–8 units, and 15% for 8 units and above during the same visit.",
+    a: "Yes. We offer 5% OFF Instant Booking Discount for 4–10 units, and 10% OFF Instant Booking Discount for 10+ units during the same visit.",
   },
   {
     q: "Why is an overhaul more expensive than a chemical wash?",
@@ -317,20 +317,18 @@ export default function PricingPage() {
 
           <Reveal delay={200}>
             <div className="mt-12 bg-sky-600 rounded-2xl p-8 text-white text-center shadow-lg shadow-sky-900/20">
-              <h3 className="text-xl sm:text-2xl font-black uppercase">Multi-Unit Discount Packages</h3>
+              <h3 className="text-xl sm:text-2xl font-black uppercase">Multi-Unit Bundle Savings</h3>
               <p className="mt-2 text-sky-100 font-medium">Service more units in one visit for bigger savings.</p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3 text-center">
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">5% Off</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">2 – 3 Units</p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 text-center max-w-2xl mx-auto">
+                <div className="bg-white/10 rounded-xl p-5 border border-white/20">
+                  <p className="text-3xl font-black">5% OFF</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 10 Units</p>
+                  <p className="text-[10px] text-sky-100 mt-1">Instant Booking Discount</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">10% Off</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 8 Units</p>
-                </div>
-                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                  <p className="text-3xl font-black">15% Off</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">8+ Units</p>
+                <div className="bg-white/10 rounded-xl p-5 border border-white/20">
+                  <p className="text-3xl font-black">10% OFF</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">10+ Units</p>
+                  <p className="text-[10px] text-sky-100 mt-1">Instant Booking Discount</p>
                 </div>
               </div>
             </div>

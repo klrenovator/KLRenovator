@@ -132,16 +132,12 @@ export const sitePublic = {
   ],
   "volumeDiscounts": [
     {
-      "units": "2 – 3 units",
-      "off": "5% off instant booking discount"
+      "units": "4 – 10 units",
+      "off": "5% OFF Instant Booking Discount"
     },
     {
-      "units": "4 – 8 units",
-      "off": "10% off instant booking discount"
-    },
-    {
-      "units": "8+ units",
-      "off": "15% off instant booking discount"
+      "units": "10+ units",
+      "off": "10% OFF Instant Booking Discount"
     }
   ],
   "links": {
@@ -389,12 +385,24 @@ export const sitePublic = {
           "price": "RM 27/ft"
         },
         {
-          "label": "Wire",
+          "label": "Electrical Wire 1.0 – 1.5 HP",
           "price": "RM 9/ft"
         },
         {
-          "label": "Standard Outdoor Bracket",
+          "label": "Electrical Wire 2.0 – 2.5 HP",
+          "price": "RM 13/ft"
+        },
+        {
+          "label": "Electrical Wire 3.0 – 4.0 HP",
+          "price": "RM 17/ft"
+        },
+        {
+          "label": "Standard Compressor / Outdoor Bracket",
           "price": "RM 45"
+        },
+        {
+          "label": "Heavy Duty Compressor / Outdoor Bracket",
+          "price": "RM 70"
         },
         {
           "label": "Indoor Universal Bracket",
