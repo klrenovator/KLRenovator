@@ -22,7 +22,6 @@ export function ToolLinks({
   heading = "Free Aircond Calculators",
   lang = "en",
 }: {
-  showAssistant?: boolean;
   heading?: string;
   lang?: ToolLinksLang;
 }) {

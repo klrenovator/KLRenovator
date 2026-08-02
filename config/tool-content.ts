@@ -2,7 +2,7 @@
 // Trilingual content for every calculator tool page (EN / MS / ZH).
 // The EN/MS/ZH page files are thin wrappers that pull their content from
 // here, so SEO copy stays in ONE place per tool. The /tools hub and
-// AI-assistant page content live here too.
+
 // ─────────────────────────────────────────────────────────────────────────
 
 export type ToolLang = "en" | "ms" | "zh";

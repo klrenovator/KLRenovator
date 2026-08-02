@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────
-// Aircond calculation core — shared by EVERY calculator and the AI assistant.
+// Aircond calculation core — shared by EVERY calculator .
 //
 // RULES:
 //  1. Client-safe: imports ONLY `config/site-public.ts` (the auto-generated
@@ -479,7 +479,7 @@ export function calculateInstallationEstimate(input: InstallationEstimateInput):
 /**
  * Typical running power draw per HP (non-inverter, wall-mounted).
  * Engineering estimates — actual draw depends on the model, age and
- * ambient temperature. Used by the electricity calculator + AI assistant.
+ * ambient temperature. Used by the electricity calculator.
  */
 export const HP_WATTAGE: Record<HpSize, number> = {
   "1.0": 900,
