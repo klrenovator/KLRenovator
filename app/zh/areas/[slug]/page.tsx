@@ -292,7 +292,7 @@ export default async function AreaPageZH({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { problem: "蒸发器盘管脏污", en: "Dirty Evaporator Coil", ms: "Gegelung Penyejat Kotor", desc: `${area.name}的第一大原因。吉隆坡的湿度和灰尘堵塞盘管翅片，减少30-50%的气流。修复：压力化学清洗从RM 120起。`, fix: "化学清洗", price: "RM 120" },
-                { problem: "冷媒不足", en: "Low Refrigerant Gas", ms: "Gas Penyejuk Rendah", desc: "如果机器运行但吹出暖风，冷媒可能不足。这意味着有泄漏——只加气不查漏是浪费钱。修复：查漏+加气从RM 150起。", fix: "加气", price: "RM 150" },
+                { problem: "冷媒不足", en: "Low Refrigerant Gas", ms: "Gas Penyejuk Rendah", desc: "如果机器运行但吹出暖风，冷媒可能不足。这意味着有泄漏——只加气不查漏是浪费钱。修复：查漏+加气从RM 2.50/PSI起。", fix: "加气", price: "从 RM 2.50/PSI起" },
                 { problem: "排水管堵塞", en: "Blocked Drain Pipe", ms: "Paip Longkang Tersumbat", desc: `${area.name}雨季期间常见。生物膜堵塞排水管，导致漏水和结冰。修复：排水管冲洗包含在基本保养中，从RM 99起。`, fix: "基本保养", price: "RM 99" },
                 { problem: "压缩机不运转", en: "Compressor Not Running", ms: "Pemampat Tidak Berfungsi", desc: "如果室内风扇运转但室外机无声，压缩机或电容可能故障。需要现场诊断。修复：维修从RM 150+零件起。", fix: "维修", price: "RM 150+" },
                 { problem: "温控器校准偏差", en: "Thermostat Miscalibrated", ms: "Termostat Tidak Tepat", desc: "机器认为房间比实际更冷，所以过早停止。旧非变频机常见。修复：保养时重新校准温控器。", fix: "基本保养", price: "RM 99" },
@@ -354,7 +354,7 @@ export default async function AreaPageZH({
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>基本保养：</strong>从 RM 99 起</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>化学清洗：</strong>从 RM 120 起</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>化学大修：</strong>从 RM 220 起</span></li>
-              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>充气：</strong>从 RM 120 起</span></li>
+              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>充气：</strong>从 RM 2.50/PSI 起</span></li>
             </ul>
             <p className="mt-4 text-xs text-slate-500 font-medium">
               RM 88 的检测费如果当天继续维修，将全额抵扣维修费用。所有工程享30天保修。

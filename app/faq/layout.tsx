@@ -5,7 +5,7 @@ import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator"),
   description:
-    "Frequently asked questions about KL Renovator aircond services. Chemical wash from RM 120, overhaul from RM 220, gas top-up, same-day booking & warranty.",
+    "Frequently asked questions about KL Renovator aircond services. Chemical wash from RM 120, overhaul from RM 220, gas top-up from RM 2.50/PSI, same-day booking & warranty.",
   alternates: buildTrilingualHreflang("/faq"),
   openGraph: {
     title: clampMetaTitle("Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator"),
@@ -76,7 +76,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "How much does gas top-up cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "R22 gas top-up starts from RM 120. R410A starts from RM 150. R32 starts from RM 180. Price depends on the unit's HP size. A leak check is included with every gas top-up.",
+          text: "Gas top-up is charged per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00). Final cost depends on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.",
         },
       },
       {

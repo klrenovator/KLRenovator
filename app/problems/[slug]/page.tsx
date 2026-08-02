@@ -114,16 +114,16 @@ export const problemContent: Record<
     warningZH: "不要忽视不冷的冷气。运转但无效的机组消耗全额电力却毫无舒适感——长期低气压还会损坏压缩机。",
     faqs: [
       { q: "My aircond is blowing air but it's warm. Is it low gas?", a: "Low gas is the most common cause, but a dirty coil or faulty capacitor can produce the same symptom. KL Renovator diagnoses all three before recommending a solution — you pay for what you actually need." },
-      { q: "How much does it cost to fix an aircond that is not cold?", a: "If it is low gas: gas top-up from RM 120 (R22), RM 150 (R410A), RM 180 (R32). If it is a dirty coil: chemical wash from RM 120. If it is a faulty capacitor: RM 180 replacement. Diagnostic fee RM 88 (waived if repair done same visit)." },
+      { q: "How much does it cost to fix an aircond that is not cold?", a: "If it is low gas: gas top-up from RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). If it is a dirty coil: chemical wash from RM 120. If it is a faulty capacitor: RM 180 replacement. Diagnostic fee RM 88 (waived if repair done same visit)." },
       { q: "Can the aircond be fixed the same day?", a: "Yes. Most causes of an aircond not being cold — gas top-up, chemical wash, capacitor replacement — are done in one visit. KL Renovator carries common parts on the van." },
     ],
     faqsBM: [
       { q: "Aircond saya menghembus udara tetapi panas. Adakah gas rendah?", a: "Gas rendah adalah punca paling biasa, tetapi gegelung kotor atau kapasitor rosak boleh menghasilkan gejala yang sama. KL Renovator mendiagnosis ketiga-tiganya sebelum mencadangkan penyelesaian." },
-      { q: "Berapa kos untuk membaiki aircond yang tidak sejuk?", a: "Jika gas rendah: top-up gas dari RM 120 (R22), RM 150 (R410A), RM 180 (R32). Jika gegelung kotor: cuci kimia dari RM 120. Jika kapasitor rosak: penggantian RM 180." },
+      { q: "Berapa kos untuk membaiki aircond yang tidak sejuk?", a: "Jika gas rendah: top-up gas dari RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). Jika gegelung kotor: cuci kimia dari RM 120. Jika kapasitor rosak: penggantian RM 180." },
     ],
     faqsZH: [
       { q: "我的冷气在吹风，但是是暖风。是气体不足吗？", a: "气体不足是最常见的原因，但脏污的盘管或故障的电容器也会产生相同症状。KL Renovator会先诊断全部三项，再提供建议。" },
-      { q: "修理不冷的冷气需要多少费用？", a: "如果是气体不足：充气从RM 120（R22）、RM 150（R410A）、RM 180（R32）起。如果是盘管脏污：化学清洗从RM 120起。如果是电容器故障：更换RM 180。" },
+      { q: "修理不冷的冷气需要多少费用？", a: "如果是气体不足：充气从 RM 2.50/PSI（R22）、RM 3.00/PSI（R410A）、RM 3.00/PSI（R32）起。如果是盘管脏污：化学清洗从RM 120起。如果是电容器故障：更换RM 180。" },
     ],
   },
   "aircond-water-leaking": {
@@ -289,21 +289,21 @@ export const problemContent: Record<
     solutionEN: "KL Renovator performs a leak check before every gas top-up. If a leak is found, it is repaired first. Refrigerant is then added using a manifold gauge to achieve the exact operating pressure specified for the unit — not simply filled until the gauge looks right.",
     solutionBM: "KL Renovator melakukan pemeriksaan kebocoran sebelum setiap top-up gas. Jika kebocoran dijumpai, ia diperbaiki dahulu. Penyejuk kemudian ditambah menggunakan tolok manifold untuk mencapai tekanan operasi tepat.",
     solutionZH: "KL Renovator在每次充气前都进行泄漏检查。如果发现泄漏，先行修复。然后使用歧管表将制冷剂充至该机型规定的精确工作压力。",
-    warningEN: "Running an aircond with low gas causes the compressor to overwork, overheat, and eventually fail permanently. Gas top-up from RM 120 is far cheaper than compressor replacement at RM 600–2,000.",
-    warningBM: "Menjalankan aircond dengan gas rendah menyebabkan pekali bekerja terlalu keras, terlalu panas, dan akhirnya gagal sepenuhnya. Top-up gas dari RM 120 jauh lebih murah daripada penggantian pekali pada RM 600–2,000.",
-    warningZH: "在制冷剂不足的情况下运行冷气会导致压缩机过度工作、过热，最终永久损坏。充气从RM 120起，远比更换压缩机（RM 600–2,000）便宜得多。",
+    warningEN: "Running an aircond with low gas causes the compressor to overwork, overheat, and eventually fail permanently. Gas top-up from RM 2.50/PSI is far cheaper than compressor replacement at RM 600–2,000.",
+    warningBM: "Menjalankan aircond dengan gas rendah menyebabkan pekali bekerja terlalu keras, terlalu panas, dan akhirnya gagal sepenuhnya. Top-up gas dari RM 2.50/PSI jauh lebih murah daripada penggantian pekali pada RM 600–2,000.",
+    warningZH: "在制冷剂不足的情况下运行冷气会导致压缩机过度工作、过热，最终永久损坏。充气从 RM 2.50/PSI 起，远比更换压缩机（RM 600–2,000）便宜得多。",
     faqs: [
       { q: "How do I know if my aircond is low on gas?", a: "Symptoms include: not cold or barely cool air, longer cooling time, ice forming on the indoor coil, condensation on the outdoor unit pipes, and higher electricity bills." },
-      { q: "How much does aircond gas top-up cost in KL?", a: "R22 from RM 120, R410A from RM 150, R32 from RM 180. Prices vary by HP size. Leak check is included with every gas top-up at KL Renovator." },
+      { q: "How much does aircond gas top-up cost in KL?", a: "R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. Prices vary by HP size. Leak check is included with every gas top-up at KL Renovator." },
       { q: "How often does an aircond need gas top-up?", a: "A well-installed, leak-free aircond should not need gas top-up for many years. If you need gas top-up every year, there is a leak that needs to be found and repaired first." },
     ],
     faqsBM: [
       { q: "Bagaimana saya tahu jika aircond saya rendah gas?", a: "Gejala termasuk: udara tidak sejuk, masa penyejukan lebih lama, ais terbentuk pada gegelung dalaman, dan bil elektrik lebih tinggi." },
-      { q: "Berapa kos top-up gas aircond di KL?", a: "R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. Pemeriksaan kebocoran disertakan dengan setiap top-up gas." },
+      { q: "Berapa kos top-up gas aircond di KL?", a: "R22 dari RM 2.50/PSI, R410A dari RM 3.00/PSI, R32 dari RM 3.00/PSI. Pemeriksaan kebocoran disertakan dengan setiap top-up gas." },
     ],
     faqsZH: [
       { q: "如何判断我的冷气是否气体不足？", a: "症状包括：空气不冷、冷却时间更长、室内盘管结冰以及电费更高。" },
-      { q: "KL冷气充气费用是多少？", a: "R22从RM 120起，R410A从RM 150起，R32从RM 180起。每次充气包含泄漏检查。" },
+      { q: "KL冷气充气费用是多少？", a: "R22 为 RM 2.50/PSI，R410A 为 RM 3.00/PSI，R32 为 RM 3.00/PSI。每次充气包含泄漏检查。" },
     ],
   },
   "aircond-freezing-up": {
@@ -337,7 +337,7 @@ export const problemContent: Record<
     faqs: [
       { q: "Why is there ice forming on my aircond?", a: "Ice on the indoor unit (evaporator coil or copper pipes) means either the refrigerant gas is low, the coil is severely blocked, or the fan is not moving enough air. Switch off the unit and WhatsApp KL Renovator — +60182983573. Most cases fixed same-day." },
       { q: "What should I do if my aircond is frozen?", a: "Step 1: Switch off the aircond from the remote or MCB. Step 2: If your unit has a fan-only mode, run it to help defrost. Step 3: Wait 1–2 hours until all ice melts. Step 4: WhatsApp KL Renovator at +60182983573 for a gas check + chemical overhaul." },
-      { q: "How much does it cost to fix an aircond that keeps freezing?", a: "Gas top-up from RM 120 (R22), RM 150 (R410A), RM 180 (R32). Chemical overhaul (if coil blocked) from RM 220. Often both are needed — KL Renovator checks and quotes before work. Diagnostic RM 88 (waived with repair)." },
+      { q: "How much does it cost to fix an aircond that keeps freezing?", a: "Gas top-up from RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). Chemical overhaul (if coil blocked) from RM 220. Often both are needed — KL Renovator checks and quotes before work. Diagnostic RM 88 (waived with repair)." },
     ],
     faqsBM: [
       { q: "Kenapa ais terbentuk pada aircond saya?", a: "Ais pada unit dalam bermakna gas penyejuk rendah, gegelung tersumbat teruk, atau kipas tidak cukup mengalirkan udara. Matikan unit dan WhatsApp KL Renovator — +60182983573." },
@@ -387,7 +387,7 @@ export const problemContent: Record<
     ],
     faqsZH: [
       { q: "如何知道我的冷气是否漏气？", a: "迹象包括：机器吹风但不冷、几周内制冷能力逐渐下降、铜管结冰、室外机附近有嘶嘶声、铜接头处有油状残留物。WhatsApp KL Renovator +60182983573当天检测。" },
-      { q: "吉隆坡冷气漏气维修费用是多少？", a: "泄漏检测诊断：RM 88（维修则免收）。修漏+充气：RM 150-350，视泄漏位置和气体类型而定。施工前提供完整报价。" },
+      { q: "吉隆坡冷气漏气维修费用是多少？", a: "泄漏检测诊断：RM 88（维修则免收）。修漏+充气： RM 2.50/PSI-350，视泄漏位置和气体类型而定。施工前提供完整报价。" },
     ],
   },
   "aircond-compressor-problem": {
@@ -718,7 +718,7 @@ export const problemContent: Record<
       { q: "Should I upgrade to inverter to reduce my electricity bill?", a: "If your current unit is over 8 years old and non-inverter, upgrading to an inverter model typically pays back in 18–24 months via electricity savings. KL Renovator provides honest advice on whether servicing or upgrading makes more financial sense." },
     ],
     faqsBM: [
-      { q: "Kenapa aircond saya menggunakan banyak elektrik?", a: "Punca utama: gegelung evaporator kotor (mengurangkan kecekapan 20–35%), gas penyejuk rendah, termostat ditetapkan terlalu rendah, atau unit bukan penyongsang. Cuci kimia KL Renovator memulihkan kecekapan. Dari RM 120." },
+      { q: "Kenapa aircond saya menggunakan banyak elektrik?", a: "Punca utama: gegelung evaporator kotor (mengurangkan kecekapan 20–35%), gas penyejuk rendah, termostat ditetapkan terlalu rendah, atau unit bukan penyongsang. Cuci kimia KL Renovator memulihkan kecekapan. Dari RM 2.50/PSI." },
       { q: "Berapa banyak elektrik yang boleh saya jimat dengan menservis aircond?", a: "Aircond penyongsang yang diselenggara dengan baik pada 24°C menggunakan 30–50% kurang elektrik berbanding unit bukan penyongsang yang kotor pada 16°C. Cuci kimia tahunan biasanya menjimatkan RM 30–80/bulan setiap unit." },
     ],
     faqsZH: [
@@ -840,16 +840,16 @@ export const problemContent: Record<
     warningZH: "错误闪烁代码是冷气内置的诊断系统。忽视它们或在未修复根本故障的情况下反复重置机器可能导致问题恶化——尤其是气体不足或压缩机保护代码。",
     faqs: [
       { q: "How do I know what my aircond error blink code means?", a: "Count the number of blinks, then look up your brand's error code chart (available on KL Renovator's brand pages or WhatsApp us the blink pattern + brand + model). KL Renovator diagnoses all brands remotely via WhatsApp for common codes." },
-      { q: "My aircond shows a blinking light and will not cool — how much will it cost to fix?", a: "Depends on the fault: Low gas: RM 120–220 (by HP/gas type). Sensor replacement: RM 150–250. PCB fault: RM 280–600. Capacitor: RM 150–250. Diagnostic RM 88 (waived with repair). WhatsApp KL Renovator the error code for a remote estimate." },
+      { q: "My aircond shows a blinking light and will not cool — how much will it cost to fix?", a: "Depends on the fault: Low gas: from RM 2.50/PSI (by HP/gas type). Sensor replacement: RM 150–250. PCB fault: RM 280–600. Capacitor: RM 150–250. Diagnostic RM 88 (waived with repair). WhatsApp KL Renovator the error code for a remote estimate." },
       { q: "Can I reset the error code myself?", a: "You can reset the unit by switching off the MCB for 10 minutes then restoring power. However, if the underlying fault is not fixed, the code will return. KL Renovator repairs the cause, not just resets the code." },
     ],
     faqsBM: [
       { q: "Bagaimana saya tahu apa maksud kod berkelip ralat aircond saya?", a: "Kira bilangan berkelip, kemudian cari carta kod ralat jenama anda (tersedia di halaman jenama KL Renovator atau WhatsApp kami corak berkelip + jenama + model). KL Renovator mendiagnosis semua jenama dari jauh melalui WhatsApp." },
-      { q: "Aircond saya menunjukkan lampu berkelip dan tidak menyejuk — berapa kos untuk membaiki?", a: "Bergantung pada kerosakan: Gas rendah: RM 120–220. Penggantian sensor: RM 150–250. Kerosakan PCB: RM 280–600. Kapasitor: RM 150–250. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
+      { q: "Aircond saya menunjukkan lampu berkelip dan tidak menyejuk — berapa kos untuk membaiki?", a: "Bergantung pada kerosakan: Gas rendah: from RM 2.50/PSI. Penggantian sensor: RM 150–250. Kerosakan PCB: RM 280–600. Kapasitor: RM 150–250. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
     ],
     faqsZH: [
       { q: "我如何知道冷气闪烁错误代码的含义？", a: "数闪烁次数，然后查找您品牌的错误代码表（可在KL Renovator的品牌页面查看，或WhatsApp我们闪烁模式+品牌+型号）。KL Renovator通过WhatsApp远程诊断所有品牌的常见代码。" },
-      { q: "冷气显示闪烁灯且不制冷——修复需要多少钱？", a: "取决于故障：气体不足：RM 120-220。传感器更换：RM 150-250。PCB故障：RM 280-600。电容器：RM 150-250。诊断费RM 88（维修则免收）。" },
+      { q: "冷气显示闪烁灯且不制冷——修复需要多少钱？", a: "取决于故障：气体不足：from RM 2.50/PSI。传感器更换：RM 150-250。PCB故障：RM 280-600。电容器：RM 150-250。诊断费RM 88（维修则免收）。" },
     ],
   },
   "aircond-water-dripping": {
@@ -1407,7 +1407,7 @@ export default async function ProblemPage({
                       {[
                         ["Diagnostic", "RM 88*"],
                         ["Chemical Wash", "From RM 120"],
-                        ["Gas Top-Up", "From RM 120"],
+                        ["Gas Top-Up", "From RM 2.50 / PSI"],
                         ["Chemical Overhaul", "From RM 220"],
                         ["Repairs / Parts", "RM 150–600"],
                       ].map(([label, price]) => (

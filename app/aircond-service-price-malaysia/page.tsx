@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
     buildFreshMetaTitle(`Aircond Service Price Malaysia — Transparent Price List`, "en")
   );
   const metaDesc = clampMetaDescription(
-    `Latest ${freshDate} aircond service prices in KL & Selangor. Basic service RM99, chemical wash RM120, overhaul RM220, gas top-up RM120, install RM199. No hidden charges.`
+    `Latest ${freshDate} aircond service prices in KL & Selangor. Basic service RM99, chemical wash RM120, overhaul RM220, gas top-up from RM2.50/PSI, install RM199. No hidden charges.`
   );
 
   return {
@@ -63,14 +63,11 @@ const pricingCategories = [
     ],
   },
   {
-    title: "Gas Top-Up & Refill",
+    title: "Gas Top-Up & Refill (Per PSI)",
     rows: [
-      { label: "R22 Gas · 1.0 HP", price: "RM 120" },
-      { label: "R22 Gas · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "R410A Gas · 1.0 HP", price: "RM 150" },
-      { label: "R410A Gas · 1.5 – 2.0 HP", price: "RM 180" },
-      { label: "R32 Gas · 1.0 HP", price: "RM 180" },
-      { label: "R32 Gas · 1.5 – 2.0 HP", price: "RM 200" },
+      { label: "R22 Gas Refill", price: "RM 2.50 / PSI" },
+      { label: "R410A Gas Refill", price: "RM 3.00 / PSI" },
+      { label: "R32 Gas Refill", price: "RM 3.00 / PSI" },
       { label: "Structural Leak Check", price: "RM 88" },
     ],
   },
@@ -140,8 +137,8 @@ const faqs = [
     a: "A standard wall-mounted unit typically takes 45 to 60 minutes. For a chemical overhaul, it may take 2 to 3 hours as the unit needs to be fully dismantled.",
   },
   {
-    q: "Do gas prices differ by type?",
-    a: "Yes. R22 gas is for older models, while R410A and R32 are for modern inverter models. Prices vary by gas type and unit HP size.",
+    q: "How is gas top-up charged?",
+    a: "Gas top-up is charged based on the actual PSI required after inspection by our technician. R22 is RM2.50/PSI, while R410A and R32 are RM3.00/PSI. We only refill the amount needed and provide transparent pricing with no hidden charges. Final cost depends on refrigerant type, PSI required, and leak condition.",
   },
   {
     q: "Can I get a discount for servicing multiple units?",
@@ -305,6 +302,14 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
+                  {cat.title === "Gas Top-Up & Refill (Per PSI)" && (
+                    <div className="px-6 py-4 bg-amber-50 border-t border-amber-100">
+                      <p className="text-xs text-amber-800 leading-relaxed font-medium">
+                        * Gas top-up is charged based on the actual PSI required after inspection by our technician. 
+                        We only refill the amount needed and provide transparent pricing with no hidden charges.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}

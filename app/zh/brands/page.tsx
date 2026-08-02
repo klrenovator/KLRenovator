@@ -162,9 +162,9 @@ export default function BrandsPageZH() {
               { service: "基本保养", price: "RM 99 起" },
               { service: "化学清洗", price: "RM 120 起" },
               { service: "化学大修", price: "RM 220 起" },
-              { service: "R22充气", price: "RM 120 起" },
-              { service: "R410A充气", price: "RM 150 起" },
-              { service: "R32充气", price: "RM 180 起" },
+              { service: "R22 充气", price: "RM 2.50 / PSI" },
+              { service: "R410A 充气", price: "RM 3.00 / PSI" },
+              { service: "R32 充气", price: "RM 3.00 / PSI" },
               { service: "故障诊断", price: "RM 88 起" },
               { service: "新机安装", price: "RM 199 起" },
             ].map((item) => (

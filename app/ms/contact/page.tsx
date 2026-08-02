@@ -105,7 +105,7 @@ const WHATSAPP_MESSAGES = [
   { label: "Aircond Tidak Sejuk", text: "Hai KL Renovator, aircond saya berfungsi tetapi tidak menyejuk dengan baik. Bolehkah anda bantu diagnosis masalah ini?" },
   { label: "Air Bocor", text: "Hai KL Renovator, aircond saya bocor air. Bila teknisi anda boleh datang memeriksa?" },
   { label: "Pemasangan Baharu", text: "Hai KL Renovator, saya perlu memasang unit aircond baharu. Bolehkah saya dapat sebut harga termasuk upah dan bahan?" },
-  { label: "Tambah Gas", text: "Hai KL Renovator, saya perlu menambah gas untuk aircond saya. Bolehkah anda maklumkan harga?" },
+  { label: "Tambah Gas", text: "Hai KL Renovator, saya perlu menambah gas untuk aircond saya. Saya faham harga dikira mengikut PSI sebenar. Boleh bantu?" },
 ];
 
 export default function ContactPageMS() {

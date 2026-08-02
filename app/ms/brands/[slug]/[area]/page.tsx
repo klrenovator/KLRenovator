@@ -209,7 +209,7 @@ export default async function BrandAreaPageMS({
                 { name: "Servis Asas", price: "Dari RM 99" },
                 { name: "Cuci Kimia Bertekanan", price: "Dari RM 120" },
                 { name: "Overhaul Kimia", price: "Dari RM 220" },
-                { name: "Isi Gas R32/R410A", price: "Dari RM 120" },
+                { name: "Isi Gas R32/R410A", price: "Dari RM 3.00/PSI" },
               ].map((p) => (
                 <div key={p.name} className="flex justify-between bg-white border border-slate-200 p-3.5 rounded-xl text-sm font-bold">
                   <span className="text-slate-700">{p.name}</span>

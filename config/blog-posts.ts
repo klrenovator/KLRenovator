@@ -74,7 +74,7 @@ export const allPosts: BlogPost[] = [
         <li>Basic Service: from <strong>RM 99</strong></li>
         <li>Chemical Wash: from <strong>RM 120</strong></li>
         <li>Chemical Overhaul: from <strong>RM 220</strong></li>
-        <li>Gas Top-Up R32/R410A: from <strong>RM 150</strong></li>
+        <li>Gas Top-Up R32/R410A: from <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>No hidden charges. All prices confirmed before work begins.</p>
 
@@ -115,7 +115,7 @@ export const allPosts: BlogPost[] = [
         <li>Servis Asas: dari <strong>RM 99</strong></li>
         <li>Cuci Kimia: dari <strong>RM 120</strong></li>
         <li>Overhaul Kimia: dari <strong>RM 220</strong></li>
-        <li>Tambah Gas R32/R410A: dari <strong>RM 150</strong></li>
+        <li>Tambah Gas R32/R410A: dari <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>Tiada caj tersembunyi. Semua harga disahkan sebelum kerja bermula.</p>
 
@@ -148,9 +148,9 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>服务</th><th>价格</th><th>时间</th></tr></thead>
         <tbody>
           <tr><td>基本保养</td><td>RM 99起</td><td>30-45分钟</td></tr>
-          <tr><td>化学清洗</td><td>RM 120起</td><td>60-75分钟</td></tr>
+          <tr><td>化学清洗</td><td>RM 2.50/PSI起</td><td>60-75分钟</td></tr>
           <tr><td>化学大修</td><td>RM 220起</td><td>2-2.5小时</td></tr>
-          <tr><td>充气</td><td>RM 120起</td><td>30-45分钟</td></tr>
+          <tr><td>充气</td><td>RM 2.50/PSI起</td><td>30-45分钟</td></tr>
           <tr><td>维修</td><td>RM 88诊断费</td><td>视问题而定</td></tr>
           <tr><td>安装</td><td>RM 199起</td><td>2-3小时</td></tr>
         </tbody>
@@ -523,7 +523,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>完整对比表</h2>
       <table>
-        <thead><tr><th>项目</th><th>化学清洗 (RM 120起)</th><th>化学大修 (RM 220起)</th></tr></thead>
+        <thead><tr><th>项目</th><th>化学清洗 (RM 2.50/PSI起)</th><th>化学大修 (RM 220起)</th></tr></thead>
         <tbody>
           <tr><td>拆卸</td><td>不拆卸——在墙上清洗</td><td>完全拆卸室内机</td></tr>
           <tr><td>蒸发器</td><td>高压冲洗</td><td>拆卸浸泡清洗</td></tr>
@@ -578,7 +578,7 @@ export const allPosts: BlogPost[] = [
       <h2>Why Is My Aircond Running But Not Cooling?</h2>
       <p>This is the most common aircond complaint in Malaysia — the unit is on, the fan is blowing, but the air is warm or barely cool. Here are the 7 most likely causes.</p>
       <h2>1. Low Refrigerant Gas</h2>
-      <p>Gas leaks slowly over time. When levels drop, cooling drops dramatically. Solution: Gas top-up (R22, R410A, or R32). From RM 120.</p>
+      <p>Gas leaks slowly over time. When levels drop, cooling drops dramatically. Solution: Gas top-up (R22, R410A, or R32). From RM 2.50/PSI.</p>
       <h2>2. Dirty Evaporator Coil</h2>
       <p>A heavily coated coil can't absorb heat efficiently. Solution: Chemical wash (from RM 120) or overhaul depending on severity.</p>
       <h2>3. Faulty Capacitor</h2>
@@ -604,7 +604,7 @@ export const allPosts: BlogPost[] = [
       <h2>Kenapa Aircond Saya Berjalan Tapi Tidak Menyejukkan?</h2>
       <p>Ini adalah aduan aircond yang paling biasa di Malaysia — unit hidup, kipas bertiup, tetapi udara panas atau hampir tidak sejuk. Berikut adalah 7 punca yang paling mungkin.</p>
       <h2>1. Gas Penyejuk Rendah</h2>
-      <p>Gas bocor perlahan dari masa ke masa. Apabila tahap merosot, penyejukan merosot dengan dramatik. Penyelesaian: Tambah gas (R22, R410A, atau R32). Dari RM 120.</p>
+      <p>Gas bocor perlahan dari masa ke masa. Apabila tahap merosot, penyejukan merosot dengan dramatik. Penyelesaian: Tambah gas (R22, R410A, atau R32). Dari RM 2.50/PSI.</p>
       <h2>2. Gegelung Evaporator Kotor</h2>
       <p>Gegelung yang sangat tersalut tidak dapat menyerap haba dengan cekap. Penyelesaian: Cuci kimia (dari RM 120) atau overhaul bergantung kepada keterukan.</p>
       <h2>3. Kapasitor Rosak</h2>
@@ -633,10 +633,10 @@ export const allPosts: BlogPost[] = [
       <p><strong>症状：</strong>出风量减少，制冷效果下降。<br><strong>解决：</strong>清洗或更换滤网。建议每2-4周清洗一次。这是最简单也是最常见的解决方案。</p>
 
       <h2>原因 #2: 制冷剂不足</h2>
-      <p><strong>症状：</strong>铜管结冰，制冷效果差，电费增加。<br><strong>解决：</strong>专业检漏+充气。R22从RM 120起，R410A从RM 150起，R32从RM 180起。</p>
+      <p><strong>症状：</strong>铜管结冰，制冷效果差，电费增加。<br><strong>解决：</strong>专业检漏+充气。R22 为 RM 2.50/PSI，R410A 为 RM 3.00/PSI，R32 为 RM 3.00/PSI。</p>
 
       <h2>原因 #3: 蒸发器脏污</h2>
-      <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 120起）或化学大修（RM 220起）。</p>
+      <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 2.50/PSI起）或化学大修（RM 220起）。</p>
 
       <h2>原因 #4: 压缩机故障</h2>
       <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 600-1,200）。如果是旧机器，可能需要考虑更换新机。</p>
@@ -790,7 +790,7 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>服务</th><th>价格</th></tr></thead>
         <tbody>
           <tr><td>基本保养</td><td>RM 99起</td></tr>
-          <tr><td>化学清洗</td><td>RM 120起</td></tr>
+          <tr><td>化学清洗</td><td>RM 2.50/PSI起</td></tr>
           <tr><td>化学大修</td><td>RM 220起</td></tr>
           <tr><td>年度保养合约(AMC)</td><td>RM 499/年起</td></tr>
         </tbody>
@@ -824,19 +824,19 @@ export const allPosts: BlogPost[] = [
       <p>The oldest gas type. Found in units made before 2015. R22 is being phased out globally due to its high ozone depletion potential.</p>
       <ul>
         <li>Units: Pre-2015 models</li>
-        <li>Top-up cost: RM 120 (1.0 HP), RM 150 (1.5–2.0 HP), RM 180 (2.5–3.0 HP)</li>
+        <li>Top-up cost: R22 (RM 2.50/PSI), R410A (RM 3.00/PSI), R32 (RM 3.00/PSI)</li>
       </ul>
       <h2>R410A</h2>
       <p>The standard gas for units made between 2010–2020. No ozone depletion but higher global warming potential than R32.</p>
       <ul>
         <li>Units: 2010–2020 Daikin, Panasonic, Mitsubishi, LG, Samsung</li>
-        <li>Top-up cost: RM 150 (1.0 HP), RM 180 (1.5–2.0 HP), RM 200 (2.5–3.0 HP)</li>
+        <li>Top-up cost: R410A (RM 3.00/PSI), R32 (RM 3.00/PSI)</li>
       </ul>
       <h2>R32</h2>
       <p>The current standard for new inverter units. Lower global warming potential, better energy efficiency. Most new units use R32.</p>
       <ul>
         <li>Units: 2018 onwards, especially inverter models</li>
-        <li>Top-up cost: RM 180 (1.0 HP), RM 200 (1.5–2.0 HP), RM 220 (2.5–3.0 HP)</li>
+        <li>Top-up cost: R32 (RM 3.00/PSI)</li>
       </ul>
       <h2>Important: Never Mix Refrigerant Types</h2>
       <p>This cannot be overstated — mixing refrigerant types causes immediate and permanent damage to the compressor. R22 and R410A operate at completely different pressure ranges. R32 and R410A, while both HFCs, have different molecular compositions and cannot be mixed. A technician who proposes "topping up" without first identifying the gas type or measuring current pressure is not following correct procedure. KL Renovator always identifies the refrigerant type from the outdoor unit sticker before any gas work begins.</p>
@@ -854,13 +854,13 @@ export const allPosts: BlogPost[] = [
       <p>Kebanyakan unit aircond di Malaysia menggunakan salah satu daripada tiga jenis penyejuk: R22, R410A, atau R32. Setiap satunya mempunyai sifat, kos, dan kesan alam sekitar yang berbeza.</p>
       <h2>R22 (Freon)</h2>
       <p>Jenis gas yang paling lama. Terdapat dalam unit yang dibuat sebelum 2015. R22 sedang dihentikan secara global kerana potensi penipisan ozon yang tinggi.</p>
-      <ul><li>Kos tambah gas: RM 120 (1.0 HP), RM 150 (1.5–2.0 HP), RM 180 (2.5–3.0 HP)</li></ul>
+      <ul><li>Kos tambah gas: RM 2.50/PSI (R22), RM 3.00/PSI (R410A/R32)</li></ul>
       <h2>R410A</h2>
       <p>Gas standard untuk unit yang dibuat antara 2010–2020.</p>
-      <ul><li>Kos tambah gas: RM 150 (1.0 HP), RM 180 (1.5–2.0 HP), RM 200 (2.5–3.0 HP)</li></ul>
+      <ul><li>Kos tambah gas: RM 3.00/PSI (R410A/R32)</li></ul>
       <h2>R32</h2>
       <p>Standard semasa untuk unit inverter baru. Potensi pemanasan global yang lebih rendah, kecekapan tenaga yang lebih baik.</p>
-      <ul><li>Kos tambah gas: RM 180 (1.0 HP), RM 200 (1.5–2.0 HP), RM 220 (2.5–3.0 HP)</li></ul>
+      <ul><li>Kos tambah gas: RM 3.00/PSI (R32)</li></ul>
       <h2>Penting: Jangan Sekali-kali Mencampurkan Jenis Penyejuk</h2>
       <p>R22 dan R410A beroperasi pada julat tekanan yang berbeza sepenuhnya. Mencampurkan jenis penyejuk menyebabkan kerosakan segera dan kekal pada kompressor. Juruteknik yang mencadangkan untuk "menambah gas" tanpa mengenal pasti jenis gas terlebih dahulu tidak mengikut prosedur yang betul. KL Renovator sentiasa mengenal pasti jenis penyejuk dari pelekat unit luar sebelum sebarang kerja gas dimulakan.</p>
 
@@ -884,7 +884,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>能效</td><td>中等</td><td>高</td><td>最高</td></tr>
           <tr><td>工作压力</td><td>低</td><td>高（1.6x R22）</td><td>高（类似R410A）</td></tr>
           <tr><td>可燃性</td><td>不可燃</td><td>不可燃</td><td>微燃（A2L级）</td></tr>
-          <tr><td>充气价格</td><td>RM 120起</td><td>RM 150起</td><td>RM 180起</td></tr>
+          <tr><td>充气价格</td><td>RM 2.50/PSI起</td><td>RM 150起</td><td>RM 3.00/PSI起</td></tr>
           <tr><td>使用年份</td><td>2015年前</td><td>2010-2022</td><td>2020年至今</td></tr>
         </tbody>
       </table>
@@ -1220,7 +1220,7 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>服务</th><th>频率</th><th>价格</th></tr></thead>
         <tbody>
           <tr><td>基本保养</td><td>每6-12个月</td><td>RM 99起</td></tr>
-          <tr><td>化学清洗</td><td>每12个月</td><td>RM 120起</td></tr>
+          <tr><td>化学清洗</td><td>每12个月</td><td>RM 2.50/PSI起</td></tr>
           <tr><td>化学大修</td><td>每2-3年</td><td>RM 220起</td></tr>
           <tr><td>年度保养合约</td><td>包含以上</td><td>RM 499/年起</td></tr>
         </tbody>
@@ -1262,7 +1262,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Wall-Mounted 1.0–1.5 HP: <strong>RM 120</strong></li>
         <li>Wall-Mounted 2.0–2.5 HP: <strong>RM 150</strong></li>
-        <li>Wall-Mounted 3.0 HP: <strong>RM 180</strong></li>
+        <li>Wall-Mounted 3.0 HP: <strong>RM 3.00/PSI</strong></li>
         <li>Wall-Mounted 4.0–5.0 HP: <strong>RM 200</strong></li>
         <li>Ceiling Cassette 1.0–1.5 HP: <strong>RM 220</strong></li>
         <li>Ceiling Cassette 2.0–3.0 HP: <strong>RM 280</strong></li>
@@ -1275,9 +1275,9 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>Gas Top-Up</h2>
       <ul>
-        <li>R22 — 1.0 HP: <strong>RM 120</strong> | 1.5–2.0 HP: <strong>RM 150</strong></li>
-        <li>R410A — 1.0 HP: <strong>RM 150</strong> | 1.5–2.0 HP: <strong>RM 180</strong></li>
-        <li>R32 — 1.0 HP: <strong>RM 180</strong> | 1.5–2.0 HP: <strong>RM 200</strong></li>
+        <li>R22: <strong>RM 2.50/PSI</strong></li>
+        <li>R410A: <strong>RM 3.00/PSI</strong></li>
+        <li>R32: <strong>RM 3.00/PSI</strong></li>
       </ul>
       <h2>Repair & Installation</h2>
       <ul>
@@ -1309,7 +1309,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Dinding 1.0–1.5 HP: <strong>RM 120</strong></li>
         <li>Dinding 2.0–2.5 HP: <strong>RM 150</strong></li>
-        <li>Dinding 3.0 HP: <strong>RM 180</strong></li>
+        <li>Dinding 3.0 HP: <strong>RM 3.00/PSI</strong></li>
         <li>Ceiling Cassette 1.0–1.5 HP: <strong>RM 220</strong></li>
       </ul>
       <h2>Overhaul Kimia</h2>
@@ -1319,9 +1319,9 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>Tambah Gas</h2>
       <ul>
-        <li>R22 — 1.0 HP: <strong>RM 120</strong></li>
-        <li>R410A — 1.0 HP: <strong>RM 150</strong></li>
-        <li>R32 — 1.0 HP: <strong>RM 180</strong></li>
+        <li>R22: <strong>RM 2.50/PSI</strong></li>
+        <li>R410A: <strong>RM 3.00/PSI</strong></li>
+        <li>R32: <strong>RM 3.00/PSI</strong></li>
       </ul>
       <h2>Pembaikan & Pemasangan</h2>
       <ul>
@@ -1348,12 +1348,12 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>服务</th><th>壁挂式 1-1.5HP</th><th>壁挂式 2-2.5HP</th><th>天花板卡式</th></tr></thead>
         <tbody>
-          <tr><td>基本保养</td><td>RM 99</td><td>RM 120</td><td>RM 180</td></tr>
+          <tr><td>基本保养</td><td>RM 99</td><td>RM 120</td><td>RM 150</td></tr>
           <tr><td>化学清洗</td><td>RM 120</td><td>RM 150</td><td>RM 220</td></tr>
           <tr><td>化学大修</td><td>RM 220</td><td>RM 280</td><td>RM 350</td></tr>
-          <tr><td>充气 R22</td><td>RM 120</td><td>RM 150</td><td>RM 200</td></tr>
-          <tr><td>充气 R410A</td><td>RM 150</td><td>RM 180</td><td>RM 250</td></tr>
-          <tr><td>充气 R32</td><td>RM 180</td><td>RM 220</td><td>RM 280</td></tr>
+          <tr><td>充气 R22</td><td colspan='3'>RM 2.50 / PSI</td></tr>
+          <tr><td>充气 R410A</td><td colspan='3'>RM 3.00 / PSI</td></tr>
+          <tr><td>充气 R32</td><td colspan='3'>RM 3.00 / PSI</td></tr>
           <tr><td>安装</td><td>RM 199</td><td>RM 249-279</td><td>RM 290+</td></tr>
           <tr><td>诊断费</td><td colspan="3">RM 88（同次维修则豁免）</td></tr>
         </tbody>
@@ -1658,7 +1658,7 @@ export const allPosts: BlogPost[] = [
       <h2>Tip 3 — Chemical Wash Every 12 Months</h2>
       <p>An annual chemical wash can reduce electricity consumption by 15–25% on a neglected unit.</p>
       <h2>Tip 4 — Check Your Gas Pressure</h2>
-      <p>Low gas makes the compressor run longer. Gas top-up from RM 120 fixes this immediately.</p>
+      <p>Low gas makes the compressor run longer. Gas top-up from RM 2.50/PSI fixes this immediately.</p>
       <h2>Tips 5–12</h2>
       <ul>
         <li>Use sleep mode and timers at night</li>
@@ -1670,10 +1670,10 @@ export const allPosts: BlogPost[] = [
         <li>Upgrade old non-inverter units to save 40–50%</li>
         <li>Book annual maintenance contract for consistent efficiency</li>
       </ul>
-      <p>Chemical wash from RM 120. Gas top-up from RM 120. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/chemical-wash">Chemical wash</a> | <a href="/services/gas-topup">Gas top-up</a></p>
+      <p>Chemical wash from RM 120. Gas top-up from RM 2.50/PSI. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/chemical-wash">Chemical wash</a> | <a href="/services/gas-topup">Gas top-up</a></p>
 
       <h2>How Much Can You Actually Save?</h2>
-      <p>A household with 3 aircond units running 8 hours per day spending RM 300/month on electricity attributed to aircond can realistically reduce this to RM 180–200 per month by combining proper temperature setting (25°C instead of 18°C), annual chemical wash, and ceiling fan use. That is RM 100–120 per month in savings — or RM 1,200–1,440 per year — from changes that cost nothing or very little to implement.</p>
+      <p>A household with 3 aircond units running 8 hours per day spending RM 300/month on electricity attributed to aircond can realistically reduce this to RM 150–200 per month by combining proper temperature setting (25°C instead of 18°C), annual chemical wash, and ceiling fan use. That is RM 100–120 per month in savings — or RM 1,200–1,440 per year — from changes that cost nothing or very little to implement.</p>
       <h2>Book a Service to Start Saving</h2>
       <p>The fastest way to reduce your aircond electricity bill is a chemical wash — it removes the coil fouling that forces the compressor to work harder. Chemical wash from <strong>RM 120</strong>. WhatsApp <strong>+60 18-298 3573</strong>.</p>
 
@@ -1690,7 +1690,7 @@ export const allPosts: BlogPost[] = [
       <h2>Petua 3 — Cuci Kimia Setiap 12 Bulan</h2>
       <p>Cuci kimia tahunan boleh mengurangkan penggunaan elektrik sebanyak 15–25% pada unit yang diabaikan.</p>
       <h2>Petua 4 — Semak Tekanan Gas Anda</h2>
-      <p>Gas rendah menyebabkan kompressor berfungsi lebih lama. Tambah gas dari RM 120 menyelesaikan ini dengan segera.</p>
+      <p>Gas rendah menyebabkan kompressor berfungsi lebih lama. Tambah gas dari RM 2.50/PSI menyelesaikan ini dengan segera.</p>
       <h2>Petua 5–12</h2>
       <ul>
         <li>Gunakan mod tidur dan pemasa pada waktu malam</li>
@@ -1703,10 +1703,10 @@ export const allPosts: BlogPost[] = [
         <li>Tempah kontrak penyelenggaraan tahunan untuk kecekapan yang konsisten</li>
       </ul>
       <p>Dengan melaksanakan petua-petua ini bersama-sama, kebanyakan isi rumah Malaysia boleh mengurangkan bahagian aircond bil elektrik mereka sebanyak 30–45% tanpa mengorbankan keselesaan. Langkah pertama dan paling mudah adalah menetapkan suhu yang betul dan memastikan servis yang konsisten.</p>
-      <p>Cuci kimia dari RM 120. Tambah gas dari RM 120. WhatsApp <strong>+60 18-298 3573</strong>. Lihat: <a href="/services/chemical-wash">Cuci kimia</a> | <a href="/services/gas-topup">Tambah gas</a></p>
+      <p>Cuci kimia dari RM 120. Tambah gas dari RM 2.50/PSI. WhatsApp <strong>+60 18-298 3573</strong>. Lihat: <a href="/services/chemical-wash">Cuci kimia</a> | <a href="/services/gas-topup">Tambah gas</a></p>
 
       <h2>Berapa Banyak Anda Boleh Jimat Sebenarnya?</h2>
-      <p>Isi rumah dengan 3 unit aircond yang berjalan 8 jam sehari dan membelanjakan RM 300/bulan untuk elektrik yang dikaitkan dengan aircond secara realistik boleh mengurangkan ini kepada RM 180–200 sebulan dengan menggabungkan tetapan suhu yang betul (25°C bukan 18°C), cuci kimia tahunan, dan penggunaan kipas siling. Itu adalah penjimatan RM 100–120 sebulan — atau RM 1,200–1,440 setahun — daripada perubahan yang tidak memerlukan kos atau sangat sedikit kos untuk dilaksanakan.</p>
+      <p>Isi rumah dengan 3 unit aircond yang berjalan 8 jam sehari dan membelanjakan RM 300/bulan untuk elektrik yang dikaitkan dengan aircond secara realistik boleh mengurangkan ini kepada RM 150–200 sebulan dengan menggabungkan tetapan suhu yang betul (25°C bukan 18°C), cuci kimia tahunan, dan penggunaan kipas siling. Itu adalah penjimatan RM 100–120 sebulan — atau RM 1,200–1,440 setahun — daripada perubahan yang tidak memerlukan kos atau sangat sedikit kos untuk dilaksanakan.</p>
       <h2>Tempah Servis untuk Mula Berjimat</h2>
       <p>Cara terpantas untuk mengurangkan bil elektrik aircond anda adalah cuci kimia — ia membuang kekotoran gegelung yang memaksa kompressor bekerja lebih keras. Cuci kimia dari <strong>RM 120</strong>. WhatsApp <strong>+60 18-298 3573</strong>.</p>
 
@@ -1743,7 +1743,7 @@ export const allPosts: BlogPost[] = [
       </table>
 
       <h2>预约省电保养</h2>
-      <p>WhatsApp <strong>+60 18-298 3573</strong> — 化学清洗从RM 120起，帮您节省电费。</p>`,
+      <p>WhatsApp <strong>+60 18-298 3573</strong> — 化学清洗从RM 2.50/PSI起，帮您节省电费。</p>`,
   },
   {
     slug: "aircond-installation-guide-malaysia",
@@ -2040,7 +2040,7 @@ export const allPosts: BlogPost[] = [
         <li>Is the outdoor fan running?</li>
         <li>Is there ice on the indoor coil?</li>
       </ul>
-      <p><strong>Professional fix:</strong> Low gas (RM 120+), dirty coil (RM 120+), faulty capacitor (RM 180)</p>
+      <p><strong>Professional fix:</strong> Low gas (from RM 2.50/PSI), dirty coil (RM 120+), faulty capacitor (RM 180)</p>
       <h2>Problem: Aircond Leaking Water</h2>
       <ul>
         <li>Check if the indoor unit is mounted level</li>
@@ -2316,11 +2316,11 @@ export const allPosts: BlogPost[] = [
         <li>Final pressure verification</li>
         <li>Cooling performance test</li>
       </ul>
-      <p>R22 from RM 120, R410A from RM 150, R32 from RM 180. Leak check included. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/gas-topup">Gas top-up service</a> | <a href="/problems/aircond-low-gas">Low gas symptoms</a></p>
+      <p>R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. Leak check included. WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/gas-topup">Gas top-up service</a> | <a href="/problems/aircond-low-gas">Low gas symptoms</a></p>
 
       <h2>How to Know If Your Unit Actually Has Low Gas</h2>
       <p>The clearest sign is consistently weak cooling across all modes and settings, combined with the outdoor unit compressor running continuously without cycling off. Ice forming on the evaporator coil or copper pipes is a strong indicator of significantly low gas. Warm air blowing from the vents while the fan runs at full speed also suggests the compressor is not achieving adequate pressure differential. These symptoms together almost always indicate low gas or a refrigerant leak — but the only way to confirm is with a manifold gauge measurement. Never top up based on symptoms alone without pressure verification.</p>
-      <p>R22 from RM 120, R410A from RM 150, R32 from RM 180. Leak check always included. WhatsApp <strong>+60 18-298 3573</strong>.</p>
+      <p>R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. Leak check always included. WhatsApp <strong>+60 18-298 3573</strong>.</p>
 
       <h2>What a Legitimate Gas Top-Up Looks Like</h2>
       <p>A professional gas top-up takes 45–60 minutes. The technician arrives with a manifold gauge set and refrigerant cylinder, connects the gauges to the service valves, reads current suction and discharge pressure, compares to manufacturer specifications for the ambient temperature, and only then adds refrigerant if the pressure is confirmed below specification. The gauge readings before and after are shown to you. If any technician proposes to top up gas in 10 minutes without connecting gauges, this is not a professional service. Always ask to see the gauge readings before and after any gas work.</p>
@@ -2349,7 +2349,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>R22</td><td>Dari RM 120</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
           <tr><td>R410A</td><td>Dari RM 150</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
-          <tr><td>R32</td><td>Dari RM 180</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
+          <tr><td>R32</td><td>RM 3.00/PSI</td><td>Pemeriksaan kebocoran + tambah gas</td></tr>
         </tbody>
       </table>
 
@@ -2371,9 +2371,9 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>类型</th><th>常见机型</th><th>环保等级</th><th>价格参考</th></tr></thead>
         <tbody>
-          <tr><td>R32</td><td>新型变频机</td><td>高 (推荐)</td><td>RM 120起</td></tr>
+          <tr><td>R32</td><td>新型变频机</td><td>高 (推荐)</td><td>RM 2.50/PSI起</td></tr>
           <tr><td>R410A</td><td>上一代变频</td><td>中</td><td>RM 150起</td></tr>
-          <tr><td>R22</td><td>旧款定频</td><td>低 (淘汰中)</td><td>RM 120起</td></tr>
+          <tr><td>R22</td><td>旧款定频</td><td>低 (淘汰中)</td><td>RM 2.50/PSI起</td></tr>
         </tbody>
       </table>
 
@@ -2606,8 +2606,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
     imageAlt: "Routine wall-mounted aircond basic servicing with filter cleaning in Kuala Lumpur",
     lastReviewed: "2026-07-03",
-    content: "<p><em>Basic servicing removes surface dust, checks airflow, tests electrical parts and keeps a healthy unit efficient. In Malaysia’s humidity, most active units should be serviced every 3–6 months.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is included in basic servicing?</h2>\n<p>Technicians wash the filters, wipe the cover, check blower airflow and electrical terminals, and confirm the drain flow is normal.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Technicians wash the filters, wipe the cover, check blower airflow and electrical terminals, and confirm the drain flow is normal.</div>\n<h2>When is basic servicing enough?</h2>\n<p>It is suitable when the aircond is still cooling, not leaking water and not producing strong odours. If dirt has entered deep coils, a chemical wash may be better.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> It is suitable when the aircond is still cooling, not leaking water and not producing strong odours.</div>\n<h2>Basic servicing price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM99</td><td>Filter wash, cover wipe, basic electrical test</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM120</td><td>Routine maintenance protocol</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM150</td><td>Routine maintenance protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM150</td><td>Panel cleaning and inspection</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM99</td><td>Slide-out clean and operating test</td></tr></tbody></table>\n<h2>How often should Malaysian homes service airconds?</h2>\n<p>Heavy-use bedrooms and offices usually need servicing every 3–4 months. Light-use guest rooms can often be maintained every 6 months.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Heavy-use bedrooms and offices usually need servicing every 3–4 months.</div>\n<h2>How does servicing reduce TNB bills?</h2>\n<p>Clean filters and coils reduce compressor strain. When airflow is not blocked, the system reaches target temperature faster and runs with less wasted energy.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Clean filters and coils reduce compressor strain.</div>\n<h2>Which brands are covered?</h2>\n<p>KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator to schedule basic servicing near you in KL or Selangor. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/basic-servicing\">Basic Servicing / Routine Maintenance</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Servis asas membuang habuk permukaan, memeriksa aliran udara, menguji komponen elektrik dan mengekalkan kecekapan unit yang masih sihat. Dalam cuaca lembap Malaysia, kebanyakan unit aktif perlu diservis setiap 3–6 bulan.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Apa yang termasuk dalam servis asas?</h2>\n<p>Juruteknik mencuci penapis, mengelap penutup, memeriksa aliran udara blower, terminal elektrik dan mengesahkan aliran saliran adalah normal.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik mencuci penapis, mengelap penutup, memeriksa aliran udara blower, terminal elektrik dan mengesahkan aliran saliran adalah normal.</div>\n<h2>When is basic servicing enough?</h2>\n<p>It is suitable when the aircond is still cooling, not leaking water and not producing strong odours. If dirt has entered deep coils, a chemical wash may be better.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia sesuai apabila aircond masih sejuk, tidak bocor air dan tidak mengeluarkan bau kuat.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM99</td><td>Filter wash, cover wipe, basic electrical test</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM120</td><td>Routine maintenance protocol</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM150</td><td>Routine maintenance protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM150</td><td>Panel cleaning and inspection</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM99</td><td>Slide-out clean and operating test</td></tr></tbody></table>\n<h2>How often should Malaysian homes service airconds?</h2>\n<p>Heavy-use bedrooms and offices usually need servicing every 3–4 months. Light-use guest rooms can often be maintained every 6 months.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur dan pejabat yang digunakan berat biasanya perlu servis setiap 3-4 bulan.</div>\n<h2>How does servicing reduce TNB bills?</h2>\n<p>Clean filters and coils reduce compressor strain. When airflow is not blocked, the system reaches target temperature faster and runs with less wasted energy.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Penapis dan gegelung bersih mengurangkan tekanan kompressor.</div>\n<h2>Which brands are covered?</h2>\n<p>KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/basic-servicing\">Basic Servicing / Routine Maintenance</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>Basic servicing removes surface dust, checks airflow, tests electrical parts and keeps a healthy unit efficient. In Malaysia’s humidity, most active units should be serviced every 3–6 months.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is included in basic servicing?</h2>\n<p>Technicians wash the filters, wipe the cover, check blower airflow and electrical terminals, and confirm the drain flow is normal.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Technicians wash the filters, wipe the cover, check blower airflow and electrical terminals, and confirm the drain flow is normal.</div>\n<h2>When is basic servicing enough?</h2>\n<p>It is suitable when the aircond is still cooling, not leaking water and not producing strong odours. If dirt has entered deep coils, a chemical wash may be better.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> It is suitable when the aircond is still cooling, not leaking water and not producing strong odours.</div>\n<h2>Basic servicing price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM99</td><td>Filter wash, cover wipe, basic electrical test</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM120</td><td>Routine maintenance protocol</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM 150</td><td>Routine maintenance protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM 150</td><td>Panel cleaning and inspection</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM99</td><td>Slide-out clean and operating test</td></tr></tbody></table>\n<h2>How often should Malaysian homes service airconds?</h2>\n<p>Heavy-use bedrooms and offices usually need servicing every 3–4 months. Light-use guest rooms can often be maintained every 6 months.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Heavy-use bedrooms and offices usually need servicing every 3–4 months.</div>\n<h2>How does servicing reduce TNB bills?</h2>\n<p>Clean filters and coils reduce compressor strain. When airflow is not blocked, the system reaches target temperature faster and runs with less wasted energy.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Clean filters and coils reduce compressor strain.</div>\n<h2>Which brands are covered?</h2>\n<p>KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator to schedule basic servicing near you in KL or Selangor. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/basic-servicing\">Basic Servicing / Routine Maintenance</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Servis asas membuang habuk permukaan, memeriksa aliran udara, menguji komponen elektrik dan mengekalkan kecekapan unit yang masih sihat. Dalam cuaca lembap Malaysia, kebanyakan unit aktif perlu diservis setiap 3–6 bulan.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Apa yang termasuk dalam servis asas?</h2>\n<p>Juruteknik mencuci penapis, mengelap penutup, memeriksa aliran udara blower, terminal elektrik dan mengesahkan aliran saliran adalah normal.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik mencuci penapis, mengelap penutup, memeriksa aliran udara blower, terminal elektrik dan mengesahkan aliran saliran adalah normal.</div>\n<h2>When is basic servicing enough?</h2>\n<p>It is suitable when the aircond is still cooling, not leaking water and not producing strong odours. If dirt has entered deep coils, a chemical wash may be better.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia sesuai apabila aircond masih sejuk, tidak bocor air dan tidak mengeluarkan bau kuat.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM99</td><td>Filter wash, cover wipe, basic electrical test</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM120</td><td>Routine maintenance protocol</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM 150</td><td>Routine maintenance protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM 150</td><td>Panel cleaning and inspection</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM99</td><td>Slide-out clean and operating test</td></tr></tbody></table>\n<h2>How often should Malaysian homes service airconds?</h2>\n<p>Heavy-use bedrooms and offices usually need servicing every 3–4 months. Light-use guest rooms can often be maintained every 6 months.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur dan pejabat yang digunakan berat biasanya perlu servis setiap 3-4 bulan.</div>\n<h2>How does servicing reduce TNB bills?</h2>\n<p>Clean filters and coils reduce compressor strain. When airflow is not blocked, the system reaches target temperature faster and runs with less wasted energy.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Penapis dan gegelung bersih mengurangkan tekanan kompressor.</div>\n<h2>Which brands are covered?</h2>\n<p>KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/basic-servicing\">Basic Servicing / Routine Maintenance</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪冷气基本保养 — 保持凉爽的最佳方案</h2>
       <p>基本保养是让冷气长寿、省电的关键。定期清理滤网和检查系统可以防止灰尘堆积，并确保在马来西亚炎热的天气中正常运行。<strong>KL Renovator</strong> 提供专业的上门基本保养服务，价格仅从 <strong>RM 99</strong> 起。</p>
 
@@ -2678,8 +2678,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     imageAlt: "High-pressure chemical wash flushing dirt from an indoor aircond unit in Selangor",
     lastReviewed: "2026-07-03",
-    content: "<p><em>A pressure chemical wash clears slime, dust and algae from the coil, blower and drain path without fully dismantling the indoor unit. It is often the fastest fix for moderate leaking, weak airflow and musty smell.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Condensation should flow through the drain pipe.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Chemical wash price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM150</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A professional technician protects the PCB and electrical area before washing.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator before the leak damages your wall, ceiling or furniture. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Cuci kimia bertekanan membersihkan lendir, habuk dan alga pada coil, blower dan saluran air tanpa membuka keseluruhan unit. Ia sering menjadi penyelesaian terpantas untuk bocor sederhana, angin lemah dan bau hapak.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kondensasi harus mengalir melalui paip longkang.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM150</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik profesional melindungi PCB dan kawasan elektrik sebelum mencuci.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>A pressure chemical wash clears slime, dust and algae from the coil, blower and drain path without fully dismantling the indoor unit. It is often the fastest fix for moderate leaking, weak airflow and musty smell.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Condensation should flow through the drain pipe.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Chemical wash price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A professional technician protects the PCB and electrical area before washing.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator before the leak damages your wall, ceiling or furniture. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Cuci kimia bertekanan membersihkan lendir, habuk dan alga pada coil, blower dan saluran air tanpa membuka keseluruhan unit. Ia sering menjadi penyelesaian terpantas untuk bocor sederhana, angin lemah dan bau hapak.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kondensasi harus mengalir melalui paip longkang.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik profesional melindungi PCB dan kawasan elektrik sebelum mencuci.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪高压化学清洗 — 彻底解决漏水与异味</h2>
       <p>当基本保养无法解决风量变弱或滴水问题时，<strong>高压化学清洗 (Pressure Chemical Wash)</strong> 是最佳选择。它能通过化学药剂和高压水枪彻底清除盘管深处的灰尘和粘稠的霉菌。<strong>KL Renovator</strong> 为所有主流品牌提供此项服务，价格仅从 <strong>RM 120</strong> 起。</p>
 
@@ -2702,7 +2702,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>壁挂式 (1.0–1.5 HP)</td><td>RM 120</td><td>铝片药剂清洗、排水管冲洗、风轮清洁</td></tr>
           <tr><td>壁挂式 (2.0–2.5 HP)</td><td>RM 150</td><td>全套深度高压清洗方案</td></tr>
-          <tr><td>壁挂式 (3.0 HP)</td><td>RM 180</td><td>大功率机组深度清洗</td></tr>
+          <tr><td>壁挂式 (3.0 HP)</td><td>RM 3.00/PSI</td><td>大功率机组深度清洗</td></tr>
           <tr><td>天花板卡式 (1.0–1.5 HP)</td><td>RM 220</td><td>面板及排水盘药剂冲洗</td></tr>
           <tr><td>窗式冷气</td><td>RM 130起</td><td>盘管清洗及托盘清理</td></tr>
         </tbody>
@@ -2820,8 +2820,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
     imageAlt: "Aircond R32 and R410A refrigerant gas top-up with pressure balancing in Selangor",
     lastReviewed: "2026-07-03",
-    content: "<p><em>Gas top-up should be pressure-checked, not guessed. If gas is low, the technician should consider leakage, valve condition and correct refrigerant type before refilling.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Does aircond gas naturally run out?</h2>\n<p>No. Refrigerant works in a sealed loop. Low gas usually indicates a leak at copper piping, flare joints, valves or coils.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> No.</div>\n<h2>What are signs of low refrigerant?</h2>\n<p>Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</div>\n<h2>Refrigerant top-up guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>R32</td><td>from RM180 / complete refill from RM120 in source table context</td><td>Modern inverter systems</td></tr><tr><td>R410A</td><td>from RM150</td><td>Mid-generation inverter systems</td></tr><tr><td>R22</td><td>from RM120</td><td>Older non-inverter systems</td></tr><tr><td>Leak check</td><td>included/basic check</td><td>Recommended before repeated top-up</td></tr></tbody></table>\n<h2>Why is overcharging dangerous?</h2>\n<p>Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</div>\n<h2>Which gas types are supported?</h2>\n<p>KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</div>\n<h2>Should I repair the leak first?</h2>\n<p>If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for pressure-checked gas top-up and honest leak advice. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/gas-topup\">Gas Top-Up / Precision Balancing</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Tambah gas mesti berdasarkan bacaan tekanan, bukan agak-agak. Jika gas rendah, juruteknik perlu semak kemungkinan bocor, keadaan valve dan jenis refrigerant yang betul sebelum mengisi.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Does aircond gas naturally run out?</h2>\n<p>No. Refrigerant works in a sealed loop. Low gas usually indicates a leak at copper piping, flare joints, valves or coils.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Tidak.</div>\n<h2>What are signs of low refrigerant?</h2>\n<p>Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>R32</td><td>from RM180 / complete refill from RM120 in source table context</td><td>Modern inverter systems</td></tr><tr><td>R410A</td><td>from RM150</td><td>Mid-generation inverter systems</td></tr><tr><td>R22</td><td>from RM120</td><td>Older non-inverter systems</td></tr><tr><td>Leak check</td><td>included/basic check</td><td>Recommended before repeated top-up</td></tr></tbody></table>\n<h2>Why is overcharging dangerous?</h2>\n<p>Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</div>\n<h2>Which gas types are supported?</h2>\n<p>KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator mengendalikan R32, R410A dan R22 dengan prosedur dan pemeriksaan tekanan yang betul dan berasingan.</div>\n<h2>Should I repair the leak first?</h2>\n<p>If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Jika kebocoran dikesan, membaiki kebocoran sebelum mengisi semula menjimatkan wang dan mengelakkan tambah gas berulang.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/gas-topup\">Gas Top-Up / Precision Balancing</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>Gas top-up should be pressure-checked, not guessed. If gas is low, the technician should consider leakage, valve condition and correct refrigerant type before refilling.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Does aircond gas naturally run out?</h2>\n<p>No. Refrigerant works in a sealed loop. Low gas usually indicates a leak at copper piping, flare joints, valves or coils.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> No.</div>\n<h2>What are signs of low refrigerant?</h2>\n<p>Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</div>\n<h2>Refrigerant top-up guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>R32</td><td>from RM 3.00/PSI</td><td>Modern inverter systems</td></tr><tr><td>R410A</td><td>from RM 3.00/PSI</td><td>Mid-generation inverter systems</td></tr><tr><td>R22</td><td>from RM 2.50/PSI</td><td>Older non-inverter systems</td></tr><tr><td>Leak check</td><td>included/basic check</td><td>Recommended before repeated top-up</td></tr></tbody></table>\n<h2>Why is overcharging dangerous?</h2>\n<p>Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</div>\n<h2>Which gas types are supported?</h2>\n<p>KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</div>\n<h2>Should I repair the leak first?</h2>\n<p>If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for pressure-checked gas top-up and honest leak advice. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/gas-topup\">Gas Top-Up / Precision Balancing</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Tambah gas mesti berdasarkan bacaan tekanan, bukan agak-agak. Jika gas rendah, juruteknik perlu semak kemungkinan bocor, keadaan valve dan jenis refrigerant yang betul sebelum mengisi.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Does aircond gas naturally run out?</h2>\n<p>No. Refrigerant works in a sealed loop. Low gas usually indicates a leak at copper piping, flare joints, valves or coils.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Tidak.</div>\n<h2>What are signs of low refrigerant?</h2>\n<p>Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>R32</td><td>from RM 3.00/PSI</td><td>Modern inverter systems</td></tr><tr><td>R410A</td><td>from RM 3.00/PSI</td><td>Mid-generation inverter systems</td></tr><tr><td>R22</td><td>from RM 2.50/PSI</td><td>Older non-inverter systems</td></tr><tr><td>Leak check</td><td>included/basic check</td><td>Recommended before repeated top-up</td></tr></tbody></table>\n<h2>Why is overcharging dangerous?</h2>\n<p>Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</div>\n<h2>Which gas types are supported?</h2>\n<p>KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator mengendalikan R32, R410A dan R22 dengan prosedur dan pemeriksaan tekanan yang betul dan berasingan.</div>\n<h2>Should I repair the leak first?</h2>\n<p>If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Jika kebocoran dikesan, membaiki kebocoran sebelum mengisi semula menjimatkan wang dan mengelakkan tambah gas berulang.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/gas-topup\">Gas Top-Up / Precision Balancing</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>马来西亚冷气加 Gas 真相 — R32, R410A 与 R22 精准压力平衡</h2>
       <p>冷气 Gas（制冷剂）并不会像汽油一样在运行中被消耗。如果您的冷气 Gas 变低，通常意味着系统存在<strong>微漏</strong>。<strong>KL Renovator</strong> 提供专业的压力检测和精准加 Gas 服务，价格从 <strong>RM 120</strong> 起。</p>
 
@@ -2842,9 +2842,9 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>冷媒类型</th><th>起始价格</th><th>适用场景</th></tr></thead>
         <tbody>
-          <tr><td>R32</td><td>RM 120起</td><td>现代变频 (Inverter) 机组</td></tr>
+          <tr><td>R32</td><td>RM 2.50/PSI起</td><td>现代变频 (Inverter) 机组</td></tr>
           <tr><td>R410A</td><td>RM 150起</td><td>上一代变频或中端机组</td></tr>
-          <tr><td>R22</td><td>RM 120起</td><td>旧款定频 (Non-Inverter) 机组</td></tr>
+          <tr><td>R22</td><td>RM 2.50/PSI起</td><td>旧款定频 (Non-Inverter) 机组</td></tr>
           <tr><td>检漏服务</td><td>视情况而定</td><td>建议在多次加 Gas 无效后进行</td></tr>
         </tbody>
       </table>
@@ -2884,8 +2884,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp",
     imageAlt: "Aircond troubleshooting repair with capacitor testing by KL Renovator in Shah Alam",
     lastReviewed: "2026-07-03",
-    content: "<p><em>Professional repair starts with diagnosis: electrical load, capacitor condition, PCB signals, fan motor, refrigerant pressure and drainage are checked before parts are recommended.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why should you not force-run a faulty aircond?</h2>\n<p>A tripping or blinking unit may have electrical or compressor faults. Force-running can burn wiring, PCB or compressor components.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A tripping or blinking unit may have electrical or compressor faults.</div>\n<h2>What does a technician check first?</h2>\n<p>Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</div>\n<h2>Common repair price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>On-site diagnostics</td><td>from RM88/RM50 depending current page policy</td><td>Multi-point electrical and pressure check</td></tr><tr><td>Capacitor replacement</td><td>from RM80</td><td>Terminal cleanup and current test</td></tr><tr><td>Fan motor/blower repair</td><td>from RM150</td><td>Motor replacement and sound check</td></tr><tr><td>PCB board repair/swap</td><td>from RM180</td><td>Circuit diagnosis and testing</td></tr><tr><td>Wiring rectification</td><td>from RM90</td><td>Safety check and insulation repair</td></tr></tbody></table>\n<h2>What causes DB box tripping?</h2>\n<p>Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</div>\n<h2>What causes loud aircond noise?</h2>\n<p>Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</div>\n<h2>Is diagnostic fee waived if repair proceeds?</h2>\n<p>On-site repair policy may waive the inspection fee if the approved repair is completed in the same visit; the final quote is confirmed before work starts.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> On-site repair policy may waive the inspection fee if the approved repair is completed in the same visit; the final quote is confirmed before work starts.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is blinking, tripping or making unusual noise. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/repair\">Troubleshooting & Repairs</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Pembaikan profesional bermula dengan diagnosis: beban elektrik, kapasitor, isyarat PCB, motor kipas, tekanan gas dan saliran diperiksa sebelum parts dicadangkan.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Why should you not force-run a faulty aircond?</h2>\n<p>A tripping or blinking unit may have electrical or compressor faults. Force-running can burn wiring, PCB or compressor components.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Unit yang trip atau berkelip mungkin mempunyai kerosakan elektrik atau kompressor.</div>\n<h2>What does a technician check first?</h2>\n<p>Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>On-site diagnostics</td><td>from RM88/RM50 depending current page policy</td><td>Multi-point electrical and pressure check</td></tr><tr><td>Capacitor replacement</td><td>from RM80</td><td>Terminal cleanup and current test</td></tr><tr><td>Fan motor/blower repair</td><td>from RM150</td><td>Motor replacement and sound check</td></tr><tr><td>PCB board repair/swap</td><td>from RM180</td><td>Circuit diagnosis and testing</td></tr><tr><td>Wiring rectification</td><td>from RM90</td><td>Safety check and insulation repair</td></tr></tbody></table>\n<h2>What causes DB box tripping?</h2>\n<p>Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</div>\n<h2>What causes loud aircond noise?</h2>\n<p>Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</div>\n<h2>Is diagnostic fee waived if repair proceeds?</h2>\n<p>Dasar pembaikan tapak mungkin mengecualikan yuran pemeriksaan jika pembaikan yang diluluskan dilakukan dalam lawatan yang sama; sebut harga akhir disahkan sebelum kerja.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Dasar pembaikan tapak mungkin mengecualikan yuran pemeriksaan jika pembaikan yang diluluskan dilakukan dalam lawatan yang sama; sebut harga akhir disahkan sebelum kerja.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/repair\">Troubleshooting & Repairs</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>Professional repair starts with diagnosis: electrical load, capacitor condition, PCB signals, fan motor, refrigerant pressure and drainage are checked before parts are recommended.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why should you not force-run a faulty aircond?</h2>\n<p>A tripping or blinking unit may have electrical or compressor faults. Force-running can burn wiring, PCB or compressor components.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A tripping or blinking unit may have electrical or compressor faults.</div>\n<h2>What does a technician check first?</h2>\n<p>Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</div>\n<h2>Common repair price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>On-site diagnostics</td><td>from RM88/RM50 depending current page policy</td><td>Multi-point electrical and pressure check</td></tr><tr><td>Capacitor replacement</td><td>from RM80</td><td>Terminal cleanup and current test</td></tr><tr><td>Fan motor/blower repair</td><td>from RM 150</td><td>Motor replacement and sound check</td></tr><tr><td>PCB board repair/swap</td><td>from RM180</td><td>Circuit diagnosis and testing</td></tr><tr><td>Wiring rectification</td><td>from RM90</td><td>Safety check and insulation repair</td></tr></tbody></table>\n<h2>What causes DB box tripping?</h2>\n<p>Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</div>\n<h2>What causes loud aircond noise?</h2>\n<p>Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</div>\n<h2>Is diagnostic fee waived if repair proceeds?</h2>\n<p>On-site repair policy may waive the inspection fee if the approved repair is completed in the same visit; the final quote is confirmed before work starts.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> On-site repair policy may waive the inspection fee if the approved repair is completed in the same visit; the final quote is confirmed before work starts.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is blinking, tripping or making unusual noise. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/repair\">Troubleshooting & Repairs</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Pembaikan profesional bermula dengan diagnosis: beban elektrik, kapasitor, isyarat PCB, motor kipas, tekanan gas dan saliran diperiksa sebelum parts dicadangkan.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Why should you not force-run a faulty aircond?</h2>\n<p>A tripping or blinking unit may have electrical or compressor faults. Force-running can burn wiring, PCB or compressor components.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Unit yang trip atau berkelip mungkin mempunyai kerosakan elektrik atau kompressor.</div>\n<h2>What does a technician check first?</h2>\n<p>Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>On-site diagnostics</td><td>from RM88/RM50 depending current page policy</td><td>Multi-point electrical and pressure check</td></tr><tr><td>Capacitor replacement</td><td>from RM80</td><td>Terminal cleanup and current test</td></tr><tr><td>Fan motor/blower repair</td><td>from RM 150</td><td>Motor replacement and sound check</td></tr><tr><td>PCB board repair/swap</td><td>from RM180</td><td>Circuit diagnosis and testing</td></tr><tr><td>Wiring rectification</td><td>from RM90</td><td>Safety check and insulation repair</td></tr></tbody></table>\n<h2>What causes DB box tripping?</h2>\n<p>Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</div>\n<h2>What causes loud aircond noise?</h2>\n<p>Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</div>\n<h2>Is diagnostic fee waived if repair proceeds?</h2>\n<p>Dasar pembaikan tapak mungkin mengecualikan yuran pemeriksaan jika pembaikan yang diluluskan dilakukan dalam lawatan yang sama; sebut harga akhir disahkan sebelum kerja.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Dasar pembaikan tapak mungkin mengecualikan yuran pemeriksaan jika pembaikan yang diluluskan dilakukan dalam lawatan yang sama; sebut harga akhir disahkan sebelum kerja.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/repair\">Troubleshooting & Repairs</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪冷气故障维修 — 精准诊断，拒绝乱收费</h2>
       <p>您的冷气是否突然跳电、灯光闪烁、或者发出刺耳的噪音？小毛病如果不及时修，可能会导致昂贵的压缩机损坏。<strong>KL Renovator</strong> 提供专业的冷气诊断与维修服务，帮您找回凉爽。</p>
 
@@ -2903,7 +2903,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>上门诊断费</td><td>RM 50 - 88</td><td>确认原因（如修则免此费）</td></tr>
           <li>更换启动电容</td><td>RM 80起</td><td>解决压缩机不启动问题</td></tr>
-          <tr><td>更换风扇马达</td><td>RM 180起</td><td>解决室内/外机噪音及风弱</td></tr>
+          <tr><td>更换风扇马达</td><td>RM 150起</td><td>解决室内/外机噪音及风弱</td></tr>
           <tr><td>主板 (PCB) 修理/更换</td><td>RM 350起</td><td>变频机核心部件修复</td></tr>
           <tr><td>修复漏点 + 加 Gas</td><td>RM 200起</td><td>一劳永逸解决漏气</td></tr>
         </tbody>
@@ -2937,8 +2937,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp",
     imageAlt: "Daikin aircond dismantle and relocation service by KL Renovator in Puchong",
     lastReviewed: "2026-07-03",
-    content: "<p><em>Safe dismantling protects the compressor and refrigerant. Proper reinstallation needs correct bracket support, copper pipe routing, vacuuming and drainage slope.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What happens during aircond dismantling?</h2>\n<p>Technicians pump down/recover refrigerant where appropriate, safely isolate power, remove the indoor and outdoor units, and prepare the site for reinstallation.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Technicians pump down/recover refrigerant where appropriate, safely isolate power, remove the indoor and outdoor units, and prepare the site for reinstallation.</div>\n<h2>Why is cheap dismantling risky?</h2>\n<p>Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</div>\n<h2>Dismantle and installation guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Dismantle 1.0–1.5HP</td><td>from RM80/RM90</td><td>Removal and pipe protection</td></tr><tr><td>Dismantle 2.0–3.0HP</td><td>from RM120</td><td>Removal and pipe protection</td></tr><tr><td>New wall-mounted installation</td><td>from RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Ceiling cassette installation</td><td>from RM290</td><td>Standard hanging and testing protocol</td></tr></tbody></table>\n<h2>What matters during reinstallation?</h2>\n<p>Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</div>\n<h2>Can old pipes be reused?</h2>\n<p>Only if pipe size, insulation, cleanliness and condition are suitable. Otherwise new copper line is safer.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Only if pipe size, insulation, cleanliness and condition are suitable.</div>\n<h2>Where do we support relocation?</h2>\n<p>KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for safe dismantling, shifting and reinstallation. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/dismantling-relocation\">Dismantle & Relocation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Proses buka aircond yang selamat melindungi kompressor dan refrigerant. Pemasangan semula memerlukan bracket kukuh, laluan paip tembaga betul, vakum dan cerun saliran yang tepat.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What happens during aircond dismantling?</h2>\n<p>Juruteknik mengepam/memulihkan gas di mana sesuai, memutuskan kuasa dengan selamat, mengeluarkan unit dalam dan luar, dan menyediakan tapak untuk pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik mengepam/memulihkan gas di mana sesuai, memutuskan kuasa dengan selamat, mengeluarkan unit dalam dan luar, dan menyediakan tapak untuk pemasangan semula.</div>\n<h2>Why is cheap dismantling risky?</h2>\n<p>Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Dismantle 1.0–1.5HP</td><td>from RM80/RM90</td><td>Removal and pipe protection</td></tr><tr><td>Dismantle 2.0–3.0HP</td><td>from RM120</td><td>Removal and pipe protection</td></tr><tr><td>New wall-mounted installation</td><td>from RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Ceiling cassette installation</td><td>from RM290</td><td>Standard hanging and testing protocol</td></tr></tbody></table>\n<h2>What matters during reinstallation?</h2>\n<p>Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</div>\n<h2>Can old pipes be reused?</h2>\n<p>Only if pipe size, insulation, cleanliness and condition are suitable. Otherwise new copper line is safer.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Hanya jika saiz paip, penebat, kebersihan dan keadaan sesuai.</div>\n<h2>Where do we support relocation?</h2>\n<p>KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/dismantling-relocation\">Dismantle & Relocation</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>Safe dismantling protects the compressor and refrigerant. Proper reinstallation needs correct bracket support, copper pipe routing, vacuuming and drainage slope.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What happens during aircond dismantling?</h2>\n<p>Technicians pump down/recover refrigerant where appropriate, safely isolate power, remove the indoor and outdoor units, and prepare the site for reinstallation.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Technicians pump down/recover refrigerant where appropriate, safely isolate power, remove the indoor and outdoor units, and prepare the site for reinstallation.</div>\n<h2>Why is cheap dismantling risky?</h2>\n<p>Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</div>\n<h2>Dismantle and installation guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Dismantle 1.0–1.5HP</td><td>from RM80/RM90</td><td>Removal and pipe protection</td></tr><tr><td>Dismantle 2.0–3.0HP</td><td>from RM 2.50/PSI</td><td>Removal and pipe protection</td></tr><tr><td>New wall-mounted installation</td><td>from RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Ceiling cassette installation</td><td>from RM290</td><td>Standard hanging and testing protocol</td></tr></tbody></table>\n<h2>What matters during reinstallation?</h2>\n<p>Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</div>\n<h2>Can old pipes be reused?</h2>\n<p>Only if pipe size, insulation, cleanliness and condition are suitable. Otherwise new copper line is safer.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Only if pipe size, insulation, cleanliness and condition are suitable.</div>\n<h2>Where do we support relocation?</h2>\n<p>KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for safe dismantling, shifting and reinstallation. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/dismantling-relocation\">Dismantle & Relocation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Proses buka aircond yang selamat melindungi kompressor dan refrigerant. Pemasangan semula memerlukan bracket kukuh, laluan paip tembaga betul, vakum dan cerun saliran yang tepat.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What happens during aircond dismantling?</h2>\n<p>Juruteknik mengepam/memulihkan gas di mana sesuai, memutuskan kuasa dengan selamat, mengeluarkan unit dalam dan luar, dan menyediakan tapak untuk pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik mengepam/memulihkan gas di mana sesuai, memutuskan kuasa dengan selamat, mengeluarkan unit dalam dan luar, dan menyediakan tapak untuk pemasangan semula.</div>\n<h2>Why is cheap dismantling risky?</h2>\n<p>Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Dismantle 1.0–1.5HP</td><td>from RM80/RM90</td><td>Removal and pipe protection</td></tr><tr><td>Dismantle 2.0–3.0HP</td><td>from RM 2.50/PSI</td><td>Removal and pipe protection</td></tr><tr><td>New wall-mounted installation</td><td>from RM199</td><td>Labour + up to 7ft copper/wire/drain</td></tr><tr><td>Ceiling cassette installation</td><td>from RM290</td><td>Standard hanging and testing protocol</td></tr></tbody></table>\n<h2>What matters during reinstallation?</h2>\n<p>Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</div>\n<h2>Can old pipes be reused?</h2>\n<p>Only if pipe size, insulation, cleanliness and condition are suitable. Otherwise new copper line is safer.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Hanya jika saiz paip, penebat, kebersihan dan keadaan sesuai.</div>\n<h2>Where do we support relocation?</h2>\n<p>KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/dismantling-relocation\">Dismantle & Relocation</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪专业冷气拆卸与安装 — 安全搬迁全指南</h2>
       <p>搬家或更换旧机？<strong>冷气拆卸（Dismantling）</strong> 和重新安装需要专业的处理，以确保冷媒不流失且机器不受损。<strong>KL Renovator</strong> 提供一站式的拆机、搬运及安装服务，价格透明。</p>
 
@@ -3134,7 +3134,7 @@ export const allPosts: BlogPost[] = [
           <tr><td><strong>环保性</strong></td><td>差 (破坏臭氧层)</td><td>一般</td><td>好 (低GWP)</td></tr>
           <tr><td><strong>运行压力</strong></td><td>低 (~65 PSI)</td><td>高 (~130 PSI)</td><td>高 (~140 PSI)</td></tr>
           <tr><td><strong>制冷效率</strong></td><td>标准</td><td>高</td><td>极高</td></tr>
-          <tr><td><strong>充气价格</strong></td><td>RM 120起</td><td>RM 150起</td><td>RM 120起</td></tr>
+          <tr><td><strong>充气价格</strong></td><td>RM 2.50/PSI起</td><td>RM 150起</td><td>RM 2.50/PSI起</td></tr>
           <tr><td><strong>可燃性</strong></td><td>不可燃</td><td>不可燃</td><td>轻微可燃 (A2L)</td></tr>
         </tbody>
       </table>
@@ -3389,7 +3389,7 @@ export const allPosts: BlogPost[] = [
         <li><strong>室外机支架 (Bracket)：</strong> RM 30 - 50。</li>
         <li><strong>PVC线槽 (Casing)：</strong> RM 30 - 50 (每 6ft)。</li>
         <li><strong>电源开关点 (Power Point)：</strong> RM 80 - 150 (视布线距离)。</li>
-        <li><strong>排水泵 (Water Pump)：</strong> RM 180 - 250 (用于无法自然排水的位置)。</li>
+        <li><strong>排水泵 (Water Pump)：</strong> RM 150 - 250 (用于无法自然排水的位置)。</li>
       </ul>
 
       <h2>3. 为什么有些地方报价 RM 150 甚至更低？</h2>
@@ -3694,7 +3694,7 @@ export const allPosts: BlogPost[] = [
       <p><strong>注意：</strong> 如果房间朝西（有下午西晒），即使面积小，也建议升级到 1.5 HP，否则降温速度会非常慢。</p>
 
       <h2>电费分析：变频 (Inverter) 真的划算吗？</h2>
-      <p>以 1.0 HP 为例，一台定频机每晚电费约 RM 1.20，而变频机只需约 RM 0.70。如果您每天开冷气睡觉，每年变频机能帮您省下近 RM 180。对于卧室这种长时间运行的场景，<strong>强烈建议选变频</strong>。</p>
+      <p>以 1.0 HP 为例，一台定频机每晚电费约 RM 1.20，而变频机只需约 RM 0.70。如果您每天开冷气睡觉，每年变频机能帮您省下近 RM 200。对于卧室这种长时间运行的场景，<strong>强烈建议选变频</strong>。</p>
 
       <h2>1.0 HP 安装价格 (2026)</h2>
       <table>
@@ -4122,9 +4122,9 @@ export const allPosts: BlogPost[] = [
     title: "AC Service Price Malaysia 2026 — Basic, Chemical Wash, Overhaul",
     titleMS: "Harga Servis AC di Malaysia 2026 — Basic, Cuci Kimia, Overhaul",
     titleZH: "2026年马来西亚AC服务价格 — 基础、化学清洗、大修",
-    excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120-220, AMC from RM 299/year. Verified pricing from klrenovator.com.",
-    excerptMS: "Harga servis AC di Malaysia 2026: servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120-220, AMC dari RM 299/tahun. Harga disahkan dari klrenovator.com.",
-    excerptZH: "2026年马来西亚AC服务价格：基础服务从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，加气从RM 120-220起，年度维护合同从RM 299/年起。从klrenovator.com验证价格。",
+    excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI-220, AMC from RM 299/year. Verified pricing from klrenovator.com.",
+    excerptMS: "Harga servis AC di Malaysia 2026: servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI-220, AMC dari RM 299/tahun. Harga disahkan dari klrenovator.com.",
+    excerptZH: "2026年马来西亚AC服务价格：基础服务从RM 99起，化学清洗从RM 2.50/PSI起，化学大修从RM 220起，加气从from RM 2.50/PSI起，年度维护合同从RM 299/年起。从klrenovator.com验证价格。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -4137,7 +4137,7 @@ export const allPosts: BlogPost[] = [
     imageAlt: "KL Renovator protected aircond chemical service setup in Kuala Lumpur for a Malaysia 2026 service price guide",
     lastReviewed: "2026-07-05",
     content: `
-      <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul from RM 220</strong> (1.0-1.5 HP), <strong>gas top-up from RM 120-220</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
+      <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul from RM 220</strong> (1.0-1.5 HP), <strong>gas top-up from RM 2.50/PSI-220</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
       <p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots pricing out AC service in KL and Selangor.</p>
       <h2>Quick answer — AC service price Malaysia 2026</h2>
       <p>AC service price in Malaysia 2026:</p>
@@ -4151,7 +4151,7 @@ export const allPosts: BlogPost[] = [
         <li>Chemical overhaul 1.0-1.5 HP: <strong>RM 220</strong></li>
         <li>Chemical overhaul 2.0-2.5 HP: RM 280</li>
         <li>Chemical overhaul 3.0-3.5 HP: RM 350</li>
-        <li>Gas top-up (R22/R410A/R32): RM 120-220 per job</li>
+        <li>Gas top-up: from RM 2.50/PSI per job</li>
         <li>AMC Basic: RM 299/year</li>
         <li>AMC Standard: RM 499/year</li>
         <li>AMC Premium: RM 899/year</li>
@@ -4188,9 +4188,9 @@ export const allPosts: BlogPost[] = [
       </tbody></table>
       <h2>Gas top-up pricing (per job, includes leak check)</h2>
       <table><thead><tr><th>Refrigerant</th><th>1.0 HP</th><th>1.5-2.0 HP</th><th>2.5-3.0 HP</th></tr></thead><tbody>
-        <tr><td>R22 (older units)</td><td>RM 120</td><td>RM 150</td><td>RM 180</td></tr>
-        <tr><td>R410A (common)</td><td>RM 150</td><td>RM 180</td><td>RM 200</td></tr>
-        <tr><td>R32 (newest, eco-friendly)</td><td>RM 180</td><td>RM 200</td><td>RM 220</td></tr>
+        <tr><td>R22 (older units)</td><td>RM 120</td><td>RM 150</td><td>RM 3.00/PSI</td></tr>
+        <tr><td>R410A (common)</td><td>RM 150</td><td>RM 3.00/PSI</td><td>RM 200</td></tr>
+        <tr><td>R32 (newest, eco-friendly)</td><td>RM 3.00/PSI</td><td>RM 200</td><td>RM 220</td></tr>
       </tbody></table>
       <h2>Annual Maintenance Contract (AMC) pricing</h2>
       <p>AMC packages bundle multiple services per year at a discount.</p>
@@ -4224,7 +4224,7 @@ export const allPosts: BlogPost[] = [
       <h3>What is the difference between chemical wash and chemical overhaul?</h3>
       <p>Chemical wash cleans coils in-place using chemicals sprayed through access panels. Overhaul fully dismantles the indoor unit and cleans every component individually. Overhaul is for neglected or very dirty units.</p>
       <h3>How much does gas top-up cost?</h3>
-      <p>RM 120-220 per job, depending on refrigerant type and unit size. Includes leak check. If the unit needs more than one full top-up per year, there is likely a leak that needs repair.</p>
+      <p>from RM 2.50/PSI per job, depending on refrigerant type and unit size. Includes leak check. If the unit needs more than one full top-up per year, there is likely a leak that needs repair.</p>
       <h3>Is AMC worth it?</h3>
       <p>For 2+ units, AMC Standard (RM 499) or Premium (RM 899) typically saves 20-30% versus pay-per-service. AMC customers also get priority booking and same-day service.</p>
       <h3>How long does AC service take?</h3>
@@ -4239,7 +4239,7 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. See our full <a href="/services/basic-servicing">Basic Servicing</a> and <a href="/services/chemical-wash">Chemical Wash</a> pricing pages, or explore <a href="/services/maintenance-contract">Annual Maintenance Contract</a> plans from RM 299/year. 1-month workmanship warranty included.</p>
     `,
     contentMS: `
-      <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia dari RM 220</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 120-220</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
+      <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia dari RM 220</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 2.50/PSI-220</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
       <p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai Malaysia yang menilai harga servis AC di KL dan Selangor.</p>
       <h2>Jawapan ringkas — harga servis AC Malaysia 2026</h2>
       <p>Harga servis AC di Malaysia 2026:</p>
@@ -4253,7 +4253,7 @@ export const allPosts: BlogPost[] = [
         <li>Overhaul kimia 1.0-1.5 HP: <strong>RM 220</strong></li>
         <li>Overhaul kimia 2.0-2.5 HP: RM 280</li>
         <li>Overhaul kimia 3.0-3.5 HP: RM 350</li>
-        <li>Tambah gas (R22/R410A/R32): RM 120-220 setiap kerja</li>
+        <li>Tambah gas: dari RM 2.50/PSI setiap kerja</li>
         <li>AMC Basic: RM 299/tahun</li>
         <li>AMC Standard: RM 499/tahun</li>
         <li>AMC Premium: RM 899/tahun</li>
@@ -4290,9 +4290,9 @@ export const allPosts: BlogPost[] = [
       </tbody></table>
       <h2>Harga tambah gas (setiap kerja, termasuk semakan kebocoran)</h2>
       <table><thead><tr><th>Refrigerant</th><th>1.0 HP</th><th>1.5-2.0 HP</th><th>2.5-3.0 HP</th></tr></thead><tbody>
-        <tr><td>R22 (unit lama)</td><td>RM 120</td><td>RM 150</td><td>RM 180</td></tr>
-        <tr><td>R410A (biasa)</td><td>RM 150</td><td>RM 180</td><td>RM 200</td></tr>
-        <tr><td>R32 (terbaru, mesra alam)</td><td>RM 180</td><td>RM 200</td><td>RM 220</td></tr>
+        <tr><td>R22 (unit lama)</td><td>RM 120</td><td>RM 150</td><td>RM 3.00/PSI</td></tr>
+        <tr><td>R410A (biasa)</td><td>RM 150</td><td>RM 3.00/PSI</td><td>RM 200</td></tr>
+        <tr><td>R32 (terbaru, mesra alam)</td><td>RM 3.00/PSI</td><td>RM 200</td><td>RM 220</td></tr>
       </tbody></table>
       <h2>Harga Kontrak Penyelenggaraan Tahunan (AMC)</h2>
       <p>Pakej AMC bundle beberapa servis setahun pada harga diskaun.</p>
@@ -4326,7 +4326,7 @@ export const allPosts: BlogPost[] = [
       <h3>Apakah perbezaan antara cuci kimia dan overhaul kimia?</h3>
       <p>Cuci kimia cuci coil di tempat menggunakan bahan kimia yang disembur melalui panel akses. Overhaul buka unit dalam sepenuhnya dan cuci setiap komponen secara individu. Overhaul untuk unit yang diabaikan atau sangat kotor.</p>
       <h3>Berapakah kos tambah gas?</h3>
-      <p>RM 120-220 setiap kerja, bergantung pada jenis refrigerant dan saiz unit. Termasuk semakan kebocoran. Jika unit perlukan lebih daripada satu tambah penuh setahun, mungkin ada kebocoran yang perlu dibaiki.</p>
+      <p>from RM 2.50/PSI setiap kerja, bergantung pada jenis refrigerant dan saiz unit. Termasuk semakan kebocoran. Jika unit perlukan lebih daripada satu tambah penuh setahun, mungkin ada kebocoran yang perlu dibaiki.</p>
       <h3>Adakah AMC berbaloi?</h3>
       <p>Untuk 2+ unit, AMC Standard (RM 499) atau Premium (RM 899) biasanya jimat 20-30% berbanding bayar setiap servis. Pelanggan AMC juga dapat tempahan keutamaan dan servis hari sama.</p>
       <h3>Berapa lama servis AC ambil masa?</h3>
@@ -4350,7 +4350,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>基本服务 (Basic Service)</td><td>RM 100 - 130</td><td><strong>RM 99</strong></td></tr>
           <tr><td>化学清洗 (Chemical Wash)</td><td>RM 120 - 160</td><td><strong>RM 120</strong></td></tr>
           <tr><td>化学大修 (Overhaul)</td><td>RM 220 - 280</td><td><strong>RM 220</strong></td></tr>
-          <tr><td>充气 (Gas Top-up R32)</td><td>RM 120+</td><td><strong>RM 120起</strong></td></tr>
+          <tr><td>充气 (Gas Top-up R32)</td><td>RM 3.00 / PSI</td><td><strong>RM 3.00 / PSI</strong></td></tr>
           <tr><td>故障诊断费</td><td>RM 50 - 100</td><td><strong>RM 50起</strong></td></tr>
         </tbody>
       </table>
@@ -4700,11 +4700,11 @@ export const allPosts: BlogPost[] = [
       <h3>3. Frozen evaporator coil (15% of cases)</h3>
       <p><strong>Symptoms:</strong> Ice visible on the copper pipe connections or on the indoor unit body, weak cooling, water dripping when ice melts.</p>
       <p><strong>Cause:</strong> Several possible reasons: low refrigerant (gas leak), dirty filter (see above), blocked coil, faulty thermostat, or running the AC below 22°C for extended periods.</p>
-      <p><strong>Fix:</strong> Switch off the AC for 2-4 hours to let the ice melt. Clean the filter. If it freezes again within hours, you likely have a refrigerant leak — call KL Renovator for gas top-up (RM 120-220) and leak check.</p>
+      <p><strong>Fix:</strong> Switch off the AC for 2-4 hours to let the ice melt. Clean the filter. If it freezes again within hours, you likely have a refrigerant leak — call KL Renovator for gas top-up (from RM 2.50/PSI) and leak check.</p>
       <h3>4. Low refrigerant (10% of cases)</h3>
       <p><strong>Symptoms:</strong> AC takes longer to cool, ice on the indoor unit, water dripping, hissing sound from the outdoor unit.</p>
       <p><strong>Cause:</strong> Refrigerant leaks from loose connections, vibration damage, or corrosion. The reduced refrigerant pressure causes the evaporator coil to over-freeze.</p>
-      <p><strong>Fix:</strong> Gas top-up (RM 120-220 for 1.0-2.5 HP) plus leak detection. If the leak is significant, repair the leak point first, then top up.</p>
+      <p><strong>Fix:</strong> Gas top-up (from RM 2.50/PSI for 1.0-2.5 HP) plus leak detection. If the leak is significant, repair the leak point first, then top up.</p>
       <h3>5. Tilted indoor unit (5% of cases)</h3>
       <p><strong>Symptoms:</strong> Water dripping from one specific side of the indoor unit, water pooling on the floor under that side.</p>
       <p><strong>Cause:</strong> The mounting bracket has loosened over time, or the original installation was not level. The drip tray is tilted away from the drain pipe, so water flows to the wrong side and drips out.</p>
@@ -4753,7 +4753,7 @@ export const allPosts: BlogPost[] = [
       <h3>Why is my aircond leaking water suddenly?</h3>
       <p>The most common cause is a blocked drain pipe (40% of cases). Algae and mould accumulate in the drain pipe over 6-12 months and block the condensate flow. The water backs up and drips from the indoor unit.</p>
       <h3>How much does it cost to fix a leaking aircond?</h3>
-      <p>RM 99-RM 350 depending on the cause. Chemical wash to clear the drain pipe is RM 120 for 1.0-1.5 HP. Gas top-up is RM 120-220. Re-leveling is RM 80-150. Drain pump replacement is RM 350-550.</p>
+      <p>RM 99-RM 350 depending on the cause. Chemical wash to clear the drain pipe is RM 120 for 1.0-1.5 HP. Gas top-up is from RM 2.50/PSI. Re-leveling is RM 80-150. Drain pump replacement is RM 350-550.</p>
       <h3>Can I fix a leaking aircond myself?</h3>
       <p>You can clean the filter yourself. For drain pipe blockages, you can try pouring white vinegar down the drain pipe. But for persistent leaks, frozen coils, or gas issues, call a professional. KL Renovator diagnostic is RM 88, waived with same-visit repair.</p>
       <h3>Is a leaking aircond dangerous?</h3>
@@ -4790,11 +4790,11 @@ export const allPosts: BlogPost[] = [
       <h3>3. Coil penyejat beku (15% kes)</h3>
       <p><strong>Gejala:</strong> Ais kelihatan pada sambungan paip tembaga atau badan unit dalam, sejuk lemah, air menitis apabila ais mencair.</p>
       <p><strong>Punca:</strong> Beberapa sebab mungkin: refrigerant rendah (kebocoran gas), penapis kotor (lihat atas), coil tersumbat, termostat rosak, atau menjalankan AC di bawah 22°C untuk tempoh lama.</p>
-      <p><strong>Penyelesaian:</strong> Matikan AC selama 2-4 jam untuk biarkan ais mencair. Cuci penapis. Jika ia membeku semula dalam beberapa jam, kemungkinan besar ada kebocoran refrigerant — panggil KL Renovator untuk tambah gas (RM 120-220) dan semakan kebocoran.</p>
+      <p><strong>Penyelesaian:</strong> Matikan AC selama 2-4 jam untuk biarkan ais mencair. Cuci penapis. Jika ia membeku semula dalam beberapa jam, kemungkinan besar ada kebocoran refrigerant — panggil KL Renovator untuk tambah gas (dari RM 2.50/PSI) dan semakan kebocoran.</p>
       <h3>4. Refrigerant rendah (10% kes)</h3>
       <p><strong>Gejala:</strong> AC ambil masa lebih lama untuk sejuk, ais pada unit dalam, air menitis, bunyi desisan dari unit luar.</p>
       <p><strong>Punca:</strong> Kebocoran refrigerant dari sambungan longgar, kerosakan getaran, atau kakisan. Tekanan refrigerant yang berkurangan menyebabkan coil penyejat terlebih beku.</p>
-      <p><strong>Penyelesaian:</strong> Tambah gas (RM 120-220 untuk 1.0-2.5 HP) plus pengesanan kebocoran. Jika kebocoran besar, baiki titik kebocoran dahulu, kemudian tambah.</p>
+      <p><strong>Penyelesaian:</strong> Tambah gas (from RM 2.50/PSI untuk 1.0-2.5 HP) plus pengesanan kebocoran. Jika kebocoran besar, baiki titik kebocoran dahulu, kemudian tambah.</p>
       <h3>5. Unit dalam condong (5% kes)</h3>
       <p><strong>Gejala:</strong> Air menitis dari satu sisi spesifik unit dalam, air bertakung di lantai di bawah sisi itu.</p>
       <p><strong>Punca:</strong> Bracket lekapan longgar dari masa ke masa, atau pemasangan asal tidak rata. Dulang titis condong jauh dari paip saliran, jadi air mengalir ke sisi salah dan menitis keluar.</p>
@@ -4843,7 +4843,7 @@ export const allPosts: BlogPost[] = [
       <h3>Mengapa aircond saya tiba-tiba bocor air?</h3>
       <p>Punca paling biasa ialah paip saliran tersumbat (40% kes). Alga dan kulat terkumpul dalam paip saliran dalam 6-12 bulan dan sekat aliran kondensat. Air tersekat dan menitis dari unit dalam.</p>
       <h3>Berapakah kos untuk baiki aircond bocor?</h3>
-      <p>RM 99-RM 350 bergantung pada punca. Cuci kimia untuk bersihkan paip saliran ialah RM 120 untuk 1.0-1.5 HP. Tambah gas ialah RM 120-220. Tara semula ialah RM 80-150. Ganti pam saliran ialah RM 350-550.</p>
+      <p>RM 99-RM 350 bergantung pada punca. Cuci kimia untuk bersihkan paip saliran ialah RM 120 untuk 1.0-1.5 HP. Tambah gas dari RM 2.50/PSI. Tara semula ialah RM 80-150. Ganti pam saliran ialah RM 350-550.</p>
       <h3>Boleh saya baiki aircond bocor sendiri?</h3>
       <p>Anda boleh cuci penapis sendiri. Untuk sumbatan paip saliran, anda boleh cuba tuang cuka putih ke paip saliran. Tetapi untuk kebocoran berterusan, coil beku, atau isu gas, panggil profesional. Diagnostik KL Renovator RM 88, dikecualikan dengan pembaikan lawatan sama.</p>
       <h3>Adakah aircond bocor berbahaya?</h3>
@@ -5473,7 +5473,7 @@ export const allPosts: BlogPost[] = [
         <li>Basic servicing: from <strong>RM 99</strong></li>
         <li>Chemical wash: from <strong>RM 120</strong></li>
         <li>Chemical overhaul: from <strong>RM 220</strong></li>
-        <li>Gas top-up (R32/R410A): from <strong>RM 150</strong></li>
+        <li>Gas top-up (R32/R410A): from <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>No hidden surcharge for inverter units. All prices confirmed before work starts.</p>
 
@@ -5537,7 +5537,7 @@ export const allPosts: BlogPost[] = [
         <li>Servis asas: dari <strong>RM 99</strong></li>
         <li>Cuci kimia: dari <strong>RM 120</strong></li>
         <li>Chemical overhaul: dari <strong>RM 220</strong></li>
-        <li>Tambah gas (R32/R410A): dari <strong>RM 150</strong></li>
+        <li>Tambah gas (R32/R410A): dari <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>Tiada caj tambahan tersembunyi untuk unit inverter. Semua harga disahkan sebelum kerja bermula.</p>
 
@@ -5619,7 +5619,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>Aircond Service Prices Malaysia 2026 — Complete Transparent Guide</h2>
       <p>KL Renovator publishes transparent aircond service prices across Kuala Lumpur and Selangor. No hidden charges — every price is confirmed on WhatsApp before the technician starts work. Prices below apply from July 2026 and may change without prior notice.</p>
-      <div class="summary-block"><strong>Direct answer:</strong> Basic servicing starts from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120, and new installation from RM 199 (wall-mounted 1.0–1.5HP).</div>
+      <div class="summary-block"><strong>Direct answer:</strong> Basic servicing starts from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI, and new installation from RM 199 (wall-mounted 1.0–1.5HP).</div>
 
       <h3>Volume Discounts</h3>
       <ul>
@@ -5682,11 +5682,11 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>R22 — 1.0 HP</td><td><strong>RM 120</strong></td></tr>
           <tr><td>R22 — 1.5–2.0 HP</td><td><strong>RM 150</strong></td></tr>
-          <tr><td>R22 — 2.5–3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R22 — 2.5–3.0 HP</td><td><strong>RM 3.00/PSI</strong></td></tr>
           <tr><td>R410A — 1.0 HP</td><td><strong>RM 150</strong></td></tr>
-          <tr><td>R410A — 1.5–2.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A — 1.5–2.0 HP</td><td><strong>RM 3.00/PSI</strong></td></tr>
           <tr><td>R410A — 2.5–3.0 HP</td><td><strong>RM 200</strong></td></tr>
-          <tr><td>R32 — 1.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R32 — 1.0 HP</td><td><strong>RM 3.00/PSI</strong></td></tr>
           <tr><td>R32 — 1.5–2.0 HP</td><td><strong>RM 200</strong></td></tr>
           <tr><td>R32 — 2.5–3.0 HP</td><td><strong>RM 220</strong></td></tr>
         </tbody>
@@ -5857,11 +5857,11 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>R22 - 1.0 HP</td><td><strong>RM 120</strong></td></tr>
           <tr><td>R22 - 1.5-2.0 HP</td><td><strong>RM 150</strong></td></tr>
-          <tr><td>R22 - 2.5-3.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R22 - 2.5-3.0 HP</td><td><strong>RM 3.00/PSI</strong></td></tr>
           <tr><td>R410A - 1.0 HP</td><td><strong>RM 150</strong></td></tr>
-          <tr><td>R410A - 1.5-2.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R410A - 1.5-2.0 HP</td><td><strong>RM 3.00/PSI</strong></td></tr>
           <tr><td>R410A - 2.5-3.0 HP</td><td><strong>RM 200</strong></td></tr>
-          <tr><td>R32 - 1.0 HP</td><td><strong>RM 180</strong></td></tr>
+          <tr><td>R32 - 1.0 HP</td><td><strong>RM 3.00/PSI</strong></td></tr>
           <tr><td>R32 - 1.5-2.0 HP</td><td><strong>RM 200</strong></td></tr>
           <tr><td>R32 - 2.5-3.0 HP</td><td><strong>RM 220</strong></td></tr>
         </tbody>
@@ -5977,7 +5977,7 @@ export const allPosts: BlogPost[] = [
           <tr><td><strong>基本保养 (Basic)</strong></td><td>RM 99</td><td>滤网、面板清洗及运行检查</td></tr>
           <tr><td><strong>高压化学清洗</strong></td><td>RM 120</td><td>药剂清洗盘管及冲洗排水管</td></tr>
           <tr><td><strong>化学大修 (Overhaul)</strong></td><td>RM 220</td><td>完整拆卸、深度浸泡清洗</td></tr>
-          <tr><td><strong>冷媒补充 (Gas R32)</strong></td><td>RM 120起</td><td>根据压力平衡加注</td></tr>
+          <tr><td><strong>冷媒补充 (Gas R32)</strong></td><td>RM 3.00 / PSI</td><td>根据压力平衡加注</td></tr>
           <tr><td><strong>故障诊断 (Diagnostic)</strong></td><td>RM 88 / RM 50</td><td>检查故障原因（如修则免）</td></tr>
           <tr><td><strong>新机安装 (Install)</strong></td><td>RM 199起</td><td>标准安装包含7ft铜管</td></tr>
         </tbody>
@@ -6122,7 +6122,7 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>Fault</th><th>Typical Repair Cost</th><th>Verdict</th></tr></thead>
         <tbody>
           <tr><td>Minor gas leak — seal and top-up</td><td>RM 150–250</td><td>✅ Repair</td></tr>
-          <tr><td>Faulty fan capacitor</td><td>RM 120–200</td><td>✅ Repair</td></tr>
+          <tr><td>Faulty fan capacitor</td><td>from RM 2.50/PSI</td><td>✅ Repair</td></tr>
           <tr><td>Blocked drain pipe</td><td>RM 99–150</td><td>✅ Repair — routine servicing</td></tr>
           <tr><td>Failed PCB (inverter)</td><td>RM 400–800</td><td>⚠️ Consider — only if under 5 years old</td></tr>
           <tr><td>Dead compressor</td><td>RM 800–1,500</td><td>❌ Replace — especially past 3 years</td></tr>
@@ -6225,7 +6225,7 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>Item</th><th>Usually Paid By</th><th>Typical Cost</th></tr></thead>
         <tbody>
           <tr><td>Routine servicing (every 3–6 months)</td><td>Tenant or landlord — per agreement</td><td>RM 99–120</td></tr>
-          <tr><td>Chemical wash (annual)</td><td>Landlord</td><td>RM 120–220</td></tr>
+          <tr><td>Chemical wash (annual)</td><td>Landlord</td><td>from RM 2.50/PSI</td></tr>
           <tr><td>Minor repairs (capacitor, drain)</td><td>Landlord</td><td>RM 99–200</td></tr>
           <tr><td>Major repairs (compressor, PCB)</td><td>Landlord</td><td>RM 400–1,500</td></tr>
           <tr><td>Damage from tenant negligence</td><td>Tenant</td><td>Depends on damage</td></tr>
@@ -6255,7 +6255,7 @@ export const allPosts: BlogPost[] = [
       <h2>Arrange Servicing for Your Rental</h2>
       <p>WhatsApp <strong>+60 18-298 3573</strong> to set up an AMC or book a one-off service for a rental property. We can coordinate directly with your tenants and send before-and-after photos after each visit. See also: <a href="/services/maintenance-contract">AMC plans</a> | <a href="/services/basic-servicing">basic servicing</a> | <a href="/services/chemical-wash">chemical wash</a></p>
     `,
-    contentMS: '<p>Bila aircond rosak di rumah sewa, soalan pertama: <strong>Siapa yang tanggung kos?</strong> Panduan lengkap untuk landlord dan penyewa.</p><h2>Siapa Bayar Apa</h2><table><tr><th>Item</th><th>Tanggungjawab</th><th>Anggaran</th></tr><tr><td>Servis rutin</td><td>Penyewa/Tuan Rumah</td><td>RM 99-120</td></tr><tr><td>Cuci kimia</td><td>Tuan Rumah</td><td>RM 120-220</td></tr><tr><td>Baiki kecil</td><td>Tuan Rumah</td><td>RM 99-200</td></tr><tr><td>Baiki besar</td><td>Tuan Rumah</td><td>RM 400-1,500</td></tr><tr><td>Kecuaian penyewa</td><td>Penyewa</td><td>Ikut kerosakan</td></tr></table><h2>Jadual Airbnb</h2><p>Airbnb guna 24 jam — servis setiap 2-3 bulan, chemical wash 6-8 bulan.</p><h2>AMC Untuk Landlord</h2><p>RM 299/tahun — 4x basic + 1x chemical wash + priority. Tenant WhatsApp terus, kami urus.</p><p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/maintenance-contract">Pelan AMC</a> | <a href="/ms/services/basic-servicing">Servis asas</a></p>',
+    contentMS: '<p>Bila aircond rosak di rumah sewa, soalan pertama: <strong>Siapa yang tanggung kos?</strong> Panduan lengkap untuk landlord dan penyewa.</p><h2>Siapa Bayar Apa</h2><table><tr><th>Item</th><th>Tanggungjawab</th><th>Anggaran</th></tr><tr><td>Servis rutin</td><td>Penyewa/Tuan Rumah</td><td>RM 99-120</td></tr><tr><td>Cuci kimia</td><td>Tuan Rumah</td><td>from RM 2.50/PSI</td></tr><tr><td>Baiki kecil</td><td>Tuan Rumah</td><td>RM 99-200</td></tr><tr><td>Baiki besar</td><td>Tuan Rumah</td><td>RM 400-1,500</td></tr><tr><td>Kecuaian penyewa</td><td>Penyewa</td><td>Ikut kerosakan</td></tr></table><h2>Jadual Airbnb</h2><p>Airbnb guna 24 jam — servis setiap 2-3 bulan, chemical wash 6-8 bulan.</p><h2>AMC Untuk Landlord</h2><p>RM 299/tahun — 4x basic + 1x chemical wash + priority. Tenant WhatsApp terus, kami urus.</p><p>WhatsApp <strong>+60 18-298 3573</strong>. <a href="/ms/services/maintenance-contract">Pelan AMC</a> | <a href="/ms/services/basic-servicing">Servis asas</a></p>',
     contentZH: `<h2>出租房与 Airbnb 冷气保养指南 — 房东省钱与避坑必读</h2>
       <p>冷气坏了，谁该付钱？房东还是租客？<strong>KL Renovator</strong> 为马来西亚房东总结了 2026 年最全的冷气维护策略，帮您保护资产并提高租客满意度。</p>
 
@@ -6718,7 +6718,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>The Danger of Freelance Bidding on HVAC Health</h2>
       <p>Because marketplace aggregators like ServisHero charge commissions and transaction fees to their registered heroes, these freelancers must operate under a high-volume, low-margin model. To maintain profitability, freelance technicians often rush through service calls, performing standard "filter-only" cleaning instead of comprehensive coil washes, and skipping vital safety and performance checks.</p>
-      <p>KL Renovator does not use commission-based freelance subcontractors. Our field technicians are full-time employees trained to our strict 8-point checklist. When we perform a chemical wash (from RM120), we clean the front and back of the evaporator coil, blow out the drain lines, and check electrical components and gas levels, ensuring your system runs at peak energy efficiency.</p>
+      <p>KL Renovator does not use commission-based freelance subcontractors. Our field technicians are full-time employees trained to our strict 8-point checklist. When we perform a chemical wash (from RM 2.50/PSI), we clean the front and back of the evaporator coil, blow out the drain lines, and check electrical components and gas levels, ensuring your system runs at peak energy efficiency.</p>
 
       <h2>Direct Communication Beats App Mediation</h2>
       <p>If your aircond starts leaking water on your wooden floors or tripping your main electrical breaker, you cannot afford to wait for app-support tickets to resolve. Direct booking with KL Renovator gives you instant, 1-on-1 WhatsApp contact with our dispatch center. We confirm slots in minutes and can have a technician at your door in 30–60 minutes for urgent emergencies.</p>
@@ -7059,7 +7059,7 @@ export const allPosts: BlogPost[] = [
             <th>Service Scope</th>
             <th>RM50–RM80 "Budget" Service</th>
             <th>RM99 Standard Service (KL Renovator)</th>
-            <th>RM150–RM250 Premium Service</th>
+            <th>RM 180–RM 250 Premium Service</th>
           </tr>
         </thead>
         <tbody>
@@ -7131,7 +7131,7 @@ export const allPosts: BlogPost[] = [
       <p>If a service price seems too good to be true, it usually is. Watch out for these warning signs:</p>
       <ul>
         <li><strong>Technician arrives without a uniform or business card</strong> — Indicates a freelance gig worker, not a registered business.</li>
-        <li><strong>Adds hidden charges after arrival</strong> — "Your gas is low, I need to top up (extra RM80–150)" after cleaning the filter.</li>
+        <li><strong>Adds hidden charges after arrival</strong> — "Your gas is low, I need to top up (charged per PSI)" after cleaning the filter.</li>
         <li><strong>Refuses to provide a written quote before work</strong> — A professional contractor gives upfront pricing.</li>
         <li><strong>No warranty offered</strong> — If the same problem returns a week later, you have no recourse.</li>
         <li><strong>Rushes through the job in under 15 minutes</strong> — Proper standard service takes 25–45 minutes per unit.</li>
@@ -7148,7 +7148,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>Book Your RM99 Service with KL Renovator Today</h2>
       <p>No hidden charges, no upselling. Our RM99 covers the full 8-point inspection. You pay only what we quote — nothing more.</p>
-      <p>WhatsApp us at <strong>+60 18-298 3573</strong> to book. <a href="/services/basic-servicing">View full service details</a> | <a href="/services/chemical-wash">Need deeper cleaning? Chemical wash from RM120</a> | <a href="/areas">Find your area coverage</a></p>
+      <p>WhatsApp us at <strong>+60 18-298 3573</strong> to book. <a href="/services/basic-servicing">View full service details</a> | <a href="/services/chemical-wash">Need deeper cleaning? Chemical wash from RM 2.50/PSI</a> | <a href="/areas">Find your area coverage</a></p>
     `,
     contentMS: `
       <h2>Servis Aircond RM99: Apakah Muslihat Di Sebaliknya?</h2>
@@ -7163,7 +7163,7 @@ export const allPosts: BlogPost[] = [
             <th>Skop Servis</th>
             <th>Servis RM50–RM80 "Bajet"</th>
             <th>Servis Standard RM99 (KL Renovator)</th>
-            <th>Servis Premium RM150–RM250</th>
+            <th>Servis Premium RM 180–RM 250</th>
           </tr>
         </thead>
         <tbody>
@@ -7265,7 +7265,7 @@ export const allPosts: BlogPost[] = [
             <th>服务范围</th>
             <th>RM50–RM80 "低价"服务</th>
             <th>RM99 标准服务 (KL Renovator)</th>
-            <th>RM150–RM250 高端服务</th>
+            <th>RM 180–RM 250 高端服务</th>
           </tr>
         </thead>
         <tbody>
@@ -7407,7 +7407,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Price Transparency</strong></td>
             <td>Estimates given, but final price confirmed only after on-site visit — leaving you vulnerable to upselling.</td>
-            <td><strong>Upfront flat-rate pricing.</strong> RM99 standard, RM120 chemical wash, RM150 gas top-up. What we quote is what you pay.</td>
+            <td><strong>Upfront flat-rate pricing.</strong> RM99 standard, RM120 chemical wash, RM 3.00/PSI gas top-up. What we quote is what you pay.</td>
           </tr>
           <tr>
             <td><strong>Communication Clarity</strong></td>
@@ -7488,7 +7488,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Ketelusan Harga</strong></td>
             <td>Anggaran diberikan, tetapi harga akhir disahkan hanya selepas lawatan tapak — meninggalkan anda terdedah kepada upselling.</td>
-            <td><strong>Harga kadar rata upfront.</strong> Servis standard RM99, cuci kimia RM120, tambah gas RM150. Apa yang kami sebut adalah apa yang anda bayar.</td>
+            <td><strong>Harga kadar rata upfront.</strong> Servis standard RM99, cuci kimia RM120, tambah gas RM 3.00/PSI. Apa yang kami sebut adalah apa yang anda bayar.</td>
           </tr>
           <tr>
             <td><strong>Kejelasan Komunikasi</strong></td>
@@ -7566,7 +7566,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>价格透明度</strong></td>
             <td>提供估算，但最终价格只有在现场访问后才能确认——让您容易遭受追加收费。</td>
-            <td><strong>预先固定实价。</strong> 标准保养 RM99，化学清洗 RM120，冷媒加注 RM150。我们报价多少您就付多少。</td>
+            <td><strong>预先固定实价。</strong> 标准保养 RM99，化学清洗 RM120，冷媒加注 RM 3.00/PSI。我们报价多少您就付多少。</td>
           </tr>
           <tr>
             <td><strong>沟通清晰度</strong></td>
@@ -7928,7 +7928,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Dirty evaporator coil (common)</strong></td>
             <td>15–25% efficiency loss</td>
-            <td>RM100–RM150/month</td>
+            <td>RM 100–200/month</td>
           </tr>
           <tr>
             <td><strong>Dirty condenser (outdoor unit)</strong></td>
@@ -7987,11 +7987,11 @@ export const allPosts: BlogPost[] = [
         <li>Filter deep clean and reinstallation</li>
         <li>Blower wheel cleaning (restores airflow volume)</li>
       </ul>
-      <p>If your unit has a refrigerant leak, a gas top-up (RM150) or repair will restore full efficiency and pay for itself in 2–3 months through lower TNB bills.</p>
+      <p>If your unit has a refrigerant leak, a gas top-up (from RM 3.00/PSI) or repair will restore full efficiency and pay for itself in 2–3 months through lower TNB bills.</p>
 
       <h2>Book Your Energy Efficiency Service Today</h2>
       <p>Stop paying for wasted electricity. A clean, well-serviced aircond runs at peak efficiency and costs less to operate every month.</p>
-      <p>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. <a href="/services/basic-servicing">Standard service from RM99</a> | <a href="/services/gas-topup">Gas top-up from RM150</a> | <a href="/services/chemical-wash">Deep chemical wash from RM120</a></p>
+      <p>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. <a href="/services/basic-servicing">Standard service from RM99</a> | <a href="/services/gas-topup">Gas top-up from RM 3.00/PSI</a> | <a href="/services/chemical-wash">Deep chemical wash from RM 120</a></p>
     `,
     contentMS: `
       <h2>Aircond Anda Mungkin Punca Bil TNB Anda Tinggi</h2>
@@ -8015,7 +8015,7 @@ export const allPosts: BlogPost[] = [
           <tr>
             <td><strong>Gegelung evaporator kotor (biasa)</strong></td>
             <td>Kehilangan kecekapan 15–25%</td>
-            <td>RM100–RM150/bulan</td>
+            <td>RM 100–200/bulan</td>
           </tr>
           <tr>
             <td><strong>Kondenser kotor (unit luar)</strong></td>
@@ -8067,7 +8067,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>Tempah Servis Kecekapan Tenaga Anda Hari Ini</h2>
       <p>Berhenti membayar untuk elektrik yang dibazirkan. Aircond yang bersih dan diselenggara dengan baik beroperasi pada kecekapan puncak dan kos kurang untuk pengendalian setiap bulan.</p>
-      <p>WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>. <a href="/ms/services/basic-servicing">Servis standard dari RM99</a> | <a href="/ms/services/gas-topup">Tambah gas dari RM150</a> | <a href="/ms/services/chemical-wash">Cuci kimia mendalam dari RM120</a></p>
+      <p>WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>. <a href="/ms/services/basic-servicing">Servis standard dari RM99</a> | <a href="/ms/services/gas-topup">Tambah gas dari RM 3.00/PSI</a> | <a href="/ms/services/chemical-wash">Cuci kimia mendalam dari RM120</a></p>
     `,
     contentZH: `<h2>TNB 电费突然飙升？检查冷气运行效率的 5 个步骤</h2>
       <p>在马来西亚，冷气通常占家庭总电费的 60% 以上。如果您发现这个月的电费异常增加，<strong>KL Renovator</strong> 建议您立即检查冷气的健康状态。低效运行的冷气每小时会多消耗 30%-50% 的电力。</p>
@@ -8133,7 +8133,7 @@ export const allPosts: BlogPost[] = [
       <p>For chemical wash, both brands cost the same — the chemical wash process is identical regardless of brand. However, Daikin units tend to have tighter coil spacing on some newer models (Ururu Sarara series), which can occasionally require more rinsing time. Our technicians factor this into the standard RM 120 price at no extra charge.</p>
 
       <h2>Gas Top-Up Cost Comparison</h2>
-      <ul><li><strong>Daikin:</strong> RM 180 (R32 1.0 HP), RM 200 (R32 1.5–2.0 HP)</li><li><strong>Panasonic:</strong> RM 180 (R32 1.0 HP), RM 200 (R32 1.5–2.0 HP)</li></ul>
+      <ul><li><strong>Daikin:</strong> RM 3.00/PSI, RM 200 (R32 1.5–2.0 HP)</li><li><strong>Panasonic:</strong> RM 3.00/PSI, RM 200 (R32 1.5–2.0 HP)</li></ul>
       <p>Both Daikin and Panasonic now use R32 refrigerant across their inverter range. Gas top-up pricing is identical. The difference is that Daikin compressors are generally considered more tolerant of slight undercharge conditions, while Panasonic inverter compressors may show performance drops more quickly when gas is low — so Panasonic owners benefit more from annual gas pressure checks during routine servicing.</p>
 
       <h2>Common Repair Cost Comparison</h2>
@@ -8168,9 +8168,9 @@ export const allPosts: BlogPost[] = [
           <tr><td>Servis asas</td><td>RM 99</td><td>RM 99</td><td>Sama</td></tr>
           <tr><td>Cuci kimia</td><td>RM 120</td><td>RM 120</td><td>Sama</td></tr>
           <tr><td>Overhaul kimia</td><td>RM 220</td><td>RM 220</td><td>Sama</td></tr>
-          <tr><td>Tambah gas R32</td><td>RM 180</td><td>RM 180</td><td>Sama</td></tr>
+          <tr><td>Tambah gas R32</td><td>RM 3.00/PSI</td><td>RM 3.00/PSI</td><td>Sama</td></tr>
           <tr><td>Kapasitor ganti</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
-          <tr><td>PCB board</td><td>RM 200-400</td><td>RM 180-350</td><td>Daikin sedikit lebih mahal</td></tr>
+          <tr><td>PCB board</td><td>RM 200-400</td><td>RM 300-350</td><td>Daikin sedikit lebih mahal</td></tr>
           <tr><td>Kompresor ganti</td><td>RM 600-1,200</td><td>RM 550-1,100</td><td>Daikin sedikit lebih mahal</td></tr>
           <tr><td>Motor kipas dalaman</td><td>RM 150-280</td><td>RM 140-260</td><td>Hampir sama</td></tr>
           <tr><td>Penderia/thermistor</td><td>RM 60-120</td><td>RM 50-100</td><td>Daikin sedikit lebih mahal</td></tr>
@@ -8219,7 +8219,7 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>项目</th><th>大金 (Daikin)</th><th>松下 (Panasonic)</th></tr></thead>
         <tbody>
           <tr><td><strong>标准基本保养</strong></td><td>RM 99起</td><td>RM 99起</td></tr>
-          <tr><td><strong>化学清洗</strong></td><td>RM 120起</td><td>RM 120起</td></tr>
+          <tr><td><strong>化学清洗</strong></td><td>RM 2.50/PSI起</td><td>RM 2.50/PSI起</td></tr>
           <tr><td><strong>主板 (PCB) 更换</strong></td><td>RM 350 - 550</td><td>RM 400 - 650</td></tr>
           <tr><td><strong>电容更换</strong></td><td>RM 80 - 150</td><td>RM 80 - 150</td></tr>
         </tbody>
@@ -8395,7 +8395,7 @@ export const allPosts: BlogPost[] = [
       </table>
 
       <h2>The Hidden Cost of Voucher Services</h2>
-      <p>Platform voucher services operate on a loss-leader model. The advertised RM 49–79 price covers only the most minimal service — removing and rinsing the air filter (a 5-minute job you could do yourself). Once the technician arrives, they will almost always identify "additional issues" that require paid add-ons: coil cleaning (extra RM 40–60), drain pipe flush (extra RM 30–50), gas pressure check (extra RM 50). By the time all the essential work is done, you have paid RM 120–180 — which is more than KL Renovator's transparent RM 99 standard service that includes all of these checks.</p>
+      <p>Platform voucher services operate on a loss-leader model. The advertised RM 49–79 price covers only the most minimal service — removing and rinsing the air filter (a 5-minute job you could do yourself). Once the technician arrives, they will almost always identify "additional issues" that require paid add-ons: coil cleaning (extra RM 40–60), drain pipe flush (extra RM 30–50), gas pressure check (charged per PSI). By the time all the essential work is done, you have paid RM 120–180 — which is more than KL Renovator's transparent RM 99 standard service that includes all of these checks.</p>
 
       <h2>The Direct Booking Advantage</h2>
       <p>When you book directly with KL Renovator, you skip the voucher middleman entirely. Our RM 99 standard service covers an 8-point inspection checklist that includes filter cleaning, evaporator coil front cleaning, condensate drain flush, blower wheel inspection, electrical terminal check, gas connection visual check, thermostat response test, and outdoor unit check. What you see quoted is what you pay — no surprise add-ons, no voucher terms to decode.</p>
@@ -8750,7 +8750,7 @@ export const allPosts: BlogPost[] = [
       <p>A correct gas top-up by a professional HVAC company like KL Renovator follows these steps: <strong>(1)</strong> Connect manifold gauge set and measure current pressure. <strong>(2)</strong> Identify the gas type from the outdoor unit sticker (R22, R410A, or R32). <strong>(3)</strong> Perform a leak check using electronic leak detector or soap-water spray on all flare connections, valve stems, and brazed joints. <strong>(4)</strong> Repair any leaks found — tighten fittings, replace flare nuts, or re-braze as needed. <strong>(5)</strong> Vacuum the system to remove moisture and non-condensables. <strong>(6)</strong> Add refrigerant to the correct pressure for the specific gas type and outdoor temperature. <strong>(7)</strong> Run the unit and verify cooling output and pressure levels.</p>
 
       <h2>KL Renovator's Gas Top-Up Service</h2>
-      <p>We include a full leak check with every gas top-up. R22 from RM 120, R410A from RM 150, R32 from RM 180. If a leak is found, we quote the repair cost before proceeding — you approve all work before we start. Prices confirmed upfront via WhatsApp. No surprise charges after the job.</p>
+      <p>We include a full leak check with every gas top-up. R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. If a leak is found, we quote the repair cost before proceeding — you approve all work before we start. Prices confirmed upfront via WhatsApp. No surprise charges after the job.</p>
 
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a proper gas top-up. <a href="/services/gas-topup">Gas top-up pricing</a> | <a href="/problems/aircond-low-gas">Low gas symptoms guide</a></p>
     `,
@@ -8761,9 +8761,9 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>Faktor</th><th>Tanpa Pemeriksaan Kebocoran</th><th>Dengan Pemeriksaan Kebocoran</th></tr></thead>
         <tbody>
-          <tr><td>Harga</td><td>RM 60-100</td><td>RM 120-180</td></tr>
+          <tr><td>Harga</td><td>RM 60-100</td><td>from RM 2.50/PSI</td></tr>
           <tr><td>Masa bertahan</td><td>2-8 minggu (gas bocor semula)</td><td>Bertahun-tahun (kebocoran dibaiki)</td></tr>
-          <tr><td>Kos tahunan</td><td>RM 300-600 (ulang 4-6x)</td><td>RM 120-180 sekali sahaja</td></tr>
+          <tr><td>Kos tahunan</td><td>RM 300-600 (ulang 4-6x)</td><td>from RM 2.50/PSI sekali sahaja</td></tr>
           <tr><td>Risiko kompresor</td><td>Tinggi — operasi gas rendah merosakkan</td><td>Rendah — sistem ditutup sepenuhnya</td></tr>
           <tr><td>Penyelesaian sebenar</td><td>Tiada — hanya rawatan simptom</td><td>Ya — punca dibaiki</td></tr>
           <tr><td>Jaminan</td><td>Tiada — gas bocor lagi, bayar lagi</td><td>Waranti pada pembaikan kebocoran</td></tr>
@@ -8808,7 +8808,7 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>项目</th><th>单纯加 Gas (Top-up)</th><th>检漏与修复 (Leak Rectification)</th></tr></thead>
         <tbody>
-          <tr><td><strong>短期费用</strong></td><td>低 (RM 120起)</td><td>中/高 (视漏点位置)</td></tr>
+          <tr><td><strong>短期费用</strong></td><td>低 (RM 2.50/PSI起)</td><td>中/高 (视漏点位置)</td></tr>
           <tr><td><strong>长期费用</strong></td><td>极高 (不断重复)</td><td><strong>低 (一次性解决)</strong></td></tr>
           <tr><td><strong>系统健康</strong></td><td>压缩机易过热</td><td><strong>恢复最佳运行状态</strong></td></tr>
           <tr><td><strong>建议场景</strong></td><td>由于安装不当导致的微渗</td><td><strong>有明显漏点或高频充气时</strong></td></tr>
@@ -8859,7 +8859,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Fan motor</td><td>RM 180–280</td><td>RM 250–380</td><td>Inverter fan motors use DC brushless technology — more expensive</td></tr>
           <tr><td>Compressor</td><td>RM 600–1,200</td><td>RM 900–2,000</td><td>Inverter compressors are variable-speed with more complex drive electronics</td></tr>
           <tr><td>Temperature sensor</td><td>RM 80–120</td><td>RM 150–250</td><td>Inverter units have multiple sensors (coil, ambient, pipe)</td></tr>
-          <tr><td>Gas top-up (R32)</td><td>N/A (mostly R22)</td><td>RM 180–220</td><td>Inverter units use R32; non-inverter older units use R22 (RM 120–150)</td></tr>
+          <tr><td>Gas top-up (R32)</td><td>N/A (mostly R22)</td><td>RM 3.00/PSI–220</td><td>Inverter units use R32 (RM 3.00/PSI); non-inverter units use R22 (RM 2.50/PSI)</td></tr>
         </tbody>
       </table>
 
@@ -8884,7 +8884,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Kapasitor</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
           <tr><td>PCB board</td><td>RM 150-250</td><td>RM 250-500</td><td>Inverter 50-100% lebih mahal</td></tr>
           <tr><td>Kompresor</td><td>RM 500-900</td><td>RM 700-1,200</td><td>Inverter 30-40% lebih mahal</td></tr>
-          <tr><td>Motor kipas</td><td>RM 150-250</td><td>RM 180-300</td><td>Inverter sedikit lebih mahal</td></tr>
+          <tr><td>Motor kipas</td><td>RM 150-250</td><td>RM 250-300</td><td>Inverter sedikit lebih mahal</td></tr>
           <tr><td>Penderia/thermistor</td><td>RM 50-80</td><td>RM 80-150</td><td>Inverter lebih mahal</td></tr>
           <tr><td>Modul inverter</td><td>Tiada</td><td>RM 300-600</td><td>Komponen unik inverter</td></tr>
           <tr><td>Reactor/filter</td><td>Tiada</td><td>RM 100-200</td><td>Komponen unik inverter</td></tr>
@@ -8936,7 +8936,7 @@ export const allPosts: BlogPost[] = [
           <tr><td><strong>常见小修 (电容等)</strong></td><td>RM 80 - 150</td><td>RM 150 - 250 (多为传感器)</td></tr>
           <tr><td><strong>主板修理/更换</strong></td><td>RM 150 - 250</td><td><strong>RM 350 - 700</strong></td></tr>
           <tr><td><strong>风扇马达更换</strong></td><td>RM 180 - 300</td><td>RM 250 - 450</td></tr>
-          <tr><td><strong>加 Gas (R22 vs R32)</strong></td><td>RM 120起</td><td>RM 120起</td></tr>
+          <tr><td><strong>加 Gas (R22 vs R32)</strong></td><td>RM 2.50 / PSI起</td><td>RM 3.00 / PSI起</td></tr>
         </tbody>
       </table>
 
@@ -9136,9 +9136,9 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>Tahun</th><th>Pemasangan RM 120 (Asas)</th><th>Pemasangan RM 199 (KL Renovator)</th></tr></thead>
         <tbody>
-          <tr><td>Tahun 1</td><td>RM 120 + RM 120 tambah gas = RM 240</td><td>RM 199 (tiada masalah)</td></tr>
-          <tr><td>Tahun 2</td><td>RM 120 tambah gas lagi = RM 360</td><td>RM 199 (tiada masalah)</td></tr>
-          <tr><td>Tahun 3</td><td>RM 400 paip baru + RM 120 gas = RM 880</td><td>RM 199 (tiada masalah)</td></tr>
+          <tr><td>Tahun 1</td><td>RM 120 + gas top-up (per PSI)</td><td>RM 199 (tiada masalah)</td></tr>
+          <tr><td>Tahun 2</td><td>gas top-up again (per PSI)</td><td>RM 199 (tiada masalah)</td></tr>
+          <tr><td>Tahun 3</td><td>RM 400 paip baru + gas top-up (per PSI)</td><td>RM 199 (tiada masalah)</td></tr>
           <tr><td>Tahun 5</td><td>RM 800 kompresor baru = RM 1,680</td><td>RM 199 (tiada masalah)</td></tr>
         </tbody>
       </table>
@@ -9569,7 +9569,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Minor repair (capacitor, sensor)</td><td>Landlord — normal wear and tear</td><td>RM 150–250</td></tr>
           <tr><td>Major repair (compressor, PCB)</td><td>Landlord — structural component of the property</td><td>RM 400–2,000</td></tr>
           <tr><td>Damage caused by tenant misuse</td><td>Tenant — e.g., unit damaged by not cleaning filter for 2 years</td><td>Varies</td></tr>
-          <tr><td>Gas top-up (refrigerant leak)</td><td>Landlord — normal component of maintaining the HVAC system</td><td>RM 120–200</td></tr>
+          <tr><td>Gas top-up (refrigerant leak)</td><td>Landlord — normal component of maintaining the HVAC system</td><td>From RM 2.50/PSI</td></tr>
         </tbody>
       </table>
 

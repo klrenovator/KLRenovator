@@ -59,7 +59,7 @@ export function HomepageAeoSchemas() {
                   name: "How much does aircon gas top-up cost in KL & Selangor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Gas top-up in KL starts from RM 120 for R22 (1.0HP), RM 150 for R410A (1.0HP), and RM 180 for R32 (1.0HP). Leak check is included with every gas top-up. KL Renovator covers all Klang Valley areas.",
+                    text: "Gas top-up in KL is charged per PSI: R22 is RM 2.50/PSI, while R410A and R32 are RM 3.00/PSI. Final cost depends on the actual PSI required after inspection by our technician. Leak check is included with every top-up.",
                   },
                 },
                 {
@@ -129,7 +129,7 @@ export function HomepageAeoSchemas() {
               estimatedCost: {
                 "@type": "MonetaryAmount",
                 currency: "MYR",
-                value: "120",
+                value: "2.50",
               },
               supply: [
                 {
@@ -247,7 +247,7 @@ export function HomepageAeoSchemas() {
                 {
                   "@type": "ListItem",
                   position: 4,
-                  name: "Gas Top-Up R22/R410A/R32 from RM 120",
+                  name: "Gas Top-Up from RM 2.50 / PSI",
                   url: "https://www.klrenovator.com/services/gas-topup",
                 },
                 {
@@ -288,12 +288,12 @@ export function HomepageAeoSchemas() {
               "@type": "HowTo",
               name: "How to Get Aircond Gas Top-Up (R22, R410A, R32) in KL & Selangor",
               description:
-                "Book a precision refrigerant gas top-up with KL Renovator. Supports R22, R410A and R32 systems. Leak check included. Starts from RM 120.",
+                "Book a precision refrigerant gas top-up with KL Renovator. Supports R22, R410A and R32 systems. Leak check included. Starts from RM 2.50 / PSI.",
               totalTime: "PT30M",
               estimatedCost: {
                 "@type": "MonetaryAmount",
                 currency: "MYR",
-                value: "120",
+                value: "2.50",
               },
               step: [
                 {
@@ -325,7 +325,7 @@ export function HomepageAeoSchemas() {
                   "@type": "HowToStep",
                   position: 5,
                   name: "Cooling Test and Handover",
-                  text: "Unit is run and cooling output confirmed. Job card with warranty details handed to you. R22 from RM 120, R410A from RM 150, R32 from RM 180.",
+                  text: "Unit is run and cooling output confirmed. Job card with warranty details handed to you. R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI.",
                 },
               ],
             }),

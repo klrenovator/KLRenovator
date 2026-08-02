@@ -147,7 +147,7 @@ export function ExitIntentPopup() {
           <div className="grid grid-cols-2 gap-2 mb-5">
             {[
               { service: "Chemical Wash", price: "from RM 120", slug: "chemical-wash" },
-              { service: "Gas Top-Up", price: "from RM 120", slug: "gas-topup" },
+              { service: "Gas Top-Up", price: "from RM 2.50/PSI", slug: "gas-topup" },
               { service: "Chemical Overhaul", price: "from RM 220", slug: "chemical-overhaul" },
               { service: "Repair & Diagnose", price: "from RM 88", slug: "repair" },
             ].map((s) => (

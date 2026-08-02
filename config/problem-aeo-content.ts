@@ -18,9 +18,9 @@ export const problemAEOContent: Record<
   }
 > = {
   "aircond-not-cold": {
-    directAnswerEN: "In most cases, an aircond that runs but isn't cold is low on refrigerant gas — this alone accounts for over half of the \"not cold\" calls KL Renovator receives. The fix is usually a same-day gas top-up (from RM 120) or, if the coil is dirty, a chemical wash (from RM 120).",
-    directAnswerMS: "Dalam kebanyakan kes, aircond yang berjalan tetapi tidak sejuk disebabkan gas penyejuk rendah — ini menyumbang lebih separuh panggilan \"tidak sejuk\" yang KL Renovator terima. Penyelesaiannya biasanya tambah gas hari sama (dari RM 120) atau cuci kimia jika gegelung kotor (dari RM 120).",
-    directAnswerZH: "在大多数情况下，冷气运行但不冷是因为制冷剂不足——这占KL Renovator接到的\"不冷\"报修的一半以上。解决方法通常是当天充气（从RM 120起），若盘管脏污则需化学清洗（从RM 120起）。",
+    directAnswerEN: "In most cases, an aircond that runs but isn't cold is low on refrigerant gas — this alone accounts for over half of the \"not cold\" calls KL Renovator receives. The fix is usually a same-day gas top-up (from RM 2.50/PSI) or, if the coil is dirty, a chemical wash (from RM 120).",
+    directAnswerMS: "Dalam kebanyakan kes, aircond yang berjalan tetapi tidak sejuk disebabkan gas penyejuk rendah — ini menyumbang lebih separuh panggilan \"tidak sejuk\" yang KL Renovator terima. Penyelesaiannya biasanya tambah gas hari sama (dari RM 2.50/PSI) atau cuci kimia jika gegelung kotor (dari RM 120).",
+    directAnswerZH: "在大多数情况下，冷气运行但不冷是因为制冷剂不足——这占KL Renovator接到的\"不冷\"报修的一半以上。解决方法通常是当天充气（从 RM 2.50/PSI 起），若盘管脏污则需化学清洗（从 RM 2.50/PSI 起）。",
     diyChecksEN: ["Check the remote is set to \"Cool\" mode, not \"Fan\" or \"Dry\" mode", "Check and rinse the washable air filter — a clogged filter alone can cause weak, warm-feeling airflow", "Check the outdoor unit isn't blocked by leaves, boxes or furniture restricting airflow"],
     diyChecksMS: [
       "Semak remote ditetapkan pada mod \"Cool\", bukan \"Fan\" atau \"Dry\"",
@@ -50,7 +50,7 @@ export const problemAEOContent: Record<
   "aircond-water-leaking": {
     directAnswerEN: "Water leaking from an indoor unit is caused by a blocked drain pipe in roughly 7 out of 10 cases KL Renovator sees in Malaysia's humid climate. A chemical wash (from RM 120) usually clears it; if the leak is severe or recurring, a full chemical overhaul (from RM 220) removes the blockage permanently.",
     directAnswerMS: "Kebocoran air dari unit dalam disebabkan oleh paip longkang tersumbat dalam kira-kira 7 daripada 10 kes yang KL Renovator lihat dalam iklim lembap Malaysia. Cuci kimia (dari RM 120) biasanya membersihkannya; jika bocor teruk, overhaul kimia penuh (dari RM 220) membuang sekatan secara kekal.",
-    directAnswerZH: "在马来西亚潮湿气候下，KL Renovator遇到的室内机漏水案例中，约七成是排水管堵塞造成的。化学清洗（从RM 120起）通常能解决；若漏水严重或反复发生，全面化学大修（从RM 220起）可永久清除堵塞。",
+    directAnswerZH: "在马来西亚潮湿气候下，KL Renovator遇到的室内机漏水案例中，约七成是排水管堵塞造成的。化学清洗（从 RM 2.50/PSI 起）通常能解决；若漏水严重或反复发生，全面化学大修（从RM 220起）可永久清除堵塞。",
     diyChecksEN: ["Place a towel or basin under the leak immediately to protect flooring/furniture", "Check if the unit is tilted — indoor units should slope slightly toward the drain outlet, a common installation fault", "Turn off the unit if leaking heavily near electrical wiring or sockets, for safety"],
     diyChecksMS: [
       "Matikan unit dan perhatikan dari mana air menitis (panel depan, paip longkang, atau dinding belakang)",
@@ -80,7 +80,7 @@ export const problemAEOContent: Record<
   "aircond-bad-smell": {
     directAnswerEN: "A musty or sour smell from your aircond is almost always mould and bacteria growing on the evaporator coil and blower wheel — it's not usually a sign of a broken part. A pressure chemical wash (from RM 120) removes it completely in most cases; a chemical overhaul (from RM 220) is needed for heavily neglected units.",
     directAnswerMS: "Bau hapak atau masam dari aircond hampir selalu adalah kulat dan bakteria yang tumbuh pada gegelung evaporator dan roda blower — bukan tanda alat ganti rosak. Cuci kimia tekanan (dari RM 120) menghilangkannya sepenuhnya dalam kebanyakan kes.",
-    directAnswerZH: "冷气发出霉味或酸味几乎总是因为蒸发器盘管和风轮上滋生了霉菌和细菌——通常不是零件损坏的迹象。压力化学清洗（从RM 120起）在大多数情况下能彻底去除异味。",
+    directAnswerZH: "冷气发出霉味或酸味几乎总是因为蒸发器盘管和风轮上滋生了霉菌和细菌——通常不是零件损坏的迹象。压力化学清洗（从 RM 2.50/PSI 起）在大多数情况下能彻底去除异味。",
     diyChecksEN: ["Check and wash the air filter — a dirty filter traps dust that feeds mould growth and holds smell", "Run the unit in \"Fan\" mode for 30 minutes with the door open before switching off, to dry out internal moisture", "Check for a musty smell specifically after long idle periods (indicates internal mould, not an external source)"],
     diyChecksMS: [
       "Semak dan basuh penapis udara — penapis kotor memerangkap habuk yang menyuburkan kulat",
@@ -138,9 +138,9 @@ export const problemAEOContent: Record<
     extraFaqsZH: [{ q: "冷气开关机时的咔嗒声正常吗？", a: "正常——启动或停止时一声轻微咔嗒声通常只是继电器切换或塑料部件的正常热胀冷缩。" }, { q: "我可以自己拧紧松动面板止响吗？", a: "室内机前盖可以。室外机外壳建议由技师处理，因为错误开壳可能影响防水性能。" }],
   },
   "aircond-low-gas": {
-    directAnswerEN: "Low gas shows up as warm air, longer cooling times, and sometimes ice on the indoor coil. KL Renovator tops up R22, R410A or R32 refrigerant from RM 120, but we always check for a leak first — topping up a leaking system without fixing the leak just means you'll be back to square one within months.",
-    directAnswerMS: "Gas rendah menunjukkan udara panas, masa penyejukan lebih lama, dan kadangkala ais pada gegelung dalam. KL Renovator menambah gas R22, R410A atau R32 dari RM 120, tetapi kami sentiasa semak kebocoran dahulu.",
-    directAnswerZH: "气体不足表现为吹暖风、制冷时间延长，有时室内盘管会结冰。KL Renovator提供R22、R410A或R32冷媒充气服务，从RM 120起，但我们会先检查是否漏气。",
+    directAnswerEN: "Low gas shows up as warm air, longer cooling times, and sometimes ice on the indoor coil. KL Renovator tops up R22, R410A or R32 refrigerant from RM 2.50/PSI, but we always check for a leak first — topping up a leaking system without fixing the leak just means you'll be back to square one within months.",
+    directAnswerMS: "Gas rendah menunjukkan udara panas, masa penyejukan lebih lama, dan kadangkala ais pada gegelung dalam. KL Renovator menambah gas R22, R410A atau R32 dari RM 2.50/PSI, tetapi kami sentiasa semak kebocoran dahulu.",
+    directAnswerZH: "气体不足表现为吹暖风、制冷时间延长，有时室内盘管会结冰。KL Renovator提供R22、R410A或R32冷媒充气服务，从 RM 2.50/PSI 起，但我们会先检查是否漏气。",
     diyChecksEN: ["Check if ice or frost has formed on the indoor unit's coil or copper pipe — a clear sign of low gas", "Note how long the unit has been running without proper cooling — sudden onset points to a new leak rather than gradual loss", "Check the outdoor unit's copper pipe joints for visible oil residue, which often marks a leak point"],
     diyChecksMS: [
       "Semak sama ada ada ais/fros pada gegelung atau paip tembaga unit dalam",
@@ -223,7 +223,7 @@ export const problemAEOContent: Record<
       "在可疑接头处进行肥皂泡测试作为二次确认",
       "检查铜管接口是否有油渍，油渍常提示泄漏点"
     ],
-    extraFaqsEN: [{ q: "How much does it cost to find and fix a refrigerant leak?", a: "Leak detection is typically included in the diagnostic visit (RM 88, waived with repair). The pipe/valve repair itself ranges RM 150-400, plus gas re-charge from RM 120-180." }, { q: "Can a leak be at the indoor unit even if I only see oil stains outside?", a: "Yes — refrigerant flows through the whole sealed loop, so a leak can occur anywhere along it." }, { q: "Is R32 gas more dangerous to have a leak with than R410A or R22?", a: "R32 is mildly flammable compared to non-flammable R410A/R22, but in small residential quantities with proper installation, the risk is low." }, { q: "Will the leak get worse over time if I don't fix it?", a: "Small leaks usually don't get dramatically worse quickly, but they don't self-heal either — cooling stops entirely once gas runs out." }],
+    extraFaqsEN: [{ q: "How much does it cost to find and fix a refrigerant leak?", a: "Leak detection is typically included in the diagnostic visit (RM 88, waived with repair). The pipe/valve repair itself ranges RM 150-400, plus gas re-charge from RM 2.50/PSI." }, { q: "Can a leak be at the indoor unit even if I only see oil stains outside?", a: "Yes — refrigerant flows through the whole sealed loop, so a leak can occur anywhere along it." }, { q: "Is R32 gas more dangerous to have a leak with than R410A or R22?", a: "R32 is mildly flammable compared to non-flammable R410A/R22, but in small residential quantities with proper installation, the risk is low." }, { q: "Will the leak get worse over time if I don't fix it?", a: "Small leaks usually don't get dramatically worse quickly, but they don't self-heal either — cooling stops entirely once gas runs out." }],
     extraFaqsMS: [{ q: "Berapa kos untuk mengesan dan membaiki kebocoran penyejuk?", a: "Pengesanan kebocoran biasanya termasuk dalam lawatan diagnostik (RM 88). Pembaikan paip/injap dari RM 150-400." }, { q: "Bolehkah kebocoran berlaku pada unit dalam walaupun saya hanya nampak kesan minyak di luar?", a: "Ya — penyejuk mengalir melalui keseluruhan gelung tertutup." }],
     extraFaqsZH: [{ q: "查找并修复冷媒泄漏需要多少费用？", a: "检漏通常包含在诊断上门费（RM 88）内。管道/阀门维修费用约RM 150-400。" }, { q: "即使我只在室外看到油渍，室内机也可能漏气吗？", a: "是的——冷媒流经整个密闭循环系统，泄漏可能发生在任何位置。" }],
   },
@@ -438,7 +438,7 @@ export const problemAEOContent: Record<
     extraFaqsZH: [{ q: "室外机静音一定是压缩机故障吗？", a: "不一定——电容器、接触器或过载保护器故障都可能导致完全静音，维修费用都远低于更换压缩机。" }, { q: "为什么室外机特别在炎热天气会过载跳闸？", a: "炎热天气下室外机需要更努力散热，额外负荷可能触发过载保护。" }],
   },
   "aircond-high-electricity-bill": {
-    directAnswerEN: "A sudden jump in your electricity bill with no change in usage habits is most commonly caused by a dirty coil or low refrigerant gas forcing the compressor to work much harder for the same cooling result — a chemical wash (from RM 120) or gas top-up (from RM 120) often brings consumption back down noticeably.",
+    directAnswerEN: "A sudden jump in your electricity bill with no change in usage habits is most commonly caused by a dirty coil or low refrigerant gas forcing the compressor to work much harder for the same cooling result — a chemical wash (from RM 120) or gas top-up (from RM 2.50/PSI) often brings consumption back down noticeably.",
     directAnswerMS: "Lonjakan mendadak dalam bil elektrik tanpa perubahan tabiat penggunaan paling biasa disebabkan gegelung kotor atau gas penyejuk rendah memaksa pekali bekerja lebih keras.",
     directAnswerZH: "在使用习惯没有变化的情况下电费突然上涨，最常见的原因是盘管脏污或制冷剂不足，迫使压缩机更努力工作。",
     diyChecksEN: ["Compare this month's bill against the same month last year, not last month, to account for seasonal weather differences", "Check the temperature setting hasn't been accidentally changed to a colder setting than usual", "Check when the unit was last chemical washed — over 12 months without a wash is a strong contributing factor"],
@@ -560,7 +560,7 @@ export const problemAEOContent: Record<
   "aircond-water-dripping": {
     directAnswerEN: "Dripping (as opposed to a heavier leak) is usually an early-stage sign of drain pipe or drain pan buildup — catching it now with a chemical wash (from RM 120) is cheaper and easier than waiting for it to worsen into a full leak requiring a chemical overhaul (from RM 220).",
     directAnswerMS: "Menitis (berbanding kebocoran lebih teruk) biasanya tanda peringkat awal penumpukan paip atau dulang longkang — menanganinya sekarang dengan cuci kimia (dari RM 120) lebih murah.",
-    directAnswerZH: "滴水（相较于更严重的漏水）通常是排水管或排水盘积垢的早期迹象——现在进行化学清洗（从RM 120起）比等到情况恶化更省钱。",
+    directAnswerZH: "滴水（相较于更严重的漏水）通常是排水管或排水盘积垢的早期迹象——现在进行化学清洗（从 RM 2.50/PSI 起）比等到情况恶化更省钱。",
     diyChecksEN: ["Note whether it's a slow drip versus a steady trickle — this indicates how advanced the blockage is", "Place a small container to catch drips and monitor if the rate increases", "Check if dripping only happens right after the unit starts cooling versus continuously"],
     diyChecksMS: [
       "Perhatikan sama ada ia titisan perlahan berbanding aliran tetap",

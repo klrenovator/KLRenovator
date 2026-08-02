@@ -132,7 +132,7 @@ const EN_FAQS: MasterFaqItem[] = [
   { category: "overhaul", q: "What parts are cleaned during a chemical overhaul?", a: "Every internal component: front panel, filters, evaporator coil, blower wheel/fan barrel, drain pan, back tray, drain pipe connection, and indoor housing. The outdoor unit condenser coil is also cleaned if accessible. All parts are soaked in chemical solution, scrubbed, rinsed, and dried before reassembly.", source: "/services/chemical-overhaul" },
 
   // ─── GAS TOP-UP (7 questions) ───────────────────────────────────────────────
-  { category: "gas-topup", q: "How much does gas top-up cost?", a: "R22 gas top-up starts from RM 120. R410A from RM 150. R32 from RM 180. Price depends on unit HP size and how much refrigerant is needed. Leak check is included with every gas top-up.", source: "/services/gas-topup" },
+  { category: "gas-topup", q: "How much does gas top-up cost?", a: "Gas top-up is charged per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00). Final cost depends on the actual PSI required after inspection. Price depends on unit HP size and how much refrigerant is needed. Leak check is included with every gas top-up.", source: "/services/gas-topup" },
   { category: "gas-topup", q: "Does my aircond need regular gas refills?", a: "No. A properly installed aircond with good flare connections should not lose refrigerant for years. If your unit needs frequent gas top-ups, there is likely a leak that needs to be found and fixed. We always check for leaks before topping up.", source: "/services/gas-topup" },
   { category: "gas-topup", q: "How do I know if my aircond is low on gas?", a: "Common signs of low refrigerant: reduced cooling, ice forming on copper pipes or the indoor coil, hissing sounds near connections, and higher-than-normal electricity consumption. Our technician can confirm with a pressure gauge reading during a diagnostic visit.", source: "/services/gas-topup" },
   { category: "gas-topup", q: "What is the difference between R22, R410A, and R32 gas?", a: "R22 is the older refrigerant being phased out for environmental reasons. R410A is the current standard for most inverter units — higher pressure, more efficient. R32 is the newest, most eco-friendly option with lower global warming potential. Your unit is designed for one specific type — never mix them.", source: "/services/gas-topup" },
@@ -254,7 +254,7 @@ const MS_FAQS: MasterFaqItem[] = [
   { category: "overhaul", q: "Komponen apa yang dibersihkan semasa overhaul?", a: "Setiap komponen dalaman: panel depan, penapis, gegelung penyejat, roda kipas, dulang saliran, dulang belakang, dan sambungan paip saliran.", source: "/services/chemical-overhaul" },
 
   // ─── TAMBAH GAS (7 soalan) ─────────────────────────────────────────────────
-  { category: "gas-topup", q: "Berapa harga tambah gas?", a: "Tambah gas R22 bermula dari RM 120. R410A dari RM 150. R32 dari RM 180. Pemeriksaan kebocoran disertakan.", source: "/services/gas-topup" },
+  { category: "gas-topup", q: "Berapa harga tambah gas?", a: "Tambah gas dikenakan bayaran per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00). Kos akhir bergantung kepada PSI sebenar yang diperlukan selepas pemeriksaan. Pemeriksaan kebocoran disertakan.", source: "/services/gas-topup" },
   { category: "gas-topup", q: "Adakah aircond perlu tambah gas secara berkala?", a: "Tidak. Aircond yang dipasang dengan betul tidak seharusnya kehilangan penyejuk selama bertahun-tahun. Jika perlu tambah gas kerap, kemungkinan ada kebocoran.", source: "/services/gas-topup" },
   { category: "gas-topup", q: "Bagaimana saya tahu aircond kurang gas?", a: "Tanda biasa: penyejukan berkurangan, ais terbentuk pada paip tembaga, bunyi desisan berhampiran sambungan, dan penggunaan elektrik lebih tinggi.", source: "/services/gas-topup" },
   { category: "gas-topup", q: "Apa beza R22, R410A, dan R32?", a: "R22 ialah penyejuk lama yang dihentikan secara berperingkat. R410A ialah standard semasa. R32 ialah pilihan terkini, paling mesra alam. Unit anda direka untuk satu jenis sahaja.", source: "/services/gas-topup" },
@@ -376,7 +376,7 @@ const ZH_FAQS: MasterFaqItem[] = [
   { category: "overhaul", q: "大修清洗哪些部件？", a: "每个内部部件：前面板、滤网、蒸发器、风轮、排水盘、后托盘和排水管连接。", source: "/services/chemical-overhaul" },
 
   // ─── 充冷媒 (7 questions) ─────────────────────────────────────────────────
-  { category: "gas-topup", q: "充气费用多少？", a: "R22 充气起价 RM 120。R410A 起价 RM 150。R32 起价 RM 180。含漏气检查。", source: "/services/gas-topup" },
+  { category: "gas-topup", q: "充气费用多少？", a: "加气按 PSI 收费：R22 (RM 2.50)、R410A (RM 3.00)、R32 (RM 3.00)。最终费用取决于技师检查后所需的实际 PSI。含漏气检查。", source: "/services/gas-topup" },
   { category: "gas-topup", q: "冷气需要定期加气吗？", a: "不需要。正确安装的冷气不应多年泄漏冷媒。若需频繁加气，可能有泄漏需要修复。", source: "/services/gas-topup" },
   { category: "gas-topup", q: "怎么知道冷气缺气？", a: "常见征兆：制冷减弱、铜管结冰、接头处有嘶嘶声、电费增加。", source: "/services/gas-topup" },
   { category: "gas-topup", q: "R22、R410A 和 R32 有什么区别？", a: "R22 是正在淘汰的旧型冷媒。R410A 是目前主流标准。R32 是最新最环保的选择。每台机组只能用一种指定类型。", source: "/services/gas-topup" },

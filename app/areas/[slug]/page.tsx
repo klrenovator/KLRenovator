@@ -522,9 +522,9 @@ export default async function AreaPage({
                   problem: "Low Refrigerant Gas",
                   problemMS: "Gas Penyejuk Rendah",
                   problemZH: "冷媒不足",
-                  desc: "If the unit runs but blows warm air, gas may be low. This means there's a leak — simply topping up without finding the leak wastes money. Fix: leak check + gas top-up from RM 150.",
+                  desc: "If the unit runs but blows warm air, gas may be low. This means there's a leak — simply topping up without finding the leak wastes money. Fix: leak check + gas top-up from RM 2.50/PSI.",
                   fix: "Gas Top-Up",
-                  price: "RM 150",
+                  price: "From RM 2.50/PSI",
                 },
                 {
                   problem: "Blocked Drain Pipe",
@@ -684,9 +684,9 @@ export default async function AreaPage({
                   { service: "Pressure Chemical Wash (4.0–5.0 HP)", price: "RM 200" },
                   { service: "Chemical Overhaul (1.0–1.5 HP)", price: "RM 220" },
                   { service: "Chemical Overhaul (2.0–2.5 HP)", price: "RM 280" },
-                  { service: "Gas Top-Up R22 (1.0 HP)", price: "RM 120" },
-                  { service: "Gas Top-Up R410A (1.0 HP)", price: "RM 150" },
-                  { service: "Gas Top-Up R32 (1.0 HP)", price: "RM 180" },
+                  { service: "Gas Top-Up R22", price: "RM 2.50 / PSI" },
+                  { service: "Gas Top-Up R410A", price: "RM 3.00 / PSI" },
+                  { service: "Gas Top-Up R32", price: "RM 3.00 / PSI" },
                   { service: "Diagnostic / Troubleshooting", price: "RM 88 (waived with repair)" },
                   { service: "New Installation (1.0–1.5 HP)", price: "From RM 199" },
                 ].map((row) => (
@@ -703,7 +703,7 @@ export default async function AreaPage({
               </ul>
               <div className="bg-slate-50 border-t border-slate-100 px-6 py-4 flex flex-wrap items-center gap-3">
                 <p className="text-xs text-slate-500 font-medium flex-1">
-                  * Prices are for labour. Materials (copper pipe, gas, casing) quoted separately before work begins.
+                  * Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.
                 </p>
                 <a
                   href={waLink(`Hi KL Renovator, I need a quote for aircond service in ${area.name}.`)}

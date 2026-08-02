@@ -161,7 +161,7 @@ export function brandAreaFaqs(
         },
         {
           q: `How much does ${b} aircond service cost in ${a}?`,
-          a: `Basic servicing starts at RM 99, pressure chemical wash at RM 120, chemical overhaul at RM 220 and gas top-up at RM 120 — the same published rates across ${state}, with no travel surcharge for ${a}. The final figure is confirmed in writing on WhatsApp before the technician starts.`,
+          a: `Basic servicing starts at RM 99, pressure chemical wash at RM 120, chemical overhaul at RM 220 and gas top-up from RM 2.50/PSI — the same published rates across ${state}, with no travel surcharge for ${a}. The final figure is confirmed in writing on WhatsApp before the technician starts.`,
         },
         {
           q: `Can you handle high-rise ${b} installations around ${first}?`,
@@ -179,7 +179,7 @@ export function brandAreaFaqs(
         },
         {
           q: `What's the price list for ${b} servicing in ${a}?`,
-          a: `RM 99 for a basic service, RM 120 for a pressure chemical wash, RM 220 for a full chemical overhaul, and RM 120 to top up gas. These rates hold across all of ${state} — nobody in ${a} pays extra for location. You'll get the exact number in writing before we start work.`,
+          a: `RM 99 for a basic service, RM 120 for a pressure chemical wash, RM 220 for a full chemical overhaul, and RM 2.50/PSI to top up gas. These rates hold across all of ${state} — nobody in ${a} pays extra for location. You'll get the exact number in writing before we start work.`,
         },
         {
           q: `We're in a high-rise near ${first} — can you still install a ${b} unit?`,
@@ -197,7 +197,7 @@ export function brandAreaFaqs(
         },
         {
           q: `${b} aircond servicing in ${a} — what does it cost?`,
-          a: `Basic service from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 120. One rate card for the whole of ${state}, ${a} included — no hidden travel fee. You'll see the final price on WhatsApp before anyone touches the unit.`,
+          a: `Basic service from RM 99, pressure chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI. One rate card for the whole of ${state}, ${a} included — no hidden travel fee. You'll see the final price on WhatsApp before anyone touches the unit.`,
         },
         {
           q: `Got a high-rise unit near ${first}? Can you install ${b} there?`,
@@ -221,7 +221,7 @@ export function brandAreaFaqs(
         },
         {
           q: `Berapa kos servis aircond ${b} di ${a}?`,
-          a: `Servis asas bermula RM 99, cuci kimia tekanan RM 120, overhaul kimia RM 220 dan tambah gas RM 120 — kadar yang sama di seluruh ${state}, tiada caj tambahan perjalanan untuk ${a}. Harga akhir disahkan secara bertulis melalui WhatsApp.`,
+          a: `Servis asas bermula RM 99, cuci kimia tekanan RM 120, overhaul kimia RM 220 dan tambah gas dari RM 2.50/PSI — kadar yang sama di seluruh ${state}, tiada caj tambahan perjalanan untuk ${a}. Harga akhir disahkan secara bertulis melalui WhatsApp.`,
         },
         {
           q: `Bolehkah anda mengendalikan pemasangan ${b} bangunan tinggi sekitar ${first}?`,
@@ -239,7 +239,7 @@ export function brandAreaFaqs(
         },
         {
           q: `Apakah senarai harga servis ${b} di ${a}?`,
-          a: `RM 99 untuk servis asas, RM 120 untuk cuci kimia tekanan, RM 220 untuk overhaul kimia penuh, dan RM 120 untuk tambah gas. Kadar ini sama di seluruh ${state} — tiada sesiapa di ${a} bayar lebih atas sebab lokasi.`,
+          a: `RM 99 untuk servis asas, RM 120 untuk cuci kimia tekanan, RM 220 untuk overhaul kimia penuh, dan RM 2.50/PSI untuk tambah gas. Kadar ini sama di seluruh ${state} — tiada sesiapa di ${a} bayar lebih atas sebab lokasi.`,
         },
         {
           q: `Kami di bangunan tinggi berhampiran ${first} — bolehkah anda pasang unit ${b}?`,
@@ -257,7 +257,7 @@ export function brandAreaFaqs(
         },
         {
           q: `Servis aircond ${b} di ${a} — berapa kosnya?`,
-          a: `Servis asas dari RM 99, cuci kimia tekanan dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 120. Satu kad harga untuk seluruh ${state}, termasuk ${a} — tiada caj perjalanan tersembunyi.`,
+          a: `Servis asas dari RM 99, cuci kimia tekanan dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI. Satu kad harga untuk seluruh ${state}, termasuk ${a} — tiada caj perjalanan tersembunyi.`,
         },
         {
           q: `Ada unit bangunan tinggi berhampiran ${first}? Bolehkah anda pasang ${b}?`,
@@ -280,7 +280,7 @@ export function brandAreaFaqs(
       },
       {
         q: `在${a}做${b}冷气服务需要多少钱？`,
-        a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气RM 120起——${state}全区统一价，${a}不加收车马费。最终价格会在技师开工前通过WhatsApp书面确认。`,
+        a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气从RM 2.50/PSI起——${state}全区统一价，${a}不加收车马费。最终价格会在技师开工前通过WhatsApp书面确认。`,
       },
       {
         q: `你们能处理${first}一带高层建筑的${b}安装吗？`,
@@ -298,7 +298,7 @@ export function brandAreaFaqs(
       },
       {
         q: `${a}的${b}保养价目表是怎样的？`,
-        a: `基本保养RM 99，压力化学清洗RM 120，全面化学大修RM 220，充气RM 120。这个价格适用于整个${state}，${a}也不例外，不会因地点加价。开工前会以文字确认最终金额。`,
+        a: `基本保养RM 99，压力化学清洗RM 120，全面化学大修RM 220，充气从RM 2.50/PSI起。这个价格适用于整个${state}，${a}也不例外，不会因地点加价。开工前会以文字确认最终金额。`,
       },
       {
         q: `我们住在${first}附近的高层楼盘，还能安装${b}机吗？`,
@@ -316,7 +316,7 @@ export function brandAreaFaqs(
       },
       {
         q: `${b}冷气服务在${a}怎么收费？`,
-        a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气RM 120起。整个${state}统一价格，${a}也一样，没有隐藏车马费。开工前会在WhatsApp上确认最终价格。`,
+        a: `基本保养RM 99起，压力化学清洗RM 120起，化学大修RM 220起，充气从RM 2.50/PSI起。整个${state}统一价格，${a}也一样，没有隐藏车马费。开工前会在WhatsApp上确认最终价格。`,
       },
       {
         q: `${first}附近有高层机组，你们能安装${b}吗？`,
