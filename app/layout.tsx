@@ -13,7 +13,6 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ConversionWidgetsLoader } from "@/components/conversion-widgets-loader";
-import { FloatingAssistantButton } from "@/components/floating-assistant-button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
@@ -434,11 +433,6 @@ export default function RootLayout({
             <main id="main-content" className="flex-1">{children}</main>
             <Footer />
             <ConversionWidgetsLoader />
-            {/* Always-visible "Expert / AI Assistant" launcher — see
-                components/floating-assistant-button.tsx. Mounted directly
-                (not via the idle-loaded conversion bundle) so it shows on
-                every page without waiting for idle / first interaction. */}
-            <FloatingAssistantButton />
           </div>
         </Providers>
         <Analytics />

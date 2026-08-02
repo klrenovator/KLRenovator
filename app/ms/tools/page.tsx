@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: clampMetaTitle("Kalkulator & Alat Aircond Percuma"),
     description:
-      "7 kalkulator aircond percuma + pembantu AI: kos pemasangan, tambah gas, BTU/HP, saiz, elektrik & penjimatan inverter. Segera, tepat, mesra mudah alih.",
+      "6 kalkulator aircond percuma: kos pemasangan, tambah gas, BTU/HP, saiz, elektrik & penjimatan inverter. Segera, tepat, mesra mudah alih.",
     url: PAGE_URL,
     type: "website",
     locale: "ms_MY",

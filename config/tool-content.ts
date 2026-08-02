@@ -19,7 +19,7 @@ export interface ToolContent {
   howToName: string;
 }
 
-type ToolKey = "installation" | "gas" | "service" | "size" | "electricity" | "savings" | "assistant";
+type ToolKey = "installation" | "gas" | "service" | "size" | "electricity" | "savings";
 
 export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
   // ── 1. Installation cost calculator ────────────────────────────────────
@@ -616,106 +616,6 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
       ],
       webAppName: "KL Renovator 变频冷气节省计算器",
       howToName: "如何计算马来西亚变频冷气节省",
-    },
-  },
-
-  // ── 7. AI assistant page ────────────────────────────────────────────────
-  assistant: {
-    en: {
-      eyebrow: "Ask Anything — Free",
-      h1: "AI Aircond Expert Assistant",
-      intro:
-        "Meet KL Renovator's aircond expert assistant — trained on the website's real 2026 service information and published pricing. Get accurate answers on installation costs, gas top-up prices, the right HP for your room, material charges, service recommendations, troubleshooting and booking — in seconds, 24/7.",
-      howItWorksTitle: "What the Assistant Knows",
-      howItWorks: [
-        "Pricing — it answers using KL Renovator's published 2026 price list only: services, per-HP installation rates, materials (copper pipe, wire, drain, casing, brackets), gas per PSI and bundle discounts.",
-        "HP recommendation — give it your room size (e.g. \"12 x 10 ft\" or \"200 sqft\") and it recommends the right HP and BTU using the same formula as the BTU calculator.",
-        "Installation estimates — it generates a professional estimated quotation with labour and material line items, based on the published installation table.",
-        "Material estimation — copper pipe, electrical wire, drain pipe, PVC casing and brackets: it explains the free 7 ft, per-foot rates and what affects the total.",
-        "Gas recommendation — R22 vs R410A vs R32: when each applies, the published per-PSI rates, and the reminder that final quantity is confirmed after technician inspection.",
-        "Service recommendation & troubleshooting — not cooling, water leakage, bad smell, noise, ice formation, weak airflow or high bills: it explains the likely cause, the recommended service and why.",
-        "FAQ & booking — warranty, operating hours, coverage areas, brands, payment, and step-by-step booking guidance with direct links.",
-        "Never invented numbers — anything that needs an on-site inspection is always returned as a range or with the on-site confirmation disclaimer, and every answer links back to the relevant page.",
-      ],
-      factors: [
-        { title: "Published prices only", desc: "The assistant reads prices live from the same price list as the website (services from RM 99, chemical wash RM 120, overhaul RM 220, gas RM 2.50–3.00/PSI, installation RM 199+). It cannot quote prices that are not published." },
-        { title: "HP-based pricing", desc: "Installation and servicing are priced by HP — 1.0–1.5 HP wall-mounted RM 199, 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 329, 4.0 HP RM 399, 5.0 HP RM 449. The assistant applies the right tier automatically." },
-        { title: "Bundle discounts", desc: "It applies the same instant booking discounts as the website: 5% OFF for 4–10 units and 10% OFF for 10+ units on multi-unit quotes." },
-        { title: "On-site confirmation", desc: "Exact gas PSI, drain routing, water pump sizing and high-rise access are always flagged as \"confirmed by the technician after on-site inspection\" — never quoted as false-precision figures." },
-      ],
-      faqs: [
-        { q: "What can the KL Renovator AI assistant do?", a: "It answers questions about aircond pricing (using the published 2026 price list), recommends the right HP for your room, generates installation quotations, estimates materials like copper pipe and wiring, advises on gas type (R22/R410A/R32), recommends the correct service from your symptoms, troubleshoots common problems (not cooling, leaks, smells, noise, ice, weak airflow, high bills), answers FAQs about warranty, hours and coverage, and guides you through booking." },
-        { q: "Is the AI assistant accurate on prices?", a: "Yes — it reads directly from KL Renovator's published price list, the same figures on the service price page and installation price guide. It never invents prices. Where a final figure depends on an on-site inspection (e.g. exact gas PSI), it gives an honest range and the technician confirms the price before work begins." },
-        { q: "Is the AI assistant free to use?", a: "Yes — completely free, no login or personal details required. It runs 24/7 and works on mobile, tablet and desktop. You can hand off to a real technician on WhatsApp at any time with one tap." },
-        { q: "Does the assistant replace a real technician?", a: "No — it gives instant, accurate guidance based on the website's service knowledge, but the final diagnosis and price are always confirmed by a KL Renovator technician on-site. It is designed to help you choose the right service and book with confidence." },
-        { q: "How do I book after using the assistant?", a: "The assistant explains the booking process step by step and links to the online booking form (klrenovator.com/book). You can also WhatsApp +60182983573 directly — mention what the assistant suggested and the technician will continue from there." },
-      ],
-      webAppName: "KL Renovator AI Aircond Expert Assistant",
-      howToName: "How to Use the KL Renovator AI Aircond Expert Assistant",
-    },
-    ms: {
-      eyebrow: "Tanya Apa Sahaja — Percuma",
-      h1: "Pembantu Pakar Aircond AI",
-      intro:
-        "Kenali pembantu pakar aircond KL Renovator — dilatih dengan maklumat servis 2026 sebenar dan harga diterbitkan dari laman web. Dapatkan jawapan tepat tentang kos pemasangan, harga tambah gas, HP yang sesuai untuk bilik anda, caj bahan, cadangan servis, penyelesaian masalah dan tempahan — dalam beberapa saat, 24/7.",
-      howItWorksTitle: "Apa yang Pembantu Ini Tahu",
-      howItWorks: [
-        "Harga — ia menjawab menggunakan senarai harga 2026 yang diterbitkan oleh KL Renovator sahaja: servis, kadar pemasangan per HP, bahan (paip tembaga, wayar, saliran, casing, pendakap), gas per PSI dan diskaun pakej.",
-        "Cadangan HP — beri saiz bilik anda (cth. \"12 x 10 kaki\" atau \"200 kaki persegi\") dan ia mencadangkan HP dan BTU yang betul menggunakan formula sama seperti kalkulator BTU.",
-        "Anggaran pemasangan — ia menjana sebut harga anggaran profesional dengan item buruh dan bahan, berdasarkan jadual pemasangan yang diterbitkan.",
-        "Anggaran bahan — paip tembaga, wayar elektrik, paip saliran, casing PVC dan pendakap: ia menerangkan 7 kaki percuma, kadar sekaki dan apa yang mempengaruhi jumlah.",
-        "Cadangan gas — R22 vs R410A vs R32: bila setiap satu digunakan, kadar per-PSI yang diterbitkan, dan peringatan bahawa kuantiti akhir disahkan selepas pemeriksaan juruteknik.",
-        "Cadangan servis & penyelesaian masalah — tidak sejuk, bocor air, bau busuk, bising, ais, aliran udara lemah atau bil tinggi: ia menerangkan punca kemungkinan, servis yang disyorkan dan sebabnya.",
-        "FAQ & tempahan — waranti, waktu operasi, kawasan liputan, jenama, bayaran, dan panduan tempahan langkah demi langkah dengan pautan terus.",
-        "Tidak pernah mencipta nombor — apa-apa yang memerlukan pemeriksaan di tapak sentiasa diberikan sebagai julat atau dengan penafian pengesahan di tapak, dan setiap jawapan memaut kembali ke halaman berkaitan.",
-      ],
-      factors: [
-        { title: "Harga diterbitkan sahaja", desc: "Pembantu membaca harga secara langsung dari senarai harga yang sama seperti laman web (servis dari RM 99, cuci kimia RM 120, overhaul RM 220, gas RM 2.50–3.00/PSI, pemasangan RM 199+). Ia tidak boleh memetik harga yang tidak diterbitkan." },
-        { title: "Harga berasaskan HP", desc: "Pemasangan dan servis dihargai mengikut HP — 1.0–1.5 HP dinding RM 199, 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 329, 4.0 HP RM 399, 5.0 HP RM 449. Pembantu menggunakan tier yang betul secara automatik." },
-        { title: "Diskaun pakej", desc: "Ia menggunakan diskaun tempahan segera yang sama seperti laman web: 5% OFF untuk 4–10 unit dan 10% OFF untuk 10+ unit pada sebut harga berbilang unit." },
-        { title: "Pengesahan di tapak", desc: "PSI gas tepat, laluan saliran, saiz pam air dan akses bangunan tinggi sentiasa ditanda sebagai \"disahkan oleh juruteknik selepas pemeriksaan di tapak\" — tidak pernah dipetik sebagai angka palsu tepat." },
-      ],
-      faqs: [
-        { q: "Apa yang boleh dilakukan oleh pembantu AI KL Renovator?", a: "Ia menjawab soalan tentang harga aircond (menggunakan senarai harga 2026 yang diterbitkan), mencadangkan HP yang betul untuk bilik anda, menjana sebut harga pemasangan, menganggarkan bahan seperti paip tembaga dan wayar, menasihati jenis gas (R22/R410A/R32), mencadangkan servis yang betul dari gejala anda, menyelesaikan masalah biasa (tidak sejuk, bocor, bau, bising, ais, aliran udara lemah, bil tinggi), menjawab FAQ tentang waranti, waktu dan liputan, serta membimbing anda melalui tempahan." },
-        { q: "Adakah pembantu AI tepat tentang harga?", a: "Ya — ia membaca terus dari senarai harga KL Renovator yang diterbitkan, angka yang sama pada halaman harga servis dan panduan harga pemasangan. Ia tidak pernah mencipta harga. Jika angka akhir bergantung pada pemeriksaan di tapak (cth. PSI gas tepat), ia memberi julat yang jujur dan juruteknik mengesahkan harga sebelum kerja bermula." },
-        { q: "Adakah pembantu AI percuma untuk digunakan?", a: "Ya — percuma sepenuhnya, tiada log masuk atau maklumat peribadi diperlukan. Ia beroperasi 24/7 dan berfungsi pada mudah alih, tablet dan desktop. Anda boleh berhubung dengan juruteknik sebenar di WhatsApp pada bila-bila masa dengan satu ketukan." },
-        { q: "Adakah pembantu menggantikan juruteknik sebenar?", a: "Tidak — ia memberi panduan segera dan tepat berdasarkan pengetahuan servis laman web, tetapi diagnosis dan harga akhir sentiasa disahkan oleh juruteknik KL Renovator di tapak. Ia direka untuk membantu anda memilih servis yang betul dan menempah dengan yakin." },
-        { q: "Macam mana saya tempah selepas menggunakan pembantu?", a: "Pembantu menerangkan proses tempahan langkah demi langkah dan memaut ke borang tempahan dalam talian (klrenovator.com/book). Anda juga boleh WhatsApp +60182983573 terus — sebutkan apa yang pembantu cadangkan dan juruteknik akan meneruskan dari situ." },
-      ],
-      webAppName: "Pembantu Pakar Aircond AI KL Renovator",
-      howToName: "Cara Menggunakan Pembantu Pakar Aircond AI KL Renovator",
-    },
-    zh: {
-      eyebrow: "免费提问 — 24/7",
-      h1: "AI 冷气专家助手",
-      intro:
-        "认识 KL Renovator 的冷气专家助手 — 基于网站真实的2026年服务信息和已公布定价训练。快速获取安装费用、加气价格、适合您房间的匹数、材料费用、服务推荐、故障排除和预约方面的准确答案 — 全天候即时响应。",
-      howItWorksTitle: "助手掌握哪些知识",
-      howItWorks: [
-        "价格 — 仅使用KL Renovator公布的2026年价格表：服务、按匹数的安装费率、材料（铜管、电线、排水管、线槽、支架）、每PSI气体价格和批量折扣。",
-        "匹数推荐 — 告诉它您的房间尺寸（如\"12 x 10英尺\"或\"200平方英尺\"），它使用与BTU计算器相同的公式推荐正确的匹数和BTU。",
-        "安装估价 — 根据已公布的安装价格表生成专业估价，包含人工和材料逐项明细。",
-        "材料估算 — 铜管、电线、排水管、PVC线槽和支架：解释免费7英尺、每英尺费率以及影响总额的因素。",
-        "气体推荐 — R22 vs R410A vs R32：各自适用的情况、已公布的每PSI费率，并提醒最终加气量需技术员检查后确认。",
-        "服务推荐与故障排除 — 不制冷、漏水、异味、噪音、结冰、风量弱或电费高：解释可能的原因、推荐的服务及理由。",
-        "FAQ与预约 — 保修、营业时间、覆盖区域、品牌、付款方式，以及带直接链接的分步预约指引。",
-        "绝不编造数字 — 任何需要现场检查的项目总是以范围形式给出或附现场确认声明，每个答案都链接回相关页面。",
-      ],
-      factors: [
-        { title: "仅使用已公布价格", desc: "助手直接读取与网站相同的价格表（服务从RM 99起、化学清洗RM 120、大修RM 220、气体每PSI RM 2.50–3.00、安装RM 199起）。它不能引用未公布的价格。" },
-        { title: "按匹数定价", desc: "安装和保养按匹数定价 — 1.0–1.5匹挂壁式RM 199、2.0匹RM 249、2.5匹RM 279、3.0匹RM 329、4.0匹RM 399、5.0匹RM 449。助手自动套用正确的档位。" },
-        { title: "批量折扣", desc: "它套用与网站相同的即时预约折扣：多台报价4–10台享5%折扣、10台以上享10%折扣。" },
-        { title: "现场确认", desc: "精确气体PSI、排水走向、水泵规格和高层出入费总是标注为\"技术员现场检查后确认\" — 绝不以虚假精确的数字报价。" },
-      ],
-      faqs: [
-        { q: "KL Renovator AI助手能做什么？", a: "它能回答冷气价格问题（使用已公布的2026年价格表）、推荐适合您房间的匹数、生成安装报价、估算铜管和电线等材料、就气体类型（R22/R410A/R32）提供建议、根据您的症状推荐正确的服务、排除常见故障（不冷、漏水、异味、噪音、结冰、风量弱、电费高）、回答关于保修、营业时间和覆盖范围的常见问题，并指导您完成预约。" },
-        { q: "AI助手的价格准确吗？", a: "准确 — 它直接读取KL Renovator公布的价目表，与服务价格页和安装价格指南上的数字一致。它绝不编造价格。如果最终数字取决于现场检查（如精确气体PSI），它会给出诚实的范围，技术员在动工前确认价格。" },
-        { q: "AI助手免费使用吗？", a: "是的 — 完全免费，无需登录或提供个人资料。它24/7运行，支持手机、平板和桌面。您随时可以一键转接给WhatsApp上的真实技术员。" },
-        { q: "助手会取代真实技术员吗？", a: "不会 — 它根据网站的服务知识提供即时、准确的指导，但最终诊断和价格始终由KL Renovator技术员现场确认。它旨在帮助您选择正确的服务并自信地预约。" },
-        { q: "使用助手后如何预约？", a: "助手会逐步解释预约流程并链接到在线预约表（klrenovator.com/book）。您也可以直接WhatsApp +60182983573 — 提及助手的建议，技术员会从那里继续。" },
-      ],
-      webAppName: "KL Renovator AI 冷气专家助手",
-      howToName: "如何使用 KL Renovator AI 冷气专家助手",
     },
   },
 };

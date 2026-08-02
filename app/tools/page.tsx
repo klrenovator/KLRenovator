@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: clampMetaTitle("Free Aircond Calculators & Tools — KL Renovator"),
     description:
-      "7 free aircond calculators + AI assistant: installation cost, gas top-up, BTU/HP, size, electricity & inverter savings. Instant, accurate, mobile-friendly.",
+      "6 free aircond calculators: installation cost, gas top-up, BTU/HP, size, electricity & inverter savings. Instant, accurate, mobile-friendly.",
     url: PAGE_URL,
     type: "website",
     locale: "en_MY",

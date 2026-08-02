@@ -104,19 +104,6 @@ export const TOOLS: ToolInfo[] = [
   },
 ];
 
-/** The AI assistant page — listed separately so hubs can feature it. */
-export const AI_ASSISTANT_TOOL: ToolInfo = {
-  slug: "/aircond-assistant",
-  title: "AI Aircond Expert Assistant",
-  titleMS: "Pembantu Pakar Aircond AI",
-  titleZH: "AI 冷气专家助手",
-  desc: "Ask KL Renovator's AI assistant anything — pricing, HP recommendation, installation quotes, gas type, service advice & booking help.",
-  descMS: "Tanya pembantu AI KL Renovator apa sahaja — harga, cadangan HP, sebut harga pemasangan, jenis gas, nasihat servis & bantuan tempahan.",
-  descZH: "向KL Renovator的AI助手提问 — 价格、匹数推荐、安装报价、气体类型、服务建议和预约帮助。",
-  icon: "🤖",
-  anchor: "AI Aircond Expert Assistant",
-};
-
 export function toolBySlug(slug: string): ToolInfo | undefined {
   return TOOLS.find((t) => t.slug === slug);
 }

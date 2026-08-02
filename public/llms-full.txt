@@ -388,10 +388,8 @@ KL Renovator offers free interactive tools on the homepage and dedicated tool pa
 - Outputs: monthly savings, yearly savings, estimated payback period, visual kWh comparison
 - URL: https://www.klrenovator.com/aircond-savings-calculator
 
-### AI Aircond Expert Assistant
-- Answers pricing questions using the published 2026 price list, recommends HP by room size, generates installation quotations, estimates materials, advises on gas type (R22/R410A/R32), recommends services from symptoms, troubleshoots common problems, answers FAQs and guides booking
-- Never invents prices; anything requiring inspection is confirmed on-site
-- URL: https://www.klrenovator.com/aircond-assistant
+### Related Calculators
+- All calculators are available at https://www.klrenovator.com/tools
 
 ## FULL SITEMAP
 
