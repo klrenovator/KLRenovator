@@ -82,27 +82,52 @@ export async function POST(req: Request) {
     }
 
     // ── 5. Persist ──────────────────────────────────────────────────────
-    const { data: booking, error } = await supabaseAdmin
+    const baseRow = {
+      customer_name: input.customer_name,
+      phone: input.phone,
+      address: input.address,
+      service_type: input.service_type,
+      aircond_type: input.aircond_type,
+      aircond_size: input.aircond_size,
+      quantity: input.quantity,
+      calculated_duration_minutes,
+      start_time: start.toISOString(),
+      end_time: end.toISOString(),
+      source: input.source,
+      calendar_event_id: null,
+      line_items: input.line_items,
+    };
+
+    // `notes` is a newer column (see scripts/sql/add-booking-notes.sql). Only
+    // send it when the customer actually wrote something.
+    const rowWithNotes = input.notes ? { ...baseRow, notes: input.notes } : baseRow;
+
+    let { data: booking, error } = await supabaseAdmin
       .from("bookings")
-      .insert([
-        {
-          customer_name: input.customer_name,
-          phone: input.phone,
-          address: input.address,
-          service_type: input.service_type,
-          aircond_type: input.aircond_type,
-          aircond_size: input.aircond_size,
-          quantity: input.quantity,
-          calculated_duration_minutes,
-          start_time: start.toISOString(),
-          end_time: end.toISOString(),
-          source: input.source,
-          calendar_event_id: null,
-          line_items: input.line_items,
-        },
-      ])
+      .insert([rowWithNotes])
       .select()
       .single();
+
+    // If the column hasn't been added to Supabase yet, don't lose the lead —
+    // retry without it. The notes still reach the team via Google Calendar
+    // and the WhatsApp confirmation.
+    const isMissingNotesColumn =
+      !!error &&
+      input.notes !== "" &&
+      (error.code === "PGRST204" || error.code === "42703") &&
+      /notes/i.test(error.message ?? "");
+
+    if (isMissingNotesColumn) {
+      console.error(
+        "Supabase 'bookings.notes' column missing — saving booking without notes. " +
+          "Run scripts/sql/add-booking-notes.sql to fix.",
+      );
+      ({ data: booking, error } = await supabaseAdmin
+        .from("bookings")
+        .insert([baseRow])
+        .select()
+        .single());
+    }
 
     if (error) {
       console.error("Supabase insert error:", error);
@@ -129,6 +154,9 @@ export async function POST(req: Request) {
             `Address: ${input.address}`,
             `Requested Services:`,
             itemsDescription,
+            // Only shown when the customer chose to write something — keeps
+            // the technician's calendar entry clean otherwise.
+            ...(input.notes ? [``, `Customer notes: ${input.notes}`, ``] : []),
             `Source: ${input.source}`,
             `Total Est. Time: ${calculated_duration_minutes / 60} hours`,
           ].join("\n"),

@@ -68,3 +68,20 @@ are defined inline in each of those page files, not in a shared component.
 
 ## 🧭 Navigation links
 File: `components/navbar.tsx` → `NAV_LINKS` array.
+
+## 📅 Booking form (`/book` and `/admin/bookings`)
+File: `components/booking-form.tsx`
+- Labels/placeholders for all 3 languages live in the `FORM_TXT` object at the
+  top (`en` / `ms` / `zh`) — add a key to all three when adding a field.
+- Dropdown choices: `SERVICE_OPTS`, `AIRCOND_OPTS`, `SIZE_OPTS`,
+  `PROPERTY_OPTS`, `PIPE_RUN_OPTS`, `UNIT_SUPPLY_OPTS`.
+- **Job Details / Notes** — optional free-text box where the customer can
+  describe the job (fault symptoms, access, preferred timing). Capped by
+  `MAX_NOTES_LENGTH` in `lib/booking-validation.ts` (single source of truth for
+  both the on-screen counter and the server check). The note is saved to
+  `bookings.notes`, added to the Google Calendar event, and included in the
+  WhatsApp confirmation message.
+  ⚠️ Requires the `notes` column in Supabase — run `scripts/sql/add-booking-notes.sql`
+  once in the Supabase SQL editor.
+- Server-side rules (phone format, working hours, quantity caps, notes length):
+  `lib/booking-validation.ts`. Job durations: `lib/booking-config.ts`.

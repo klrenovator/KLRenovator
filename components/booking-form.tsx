@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { calculateDurationMinutes, calculateTotalDurationMinutes } from "@/lib/booking-config";
+import { MAX_NOTES_LENGTH } from "@/lib/booking-validation";
 import { useLang } from "@/context/language-context";
 import { trackBookingSubmit } from "@/lib/analytics";
 import { sitePublic } from "@/config/site-public";
@@ -59,6 +60,10 @@ const FORM_TXT = {
     addService: "+ Add Another Service / Unit",
     removeService: "Remove",
     itemHeader: "Service Item #{N}",
+    optional: "optional",
+    notes: "Job Details / Notes",
+    notesPh: "e.g. Aircond not cold, water dripping from indoor unit, 3rd floor with no lift, please come after 2 PM…",
+    notesHelp: "Anything we should know before we arrive? Leave it blank if you're not sure — we'll confirm everything on site.",
   },
   ms: {
     title: "Tempah Temujanji",
@@ -97,6 +102,10 @@ const FORM_TXT = {
     addService: "+ Tambah Servis / Unit Lain",
     removeService: "Buang",
     itemHeader: "Item Servis #{N}",
+    optional: "pilihan",
+    notes: "Butiran Kerja / Nota",
+    notesPh: "cth. Aircond tidak sejuk, air menitis dari unit dalam, tingkat 3 tiada lif, sila datang selepas 2 petang…",
+    notesHelp: "Ada apa-apa yang kami patut tahu sebelum tiba? Boleh biarkan kosong jika tidak pasti — kami sahkan semuanya di tapak.",
   },
   zh: {
     title: "预约时间",
@@ -135,6 +144,10 @@ const FORM_TXT = {
     addService: "+ 添加其他服务 / 机器",
     removeService: "删除",
     itemHeader: "服务项目 #{N}",
+    optional: "选填",
+    notes: "工作详情 / 备注",
+    notesPh: "例如：冷气不冷、室内机滴水、3楼没有电梯、请下午2点后到…",
+    notesHelp: "有什么需要我们提前知道的吗？不确定可以留空 — 我们会在现场确认。",
   }
 };
 
@@ -209,6 +222,12 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
     ...item,
     quantity: resolveQuantity(item.quantity),
   }));
+
+  // Free-text box where the customer can describe the job in their own words
+  // (fault symptoms, access notes, preferred timing). Always optional — the
+  // form must never block on it. The cap is shared with the API validator so
+  // the counter can never disagree with what the server accepts.
+  const [notes, setNotes] = useState("");
 
   const [propertyType, setPropertyType] = useState("Condo / Apartment");
   const [floorLevel, setFloorLevel] = useState("");
@@ -310,6 +329,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           phone,
           address,
           line_items: normalisedLineItems,
+          notes: notes.trim(),
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
           company_website: companyWebsite,
@@ -337,6 +357,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           line_items_count: lineItems.length,
           total_quantity: normalisedLineItems.reduce((acc, item) => acc + item.quantity, 0),
           source: isAdmin ? "whatsapp_manual" : "web",
+          has_notes: notes.trim() !== "",
         });
 
         if (isAdmin) {
@@ -354,6 +375,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
           // Admin sends a confirmation TO the customer's WhatsApp.
           let msgText = `Hi ${name}, your booking for services:\n${serviceLines}\n\nat Address: ${address} is confirmed on ${slotDate} at ${slotTime}.`;
+          if (notes.trim()) {
+            msgText += `\n\nYour notes: ${notes.trim()}`;
+          }
           if (daysRequired > 1) {
             msgText += `\n\nNote: As this is a large job, it will take ${daysRequired} days. The selected date is Day 1. Our team will coordinate the rest of the schedule with you.`;
           }
@@ -373,6 +397,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           }).join("\n");
 
           let pubMsg = `Hi KL Renovator, I just booked online. My details:\n\nName: ${name}\nServices:\n${serviceLines}\nAddress: ${address}\nDate: ${slotDate}\nTime: ${slotTime}`;
+          if (notes.trim()) {
+            pubMsg += `\nNotes: ${notes.trim()}`;
+          }
           if (daysRequired > 1) {
             pubMsg += `\n\nNote: I understand this is a ${daysRequired}-day job.`;
           }
@@ -664,6 +691,31 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           </div>
         </div>
       )}
+
+      {/* ── Optional job details ──────────────────────────────────────────
+          Customers who know what's wrong (or have access/timing quirks) can
+          tell us up front; everyone else can leave it empty. Never required. */}
+      <div>
+        <label htmlFor="booking-notes" className="block text-sm font-semibold text-slate-700">
+          {t.notes}{" "}
+          <span className="font-normal text-slate-400">({t.optional})</span>
+        </label>
+        <textarea
+          id="booking-notes"
+          rows={3}
+          maxLength={MAX_NOTES_LENGTH}
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+          placeholder={t.notesPh}
+          className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+        />
+        <div className="mt-1 flex items-start justify-between gap-3">
+          <p className="text-[11px] leading-snug text-slate-500">{t.notesHelp}</p>
+          <span className="shrink-0 text-[11px] tabular-nums text-slate-400">
+            {notes.length}/{MAX_NOTES_LENGTH}
+          </span>
+        </div>
+      </div>
 
       {isAdmin && (
         <div className="rounded-lg bg-red-50 p-4 border border-red-200">
