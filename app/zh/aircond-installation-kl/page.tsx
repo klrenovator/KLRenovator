@@ -315,10 +315,11 @@ export default function AircondInstallationKLZHPage() {
             <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
               <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> 额外收费（仅按需）</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺铜管: RM 17–27/尺</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺电线: RM 9/尺</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺铜管: RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺电线: RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC套管/暗管: RM 6–12/尺</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 重型支架升级: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 标准室外压缩机/支架: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 重型室外压缩机/支架: RM 70</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 新插座点位: RM 100</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 凿墙/暗管: RM 6/尺</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 高层/难进场: RM 50–150</li>

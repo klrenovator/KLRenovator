@@ -80,7 +80,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a pressure chemical wash cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% off 2–3 units, 10% off 4–8 units, 15% off 8+ units same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
       },
       {
         q: "How often should I get a chemical wash?",
@@ -107,7 +107,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga cuci kimia tekanan di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2–3 unit, 10% untuk 4–8 unit, 15% untuk 8+ unit lawatan sama.",
+        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
       },
       {
         q: "Berapa kerap saya perlu buat cuci kimia?",
@@ -131,7 +131,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的高压化学清洗费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：2-3台5%，4-8台10%，8台以上同次上门15%。",
+        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "化学清洗应该多久做一次？",
@@ -203,7 +203,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical overhaul cost in KL & Selangor?",
-        a: "Wall-mounted 1.0\u20131.5 HP: RM 220. Wall-mounted 2.0\u20132.5 HP: RM 280. Wall-mounted 3.0\u20133.5 HP: RM 350. Ceiling cassette 1.0\u20133.0 HP: RM 430. Ceiling cassette 3.5\u20135.0 HP: RM 500. Ceiling cassette overhauls take longer because the unit is integrated into the ceiling grid and requires more disassembly work. All prices confirmed before technician begins. Multi-unit discount applies: 5% off 2\u20133 units, 10% off 4\u20138 units.",
+        a: "Wall-mounted 1.0\u20131.5 HP: RM 220. Wall-mounted 2.0\u20132.5 HP: RM 280. Wall-mounted 3.0\u20133.5 HP: RM 350. Ceiling cassette 1.0\u20133.0 HP: RM 430. Ceiling cassette 3.5\u20135.0 HP: RM 500. Ceiling cassette overhauls take longer because the unit is integrated into the ceiling grid and requires more disassembly work. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units.",
       },
       {
         q: "When do I need a chemical overhaul vs a chemical wash?",
@@ -255,7 +255,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修费用是多少？",
-        a: "挂壁式1.0\u20131.5 HP：RM 220。挂壁式2.0\u20132.5 HP：RM 280。挂壁式3.0\u20133.5 HP：RM 350。天花板卡式1.0\u20133.0 HP：RM 430。天花板卡式3.5\u20135.0 HP：RM 500。卡式大修时间更长，因为机器与天花板网格集成需要更多拆卸工作。所有价格在技术员开始前确认。多台折扣：2-3台5%，4-8台10%。",
+        a: "挂壁式1.0\u20131.5 HP：RM 220。挂壁式2.0\u20132.5 HP：RM 280。挂壁式3.0\u20133.5 HP：RM 350。天花板卡式1.0\u20133.0 HP：RM 430。天花板卡式3.5\u20135.0 HP：RM 500。卡式大修时间更长，因为机器与天花板网格集成需要更多拆卸工作。所有价格在技术员开始前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount）。",
       },
       {
         q: "何时需要化学大修而非化学清洗？",
@@ -550,7 +550,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does aircond installation cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP installation starts from RM 199 (includes 7ft copper pipe, wiring, drainage, and bracket). 2.0 HP from RM 249, 2.5 HP from RM 279. Ceiling cassette from RM 290. Window unit from RM 199. Additional copper pipe above 7ft: RM 25/ft. These are the prices you pay — confirmed before we start.",
+        a: "Wall-mounted 1.0–1.5 HP installation starts from RM 199 (includes 7ft copper pipe, wiring, drainage, and bracket). 2.0 HP from RM 249, 2.5 HP from RM 279. Ceiling cassette from RM 290. Window unit from RM 199. Additional copper pipe above 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Electrical wire above 7ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). These are the prices you pay — confirmed before we start.",
       },
       {
         q: "How long does a professional installation take?",
@@ -562,7 +562,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "What exactly is included in the RM 199 installation?",
-        a: "The RM 199 standard wall-mounted package includes: (1) Site survey and wall assessment, (2) 7ft copper pipe correctly sized to your unit's HP with proper insulation, (3) Electrical wiring from isolator to indoor unit through dedicated conduit, (4) PVC drainage pipe with proper fall gradient, (5) Wall bracket with rubber vibration pads, (6) Vacuum pump evacuation (minimum 15 min), (7) Nitrogen pressure leak test, (8) Full commissioning — cooling, airflow, thermostat calibration, (9) Written job card and 1-month workmanship warranty. Extra copper pipe beyond 7ft: RM 25/ft.",
+        a: "The RM 199 standard wall-mounted package includes: (1) Site survey and wall assessment, (2) 7ft copper pipe correctly sized to your unit's HP with proper insulation, (3) Electrical wiring from isolator to indoor unit through dedicated conduit, (4) PVC drainage pipe with proper fall gradient, (5) Wall bracket with rubber vibration pads, (6) Vacuum pump evacuation (minimum 15 min), (7) Nitrogen pressure leak test, (8) Full commissioning — cooling, airflow, thermostat calibration, (9) Written job card and 1-month workmanship warranty. Extra copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra electrical wire beyond 7ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP).",
       },
       {
         q: "Can you install any aircond brand?",
@@ -581,7 +581,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga pemasangan aircond di KL & Selangor?",
-        a: "Pemasangan dinding 1.0–1.5 HP bermula dari RM 199 (termasuk 7 kaki paip kuprum, pendawaian, paip longkang, dan braket). 2.0 HP dari RM 249, 2.5 HP dari RM 279. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Paip kuprum tambahan melebihi 7 kaki: RM 25/kaki. Ini harga yang anda bayar — disahkan sebelum kami mula.",
+        a: "Pemasangan dinding 1.0–1.5 HP bermula dari RM 199 (termasuk 7 kaki paip kuprum, pendawaian, paip longkang, dan braket). 2.0 HP dari RM 249, 2.5 HP dari RM 279. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP). Ini harga yang anda bayar — disahkan sebelum kami mula.",
       },
       {
         q: "Berapa lama masa pemasangan profesional?",
@@ -593,7 +593,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Apa sebenarnya yang termasuk dalam pemasangan RM 199?",
-        a: "Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak dan penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul mengikut HP unit anda dengan penebat yang betul, (3) Pendawaian elektrik dari pengasing ke unit dalaman melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan jatuh yang betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum (minimum 15 min), (7) Ujian kebocoran tekanan nitrogen, (8) Pentauliahan penuh — penyejukan, aliran udara, penentukuran termostat, (9) Kad kerja bertulis dan waranti mutu kerja 1 bulan. Paip kuprum tambahan melebihi 7 kaki: RM 25/kaki.",
+        a: "Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak dan penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul mengikut HP unit anda dengan penebat yang betul, (3) Pendawaian elektrik dari pengasing ke unit dalaman melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan jatuh yang betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum (minimum 15 min), (7) Ujian kebocoran tekanan nitrogen, (8) Pentauliahan penuh — penyejukan, aliran udara, penentukuran termostat, (9) Kad kerja bertulis dan waranti mutu kerja 1 bulan. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).",
       },
       {
         q: "Bolehkah anda memasang semua jenama aircond?",
@@ -608,7 +608,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪安装冷气费用是多少？",
-        a: "挂壁式1.0–1.5 HP安装从RM 199起（含7尺铜管、电线、排水管和支架）。2.0 HP从RM 249起，2.5 HP从RM 279起。天花板卡式机从RM 290起。窗式机从RM 199起。超出7尺的额外铜管：RM 25/尺。这是您支付的价格——开工前确认。",
+        a: "挂壁式1.0–1.5 HP安装从RM 199起（含7尺铜管、电线、排水管和支架）。2.0 HP从RM 249起，2.5 HP从RM 279起。天花板卡式机从RM 290起。窗式机从RM 199起。超出7尺的额外铜管：RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP）。超出7尺的额外电线：RM 9/尺（1.0–1.5 HP），RM 13/尺（2.0–2.5 HP），RM 17/尺（3.0–4.0 HP）。这是您支付的价格——开工前确认。",
       },
       {
         q: "专业安装需要多长时间？",
@@ -620,7 +620,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "RM 199安装套餐具体包含什么？",
-        a: "RM 199标准挂壁式套餐包括：（1）现场勘查和墙体评估，（2）7尺铜管按您机器的HP正确配管并带正确隔热，（3）从隔离开关到室内机通过专用线管的电线，（4）带正确下坡度的PVC排水管，（5）带橡胶减震垫的墙壁支架，（6）真空泵抽真空（最少15分钟），（7）氮气压力泄漏测试，（8）全面调试——制冷、风量、温控器校准，（9）书面工作卡和1个月工艺保修。超出7尺的额外铜管：RM 25/尺。",
+        a: "RM 199标准挂壁式套餐包括：（1）现场勘查和墙体评估，（2）7尺铜管按您机器的HP正确配管并带正确隔热，（3）从隔离开关到室内机通过专用线管的电线，（4）带正确下坡度的PVC排水管，（5）带橡胶减震垫的墙壁支架，（6）真空泵抽真空（最少15分钟），（7）氮气压力泄漏测试，（8）全面调试——制冷、风量、温控器校准，（9）书面工作卡和1个月工艺保修。超出7尺的额外铜管：RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP）。超出7尺的额外电线：RM 9/尺（1.0–1.5 HP），RM 13/尺（2.0–2.5 HP），RM 17/尺（3.0–4.0 HP）。",
       },
       {
         q: "可以安装所有冷气品牌吗？",
@@ -680,7 +680,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does basic aircond servicing cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 120. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% off for 2–3 units, 10% off for 4–8 units, 15% off for 8+ units on the same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 120. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
       },
       {
         q: "How often should I service my aircond?",
@@ -707,7 +707,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis asas aircond di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 120. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: 5% diskaun untuk 2–3 unit, 10% untuk 4–8 unit, 15% untuk 8+ unit pada lawatan yang sama.",
+        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 120. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
       },
       {
         q: "Berapa kerap saya perlu servis aircond?",
@@ -731,7 +731,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪基本冷气保养费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 120。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：2-3台享5%折扣，4-8台享10%折扣，8台以上同次上门享15%折扣。",
+        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 120。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "冷气应该多久保养一次？",
@@ -808,7 +808,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Can you service multiple ceiling cassette units across our entire premises in one visit?",
-        a: "Yes \u2014 this is what we do regularly for commercial clients. We can schedule 2\u20133 technicians on the same day for larger sites (restaurants with 4\u20136 units, offices with 8\u201312 units, retail floors). All units serviced, drain paths tested, and cooling verified before we leave. Volume discounts: 5% off for 2\u20133 units, 10% off for 4\u20138 units, 15% off for 8+ units on the same visit. Custom annual maintenance contracts (AMC) also available for quarterly or biannual scheduled servicing \u2014 WhatsApp us for a site-specific proposal.",
+        a: "Yes \u2014 this is what we do regularly for commercial clients. We can schedule 2\u20133 technicians on the same day for larger sites (restaurants with 4\u20136 units, offices with 8\u201312 units, retail floors). All units serviced, drain paths tested, and cooling verified before we leave. Volume discounts: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units on the same visit. Custom annual maintenance contracts (AMC) also available for quarterly or biannual scheduled servicing \u2014 WhatsApp us for a site-specific proposal.",
       },
       {
         q: "Can you service our ceiling cassette units after business hours?",
@@ -835,7 +835,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Bolehkah anda servis berbilang unit ceiling cassette di seluruh premis kami dalam satu lawatan?",
-        a: "Ya \u2014 ini yang kami lakukan secara berkala untuk pelanggan komersial. Kami boleh menjadualkan 2\u20133 juruteknik pada hari yang sama untuk tapak yang lebih besar. Semua unit diservis, laluan longkang diuji, dan penyejukan disahkan sebelum kami bertolak. Diskaun volum: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit, 15% untuk 8+ unit pada lawatan yang sama. Kontrak penyelenggaraan tahunan (AMC) juga tersedia.",
+        a: "Ya \u2014 ini yang kami lakukan secara berkala untuk pelanggan komersial. Kami boleh menjadualkan 2\u20133 juruteknik pada hari yang sama untuk tapak yang lebih besar. Semua unit diservis, laluan longkang diuji, dan penyejukan disahkan sebelum kami bertolak. Diskaun volum: Diskaun Tempahan Segera 5% untuk 4\u201310 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama. Kontrak penyelenggaraan tahunan (AMC) juga tersedia.",
       },
       {
         q: "Bolehkah anda servis unit ceiling cassette kami selepas waktu perniagaan?",
@@ -916,7 +916,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does aircond dismantle and relocation cost in KL & Selangor?",
-        a: "Dismantle only (without reinstall): RM 90. Full dismantle + reinstall same building/nearby: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Full dismantle + reinstall different location: RM 350 (1.0\u20131.5 HP). All full-relocation packages include: refrigerant pump-down, safe dismantle, transport, new 7ft copper pipe, new wiring, new drainage, new wall bracket, vacuum commissioning, and full test. Additional copper pipe beyond 7ft: RM 25/ft. If the new location requires roof-mount or high-rise external condenser mounting, additional bracket fees may apply \u2014 confirmed before work.",
+        a: "Dismantle only (without reinstall): RM 90. Full dismantle + reinstall same building/nearby: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Full dismantle + reinstall different location: RM 350 (1.0\u20131.5 HP). All full-relocation packages include: refrigerant pump-down, safe dismantle, transport, new 7ft copper pipe, new wiring, new drainage, new wall bracket, vacuum commissioning, and full test. Additional copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Additional wire beyond 7ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). If the new location requires roof-mount or high-rise external condenser mounting, additional bracket fees may apply \u2014 confirmed before work.",
       },
       {
         q: "Will my aircond refrigerant gas be lost during the relocation?",
@@ -928,7 +928,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Can I reuse my existing copper pipes and bracket at the new location?",
-        a: "Copper pipes: No. They are embedded in the wall, cut during removal, and cannot be extracted intact. New copper pipe (7ft included in the relocation package, RM 25/ft beyond) is always used at the new location. Wall bracket: No. The bracket stays on the old wall (it is screwed/bolted in). A new bracket is included in the relocation package and mounted at the new location. The only components that move with you are the indoor unit, outdoor condenser, and remote control. Everything else \u2014 pipes, wiring, drainage, bracket \u2014 is new at the new site.",
+        a: "Copper pipes: No. They are embedded in the wall, cut during removal, and cannot be extracted intact. New copper pipe (7ft included in the relocation package, RM 17/ft for 1.0–1.5 HP beyond) is always used at the new location. Wall bracket: No. The bracket stays on the old wall (it is screwed/bolted in). A new bracket is included in the relocation package and mounted at the new location. The only components that move with you are the indoor unit, outdoor condenser, and remote control. Everything else \u2014 pipes, wiring, drainage, bracket \u2014 is new at the new site.",
       },
       {
         q: "My new condo has different wall type or ceiling height \u2014 can you still install?",
@@ -943,7 +943,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga tanggal dan pindah aircond di KL & Selangor?",
-        a: "Tanggal sahaja (tanpa pasang semula): RM 90. Tanggal + pasang semula bangunan sama/berdekatan: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Tanggal + pasang semula lokasi berbeza: RM 350 (1.0\u20131.5 HP). Semua pakej penuh termasuk: pam-turun bahan pendingin, tanggal selamat, pengangkutan, 7 kaki paip kuprum baharu, pendawaian baharu, longkang baharu, braket dinding baharu, pentauliahan vakum, dan ujian penuh. Paip kuprum tambahan melebihi 7 kaki: RM 25/kaki.",
+        a: "Tanggal sahaja (tanpa pasang semula): RM 90. Tanggal + pasang semula bangunan sama/berdekatan: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Tanggal + pasang semula lokasi berbeza: RM 350 (1.0\u20131.5 HP). Semua pakej penuh termasuk: pam-turun bahan pendingin, tanggal selamat, pengangkutan, 7 kaki paip kuprum baharu, pendawaian baharu, longkang baharu, braket dinding baharu, pentauliahan vakum, dan ujian penuh. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).",
       },
       {
         q: "Adakah gas aircond saya akan hilang semasa pemindahan?",
@@ -955,7 +955,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Bolehkah saya menggunakan semula paip kuprum dan braket lama di lokasi baharu?",
-        a: "Paip kuprum: Tidak. Ia tertanam di dinding, dipotong semasa penanggalan, dan tidak boleh dikeluarkan secara utuh. Paip kuprum baharu (7 kaki termasuk dalam pakej, RM 25/kaki tambahan) sentiasa digunakan di lokasi baharu. Braket dinding: Tidak. Braket kekal di dinding lama. Braket baharu disertakan dalam pakej pemindahan. Satu-satunya komponen yang berpindah dengan anda adalah unit dalaman, kondenser luar, dan alat kawalan jauh.",
+        a: "Paip kuprum: Tidak. Ia tertanam di dinding, dipotong semasa penanggalan, dan tidak boleh dikeluarkan secara utuh. Paip kuprum baharu (7 kaki termasuk dalam pakej, RM 17/kaki (1.0–1.5 HP) tambahan) sentiasa digunakan di lokasi baharu. Braket dinding: Tidak. Braket kekal di dinding lama. Braket baharu disertakan dalam pakej pemindahan. Satu-satunya komponen yang berpindah dengan anda adalah unit dalaman, kondenser luar, dan alat kawalan jauh.",
       },
       {
         q: "Adakah berbaloi memindahkan unit lama, atau beli yang baharu?",
@@ -967,7 +967,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪冷气拆机和搬迁费用是多少？",
-        a: "仅拆机（不重装）：RM 90。拆机+同楼/就近重装：RM 250（1.0-1.5 HP），RM 290（2.0-2.5 HP）。拆机+不同地点重装：RM 350（1.0-1.5 HP）。所有完整搬迁套餐包括：制冷剂泵送回收、安全拆机、运输、7尺新铜管、新电线、新排水管、新墙支架、真空调试和全面测试。超出7尺的额外铜管：RM 25/尺。",
+        a: "仅拆机（不重装）：RM 90。拆机+同楼/就近重装：RM 250（1.0-1.5 HP），RM 290（2.0-2.5 HP）。拆机+不同地点重装：RM 350（1.0-1.5 HP）。所有完整搬迁套餐包括：制冷剂泵送回收、安全拆机、运输、7尺新铜管、新电线、新排水管、新墙支架、真空调试和全面测试。超出7尺的额外铜管：RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP）。超出7尺的额外电线：RM 9/尺（1.0–1.5 HP），RM 13/尺（2.0–2.5 HP），RM 17/尺（3.0–4.0 HP）。",
       },
       {
         q: "搬迁过程中冷媒气体会有损失吗？",
@@ -979,7 +979,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "可以在新地点重复使用旧的铜管和支架吗？",
-        a: "铜管：不能。它们嵌入在墙壁中，拆机时被切断，无法完整取出。新铜管（搬迁套餐含7尺，超出RM 25/尺）始终在新地点使用。墙支架：不能。支架留在旧墙上。新支架包含在搬迁套餐中。唯一随您移动的部件是室内机、室外冷凝器和遥控器。其他一切\u2014\u2014管道、电线、排水管、支架\u2014\u2014在新地点都是全新的。",
+        a: "铜管：不能。它们嵌入在墙壁中，拆机时被切断，无法完整取出。新铜管（搬迁套餐含7尺，超出RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP））始终在新地点使用。墙支架：不能。支架留在旧墙上。新支架包含在搬迁套餐中。唯一随您移动的部件是室内机、室外冷凝器和遥控器。其他一切\u2014\u2014管道、电线、排水管、支架\u2014\u2014在新地点都是全新的。",
       },
       {
         q: "搬迁旧机器值得吗，还是应该买新的？",

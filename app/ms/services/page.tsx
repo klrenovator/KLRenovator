@@ -149,9 +149,8 @@ const CONTRACT_ROWS = [
 ];
 
 const VOLUME_DISCOUNTS = [
-  { units: "2 – 3 unit", off: "Diskaun tempahan segera 5%" },
-  { units: "4 – 8 unit", off: "Diskaun tempahan segera 10%" },
-  { units: "8+ unit", off: "Diskaun tempahan segera 15%" },
+  { units: "4 – 10 unit", off: "Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)" },
+  { units: "10+ unit", off: "Diskaun Tempahan Segera 10% (10% OFF Instant Booking Discount)" },
 ];
 
 export default function ServicesPageMS() {

@@ -89,7 +89,7 @@ export const allPosts: BlogPost[] = [
       <p>We are headquartered in Selayang — fastest response time in the area. <a href="/areas/batu-caves">Batu Caves service page</a> | <a href="/areas/selayang">Selayang service page</a> | <a href="/services/chemical-wash">Chemical wash pricing</a></p>
 
       <h2>Volume Discounts for Multiple Units</h2>
-      <p>Many Batu Caves and Selayang households have 2–4 aircond units. Booking all units in one visit saves travel cost and qualifies for volume discounts: 5% off for 2–3 units, 10% off for 4–8 units. A household with 3 wall-mounted units for chemical wash would pay RM 120 × 3 = RM 360, less 5% = <strong>RM 342</strong> total. WhatsApp us with the number of units for a confirmed quote before booking.</p>
+      <p>Many Batu Caves and Selayang households have 2–4 aircond units. Booking all units in one visit saves travel cost and qualifies for volume discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. A household with 3 wall-mounted units for chemical wash would pay RM 120 × 3 = RM 360, less 5% = <strong>RM 342</strong> total. WhatsApp us with the number of units for a confirmed quote before booking.</p>
     `,
     contentMS: `
       <h2>Servis Aircond di Batu Caves & Selayang</h2>
@@ -130,7 +130,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator beribu pejabat di Selayang, bermakna juruteknik yang dihantar ke Batu Caves dan Selayang tidak perlu memandu jauh dari bahagian lain KL — masa tindak balas lebih pantas dan slot hari sama lebih kerap tersedia berbanding syarikat yang beribu pejabat di bahagian lain Lembah Klang. Pasukan kami telah menservis beribu-ribu unit khusus di koridor ini, memberikan kami kebiasaan langsung dengan jenis bangunan tempatan, gaya pemasangan, dan masalah khusus yang timbul daripada persekitaran tempatan.</p>
 
       <h2>Diskaun Pukal untuk Banyak Unit</h2>
-      <p>Ramai isi rumah Batu Caves dan Selayang mempunyai 2–4 unit aircond. Menempah semua unit dalam satu lawatan menjimatkan kos perjalanan dan layak untuk diskaun pukal: 5% diskaun untuk 2–3 unit, 10% diskaun untuk 4–8 unit. Isi rumah dengan 3 unit dinding untuk cuci kimia akan membayar RM 120 × 3 = RM 360, tolak 5% = <strong>RM 342</strong> jumlah keseluruhan. WhatsApp kami dengan bilangan unit untuk sebut harga yang disahkan sebelum menempah.</p>
+      <p>Ramai isi rumah Batu Caves dan Selayang mempunyai 2–4 unit aircond. Menempah semua unit dalam satu lawatan menjimatkan kos perjalanan dan layak untuk diskaun pukal: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Isi rumah dengan 3 unit dinding untuk cuci kimia akan membayar RM 120 × 3 = RM 360. WhatsApp kami dengan bilangan unit untuk sebut harga yang disahkan sebelum menempah.</p>
     `,
     contentZH: `<h2>黑风洞及双溪毛糯冷气服务2026 — 完整指南</h2>
       <p>住在黑风洞或双溪毛糯？<a href="/near-me">KL Renovator的专业冷气技师</a>为您提供全面的冷气服务——从基本保养到化学清洗、维修和安装。</p>
@@ -221,9 +221,8 @@ export const allPosts: BlogPost[] = [
 
       <h2>Volume Discounts Available</h2>
       <ul>
-        <li>2–3 units: 5% off</li>
-        <li>4–8 units: 10% off</li>
-        <li>8+ units: 15% off</li>
+        <li>4–10 units: 5% OFF Instant Booking Discount</li>
+        <li>10+ units: 10% OFF Instant Booking Discount</li>
       </ul>
       <h2>How Long Does a Chemical Wash Take?</h2>
       <p>A single wall-mounted unit chemical wash takes approximately 45–90 minutes depending on the level of soiling. A heavily neglected unit that has not been serviced for 2 or more years may take up to 2 hours. Ceiling cassette units typically take 90–120 minutes due to their larger coil surface area and the additional work required to access the unit through the ceiling panel.</p>
@@ -237,7 +236,7 @@ export const allPosts: BlogPost[] = [
       <p>Every chemical wash by KL Renovator comes with a 1-month workmanship warranty. If the drain pipe blocks again within 30 days of service, we return to clear it at no additional charge. This warranty covers workmanship — it does not cover pre-existing mechanical faults that were present before the service. All warranty terms are communicated clearly before work begins. For ongoing protection, an annual maintenance plan is available from RM 499 per year covering 2–4 residential units.</p>
 
       <h2>Warranty and After-Service Guarantee</h2>
-      <p>Every chemical wash by KL Renovator includes a 1-month workmanship warranty. If the drain pipe blocks again within 30 days, we return at no charge. Volume discounts apply when booking multiple units in one visit — 5% off for 2–3 units, 10% off for 4–8 units. For example, 3 wall-mounted 1.5 HP units at RM 120 each becomes RM 342 total with the 5% multi-unit discount. Payment is accepted after the job is completed to your satisfaction — cash, online transfer, or DuitNow QR. No upfront payment required for residential bookings.</p>
+      <p>Every chemical wash by KL Renovator includes a 1-month workmanship warranty. If the drain pipe blocks again within 30 days, we return at no charge. Volume discounts apply when booking multiple units in one visit — 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. For example, 3 wall-mounted 1.5 HP units at RM 120 each becomes RM 360 total. Payment is accepted after the job is completed to your satisfaction — cash, online transfer, or DuitNow QR. No upfront payment required for residential bookings.</p>
     `,
     contentMS: `
       <h2>Harga Cuci Kimia di Malaysia 2026</h2>
@@ -273,9 +272,8 @@ export const allPosts: BlogPost[] = [
 
       <h2>Diskaun Kuantiti Tersedia</h2>
       <ul>
-        <li>2–3 unit: 5% diskaun</li>
-        <li>4–8 unit: 10% diskaun</li>
-        <li>8+ unit: 15% diskaun</li>
+        <li>4–10 unit: Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)</li>
+        <li>10+ unit: Diskaun Tempahan Segera 10% (10% OFF Instant Booking Discount)</li>
       </ul>
       <h2>Berapa Lama Cuci Kimia Mengambil Masa?</h2>
       <p>Cuci kimia satu unit dinding mengambil masa lebih kurang 45–90 minit bergantung pada tahap kekotoran. Unit yang sangat diabaikan selama 2 tahun atau lebih mungkin mengambil masa sehingga 2 jam. Unit ceiling cassette biasanya mengambil masa 90–120 minit kerana kawasan permukaan gegelung yang lebih besar dan kerja tambahan yang diperlukan untuk mengakses unit melalui panel siling.</p>
@@ -289,7 +287,7 @@ export const allPosts: BlogPost[] = [
       <p>Setiap cuci kimia oleh KL Renovator disertakan dengan waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari selepas servis, kami akan kembali membersihkannya tanpa caj tambahan. Waranti ini meliputi kerja — ia tidak meliputi kerosakan mekanikal sedia ada yang wujud sebelum servis. Semua terma waranti disampaikan dengan jelas sebelum kerja bermula. Untuk perlindungan berterusan, pelan penyelenggaraan tahunan tersedia dari RM 499 setahun meliputi 2–4 unit kediaman.</p>
 
       <h2>Waranti dan Jaminan Selepas Servis</h2>
-      <p>Setiap cuci kimia oleh KL Renovator termasuk waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari, kami kembali tanpa caj. Diskaun kuantiti terpakai apabila menempah banyak unit dalam satu lawatan — 5% diskaun untuk 2–3 unit, 10% diskaun untuk 4–8 unit. Sebagai contoh, 3 unit dinding 1.5 HP pada RM 120 setiap satu menjadi RM 342 jumlah keseluruhan dengan diskaun multi-unit 5%. Pembayaran diterima selepas kerja selesai dengan memuaskan anda — tunai, pemindahan dalam talian, atau DuitNow QR. Tiada pembayaran pendahuluan diperlukan untuk tempahan kediaman.</p>
+      <p>Setiap cuci kimia oleh KL Renovator termasuk waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari, kami kembali tanpa caj. Diskaun kuantiti terpakai apabila menempah banyak unit dalam satu lawatan — Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Sebagai contoh, 3 unit dinding 1.5 HP pada RM 120 setiap satu menjadi RM 360 jumlah keseluruhan. Pembayaran diterima selepas kerja selesai dengan memuaskan anda — tunai, pemindahan dalam talian, atau DuitNow QR. Tiada pembayaran pendahuluan diperlukan untuk tempahan kediaman.</p>
     `,
     contentZH: `<h2>2026年马来西亚冷气化学清洗价格 — 完整明细</h2>
       <p>化学清洗是冷气深度保养的核心服务。<a href="/near-me">KL Renovator</a>为您提供透明的价格明细，让您了解每一分钱花在哪里。</p>
@@ -1285,7 +1283,7 @@ export const allPosts: BlogPost[] = [
         <li>Installation Wall-Mounted 1.0–1.5 HP: <strong>RM 199</strong></li>
       </ul>
       <h2>Volume Discounts and Additional Information</h2>
-      <p>Booking 2 or more units in the same visit qualifies for volume discounts: 2–3 units saves 5%, 4–8 units saves 10%, and 8 or more units saves 15%. All prices listed here are for the KL and Selangor service area. Prices are confirmed in writing via WhatsApp before any technician visit. There are never any charges added after the job without your explicit approval first.</p>
+      <p>Booking 4 or more units in the same visit qualifies for volume discounts: 4–10 units saves 5% OFF Instant Booking Discount, 10+ units saves 10% OFF Instant Booking Discount. All prices listed here are for the KL and Selangor service area. Prices are confirmed in writing via WhatsApp before any technician visit. There are never any charges added after the job without your explicit approval first.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong>. See also: <a href="/services">All services with full detail</a></p>
 
       <h2>What Determines the Final Price</h2>
@@ -1329,7 +1327,7 @@ export const allPosts: BlogPost[] = [
         <li>Pemasangan Dinding 1.0–1.5 HP: <strong>RM 199</strong></li>
       </ul>
       <h2>Diskaun Kuantiti dan Maklumat Tambahan</h2>
-      <p>Menempah 2 unit atau lebih dalam lawatan yang sama layak mendapat diskaun kuantiti: 2–3 unit jimat 5%, 4–8 unit jimat 10%, dan 8 unit atau lebih jimat 15%. Semua harga disahkan secara bertulis melalui WhatsApp sebelum sebarang lawatan juruteknik. Tiada caj ditambah selepas kerja tanpa kelulusan jelas anda terlebih dahulu.</p>
+      <p>Menempah 4 unit atau lebih dalam lawatan yang sama layak mendapat diskaun kuantiti: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Semua harga disahkan secara bertulis melalui WhatsApp sebelum sebarang lawatan juruteknik. Tiada caj ditambah selepas kerja tanpa kelulusan jelas anda terlebih dahulu.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk membuat tempahan. Lihat juga: <a href="/services">Semua perkhidmatan dengan butiran penuh</a></p>
 
       <h2>Apa yang Menentukan Harga Akhir</h2>
@@ -3218,9 +3216,9 @@ export const allPosts: BlogPost[] = [
     title: "Aircond Installation Cost Malaysia 2026 — Full Price Breakdown",
     titleMS: "Kos Pemasangan Aircond di Malaysia 2026 — Panduan Harga Penuh (KL & Selangor)",
     titleZH: "2026年马来西亚冷气安装费用 — 完整价格指南（吉隆坡与雪兰莪）",
-    excerpt: "Full 2026 aircond installation cost guide for Malaysia. RM 199 base install (1.0-1.5 HP wall-mounted) plus transparent add-ons, RM 25/ft extra copper, and what condo vs landed actually costs. Verified KL Renovator pricing.",
-    excerptMS: "Panduan lengkap kos pemasangan aircond 2026 di Malaysia. Pasang asas RM 199 (1.0-1.5 HP dinding) dengan add-on telus, RM 25/kaki paip tembaga tambahan, dan perbezaan harga kondo vs teres. Harga KL Renovator disahkan.",
-    excerptZH: "完整2026年马来西亚冷气安装费用指南。基础安装RM 199（1.0-1.5 HP壁挂式），透明附加费，额外铜管RM 25/尺，以及公寓与有地房屋的实际费用对比。KL Renovator经核实价格。",
+    excerpt: "Full 2026 aircond installation cost guide for Malaysia. RM 199 base install (1.0-1.5 HP wall-mounted) plus transparent add-ons, HP-wise copper (RM 17–27/ft) and wire (RM 9–17/ft) pricing, and what condo vs landed actually costs. Verified KL Renovator pricing.",
+    excerptMS: "Panduan lengkap kos pemasangan aircond 2026 di Malaysia. Pasang asas RM 199 (1.0-1.5 HP dinding) dengan add-on telus, harga paip tembaga mengikut HP (RM 17–27/kaki) dan wayar (RM 9–17/kaki), dan perbezaan harga kondo vs teres. Harga KL Renovator disahkan.",
+    excerptZH: "完整2026年马来西亚冷气安装费用指南。基础安装RM 199（1.0-1.5 HP壁挂式），透明附加费，按HP差异的铜管（RM 17–27/尺）和电线（RM 9–17/尺）定价，以及公寓与有地房屋的实际费用对比。KL Renovator经核实价格。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -3261,16 +3259,17 @@ export const allPosts: BlogPost[] = [
       <p>The RM 199 base installation covers labour plus up to <strong>7ft copper pipe, wiring, drain pipe and standard bracket</strong> for a 1.0-1.5 HP wall-mounted unit. This is the entry-level package published on klrenovator.com. Anything outside this scope is quoted as a transparent add-on before work starts.</p>
       <h2>Common add-on costs</h2>
       <table><thead><tr><th>Add-on</th><th>Price</th><th>Notes</th></tr></thead><tbody>
-        <tr><td>Extra copper pipe beyond 7ft</td><td>RM 25/ft</td><td>Most landed homes need 15-20ft total</td></tr>
+        <tr><td>Extra copper pipe beyond 7ft</td><td>RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</td><td>HP-wise rate — most landed homes need 15-20ft total</td></tr>
+        <tr><td>Extra electrical wire beyond 7ft</td><td>RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)</td><td>HP-wise rate</td></tr>
         <tr><td>Casing / trunking</td><td>RM 8-15/ft</td><td>For visible pipe runs</td></tr>
         <tr><td>Drain pump (ceiling cassette)</td><td>RM 350-550</td><td>When gravity drainage is not possible</td></tr>
         <tr><td>Power point / electrical work</td><td>Quoted on site</td><td>15A dedicated circuit recommended</td></tr>
         <tr><td>Condo management booking fee</td><td>RM 50-100</td><td>Service lift + time-window</td></tr>
       </tbody></table>
       <h2>Condo vs landed — how the price differs</h2>
-      <p><strong>Condominiums</strong> typically fit within the 7ft copper limit because the outdoor unit sits on the AC ledge directly behind the indoor unit. Add RM 50-100 for management booking. <strong>Landed houses (terrace, semi-D, bungalow)</strong> usually need 15-20ft of copper pipe to run from indoor to outdoor, which adds RM 200-325 to the base price at RM 25/ft.</p>
+      <p><strong>Condominiums</strong> typically fit within the 7ft copper limit because the outdoor unit sits on the AC ledge directly behind the indoor unit. Add RM 50-100 for management booking. <strong>Landed houses (terrace, semi-D, bungalow)</strong> usually need 15-20ft of copper pipe to run from indoor to outdoor, which adds RM 200-540 to the base price using HP-wise rates (RM 17/ft for 1.0–1.5 HP, RM 23/ft for 2.0–2.5 HP, RM 27/ft for 3.0–3.5 HP).</p>
       <h2>What about multi-unit discounts?</h2>
-      <p>Installing multiple units in the same visit attracts a discount: 5% off for 2-3 units, 10% off for 4-8 units, 15% off for 8+ units. Many landed homeowners in Puchong, Subang and Shah Alam book 3-5 unit installations together.</p>
+      <p>Installing multiple units in the same visit attracts a discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. Many landed homeowners in Puchong, Subang and Shah Alam book 3-5 unit installations together.</p>
       <h2>What is NOT included in the base price?</h2>
       <p>Unit cost, dismantling of old unit (RM 90), ceiling cassette ceiling-grid work, plastering, painting, electrical rewiring of the home, and any concrete cutting. KL Renovator quotes these separately after a site survey.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
@@ -3328,16 +3327,17 @@ export const allPosts: BlogPost[] = [
       <p>Harga asas RM 199 merangkumi upah kerja sehingga <strong>7ft paip tembaga, wiring, paip saliran dan bracket standard</strong> untuk unit dinding 1.0-1.5 HP. Ini adalah pakej asas yang diterbitkan di klrenovator.com. Apa-apa di luar skop ini akan disebut harga sebagai add-on telus sebelum kerja bermula.</p>
       <h2>Kos add-on biasa</h2>
       <table><thead><tr><th>Add-on</th><th>Harga</th><th>Nota</th></tr></thead><tbody>
-        <tr><td>Paip tembaga tambahan melebihi 7ft</td><td>RM 25/kaki</td><td>Kebanyakan rumah teres perlukan 15-20ft jumlah</td></tr>
+        <tr><td>Paip tembaga tambahan melebihi 7ft</td><td>RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</td><td>Kadar mengikut HP — kebanyakan rumah teres perlukan 15-20ft jumlah</td></tr>
+        <tr><td>Wayar elektrik tambahan melebihi 7ft</td><td>RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP)</td><td>Kadar mengikut HP</td></tr>
         <tr><td>Casing / trunking</td><td>RM 8-15/kaki</td><td>Untuk laluan paip yang kelihatan</td></tr>
         <tr><td>Drain pump (ceiling cassette)</td><td>RM 350-550</td><td>Apabila saliran graviti tidak boleh</td></tr>
         <tr><td>Power point / kerja elektrik</td><td>Sebut harga di tapak</td><td>Litar dedicated 15A disyorkan</td></tr>
         <tr><td>Yuran tempahan pengurusan kondo</td><td>RM 50-100</td><td>Lif perkhidmatan + slot masa</td></tr>
       </tbody></table>
       <h2>Kondo vs rumah teres — perbezaan harga</h2>
-      <p><strong>Kondominium</strong> biasanya muat dalam had 7ft paip tembaga kerana unit luar berada di AC ledge tepat di belakang unit dalam. Tambah RM 50-100 untuk tempahan pengurusan. <strong>Rumah teres (teres, semi-D, banglo)</strong> biasanya perlukan 15-20ft paip tembaga untuk jalankan dari dalam ke luar, yang menambah RM 200-325 kepada harga asas pada RM 25/kaki.</p>
+      <p><strong>Kondominium</strong> biasanya muat dalam had 7ft paip tembaga kerana unit luar berada di AC ledge tepat di belakang unit dalam. Tambah RM 50-100 untuk tempahan pengurusan. <strong>Rumah teres (teres, semi-D, banglo)</strong> biasanya perlukan 15-20ft paip tembaga untuk jalankan dari dalam ke luar, yang menambah RM 200-540 kepada harga asas menggunakan kadar mengikut HP (RM 17/kaki untuk 1.0–1.5 HP, RM 23/kaki untuk 2.0–2.5 HP, RM 27/kaki untuk 3.0–3.5 HP).</p>
       <h2>Bagaimana dengan diskaun multi-unit?</h2>
-      <p>Pemasangan beberapa unit dalam lawatan sama menarik diskaun: 5% off untuk 2-3 unit, 10% off untuk 4-8 unit, 15% off untuk 8+ unit. Banyak pemilik rumah teres di Puchong, Subang dan Shah Alam tempah 3-5 unit pemasangan bersama.</p>
+      <p>Pemasangan beberapa unit dalam lawatan sama menarik diskaun: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Banyak pemilik rumah teres di Puchong, Subang dan Shah Alam tempah 3-5 unit pemasangan bersama.</p>
       <h2>Apa TIDAK termasuk dalam harga asas?</h2>
       <p>Kos unit, pembongkaran unit lama (RM 90), kerja grid siling ceiling cassette, plaster, cat, pendawaian semula elektrik rumah, dan sebarang pemotongan konkrit. KL Renovator memberi sebut harga berasingan selepas tinjauan tapak.</p>
       <h2>Liputan perkhidmatan di KL &amp; Selangor</h2>
@@ -3408,9 +3408,9 @@ export const allPosts: BlogPost[] = [
     title: "Why Is Aircond Installation So Expensive in Malaysia? 7 Real Reasons",
     titleMS: "Mengapa Pemasangan Aircond Mahal di Malaysia? 7 Sebab Sebenar (2026)",
     titleZH: "为什么马来西亚冷气安装这么贵？7个真实原因（2026）",
-    excerpt: "Aircond installation in Malaysia costs more than most people expect. Here are 7 real reasons: certified technician shortage, copper pipe price hike, RM 25/ft extra, insurance, tools, condo compliance and warranty. KL Renovator transparent breakdown.",
-    excerptMS: "Pemasangan aircond di Malaysia lebih mahal daripada jangkaan. Berikut 7 sebab sebenar: kekurangan juruteknik bertauliah, kenaikan harga paip tembaga, RM 25/kaki tambahan, insurans, alat, pematuhan kondo dan waranti. Pecahan telus KL Renovator.",
-    excerptZH: "马来西亚冷气安装比大多数人预期的要贵。以下是7个真实原因：认证技师短缺、铜管价格上涨、额外RM 25/尺、保险、工具、公寓合规和保修。KL Renovator透明细分。",
+    excerpt: "Aircond installation in Malaysia costs more than most people expect. Here are 7 real reasons: certified technician shortage, copper pipe price hike, HP-wise extra fees (RM 17–27/ft copper, RM 9–17/ft wire), insurance, tools, condo compliance and warranty. KL Renovator transparent breakdown.",
+    excerptMS: "Pemasangan aircond di Malaysia lebih mahal daripada jangkaan. Berikut 7 sebab sebenar: kekurangan juruteknik bertauliah, kenaikan harga paip tembaga, caj tambahan mengikut HP (RM 17–27/kaki paip, RM 9–17/kaki wayar), insurans, alat, pematuhan kondo dan waranti. Pecahan telus KL Renovator.",
+    excerptZH: "马来西亚冷气安装比大多数人预期的要贵。以下是7个真实原因：认证技师短缺、铜管价格上涨、按HP差异的额外费用（铜管RM 17–27/尺，电线RM 9–17/尺）、保险、工具、公寓合规和保修。KL Renovator透明细分。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -3428,7 +3428,7 @@ export const allPosts: BlogPost[] = [
       <h2>Quick Answer</h2>
       <p>A standard wall-mounted aircond installation in Malaysia costs <strong>RM 199</strong> (1.0-1.5 HP), <strong>RM 249</strong> (2.0 HP), <strong>RM 279</strong> (2.5 HP), up to <strong>RM 449</strong> (5.0 HP) for wall-mounted, and <strong>RM 290-RM 400</strong> for ceiling cassette in 2026.</p>
       <h2>1. Copper Pipe — The Hidden Cost That Doubled</h2>
-      <p>This is the #1 reason installation costs have risen since 2020. Aircond copper pipe is NOT the same as regular plumbing copper — it must be internally cleaned and sealed, insulation-rolled, and refrigerant-rated. The first 7 feet are included in the RM 199 base install price. Extra pipe beyond 7ft is <strong>RM 25/ft</strong> — this is the published rate on klrenovator.com, confirmed before any work starts.</p>
+      <p>This is the #1 reason installation costs have risen since 2020. Aircond copper pipe is NOT the same as regular plumbing copper — it must be internally cleaned and sealed, insulation-rolled, and refrigerant-rated. The first 7 feet are included in the RM 199 base install price. Extra pipe beyond 7ft uses HP-wise rates: <strong>RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</strong> — this is the published rate on klrenovator.com, confirmed before any work starts.</p>
       <h2>2. Certified Technician Scarcity</h2>
       <p>Malaysia has a real shortage of properly certified HVAC technicians. SKM Tahap 3 (HVAC), EPA 608, and brand-specific training (Daikin, Panasonic, Mitsubishi) are required. KL Renovator's team is SKM-certified, brand-trained, and the company carries RM 1M public liability insurance.</p>
       <h2>3. Insurance and Liability</h2>
@@ -3447,11 +3447,11 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>
       <h2>FAQ — Why Aircond Installation Is So Expensive</h2>
       <h3>Why do some installers quote RM 99 while others quote RM 199+?</h3>
-      <p>RM 99 quotes typically exclude copper pipe (RM 25/ft extra), bracket, vacuum test, or warranty. Once you add the missing items, the real cost matches or exceeds RM 199.</p>
+      <p>RM 99 quotes typically exclude copper pipe (HP-wise RM 17–27/ft extra), bracket, vacuum test, or warranty. Once you add the missing items, the real cost matches or exceeds RM 199.</p>
       <h3>Can I bring my own copper pipe to save money?</h3>
       <p>Technically yes, but most technicians will not warranty work using customer-supplied materials. KL Renovator's warranty requires we supply all materials.</p>
       <h3>Is the RM 199 quote really the final price?</h3>
-      <p>For standard installations within 7 feet and a single wall penetration, yes. If your site needs extra pipe (RM 25/ft), trunking, condensate pump, or has access issues, we will tell you the additional cost BEFORE starting work.</p>
+      <p>For standard installations within 7 feet and a single wall penetration, yes. If your site needs extra pipe (HP-wise RM 17–27/ft for copper, RM 9–17/ft for wire), trunking, condensate pump, or has access issues, we will tell you the additional cost BEFORE starting work.</p>
       <h3>Why do condo installations cost more?</h3>
       <p>Condo installations add management approval time, lift reservation fees, time window constraints, and trunking for aesthetics. These add RM 50-RM 300 to the typical cost.</p>
       <h3>Do 2.5 HP units cost more to install than 1.0 HP?</h3>
@@ -3471,7 +3471,7 @@ export const allPosts: BlogPost[] = [
       <h2>Jawapan Ringkas</h2>
       <p>Pemasangan aircond dinding standard di Malaysia berharga <strong>RM 199</strong> (1.0-1.5 HP), <strong>RM 249</strong> (2.0 HP), <strong>RM 279</strong> (2.5 HP), sehingga <strong>RM 449</strong> (5.0 HP) untuk dinding, dan <strong>RM 290-RM 400</strong> untuk ceiling cassette pada 2026.</p>
       <h2>1. Paip Tembaga — Kos Tersembunyi Yang Berganda</h2>
-      <p>Ini adalah sebab #1 kos pemasangan meningkat sejak 2020. Paip tembaga aircond BUKAN sama seperti tembaga paip biasa — ia perlu dibersihkan dan ditutup dalaman, digulung penebat, dan dinilai refrigerant. 7 kaki pertama <strong>termasuk</strong> dalam harga asas RM 199. Paip tambahan melebihi 7 kaki ialah <strong>RM 25/kaki</strong> — kadar yang diterbitkan di klrenovator.com, disahkan sebelum sebarang kerja bermula.</p>
+      <p>Ini adalah sebab #1 kos pemasangan meningkat sejak 2020. Paip tembaga aircond BUKAN sama seperti tembaga paip biasa — ia perlu dibersihkan dan ditutup dalaman, digulung penebat, dan dinilai refrigerant. 7 kaki pertama <strong>termasuk</strong> dalam harga asas RM 199. Paip tambahan melebihi 7 kaki menggunakan kadar mengikut HP: <strong>RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</strong> — kadar yang diterbitkan di klrenovator.com, disahkan sebelum sebarang kerja bermula.</p>
       <h2>2. Kekurangan Juruteknik Bertauliah</h2>
       <p>Malaysia kekurangan juruteknik HVAC bertauliah. Pensijilan diperlukan: SKM Tahap 3 (HVAC), EPA 608, dan latihan khusus jenama (Daikin, Panasonic, Mitsubishi). Pasukan KL Renovator bertauliah SKM, terlatih jenama, dan syarikat membawa insurans liabiliti awam RM 1J.</p>
       <h2>3. Insurans dan Liabiliti</h2>
@@ -3490,11 +3490,11 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator berkhidmat di Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. Kami bekerja pada Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic untuk unit dinding, ceiling cassette dan tingkap sahaja.</p>
       <h2>FAQ — Kenapa Pemasangan Aircond Mahal</h2>
       <h3>Kenapa sesetengah pemasang sebut harga RM 99 manakala RM 199+?</h3>
-      <p>Sebut harga RM 99 biasanya tidak termasuk paip tembaga (tambahan RM 25/kaki), bracket, ujian vakum, atau waranti. Setelah tambah item yang hilang, kos sebenar sepadan atau melebihi RM 199.</p>
+      <p>Sebut harga RM 99 biasanya tidak termasuk paip tembaga (tambahan RM 17–27/kaki mengikut HP), bracket, ujian vakum, atau waranti. Setelah tambah item yang hilang, kos sebenar sepadan atau melebihi RM 199.</p>
       <h3>Boleh saya bawa paip tembaga sendiri?</h3>
       <p>Secara teknikal ya, tetapi kebanyakan juruteknik tidak akan waranti kerja menggunakan bahan pelanggan. Waranti KL Renovator memerlukan kami bekalkan semua bahan.</p>
       <h3>Adakah sebut harga RM 199 betul-betul harga akhir?</h3>
-      <p>Untuk pemasangan standard dalam 7 kaki dan satu penembusan dinding, ya. Jika tapak perlukan paip tambahan (RM 25/kaki), trunking, pam kondensat, atau ada isu akses, kami akan beritahu kos tambahan SEBELUM mula kerja.</p>
+      <p>Untuk pemasangan standard dalam 7 kaki dan satu penembusan dinding, ya. Jika tapak perlukan paip tambahan (RM 17–27/kaki mengikut HP untuk tembaga, RM 9–17/kaki untuk wayar), trunking, pam kondensat, atau ada isu akses, kami akan beritahu kos tambahan SEBELUM mula kerja.</p>
       <h3>Kenapa pemasangan kondo lebih mahal?</h3>
       <p>Pemasangan kondo tambah masa kelulusan pengurusan, yuran tempahan lif, sekatan tetingkap masa, dan trunking untuk estetik. Ini tambah RM 50-RM 300 kepada kos biasa.</p>
       <h3>Adakah unit 2.5 HP lebih mahal untuk pasang?</h3>
@@ -3606,7 +3606,7 @@ export const allPosts: BlogPost[] = [
       <h3>Can 1 HP cool a 150 sqft bedroom?</h3>
       <p>Marginal — 1 HP can cool 150 sqft but will run constantly. For 150 sqft, 1.5 HP is recommended for better humidity control and compressor longevity.</p>
       <h3>How much does 1 HP aircond installation cost in Malaysia?</h3>
-      <p>RM 199 base install for 1.0-1.5 HP wall-mounted, as published on klrenovator.com (July 2026). Extra copper pipe beyond 7ft is RM 25/ft.</p>
+      <p>RM 199 base install for 1.0-1.5 HP wall-mounted, as published on klrenovator.com (July 2026). Extra copper pipe beyond 7ft uses HP-wise rates: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra wire: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP).</p>
       <h3>What size aircond for a 12x12 bedroom?</h3>
       <p>12ft × 12ft = 144 sqft → 1.5 HP recommended. 1 HP will work but 1.5 HP gives better comfort and humidity control.</p>
       <h3>What size aircond for a 10x10 bedroom?</h3>
@@ -3671,7 +3671,7 @@ export const allPosts: BlogPost[] = [
       <h3>Boleh 1 HP sejukkan bilik tidur 150 kaki²?</h3>
       <p>Marginal — 1 HP boleh sejukkan 150 kaki² tetapi akan berjalan berterusan. Untuk 150 kaki², 1.5 HP disyorkan untuk kawalan kelembapan dan jangka hayat pemampat yang lebih baik.</p>
       <h3>Berapakah kos pemasangan aircond 1 HP di Malaysia?</h3>
-      <p>Pasang asas RM 199 untuk dinding 1.0-1.5 HP, seperti yang diterbitkan di klrenovator.com (Julai 2026). Paip tembaga tambahan melebihi 7 kaki ialah RM 25/kaki.</p>
+      <p>Pasang asas RM 199 untuk dinding 1.0-1.5 HP, seperti yang diterbitkan di klrenovator.com (Julai 2026). Paip tembaga tambahan melebihi 7 kaki menggunakan kadar mengikut HP: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).</p>
       <h3>Apakah saiz aircond untuk bilik tidur 12x12?</h3>
       <p>12 kaki × 12 kaki = 144 kaki² → 1.5 HP disyorkan. 1 HP akan berfungsi tetapi 1.5 HP beri keselesaan dan kawalan kelembapan yang lebih baik.</p>
       <h3>Apakah saiz aircond untuk bilik tidur 10x10?</h3>
@@ -3771,7 +3771,8 @@ export const allPosts: BlogPost[] = [
       <p>The AC unit itself, dismantling of old unit (RM 90 if needed), ceiling cassette ceiling-grid work, plastering, painting, electrical rewiring of the home, concrete cutting, scaffold for high-floor access. KL Renovator quotes these as add-ons after a site survey.</p>
       <h2>Add-on cost reference</h2>
       <table><thead><tr><th>Add-on</th><th>Price</th><th>When Needed</th></tr></thead><tbody>
-        <tr><td>Extra copper pipe beyond 7ft</td><td>RM 25/ft</td><td>Landed homes, long pipe runs</td></tr>
+        <tr><td>Extra copper pipe beyond 7ft</td><td>RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</td><td>Landed homes, long pipe runs</td></tr>
+        <tr><td>Extra electrical wire beyond 7ft</td><td>RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)</td><td>Landed homes, long wire runs</td></tr>
         <tr><td>Casing / trunking</td><td>RM 8-15/ft</td><td>Visible pipe runs</td></tr>
         <tr><td>Drain pump (ceiling cassette)</td><td>RM 350-550</td><td>No gravity drainage</td></tr>
         <tr><td>Power point / electrical work</td><td>Quoted on site</td><td>15A dedicated circuit recommended</td></tr>
@@ -3788,14 +3789,14 @@ export const allPosts: BlogPost[] = [
       <p>Single-box unit that fits into a window slot. Common in older shophouses, budget rentals, and small offices. KL Renovator installs window units from <strong>RM 199</strong> for 1.0-1.5 HP. Simpler install but less common in modern Malaysian homes.</p>
       <h2>Condo vs landed installation cost</h2>
       <p><strong>Condominiums:</strong> typically 7ft copper limit applies because the outdoor unit sits on the AC ledge directly behind the indoor unit. Add RM 50-100 for management booking fee. Total typical: RM 199-RM 250 + booking.</p>
-      <p><strong>Landed houses (terrace, semi-D, bungalow):</strong> usually need 15-20ft copper pipe run, which adds RM 200-325 to the base price at RM 25/ft. Total typical: RM 199 + RM 200-325 = RM 399-RM 524 for 1.5 HP.</p>
+      <p><strong>Landed houses (terrace, semi-D, bungalow):</strong> usually need 15-20ft copper pipe run, which adds RM 200-540 to the base price using HP-wise rates (RM 17/ft for 1.0–1.5 HP, RM 23/ft for 2.0–2.5 HP, RM 27/ft for 3.0–3.5 HP). Total typical: RM 199 + RM 200-540 = RM 399-RM 739 for 1.5 HP.</p>
       <h2>Multi-unit discount (same visit)</h2>
-      <p>Installing multiple units in the same visit attracts: 5% off for 2-3 units, 10% off for 4-8 units, 15% off for 8+ units. This applies to both the installation and is a common choice for landed homeowners installing 3-5 units at once.</p>
+      <p>Installing multiple units in the same visit attracts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. This applies to both the installation and is a common choice for landed homeowners installing 3-5 units at once.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
       <p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>
       <h2>FAQ — AC unit installation cost</h2>
       <h3>How much does it cost to install one AC unit in Malaysia?</h3>
-      <p>RM 199 base for 1.0-1.5 HP wall-mounted with KL Renovator. Larger units cost more. Extra copper pipe beyond 7ft is RM 25/ft.</p>
+      <p>RM 199 base for 1.0-1.5 HP wall-mounted with KL Renovator. Larger units cost more. Extra copper pipe beyond 7ft uses HP-wise rates: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra wire: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP).</p>
       <h3>Does the installation cost include the AC unit?</h3>
       <p>No. The installation price covers labour, copper pipe (up to 7ft), wiring, drainage, bracket, vacuum test, and warranty. The AC unit itself is sold separately by the unit dealer.</p>
       <h3>Is installation cheaper for inverter vs non-inverter?</h3>
@@ -3853,7 +3854,8 @@ export const allPosts: BlogPost[] = [
       <p>Unit AC itu sendiri, pembongkaran unit lama (RM 90 jika perlu), kerja grid siling ceiling cassette, plaster, cat, pendawaian semula elektrik rumah, pemotongan konkrit, perancah untuk akses tingkat tinggi. KL Renovator menyebut harga ini sebagai add-on selepas tinjauan tapak.</p>
       <h2>Rujukan kos add-on</h2>
       <table><thead><tr><th>Add-on</th><th>Harga</th><th>Bila Diperlukan</th></tr></thead><tbody>
-        <tr><td>Paip tembaga tambahan melebihi 7ft</td><td>RM 25/kaki</td><td>Rumah teres, laluan paip panjang</td></tr>
+        <tr><td>Paip tembaga tambahan melebihi 7ft</td><td>RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</td><td>Rumah teres, laluan paip panjang</td></tr>
+        <tr><td>Wayar elektrik tambahan melebihi 7ft</td><td>RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP)</td><td>Rumah teres, laluan wayar panjang</td></tr>
         <tr><td>Casing / trunking</td><td>RM 8-15/kaki</td><td>Laluan paip yang kelihatan</td></tr>
         <tr><td>Drain pump (ceiling cassette)</td><td>RM 350-550</td><td>Tiada saliran graviti</td></tr>
         <tr><td>Power point / kerja elektrik</td><td>Sebut harga di tapak</td><td>Litar dedicated 15A disyorkan</td></tr>
@@ -3870,14 +3872,14 @@ export const allPosts: BlogPost[] = [
       <p>Unit kotak tunggal yang muat dalam slot tingkap. Biasa dalam rumah kedai lama, sewa bajet, dan pejabat kecil. KL Renovator pasang unit tingkap dari <strong>RM 199</strong> untuk 1.0-1.5 HP. Pasang lebih mudah tetapi kurang biasa dalam rumah Malaysia moden.</p>
       <h2>Kos pasang kondo vs rumah teres</h2>
       <p><strong>Kondominium:</strong> biasanya had 7ft tembaga digunakan kerana unit luar berada di AC ledge tepat di belakang unit dalam. Tambah RM 50-100 untuk yuran tempahan pengurusan. Jumlah biasa: RM 199-RM 250 + tempahan.</p>
-      <p><strong>Rumah teres (teres, semi-D, banglo):</strong> biasanya perlukan 15-20ft laluan paip tembaga, yang menambah RM 200-325 kepada harga asas pada RM 25/kaki. Jumlah biasa: RM 199 + RM 200-325 = RM 399-RM 524 untuk 1.5 HP.</p>
+      <p><strong>Rumah teres (teres, semi-D, banglo):</strong> biasanya perlukan 15-20ft laluan paip tembaga, yang menambah RM 200-540 kepada harga asas menggunakan kadar mengikut HP (RM 17/kaki untuk 1.0–1.5 HP, RM 23/kaki untuk 2.0–2.5 HP, RM 27/kaki untuk 3.0–3.5 HP). Jumlah biasa: RM 199 + RM 200-540 = RM 399-RM 739 untuk 1.5 HP.</p>
       <h2>Diskaun multi-unit (lawatan sama)</h2>
-      <p>Pemasangan beberapa unit dalam lawatan sama menarik: 5% off untuk 2-3 unit, 10% off untuk 4-8 unit, 15% off untuk 8+ unit. Ini dipakai untuk kedua-dua pemasangan dan pilihan biasa untuk pemilik rumah teres yang pasang 3-5 unit sekaligus.</p>
+      <p>Pemasangan beberapa unit dalam lawatan sama menarik: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Ini dipakai untuk kedua-dua pemasangan dan pilihan biasa untuk pemilik rumah teres yang pasang 3-5 unit sekaligus.</p>
       <h2>Liputan perkhidmatan di KL &amp; Selangor</h2>
       <p>KL Renovator berkhidmat di Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. Kami bekerja pada Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic untuk unit dinding, ceiling cassette dan tingkap sahaja.</p>
       <h2>FAQ — kos pasang unit AC</h2>
       <h3>Berapakah kos untuk pasang satu unit AC di Malaysia?</h3>
-      <p>Asas RM 199 untuk dinding 1.0-1.5 HP dengan KL Renovator. Unit lebih besar kos lebih. Paip tembaga tambahan melebihi 7 kaki ialah RM 25/kaki.</p>
+      <p>Asas RM 199 untuk dinding 1.0-1.5 HP dengan KL Renovator. Unit lebih besar kos lebih. Paip tembaga tambahan melebihi 7 kaki menggunakan kadar mengikut HP: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).</p>
       <h3>Adakah kos pemasangan termasuk unit AC?</h3>
       <p>Tidak. Harga pemasangan merangkumi upah, paip tembaga (sehingga 7 kaki), wiring, saliran, bracket, ujian vakum, dan waranti. Unit AC itu sendiri dijual berasingan oleh pengedar unit.</p>
       <h3>Adakah pemasangan lebih murah untuk inverter vs non-inverter?</h3>
@@ -4952,7 +4954,7 @@ export const allPosts: BlogPost[] = [
       <p><strong>Total: 2-3 hours for a standard install.</strong></p>
       <h2>What slows down installation</h2>
       <ol>
-        <li><strong>Long pipe runs</strong> — 7ft copper pipe is standard, included in RM 199 base price. Each additional foot: RM 25/ft. Terrace houses often need 15-20ft (vs 7ft for condos). Each extra foot adds 5-10 minutes.</li>
+        <li><strong>Long pipe runs</strong> — 7ft copper pipe is standard, included in RM 199 base price. Each additional foot uses HP-wise rates: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Terrace houses often need 15-20ft (vs 7ft for condos). Each extra foot adds 5-10 minutes.</li>
         <li><strong>Difficult access</strong> — high-rise condos (30+ floors) need lift booking + crane coordination. Adds 30-60 minutes.</li>
         <li><strong>Old unit removal</strong> — KL Renovator charges RM 90 for dismantle-only, takes 30-60 minutes.</li>
         <li><strong>Condo compliance paperwork</strong> — booking forms, lift reservation, time windows.</li>
@@ -5021,11 +5023,10 @@ export const allPosts: BlogPost[] = [
       <h2>Multi-unit installation time savings</h2>
       <p>For multiple units in one visit:</p>
       <ul>
-        <li>2-3 units: 5% discount + 2-3 hours per unit</li>
-        <li>4-8 units: 10% discount + 2-3 hours per unit (faster than individual bookings)</li>
-        <li>8+ units: 15% discount + 2-3 hours per unit (3+ days for very large projects)</li>
+        <li>4–10 units: 5% OFF Instant Booking Discount + 2-3 hours per unit</li>
+        <li>10+ units: 10% OFF Instant Booking Discount + 2-3 hours per unit (faster than individual bookings)</li>
       </ul>
-      <p>4 units: usually 1 day. 5-8 units: 2 days. 8+ units: 3+ days.</p>
+      <p>4 units: usually 1 day. 5-10 units: 2 days. 10+ units: 3+ days.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
       <p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>
       <h2>FAQ — aircond installation time in Malaysia</h2>
@@ -5090,7 +5091,7 @@ export const allPosts: BlogPost[] = [
       <p><strong>Jumlah: 2-3 jam untuk pasang standard.</strong></p>
       <h2>Apa melambatkan pemasangan</h2>
       <ol>
-        <li><strong>Laluan paip panjang</strong> — 7 kaki paip tembaga standard termasuk dalam harga asas RM 199. Setiap kaki tambahan: RM 25/kaki. Rumah teres selalunya perlukan 15-20 kaki (vs 7 kaki kondo). Setiap kaki tambahan tambah 5-10 minit.</li>
+        <li><strong>Laluan paip panjang</strong> — 7 kaki paip tembaga standard termasuk dalam harga asas RM 199. Setiap kaki tambahan menggunakan kadar mengikut HP: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Rumah teres selalunya perlukan 15-20 kaki (vs 7 kaki kondo). Setiap kaki tambahan tambah 5-10 minit.</li>
         <li><strong>Akses sukar</strong> — kondo tingkat tinggi (30+) perlukan tempahan lif + koordinasi kren. Tambah 30-60 minit.</li>
         <li><strong>Pembuangan unit lama</strong> — KL Renovator caj RM 90 untuk buka sahaja, ambil 30-60 minit.</li>
         <li><strong>Kertas kerja pematuhan kondo</strong> — borang tempahan, tempahan lif, slot masa.</li>
@@ -5159,11 +5160,10 @@ export const allPosts: BlogPost[] = [
       <h2>Penjimatan masa pasang berbilang unit</h2>
       <p>Untuk berbilang unit dalam satu lawatan:</p>
       <ul>
-        <li>2-3 unit: diskaun 5% + 2-3 jam seunit</li>
-        <li>4-8 unit: diskaun 10% + 2-3 jam seunit (lebih cepat daripada tempahan individu)</li>
-        <li>8+ unit: diskaun 15% + 2-3 jam seunit (3+ hari untuk projek sangat besar)</li>
+        <li>4–10 unit: Diskaun Tempahan Segera 5% + 2-3 jam seunit</li>
+        <li>10+ unit: Diskaun Tempahan Segera 10% + 2-3 jam seunit (lebih cepat daripada tempahan individu)</li>
       </ul>
-      <p>4 unit biasanya siap dalam 1 hari, 5-8 unit dalam 2 hari, 8+ unit dalam 3+ hari.</p>
+      <p>4 unit biasanya siap dalam 1 hari, 5-10 unit dalam 2 hari, 10+ unit dalam 3+ hari.</p>
       <h2>Liputan perkhidmatan di KL &amp; Selangor</h2>
       <p>KL Renovator berkhidmat di Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. Kami bekerja pada Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic untuk unit dinding, ceiling cassette dan tingkap sahaja.</p>
       <h2>FAQ — masa pemasangan aircond di Malaysia</h2>
@@ -5623,9 +5623,8 @@ export const allPosts: BlogPost[] = [
 
       <h3>Volume Discounts</h3>
       <ul>
-        <li>2–3 units: <strong>5% off</strong></li>
-        <li>4–8 units: <strong>10% off</strong></li>
-        <li>8+ units: <strong>15% off</strong></li>
+        <li>4–10 units: <strong>5% OFF Instant Booking Discount</strong></li>
+        <li>10+ units: <strong>10% OFF Instant Booking Discount</strong></li>
       </ul>
       <p>Discounts apply when booking multiple units in the same visit.</p>
 
@@ -5710,7 +5709,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Window unit 2.0–2.5 HP</td><td><strong>RM 249</strong></td></tr>
         </tbody>
       </table>
-      <p><strong>Note:</strong> Extra copper beyond 7ft: RM 25/ft. High-rise condo access fees &amp; special works are quoted separately.</p>
+      <p><strong>Note:</strong> Extra copper beyond 7ft uses HP-wise rates: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra wire: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). High-rise condo access fees &amp; special works are quoted separately.</p>
 
       <h2>6. Troubleshooting &amp; Repairs</h2>
       <p><em>Systematic diagnosis and parts replacement (capacitor, fan motor, PCB, sensors, contactors, drain pump, compressor). Diagnostic fee RM 88 waived if repaired same visit.</em></p>
@@ -5759,7 +5758,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Dismantle + reinstall different location (1.0–1.5 HP)</td><td><strong>RM 350</strong></td></tr>
         </tbody>
       </table>
-      <p><strong>Note:</strong> 7ft new copper included. Extra copper RM 25/ft beyond 7ft.</p>
+      <p><strong>Note:</strong> 7ft new copper included. Extra copper uses HP-wise rates beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra wire: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP).</p>
 
       <h2>9. Emergency Aircond Repair</h2>
       <p><em>30–60 minute response target, 20+ brands, common parts in van, operate until 10pm. Diagnostic fee waived if repaired.</em></p>
@@ -5798,9 +5797,8 @@ export const allPosts: BlogPost[] = [
 
       <h3>Diskaun Kuantiti (Volume Discounts)</h3>
       <ul>
-        <li>2-3 unit: <strong>5% diskaun</strong></li>
-        <li>4-8 unit: <strong>10% diskaun</strong></li>
-        <li>8+ unit: <strong>15% diskaun</strong></li>
+        <li>4–10 unit: <strong>Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)</strong></li>
+        <li>10+ unit: <strong>Diskaun Tempahan Segera 10% (10% OFF Instant Booking Discount)</strong></li>
       </ul>
       <p>Diskaun terpakai apabila menempah berbilang unit dalam lawatan yang sama.</p>
 
@@ -5885,7 +5883,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Unit Tingkap 2.0-2.5 HP</td><td><strong>RM 249</strong></td></tr>
         </tbody>
       </table>
-      <p><strong>Nota:</strong> Paip kuprum tambahan melebihi 7 kaki: RM 25/kaki. Caj akses kondo tinggi &amp; kerja khas dikutip berasingan.</p>
+      <p><strong>Nota:</strong> Paip kuprum tambahan melebihi 7 kaki menggunakan kadar mengikut HP: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP). Caj akses kondo tinggi &amp; kerja khas dikutip berasingan.</p>
 
       <h2>6. Pembaikan &amp; Diagnostik (Troubleshooting &amp; Repairs)</h2>
       <p><em>Diagnostik sistematik, penggantian bahagian (kapasitor, motor kipas, PCB, sensor, kontaktors, pam longkang, kompresor). Yuran diagnostik RM 88 dikecualikan jika dibaiki lawatan sama.</em></p>
@@ -5934,7 +5932,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Tanggal + Pasang Semula Lokasi Berbeza (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr>
         </tbody>
       </table>
-      <p><strong>Nota:</strong> Paip kuprum baharu 7 kaki termasuk. Tambahan RM 25/kaki melebihi 7 kaki.</p>
+      <p><strong>Nota:</strong> Paip kuprum baharu 7 kaki termasuk. Tambahan melebihi 7 kaki menggunakan kadar mengikut HP: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).</p>
 
       <h2>9. Pembaikan Kecemasan (Emergency Aircond Repair)</h2>
       <p><em>Respons 30-60 minit, 20+ jenama, bahagian biasa dalam van, operasi hingga 10 malam. Yuran diagnostik dikecualikan jika dibaiki.</em></p>
@@ -5988,7 +5986,7 @@ export const allPosts: BlogPost[] = [
       <ol>
         <li><strong>机组马力 (HP)：</strong> 2.0 HP 及以上机型需要更多药剂和人力，价格通常高出 RM 20-50。</li>
         <li><strong>机组类型：</strong> 天花板卡式机 (Ceiling Cassette) 的清洗难度高于壁挂式。</li>
-        <li><strong>额外材料：</strong> 如铜管加长（RM 25/ft）、安装支架、加装开关或排水泵。</li>
+        <li><strong>额外材料：</strong> 如铜管加长（按HP差异：1.0–1.5 HP为RM 17/ft，2.0–2.5 HP为RM 23/ft，3.0–3.5 HP为RM 27/ft）、电线加长（1.0–1.5 HP为RM 9/ft，2.0–2.5 HP为RM 13/ft，3.0–4.0 HP为RM 17/ft）、安装支架、加装开关或排水泵。</li>
         <li><strong>工作环境：</strong> 高楼公寓或难以到达的室外机位置可能涉及额外费用。</li>
       </ol>
 

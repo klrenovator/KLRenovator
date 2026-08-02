@@ -143,7 +143,7 @@ const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
 const GLOBAL_SERVICE_FAQS: ServiceFaq[] = [
   { q: "Do you confirm the price before starting work?", a: "Yes. KL Renovator confirms the service scope, starting price and any extra material or repair cost before work begins." },
   { q: "Is there a workmanship warranty?", a: "Yes. Eligible workmanship is covered by a 1-month workmanship warranty. Warranty terms are explained clearly before handover." },
-  { q: "Do you offer discounts for multiple units?", a: "Yes. Eligible multi-unit bookings can receive 5% off for 2–3 units, 10% off for 4–8 units and 15% off for 8+ units, confirmed before booking." },
+  { q: "Do you offer discounts for multiple units?", a: "Yes. Eligible multi-unit bookings can receive 5% OFF Instant Booking Discount for 4–10 units and 10% OFF Instant Booking Discount for 10+ units, confirmed before booking." },
 ];
 
 function mergeFaqs(...groups: ServiceFaq[][]): ServiceFaq[] {
@@ -935,88 +935,6 @@ export default async function ServicePage({
         </section>
       )}
 
-      {/* Highlights */}
-      <section className="py-14 sm:py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <p className={eyebrow()}>What&apos;s included</p>
-            <h2 className="mt-3">
-              <span className={title({ size: "sm" })}>Everything you </span>
-              <span className={title({ size: "sm", color: "brand" })}>get with us.</span>
-            </h2>
-          </Reveal>
-          <div className="mt-8 grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4 border border-slate-200">
-            {data.highlights.map((h: string, i: number) => (
-              <Reveal key={h} delay={i * 60}>
-                <div className="flex items-start gap-3 bg-white p-5 h-full">
-                  <span className={`inline-flex h-8 w-8 shrink-0 items-center justify-center ${highlightColors[i % highlightColors.length]} text-white`}>
-                    <FiCheck className="h-4 w-4" />
-                  </span>
-                  <p className="text-sm font-semibold text-slate-800 leading-relaxed">{h}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Work Proof */}
-      <section className="py-14 sm:py-16 bg-slate-50 border-y border-slate-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center max-w-3xl mx-auto">
-              <p className={eyebrow()}>Real Work Proof · Bukti Kerja · 真实施工</p>
-              <h2 className="mt-3">
-                <span className={title({ size: "sm" })}>See How Our </span>
-                <span className={title({ size: "sm", color: "brand" })}>Technicians Work</span>
-              </h2>
-              <p className="mt-4 text-sm text-slate-600 leading-relaxed">
-                Real KL Renovator job photos help customers understand the workmanship standard before booking: protected indoor work, correct tools, clean handling and service-specific proof from homes, condos, offices and shoplots around KL & Selangor.
-              </p>
-            </div>
-          </Reveal>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {proofImages.map((img, i) => (
-              <Reveal key={img.src} delay={i * 80}>
-                <figure className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all">
-                  <div className="relative aspect-[4/3] bg-slate-100">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <figcaption className="p-4">
-                    <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{img.title}</h3>
-                    <p className="mt-1 text-xs leading-relaxed text-slate-500">{img.alt}</p>
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-emerald-100 bg-white p-5 text-center">
-                <p className="text-2xl font-black text-emerald-600">1-Month</p>
-                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Workmanship warranty</p>
-              </div>
-              <div className="rounded-2xl border border-sky-100 bg-white p-5 text-center">
-                <p className="text-2xl font-black text-sky-600">500+</p>
-                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Google 5-star reviews</p>
-              </div>
-              <div className="rounded-2xl border border-amber-100 bg-white p-5 text-center">
-                <p className="text-2xl font-black text-amber-600">SSM</p>
-                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Registered Malaysian business</p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Pricing */}
       <section id="service-pricing" className="py-14 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -1118,6 +1036,88 @@ export default async function ServicePage({
               </div>
             </Reveal>
           )}
+        </div>
+      </section>
+
+      {/* Highlights */}
+      <section className="py-14 sm:py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className={eyebrow()}>What&apos;s included</p>
+            <h2 className="mt-3">
+              <span className={title({ size: "sm" })}>Everything you </span>
+              <span className={title({ size: "sm", color: "brand" })}>get with us.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-8 grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4 border border-slate-200">
+            {data.highlights.map((h: string, i: number) => (
+              <Reveal key={h} delay={i * 60}>
+                <div className="flex items-start gap-3 bg-white p-5 h-full">
+                  <span className={`inline-flex h-8 w-8 shrink-0 items-center justify-center ${highlightColors[i % highlightColors.length]} text-white`}>
+                    <FiCheck className="h-4 w-4" />
+                  </span>
+                  <p className="text-sm font-semibold text-slate-800 leading-relaxed">{h}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Real Work Proof */}
+      <section className="py-14 sm:py-16 bg-slate-50 border-y border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto">
+              <p className={eyebrow()}>Real Work Proof · Bukti Kerja · 真实施工</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>See How Our </span>
+                <span className={title({ size: "sm", color: "brand" })}>Technicians Work</span>
+              </h2>
+              <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                Real KL Renovator job photos help customers understand the workmanship standard before booking: protected indoor work, correct tools, clean handling and service-specific proof from homes, condos, offices and shoplots around KL & Selangor.
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {proofImages.map((img, i) => (
+              <Reveal key={img.src} delay={i * 80}>
+                <figure className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all">
+                  <div className="relative aspect-[4/3] bg-slate-100">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption className="p-4">
+                    <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{img.title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-500">{img.alt}</p>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-emerald-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-emerald-600">1-Month</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Workmanship warranty</p>
+              </div>
+              <div className="rounded-2xl border border-sky-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-sky-600">500+</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Google 5-star reviews</p>
+              </div>
+              <div className="rounded-2xl border border-amber-100 bg-white p-5 text-center">
+                <p className="text-2xl font-black text-amber-600">SSM</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Registered Malaysian business</p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

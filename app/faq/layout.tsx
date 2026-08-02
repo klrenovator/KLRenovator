@@ -68,7 +68,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "Do you offer volume discounts?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. 2–3 units: 5% off. 4–8 units: 10% off. 8+ units: 15% off. Discounts apply to labour charges. WhatsApp +60182983573 to confirm.",
+          text: "Yes. 4–10 units: 5% OFF Instant Booking Discount. 10+ units: 10% OFF Instant Booking Discount. Discounts apply to labour charges. WhatsApp +60182983573 to confirm.",
         },
       },
       {
