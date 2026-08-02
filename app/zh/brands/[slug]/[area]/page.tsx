@@ -209,7 +209,7 @@ export default async function BrandAreaPageZH({
                 { name: "基本保养", price: "起价 RM 99" },
                 { name: "高压化学清洗", price: "起价 RM 120" },
                 { name: "化学大修", price: "起价 RM 220" },
-                { name: "充冷媒 R32/R410A", price: "起价 RM 120" },
+                { name: "充冷媒 R32/R410A", price: "从 RM 3.00/PSI" },
               ].map((p) => (
                 <div key={p.name} className="flex justify-between bg-white border border-slate-200 p-3.5 rounded-xl text-sm font-bold">
                   <span className="text-slate-700">{p.name}</span>

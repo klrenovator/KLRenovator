@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     buildFreshMetaTitle(`马来西亚冷气服务价格 — 透明价目表`, "zh")
   );
   const metaDesc = clampMetaDescription(
-    `${freshDate}吉隆坡及雪兰莪冷气服务价格。基本保养RM99，化学清洗RM120，大修RM220，加气RM120，安装RM199。无隐藏费用。`
+    `${freshDate}吉隆坡及雪兰莪冷气服务价格。基本保养RM99，化学清洗RM120，大修RM220，加气从RM2.50/PSI起，安装RM199。无隐藏费用。`
   );
 
   return {
@@ -70,14 +70,11 @@ const pricingCategories = [
     ],
   },
   {
-    title: "冷媒充注",
+    title: "冷媒充注 (按 PSI 计算)",
     rows: [
-      { label: "R22 冷媒 · 1.0 HP", price: "RM 120" },
-      { label: "R22 冷媒 · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "R410A 冷媒 · 1.0 HP", price: "RM 150" },
-      { label: "R410A 冷媒 · 1.5 – 2.0 HP", price: "RM 180" },
-      { label: "R32 冷媒 · 1.0 HP", price: "RM 180" },
-      { label: "R32 冷媒 · 1.5 – 2.0 HP", price: "RM 200" },
+      { label: "R22 冷媒充注", price: "RM 2.50 / PSI" },
+      { label: "R410A 冷媒充注", price: "RM 3.00 / PSI" },
+      { label: "R32 冷媒充注", price: "RM 3.00 / PSI" },
       { label: "泄漏检查", price: "RM 88" },
     ],
   },
@@ -147,8 +144,8 @@ const faqs = [
     a: "标准挂机通常 45–60 分钟。化学大修因需完全拆机，可能需要 2–3 小时。",
   },
   {
-    q: "不同冷媒价格是否不同？",
-    a: "是的。R22 用于旧机型，R410A 和 R32 用于现代变频机。价格按冷媒类型和匹数计算。",
+    q: "加气如何收费？",
+    a: "加气费用根据技术员检查后的实际 PSI 计算。R22 为 RM2.50/PSI，R410A 和 R32 为 RM3.00/PSI。我们仅填充所需的量，并提供透明的价格，无隐藏收费。最终费用取决于冷媒类型、所需 PSI 和泄漏情况。",
   },
   {
     q: "多台机组有折扣吗？",
@@ -309,6 +306,13 @@ export default function ZhPricingPage() {
                       </li>
                     ))}
                   </ul>
+                  {cat.title === "冷媒充注 (按 PSI 计算)" && (
+                    <div className="px-6 py-4 bg-amber-50 border-t border-amber-100">
+                      <p className="text-xs text-amber-800 leading-relaxed font-medium">
+                        * 加气费用根据检查后的实际 PSI 计算。我们仅填充所需的量，并提供透明的价格，无隐藏收费。
+                      </p>
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}

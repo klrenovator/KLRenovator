@@ -418,7 +418,7 @@ const SERVICE_LABELS: Record<
   en: {
     "basic-servicing": { label: "Basic Servicing", price: "from RM 99", reason: "routine cleaning, airflow checks and preventive maintenance" },
     "chemical-wash": { label: "Chemical Wash", price: "from RM 120", reason: "deep coil cleaning when dust, mould or weak cooling is present" },
-    "gas-topup": { label: "Gas Top-Up", price: "from RM 150", reason: "pressure diagnosis for low cooling or suspected refrigerant loss" },
+    "gas-topup": { label: "Gas Top-Up", price: "from RM 2.50/PSI", reason: "pressure diagnosis for low cooling or suspected refrigerant loss" },
     repair: { label: "Aircond Repair", price: "from RM 150", reason: "fault isolation for leaking, tripping, noisy or non-cooling units" },
     installation: { label: "Installation", price: "from RM 199", reason: "new unit setup, pipe routing, bracket and commissioning work" },
     "ceiling-cassette": { label: "Ceiling Cassette", price: "from RM 220", reason: "commercial cassette cleaning, drain and airflow checks" },
@@ -427,7 +427,7 @@ const SERVICE_LABELS: Record<
   ms: {
     "basic-servicing": { label: "Servis Asas", price: "dari RM 99", reason: "pembersihan rutin, semakan airflow dan penyelenggaraan pencegahan" },
     "chemical-wash": { label: "Cuci Kimia", price: "dari RM 120", reason: "cuci coil mendalam apabila ada habuk, kulat atau cooling lemah" },
-    "gas-topup": { label: "Tambah Gas", price: "dari RM 150", reason: "diagnosis tekanan untuk cooling rendah atau disyaki kurang refrigerant" },
+    "gas-topup": { label: "Tambah Gas", price: "dari RM 2.50/PSI", reason: "diagnosis tekanan untuk cooling rendah atau disyaki kurang refrigerant" },
     repair: { label: "Baiki Aircond", price: "dari RM 150", reason: "semakan punca air menitis, trip, bunyi kuat atau tidak sejuk" },
     installation: { label: "Pemasangan", price: "dari RM 199", reason: "pasang unit baharu, laluan paip, bracket dan commissioning" },
     "ceiling-cassette": { label: "Ceiling Cassette", price: "dari RM 220", reason: "cuci cassette komersial, saliran dan semakan airflow" },
@@ -436,7 +436,7 @@ const SERVICE_LABELS: Record<
   zh: {
     "basic-servicing": { label: "基础保养", price: "RM 99起", reason: "例行清洁、风量检查和预防性保养" },
     "chemical-wash": { label: "化学清洗", price: "RM 120起", reason: "灰尘、霉味或制冷弱时进行深度盘管清洗" },
-    "gas-topup": { label: "补充冷媒", price: "RM 150起", reason: "针对制冷不足或疑似冷媒流失进行压力诊断" },
+    "gas-topup": { label: "补充冷媒", price: "RM 2.50/PSI起", reason: "针对制冷不足或疑似冷媒流失进行压力诊断" },
     repair: { label: "冷气维修", price: "RM 150起", reason: "排查漏水、跳电、噪音或不制冷问题" },
     installation: { label: "冷气安装", price: "RM 199起", reason: "新机安装、铜管路线、支架和调试" },
     "ceiling-cassette": { label: "天花板卡式机", price: "RM 220起", reason: "商业卡式机清洗、排水和风量检查" },

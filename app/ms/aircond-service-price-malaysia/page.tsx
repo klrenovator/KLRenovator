@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     buildFreshMetaTitle(`Harga Servis Aircond Malaysia — Senarai Harga Telus`, "ms")
   );
   const metaDesc = clampMetaDescription(
-    `Senarai harga servis aircond ${freshDate} di KL & Selangor. Servis asas RM99, cuci kimia RM120, overhaul RM220, tambah gas RM120, pasang RM199. Tiada caj tersembunyi.`
+    `Senarai harga servis aircond ${freshDate} di KL & Selangor. Servis asas RM99, cuci kimia RM120, overhaul RM220, tambah gas dari RM2.50/PSI, pasang RM199. Tiada caj tersembunyi.`
   );
 
   return {
@@ -70,14 +70,11 @@ const pricingCategories = [
     ],
   },
   {
-    title: "Tambah Gas & Refill",
+    title: "Tambah Gas & Refill (Per PSI)",
     rows: [
-      { label: "Gas R22 · 1.0 HP", price: "RM 120" },
-      { label: "Gas R22 · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "Gas R410A · 1.0 HP", price: "RM 150" },
-      { label: "Gas R410A · 1.5 – 2.0 HP", price: "RM 180" },
-      { label: "Gas R32 · 1.0 HP", price: "RM 180" },
-      { label: "Gas R32 · 1.5 – 2.0 HP", price: "RM 200" },
+      { label: "Isi Semula Gas R22", price: "RM 2.50 / PSI" },
+      { label: "Isi Semula Gas R410A", price: "RM 3.00 / PSI" },
+      { label: "Isi Semula Gas R32", price: "RM 3.00 / PSI" },
       { label: "Pemeriksaan Kebocoran (Leak Check)", price: "RM 88" },
     ],
   },
@@ -147,8 +144,8 @@ const faqs = [
     a: "Satu unit dinding standard biasanya 45–60 minit. Chemical overhaul mungkin 2–3 jam kerana unit dibuka sepenuhnya.",
   },
   {
-    q: "Adakah harga gas berbeza mengikut jenis?",
-    a: "Ya. Gas R22 untuk model lama, manakala R410A dan R32 untuk model inverter moden. Harga berbeza mengikut jenis gas dan saiz HP unit anda.",
+    q: "Bagaimanakah tambah gas dikenakan bayaran?",
+    a: "Tambah gas dikenakan bayaran berdasarkan PSI sebenar yang diperlukan selepas pemeriksaan oleh juruteknik kami. R22 ialah RM2.50/PSI, manakala R410A dan R32 ialah RM3.00/PSI. Kami hanya mengisi jumlah yang diperlukan dan menyediakan harga telus tanpa caj tersembunyi. Kos akhir bergantung kepada jenis gas, jumlah PSI dan keadaan kebocoran.",
   },
   {
     q: "Boleh saya dapat diskaun jika servis banyak unit?",
@@ -312,6 +309,14 @@ export default function HargaServisPage() {
                       </li>
                     ))}
                   </ul>
+                  {cat.title === "Tambah Gas & Refill (Per PSI)" && (
+                    <div className="px-6 py-4 bg-amber-50 border-t border-amber-100">
+                      <p className="text-xs text-amber-800 leading-relaxed font-medium">
+                        * Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan oleh juruteknik kami. 
+                        Kami hanya mengisi jumlah yang diperlukan dan menyediakan harga telus tanpa caj tersembunyi.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}

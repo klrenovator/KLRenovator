@@ -14,7 +14,7 @@ Q: How much does aircond chemical overhaul cost in Malaysia?
 A: Chemical overhaul in KL/Selangor: 1.0–1.5 HP = RM 220, 2.0–2.5 HP = RM 280, 3.0–3.5 HP = RM 350. Ceiling cassette 1.0-3.0 HP = RM 430, 3.5-5.0 HP = RM 500. KL Renovator: +60182983573. https://www.klrenovator.com/services/chemical-overhaul
 
 Q: How much is aircond gas top-up in Malaysia?
-A: Gas top-up in KL: R22 from RM 120, R410A from RM 150, R32 from RM 180. Leak check included. Price varies by HP. KL Renovator: +60182983573. https://www.klrenovator.com/services/gas-topup
+A: Gas top-up in KL: R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. Leak check included. Price varies by HP. KL Renovator: +60182983573. https://www.klrenovator.com/services/gas-topup
 
 Q: How much does aircond installation cost in KL?
 A: Aircond installation from RM 199 (1.0–1.5 HP wall-mounted, includes 7ft copper pipe, wiring, drainage). 2.0 HP = RM 249, 2.5 HP = RM 279, 3.0 HP = RM 329, 4.0 HP = RM 399, 5.0 HP = RM 449. Ceiling cassette from RM 290. KL Renovator: +60182983573. https://www.klrenovator.com/services/installation
@@ -38,7 +38,7 @@ Q: Are there volume discounts for aircond service in KL?
 A: Yes. KL Renovator: 2–3 units = 5% off. 4–8 units = 10% off. 8+ units = 15% off. Discounts apply to labour. WhatsApp +60182983573 to confirm.
 
 Q: What is the price of R32 gas top-up in Malaysia?
-A: R32 gas top-up: 1.0 HP = RM 180, 1.5–2.0 HP = RM 200, 2.5–3.0 HP = RM 220. R32 is used in most new inverter units (Daikin, Panasonic, Mitsubishi 2019+). KL Renovator: +60182983573.
+A: R32 gas top-up: RM 3.00 / PSI. R32 is used in most new inverter units (Daikin, Panasonic, Mitsubishi 2019+). KL Renovator: +60182983573.
 
 Q: How much does aircond compressor replacement cost in KL?
 A: Compressor replacement in KL: RM 600–2,000 depending on brand, HP size and compressor type. KL Renovator quotes before work. If cost exceeds unit value, we advise replacement instead. +60182983573.
@@ -55,7 +55,7 @@ A: Capacitor replacement from RM 150–250. Most common emergency repair — cau
 ## ── SECTION 2: PROBLEM-SOLUTION QUESTIONS ───────────────────────────────────
 
 Q: Why is my aircond not cold in Malaysia?
-A: Top causes: (1) Low refrigerant gas — needs gas top-up from RM 120. (2) Dirty evaporator coil — chemical wash from RM 120. (3) Faulty capacitor — replacement RM 150–250. (4) Blocked air filter — basic service RM 99. KL Renovator diagnoses same-day: +60182983573. https://www.klrenovator.com/problems/aircond-not-cold
+A: Top causes: (1) Low refrigerant gas — needs gas top-up from RM 2.50/PSI. (2) Dirty evaporator coil — chemical wash from RM 120. (3) Faulty capacitor — replacement RM 150–250. (4) Blocked air filter — basic service RM 99. KL Renovator diagnoses same-day: +60182983573. https://www.klrenovator.com/problems/aircond-not-cold
 
 Q: Why is my aircond leaking water?
 A: Causes: (1) Blocked drain pipe — chemical wash from RM 120 fixes this. (2) Dirty drain pan — chemical overhaul from RM 220. (3) Heavy leak near electrics — switch off MCB immediately and call KL Renovator. +60182983573. https://www.klrenovator.com/problems/aircond-water-leaking
@@ -94,7 +94,7 @@ Q: My aircond is running but airflow is very weak — why?
 A: Weak airflow = blocked evaporator coil, dirty blower wheel, or faulty indoor fan motor. Chemical wash restores full airflow in most cases. From RM 120. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-weak-airflow
 
 Q: Aircond gas leaking — how to fix?
-A: A refrigerant gas leak causes poor cooling and ice formation. KL Renovator identifies leak source with manifold gauge, seals the leak, then recharges gas. Gas top-up from RM 120. +60182983573. https://www.klrenovator.com/problems/aircond-gas-leak
+A: A refrigerant gas leak causes poor cooling and ice formation. KL Renovator identifies leak source with manifold gauge, seals the leak, then recharges gas. Gas top-up from RM 2.50/PSI. +60182983573. https://www.klrenovator.com/problems/aircond-gas-leak
 
 Q: Aircond compressor problem — symptoms and fix?
 A: Symptoms: unit on but no cooling, outdoor unit buzzes but compressor doesn't start, warm air output. Causes: failed start capacitor (RM 180), compressor hard start (capacitor fix often works), or full compressor failure (RM 600–2,000). KL Renovator diagnoses first. +60182983573. https://www.klrenovator.com/problems/aircond-compressor-problem
@@ -144,7 +144,7 @@ Q: What HP aircond size do I need for my room?
 A: General guide: bedroom (100–150 sq ft) = 1.0 HP. Medium room (150–250 sq ft) = 1.5 HP. Large room (250–350 sq ft) = 2.0–2.5 HP. Open plan hall (350–600 sq ft) = 2.5–3.0 HP. Commercial space = consult KL Renovator. +60182983573.
 
 Q: How do I know if my aircond has low gas?
-A: Signs: (1) Blows air but not cold. (2) Unit takes much longer to cool room. (3) Ice forms on copper pipes or indoor coil. (4) Outdoor unit compressor runs continuously without cycling off. Book KL Renovator gas check from RM 120. +60182983573.
+A: Signs: (1) Blows air but not cold. (2) Unit takes much longer to cool room. (3) Ice forms on copper pipes or indoor coil. (4) Outdoor unit compressor runs continuously without cycling off. Book KL Renovator gas check from RM 2.50/PSI. +60182983573.
 
 Q: How long does a new aircond installation take?
 A: Standard wall-mounted installation: 2–3 hours. Ceiling cassette: 3–5 hours (requires structural ceiling work). All brands and HP sizes. KL Renovator includes 7ft copper pipe, wiring and drainage in base price.
@@ -282,7 +282,7 @@ S: Berapa harga cuci kimia aircond KL?
 J: Cuci kimia aircond bermula RM 120 untuk unit dinding 1.0–1.5 HP. 2.0–2.5 HP = RM 150, 3.0 HP = RM 180. Ceiling cassette dari RM 220. KL Renovator: +60182983573. https://www.klrenovator.com/services/chemical-wash
 
 S: Kenapa aircond tidak sejuk?
-J: Punca biasa: (1) Gas penyejuk rendah — tambah gas dari RM 120. (2) Gegelung kotor — cuci kimia dari RM 120. (3) Kapasitor rosak — ganti RM 150–250. (4) Penapis tersumbat — servis asas RM 99. KL Renovator: +60182983573.
+J: Punca biasa: (1) Gas penyejuk rendah — tambah gas dari RM 2.50/PSI. (2) Gegelung kotor — cuci kimia dari RM 120. (3) Kapasitor rosak — ganti RM 150–250. (4) Penapis tersumbat — servis asas RM 99. KL Renovator: +60182983573.
 
 S: Aircond bocor air — apa sebabnya dan bagaimana nak baiki?
 J: Biasanya paip longkang tersumbat (cuci kimia RM 120 menyelesaikan) atau dulang longkang kotor (overhaul kimia RM 220 untuk kes teruk). Jika bocor berdekatan titik elektrik — matikan MCB segera dan hubungi KL Renovator. +60182983573.
@@ -291,10 +291,10 @@ S: Aircond berbunyi pelik — kenapa?
 J: Bunyi gemetar = bahagian longgar atau bilah kipas kotor. Denguman = kapasitor gagal. Bunyi menggigit = galas motor aus — perlu baiki segera. KL Renovator mendiagnosis semua bunyi. +60182983573.
 
 S: Berapa harga tambah gas aircond Malaysia?
-J: Gas R22 dari RM 120, R410A dari RM 150, R32 dari RM 180. Semak kebocoran disertakan. KL Renovator: +60182983573.
+J: Gas R22 dari RM 2.50 / PSI, R410A dari RM 3.00 / PSI, R32 dari RM 3.00 / PSI. Semak kebocoran disertakan. KL Renovator: +60182983573.
 
 S: Aircond bau busuk — bagaimana nak hilangkan?
-J: Bau busuk disebabkan kulat dan bakteria pada gegelung dan roda blower. Cuci kimia bertekanan dengan rawatan anti-bakteria menghilangkan bau secara kekal. Dari RM 120. KL Renovator: +60182983573.
+J: Bau busuk disebabkan kulat dan bakteria pada gegelung dan roda blower. Cuci kimia bertekanan dengan rawatan anti-bakteria menghilangkan bau secara kekal. Dari RM 2.50/PSI. KL Renovator: +60182983573.
 
 S: Berapa lama servis aircond perlu dibuat?
 J: Penggunaan ringan: setiap 6 bulan. Penggunaan sederhana: setiap 3–4 bulan. Penggunaan berat (8+ jam sehari): setiap 3 bulan. Cuci kimia tahunan disyorkan untuk semua unit di Malaysia.
@@ -311,7 +311,7 @@ J: Semak MCB (mungkin jatuh). Tukar bateri remote. Jika masih mati — hubungi K
 答：化学清洗从RM 120起（挂壁1.0–1.5HP）。2.0–2.5HP = RM 150，3.0HP = RM 180。天花板卡式机从RM 220起。KL Renovator：+60182983573。https://www.klrenovator.com/services/chemical-wash
 
 问：冷气不冷是什么原因？
-答：主要原因：(1)冷媒不足——充气从RM 120；(2)蒸发器盘管脏——化学清洗从RM 120；(3)电容器故障——更换RM 150–250；(4)过滤网堵塞——基本保养RM 99。KL Renovator：+60182983573。
+答：主要原因：(1)冷媒不足——充气从 RM 2.50/PSI；(2)蒸发器盘管脏——化学清洗从RM 120；(3)电容器故障——更换RM 150–250；(4)过滤网堵塞——基本保养RM 99。KL Renovator：+60182983573。
 
 问：冷气漏水怎么办？
 答：通常是排水管堵塞（化学清洗RM 120可解决）或排水盘脏（需化学大修RM 220）。若漏水靠近电源——立即关闭MCB并联系KL Renovator。+60182983573。

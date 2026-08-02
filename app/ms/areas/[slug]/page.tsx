@@ -306,7 +306,7 @@ export default async function AreaPageMS({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { problem: "Gegelung Penyejat Kotor", en: "Dirty Evaporator Coil", zh: "蒸发器盘管脏污", desc: `Punca #1 di ${area.name}. Kelembapan dan habuk KL menyumbat sirip gegelung, mengurangkan aliran udara 30–50%. Baiki: cuci kimia tekanan dari RM 120.`, fix: "Cuci Kimia", price: "RM 120" },
-                { problem: "Gas Penyejuk Rendah", en: "Low Refrigerant Gas", zh: "冷媒不足", desc: "Jika unit berjalan tetapi hembus angin panas, gas mungkin rendah. Ini bermakna ada kebocoran — tambah gas sahaja tanpa mencari kebocoran membazir wang. Baiki: semak bocor + tambah gas dari RM 150.", fix: "Tambah Gas", price: "RM 150" },
+                { problem: "Gas Penyejuk Rendah", en: "Low Refrigerant Gas", zh: "冷媒不足", desc: "Jika unit berjalan tetapi hembus angin panas, gas mungkin rendah. Ini bermakna ada kebocoran — tambah gas sahaja tanpa mencari kebocoran membazir wang. Baiki: semak bocor + tambah gas dari RM 2.50/PSI.", fix: "Tambah Gas", price: "Dari RM 2.50/PSI" },
                 { problem: "Paip Longkang Tersumbat", en: "Blocked Drain Pipe", zh: "排水管堵塞", desc: `Biasa di ${area.name} semasa musim monsun. Biofilm menyumbat saliran, menyebabkan bocor air dan pembentukan ais. Baiki: bilas longkang termasuk dalam servis asas dari RM 99.`, fix: "Servis Asas", price: "RM 99" },
                 { problem: "Pemampat Tidak Berfungsi", en: "Compressor Not Running", zh: "压缩机不运转", desc: "Jika kipas dalam berjalan tetapi unit luar senyap, pemampat atau kapasitor mungkin rosak. Perlu diagnosis di lokasi. Baiki: pembaikan dari RM 150 + alat ganti.", fix: "Pembaikan", price: "RM 150+" },
                 { problem: "Termostat Tidak Tepat", en: "Thermostat Miscalibrated", zh: "温控器校准偏差", desc: "Unit fikir bilik lebih sejuk dari sebenar, jadi ia mati terlalu awal. Biasa pada unit bukan inverter lama. Baiki: kalibrasi semula termostat semasa servis.", fix: "Servis Asas", price: "RM 99" },
@@ -368,7 +368,7 @@ export default async function AreaPageMS({
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Servis Asas:</strong> dari RM 99</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Cuci Kimia:</strong> dari RM 120</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Overhaul Kimia:</strong> dari RM 220</span></li>
-              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Tambah Gas:</strong> dari RM 120</span></li>
+              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Tambah Gas:</strong> dari RM 2.50/PSI</span></li>
             </ul>
             <p className="mt-4 text-xs text-slate-500 font-medium">
               Yuran diagnostik RM 88 dikreditkan sepenuhnya ke dalam bil pembaikan jika anda teruskan servis pada lawatan yang sama. Waranti kerja 30 hari untuk semua kerja.

@@ -36,13 +36,13 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     titleMS: "Cuci Kimia Bertekanan",
     titleZH: "高压化学清洗",
     taglineMS:
-      "Pembersihan kimia tekanan tinggi 80–120 PSI semasa unit kekal terpasang — melarutkan biofilm degil, membersihkan paip tersumbat, dan memulihkan aliran udara. Dari RM 120.",
+      "Pembersihan kimia tekanan tinggi 80–120 PSI semasa unit kekal terpasang — melarutkan biofilm degil, membersihkan paip tersumbat, dan memulihkan aliran udara. Dari RM 2.50/PSI.",
     taglineZH:
-      "机器保持挂墙状态进行80–120 PSI高压化学深度清洁——高效溶解顽固生物膜、清理疏通管路并全面恢复强劲风量。从RM 120起。",
+      "机器保持挂墙状态进行80–120 PSI高压化学深度清洁——高效溶解顽固生物膜、清理疏通管路并全面恢复强劲风量。从 RM 2.50/PSI 起。",
     descriptionMS:
       "Perkhidmatan Cuci Kimia Bertekanan kami direka khas untuk penghawa dingin yang memerlukan pembersihan mendalam melebihi penyelenggaraan rutin penapis. Selepas 12 hingga 18 bulan operasi harian, sirip gegelung penyejat, roda kipas, dan barrel dalaman mengumpul biofilm padat, hama habuk, dan enap cemar degil yang tidak dapat ditembus oleh servis asas. Semasa cuci kimia bertekanan, juruteknik KL Renovator menyembur larutan kimia alkali selamat dimakan pada 80–120 PSI terus ke dalam unit dalaman yang kekal terpasang di dinding. Kimia berbuih melarutkan sisa berminyak dan biofilm dalam beberapa minit tanpa merosakkan gegelung atau sirip kuprum yang sensitif. Seterusnya, bilasan air bertekanan tinggi membilas setiap kotoran terlarut keluar melalui dulang dan paip saliran untuk mencegah penyumbatan masa depan. Keseluruhan proses mengambil masa kira-kira 60 hingga 75 minit setiap unit tanpa mengotorkan ruang anda, kerana pasukan kami memasang kanvas kalis air dan alas pelindung tugas berat untuk melindungi dinding, lantai dan perabot anda. Dengan harga telus bermula dari RM 120 untuk unit dinding 1.0–1.5 HP, servis ini memulihkan kecekapan penyejukan ke tahap hampir baharu.",
     descriptionZH:
-      "我们的高压化学清洗服务专为需要超越日常过滤网清洁的冷气深度保养而设计。经过12至18个月的日常运转，冷气蒸发器盘管翅片、风轮及内部滚筒会积累厚重的生物膜、尘螨及顽固菌泥，这是普通基本保养无法触及深层的。在高压化学清洗过程中，KL Renovator技术员将食品级安全碱性化学溶液以80至120 PSI高压直接喷入挂壁室内机内部。起泡化学液在数分钟内迅速分解油性污垢与生物膜，且不损伤敏感的铜盘管或翅片。紧接着，使用高压清水冲洗将所有彻底溶解的污染物经过排水盘与排水管冲离，从而有效预防未雨绸缪的生物管路堵塞。整套作业每台约需60至75分钟，且全程零脏乱——我们的团队会严密铺设重型防水罩和保护帆布，确保您的墙面、地板与周边家具完好无损。挂壁式1.0–1.5马力透明明码实价从RM 120起，本服务能够全面恢复冷气的高效制冷表现与室内清新洁净送风。",
+      "我们的高压化学清洗服务专为需要超越日常过滤网清洁的冷气深度保养而设计。经过12至18个月的日常运转，冷气蒸发器盘管翅片、风轮及内部滚筒会积累厚重的生物膜、尘螨及顽固菌泥，这是普通基本保养无法触及深层的。在高压化学清洗过程中，KL Renovator技术员将食品级安全碱性化学溶液以80至120 PSI高压直接喷入挂壁室内机内部。起泡化学液在数分钟内迅速分解油性污垢与生物膜，且不损伤敏感的铜盘管或翅片。紧接着，使用高压清水冲洗将所有彻底溶解的污染物经过排水盘与排水管冲离，从而有效预防未雨绸缪的生物管路堵塞。整套作业每台约需60至75分钟，且全程零脏乱——我们的团队会严密铺设重型防水罩和保护帆布，确保您的墙面、地板与周边家具完好无损。挂壁式1.0–1.5马力透明明码实价从 RM 2.50/PSI 起，本服务能够全面恢复冷气的高效制冷表现与室内清新洁净送风。",
     highlightsMS: [
       "Semburan tekanan tinggi 80–120 PSI mencapai jauh ke dalam sirip gegelung & roda kipas",
       "Kimia alkali selamat dimakan — melarutkan kulat & biofilm, bukan sekadar habuk permukaan",
@@ -164,13 +164,13 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     titleMS: "Tambah Gas / Pengimbangan Tepat",
     titleZH: "精准充气/冷媒平衡",
     taglineMS:
-      "Tambahan gas bahan pendingin tepat dengan pengukuran tolok manifold. R22, R410A & R32. Pemeriksaan kebocoran disertakan setiap kerja. Dari RM 120.",
+      "Tambahan gas bahan pendingin tepat dengan pengukuran tolok manifold. R22, R410A & R32. Pemeriksaan kebocoran disertakan setiap kerja. Dari RM 2.50/PSI.",
     taglineZH:
-      "使用歧管压力表精准测量充注制冷剂。R22、R410A和R32。每次作业含泄漏检查。从RM 120起。",
+      "使用歧管压力表精准测量充注制冷剂。R22、R410A和R32。每次作业含泄漏检查。从 RM 2.50/PSI 起。",
     descriptionMS:
-      "Aircond anda bersih. Penapis baru dicuci. Gegelung baru sahaja diservis. Tetapi udara yang keluar hampir tidak sejuk dan kompressor luar berjalan tanpa henti tanpa mencapai suhu. Ini adalah petanda klasik bahan pendingin rendah — 'darah' sistem penghawa dingin anda. Tanpa cas bahan pendingin yang betul beredar melalui talian kuprum, sistem secara fizikal tidak dapat memindahkan haba dari dalam ke luar, tidak kira sekeras mana kompressor bekerja. KL Renovator menggunakan tolok manifold digital ketepatan untuk mengukur tekanan statik, tekanan sedutan, dan tekanan pelepasan sistem anda terhadap spesifikasi pengeluar untuk model dan jenis bahan pendingin tepat anda — R22, R410A, atau R32. Kami kemudian menambah bahan pendingin dalam kenaikan terkawal sambil memantau bacaan tolok sehingga sistem seimbang mengikut spesifikasi. Setiap tambahan gas termasuk pemeriksaan kebocoran fizikal menyeluruh di semua sambungan flare yang boleh diakses, injap servis, dan permukaan gegelung penyejat dan kondenser. Kerana bahan pendingin tidak 'digunakan' — jika rendah, ia bocor keluar di suatu tempat. Dari RM 120 untuk R22, 1.0 HP.",
+      "Aircond anda bersih. Penapis baru dicuci. Gegelung baru sahaja diservis. Tetapi udara yang keluar hampir tidak sejuk dan kompressor luar berjalan tanpa henti tanpa mencapai suhu. Ini adalah petanda klasik bahan pendingin rendah — 'darah' sistem penghawa dingin anda. Tanpa cas bahan pendingin yang betul beredar melalui talian kuprum, sistem secara fizikal tidak dapat memindahkan haba dari dalam ke luar, tidak kira sekeras mana kompressor bekerja. KL Renovator menggunakan tolok manifold digital ketepatan untuk mengukur tekanan statik, tekanan sedutan, dan tekanan pelepasan sistem anda terhadap spesifikasi pengeluar untuk model dan jenis bahan pendingin tepat anda — R22, R410A, atau R32. Kami kemudian menambah bahan pendingin dalam kenaikan terkawal sambil memantau bacaan tolok sehingga sistem seimbang mengikut spesifikasi. Setiap tambahan gas termasuk pemeriksaan kebocoran fizikal menyeluruh di semua sambungan flare yang boleh diakses, injap servis, dan permukaan gegelung penyejat dan kondenser. Kerana bahan pendingin tidak 'digunakan' — jika rendah, ia bocor keluar di suatu tempat. Dari RM 2.50/PSI.",
     descriptionZH:
-      "您的冷气是干净的。过滤网刚洗过。盘管刚保养过。但吹出来的风几乎没有凉意，室外压缩机不停运转却达不到温度。这是制冷剂不足的典型信号——冷气系统的‘血液’。没有正确充注量的制冷剂在铜管中循环，系统物理上无法将热量从室内转移到室外，无论压缩机如何努力运转。KL Renovator使用精密数字歧管压力表，对照制造商为您机器型号和制冷剂类型（R22、R410A或R32）制定的规格来测量系统静压、吸气压力和排气压力。然后我们在监控压力表读数的同时以受控增量添加制冷剂，直到系统平衡到规格要求。每次充气都包括对所有可触及的喇叭口接头、检修阀以及蒸发器和冷凝器盘管表面进行彻底的物理泄漏检查。因为制冷剂不会‘消耗’——如果水平低，就是某处泄漏了。R22 1.0 HP从RM 120起。",
+      "您的冷气是干净的。过滤网刚洗过。盘管刚保养过。但吹出来的风几乎没有凉意，室外压缩机不停运转却达不到温度。这是制冷剂不足的典型信号——冷气系统的‘血液’。没有正确充注量的制冷剂在铜管中循环，系统物理上无法将热量从室内转移到室外，无论压缩机如何努力运转。KL Renovator使用精密数字歧管压力表，对照制造商为您机器型号和制冷剂类型（R22、R410A或R32）制定的规格来测量系统静压、吸气压力和排气压力。然后我们在监控压力表读数的同时以受控增量添加制冷剂，直到系统平衡到规格要求。每次充气都包括对所有可触及的喇叭口接头、检修阀以及蒸发器和冷凝器盘管表面进行彻底的物理泄漏检查。因为制冷剂不会‘消耗’——如果水平低，就是某处泄漏了。从 RM 2.50/PSI 起。",
     highlightsMS: [
       "Tolok manifold digital — pengukuran tekanan tepat, bukan tekaan",
       "R22, R410A & R32 — jenis bahan pendingin betul dipadankan dengan papan nama unit anda",
@@ -204,26 +204,16 @@ export const serviceI18n: Record<string, ServiceI18n> = {
       { step: "精准充注与验证", desc: "在监控压力表的同时以受控增量添加制冷剂。目标：吸气压力在当前环境温度下处于制造商范围内。重新测量温差——目标8-12°C差异。检查压缩机电流。结果记录在您的工作卡上。" },
     ],
     priceTableMS: [
-      { label: "Gas R22 · 1.0 HP", price: "RM 120" },
-      { label: "Gas R22 · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "Gas R22 · 2.5 – 3.0 HP", price: "RM 180" },
-      { label: "Gas R410A · 1.0 HP", price: "RM 150" },
-      { label: "Gas R410A · 1.5 – 2.0 HP", price: "RM 180" },
-      { label: "Gas R410A · 2.5 – 3.0 HP", price: "RM 200" },
-      { label: "Gas R32 · 1.0 HP", price: "RM 180" },
-      { label: "Gas R32 · 1.5 – 2.0 HP", price: "RM 200" },
-      { label: "Gas R32 · 2.5 – 3.0 HP", price: "RM 220" },
+      { label: "Isi Semula Gas R22", price: "RM 2.50 / PSI" },
+      { label: "Isi Semula Gas R410A", price: "RM 3.00 / PSI" },
+      { label: "Isi Semula Gas R32", price: "RM 3.00 / PSI" },
+      { label: "Pemeriksaan Kebocoran", price: "RM 88" },
     ],
     priceTableZH: [
-      { label: "R22气体 · 1.0 HP", price: "RM 120" },
-      { label: "R22气体 · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "R22气体 · 2.5 – 3.0 HP", price: "RM 180" },
-      { label: "R410A气体 · 1.0 HP", price: "RM 150" },
-      { label: "R410A气体 · 1.5 – 2.0 HP", price: "RM 180" },
-      { label: "R410A气体 · 2.5 – 3.0 HP", price: "RM 200" },
-      { label: "R32气体 · 1.0 HP", price: "RM 180" },
-      { label: "R32气体 · 1.5 – 2.0 HP", price: "RM 200" },
-      { label: "R32气体 · 2.5 – 3.0 HP", price: "RM 220" },
+      { label: "R22 冷媒充注", price: "RM 2.50 / PSI" },
+      { label: "R410A 冷媒充注", price: "RM 3.00 / PSI" },
+      { label: "R32 冷媒充注", price: "RM 3.00 / PSI" },
+      { label: "泄漏检查", price: "RM 88" },
     ],
   },
 

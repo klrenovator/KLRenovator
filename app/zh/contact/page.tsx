@@ -105,7 +105,7 @@ const WHATSAPP_MESSAGES = [
   { label: "冷气不冷", text: "您好 KL Renovator，我的冷气在运行但不制冷。可以帮忙诊断问题吗？" },
   { label: "漏水", text: "您好 KL Renovator，我的冷气在漏水。技术员什么时候可以来检查？" },
   { label: "新安装", text: "您好 KL Renovator，我需要安装新的冷气。可以给我包含人工和材料的报价吗？" },
-  { label: "冷媒充注", text: "您好 KL Renovator，我需要为冷气加冷媒。可以告诉我价格吗？" },
+  { label: "冷媒充注", text: "您好 KL Renovator，我需要为冷气加冷媒。我明白加气费用是根据实际 PSI 计算的。可以告诉我价格吗？" },
 ];
 
 export default function ContactPageZH() {

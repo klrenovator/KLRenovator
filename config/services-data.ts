@@ -37,7 +37,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     tagline: "High-pressure 80–120 PSI chemical deep-cleaning on-wall — dissolves stubborn biofilm, clears blocked drains, and restores strong airflow. From RM 120 today.",
     description:
       "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 120 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
-    startPrice: "RM 120",
+    startPrice: "RM 2.50 / PSI",
     heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     ogImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     aioSummary: "Pressure chemical wash for airconds in KL & Selangor involves high-pressure (80-120 PSI) alkaline cleaning of internal coils. Starting Price: RM 120. Service Time: 60-75 mins. Warranty: 1-month workmanship. Ideal for restoring airflow and removing microbial odors.",
@@ -289,15 +289,15 @@ export const servicesData: Record<string, ServiceDetail> = {
   "gas-topup": {
     slug: "gas-topup",
     title: "Gas Top-Up / Precision Balancing",
-    tagline: "Precision refrigerant gas top-up with manifold pressure check. R22, R410A & R32. Leak inspection included on every job. From RM 120. Same-day KL & Selangor.",
+    tagline: "Precision refrigerant gas top-up with manifold pressure check. R22, R410A & R32. Leak inspection included on every job. From RM 2.50 / PSI. Same-day KL & Selangor.",
     description:
-      "Your aircond is clean. The filters are new. The coil was just washed. But the air coming out is barely cool and the outdoor compressor runs non-stop without reaching temperature. This is the classic signature of low refrigerant \u2014 the \u2018blood\u2019 of your air conditioning system. Without the correct charge of refrigerant circulating through the copper lines, the system physically cannot move heat from inside to outside, no matter how hard the compressor works. KL Renovator uses precision digital manifold gauges to measure your system's standing pressure, suction pressure, and discharge pressure against the manufacturer's specification for your exact model and refrigerant type \u2014 R22, R410A, or R32. We then add refrigerant in controlled increments while monitoring gauge readings until the system is balanced to spec. Every gas top-up includes a thorough physical leak inspection at all accessible flare connections, service valves, and the evaporator and condenser coil surfaces. Because refrigerant does not \u2018get used up\u2019 \u2014 if it is low, it leaked out somewhere. From RM 120 for R22, 1.0 HP.",
-    startPrice: "RM 120",
+      "Your aircond is clean. The filters are new. The coil was just washed. But the air coming out is barely cool and the outdoor compressor runs non-stop without reaching temperature. This is the classic signature of low refrigerant \u2014 the \u2018blood\u2019 of your air conditioning system. Without the correct charge of refrigerant circulating through the copper lines, the system physically cannot move heat from inside to outside, no matter how hard the compressor works. KL Renovator uses precision digital manifold gauges to measure your system's standing pressure, suction pressure, and discharge pressure against the manufacturer's specification for your exact model and refrigerant type \u2014 R22, R410A, or R32. We then add refrigerant in controlled increments while monitoring gauge readings until the system is balanced to spec. Every gas top-up includes a thorough physical leak inspection at all accessible flare connections, service valves, and the evaporator and condenser coil surfaces. Because refrigerant does not \u2018get used up\u2019 \u2014 if it is low, it leaked out somewhere. Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.",
+    startPrice: "RM 2.50 / PSI",
     heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
     ogImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
-    aioSummary: "Precision refrigerant top-up for R32, R410A, and R22 systems using digital manifold gauges. Starting Price: RM 120. Includes structural leak inspection. Guaranteed Delta-T (cooling drop) improvement of 8-12°C.",
-    aioSummaryMS: "Tambah gas tepat untuk sistem R32, R410A, dan R22 menggunakan manifold digital. Harga: RM 120. Termasuk pemeriksaan kebocoran struktur. Dijamin peningkatan suhu sejuk (Delta-T) sebanyak 8-12°C.",
-    aioSummaryZH: "使用数显歧管表为R32、R410A及R22系统提供精准充气。起步价：RM 120。包含结构性查漏。保证提升8-12°C的制冷温差。",
+    aioSummary: "Precision refrigerant top-up for R32, R410A, and R22 systems using digital manifold gauges. Starting Price: RM 2.50 / PSI. Includes structural leak inspection. Guaranteed Delta-T (cooling drop) improvement of 8-12°C.",
+    aioSummaryMS: "Tambah gas tepat untuk sistem R32, R410A, dan R22 menggunakan manifold digital. Harga: RM 2.50 / PSI. Termasuk pemeriksaan kebocoran struktur. Dijamin peningkatan suhu sejuk (Delta-T) sebanyak 8-12°C.",
+    aioSummaryZH: "使用数显歧管表为R32、R410A及R22系统提供精准充气。起步价：RM 2.50 / PSI。包含结构性查漏。保证提升8-12°C的制冷温差。",
     highlights: [
       "Precision digital manifold measurement — calibrated to manufacturer specs",
       "Comprehensive support for R32, R410A, and R22 refrigerant systems",
@@ -317,7 +317,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does aircond gas top-up cost in KL & Selangor?",
-        a: "R22: RM 120 (1.0 HP), RM 150 (1.5\u20132.0 HP), RM 180 (2.5\u20133.0 HP). R410A: RM 150 (1.0 HP), RM 180 (1.5\u20132.0 HP), RM 200 (2.5\u20133.0 HP). R32: RM 180 (1.0 HP), RM 200 (1.5\u20132.0 HP), RM 220 (2.5\u20133.0 HP). These prices are for a standard top-up from low to full. If the system is completely empty (e.g., after a major leak), the price may be higher because more refrigerant is needed \u2014 we will confirm before adding. Leak inspection included at every price level.",
+        a: "Gas top-up is charged per PSI: R22 is RM 2.50/PSI, while R410A and R32 are RM 3.00/PSI. Final cost depends on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges. Leak inspection is included with every top-up.",
       },
       {
         q: "How do I know if my aircond needs a gas top-up, not just a clean?",
@@ -344,7 +344,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga tambah gas aircond di KL & Selangor?",
-        a: "R22: RM 120 (1.0 HP), RM 150 (1.5\u20132.0 HP), RM 180 (2.5\u20133.0 HP). R410A: RM 150 (1.0 HP), RM 180 (1.5\u20132.0 HP), RM 200 (2.5\u20133.0 HP). R32: RM 180 (1.0 HP), RM 200 (1.5\u20132.0 HP), RM 220 (2.5\u20133.0 HP). Harga ini untuk tambahan standard dari rendah ke penuh. Jika sistem kosong sepenuhnya, harga mungkin lebih tinggi kerana lebih banyak gas diperlukan. Pemeriksaan kebocoran disertakan pada setiap tahap harga.",
+        a: "Tambah gas dikenakan bayaran per PSI: R22 ialah RM 2.50/PSI, manakala R410A dan R32 ialah RM 3.00/PSI. Kos akhir bergantung kepada PSI sebenar yang diperlukan selepas pemeriksaan oleh juruteknik kami. Kami hanya mengisi jumlah yang diperlukan dan menyediakan harga telus tanpa caj tersembunyi.",
       },
       {
         q: "Bagaimana saya tahu aircond perlu tambah gas, bukan sekadar cuci?",
@@ -368,7 +368,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪冷气充气费用是多少？",
-        a: "R22：RM 120（1.0 HP），RM 150（1.5\u20132.0 HP），RM 180（2.5\u20133.0 HP）。R410A：RM 150（1.0 HP），RM 180（1.5\u20132.0 HP），RM 200（2.5\u20133.0 HP）。R32：RM 180（1.0 HP），RM 200（1.5\u20132.0 HP），RM 220（2.5\u20133.0 HP）。这些价格适用于从低到满的标准充气。如果系统完全为空（如重大泄漏后），价格可能更高。每个价格级别都包含泄漏检查。",
+        a: "加气按 PSI 收费：R22 为 RM 2.50/PSI，R410A 和 R32 为 RM 3.00/PSI。最终费用取决于技师检查后所需的实际 PSI。我们仅填充所需的量，并提供透明的价格，无隐藏收费。每次加气均包含漏气检查。",
       },
       {
         q: "如何判断冷气需要充气而不是仅仅清洗？",
@@ -390,16 +390,12 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "能否当天预约冷媒充注？", a: "可以 — KL Renovator 经常有当天预约名额用于充气服务。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
-      { label: "R22 Gas · 1.0 HP", price: "RM 120" },
-      { label: "R22 Gas · 1.5 – 2.0 HP", price: "RM 150" },
-      { label: "R22 Gas · 2.5 – 3.0 HP", price: "RM 180" },
-      { label: "R410A Gas · 1.0 HP", price: "RM 150" },
-      { label: "R410A Gas · 1.5 – 2.0 HP", price: "RM 180" },
-      { label: "R410A Gas · 2.5 – 3.0 HP", price: "RM 200" },
-      { label: "R32 Gas · 1.0 HP", price: "RM 180" },
-      { label: "R32 Gas · 1.5 – 2.0 HP", price: "RM 200" },
-      { label: "R32 Gas · 2.5 – 3.0 HP", price: "RM 220" },
+      { label: "R22 Gas Refill", price: "RM 2.50 / PSI" },
+      { label: "R410A Gas Refill", price: "RM 3.00 / PSI" },
+      { label: "R32 Gas Refill", price: "RM 3.00 / PSI" },
+      { label: "Structural Leak Check", price: "RM 88" },
     ],
+    priceTableNote: "Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.", 
   },
 
   // ── 4. REPAIR & TROUBLESHOOTING ──────────────────────────────────────────
@@ -700,7 +696,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Does basic servicing include gas top-up?",
-        a: "No — basic servicing is a cleaning and inspection service. If our technician's cooling test shows the refrigerant pressure is low (temperature drop less than 8°C after cleaning), they will inform you and quote a gas top-up separately (from RM 120). Aircond systems do not consume refrigerant — if the gas is low, there is a leak somewhere. We will check for obvious leak points (flare connections, service valves) and advise whether a top-up is enough or a leak repair is needed.",
+        a: "No — basic servicing is a cleaning and inspection service. If our technician's cooling test shows the refrigerant pressure is low (temperature drop less than 8°C after cleaning), they will inform you and quote a gas top-up separately (from RM 2.50 / PSI). Aircond systems do not consume refrigerant — if the gas is low, there is a leak somewhere. We will check for obvious leak points (flare connections, service valves) and advise whether a top-up is enough or a leak repair is needed.",
       },
       {
         q: "Can I do basic servicing myself?",
@@ -727,7 +723,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Adakah servis asas termasuk tambah gas?",
-        a: "Tidak — servis asas adalah perkhidmatan pembersihan dan pemeriksaan. Jika ujian penyejukan juruteknik kami menunjukkan tekanan bahan pendingin rendah (penurunan suhu kurang daripada 8°C selepas pembersihan), mereka akan memaklumkan anda dan mengkuotakan tambah gas secara berasingan (dari RM 120). Sistem aircond tidak menggunakan bahan pendingin — jika gas rendah, ada kebocoran di suatu tempat. Kami akan memeriksa titik kebocoran yang jelas (sambungan flare, injap servis) dan menasihatkan sama ada tambah gas sahaja mencukupi atau pembaikan kebocoran diperlukan.",
+        a: "Tidak — servis asas adalah perkhidmatan pembersihan dan pemeriksaan. Jika ujian penyejukan juruteknik kami menunjukkan tekanan bahan pendingin rendah (penurunan suhu kurang daripada 8°C selepas pembersihan), mereka akan memaklumkan anda dan mengkuotakan tambah gas secara berasingan (dari RM 2.50 / PSI). Sistem aircond tidak menggunakan bahan pendingin — jika gas rendah, ada kebocoran di suatu tempat. Kami akan memeriksa titik kebocoran yang jelas (sambungan flare, injap servis) dan menasihatkan sama ada tambah gas sahaja mencukupi atau pembaikan kebocoran diperlukan.",
       },
       { q: "Apa yang berlaku jika anda menemui kerosakan semasa servis asas?", a: "Jika pemeriksaan 8-titik kami menemui kapasitor atau sensor yang rosak, kami akan maklumkan segera dan berikan sebut harga tetap. Kebanyakan pembaikan boleh diselesaikan terus pada lawatan yang sama." },
       { q: "Bolehkah saya menempah servis asas pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk servis asas di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." }
@@ -751,7 +747,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "基本保养包含加气吗？",
-        a: "不包含——基本保养是清洁和检查服务。如果我们技术员的制冷测试显示冷媒压力低（清洁后温差低于8°C），他们会通知您并单独报价加气服务（从RM 120起）。冷气系统不会消耗制冷剂——如果气体不足，说明某处有泄漏。我们会检查明显的泄漏点（喇叭口接头、检修阀）并建议仅加气是否足够还是需要修复泄漏。",
+        a: "不包含——基本保养是清洁和检查服务。如果我们技术员的制冷测试显示冷媒压力低（清洁后温差低于8°C），他们会通知您并单独报价加气服务（从RM 2.50 / PSI起）。冷气系统不会消耗制冷剂——如果气体不足，说明某处有泄漏。我们会检查明显的泄漏点（喇叭口接头、检修阀）并建议仅加气是否足够还是需要修复泄漏。",
       },
       { q: "如果在基本保养期间发现故障怎么办？", a: "如果我们的8项检查发现电容或传感器故障，我们会立即通知您并提供确定报价。大多数维修可以在同一次上门中当场完成。" },
       { q: "能否当天预约基本保养？", a: "可以 — KL Renovator 经常有当天预约名额用于基本保养。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
