@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────
 // Aircond Installation Cost Calculator — estimates material cost, labour
 // cost, bundle discount and grand total using the published site pricing
-// via lib/aircond-math.ts (single source of truth).
+// via lib/aircond-math.ts (single source of truth). Trilingual (en/ms/zh).
 // ─────────────────────────────────────────────────────────────────────────
 "use client";
 
@@ -19,6 +19,8 @@ import {
 } from "@/lib/aircond-math";
 import { CalcCard, CalcLabel, CalcNote, CalculateButton, NumberField, PillGroup, ResultStat, SelectField } from "./ui";
 
+type Lang = "en" | "ms" | "zh";
+
 const HP_OPTIONS: { value: HpSize; label: string }[] = [
   { value: "1.0", label: "1.0 HP" },
   { value: "1.5", label: "1.5 HP" },
@@ -30,13 +32,194 @@ const HP_OPTIONS: { value: HpSize; label: string }[] = [
   { value: "5.0", label: "5.0 HP" },
 ];
 
-const UNIT_TYPE_OPTIONS: { value: UnitType; label: string; sub: string }[] = [
-  { value: "wall", label: "Wall-Mounted", sub: "Most homes & offices" },
-  { value: "cassette", label: "Ceiling Cassette", sub: "Shoplots & offices" },
-  { value: "window", label: "Window Unit", sub: "Older homes" },
-];
+const UNIT_TYPE_OPTIONS: Record<Lang, { value: UnitType; label: string; sub: string }[]> = {
+  en: [
+    { value: "wall", label: "Wall-Mounted", sub: "Most homes & offices" },
+    { value: "cassette", label: "Ceiling Cassette", sub: "Shoplots & offices" },
+    { value: "window", label: "Window Unit", sub: "Older homes" },
+  ],
+  ms: [
+    { value: "wall", label: "Dinding", sub: "Kebanyakan rumah & pejabat" },
+    { value: "cassette", label: "Ceiling Cassette", sub: "Kedai & pejabat" },
+    { value: "window", label: "Unit Tingkap", sub: "Rumah lama" },
+  ],
+  zh: [
+    { value: "wall", label: "挂壁式", sub: "多数家庭与办公室" },
+    { value: "cassette", label: "天花板卡式", sub: "店铺与办公室" },
+    { value: "window", label: "窗式", sub: "旧式住宅" },
+  ],
+};
 
-export function InstallationCostCalculator() {
+interface Strings {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  unitsLabel: string;
+  unitsHint: string;
+  typeLabel: string;
+  hpLabel: string;
+  runTitle: string;
+  copper: string;
+  wire: string;
+  drain: string;
+  freeHint: string;
+  addonsTitle: string;
+  pvc: string;
+  pvcHint: string;
+  bracketCheck: string;
+  bracketTypeLabel: string;
+  standard: string;
+  heavy: string;
+  switchCheck: string;
+  pumpCheck: string;
+  pumpSub: string;
+  calculate: string;
+  resultTitle: string;
+  labour: string;
+  labourSub: string;
+  material: string;
+  materialSub: string;
+  discount: string;
+  discountSub: string;
+  discountNone: string;
+  grandTotal: string;
+  perUnit: string;
+  for1Unit: string;
+  breakdown: string;
+  confirmedQuote: string;
+  startOver: string;
+  note: string;
+  waIntro: string;
+}
+
+const STRINGS: Record<Lang, Strings> = {
+  en: {
+    eyebrow: "Free Instant Estimate",
+    title: "Aircond Installation Cost Calculator",
+    subtitle: "Labour + materials + bundle discount. Every published price is used as-is; anything unconfirmed is clearly marked as an estimate.",
+    unitsLabel: "Number of Units",
+    unitsHint: "Multi-unit jobs get bundle discounts (4–10 units: 5%, 10+: 10%)",
+    typeLabel: "Aircond Type",
+    hpLabel: "Horsepower (HP)",
+    runTitle: "Pipe & Wire Run Lengths (per unit)",
+    copper: "Copper Pipe Length",
+    wire: "Electrical Wire Length",
+    drain: "Drain Pipe Length",
+    freeHint: `First ${FREE_RUN_FEET} ft free`,
+    addonsTitle: "Optional Add-ons",
+    pvc: "PVC Casing (optional)",
+    pvcHint: "RM 6–12/ft (published rate)",
+    bracketCheck: "Outdoor Bracket",
+    bracketTypeLabel: "Bracket Type",
+    standard: "Standard",
+    heavy: "Heavy Duty",
+    switchCheck: "Aircond Switch / Plug Point",
+    pumpCheck: "Water Pump",
+    pumpSub: "(concealed / low-ceiling installs)",
+    calculate: "Calculate My Installation Cost",
+    resultTitle: "Your Installation Estimate",
+    labour: "Labour Cost",
+    labourSub: "per unit",
+    material: "Material Cost",
+    materialSub: "pipe, wire, add-ons",
+    discount: "Bundle Discount",
+    discountSub: "Add 4+ units",
+    discountNone: "—",
+    grandTotal: "Grand Total",
+    perUnit: "per unit",
+    for1Unit: "for 1 unit",
+    breakdown: "Breakdown",
+    confirmedQuote: "Get Confirmed Quote",
+    startOver: "Start Over",
+    note: `Standard installation includes ${FREE_RUN_FEET} ft of copper pipe, wire and drain pipe free (published terms). Copper pipe is charged at RM 17–27/ft, wire at RM 9–17/ft, PVC casing RM 6–12/ft, brackets RM 35–70, switch/plug point RM 100. Drain pipe beyond ${FREE_RUN_FEET} ft is estimated at RM ${DRAIN_PIPE_RATE}/ft and the water pump at the published RM 350–550 repair range — both confirmed by the technician after on-site inspection. Multi-unit bundle discounts: 4–10 units 5% OFF, 10+ units 10% OFF.`,
+    waIntro: "I used your Aircond Installation Cost Calculator and would like a confirmed quotation:",
+  },
+  ms: {
+    eyebrow: "Anggaran Percuma Segera",
+    title: "Kalkulator Kos Pemasangan Aircond",
+    subtitle: "Buruh + bahan + diskaun pakej. Setiap harga diterbitkan digunakan seadanya; apa-apa yang belum disahkan ditanda sebagai anggaran.",
+    unitsLabel: "Bilangan Unit",
+    unitsHint: "Kerja berbilang unit dapat diskaun pakej (4–10 unit: 5%, 10+: 10%)",
+    typeLabel: "Jenis Aircond",
+    hpLabel: "Kuasa Kuda (HP)",
+    runTitle: "Panjang Paip & Wayar (setiap unit)",
+    copper: "Panjang Paip Tembaga",
+    wire: "Panjang Wayar Elektrik",
+    drain: "Panjang Paip Saliran",
+    freeHint: `${FREE_RUN_FEET} kaki pertama percuma`,
+    addonsTitle: "Item Tambahan Pilihan",
+    pvc: "Casing PVC (pilihan)",
+    pvcHint: "RM 6–12/kaki (kadar diterbitkan)",
+    bracketCheck: "Pendakap Luar",
+    bracketTypeLabel: "Jenis Pendakap",
+    standard: "Standard",
+    heavy: "Heavy Duty",
+    switchCheck: "Suis / Plug Point Aircond",
+    pumpCheck: "Pam Air",
+    pumpSub: "(pemasangan tersembunyi / siling rendah)",
+    calculate: "Kira Kos Pemasangan Saya",
+    resultTitle: "Anggaran Pemasangan Anda",
+    labour: "Kos Buruh",
+    labourSub: "setiap unit",
+    material: "Kos Bahan",
+    materialSub: "paip, wayar, tambahan",
+    discount: "Diskaun Pakej",
+    discountSub: "Tambah 4+ unit",
+    discountNone: "—",
+    grandTotal: "Jumlah Keseluruhan",
+    perUnit: "setiap unit",
+    for1Unit: "untuk 1 unit",
+    breakdown: "Pecahan",
+    confirmedQuote: "Dapatkan Sebut Harga Sah",
+    startOver: "Mula Semula",
+    note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki paip tembaga, wayar dan paip saliran percuma (terma diterbitkan). Paip tembaga dicaj RM 17–27/kaki, wayar RM 9–17/kaki, casing PVC RM 6–12/kaki, pendakap RM 35–70, suis/plug point RM 100. Paip saliran melebihi ${FREE_RUN_FEET} kaki dianggarkan RM ${DRAIN_PIPE_RATE}/kaki dan pam air pada julat pembaikan RM 350–550 yang diterbitkan — kedua-duanya disahkan oleh juruteknik selepas pemeriksaan di tapak. Diskaun pakej berbilang unit: 4–10 unit 5% OFF, 10+ unit 10% OFF.`,
+    waIntro: "Saya menggunakan Kalkulator Kos Pemasangan Aircond anda dan ingin sebut harga disahkan:",
+  },
+  zh: {
+    eyebrow: "免费即时估价",
+    title: "冷气安装费用计算器",
+    subtitle: "人工 + 材料 + 批量折扣。所有已公布价格原样使用；任何未确认项目都会明确标注为估算。",
+    unitsLabel: "安装台数",
+    unitsHint: "多台安装享批量折扣（4–10台：5%，10台以上：10%）",
+    typeLabel: "冷气类型",
+    hpLabel: "匹数（HP）",
+    runTitle: "管道与电线长度（每台）",
+    copper: "铜管长度",
+    wire: "电线长度",
+    drain: "排水管长度",
+    freeHint: `前${FREE_RUN_FEET}英尺免费`,
+    addonsTitle: "可选附加项目",
+    pvc: "PVC线槽（可选）",
+    pvcHint: "每英尺RM 6–12（已公布费率）",
+    bracketCheck: "室外支架",
+    bracketTypeLabel: "支架类型",
+    standard: "标准",
+    heavy: "重型",
+    switchCheck: "冷气开关/插座",
+    pumpCheck: "水泵",
+    pumpSub: "（隐藏式/低吊顶安装）",
+    calculate: "计算我的安装费用",
+    resultTitle: "您的安装估价",
+    labour: "人工费",
+    labourSub: "每台",
+    material: "材料费",
+    materialSub: "管道、电线、附加项",
+    discount: "批量折扣",
+    discountSub: "4台以上",
+    discountNone: "—",
+    grandTotal: "总价",
+    perUnit: "每台",
+    for1Unit: "1台",
+    breakdown: "费用明细",
+    confirmedQuote: "获取正式报价",
+    startOver: "重新开始",
+    note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、电线和排水管免费（已公布条款）。铜管每英尺RM 17–27、电线每英尺RM 9–17、PVC线槽每英尺RM 6–12、支架RM 35–70、开关/插座RM 100。超出${FREE_RUN_FEET}英尺的排水管按每英尺RM ${DRAIN_PIPE_RATE}估算，水泵按已公布的RM 350–550维修范围估算 — 两者均由技术员现场检查后确认。多台批量折扣：4–10台享5%折扣，10台以上享10%折扣。`,
+    waIntro: "我使用了你们的冷气安装费用计算器，希望获得正式报价：",
+  },
+};
+
+export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
+  const s = STRINGS[lang];
   const [units, setUnits] = useState(1);
   const [hp, setHp] = useState<HpSize>("1.5");
   const [unitType, setUnitType] = useState<UnitType>("wall");
@@ -65,6 +248,20 @@ export function InstallationCostCalculator() {
     needsWaterPump,
   });
 
+  const discountLabel =
+    lang === "en"
+      ? result.discount.label
+      : lang === "ms"
+        ? `${result.discount.pct}% OFF — Diskaun Tempahan Segera (${result.discount.range === "4–10 units" ? "4–10 unit" : "10+ unit"})`
+        : `${result.discount.pct}% 折扣 — 即时预约优惠（${result.discount.range === "4–10 units" ? "4–10台" : "10台以上"}）`;
+
+  const unitTypeLabel =
+    unitType === "wall"
+      ? lang === "ms" ? "Dinding" : lang === "zh" ? "挂壁式" : "Wall-Mounted"
+      : unitType === "cassette"
+        ? lang === "ms" ? "Ceiling Cassette" : lang === "zh" ? "天花板卡式" : "Ceiling Cassette"
+        : lang === "ms" ? "Unit Tingkap" : lang === "zh" ? "窗式" : "Window Unit";
+
   const handleCalculate = () => {
     setShowResult(true);
     trackToolUse("installation-cost-calculator", {
@@ -72,6 +269,7 @@ export function InstallationCostCalculator() {
       hp,
       unit_type: unitType,
       grand_total: result.grandTotal,
+      lang,
     });
     if (typeof window !== "undefined") {
       const params = new URLSearchParams();
@@ -86,23 +284,23 @@ export function InstallationCostCalculator() {
   const waMsg = [
     "Hi KL Renovator 👋",
     "",
-    "I used your Aircond Installation Cost Calculator and would like a confirmed quotation:",
+    s.waIntro,
     "",
-    `🔢 Units: ${units}`,
+    `🔢 Units / Unit / 台数: ${units}`,
     `💨 HP: ${hp} HP`,
-    `🏠 Type: ${unitType === "wall" ? "Wall-Mounted" : unitType === "cassette" ? "Ceiling Cassette" : "Window Unit"}`,
-    `📏 Copper pipe: ${copperFeet} ft | Wire: ${wireFeet} ft | Drain: ${drainFeet} ft`,
+    `🏠 Type / Jenis / 类型: ${unitTypeLabel}`,
+    `📏 Copper: ${copperFeet} ft | Wire / Wayar / 电线: ${wireFeet} ft | Drain / Saliran / 排水: ${drainFeet} ft`,
     pvcFeet > 0 ? `📦 PVC casing: ${pvcFeet} ft` : "",
-    needsOutdoorBracket ? `🔩 Outdoor bracket: ${heavyDuty ? "Heavy duty" : "Standard"}` : "",
-    needsSwitch ? "🔌 Aircond switch: Yes" : "",
-    needsWaterPump ? "💧 Water pump: Yes" : "",
+    needsOutdoorBracket ? `🔩 Bracket / Pendakap / 支架: ${heavyDuty ? "Heavy duty" : "Standard"}` : "",
+    needsSwitch ? "🔌 Switch / Suis / 开关: Yes / Ya / 是" : "",
+    needsWaterPump ? "💧 Water pump / Pam air / 水泵: Yes / Ya / 是" : "",
     "",
-    `💰 Estimated Grand Total: ${formatRM(result.grandTotal)}`,
-    result.discountAmount > 0 ? `🎉 ${result.discount.label} applied (−${formatRM(result.discountAmount)})` : "",
+    `💰 ${lang === "ms" ? "Anggaran Jumlah" : lang === "zh" ? "预计总价" : "Estimated Grand Total"}: ${formatRM(result.grandTotal)}`,
+    result.discountAmount > 0 ? `🎉 ${discountLabel} (−${formatRM(result.discountAmount)})` : "",
     "",
-    "📍 My Location:",
+    "📍 Location / Lokasi / 地点:",
     "",
-    "Please confirm availability and exact pricing. Thank you!",
+    "Please confirm / Sila sahkan / 请确认. Thank you / Terima kasih / 谢谢!",
   ]
     .filter(Boolean)
     .join("\n");
@@ -111,76 +309,74 @@ export function InstallationCostCalculator() {
     <CalcCard>
       <div className="mb-6">
         <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2 flex items-center gap-2">
-          <FaWrench className="h-4 w-4" /> Free Instant Estimate
+          <FaWrench className="h-4 w-4" /> {s.eyebrow}
         </p>
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">Aircond Installation Cost Calculator</h2>
-        <p className="text-sm text-slate-500 mt-1">
-          Labour + materials + bundle discount. Every published price is used as-is; anything unconfirmed is clearly marked as an estimate.
-        </p>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">{s.title}</h2>
+        <p className="text-sm text-slate-500 mt-1">{s.subtitle}</p>
       </div>
 
       <div className="space-y-6">
         {/* Units + type + HP */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <NumberField label="Number of Units" value={units} onChange={(v) => { setUnits(Math.max(1, Math.min(30, Math.round(v)))); setShowResult(false); }} min={1} max={30} hint="Multi-unit jobs get bundle discounts (4–10 units: 5%, 10+: 10%)" />
-          <SelectField label="Aircond Type" value={unitType} onChange={(v) => { setUnitType(v as UnitType); setShowResult(false); }} options={UNIT_TYPE_OPTIONS.map((o) => ({ value: o.value, label: o.label }))} />
+          <NumberField label={s.unitsLabel} value={units} onChange={(v) => { setUnits(Math.max(1, Math.min(30, Math.round(v)))); setShowResult(false); }} min={1} max={30} hint={s.unitsHint} />
+          <SelectField label={s.typeLabel} value={unitType} onChange={(v) => { setUnitType(v as UnitType); setShowResult(false); }} options={UNIT_TYPE_OPTIONS[lang].map((o) => ({ value: o.value, label: o.label }))} />
         </div>
-        <PillGroup label="Horsepower (HP)" value={hp} onChange={(v) => { setHp(v); setShowResult(false); }} options={HP_OPTIONS} />
+        <PillGroup label={s.hpLabel} value={hp} onChange={(v) => { setHp(v); setShowResult(false); }} options={HP_OPTIONS} />
 
         {/* Run lengths */}
         <div>
-          <CalcLabel icon={<FaRulerCombined className="h-4 w-4 text-sky-600" />}>Pipe &amp; Wire Run Lengths (per unit)</CalcLabel>
+          <CalcLabel icon={<FaRulerCombined className="h-4 w-4 text-sky-600" />}>{s.runTitle}</CalcLabel>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <NumberField label="Copper Pipe Length" value={copperFeet} onChange={(v) => { setCopperFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={`First ${FREE_RUN_FEET} ft free`} />
-            <NumberField label="Electrical Wire Length" value={wireFeet} onChange={(v) => { setWireFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={`First ${FREE_RUN_FEET} ft free`} />
-            <NumberField label="Drain Pipe Length" value={drainFeet} onChange={(v) => { setDrainFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={`First ${FREE_RUN_FEET} ft free`} />
+            <NumberField label={s.copper} value={copperFeet} onChange={(v) => { setCopperFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
+            <NumberField label={s.wire} value={wireFeet} onChange={(v) => { setWireFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
+            <NumberField label={s.drain} value={drainFeet} onChange={(v) => { setDrainFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
           </div>
         </div>
 
         {/* Optional add-ons */}
         <div>
-          <CalcLabel icon={<FaBoxOpen className="h-4 w-4 text-sky-600" />}>Optional Add-ons</CalcLabel>
+          <CalcLabel icon={<FaBoxOpen className="h-4 w-4 text-sky-600" />}>{s.addonsTitle}</CalcLabel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <NumberField label="PVC Casing (optional)" value={pvcFeet} onChange={(v) => { setPvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint="RM 6–12/ft (published rate)" />
+            <NumberField label={s.pvc} value={pvcFeet} onChange={(v) => { setPvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.pvcHint} />
             <div className="flex items-end">
               <label className="flex items-center gap-3 w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-sky-400 transition-colors">
                 <input type="checkbox" checked={needsOutdoorBracket} onChange={(e) => { setNeedsOutdoorBracket(e.target.checked); setShowResult(false); }} className="h-4 w-4 accent-sky-600" />
-                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaShieldAlt className="text-sky-600" /> Outdoor Bracket</span>
+                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaShieldAlt className="text-sky-600" /> {s.bracketCheck}</span>
               </label>
             </div>
             {needsOutdoorBracket && (
-              <PillGroup label="Bracket Type" value={heavyDuty ? "heavy" : "standard"} onChange={(v) => { setHeavyDuty(v === "heavy"); setShowResult(false); }} options={[{ value: "standard", label: "Standard" }, { value: "heavy", label: "Heavy Duty" }]} color="emerald" />
+              <PillGroup label={s.bracketTypeLabel} value={heavyDuty ? "heavy" : "standard"} onChange={(v) => { setHeavyDuty(v === "heavy"); setShowResult(false); }} options={[{ value: "standard", label: s.standard }, { value: "heavy", label: s.heavy }]} color="emerald" />
             )}
             <div className="flex items-end">
               <label className="flex items-center gap-3 w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-sky-400 transition-colors">
                 <input type="checkbox" checked={needsSwitch} onChange={(e) => { setNeedsSwitch(e.target.checked); setShowResult(false); }} className="h-4 w-4 accent-sky-600" />
-                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaPlug className="text-sky-600" /> Aircond Switch / Plug Point</span>
+                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaPlug className="text-sky-600" /> {s.switchCheck}</span>
               </label>
             </div>
             <div className="flex items-end">
               <label className="flex items-center gap-3 w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-sky-400 transition-colors">
                 <input type="checkbox" checked={needsWaterPump} onChange={(e) => { setNeedsWaterPump(e.target.checked); setShowResult(false); }} className="h-4 w-4 accent-sky-600" />
-                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaWater className="text-sky-600" /> Water Pump <span className="text-[10px] text-slate-400 font-semibold">(concealed / low-ceiling installs)</span></span>
+                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaWater className="text-sky-600" /> {s.pumpCheck} <span className="text-[10px] text-slate-400 font-semibold">{s.pumpSub}</span></span>
               </label>
             </div>
           </div>
         </div>
 
-        <CalculateButton onClick={handleCalculate}>Calculate My Installation Cost</CalculateButton>
+        <CalculateButton onClick={handleCalculate}>{s.calculate}</CalculateButton>
 
         {showResult && (
           <div className="mt-2 bg-gradient-to-br from-sky-600 to-sky-700 rounded-2xl shadow-lg p-6 text-white">
-            <h3 className="text-lg font-black uppercase tracking-tight mb-5">Your Installation Estimate</h3>
+            <h3 className="text-lg font-black uppercase tracking-tight mb-5">{s.resultTitle}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-              <ResultStat label="Labour Cost" value={formatRM(result.labourTotal)} sub={`${formatRM(result.labourPerUnit)} / unit`} />
-              <ResultStat label="Material Cost" value={formatRM(result.materialsTotal)} sub="pipe, wire, add-ons" />
-              <ResultStat label="Bundle Discount" value={result.discountAmount > 0 ? `−${formatRM(result.discountAmount)}` : "—"} sub={result.discountAmount > 0 ? `${result.discount.pct}% OFF` : "Add 4+ units"} />
-              <ResultStat label="Grand Total" value={formatRM(result.grandTotal)} sub={units > 1 ? `${formatRM(result.perUnitTotal)} / unit` : "for 1 unit"} />
+              <ResultStat label={s.labour} value={formatRM(result.labourTotal)} sub={`${formatRM(result.labourPerUnit)} ${s.labourSub}`} />
+              <ResultStat label={s.material} value={formatRM(result.materialsTotal)} sub={s.materialSub} />
+              <ResultStat label={s.discount} value={result.discountAmount > 0 ? `−${formatRM(result.discountAmount)}` : s.discountNone} sub={result.discountAmount > 0 ? `${result.discount.pct}% OFF` : s.discountSub} />
+              <ResultStat label={s.grandTotal} value={formatRM(result.grandTotal)} sub={units > 1 ? `${formatRM(result.perUnitTotal)} ${s.perUnit}` : s.for1Unit} />
             </div>
 
             {/* Line-item breakdown */}
             <div className="bg-white/10 backdrop-blur rounded-xl p-4 mb-5">
-              <p className="text-[11px] font-black uppercase tracking-widest text-sky-100 mb-3">Breakdown</p>
+              <p className="text-[11px] font-black uppercase tracking-widest text-sky-100 mb-3">{s.breakdown}</p>
               <ul className="space-y-2">
                 {result.lineItems.map((item, i) => (
                   <li key={i} className="flex items-start justify-between gap-3 text-sm">
@@ -194,7 +390,7 @@ export function InstallationCostCalculator() {
                 ))}
                 {result.discountAmount > 0 && (
                   <li className="flex items-center justify-between gap-3 text-sm border-t border-white/20 pt-2">
-                    <span className="text-emerald-200 font-bold">{result.discount.label}</span>
+                    <span className="text-emerald-200 font-bold">{discountLabel}</span>
                     <span className="font-black text-emerald-300 whitespace-nowrap">−{formatRM(result.discountAmount)}</span>
                   </li>
                 )}
@@ -208,26 +404,21 @@ export function InstallationCostCalculator() {
                 rel="nofollow noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-widest text-xs sm:text-sm py-3.5 rounded-xl transition-all shadow-lg text-center"
               >
-                <FaWhatsapp className="h-4 w-4" /> Get Confirmed Quote
+                <FaWhatsapp className="h-4 w-4" /> {s.confirmedQuote}
               </a>
               <button
                 type="button"
                 onClick={() => { setShowResult(false); trackToolUse("installation-cost-calculator", { action: "reset" }); }}
                 className="bg-white/10 hover:bg-white/20 text-white font-black uppercase tracking-widest text-xs sm:text-sm py-3.5 rounded-xl transition-all cursor-pointer"
               >
-                ↺ Start Over
+                ↺ {s.startOver}
               </button>
             </div>
           </div>
         )}
       </div>
 
-      <CalcNote>
-        Standard installation includes {FREE_RUN_FEET} ft of copper pipe, wire and drain pipe free (published terms). Copper pipe is charged at RM 17–27/ft,
-        wire at RM 9–17/ft, PVC casing RM 6–12/ft, brackets RM 35–70, switch/plug point RM 100. Drain pipe beyond {FREE_RUN_FEET} ft is estimated at
-        RM {DRAIN_PIPE_RATE}/ft and the water pump at the published RM 350–550 repair range — both confirmed by the technician after on-site inspection.
-        Multi-unit bundle discounts: 4–10 units 5% OFF, 10+ units 10% OFF.
-      </CalcNote>
+      <CalcNote>{s.note}</CalcNote>
     </CalcCard>
   );
 }

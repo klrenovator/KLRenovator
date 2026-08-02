@@ -129,6 +129,22 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
     return target === "en" ? enPath : enPath === "/" ? `/${target}` : `/${target}${enPath}`;
   }
 
+  // Free tools & calculators — /ms and /zh twins exist (2026-08), same slug
+  // under the locale prefix.
+  const toolPages = [
+    "/tools",
+    "/aircond-installation-cost-calculator",
+    "/aircond-gas-topup-cost-calculator",
+    "/which-aircond-service-do-i-need",
+    "/aircond-size-calculator",
+    "/aircond-electricity-cost-calculator",
+    "/aircond-savings-calculator",
+    "/aircond-assistant",
+  ];
+  if (toolPages.includes(enPath)) {
+    return target === "en" ? enPath : `/${target}${enPath}`;
+  }
+
   // Dynamic service detail pages (/services/<slug>) → real /ms and /zh twins
   // created in Round 18.3 (app/ms/services/[slug], app/zh/services/[slug]).
   // Add this ONLY after those route files exist, so the switcher never
@@ -222,7 +238,7 @@ export const Navbar = () => {
     { label: lbl.home,         href: "/",          localize: true },
     { label: lbl.installation, href: "/installation", localize: true },
     { label: lbl.services,     href: "/services",  localize: true },
-    { label: lbl.tools,        href: "/tools",     localize: false },
+    { label: lbl.tools,        href: "/tools",     localize: true },
     { label: lbl.blog,         href: "/blog",      localize: true },
     { label: lbl.about,        href: "/about",     localize: true },
     { label: lbl.faq,          href: "/faq",       localize: true },

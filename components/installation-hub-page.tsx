@@ -338,6 +338,7 @@ export function InstallationHubPage({ locale }: { locale: HubLocale }) {
       <section className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ToolLinks
+            lang={locale === "ms" ? "ms" : locale === "zh" ? "zh" : "en"}
             heading={
               locale === "ms"
                 ? "Kalkulator Aircond Percuma"

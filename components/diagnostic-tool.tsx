@@ -452,7 +452,57 @@ function buildDiagnosticWaMsg(result: DiagnosticResult, path: string[]): string 
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
-export function DiagnosticTool() {
+type DiagLang = "en" | "ms" | "zh";
+
+/** Localized UI chrome (labels/buttons) for the diagnostic tool. */
+const UI_TEXT: Record<DiagLang, {
+  headerSub: string;
+  likelyCause: string;
+  recommendedAction: string;
+  recommendedService: string;
+  viewService: string;
+  readGuide: string;
+  waBook: string;
+  startNew: string;
+  goBack: string;
+}> = {
+  en: {
+    headerSub: "Alat Diagnostik Masalah Aircond  |  冷气问题诊断工具",
+    likelyCause: "Likely Cause",
+    recommendedAction: "Recommended Action",
+    recommendedService: "Recommended Service",
+    viewService: "View Service →",
+    readGuide: "Read full guide for this problem →",
+    waBook: "WhatsApp My Diagnosis — Book Fix",
+    startNew: "↺ Start New Diagnosis",
+    goBack: "← Go back",
+  },
+  ms: {
+    headerSub: "Diagnostik masalah aircond dalam beberapa saat",
+    likelyCause: "Punca Kemungkinan",
+    recommendedAction: "Tindakan Disyorkan",
+    recommendedService: "Servis Disyorkan",
+    viewService: "Lihat Servis →",
+    readGuide: "Baca panduan penuh untuk masalah ini →",
+    waBook: "WhatsApp Diagnosis Saya — Tempah Pembaikan",
+    startNew: "↺ Mulakan Diagnosis Baharu",
+    goBack: "← Kembali",
+  },
+  zh: {
+    headerSub: "几秒钟内诊断冷气问题",
+    likelyCause: "可能的原因",
+    recommendedAction: "建议采取的措施",
+    recommendedService: "推荐服务",
+    viewService: "查看服务 →",
+    readGuide: "阅读此问题的完整指南 →",
+    waBook: "WhatsApp发送诊断 — 预约维修",
+    startNew: "↺ 重新诊断",
+    goBack: "← 返回",
+  },
+};
+
+export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
+  const ui = UI_TEXT[lang];
   const [currentStep, setCurrentStep] = useState<string>("start");
   const [result, setResult] = useState<DiagnosticResult | null>(null);
   const [path, setPath] = useState<string[]>([]);
@@ -497,10 +547,10 @@ export function DiagnosticTool() {
       <div className="bg-gradient-to-r from-violet-600 to-violet-500 px-6 py-5 text-white">
         <p className="text-xs font-black uppercase tracking-widest opacity-80 mb-1">Free Instant Diagnosis</p>
         <h3 className="text-xl font-black leading-tight">
-          Aircond Problem Diagnostic Tool
+          {lang === "ms" ? "Alat Diagnostik Masalah Aircond" : lang === "zh" ? "冷气问题诊断工具" : "Aircond Problem Diagnostic Tool"}
         </h3>
         <p className="text-violet-200 text-xs mt-1">
-          Alat Diagnostik Masalah Aircond &nbsp;|&nbsp; 冷气问题诊断工具
+          {ui.headerSub}
         </p>
       </div>
 
@@ -520,29 +570,33 @@ export function DiagnosticTool() {
         {!result && step && (
           <div className="space-y-4">
             <div>
-              <p className="font-black text-slate-900 text-base sm:text-lg leading-snug mb-1">{step.question.en}</p>
-              <p className="text-xs text-slate-400">{step.question.ms} &nbsp;|&nbsp; {step.question.zh}</p>
+              <p className="font-black text-slate-900 text-base sm:text-lg leading-snug mb-1">{step.question[lang]}</p>
+              {lang === "en" && (
+                <p className="text-xs text-slate-400">{step.question.ms} &nbsp;|&nbsp; {step.question.zh}</p>
+              )}
             </div>
             <div className="space-y-2.5">
               {step.options.map((option, i) => (
                 <button
                   key={i}
-                  onClick={() => handleOption(option, option.label.en)}
+                  onClick={() => handleOption(option, option.label[lang])}
                   className="w-full text-left px-4 py-3.5 rounded-2xl border border-slate-200 hover:border-violet-400 hover:bg-violet-50 text-slate-800 hover:text-violet-900 text-sm font-semibold transition-all active:scale-[0.98] group"
                 >
                   <span className="flex items-center justify-between">
-                    <span>{option.label.en}</span>
+                    <span>{option.label[lang]}</span>
                     <span className="text-slate-300 group-hover:text-violet-400 transition-colors text-lg shrink-0 ml-2">›</span>
                   </span>
-                  <span className="text-xs text-slate-400 font-normal block mt-0.5">
-                    {option.label.ms} &nbsp;|&nbsp; {option.label.zh}
-                  </span>
+                  {lang === "en" && (
+                    <span className="text-xs text-slate-400 font-normal block mt-0.5">
+                      {option.label.ms} &nbsp;|&nbsp; {option.label.zh}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
             {history.length > 0 && (
               <button onClick={handleBack} className="text-xs text-slate-400 hover:text-slate-600 font-semibold transition-colors">
-                ← Go back
+                {ui.goBack}
               </button>
             )}
           </div>
@@ -553,23 +607,27 @@ export function DiagnosticTool() {
           <div className="space-y-4">
             {/* Urgency badge */}
             <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black ${urgencyConfig.badge}`}>
-              {urgencyConfig.label}
+              {lang === "ms" ? urgencyConfig.labelMS : lang === "zh" ? urgencyConfig.labelZH : urgencyConfig.label}
             </div>
 
             {/* Result card */}
             <div className={`border rounded-2xl p-5 ${urgencyConfig.color}`}>
-              <h4 className="font-black text-slate-900 text-base mb-3">{result.title.en}</h4>
+              <h4 className="font-black text-slate-900 text-base mb-3">{result.title[lang]}</h4>
 
               <div className="space-y-3">
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Likely Cause</p>
-                  <p className="text-sm text-slate-700 leading-relaxed">{result.cause.en}</p>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{result.cause.ms}</p>
-                  <p className="text-xs text-slate-400 leading-relaxed">{result.cause.zh}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{ui.likelyCause}</p>
+                  <p className="text-sm text-slate-700 leading-relaxed">{result.cause[lang]}</p>
+                  {lang === "en" && (
+                    <>
+                      <p className="text-xs text-slate-400 mt-1 leading-relaxed">{result.cause.ms}</p>
+                      <p className="text-xs text-slate-400 leading-relaxed">{result.cause.zh}</p>
+                    </>
+                  )}
                 </div>
                 <div className="border-t border-slate-200 pt-3">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Recommended Action</p>
-                  <p className="text-sm text-slate-700 leading-relaxed font-medium">{result.solution.en}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{ui.recommendedAction}</p>
+                  <p className="text-sm text-slate-700 leading-relaxed font-medium">{result.solution[lang]}</p>
                 </div>
               </div>
             </div>
@@ -577,24 +635,24 @@ export function DiagnosticTool() {
             {/* Service link */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs text-slate-500 font-medium mb-0.5">Recommended Service</p>
+                <p className="text-xs text-slate-500 font-medium mb-0.5">{ui.recommendedService}</p>
                 <p className="font-black text-slate-900 text-sm">{result.serviceName}</p>
               </div>
               <Link
-                href={`/services/${result.serviceSlug}`}
+                href={lang === "en" ? `/services/${result.serviceSlug}` : `/${lang}/services/${result.serviceSlug}`}
                 className="text-xs font-black text-sky-600 hover:text-sky-800 border border-sky-200 hover:border-sky-400 px-3 py-2 rounded-xl transition-all whitespace-nowrap ml-3"
               >
-                View Service →
+                {ui.viewService}
               </Link>
             </div>
 
             {/* Problem page link */}
             {result.problemSlug && (
               <Link
-                href={`/problems/${result.problemSlug}`}
+                href={lang === "en" ? `/problems/${result.problemSlug}` : `/${lang}/problems/${result.problemSlug}`}
                 className="block text-xs font-semibold text-violet-600 hover:text-violet-800 transition-colors text-center"
               >
-                Read full guide for this problem →
+                {ui.readGuide}
               </Link>
             )}
 
@@ -606,7 +664,7 @@ export function DiagnosticTool() {
               className="flex items-center justify-center gap-2.5 w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-green-500/20"
             >
               <FaWhatsapp className="h-5 w-5 shrink-0" />
-              WhatsApp My Diagnosis — Book Fix
+              {ui.waBook}
             </a>
 
             {result.urgency === "emergency" && (
@@ -614,7 +672,7 @@ export function DiagnosticTool() {
                 href={`tel:${sitePublic.phone}`}
                 className="flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all shadow-lg"
               >
-                📞 Call Emergency Line Now
+                📞 {lang === "ms" ? "Panggil Talian Kecemasan Sekarang" : lang === "zh" ? "立即致电紧急热线" : "Call Emergency Line Now"}
               </a>
             )}
 
@@ -622,7 +680,7 @@ export function DiagnosticTool() {
               onClick={handleReset}
               className="w-full text-xs text-slate-400 hover:text-slate-600 font-semibold py-2 transition-colors"
             >
-              ↺ Start New Diagnosis
+              {ui.startNew}
             </button>
           </div>
         )}

@@ -17,8 +17,51 @@ import {
   welcomeMessage,
   type AssistantCard,
   type AssistantContext,
+  type AssistantLang,
   type AssistantMessage,
 } from "@/lib/aircond-assistant";
+
+const CHAT_STRINGS: Record<AssistantLang, {
+  headerTitle: string;
+  headerSub: string;
+  placeholder: string;
+  thinking: string;
+  reset: string;
+  handoffText: string;
+  waLabel: string;
+  waMsg: string;
+}> = {
+  en: {
+    headerTitle: "Aircond Expert Assistant",
+    headerSub: "Online · trained on KL Renovator 2026 pricing",
+    placeholder: 'Ask anything… e.g. "How much is installation for 2 HP?"',
+    thinking: "Thinking…",
+    reset: "Reset conversation",
+    handoffText: "Need a confirmed booking? Talk to a real technician:",
+    waLabel: "WhatsApp",
+    waMsg: "Hi KL Renovator! I was just chatting with your AI assistant and I'd like to confirm a booking. Here are my details:\n\n📍 Location:\n❄️ Service needed:\n🔢 Units / HP:\n\nPlease confirm price and availability. Thank you!",
+  },
+  ms: {
+    headerTitle: "Pembantu Pakar Aircond",
+    headerSub: "Dalam talian · dilatih dengan harga KL Renovator 2026",
+    placeholder: 'Tanya apa sahaja… cth. "Berapa harga pemasangan 2 HP?"',
+    thinking: "Berfikir…",
+    reset: "Set semula perbualan",
+    handoffText: "Perlukan tempahan disahkan? Bercakap dengan juruteknik sebenar:",
+    waLabel: "WhatsApp",
+    waMsg: "Helo KL Renovator! Saya baru sahaja berbual dengan pembantu AI anda dan ingin mengesahkan tempahan. Maklumat saya:\n\n📍 Lokasi:\n❄️ Servis diperlukan:\n🔢 Unit / HP:\n\nSila sahkan harga dan ketersediaan. Terima kasih!",
+  },
+  zh: {
+    headerTitle: "冷气专家助手",
+    headerSub: "在线 · 基于KL Renovator 2026年定价训练",
+    placeholder: "随便问… 例如\"2匹安装多少钱？\"",
+    thinking: "思考中…",
+    reset: "重置对话",
+    handoffText: "需要确认预约？与真实技术员联系：",
+    waLabel: "WhatsApp",
+    waMsg: "您好KL Renovator！我刚与你们的AI助手交谈，想确认预约。我的信息：\n\n📍 地点：\n❄️ 所需服务：\n🔢 台数/匹数：\n\n请确认价格和可用时间。谢谢！",
+  },
+};
 
 function PricingCard({ card }: { card: Extract<AssistantCard, { type: "pricing" }> }) {
   return (
@@ -184,8 +227,9 @@ function SuggestionChip({ label }: { label: string }) {
   );
 }
 
-export function AiAssistant() {
-  const [messages, setMessages] = useState<AssistantMessage[]>([welcomeMessage()]);
+export function AiAssistant({ lang = "en" }: { lang?: AssistantLang }) {
+  const cs = CHAT_STRINGS[lang];
+  const [messages, setMessages] = useState<AssistantMessage[]>([welcomeMessage(lang)]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
   const [context, setContext] = useState<AssistantContext>({});
@@ -216,8 +260,8 @@ export function AiAssistant() {
     setMessages((m) => [...m, { role: "user", text }]);
     setInput("");
     setTyping(true);
-    const reply = answer(text, context);
-    trackToolUse("ai-assistant", { intent: reply.intent });
+    const reply = answer(text, context, lang);
+    trackToolUse("ai-assistant", { intent: reply.intent, lang });
     // Small delay so the typing indicator is visible and the interaction feels natural.
     await new Promise((r) => setTimeout(r, 550 + Math.min(900, reply.message.text.length * 3)));
     setMessages((m) => [...m, { ...reply.message, role: "assistant" as const }]);
@@ -228,9 +272,9 @@ export function AiAssistant() {
   sendRef.current = send;
 
   function reset() {
-    setMessages([welcomeMessage()]);
+    setMessages([welcomeMessage(lang)]);
     setContext({});
-    trackToolUse("ai-assistant", { action: "reset" });
+    trackToolUse("ai-assistant", { action: "reset", lang });
   }
 
   return (
@@ -241,16 +285,16 @@ export function AiAssistant() {
           <FaRobot className="h-5 w-5" />
         </span>
         <div className="flex-1 min-w-0">
-          <p className="font-black leading-tight text-sm sm:text-base">Aircond Expert Assistant</p>
+          <p className="font-black leading-tight text-sm sm:text-base">{cs.headerTitle}</p>
           <p className="text-[11px] text-violet-100 flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
-            Online · trained on KL Renovator 2026 pricing
+            {cs.headerSub}
           </p>
         </div>
         <button
           type="button"
           onClick={reset}
-          aria-label="Reset conversation"
+          aria-label={cs.reset}
           className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
         >
           <FiRotateCcw className="h-4 w-4" />
@@ -269,7 +313,7 @@ export function AiAssistant() {
             </span>
             <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-md px-4 py-3 shadow-sm flex items-center gap-2">
               <FaSpinner className="h-3.5 w-3.5 text-violet-600 animate-spin" />
-              <span className="text-xs font-bold text-slate-500">Thinking…</span>
+              <span className="text-xs font-bold text-slate-500">{cs.thinking}</span>
             </div>
           </div>
         )}
@@ -288,14 +332,14 @@ export function AiAssistant() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder='Ask anything… e.g. "How much is installation for 2 HP?"'
-          aria-label="Ask the aircond assistant"
+          placeholder={cs.placeholder}
+          aria-label={cs.placeholder}
           className="flex-1 min-w-0 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none px-4 py-3 text-sm font-medium text-slate-900 bg-slate-50 focus:bg-white transition-colors"
         />
         <button
           type="submit"
           disabled={!input.trim() || typing}
-          aria-label="Send message"
+          aria-label={lang === "ms" ? "Hantar mesej" : lang === "zh" ? "发送消息" : "Send message"}
           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-600 hover:bg-sky-700 text-white transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-md"
         >
           <FaPaperPlane className="h-4 w-4" />
@@ -304,16 +348,14 @@ export function AiAssistant() {
 
       {/* WhatsApp handoff */}
       <div className="bg-slate-50 border-t border-slate-100 px-4 py-2.5 flex items-center justify-between gap-3">
-        <p className="text-[11px] text-slate-500 font-medium">
-          Need a confirmed booking? Talk to a real technician:
-        </p>
+        <p className="text-[11px] text-slate-500 font-medium">{cs.handoffText}</p>
         <a
-          href={waLink("Hi KL Renovator! I was just chatting with your AI assistant and I'd like to confirm a booking. Here are my details:\n\n📍 Location:\n❄️ Service needed:\n🔢 Units / HP:\n\nPlease confirm price and availability. Thank you!")}
+          href={waLink(cs.waMsg)}
           target="_blank"
           rel="nofollow noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider bg-[#25D366] hover:bg-[#1ebe5d] text-white px-3.5 py-2 rounded-lg transition-colors shrink-0"
         >
-          <FaWhatsapp className="h-3.5 w-3.5" /> WhatsApp
+          <FaWhatsapp className="h-3.5 w-3.5" /> {cs.waLabel}
         </a>
       </div>
     </div>

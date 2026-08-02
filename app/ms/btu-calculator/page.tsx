@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
+import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia | Kira HP Bilik"),
@@ -19,5 +20,14 @@ export const metadata: Metadata = {
 };
 
 export default function BtuCalculatorPageMS() {
-  return <BtuCalculator lang="ms" />;
+  return (
+    <>
+      <BtuCalculator lang="ms" />
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ToolLinks lang="ms" heading="Kalkulator Aircond Percuma" />
+        </div>
+      </section>
+    </>
+  );
 }

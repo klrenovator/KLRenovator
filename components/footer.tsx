@@ -128,17 +128,17 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Free Calculators (EN-only tools — never localized) */}
+          {/* Free Calculators (trilingual EN/MS/ZH tool pages) */}
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Free Calculators &amp; AI</p>
             <ul className="space-y-1.5">
-              <li><NextLink href="/aircond-installation-cost-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Cost Calculator</NextLink></li>
-              <li><NextLink href="/aircond-gas-topup-cost-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Gas Top-up Cost Estimator</NextLink></li>
-              <li><NextLink href="/aircond-size-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Size Calculator</NextLink></li>
-              <li><NextLink href="/aircond-electricity-cost-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Electricity Cost Calculator</NextLink></li>
-              <li><NextLink href="/aircond-savings-calculator" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Inverter Savings Calculator</NextLink></li>
-              <li><NextLink href="/which-aircond-service-do-i-need" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Which Service Do I Need?</NextLink></li>
-              <li><NextLink href="/aircond-assistant" className="text-xs font-black text-violet-600 hover:text-violet-800 transition-colors">🤖 AI Aircond Expert Assistant</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-installation-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Pemasangan" : lang === "zh" ? "安装费用计算器" : "Installation Cost Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-gas-topup-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Anggaran Kos Tambah Gas" : lang === "zh" ? "加气费用估算器" : "Gas Top-up Cost Estimator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-size-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Saiz Aircond" : lang === "zh" ? "冷气尺寸计算器" : "Aircond Size Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-electricity-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Elektrik" : lang === "zh" ? "电费计算器" : "Electricity Cost Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-savings-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penjimatan Inverter" : lang === "zh" ? "变频节省计算器" : "Inverter Savings Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/which-aircond-service-do-i-need")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Servis Mana Yang Saya Perlukan?" : lang === "zh" ? "我需要哪种服务？" : "Which Service Do I Need?"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-assistant")} className="text-xs font-black text-violet-600 hover:text-violet-800 transition-colors">🤖 {lang === "ms" ? "Pembantu Pakar Aircond AI" : lang === "zh" ? "AI 冷气专家助手" : "AI Aircond Expert Assistant"}</NextLink></li>
             </ul>
           </div>
 

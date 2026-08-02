@@ -39,11 +39,75 @@ export interface ToolPageProps {
   howToName: string;
   /** Heading above the step list (defaults to "How This Calculator Works"). */
   howItWorksTitle?: string;
+  /** Page language — localizes section headings, CTA and link labels. */
+  lang?: "en" | "ms" | "zh";
   /** Extra content sections rendered between factors and FAQs. */
   children?: ReactNode;
 }
 
 const BASE = "https://www.klrenovator.com";
+
+const LAYOUT_STRINGS: Record<"en" | "ms" | "zh", {
+  toolsHub: string;
+  howItWorksTitle: string;
+  factorsTitle: string;
+  faqsTitle: string;
+  linkCard1Title: string;
+  linkCard1Desc: string;
+  linkCard2Title: string;
+  linkCard2Desc: string;
+  ctaTitle: string;
+  ctaBody: string;
+  ctaWa: string;
+  ctaBook: string;
+  toolLinksHeading: string;
+}> = {
+  en: {
+    toolsHub: "Free Aircond Calculators",
+    howItWorksTitle: "How This Calculator Works",
+    factorsTitle: "What Affects the Estimate",
+    faqsTitle: "Frequently Asked Questions",
+    linkCard1Title: "Aircond Service Price 2026 — Malaysia",
+    linkCard1Desc: "Basic service RM 99, chemical wash RM 120, overhaul RM 220, gas RM 2.50/PSI. Full published price list.",
+    linkCard2Title: "Aircond Installation Price Guide",
+    linkCard2Desc: "Installation from RM 199 — full materials breakdown: copper pipe, wire, bracket, casing & warranty.",
+    ctaTitle: "Get a Confirmed Quotation — Free",
+    ctaBody: "Estimates are instant; the final price is confirmed before any work begins. No hidden charges, 1-month workmanship warranty, same-day service across KL & Selangor.",
+    ctaWa: "WhatsApp for a Quote",
+    ctaBook: "Book a Slot Online",
+    toolLinksHeading: "Free Aircond Calculators",
+  },
+  ms: {
+    toolsHub: "Kalkulator Aircond Percuma",
+    howItWorksTitle: "Cara Alat Ini Berfungsi",
+    factorsTitle: "Apa yang Mempengaruhi Anggaran",
+    faqsTitle: "Soalan Lazim",
+    linkCard1Title: "Harga Servis Aircond 2026 — Malaysia",
+    linkCard1Desc: "Servis asas RM 99, cuci kimia RM 120, overhaul RM 220, gas RM 2.50/PSI. Senarai harga penuh yang diterbitkan.",
+    linkCard2Title: "Panduan Harga Pemasangan Aircond",
+    linkCard2Desc: "Pemasangan dari RM 199 — pecahan bahan penuh: paip tembaga, wayar, pendakap, casing & waranti.",
+    ctaTitle: "Dapatkan Sebut Harga Sah — Percuma",
+    ctaBody: "Anggaran serta-merta; harga akhir disahkan sebelum kerja bermula. Tiada caj tersembunyi, waranti mutu kerja 1 bulan, servis hari sama di seluruh KL & Selangor.",
+    ctaWa: "WhatsApp untuk Sebut Harga",
+    ctaBook: "Tempah Slot Dalam Talian",
+    toolLinksHeading: "Kalkulator Aircond Percuma",
+  },
+  zh: {
+    toolsHub: "免费冷气计算工具",
+    howItWorksTitle: "工具使用方法",
+    factorsTitle: "影响估价的因素",
+    faqsTitle: "常见问题",
+    linkCard1Title: "2026年冷气服务价格 — 马来西亚",
+    linkCard1Desc: "基本保养RM 99、化学清洗RM 120、大修RM 220、气体每PSI RM 2.50。完整已公布价目表。",
+    linkCard2Title: "冷气安装价格指南",
+    linkCard2Desc: "安装从RM 199起 — 完整材料明细：铜管、电线、支架、线槽与保修。",
+    ctaTitle: "获取正式报价 — 免费",
+    ctaBody: "估价即时生成；最终价格在动工前确认。无隐藏费用、1个月工艺保修、吉隆坡及雪兰莪当天服务。",
+    ctaWa: "WhatsApp获取报价",
+    ctaBook: "在线预约",
+    toolLinksHeading: "免费冷气计算工具",
+  },
+};
 
 export function ToolPageLayout({
   eyebrow,
@@ -56,15 +120,18 @@ export function ToolPageLayout({
   webAppName,
   pageUrl,
   howToName,
-  howItWorksTitle = "How This Calculator Works",
+  howItWorksTitle,
+  lang = "en",
   children,
 }: ToolPageProps) {
+  const t = LAYOUT_STRINGS[lang];
+  const localePrefix = lang === "en" ? "" : `/${lang}`;
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: BASE },
-      { "@type": "ListItem", position: 2, name: "Free Aircond Calculators", item: `${BASE}/tools` },
+      { "@type": "ListItem", position: 2, name: t.toolsHub, item: `${BASE}${localePrefix}/tools` },
       { "@type": "ListItem", position: 3, name: h1, item: pageUrl },
     ],
   };
@@ -121,7 +188,7 @@ export function ToolPageLayout({
       <section className="py-14 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">{howItWorksTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">{howItWorksTitle ?? t.howItWorksTitle}</h2>
             <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-100">
               <ol className="space-y-4">
                 {howItWorks.map((step, idx) => (
@@ -143,7 +210,7 @@ export function ToolPageLayout({
         <section className="py-14 bg-slate-50 border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">What Affects the Estimate</h2>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">{t.factorsTitle}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {factors.map((f, idx) => (
                   <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
@@ -164,7 +231,7 @@ export function ToolPageLayout({
       <section className="py-14 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">Frequently Asked Questions</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">{t.faqsTitle}</h2>
             <div className="space-y-5">
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
@@ -183,21 +250,21 @@ export function ToolPageLayout({
       {/* Internal links */}
       <section className="py-14 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <ToolLinks />
+          <ToolLinks heading={t.toolLinksHeading} lang={lang} />
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <NextLink
-              href="/aircond-service-price-malaysia"
+              href={`${localePrefix}/aircond-service-price-malaysia`}
               className="group rounded-2xl border border-slate-200 bg-white p-5 hover:border-sky-400 hover:shadow-md transition-all"
             >
-              <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">Aircond Service Price 2026 — Malaysia</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">Basic service RM 99, chemical wash RM 120, overhaul RM 220, gas RM 2.50/PSI. Full published price list.</p>
+              <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">{t.linkCard1Title}</p>
+              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{t.linkCard1Desc}</p>
             </NextLink>
             <NextLink
-              href="/installation-price-malaysia"
+              href={`${localePrefix}/installation-price-malaysia`}
               className="group rounded-2xl border border-slate-200 bg-white p-5 hover:border-sky-400 hover:shadow-md transition-all"
             >
-              <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">Aircond Installation Price Guide</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">Installation from RM 199 — full materials breakdown: copper pipe, wire, bracket, casing &amp; warranty.</p>
+              <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">{t.linkCard2Title}</p>
+              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{t.linkCard2Desc}</p>
             </NextLink>
           </div>
         </div>
@@ -206,11 +273,8 @@ export function ToolPageLayout({
       {/* CTA */}
       <section className="bg-gradient-to-r from-sky-700 to-sky-600 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight mb-3">Get a Confirmed Quotation — Free</h2>
-          <p className="text-sky-100 text-sm sm:text-base max-w-2xl mx-auto mb-8">
-            Estimates are instant; the final price is confirmed before any work begins. No hidden charges, 1-month workmanship warranty,
-            same-day service across KL &amp; Selangor.
-          </p>
+          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight mb-3">{t.ctaTitle}</h2>
+          <p className="text-sky-100 text-sm sm:text-base max-w-2xl mx-auto mb-8">{t.ctaBody}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={waLink(rfqMsg)}
@@ -218,13 +282,13 @@ export function ToolPageLayout({
               rel="nofollow noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black uppercase tracking-widest px-7 py-4 rounded-xl text-sm transition-all hover:scale-[1.02] shadow-lg"
             >
-              <FaWhatsapp className="h-5 w-5" /> WhatsApp for a Quote
+              <FaWhatsapp className="h-5 w-5" /> {t.ctaWa}
             </a>
             <NextLink
               href="/book"
               className="inline-flex items-center justify-center gap-2 bg-white text-sky-700 hover:bg-sky-50 font-black uppercase tracking-widest px-7 py-4 rounded-xl text-sm transition-all hover:scale-[1.02] shadow-lg"
             >
-              Book a Slot Online <FiArrowRight className="h-4 w-4" />
+              {t.ctaBook} <FiArrowRight className="h-4 w-4" />
             </NextLink>
           </div>
         </div>
