@@ -348,6 +348,50 @@ export default function EmergencyPage() {
         </div>
       </section>
 
+      {/* ── PRICING ──────────────────────────────────────────────────────────── */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Emergency Pricing</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Transparent Emergency Rates</h2>
+            <p className="text-slate-500 text-sm mt-2">Harga Kecemasan &nbsp;|&nbsp; 紧急服务价格</p>
+          </div>
+
+          <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <div className="bg-slate-50 px-6 py-4 border-b border-slate-100">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500">Standard Hours (9am – 6pm)</p>
+            </div>
+            {[
+              { label: "Diagnostic Fee", price: "RM 88", note: "Waived if repair done same visit" },
+              { label: "Capacitor Replacement (common emergency)", price: "RM 180", note: "" },
+              { label: "Fan Motor Replacement", price: "RM 250–450", note: "" },
+              { label: "PCB Board Replacement", price: "RM 300–600", note: "" },
+              { label: "Compressor Replacement", price: "RM 600–2,000", note: "Quote before work" },
+              { label: "Drain Pipe Emergency Clear", price: "RM 120", note: "" },
+            ].map((row, i) => (
+              <div key={i} className={`flex items-start justify-between px-6 py-3.5 ${i % 2 === 0 ? "bg-white" : "bg-slate-50/50"} border-b border-slate-100 last:border-0`}>
+                <div>
+                  <p className="font-semibold text-slate-800 text-sm">{row.label}</p>
+                  {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
+                </div>
+                <p className="font-black text-sky-700 text-sm shrink-0 ml-4">{row.price}</p>
+              </div>
+            ))}
+            <div className="bg-amber-50 border-t border-amber-100 px-6 py-4">
+              <div className="flex items-start gap-2">
+                <FiClock className="h-4 w-4 text-amber-600 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-black text-amber-800">After-Hours Surcharge (6pm – 10pm)</p>
+                  <p className="text-xs text-amber-700 mt-0.5">RM 50 overtime surcharge applies for jobs confirmed after 6:00 PM. Diagnostic becomes RM 138 (waived if repair done same visit).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xs text-slate-400 text-center mt-4">All prices confirmed before work begins. No surprise charges.</p>
+        </div>
+      </section>
+
       {/* Round 35 / 8.6: Emergency AIO / LLMO compact answer block */}
       <section id="service-summary" className="py-10 px-4 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto rounded-3xl border border-red-100 bg-gradient-to-br from-red-50 to-white p-5 sm:p-6 shadow-sm">
@@ -637,50 +681,6 @@ export default function EmergencyPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── PRICING ──────────────────────────────────────────────────────────── */}
-      <section className="py-14 px-4 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Emergency Pricing</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Transparent Emergency Rates</h2>
-            <p className="text-slate-500 text-sm mt-2">Harga Kecemasan &nbsp;|&nbsp; 紧急服务价格</p>
-          </div>
-
-          <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-            <div className="bg-slate-50 px-6 py-4 border-b border-slate-100">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-500">Standard Hours (9am – 6pm)</p>
-            </div>
-            {[
-              { label: "Diagnostic Fee", price: "RM 88", note: "Waived if repair done same visit" },
-              { label: "Capacitor Replacement (common emergency)", price: "RM 180", note: "" },
-              { label: "Fan Motor Replacement", price: "RM 250–450", note: "" },
-              { label: "PCB Board Replacement", price: "RM 300–600", note: "" },
-              { label: "Compressor Replacement", price: "RM 600–2,000", note: "Quote before work" },
-              { label: "Drain Pipe Emergency Clear", price: "RM 120", note: "" },
-            ].map((row, i) => (
-              <div key={i} className={`flex items-start justify-between px-6 py-3.5 ${i % 2 === 0 ? "bg-white" : "bg-slate-50/50"} border-b border-slate-100 last:border-0`}>
-                <div>
-                  <p className="font-semibold text-slate-800 text-sm">{row.label}</p>
-                  {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
-                </div>
-                <p className="font-black text-sky-700 text-sm shrink-0 ml-4">{row.price}</p>
-              </div>
-            ))}
-            <div className="bg-amber-50 border-t border-amber-100 px-6 py-4">
-              <div className="flex items-start gap-2">
-                <FiClock className="h-4 w-4 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-black text-amber-800">After-Hours Surcharge (6pm – 10pm)</p>
-                  <p className="text-xs text-amber-700 mt-0.5">RM 50 overtime surcharge applies for jobs confirmed after 6:00 PM. Diagnostic becomes RM 138 (waived if repair done same visit).</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-xs text-slate-400 text-center mt-4">All prices confirmed before work begins. No surprise charges.</p>
         </div>
       </section>
 

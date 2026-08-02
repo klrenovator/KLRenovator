@@ -174,6 +174,59 @@ export default function AircondInstallationKLZHPage() {
         </div>
       </section>
 
+      {/* Pricing Transparency Table */}
+      <section className="py-20 sm:py-28 bg-slate-50" id="pricing">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <p className={eyebrow()}>透明安装报价</p>
+              <h2 className="mt-3"><span className={title({ size: "sm" })}>无隐形收费 — </span><span className={title({ size: "sm", color: "brand" })}>动钻前价格已确认</span></h2>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
+              <div className="min-w-[900px]">
+                <PricingRow type="类型" hp="匹数" price="人工费" pipe="铜管" bracket="支架" wire="电线" drain="排水管" isHeader />
+                {PRICING_TABLE.map((row) => (
+                  <PricingRow key={`${row.type}-${row.hp}`} {...row} />
+                ))}
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
+              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> 人工费包含项目</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 免费现场勘察报价</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7尺铜管(液管+气管)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7尺电线</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7尺PVC排水管</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 标准室外机支架</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 真空泵抽真空调试</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 释放制冷剂测试</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 1个月工艺保修卡</li>
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
+              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> 额外收费（仅按需）</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺铜管: RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺电线: RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC套管/暗管: RM 6–12/尺</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 标准室外压缩机/支架: RM 45</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 重型室外压缩机/支架: RM 70</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 新插座点位: RM 100</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 凿墙/暗管: RM 6/尺</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 高层/难进场: RM 50–150</li>
+              </ul>
+              <p className="mt-4 text-xs text-amber-600">所有额外费用现场报价、经您批准后才动工。绝无惊喜。</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Why Choose KL Renovator for Installation */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -274,59 +327,6 @@ export default function AircondInstallationKLZHPage() {
               </div>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* Pricing Transparency Table */}
-      <section className="py-20 sm:py-28 bg-slate-50" id="pricing">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-10">
-              <p className={eyebrow()}>透明安装报价</p>
-              <h2 className="mt-3"><span className={title({ size: "sm" })}>无隐形收费 — </span><span className={title({ size: "sm", color: "brand" })}>动钻前价格已确认</span></h2>
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
-              <div className="min-w-[900px]">
-                <PricingRow type="类型" hp="匹数" price="人工费" pipe="铜管" bracket="支架" wire="电线" drain="排水管" isHeader />
-                {PRICING_TABLE.map((row) => (
-                  <PricingRow key={`${row.type}-${row.hp}`} {...row} />
-                ))}
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
-              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> 人工费包含项目</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 免费现场勘察报价</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7尺铜管(液管+气管)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7尺电线</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7尺PVC排水管</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 标准室外机支架</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 真空泵抽真空调试</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 释放制冷剂测试</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 1个月工艺保修卡</li>
-              </ul>
-            </div>
-          </Reveal>
-          <Reveal delay={300}>
-            <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
-              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> 额外收费（仅按需）</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺铜管: RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺电线: RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC套管/暗管: RM 6–12/尺</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 标准室外压缩机/支架: RM 45</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 重型室外压缩机/支架: RM 70</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 新插座点位: RM 100</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 凿墙/暗管: RM 6/尺</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 高层/难进场: RM 50–150</li>
-              </ul>
-              <p className="mt-4 text-xs text-amber-600">所有额外费用现场报价、经您批准后才动工。绝无惊喜。</p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
