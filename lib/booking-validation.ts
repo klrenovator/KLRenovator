@@ -28,6 +28,11 @@ export const MAX_QUANTITY = 30;
 export const MAX_LINE_ITEMS = 15;
 /** How far ahead a customer may self-book. */
 export const MAX_LEAD_DAYS = 180;
+/**
+ * Optional free-text job description from the customer. Capped so the field
+ * can't be used to push a huge payload into the DB / calendar description.
+ */
+export const MAX_NOTES_LENGTH = 1000;
 
 export type BookingLineItem = {
   service_type: string;
@@ -41,6 +46,8 @@ export type BookingInput = {
   phone: string;
   address: string;
   line_items: BookingLineItem[];
+  /** Customer's own description of the job. Empty string when not provided. */
+  notes: string;
   start_time: string;
   source: string;
   // Fallbacks for older DB columns / queries
@@ -86,6 +93,16 @@ export function validateBooking(body: unknown): ValidationResult {
   const address = str(b.address);
   if (address.length < 10 || address.length > 500) {
     return { ok: false, error: "Please enter a full address (10–500 characters)." };
+  }
+
+  // Optional: the customer may describe the job in their own words, or skip
+  // it entirely. Only the upper bound is enforced.
+  const notes = str(b.notes);
+  if (notes.length > MAX_NOTES_LENGTH) {
+    return {
+      ok: false,
+      error: `Job details are too long (max ${MAX_NOTES_LENGTH} characters). Please shorten them or send the rest via WhatsApp.`,
+    };
   }
 
   let parsedLineItems: BookingLineItem[] = [];
@@ -207,6 +224,7 @@ export function validateBooking(body: unknown): ValidationResult {
       phone,
       address,
       line_items: parsedLineItems,
+      notes,
       start_time: start.toISOString(),
       source,
       // Fallback details for database backwards compatibility

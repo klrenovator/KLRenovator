@@ -146,9 +146,10 @@ const REQUIRED = [
   "/aircond-savings-calculator",
   "/ms/aircond-savings-calculator",
   "/zh/aircond-savings-calculator",
-  "/aircond-assistant",
-  "/ms/aircond-assistant",
-  "/zh/aircond-assistant",
+  // NOTE: /aircond-assistant (+ /ms, /zh) used to be listed here. Those pages
+  // were deliberately removed in PR #16 ("Remove AI Assistant completely —
+  // prevent lead leakage") but the entries were left behind, so every build
+  // since has failed this check on a route that is never meant to exist again.
 ];
 const builtSet = new Set(htmlFiles.map(routeOf));
 for (const route of REQUIRED) {
