@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 import { createCalendarEvent, getBusySlots } from "@/lib/google-calendar";
 import { calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { validateBooking } from "@/lib/booking-validation";
@@ -46,6 +46,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: parsed.error }, { status: 400 });
     }
     const input = parsed.value;
+
+    // Booking persistence is privileged. Do not silently downgrade to an
+    // anonymous Supabase client if a deployment secret was omitted.
+    let supabaseAdmin: ReturnType<typeof getSupabaseAdmin>;
+    try {
+      supabaseAdmin = getSupabaseAdmin();
+    } catch (configError) {
+      console.error("Booking storage is not configured:", configError);
+      return NextResponse.json(
+        { error: "Online booking is temporarily unavailable. Please WhatsApp us directly." },
+        { status: 503 },
+      );
+    }
 
     // ── 3. Duration ─────────────────────────────────────────────────────
     const calculated_duration_minutes = calculateTotalDurationMinutes(input.line_items);

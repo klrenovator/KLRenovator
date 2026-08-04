@@ -27,5 +27,5 @@ export const metadata: Metadata = {
 };
 
 export default function AreasPageMS() {
-  return <AreasClient />;
+  return <AreasClient forcedLang="ms" />;
 }

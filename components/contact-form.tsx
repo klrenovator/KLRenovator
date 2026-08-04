@@ -59,11 +59,13 @@ export const ContactForm = () => {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+          <label htmlFor="contact-name" className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
             Your Name
           </label>
           <input
+            id="contact-name"
             required
+            autoComplete="name"
             type="text"
             placeholder="Full name"
             value={form.name}
@@ -72,11 +74,13 @@ export const ContactForm = () => {
           />
         </div>
         <div>
-          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+          <label htmlFor="contact-area" className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
             Area / Location
           </label>
           <input
+            id="contact-area"
             required
+            autoComplete="address-level2"
             type="text"
             placeholder="e.g. Subang Jaya"
             list="areas"
@@ -93,10 +97,11 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+        <label htmlFor="contact-service" className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
           Required Aircond Service
         </label>
         <select
+          id="contact-service"
           value={form.service}
           onChange={(e) => setForm({ ...form, service: e.target.value })}
           className={`${inputCls} appearance-none cursor-pointer`}
@@ -111,10 +116,11 @@ export const ContactForm = () => {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+          <label htmlFor="contact-units" className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
             Number of Units
           </label>
           <select
+            id="contact-units"
             value={form.units}
             onChange={(e) => setForm({ ...form, units: e.target.value })}
             className={`${inputCls} appearance-none cursor-pointer`}
@@ -125,10 +131,11 @@ export const ContactForm = () => {
           </select>
         </div>
         <div>
-          <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+          <label htmlFor="contact-hp" className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
             HP Size (if known)
           </label>
           <select
+            id="contact-hp"
             value={form.hp}
             onChange={(e) => setForm({ ...form, hp: e.target.value })}
             className={`${inputCls} appearance-none cursor-pointer`}
@@ -142,10 +149,11 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
+        <label htmlFor="contact-message" className="mb-2 block text-xs font-black uppercase tracking-wider text-slate-700">
           Message / Notes (optional)
         </label>
         <textarea
+          id="contact-message"
           rows={4}
           placeholder="e.g. No. of units, AC brand, leaking or noise issues, preferred booking date..."
           value={form.message}
