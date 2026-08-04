@@ -16,7 +16,7 @@ const RATE_WINDOW_MS = 10 * 60 * 1000;
 export async function POST(req: Request) {
   try {
     // ── 1. Rate limit ───────────────────────────────────────────────────
-    const limit = hit(`bookings:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
+    const limit = await hit(`bookings:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
     if (!limit.allowed) {
       return NextResponse.json(
         { error: "Too many booking attempts. Please try again shortly, or WhatsApp us directly." },

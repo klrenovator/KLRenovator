@@ -27,7 +27,7 @@ function parseMalaysiaDate(value: string): Date | null {
 }
 
 export async function GET(req: Request) {
-  const limit = hit(`availability:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
+  const limit = await hit(`availability:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
   if (!limit.allowed) {
     return NextResponse.json(
       { error: "Too many availability requests. Please try again shortly." },
