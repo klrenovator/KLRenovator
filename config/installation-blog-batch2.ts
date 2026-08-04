@@ -72,6 +72,7 @@ export const installationBlogBatch2: BlogPost[] = [
         <li><strong>Additional copper pipe:</strong> RM 18-35 per foot beyond included 7ft</li>
         <li><strong>Heavy-duty bracket:</strong> RM 50-80 (for larger units or exposed outdoor positions)</li>
         <li><strong>Casing/trunking:</strong> RM 8-12 per foot for exposed pipe runs</li>
+        <li><strong>Drain pipe beyond included 7ft:</strong> RM 5 per foot</li>
         <li><strong>New MCB circuit:</strong> RM 150-250 (for 2.5 HP+ units needing dedicated circuit)</li>
         <li><strong>Condensate pump:</strong> RM 120-180 (when gravity drainage isn't possible)</li>
       </ul>

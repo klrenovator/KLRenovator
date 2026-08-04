@@ -203,7 +203,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical overhaul cost in KL & Selangor?",
-        a: "Wall-mounted 1.0\u20131.5 HP: RM 220. Wall-mounted 2.0\u20132.5 HP: RM 280. Wall-mounted 3.0\u20133.5 HP: RM 350. Ceiling cassette 1.0\u20133.0 HP: RM 430. Ceiling cassette 3.5\u20135.0 HP: RM 500. Ceiling cassette overhauls take longer because the unit is integrated into the ceiling grid and requires more disassembly work. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units.",
+        a: "Wall-mounted 1.0\u20131.5 HP: RM 220. Wall-mounted 2.0\u20132.5 HP: RM 280. Wall-mounted 3.0\u20133.5 HP: RM 350. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units.",
       },
       {
         q: "When do I need a chemical overhaul vs a chemical wash?",
@@ -231,7 +231,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga chemical overhaul di KL & Selangor?",
-        a: "Dinding 1.0\u20131.5 HP: RM 220. Dinding 2.0\u20132.5 HP: RM 280. Dinding 3.0\u20133.5 HP: RM 350. Ceiling cassette 1.0\u20133.0 HP: RM 430. Ceiling cassette 3.5\u20135.0 HP: RM 500. Overhaul ceiling cassette mengambil masa lebih lama kerana unit bersepadu dengan grid siling. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit.",
+        a: "Dinding 1.0\u20131.5 HP: RM 220. Dinding 2.0\u20132.5 HP: RM 280. Dinding 3.0\u20133.5 HP: RM 350. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit.",
       },
       {
         q: "Bilakah saya memerlukan overhaul kimia vs cuci kimia?",
@@ -255,7 +255,6 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修费用是多少？",
-        a: "挂壁式1.0\u20131.5 HP：RM 220。挂壁式2.0\u20132.5 HP：RM 280。挂壁式3.0\u20133.5 HP：RM 350。天花板卡式1.0\u20133.0 HP：RM 430。天花板卡式3.5\u20135.0 HP：RM 500。卡式大修时间更长，因为机器与天花板网格集成需要更多拆卸工作。所有价格在技术员开始前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount）。",
       },
       {
         q: "何时需要化学大修而非化学清洗？",
@@ -280,8 +279,6 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
       { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 350" },
-      { label: "Ceiling Cassette · 1.0 – 3.0 HP", price: "RM 430" },
-      { label: "Ceiling Cassette · 3.5 – 5.0 HP", price: "RM 500" },
     ],
   },
 
@@ -770,7 +767,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "Ceiling Cassette Service",
     tagline: "Specialist service for commercial ceiling cassette units — offices, shops & restaurants. Chemical wash, overhaul, and repair. Off-hours scheduling in KL.",
     description:
-      "Ceiling cassettes are the workhorses of Malaysian commercial spaces: the 4-way unit recessed into the ceiling grid of your office, retail shop, restaurant, clinic, or salon. They are more complex than wall-mounted units \u2014 the blower is larger, the drain pan is integrated into the ceiling panel, and a clogged drain does not drip onto the floor (where you see it) but into the ceiling void (where it silently damages your gypsum board for weeks before you notice the stain). KL Renovator specialises in ceiling cassette servicing for commercial premises across the Klang Valley. Our technicians are trained to safely access ceiling-mounted units, remove the heavy cassette panel, chemically clean the blower and coil, deep-clean the drain pan (the #1 source of hidden ceiling leaks), and test everything before closing. We also handle multi-unit commercial sites \u2014 restaurants with 3\u20134 cassettes, offices with 6\u201310, retail floors with mixed cassette and wall-mounted units. Coordinated scheduling, off-hours (evening/weekend) availability, and volume discounts for regular commercial contracts. Basic service from RM 150, chemical wash from RM 220, chemical overhaul from RM 430.",
+      "Ceiling cassettes are the workhorses of Malaysian commercial spaces: the 4-way unit recessed into the ceiling grid of your office, retail shop, restaurant, clinic, or salon. They are more complex than wall-mounted units \u2014 the blower is larger, the drain pan is integrated into the ceiling panel, and a clogged drain does not drip onto the floor (where you see it) but into the ceiling void (where it silently damages your gypsum board for weeks before you notice the stain). KL Renovator specialises in ceiling cassette servicing for commercial premises across the Klang Valley. Our technicians are trained to safely access ceiling-mounted units, remove the heavy cassette panel, chemically clean the blower and coil, deep-clean the drain pan (the #1 source of hidden ceiling leaks), and test everything before closing. We also handle multi-unit commercial sites \u2014 restaurants with 3\u20134 cassettes, offices with 6\u201310, retail floors with mixed cassette and wall-mounted units. Coordinated scheduling, off-hours (evening/weekend) availability, and volume discounts for regular commercial contracts. Pricing is confirmed according to the selected service and unit configuration.",
     startPrice: "RM 150",
     heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
     ogImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
@@ -796,7 +793,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does ceiling cassette servicing cost in KL & Selangor?",
-        a: "Basic service: RM 150 (1.0\u20131.5 HP), RM 200 (2.0\u20133.0 HP), RM 250 (3.5\u20135.0 HP). Chemical wash: RM 220 (1.0\u20131.5 HP), RM 280 (2.0\u20133.0 HP), RM 350 (4.0\u20135.0 HP). Chemical overhaul: RM 430 (1.0\u20133.0 HP), RM 500 (3.5\u20135.0 HP). Installation: RM 290 (1.0\u20131.5 HP), RM 350 (2.0\u20133.0 HP), RM 400 (3.5\u20136.0 HP). Multi-unit discounts available for commercial premises \u2014 WhatsApp us your unit count for a custom quote.",
+        a: "Basic service: RM 150 (1.0\u20131.5 HP), RM 200 (2.0\u20133.0 HP), RM 250 (3.5\u20135.0 HP). Chemical wash: RM 220 (1.0\u20131.5 HP), RM 280 (2.0\u20133.0 HP), RM 350 (4.0\u20135.0 HP). Chemical overhaul pricing is available for wall-mounted units only and is confirmed by HP. Installation: RM 290 (1.0\u20131.5 HP), RM 350 (2.0\u20133.0 HP), RM 400 (3.5\u20136.0 HP). Multi-unit discounts available for commercial premises \u2014 WhatsApp us your unit count for a custom quote.",
       },
       {
         q: "My ceiling cassette is dripping water \u2014 what should I do immediately?",
@@ -823,7 +820,6 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis ceiling cassette di KL & Selangor?",
-        a: "Servis asas: RM 150 (1.0\u20131.5 HP), RM 200 (2.0\u20133.0 HP), RM 250 (3.5\u20135.0 HP). Cuci kimia: RM 220 (1.0\u20131.5 HP), RM 280 (2.0\u20133.0 HP), RM 350 (4.0\u20135.0 HP). Overhaul kimia: RM 430 (1.0\u20133.0 HP), RM 500 (3.5\u20135.0 HP). Pemasangan: RM 290 (1.0\u20131.5 HP). Diskaun pelbagai unit tersedia untuk premis komersial \u2014 WhatsApp kami bilangan unit anda untuk sebut harga khas.",
       },
       {
         q: "Ceiling cassette saya menitis air \u2014 apa yang perlu saya lakukan dengan segera?",
@@ -846,7 +842,6 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪天花板卡式机保养费用是多少？",
-        a: "基本保养：RM 150（1.0-1.5 HP），RM 200（2.0-3.0 HP），RM 250（3.5-5.0 HP）。化学清洗：RM 220（1.0-1.5 HP），RM 280（2.0-3.0 HP），RM 350（4.0-5.0 HP）。化学大修：RM 430（1.0-3.0 HP），RM 500（3.5-5.0 HP）。安装：RM 290（1.0-1.5 HP）。商业场所多台折扣\u2014\u2014WhatsApp我们您的机器数量获取定制报价。",
       },
       {
         q: "天花板卡式机滴水\u2014\u2014我该怎么办？",
@@ -875,8 +870,6 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Chemical Wash · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 280" },
       { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 350" },
-      { label: "Chemical Overhaul · 1.0 – 3.0 HP", price: "RM 430" },
-      { label: "Chemical Overhaul · 3.5 – 5.0 HP", price: "RM 500" },
       { label: "Installation · 1.0 – 1.5 HP", price: "RM 290" },
       { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },

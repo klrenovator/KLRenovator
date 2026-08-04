@@ -281,14 +281,6 @@ export const sitePublic = {
         {
           "label": "Wall-Mounted · 3.0 – 3.5 HP",
           "price": "RM 350"
-        },
-        {
-          "label": "Ceiling Cassette · 1.0 – 3.0 HP",
-          "price": "RM 430"
-        },
-        {
-          "label": "Ceiling Cassette · 3.5 – 5.0 HP",
-          "price": "RM 500"
         }
       ]
     },
@@ -395,6 +387,10 @@ export const sitePublic = {
         {
           "label": "Electrical Wire 3.0 – 4.0 HP",
           "price": "RM 17/ft"
+        },
+        {
+          "label": "Drain Pipe beyond 7 ft",
+          "price": "RM 5/ft"
         },
         {
           "label": "Standard Compressor / Outdoor Bracket",

@@ -62,6 +62,7 @@ const MATERIAL_PRICES = [
   { label: "电线 1.0–1.5 HP", price: "RM 9/尺" },
   { label: "电线 2.0–2.5 HP", price: "RM 13/尺" },
   { label: "电线 3.0–4.0 HP", price: "RM 17/尺" },
+  { label: "超过7尺排水管", price: "RM 5/尺" },
   { label: "标准室外压缩机/支架", price: "RM 45" },
   { label: "重型室外压缩机/支架", price: "RM 70" },
   { label: "室内通用支架", price: "RM 35" },

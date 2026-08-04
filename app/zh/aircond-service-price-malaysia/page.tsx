@@ -97,7 +97,6 @@ const pricingCategories = [
       { label: "基本保养 · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "化学清洗 · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "化学清洗 · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "化学大修 · 1.0 – 3.0 HP", price: "RM 430" },
     ],
   },
   {
