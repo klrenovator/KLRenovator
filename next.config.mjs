@@ -88,6 +88,15 @@ const nextConfig = {
     ];
   },
   // ✅ Security headers — Google trust/ranking signal + Lighthouse "Best Practices"
+  // ── Content-Security-Policy (audit item P0-04) ─────────────────────────────
+  // Phase 1 (this session): REPORT-ONLY rollout. The policy below is designed to
+  // be enforceable, but is deliberately sent as `Content-Security-Policy-Report-Only`
+  // so the site keeps working unchanged while browsers report every violation to
+  // /api/csp-report. 'unsafe-inline' remains in script-src because GTM, the
+  // <html lang> fixer, Clarity, GA4 and the JSON-LD blocks are inline scripts;
+  // enforcement (nonce/hash strategy) is tracked as P0-04b in DEEP_WEBSITE_AUDIT.md.
+  // Violations must be reviewed for at least one full production cycle before the
+  // policy is switched to enforcement (drop the "-Report-Only" suffix).
   async headers() {
     return [
       {
@@ -112,6 +121,34 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
+          },
+          {
+            // CSP3 report group consumed by the `report-to` directive.
+            key: 'Report-To',
+            value: '{"group":"csp-endpoint","max_age":31536000,"endpoints":[{"url":"https://www.klrenovator.com/api/csp-report"}]}',
+          },
+          {
+            key: 'Content-Security-Policy-Report-Only',
+            value: [
+              "default-src 'self'",
+              "base-uri 'self'",
+              "object-src 'none'",
+              "frame-ancestors 'self'",
+              "form-action 'self' https://wa.me https://api.whatsapp.com",
+              "img-src 'self' data: blob: https://*.googleusercontent.com https://*.googleapis.com",
+              // GTM container, GA4 loader, Clarity tag, Vercel Analytics.
+              // 'unsafe-eval' listed so Next dev / React dev can keep working
+              // during the report-only phase — remove it at enforcement if the
+              // violation log shows nothing needs it in production.
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms https://va.vercel-scripts.com https://*.vercel-scripts.com",
+              "style-src 'self' 'unsafe-inline'",
+              "font-src 'self' data:",
+              "connect-src 'self' https://www.google-analytics.com https://*.clarity.ms https://*.vercel-scripts.com https://*.supabase.co https://maps.googleapis.com https://www.googleapis.com https://*.doubleclick.net",
+              "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com",
+              "worker-src 'self' blob:",
+              "report-uri /api/csp-report",
+              "report-to csp-endpoint",
+            ].join('; '),
           },
         ],
       },

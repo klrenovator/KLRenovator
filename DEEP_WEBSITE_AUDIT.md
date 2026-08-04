@@ -14,6 +14,14 @@ The audit is a point-in-time report. The following initial remediation batch was
 - The contact form now gives every field an associated label and useful autocomplete hints.
 - Area hubs now receive an explicit URL locale for SSR and generate locale-correct internal links. Homepage client-context sections receive an initial server locale; further work is still needed to translate all remaining hard-coded homepage copy and the global shell at SSR.
 
+**Session 2 (2026-08-04) — pending work batch 1 (verified with `lint` + `typecheck` + `build` + sanitizer tests):**
+
+- **P0-04 (CSP, phase 1):** `Content-Security-Policy-Report-Only` is now sent globally with `report-uri`/`report-to`, a `Report-To` header, and a violation collector at `app/api/csp-report/route.ts`. Enforcement (nonce/hash, dropping `'unsafe-inline'`) is tracked as P0-04b.
+- **P0-05 (blog HTML sanitization):** every EN/MS/ZH blog body is sanitised on the server (`lib/blog-html-sanitize.ts`) before it reaches `dangerouslySetInnerHTML`; `scripts/verify-sanitizer.mjs` passes all attack payloads plus all 261 real blog bodies.
+- **P1-06:** global `app/loading.tsx` and `app/global-error.tsx` added (`error.tsx`/`not-found.tsx` already existed).
+- **P2-09:** `priority` + `loading="lazy"` conflicts removed (blog hero keeps `priority`; decorative header bg is lazy-only). Automated scan confirms zero remaining conflicts in `app`/`components`.
+- **P2-10:** `window.open` in `components/contact-form.tsx` now passes `"noopener,noreferrer"`; automated scan confirms every `target="_blank"` anchor already had `rel` with `noopener`.
+
 ## Implementation tracker — update this after every remediation session
 
 **Legend:** ✅ **Done in code** = implementation committed but still needs normal CI/production verification.  🟡 **Partially done** = risk has been reduced but not fully closed.  ⏳ **Pending** = no remediation committed yet.  🔎 **Verification pending** = needs a build, automated test, production crawl, or measurement rather than a code change.
@@ -23,8 +31,9 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P0-01 | 🟡 **Partially done** | `/ms`/`/zh` homepage context sections now receive an explicit server locale; all `/areas` locale hubs now use `forcedLang` and locale-correct links. Remaining: translate hard-coded homepage content and render global navbar/footer with route locale on the server. |
 | P0-02 | ✅ **Done in code** | Availability now validates real date, lead window and 1–480 minute duration, and no longer has unbounded looping. Add route tests. |
 | P0-03 | 🟡 **Partially done** | Endpoint now has a local per-IP throttle. Replace `lib/rate-limit.ts` with Redis/Vercel KV/Upstash shared rate limiting before relying on it at serverless scale. |
-| P0-04 | ⏳ **Pending** | Design CSP report-only rollout with nonce/hash strategy for Next, GTM, Clarity, GA and JSON-LD; then enforce. |
-| P0-05 | ⏳ **Pending** | Replace/sanitize blog HTML inserted through `dangerouslySetInnerHTML`. |
+| P0-04 | ✅ **Done in code** | Report-only CSP rolled out globally (`next.config.mjs`): `Content-Security-Policy-Report-Only` + `Report-To` + `report-uri /api/csp-report` collector (`app/api/csp-report/route.ts`). Enforcement phase is a new item — see P0-04b. |
+| P0-04b | ⏳ **Pending** | **CSP enforcement.** (1) Deploy and let browsers report violations to `/api/csp-report` for at least one full production cycle (Vercel function logs; or set `CSP_REPORT_LOG=1`). (2) Nonce/hash the inline scripts (GTM, `<html lang>` fixer, Clarity, GA4, JSON-LD) or externalise them. (3) Drop `'unsafe-inline'`/`'unsafe-eval'` from `script-src` only if the violation log shows nothing needs them. (4) Rename header `Content-Security-Policy-Report-Only` → `Content-Security-Policy`. |
+| P0-05 | ✅ **Done in code** | All blog bodies (EN/MS/ZH, 261 total) sanitised server-side (`lib/blog-html-sanitize.ts`) before `dangerouslySetInnerHTML`. Allowlist tags/attributes/URL-schemes; `scripts/verify-sanitizer.mjs` green (17 attack payloads + whole real corpus). |
 | P0-06 | ✅ **Done in code** | Privileged Supabase client now throws when server config is absent; booking route returns safe 503. Verify env configuration in deployment. |
 | P0-07 | ✅ **Done in code** | IndexNow fails closed without `INDEXNOW_TRIGGER_SECRET`; `.env.example` updated. Configure secret and trusted automation caller in production. |
 | P0-08 | 🟡 **Partially done** | Explicit route locale is now passed to homepage/areas content. Root `<html lang>` still relies on client correction; migrate locale routing/layouts for true server markup. |
@@ -33,7 +42,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P1-03 | ⏳ **Pending** | Bundle analyzer, RUM baseline and defer/nonessential global widgets/scripts. |
 | P1-04 | ⏳ **Pending** | PDPA consent, retention, deletion, staff-access and data-processing controls require product/legal/operational work. |
 | P1-05 | 🟡 **Partially done** | Contact form labels/IDs/autocomplete fixed. Audit and fix booking/admin/calculator forms with axe + keyboard tests. |
-| P1-06 | ⏳ **Pending** | Add global and route-family `loading.tsx`, `error.tsx`, `not-found.tsx`. |
+| P1-06 | ✅ **Done in code** | Global `app/loading.tsx` + `app/global-error.tsx` added; `app/error.tsx`/`app/not-found.tsx` already existed. Optional follow-up: per-route-family loading/error segments for the biggest families. |
 | P1-07 | ⏳ **Pending** | Model Calendar-outage bookings as pending confirmation, add idempotent sync/retry/operations notification and multi-day scheduling design. |
 | P2-01 | ⏳ **Pending** | Replace in-memory limiter with a shared production store. |
 | P2-02 | ⏳ **Pending** | Add response cache headers/rate limits/validation to Google Reviews endpoint. |
@@ -43,8 +52,8 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P2-06 | 🔎 **Verification pending** | Build a deployed sitemap crawler asserting 200, canonical, reciprocal hreflang, noindex, one H1, body language. |
 | P2-07 | 🔎 **Verification pending** | Confirm all dynamic route families have intended `generateStaticParams`/`dynamicParams` contract in a green build. |
 | P2-08 | ⏳ **Pending** | Give blog/services index hubs explicit page metadata and test rendered head. |
-| P2-09 | ⏳ **Pending** | Correct `priority` + `loading="lazy"` Image conflict; audit actual LCP images/sizes. |
-| P2-10 | ⏳ **Pending** | Audit all `window.open` / external blank links; add explicit noopener options where needed. |
+| P2-09 | ✅ **Done in code** | `priority` + `loading="lazy"` conflict removed (blog hero keeps `priority`, decorative header bg lazy-only; services gallery was already correct). Automated scan of every `<Image>` in `app`/`components` confirms zero conflicts. Remaining: audit actual LCP images/sizes. |
+| P2-10 | ✅ **Done in code** | `window.open` in `components/contact-form.tsx` now passes `"noopener,noreferrer"`. Automated scan confirms every `target="_blank"` anchor in `app`/`components` already includes `rel` with `noopener`. |
 | P2-11 | ⏳ **Pending** | Replace public upstream error detail with opaque errors/correlation IDs; restrict debug diagnostics further. |
 | P2-12 | ⏳ **Pending** | Full WCAG rendered audit: axe, keyboard, focus, dialogs, contrast, reduced motion, screen readers. |
 | P2-13 | ⏳ **Pending** | Simplify and usability-test floating/sticky/exit conversion widgets; localize mixed-language homepage hardcopy. |
@@ -56,7 +65,17 @@ The audit is a point-in-time report. The following initial remediation batch was
 
 ### Next-session starting point
 
-Start with **P0-04 (CSP)** and **P0-05 (blog HTML sanitization)**. After those, complete **P0-01/P0-08** by moving route locale into server-rendered layout/content for homepage and global shell. Do not mark any item “fully verified” until the commands at the end of this report and a deployed crawl have passed.
+**Session log 2026-08-04 (batch 1 done ✅):** P0-04 (report-only CSP + `/api/csp-report` collector), P0-05 (server-side blog HTML sanitisation, all 261 bodies + attack payloads verified), P1-06 (global `loading.tsx` + `global-error.tsx`), P2-09 (`priority`+`lazy` conflict fixed, scan green), P2-10 (`window.open` noopener + blank-link scan green). All verified locally with `npm run lint`, `npm run typecheck`, `npm run build`, `npx tsx scripts/verify-sanitizer.mjs`.
+
+**Next session — start with:**
+1. **P0-04b** — CSP enforcement (needs production violation reports first; see row).
+2. **P0-01 / P0-08** — move route locale into server-rendered layout/content for homepage and global shell (navbar/footer/`<html lang>` at SSR), then finish P1-02 (`llms.txt` regeneration).
+3. **P0-03 / P2-01** — replace `lib/rate-limit.ts` in-memory limiter with Redis/Vercel KV/Upstash shared rate limiting.
+4. **P1-07** — model Calendar-outage bookings as pending confirmation + idempotent retry/notification.
+5. **P1-05 / P2-12** — axe/keyboard accessibility pass on booking/admin/calculator forms, then full WCAG rendered audit.
+6. **P1-03, P2-02, P2-08, P2-11, P2-13, P2-14, P3-01…P3-04** — see tracker rows.
+
+Do not mark any item “fully verified” until the commands at the end of this report and a deployed crawl have passed. Re-run `npx tsx scripts/verify-sanitizer.mjs` after any change to blog content or the sanitizer.
 
 ## Executive verdict
 

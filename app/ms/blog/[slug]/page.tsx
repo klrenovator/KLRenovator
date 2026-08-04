@@ -4,6 +4,7 @@ import { allPosts } from "@/config/blog-posts";
 import { getRelatedPosts } from "@/app/blog/get-related-posts";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { sanitizeBlogPost } from "@/lib/blog-html-sanitize";
 import { BlogPostClient } from "@/app/blog/[slug]/blog-post-client";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -70,5 +71,7 @@ export default async function BlogPostPageMS({
 
   const related = getRelatedPosts(slug);
 
-  return <BlogPostClient post={post} related={related} forcedLang="ms" />;
+  // Sanitise authored article HTML on the server before client rendering
+  // (audit item P0-05) — mirrors the EN route.
+  return <BlogPostClient post={sanitizeBlogPost(post)} related={related} forcedLang="ms" />;
 }

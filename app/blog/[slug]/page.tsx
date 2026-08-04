@@ -6,6 +6,7 @@ import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildFaqSchema } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
+import { sanitizeBlogPost } from "@/lib/blog-html-sanitize";
 import { BlogPostClient } from "./blog-post-client";
 
 // ─── Static Params (Server Only) ─────────────────────────────────────────────
@@ -74,5 +75,7 @@ export default async function BlogPostPage({
 
   const related = getRelatedPosts(slug);
 
-  return <BlogPostClient post={post} related={related} />;
+  // Sanitise the authored article HTML once, on the server, before it can
+  // reach any `dangerouslySetInnerHTML` in the client (audit item P0-05).
+  return <BlogPostClient post={sanitizeBlogPost(post)} related={related} />;
 }

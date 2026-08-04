@@ -266,7 +266,6 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
               src={post.image}
               alt={post.imageAlt}
               fill
-              priority={true}
               sizes="100vw"
               className="object-cover object-center"
               loading="lazy"
@@ -314,7 +313,6 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 priority={true}
                 sizes="(min-width: 1024px) 896px, 100vw"
                 className="object-cover"
-                loading="lazy"
                 decoding="async"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-4 py-2 text-[11px] font-semibold text-white/90">
