@@ -14,6 +14,50 @@ The audit is a point-in-time report. The following initial remediation batch was
 - The contact form now gives every field an associated label and useful autocomplete hints.
 - Area hubs now receive an explicit URL locale for SSR and generate locale-correct internal links. Homepage client-context sections receive an initial server locale; further work is still needed to translate all remaining hard-coded homepage copy and the global shell at SSR.
 
+## Implementation tracker — update this after every remediation session
+
+**Legend:** ✅ **Done in code** = implementation committed but still needs normal CI/production verification.  🟡 **Partially done** = risk has been reduced but not fully closed.  ⏳ **Pending** = no remediation committed yet.  🔎 **Verification pending** = needs a build, automated test, production crawl, or measurement rather than a code change.
+
+| ID | Current status | Next action / notes |
+|---|---|---|
+| P0-01 | 🟡 **Partially done** | `/ms`/`/zh` homepage context sections now receive an explicit server locale; all `/areas` locale hubs now use `forcedLang` and locale-correct links. Remaining: translate hard-coded homepage content and render global navbar/footer with route locale on the server. |
+| P0-02 | ✅ **Done in code** | Availability now validates real date, lead window and 1–480 minute duration, and no longer has unbounded looping. Add route tests. |
+| P0-03 | 🟡 **Partially done** | Endpoint now has a local per-IP throttle. Replace `lib/rate-limit.ts` with Redis/Vercel KV/Upstash shared rate limiting before relying on it at serverless scale. |
+| P0-04 | ⏳ **Pending** | Design CSP report-only rollout with nonce/hash strategy for Next, GTM, Clarity, GA and JSON-LD; then enforce. |
+| P0-05 | ⏳ **Pending** | Replace/sanitize blog HTML inserted through `dangerouslySetInnerHTML`. |
+| P0-06 | ✅ **Done in code** | Privileged Supabase client now throws when server config is absent; booking route returns safe 503. Verify env configuration in deployment. |
+| P0-07 | ✅ **Done in code** | IndexNow fails closed without `INDEXNOW_TRIGGER_SECRET`; `.env.example` updated. Configure secret and trusted automation caller in production. |
+| P0-08 | 🟡 **Partially done** | Explicit route locale is now passed to homepage/areas content. Root `<html lang>` still relies on client correction; migrate locale routing/layouts for true server markup. |
+| P1-01 | ✅ **Done in code** | Language context no longer restores a stored language that conflicts with an explicit English URL. |
+| P1-02 | 🟡 **Partially done** | `llms.txt` claim remains inaccurate until all homepage/global content is fully server-locale rendered; update generated public AI files at completion. |
+| P1-03 | ⏳ **Pending** | Bundle analyzer, RUM baseline and defer/nonessential global widgets/scripts. |
+| P1-04 | ⏳ **Pending** | PDPA consent, retention, deletion, staff-access and data-processing controls require product/legal/operational work. |
+| P1-05 | 🟡 **Partially done** | Contact form labels/IDs/autocomplete fixed. Audit and fix booking/admin/calculator forms with axe + keyboard tests. |
+| P1-06 | ⏳ **Pending** | Add global and route-family `loading.tsx`, `error.tsx`, `not-found.tsx`. |
+| P1-07 | ⏳ **Pending** | Model Calendar-outage bookings as pending confirmation, add idempotent sync/retry/operations notification and multi-day scheduling design. |
+| P2-01 | ⏳ **Pending** | Replace in-memory limiter with a shared production store. |
+| P2-02 | ⏳ **Pending** | Add response cache headers/rate limits/validation to Google Reviews endpoint. |
+| P2-03 | ⏳ **Pending** | Split giant config/page modules into typed domain content collections. |
+| P2-04 | ⏳ **Pending** | Gradually consolidate duplicated `app`/`app/ms`/`app/zh` route trees into a server-first locale architecture. |
+| P2-05 | ⏳ **Pending** | Generate sitemap from typed content registry and content-aware dates. |
+| P2-06 | 🔎 **Verification pending** | Build a deployed sitemap crawler asserting 200, canonical, reciprocal hreflang, noindex, one H1, body language. |
+| P2-07 | 🔎 **Verification pending** | Confirm all dynamic route families have intended `generateStaticParams`/`dynamicParams` contract in a green build. |
+| P2-08 | ⏳ **Pending** | Give blog/services index hubs explicit page metadata and test rendered head. |
+| P2-09 | ⏳ **Pending** | Correct `priority` + `loading="lazy"` Image conflict; audit actual LCP images/sizes. |
+| P2-10 | ⏳ **Pending** | Audit all `window.open` / external blank links; add explicit noopener options where needed. |
+| P2-11 | ⏳ **Pending** | Replace public upstream error detail with opaque errors/correlation IDs; restrict debug diagnostics further. |
+| P2-12 | ⏳ **Pending** | Full WCAG rendered audit: axe, keyboard, focus, dialogs, contrast, reduced motion, screen readers. |
+| P2-13 | ⏳ **Pending** | Simplify and usability-test floating/sticky/exit conversion widgets; localize mixed-language homepage hardcopy. |
+| P2-14 | ⏳ **Pending** | Create claim/evidence register and validate all ratings, prices, warranties, coverage and qualifications. |
+| P3-01 | ⏳ **Pending** | Review modernizing TS target after browser support confirmation. |
+| P3-02 | ⏳ **Pending** | Move verbose historical round comments to ADR/changelog. |
+| P3-03 | ⏳ **Pending** | Replace remaining `as any` escape hatches with proper types. |
+| P3-04 | ⏳ **Pending** | Rewrite `llms` material as concise dated factual evidence; treat it as discovery aid, not ranking signal. |
+
+### Next-session starting point
+
+Start with **P0-04 (CSP)** and **P0-05 (blog HTML sanitization)**. After those, complete **P0-01/P0-08** by moving route locale into server-rendered layout/content for homepage and global shell. Do not mark any item “fully verified” until the commands at the end of this report and a deployed crawl have passed.
+
 ## Executive verdict
 
 This is an unusually ambitious local-service Next.js site with real effort invested in technical SEO, multilingual routes, structured data, metadata, static generation, booking validation, and CI checks. It is not a generic template. The best parts are the data-rich location/service architecture, server-rendered route families, concrete SEO safeguards in CI, and the substantially improved admin authentication/booking API.
