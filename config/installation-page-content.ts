@@ -72,6 +72,7 @@ const basePricing = {
     ],
     extras: [
       "Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
+      "Drain pipe beyond 7 ft: RM 5/ft",
       "Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
       "PVC casing/concealment: RM 6–12/ft",
       "Standard compressor / outdoor bracket: RM 45",
@@ -94,6 +95,7 @@ const basePricing = {
     ],
     extras: [
       "Paip tembaga melebihi 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
+      "Paip saliran melebihi 7 ft: RM 5/ft",
       "Wayar elektrik melebihi 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
       "Casing PVC/penyembunyian: RM 6–12/ft",
       "Braket kompressor / luaran standard: RM 45",
@@ -116,6 +118,7 @@ const basePricing = {
     ],
     extras: [
       "超出7尺铜管：RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)",
+      "超出7尺排水管：RM 5/尺",
       "超出7尺电线：RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)",
       "PVC套管/隐藏：RM 6–12/尺",
       "标准室外压缩机/支架：RM 45",

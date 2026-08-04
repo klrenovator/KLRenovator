@@ -7973,8 +7973,6 @@ export const siteConfig = {
         { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
         { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
         { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 350" },
-        { label: "Ceiling Cassette · 1.0 – 3.0 HP", price: "RM 430" },
-        { label: "Ceiling Cassette · 3.5 – 5.0 HP", price: "RM 500" },
       ],
     },
     gasTopup: {
@@ -8018,6 +8016,7 @@ export const siteConfig = {
         { label: "Electrical Wire 1.0 – 1.5 HP", price: "RM 9/ft" },
         { label: "Electrical Wire 2.0 – 2.5 HP", price: "RM 13/ft" },
         { label: "Electrical Wire 3.0 – 4.0 HP", price: "RM 17/ft" },
+        { label: "Drain Pipe beyond 7 ft", price: "RM 5/ft" },
         { label: "Standard Compressor / Outdoor Bracket", price: "RM 45" },
         { label: "Heavy Duty Compressor / Outdoor Bracket", price: "RM 70" },
         { label: "Indoor Universal Bracket", price: "RM 35" },

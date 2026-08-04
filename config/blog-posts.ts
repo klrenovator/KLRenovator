@@ -2177,7 +2177,6 @@ export const allPosts: BlogPost[] = [
         <li>Basic Service 1.0–1.5 HP: <strong>RM 150</strong></li>
         <li>Chemical Wash 1.0–1.5 HP: <strong>RM 220</strong></li>
         <li>Chemical Wash 2.0–3.0 HP: <strong>RM 280</strong></li>
-        <li>Chemical Overhaul 1.0–3.0 HP: <strong>RM 430</strong></li>
       </ul>
       <h2>Annual Maintenance Contracts</h2>
       <ul>
@@ -2261,7 +2260,6 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>基本保养 1.0–1.5 HP：<strong>RM 150</strong></li>
         <li>化学清洗 1.0–1.5 HP：<strong>RM 220</strong></li>
-        <li>化学大修 1.0–3.0 HP：<strong>RM 430</strong></li>
       </ul>
       <h2>年度维护合同</h2>
       <ul>
@@ -2770,8 +2768,6 @@ export const allPosts: BlogPost[] = [
           <tr><td>壁挂式 (1.0–1.5 HP)</td><td>RM 220</td><td>完整拆卸、药剂浸泡、重新安装、抽真空</td></tr>
           <tr><td>壁挂式 (2.0–2.5 HP)</td><td>RM 280</td><td>大功率壁挂机深度大修方案</td></tr>
           <tr><td>壁挂式 (3.0–3.5 HP)</td><td>RM 350</td><td>全屋主力机大修协议</td></tr>
-          <tr><td>天花板卡式 (1.0–3.0 HP)</td><td>RM 430</td><td>面板、托盘及核心盘管深度大修</td></tr>
-          <tr><td>天花板卡式 (3.5–5.0 HP)</td><td>RM 500</td><td>大型商业机组深度大修方案</td></tr>
         </tbody>
       </table>
 
@@ -4186,7 +4182,6 @@ export const allPosts: BlogPost[] = [
       <table><thead><tr><th>Service Type</th><th>Price Range</th></tr></thead><tbody>
         <tr><td>Ceiling cassette basic service</td><td>RM 150-250</td></tr>
         <tr><td>Ceiling cassette chemical wash</td><td>RM 220-350</td></tr>
-        <tr><td>Ceiling cassette chemical overhaul</td><td>RM 430-500</td></tr>
       </tbody></table>
       <h2>Gas top-up pricing (per job, includes leak check)</h2>
       <table><thead><tr><th>Refrigerant</th><th>1.0 HP</th><th>1.5-2.0 HP</th><th>2.5-3.0 HP</th></tr></thead><tbody>
@@ -4236,7 +4231,7 @@ export const allPosts: BlogPost[] = [
       <h3>What is the warranty on service work?</h3>
       <p>1-month workmanship warranty on service work. If the same issue recurs within 1 month, KL Renovator returns and redoes the service at no charge.</p>
       <h3>Do you service ceiling cassette units?</h3>
-      <p>Yes. KL Renovator services all ceiling cassette units: basic RM 150-250, chemical wash RM 220-350, overhaul RM 430-500. Ceiling cassette service is more involved due to height and accessibility.</p>
+      <p>Yes. KL Renovator services all ceiling cassette units: basic RM 150-250, chemical wash RM 220-350, overhaul pricing confirmed on-site. Ceiling cassette service is more involved due to height and accessibility.</p>
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. See our full <a href="/services/basic-servicing">Basic Servicing</a> and <a href="/services/chemical-wash">Chemical Wash</a> pricing pages, or explore <a href="/services/maintenance-contract">Annual Maintenance Contract</a> plans from RM 299/year. 1-month workmanship warranty included.</p>
     `,
@@ -4288,7 +4283,6 @@ export const allPosts: BlogPost[] = [
       <table><thead><tr><th>Jenis Servis</th><th>Julat Harga</th></tr></thead><tbody>
         <tr><td>Servis asas ceiling cassette</td><td>RM 150-250</td></tr>
         <tr><td>Cuci kimia ceiling cassette</td><td>RM 220-350</td></tr>
-        <tr><td>Overhaul kimia ceiling cassette</td><td>RM 430-500</td></tr>
       </tbody></table>
       <h2>Harga tambah gas (setiap kerja, termasuk semakan kebocoran)</h2>
       <table><thead><tr><th>Refrigerant</th><th>1.0 HP</th><th>1.5-2.0 HP</th><th>2.5-3.0 HP</th></tr></thead><tbody>
@@ -4338,7 +4332,7 @@ export const allPosts: BlogPost[] = [
       <h3>Apakah waranti pada kerja servis?</h3>
       <p>Waranti kerja 1 bulan untuk kerja servis. Jika isu sama berulang dalam 1 bulan, KL Renovator pulang dan buat semula servis tanpa caj.</p>
       <h3>Adakah anda servis unit ceiling cassette?</h3>
-      <p>Ya. KL Renovator servis semua unit ceiling cassette: asas RM 150-250, cuci kimia RM 220-350, overhaul RM 430-500. Servis ceiling cassette lebih terlibat kerana ketinggian dan kebolehcapaian.</p>
+      <p>Ya. KL Renovator servis semua unit ceiling cassette: asas RM 150-250, cuci kimia RM 220-350, overhaul pricing confirmed on-site. Servis ceiling cassette lebih terlibat kerana ketinggian dan kebolehcapaian.</p>
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC. Lihat harga penuh <a href="/ms/services/basic-servicing">Servis Asas</a> dan <a href="/ms/services/chemical-wash">Cuci Kimia</a>, atau terokai pelan <a href="/ms/services/maintenance-contract">Kontrak Penyelenggaraan Tahunan</a> dari RM 299/tahun.</p>
     `,
@@ -5669,8 +5663,6 @@ export const allPosts: BlogPost[] = [
           <tr><td>Wall-mounted 1.0–1.5 HP</td><td><strong>RM 220</strong></td></tr>
           <tr><td>Wall-mounted 2.0–2.5 HP</td><td><strong>RM 280</strong></td></tr>
           <tr><td>Wall-mounted 3.0–3.5 HP</td><td><strong>RM 350</strong></td></tr>
-          <tr><td>Ceiling cassette 1.0–3.0 HP</td><td><strong>RM 430</strong></td></tr>
-          <tr><td>Ceiling cassette 3.5–5.0 HP</td><td><strong>RM 500</strong></td></tr>
         </tbody>
       </table>
 
@@ -5739,8 +5731,6 @@ export const allPosts: BlogPost[] = [
           <tr><td>Chemical wash 1.0–1.5 HP</td><td><strong>RM 220</strong></td></tr>
           <tr><td>Chemical wash 2.0–3.0 HP</td><td><strong>RM 280</strong></td></tr>
           <tr><td>Chemical wash 4.0–5.0 HP</td><td><strong>RM 350</strong></td></tr>
-          <tr><td>Chemical overhaul 1.0–3.0 HP</td><td><strong>RM 430</strong></td></tr>
-          <tr><td>Chemical overhaul 3.5–5.0 HP</td><td><strong>RM 500</strong></td></tr>
           <tr><td>Installation 1.0–1.5 HP</td><td><strong>RM 290</strong></td></tr>
           <tr><td>Installation 2.0–3.0 HP</td><td><strong>RM 350</strong></td></tr>
           <tr><td>Installation 3.5–6.0 HP</td><td><strong>RM 400</strong></td></tr>
@@ -5843,8 +5833,6 @@ export const allPosts: BlogPost[] = [
           <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
           <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 280</strong></td></tr>
           <tr><td>Dinding 3.0-3.5 HP</td><td><strong>RM 350</strong></td></tr>
-          <tr><td>Ceiling Cassette 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
-          <tr><td>Ceiling Cassette 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
         </tbody>
       </table>
 
@@ -5913,8 +5901,6 @@ export const allPosts: BlogPost[] = [
           <tr><td>Cuci Kimia 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
           <tr><td>Cuci Kimia 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
           <tr><td>Cuci Kimia 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
-          <tr><td>Overhaul Kimia 1.0-3.0 HP</td><td><strong>RM 430</strong></td></tr>
-          <tr><td>Overhaul Kimia 3.5-5.0 HP</td><td><strong>RM 500</strong></td></tr>
           <tr><td>Pemasangan 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
           <tr><td>Pemasangan 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
           <tr><td>Pemasangan 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>

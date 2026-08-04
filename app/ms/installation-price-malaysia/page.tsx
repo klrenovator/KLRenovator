@@ -62,6 +62,7 @@ const MATERIAL_PRICES = [
   { label: "Wayar Elektrik 1.0–1.5 HP", price: "RM 9/kaki" },
   { label: "Wayar Elektrik 2.0–2.5 HP", price: "RM 13/kaki" },
   { label: "Wayar Elektrik 3.0–4.0 HP", price: "RM 17/kaki" },
+  { label: "Paip saliran melebihi 7 kaki", price: "RM 5/kaki" },
   { label: "Braket Kompressor / Luaran Standard", price: "RM 45" },
   { label: "Braket Kompressor / Luaran Heavy Duty", price: "RM 70" },
   { label: "Braket Universal Dalaman", price: "RM 35" },

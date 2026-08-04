@@ -97,7 +97,6 @@ const pricingCategories = [
       { label: "Servis Asas · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Cuci Kimia · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Cuci Kimia · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Overhaul Kimia · 1.0 – 3.0 HP", price: "RM 430" },
     ],
   },
   {

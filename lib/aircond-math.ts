@@ -101,13 +101,10 @@ export function electricalWireRate(hp: HpSize): number {
   return 17;
 }
 
-/**
- * Drain pipe rate — NOT published in site.ts materials pricing (only "7ft
- * drain pipe free with installation"). This is the standard Klang Valley
- * rate used for ESTIMATES only; the final rate is confirmed by the
- * technician on-site. Keep in sync with any future site.ts update.
- */
-export const DRAIN_PIPE_RATE = 5; // RM per foot, estimate only
+/** Drain pipe rate per foot beyond the free 7 ft — from pricing.materials. */
+export const DRAIN_PIPE_RATE = rmToNumber(
+  sitePublic.pricing.materials.rows.find((x) => x.label.includes("Drain Pipe"))?.price ?? "RM 5/ft",
+);
 
 /** PVC casing — published as "RM 6 – 12/ft". Mid point used for estimates. */
 export function pvcCasingRate(): { min: number; max: number; mid: number } {

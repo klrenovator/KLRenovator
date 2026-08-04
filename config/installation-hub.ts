@@ -303,7 +303,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "How much does aircond installation cost in KL and Selangor?",
-        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP and RM 329 for 3.0 HP. Ceiling cassette starts from RM 290 and window units from RM 180. Every quote includes 7 ft of copper pipe, wiring, drain pipe and a standard bracket. Extra copper pipe is RM 17–27 per foot depending on HP size.",
+        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP and RM 329 for 3.0 HP. Ceiling cassette starts from RM 290 and window units from RM 180. Every quote includes 7 ft of copper pipe, wiring, drain pipe and a standard bracket. Extra copper pipe is RM 17–27 per foot depending on HP size. Extra drain pipe beyond the included 7 ft is RM 5 per foot.",
       },
       {
         q: "How long does an aircond installation take?",

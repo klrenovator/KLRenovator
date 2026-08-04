@@ -90,7 +90,6 @@ const pricingCategories = [
       { label: "Basic Servicing · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Chemical Wash · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Chemical Overhaul · 1.0 – 3.0 HP", price: "RM 430" },
     ],
   },
   {
