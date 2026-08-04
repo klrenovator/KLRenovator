@@ -418,7 +418,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
   if (success) {
     return (
-      <div className="rounded-2xl border border-sky-100 bg-sky-50 p-6 text-center shadow-lg">
+      <div className="rounded-2xl border border-sky-100 bg-sky-50 p-6 text-center shadow-lg" role="status" aria-live="polite">
         <h3 className="mb-2 text-xl font-bold text-sky-900">{t.successTitle}</h3>
         <p className="text-slate-600 mb-4">{t.successDesc}</p>
         {generatedLink && (
@@ -452,33 +452,41 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       <h2 className="text-2xl font-bold text-slate-900 mb-6">{isAdmin ? t.adminTitle : t.title}</h2>
       
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.name}</label>
+        <label htmlFor="booking-name" className="block text-sm font-semibold text-slate-700">{t.name}</label>
         <input
+          id="booking-name"
           type="text"
           required
+          autoComplete="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           placeholder={t.namePh}
+          aria-describedby="booking-name-hint"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.phone}</label>
+        <label htmlFor="booking-phone" className="block text-sm font-semibold text-slate-700">{t.phone}</label>
         <input
+          id="booking-phone"
           type="tel"
           required
+          autoComplete="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           placeholder={t.phonePh}
+          aria-describedby="booking-phone-hint"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.address}</label>
+        <label htmlFor="booking-address" className="block text-sm font-semibold text-slate-700">{t.address}</label>
         <textarea
+          id="booking-address"
           required
+          autoComplete="street-address"
           rows={2}
           value={address}
           onChange={(e) => setAddress(e.target.value)}
@@ -521,8 +529,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.serviceType}</label>
+                <label htmlFor={`service-type-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.serviceType}</label>
                 <select
+                  id={`service-type-${idx}`}
                   value={item.service_type}
                   onChange={(e) => updateLineItem(idx, "service_type", e.target.value)}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -536,8 +545,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondType}</label>
+                <label htmlFor={`aircond-type-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondType}</label>
                 <select
+                  id={`aircond-type-${idx}`}
                   value={item.aircond_type}
                   onChange={(e) => updateLineItem(idx, "aircond_type", e.target.value)}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -553,8 +563,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondSize}</label>
+                <label htmlFor={`aircond-size-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondSize}</label>
                 <select
+                  id={`aircond-size-${idx}`}
                   value={item.aircond_size}
                   onChange={(e) => updateLineItem(idx, "aircond_size", e.target.value)}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -568,8 +579,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.quantity}</label>
+                <label htmlFor={`quantity-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.quantity}</label>
                 <input
+                  id={`quantity-${idx}`}
                   type="number"
                   min="1"
                   max="15"
@@ -719,9 +731,10 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
       {isAdmin && (
         <div className="rounded-lg bg-red-50 p-4 border border-red-200">
-          <label className="block text-sm font-bold text-red-700">{t.adminOverride}</label>
+          <label htmlFor="admin-manual-hours" className="block text-sm font-bold text-red-700">{t.adminOverride}</label>
           <p className="text-xs text-red-600 mb-2">Leave blank to use standard system calculation ({baseDurationMinutes / 60} hrs).</p>
           <input
+            id="admin-manual-hours"
             type="number"
             step="0.5"
             min="0.5"
@@ -749,8 +762,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       )}
 
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.selectDate}</label>
+        <label htmlFor="booking-date" className="block text-sm font-semibold text-slate-700">{t.selectDate}</label>
         <input
+          id="booking-date"
           type="date"
           required
           min={new Date().toISOString().split("T")[0]}
@@ -765,8 +779,8 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       </div>
 
       {selectedDate && fetchedOnce && (
-        <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">{t.availTimes}</label>
+        <div role="group" aria-labelledby="available-times-label">
+          <label id="available-times-label" className="block text-sm font-semibold text-slate-700 mb-2">{t.availTimes}</label>
           {availableSlots.length > 0 ? (
             <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
               {availableSlots.map((slot) => {
@@ -781,6 +795,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
                     key={slot}
                     type="button"
                     onClick={() => setSelectedSlot(slot)}
+                    aria-pressed={selectedSlot === slot}
                     className={`rounded-lg px-2 py-2 text-sm font-semibold transition ${
                       selectedSlot === slot
                         ? "bg-sky-600 text-white shadow-md"
