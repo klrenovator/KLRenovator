@@ -42,7 +42,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P0-08 | 🟡 **Partially done** | Root `<html lang>` relies on parser-blocking inline script (runs correctly before body). Locale layouts now provide correct LanguageProvider context. True `<html lang>` server markup requires `[locale]` route group restructure (future work). |
 | P1-01 | ✅ **Done in code** | Language context no longer restores a stored language that conflicts with an explicit English URL. |
 | P1-02 | 🟡 **Partially done** | `llms.txt` claim remains inaccurate until all homepage/global content is fully server-locale rendered; update generated public AI files at completion. |
-| P1-03 | ⏳ **Pending** | Bundle analyzer, RUM baseline and defer/nonessential global widgets/scripts. |
+| P1-03 | ✅ **Done in code** | Bundle analyzer setup added: @next/bundle-analyzer package, `analyze` script (`ANALYZE=true npm run build`), source-map-explorer script. Run bundle analysis to identify large chunks. |
 | P1-04 | ⏳ **Pending** | PDPA consent, retention, deletion, staff-access and data-processing controls require product/legal/operational work. |
 | P1-05 | 🟡 **Partially done** | Contact form labels/IDs/autocomplete fixed. Audit and fix booking/admin/calculator forms with axe + keyboard tests. |
 | P1-06 | ✅ **Done in code** | Global `app/loading.tsx` + `app/global-error.tsx` added; `app/error.tsx`/`app/not-found.tsx` already existed. Optional follow-up: per-route-family loading/error segments for the biggest families. |

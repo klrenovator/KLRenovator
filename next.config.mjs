@@ -1,3 +1,11 @@
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
+// Bundle analyzer enabled when ANALYZE=true environment variable is set.
+// Run: ANALYZE=true npm run build
+const withBundleAnalyzerConfig = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Lint runs in CI (`npm run lint`) rather than inside `next build`.
@@ -156,4 +164,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzerConfig(nextConfig);
