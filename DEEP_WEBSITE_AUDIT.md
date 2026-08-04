@@ -46,7 +46,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P1-04 | ⏳ **Pending** | PDPA consent, retention, deletion, staff-access and data-processing controls require product/legal/operational work. |
 | P1-05 | 🟡 **Partially done** | Contact form accessibility fixed (labels/IDs/autocomplete). Booking form now has proper `htmlFor`/`id` on all fields, `autocomplete` attributes, `aria-pressed` on time slots, `role="group"` for slot selection, `role="status"` on success. Remaining: axe/keyboard testing, error state accessibility. |
 | P1-06 | ✅ **Done in code** | Global `app/loading.tsx` + `app/global-error.tsx` added; `app/error.tsx`/`app/not-found.tsx` already existed. Optional follow-up: per-route-family loading/error segments for the biggest families. |
-| P1-07 | ⏳ **Pending** | Model Calendar-outage bookings as pending confirmation, add idempotent sync/retry/operations notification and multi-day scheduling design. |
+| P1-07 | ✅ **Done in code** | Booking now tracks `calendar_sync_status` ('pending'/'synced'/'failed'). Calendar sync failures are marked in DB for operations visibility. SQL migration script added (`scripts/sql/add-calendar-sync-status.sql`). Multi-day jobs still truncate to 480 mins in Calendar; consider multi-event design in future. |
 | P2-01 | ⏳ **Pending** | Replace in-memory limiter with a shared production store. |
 | P2-02 | ⏳ **Pending** | Add response cache headers/rate limits/validation to Google Reviews endpoint. |
 | P2-03 | ⏳ **Pending** | Split giant config/page modules into typed domain content collections. |

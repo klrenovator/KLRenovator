@@ -95,6 +95,7 @@ export async function POST(req: Request) {
     }
 
     // ── 5. Persist ──────────────────────────────────────────────────────
+    // calendar_sync_status: starts as 'pending', updated after Calendar sync
     const baseRow = {
       customer_name: input.customer_name,
       phone: input.phone,
@@ -108,6 +109,7 @@ export async function POST(req: Request) {
       end_time: end.toISOString(),
       source: input.source,
       calendar_event_id: null,
+      calendar_sync_status: "pending" as const, // P1-07: track Calendar sync state
       line_items: input.line_items,
     };
 
@@ -153,6 +155,7 @@ export async function POST(req: Request) {
 
     // ── 6. Mirror to Google Calendar (non-fatal) ────────────────────────
     // Runs after the DB write so a Calendar outage never costs us the lead.
+    // P1-07: Track sync status so operations can see health and retry failed syncs.
     if (process.env.GOOGLE_CALENDAR_ID) {
       try {
         const itemsDescription = input.line_items.map((item, idx) => {
@@ -177,14 +180,25 @@ export async function POST(req: Request) {
           end,
         });
 
-        if (calendar_event_id && booking?.id) {
+        if (booking?.id) {
+          // P1-07: Update Calendar sync status to 'synced' on success
           await supabaseAdmin
             .from("bookings")
-            .update({ calendar_event_id })
+            .update({ 
+              calendar_event_id,
+              calendar_sync_status: calendar_event_id ? "synced" : "failed"
+            })
             .eq("id", booking.id);
         }
       } catch (calError) {
+        // P1-07: Mark sync as failed so it can be retried
         console.error("Google Calendar warning (booking still saved):", calError);
+        if (booking?.id) {
+          await supabaseAdmin
+            .from("bookings")
+            .update({ calendar_sync_status: "failed" })
+            .eq("id", booking.id);
+        }
       }
     }
 
