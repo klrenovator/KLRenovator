@@ -177,41 +177,40 @@ const LangContext = createContext<LangContextType>({
   t: (k) => translations["en"][k],
 });
 
-export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  // Start with "en" on server. On client, immediately correct from localStorage
-  // using a layout effect (runs synchronously before paint) — this eliminates
-  // the one-render English flash that useEffect caused.
-  const [lang, setLangState] = useState<Lang>("en");
+export const LanguageProvider = ({
+  children,
+  initialLang = "en",
+}: {
+  children: React.ReactNode;
+  /** Use for a route whose locale is already known on the server. */
+  initialLang?: Lang;
+}) => {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
-  // useLayoutEffect fires before the browser paints, so the user never sees
-  // the wrong language. Falls back to useEffect on server (SSR safe).
+  // Keep the shared client shell aligned with the route after hydration.
+  // Route-specific content must use an explicit initialLang for SSR.
   const useIsomorphicLayoutEffect =
     typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
 
   useIsomorphicLayoutEffect(() => {
-    // 1. Check path first, it overrides storage for strict MS/ZH routes
+    // The URL is authoritative. In particular, never restore a previous Malay
+    // or Chinese localStorage value while rendering an explicit English URL.
+    // Route-specific server components pass initialLang for indexable content;
+    // this is only a client-navigation safety net for the shared shell.
     const path = window.location.pathname;
-    let detected: Lang | null = null;
-    if (path.startsWith("/ms/") || path === "/ms") detected = "ms";
-    else if (path.startsWith("/zh/") || path === "/zh") detected = "zh";
-    
-    if (detected) {
-      setLangState(detected);
-      return;
-    }
-
-    // 2. Fallback to localStorage for English routes
-    try {
-      const saved = localStorage.getItem("klr_lang") as Lang | null;
-      if (saved && ["en", "ms", "zh"].includes(saved)) {
-        setLangState(saved);
-      }
-    } catch {}
+    const detected: Lang = path.startsWith("/ms/") || path === "/ms"
+      ? "ms"
+      : path.startsWith("/zh/") || path === "/zh"
+        ? "zh"
+        : "en";
+    setLangState(detected);
   }, []);
 
   const setLang = (l: Lang) => {
+    // Navbar changes the route at the same time. Keep this state update for
+    // immediate UI feedback, but do not persist a preference that can later
+    // contradict an explicit URL.
     setLangState(l);
-    try { localStorage.setItem("klr_lang", l); } catch {}
   };
 
   const t = (key: TranslationKey): string =>

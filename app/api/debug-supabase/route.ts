@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 import { ADMIN_COOKIE, verifySession } from "@/lib/admin-session";
 
@@ -25,6 +25,7 @@ export async function GET() {
   }
 
   try {
+    const supabaseAdmin = getSupabaseAdmin();
     const { count, error } = await supabaseAdmin
       .from("bookings")
       .select("*", { count: "exact", head: true });

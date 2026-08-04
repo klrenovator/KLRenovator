@@ -58,7 +58,7 @@ export default function AreasPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(areaHubSchema) }}
       />
-      <AreasClient />
+      <AreasClient forcedLang="en" />
     </>
   );
 }

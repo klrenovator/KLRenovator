@@ -1,6 +1,5 @@
 import Home from "../page";
 import type { Metadata } from "next";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Pakar Servis Aircond KL & Selangor | KL Renovator",
@@ -34,5 +33,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomeMS() {
-  return <Home />;
+  return <Home locale="ms" />;
 }

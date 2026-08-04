@@ -22,6 +22,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { HomepageAeoSchemas } from "@/components/homepage-aeo-schemas";
 import type { Metadata } from "next";
+import { LanguageProvider, type Lang } from "@/context/language-context";
 
 // Homepage-specific OG/Twitter image (the layout default is the logo).
 // Deep-merges with the root layout's openGraph — only the image is overridden.
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+function HomeContent({ locale }: { locale: Lang }) {
   // NOTE: HVACBusiness and WebSite schema used to be duplicated here AND in
   // app/layout.tsx (same @id, rendered twice on the homepage specifically).
   // The layout.tsx version is the more complete one (aggregateRating, brand
@@ -160,9 +161,9 @@ export default function Home() {
       <WhyChooseUs />
       <GoogleReviews />
       <div className="max-w-5xl mx-auto px-4 py-12">
-        <ReviewTrustWidget locale="en" />
+        <ReviewTrustWidget locale={locale} />
       </div>
-      <PriceComparisonUI locale="en" />
+      <PriceComparisonUI locale={locale} />
 
       {/* ── Emergency Banner ─────────────────────────────────────────── */}
       <section className="bg-gradient-to-r from-red-700 to-rose-600 text-white py-10 px-4">
@@ -521,9 +522,23 @@ export default function Home() {
         </div>
       </section>
 
-      <InstagramFeed locale="en" />
+      <InstagramFeed locale={locale} />
 
       <ReadyToBook />
     </>
+  );
+}
+
+
+/**
+ * The public URL selects the locale before the first server render.  Do not
+ * depend on localStorage for an indexable page: crawlers and first-time users
+ * must receive the same language as the URL declares.
+ */
+export default function Home({ locale = "en" }: { locale?: Lang }) {
+  return (
+    <LanguageProvider initialLang={locale}>
+      <HomeContent locale={locale} />
+    </LanguageProvider>
   );
 }

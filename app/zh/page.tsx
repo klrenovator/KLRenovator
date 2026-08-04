@@ -34,5 +34,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomeZH() {
-  return <Home />;
+  return <Home locale="zh" />;
 }

@@ -4,6 +4,16 @@
 **Repository / branch:** `klrenovator/KLRenovator` / `arena/019fcdb9-klrenovator`  
 **Method:** static source review of the complete tracked project structure (139 routes/pages, 209 TSX files, 65 TS files, configuration, scripts, public assets, and CI). Findings are deliberately evidence-based: a browser crawl, Lighthouse run, production headers, `npm audit`, `npm run lint`, `npm run typecheck`, and `next build` could **not** be run in this checkout because `node_modules` is absent and registry installation is unavailable. Therefore measured CWV, production response behaviour, dependency CVEs, and build status remain **unverified**, not “passed”.
 
+## Remediation log
+
+The audit is a point-in-time report. The following initial remediation batch was implemented after this report on the same branch and still requires CI/build verification:
+
+- Booking availability now validates a real MYT date, lead window and a 480-minute maximum, rejects malformed numeric input, excludes elapsed slots, and has route-level throttling (`app/api/bookings/availability/route.ts`). A shared distributed limiter remains the next production-hardening step.
+- Privileged Supabase use now fails closed when server configuration is missing instead of falling back to the anonymous client (`lib/supabase.ts`, booking/debug handlers).
+- IndexNow trigger now fails closed when its secret is absent (`app/api/indexnow/route.ts`, `.env.example`).
+- The contact form now gives every field an associated label and useful autocomplete hints.
+- Area hubs now receive an explicit URL locale for SSR and generate locale-correct internal links. Homepage client-context sections receive an initial server locale; further work is still needed to translate all remaining hard-coded homepage copy and the global shell at SSR.
+
 ## Executive verdict
 
 This is an unusually ambitious local-service Next.js site with real effort invested in technical SEO, multilingual routes, structured data, metadata, static generation, booking validation, and CI checks. It is not a generic template. The best parts are the data-rich location/service architecture, server-rendered route families, concrete SEO safeguards in CI, and the substantially improved admin authentication/booking API.

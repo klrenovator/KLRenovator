@@ -5,7 +5,7 @@ import { FiMapPin, FiArrowRight, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 
 import { sitePublic } from "@/config/site-public";
-import { useLang } from "@/context/language-context";
+import { useLang, type Lang } from "@/context/language-context";
 import { waLink } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 
@@ -81,9 +81,14 @@ const KL_SLUGS = [
 ];
 const PUTRAJAYA_SLUGS = ["putrajaya", "cyberjaya"];
 
-export function AreasClient() {
-  const { lang } = useLang();
+export function AreasClient({ forcedLang }: { forcedLang?: Lang }) {
+  const { lang: contextLang } = useLang();
+  // A locale URL must determine its server-rendered content. Context remains
+  // useful for the unprefixed English route only; it must not override /ms or
+  // /zh during hydration.
+  const lang = forcedLang ?? contextLang;
   const t = T[lang];
+  const localePrefix = lang === "en" ? "" : `/${lang}`;
 
   const klAreas = sitePublic.areaPagesLite.filter((a) => KL_SLUGS.includes(a.slug));
   const putrajayaAreas = sitePublic.areaPagesLite.filter((a) => PUTRAJAYA_SLUGS.includes(a.slug));
@@ -114,7 +119,7 @@ export function AreasClient() {
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {areas.map((area, i) => (
           <Reveal key={area.slug} delay={i * 30}>
-            <NextLink href={`/areas/${area.slug}`} className={areaCardClasses}>
+            <NextLink href={`${localePrefix}/areas/${area.slug}`} className={areaCardClasses}>
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-50 border border-sky-100">
                   <FiMapPin className="h-3.5 w-3.5 text-sky-500" />
@@ -137,7 +142,7 @@ export function AreasClient() {
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-1 text-xs text-slate-500">
-            <NextLink href="/" className="hover:text-sky-600 transition">
+            <NextLink href={localePrefix || "/"} className="hover:text-sky-600 transition">
               {lang === "zh" ? "首页" : lang === "ms" ? "Utama" : "Home"}
             </NextLink>
             <FiArrowRight className="h-3 w-3" />
@@ -215,13 +220,13 @@ export function AreasClient() {
           <Reveal>
             <p>
               {lang === "en" && (
-                <>Explore our <NextLink href="/services" className="text-sky-600 font-semibold hover:underline">full services list</NextLink>, learn about <NextLink href="/brands/daikin" className="text-sky-600 font-semibold hover:underline">Daikin servicing</NextLink>, <NextLink href="/brands/panasonic" className="text-sky-600 font-semibold hover:underline">Panasonic servicing</NextLink>, or read our <NextLink href="/blog" className="text-sky-600 font-semibold hover:underline">blog</NextLink> for HVAC tips.</>
+                <>Explore our <NextLink href={`${localePrefix}/services`} className="text-sky-600 font-semibold hover:underline">full services list</NextLink>, learn about <NextLink href={`${localePrefix}/brands/daikin`} className="text-sky-600 font-semibold hover:underline">Daikin servicing</NextLink>, <NextLink href={`${localePrefix}/brands/panasonic`} className="text-sky-600 font-semibold hover:underline">Panasonic servicing</NextLink>, or read our <NextLink href={`${localePrefix}/blog`} className="text-sky-600 font-semibold hover:underline">blog</NextLink> for HVAC tips.</>
               )}
               {lang === "ms" && (
-                <>Terokai <NextLink href="/services" className="text-sky-600 font-semibold hover:underline">senarai perkhidmatan penuh</NextLink> kami, ketahui tentang <NextLink href="/brands/daikin" className="text-sky-600 font-semibold hover:underline">servis Daikin</NextLink>, <NextLink href="/brands/panasonic" className="text-sky-600 font-semibold hover:underline">servis Panasonic</NextLink>, atau baca <NextLink href="/blog" className="text-sky-600 font-semibold hover:underline">blog</NextLink> kami untuk tips HVAC.</>
+                <>Terokai <NextLink href={`${localePrefix}/services`} className="text-sky-600 font-semibold hover:underline">senarai perkhidmatan penuh</NextLink> kami, ketahui tentang <NextLink href={`${localePrefix}/brands/daikin`} className="text-sky-600 font-semibold hover:underline">servis Daikin</NextLink>, <NextLink href={`${localePrefix}/brands/panasonic`} className="text-sky-600 font-semibold hover:underline">servis Panasonic</NextLink>, atau baca <NextLink href={`${localePrefix}/blog`} className="text-sky-600 font-semibold hover:underline">blog</NextLink> kami untuk tips HVAC.</>
               )}
               {lang === "zh" && (
-                <>探索我们的<NextLink href="/services" className="text-sky-600 font-semibold hover:underline">完整服务列表</NextLink>，了解<NextLink href="/brands/daikin" className="text-sky-600 font-semibold hover:underline">Daikin 服务</NextLink>、<NextLink href="/brands/panasonic" className="text-sky-600 font-semibold hover:underline">Panasonic 服务</NextLink>，或阅读我们的<NextLink href="/blog" className="text-sky-600 font-semibold hover:underline">博客</NextLink>获取HVAC技巧。</>
+                <>探索我们的<NextLink href={`${localePrefix}/services`} className="text-sky-600 font-semibold hover:underline">完整服务列表</NextLink>，了解<NextLink href={`${localePrefix}/brands/daikin`} className="text-sky-600 font-semibold hover:underline">Daikin 服务</NextLink>、<NextLink href={`${localePrefix}/brands/panasonic`} className="text-sky-600 font-semibold hover:underline">Panasonic 服务</NextLink>，或阅读我们的<NextLink href={`${localePrefix}/blog`} className="text-sky-600 font-semibold hover:underline">博客</NextLink>获取HVAC技巧。</>
               )}
             </p>
           </Reveal>
@@ -265,7 +270,7 @@ export function AreasClient() {
               {sitePublic.services.map((s) => (
                 <NextLink
                   key={s.slug}
-                  href={`/services/${s.slug}`}
+                  href={`${localePrefix}/services/${s.slug}`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-600 uppercase tracking-wider hover:border-sky-400 hover:bg-sky-50 hover:text-sky-700 transition"
                 >
                   {s.title} <FiArrowRight className="h-3 w-3" />

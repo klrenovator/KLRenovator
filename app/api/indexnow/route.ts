@@ -35,18 +35,16 @@ function buildUrlList(): string[] {
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const trigger = searchParams.get("trigger");
 
-  // The old `?trigger=auto|manual` check was not authentication — the value
-  // is guessable and was visible in this file. Require a shared secret when
-  // one is configured, and rate limit regardless so this can't be used to
-  // spam IndexNow from our domain.
+  // `trigger=auto|manual` is not authentication: it is guessable and was
+  // historically visible in source. This operational endpoint fails closed
+  // until a deployment configures its secret.
   const expected = process.env.INDEXNOW_TRIGGER_SECRET;
-  if (expected) {
-    if (searchParams.get("key") !== expected) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-  } else if (trigger !== "auto" && trigger !== "manual") {
+  if (!expected) {
+    console.error("IndexNow trigger attempted without INDEXNOW_TRIGGER_SECRET configured.");
+    return NextResponse.json({ error: "Service unavailable" }, { status: 503 });
+  }
+  if (searchParams.get("key") !== expected) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
