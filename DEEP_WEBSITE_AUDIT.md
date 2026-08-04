@@ -1,5 +1,8 @@
 # KL Renovator — Deep Technical Website Audit
 
+> **⚡ Arena Agent Mode Working Rule:**
+> Work through pending items in priority order (P0 → P1 → P2 → P3) without asking the user. Commit changes after each task. Update the tracker table in this file after every session. When asked to "start pending work" or similar, pick the highest priority incomplete item and proceed.
+
 **Audit date:** 2026-08-04  
 **Repository / branch:** `klrenovator/KLRenovator` / `arena/019fcdb9-klrenovator`  
 **Method:** static source review of the complete tracked project structure (139 routes/pages, 209 TSX files, 65 TS files, configuration, scripts, public assets, and CI). Findings are deliberately evidence-based: a browser crawl, Lighthouse run, production headers, `npm audit`, `npm run lint`, `npm run typecheck`, and `next build` could **not** be run in this checkout because `node_modules` is absent and registry installation is unavailable. Therefore measured CWV, production response behaviour, dependency CVEs, and build status remain **unverified**, not “passed”.
@@ -28,15 +31,15 @@ The audit is a point-in-time report. The following initial remediation batch was
 
 | ID | Current status | Next action / notes |
 |---|---|---|
-| P0-01 | 🟡 **Partially done** | `/ms`/`/zh` homepage context sections now receive an explicit server locale; all `/areas` locale hubs now use `forcedLang` and locale-correct links. Remaining: translate hard-coded homepage content and render global navbar/footer with route locale on the server. |
+| P0-01 | 🟡 **Partially done** | Locale layouts (`app/ms/layout.tsx`, `app/zh/layout.tsx`) now provide server-side LanguageProvider with correct initialLang. Nested provider wrapping fixed to prevent double-context. Remaining: true `<html lang>` server-side fix requires URL restructure to `[locale]` route group (see P0-08 notes). |
 | P0-02 | ✅ **Done in code** | Availability now validates real date, lead window and 1–480 minute duration, and no longer has unbounded looping. Add route tests. |
 | P0-03 | 🟡 **Partially done** | Endpoint now has a local per-IP throttle. Replace `lib/rate-limit.ts` with Redis/Vercel KV/Upstash shared rate limiting before relying on it at serverless scale. |
 | P0-04 | ✅ **Done in code** | Report-only CSP rolled out globally (`next.config.mjs`): `Content-Security-Policy-Report-Only` + `Report-To` + `report-uri /api/csp-report` collector (`app/api/csp-report/route.ts`). Enforcement phase is a new item — see P0-04b. |
-| P0-04b | ⏳ **Pending** | **CSP enforcement.** (1) Deploy and let browsers report violations to `/api/csp-report` for at least one full production cycle (Vercel function logs; or set `CSP_REPORT_LOG=1`). (2) Nonce/hash the inline scripts (GTM, `<html lang>` fixer, Clarity, GA4, JSON-LD) or externalise them. (3) Drop `'unsafe-inline'`/`'unsafe-eval'` from `script-src` only if the violation log shows nothing needs them. (4) Rename header `Content-Security-Policy-Report-Only` → `Content-Security-Policy`. |
+| P0-04b | ⏳ **Pending** | **CSP enforcement.** (1) Deploy and let browsers report violations to `/api/csp-report` for at least one full production cycle. (2) Nonce/hash the inline scripts (GTM, Clarity, GA4, JSON-LD) or externalise them. (3) Drop `'unsafe-inline'`/`'unsafe-eval'` from `script-src` only if the violation log shows nothing needs them. (4) Rename header `Content-Security-Policy-Report-Only` → `Content-Security-Policy`. |
 | P0-05 | ✅ **Done in code** | All blog bodies (EN/MS/ZH, 261 total) sanitised server-side (`lib/blog-html-sanitize.ts`) before `dangerouslySetInnerHTML`. Allowlist tags/attributes/URL-schemes; `scripts/verify-sanitizer.mjs` green (17 attack payloads + whole real corpus). |
 | P0-06 | ✅ **Done in code** | Privileged Supabase client now throws when server config is absent; booking route returns safe 503. Verify env configuration in deployment. |
 | P0-07 | ✅ **Done in code** | IndexNow fails closed without `INDEXNOW_TRIGGER_SECRET`; `.env.example` updated. Configure secret and trusted automation caller in production. |
-| P0-08 | 🟡 **Partially done** | Explicit route locale is now passed to homepage/areas content. Root `<html lang>` still relies on client correction; migrate locale routing/layouts for true server markup. |
+| P0-08 | 🟡 **Partially done** | Root `<html lang>` relies on parser-blocking inline script (runs correctly before body). Locale layouts now provide correct LanguageProvider context. True `<html lang>` server markup requires `[locale]` route group restructure (future work). |
 | P1-01 | ✅ **Done in code** | Language context no longer restores a stored language that conflicts with an explicit English URL. |
 | P1-02 | 🟡 **Partially done** | `llms.txt` claim remains inaccurate until all homepage/global content is fully server-locale rendered; update generated public AI files at completion. |
 | P1-03 | ⏳ **Pending** | Bundle analyzer, RUM baseline and defer/nonessential global widgets/scripts. |

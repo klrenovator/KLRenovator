@@ -180,49 +180,65 @@ const LangContext = createContext<LangContextType>({
 export const LanguageProvider = ({
   children,
   initialLang = "en",
+  as,
 }: {
   children: React.ReactNode;
   /** Use for a route whose locale is already known on the server. */
   initialLang?: Lang;
+  /** Optional explicit locale override - used by locale layouts */
+  as?: Lang;
 }) => {
-  const [lang, setLangState] = useState<Lang>(initialLang);
+  // Check if we're already inside a LanguageProvider context
+  const existingContext = React.useContext(LangContext);
+  
+  // If already inside a provider with the same locale or already set, 
+  // just pass through (prevents double-wrapping)
+  const effectiveLang = as ?? initialLang;
+  const shouldWrap = !existingContext.lang || existingContext.lang === "en" || existingContext.lang !== effectiveLang;
 
-  // Keep the shared client shell aligned with the route after hydration.
-  // Route-specific content must use an explicit initialLang for SSR.
-  const useIsomorphicLayoutEffect =
-    typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
+  if (shouldWrap) {
+    const [lang, setLangState] = useState<Lang>(effectiveLang);
 
-  useIsomorphicLayoutEffect(() => {
-    // The URL is authoritative. In particular, never restore a previous Malay
-    // or Chinese localStorage value while rendering an explicit English URL.
-    // Route-specific server components pass initialLang for indexable content;
-    // this is only a client-navigation safety net for the shared shell.
-    const path = window.location.pathname;
-    const detected: Lang = path.startsWith("/ms/") || path === "/ms"
-      ? "ms"
-      : path.startsWith("/zh/") || path === "/zh"
-        ? "zh"
-        : "en";
-    setLangState(detected);
-  }, []);
+    // Keep the shared client shell aligned with the route after hydration.
+    // Route-specific content must use an explicit initialLang for SSR.
+    const useIsomorphicLayoutEffect =
+      typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
 
-  const setLang = (l: Lang) => {
-    // Navbar changes the route at the same time. Keep this state update for
-    // immediate UI feedback, but do not persist a preference that can later
-    // contradict an explicit URL.
-    setLangState(l);
-  };
+    useIsomorphicLayoutEffect(() => {
+      // The URL is authoritative. In particular, never restore a previous Malay
+      // or Chinese localStorage value while rendering an explicit English URL.
+      // Route-specific server components pass initialLang for indexable content;
+      // this is only a client-navigation safety net for the shared shell.
+      const path = window.location.pathname;
+      const detected: Lang = path.startsWith("/ms/") || path === "/ms"
+        ? "ms"
+        : path.startsWith("/zh/") || path === "/zh"
+          ? "zh"
+          : "en";
+      setLangState(detected);
+    }, []);
 
-  const t = (key: TranslationKey): string =>
-    ((translations[lang] as Record<string, string>)[key]) ??
-    ((translations["en"] as Record<string, string>)[key]) ??
-    key;
+    const setLang = (l: Lang) => {
+      // Navbar changes the route at the same time. Keep this state update for
+      // immediate UI feedback, but do not persist a preference that can later
+      // contradict an explicit URL.
+      setLangState(l);
+    };
 
-  return (
-    <LangContext.Provider value={{ lang, setLang, t }}>
-      {children}
-    </LangContext.Provider>
-  );
+    const t = (key: TranslationKey): string =>
+      ((translations[lang] as Record<string, string>)[key]) ??
+      ((translations["en"] as Record<string, string>)[key]) ??
+      key;
+
+    return (
+      <LangContext.Provider value={{ lang, setLang, t }}>
+        {children}
+      </LangContext.Provider>
+    );
+  }
+
+  // Already inside a provider, just pass children through
+  return <>{children}</>;
 };
 
 export const useLang = () => useContext(LangContext);
