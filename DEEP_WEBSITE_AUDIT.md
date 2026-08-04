@@ -48,7 +48,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P1-06 | ✅ **Done in code** | Global `app/loading.tsx` + `app/global-error.tsx` added; `app/error.tsx`/`app/not-found.tsx` already existed. Optional follow-up: per-route-family loading/error segments for the biggest families. |
 | P1-07 | ✅ **Done in code** | Booking now tracks `calendar_sync_status` ('pending'/'synced'/'failed'). Calendar sync failures are marked in DB for operations visibility. SQL migration script added (`scripts/sql/add-calendar-sync-status.sql`). Multi-day jobs still truncate to 480 mins in Calendar; consider multi-event design in future. |
 | P2-01 | ⏳ **Pending** | Replace in-memory limiter with a shared production store. |
-| P2-02 | ⏳ **Pending** | Add response cache headers/rate limits/validation to Google Reviews endpoint. |
+| P2-02 | ✅ **Done in code** | Google Reviews endpoint now has explicit cache headers (`s-maxage=3600, stale-while-revalidate=86400`), rate limiting (60 req/min per IP), and proper 429/204 responses with cache headers. |
 | P2-03 | ⏳ **Pending** | Split giant config/page modules into typed domain content collections. |
 | P2-04 | ⏳ **Pending** | Gradually consolidate duplicated `app`/`app/ms`/`app/zh` route trees into a server-first locale architecture. |
 | P2-05 | ⏳ **Pending** | Generate sitemap from typed content registry and content-aware dates. |
