@@ -255,6 +255,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修费用是多少？",
+        a: "挂壁式1.0–1.5 HP：RM 220。挂壁式2.0–2.5 HP：RM 280。挂壁式3.0–3.5 HP：RM 350。所有价格在技术员开始工作前确认。多台折扣适用：4–10台享5%即时预订折扣，10台以上享10%即时预订折扣。",
       },
       {
         q: "何时需要化学大修而非化学清洗？",
@@ -820,6 +821,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis ceiling cassette di KL & Selangor?",
+        a: "Servis asas: RM 150 (1.0–1.5 HP), RM 200 (2.0–3.0 HP), RM 250 (3.5–5.0 HP). Cuci kimia: RM 220 (1.0–1.5 HP), RM 280 (2.0–3.0 HP), RM 350 (4.0–5.0 HP). Harga overhaul kimia hanya tersedia untuk unit dinding dan disahkan oleh HP. Pemasangan: RM 290 (1.0–1.5 HP), RM 350 (2.0–3.0 HP), RM 400 (3.5–6.0 HP). Diskaun pelbagai unit tersedia untuk premis komersial — WhatsApp kami jumlah unit anda untuk sebut harga khas.",
       },
       {
         q: "Ceiling cassette saya menitis air \u2014 apa yang perlu saya lakukan dengan segera?",
@@ -842,6 +844,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪天花板卡式机保养费用是多少？",
+        a: "基本保养：RM 150（1.0–1.5 HP），RM 200（2.0–3.0 HP），RM 250（3.5–5.0 HP）。化学清洗：RM 220（1.0–1.5 HP），RM 280（2.0–3.0 HP），RM 350（4.0–5.0 HP）。化学大修价格仅适用于挂壁式，按HP确认。安装：RM 290（1.0–1.5 HP），RM 350（2.0–3.0 HP），RM 400（3.5–6.0 HP）。商业场所享有多台折扣——WhatsApp告诉我们您的机器数量以获取定制报价。",
       },
       {
         q: "天花板卡式机滴水\u2014\u2014我该怎么办？",
