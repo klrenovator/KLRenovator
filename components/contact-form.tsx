@@ -36,7 +36,9 @@ export const ContactForm = () => {
       "Please share price and available time. Thank you!",
     ].join("\n");
     trackQuoteSubmit("contact_form", { service: form.service, area: form.area, units: form.units });
-    window.open(waLink(msg), "_blank");
+    // window.open does NOT get the implicit noopener that anchor target=_blank
+    // links get, so pass it explicitly (audit item P2-10).
+    window.open(waLink(msg), "_blank", "noopener,noreferrer");
     setTimeout(() => setSubmitting(false), 1000);
   };
 
