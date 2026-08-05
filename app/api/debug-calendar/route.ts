@@ -35,11 +35,11 @@ export async function GET() {
 
     return NextResponse.json({ ok: true, message: "Calendar auth is working" });
   } catch (error) {
+    console.error("[DEBUG-CALENDAR] Auth failure:", error);
     return NextResponse.json(
       {
         ok: false,
         error: "Calendar auth failed",
-        details: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

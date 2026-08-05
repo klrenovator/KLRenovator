@@ -89,11 +89,13 @@ export async function GET(req: Request) {
         submitted: urlList.length,
       });
     } else {
-      return NextResponse.json({ success: false, error: await response.text() });
+      console.error("[INDEXNOW] Upstream error:", await response.text());
+      return NextResponse.json({ success: false, error: "Upstream ping failed" });
     }
   } catch (error) {
+    console.error("[INDEXNOW] Exception:", error);
     return NextResponse.json(
-      { error: "Failed to send IndexNow ping", details: error instanceof Error ? error.message : String(error) },
+      { error: "Failed to send IndexNow ping" },
       { status: 500 },
     );
   }

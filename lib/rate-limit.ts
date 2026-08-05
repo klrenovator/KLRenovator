@@ -26,6 +26,13 @@ function sweep(now: number) {
   });
 }
 
+// Production hardening (audit P2-01): replace in-memory Map with Vercel KV,
+// Upstash Redis, or a platform-shared store so rate limits survive cold starts
+// and are global across serverless instances. The `hit()` signature is kept
+// unchanged so the swap is a drop-in replacement.
+// SESSION 2026-08-05: in-memory limiter remains for abuse protection; shared
+// store is next production step.
+
 export type RateLimitResult = {
   allowed: boolean;
   remaining: number;
