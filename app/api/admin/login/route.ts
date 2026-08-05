@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
 
 import { ADMIN_COOKIE, SESSION_TTL_SECONDS, signSession, safeEqual } from "@/lib/admin-session";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 // ─────────────────────────────────────────────────────────────────────────
 // Admin login — server-side password check + signed HttpOnly session cookie.
@@ -23,6 +24,14 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
+  const limit = await rateLimit(`admin-login:${clientIp(req)}`, 8, 10 * 60 * 1000);
+  if (!limit.allowed) {
+    return NextResponse.json(
+      { error: "Too many login attempts. Please try again later." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfterSeconds) } },
+    );
+  }
+
   const password = process.env.ADMIN_PASSWORD;
   const secret = process.env.ADMIN_SESSION_SECRET;
 

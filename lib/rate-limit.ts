@@ -1,75 +1,117 @@
 // ─────────────────────────────────────────────────────────────────────────
-// Minimal in-memory fixed-window rate limiter.
+// Shared, fixed-window rate limiter.
 //
-// Scope & limitations (read before relying on this):
-//   • State lives in the Node process. On Vercel each serverless instance
-//     has its own map, so the effective limit is (limit × warm instances).
-//     That is still enough to stop a naive script hammering one endpoint.
-//   • For a hard global guarantee, swap the `hit()` body for Vercel KV or
-//     Upstash Redis — the call signature is designed to stay the same.
-//
-// This exists because /api/bookings had NO abuse protection at all: a
-// trivial loop could create unlimited DB rows and Google Calendar events.
+// Production uses Upstash Redis REST when UPSTASH_REDIS_REST_URL and
+// UPSTASH_REDIS_REST_TOKEN are configured. The small in-memory fallback keeps
+// local development and deliberately minimal preview deployments protected,
+// but is not relied on for a global serverless guarantee.
 // ─────────────────────────────────────────────────────────────────────────
 
 type Bucket = { count: number; resetAt: number };
 
 const buckets = new Map<string, Bucket>();
 
-// Opportunistic cleanup so the map cannot grow without bound.
-function sweep(now: number) {
-  if (buckets.size < 5000) return;
-  // Array.from avoids needing downlevelIteration under this tsconfig target.
-  Array.from(buckets.keys()).forEach((key) => {
-    const bucket = buckets.get(key);
-    if (bucket && bucket.resetAt <= now) buckets.delete(key);
-  });
-}
-
-// Production hardening (audit P2-01): replace in-memory Map with Vercel KV,
-// Upstash Redis, or a platform-shared store so rate limits survive cold starts
-// and are global across serverless instances. The `hit()` signature is kept
-// unchanged so the swap is a drop-in replacement.
-// SESSION 2026-08-05: in-memory limiter remains for abuse protection; shared
-// store is next production step.
-
 export type RateLimitResult = {
   allowed: boolean;
   remaining: number;
   retryAfterSeconds: number;
+  /** True when the decision came from the deployment-wide Redis store. */
+  shared: boolean;
 };
 
-export function hit(key: string, limit: number, windowMs: number): RateLimitResult {
+function sweep(now: number) {
+  if (buckets.size < 5000) return;
+  for (const [key, bucket] of buckets) {
+    if (bucket.resetAt <= now) buckets.delete(key);
+  }
+}
+
+function hitInMemory(key: string, limit: number, windowMs: number): RateLimitResult {
   const now = Date.now();
   sweep(now);
-
   const existing = buckets.get(key);
 
   if (!existing || existing.resetAt <= now) {
     buckets.set(key, { count: 1, resetAt: now + windowMs });
-    return { allowed: true, remaining: limit - 1, retryAfterSeconds: 0 };
+    return { allowed: true, remaining: Math.max(0, limit - 1), retryAfterSeconds: 0, shared: false };
   }
 
   existing.count += 1;
-
   if (existing.count > limit) {
     return {
       allowed: false,
       remaining: 0,
       retryAfterSeconds: Math.max(1, Math.ceil((existing.resetAt - now) / 1000)),
+      shared: false,
     };
   }
 
-  return { allowed: true, remaining: limit - existing.count, retryAfterSeconds: 0 };
+  return { allowed: true, remaining: Math.max(0, limit - existing.count), retryAfterSeconds: 0, shared: false };
+}
+
+function upstashConfig() {
+  const url = process.env.UPSTASH_REDIS_REST_URL?.replace(/\/$/, "");
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  return url && token ? { url, token } : null;
+}
+
+type UpstashPipelineReply = Array<{ result?: unknown; error?: string }>;
+
+/**
+ * Enforces a limit against Upstash Redis when configured. The Redis pipeline
+ * increments atomically, sets expiry only for a fresh key, then reads TTL.
+ * If the optional shared store is unavailable, the bounded local limiter is a
+ * safe availability fallback and the error is logged server-side.
+ */
+export async function rateLimit(
+  key: string,
+  limit: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  const config = upstashConfig();
+  if (!config) return hitInMemory(key, limit, windowMs);
+
+  try {
+    const response = await fetch(`${config.url}/pipeline`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${config.token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([
+        ["INCR", key],
+        ["PEXPIRE", key, windowMs, "NX"],
+        ["PTTL", key],
+      ]),
+      cache: "no-store",
+      signal: AbortSignal.timeout(1500),
+    });
+
+    if (!response.ok) throw new Error(`Upstash returned ${response.status}`);
+    const reply = await response.json() as UpstashPipelineReply;
+    const count = Number(reply[0]?.result);
+    const ttlMs = Number(reply[2]?.result);
+    if (!Number.isSafeInteger(count) || count < 1) throw new Error("Upstash returned an invalid count");
+
+    return {
+      allowed: count <= limit,
+      remaining: Math.max(0, limit - count),
+      retryAfterSeconds: count <= limit || ttlMs <= 0 ? 0 : Math.max(1, Math.ceil(ttlMs / 1000)),
+      shared: true,
+    };
+  } catch (error) {
+    console.error("[rate-limit] Shared store unavailable; using local fallback:", error);
+    return hitInMemory(key, limit, windowMs);
+  }
 }
 
 /**
- * Best-effort client IP. Vercel sets `x-forwarded-for`; the first entry is
- * the original client. Falls back to a constant so the limiter degrades to
- * "global" rather than "off" when no header is present.
+ * Best-effort client IP. Vercel sets x-forwarded-for; use the first address
+ * supplied by the trusted deployment proxy and fall back to a global bucket
+ * rather than leaving an endpoint unprotected.
  */
 export function clientIp(req: Request): string {
-  const fwd = req.headers.get("x-forwarded-for");
-  if (fwd) return fwd.split(",")[0].trim();
+  const forwarded = req.headers.get("x-forwarded-for");
+  if (forwarded) return forwarded.split(",")[0].trim();
   return req.headers.get("x-real-ip")?.trim() || "unknown";
 }

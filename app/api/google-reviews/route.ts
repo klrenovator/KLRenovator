@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 /**
  * LIVE GOOGLE REVIEWS ENDPOINT
@@ -42,7 +43,15 @@ function initials(name: string) {
     .toUpperCase();
 }
 
-export async function GET() {
+export async function GET(req: Request) {
+  const limit = await rateLimit(`google-reviews:${clientIp(req)}`, 120, 10 * 60 * 1000);
+  if (!limit.allowed) {
+    return new NextResponse(null, {
+      status: 429,
+      headers: { "Retry-After": String(limit.retryAfterSeconds) },
+    });
+  }
+
   const key = process.env.GOOGLE_PLACES_API_KEY;
   const placeId = process.env.GOOGLE_PLACE_ID;
 

@@ -1,10 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { LanguageProvider, useLang } from "@/context/language-context";
+import { LanguageProvider, useLang, type Lang } from "@/context/language-context";
 
 export interface ProvidersProps {
   children: React.ReactNode;
+  /** Locale selected by the server route before the initial render. */
+  initialLang?: Lang;
 }
 
 // Inner component that reads lang and applies it to <html>
@@ -23,9 +25,9 @@ function LangSync() {
   return null;
 }
 
-export function Providers({ children }: ProvidersProps) {
+export function Providers({ children, initialLang = "en" }: ProvidersProps) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={initialLang}>
       <LangSync />
       {children}
     </LanguageProvider>

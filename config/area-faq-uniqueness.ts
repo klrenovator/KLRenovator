@@ -5,7 +5,7 @@
 // inject 2 Near-Me FAQs that mention area-specific landmarks, so every area's FAQPage JSON-LD
 // is structurally similar but textually unique (area name + landmark + state variation).
 
-type AreaPageLike = {
+export type AreaPageLike = {
   slug: string;
   name: string;
   state: string;

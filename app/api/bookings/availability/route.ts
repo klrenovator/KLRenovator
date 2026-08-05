@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getBusySlots } from "@/lib/google-calendar";
 import { BOOKING_HOURS } from "@/lib/booking-config";
 import { MAX_LEAD_DAYS } from "@/lib/booking-validation";
-import { clientIp, hit } from "@/lib/rate-limit";
+import { clientIp, rateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -27,7 +27,7 @@ function parseMalaysiaDate(value: string): Date | null {
 }
 
 export async function GET(req: Request) {
-  const limit = hit(`availability:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
+  const limit = await rateLimit(`availability:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
   if (!limit.allowed) {
     return NextResponse.json(
       { error: "Too many availability requests. Please try again shortly." },

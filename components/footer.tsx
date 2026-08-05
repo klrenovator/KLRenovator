@@ -57,10 +57,21 @@ export const Footer = () => {
   const { t, lang } = useLang();
   const fl = FOOTER_LINKS[lang as keyof typeof FOOTER_LINKS] ?? FOOTER_LINKS.en;
 
+  // Malay installation landings intentionally use native slugs rather than
+  // an English slug under /ms. Keep globally rendered footer links on real
+  // routes; a missing footer destination is amplified across every page.
   const localizedPath = (path: string) => {
     if (lang === "en") return path;
     if (path === "/") return `/${lang}`;
-    return `/${lang}${path}`;
+    if (lang === "ms") {
+      const malaySlugs: Record<string, string> = {
+        "/aircond-installation-kl": "/ms/pemasangan-aircond-kl",
+        "/new-home-aircond-installation": "/ms/pemasangan-aircond-rumah-baru",
+        "/commercial-aircond-installation": "/ms/pemasangan-aircond-komersial",
+      };
+      return malaySlugs[path] ?? `/ms${path}`;
+    }
+    return `/zh${path}`;
   };
 
   return (

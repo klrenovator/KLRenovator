@@ -1,66 +1,21 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
 import { ConversionTracking } from "@/components/conversion-tracking";
-
-const MobileStickyBar = dynamic(
-  () =>
-    import("@/components/mobile-sticky-bar").then((mod) => mod.MobileStickyBar),
-  { ssr: false, loading: () => null },
-);
-
-const StickyActions = dynamic(
-  () => import("@/components/sticky-actions").then((mod) => mod.StickyActions),
-  { ssr: false, loading: () => null },
-);
-
-const ExitIntentPopup = dynamic(
-  () =>
-    import("@/components/exit-intent-popup").then((mod) => mod.ExitIntentPopup),
-  { ssr: false, loading: () => null },
-);
-
-const ScrollDepthCTA = dynamic(
-  () =>
-    import("@/components/scroll-depth-cta").then((mod) => mod.ScrollDepthCTA),
-  { ssr: false, loading: () => null },
-);
-
-const FloatingBookingButton = dynamic(
-  () =>
-    import("@/components/floating-booking-button").then(
-      (mod) => mod.FloatingBookingButton,
-    ),
-  { ssr: false, loading: () => null },
-);
-
-const FloatingOfferButton = dynamic(
-  () =>
-    import("@/components/floating-offer-button").then(
-      (mod) => mod.FloatingOfferButton,
-    ),
-  { ssr: false, loading: () => null },
-);
+import { MobileStickyBar } from "@/components/mobile-sticky-bar";
+import { StickyActions } from "@/components/sticky-actions";
 
 /**
- * Non-critical conversion widgets.
- *
- * Round 21 / 20H.87: this component is no longer mounted directly from the
- * root layout. `ConversionWidgetsLoader` imports it after browser idle / first
- * user intent, and each lead widget remains split into its own client chunk.
+ * The site-wide conversion layer intentionally has one CTA pattern per
+ * viewport: WhatsApp/call actions on desktop and the same two actions in the
+ * mobile sticky bar. In particular, it does not interrupt reading with exit
+ * modals, scroll-depth bars, or drifting buttons.
  */
 export function ConversionWidgets() {
   return (
     <>
-      {/* Global WhatsApp / tel: click attribution — see lib/analytics.ts */}
       <ConversionTracking />
       <StickyActions />
       <MobileStickyBar />
-      <ExitIntentPopup />
-      <ScrollDepthCTA />
-      {/* <FloatingOfferButton /> Temporarily disabled as requested */}
-      <FloatingBookingButton />
     </>
   );
 }
