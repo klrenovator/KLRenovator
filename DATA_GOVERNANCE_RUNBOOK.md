@@ -2,6 +2,8 @@
 
 **Owner:** Operations lead
 
+**Last updated:** 05 August 2026 (P1-04 final pass)
+
 **Review cadence:** monthly, and whenever a processor, form, or booking workflow changes
 
 **Scope:** booking, contact/WhatsApp enquiries, staff access, Supabase, Google Calendar, GA4, Clarity and Vercel.
@@ -25,6 +27,7 @@ This internal runbook supports the public [Privacy Policy](/privacy-policy). It 
 | Calendar event | Keep only while needed to schedule/complete the job; no longer than the underlying booking record | Delete event content once the linked record is removed | Operations |
 | Admin access audit log | 12 months | Delete aggregated log after review | Operations |
 | Analytics data | Provider-configured minimum practical retention | Review GA4/Clarity settings quarterly | Marketing |
+| Consent records (booking) | Same as booking record it belongs to (proof of consent) | Delete with booking | Operations |
 
 A legal, fraud, complaint, payment, or warranty hold overrides normal deletion. Record the reason and review date; delete when the hold ends.
 
@@ -44,18 +47,34 @@ A legal, fraud, complaint, payment, or warranty hold overrides normal deletion. 
 2. Preserve only necessary logs/evidence; do not paste customer details into tickets or public repositories.
 3. Assess affected systems, data types, people, and timeframe. Notify management and obtain legal advice on notification duties.
 4. Fix root cause, rotate credentials, test the repair, and document preventive actions.
+5. Notify affected data subjects if required under PDPA 2010 breach notification guidance.
 
-## 5. Monthly controls checklist
+## 5. Monthly controls checklist (enhanced 2026-08-05 — P1-04, P0-04b, P2-14)
 
 - [ ] Admin, Supabase, Google Calendar, Vercel and Upstash access reviewed.
 - [ ] Pending Calendar-sync bookings checked and customers/technicians notified where required.
 - [ ] 90-day unconverted enquiries deleted or justified under a hold.
 - [ ] Expired records identified against the retention schedule.
-- [ ] Data subject requests closed within target timeframe.
+- [ ] Data subject requests closed within target timeframe (21 days PDPA).
 - [ ] Privacy Policy processor list and booking consent copy still match the deployed site.
-- [ ] Production environment has `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` configured.
+- [ ] Booking form consent checkbox is required client-side AND server-side (`lib/booking-validation.ts` checks `consent:true`).
+- [ ] Production environment has `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` configured (rate limiting).
 - [ ] Claim-evidence register reviewed; private evidence is stored outside the repository.
+- [ ] CSP enforcement live: response headers contain `Content-Security-Policy` with nonce + `x-csp-enforced:1`; check `https://www.klrenovator.com` headers + `/api/csp-report` logs.
+- [ ] `CONTENT_SECURITY_POLICY` report logs reviewed (if `CSP_REPORT_LOG=1`); no unexpected violations in last 30 days.
+- [ ] Deployed crawler `SITE_URL=https://www.klrenovator.com npm run crawl:deployed` run and passed (200, canonical, hreflang reciprocal, noindex, H1, SSR lang).
+- [ ] Accessibility quick check: skip link, focus-visible, ESC to close drawers, keyboard booking flow.
+- [ ] Conversion widgets still single pattern (one desktop, one mobile WA/phone) — no stacking.
 
 ## 6. Deployment prerequisites
 
-Before releasing a booking-flow change, verify that the public consent checkbox is required, the Privacy Policy remains linked, all required server secrets are configured, and the deployed sitemap crawl passes. The technical checks are documented in `DEEP_WEBSITE_AUDIT.md`.
+Before releasing a booking-flow change, verify:
+
+- Public consent checkbox is required (client disables submit, server returns 400 if missing) — see `lib/booking-validation.ts`.
+- Privacy Policy remains linked in booking form and footer, last-updated date current.
+- All required server secrets are configured (`SUPABASE_*`, `GOOGLE_*`, `ADMIN_SESSION_SECRET`, `UPSTASH_*`, `INDEXNOW_TRIGGER_SECRET`).
+- `npm run lint && npm run typecheck && npm run build && npm run verify:build && npm run verify:routes && npm run audit:gsc` are green.
+- Deployed sitemap crawl passes (`npm run crawl:deployed` with production `SITE_URL`).
+- Sanitizer script passes (`npx tsx scripts/verify-sanitizer.mjs`) for all 261 blog bodies + attack payloads.
+
+The technical checks are documented in `DEEP_WEBSITE_AUDIT.md`.

@@ -50,6 +50,7 @@ export type BookingInput = {
   notes: string;
   start_time: string;
   source: string;
+  consent: boolean;
   // Fallbacks for older DB columns / queries
   service_type: string;
   aircond_type: string;
@@ -214,6 +215,13 @@ export function validateBooking(body: unknown): ValidationResult {
     };
   }
 
+  // P1-04: PDPA explicit consent must be present and true (client also disables submit, but server enforces)
+  const consentRaw = b.consent;
+  const consent = consentRaw === true || consentRaw === "true" || consentRaw === 1 || consentRaw === "1";
+  if (!consent) {
+    return { ok: false, error: "Please accept the Privacy Policy consent before booking." };
+  }
+
   const sourceRaw = str(b.source) || "web";
   const source = sourceRaw.slice(0, 40);
 
@@ -227,7 +235,7 @@ export function validateBooking(body: unknown): ValidationResult {
       notes,
       start_time: start.toISOString(),
       source,
-      // Fallback details for database backwards compatibility
+      consent: true,
       service_type: firstItem.service_type,
       aircond_type: firstItem.aircond_type,
       aircond_size: firstItem.aircond_size,
