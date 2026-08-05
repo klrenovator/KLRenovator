@@ -263,7 +263,7 @@ const COPY = {
 function HomeContent({ locale }: { locale: Lang }) {
   const t = COPY[locale] || COPY.en;
   const faqs = t.faqs;
-  const homeFAQSchema = buildFaqSchema(faqs as any);
+  const homeFAQSchema = buildFaqSchema(faqs as ReadonlyArray<{ q: string; a: string }>);
 
   const homeServiceSchema = {
     "@context": "https://schema.org",
