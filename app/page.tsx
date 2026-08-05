@@ -174,7 +174,7 @@ function HomeContent({ locale }: { locale: Lang }) {
               Same-Day Emergency Available
             </div>
             <h2 className="text-xl sm:text-2xl font-black leading-tight mb-1">Aircond Breakdown? We Come Today.</h2>
-            <p className="text-red-100 text-sm">Aircond rosak? Kami datang hari ini. &nbsp;|&nbsp; 冷气坏了？我们今天上门。</p>
+            <p className="text-red-100 text-sm">{locale === "ms" ? "Aircond rosak? Kami datang hari ini." : locale === "zh" ? "冷气坏了？我们今天上门。" : "Aircond Breakdown? We respond same day."}</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <NextLink

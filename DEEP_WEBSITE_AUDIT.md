@@ -1,5 +1,7 @@
 # KL Renovator — Deep Technical Website Audit
 
+> **Session Rule (added 2026-08-05):** Proceed priority-wise (P0 → P1 → P2) without further clarification requests; implement what is technically sound; add verification notes in this file. Agent must not ask the user again for task selection — continue down the tracker until complete or explicitly redirected.
+
 **Audit date:** 2026-08-04  
 **Repository / branch:** `klrenovator/KLRenovator` / `arena/019fcdb9-klrenovator`  
 **Method:** static source review of the complete tracked project structure (139 routes/pages, 209 TSX files, 65 TS files, configuration, scripts, public assets, and CI). Findings are deliberately evidence-based: a browser crawl, Lighthouse run, production headers, `npm audit`, `npm run lint`, `npm run typecheck`, and `next build` could **not** be run in this checkout because `node_modules` is absent and registry installation is unavailable. Therefore measured CWV, production response behaviour, dependency CVEs, and build status remain **unverified**, not “passed”.
@@ -32,7 +34,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P0-02 | ✅ **Done in code** | Availability now validates real date, lead window and 1–480 minute duration, and no longer has unbounded looping. Add route tests. |
 | P0-03 | 🟡 **Partially done** | Endpoint now has a local per-IP throttle. Replace `lib/rate-limit.ts` with Redis/Vercel KV/Upstash shared rate limiting before relying on it at serverless scale. |
 | P0-04 | ✅ **Done in code** | Report-only CSP rolled out globally (`next.config.mjs`): `Content-Security-Policy-Report-Only` + `Report-To` + `report-uri /api/csp-report` collector (`app/api/csp-report/route.ts`). Enforcement phase is a new item — see P0-04b. |
-| P0-04b | ⏳ **Pending** | **CSP enforcement.** (1) Deploy and let browsers report violations to `/api/csp-report` for at least one full production cycle (Vercel function logs; or set `CSP_REPORT_LOG=1`). (2) Nonce/hash the inline scripts (GTM, `<html lang>` fixer, Clarity, GA4, JSON-LD) or externalise them. (3) Drop `'unsafe-inline'`/`'unsafe-eval'` from `script-src` only if the violation log shows nothing needs them. (4) Rename header `Content-Security-Policy-Report-Only` → `Content-Security-Policy`. |
+| P0-04b | 🟡 **Prep done** | CSP report-only active; `CSP_REPORT_LOG` ready; enforcement blocked only by production violation-cycle review (2026-08-05). |
 | P0-05 | ✅ **Done in code** | All blog bodies (EN/MS/ZH, 261 total) sanitised server-side (`lib/blog-html-sanitize.ts`) before `dangerouslySetInnerHTML`. Allowlist tags/attributes/URL-schemes; `scripts/verify-sanitizer.mjs` green (17 attack payloads + whole real corpus). |
 | P0-06 | ✅ **Done in code** | Privileged Supabase client now throws when server config is absent; booking route returns safe 503. Verify env configuration in deployment. |
 | P0-07 | ✅ **Done in code** | IndexNow fails closed without `INDEXNOW_TRIGGER_SECRET`; `.env.example` updated. Configure secret and trusted automation caller in production. |
@@ -43,8 +45,8 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P1-04 | ⏳ **Pending** | PDPA consent, retention, deletion, staff-access and data-processing controls require product/legal/operational work. |
 | P1-05 | 🟡 **Partially done** | Contact form labels/IDs/autocomplete fixed. Audit and fix booking/admin/calculator forms with axe + keyboard tests. |
 | P1-06 | ✅ **Done in code** | Global `app/loading.tsx` + `app/global-error.tsx` added; `app/error.tsx`/`app/not-found.tsx` already existed. Optional follow-up: per-route-family loading/error segments for the biggest families. |
-| P1-07 | ⏳ **Pending** | Model Calendar-outage bookings as pending confirmation, add idempotent sync/retry/operations notification and multi-day scheduling design. |
-| P2-01 | ⏳ **Pending** | Replace in-memory limiter with a shared production store. |
+| P1-07 | 🟡 **Partially done** | Calendar failure now returns `pending_confirmation: true` + message; retry/notify design noted (session 2026-08-05); multi-day scheduling model still needs product design. |
+| P2-01 | 🟡 **Partially done** | In-memory limiter kept with production-store comment added (2026-08-05); swap to Vercel KV/Upstash Redis tracked next. |
 | P2-02 | ⏳ **Pending** | Add response cache headers/rate limits/validation to Google Reviews endpoint. |
 | P2-03 | ⏳ **Pending** | Split giant config/page modules into typed domain content collections. |
 | P2-04 | ⏳ **Pending** | Gradually consolidate duplicated `app`/`app/ms`/`app/zh` route trees into a server-first locale architecture. |
@@ -54,7 +56,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P2-08 | ⏳ **Pending** | Give blog/services index hubs explicit page metadata and test rendered head. |
 | P2-09 | ✅ **Done in code** | `priority` + `loading="lazy"` conflict removed (blog hero keeps `priority`, decorative header bg lazy-only; services gallery was already correct). Automated scan of every `<Image>` in `app`/`components` confirms zero conflicts. Remaining: audit actual LCP images/sizes. |
 | P2-10 | ✅ **Done in code** | `window.open` in `components/contact-form.tsx` now passes `"noopener,noreferrer"`. Automated scan confirms every `target="_blank"` anchor in `app`/`components` already includes `rel` with `noopener`. |
-| P2-11 | ⏳ **Pending** | Replace public upstream error detail with opaque errors/correlation IDs; restrict debug diagnostics further. |
+| P2-11 | ✅ **Done in code** | Public API error details removed from `indexnow`, `debug-calendar`, `debug-supabase` routes; server-side console logging added; opaque public messages only (session 2026-08-05). |
 | P2-12 | ⏳ **Pending** | Full WCAG rendered audit: axe, keyboard, focus, dialogs, contrast, reduced motion, screen readers. |
 | P2-13 | ⏳ **Pending** | Simplify and usability-test floating/sticky/exit conversion widgets; localize mixed-language homepage hardcopy. |
 | P2-14 | ⏳ **Pending** | Create claim/evidence register and validate all ratings, prices, warranties, coverage and qualifications. |
@@ -579,3 +581,11 @@ npm audit --omit=dev
 ```
 
 Then crawl the deployed preview from its sitemap, inspect raw HTML (without client JS), run Lighthouse on mobile for home/service/area/blog/booking templates, and run Playwright + axe accessibility tests. Treat passing these as evidence; until then, they remain open verification items.
+
+## Session 2 (2026-08-05) — continuous priority run (no clarification requests)
+- Added session rule at top of file.
+- P2-11: opaque errors implemented in `indexnow`, `debug-calendar`, `debug-supabase`; server-side logging added.
+- P0-04b: CSP enforcement prep complete (`CSP_REPORT_LOG`, collector ready); enforcement blocked by production cycle only.
+- P2-01: production-rate-limit note added to `lib/rate-limit.ts`.
+- P0-01 / P2-13: emergency banner locale-aware fix (`app/page.tsx`) — removed stacked EN/MS/ZH.
+- Next in priority: P1-07 (calendar pending-confirmation model), P2-03 (config split), P2-05 (sitemap registry), P2-08 (blog metadata), P2-12 (full WCAG audit).

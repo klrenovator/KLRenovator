@@ -31,8 +31,9 @@ export async function GET() {
       .select("*", { count: "exact", head: true });
 
     if (error) {
+      console.error("[DEBUG-SUPABASE] DB error:", error);
       return NextResponse.json(
-        { ok: false, error: "Supabase DB error", details: error.message },
+        { ok: false, error: "Supabase DB error" },
         { status: 500 },
       );
     }
@@ -40,11 +41,11 @@ export async function GET() {
     // Deliberately no row payload — count only.
     return NextResponse.json({ ok: true, message: "Supabase connection healthy", count });
   } catch (error) {
+    console.error("[DEBUG-SUPABASE] Exception:", error);
     return NextResponse.json(
       {
         ok: false,
         error: "Supabase connection failed",
-        details: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

@@ -81,6 +81,10 @@ export async function GET() {
       rating: data.result?.rating,
       total: data.result?.user_ratings_total,
       reviews,
+    }, {
+      headers: {
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+      },
     });
   } catch {
     return new NextResponse(null, { status: 204 });

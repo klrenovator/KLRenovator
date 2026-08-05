@@ -4,6 +4,11 @@
 
 import Image from "next/image";
 
+export const metadata = {
+  title: "Aircond Services KL & Selangor — Installation, Wash, Repair, Gas Top-up",
+  description: "Professional aircond servicing, chemical wash, overhaul, gas top-up and installation across KL & Selangor. Same-day slots, transparent pricing from RM99.",
+};
+
 import { FaWhatsapp, FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";

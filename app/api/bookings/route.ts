@@ -151,8 +151,11 @@ export async function POST(req: Request) {
       );
     }
 
+    let calendarSyncFailed = false;
     // ── 6. Mirror to Google Calendar (non-fatal) ────────────────────────
     // Runs after the DB write so a Calendar outage never costs us the lead.
+    // P1-07: when Calendar fails, the booking is preserved as "pending
+    // confirmation"; operations must retry sync and notify customer/tech.
     if (process.env.GOOGLE_CALENDAR_ID) {
       try {
         const itemsDescription = input.line_items.map((item, idx) => {
@@ -184,10 +187,14 @@ export async function POST(req: Request) {
             .eq("id", booking.id);
         }
       } catch (calError) {
+        calendarSyncFailed = true;
         console.error("Google Calendar warning (booking still saved):", calError);
       }
     }
 
+    if (calendarSyncFailed) {
+      return NextResponse.json({ booking, pending_confirmation: true, message: "Booking saved — calendar sync delayed. We will confirm via WhatsApp/call shortly." });
+    }
     return NextResponse.json({ booking });
   } catch (error) {
     console.error("Booking API fatal error:", error);
