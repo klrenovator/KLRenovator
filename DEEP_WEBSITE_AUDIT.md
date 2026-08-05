@@ -62,7 +62,7 @@ The audit is a point-in-time report. The following initial remediation batch was
 | P2-14 | ✅ **Done in code** | `CLAIM_EVIDENCE_REGISTER.md` final pass: all 14 claims have evidence location, qualified wording, status ✅/⚠️, owner, expiry. Claims: Google rating/live API verified, 500+ reviews screenshot archived, 5k customers anonymised DB count (private), same-day qualified (book before 11am, subject to availability), dispatch 30-60min qualified (traffic dependent), SSM verified, warranty template, pricing locked, 39 areas + 158 kampungs verified, 20 brands verified, trained & insured qualified, multilingual verified, free tools math verified. Superlatives removed from `llms.txt`. Private evidence folder required for ops. |
 | P3-01 | ✅ **Done in code** | `tsconfig.json` target is `ESNext`, aligned with the supported modern Next.js browser baseline. |
 | P3-02 | ✅ **Done in code** | Historical Round notes moved to `CHANGELOG.md` with full batch history. `next.config.mjs` cleaned to concise invariants (redirects + headers). `app/**/page.tsx` and `components/**` stripped of verbose `Round` comments. `npx tsc --noEmit` clean. |
-| P3-03 | 🟡 **Partially done** | Area FAQ builder exports a typed input shape. One `as any` in `app/(en)/page.tsx` fixed to typed assertion. Remaining: ~20 `as any` in `lib/sitemap.ts` for optional property access on area/kampung/problem/blog data objects — needs proper typing of config data structures. |
+| P3-03 | ✅ **Done in code** | All `as any` removed. Created `config/site/types.ts` with typed `AreaPage`, `KampungPage`, `FaqItem` interfaces. `lib/sitemap.ts` now uses typed casts (`as AreaPage[]`, `as KampungPage[]`) instead of `as any`. Blog post `as any` removed since `BlogPost` type already includes `contentMS`/`contentZH`. Zero `as any` remain in lib/components/app. |
 | P3-04 | ✅ **Done in code** | `public/llms.txt` uses concise factual language and avoids unsupported ranking/market-leadership claims. |
 
 ### Next-session starting point
@@ -71,7 +71,6 @@ The audit is a point-in-time report. The following initial remediation batch was
 
 **All P0/P1/P2/P3 items now ✅ Done in code** (verified 2026-08-05). Remaining optional improvements:
 1. **P0-04b nonce phase** — requires middleware which would make 2120+ pages dynamic. Trade-off decision needed.
-2. **P3-03** — ~20 `as any` remain in `lib/sitemap.ts` for optional property access. Needs proper typing of config data structures.
 
 Do not mark any item “fully verified” until the commands at the end of this report and a deployed crawl have passed. Re-run `npx tsx scripts/verify-sanitizer.mjs` after any change to blog content or the sanitizer.
 
@@ -674,8 +673,9 @@ All passed locally. Production-only checks (CSP header live, Upstash Redis confi
 - All P0: ✅ Done in code (P0-01..P0-08, including P0-04b enforcement)
 - All P1: ✅ Done in code (P1-01..P1-07, including P1-04 consent server-side)
 - All P2: ✅ Done in code (P2-01..P2-14, including P2-04 locale consolidation, P2-06 crawler ready, P2-12 a11y advanced, P2-14 claim register final)
-- P3-01, P3-02, P3-04: ✅ Done in code
-- P3-03: 🟡 Partially done — one `as any` fixed in homepage, ~20 remain in `lib/sitemap.ts`
+- All P3: ✅ Done in code (P3-01 tsconfig, P3-02 changelog, P3-03 zero `as any`, P3-04 llms.txt)
+
+**All audit items are now ✅ Done in code.** No pending or partially-done items remain.
 
 ## Session 7 (2026-08-05) — final completion pass: P1-06 MS/ZH, P3-03 partial
 
@@ -688,3 +688,22 @@ Priority-wise completion of remaining gaps found during deep verification:
 **Verification status:** All code changes committed. CI/build verification pending (requires `node_modules` installation).
 
 Next: double-check before PR, then open PR.
+
+## Session 8 (2026-08-05) — P3-03 final completion: all `as any` removed ✅
+
+Priority-wise completion of the last partially-done item:
+
+- **P3-03 ✅ DONE**: Created `config/site/types.ts` with typed `AreaPage`, `KampungPage`, and `FaqItem` interfaces. `lib/sitemap.ts` now imports these types and uses typed casts (`as AreaPage[]`, `as KampungPage[]`) instead of `as any` for area/kampung locale property access. Blog post `as any` casts removed — `BlogPost` type already includes `contentMS`/`contentZH` as required fields. Zero `as any` remain in `lib/`, `components/`, and `app/`.
+
+**Verification (this session):**
+```bash
+npm ci
+npm run lint          # 0 errors
+npx tsc --noEmit      # clean
+NODE_OPTIONS=--max-old-space-size=6144 npm run build  # 2127 pages
+npm run verify:build  # ✓ passed (2120 sitemap URLs)
+npm run verify:routes # ✓ 30 dynamic route modules
+npm run audit:gsc     # ✓ passed
+npx tsx scripts/verify-sanitizer.mjs  # ✓ 261 real + 17 attack payloads
+```
+All green. **All P0–P3 audit items are now ✅ Done in code.**
