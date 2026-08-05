@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
-import { allPosts } from "@/config/blog-posts";
+import { allPosts, type BlogPost } from "@/config/blog-posts";
 import { brandAreaPairs } from "@/config/brand-area-priority";
+import type { AreaPage, KampungPage } from "@/config/site/types";
 
 const BASE = "https://www.klrenovator.com";
 
@@ -176,8 +177,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
 
-  const realAreaPages = siteConfig.areaPages.filter(
-    (a) => typeof (a as any).lat === "number" && typeof (a as any).lng === "number" && Array.isArray((a as any).landmarks) && (a as any).landmarks.length > 0,
+  const typedAreaPages = siteConfig.areaPages as AreaPage[];
+
+  const realAreaPages = typedAreaPages.filter(
+    (a) => typeof a.lat === "number" && typeof a.lng === "number" && Array.isArray(a.landmarks) && a.landmarks.length > 0,
   );
 
   const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
@@ -191,8 +194,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/areas/${area.slug}`,
     }),
   }));
-  const msAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
-    .filter((a) => (a as any).faqsBM && (a as any).faqsBM.length > 0)
+  const msAreaPages: MetadataRoute.Sitemap = typedAreaPages
+    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
     .map((area) => ({
       url: `${BASE}/ms/areas/${area.slug}`,
       lastModified: now,
@@ -204,8 +207,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/areas/${area.slug}`,
       }),
     }));
-  const zhAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
-    .filter((a) => (a as any).faqsZH && (a as any).faqsZH.length > 0)
+  const zhAreaPages: MetadataRoute.Sitemap = typedAreaPages
+    .filter((a) => a.faqsZH && a.faqsZH.length > 0)
     .map((area) => ({
       url: `${BASE}/zh/areas/${area.slug}`,
       lastModified: now,
@@ -230,7 +233,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
   const msAreaInstallationPages: MetadataRoute.Sitemap = realAreaPages
-    .filter((a) => (a as any).faqsBM && (a as any).faqsBM.length > 0)
+    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
     .map((area) => ({
       url: `${BASE}/ms/areas/${area.slug}/installation`,
       lastModified: now,
@@ -243,7 +246,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
   const zhAreaInstallationPages: MetadataRoute.Sitemap = realAreaPages
-    .filter((a) => (a as any).faqsZH && (a as any).faqsZH.length > 0)
+    .filter((a) => a.faqsZH && a.faqsZH.length > 0)
     .map((area) => ({
       url: `${BASE}/zh/areas/${area.slug}/installation`,
       lastModified: now,
@@ -267,8 +270,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
     }),
   }));
-  const msKampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => (k as any).descriptionMS)
+  const typedKampungPages = siteConfig.kampungPages as KampungPage[];
+
+  const msKampungInstallationPages: MetadataRoute.Sitemap = typedKampungPages
+    .filter((k) => k.descriptionMS)
     .map((k) => ({
       url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}/installation`,
       lastModified: now,
@@ -280,8 +285,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
       }),
     }));
-  const zhKampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => (k as any).descriptionZH)
+  const zhKampungInstallationPages: MetadataRoute.Sitemap = typedKampungPages
+    .filter((k) => k.descriptionZH)
     .map((k) => ({
       url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}/installation`,
       lastModified: now,
@@ -432,7 +437,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
   const msBlogPages: MetadataRoute.Sitemap = allPosts
-    .filter((p) => (p as any).contentMS)
+    .filter((p) => p.contentMS)
     .map((p) => ({
       url: `${BASE}/ms/blog/${p.slug}`,
       lastModified: now,
@@ -445,7 +450,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
   const zhBlogPages: MetadataRoute.Sitemap = allPosts
-    .filter((p) => (p as any).contentZH)
+    .filter((p) => p.contentZH)
     .map((p) => ({
       url: `${BASE}/zh/blog/${p.slug}`,
       lastModified: now,
@@ -469,8 +474,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/areas/${k.parentSlug}/${k.slug}`,
     }),
   }));
-  const msKampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => (k as any).descriptionMS)
+  const msKampungPages: MetadataRoute.Sitemap = typedKampungPages
+    .filter((k) => k.descriptionMS)
     .map((k) => ({
       url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}`,
       lastModified: now,
@@ -482,8 +487,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/areas/${k.parentSlug}/${k.slug}`,
       }),
     }));
-  const zhKampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => (k as any).descriptionZH)
+  const zhKampungPages: MetadataRoute.Sitemap = typedKampungPages
+    .filter((k) => k.descriptionZH)
     .map((k) => ({
       url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}`,
       lastModified: now,
