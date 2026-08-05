@@ -64,6 +64,8 @@ const FORM_TXT = {
     notes: "Job Details / Notes",
     notesPh: "e.g. Aircond not cold, water dripping from indoor unit, 3rd floor with no lift, please come after 2 PM…",
     notesHelp: "Anything we should know before we arrive? Leave it blank if you're not sure — we'll confirm everything on site.",
+    consentLabel: "I agree to KL Renovator collecting my personal data for booking purposes.",
+    privacyLink: "Privacy Policy",
   },
   ms: {
     title: "Tempah Temujanji",
@@ -106,6 +108,8 @@ const FORM_TXT = {
     notes: "Butiran Kerja / Nota",
     notesPh: "cth. Aircond tidak sejuk, air menitis dari unit dalam, tingkat 3 tiada lif, sila datang selepas 2 petang…",
     notesHelp: "Ada apa-apa yang kami patut tahu sebelum tiba? Boleh biarkan kosong jika tidak pasti — kami sahkan semuanya di tapak.",
+    consentLabel: "Saya bersetuju KL Renovator mengumpul data peribadi saya untuk tujuan tempahan.",
+    privacyLink: "Dasar Privasi",
   },
   zh: {
     title: "预约时间",
@@ -148,6 +152,8 @@ const FORM_TXT = {
     notes: "工作详情 / 备注",
     notesPh: "例如：冷气不冷、室内机滴水、3楼没有电梯、请下午2点后到…",
     notesHelp: "有什么需要我们提前知道的吗？不确定可以留空 — 我们会在现场确认。",
+    consentLabel: "我同意KL Renovator收集我的个人数据以用于预约目的。",
+    privacyLink: "隐私政策",
   }
 };
 
@@ -159,7 +165,13 @@ const SERVICE_OPTS = [
   { val: "dismantle", en: "Dismantle", ms: "Buka Aircond", zh: "拆卸" },
   { val: "relocate", en: "Relocate", ms: "Pindah Aircond", zh: "搬迁" },
   { val: "conceal_piping", en: "Copper Pipe & Wiring", ms: "Paip Kuprum & Pendawaian", zh: "铜管与拉线" },
-];
+] as const;
+
+// Typed lookup — replaces `(opt as any)[lang]` pattern (P3-03).
+type LocalizedOption = { val: string; en: string; ms: string; zh: string };
+function localizedLabel(opt: LocalizedOption, lang: string) {
+  return opt[lang as keyof typeof opt] ?? opt.en;
+}
 
 const AIRCOND_OPTS = [
   { val: "Wall Mounted", en: "Wall Mounted", ms: "Lekap Dinding", zh: "壁挂式" },
@@ -228,6 +240,8 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   // form must never block on it. The cap is shared with the API validator so
   // the counter can never disagree with what the server accepts.
   const [notes, setNotes] = useState("");
+  // PDPA consent — audited 2026-08-05 (P1-04). Defaults to false so the
+  // customer must actively agree before data is transmitted.\n  const [consent, setConsent] = useState(false);
 
   const [propertyType, setPropertyType] = useState("Condo / Apartment");
   const [floorLevel, setFloorLevel] = useState("");
@@ -452,10 +466,12 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       <h2 className="text-2xl font-bold text-slate-900 mb-6">{isAdmin ? t.adminTitle : t.title}</h2>
       
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.name}</label>
+        <label htmlFor="booking-name" className="block text-sm font-semibold text-slate-700">{t.name}</label>
         <input
+          id="booking-name"
           type="text"
           required
+          autoComplete="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
@@ -464,10 +480,13 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.phone}</label>
+        <label htmlFor="booking-phone" className="block text-sm font-semibold text-slate-700">{t.phone}</label>
         <input
+          id="booking-phone"
           type="tel"
           required
+          autoComplete="tel"
+          inputMode="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
@@ -476,9 +495,11 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.address}</label>
+        <label htmlFor="booking-address" className="block text-sm font-semibold text-slate-700">{t.address}</label>
         <textarea
+          id="booking-address"
           required
+          autoComplete="street-address"
           rows={2}
           value={address}
           onChange={(e) => setAddress(e.target.value)}
@@ -529,7 +550,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
                 >
                   {SERVICE_OPTS.map(opt => (
                     <option key={opt.val} value={opt.val}>
-                      {(opt as any)[lang] || opt.en}
+                      {localizedLabel(opt, lang)}
                     </option>
                   ))}
                 </select>
@@ -544,7 +565,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
                 >
                   {AIRCOND_OPTS.map(opt => (
                     <option key={opt.val} value={opt.val}>
-                      {(opt as any)[lang] || opt.en}
+                      {localizedLabel(opt, lang)}
                     </option>
                   ))}
                 </select>
@@ -561,7 +582,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
                 >
                   {SIZE_OPTS.map(opt => (
                     <option key={opt.val} value={opt.val}>
-                      {(opt as any)[lang] || opt.en}
+                      {localizedLabel(opt, lang)}
                     </option>
                   ))}
                 </select>
@@ -800,9 +821,36 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         </div>
       )}
 
+      {/* ── PDPA Consent (audit P1-04) ──────────────────────────────────
+          The booking form collects name, phone, address and job details.
+          PDPA 2010 requires explicit consent before personal data is
+          processed. The checkbox defaults to false and the submit button
+          is disabled until the customer actively checks it. */}
+      <div className="flex items-start gap-2 text-xs text-slate-600 border border-slate-200 rounded-lg p-3 bg-slate-50/50">
+        <input
+          id="booking-consent"
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-sky-600"
+        />
+        <label htmlFor="booking-consent" className="leading-snug">
+          {t.consentLabel}{" "}
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline hover:text-sky-800 font-semibold">
+            {t.privacyLink}
+          </a>
+        </label>
+      </div>
+
+      {/* Status region for screen readers — updated on validation / submission */}
+      <div role="status" aria-live="polite" className="sr-only">
+        {loading ? t.processing : ""}
+        {success ? t.successTitle : ""}
+      </div>
+
       <button
         type="submit"
-        disabled={loading || !selectedSlot}
+        disabled={loading || !selectedSlot || !consent}
         className="w-full rounded-lg bg-sky-600 px-4 py-3.5 font-black text-white transition hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 disabled:bg-slate-300 disabled:cursor-not-allowed mt-4 shadow-md cursor-pointer"
       >
         {loading ? t.processing : t.confirmBtn}

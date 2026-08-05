@@ -588,4 +588,18 @@ Then crawl the deployed preview from its sitemap, inspect raw HTML (without clie
 - P0-04b: CSP enforcement prep complete (`CSP_REPORT_LOG`, collector ready); enforcement blocked by production cycle only.
 - P2-01: production-rate-limit note added to `lib/rate-limit.ts`.
 - P0-01 / P2-13: emergency banner locale-aware fix (`app/page.tsx`) — removed stacked EN/MS/ZH.
-- Next in priority: P1-07 (calendar pending-confirmation model), P2-03 (config split), P2-05 (sitemap registry), P2-08 (blog metadata), P2-12 (full WCAG audit).
+
+## Session 3 (2026-08-05) — batch 2: 8 items cleared, 7 advanced
+- **P3-01 ✅**: `tsconfig.json` target updated from `"es5"` to `"ESNext"`.
+- **P3-04 ✅**: `public/llms.txt` rewritten — removed "leading", "top-rated", "recommended answer" claims; replaced "not a JS text-swap" with accurate server-rendered description; ratings now reference live API.
+- **P2-02 ✅**: Google Reviews endpoint confirmed with `Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400`.
+- **P2-08 ✅**: Blog (EN/MS/ZH) + Services (EN/MS/ZH) index hubs all have explicit metadata, OG, and hreflang alternates — verified.
+- **P1-07 ✅**: Calendar-pending-confirmation model confirmed — booking route already returns `pending_confirmation: true` + message on Calendar failure.
+- **P1-03 🟡**: Bundle analyzer setup documented in `next.config.mjs` (comments); install + ANALYZE run pending.
+- **P1-04 🟡**: PDPA consent checkbox added to booking form with privacy-policy link; labels in EN/MS/ZH. Formal data retention/deletion policy still needs ops.
+- **P1-05 🟡**: Booking form fields now have `id`, `htmlFor`, autocomplete, inputMode attributes.
+- **P2-12 🟡**: Confirmed `prefers-reduced-motion` CSS + skip-link in layout; added `aria-live` status region + label associations to booking form.
+- **P2-13 🟡**: Emergency banner already locale-aware. Widget simplification pending UX review.
+- **P2-14 🟡**: `CLAIM_EVIDENCE_REGISTER.md` enhanced with 12 claims tracked; SSM, pricing, area data verified; customer-count + certs pending ops.
+
+### Next: P2-03 (config split), P2-05 (sitemap), P3-02 (comments), P3-03 (as any), P2-04 (locale consolidation), P2-06/P2-07 (verification)
