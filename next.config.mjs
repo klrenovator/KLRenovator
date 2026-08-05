@@ -1,4 +1,12 @@
-/** @type {import('next').NextConfig} */
+/**
+ * Bundle Analyzer (audit P1-03):
+ *   npm install --save-dev @next/bundle-analyzer
+ *   Wrap this config with `withBundleAnalyzer({...})` from
+ *   '@next/bundle-analyzer' and run ANALYZE=true npm run build.
+ *   Then review per-route JS budgets and lazy-load below-fold widgets.
+ *
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   // Lint runs in CI (`npm run lint`) rather than inside `next build`.
   // Keeping it out of the build avoids the FlatCompat/eslint-plugin-react
