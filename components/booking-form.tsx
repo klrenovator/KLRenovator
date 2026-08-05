@@ -241,7 +241,8 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
   // the counter can never disagree with what the server accepts.
   const [notes, setNotes] = useState("");
   // PDPA consent — audited 2026-08-05 (P1-04). Defaults to false so the
-  // customer must actively agree before data is transmitted.\n  const [consent, setConsent] = useState(false);
+  // customer must actively agree before data is transmitted.
+  const [consent, setConsent] = useState(false);
 
   const [propertyType, setPropertyType] = useState("Condo / Apartment");
   const [floorLevel, setFloorLevel] = useState("");
