@@ -378,7 +378,6 @@ export const BRAND_PROBLEM_MAP: Record<string, string[]> = {
 // ── BRAND → SERVICE MAP ───────────────────────────────────────────────────────
 // Key services to promote from each brand page
 export const BRAND_SERVICE_MAP: Record<string, string[]> = {
-  // Round 51 / 10.1–10.6: brand → service reverse links (triangular brand↔service↔problem)
   "daikin": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair", "installation"],
   "panasonic": ["chemical-wash", "gas-topup", "chemical-overhaul", "repair", "basic-servicing"],
   "mitsubishi": ["chemical-wash", "gas-topup", "repair", "chemical-overhaul"],
@@ -420,7 +419,6 @@ export const PROBLEM_BRAND_MAP: Record<string, string[]> = (() => {
 
 // ── BLOG → SERVICE MAP ────────────────────────────────────────────────────────
 // Which services to link from each blog post
-// Round 51 / 10.1–10.6: complete reverse coverage for all 54 blog posts
 export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-service-batu-caves-selayang-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
   "aircond-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
@@ -465,7 +463,6 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-maintenance-contract-malaysia-2026": ["maintenance-contract", "basic-servicing", "chemical-wash"],
   "inverter-vs-non-inverter-aircond-service-malaysia-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],
   "harga-servis-aircond-2026-malaysia": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
-  // Round 60 — 13 new competitor gap-fill blog posts (6B.9–6B.21)
   "daikin-vs-panasonic-aircond-service-cost-malaysia-2026": ["chemical-wash", "gas-topup", "repair"],
   "authorized-vs-independent-aircond-service-malaysia-2026": ["repair", "chemical-wash", "basic-servicing"],
   "shopee-aircond-service-vs-direct-booking-malaysia-2026": ["basic-servicing", "chemical-wash", "maintenance-contract"],

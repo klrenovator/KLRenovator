@@ -397,7 +397,6 @@ export default async function BrandPageZH({
         </section>
       )}
 
-      {/* Round 32 / 20D.34: Brand + Area Combo Linking Module */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -457,7 +456,7 @@ export default async function BrandPageZH({
         </div>
       </section>
 
-      {/* Common Problems for This Brand — triangular cross-link (Round 10.5) */}
+      
       {/* ── Technical Specifications Section ───────────────────────────────── */}
       {(() => {
         const techSpecs =
@@ -576,7 +575,6 @@ export default async function BrandPageZH({
       )}
 
       
-      {/* Round 51 / 10.1–10.6: Brand → Service reverse links */}
       {(() => {
         const serviceSlugs = BRAND_SERVICE_MAP[slug] || BRAND_SERVICE_MAP["_default"] || [];
         const brandServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));

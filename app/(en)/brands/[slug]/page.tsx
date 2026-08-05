@@ -18,7 +18,6 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /brands/[slug] — English brand page.
-// Round 52: restored true EN body (v60 upload had MS body) + Brand→Service reverse links.
 // ─────────────────────────────────────────────────────────────────────────
 
 // This route is backed by a finite typed content registry.
@@ -405,7 +404,6 @@ export default async function BrandPageEN({
         </section>
       )}
 
-      {/* Round 32 / 20D.34: Brand + Area Combo Linking Module */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -465,7 +463,7 @@ export default async function BrandPageEN({
         </div>
       </section>
 
-      {/* Common Problems for This Brand — triangular cross-link (Round 10.5) */}
+      
       {/* ── Technical Specifications Section ───────────────────────────────── */}
       {(() => {
         const techSpecs =
@@ -585,7 +583,6 @@ export default async function BrandPageEN({
       )}
 
       
-      {/* Round 51/52: Brand → Service reverse links */}
       {(() => {
         const serviceSlugs = BRAND_SERVICE_MAP[slug] || BRAND_SERVICE_MAP["_default"] || [];
         const brandServices = siteConfig.services.filter((s) => serviceSlugs.includes(s.slug));

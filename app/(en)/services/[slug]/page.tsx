@@ -34,7 +34,6 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Round 22 / AMC hotfix: exclude service routes that have their own
   // dedicated static page files. Including maintenance-contract here can
   // let the dynamic [slug] route prerender a notFound() response because
   // servicesData intentionally does not contain the AMC landing-page copy.
@@ -306,7 +305,6 @@ export default async function ServicePage({
   const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
   const proofImages = SERVICE_PROOF_IMAGES[slug] ?? SERVICE_PROOF_IMAGES["installation"];
 
-  // ── Service Schema — Round 19 / 20H.85 parity via shared builder ──
   const serviceSchema = buildServiceSchema({
     slug,
     name: data.title,
@@ -657,7 +655,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Round 35 / 8.6: AIO / LLMO compact answer block for AI-quotable service summaries */}
       <section id="service-summary" className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -689,7 +686,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Round 36 / 8.7: Semantic SEO & HVAC Entity Pass */}
       <section id="parts-and-checks" className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -733,7 +729,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Round 38 / 8.9: Visual & SXO Polish — decision tree + comparison table */}
       <section id="service-choice-guide" className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -795,7 +790,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Round 33 / 8.1: Service Pages Core Polish — scope and flow clarity */}
       <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -846,7 +840,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Round 34 / 8.5: Service Page SXO / CRO — CTA placement by user intent stage */}
       <section id="booking-options" className="py-12 bg-slate-950 text-white border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -941,7 +934,7 @@ export default async function ServicePage({
         );
       })()}
 
-      {/* ── Value Proposition: Servis Aircond Murah KL — Round 24 / 20F.52 ── */}
+      
       {slug === "basic-servicing" && (
         <section className="py-14 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

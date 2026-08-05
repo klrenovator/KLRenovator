@@ -178,7 +178,6 @@ export default async function KampungPage({
         </div>
       </section>
 
-      {/* Round 31 / 20D.33: Area Page Uniqueness Matrix for every sub-area route */}
       <section id={uniquenessMatrix.id} aria-labelledby={`${uniquenessMatrix.id}-heading`} className="py-12 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>

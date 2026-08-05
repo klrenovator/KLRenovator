@@ -577,7 +577,7 @@ export function ServiceDetailI18n({
 
             <Reveal delay={120}>
               <div className="flex flex-col gap-5">
-                {/* AIO / LLMO Answer Block — Round 33 / 8.6 */}
+                
                 <div className="rounded-2xl border-2 border-slate-900 bg-slate-900 p-5 text-white shadow-xl relative overflow-hidden text-left">
                   <div className="absolute top-0 right-0 opacity-10 pointer-events-none p-2">
                     <ServiceIcon name={iconName} className="h-20 w-20" />
@@ -794,7 +794,7 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
-      {/* Round 35 / 8.6: AIO / LLMO compact answer block for localized AI-quotable service summaries */}
+      
       <section id="service-summary" className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -826,7 +826,7 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
-      {/* Round 36 / 8.7: Semantic SEO & HVAC Entity Pass — localized */}
+      
       <section id="parts-and-checks" className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -870,7 +870,7 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
-      {/* Round 38 / 8.9: Visual & SXO Polish — localized decision tree + comparison table */}
+      
       <section id="service-choice-guide" className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -932,7 +932,7 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
-      {/* Round 33 / 8.1: Service Pages Core Polish — localized scope and flow clarity */}
+      
       <section className="py-12 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -983,7 +983,7 @@ export function ServiceDetailI18n({
         </div>
       </section>
 
-      {/* Round 34 / 8.5: Service Page SXO / CRO — localized CTA placement by user intent stage */}
+      
       <section id="booking-options" className="py-12 bg-slate-950 text-white border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -1064,7 +1064,7 @@ export function ServiceDetailI18n({
         );
       })()}
 
-      {/* ── Value Proposition: Servis Aircond Murah KL — Round 24 / 20F.52 ── */}
+      
       {slug === "basic-servicing" && (
         <section className="py-14 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1347,7 +1347,7 @@ export function ServiceDetailI18n({
         </section>
       )}
 
-      {/* ── Comparison Table — Round 35 / 8.9 ── */}
+      
       {(() => {
         const table = lang === "ms" ? data.compareTableMS : data.compareTableZH;
         if (!table) return null;

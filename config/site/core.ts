@@ -1,20 +1,6 @@
-// P2-03: Site config split into typed domain collections (config/site/*) to improve maintainability and avoid giant diffs.
-// This barrel file re-assembles the legacy siteConfig shape so existing imports continue to work.
-// New code should import directly from config/site/* where possible.
+// Core business identity split from site.ts (P2-03)
+export const businessIdentity = {
 
-import { areaPages } from "./site/areas";
-import { kampungPages } from "./site/kampungs";
-import { brandPages } from "./site/brands";
-import { problemPages } from "./site/problems";
-import { brandsSupported } from "./site/brands-supported";
-import { services } from "./site/services";
-import { pricing } from "./site/pricing";
-import { volumeDiscounts } from "./site/volume-discounts";
-import { stats } from "./site/stats";
-import { links } from "./site/links";
-import { areaNames } from "./site/core";
-
-export const siteConfig = {
   name: "KL Renovator",
   parentCompany: "Multicore Dynamics Resources",
   legalName: "Multicore Dynamics Resources",
@@ -23,6 +9,11 @@ export const siteConfig = {
   tagline: "Aircond Installation, Servicing & Repair KL & Selangor",
   description:
     "KL Renovator provides expert aircond installation (from RM199), professional servicing, chemical wash, overhaul, gas top-up (from RM 2.50/PSI) and repairs in Kuala Lumpur & Selangor. Serving Batu Caves, Ampang, Cheras, Petaling Jaya, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Wangsa Maju, Kepong, Sri Petaling, Bukit Jalil, Kota Damansara, Ara Damansara, Sunway, USJ, Port Klang, Bukit Tinggi, Setia Alam, Meru, Rawang, Kundang, Semenyih, Balakong, Seri Kembangan, Pandan Indah, Putrajaya, Cyberjaya & Dengkil. Same-day installation and servicing for Daikin, Panasonic, Mitsubishi, York, LG, Midea, Samsung & 13 more brands. Transparent pricing confirmed before work begins.",
+  // Short version for HTML <meta name="description">, OG, and Twitter cards —
+  // Google truncates around 155-160 characters, so the long `description`
+  // above (used for JSON-LD schema, where length doesn't hurt) is NOT
+  // suitable for these tags. This one is kept inside the 150-158 char
+  // target range from the project's own CTR-optimization brief.
   metaDescription:
     "Expert aircond installation from RM199 — plus servicing, chemical wash, overhaul & repairs across KL & Selangor. Same-day, transparent pricing. 20 brands.",
 
@@ -55,31 +46,18 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
 
-  areas: areaNames,
+  };
 
-  areaPages,
-  kampungPages,
-  brandPages,
-  problemPages,
-
-  brandsSupported,
-  services,
-  pricing,
-  volumeDiscounts,
-  stats,
-  links,
-};
-
-export type SiteConfig = typeof siteConfig;
-
-// Re-export individual collections for direct consumption (P2-03)
-export { areaPages } from "./site/areas";
-export { kampungPages } from "./site/kampungs";
-export { brandPages } from "./site/brands";
-export { problemPages } from "./site/problems";
-export { brandsSupported } from "./site/brands-supported";
-export { services } from "./site/services";
-export { pricing } from "./site/pricing";
-export { volumeDiscounts } from "./site/volume-discounts";
-export { stats } from "./site/stats";
-export { links } from "./site/links";
+export const areaNames = [
+    "Kuala Lumpur", "Cheras", "Ampang", "Setapak", "Wangsa Maju",
+    "Kepong", "Sri Petaling", "Bukit Jalil", "Mont Kiara", "Bangsar",
+    "Desa ParkCity", "Taman Melawati", "Hulu Kelang",
+    "Petaling Jaya", "Subang Jaya", "Shah Alam", "Puchong", "Damansara",
+    "Kota Damansara", "Ara Damansara", "Sunway", "USJ", "Bandar Utama", "SS2",
+    "Klang", "Port Klang", "Bukit Tinggi", "Setia Alam", "Meru",
+    "Kota Kemuning", "Bukit Jelutong", "Glenmarie",
+    "Batu Caves", "Selayang", "Rawang", "Kundang", "Sungai Buloh",
+    "Kajang", "Semenyih", "Balakong", "Seri Kembangan", "Pandan Indah",
+    "Bandar Puteri", "Putrajaya", "Cyberjaya", "Dengkil",
+    "Selangor", "Sentul", "Bandar Botanic",
+  ];

@@ -1,5 +1,4 @@
 // config/area-faq-uniqueness.ts
-// Round 43 / v50 — 9.10 Schema Uniqueness Pass for Areas
 // Purpose: Vary FAQ schema questions slightly across area pages to avoid duplicate schema flags.
 // Each area page keeps its own unique faqs from siteConfig (faqs / faqsBM / faqsZH) but we
 // inject 2 Near-Me FAQs that mention area-specific landmarks, so every area's FAQPage JSON-LD

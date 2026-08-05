@@ -1438,7 +1438,6 @@ export default async function ProblemPage({
       </section>
 
       
-      {/* Round 52 / 10.8 — Related symptom hubs for this problem entity */}
       {(() => {
         const hubs = getHubsForProblem(slug);
         if (hubs.length === 0) return null;

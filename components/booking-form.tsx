@@ -543,8 +543,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.serviceType}</label>
+                <label htmlFor={`booking-service-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.serviceType}</label>
                 <select
+                  id={`booking-service-${idx}`}
                   value={item.service_type}
                   onChange={(e) => updateLineItem(idx, "service_type", e.target.value)}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -558,8 +559,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondType}</label>
+                <label htmlFor={`booking-aircond-type-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondType}</label>
                 <select
+                  id={`booking-aircond-type-${idx}`}
                   value={item.aircond_type}
                   onChange={(e) => updateLineItem(idx, "aircond_type", e.target.value)}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -575,8 +577,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondSize}</label>
+                <label htmlFor={`booking-size-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.aircondSize}</label>
                 <select
+                  id={`booking-size-${idx}`}
                   value={item.aircond_size}
                   onChange={(e) => updateLineItem(idx, "aircond_size", e.target.value)}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -590,29 +593,27 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1">{t.quantity}</label>
+                <label htmlFor={`booking-qty-${idx}`} className="block text-xs font-semibold text-slate-600 mb-1">{t.quantity}</label>
                 <input
+                  id={`booking-qty-${idx}`}
                   type="number"
                   min="1"
                   max="15"
                   required
+                  autoComplete="off"
+                  inputMode="numeric"
                   value={item.quantity}
                   onChange={(e) => {
                     const raw = e.target.value;
-
-                    // Let the box sit empty while the customer types a new
-                    // number; don't snap back to 1 on every keystroke.
                     if (raw === "") {
                       updateLineItem(idx, "quantity", "");
                       return;
                     }
-
                     const parsed = parseInt(raw, 10);
                     if (Number.isNaN(parsed)) return;
                     updateLineItem(idx, "quantity", Math.min(Math.max(parsed, 1), 15));
                   }}
                   onBlur={() => {
-                    // Leaving the field empty commits the safe fallback of 1.
                     if (item.quantity === "") updateLineItem(idx, "quantity", 1);
                   }}
                   className="block w-full rounded-lg border border-slate-300 px-2 py-1.5 text-sm bg-white focus:border-sky-500 focus:outline-none"
@@ -771,8 +772,9 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       )}
 
       <div>
-        <label className="block text-sm font-semibold text-slate-700">{t.selectDate}</label>
+        <label htmlFor="booking-date" className="block text-sm font-semibold text-slate-700">{t.selectDate}</label>
         <input
+          id="booking-date"
           type="date"
           required
           min={new Date().toISOString().split("T")[0]}
@@ -788,7 +790,8 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
 
       {selectedDate && fetchedOnce && (
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">{t.availTimes}</label>
+          <p id="avail-times-label" className="block text-sm font-semibold text-slate-700 mb-2">{t.availTimes}</p>
+          <div role="group" aria-labelledby="avail-times-label">
           {availableSlots.length > 0 ? (
             <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
               {availableSlots.map((slot) => {
@@ -819,6 +822,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
               {t.noSlots}
             </div>
           )}
+          </div>
         </div>
       )}
 

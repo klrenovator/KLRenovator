@@ -10,7 +10,6 @@ type IdleWindow = Window & {
 type ConversionWidgetsComponent = ComponentType;
 
 /**
- * Round 21 / 20H.87 — tiny idle-loader island for non-critical lead widgets.
  *
  * The old layout imported the full ConversionWidgets client component on every
  * route. Its child widgets were dynamic, but the conversion island itself still

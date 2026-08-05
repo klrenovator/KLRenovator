@@ -325,7 +325,7 @@ export default async function ProblemPageMS({
         </div>
       </section>
 
-      {/* Brands — triangular cross-link (Round 10.5) */}
+      
       {relatedBrandsMS.length > 0 && (
         <section className="py-10 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -359,7 +359,7 @@ export default async function ProblemPageMS({
         </section>
       )}
 
-      {/* Areas — triangular cross-link (Round 10.5) */}
+      
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -392,7 +392,6 @@ export default async function ProblemPageMS({
       </section>
 
       
-      {/* Round 51 / 10.1–10.6: Problem → Blog reverse guides */}
       {(() => {
         const relatedSlugs = PROBLEM_BLOG_MAP_V2[slug] ?? [];
         const relatedPosts = allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 3);
@@ -428,7 +427,6 @@ export default async function ProblemPageMS({
       })()}
 
 
-      {/* Round 52 / 10.8 — Related symptom hubs for this problem entity */}
       {(() => {
         const hubs = getHubsForProblem(slug);
         if (hubs.length === 0) return null;

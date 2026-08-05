@@ -121,7 +121,6 @@ export default async function AreaPageMS({
       addressCountry: "MY",
     },
     geo: { "@type": "GeoCoordinates", latitude: area.lat, longitude: area.lng },
-    // Round 18 / 20H.84: keep area page LocalBusiness schema
     // aligned with the homepage entity by listing the full Klang Valley
     // service footprint, not only the current landing-page city.
     areaServed: [
@@ -296,7 +295,7 @@ export default async function AreaPageMS({
         </div>
       </section>
 
-      {/* Aircond Tak Sejuk — Per-Area Intent Section — Round 28 / 20F.57 */}
+      
       <section className="py-14 bg-red-50 border-y border-red-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -462,7 +461,7 @@ export default async function AreaPageMS({
         </div>
       </section>
 
-      {/* Brands We Service in This Area — triangular cross-link (Round 10.5) */}
+      
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
@@ -488,7 +487,7 @@ export default async function AreaPageMS({
         </div>
       </section>
 
-      {/* Common Problems Fixed in This Area — triangular cross-link (Round 10.5) */}
+      
       {(() => {
         const specificSlugs = AREA_PROBLEM_MAP[slug] ?? AREA_PROBLEM_MAP["_default"];
         const relatedProblems = siteConfig.problemPages.filter((p) => specificSlugs.includes(p.slug));

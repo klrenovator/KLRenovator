@@ -218,7 +218,6 @@ export default async function AreaPage({
       latitude: area.lat,
       longitude: area.lng,
     },
-    // Round 18 / 20H.84: keep area page LocalBusiness schema
     // aligned with the homepage entity by listing the full Klang Valley
     // service footprint, not only the current landing-page city.
     areaServed: [
@@ -499,7 +498,7 @@ export default async function AreaPage({
         </div>
       </section>
 
-      {/* ── Aircond Not Cold / Tak Sejuk — Per-Area Intent Section — Round 28 / 20F.57 ── */}
+      
       <section className="py-14 bg-red-50 border-y border-red-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>

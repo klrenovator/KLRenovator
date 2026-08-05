@@ -156,7 +156,6 @@ export default function ProblemsPageZH() {
       </section>
 
       
-      {/* Round 52 / 10.8 — Entity Hub clusters */}
       <section className="py-16 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>

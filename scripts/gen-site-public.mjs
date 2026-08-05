@@ -1,42 +1,23 @@
-// ─────────────────────────────────────────────────────────────────────────
-// Generates `config/site-public.ts` — the small, client-safe projection of
-// the very large `config/site.ts`.
-//
-// Run:  npm run gen:site-public
-//
-// Re-run this whenever you change phone / whatsapp / email / links /
-// pricing / services / stats / area names / brand names / problem names in
-// config/site.ts, so the client-side copy stays in sync. Everything else in
-// site.ts (long descriptions, FAQs, kampung content) is server-only and is
-// deliberately NOT copied here.
-// ─────────────────────────────────────────────────────────────────────────
+// Generates config/site-public.ts — client-safe projection of config/site.ts
+// Updated for P2-03 split: site.ts now imports from config/site/* typed collections.
+// This script now uses tsx ESM loader to import TS directly.
 
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const sitePath = path.join(root, "config", "site.ts");
 const outPath = path.join(root, "config", "site-public.ts");
-const tmpPath = path.join(root, "config", ".site-eval.tmp.mjs");
 
-// config/site.ts is plain data (zero imports), so we can strip the few bits
-// of TS syntax it uses and evaluate it directly as an ES module.
-let src = fs.readFileSync(sitePath, "utf8");
-src = src.replace(/^export type SiteConfig.*$/m, "");
-src = src.replace(/ as const/g, "");
-src = src.replace(/^export const siteConfig =/m, "const siteConfig =");
-src += "\nexport default siteConfig;\n";
-
-fs.writeFileSync(tmpPath, src);
-
-let c;
+// Dynamically import tsx ESM loader if available, then import siteConfig
+// When run via `npx tsx`, .ts imports work natively. When run via node, we try to load tsx/esm.
 try {
-  const mod = await import(pathToFileURL(tmpPath).href);
-  c = mod.default;
-} finally {
-  fs.rmSync(tmpPath, { force: true });
+  await import("tsx/esm");
+} catch {
+  // tsx not installed as dependency, but npx tsx will have already handled .ts resolution
 }
+
+const { siteConfig: c } = await import(path.join(root, "config", "site.ts"));
 
 const pick = (obj, keys) => Object.fromEntries(keys.map((k) => [k, obj[k]]));
 
@@ -60,13 +41,9 @@ const out = {
   volumeDiscounts: c.volumeDiscounts,
   links: c.links,
   pricing: c.pricing,
-  // Only the fields client components actually render — no `short`-form
-  // prose beyond the service card blurb, no FAQ arrays.
   services: c.services.map((s) =>
     pick(s, ["slug", "title", "short", "startPrice", "icon", "targetProblem", "category"]),
   ),
-  // "Lite" list variants: slug + display name only. Used for link grids and
-  // dropdowns. The full objects (descriptions, FAQs, meta) stay server-side.
   areaPagesLite: c.areaPages.map((a) => pick(a, ["slug", "name", "state"])),
   brandPagesLite: c.brandPages.map((b) => pick(b, ["slug", "name"])),
   problemPagesLite: c.problemPages.map((p) => pick(p, ["slug", "name", "nameMS", "nameZH"])),
@@ -107,5 +84,6 @@ export type SitePublic = typeof sitePublic;
 fs.writeFileSync(outPath, banner);
 
 const kb = (fs.statSync(outPath).size / 1024).toFixed(1);
-const srcKb = (fs.statSync(sitePath).size / 1024).toFixed(1);
+const srcPath = path.join(root, "config", "site.ts");
+const srcKb = (fs.statSync(srcPath).size / 1024).toFixed(1);
 console.log(`✓ config/site-public.ts written — ${kb} KB (from ${srcKb} KB site.ts)`);
