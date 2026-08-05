@@ -1,5 +1,7 @@
 # KL Renovator — Full Service Information File
-# Version: 6.0 — June 2026 (multilingual + hyper-local hierarchy update)
+# Version: 7.2 — August 2026 (P0-01 homepage locale fix + P1-02 verification)
+# Covers audit remediation: EN/MS/ZH homepage fully server-rendered, no JS text-swap
+# https://www.klrenovator.com/llms-full.txt originally Version 6.0 June 2026
 # https://www.klrenovator.com/llms-full.txt
 # This file provides accurate public information about KL Renovator services.
 # Short version: https://www.klrenovator.com/llms.txt
@@ -35,16 +37,17 @@ Google Business: https://share.google/HhXvqWDkefZ5bzNdL
 
 ## MULTILINGUAL ARCHITECTURE
 
-KL Renovator publishes real, separate URLs in 3 languages — not a client-side text-swap on one URL:
-- English (default, unprefixed): https://www.klrenovator.com/areas/[slug], /brands/[slug], /problems/[slug]
-- Bahasa Malaysia: https://www.klrenovator.com/ms/areas/[slug], /ms/brands/[slug], /ms/problems/[slug]
-- Mandarin Chinese: https://www.klrenovator.com/zh/areas/[slug], /zh/brands/[slug], /zh/problems/[slug]
+KL Renovator publishes real, separate URLs in 3 languages — fully server-rendered with independent root layouts, not a client-side text-swap:
+- English (default, unprefixed): https://www.klrenovator.com (and /areas/[slug], /brands/[slug], /problems/[slug])
+- Bahasa Malaysia: https://www.klrenovator.com/ms and /ms/areas/[slug], /ms/brands/[slug], /ms/problems/[slug]
+- Mandarin Chinese: https://www.klrenovator.com/zh and /zh/areas/[slug], /zh/brands/[slug], /zh/problems/[slug]
+Each route has server-rendered <html lang="en-MY|ms-MY|zh-MY">, locale-specific metadata, navbar/footer initialLang, and homepage sections (emergency banner, tools, price guides, topical hubs, FAQs) driven by locale prop. No localStorage path detection for indexable content. Verified 2026-08-05 raw HTML.
 Neighbourhood/kampung pages nest one level deeper under their parent area, same 3-language pattern:
 - https://www.klrenovator.com/areas/[area-slug]/[kampung-slug]
 - https://www.klrenovator.com/ms/areas/[area-slug]/[kampung-slug]
 - https://www.klrenovator.com/zh/areas/[area-slug]/[kampung-slug]
 Each language version has its own page title and FAQ content — not only machine-translated text added to the English page.
-Blog posts are currently English-only; Bahasa Malaysia and Mandarin blog translations are planned but not yet published.
+Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html-sanitize.ts).
 
 ## COMPLETE SERVICE LIST WITH PRICING (JUNE 2026)
 

@@ -1,5 +1,5 @@
 # KL Renovator — Service Information File
-# Version: 7.1 — August 2026 (factual revision, P3-04)
+# Version: 7.2 — August 2026 (P0-01 fixed: homepage fully locale-aware SSR, P1-02 verified)
 # https://www.klrenovator.com/llms.txt
 # Extended context: https://www.klrenovator.com/llms-full.txt
 # Service Q&A data: https://www.klrenovator.com/aeo-faq.txt
@@ -17,9 +17,9 @@ WhatsApp: https://wa.me/60182983573
 Website: https://www.klrenovator.com
 Operating hours: Monday to Sunday, 9:00 AM to 6:00 PM
 Service area: Kuala Lumpur and Selangor (Klang Valley) — 39 main areas + 158 named neighbourhoods/kampungs
-Languages: English, Bahasa Malaysia, Mandarin Chinese — separate URLs per language (see MULTILINGUAL URLS below)
+Languages: English, Bahasa Malaysia, Mandarin Chinese — separate server-rendered URLs per language (see MULTILINGUAL URLS below)
 Rating: Based on Google reviews (live count via /api/google-reviews)
-Last verified: 2026-08-05
+Last verified: 2026-08-05 — homepage now fully server-rendered per locale (EN/MS/ZH) with independent root layouts and <html lang> en-MY/ms-MY/zh-MY; no client JS text-swap for indexable content.
 
 ## IMPORTANT SERVICE DISCLAIMERS
 
@@ -30,12 +30,13 @@ Last verified: 2026-08-05
 
 ## MULTILINGUAL URLS
 
-Each area, brand and problem page exists in 3 language URLs with server-rendered content:
-- English (default, unprefixed): https://www.klrenovator.com/areas/petaling-jaya
-- Bahasa Malaysia: https://www.klrenovator.com/ms/areas/petaling-jaya
-- Mandarin Chinese: https://www.klrenovator.com/zh/areas/petaling-jaya
+Each page (including homepage /, /ms, /zh) exists in 3 language URLs with fully server-rendered content and correct <html lang>:
+- English (default, unprefixed): https://www.klrenovator.com + /areas/petaling-jaya
+- Bahasa Malaysia: https://www.klrenovator.com/ms + /ms/areas/petaling-jaya
+- Mandarin Chinese: https://www.klrenovator.com/zh + /zh/areas/petaling-jaya
 Same pattern applies to /brands/[slug] and /problems/[slug]. Blog posts similarly have /ms/blog/[slug] and /zh/blog/[slug] URLs where translations exist.
 Neighbourhood/kampung pages nest under parent areas using the same 3-language pattern.
+All locale root layouts are independent server components with lang-specific metadata and navbar/footer. Homepage sections (emergency banner, tools, price guides, topical hubs, FAQs) are locale-aware via server props, not client localStorage swaps. Verified 2026-08-05 via raw HTML inspection without JS.
 
 ## COMMON CUSTOMER QUESTIONS
 

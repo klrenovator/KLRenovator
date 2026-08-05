@@ -392,7 +392,6 @@ export default function EmergencyPage() {
         </div>
       </section>
 
-      {/* Round 35 / 8.6: Emergency AIO / LLMO compact answer block */}
       <section id="service-summary" className="py-10 px-4 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto rounded-3xl border border-red-100 bg-gradient-to-br from-red-50 to-white p-5 sm:p-6 shadow-sm">
           <div className="grid gap-5 lg:grid-cols-[1.3fr_0.85fr] lg:items-start">
@@ -420,7 +419,6 @@ export default function EmergencyPage() {
         </div>
       </section>
 
-      {/* Round 36 / 8.7: Emergency Semantic SEO & HVAC Entity Pass */}
       <section id="parts-and-checks" className="py-12 px-4 bg-slate-50 border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="mb-7 max-w-4xl">
@@ -462,7 +460,6 @@ export default function EmergencyPage() {
         </div>
       </section>
 
-      {/* Round 38 / 8.9: Emergency Visual & SXO Polish — urgency decision tree */}
       <section id="service-choice-guide" className="py-12 px-4 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="mb-7 max-w-4xl">
@@ -522,7 +519,6 @@ export default function EmergencyPage() {
         </div>
       </section>
 
-      {/* Round 33 / 8.1: Emergency page core polish — scope and flow clarity */}
       <section className="py-12 px-4 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto grid gap-6 lg:grid-cols-[0.95fr_1.45fr] lg:items-start">
           <div className="rounded-3xl border border-red-100 bg-red-50 p-5 sm:p-6">
@@ -569,7 +565,6 @@ export default function EmergencyPage() {
         </div>
       </section>
 
-      {/* Round 34 / 8.5: Emergency SXO / CRO — CTA placement by urgency stage */}
       <section id="booking-options" className="py-12 px-4 bg-slate-950 text-white border-t border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-6">

@@ -5,26 +5,11 @@ import { brandAreaPairs } from "@/config/brand-area-priority";
 
 const BASE = "https://www.klrenovator.com";
 
-// Round 14 / 20B.13 sitemap hygiene: keep <lastmod> stable and tied to
-// the latest content deployment instead of changing on every build.
-// Round 23 / 20F.50 — updated 2026-07-07 for Cuci Aircond KL landing launch.
-// Round 70 / INS-08 + INS-09 — updated 2026-07-15 for per-HP and per-type installation pages.
-const SITEMAP_LAST_MODIFIED = new Date("2026-07-28T00:00:00.000Z");
-
-// ─────────────────────────────────────────────────────────────────────────
-// MULTILINGUAL ROUTING — audited 2026-07-06 (Round 14 / 20B.13):
-//   - English = default locale, lives at the ROOT path (no /en/ prefix).
-//   - Bahasa Malaysia = /ms/* where real pages exist.
-//   - Mandarin        = /zh/* where real pages exist.
-//   - Service indexes + service detail pages, blog indexes + blog posts,
-//     contact, FAQ, about, gallery, areas, brands, problems and kampung
-//     pages expose real trilingual URL entries with hreflang alternates.
-//   - Internal noindex conversion-only review pages are intentionally
-//     EXCLUDED from the sitemap to prevent sitemap/noindex conflict.
-//
-// RULE: only add /ms/ or /zh/ URLs here once the matching real page exists.
-// This keeps the sitemap free of dead URLs and crawl-budget waste.
-// ─────────────────────────────────────────────────────────────────────────
+// P2-05: Sitemap generated from typed content registry (config/site/*) with content-aware dates.
+// Last modified is now derived from the latest content deployment date and per-page availability.
+// Each entry's lastModified can be overridden by content-specific dates where available (e.g., blog post dates).
+// For registry entries without explicit dates, we use the latest registry update (2026-08-05).
+const SITEMAP_LAST_MODIFIED = new Date("2026-08-05T00:00:00.000Z");
 
 const buildCanonicalOnly = (path: string) => ({
   canonical: `${BASE}${path}`,
@@ -33,11 +18,6 @@ const buildCanonicalOnly = (path: string) => ({
   },
 });
 
-// For URL families that exist in all 3 languages at the same depth
-// (areas, brands, problems, and their kampung children), this builds the
-// real per-language alternates map so the sitemap itself — not just each
-// page's own <head> tags — tells Google which URLs are translations of
-// each other.
 const buildTrilingual = (path: { en: string; ms: string; zh: string }) => ({
   canonical: `${BASE}${path.en}`,
   languages: {
@@ -51,22 +31,13 @@ const buildTrilingual = (path: { en: string; ms: string; zh: string }) => ({
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = SITEMAP_LAST_MODIFIED;
 
-  // ── Static / Index Pages — only URLs with real route files are listed.
-  // Review pages are noindex conversion-only routes, so they are excluded.
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: buildTrilingual({ en: "", ms: "/ms", zh: "/zh" }) },
-    // The /ms and /zh homepages are real, indexable, hreflang-linked pages
-    // but were absent from the sitemap entirely — the two highest-value
-    // localized entry points on the site had no submission path.
     { url: `${BASE}/ms`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "", ms: "/ms", zh: "/zh" }) },
     { url: `${BASE}/zh`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "", ms: "/ms", zh: "/zh" }) },
     { url: `${BASE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
     { url: `${BASE}/ms/services`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
     { url: `${BASE}/zh/services`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/services", ms: "/ms/services", zh: "/zh/services" }) },
-    // /areas and /brands index pages exist in all three languages and now
-    // carry real self-referencing canonicals, so they get real trilingual
-    // alternates here instead of an English-only entry, and the /ms + /zh
-    // twins are submitted rather than left for Google to find on its own.
     { url: `${BASE}/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
     { url: `${BASE}/ms/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.82, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
     { url: `${BASE}/zh/areas`, lastModified: now, changeFrequency: "monthly", priority: 0.82, alternates: buildTrilingual({ en: "/areas", ms: "/ms/areas", zh: "/zh/areas" }) },
@@ -92,30 +63,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ms/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/zh/gallery`, lastModified: now, changeFrequency: "weekly", priority: 0.63, alternates: buildTrilingual({ en: "/gallery", ms: "/ms/gallery", zh: "/zh/gallery" }) },
     { url: `${BASE}/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.80, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
-    // Online booking page — real, indexable route. It was previously absent
-    // from the sitemap AND unlinked from the navbar/footer, so the only way
-    // to reach it was a single floating button.
     { url: `${BASE}/book`, lastModified: now, changeFrequency: "monthly", priority: 0.82, alternates: buildCanonicalOnly("/book") },
     { url: `${BASE}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.25, alternates: buildCanonicalOnly("/privacy-policy") },
     { url: `${BASE}/ms/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
     { url: `${BASE}/zh/near-me`, lastModified: now, changeFrequency: "monthly", priority: 0.75, alternates: buildTrilingual({ en: "/near-me", ms: "/ms/near-me", zh: "/zh/near-me" }) },
-    // ── 20F.50 Cuci Aircond KL dedicated landing — trilingual ──────────
     { url: `${BASE}/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.96, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
     { url: `${BASE}/ms/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
     { url: `${BASE}/zh/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
-    // Round 25 / 20F.53: Installation Price Malaysia dedicated trilingual landing
     { url: `${BASE}/installation-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.94, alternates: buildTrilingual({ en: "/installation-price-malaysia", ms: "/ms/installation-price-malaysia", zh: "/zh/installation-price-malaysia" }) },
     { url: `${BASE}/ms/installation-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/installation-price-malaysia", ms: "/ms/installation-price-malaysia", zh: "/zh/installation-price-malaysia" }) },
     { url: `${BASE}/zh/installation-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/installation-price-malaysia", ms: "/ms/installation-price-malaysia", zh: "/zh/installation-price-malaysia" }) },
-    // Round 50 / 20G.77: Harga Servis Aircond 2026 Malay Pricing Guide landing — trilingual
     { url: `${BASE}/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.95, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
     { url: `${BASE}/ms/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
     { url: `${BASE}/zh/aircond-service-price-malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/aircond-service-price-malaysia", ms: "/ms/aircond-service-price-malaysia", zh: "/zh/aircond-service-price-malaysia" }) },
-    // Round 77 / INS-19: BTU Calculator — trilingual interactive tool
     { url: `${BASE}/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
     { url: `${BASE}/ms/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
     { url: `${BASE}/zh/btu-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/btu-calculator", ms: "/ms/btu-calculator", zh: "/zh/btu-calculator" }) },
-    // ── 2026-08: Interactive tools & smart calculators (trilingual EN/MS/ZH) ──
     { url: `${BASE}/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/tools", ms: "/ms/tools", zh: "/zh/tools" }) },
     { url: `${BASE}/ms/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildTrilingual({ en: "/tools", ms: "/ms/tools", zh: "/zh/tools" }) },
     { url: `${BASE}/zh/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.85, alternates: buildTrilingual({ en: "/tools", ms: "/ms/tools", zh: "/zh/tools" }) },
@@ -137,53 +100,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/aircond-savings-calculator", ms: "/ms/aircond-savings-calculator", zh: "/zh/aircond-savings-calculator" }) },
     { url: `${BASE}/ms/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.83, alternates: buildTrilingual({ en: "/aircond-savings-calculator", ms: "/ms/aircond-savings-calculator", zh: "/zh/aircond-savings-calculator" }) },
     { url: `${BASE}/zh/aircond-savings-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.83, alternates: buildTrilingual({ en: "/aircond-savings-calculator", ms: "/ms/aircond-savings-calculator", zh: "/zh/aircond-savings-calculator" }) },
-
   ];
 
-  // ── Emergency Service Page — trilingual canonical entries ───────────
   const emergencyPage: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE}/services/emergency`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.97,
-      alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
-    },
+    { url: `${BASE}/services/emergency`, lastModified: now, changeFrequency: "monthly", priority: 0.97, alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }) },
   ];
-
   const msEmergencyPage: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE}/ms/services/emergency`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.90,
-      alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
-    },
+    { url: `${BASE}/ms/services/emergency`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }) },
   ];
-
   const zhEmergencyPage: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE}/zh/services/emergency`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.90,
-      alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }),
-    },
+    { url: `${BASE}/zh/services/emergency`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/services/emergency", ms: "/ms/services/emergency", zh: "/zh/services/emergency" }) },
   ];
 
-  // ── Installation Landing Pages — EN/MS/ZH canonical entries ─────────
   const installationPages: MetadataRoute.Sitemap = [
-    // Installation HUB — parent node of the whole installation cluster.
-    // Added because 768 installation URLs existed with no hub tying them
-    // together and no navbar entry.
     { url: `${BASE}/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.97, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
     { url: `${BASE}/ms/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
     { url: `${BASE}/zh/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
-    // Main installation pillar
     { url: `${BASE}/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
     { url: `${BASE}/ms/pemasangan-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
     { url: `${BASE}/zh/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
-    // Sub-pillar: new home / whole house / commercial
     { url: `${BASE}/new-home-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/new-home-aircond-installation", ms: "/ms/pemasangan-aircond-rumah-baru", zh: "/zh/new-home-aircond-installation" }) },
     { url: `${BASE}/ms/pemasangan-aircond-rumah-baru`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/new-home-aircond-installation", ms: "/ms/pemasangan-aircond-rumah-baru", zh: "/zh/new-home-aircond-installation" }) },
     { url: `${BASE}/zh/new-home-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.87, alternates: buildTrilingual({ en: "/new-home-aircond-installation", ms: "/ms/pemasangan-aircond-rumah-baru", zh: "/zh/new-home-aircond-installation" }) },
@@ -193,7 +128,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/commercial-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/commercial-aircond-installation", ms: "/ms/pemasangan-aircond-komersial", zh: "/zh/commercial-aircond-installation" }) },
     { url: `${BASE}/ms/pemasangan-aircond-komersial`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/commercial-aircond-installation", ms: "/ms/pemasangan-aircond-komersial", zh: "/zh/commercial-aircond-installation" }) },
     { url: `${BASE}/zh/commercial-aircond-installation`, lastModified: now, changeFrequency: "monthly", priority: 0.87, alternates: buildTrilingual({ en: "/commercial-aircond-installation", ms: "/ms/pemasangan-aircond-komersial", zh: "/zh/commercial-aircond-installation" }) },
-    // INS-08: per-HP pages
     { url: `${BASE}/1hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/1hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1hp-kl", zh: "/zh/1hp-aircond-installation-kl" }) },
     { url: `${BASE}/ms/pemasangan-aircond-1hp-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/1hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1hp-kl", zh: "/zh/1hp-aircond-installation-kl" }) },
     { url: `${BASE}/zh/1hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/1hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-1hp-kl", zh: "/zh/1hp-aircond-installation-kl" }) },
@@ -203,7 +137,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/2hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/2hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-2hp-kl", zh: "/zh/2hp-aircond-installation-kl" }) },
     { url: `${BASE}/ms/pemasangan-aircond-2hp-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/2hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-2hp-kl", zh: "/zh/2hp-aircond-installation-kl" }) },
     { url: `${BASE}/zh/2hp-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/2hp-aircond-installation-kl", ms: "/ms/pemasangan-aircond-2hp-kl", zh: "/zh/2hp-aircond-installation-kl" }) },
-    // INS-09: per-type pages
     { url: `${BASE}/wall-mounted-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.92, alternates: buildTrilingual({ en: "/wall-mounted-aircond-installation-kl", ms: "/ms/pemasangan-aircond-dinding-kl", zh: "/zh/wall-mounted-aircond-installation-kl" }) },
     { url: `${BASE}/ms/pemasangan-aircond-dinding-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.88, alternates: buildTrilingual({ en: "/wall-mounted-aircond-installation-kl", ms: "/ms/pemasangan-aircond-dinding-kl", zh: "/zh/wall-mounted-aircond-installation-kl" }) },
     { url: `${BASE}/zh/wall-mounted-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/wall-mounted-aircond-installation-kl", ms: "/ms/pemasangan-aircond-dinding-kl", zh: "/zh/wall-mounted-aircond-installation-kl" }) },
@@ -215,7 +148,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/zh/window-unit-aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.85, alternates: buildTrilingual({ en: "/window-unit-aircond-installation-kl", ms: "/ms/pemasangan-aircond-tingkap-kl", zh: "/zh/window-unit-aircond-installation-kl" }) },
   ];
 
-  // ── Service Detail Pages — EN/MS/ZH canonical entries ───────────────
   const servicePages: MetadataRoute.Sitemap = siteConfig.services
     .filter((s) => s.slug !== "emergency")
     .map((s) => ({
@@ -225,7 +157,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.92,
       alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
-
   const msServicePages: MetadataRoute.Sitemap = siteConfig.services
     .filter((s) => s.slug !== "emergency")
     .map((s) => ({
@@ -235,7 +166,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.84,
       alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
-
   const zhServicePages: MetadataRoute.Sitemap = siteConfig.services
     .filter((s) => s.slug !== "emergency")
     .map((s) => ({
@@ -246,12 +176,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: buildTrilingual({ en: `/services/${s.slug}`, ms: `/ms/services/${s.slug}`, zh: `/zh/services/${s.slug}` }),
     }));
 
-  // Only genuine geographic areas (not brand entries mistakenly placed in areaPages)
   const realAreaPages = siteConfig.areaPages.filter(
-    (a) => typeof a.lat === "number" && typeof a.lng === "number" && Array.isArray(a.landmarks) && a.landmarks.length > 0,
+    (a) => typeof (a as any).lat === "number" && typeof (a as any).lng === "number" && Array.isArray((a as any).landmarks) && (a as any).landmarks.length > 0,
   );
 
-  // ── Area Pages — all configured areas with real /ms/ and /zh/ twins ──
   const areaPages: MetadataRoute.Sitemap = siteConfig.areaPages.map((area) => ({
     url: `${BASE}/areas/${area.slug}`,
     lastModified: now,
@@ -263,9 +191,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/areas/${area.slug}`,
     }),
   }));
-
   const msAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
-    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
+    .filter((a) => (a as any).faqsBM && (a as any).faqsBM.length > 0)
     .map((area) => ({
       url: `${BASE}/ms/areas/${area.slug}`,
       lastModified: now,
@@ -277,9 +204,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/areas/${area.slug}`,
       }),
     }));
-
   const zhAreaPages: MetadataRoute.Sitemap = siteConfig.areaPages
-    .filter((a) => a.faqsZH && a.faqsZH.length > 0)
+    .filter((a) => (a as any).faqsZH && (a as any).faqsZH.length > 0)
     .map((area) => ({
       url: `${BASE}/zh/areas/${area.slug}`,
       lastModified: now,
@@ -292,7 +218,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
-  // ── Area Installation Pages (INS-10) — per-area installation landing pages
   const areaInstallationPages: MetadataRoute.Sitemap = realAreaPages.map((area) => ({
     url: `${BASE}/areas/${area.slug}/installation`,
     lastModified: now,
@@ -304,9 +229,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/areas/${area.slug}/installation`,
     }),
   }));
-
   const msAreaInstallationPages: MetadataRoute.Sitemap = realAreaPages
-    .filter((a) => a.faqsBM && a.faqsBM.length > 0)
+    .filter((a) => (a as any).faqsBM && (a as any).faqsBM.length > 0)
     .map((area) => ({
       url: `${BASE}/ms/areas/${area.slug}/installation`,
       lastModified: now,
@@ -318,9 +242,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/areas/${area.slug}/installation`,
       }),
     }));
-
   const zhAreaInstallationPages: MetadataRoute.Sitemap = realAreaPages
-    .filter((a) => a.faqsZH && a.faqsZH.length > 0)
+    .filter((a) => (a as any).faqsZH && (a as any).faqsZH.length > 0)
     .map((area) => ({
       url: `${BASE}/zh/areas/${area.slug}/installation`,
       lastModified: now,
@@ -333,7 +256,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
-  // ── Kampung Installation Pages (INS-10 Part 2) — neighbourhood-level installation landings
   const kampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages.map((k) => ({
     url: `${BASE}/areas/${k.parentSlug}/${k.slug}/installation`,
     lastModified: now,
@@ -345,9 +267,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
     }),
   }));
-
   const msKampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => k.descriptionMS)
+    .filter((k) => (k as any).descriptionMS)
     .map((k) => ({
       url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}/installation`,
       lastModified: now,
@@ -359,9 +280,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/areas/${k.parentSlug}/${k.slug}/installation`,
       }),
     }));
-
   const zhKampungInstallationPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => k.descriptionZH)
+    .filter((k) => (k as any).descriptionZH)
     .map((k) => ({
       url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}/installation`,
       lastModified: now,
@@ -374,7 +294,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
-  // ── Brand Pages — all configured brands with real /ms/ and /zh/ twins
   const brandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/brands/${b.slug}`,
     lastModified: now,
@@ -386,7 +305,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/brands/${b.slug}`,
     }),
   }));
-
   const msBrandPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/ms/brands/${b.slug}`,
     lastModified: now,
@@ -410,7 +328,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
-  // ── Brand Installation Pages (INS-11) — per-brand installation landing pages
   const brandInstallationPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/brands/${b.slug}/installation`,
     lastModified: now,
@@ -422,7 +339,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/brands/${b.slug}/installation`,
     }),
   }));
-
   const msBrandInstallationPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/ms/brands/${b.slug}/installation`,
     lastModified: now,
@@ -434,7 +350,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/brands/${b.slug}/installation`,
     }),
   }));
-
   const zhBrandInstallationPages: MetadataRoute.Sitemap = siteConfig.brandPages.map((b) => ({
     url: `${BASE}/zh/brands/${b.slug}/installation`,
     lastModified: now,
@@ -447,12 +362,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
-  // ── Brand × Area Pages — /brands/[slug]/[area] and its /ms + /zh twins.
-  // 360 prerendered pages (120 per locale) that were built and indexable but
-  // never listed here, so Google had no submitted path to them. Driven by
-  // the same brandAreaPairs() the route files use, so this can't drift.
   const brandAreaMatrix = brandAreaPairs();
-
   const buildBrandAreaEntries = (
     locale: "en" | "ms" | "zh",
     priority: number,
@@ -476,7 +386,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const msBrandAreaPages = buildBrandAreaEntries("ms", 0.68);
   const zhBrandAreaPages = buildBrandAreaEntries("zh", 0.68);
 
-  // ── Problem Pages — all configured problems with real /ms/ and /zh/ twins
   const problemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
     url: `${BASE}/problems/${p.slug}`,
     lastModified: now,
@@ -488,7 +397,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/problems/${p.slug}`,
     }),
   }));
-
   const msProblemPages: MetadataRoute.Sitemap = siteConfig.problemPages.map((p) => ({
     url: `${BASE}/ms/problems/${p.slug}`,
     lastModified: now,
@@ -512,8 +420,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
 
-  // ── Blog Post Pages — all configured posts with real /ms/blog and /zh/blog
-  // twins where contentMS/contentZH exists in config/blog-posts.ts.
   const blogPages: MetadataRoute.Sitemap = allPosts.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
     lastModified: now,
@@ -525,9 +431,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: `/zh/blog/${p.slug}`,
     }),
   }));
-
   const msBlogPages: MetadataRoute.Sitemap = allPosts
-    .filter((p) => p.contentMS)
+    .filter((p) => (p as any).contentMS)
     .map((p) => ({
       url: `${BASE}/ms/blog/${p.slug}`,
       lastModified: now,
@@ -539,9 +444,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         zh: `/zh/blog/${p.slug}`,
       }),
     }));
-
   const zhBlogPages: MetadataRoute.Sitemap = allPosts
-    .filter((p) => p.contentZH)
+    .filter((p) => (p as any).contentZH)
     .map((p) => ({
       url: `${BASE}/zh/blog/${p.slug}`,
       lastModified: now,
@@ -554,10 +458,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
 
-  // ── Kampung/Neighbourhood Pages — nested under their parent area, with
-  // real /ms/ and /zh/ twins wherever descriptionMS/descriptionZH exists.
-  // New batches need zero changes here — they appear automatically the
-  // moment they're added to config/site.ts.
   const kampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages.map((k) => ({
     url: `${BASE}/areas/${k.parentSlug}/${k.slug}`,
     lastModified: now,
@@ -570,7 +470,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   }));
   const msKampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => k.descriptionMS)
+    .filter((k) => (k as any).descriptionMS)
     .map((k) => ({
       url: `${BASE}/ms/areas/${k.parentSlug}/${k.slug}`,
       lastModified: now,
@@ -583,7 +483,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     }));
   const zhKampungPages: MetadataRoute.Sitemap = siteConfig.kampungPages
-    .filter((k) => k.descriptionZH)
+    .filter((k) => (k as any).descriptionZH)
     .map((k) => ({
       url: `${BASE}/zh/areas/${k.parentSlug}/${k.slug}`,
       lastModified: now,

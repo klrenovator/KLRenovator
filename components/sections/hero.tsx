@@ -52,7 +52,6 @@ const HERO_IMAGES = [
   },
 ];
 
-// Round 16 / 20H.80 — keep the LCP image predictable on mobile:
 // - `svh` avoids mobile browser address-bar vh jumps.
 // - 360/414px device sizes are added in next.config.mjs, so this `sizes`
 //   string can now select a true phone-sized image instead of 640px+.

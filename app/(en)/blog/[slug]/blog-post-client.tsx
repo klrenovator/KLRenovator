@@ -478,7 +478,6 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 </div>
 
 
-                {/* Round 51 / 10.1–10.6: Blog → Problem reverse links */}
                 {(() => {
                   const problemSlugs = Object.entries(PROBLEM_BLOG_MAP_V2)
                     .filter(([, blogs]) => blogs.includes(post.slug))

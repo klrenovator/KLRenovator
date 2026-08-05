@@ -15,7 +15,6 @@ import { buildServiceRouteAlternates } from "@/config/service-route-qa";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Round 39 / 8.10 route QA: exclude only routes that have their own
   // dedicated localized static page files. Emergency must remain here for
   // Malay route-generation parity because /ms/services/emergency is served
   // by this localized dynamic template.

@@ -1,5 +1,4 @@
 // config/service-og-images.ts
-// Round 46 / v53 — 20E.42 Service-Specific OpenGraph Images Code Setup
 // Purpose: Provide branded service-specific OG images for all service pages (EN/MS/ZH)
 // Using real work photos from /public/hero that already exist in the repo
 

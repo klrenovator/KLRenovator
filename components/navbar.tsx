@@ -145,7 +145,6 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
   }
 
   // Dynamic service detail pages (/services/<slug>) → real /ms and /zh twins
-  // created in Round 18.3 (app/ms/services/[slug], app/zh/services/[slug]).
   // Add this ONLY after those route files exist, so the switcher never
   // navigates to a route that doesn't exist.
   if (/^\/services\/.+/.test(enPath)) {
