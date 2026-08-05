@@ -1884,5 +1884,5 @@ export const areaPages = [
         { q: "吉隆坡市中心/KLCC 大楼装卸区你们能配合吗？", a: "可以。我们常在市中心塔楼作业，如需会提前配合保安、装卸区与施工许可。" }
       ],
     },
-  ],
+  ]
 export default areaPages;
