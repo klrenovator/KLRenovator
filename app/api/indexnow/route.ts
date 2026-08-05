@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { hit, clientIp } from "@/lib/rate-limit";
-import sitemap from "@/app/sitemap";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
+import sitemap from "@/lib/sitemap";
 
 export const dynamic = "force-dynamic";
 
@@ -48,7 +48,7 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const limit = hit(`indexnow:${clientIp(req)}`, 3, 60 * 60 * 1000);
+  const limit = await rateLimit(`indexnow:${clientIp(req)}`, 3, 60 * 60 * 1000);
   if (!limit.allowed) {
     return NextResponse.json(
       { error: "Rate limited" },

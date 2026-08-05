@@ -3,7 +3,7 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { createCalendarEvent, getBusySlots } from "@/lib/google-calendar";
 import { calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { validateBooking } from "@/lib/booking-validation";
-import { hit, clientIp } from "@/lib/rate-limit";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -16,7 +16,7 @@ const RATE_WINDOW_MS = 10 * 60 * 1000;
 export async function POST(req: Request) {
   try {
     // ── 1. Rate limit ───────────────────────────────────────────────────
-    const limit = hit(`bookings:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
+    const limit = await rateLimit(`bookings:${clientIp(req)}`, RATE_LIMIT, RATE_WINDOW_MS);
     if (!limit.allowed) {
       return NextResponse.json(
         { error: "Too many booking attempts. Please try again shortly, or WhatsApp us directly." },

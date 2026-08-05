@@ -167,7 +167,7 @@ const SERVICE_OPTS = [
   { val: "conceal_piping", en: "Copper Pipe & Wiring", ms: "Paip Kuprum & Pendawaian", zh: "铜管与拉线" },
 ] as const;
 
-// Typed lookup — replaces `(opt as any)[lang]` pattern (P3-03).
+// Typed lookup for localized option labels (P3-03).
 type LocalizedOption = { val: string; en: string; ms: string; zh: string };
 function localizedLabel(opt: LocalizedOption, lang: string) {
   return opt[lang as keyof typeof opt] ?? opt.en;

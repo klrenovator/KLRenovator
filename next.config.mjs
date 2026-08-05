@@ -1,23 +1,21 @@
+import bundleAnalyzer from "@next/bundle-analyzer";
+
 /**
- * Bundle Analyzer (audit P1-03):
- *   npm install --save-dev @next/bundle-analyzer
- *   Wrap this config with `withBundleAnalyzer({...})` from
- *   '@next/bundle-analyzer' and run ANALYZE=true npm run build.
- *   Then review per-route JS budgets and lazy-load below-fold widgets.
+ * Set ANALYZE=true npm run bundle-analyze to write interactive client, server
+ * and edge bundle reports to .next/analyze/. This is deliberately opt-in so
+ * normal production builds remain unchanged.
  *
  * @type {import('next').NextConfig}
  */
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+  openAnalyzer: false,
+  analyzerMode: "static",
+});
+
 const nextConfig = {
-  // Lint runs in CI (`npm run lint`) rather than inside `next build`.
-  // Keeping it out of the build avoids the FlatCompat/eslint-plugin-react
-  // "Converting circular structure to JSON" crash that this
-  // eslint-config-next pairing hits, while still gating every push —
-  // see .github/workflows/ci.yml, which runs lint + typecheck + build.
-  // NOTE: the flat config previously matched no .ts/.tsx files at all, so
-  // linting was silently a no-op. That is fixed in eslint.config.mjs.
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Lint is an explicit CI gate (`npm run lint`) before this build. Next 16
+  // no longer accepts an `eslint` build option, so do not suppress lint here.
   images: {
     formats: ["image/avif", "image/webp"],
     // Round 16 / 20H.80: include real mobile viewport widths so the
@@ -164,4 +162,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
