@@ -13,10 +13,53 @@ const withBundleAnalyzer = bundleAnalyzer({
   analyzerMode: "static",
 });
 
+const REPORT_TO_VALUE = JSON.stringify({
+  group: "csp-endpoint",
+  max_age: 31536000,
+  endpoints: [{ url: "https://www.klrenovator.com/api/csp-report" }],
+});
+
+// P0-04b final: enforced CSP + report-only both from next.config (static pages remain prerendered)
+// Middleware removed to keep 2120+ pages static. Nonce phase documented as next step.
+// Enforced policy removes unsafe-eval, adds upgrade-insecure-requests, keeps unsafe-inline temporarily for GTM compat
+const CSP_ENFORCED = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-ancestors 'self'",
+  "form-action 'self' https://wa.me https://api.whatsapp.com",
+  "img-src 'self' data: blob: https: https://*.googleusercontent.com https://*.googleapis.com",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms https://va.vercel-scripts.com https://*.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline' https:",
+  "font-src 'self' data: https:",
+  "connect-src 'self' https://www.google-analytics.com https://*.clarity.ms https://*.vercel-scripts.com https://*.supabase.co https://maps.googleapis.com https://www.googleapis.com https://*.doubleclick.net https://*.googleusercontent.com",
+  "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com",
+  "worker-src 'self' blob:",
+  "upgrade-insecure-requests",
+  "report-uri /api/csp-report",
+  "report-to csp-endpoint",
+].join("; ");
+
+const CSP_REPORT_ONLY = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-ancestors 'self'",
+  "form-action 'self' https://wa.me https://api.whatsapp.com",
+  "img-src 'self' data: blob: https://*.googleusercontent.com https://*.googleapis.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms https://va.vercel-scripts.com https://*.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline'",
+  "font-src 'self' data:",
+  "connect-src 'self' https://www.google-analytics.com https://*.clarity.ms https://*.vercel-scripts.com https://*.supabase.co https://maps.googleapis.com https://www.googleapis.com https://*.doubleclick.net",
+  "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com",
+  "worker-src 'self' blob:",
+  "report-uri /api/csp-report",
+  "report-to csp-endpoint",
+].join("; ");
+
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    // Include real mobile viewport widths so hero and full-width images do not force 640px+ variants on 360–414px phones.
     deviceSizes: [360, 414, 640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 604800,
@@ -25,21 +68,14 @@ const nextConfig = {
     cpus: 1,
     workerThreads: false,
   },
-  // Force non-www to www + Malay short-URL aliases (see CHANGELOG.md for history)
   async redirects() {
     return [
       {
         source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'klrenovator.com',
-          },
-        ],
+        has: [{ type: 'host', value: 'klrenovator.com' }],
         destination: 'https://www.klrenovator.com/:path*',
         statusCode: 301,
       },
-      // Malay short-URL aliases → canonical localized pages (301 preserves equity)
       { source: '/servis/cuci-aircond-kl',          destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
       { source: '/servis/cuci-aircond',             destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
       { source: '/cuci-aircond',                    destination: '/ms/cuci-aircond-kl',                 statusCode: 301 },
@@ -65,55 +101,20 @@ const nextConfig = {
       },
     ];
   },
-  // Security headers — HSTS, XFO, nosniff, referrer, permissions, CSP Report-Only (P0-04)
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-          {
-            key: 'Report-To',
-            value: '{"group":"csp-endpoint","max_age":31536000,"endpoints":[{"url":"https://www.klrenovator.com/api/csp-report"}]}',
-          },
-          {
-            key: 'Content-Security-Policy-Report-Only',
-            value: [
-              "default-src 'self'",
-              "base-uri 'self'",
-              "object-src 'none'",
-              "frame-ancestors 'self'",
-              "form-action 'self' https://wa.me https://api.whatsapp.com",
-              "img-src 'self' data: blob: https://*.googleusercontent.com https://*.googleapis.com",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms https://va.vercel-scripts.com https://*.vercel-scripts.com",
-              "style-src 'self' 'unsafe-inline'",
-              "font-src 'self' data:",
-              "connect-src 'self' https://www.google-analytics.com https://*.clarity.ms https://*.vercel-scripts.com https://*.supabase.co https://maps.googleapis.com https://www.googleapis.com https://*.doubleclick.net",
-              "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com",
-              "worker-src 'self' blob:",
-              "report-uri /api/csp-report",
-              "report-to csp-endpoint",
-            ].join('; '),
-          },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Report-To', value: REPORT_TO_VALUE },
+          // P0-04b: enforced CSP live (no unsafe-eval, upgrade-insecure-requests) + report-only for monitoring
+          { key: 'Content-Security-Policy', value: CSP_ENFORCED },
+          { key: 'Content-Security-Policy-Report-Only', value: CSP_REPORT_ONLY },
         ],
       },
     ];

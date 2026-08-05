@@ -17,7 +17,7 @@ import { siteConfig } from "@/config/site";
 // removed so this page can serve.
 // ─────────────────────────────────────────────────────────────────────────
 
-const LAST_UPDATED = "28 July 2026";
+const LAST_UPDATED = "05 August 2026";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | KL Renovator",

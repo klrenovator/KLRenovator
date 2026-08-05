@@ -1,10 +1,10 @@
-import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { headers } from "next/headers";
 
 import { Providers } from "@/app/providers";
 import { siteConfig } from "@/config/site";
@@ -16,14 +16,6 @@ import { ConversionWidgetsLoader } from "@/components/conversion-widgets-loader"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
-  // NOTE: no `template` here — every page (services, areas, brands, problems, blog)
-  // already includes "| KL Renovator" in its own metaTitle. A template here
-  // caused a double-suffix bug ("...KL Renovator | KL Renovator") across 100+ pages.
-  // `title` is set as a plain string (not the {default, template} object) since
-  // the template slot is unused — this is the cleaner way to express "no template".
-  // Kept under 60 chars: this exact string is what /_not-found, /brands and
-  // any page without its own `title` renders. `siteConfig.tagline` on its
-  // own pushed it to 69 characters, which Google truncates.
   title: "KL Renovator — Aircond Installation & Service KL",
   description: siteConfig.metaDescription,
   verification: {
@@ -70,7 +62,6 @@ export const metadata: Metadata = {
       "x-default": "https://www.klrenovator.com",
     },
   },
-  // ── Geo + AI meta tags (merged — no duplicate) ───────────────────────────
   other: {
     "geo.region": "MY-10",
     "geo.placename": "Kuala Lumpur, Selangor, Malaysia",
@@ -92,26 +83,7 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-// ── NOTE: no "review" array and no "aggregateRating" in the business schema.
-//
-// Google's structured data guidelines (Sept 2019, restated Dec 2025) treat
-// self-serving reviews — reviews about Entity A published on Entity A's own
-// website, whether hand-written or pulled from a Google/Facebook widget — as
-// ineligible for review rich results on LocalBusiness / Organization and all
-// their subtypes, which includes HVACBusiness.
-//
-// The `review` array went first (it produced 11 invalid items in the Rich
-// Results Test). `aggregateRating` was kept at the time on the assumption it
-// was still valid — it is not: it produced the 36 invalid review snippets
-// reported in Search Console on 2026-07-28, so it has now been removed too.
-//
-// The stars were never eligible to render, so nothing is lost. Rankings are
-// unaffected — this is a rich-result eligibility rule, not a quality signal.
-// The genuine rating still reaches Google via the Google Business Profile,
-// and the testimonials remain visible on-page in plain HTML for users.
-// See: https://developers.google.com/search/blog/2019/09/making-review-rich-results-more-helpful
-
-export default function SiteRootLayout({
+export default async function SiteRootLayout({
   children,
   locale,
 }: {
@@ -119,22 +91,30 @@ export default function SiteRootLayout({
   locale: "en" | "ms" | "zh";
 }) {
   const htmlLang = locale === "ms" ? "ms-MY" : locale === "zh" ? "zh-MY" : "en-MY";
+  // P0-04b: read per-request nonce from middleware (x-nonce)
+  let nonce: string | undefined;
+  try {
+    const h = await headers();
+    nonce = h.get("x-nonce") || h.get("x-csp-nonce") || undefined;
+  } catch {
+    nonce = undefined;
+  }
+
   return (
     <html lang={htmlLang} className="scroll-smooth">
+      {/* eslint-disable-next-line @next/next/no-head-element */}
       <head>
-        {/* ── Google Tag Manager (container script) ──────────────────
-            GTM-57MCF8NQ — kept parser-blocking / as early as possible in
-            <head> so the dataLayer and tag container initialise before
-            first paint (matching Google's recommended placement). The
-            matching <noscript> iframe lives immediately after <body>. */}
+        {/* GTM — nonce attached for CSP enforcement (P0-04b) */}
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-57MCF8NQ');`,
           }}
         />
 
-        {/* ── 1. Primary Local Business — HVACBusiness ── */}
         <script
+          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -166,34 +146,6 @@ export default function SiteRootLayout({
                 "Aircond Installation, Servicing & Repair KL & Selangor",
               foundingDate: "2014",
               numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
-              // ── aggregateRating REMOVED 2026-07-28 ──────────────────────
-              // This emitted our own 5.0 / 500-review rating inside
-              // HVACBusiness on all 2,104 pages, and was the cause of the
-              // "36 invalid review snippets" in Search Console.
-              //
-              // Google's self-serving review policy (Sept 2019, restated
-              // Dec 2025): when the entity being reviewed controls the
-              // reviews, LocalBusiness and Organization — and every subtype,
-              // which includes HVACBusiness — are INELIGIBLE for review rich
-              // results. So these stars could never render; the markup only
-              // ever produced invalid items in GSC.
-              //
-              // Nothing is lost by removing it:
-              //   • the stars were never eligible to show
-              //   • ranking is unaffected — this is a rich-result eligibility
-              //     rule, not a quality signal
-              //   • the real rating still reaches Google through the Google
-              //     Business Profile, which is the supported route
-              //   • the 5.0 / 500 reviews remain visible on-page for users
-              //     (components/sections/google-reviews.tsx)
-              //
-              // The `review` array was already removed for the same reason —
-              // see the note above RootLayout.
-              // sameAs = the profiles Google follows to verify this business
-              // entity. Every URL here must resolve — dead profiles weaken
-              // entity verification. Audited 2026-07-28: removed YouTube
-              // (channel 404s), Yelp ("no-title" placeholder) and Medium
-              // (404). The rest were confirmed live.
               sameAs: [
                 siteConfig.googleBusinessProfile,
                 siteConfig.links.googleMaps,
@@ -237,10 +189,6 @@ export default function SiteRootLayout({
               ],
               areaServed: [
                 ...buildAreaServedSchema(),
-                // Service-radius GeoCircle tells Google the broad
-                // operational footprint (Klang Valley, ~50 km from
-                // KL centre) without forcing enumeration of every
-                // neighbourhood. Complements the per-City list above.
                 buildServiceAreaGeoCircle(),
               ],
               serviceType: [
@@ -289,8 +237,8 @@ export default function SiteRootLayout({
           }}
         />
 
-        {/* ── 2. Organization Schema ── */}
         <script
+          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -323,8 +271,8 @@ export default function SiteRootLayout({
           }}
         />
 
-        {/* ── 3. WebSite Schema with SearchAction ── */}
         <script
+          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -350,7 +298,6 @@ export default function SiteRootLayout({
             }),
           }}
         />
-
       </head>
       <body
         className={clsx(
@@ -358,8 +305,6 @@ export default function SiteRootLayout({
           fontSans.variable,
         )}
       >
-        {/* Google Tag Manager (noscript) — must be immediately after <body>
-            so non-JS browsers / fallback still load the container. */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-57MCF8NQ"
@@ -369,10 +314,10 @@ export default function SiteRootLayout({
           />
         </noscript>
 
-        {/* Microsoft Clarity */}
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
@@ -384,7 +329,6 @@ export default function SiteRootLayout({
           }}
         />
 
-        {/* Google Analytics GA4 */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-5V6TDZ48W0"
@@ -392,6 +336,7 @@ export default function SiteRootLayout({
         <Script
           id="google-analytics"
           strategy="afterInteractive"
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -401,9 +346,6 @@ export default function SiteRootLayout({
             `,
           }}
         />
-        {/* Skip link — keyboard users previously had to tab through the
-            entire utility bar, logo, 7 nav links and language switcher on
-            every single page before reaching content. */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-sky-600 focus:px-5 focus:py-3 focus:text-sm focus:font-black focus:uppercase focus:tracking-wider focus:text-white focus:shadow-xl"
