@@ -347,6 +347,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
           notes: notes.trim(),
           start_time: selectedSlot,
           source: isAdmin ? "whatsapp_manual" : "web",
+          consent: consent === true,
           company_website: companyWebsite,
           // Installation details formatting
           ...(hasInstallationOrRelocate

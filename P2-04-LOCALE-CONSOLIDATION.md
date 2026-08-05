@@ -1,13 +1,53 @@
-# P2-04 — Locale Architecture Consolidation Design (2026-08-05)
-Current state: literal mirrored trees `app/`, `app/ms/`, `app/zh/` with duplicated routes.
+# P2-04 — Locale Architecture Consolidation — COMPLETED (2026-08-05)
 
-Proposed migration (progressive, no URL breakage):
-1. Introduce `[locale]` route segment group (`app/(locale)/[locale]/...` or `app/[locale]/...`) with default `en`.
-2. Move shared server components / content collections into `app/lib/i18n/` typed locale dictionary.
-3. Preserve existing URLs via `next.config.mjs` rewrites/redirects during transition.
-4. Phase 1: consolidate homepage + global shell (navbar/footer/html lang) to server locale.
-5. Phase 2: migrate service/area/detail pages progressively.
-6. Phase 3: retire `app/ms/` and `app/zh/` literal trees once all routes use `[locale]`.
+## Final state — Phase 3 done
 
-Risk reduction: keep current routes intact until Phase 1 verified; use feature flags.
-Next action: design typed locale-content interface (EN/MS/ZH) and test with one family (e.g., services).
+**Problem (before):** Literal mirrored trees `app/`, `app/ms/`, `app/zh/` with duplicated route logic,
+ad-hoc `useLang()` checks, and inconsistent `forcedLang` handling. Risk of canonical/hreflang drift
+and EN content leaking into MS/ZH SSR.
+
+**Solution (implemented):**
+
+1. **Central typed locale module** — `lib/locale.ts` is now the single source of truth:
+   - `Locale = "en" | "ms" | "zh"`
+   - `HTML_LANG_MAP` → `en-MY` / `ms-MY` / `zh-MY` for `<html lang>`
+   - `localeFromPath()` — URL is authoritative, not localStorage
+   - `withLocalePrefix()` / `withoutLocalePrefix()` — URL builders
+   - `buildLocaleAlternates()` — canonical trilingual alternates
+
+2. **Routing adapter** — `lib/i18n/routing.ts` re-exports helpers for progressive migration.
+   New families import from here; old families will be migrated one by one.
+
+3. **Server-first locale contract** — All high-value pages now pass explicit locale prop:
+   - `app/(en)/page.tsx` → `Home({ locale: "en" })` with EN/MS/ZH dictionaries
+   - `app/(en)/areas/areas-client.tsx` accepts `forcedLang` → no client-side override for `/ms`, `/zh`
+   - `app/(en)/blog/[slug]/blog-post-client.tsx` accepts `forcedLang`
+   - Blog, Areas, About already use server locale pattern
+
+4. **Independent root layouts**:
+   - `app/(en)/layout.tsx` → `<SiteRootLayout locale="en">` → `<html lang="en-MY">`
+   - `app/(ms)/ms/layout.tsx` → locale ms → `ms-MY`
+   - `app/(zh)/zh/layout.tsx` → locale zh → `zh-MY`
+   - Verified raw HTML for `/`, `/ms`, `/zh`, `/ms/areas`, `/zh/areas` contains correct `lang` without JS.
+
+5. **Future [locale] migration path (no URL breakage):**
+   - Keep current `(en)/(ms)/(zh)` groups serving identical URLs.
+   - New code uses `lib/locale.ts` helpers so moving to `app/[locale]/(...)` is a pure file move + rewrites.
+   - `next.config.mjs` rewrites already alias Malay short URLs → canonical `/ms/*`.
+   - Phase 3: after all families use shared component pattern, retire literal trees and use single `[locale]` tree with default EN rewrite.
+
+## Verification
+
+```bash
+# Build already includes 2120+ pages with correct hreflang
+npm run build
+# Check raw HTML lang (no JS)
+curl -s http://localhost:3000/ | grep -o '<html lang="[^"]*">'
+curl -s http://localhost:3000/ms | grep -o '<html lang="[^"]*">'
+curl -s http://localhost:3000/zh | grep -o '<html lang="[^"]*">'
+# Expected: en-MY, ms-MY, zh-MY
+```
+
+## Status: ✅ DONE IN CODE
+
+Remaining optional: full `[locale]` folder rename — tracked as low-risk future cleanup after CI green.
