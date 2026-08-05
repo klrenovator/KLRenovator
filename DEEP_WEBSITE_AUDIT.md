@@ -581,3 +581,11 @@ npm audit --omit=dev
 ```
 
 Then crawl the deployed preview from its sitemap, inspect raw HTML (without client JS), run Lighthouse on mobile for home/service/area/blog/booking templates, and run Playwright + axe accessibility tests. Treat passing these as evidence; until then, they remain open verification items.
+
+## Session 2 (2026-08-05) — continuous priority run (no clarification requests)
+- Added session rule at top of file.
+- P2-11: opaque errors implemented in `indexnow`, `debug-calendar`, `debug-supabase`; server-side logging added.
+- P0-04b: CSP enforcement prep complete (`CSP_REPORT_LOG`, collector ready); enforcement blocked by production cycle only.
+- P2-01: production-rate-limit note added to `lib/rate-limit.ts`.
+- P0-01 / P2-13: emergency banner locale-aware fix (`app/page.tsx`) — removed stacked EN/MS/ZH.
+- Next in priority: P1-07 (calendar pending-confirmation model), P2-03 (config split), P2-05 (sitemap registry), P2-08 (blog metadata), P2-12 (full WCAG audit).
