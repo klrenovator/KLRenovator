@@ -361,7 +361,7 @@ export default function NearMeClient({ initialLang }: { initialLang?: "en" | "ms
                   <FiMapPin className="h-3.5 w-3.5 text-sky-500 shrink-0 group-hover:text-sky-600" />
                   <span className="font-bold text-slate-900 text-xs truncate group-hover:text-sky-800">{area.name}</span>
                 </div>
-                <span className="mt-2 text-[10px] font-semibold text-slate-400 group-hover:text-sky-600 uppercase tracking-wider">
+                <span className="mt-2 text-[10px] font-semibold text-slate-500 group-hover:text-sky-600 uppercase tracking-wider">
                   {area.state} →
                 </span>
               </NextLink>

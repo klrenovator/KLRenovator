@@ -236,7 +236,7 @@ export default async function AreaPageMS({
               if (links.length === 0) return null;
               return (
               <div className="mt-4">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
                   {neighbourhoods.length > 0 ? "Panduan Kawasan Kejiranan" : "Panduan Kejiranan Berhampiran"}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -320,7 +320,7 @@ export default async function AreaPageMS({
                     <h3 className="font-black text-slate-900 text-sm">{item.problem}</h3>
                     <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{item.price}</span>
                   </div>
-                  <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.en} · {item.zh}</p>
+                  <p className="text-[10px] text-slate-500 font-semibold mb-2">{item.en} · {item.zh}</p>
                   <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -435,7 +435,7 @@ export default async function AreaPageMS({
           {/* Near Me FAQs — BM */}
           <Reveal>
             <div className="mt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">📍 Berhampiran Saya</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">📍 Berhampiran Saya</p>
               <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
                 <details className="group bg-white p-4">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">

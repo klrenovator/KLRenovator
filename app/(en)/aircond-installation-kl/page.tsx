@@ -51,7 +51,7 @@ const PRICING_TABLE = [
   { type: "Ceiling Cassette", hp: "1.0–1.5 HP", price: "RM 290", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe + pump included" },
   { type: "Ceiling Cassette", hp: "2.0–3.0 HP", price: "RM 350", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe + pump included" },
   { type: "Ceiling Cassette", hp: "3.5–6.0 HP", price: "RM 400", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe + pump included" },
-  { type: "Window Unit", hp: "1.0–2.0 HP", price: "RM 180", pipe: "N/A (self-contained)", wire: "Wiring included", drain: "Built-in drain" },
+  { type: "Window Unit", hp: "1.0–2.0 HP", price: "RM 199", pipe: "N/A (self-contained)", wire: "Wiring included", drain: "Built-in drain" },
 ];
 
 const BRANDS = siteConfig.brandsSupported;
@@ -347,7 +347,7 @@ export default function AircondInstallationKLPage() {
               {BRANDS.map((brand) => (
                 <Link key={brand} href={`/brands/${brand.toLowerCase()}/installation`} className="bg-slate-50 border border-slate-100 rounded-xl p-4 text-center hover:border-sky-300 hover:shadow-md transition-all group">
                   <p className="font-black text-slate-900 group-hover:text-sky-600 transition-colors">{brand}</p>
-                  <p className="text-xs text-slate-400 mt-1">Expert Installation</p>
+                  <p className="text-xs text-slate-500 mt-1">Expert Installation</p>
                 </Link>
               ))}
             </div>

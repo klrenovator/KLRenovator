@@ -1178,7 +1178,7 @@ export default async function ProblemPage({
               <p className="mt-3 text-sm text-slate-500 font-medium leading-relaxed max-w-2xl border-l-2 border-sky-200 pl-3">
                 {problem.descriptionMS}
               </p>
-              <p className="mt-2 text-sm text-slate-400 font-medium leading-relaxed max-w-2xl border-l-2 border-slate-200 pl-3">
+              <p className="mt-2 text-sm text-slate-500 font-medium leading-relaxed max-w-2xl border-l-2 border-slate-200 pl-3">
                 {problem.descriptionZH}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -1214,7 +1214,7 @@ export default async function ProblemPage({
                 </p>
                 <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">{aeo.directAnswerEN}</p>
                 <p className="mt-2 text-xs text-slate-500 font-medium leading-relaxed border-l-2 border-sky-200 pl-3">{aeo.directAnswerMS}</p>
-                <p className="mt-2 text-xs text-slate-400 font-medium leading-relaxed border-l-2 border-slate-200 pl-3">{aeo.directAnswerZH}</p>
+                <p className="mt-2 text-xs text-slate-500 font-medium leading-relaxed border-l-2 border-slate-200 pl-3">{aeo.directAnswerZH}</p>
               </div>
             </Reveal>
           </div>
@@ -1304,7 +1304,7 @@ export default async function ProblemPage({
                           <p key={`ms-${i}`} className="text-xs text-slate-300 font-medium">🇲🇾 {tip}</p>
                         ))}
                         {aeo.technicianChecksZH.map((tip, i) => (
-                          <p key={`zh-${i}`} className="text-xs text-slate-400 font-medium">🇨🇳 {tip}</p>
+                          <p key={`zh-${i}`} className="text-xs text-slate-500 font-medium">🇨🇳 {tip}</p>
                         ))}
                       </div>
                     </details>
@@ -1365,7 +1365,7 @@ export default async function ProblemPage({
           {/* ZH Causes */}
           <Reveal delay={80}>
             <div className="mt-10 max-w-5xl">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">原因分析 — {problem.nameZH}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">原因分析 — {problem.nameZH}</p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {content.causesZH.map((cause, i) => (
                   <div key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium bg-slate-50 border border-slate-200 rounded-xl p-3">
@@ -1562,7 +1562,7 @@ export default async function ProblemPage({
           {[...content.faqsBM, ...(aeo?.extraFaqsMS ?? [])].length > 0 && (
             <Reveal>
               <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">🇲🇾 Bahasa Malaysia</p>
                 {[...content.faqsBM, ...(aeo?.extraFaqsMS ?? [])].map((faq, i) => (
                   <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
                     <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
@@ -1576,7 +1576,7 @@ export default async function ProblemPage({
           {[...content.faqsZH, ...(aeo?.extraFaqsZH ?? [])].length > 0 && (
             <Reveal>
               <div className="mt-6 space-y-3 border-t border-slate-200 pt-6">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">🇨🇳 中文</p>
                 {[...content.faqsZH, ...(aeo?.extraFaqsZH ?? [])].map((faq, i) => (
                   <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4">
                     <h3 className="font-black text-sm text-slate-900 mb-2">{faq.q}</h3>
@@ -1609,7 +1609,7 @@ export default async function ProblemPage({
                   <FiArrowRight className="h-3.5 w-3.5 text-red-400 shrink-0 mt-0.5" />
                   <span>
                     <span className="block">{p.name}</span>
-                    <span className="text-xs text-slate-400 font-normal group-hover:text-red-400">{p.nameMS} · {p.nameZH}</span>
+                    <span className="text-xs text-slate-500 font-normal group-hover:text-red-400">{p.nameMS} · {p.nameZH}</span>
                   </span>
                 </NextLink>
               ))}

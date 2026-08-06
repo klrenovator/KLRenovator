@@ -447,7 +447,7 @@ export default function ZhPricingPage() {
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">立即获取免费报价</h2>
-          <p className="mt-4 text-lg text-slate-400 font-medium">WhatsApp 我们您的冷气型号和位置，30 分钟内快速回复。</p>
+          <p className="mt-4 text-lg text-slate-500 font-medium">WhatsApp 我们您的冷气型号和位置，30 分钟内快速回复。</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={waLink("Hi KL Renovator，我想询问冷气服务价格。")}

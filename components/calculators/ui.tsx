@@ -66,7 +66,7 @@ export function NumberField({
           className={`${inputCls} ${suffix ? "pr-12" : ""} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
         />
         {suffix && (
-          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-black text-slate-400">
+          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-black text-slate-500">
             {suffix}
           </span>
         )}
@@ -101,7 +101,7 @@ export function SelectField({
             </option>
           ))}
         </select>
-        <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+        <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
       </div>
       {hint && <p className="mt-1.5 text-xs text-slate-500">{hint}</p>}
     </div>
@@ -144,7 +144,7 @@ export function PillGroup<T extends string>({
             }`}
           >
             {o.label}
-            {o.sub && <span className={`block text-[10px] font-semibold mt-0.5 ${value === o.value ? "opacity-80" : "text-slate-400"}`}>{o.sub}</span>}
+            {o.sub && <span className={`block text-[10px] font-semibold mt-0.5 ${value === o.value ? "opacity-80" : "text-slate-500"}`}>{o.sub}</span>}
           </button>
         ))}
       </div>

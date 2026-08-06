@@ -193,7 +193,7 @@ export function ReviewPageI18n({ lang }: { lang: Lang }) {
             {d.googleButton}
           </a>
 
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-500">
             {d.googleNote}
           </p>
         </div>
@@ -233,7 +233,7 @@ export function ReviewPageI18n({ lang }: { lang: Lang }) {
             <FaWhatsapp className="h-5 w-5 shrink-0" />
             {d.feedbackButton}
           </a>
-          <p className="text-xs text-slate-400 text-center mt-3">
+          <p className="text-xs text-slate-500 text-center mt-3">
             {d.feedbackNote}
           </p>
         </div>
@@ -264,7 +264,7 @@ export function ReviewPageI18n({ lang }: { lang: Lang }) {
       {/* Services hub */}
       <section className="py-10 px-4 bg-white border-t border-slate-100">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 text-center">{d.servicesHub}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4 text-center">{d.servicesHub}</p>
           <div className="flex flex-wrap justify-center gap-2">
             {siteConfig.services.filter(s => s.slug !== "emergency").map((s) => (
               <NextLink

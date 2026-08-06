@@ -165,7 +165,7 @@ export default function ServicesPage() {
                     <ServiceIcon name={service.icon} className="h-5 w-5" />
                   </div>
                   <h3 className="font-black text-slate-900 text-sm leading-snug mb-2">{service.title}</h3>
-                  <p className="text-xs text-slate-400 font-medium leading-relaxed flex-grow">{service.short}</p>
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed flex-grow">{service.short}</p>
                   <div className="mt-4 flex items-center gap-1.5 text-sky-600 text-xs font-black uppercase tracking-wider">
                     View Details <FaArrowRight className="h-3 w-3" />
                   </div>

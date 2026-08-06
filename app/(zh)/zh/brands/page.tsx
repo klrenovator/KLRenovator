@@ -103,7 +103,7 @@ export default function BrandsPageZH() {
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-lg">{cat.flag}</span>
                     <h3 className="text-sm font-black uppercase tracking-widest text-slate-700">{cat.name}</h3>
-                    <span className="text-[10px] text-slate-400 font-medium">— {cat.note}</span>
+                    <span className="text-[10px] text-slate-500 font-medium">— {cat.note}</span>
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {catBrands.map((brand) => (
@@ -155,7 +155,7 @@ export default function BrandsPageZH() {
           <Reveal><div className="text-center mb-10">
             <p className="text-xs font-black uppercase tracking-widest text-sky-400 mb-2">统一价格 — 所有品牌</p>
             <h2 className="text-2xl font-black uppercase text-white">透明统一品牌定价</h2>
-            <p className="mt-2 text-slate-400 text-sm font-medium">大金、松下、三菱统一价格 — 全部20个品牌。</p>
+            <p className="mt-2 text-slate-500 text-sm font-medium">大金、松下、三菱统一价格 — 全部20个品牌。</p>
           </div></Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -169,7 +169,7 @@ export default function BrandsPageZH() {
               { service: "新机安装", price: "RM 199 起" },
             ].map((item) => (
               <div key={item.service} className="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center">
-                <p className="text-xs font-bold text-slate-400 mb-1">{item.service}</p>
+                <p className="text-xs font-bold text-slate-500 mb-1">{item.service}</p>
                 <p className="text-lg font-black text-sky-400">{item.price}</p>
               </div>
             ))}

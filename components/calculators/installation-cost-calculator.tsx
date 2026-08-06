@@ -371,7 +371,7 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
             <div className="flex items-end">
               <label className="flex items-center gap-3 w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-sky-400 transition-colors">
                 <input type="checkbox" checked={needsWaterPump} onChange={(e) => { setNeedsWaterPump(e.target.checked); setShowResult(false); }} className="h-4 w-4 accent-sky-600" />
-                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaWater className="text-sky-600" /> {s.pumpCheck} <span className="text-[10px] text-slate-400 font-semibold">{s.pumpSub}</span></span>
+                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaWater className="text-sky-600" /> {s.pumpCheck} <span className="text-[10px] text-slate-500 font-semibold">{s.pumpSub}</span></span>
               </label>
             </div>
           </div>

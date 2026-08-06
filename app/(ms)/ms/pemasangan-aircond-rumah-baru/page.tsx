@@ -106,7 +106,7 @@ export default function PemasanganAircondRumahBaruPage() {
                   {pkg.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full">Nilai Terbaik</div>}
                   {pkg.badge && !pkg.highlight && <div className="inline-flex self-start bg-sky-50 border border-sky-100 text-sky-700 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">{pkg.badge}</div>}
                   <div className="mb-4"><h3 className="font-black text-xl text-slate-900 mb-1">{pkg.name}</h3><p className="text-slate-500 text-sm">{pkg.subtitle}</p></div>
-                  <div className="mb-4"><span className="text-3xl font-black text-sky-600">{pkg.price}</span><span className="text-slate-400 text-sm ml-1">jumlah upah</span></div>
+                  <div className="mb-4"><span className="text-3xl font-black text-sky-600">{pkg.price}</span><span className="text-slate-500 text-sm ml-1">jumlah upah</span></div>
                   <div className="bg-slate-50 rounded-xl p-4 mb-5 flex-1">
                     <p className="text-xs font-black uppercase tracking-wider text-slate-500 mb-3">Apa Termasuk</p>
                     <ul className="space-y-2">{pkg.includes.map((item: string, j: number) => (<li key={j} className="flex items-start gap-2 text-sm text-slate-700"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" /><span>{item}</span></li>))}</ul>
@@ -273,9 +273,9 @@ export default function PemasanganAircondRumahBaruPage() {
             </div>
             <p className="mt-6 text-slate-500 text-sm">Meliputi semua kawasan KL & Selangor — Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Cheras, Ampang, Puchong, Klang, Damansara, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya & banyak lagi.</p>
             <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-center gap-4">
-              <Link href="/ms/pemasangan-aircond-kl" className="text-sm text-slate-400 hover:text-white transition-colors">← Semua Perkhidmatan Pemasangan</Link>
-              <Link href="/ms/installation-price-malaysia" className="text-sm text-slate-400 hover:text-white transition-colors">Panduan Harga Penuh</Link>
-              <Link href="/ms/faq" className="text-sm text-slate-400 hover:text-white transition-colors">Lebih Banyak Soalan Lazim</Link>
+              <Link href="/ms/pemasangan-aircond-kl" className="text-sm text-slate-500 hover:text-white transition-colors">← Semua Perkhidmatan Pemasangan</Link>
+              <Link href="/ms/installation-price-malaysia" className="text-sm text-slate-500 hover:text-white transition-colors">Panduan Harga Penuh</Link>
+              <Link href="/ms/faq" className="text-sm text-slate-500 hover:text-white transition-colors">Lebih Banyak Soalan Lazim</Link>
             </div>
           </Reveal>
         </div>

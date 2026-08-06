@@ -143,7 +143,7 @@ export function InstallationSpotlight({ locale = "en" }: { locale?: Locale }) {
                 </div>
               ))}
             </div>
-            <p className="mt-2 text-[11px] leading-relaxed text-slate-400">{t.extra}</p>
+            <p className="mt-2 text-[11px] leading-relaxed text-slate-500">{t.extra}</p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <NextLink href="/installation" className="inline-flex flex-1 items-center justify-center gap-2 bg-slate-900 px-6 py-4 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-slate-800 active:scale-[0.97]">

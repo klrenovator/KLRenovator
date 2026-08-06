@@ -1,7 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { InstallationSpotlight } from "@/components/sections/installation-spotlight";
-import { PriceCalculator } from "@/components/price-calculator";
-import { DiagnosticTool } from "@/components/diagnostic-tool";
+import dynamic from "next/dynamic";
 import { StatsBand } from "@/components/sections/stats-band";
 import { ServicesWithPricing } from "@/components/sections/services-with-pricing";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
@@ -15,7 +14,6 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
-import { buildFaqSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import NextLink from "next/link";
 import { FiArrowRight } from "react-icons/fi";
@@ -24,6 +22,20 @@ import { HomepageAeoSchemas } from "@/components/homepage-aeo-schemas";
 import type { Metadata } from "next";
 import { LanguageProvider, type Lang } from "@/context/language-context";
 
+const CalculatorLoading = () => (
+  <div className="min-h-32 animate-pulse rounded-2xl bg-slate-100 p-6 text-center text-sm text-slate-500" role="status" aria-live="polite">
+    Loading free aircond tools…
+  </div>
+);
+
+const PriceCalculator = dynamic(
+  () => import("@/components/price-calculator").then((module) => module.PriceCalculator),
+  { loading: CalculatorLoading },
+);
+const DiagnosticTool = dynamic(
+  () => import("@/components/diagnostic-tool").then((module) => module.DiagnosticTool),
+  { loading: CalculatorLoading },
+);
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.klrenovator.com",
@@ -113,7 +125,7 @@ const COPY = {
     faqPage: "dedicated FAQ page →",
     waFaq: "🔧 Aircond Installation Enquiry\n\nHi KL Renovator, I have a question about installation.\n\n📍 My Area:\n❄️ Unit Type:\n📏 HP Size:\n\nPlease send info & pricing.",
     faqs: [
-      { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, insulation, electrical wire and drain pipe, vacuum pump commissioning, and 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 180. All prices confirmed before work begins." },
+      { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, insulation, electrical wire and drain pipe, vacuum pump commissioning, and 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 199. All prices confirmed before work begins." },
       { q: "How long does aircond installation take?", a: "Standard wall-mounted installation takes 3–5 hours for a single unit. Ceiling cassette takes 5–8 hours. Multi-unit whole-house installations typically complete in 1–2 days. Same-day installation available for bookings made before 11 AM." },
       { q: "Which aircond brands does KL Renovator install?", a: "All 20 major brands — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Haier, Hisense, Aux, TCL, Isonic and National. Both inverter and non-inverter models." },
       { q: "Can you install aircond in high-rise condos in KL?", a: "Yes — we regularly install in condos across KLCC, Mont Kiara, Bangsar, Sentul, PJ and Subang Jaya. We coordinate with building management for lift/loading bay access, follow JMB rules, and ensure outdoor unit placement complies with all regulations." },
@@ -182,7 +194,7 @@ const COPY = {
     faqPage: "halaman FAQ khusus →",
     waFaq: "🔧 Pertanyaan Pemasangan Aircond\n\nHai KL Renovator, saya ada soalan mengenai pemasangan.\n\n📍 Kawasan Saya:\n❄️ Jenis Unit:\n📏 Saiz HP:\n\nSila hantar info & harga.",
     faqs: [
-      { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard, vakum pam, dan waranti kerja 1 bulan. Ceiling cassette dari RM 290, unit tingkap dari RM 180. Semua harga disahkan sebelum kerja bermula." },
+      { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard, vakum pam, dan waranti kerja 1 bulan. Ceiling cassette dari RM 290, unit tingkap dari RM 199. Semua harga disahkan sebelum kerja bermula." },
       { q: "Berapa lama pemasangan aircond mengambil masa?", a: "Pemasangan dinding standard mengambil masa 3–5 jam untuk satu unit. Ceiling cassette mengambil 5–8 jam. Pemasangan seluruh rumah biasanya siap dalam 1–2 hari. Pemasangan hari sama tersedia untuk tempahan sebelum 11 pagi." },
       { q: "Jenama aircond apa yang dipasang oleh KL Renovator?", a: "Semua 20 jenama utama — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Haier, Hisense, Aux, TCL, Isonic dan National. Kedua-dua model inverter dan bukan inverter." },
       { q: "Bolehkah anda pasang aircond di kondominium tinggi di KL?", a: "Ya — kami kerap memasang di kondo sekitar KLCC, Mont Kiara, Bangsar, Sentul, PJ dan Subang Jaya. Kami berurusan dengan pengurusan bangunan untuk akses lif/teluk muatan, mematuhi peraturan JMB, dan memastikan penempatan unit luar mematuhi semua peraturan." },
@@ -251,7 +263,7 @@ const COPY = {
     faqPage: "专用FAQ页面上的100+常见问题 →",
     waFaq: "🔧 冷气安装咨询\n\n你好 KL Renovator，我对安装有疑问。\n\n📍 我的区域：\n❄️ 机型：\n📏 匹数：\n\n请发送信息和价格。",
     faqs: [
-      { q: "吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式安装从RM 199起（1.0–1.5 HP），包含7英尺铜管、电线、排水管、标准支架、真空泵调试和1个月工艺保修。天花板卡式机RM 290起，窗式机RM 180起。所有价格在施工前确认。" },
+      { q: "吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式安装从RM 199起（1.0–1.5 HP），包含7英尺铜管、电线、排水管、标准支架、真空泵调试和1个月工艺保修。天花板卡式机RM 290起，窗式机RM 199起。所有价格在施工前确认。" },
       { q: "冷气安装需要多长时间？", a: "标准挂壁式安装单台需要3–5小时。天花板卡式机需要5–8小时。全屋多台安装通常1–2天完成。上午11点前预约可安排当天安装。" },
       { q: "KL Renovator安装哪些冷气品牌？", a: "全部20个主要品牌 — 大金、松下、三菱、约克、美的、LG、三星、Carrier、富士通、日立、夏普、Acson、格力、东芝、海尔、海信、Aux、TCL、Isonic和National。变频和非变频机型均可。" },
       { q: "能在吉隆坡高层公寓安装冷气吗？", a: "可以 — 我们经常在KLCC、Mont Kiara、Bangsar、Sentul、PJ和Subang Jaya的公寓安装。我们协调大厦管理处的电梯/卸货区通行，遵守JMB规定，确保室外机位置符合所有规范。" },
@@ -263,7 +275,6 @@ const COPY = {
 function HomeContent({ locale }: { locale: Lang }) {
   const t = COPY[locale] || COPY.en;
   const faqs = t.faqs;
-  const homeFAQSchema = buildFaqSchema(faqs as ReadonlyArray<{ q: string; a: string }>);
 
   const homeServiceSchema = {
     "@context": "https://schema.org",
@@ -312,7 +323,6 @@ function HomeContent({ locale }: { locale: Lang }) {
       <HomepageAeoSchemas />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://www.klrenovator.com" }] }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFAQSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeServiceSchema) }} />
 
       <Hero />
@@ -535,7 +545,7 @@ function HomeContent({ locale }: { locale: Lang }) {
           <Reveal delay={400}>
             <div className="mt-8 text-center">
               <a href={waLink(t.waFaq)} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl"><FaWhatsapp className="h-5 w-5" /> {t.askWa}</a>
-              <p className="mt-3 text-xs text-slate-400">{t.browseFaq} <NextLink href="/faq" className="text-sky-600 font-bold underline hover:text-sky-800">{t.faqPage}</NextLink></p>
+              <p className="mt-3 text-xs text-slate-500">{t.browseFaq} <NextLink href="/faq" className="text-sky-600 font-bold underline hover:text-sky-800">{t.faqPage}</NextLink></p>
             </div>
           </Reveal>
         </div>

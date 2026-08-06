@@ -128,7 +128,7 @@ export function AreasClient({ forcedLang }: { forcedLang?: Lang }) {
                   {area.name}
                 </span>
               </div>
-              <FiArrowRight className="h-4 w-4 shrink-0 text-slate-400 group-hover:text-sky-500 group-hover:translate-x-0.5 transition-all" />
+              <FiArrowRight className="h-4 w-4 shrink-0 text-slate-500 group-hover:text-sky-500 group-hover:translate-x-0.5 transition-all" />
             </NextLink>
           </Reveal>
         ))}

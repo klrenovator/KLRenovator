@@ -67,7 +67,7 @@ const ReviewCard = ({ r }: { r: Review }) => (
         <span style={{ color: "#4285F4" }}>g</span>
         <span style={{ color: "#34A853" }}>l</span>
         <span style={{ color: "#EA4335" }}>e</span>
-        <span className="text-slate-400 ml-1">Review</span>
+        <span className="text-slate-500 ml-1">Review</span>
       </span>
     </div>
   </article>

@@ -90,7 +90,7 @@ function FaqItem({ q, a, source, lang = "en" }: { q: string; a: string; source?:
         <span className={`text-sm sm:text-base font-black tracking-tight transition-colors ${open ? "text-sky-600" : "text-slate-900 group-hover:text-sky-600"}`}>
           {q}
         </span>
-        <FaChevronDown className={`h-4 w-4 shrink-0 mt-1 text-slate-400 transition-all duration-200 ${open ? "rotate-180 text-sky-500" : ""}`} />
+        <FaChevronDown className={`h-4 w-4 shrink-0 mt-1 text-slate-500 transition-all duration-200 ${open ? "rotate-180 text-sky-500" : ""}`} />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-[500px] pb-5" : "max-h-0"}`}>
         <p className="text-sm text-slate-600 font-medium leading-relaxed pr-8">{a}</p>
@@ -181,7 +181,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-3">
           {/* Search */}
           <div className="relative mb-3">
-            <FaMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+            <FaMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
             <input
               type="text"
               value={searchQuery}
@@ -196,7 +196,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
             {searchQuery && (
               <button
                 onClick={() => { setSearchQuery(""); setShowMostAsked(true); }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 font-bold"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500 hover:text-slate-600 font-bold"
               >
                 ✕
               </button>
@@ -247,7 +247,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
       {/* FAQ Accordion */}
       <section className="py-12 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6">
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-6">
             {displayFaqs.length} {hero.showingResults}
             {isSearching && ` — "${searchQuery}"`}
           </p>

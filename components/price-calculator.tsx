@@ -43,10 +43,10 @@ const BASE_PRICES: Record<Exclude<ServiceType, "gas-topup" | "installation" | "r
 };
 
 function Select({ value, onChange, children }: { value: string; onChange: (value: string) => void; children: ReactNode }) {
-  return <div className="relative"><select value={value} onChange={(e) => onChange(e.target.value)} className={selectCls}>{children}</select><FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" /></div>;
+  return <div className="relative"><select value={value} onChange={(e) => onChange(e.target.value)} className={selectCls}>{children}</select><FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" /></div>;
 }
 function FeetInput({ label, value, onChange, hint }: { label: string; value: number; onChange: (value: number) => void; hint: string }) {
-  return <label className="block"><span className="block text-[11px] font-bold text-slate-700 mb-1">{label}</span><input type="number" min="0" max="100" value={value} onChange={(e) => onChange(Math.max(0, Math.min(100, Number(e.target.value) || 0)))} className={selectCls} /><span className="block text-[10px] text-slate-400 mt-1">{hint}</span></label>;
+  return <label className="block"><span className="block text-[11px] font-bold text-slate-700 mb-1">{label}</span><input type="number" min="0" max="100" value={value} onChange={(e) => onChange(Math.max(0, Math.min(100, Number(e.target.value) || 0)))} className={selectCls} /><span className="block text-[10px] text-slate-500 mt-1">{hint}</span></label>;
 }
 
 export function PriceCalculator() {

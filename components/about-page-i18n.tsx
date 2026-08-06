@@ -714,7 +714,7 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-center text-xs text-slate-400 font-medium">
+          <p className="mt-4 text-center text-xs text-slate-500 font-medium">
             {d.gallerySwipe}
           </p>
         </div>

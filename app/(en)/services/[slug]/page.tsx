@@ -512,7 +512,7 @@ export default async function ServicePage({
               <p className="mt-2 text-xs text-slate-500">
                 {t("pricingNote", "en")}
               </p>
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-500 mt-0.5">
                 {t("pricingNote", "ms")} · {t("pricingNote", "zh")}
               </p>
             </div>
@@ -594,7 +594,7 @@ export default async function ServicePage({
                     ))}
                   </ul>
                 </div>
-                <p className="text-xs text-slate-400 mt-3">
+                <p className="text-xs text-slate-500 mt-3">
                   All material costs are quoted and confirmed with you before work begins. No surprises.
                 </p>
               </div>
@@ -630,11 +630,11 @@ export default async function ServicePage({
                 </p>
                 <dl className="mt-4 grid grid-cols-2 gap-3 text-xs">
                   <div className="rounded-xl bg-slate-50 p-3">
-                    <dt className="font-bold uppercase tracking-wider text-slate-400">Last reviewed</dt>
+                    <dt className="font-bold uppercase tracking-wider text-slate-500">Last reviewed</dt>
                     <dd className="mt-1 font-black text-slate-900">3 July 2026</dd>
                   </div>
                   <div className="rounded-xl bg-slate-50 p-3">
-                    <dt className="font-bold uppercase tracking-wider text-slate-400">Business</dt>
+                    <dt className="font-bold uppercase tracking-wider text-slate-500">Business</dt>
                     <dd className="mt-1 font-black text-slate-900">SSM Registered</dd>
                   </div>
                 </dl>
@@ -673,12 +673,12 @@ export default async function ServicePage({
                   <dl className="grid gap-3">
                     {aioBlock.facts.map((fact) => (
                       <div key={fact.label} className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 last:border-b-0 last:pb-0">
-                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-400">{fact.label}</dt>
+                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-500">{fact.label}</dt>
                         <dd className="text-right text-sm font-black text-slate-900">{fact.value}</dd>
                       </div>
                     ))}
                   </dl>
-                  <p className="mt-4 text-[11px] leading-relaxed text-slate-400">{aioBlock.sourceLine}</p>
+                  <p className="mt-4 text-[11px] leading-relaxed text-slate-500">{aioBlock.sourceLine}</p>
                 </aside>
               </div>
             </div>
@@ -988,12 +988,12 @@ export default async function ServicePage({
                   <p className="text-3xl font-black text-slate-600 mt-2">RM 120</p>
                   <p className="text-xs text-slate-500 font-bold mt-1">For heavy dirt / smell / weak airflow</p>
                   <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> High-pressure 80–120 PSI</li>
-                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Deep coil &amp; blower cleaning</li>
-                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Dissolves mould &amp; biofilm</li>
-                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> 60–75 min per unit</li>
-                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Recommended every 12 months</li>
-                    <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> Best after 12+ months no deep clean</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> High-pressure 80–120 PSI</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> Deep coil &amp; blower cleaning</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> Dissolves mould &amp; biofilm</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> 60–75 min per unit</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> Recommended every 12 months</li>
+                    <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> Best after 12+ months no deep clean</li>
                   </ul>
                 </div>
               </div>
@@ -1226,7 +1226,7 @@ export default async function ServicePage({
           {enhancedFaqsBM && enhancedFaqsBM.length > 0 && (
             <Reveal>
               <div className="mt-6 border-t border-slate-200 pt-6">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">🇲🇾 Bahasa Malaysia</p>
                 <div className="space-y-3">
                   {enhancedFaqsBM.map((f: { q: string; a: string }, i: number) => (
                     <div key={i} className="bg-white border border-slate-200 p-4">
@@ -1243,7 +1243,7 @@ export default async function ServicePage({
           {enhancedFaqsZH && enhancedFaqsZH.length > 0 && (
             <Reveal>
               <div className="mt-6 border-t border-slate-200 pt-6">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">🇨🇳 中文</p>
                 <div className="space-y-3">
                   {enhancedFaqsZH.map((f: { q: string; a: string }, i: number) => (
                     <div key={i} className="bg-white border border-slate-200 p-4">
@@ -1372,7 +1372,7 @@ export default async function ServicePage({
               <div key={item.title} className="bg-white border border-slate-200 rounded-2xl p-5">
                 <span className="text-2xl mb-3 block">{item.icon}</span>
                 <h3 className="font-black text-slate-900 text-sm mb-0.5">{item.title}</h3>
-                <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.ms} · {item.zh}</p>
+                <p className="text-[10px] text-slate-500 font-semibold mb-2">{item.ms} · {item.zh}</p>
                 <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -1435,7 +1435,7 @@ export default async function ServicePage({
                   >
                     <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
                     {problem.name}
-                    <span className="text-slate-400 font-normal"> · {problem.nameMS}</span>
+                    <span className="text-slate-500 font-normal"> · {problem.nameMS}</span>
                   </NextLink>
                 ));
               })()}
@@ -1551,7 +1551,7 @@ export default async function ServicePage({
                 <p className="mt-1 text-sm text-slate-500 font-medium">
                   {t("sendMessage", "ms")}
                 </p>
-                <p className="mt-0.5 text-sm text-slate-400 font-medium">
+                <p className="mt-0.5 text-sm text-slate-500 font-medium">
                   {t("sendMessage", "zh")}
                 </p>
                 <div className="mt-6">

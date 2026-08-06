@@ -219,7 +219,7 @@ export function GalleryClient() {
       <section className="py-12 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {filtered.length === 0 ? (
-            <p className="text-center text-slate-400 py-20">No photos in this category yet.</p>
+            <p className="text-center text-slate-500 py-20">No photos in this category yet.</p>
           ) : (
             <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((item, index) => (
@@ -256,7 +256,7 @@ export function GalleryClient() {
                     <div className="p-4">
                       <p className="font-black text-slate-900 text-sm leading-snug">{item.title}</p>
                       {item.desc && (
-                        <p className="text-xs text-slate-400 mt-1.5 line-clamp-2 font-medium">{item.desc}</p>
+                        <p className="text-xs text-slate-500 mt-1.5 line-clamp-2 font-medium">{item.desc}</p>
                       )}
                     </div>
                   </button>

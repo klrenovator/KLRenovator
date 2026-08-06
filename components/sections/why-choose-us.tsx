@@ -122,7 +122,7 @@ export const WhyChooseUs = () => {
         {/* Brands row */}
         <Reveal>
           <div className="mt-14 bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 text-center mb-6">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 text-center mb-6">
               All Brands We Service
             </p>
             <div className="flex flex-wrap justify-center gap-3">

@@ -347,7 +347,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "Berapakah kos pemasangan aircond di KL dan Selangor?",
-        a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP dan RM 329 untuk 3.0 HP. Keset siling bermula dari RM 290 dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 kaki pertama paip kuprum, penebat, wayar elektrik dan paip saliran. Braket luar jika diperlukan akan disebut sebagai caj khas berbayar sebelum kerja bermula. Paip kuprum tambahan RM 17–27 sekaki bergantung pada saiz HP.",
+        a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP dan RM 329 untuk 3.0 HP. Keset siling bermula dari RM 290 dan unit tingkap dari RM 199. Setiap sebut harga termasuk 7 kaki pertama paip kuprum, penebat, wayar elektrik dan paip saliran. Braket luar jika diperlukan akan disebut sebagai caj khas berbayar sebelum kerja bermula. Paip kuprum tambahan RM 17–27 sekaki bergantung pada saiz HP.",
       },
       {
         q: "Berapa lama masa pemasangan aircond?",

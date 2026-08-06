@@ -142,7 +142,7 @@ export default function BlogIndexClient({ posts, initialLang = "en" }: { posts: 
                       {featuredT?.excerpt ?? featured.excerpt}
                     </p>
                   </div>
-                  <div className="flex items-center gap-4 mt-6 text-xs text-slate-400 font-bold uppercase tracking-wider">
+                  <div className="flex items-center gap-4 mt-6 text-xs text-slate-500 font-bold uppercase tracking-wider">
                     <span className="flex items-center gap-1.5">
                       <FiClock className="h-3 w-3" /> {featured.readTime} {ui.minRead}
                     </span>
@@ -214,10 +214,10 @@ export default function BlogIndexClient({ posts, initialLang = "en" }: { posts: 
                         {t.excerpt}
                       </p>
                       <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-100">
-                        <span className="flex items-center gap-1.5 text-[11px] text-slate-400 font-bold uppercase tracking-wider">
+                        <span className="flex items-center gap-1.5 text-[11px] text-slate-500 font-bold uppercase tracking-wider">
                           <FiClock className="h-3 w-3" /> {post.readTime} {ui.min}
                         </span>
-                        <span className="text-[11px] text-slate-400 font-bold">{post.date}</span>
+                        <span className="text-[11px] text-slate-500 font-bold">{post.date}</span>
                       </div>
                     </div>
                   </NextLink>

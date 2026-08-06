@@ -338,7 +338,7 @@ export default function MsInstallationPricePage() {
             {WHY_ITEMS.map((item) => (
               <div key={item.title} className="bg-slate-50 border border-slate-200 rounded-xl p-5">
                 <h3 className="font-black text-slate-900 text-sm mb-0.5">{item.title}</h3>
-                <p className="text-[10px] text-slate-400 font-semibold mb-2">English · {item.zh}</p>
+                <p className="text-[10px] text-slate-500 font-semibold mb-2">English · {item.zh}</p>
                 <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}

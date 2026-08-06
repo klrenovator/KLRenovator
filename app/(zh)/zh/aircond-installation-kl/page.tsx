@@ -344,7 +344,7 @@ export default function AircondInstallationKLZHPage() {
               {BRANDS.map((brand) => (
                 <a key={brand} href={`/zh/brands/${brand.toLowerCase()}/installation`} className="bg-slate-50 border border-slate-100 rounded-xl p-4 text-center hover:border-sky-300 hover:shadow-md transition-all group">
                   <p className="font-black text-slate-900 group-hover:text-sky-600 transition-colors">{brand}</p>
-                  <p className="text-xs text-slate-400 mt-1">专业安装</p>
+                  <p className="text-xs text-slate-500 mt-1">专业安装</p>
                 </a>
               ))}
             </div>

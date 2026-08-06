@@ -722,7 +722,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
       <div>
         <label htmlFor="booking-notes" className="block text-sm font-semibold text-slate-700">
           {t.notes}{" "}
-          <span className="font-normal text-slate-400">({t.optional})</span>
+          <span className="font-normal text-slate-500">({t.optional})</span>
         </label>
         <textarea
           id="booking-notes"
@@ -735,7 +735,7 @@ export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
         />
         <div className="mt-1 flex items-start justify-between gap-3">
           <p className="text-[11px] leading-snug text-slate-500">{t.notesHelp}</p>
-          <span className="shrink-0 text-[11px] tabular-nums text-slate-400">
+          <span className="shrink-0 text-[11px] tabular-nums text-slate-500">
             {notes.length}/{MAX_NOTES_LENGTH}
           </span>
         </div>

@@ -427,7 +427,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                   >
                     <FaWhatsapp className="h-4 w-4" /> {ui.bookWA}
                   </a>
-                  <p className="mt-3 text-[10px] text-slate-400 font-medium text-center leading-relaxed">
+                  <p className="mt-3 text-[10px] text-slate-500 font-medium text-center leading-relaxed">
                     {ui.coverageNote}
                   </p>
                 </div>
@@ -618,7 +618,7 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                         {rTitle}
                       </h3>
                       <p className="mt-1.5 text-xs text-slate-500 font-medium line-clamp-2">{rExcerpt}</p>
-                      <div className="flex items-center gap-2 mt-3 text-[11px] text-slate-400 font-bold">
+                      <div className="flex items-center gap-2 mt-3 text-[11px] text-slate-500 font-bold">
                         <FiClock className="h-3 w-3" /> {p.readTime} {ui.readTime} . {p.dateDisplay}
                       </div>
                       </div>

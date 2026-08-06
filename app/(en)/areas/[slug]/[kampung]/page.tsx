@@ -145,7 +145,7 @@ export default async function KampungPage({
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <nav className="flex items-center gap-1.5 text-xs font-bold text-slate-400 mb-4" aria-label="Breadcrumb">
+            <nav className="flex items-center gap-1.5 text-xs font-bold text-slate-500 mb-4" aria-label="Breadcrumb">
               <NextLink href="/areas" className="hover:text-sky-600">Service Areas</NextLink>
               <FiChevronRight className="h-3 w-3" />
               <NextLink href={`/areas/${slug}`} className="hover:text-sky-600">{parentArea?.name}</NextLink>

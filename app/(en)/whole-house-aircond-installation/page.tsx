@@ -109,7 +109,7 @@ export default function WholeHouseInstallationPage() {
                 <div className={`relative bg-white border-2 rounded-2xl p-6 sm:p-8 h-full flex flex-col ${tier.highlight ? "border-amber-400 shadow-lg shadow-amber-100" : "border-slate-200 hover:border-sky-300 hover:shadow-md"} transition-all`}>
                   {tier.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full">Best Value</div>}
                   <div className="mb-4"><div className="inline-flex bg-sky-50 border border-sky-100 text-sky-700 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">{tier.badge}</div><h3 className="font-black text-2xl text-slate-900">{tier.units}</h3></div>
-                  <div className="mb-4"><span className="text-3xl font-black text-sky-600">{tier.price}</span><span className="text-slate-400 text-sm ml-1">total labour</span></div>
+                  <div className="mb-4"><span className="text-3xl font-black text-sky-600">{tier.price}</span><span className="text-slate-500 text-sm ml-1">total labour</span></div>
                   <div className="bg-emerald-50 border border-emerald-100 rounded-xl px-3 py-1.5 inline-flex self-start mb-5"><span className="text-xs font-black text-emerald-700">{tier.save}</span></div>
                   <div className="bg-slate-50 rounded-xl p-4 mb-5 flex-1">
                     <ul className="space-y-2">{tier.highlights.map((h: string, j: number) => (<li key={j} className="flex items-start gap-2 text-sm text-slate-700"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" /><span>{h}</span></li>))}</ul>
@@ -214,9 +214,9 @@ export default function WholeHouseInstallationPage() {
             </div>
             <p className="mt-6 text-slate-500 text-sm">Serving all KL & Selangor areas — Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Cheras, Ampang, Puchong, Klang, Damansara, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya & more.</p>
             <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-center gap-4">
-              <Link href="/aircond-installation-kl" className="text-sm text-slate-400 hover:text-white transition-colors">← All Installation Services</Link>
-              <Link href="/new-home-aircond-installation" className="text-sm text-slate-400 hover:text-white transition-colors">New Home Packages</Link>
-              <Link href="/installation-price-malaysia" className="text-sm text-slate-400 hover:text-white transition-colors">Full Price Guide</Link>
+              <Link href="/aircond-installation-kl" className="text-sm text-slate-500 hover:text-white transition-colors">← All Installation Services</Link>
+              <Link href="/new-home-aircond-installation" className="text-sm text-slate-500 hover:text-white transition-colors">New Home Packages</Link>
+              <Link href="/installation-price-malaysia" className="text-sm text-slate-500 hover:text-white transition-colors">Full Price Guide</Link>
             </div>
           </Reveal>
         </div>
