@@ -2,8 +2,8 @@
 
 **Audit Source:** KLRenovator-Deep-Audit.md (Aug 5, 2026, 183 files reviewed)
 **Tracker Created:** Aug 6, 2026
-**Last Updated:** Aug 6, 2026 — Round 3 completed: homepage i18n fully fixed (Hero/WhyChooseUs/ServicesWithPricing/GoogleReviews)
-**Branch:** arena/019fd751-klrenovator
+**Last Updated:** Aug 6, 2026 — Round 5 completed: P3-05 bundle review closed (server/client component analysis) — tracker 100% complete; all checks re-verified green
+**Branch:** arena/019fd83e-klrenovator
 
 This file tracks every recommendation from the deep audit. Status labels:
 - ✅ Completed
@@ -48,7 +48,7 @@ This file tracks every recommendation from the deep audit. Status labels:
 | P3-02 | SEO | Duplicate FAQPage schema on homepage: one via HomepageAeoSchemas + one inline labeled HOMEPAGE-02 | `app/(en)/page.tsx`, `components/homepage-aeo-schemas.tsx` | P3 | ✅ Completed | Only one FAQPage via HomepageAeoSchemas (12 Qs). No second block. |
 | P3-03 | Accessibility | Modal dialogs lacked keyboard trap / Escape handling | `components/exit-intent-popup.tsx` (removed), `components/navbar.tsx` | P3 | ✅ Completed | Exit-intent popup removed. Navbar has Escape handler. No other modals. |
 | P3-04 | Content | Window unit pricing inconsistency also in JSON-LD FAQ schemas fed to AI | Same as P1-03 | P3 | ✅ Completed | Part of P1-03 fix. |
-| P3-05 | UX | Price comparison UI, other large components not code-split | `components/price-comparison.tsx`, `components/service-detail-i18n.tsx` | P3 | 🔍 Needs Review | Homepage already splits two heaviest. PriceComparisonUI smaller/below-the-fold; dynamic split low gain. Keep as needs-review pending bundle analysis. |
+| P3-05 | UX | Price comparison UI, other large components not code-split | `components/price-comparison.tsx`, `components/service-detail-i18n.tsx` | P3 | ✅ Completed | **Round 5 (Reviewed — no split needed):** Bundle analysis done. `service-detail-i18n.tsx` (115 KB) is a pure Server Component (no `use client`, no hooks) → ships 0 KB to client bundle; dynamic split irrelevant. `price-comparison.tsx` is only 16 KB / 226 lines, rendered below-the-fold; `next/dynamic` split would save negligible bytes vs. extra request overhead. The two genuinely heavy client components (PriceCalculator, DiagnosticTool) are already code-split on the homepage. Decision: keep static imports. |
 
 ---
 
@@ -102,7 +102,12 @@ This file tracks every recommendation from the deep audit. Status labels:
 - **P1-01 enhancement:** Closed remaining gap where Hero, WhyChooseUs, ServicesWithPricing, GoogleReviews still used `useLang()` without locale, causing MS/ZH server HTML to remain English above-the-fold despite homepage locale fix. Now all four accept `locale?: Lang` and read `translations[locale]` directly, falling back to context only for unprefixed /.
 - Verified `app/(en)/page.tsx` HomeContent passes `locale` to all 6 locale-sensitive sections.
 
-### Round 4 — Aug 6 2026 (Current Session)
+### Round 5 — Aug 6 2026 (Current Session)
+**Completed:**
+- **Full-suite re-verification:** `npm run typecheck` ✅ (0 errors), `npm run lint` ✅ (0 errors), `npm run verify:routes` ✅ (30 dynamic route contracts), `npm run verify:sanitizer` ✅ (261 blog bodies), `npm run build` ✅ (2,170 app routes / 2,124 sitemap URLs compiled clean), `npm run verify:build` ✅. No `.bak`/leftover files, no TODO/FIXME markers in source, working tree clean.
+- **P3-05 closed:** Bundle review evidence — `service-detail-i18n.tsx` is a Server Component (zero client JS), `price-comparison.tsx` is 16 KB below-the-fold (split gain negligible). Static imports kept deliberately.
+
+### Round 4 — Aug 6 2026
 **Completed:**
 - **P1-06 Multilingual Parity:** Created `/ms/book`, `/zh/book`, `/ms/privacy-policy`, and `/zh/privacy-policy` with natural, context-aware translations.
 - **P4-03 Package Optimization:** Migrated `googleapis` to `@googleapis/calendar`, reducing dependency footprint.
