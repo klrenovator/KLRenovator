@@ -68,10 +68,12 @@ export function installationLabour(hp: HpSize, unitType: UnitType): number {
     return byPrice("3.5") || 400;
   }
   if (unitType === "window") {
-    // siteConfig.pricing.installation has no window rows; the live homepage
-    // PriceCalculator (source of truth for tools) prices window at 199/249.
-    // The homepage FAQ quotes "window unit from RM 180".
-    return h <= 1.5 ? 199 : 249;
+    // Window rows now exist in siteConfig.pricing.installation (RM 199 for 1.0–1.5 HP, RM 249 for 2.0+)
+    // so we read from the published table first, with 199/249 fallback for safety.
+    const byPrice = (labelPart: string) =>
+      rmToNumber(rows.find((r) => r.label.startsWith("Window") && r.label.includes(labelPart))?.price ?? "0");
+    if (h <= 1.5) return byPrice("1.0") || 199;
+    return byPrice("2.0") || 249;
   }
   // wall-mounted — exact HP row first, then nearest published tier
   const exact = rows.find((r) => r.label.startsWith("Wall-Mounted") && r.label.includes(` ${hp} HP`));

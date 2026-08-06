@@ -25,7 +25,7 @@ export async function GET() {
   }
 
   try {
-    const calendar = getCalendarClient();
+    const calendar = await getCalendarClient();
     await calendar.events.list({
       calendarId,
       timeMin: new Date().toISOString(),

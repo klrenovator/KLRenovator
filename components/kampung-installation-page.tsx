@@ -309,7 +309,7 @@ export function KampungInstallationLandingPage({
                   },
                   {
                     type: locale === "zh" ? "窗口式" : locale === "ms" ? "Unit Tingkap" : "Window Unit",
-                    p1: "RM 180",
+                    p1: "RM 199",
                     p2: "RM 200",
                     p3: "—",
                   },

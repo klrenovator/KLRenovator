@@ -144,7 +144,7 @@ export const INSTALLATION_HUB_GROUPS: HubGroup[] = [
           ms: "Unit lengkap untuk rumah lama dan sewaan.",
           zh: "一体式机型，适合旧屋与出租单位。",
         },
-        price: "RM 180",
+        price: "RM 199",
       },
     ],
   },
@@ -303,7 +303,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "How much does aircond installation cost in KL and Selangor?",
-        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP and RM 329 for 3.0 HP. Ceiling cassette starts from RM 290 and window units from RM 180. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. Any required outdoor bracket is quoted separately as a paid special charge before work begins. Extra copper pipe is RM 17–27 per foot depending on HP size. Extra drain pipe beyond the included 7 ft is RM 5 per foot.",
+        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP and RM 329 for 3.0 HP. Ceiling cassette starts from RM 290 and window units from RM 199. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. Any required outdoor bracket is quoted separately as a paid special charge before work begins. Extra copper pipe is RM 17–27 per foot depending on HP size. Extra drain pipe beyond the included 7 ft is RM 5 per foot.",
       },
       {
         q: "How long does an aircond installation take?",
@@ -391,7 +391,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "在吉隆坡和雪兰莪安装冷气需要多少钱？",
-        a: "挂壁式安装 1.0–1.5 匹 RM 199 起，2.0 匹 RM 249，3.0 匹 RM 329。天花板卡式 RM 290 起，窗式机 RM 180 起。每份报价均包含 7 英尺铜管、电线、排水管及标准支架。额外铜管依匹数每英尺 RM 17–27。",
+        a: "挂壁式安装 1.0–1.5 匹 RM 199 起，2.0 匹 RM 249，3.0 匹 RM 329。天花板卡式 RM 290 起，窗式机 RM 199 起。每份报价均包含 7 英尺铜管、电线、排水管及标准支架。额外铜管依匹数每英尺 RM 17–27。",
       },
       {
         q: "冷气安装需要多长时间？",

@@ -48,7 +48,7 @@ const PRICING_TABLE = [
   { type: "天花板卡式机", hp: "1.0–1.5 匹", price: "RM 290", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管+水泵" },
   { type: "天花板卡式机", hp: "2.0–3.0 匹", price: "RM 350", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管+水泵" },
   { type: "天花板卡式机", hp: "3.5–6.0 匹", price: "RM 400", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管+水泵" },
-  { type: "窗式机", hp: "1.0–2.0 匹", price: "RM 180", pipe: "不适用(一体机)", wire: "含电线", drain: "内置排水" },
+  { type: "窗式机", hp: "1.0–2.0 匹", price: "RM 199", pipe: "不适用(一体机)", wire: "含电线", drain: "内置排水" },
 ];
 
 const BRANDS = siteConfig.brandsSupported;
