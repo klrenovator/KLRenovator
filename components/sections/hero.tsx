@@ -6,7 +6,7 @@ import { FaWhatsapp, FaPhone, FaStar } from "react-icons/fa6";
 
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
-import { useLang } from "@/context/language-context";
+import { translations, useLang, type Lang } from "@/context/language-context";
 
 // SEO-optimised filenames — keyword-rich, no date-stamps
 const HERO_IMAGES = [
@@ -60,7 +60,7 @@ const HERO_IMAGE_SIZES = "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1
 const HERO_BLUR_DATA_URL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMjgnIHZpZXdCb3g9JzAgMCAxNiAyOCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9J2cnIHgxPScwJyB5MT0nMCcgeDI9JzEnIHkyPScxJz48c3RvcCBzdG9wLWNvbG9yPScjMGYxNzJhJy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDI4NGM3Jy8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9JzE2JyBoZWlnaHQ9JzI4JyBmaWxsPSd1cmwoI2cpJy8+PC9zdmc+";
 
-export const Hero = () => {
+export const Hero = ({ locale }: { locale?: Lang } = {}) => {
   const [current, setCurrent] = useState(0);
   // Tracks the slide we're transitioning FROM, kept mounted underneath
   // the new image (at full opacity) so there is never a gap where nothing
@@ -72,7 +72,11 @@ export const Hero = () => {
   // half-loaded/placeholder frame.
   const [visible, setVisible] = useState(true);
 
-  const { t } = useLang();
+  const { lang: ctxLang, t: ctxT } = useLang();
+  const lang: Lang = locale ?? ctxLang;
+  const t = (key: keyof typeof translations["en"]): string =>
+    ((translations[lang] as Record<string, string>)[key]) ??
+    ctxT(key);
 
   const setSlide = (next: number) => {
     if (next === current) return;

@@ -7,7 +7,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
 import { googlePlace, googleReviews, type Review } from "@/config/reviews";
 import { title, eyebrow } from "@/components/primitives";
-import { useLang } from "@/context/language-context";
+import { translations, useLang, type Lang } from "@/context/language-context";
 
 // ── Official Google "G" multicolor SVG ───────────────────────────────────────
 const GoogleGIcon = ({ className }: { className?: string }) => (
@@ -73,13 +73,16 @@ const ReviewCard = ({ r }: { r: Review }) => (
   </article>
 );
 
-export const GoogleReviews = () => {
+export const GoogleReviews = ({ locale }: { locale?: Lang } = {}) => {
   const [reviews, setReviews] = useState<Review[]>(googleReviews);
   const [meta, setMeta] = useState({
     rating: googlePlace.averageRating,
     total: googlePlace.totalReviews,
   });
-  const { t } = useLang();
+  const { lang: ctxLang, t: ctxT } = useLang();
+  const lang: Lang = locale ?? ctxLang;
+  const t = (key: keyof typeof translations["en"]): string =>
+    ((translations[lang] as Record<string, string>)[key]) ?? ctxT(key);
 
   useEffect(() => {
     let aborted = false;
