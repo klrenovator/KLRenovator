@@ -70,7 +70,7 @@ const LAYOUT_STRINGS: Record<"en" | "ms" | "zh", {
     linkCard1Title: "Aircond Service Price 2026 — Malaysia",
     linkCard1Desc: "Basic service RM 99, chemical wash RM 120, overhaul RM 220, gas RM 2.50/PSI. Full published price list.",
     linkCard2Title: "Aircond Installation Price Guide",
-    linkCard2Desc: "Installation from RM 199 — full materials breakdown: copper pipe, wire, bracket, casing & warranty.",
+    linkCard2Desc: "Installation from RM 199 — full materials breakdown: copper pipe, wire, casing & warranty.",
     ctaTitle: "Get a Confirmed Quotation — Free",
     ctaBody: "Estimates are instant; the final price is confirmed before any work begins. No hidden charges, 1-month workmanship warranty, same-day service across KL & Selangor.",
     ctaWa: "WhatsApp for a Quote",

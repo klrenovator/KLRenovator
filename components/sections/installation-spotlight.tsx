@@ -44,7 +44,7 @@ const COPY: Record<Locale, {
     included: [
       "7 ft copper pipe + Armaflex insulation",
       "Electrical wiring & drain pipe",
-      "Standard outdoor bracket",
+      "Outdoor bracket (paid special charge if required)",
       "Vacuum pump commissioning (500 microns)",
       "15-minute run & cooling test",
       "1-month written workmanship warranty",
@@ -72,7 +72,7 @@ const COPY: Record<Locale, {
     included: [
       "Paip kuprum 7 kaki + penebat Armaflex",
       "Pendawaian elektrik & paip saliran",
-      "Bracket luar standard",
+      "Pilihan braket luar berbayar jika diperlukan",
       "Vakum pam (500 mikron)",
       "Ujian jalan & penyejukan 15 minit",
       "Waranti kerja bertulis 1 bulan",

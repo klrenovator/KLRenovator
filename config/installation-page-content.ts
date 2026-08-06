@@ -18,7 +18,7 @@ type PricingRow = {
   hp: string;
   labour: string;
   pipe: string;
-  bracket: string;
+  bracket?: string;
   note?: string;
 };
 
@@ -65,7 +65,7 @@ const basePricing = {
       "7 ft copper pipe (liquid + gas lines)",
       "7 ft electrical wiring",
       "7 ft PVC drain pipe",
-      "Standard outdoor bracket",
+      "Outdoor bracket (paid special charge if required)",
       "Vacuum pump commissioning",
       "Refrigerant release & testing",
       "1-month workmanship warranty card",
@@ -73,8 +73,8 @@ const basePricing = {
     extras: [
       "Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
       "Drain pipe beyond 7 ft: RM 5/ft",
-      "Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
-      "PVC casing/concealment: RM 6–12/ft",
+      "Wire beyond 7 ft: RM 9/ft",
+      "Small PVC casing (electrical wire): RM 6/ft; large PVC casing (copper pipe + wire + insulation): RM 12/ft",
       "Standard compressor / outdoor bracket: RM 45",
       "Heavy-duty compressor / outdoor bracket: RM 70",
       "New electrical plug point: RM 100",
@@ -96,8 +96,8 @@ const basePricing = {
     extras: [
       "Paip tembaga melebihi 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
       "Paip saliran melebihi 7 ft: RM 5/ft",
-      "Wayar elektrik melebihi 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
-      "Casing PVC/penyembunyian: RM 6–12/ft",
+      "Wayar elektrik melebihi 7 ft: RM 9/ft",
+      "Casing PVC kecil (wayar elektrik): RM 6/kaki; casing PVC besar (paip kuprum + wayar + penebat): RM 12/kaki",
       "Braket kompressor / luaran standard: RM 45",
       "Braket kompressor / luaran heavy-duty: RM 70",
       "Pasang plug point baharu: RM 100",
@@ -120,7 +120,7 @@ const basePricing = {
       "超出7尺铜管：RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)",
       "超出7尺排水管：RM 5/尺",
       "超出7尺电线：RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)",
-      "PVC套管/隐藏：RM 6–12/尺",
+      "小型PVC线槽（电线）：RM 6/尺；大型PVC线槽（铜管+电线+保温层）：RM 12/尺",
       "标准室外压缩机/支架：RM 45",
       "重型室外压缩机/支架：RM 70",
       "新增电源插座：RM 100",
@@ -178,8 +178,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "1HP Installation Pricing",
       pricingRows: [
-        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft included", bracket: "Standard included", note: "Wall-mounted" },
-        { hp: "1.0 HP", labour: "RM 290", pipe: "7 ft included", bracket: "Ceiling kit included", note: "Ceiling cassette" },
+        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft included", note: "Wall-mounted" },
+        { hp: "1.0 HP", labour: "RM 290", pipe: "7 ft included", note: "Ceiling cassette" },
       ],
       includedTitle: "What's Included",
       includedItems: basePricing.en.included,
@@ -188,7 +188,7 @@ export const installationPageContent: Record<
       whyTitle: "Why Choose KL Renovator for 1HP Installation?",
       whyItems: whyChoose.en,
       faqs: [
-        { q: "How much does 1HP aircond installation cost in KL?", a: "1HP wall-mounted installation starts from RM 199 including 7 ft copper pipe, wiring, drain pipe, and standard bracket. Ceiling cassette 1HP starts from RM 290. Extra materials beyond 7 ft are quoted before work begins." },
+        { q: "How much does 1HP aircond installation cost in KL?", a: "1HP wall-mounted installation starts from RM 199 including 7 ft copper pipe, insulation, electrical wire and drain pipe. Ceiling cassette 1HP starts from RM 290. Extra materials beyond 7 ft are quoted before work begins." },
         { q: "Is 1HP enough for my bedroom?", a: "1HP is ideal for bedrooms up to 130 sq ft with normal ceiling height and moderate sun exposure. For west-facing rooms, large windows, or ceilings over 10 ft, 1.5HP may be better. We assess on-site and recommend the right size." },
         { q: "How long does 1HP installation take?", a: "A standard 1HP wall-mounted installation takes 3–4 hours including vacuum pump commissioning, electrical testing, and final run-check. Same-day installation is available for bookings made before 11 AM." },
         { q: "Do I need a dedicated circuit for a 1HP aircond?", a: "Yes — Malaysian electrical standards require a dedicated 16A MCB circuit for each 1HP unit. We include the wiring from your DB box and install an outdoor isolator as part of the installation." },
@@ -221,8 +221,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Harga Pemasangan 1HP",
       pricingRows: [
-        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "Dinding" },
-        { hp: "1.0 HP", labour: "RM 290", pipe: "7 ft disertakan", bracket: "Kit siling disertakan", note: "Ceiling cassette" },
+        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft disertakan", note: "Dinding" },
+        { hp: "1.0 HP", labour: "RM 290", pipe: "7 ft disertakan", note: "Ceiling cassette" },
       ],
       includedTitle: "Apa Yang Termasuk",
       includedItems: basePricing.ms.included,
@@ -231,7 +231,7 @@ export const installationPageContent: Record<
       whyTitle: "Kenapa Pilih KL Renovator untuk Pemasangan 1HP?",
       whyItems: whyChoose.ms,
       faqs: [
-        { q: "Berapa harga pemasangan aircond 1HP di KL?", a: "Pemasangan dinding 1HP bermula RM 199 termasuk 7 ft paip tembaga, wayar, paip saliran, dan braket standard. Ceiling cassette 1HP bermula RM 290. Bahan tambahan melebihi 7 ft disebut sebelum kerja bermula." },
+        { q: "Berapa harga pemasangan aircond 1HP di KL?", a: "Pemasangan dinding 1HP bermula RM 199 termasuk 7 ft paip tembaga, wayar, paip saliran standard. Ceiling cassette 1HP bermula RM 290. Bahan tambahan melebihi 7 ft disebut sebelum kerja bermula." },
         { q: "Adakah 1HP mencukupi untuk bilik tidur saya?", a: "1HP sesuai untuk bilik tidur sehingga 130 kaki persegi dengan ketinggian siling biasa dan pendedahan matahari sederhana. Untuk bilik menghadap barat, tingkap besar, atau siling melebihi 10 kaki, 1.5HP mungkin lebih baik. Kami nilai di tapak." },
         { q: "Berapa lama pemasangan 1HP?", a: "Pemasangan dinding 1HP standard mengambil masa 3–4 jam termasuk pentauliahan pam vakum, ujian elektrik, dan pemeriksaan akhir. Servis hari sama tersedia untuk tempahan sebelum 11 pagi." },
         { q: "Perlukah litar khas untuk aircond 1HP?", a: "Ya — standard elektrik Malaysia memerlukan litar 16A MCB khas untuk setiap unit 1HP. Kami termasuk wayar dari kotak DB anda dan memasang isolator luar sebagai sebahagian pemasangan." },
@@ -264,8 +264,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "1匹安装价格",
       pricingRows: [
-        { hp: "1.0 匹", labour: "RM 199", pipe: "含7尺铜管", bracket: "含标准支架", note: "挂壁式" },
-        { hp: "1.0 匹", labour: "RM 290", pipe: "含7尺铜管", bracket: "含吊顶套件", note: "天花板卡式" },
+        { hp: "1.0 匹", labour: "RM 199", pipe: "含7尺铜管", note: "挂壁式" },
+        { hp: "1.0 匹", labour: "RM 290", pipe: "含7尺铜管", note: "天花板卡式" },
       ],
       includedTitle: "包含项目",
       includedItems: basePricing.zh.included,
@@ -309,8 +309,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "1.5HP Installation Pricing",
       pricingRows: [
-        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft included", bracket: "Standard included", note: "Wall-mounted" },
-        { hp: "1.5 HP", labour: "RM 290", pipe: "7 ft included", bracket: "Ceiling kit included", note: "Ceiling cassette" },
+        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft included", note: "Wall-mounted" },
+        { hp: "1.5 HP", labour: "RM 290", pipe: "7 ft included", note: "Ceiling cassette" },
       ],
       includedTitle: "What's Included",
       includedItems: basePricing.en.included,
@@ -319,7 +319,7 @@ export const installationPageContent: Record<
       whyTitle: "Why Choose KL Renovator for 1.5HP Installation?",
       whyItems: whyChoose.en,
       faqs: [
-        { q: "How much does 1.5HP aircond installation cost?", a: "1.5HP wall-mounted installation starts from RM 199 including 7 ft copper pipe, wiring, drain pipe, and standard bracket. Ceiling cassette 1.5HP starts from RM 290. All extras are quoted and approved before work starts." },
+        { q: "How much does 1.5HP aircond installation cost?", a: "1.5HP wall-mounted installation starts from RM 199 including 7 ft copper pipe, insulation, electrical wire and drain pipe. Ceiling cassette 1.5HP starts from RM 290. All extras are quoted and approved before work starts." },
         { q: "Is 1.5HP too big for a bedroom?", a: "Not for most master bedrooms in KL and Selangor. 1.5HP is ideal for rooms 130–180 sq ft, especially with afternoon sun, high ceilings, or large windows. Oversizing is only a problem when the unit is far too large for the space." },
         { q: "Can I install 1.5HP in a condo?", a: "Yes — 1.5HP is the most common size installed in condos across KLCC, Mont Kiara, Bangsar, and PJ. We handle JMB approval, lift booking, service-ledge access, and outdoor unit placement per building rules." },
         { q: "What electrical breaker do I need for 1.5HP?", a: "A 1.5HP unit requires a dedicated 16A MCB circuit. We run wiring from your DB box, install an outdoor isolator, and verify earth leakage protection as part of the installation." },
@@ -352,8 +352,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Harga Pemasangan 1.5HP",
       pricingRows: [
-        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "Dinding" },
-        { hp: "1.5 HP", labour: "RM 290", pipe: "7 ft disertakan", bracket: "Kit siling disertakan", note: "Ceiling cassette" },
+        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft disertakan", note: "Dinding" },
+        { hp: "1.5 HP", labour: "RM 290", pipe: "7 ft disertakan", note: "Ceiling cassette" },
       ],
       includedTitle: "Apa Yang Termasuk",
       includedItems: basePricing.ms.included,
@@ -362,7 +362,7 @@ export const installationPageContent: Record<
       whyTitle: "Kenapa Pilih KL Renovator untuk Pemasangan 1.5HP?",
       whyItems: whyChoose.ms,
       faqs: [
-        { q: "Berapa harga pemasangan aircond 1.5HP?", a: "Pemasangan dinding 1.5HP bermula RM 199 termasuk 7 ft paip tembaga, wayar, paip saliran, dan braket standard. Ceiling cassette 1.5HP bermula RM 290. Semua tambahan disebut dan diluluskan sebelum kerja bermula." },
+        { q: "Berapa harga pemasangan aircond 1.5HP?", a: "Pemasangan dinding 1.5HP bermula RM 199 termasuk 7 ft paip tembaga, wayar, paip saliran standard. Ceiling cassette 1.5HP bermula RM 290. Semua tambahan disebut dan diluluskan sebelum kerja bermula." },
         { q: "Adakah 1.5HP terlalu besar untuk bilik tidur?", a: "Tidak untuk kebanyakan bilik tidur utama di KL dan Selangor. 1.5HP sesuai untuk bilik 130–180 kaki persegi, terutama dengan matahari petang, siling tinggi, atau tingkap besar." },
         { q: "Boleh pasang 1.5HP di kondo?", a: "Ya — 1.5HP adalah saiz paling biasa dipasang di kondominium di KLCC, Mont Kiara, Bangsar, dan PJ. Kami uruskan kelulusan JMB, tempahan lif, akses service ledge, dan kedudukan unit luar." },
         { q: "Berapa MCB yang diperlukan untuk 1.5HP?", a: "Unit 1.5HP memerlukan litar 16A MCB khas. Kami tarik wayar dari kotak DB, pasang isolator luar, dan sahkan perlindungan kebocoran bumi." },
@@ -395,8 +395,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "1.5匹安装价格",
       pricingRows: [
-        { hp: "1.5 匹", labour: "RM 199", pipe: "含7尺铜管", bracket: "含标准支架", note: "挂壁式" },
-        { hp: "1.5 匹", labour: "RM 290", pipe: "含7尺铜管", bracket: "含吊顶套件", note: "天花板卡式" },
+        { hp: "1.5 匹", labour: "RM 199", pipe: "含7尺铜管", note: "挂壁式" },
+        { hp: "1.5 匹", labour: "RM 290", pipe: "含7尺铜管", note: "天花板卡式" },
       ],
       includedTitle: "包含项目",
       includedItems: basePricing.zh.included,
@@ -440,8 +440,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "2HP Installation Pricing",
       pricingRows: [
-        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft included", bracket: "Standard included", note: "Wall-mounted" },
-        { hp: "2.0 HP", labour: "RM 350", pipe: "7 ft included", bracket: "Ceiling kit included", note: "Ceiling cassette" },
+        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft included", note: "Wall-mounted" },
+        { hp: "2.0 HP", labour: "RM 350", pipe: "7 ft included", note: "Ceiling cassette" },
       ],
       includedTitle: "What's Included",
       includedItems: basePricing.en.included,
@@ -450,7 +450,7 @@ export const installationPageContent: Record<
       whyTitle: "Why Choose KL Renovator for 2HP Installation?",
       whyItems: whyChoose.en,
       faqs: [
-        { q: "How much does 2HP aircond installation cost?", a: "2HP wall-mounted installation starts from RM 249 including 7 ft copper pipe, wiring, drain pipe, and standard bracket. Ceiling cassette 2HP starts from RM 350. Larger pipe diameter and heavier bracket are included in the price." },
+        { q: "How much does 2HP aircond installation cost?", a: "2HP wall-mounted installation starts from RM 249 including the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. Ceiling cassette 2HP starts from RM 350. Any outdoor bracket required is quoted separately as a paid special charge before work begins." },
         { q: "What room size needs a 2HP aircond?", a: "2HP is recommended for rooms 180–250 sq ft, especially open-plan spaces, high ceilings, or rooms with significant sun exposure. For normal bedrooms under 180 sq ft, 1.5HP is usually sufficient." },
         { q: "Does 2HP need a bigger electrical circuit?", a: "Yes — a 2HP unit typically needs a dedicated 20A MCB circuit with 2.5mm² or 4mm² wiring depending on run length. We assess your DB box capacity and upgrade the circuit as needed." },
         { q: "Is 2HP installation available same-day in KL?", a: "Yes — same-day 2HP installation is available across KL and Selangor for bookings made before 11 AM. The job takes 4–5 hours including vacuum commissioning and electrical testing." },
@@ -483,8 +483,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Harga Pemasangan 2HP",
       pricingRows: [
-        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "Dinding" },
-        { hp: "2.0 HP", labour: "RM 350", pipe: "7 ft disertakan", bracket: "Kit siling disertakan", note: "Ceiling cassette" },
+        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft disertakan", note: "Dinding" },
+        { hp: "2.0 HP", labour: "RM 350", pipe: "7 ft disertakan", note: "Ceiling cassette" },
       ],
       includedTitle: "Apa Yang Termasuk",
       includedItems: basePricing.ms.included,
@@ -493,7 +493,7 @@ export const installationPageContent: Record<
       whyTitle: "Kenapa Pilih KL Renovator untuk Pemasangan 2HP?",
       whyItems: whyChoose.ms,
       faqs: [
-        { q: "Berapa harga pemasangan aircond 2HP?", a: "Pemasangan dinding 2HP bermula RM 249 termasuk 7 ft paip tembaga, wayar, paip saliran, dan braket standard. Ceiling cassette 2HP bermula RM 350. Diameter paip lebih besar dan braket lebih berat termasuk dalam harga." },
+        { q: "Berapa harga pemasangan aircond 2HP?", a: "Pemasangan dinding 2HP bermula RM 249 termasuk 7 kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran. Ceiling cassette 2HP bermula RM 350. Sebarang braket luar yang diperlukan disebut sebagai caj khas berbayar sebelum kerja bermula." },
         { q: "Saiz bilik apa yang perlukan aircond 2HP?", a: "2HP disyorkan untuk bilik 180–250 kaki persegi, terutama ruang terbuka, siling tinggi, atau bilik dengan pendedahan matahari ketara. Untuk bilik tidur biasa bawah 180 kaki persegi, 1.5HP biasanya mencukupi." },
         { q: "Adakah 2HP perlukan litar elektrik lebih besar?", a: "Ya — unit 2HP biasanya memerlukan litar 20A MCB khas dengan wayar 2.5mm² atau 4mm² bergantung pada jarak. Kami menilai kapasiti kotak DB anda dan menaik taraf litar jika perlu." },
         { q: "Boleh pasang 2HP hari sama di KL?", a: "Ya — pemasangan 2HP hari sama tersedia di KL dan Selangor untuk tempahan sebelum 11 pagi. Kerja mengambil masa 4–5 jam termasuk pentauliahan vakum dan ujian elektrik." },
@@ -526,8 +526,8 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "2匹安装价格",
       pricingRows: [
-        { hp: "2.0 匹", labour: "RM 249", pipe: "含7尺铜管", bracket: "含标准支架", note: "挂壁式" },
-        { hp: "2.0 匹", labour: "RM 350", pipe: "含7尺铜管", bracket: "含吊顶套件", note: "天花板卡式" },
+        { hp: "2.0 匹", labour: "RM 249", pipe: "含7尺铜管", note: "挂壁式" },
+        { hp: "2.0 匹", labour: "RM 350", pipe: "含7尺铜管", note: "天花板卡式" },
       ],
       includedTitle: "包含项目",
       includedItems: basePricing.zh.included,
@@ -571,11 +571,11 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Wall-Mounted Installation Pricing",
       pricingRows: [
-        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft included", bracket: "Standard included", note: "" },
-        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft included", bracket: "Standard included", note: "" },
-        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft included", bracket: "Standard included", note: "" },
-        { hp: "2.5 HP", labour: "RM 279", pipe: "7 ft included", bracket: "Standard included", note: "" },
-        { hp: "3.0 HP", labour: "RM 329", pipe: "7 ft included", bracket: "Standard included", note: "" },
+        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft included", note: "" },
+        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft included", note: "" },
+        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft included", note: "" },
+        { hp: "2.5 HP", labour: "RM 279", pipe: "7 ft included", note: "" },
+        { hp: "3.0 HP", labour: "RM 329", pipe: "7 ft included", note: "" },
       ],
       includedTitle: "What's Included",
       includedItems: basePricing.en.included,
@@ -584,7 +584,7 @@ export const installationPageContent: Record<
       whyTitle: "Why Choose KL Renovator for Wall-Mounted Installation?",
       whyItems: whyChoose.en,
       faqs: [
-        { q: "How much does wall-mounted aircond installation cost?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, RM 279 for 2.5 HP, and RM 329 for 3.0 HP. All prices include 7 ft copper pipe, wiring, drain pipe, standard bracket, and vacuum pump commissioning." },
+        { q: "How much does wall-mounted aircond installation cost?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, RM 279 for 2.5 HP, and RM 329 for 3.0 HP. All prices include 7 ft copper pipe, insulation, electrical wire and drain pipe, and vacuum pump commissioning." },
         { q: "How long does wall-mounted installation take?", a: "A single wall-mounted unit takes 3–5 hours depending on pipe run length, floor level, and electrical work needed. Multi-unit installations for whole houses typically take 1–2 days." },
         { q: "Can you install wall-mounted units in high-rise condos?", a: "Yes — we install wall-mounted units in condos across KLCC, Mont Kiara, Bangsar, PJ, Subang, and all major KL/Selangor high-rises. We coordinate with building management for lift access and service-ledge work." },
         { q: "Which brands of wall-mounted units do you install?", a: "All 20 major brands — Daikin, Panasonic, Mitsubishi Electric, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL, Isonic, and Acson." },
@@ -617,11 +617,11 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Harga Pemasangan Dinding",
       pricingRows: [
-        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "" },
-        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "" },
-        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "" },
-        { hp: "2.5 HP", labour: "RM 279", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "" },
-        { hp: "3.0 HP", labour: "RM 329", pipe: "7 ft disertakan", bracket: "Standard disertakan", note: "" },
+        { hp: "1.0 HP", labour: "RM 199", pipe: "7 ft disertakan", note: "" },
+        { hp: "1.5 HP", labour: "RM 199", pipe: "7 ft disertakan", note: "" },
+        { hp: "2.0 HP", labour: "RM 249", pipe: "7 ft disertakan", note: "" },
+        { hp: "2.5 HP", labour: "RM 279", pipe: "7 ft disertakan", note: "" },
+        { hp: "3.0 HP", labour: "RM 329", pipe: "7 ft disertakan", note: "" },
       ],
       includedTitle: "Apa Yang Termasuk",
       includedItems: basePricing.ms.included,
@@ -630,7 +630,7 @@ export const installationPageContent: Record<
       whyTitle: "Kenapa Pilih KL Renovator untuk Pemasangan Dinding?",
       whyItems: whyChoose.ms,
       faqs: [
-        { q: "Berapa harga pemasangan aircond dinding?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, RM 279 untuk 2.5 HP, dan RM 329 untuk 3.0 HP. Semua harga termasuk 7 ft paip tembaga, wayar, paip saliran, braket standard, dan pentauliahan pam vakum." },
+        { q: "Berapa harga pemasangan aircond dinding?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, RM 279 untuk 2.5 HP, dan RM 329 untuk 3.0 HP. Semua harga termasuk 7 ft paip tembaga, wayar, paip saliran standard, dan pentauliahan pam vakum." },
         { q: "Berapa lama pemasangan dinding?", a: "Satu unit dinding mengambil masa 3–5 jam bergantung pada panjang laluan paip, aras tingkat, dan kerja elektrik yang diperlukan. Pemasangan multi-unit untuk seluruh rumah biasanya mengambil 1–2 hari." },
         { q: "Boleh pasang unit dinding di kondominium tinggi?", a: "Ya — kami memasang unit dinding di kondominium di KLCC, Mont Kiara, Bangsar, PJ, Subang, dan semua bangunan tinggi utama KL/Selangor. Kami menguruskan akses lif dan service ledge dengan pengurusan bangunan." },
         { q: "Jenama unit dinding apa yang anda pasang?", a: "Semua 20 jenama utama — Daikin, Panasonic, Mitsubishi Electric, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL, Isonic, dan Acson." },
@@ -663,11 +663,11 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "挂壁式安装价格",
       pricingRows: [
-        { hp: "1.0 匹", labour: "RM 199", pipe: "含7尺铜管", bracket: "含标准支架", note: "" },
-        { hp: "1.5 匹", labour: "RM 199", pipe: "含7尺铜管", bracket: "含标准支架", note: "" },
-        { hp: "2.0 匹", labour: "RM 249", pipe: "含7尺铜管", bracket: "含标准支架", note: "" },
-        { hp: "2.5 匹", labour: "RM 279", pipe: "含7尺铜管", bracket: "含标准支架", note: "" },
-        { hp: "3.0 匹", labour: "RM 329", pipe: "含7尺铜管", bracket: "含标准支架", note: "" },
+        { hp: "1.0 匹", labour: "RM 199", pipe: "含7尺铜管", note: "" },
+        { hp: "1.5 匹", labour: "RM 199", pipe: "含7尺铜管", note: "" },
+        { hp: "2.0 匹", labour: "RM 249", pipe: "含7尺铜管", note: "" },
+        { hp: "2.5 匹", labour: "RM 279", pipe: "含7尺铜管", note: "" },
+        { hp: "3.0 匹", labour: "RM 329", pipe: "含7尺铜管", note: "" },
       ],
       includedTitle: "包含项目",
       includedItems: basePricing.zh.included,
@@ -711,9 +711,9 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Ceiling Cassette Installation Pricing",
       pricingRows: [
-        { hp: "1.0–1.5 HP", labour: "RM 290", pipe: "7 ft included", bracket: "Ceiling kit included", note: "" },
-        { hp: "2.0–3.0 HP", labour: "RM 350", pipe: "7 ft included", bracket: "Ceiling kit included", note: "" },
-        { hp: "3.5–6.0 HP", labour: "RM 400", pipe: "7 ft included", bracket: "Ceiling kit included", note: "" },
+        { hp: "1.0–1.5 HP", labour: "RM 290", pipe: "7 ft included", note: "" },
+        { hp: "2.0–3.0 HP", labour: "RM 350", pipe: "7 ft included", note: "" },
+        { hp: "3.5–6.0 HP", labour: "RM 400", pipe: "7 ft included", note: "" },
       ],
       includedTitle: "What's Included",
       includedItems: basePricing.en.included,
@@ -755,9 +755,9 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Harga Pemasangan Ceiling Cassette",
       pricingRows: [
-        { hp: "1.0–1.5 HP", labour: "RM 290", pipe: "7 ft disertakan", bracket: "Kit siling disertakan", note: "" },
-        { hp: "2.0–3.0 HP", labour: "RM 350", pipe: "7 ft disertakan", bracket: "Kit siling disertakan", note: "" },
-        { hp: "3.5–6.0 HP", labour: "RM 400", pipe: "7 ft disertakan", bracket: "Kit siling disertakan", note: "" },
+        { hp: "1.0–1.5 HP", labour: "RM 290", pipe: "7 ft disertakan", note: "" },
+        { hp: "2.0–3.0 HP", labour: "RM 350", pipe: "7 ft disertakan", note: "" },
+        { hp: "3.5–6.0 HP", labour: "RM 400", pipe: "7 ft disertakan", note: "" },
       ],
       includedTitle: "Apa Yang Termasuk",
       includedItems: basePricing.ms.included,
@@ -799,9 +799,9 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "天花板卡式机安装价格",
       pricingRows: [
-        { hp: "1.0–1.5 匹", labour: "RM 290", pipe: "含7尺铜管", bracket: "含吊顶套件", note: "" },
-        { hp: "2.0–3.0 匹", labour: "RM 350", pipe: "含7尺铜管", bracket: "含吊顶套件", note: "" },
-        { hp: "3.5–6.0 匹", labour: "RM 400", pipe: "含7尺铜管", bracket: "含吊顶套件", note: "" },
+        { hp: "1.0–1.5 匹", labour: "RM 290", pipe: "含7尺铜管", note: "" },
+        { hp: "2.0–3.0 匹", labour: "RM 350", pipe: "含7尺铜管", note: "" },
+        { hp: "3.5–6.0 匹", labour: "RM 400", pipe: "含7尺铜管", note: "" },
       ],
       includedTitle: "包含项目",
       includedItems: basePricing.zh.included,
@@ -845,9 +845,9 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Window Unit Installation Pricing",
       pricingRows: [
-        { hp: "1.0 HP", labour: "RM 180", pipe: "Self-contained", bracket: "Window frame mount", note: "" },
-        { hp: "1.5 HP", labour: "RM 200", pipe: "Self-contained", bracket: "Window frame mount", note: "" },
-        { hp: "2.0 HP", labour: "RM 230", pipe: "Self-contained", bracket: "Window frame mount", note: "" },
+        { hp: "1.0 HP", labour: "RM 180", pipe: "Self-contained", note: "" },
+        { hp: "1.5 HP", labour: "RM 200", pipe: "Self-contained", note: "" },
+        { hp: "2.0 HP", labour: "RM 230", pipe: "Self-contained", note: "" },
       ],
       includedTitle: "What's Included",
       includedItems: [
@@ -903,9 +903,9 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "Harga Pemasangan Unit Tingkap",
       pricingRows: [
-        { hp: "1.0 HP", labour: "RM 180", pipe: "Terkandung", bracket: "Bingkai tingkap", note: "" },
-        { hp: "1.5 HP", labour: "RM 200", pipe: "Terkandung", bracket: "Bingkai tingkap", note: "" },
-        { hp: "2.0 HP", labour: "RM 230", pipe: "Terkandung", bracket: "Bingkai tingkap", note: "" },
+        { hp: "1.0 HP", labour: "RM 180", pipe: "Terkandung", note: "" },
+        { hp: "1.5 HP", labour: "RM 200", pipe: "Terkandung", note: "" },
+        { hp: "2.0 HP", labour: "RM 230", pipe: "Terkandung", note: "" },
       ],
       includedTitle: "Apa Yang Termasuk",
       includedItems: [
@@ -961,9 +961,9 @@ export const installationPageContent: Record<
       ],
       pricingTitle: "窗口式冷气安装价格",
       pricingRows: [
-        { hp: "1.0 匹", labour: "RM 180", pipe: "一体机", bracket: "窗框固定", note: "" },
-        { hp: "1.5 匹", labour: "RM 200", pipe: "一体机", bracket: "窗框固定", note: "" },
-        { hp: "2.0 匹", labour: "RM 230", pipe: "一体机", bracket: "窗框固定", note: "" },
+        { hp: "1.0 匹", labour: "RM 180", pipe: "一体机", note: "" },
+        { hp: "1.5 匹", labour: "RM 200", pipe: "一体机", note: "" },
+        { hp: "2.0 匹", labour: "RM 230", pipe: "一体机", note: "" },
       ],
       includedTitle: "包含项目",
       includedItems: [

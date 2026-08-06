@@ -83,7 +83,7 @@ function getIntroBody(
       `KL Renovator installs ${name} airconds across Kuala Lumpur and Selangor. Our technicians are trained on ${name} models including ${models}, sizing the right HP, running copper pipe, and commissioning every unit with vacuum pump evacuation and a 1-month workmanship warranty.`,
       `Whether you are moving into a new home or upgrading an old unit, KL Renovator handles full ${name} aircond installation from survey to final testing. We install all ${name} series including ${models}, using genuine or OEM-equivalent parts and confirming every price before drilling.`,
       `${name} units such as ${models} are popular across KL and Selangor for their reliability. KL Renovator's installers fit wall-mounted, ceiling cassette and window ${name} units, matching the correct HP to your room size and completing every job to manufacturer warranty standards.`,
-      `Need a new ${name} aircond installed? Our team dispatches trained HVAC technicians throughout KL & Selangor. Every ${name} installation includes 7 ft copper pipe, wiring, drain pipe, a standard outdoor bracket, vacuum pump commissioning, and a 1-month workmanship warranty card.`,
+      `Need a new ${name} aircond installed? Our team dispatches trained HVAC technicians throughout KL & Selangor. Every ${name} installation includes 7 ft copper pipe, insulation, electrical wire and drain pipe, a standard outdoor bracket, vacuum pump commissioning, and a 1-month workmanship warranty card.`,
     ];
     return pick(brand.slug, templates);
   }
@@ -93,7 +93,7 @@ function getIntroBody(
       `KL Renovator memasang aircond ${name} di seluruh Kuala Lumpur dan Selangor. Juruteknik kami dilatih untuk model ${name} termasuk ${models}, menentukan saiz HP yang betul, memasang paip tembaga, dan menauliahkan setiap unit dengan pengosongan pam vakum serta waranti kerja 1 bulan.`,
       `Sama ada anda berpindah ke rumah baharu atau menaik taraf unit lama, KL Renovator mengendalikan pemasangan aircond ${name} penuh dari tinjauan hingga ujian akhir. Kami memasang semua siri ${name} termasuk ${models}, menggunakan alat ganti asli atau setara OEM dan mengesahkan setiap harga sebelum mengecer.`,
       `Unit ${name} seperti ${models} popular di KL dan Selangor kerana kebolehpercayaannya. Pemasang KL Renovator memasang unit ${name} dinding, ceiling cassette dan tingkap, memadankan HP yang betul dengan saiz bilik anda dan menyelesaikan setiap kerja mengikut standard waranti pengeluar.`,
-      `Perlukan aircond ${name} baharu dipasang? Pasukan kami menghantar juruteknik HVAC berlatih di seluruh KL & Selangor. Setiap pemasangan ${name} termasuk 7 ft paip tembaga, wayar, paip saliran, braket luar standard, pentauliahan pam vakum, dan kad waranti kerja 1 bulan.`,
+      `Perlukan aircond ${name} baharu dipasang? Pasukan kami menghantar juruteknik HVAC berlatih di seluruh KL & Selangor. Setiap pemasangan ${name} termasuk 7 ft paip tembaga, wayar, paip saliran luar standard, pentauliahan pam vakum, dan kad waranti kerja 1 bulan.`,
     ];
     return pick(brand.slug, templates);
   }
@@ -191,7 +191,7 @@ function getWhyItems(
       { title: `${name}-Trained Technicians`, body: `Our installers understand ${name} wiring, PCB logic, and gas requirements, so installations are completed correctly the first time.` },
       { title: "Right HP, Every Room", body: `We measure room size, ceiling height, and sun exposure before recommending 1HP, 1.5HP, or 2HP for your ${name} unit.` },
       { title: "Vacuum Pump Standard", body: `Every ${name} installation includes proper evacuation to protect the compressor and keep manufacturer warranty valid.` },
-      { title: "Price Confirmed First", body: `Copper pipe, wiring, brackets, and extras are quoted before drilling begins — no surprise bills for your ${name} install.` },
+      { title: "Price Confirmed First", body: `Copper pipe, wirings, and extras are quoted before drilling begins — no surprise bills for your ${name} install.` },
     ];
   }
 
@@ -200,7 +200,7 @@ function getWhyItems(
       { title: `Juruteknik ${name} Berlatih`, body: `Pemasang kami memahami pendawaian, logik PCB, dan keperluan gas ${name}, jadi pemasangan diselesaikan dengan betul pada kali pertama.` },
       { title: "HP Yang Tepat, Setiap Bilik", body: `Kami mengukur saiz bilik, ketinggian siling, dan pendedahan matahari sebelum mencadangkan 1HP, 1.5HP, atau 2HP untuk unit ${name} anda.` },
       { title: "Standard Pam Vakum", body: `Setiap pemasangan ${name} termasuk pengosongan yang betul untuk melindungi pemampat dan mengekalkan waranti pengeluar.` },
-      { title: "Harga Disahkan Dahulu", body: `Paip tembaga, wayar, braket, dan tambahan disebut sebelum mengecer bermula — tiada bil surprise untuk pemasangan ${name} anda.` },
+      { title: "Harga Disahkan Dahulu", body: `Paip tembaga, wayar, dan tambahan disebut sebelum mengecer bermula — tiada bil surprise untuk pemasangan ${name} anda.` },
     ];
   }
 
@@ -228,7 +228,7 @@ function getFAQs(
     return [
       {
         q: `How much does ${name} aircond installation cost in KL?`,
-        a: `Wall-mounted ${name} installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, and RM 279–RM 329 for larger units. Ceiling cassette starts from RM 290, and window units from RM 180. Every quote includes 7 ft copper pipe, wiring, drain pipe, and a standard bracket.`,
+        a: `Wall-mounted ${name} installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, and RM 279–RM 329 for larger units. Ceiling cassette starts from RM 290, and window units from RM 180. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. If an outdoor bracket is required, it is quoted separately as a paid special charge before work begins.`,
       },
       {
         q: `Which ${name} models can KL Renovator install?`,
@@ -236,7 +236,7 @@ function getFAQs(
       },
       {
         q: `Do you use original parts for ${name} installation?`,
-        a: `Yes — we use genuine or high-quality OEM-equivalent parts for ${name} installations, including capacitors, wiring, and brackets, to ensure system longevity and warranty protection.`,
+        a: `Yes — we use genuine or high-quality OEM-equivalent parts for ${name} installations, including capacitors, wirings, to ensure system longevity and warranty protection.`,
       },
       {
         q: `How long does ${name} installation take?`,
@@ -253,7 +253,7 @@ function getFAQs(
     return [
       {
         q: `Berapa harga pemasangan aircond ${name} di KL?`,
-        a: `Pemasangan dinding ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran, dan braket standard.`,
+        a: `Pemasangan dinding ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran standard.`,
       },
       {
         q: `Model ${name} apa yang KL Renovator boleh pasang?`,
@@ -261,7 +261,7 @@ function getFAQs(
       },
       {
         q: `Adakah anda menggunakan alat ganti asli untuk pemasangan ${name}?`,
-        a: `Ya — kami menggunakan alat ganti asli atau berkualiti tinggi setara OEM untuk pemasangan ${name}, termasuk kapasitor, wayar, dan braket, bagi memastikan jangka hayat sistem dan perlindungan waranti.`,
+        a: `Ya — kami menggunakan alat ganti asli atau berkualiti tinggi setara OEM untuk pemasangan ${name}, termasuk kapasitor, wayar, bagi memastikan jangka hayat sistem dan perlindungan waranti.`,
       },
       {
         q: `Berapa lama pemasangan ${name}?`,
@@ -304,7 +304,7 @@ const baseIncluded: Record<BrandInstallationLocale, string[]> = {
     "7 ft copper pipe (liquid + gas lines)",
     "7 ft electrical wiring",
     "7 ft PVC drain pipe",
-    "Standard outdoor bracket",
+    "Outdoor bracket (paid special charge if required)",
     "Vacuum pump commissioning",
     "Refrigerant release & run test",
     "1-month workmanship warranty card",
@@ -335,8 +335,8 @@ const baseExtras: Record<BrandInstallationLocale, string[]> = {
   en: [
     "Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
       "Drain pipe beyond 7 ft: RM 5/ft",
-    "Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
-    "PVC casing / concealment: RM 6–12/ft",
+    "Wire beyond 7 ft: RM 9/ft",
+    "Small PVC casing (electrical wire): RM 6/ft; large PVC casing (copper pipe + wire + insulation): RM 12/ft",
     "Standard compressor / outdoor bracket: RM 45",
     "Heavy-duty compressor / outdoor bracket: RM 70",
     "New electrical plug point: RM 100",
@@ -346,8 +346,8 @@ const baseExtras: Record<BrandInstallationLocale, string[]> = {
   ms: [
     "Paip tembaga melebihi 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
       "Paip saliran melebihi 7 ft: RM 5/ft",
-    "Wayar elektrik melebihi 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
-    "Casing PVC / penyembunyian: RM 6–12/ft",
+    "Wayar elektrik melebihi 7 ft: RM 9/ft",
+    "Casing PVC kecil (wayar elektrik): RM 6/kaki; casing PVC besar (paip kuprum + wayar + penebat): RM 12/kaki",
     "Braket kompressor / luaran standard: RM 45",
     "Braket kompressor / luaran heavy-duty: RM 70",
     "Pasang plug point baharu: RM 100",
@@ -358,7 +358,7 @@ const baseExtras: Record<BrandInstallationLocale, string[]> = {
     "超出7尺铜管：RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)",
     "超出7尺排水管：RM 5/尺",
     "超出7尺电线：RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)",
-    "PVC套管/隐藏：RM 6–12/尺",
+    "小型PVC线槽（电线）：RM 6/尺；大型PVC线槽（铜管+电线+保温层）：RM 12/尺",
     "标准室外压缩机/支架：RM 45",
     "重型室外压缩机/支架：RM 70",
     "新增电源插座：RM 100",

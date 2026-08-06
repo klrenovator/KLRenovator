@@ -195,7 +195,7 @@ export const sitePublic = {
           "price": "RM 400"
         }
       ],
-      "note": "Standard installation includes 7ft copper pipe, wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below."
+      "note": "Standard installation includes 7ft copper pipe, insulation, electrical wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below."
     },
     "basicServicing": {
       "title": "Basic Servicing / Cleaning",
@@ -319,7 +319,11 @@ export const sitePublic = {
         },
         {
           "label": "PCB Board Replacement",
-          "price": "RM 280 – 600"
+          "price": "RM 350 – 600"
+        },
+        {
+          "label": "Gas Leak Repair",
+          "price": "RM 120 / leak"
         },
         {
           "label": "Temperature Sensor Replacement",
@@ -359,7 +363,7 @@ export const sitePublic = {
           "price": "RM 350"
         }
       ],
-      "note": "7ft copper pipe, wire, and drain pipe are free with reinstallation. Beyond 7ft, or any bracket/casing/electrical/access work, is charged per the Additional Materials & Special Charges rates."
+      "note": "7ft copper pipe, insulation, electrical wire, and drain pipe are free with reinstallation. Beyond 7ft, or any bracket/casing/electrical/access work, is charged per the Additional Materials & Special Charges rates."
     },
     "materials": {
       "title": "Additional Materials Pricing",
@@ -377,16 +381,12 @@ export const sitePublic = {
           "price": "RM 27/ft"
         },
         {
-          "label": "Electrical Wire 1.0 – 1.5 HP",
+          "label": "Electrical Wire",
           "price": "RM 9/ft"
         },
         {
-          "label": "Electrical Wire 2.0 – 2.5 HP",
-          "price": "RM 13/ft"
-        },
-        {
-          "label": "Electrical Wire 3.0 – 4.0 HP",
-          "price": "RM 17/ft"
+          "label": "Insulation",
+          "price": "RM 7/ft"
         },
         {
           "label": "Drain Pipe beyond 7 ft",
@@ -405,8 +405,12 @@ export const sitePublic = {
           "price": "RM 35"
         },
         {
-          "label": "PVC Casing Wire/Copper Pipe",
-          "price": "RM 6 – 12/ft"
+          "label": "Small PVC Casing (Electrical Wire)",
+          "price": "RM 6/ft"
+        },
+        {
+          "label": "Large PVC Casing (Copper Pipe + Wire + Insulation)",
+          "price": "RM 12/ft"
         },
         {
           "label": "Electrical Plug Point Installation",

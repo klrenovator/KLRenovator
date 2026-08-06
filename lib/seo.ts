@@ -274,7 +274,7 @@ export function buildInstallationServiceSchema(): Record<string, unknown> {
         "@type": "PriceSpecification",
         price: 199,
         priceCurrency: "MYR",
-        description: "Starting from RM 199 for wall-mounted 1.0–1.5 HP including 7ft copper pipe, wiring, drain pipe, standard bracket, vacuum pump commissioning, and 1-month workmanship warranty.",
+        description: "Starting from RM 199 for wall-mounted 1.0–1.5 HP including 7ft copper pipe, insulation, electrical wire and drain pipe, vacuum pump commissioning, and 1-month workmanship warranty.",
         eligibleQuantity: {
           "@type": "QuantitativeValue",
           minValue: 1,
@@ -303,10 +303,10 @@ export function buildInstallationServiceSchema(): Record<string, unknown> {
       "@type": "OfferCatalog",
       name: "Aircond Installation Pricing",
       itemListElement: [
-        { "@type": "Offer", position: 1, name: "Wall-Mounted 1.0 HP", priceCurrency: "MYR", price: 199, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
-        { "@type": "Offer", position: 2, name: "Wall-Mounted 1.5 HP", priceCurrency: "MYR", price: 199, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
-        { "@type": "Offer", position: 3, name: "Wall-Mounted 2.0 HP", priceCurrency: "MYR", price: 249, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
-        { "@type": "Offer", position: 4, name: "Wall-Mounted 2.5 HP", priceCurrency: "MYR", price: 279, description: "7ft copper pipe, wiring, drain, bracket, vacuum, warranty included" },
+        { "@type": "Offer", position: 1, name: "Wall-Mounted 1.0 HP", priceCurrency: "MYR", price: 199, description: "7ft copper pipe, wiring, drain, vacuum, warranty included" },
+        { "@type": "Offer", position: 2, name: "Wall-Mounted 1.5 HP", priceCurrency: "MYR", price: 199, description: "7ft copper pipe, wiring, drain, vacuum, warranty included" },
+        { "@type": "Offer", position: 3, name: "Wall-Mounted 2.0 HP", priceCurrency: "MYR", price: 249, description: "7ft copper pipe, wiring, drain, vacuum, warranty included" },
+        { "@type": "Offer", position: 4, name: "Wall-Mounted 2.5 HP", priceCurrency: "MYR", price: 279, description: "7ft copper pipe, wiring, drain, vacuum, warranty included" },
         { "@type": "Offer", position: 5, name: "Ceiling Cassette 1.0–1.5 HP", priceCurrency: "MYR", price: 290, description: "7ft copper pipe, wiring, drain+pump, suspension kit, vacuum, warranty included" },
         { "@type": "Offer", position: 6, name: "Window Unit 1.0–2.0 HP", priceCurrency: "MYR", price: 180, description: "Window frame mounting, wiring, vacuum, warranty included" },
       ],
@@ -340,7 +340,7 @@ export function buildInstallationHowToSchema(): Record<string, unknown> {
       { "@type": "HowToTool", name: "Two-stage vacuum pump (500 microns)" },
       { "@type": "HowToTool", name: "Flaring tool and torque wrench" },
       { "@type": "HowToTool", name: "Manifold gauge set" },
-      { "@type": "HowToTool", name: "Nitrogen purging kit" },
+      { "@type": "HowToTool", name: "purging kit" },
       { "@type": "HowToTool", name: "Digital thermometer and clamp meter" },
     ],
     step: [
@@ -355,7 +355,7 @@ export function buildInstallationHowToSchema(): Record<string, unknown> {
         "@type": "HowToStep",
         position: 2,
         name: "Technician Dispatch & Preparation",
-        text: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulation, brackets, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.",
+        text: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulations, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.",
       },
       {
         "@type": "HowToStep",

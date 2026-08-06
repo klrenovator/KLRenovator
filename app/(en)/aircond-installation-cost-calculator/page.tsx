@@ -10,12 +10,12 @@ const PAGE_URL = "https://www.klrenovator.com/aircond-installation-cost-calculat
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Installation Cost Calculator Malaysia — Free Quote"),
   description:
-    "Free aircond installation cost calculator Malaysia. Estimate labour, copper pipe, wire, drain pipe, bracket, switch & water pump costs with bundle discounts. Get a confirmed quote from KL Renovator.",
+    "Free aircond installation cost calculator Malaysia. Estimate labour, copper pipe, wire, drain pipe, switch & water pump costs with bundle discounts. Get a confirmed quote from KL Renovator.",
   alternates: buildTrilingualHreflang("/aircond-installation-cost-calculator"),
   openGraph: {
     title: clampMetaTitle("Aircond Installation Cost Calculator Malaysia"),
     description:
-      "Estimate your aircond installation cost instantly — labour, copper pipe, electrical wire, drain pipe, bracket & more. From RM 199 installation.",
+      "Estimate your aircond installation cost instantly — labour, copper pipe, electrical wire, drain pipe & more. From RM 199 installation.",
     url: PAGE_URL,
     type: "website",
     locale: "en_MY",

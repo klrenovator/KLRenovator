@@ -261,7 +261,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
       { label: "Yuran Diagnostik (dikecualikan dengan pembaikan)", price: "RM 88" },
       { label: "Penggantian Kapasitor", price: "RM 150 – 250" },
       { label: "Penggantian Motor Kipas", price: "RM 250 – 380" },
-      { label: "Penggantian Papan PCB", price: "RM 280 – 600" },
+      { label: "Penggantian Papan PCB", price: "RM 350 – 600" },
       { label: "Penggantian Penderia Suhu", price: "RM 150 – 250" },
       { label: "Penggantian Kontaktor", price: "RM 150 – 200" },
       { label: "Penggantian Pam Longkang", price: "RM 350 – 550" },
@@ -271,7 +271,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
       { label: "诊断费（随维修免除）", price: "RM 88" },
       { label: "电容更换", price: "RM 150 – 250" },
       { label: "风扇电机更换", price: "RM 250 – 380" },
-      { label: "PCB板更换", price: "RM 280 – 600" },
+      { label: "PCB板更换", price: "RM 350 – 600" },
       { label: "温度传感器更换", price: "RM 150 – 250" },
       { label: "接触器更换", price: "RM 150 – 200" },
       { label: "排水泵更换", price: "RM 350 – 550" },
@@ -288,7 +288,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     taglineZH:
       "所有品牌专业冷气安装——整洁的电缆布线、正确的管道尺寸和全面的真空调试。可当天安装。",
     descriptionMS:
-      "Aircond yang dipasang dengan buruk boleh kehilangan 20–30% kecekapannya sebelum ia beroperasi sejam pertama. Saiz paip kuprum yang tidak betul, evakuasi vakum yang dilangkau, sambungan flare yang longgar, atau laluan kabel yang tidak kemas akan menyebabkan kebocoran gas, kegagalan kompresor pramatang, dan bil elektrik yang lebih tinggi dari sepatutnya. KL Renovator memasang unit dinding, ceiling cassette, dan tingkap untuk rumah, kondo, shoplot, dan pejabat di seluruh KL dan Selangor — dan kami membawa latihan HVAC yang tulen ke setiap kerja. Setiap pemasangan merangkumi: 7 kaki paip kuprum bersaiz betul (berpenebat), pendawaian elektrik, paip longkang, braket dinding/lantai, evakuasi pam vakum penuh, ujian kebocoran tekanan, dan ujian pentauliahan yang mengesahkan output penyejukan, aliran udara, dan penentukuran termostat. RM 199 untuk unit dinding standard 1.0–1.5 HP — harga disahkan sebelum kami menggerudi satu lubang pun.",
+      "Aircond yang dipasang dengan buruk boleh kehilangan 20–30% kecekapannya sebelum ia beroperasi sejam pertama. Saiz paip kuprum yang tidak betul, evakuasi vakum yang dilangkau, sambungan flare yang longgar, atau laluan kabel yang tidak kemas akan menyebabkan kebocoran gas, kegagalan kompresor pramatang, dan bil elektrik yang lebih tinggi dari sepatutnya. KL Renovator memasang unit dinding, ceiling cassette, dan tingkap untuk rumah, kondo, shoplot, dan pejabat di seluruh KL dan Selangor — dan kami membawa latihan HVAC yang tulen ke setiap kerja. Setiap pemasangan merangkumi: 7 kaki paip kuprum bersaiz betul (berpenebat), pendawaian elektrik, paip longkang dinding/lantai, evakuasi pam vakum penuh, ujian kebocoran tekanan, dan ujian pentauliahan yang mengesahkan output penyejukan, aliran udara, dan penentukuran termostat. RM 199 untuk unit dinding standard 1.0–1.5 HP — harga disahkan sebelum kami menggerudi satu lubang pun.",
     descriptionZH:
       "安装不当的冷气在运行第一个小时之前就可能损失20-30%的效率。铜管尺寸不正确、跳过真空调试、喇叭口连接松动或电缆布线混乱将导致气体泄漏、压缩机过早损坏和电费高于应有水平。KL Renovator为吉隆坡和雪兰莪的家庭、公寓、店屋和办公室安装挂壁式、天花板卡式和窗式机器——每次作业都带着真正的HVAC专业培训。每次安装包括：7尺正确尺寸的铜管（带隔热）、电线、排水管、墙壁/地面支架、全真空泵抽真空、压力泄漏测试以及验证制冷输出、风量和温控器校准的调试运行。标准挂壁式1.0-1.5 HP机器RM 199——在我们钻任何一个孔之前价格已确认。",
     highlightsMS: [
@@ -297,7 +297,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
       "7 kaki paip kuprum disertakan — bersaiz betul mengikut HP, bukan tolok nipis universal",
       "Pendawaian elektrik + paip longkang + braket semuanya disertakan",
       "Evakuasi pam vakum wajib — kami tidak pernah melangkau langkah ini",
-      "Ujian kebocoran tekanan dengan nitrogen sebelum melepaskan bahan pendingin",
+      "Pentauliahan pam vakum (500 mikron) sebelum melepaskan bahan pendingin",
       "Trunking kabel yang kemas — tiada wayar longgar yang kelihatan di sepanjang dinding anda",
       "Waranti mutu kerja 1 bulan + senarai semak pemasangan bertulis",
     ],
@@ -315,13 +315,13 @@ export const serviceI18n: Record<string, ServiceI18n> = {
       { step: "Tinjauan Pra-Pemasangan", desc: "Juruteknik memeriksa kekuatan dinding, kapasiti bekalan elektrik, kejatuhan longkang, dan penempatan kondenser luar. Ukuran disahkan sebelum sebarang penggerudian. Peraturan kondo diperiksa — kami berkoordinasi dengan pihak pengurusan jika perlu." },
       { step: "Braket, Paip & Laluan Kabel", desc: "Braket dinding diratakan dan dipasang. Paip kuprum dipotong mengikut panjang tepat, diflare, ditebat, dan dihalakan dengan kemas melalui penembusan dinding. Paip longkang ditetapkan dengan kecerunan jatuh yang betul supaya air mengalir secara semula jadi." },
       { step: "Unit Luar & Elektrik", desc: "Unit kondenser dipasang pada braket dengan pad getah getaran. Suis pengasing elektrik dipasang berhampiran unit luar (diperlukan oleh peraturan Malaysia). Pendawaian dihalakan melalui konduit khusus, bukan dikongsi dengan litar lain." },
-      { step: "Vakum, Ujian Kebocoran & Pentauliahan", desc: "Sistem divakum dengan pam vakum selama minimum 15–20 minit untuk mengeluarkan semua kelembapan dan udara. Ujian tekanan nitrogen mengesahkan tiada kebocoran. Bahan pendingin dilepaskan, penyejukan diuji pada semua kelajuan kipas, termostat dikalibrasi, dan kad kerja ditandatangani." },
+      { step: "Vakum, Ujian Kebocoran & Pentauliahan", desc: "Sistem divakum dengan pam vakum selama minimum 15–20 minit untuk mengeluarkan semua kelembapan dan udara. Pentauliahan pam vakum (500 mikron) mengesahkan tiada kebocoran. Bahan pendingin dilepaskan, penyejukan diuji pada semua kelajuan kipas, termostat dikalibrasi, dan kad kerja ditandatangani." },
     ],
     processZH: [
       { step: "安装前勘查", desc: "技术员检查墙体强度、电力供应容量、排水坡度和室外冷凝器位置。在钻孔前确认所有尺寸。检查公寓规定——如有需要我们与管理处协调。" },
       { step: "支架、管道和电缆铺设", desc: "墙壁支架调平并固定。铜管按精确长度切割、喇叭口处理、隔热处理，整齐穿过墙孔。排水管按正确下坡设置，让水自然流出。" },
       { step: "室外机和电气", desc: "冷凝器安装在带橡胶减震垫的支架上。电气隔离开关安装在室外机附近（马来西亚法规要求）。电线通过专用线管布线，不与其他电路共用。" },
-      { step: "抽真空、检漏和调试", desc: "系统用真空泵抽真空至少15-20分钟，排除所有水分和空气。氮气压力测试确认无泄漏。释放制冷剂，在所有风速下测试制冷效果，校准温控器，签署工作卡。" },
+      { step: "抽真空、检漏和调试", desc: "系统用真空泵抽真空至少15-20分钟，排除所有水分和空气。真空泵调试（500微米）确认无泄漏。释放制冷剂，在所有风速下测试制冷效果，校准温控器，签署工作卡。" },
     ],
     priceTableMS: [
       { label: "Dinding · 1.0 – 1.5 HP", price: "RM 199" },
@@ -494,13 +494,13 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     taglineZH:
       "安全泵送回收、专业拆机和在新地址完全重新调试。可当天搬入即安装。全套从RM 250起。",
     descriptionMS:
-      "Anda berpindah ke kondominium baharu di Petaling Jaya, atau pejabat anda berpindah dari Bangsar ke Damansara. Anda mempunyai unit inverter Daikin yang sempurna dan baru berusia 3 tahun — menggantikannya akan menelan kos RM 1,500+. Menanggal dan memindahkannya adalah keputusan kewangan yang bijak. Tetapi ini bukan kerja untuk penggerak am atau tukang dengan sepana. Pemindahan aircond melibatkan: mengepam turun bahan pendingin ke dalam kondenser luar dengan selamat (supaya tiada gas hilang), memutuskan pengasing elektrik, menanggal unit dalaman dari braket dinding, mengeluarkan kondenser luar dari braket atau pelantar, mengeluarkan paip kuprum dan pendawaian melalui penembusan dinding, mengangkut kedua-dua unit dengan selamat ke lokasi baharu, dan kemudian melakukan pemasangan baharu sepenuhnya: paip kuprum baharu, longkang baharu, laluan pendawaian baharu, evakuasi vakum, dan pentauliahan semula. KL Renovator melakukan ini dari mula hingga akhir. Pindah lengkap dan pasang semula dari RM 250 (1.0–1.5 HP, bangunan sama atau berdekatan). RM 350 untuk pemindahan lokasi berbeza. Termasuk pemulihan bahan pendingin, 7 kaki paip kuprum baharu, pendawaian, longkang, braket, vakum, dan ujian.",
+      "Anda berpindah ke kondominium baharu di Petaling Jaya, atau pejabat anda berpindah dari Bangsar ke Damansara. Anda mempunyai unit inverter Daikin yang sempurna dan baru berusia 3 tahun — menggantikannya akan menelan kos RM 1,500+. Menanggal dan memindahkannya adalah keputusan kewangan yang bijak. Tetapi ini bukan kerja untuk penggerak am atau tukang dengan sepana. Pemindahan aircond melibatkan: mengepam turun bahan pendingin ke dalam kondenser luar dengan selamat (supaya tiada gas hilang), memutuskan pengasing elektrik, menanggal unit dalaman dari braket dinding, mengeluarkan kondenser luar dari braket atau pelantar, mengeluarkan paip kuprum dan pendawaian melalui penembusan dinding, mengangkut kedua-dua unit dengan selamat ke lokasi baharu, dan kemudian melakukan pemasangan baharu sepenuhnya: paip kuprum baharu, longkang baharu, laluan pendawaian baharu, evakuasi vakum, dan pentauliahan semula. KL Renovator melakukan ini dari mula hingga akhir. Pindah lengkap dan pasang semula dari RM 250 (1.0–1.5 HP, bangunan sama atau berdekatan). RM 350 untuk pemindahan lokasi berbeza. Termasuk pemulihan bahan pendingin, 7 kaki paip kuprum baharu, pendawaian, longkang, vakum, dan ujian.",
     descriptionZH:
       "您要搬到八打灵再也的新公寓，或者您的办公室要从Bangsar搬到Damansara。您有一台用了3年状况完好的大金变频机——更换它将花费RM 1,500以上。拆机搬迁是明智的财务决策。但这绝非普通搬运工或拿扳手的杂工能做的工作。冷气搬迁包括：将制冷剂安全泵入室外冷凝器（不损失气体）、断开电气隔离开关、从墙支架上卸下室内机、从支架或平台上取下室外冷凝器、通过墙孔拔出铜管和电线、将两台机器安全运输到新地点、然后进行全套新安装：新铜管、新排水管、新电线铺设、真空抽气并重新调试。KL Renovator从头到尾完成这一切。完整搬迁重装从RM 250起（1.0-1.5 HP，同楼或附近）。不同地点搬迁RM 350。含制冷剂回收、7尺新铜管、电线、排水管、支架、真空和测试。",
     highlightsMS: [
       "Pam-turun bahan pendingin sebelum tanggal — sifar gas hilang, sifar pelepasan alam sekitar",
       "Penanggalan selamat unit dalaman, kondenser luar, dan semua bahan penembusan dinding",
-      "Pemasangan semula penuh di lokasi baharu — paip kuprum, pendawaian, longkang, braket baharu disertakan",
+      "Pemasangan semula penuh di lokasi baharu — paip kuprum, pendawaian, longkang baharu disertakan",
       "Evakuasi pam vakum di tapak baharu — standard pentauliahan sama seperti pemasangan baharu",
       "Semua 20 jenama dikendalikan — inverter dan bukan inverter, R32 dan R410A",
       "Tanggal + pasang semula hari sama untuk kebanyakan pindah tempatan — pindah masuk dengan AC berfungsi",

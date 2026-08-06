@@ -30,7 +30,7 @@ export const TOOLS: ToolInfo[] = [
     title: "Installation Cost Calculator",
     titleMS: "Kalkulator Kos Pemasangan",
     titleZH: "安装费用计算器",
-    desc: "Instant aircond installation estimate — labour, copper pipe, wire, drain pipe, bracket, switch & water pump with bundle discounts.",
+    desc: "Instant aircond installation estimate — labour, copper pipe, wire, drain pipe, switch & water pump with bundle discounts.",
     descMS: "Anggaran pemasangan aircond serta-merta — buruh, paip tembaga, wayar, saliran, pendakap, suis & pam air dengan diskaun pakej.",
     descZH: "即时冷气安装估价 — 人工、铜管、电线、排水管、支架、开关和水泵，含批量折扣。",
     icon: "🔧",

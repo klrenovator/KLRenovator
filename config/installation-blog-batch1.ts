@@ -56,7 +56,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <h2>Mistake #7: Incorrect Outdoor Unit Placement</h2>
       <p>Placing the outdoor unit in direct sunlight or enclosed spaces reduces cooling efficiency by 15-25% and causes compressor overheating. Ensure minimum 30cm clearance on all sides and a shaded location.</p>
 
-      <h2>Mistake #8: Skipping the Nitrogen Pressure Test</h2>
+      <h2>Mistake #8: Skipping the Pressure Test</h2>
       <p>Without a pressure test at 150 PSI for 15 minutes, undetected leaks cause refrigerant loss and repeated RM 120-180 gas top-ups. Every quality installation includes this essential step.</p>
 
       <h2>Mistake #9: Reusing Old Pipes During Replacement</h2>
@@ -78,7 +78,7 @@ export const installationBlogBatch1: BlogPost[] = [
       </table>
 
       <h2>KL Renovator's Quality Installation Standard</h2>
-      <p>Every installation by our <a href="/near-me">expert installers near you</a> includes two-stage vacuum evacuation, Type L copper pipe, Armaflex insulation, nitrogen pressure test, electrical circuit check, proper drainage, and a written 1-month workmanship warranty. <strong>From RM 199, same-day available.</strong></p>
+      <p>Every installation by our <a href="/near-me">expert installers near you</a> includes two-stage vacuum evacuation, Type L copper pipe, Armaflex insulation, vacuum pump commissioning (500 microns), electrical circuit check, proper drainage, and a written 1-month workmanship warranty. <strong>From RM 199, same-day available.</strong></p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a transparent quote within 30 minutes.</p>
     `,
     contentMS: `
@@ -106,7 +106,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <h2>Kesilapan #7: Penempatan Unit Luar Tidak Betul</h2>
       <p>Meletakkan unit luar di bawah cahaya matahari langsung atau ruang tertutup mengurangkan kecekapan penyejukan 15-25% dan menyebabkan pemampat terlalu panas. Pastikan jarak minimum 30cm di semua sisi dan lokasi teduh.</p>
 
-      <h2>Kesilapan #8: Melangkau Ujian Tekanan Nitrogen</h2>
+      <h2>Kesilapan #8: Melangkau Ujian Tekanan </h2>
       <p>Tanpa ujian tekanan pada 150 PSI selama 15 minit, kebocoran yang tidak dikesan menyebabkan kehilangan penyejuk dan tambah gas berulang RM 120-180. Setiap pemasangan berkualiti merangkumi langkah penting ini.</p>
 
       <h2>Kesilapan #9: Menggunakan Semula Paip Lama</h2>
@@ -128,7 +128,7 @@ export const installationBlogBatch1: BlogPost[] = [
       </table>
 
       <h2>Standard Pemasangan Berkualiti KL Renovator</h2>
-      <p>Setiap pemasangan oleh <a href="/near-me">pemasang pakar berhampiran anda</a> termasuk evakuasi vakum dua peringkat, paip tembaga Jenis L, penebat Armaflex, ujian tekanan nitrogen, pemeriksaan litar elektrik, saliran betul, dan waranti kerja 1 bulan bertulis. <strong>Dari RM 199, hari sama tersedia.</strong></p>
+      <p>Setiap pemasangan oleh <a href="/near-me">pemasang pakar berhampiran anda</a> termasuk evakuasi vakum dua peringkat, paip tembaga Jenis L, penebat Armaflex, pentauliahan pam vakum (500 mikron), pemeriksaan litar elektrik, saliran betul, dan waranti kerja 1 bulan bertulis. <strong>Dari RM 199, hari sama tersedia.</strong></p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk sebut harga telus dalam 30 minit.</p>
     `,
     contentZH: `
@@ -156,7 +156,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <h2>错误 #7：室外机放置不当</h2>
       <p>将室外机放在阳光直射或封闭空间会降低制冷效率15-25%并导致压缩机过热。确保四周最少30cm间距和遮阳位置。</p>
 
-      <h2>错误 #8：跳过氮气压力测试</h2>
+      <h2>错误 #8：跳过真空泵调试（500微米）</h2>
       <p>没有在150 PSI下进行15分钟压力测试，未发现的泄漏会导致冷媒损失和反复RM 120-180充气。每次优质安装都包括这个关键步骤。</p>
 
       <h2>错误 #9：更换时重复使用旧管</h2>
@@ -178,7 +178,7 @@ export const installationBlogBatch1: BlogPost[] = [
       </table>
 
       <h2>KL Renovator 优质安装标准</h2>
-      <p>我们<a href="/near-me">您附近的专家安装人员</a>的每次安装都包括两级真空抽气、L型铜管、Armaflex保温、氮气压力测试、电路检查、正确排水和书面1个月工艺保修。<strong>RM 199起，可当天安装。</strong></p>
+      <p>我们<a href="/near-me">您附近的专家安装人员</a>的每次安装都包括两级真空抽气、L型铜管、Armaflex保温、真空泵调试（500微米）、电路检查、正确排水和书面1个月工艺保修。<strong>RM 199起，可当天安装。</strong></p>
       <p>WhatsApp <strong>+60 18-298 3573</strong>，30分钟内获得透明报价。</p>
     `,
   },
@@ -227,7 +227,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Send us your unit type, HP size, brand, and address. We confirm transparent pricing and availability within 30 minutes. Same-day slots available for bookings before 11 AM.</p>
 
       <h3>Step 2: Technician Dispatch (30-60 min)</h3>
-      <p>Our qualified installation specialist is dispatched with all required materials — Type L copper pipe, Armaflex insulation, brackets, wiring, vacuum pump, and nitrogen tank. GPS-tracked arrival with ETA via WhatsApp.</p>
+      <p>Our qualified installation specialist is dispatched with all required materials — Type L copper pipe, Armaflex insulations, wiring, vacuum pump, and tank. GPS-tracked arrival with ETA via WhatsApp.</p>
 
       <h3>Step 3: Site Survey & Wall Assessment (15-20 min)</h3>
       <p>The technician inspects the installation spot, checks wall strength, electrical circuit capacity, drainage path, and outdoor unit position. Any issues are flagged before work begins — no surprises.</p>
@@ -236,7 +236,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>The main work: bracket mounting, copper pipe cutting and flaring, wiring through conduit, drain pipe installation. This is where quality matters most — every connection, every flare, every inch of insulation.</p>
 
       <h3>Step 5: Vacuum Evacuation & Leak Test (20-30 min)</h3>
-      <p>Two-stage vacuum pump evacuation for minimum 15-20 minutes. This step is <strong>never skipped</strong> — it removes moisture that causes compressor failure. Nitrogen pressure test at 150 PSI confirms zero leaks.</p>
+      <p>Two-stage vacuum pump evacuation for minimum 15-20 minutes. This step is <strong>never skipped</strong> — it removes moisture that causes compressor failure. Vacuum pump commissioning (500 microns) at 150 PSI confirms zero leaks.</p>
 
       <h3>Step 6: Commissioning Run (15-20 min)</h3>
       <p>Unit powered on and tested through full cooling cycle. Delta-T test measures supply vs return air temperature. All fan speeds, thermostat response, and drainage flow verified.</p>
@@ -278,7 +278,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Hantar jenis unit, saiz HP, jenama, dan alamat anda. Kami mengesahkan harga telus dan ketersediaan dalam 30 minit. Slot hari sama tersedia untuk tempahan sebelum 11 pagi.</p>
 
       <h3>Langkah 2: Penghantaran Juruteknik (30-60 min)</h3>
-      <p>Pakar pemasangan berkelayakan kami dihantar dengan semua bahan yang diperlukan — paip tembaga Jenis L, penebat Armaflex, pendakap, pendawaian, pam vakum, dan tangki nitrogen. Ketibaan dijejaki GPS dengan ETA melalui WhatsApp.</p>
+      <p>Pakar pemasangan berkelayakan kami dihantar dengan semua bahan yang diperlukan — paip tembaga Jenis L, penebat Armaflex, pendakap, pendawaian, pam vakum, dan tangki . Ketibaan dijejaki GPS dengan ETA melalui WhatsApp.</p>
 
       <h3>Langkah 3: Tinjauan Tapak & Penilaian Dinding (15-20 min)</h3>
       <p>Juruteknik memeriksa lokasi pemasangan, kekuatan dinding, kapasiti litar elektrik, laluan saliran, dan kedudukan unit luar. Sebarang isu dimaklumkan sebelum kerja dimulakan — tiada kejutan.</p>
@@ -287,7 +287,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Kerja utama: pemasangan pendakap, pemotongan dan flaring paip tembaga, pendawaian melalui konduit, pemasangan paip saliran. Di sinilah kualiti paling penting — setiap sambungan, setiap flare, setiap inci penebat.</p>
 
       <h3>Langkah 5: Evakuasi Vakum & Ujian Kebocoran (20-30 min)</h3>
-      <p>Evakuasi pam vakum dua peringkat selama minimum 15-20 minit. Langkah ini <strong>tidak pernah dilangkau</strong> — ia membuang kelembapan yang menyebabkan kegagalan pemampat. Ujian tekanan nitrogen pada 150 PSI mengesahkan sifar kebocoran.</p>
+      <p>Evakuasi pam vakum dua peringkat selama minimum 15-20 minit. Langkah ini <strong>tidak pernah dilangkau</strong> — ia membuang kelembapan yang menyebabkan kegagalan pemampat. Pentauliahan pam vakum (500 mikron) pada 150 PSI mengesahkan sifar kebocoran.</p>
 
       <h3>Langkah 6: Larian Pentauliahan (15-20 min)</h3>
       <p>Unit dihidupkan dan diuji melalui kitaran penyejukan penuh. Ujian Delta-T mengukur suhu udara bekalan vs pulang. Semua kelajuan kipas, tindak balas termostat, dan aliran saliran disahkan.</p>
@@ -338,7 +338,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>主要工作：支架安装、铜管切割和扩口、穿管布线、排水管安装。这是质量最关键的环节——每个接头、每个扩口、每寸保温。</p>
 
       <h3>第5步：真空抽气与检漏（20-30分钟）</h3>
-      <p>两级真空泵抽气至少15-20分钟。此步骤<strong>绝不跳过</strong>——它去除导致压缩机故障的水分。150 PSI氮气压力测试确认零泄漏。</p>
+      <p>两级真空泵抽气至少15-20分钟。此步骤<strong>绝不跳过</strong>——它去除导致压缩机故障的水分。150 PSI真空泵调试（500微米）确认零泄漏。</p>
 
       <h3>第6步：调试运行（15-20分钟）</h3>
       <p>开机进行完整制冷循环测试。Delta-T测试测量送风与回风温差。所有风速、温控器响应和排水流量均已验证。</p>

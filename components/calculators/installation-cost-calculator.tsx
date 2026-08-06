@@ -62,9 +62,11 @@ interface Strings {
   copper: string;
   wire: string;
   drain: string;
+  insulation: string;
   freeHint: string;
   addonsTitle: string;
-  pvc: string;
+  smallPvc: string;
+  largePvc: string;
   pvcHint: string;
   bracketCheck: string;
   bracketTypeLabel: string;
@@ -105,10 +107,12 @@ const STRINGS: Record<Lang, Strings> = {
     copper: "Copper Pipe Length",
     wire: "Electrical Wire Length",
     drain: "Drain Pipe Length",
+    insulation: "Insulation Length",
     freeHint: `First ${FREE_RUN_FEET} ft free`,
     addonsTitle: "Optional Add-ons",
-    pvc: "PVC Casing (optional)",
-    pvcHint: "RM 6–12/ft (published rate)",
+    smallPvc: "Small PVC Casing (Electrical Wire)",
+    largePvc: "Large PVC Casing (Copper Pipe + Wire + Insulation)",
+    pvcHint: "Charged by actual casing length",
     bracketCheck: "Outdoor Bracket",
     bracketTypeLabel: "Bracket Type",
     standard: "Standard",
@@ -131,7 +135,7 @@ const STRINGS: Record<Lang, Strings> = {
     breakdown: "Breakdown",
     confirmedQuote: "Get Confirmed Quote",
     startOver: "Start Over",
-    note: `Standard installation includes ${FREE_RUN_FEET} ft of copper pipe, wire and drain pipe free (published terms). Copper pipe is charged at RM 17–27/ft, wire at RM 9–17/ft, PVC casing RM 6–12/ft, brackets RM 35–70, switch/plug point RM 100. Drain pipe beyond ${FREE_RUN_FEET} ft is estimated at RM ${DRAIN_PIPE_RATE}/ft and the water pump at the published RM 350–550 repair range — both confirmed by the technician after on-site inspection. Multi-unit bundle discounts: 4–10 units 5% OFF, 10+ units 10% OFF.`,
+    note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft by HP, electrical wire RM 9/ft, insulation RM 7/ft, and drain pipe RM ${DRAIN_PIPE_RATE}/ft. Small PVC casing (electrical wire) is RM 6/ft; large PVC casing (copper pipe + wire + insulation) is RM 12/ft. Outdoor brackets are paid add-ons (RM 45–70), never included free. Multi-unit bundle discounts: 4–10 units 5% OFF, 10+ units 10% OFF.`,
     waIntro: "I used your Aircond Installation Cost Calculator and would like a confirmed quotation:",
   },
   ms: {
@@ -146,10 +150,12 @@ const STRINGS: Record<Lang, Strings> = {
     copper: "Panjang Paip Tembaga",
     wire: "Panjang Wayar Elektrik",
     drain: "Panjang Paip Saliran",
+    insulation: "Panjang Penebat",
     freeHint: `${FREE_RUN_FEET} kaki pertama percuma`,
     addonsTitle: "Item Tambahan Pilihan",
-    pvc: "Casing PVC (pilihan)",
-    pvcHint: "RM 6–12/kaki (kadar diterbitkan)",
+    smallPvc: "Casing PVC Kecil (Wayar Elektrik)",
+    largePvc: "Casing PVC Besar (Paip Tembaga + Wayar + Penebat)",
+    pvcHint: "Dicaj mengikut panjang casing sebenar",
     bracketCheck: "Pendakap Luar",
     bracketTypeLabel: "Jenis Pendakap",
     standard: "Standard",
@@ -172,7 +178,7 @@ const STRINGS: Record<Lang, Strings> = {
     breakdown: "Pecahan",
     confirmedQuote: "Dapatkan Sebut Harga Sah",
     startOver: "Mula Semula",
-    note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki paip tembaga, wayar dan paip saliran percuma (terma diterbitkan). Paip tembaga dicaj RM 17–27/kaki, wayar RM 9–17/kaki, casing PVC RM 6–12/kaki, pendakap RM 35–70, suis/plug point RM 100. Paip saliran melebihi ${FREE_RUN_FEET} kaki dianggarkan RM ${DRAIN_PIPE_RATE}/kaki dan pam air pada julat pembaikan RM 350–550 yang diterbitkan — kedua-duanya disahkan oleh juruteknik selepas pemeriksaan di tapak. Diskaun pakej berbilang unit: 4–10 unit 5% OFF, 10+ unit 10% OFF.`,
+    note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27/kaki mengikut HP, wayar elektrik RM 9/kaki, penebat RM 7/kaki dan paip saliran RM ${DRAIN_PIPE_RATE}/kaki. Casing PVC kecil (wayar) RM 6/kaki; casing PVC besar (paip tembaga + wayar + penebat) RM 12/kaki. Pendakap luar ialah item tambahan berbayar (RM 45–70), bukan percuma. Diskaun pakej berbilang unit: 4–10 unit 5% OFF, 10+ unit 10% OFF.`,
     waIntro: "Saya menggunakan Kalkulator Kos Pemasangan Aircond anda dan ingin sebut harga disahkan:",
   },
   zh: {
@@ -187,10 +193,12 @@ const STRINGS: Record<Lang, Strings> = {
     copper: "铜管长度",
     wire: "电线长度",
     drain: "排水管长度",
+    insulation: "保温层长度",
     freeHint: `前${FREE_RUN_FEET}英尺免费`,
     addonsTitle: "可选附加项目",
-    pvc: "PVC线槽（可选）",
-    pvcHint: "每英尺RM 6–12（已公布费率）",
+    smallPvc: "小型 PVC 线槽（电线）",
+    largePvc: "大型 PVC 线槽（铜管 + 电线 + 保温层）",
+    pvcHint: "按实际线槽长度收费",
     bracketCheck: "室外支架",
     bracketTypeLabel: "支架类型",
     standard: "标准",
@@ -213,7 +221,7 @@ const STRINGS: Record<Lang, Strings> = {
     breakdown: "费用明细",
     confirmedQuote: "获取正式报价",
     startOver: "重新开始",
-    note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、电线和排水管免费（已公布条款）。铜管每英尺RM 17–27、电线每英尺RM 9–17、PVC线槽每英尺RM 6–12、支架RM 35–70、开关/插座RM 100。超出${FREE_RUN_FEET}英尺的排水管按每英尺RM ${DRAIN_PIPE_RATE}估算，水泵按已公布的RM 350–550维修范围估算 — 两者均由技术员现场检查后确认。多台批量折扣：4–10台享5%折扣，10台以上享10%折扣。`,
+    note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。室外支架为付费附加项目（RM 45–70），不免费包含。多台批量折扣：4–10台享5%折扣，10台以上享10%折扣。`,
     waIntro: "我使用了你们的冷气安装费用计算器，希望获得正式报价：",
   },
 };
@@ -226,7 +234,9 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
   const [copperFeet, setCopperFeet] = useState(7);
   const [wireFeet, setWireFeet] = useState(7);
   const [drainFeet, setDrainFeet] = useState(7);
-  const [pvcFeet, setPvcFeet] = useState(0);
+  const [insulationFeet, setInsulationFeet] = useState(7);
+  const [smallPvcFeet, setSmallPvcFeet] = useState(0);
+  const [largePvcFeet, setLargePvcFeet] = useState(0);
   const [needsOutdoorBracket, setNeedsOutdoorBracket] = useState(true);
   const [heavyDuty, setHeavyDuty] = useState(false);
   const [needsSwitch, setNeedsSwitch] = useState(false);
@@ -239,8 +249,10 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
     unitType,
     extraCopperFeet: Math.max(0, copperFeet - FREE_RUN_FEET),
     extraWireFeet: Math.max(0, wireFeet - FREE_RUN_FEET),
+    extraInsulationFeet: Math.max(0, insulationFeet - FREE_RUN_FEET),
     extraDrainFeet: Math.max(0, drainFeet - FREE_RUN_FEET),
-    pvcFeet,
+    smallPvcFeet,
+    largePvcFeet,
     needsOutdoorBracket,
     heavyDutyBracket: heavyDuty,
     needsIndoorBracket: false,
@@ -289,8 +301,9 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
     `🔢 Units / Unit / 台数: ${units}`,
     `💨 HP: ${hp} HP`,
     `🏠 Type / Jenis / 类型: ${unitTypeLabel}`,
-    `📏 Copper: ${copperFeet} ft | Wire / Wayar / 电线: ${wireFeet} ft | Drain / Saliran / 排水: ${drainFeet} ft`,
-    pvcFeet > 0 ? `📦 PVC casing: ${pvcFeet} ft` : "",
+    `📏 Copper: ${copperFeet} ft | Wire / Wayar / 电线: ${wireFeet} ft | Insulation / Penebat / 保温: ${insulationFeet} ft | Drain / Saliran / 排水: ${drainFeet} ft`,
+    smallPvcFeet > 0 ? `📦 Small PVC casing (wire): ${smallPvcFeet} ft` : "",
+    largePvcFeet > 0 ? `📦 Large PVC casing (pipe + wire + insulation): ${largePvcFeet} ft` : "",
     needsOutdoorBracket ? `🔩 Bracket / Pendakap / 支架: ${heavyDuty ? "Heavy duty" : "Standard"}` : "",
     needsSwitch ? "🔌 Switch / Suis / 开关: Yes / Ya / 是" : "",
     needsWaterPump ? "💧 Water pump / Pam air / 水泵: Yes / Ya / 是" : "",
@@ -326,9 +339,10 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
         {/* Run lengths */}
         <div>
           <CalcLabel icon={<FaRulerCombined className="h-4 w-4 text-sky-600" />}>{s.runTitle}</CalcLabel>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <NumberField label={s.copper} value={copperFeet} onChange={(v) => { setCopperFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
             <NumberField label={s.wire} value={wireFeet} onChange={(v) => { setWireFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
+            <NumberField label={s.insulation} value={insulationFeet} onChange={(v) => { setInsulationFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
             <NumberField label={s.drain} value={drainFeet} onChange={(v) => { setDrainFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.freeHint} />
           </div>
         </div>
@@ -337,7 +351,8 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
         <div>
           <CalcLabel icon={<FaBoxOpen className="h-4 w-4 text-sky-600" />}>{s.addonsTitle}</CalcLabel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <NumberField label={s.pvc} value={pvcFeet} onChange={(v) => { setPvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint={s.pvcHint} />
+            <NumberField label={s.smallPvc} value={smallPvcFeet} onChange={(v) => { setSmallPvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint="RM 6/ft" />
+            <NumberField label={s.largePvc} value={largePvcFeet} onChange={(v) => { setLargePvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={100} suffix="ft" hint="RM 12/ft" />
             <div className="flex items-end">
               <label className="flex items-center gap-3 w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-sky-400 transition-colors">
                 <input type="checkbox" checked={needsOutdoorBracket} onChange={(e) => { setNeedsOutdoorBracket(e.target.checked); setShowResult(false); }} className="h-4 w-4 accent-sky-600" />

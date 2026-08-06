@@ -38,17 +38,17 @@ const INSTALLATION_PROCESS = [
 ];
 
 const PRICING_TABLE = [
-  { type: "挂壁式", hp: "1.0 匹", price: "RM 199", pipe: "含7尺铜管", bracket: "含标准支架", wire: "含电线", drain: "含排水管" },
-  { type: "挂壁式", hp: "1.5 匹", price: "RM 199", pipe: "含7尺铜管", bracket: "含标准支架", wire: "含电线", drain: "含排水管" },
-  { type: "挂壁式", hp: "2.0 匹", price: "RM 249", pipe: "含7尺铜管", bracket: "含标准支架", wire: "含电线", drain: "含排水管" },
-  { type: "挂壁式", hp: "2.5 匹", price: "RM 279", pipe: "含7尺铜管", bracket: "含标准支架", wire: "含电线", drain: "含排水管" },
-  { type: "挂壁式", hp: "3.0 匹", price: "RM 329", pipe: "含7尺铜管", bracket: "含标准支架", wire: "含电线", drain: "含排水管" },
-  { type: "挂壁式", hp: "4.0 匹", price: "RM 399", pipe: "含7尺铜管", bracket: "含重型支架", wire: "含电线", drain: "含排水管" },
-  { type: "挂壁式", hp: "5.0 匹", price: "RM 449", pipe: "含7尺铜管", bracket: "含重型支架", wire: "含电线", drain: "含排水管" },
-  { type: "天花板卡式机", hp: "1.0–1.5 匹", price: "RM 290", pipe: "含7尺铜管", bracket: "含吊装套件", wire: "含电线", drain: "含排水管+水泵" },
-  { type: "天花板卡式机", hp: "2.0–3.0 匹", price: "RM 350", pipe: "含7尺铜管", bracket: "含吊装套件", wire: "含电线", drain: "含排水管+水泵" },
-  { type: "天花板卡式机", hp: "3.5–6.0 匹", price: "RM 400", pipe: "含7尺铜管", bracket: "含吊装套件", wire: "含电线", drain: "含排水管+水泵" },
-  { type: "窗式机", hp: "1.0–2.0 匹", price: "RM 180", pipe: "不适用(一体机)", bracket: "窗框安装", wire: "含电线", drain: "内置排水" },
+  { type: "挂壁式", hp: "1.0 匹", price: "RM 199", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "挂壁式", hp: "1.5 匹", price: "RM 199", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "挂壁式", hp: "2.0 匹", price: "RM 249", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "挂壁式", hp: "2.5 匹", price: "RM 279", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "挂壁式", hp: "3.0 匹", price: "RM 329", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "挂壁式", hp: "4.0 匹", price: "RM 399", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "挂壁式", hp: "5.0 匹", price: "RM 449", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管" },
+  { type: "天花板卡式机", hp: "1.0–1.5 匹", price: "RM 290", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管+水泵" },
+  { type: "天花板卡式机", hp: "2.0–3.0 匹", price: "RM 350", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管+水泵" },
+  { type: "天花板卡式机", hp: "3.5–6.0 匹", price: "RM 400", pipe: "含7尺铜管", wire: "含电线", drain: "含排水管+水泵" },
+  { type: "窗式机", hp: "1.0–2.0 匹", price: "RM 180", pipe: "不适用(一体机)", wire: "含电线", drain: "内置排水" },
 ];
 
 const BRANDS = siteConfig.brandsSupported;
@@ -101,14 +101,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-function PricingRow({ type, hp, price, pipe, bracket, wire, drain, isHeader = false }: { type: string; hp: string; price: string; pipe: string; bracket: string; wire: string; drain: string; isHeader?: boolean }) {
+function PricingRow({ type, hp, price, pipe, wire, drain, isHeader = false }: { type: string; hp: string; price: string; pipe: string; wire: string; drain: string; isHeader?: boolean }) {
   return (
-    <div className={`grid grid-cols-[1fr_80px_repeat(4,1fr)] gap-4 px-4 py-3 ${isHeader ? "bg-slate-50 font-black text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200" : "border-b border-slate-50 hover:bg-sky-50/30 transition-colors text-sm"}`}>
+    <div className={`grid grid-cols-[1fr_80px_repeat(3,1fr)] gap-4 px-4 py-3 ${isHeader ? "bg-slate-50 font-black text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200" : "border-b border-slate-50 hover:bg-sky-50/30 transition-colors text-sm"}`}>
       <span className={`font-${isHeader ? "black" : "medium"} text-${isHeader ? "slate-700" : "slate-900"}`}>{type}</span>
       <span className="text-center">{hp}</span>
       <span className="text-center text-sky-600 font-black">{price}</span>
       <span className="text-center text-xs text-slate-500">{pipe}</span>
-      <span className="text-center text-xs text-slate-500">{bracket}</span>
       <span className="text-center text-xs text-slate-500">{wire}</span>
       <span className="text-center text-xs text-slate-500">{drain}</span>
     </div>
@@ -186,7 +185,7 @@ export default function AircondInstallationKLZHPage() {
           <Reveal delay={100}>
             <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
               <div className="min-w-[900px]">
-                <PricingRow type="类型" hp="匹数" price="人工费" pipe="铜管" bracket="支架" wire="电线" drain="排水管" isHeader />
+                <PricingRow type="类型" hp="匹数" price="人工费" pipe="铜管" wire="电线" drain="排水管" isHeader />
                 {PRICING_TABLE.map((row) => (
                   <PricingRow key={`${row.type}-${row.hp}`} {...row} />
                 ))}
@@ -214,7 +213,7 @@ export default function AircondInstallationKLZHPage() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺铜管: RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 超7尺电线: RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC套管/暗管: RM 6–12/尺</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 小型PVC线槽（电线）：RM 6/尺；大型PVC线槽（铜管+电线+保温层）：RM 12/尺</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 标准室外压缩机/支架: RM 45</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 重型室外压缩机/支架: RM 70</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 新插座点位: RM 100</li>

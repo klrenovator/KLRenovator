@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 const INSTALLATION_PROCESS = [
   { step: 1, title: "WhatsApp Booking & Site Survey", desc: "Contact us via WhatsApp at +60182983573 with your area, unit type (wall-mounted, ceiling cassette, window), and HP size. We confirm pricing and schedule a same-day or next-day site survey. Our technician assesses piping route, outdoor unit placement, and electrical requirements.", icon: <FiMessageSquare className="h-5 w-5" /> },
-  { step: 2, title: "Technician Dispatch & Preparation", desc: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulation, brackets, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.", icon: <FaTruck className="h-5 w-5" /> },
+  { step: 2, title: "Technician Dispatch & Preparation", desc: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulations, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.", icon: <FaTruck className="h-5 w-5" /> },
   { step: 3, title: "Copper Piping & Insulation Installation", desc: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Armaflex insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.", icon: <FaWrench className="h-5 w-5" /> },
   { step: 4, title: "Drain Pipe Installation with Gradient", desc: "PVC drain pipe installed with minimum 1:50 gradient for gravity drainage. Anti-siphon trap prevents backflow. Condensate tested before closing up. For high-rise condos, we route to nearest floor trap or balcony drain per building management rules.", icon: <FaWrench className="h-5 w-5" /> },
   { step: 5, title: "Electrical Connection & Breaker Check", desc: "Dedicated circuit with correct MCB rating (16A for 1.0–1.5HP, 20A for 2.0–2.5HP, 32A for 3.0HP+). Wiring sized per Malaysian standards. Earth leakage protection verified. Outdoor unit isolator installed for safety and maintenance access.", icon: <FaBolt className="h-5 w-5" /> },
@@ -41,26 +41,26 @@ const INSTALLATION_PROCESS = [
 ];
 
 const PRICING_TABLE = [
-  { type: "Wall-Mounted", hp: "1.0 HP", price: "RM 199", pipe: "7 ft copper pipe included", bracket: "Standard bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Wall-Mounted", hp: "1.5 HP", price: "RM 199", pipe: "7 ft copper pipe included", bracket: "Standard bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Wall-Mounted", hp: "2.0 HP", price: "RM 249", pipe: "7 ft copper pipe included", bracket: "Standard bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Wall-Mounted", hp: "2.5 HP", price: "RM 279", pipe: "7 ft copper pipe included", bracket: "Standard bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Wall-Mounted", hp: "3.0 HP", price: "RM 329", pipe: "7 ft copper pipe included", bracket: "Standard bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Wall-Mounted", hp: "4.0 HP", price: "RM 399", pipe: "7 ft copper pipe included", bracket: "Heavy-duty bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Wall-Mounted", hp: "5.0 HP", price: "RM 449", pipe: "7 ft copper pipe included", bracket: "Heavy-duty bracket included", wire: "Wiring included", drain: "Drain pipe included" },
-  { type: "Ceiling Cassette", hp: "1.0–1.5 HP", price: "RM 290", pipe: "7 ft copper pipe included", bracket: "Ceiling suspension kit included", wire: "Wiring included", drain: "Drain pipe + pump included" },
-  { type: "Ceiling Cassette", hp: "2.0–3.0 HP", price: "RM 350", pipe: "7 ft copper pipe included", bracket: "Ceiling suspension kit included", wire: "Wiring included", drain: "Drain pipe + pump included" },
-  { type: "Ceiling Cassette", hp: "3.5–6.0 HP", price: "RM 400", pipe: "7 ft copper pipe included", bracket: "Ceiling suspension kit included", wire: "Wiring included", drain: "Drain pipe + pump included" },
-  { type: "Window Unit", hp: "1.0–2.0 HP", price: "RM 180", pipe: "N/A (self-contained)", bracket: "Window frame mounting", wire: "Wiring included", drain: "Built-in drain" },
+  { type: "Wall-Mounted", hp: "1.0 HP", price: "RM 199", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Wall-Mounted", hp: "1.5 HP", price: "RM 199", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Wall-Mounted", hp: "2.0 HP", price: "RM 249", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Wall-Mounted", hp: "2.5 HP", price: "RM 279", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Wall-Mounted", hp: "3.0 HP", price: "RM 329", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Wall-Mounted", hp: "4.0 HP", price: "RM 399", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Wall-Mounted", hp: "5.0 HP", price: "RM 449", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe included" },
+  { type: "Ceiling Cassette", hp: "1.0–1.5 HP", price: "RM 290", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe + pump included" },
+  { type: "Ceiling Cassette", hp: "2.0–3.0 HP", price: "RM 350", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe + pump included" },
+  { type: "Ceiling Cassette", hp: "3.5–6.0 HP", price: "RM 400", pipe: "7 ft copper pipe included", wire: "Wiring included", drain: "Drain pipe + pump included" },
+  { type: "Window Unit", hp: "1.0–2.0 HP", price: "RM 180", pipe: "N/A (self-contained)", wire: "Wiring included", drain: "Built-in drain" },
 ];
 
 const BRANDS = siteConfig.brandsSupported;
 
 const FAQS = [
-  { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, wiring, drain pipe, and standard bracket. Ceiling cassette from RM 290. Window unit from RM 180. Extra materials beyond 7 ft are charged per foot using HP-wise rates: Copper pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Wire RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). Casing RM 6–12/ft. All prices confirmed before work begins. Drain pipe beyond the included 7 ft is RM 5/ft. All prices confirmed before work begins." },
+  { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, insulation, electrical wire and drain pipe. Ceiling cassette from RM 290. Window unit from RM 180. Extra materials beyond 7 ft are charged per foot using HP-wise rates: Copper pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Wire RM 9/ft. Small PVC casing RM 6/ft; large PVC casing RM 12/ft. All prices confirmed before work begins. Drain pipe beyond the included 7 ft is RM 5/ft. All prices confirmed before work begins." },
   { q: "How long does aircond installation take?", a: "Standard wall-mounted installation takes 3–5 hours for a single unit. Ceiling cassette takes 5–8 hours due to ceiling suspension and drain pump wiring. Multi-unit whole-house installations typically complete in 1–2 days. Same-day installation available for bookings made before 11 AM." },
   { q: "Do you install aircond in high-rise condos in KL?", a: "Yes — we regularly install in condos across KLCC, Mont Kiara, Bangsar, Sentul, PJ, and Subang Jaya. We coordinate with building management for lift/loading bay access, follow security procedures, and ensure outdoor unit placement complies with JMB rules. Our technicians are experienced with service-ledge and balcony installations." },
-  { q: "What copper pipe grade do you use for installation?", a: "We use Type L copper pipe for 1.0–2.5 HP wall-mounted units and Type M for 3.0 HP+ where wall thickness permits. All pipes are nitrogen-purged during brazing to prevent oxidation. Armaflex insulation (9–13mm) is standard. This exceeds the minimum Malaysian standard and ensures long-term reliability." },
+  { q: "What copper pipe grade do you use for installation?", a: "We use Type L copper pipe for 1.0–2.5 HP wall-mounted units and Type M for 3.0 HP+ where wall thickness permits. All pipes are cleanly prepared during brazing to prevent oxidation. Armaflex insulation (9–13mm) is standard. This exceeds the minimum Malaysian standard and ensures long-term reliability." },
   { q: "Why is vacuum pump commissioning mandatory?", a: "Vacuuming removes moisture and air from the refrigerant lines. Moisture + refrigerant = acid, which destroys compressor windings and clogs capillary tubes. Non-condensables raise head pressure and kill efficiency. We pull to 500 microns and hold for 15+ minutes. No vacuum = no warranty. This is standard HVAC best practice worldwide." },
   { q: "Can you install during rainy season in Malaysia?", a: "Yes — we install year-round. For outdoor work during rain, we use pop-up canopies and waterproof covers. Indoor unit mounting and piping continue unaffected. Only heavy lightning storms pause outdoor compressor placement for safety. Same-day slots may be slightly tighter during monsoon — book early." },
   { q: "Do I need a dedicated electrical circuit for my new aircond?", a: "Yes — Malaysian regulations (MS IEC 60364) require a dedicated circuit with its own MCB for each aircond unit. We install a new circuit from your DB box if one doesn't exist, or verify the existing circuit's capacity. Plug-in units still need a dedicated socket on a protected circuit. Electrical work is included in our installation quote." },
@@ -104,14 +104,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-function PricingRow({ type, hp, price, pipe, bracket, wire, drain, isHeader = false }: { type: string; hp: string; price: string; pipe: string; bracket: string; wire: string; drain: string; isHeader?: boolean }) {
+function PricingRow({ type, hp, price, pipe, wire, drain, isHeader = false }: { type: string; hp: string; price: string; pipe: string; wire: string; drain: string; isHeader?: boolean }) {
   return (
-    <div className={`grid grid-cols-[1fr_80px_repeat(4,1fr)] gap-4 px-4 py-3 ${isHeader ? "bg-slate-50 font-black text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200" : "border-b border-slate-50 hover:bg-sky-50/30 transition-colors text-sm"}`}>
+    <div className={`grid grid-cols-[1fr_80px_repeat(3,1fr)] gap-4 px-4 py-3 ${isHeader ? "bg-slate-50 font-black text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200" : "border-b border-slate-50 hover:bg-sky-50/30 transition-colors text-sm"}`}>
       <span className={`font-${isHeader ? "black" : "medium"} text-${isHeader ? "slate-700" : "slate-900"}`}>{type}</span>
       <span className="text-center">{hp}</span>
       <span className="text-center text-sky-600 font-black">{price}</span>
       <span className="text-center text-xs text-slate-500">{pipe}</span>
-      <span className="text-center text-xs text-slate-500">{bracket}</span>
       <span className="text-center text-xs text-slate-500">{wire}</span>
       <span className="text-center text-xs text-slate-500">{drain}</span>
     </div>
@@ -189,7 +188,7 @@ export default function AircondInstallationKLPage() {
           <Reveal delay={100}>
             <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
               <div className="min-w-[900px]">
-                <PricingRow type="Type" hp="HP" price="Labour" pipe="Copper Pipe" bracket="Bracket" wire="Wiring" drain="Drain Pipe" isHeader />
+                <PricingRow type="Type" hp="HP" price="Labour" pipe="Copper Pipe" wire="Wiring" drain="Drain Pipe" isHeader />
                 {PRICING_TABLE.map((row) => (
                   <PricingRow key={`${row.type}-${row.hp}`} {...row} />
                 ))}
@@ -204,7 +203,7 @@ export default function AircondInstallationKLPage() {
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft copper pipe (liquid + gas lines)</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft electrical wiring</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft PVC drain pipe</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard outdoor bracket</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Outdoor bracket (paid special charge if required)</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Vacuum pump commissioning</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Refrigerant release & testing</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 1-month workmanship warranty card</li>
@@ -216,8 +215,8 @@ export default function AircondInstallationKLPage() {
               <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Additional Charges (Only If Needed)</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> PVC casing/concealment: RM 6–12/ft</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Small PVC casing (electrical wire): RM 6/ft; large PVC casing (copper pipe + wire + insulation): RM 12/ft</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard compressor / outdoor bracket: RM 45</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Heavy-duty compressor / outdoor bracket: RM 70</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> New electrical plug point: RM 100</li>
@@ -299,7 +298,7 @@ export default function AircondInstallationKLPage() {
                 <ul className="space-y-2 text-sm text-slate-600">
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Type L copper (1.0–2.5 HP) — thicker walls, better corrosion resistance</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-5 text-emerald-500 shrink-0" /> Type M copper (3.0 HP+) — approved for larger capacity</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Nitrogen purged during brazing — prevents internal oxidation</li>
+                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> purged during brazing — prevents internal oxidation</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Proper flare connections — torque-wrench tightened to spec</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> No kinks, sharp bends, or undersized pipe runs</li>
                 </ul>
@@ -324,7 +323,7 @@ export default function AircondInstallationKLPage() {
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Dedicated circuit from DB — correct MCB rating per HP</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> 2.5mm² cable (1.0–2.5 HP), 4mm² (3.0–5.0 HP)</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Outdoor isolator switch — safety & maintenance access</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Heavy-duty brackets — vibration-damped, powder-coated</li>
+                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Heavy-duty outdoor bracket (paid special charge if required)s — vibration-damped, powder-coated</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Cable trunking — neat, protected, paintable</li>
                 </ul>
               </div>

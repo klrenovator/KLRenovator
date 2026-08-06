@@ -106,7 +106,7 @@ const pricingCategories = [
       { label: "Tukar Kapasitor", price: "RM 150 – 250" },
       { label: "Tukar Motor Kipas Dalaman", price: "RM 250 – 380" },
       { label: "Tukar Motor Kipas Luaran", price: "RM 300 – 450" },
-      { label: "Repair / Tukar Papan PCB", price: "RM 280 – 600" },
+      { label: "Repair / Tukar Papan PCB", price: "RM 350 – 600" },
       { label: "Tukar Pam Longkang", price: "RM 350 – 550" },
     ],
   },

@@ -37,7 +37,7 @@ export function rmToNumber(price: string): number {
   return Number.isFinite(n) ? n : 0;
 }
 
-/** "RM 6 – 12/ft" → { min: 6, max: 12 } · "RM 199" → { min: 199, max: 199 } */
+/** Parses published RM price strings into minimum/maximum values. */
 export function rmRange(price: string): { min: number; max: number } {
   const nums = price.match(/\d+(?:\.\d+)?/g)?.map(Number) ?? [];
   if (nums.length === 0) return { min: 0, max: 0 };
@@ -93,24 +93,31 @@ export function copperPipeRate(hp: HpSize): number {
   return 27;
 }
 
-/** Electrical wire rate per foot — from pricing.materials. */
-export function electricalWireRate(hp: HpSize): number {
-  const h = hpNumeric(hp);
-  if (h <= 1.5) return 9;
-  if (h <= 2.5) return 13;
-  return 17;
+/** Electrical wire rate per foot beyond the free 7 ft — one published rate for every HP. */
+export const ELECTRICAL_WIRE_RATE = rmToNumber(
+  sitePublic.pricing.materials.rows.find((x) => x.label === "Electrical Wire")?.price ?? "RM 9/ft",
+);
+export function electricalWireRate(_hp: HpSize): number {
+  return ELECTRICAL_WIRE_RATE;
 }
 
-/** Drain pipe rate per foot beyond the free 7 ft — from pricing.materials. */
+/** Insulation rate per foot beyond the free 7 ft. */
+export const INSULATION_RATE = rmToNumber(
+  sitePublic.pricing.materials.rows.find((x) => x.label === "Insulation")?.price ?? "RM 7/ft",
+);
+
+/** Drain pipe rate per foot beyond the free 7 ft. */
 export const DRAIN_PIPE_RATE = rmToNumber(
   sitePublic.pricing.materials.rows.find((x) => x.label.includes("Drain Pipe"))?.price ?? "RM 5/ft",
 );
 
-/** PVC casing — published as "RM 6 – 12/ft". Mid point used for estimates. */
-export function pvcCasingRate(): { min: number; max: number; mid: number } {
-  const r = rmRange(sitePublic.pricing.materials.rows.find((x) => x.label.includes("PVC Casing"))?.price ?? "RM 6 – 12/ft");
-  return { min: r.min, max: r.max, mid: Math.round((r.min + r.max) / 2) };
-}
+/** Separate published PVC casing rates. */
+export const SMALL_PVC_CASING_RATE = rmToNumber(
+  sitePublic.pricing.materials.rows.find((x) => x.label.includes("Small PVC Casing"))?.price ?? "RM 6/ft",
+);
+export const LARGE_PVC_CASING_RATE = rmToNumber(
+  sitePublic.pricing.materials.rows.find((x) => x.label.includes("Large PVC Casing"))?.price ?? "RM 12/ft",
+);
 
 /** Free run included with every installation (published in pricing notes). */
 export const FREE_RUN_FEET = 7;
@@ -305,10 +312,14 @@ export interface InstallationEstimateInput {
   extraCopperFeet: number;
   /** Extra electrical wire length in feet BEYOND the free 7 ft. */
   extraWireFeet: number;
+  /** Extra insulation length in feet BEYOND the free 7 ft. */
+  extraInsulationFeet: number;
   /** Extra drain pipe length in feet BEYOND the free 7 ft. */
   extraDrainFeet: number;
-  /** PVC casing length in feet (optional, RM 6–12/ft published). */
-  pvcFeet: number;
+  /** Small PVC casing (electrical wire) length in feet. */
+  smallPvcFeet: number;
+  /** Large PVC casing (copper pipe + wire + insulation) length in feet. */
+  largePvcFeet: number;
   needsOutdoorBracket: boolean;
   heavyDutyBracket: boolean;
   needsIndoorBracket: boolean;
@@ -349,7 +360,6 @@ export function calculateInstallationEstimate(input: InstallationEstimateInput):
 
   const copperRate = copperPipeRate(input.hp);
   const wireRate = electricalWireRate(input.hp);
-  const pvc = pvcCasingRate();
   const pump = waterPumpRange();
 
   const lineItems: InstallationLineItem[] = [];
@@ -385,6 +395,17 @@ export function calculateInstallationEstimate(input: InstallationEstimateInput):
     });
   }
 
+  // Insulation beyond free 7 ft
+  if (input.extraInsulationFeet > 0) {
+    const amt = Math.round(input.extraInsulationFeet * INSULATION_RATE * u);
+    lineItems.push({
+      label: "Insulation (extra)",
+      detail: `${input.extraInsulationFeet} ft × ${formatRM(INSULATION_RATE)}/ft × ${u} unit${u > 1 ? "s" : ""}`,
+      amount: amt,
+      note: "First 7 ft free with installation",
+    });
+  }
+
   // Drain pipe beyond free 7 ft
   if (input.extraDrainFeet > 0) {
     const amt = Math.round(input.extraDrainFeet * DRAIN_PIPE_RATE * u);
@@ -396,14 +417,21 @@ export function calculateInstallationEstimate(input: InstallationEstimateInput):
     });
   }
 
-  // PVC casing
-  if (input.pvcFeet > 0) {
-    const amt = Math.round(input.pvcFeet * pvc.mid * u);
+  // Separate PVC casing options
+  if (input.smallPvcFeet > 0) {
+    const amt = Math.round(input.smallPvcFeet * SMALL_PVC_CASING_RATE * u);
     lineItems.push({
-      label: "PVC Casing (wire / pipe cover)",
-      detail: `${input.pvcFeet} ft × ${formatRM(pvc.mid)}/ft (RM ${pvc.min}–${pvc.max} published) × ${u} unit${u > 1 ? "s" : ""}`,
+      label: "Small PVC Casing (Electrical Wire)",
+      detail: `${input.smallPvcFeet} ft × ${formatRM(SMALL_PVC_CASING_RATE)}/ft × ${u} unit${u > 1 ? "s" : ""}`,
       amount: amt,
-      note: "Mid-range of published RM 6–12/ft",
+    });
+  }
+  if (input.largePvcFeet > 0) {
+    const amt = Math.round(input.largePvcFeet * LARGE_PVC_CASING_RATE * u);
+    lineItems.push({
+      label: "Large PVC Casing (Copper Pipe + Wire + Insulation)",
+      detail: `${input.largePvcFeet} ft × ${formatRM(LARGE_PVC_CASING_RATE)}/ft × ${u} unit${u > 1 ? "s" : ""}`,
+      amount: amt,
     });
   }
 

@@ -62,7 +62,7 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Thicker-walled copper tubing (Type L) for refrigerant lines 1.0–2.5 HP. Superior corrosion resistance and pressure rating vs Type M.",
     aliases: ["Type L copper", "Type L tubing", "refrigerant copper pipe", "AC copper pipe"],
     whereToAppear: ["installation-pages", "pricing-guide", "materials-section", "hp-guide-pages"],
-    relatedEntities: ["FlareConnection", "ArmaflexInsulation", "VacuumPump", "NitrogenPurging", "SplitAirConditioner"],
+    relatedEntities: ["FlareConnection", "ArmaflexInsulation", "VacuumPump", "CleanPipePreparation", "SplitAirConditioner"],
   },
 
   CopperPipeTypeM: {
@@ -71,7 +71,7 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Standard-walled copper tubing (Type M) approved for 3.0 HP+ systems where wall thickness permits. Cost-effective for larger capacity.",
     aliases: ["Type M copper", "Type M tubing", "large-capacity copper pipe"],
     whereToAppear: ["installation-pages", "pricing-guide", "hp-guide-pages"],
-    relatedEntities: ["FlareConnection", "ArmaflexInsulation", "VacuumPump", "NitrogenPurging"],
+    relatedEntities: ["FlareConnection", "ArmaflexInsulation", "VacuumPump", "CleanPipePreparation"],
   },
 
   ArmaflexInsulation: {
@@ -135,14 +135,14 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Eccentric cone flaring tool for 45° SAE flares + calibrated torque wrench for precise flare nut tightening to manufacturer specs. Prevents over/under-torqued connections.",
     aliases: ["flaring tool", "flare tool", "torque wrench", "flare nut wrench"],
     whereToAppear: ["installation-pages", "copper-piping-section", "materials-section"],
-    relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "FlareConnection", "NitrogenPurging"],
+    relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "FlareConnection", "CleanPipePreparation"],
   },
 
-  NitrogenPurgingKit: {
-    name: "Nitrogen Purging Kit",
+  CleanPipePreparationKit: {
+    name: "Clean Preparation Kit",
     type: "Tool",
-    description: "Nitrogen regulator, hose, and flow meter for purging copper lines during brazing. Prevents internal copper oxide formation that contaminates refrigerant and clogs capillary tubes.",
-    aliases: ["nitrogen purge", "nitrogen brazing", "brazing nitrogen", "oxide prevention"],
+    description: "regulator, hose, and flow meter for purging copper lines during brazing. Prevents internal copper oxide formation that contaminates refrigerant and clogs capillary tubes.",
+    aliases: ["purge", "brazing", "brazing ", "oxide prevention"],
     whereToAppear: ["installation-pages", "copper-piping-section", "brazing-section"],
     relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "FlaringTool", "VacuumPump"],
   },
@@ -221,13 +221,13 @@ export const installationEntities: Record<string, InstallationEntity> = {
     relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "FlaringTool", "TorqueWrench", "ManifoldGaugeSet", "VacuumPump"],
   },
 
-  BrazingWithNitrogen: {
-    name: "Brazing with Nitrogen Purge",
+  CleanPipeBrazing: {
+    name: "Brazing with Purge",
     type: "Technique",
-    description: "Silver-alloy brazing (15% Ag min) with continuous low-flow nitrogen (2–3 CFM) through the joint. Prevents internal copper oxide (cupric oxide) formation that would circulate as contamination.",
-    aliases: ["nitrogen brazing", "brazing with purge", "oxide-free brazing", "silver brazing", "HVAC brazing"],
+    description: "Silver-alloy brazing (15% Ag min) with continuous low-flow (2–3 CFM) through the joint. Prevents internal copper oxide (cupric oxide) formation that would circulate as contamination.",
+    aliases: ["brazing", "brazing with purge", "oxide-free brazing", "silver brazing", "HVAC brazing"],
     whereToAppear: ["installation-pages", "copper-piping-section", "brazing-section"],
-    relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "NitrogenPurgingKit", "VacuumPump", "ManifoldGaugeSet"],
+    relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "CleanPipePreparationKit", "VacuumPump", "ManifoldGaugeSet"],
   },
 
   // ─── Chemicals ───
@@ -454,7 +454,7 @@ export const entityPhrases = {
   // Materials — Copper
   copperTypeL: "We use Type L copper pipe (thicker walls) for 1.0–2.5 HP systems — better corrosion resistance and pressure rating than Type M.",
   copperTypeM: "For 3.0 HP and above, Type M copper is approved where wall thickness permits — cost-effective for larger capacity.",
-  copperNitrogen: "All brazing is done with continuous nitrogen purge to prevent internal copper oxide that contaminates refrigerant and clogs capillary tubes.",
+  copperPreparation: "All brazing is done with continuous purge to prevent internal copper oxide that contaminates refrigerant and clogs capillary tubes.",
   copperFlare: "Indoor/outdoor connections use precision 45° SAE flares torqued to spec — no brazing at the unit, leak-free mechanical joints.",
 
   // Materials — Insulation

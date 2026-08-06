@@ -99,7 +99,7 @@ const pricingCategories = [
       { label: "Capacitor Replacement", price: "RM 150 – 250" },
       { label: "Indoor Fan Motor Replacement", price: "RM 250 – 380" },
       { label: "Outdoor Fan Motor Replacement", price: "RM 300 – 450" },
-      { label: "PCB Control Board Repair / Replace", price: "RM 280 – 600" },
+      { label: "PCB Control Board Repair / Replace", price: "RM 350 – 600" },
       { label: "Drain Pump Replacement", price: "RM 350 – 550" },
     ],
   },

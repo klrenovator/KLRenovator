@@ -1,790 +1,111 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { waLink } from "@/lib/whatsapp";
 import { sitePublic } from "@/config/site-public";
 import { getBundleDiscount } from "@/lib/aircond-math";
 
-// ── Types ─────────────────────────────────────────────────────────────────────
-type ServiceType = "basic-servicing" | "chemical-wash" | "chemical-overhaul" | "gas-topup" | "installation" | "repair";
+type ServiceType = "basic-servicing" | "chemical-wash" | "chemical-overhaul" | "gas-topup" | "installation" | "repair" | "dismantle" | "relocate-same" | "relocate-other";
 type UnitType = "wall" | "cassette" | "window";
 type GasType = "r22" | "r410a" | "r32";
 
-// ── Pricing matrix (synced with site.ts / services-data.ts) ──────────────────
-const PRICING: Record<ServiceType, Record<UnitType, Record<string, number>>> = {
-  "basic-servicing": {
-    wall: { "1.0-1.5": 99, "2.0-2.5": 120, "3.0-3.5": 150 },
-    cassette: { "1.0-1.5": 150, "2.0-3.0": 200, "3.5-5.0": 250 },
-    window: { "1.0-1.5": 99, "2.0-2.5": 120, "3.0-3.5": 150 },
-  },
-  "chemical-wash": {
-    wall: { "1.0-1.5": 120, "2.0-2.5": 150, "3.0": 180, "4.0-5.0": 200 },
-    cassette: { "1.0-1.5": 220, "2.0-3.0": 280, "4.0-5.0": 350 },
-    window: { "1.0-2.0": 130, "2.5-3.0": 160 },
-  },
-  "chemical-overhaul": {
-    wall: { "1.0-1.5": 220, "2.0-2.5": 280, "3.0-3.5": 350 },
-    cassette: { "1.0-3.0": 430, "3.5-5.0": 500 },
-    window: { "1.0-1.5": 220, "2.0-2.5": 280, "3.0-3.5": 350 },
-  },
-  "gas-topup": {
-    wall: { r22: 0, r410a: 0, r32: 0 },
-    cassette: { r22: 0, r410a: 0, r32: 0 },
-    window: { r22: 0, r410a: 0, r32: 0 },
-  },
-  "installation": {
-    wall: { "1.0-1.5": 199, "2.0": 249, "2.5": 279, "3.0": 329, "4.0": 399, "5.0": 449 },
-    cassette: { "1.0-1.5": 290, "2.0-3.0": 350, "3.5-6.0": 400 },
-    window: { "1.0-1.5": 199, "2.0-2.5": 249 },
-  },
-  "repair": {
-    wall: { diagnostic: 88 },
-    cassette: { diagnostic: 88 },
-    window: { diagnostic: 88 },
-  },
+const selectCls = "w-full border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-sm font-bold text-slate-900 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all appearance-none cursor-pointer";
+const FREE_FEET = 7;
+const COPPER_RATE = (hp: string) => hp === "1.0-1.5" ? 17 : hp === "2.0" || hp === "2.5" ? 23 : 27;
+const hpBand = (hp: string) => hp === "2.0" || hp === "2.5" ? "2.0-2.5" : hp;
+const WIRE_RATE = 9;
+const INSULATION_RATE = 7;
+const DRAIN_RATE = 5;
+const SMALL_PVC_RATE = 6;
+const LARGE_PVC_RATE = 12;
+
+const SERVICE_LABELS: Record<ServiceType, string> = {
+  "basic-servicing": "Basic Servicing",
+  "chemical-wash": "Chemical Wash",
+  "chemical-overhaul": "Chemical Overhaul",
+  "gas-topup": "Gas Top-Up",
+  installation: "New Installation",
+  repair: "Repair / Diagnostic",
+  dismantle: "Dismantle Only (indoor + outdoor)",
+  "relocate-same": "Dismantle + Reinstall Same Place",
+  "relocate-other": "Dismantle + Reinstall Other Place",
 };
 
-const GAS_PRICING: Record<GasType, Record<string, number>> = {
-  r22: { "1.0": 120, "1.5-2.0": 150, "2.5-3.0": 180 },
-  r410a: { "1.0": 150, "1.5-2.0": 180, "2.5-3.0": 200 },
-  r32: { "1.0": 180, "1.5-2.0": 200, "2.5-3.0": 220 },
+const BASE_PRICES: Record<Exclude<ServiceType, "gas-topup" | "installation" | "relocate-same">, Record<string, number>> = {
+  "basic-servicing": { "1.0-1.5": 99, "2.0-2.5": 120, "3.0-3.5": 150 },
+  "chemical-wash": { "1.0-1.5": 120, "2.0-2.5": 150, "3.0-3.5": 180 },
+  "chemical-overhaul": { "1.0-1.5": 220, "2.0-2.5": 280, "3.0-3.5": 350 },
+  repair: { "1.0-1.5": 88, "2.0-2.5": 88, "3.0-3.5": 88 },
+  dismantle: { "1.0-1.5": 90, "2.0-2.5": 90, "3.0-3.5": 90 },
+  "relocate-other": { "1.0-1.5": 350, "2.0-2.5": 350, "3.0-3.5": 350 },
 };
 
-// Copper pipe rates per foot (extra beyond 7 ft free)
-const COPPER_PIPE_RATE: Record<string, number> = {
-  "1.0-1.5": 17,
-  "1.0": 17,
-  "2.0": 23,
-  "2.0-2.5": 23,
-  "1.5-2.0": 23,
-  "2.5": 23,
-  "2.5-3.0": 27,
-  "3.0": 27,
-  "3.0-3.5": 27,
-  "4.0": 27,
-  "4.0-5.0": 27,
-  "5.0": 27,
-  "3.5-5.0": 27,
-  "3.5-6.0": 27,
-  "1.0-3.0": 23,
-};
-
-// Electrical wire rates per foot (HP-wise, standardized)
-const WIRE_RATE: Record<string, number> = {
-  "1.0-1.5": 9,
-  "1.0": 9,
-  "1.5": 9,
-  "1.5-2.0": 13,
-  "2.0-2.5": 13,
-  "2.0": 13,
-  "2.5": 13,
-  "2.5-3.0": 17,
-  "3.0": 17,
-  "3.0-3.5": 17,
-  "3.5-5.0": 17,
-  "3.5-6.0": 17,
-  "4.0": 17,
-  "4.0-5.0": 17,
-  "5.0": 17,
-  "1.0-3.0": 13,
-};
-const FREE_PIPE_FEET = 7;
-const STANDARD_OUTDOOR_BRACKET_PRICE = 45;
-const HEAVY_DUTY_OUTDOOR_BRACKET_PRICE = 70;
-const INDOOR_BRACKET_PRICE = 35;
-const SWITCH_PRICE = 100;
-const PVC_INDOOR_RATE = 8;  // RM per foot (mid of RM 6-12 range for wire casing)
-const PVC_OUTDOOR_RATE = 12; // RM per foot (for copper pipe casing)
-
-// ── HP size options by service + unit type ────────────────────────────────────
-const HP_OPTIONS: Record<ServiceType, Record<UnitType, { value: string; label: string; price: number }[]>> = {
-  "basic-servicing": {
-    wall: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 99 },
-      { value: "2.0-2.5", label: "2.0 – 2.5 HP", price: 120 },
-      { value: "3.0-3.5", label: "3.0 – 3.5 HP", price: 150 },
-    ],
-    cassette: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 150 },
-      { value: "2.0-3.0", label: "2.0 – 3.0 HP", price: 200 },
-      { value: "3.5-5.0", label: "3.5 – 5.0 HP", price: 250 },
-    ],
-    window: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 99 },
-      { value: "2.0-2.5", label: "2.0 – 2.5 HP", price: 120 },
-    ],
-  },
-  "chemical-wash": {
-    wall: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 120 },
-      { value: "2.0-2.5", label: "2.0 – 2.5 HP", price: 150 },
-      { value: "3.0", label: "3.0 HP", price: 180 },
-      { value: "4.0-5.0", label: "4.0 – 5.0 HP", price: 200 },
-    ],
-    cassette: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 220 },
-      { value: "2.0-3.0", label: "2.0 – 3.0 HP", price: 280 },
-      { value: "4.0-5.0", label: "4.0 – 5.0 HP", price: 350 },
-    ],
-    window: [
-      { value: "1.0-2.0", label: "1.0 – 2.0 HP", price: 130 },
-      { value: "2.5-3.0", label: "2.5 – 3.0 HP", price: 160 },
-    ],
-  },
-  "chemical-overhaul": {
-    wall: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 220 },
-      { value: "2.0-2.5", label: "2.0 – 2.5 HP", price: 280 },
-      { value: "3.0-3.5", label: "3.0 – 3.5 HP", price: 350 },
-    ],
-    cassette: [
-      { value: "1.0-3.0", label: "1.0 – 3.0 HP", price: 430 },
-      { value: "3.5-5.0", label: "3.5 – 5.0 HP", price: 500 },
-    ],
-    window: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 220 },
-      { value: "2.0-2.5", label: "2.0 – 2.5 HP", price: 280 },
-    ],
-  },
-  "gas-topup": {
-    wall: [
-      { value: "1.0", label: "1.0 HP", price: 0 },
-      { value: "1.5-2.0", label: "1.5 – 2.0 HP", price: 0 },
-      { value: "2.5-3.0", label: "2.5 – 3.0 HP", price: 0 },
-    ],
-    cassette: [
-      { value: "1.0", label: "1.0 HP", price: 0 },
-      { value: "1.5-2.0", label: "1.5 – 2.0 HP", price: 0 },
-      { value: "2.5-3.0", label: "2.5 – 3.0 HP", price: 0 },
-    ],
-    window: [
-      { value: "1.0", label: "1.0 HP", price: 0 },
-      { value: "1.5-2.0", label: "1.5 – 2.0 HP", price: 0 },
-    ],
-  },
-  "installation": {
-    wall: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 199 },
-      { value: "2.0", label: "2.0 HP", price: 249 },
-      { value: "2.5", label: "2.5 HP", price: 279 },
-      { value: "3.0", label: "3.0 HP", price: 329 },
-      { value: "4.0", label: "4.0 HP", price: 399 },
-      { value: "5.0", label: "5.0 HP", price: 449 },
-    ],
-    cassette: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 290 },
-      { value: "2.0-3.0", label: "2.0 – 3.0 HP", price: 350 },
-      { value: "3.5-6.0", label: "3.5 – 6.0 HP", price: 400 },
-    ],
-    window: [
-      { value: "1.0-1.5", label: "1.0 – 1.5 HP", price: 199 },
-      { value: "2.0-2.5", label: "2.0 – 2.5 HP", price: 249 },
-    ],
-  },
-  "repair": {
-    wall: [{ value: "diagnostic", label: "Diagnostic + Repair", price: 88 }],
-    cassette: [{ value: "diagnostic", label: "Diagnostic + Repair", price: 88 }],
-    window: [{ value: "diagnostic", label: "Diagnostic + Repair", price: 88 }],
-  },
-};
-
-const SERVICE_LABELS: Record<ServiceType, { en: string; ms: string; zh: string }> = {
-  "basic-servicing": { en: "Basic Servicing", ms: "Servis Asas", zh: "基本保养" },
-  "chemical-wash": { en: "Chemical Wash", ms: "Cuci Kimia", zh: "化学清洗" },
-  "chemical-overhaul": { en: "Chemical Overhaul", ms: "Overhaul Kimia", zh: "化学大修" },
-  "gas-topup": { en: "Gas Top-Up", ms: "Tambah Gas", zh: "充气" },
-  "installation": { en: "New Installation", ms: "Pemasangan Baru", zh: "新机安装" },
-  "repair": { en: "Repair / Diagnostic", ms: "Baiki / Diagnostik", zh: "维修/诊断" },
-};
-
-const UNIT_LABELS: Record<UnitType, { en: string; ms: string; zh: string }> = {
-  wall: { en: "Wall-Mounted", ms: "Unit Dinding", zh: "挂壁式" },
-  cassette: { en: "Ceiling Cassette", ms: "Ceiling Cassette", zh: "天花板卡式" },
-  window: { en: "Window Unit", ms: "Unit Tingkap", zh: "窗式" },
-};
-
-const GAS_LABELS: Record<GasType, string> = {
-  r22: "R22 (older units)",
-  r410a: "R410A (standard)",
-  r32: "R32 (newer inverter)",
-};
-
-// Bundle discount logic lives in lib/aircond-math.ts (single source of
-// truth — mirrors siteConfig.volumeDiscounts): 4–10 units → 5%, 11+ → 10%.
-const getDiscount = getBundleDiscount;
-
-// Helper: get copper pipe rate for current HP size
-function getCopperRatePerFoot(hpSize: string): number {
-  return COPPER_PIPE_RATE[hpSize] ?? 17;
+function Select({ value, onChange, children }: { value: string; onChange: (value: string) => void; children: ReactNode }) {
+  return <div className="relative"><select value={value} onChange={(e) => onChange(e.target.value)} className={selectCls}>{children}</select><FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" /></div>;
+}
+function FeetInput({ label, value, onChange, hint }: { label: string; value: number; onChange: (value: number) => void; hint: string }) {
+  return <label className="block"><span className="block text-[11px] font-bold text-slate-700 mb-1">{label}</span><input type="number" min="0" max="100" value={value} onChange={(e) => onChange(Math.max(0, Math.min(100, Number(e.target.value) || 0)))} className={selectCls} /><span className="block text-[10px] text-slate-400 mt-1">{hint}</span></label>;
 }
 
-// Helper: get electrical wire rate for current HP size (HP-wise, standardized)
-function getWireRatePerFoot(hpSize: string): number {
-  return WIRE_RATE[hpSize] ?? 9;
-}
-
-// Shared select styling — matches the house input style used in contact-form.tsx
-const selectCls =
-  "w-full border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-sm font-bold text-slate-900 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all duration-200 appearance-none cursor-pointer";
-
-// Compact yes/no select used across the Add-ons section
-function YesNoSelect({
-  value,
-  onChange,
-  yesLabel = "✅ Yes, I have one",
-  noLabel = "❌ No, need one",
-}: {
-  value: boolean | null;
-  onChange: (v: boolean) => void;
-  yesLabel?: string;
-  noLabel?: string;
-}) {
-  return (
-    <div className="relative">
-      <select
-        value={value === null ? "" : value ? "yes" : "no"}
-        onChange={(e) => onChange(e.target.value === "yes")}
-        className={selectCls}
-      >
-        <option value="" disabled>Select an option…</option>
-        <option value="yes">{yesLabel}</option>
-        <option value="no">{noLabel}</option>
-      </select>
-      <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-    </div>
-  );
-}
-
-// ── Component ─────────────────────────────────────────────────────────────────
 export function PriceCalculator() {
   const [service, setService] = useState<ServiceType>("chemical-wash");
   const [unitType, setUnitType] = useState<UnitType>("wall");
-  const [hpSize, setHpSize] = useState<string>("1.0-1.5");
+  const [hp, setHp] = useState("1.0-1.5");
   const [gasType, setGasType] = useState<GasType>("r32");
-  const [units, setUnits] = useState<number>(1);
+  const [units, setUnits] = useState(1);
+  const [copperFeet, setCopperFeet] = useState(7);
+  const [wireFeet, setWireFeet] = useState(7);
+  const [insulationFeet, setInsulationFeet] = useState(7);
+  const [drainFeet, setDrainFeet] = useState(7);
+  const [smallPvcFeet, setSmallPvcFeet] = useState(0);
+  const [largePvcFeet, setLargePvcFeet] = useState(0);
+  const [bracket, setBracket] = useState<"none" | "standard" | "heavy">("none");
   const [showResult, setShowResult] = useState(false);
 
-  // ── Add-on states (installation only) ───────────────────────────────────────
-  const [extraCopperFeet, setExtraCopperFeet] = useState<number>(0);
-  const [hasOutdoorBracket, setHasOutdoorBracket] = useState<boolean | null>(null);
-  const [outdoorBracketType, setOutdoorBracketType] = useState<"standard" | "heavy">("standard");
-  const [hasSwitch, setHasSwitch] = useState<boolean | null>(null);
-  const [wantsPvcIndoor, setWantsPvcIndoor] = useState<boolean | null>(null);
-  const [pvcIndoorFeet, setPvcIndoorFeet] = useState<number>(0);
-  const [wantsPvcOutdoor, setWantsPvcOutdoor] = useState<boolean | null>(null);
-  const [pvcOutdoorFeet, setPvcOutdoorFeet] = useState<number>(0);
-  const [hasIndoorBracket, setHasIndoorBracket] = useState<boolean | null>(null);
+  const includesInstallationMaterials = service === "installation" || service === "relocate-same" || service === "relocate-other";
+  const basePrice = useMemo(() => {
+    if (service === "gas-topup") return gasType === "r22" ? 120 : gasType === "r410a" ? 150 : 180;
+    if (service === "installation") return hp === "1.0-1.5" ? 199 : hp === "2.0" ? 249 : hp === "2.5" ? 279 : 329;
+    if (service === "relocate-same") return hp === "2.0" || hp === "2.5" ? 290 : 250;
+    return BASE_PRICES[service as Exclude<ServiceType, "gas-topup" | "installation" | "relocate-same">]?.[hpBand(hp)] ?? 0;
+  }, [service, gasType, hp]);
+  const extra = (feet: number) => Math.max(0, feet - FREE_FEET);
+  const materialLines = includesInstallationMaterials ? [
+    { label: `Extra Copper Pipe — ${extra(copperFeet)} ft × RM ${COPPER_RATE(hp)}/ft`, amount: extra(copperFeet) * COPPER_RATE(hp) },
+    { label: `Extra Electrical Wire — ${extra(wireFeet)} ft × RM ${WIRE_RATE}/ft`, amount: extra(wireFeet) * WIRE_RATE },
+    { label: `Extra Insulation — ${extra(insulationFeet)} ft × RM ${INSULATION_RATE}/ft`, amount: extra(insulationFeet) * INSULATION_RATE },
+    { label: `Extra Drain Pipe — ${extra(drainFeet)} ft × RM ${DRAIN_RATE}/ft`, amount: extra(drainFeet) * DRAIN_RATE },
+    { label: `Small PVC Casing (Electrical Wire) — ${smallPvcFeet} ft × RM ${SMALL_PVC_RATE}/ft`, amount: smallPvcFeet * SMALL_PVC_RATE },
+    { label: `Large PVC Casing (Copper Pipe + Wire + Insulation) — ${largePvcFeet} ft × RM ${LARGE_PVC_RATE}/ft`, amount: largePvcFeet * LARGE_PVC_RATE },
+    ...(bracket === "none" ? [] : [{ label: bracket === "heavy" ? "Heavy Duty Compressor / Outdoor Bracket" : "Standard Compressor / Outdoor Bracket", amount: bracket === "heavy" ? 70 : 45 }]),
+  ].filter((line) => line.amount > 0) : [];
+  const materialsTotal = materialLines.reduce((total, line) => total + line.amount, 0) * units;
+  const serviceTotal = basePrice * units;
+  const discount = getBundleDiscount(units);
+  const discountAmount = Math.round((serviceTotal * discount.pct) / 100);
+  const total = serviceTotal - discountAmount + materialsTotal;
 
-  // ── Base price calculation ─────────────────────────────────────────────────
-  const perUnitPrice = useMemo(() => {
-    if (service === "gas-topup") {
-      return GAS_PRICING[gasType]?.[hpSize] ?? 180;
-    }
-    const opts = HP_OPTIONS[service]?.[unitType] ?? [];
-    const found = opts.find((o) => o.value === hpSize);
-    return found?.price ?? 0;
-  }, [service, unitType, hpSize, gasType]);
-
-  const subtotal = perUnitPrice * units;
-  const discount = getDiscount(units);
-  const discountAmt = Math.round(subtotal * discount.pct / 100);
-  const baseTotal = subtotal - discountAmt;
-
-  const isInstallation = service === "installation";
-
-  // ── Add-on cost calculation (installation only) ───────────────────────────
-  const copperRate = getCopperRatePerFoot(hpSize);
-  const wireRate = getWireRatePerFoot(hpSize);
-  const copperExtraCost = isInstallation && extraCopperFeet > 0
-    ? extraCopperFeet * copperRate + extraCopperFeet * wireRate
-    : 0;
-  const outdoorBracketCost = isInstallation && hasOutdoorBracket === false
-    ? (outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE)
-    : 0;
-  const switchCost = isInstallation && hasSwitch === false ? SWITCH_PRICE : 0;
-  const pvcIndoorCost = isInstallation && wantsPvcIndoor === true && pvcIndoorFeet > 0 ? pvcIndoorFeet * PVC_INDOOR_RATE : 0;
-  const pvcOutdoorCost = isInstallation && wantsPvcOutdoor === true && pvcOutdoorFeet > 0 ? pvcOutdoorFeet * PVC_OUTDOOR_RATE : 0;
-  const indoorBracketCost = isInstallation && hasIndoorBracket === false ? INDOOR_BRACKET_PRICE : 0;
-
-  const addOnTotal = copperExtraCost + outdoorBracketCost + switchCost + pvcIndoorCost + pvcOutdoorCost + indoorBracketCost;
-  const grandTotal = baseTotal + addOnTotal;
-
-  // ── WhatsApp message ───────────────────────────────────────────────────────
-  const addOnLines: string[] = [];
-  if (isInstallation) {
-    if (extraCopperFeet > 0) {
-      addOnLines.push(`📦 Extra Copper Pipe & Wire: ${extraCopperFeet} ft beyond free 7 ft = RM ${copperExtraCost.toLocaleString()} (copper RM ${copperRate}/ft + wire RM ${wireRate}/ft for ${hpSize} HP)`);
-    } else {
-      addOnLines.push(`📦 Copper Pipe & Wire: Using standard 7 ft (free included)`);
-    }
-    if (hasOutdoorBracket === false) {
-      const bracketPrice = outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE;
-      const bracketLabel = outdoorBracketType === "heavy" ? "Heavy Duty Compressor / Outdoor Bracket" : "Standard Compressor / Outdoor Bracket";
-      addOnLines.push(`🔩 ${bracketLabel}: RM ${bracketPrice} (not available, to be supplied)`);
-    }
-    if (hasSwitch === false) addOnLines.push(`🔌 Aircond Switch / Plug Point: RM ${SWITCH_PRICE} (installation required)`);
-    if (wantsPvcIndoor === true && pvcIndoorFeet > 0) addOnLines.push(`📏 PVC Casing (Indoor – wire section): ${pvcIndoorFeet} ft × RM ${PVC_INDOOR_RATE}/ft = RM ${pvcIndoorCost.toLocaleString()}`);
-    if (wantsPvcOutdoor === true && pvcOutdoorFeet > 0) addOnLines.push(`📏 PVC Casing (Outdoor – copper pipe section): ${pvcOutdoorFeet} ft × RM ${PVC_OUTDOOR_RATE}/ft = RM ${pvcOutdoorCost.toLocaleString()}`);
-    if (hasIndoorBracket === false) addOnLines.push(`🔧 Indoor Unit Bracket: RM ${INDOOR_BRACKET_PRICE} (old unit bracket not available)`);
-  }
-
-  const waMsg = [
-    "Hi KL Renovator 👋",
-    "",
-    "I used your Price Calculator and would like to confirm a booking:",
-    "",
-    `🔧 Service: ${SERVICE_LABELS[service].en}`,
-    `📟 Unit Type: ${UNIT_LABELS[unitType].en}`,
-    `💨 HP Size: ${hpSize} HP`,
-    service === "gas-topup" ? `⛽ Gas Type: ${GAS_LABELS[gasType]}` : "",
-    `🔢 Number of Units: ${units}`,
-    "",
-    addOnLines.length > 0 ? "📋 Add-ons / Materials:" : "",
-    ...addOnLines,
-    "",
-    `💰 Base Service Total: RM ${baseTotal.toLocaleString()}${discount.pct > 0 ? ` (${discount.label})` : ""}`,
-    addOnTotal > 0 ? `🔩 Add-ons Total: RM ${addOnTotal.toLocaleString()}` : "",
-    `💵 Estimated Grand Total: RM ${grandTotal.toLocaleString()}`,
-    "",
-    "📍 My Location:",
-    "",
-    "Please confirm availability and send a technician. Thank you!",
+  const quoteMessage = [
+    "Hi KL Renovator 👋", "", "I used your Price Calculator and would like a confirmed quote:", "",
+    `Service: ${SERVICE_LABELS[service]}`, `Unit type: ${unitType}`, `HP: ${hp} HP`, `Units: ${units}`,
+    service === "gas-topup" ? `Gas type: ${gasType.toUpperCase()}` : "",
+    includesInstallationMaterials ? `Lengths per unit — copper ${copperFeet} ft, wire ${wireFeet} ft, insulation ${insulationFeet} ft, drain ${drainFeet} ft` : "",
+    includesInstallationMaterials ? `PVC — small ${smallPvcFeet} ft, large ${largePvcFeet} ft; bracket: ${bracket}` : "",
+    "", `Estimated total: RM ${total.toLocaleString()}`, "", "Location:", "Please confirm. Thank you!",
   ].filter(Boolean).join("\n");
 
-  function handleCalculate() {
-    const newOpts = HP_OPTIONS[service]?.[unitType] ?? [];
-    if (!newOpts.find((o) => o.value === hpSize) && newOpts.length > 0) {
-      setHpSize(newOpts[0].value);
-    }
-    setShowResult(true);
-  }
-
-  function resetAddons() {
-    setExtraCopperFeet(0);
-    setHasOutdoorBracket(null);
-    setHasSwitch(null);
-    setWantsPvcIndoor(null);
-    setPvcIndoorFeet(0);
-    setWantsPvcOutdoor(null);
-    setPvcOutdoorFeet(0);
-    setHasIndoorBracket(null);
-    setShowResult(false);
-  }
-
-  const hpOptionsForSelection = HP_OPTIONS[service]?.[unitType] ?? [];
-
-  return (
-    <div className="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-sky-600 to-sky-500 px-6 py-5 text-white">
-        <p className="text-xs font-black uppercase tracking-widest opacity-80 mb-1">Free Instant Estimate</p>
-        <h3 className="text-xl font-black leading-tight">
-          Aircond Service Price Calculator
-        </h3>
-        <p className="text-sky-100 text-xs mt-1">
-          Kalkulator Harga Servis Aircond &nbsp;|&nbsp; 冷气服务价格计算器
-        </p>
-      </div>
-
-      <div className="p-6 space-y-4">
-
-        {/* Step 1: Service Type */}
-        <div>
-          <label className="block text-xs font-black uppercase tracking-widest text-slate-500 mb-1.5">
-            1. Service &nbsp;<span className="text-slate-400 font-medium normal-case tracking-normal">Perkhidmatan · 服务</span>
-          </label>
-          <div className="relative">
-            <select
-              value={service}
-              onChange={(e) => { setService(e.target.value as ServiceType); resetAddons(); }}
-              className={selectCls}
-            >
-              {(Object.keys(SERVICE_LABELS) as ServiceType[]).map((s) => (
-                <option key={s} value={s}>
-                  {SERVICE_LABELS[s].en} · {SERVICE_LABELS[s].zh}
-                </option>
-              ))}
-            </select>
-            <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-          </div>
-        </div>
-
-        {/* Step 2 + 3: Unit Type & HP Size side-by-side on larger screens, stacked on mobile */}
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-xs font-black uppercase tracking-widest text-slate-500 mb-1.5">
-              2. Unit Type
-            </label>
-            <div className="relative">
-              <select
-                value={unitType}
-                onChange={(e) => { setUnitType(e.target.value as UnitType); setShowResult(false); }}
-                className={selectCls}
-              >
-                {(["wall", "cassette", "window"] as UnitType[]).map((u) => (
-                  <option key={u} value={u}>{UNIT_LABELS[u].en}</option>
-                ))}
-              </select>
-              <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-xs font-black uppercase tracking-widest text-slate-500 mb-1.5">
-              3. HP Size
-            </label>
-            <div className="relative">
-              <select
-                value={hpSize}
-                onChange={(e) => { setHpSize(e.target.value); setShowResult(false); }}
-                className={selectCls}
-              >
-                {hpOptionsForSelection.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}{service !== "gas-topup" && opt.price > 0 ? ` — RM ${opt.price}` : ""}
-                  </option>
-                ))}
-              </select>
-              <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-            </div>
-          </div>
-        </div>
-
-        {/* Gas Type (only for gas-topup) */}
-        {service === "gas-topup" && (
-          <div>
-            <label className="block text-xs font-black uppercase tracking-widest text-slate-500 mb-1.5">
-              Gas Type &nbsp;<span className="text-slate-400 font-medium normal-case tracking-normal">Jenis Gas · 气体类型</span>
-            </label>
-            <div className="relative">
-              <select
-                value={gasType}
-                onChange={(e) => { setGasType(e.target.value as GasType); setShowResult(false); }}
-                className={selectCls}
-              >
-                {(["r22", "r410a", "r32"] as GasType[]).map((g) => (
-                  <option key={g} value={g}>{g.toUpperCase()} — {GAS_LABELS[g]}</option>
-                ))}
-              </select>
-              <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-            </div>
-            <p className="text-[11px] text-slate-400 mt-1.5">Not sure? Check the sticker on your outdoor unit or WhatsApp us a photo.</p>
-          </div>
-        )}
-
-        {/* Step 4: Number of Units */}
-        <div>
-          <label className="block text-xs font-black uppercase tracking-widest text-slate-500 mb-1.5">
-            4. Number of Units &nbsp;<span className="text-slate-400 font-medium normal-case tracking-normal">Bilangan Unit · 机器数量</span>
-          </label>
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => { setUnits(Math.max(1, units - 1)); setShowResult(false); }}
-              className="h-10 w-10 rounded-xl border border-slate-200 bg-white text-slate-700 font-black text-lg hover:bg-slate-50 transition-all flex items-center justify-center"
-            >
-              −
-            </button>
-            <span className="text-2xl font-black text-slate-900 w-8 text-center">{units}</span>
-            <button
-              onClick={() => { setUnits(Math.min(20, units + 1)); setShowResult(false); }}
-              className="h-10 w-10 rounded-xl border border-slate-200 bg-white text-slate-700 font-black text-lg hover:bg-slate-50 transition-all flex items-center justify-center"
-            >
-              +
-            </button>
-            <span className="text-xs text-slate-500 ml-1">
-              {units > 1 && getDiscount(units).pct > 0 && (
-                <span className="text-emerald-600 font-black">{getDiscount(units).label} applied!</span>
-              )}
-            </span>
-          </div>
-        </div>
-
-        {/* ── ADD-ONS SECTION — Installation only ─────────────────────────────
-            These materials (bracket, switch, PVC casing) only apply to new
-            unit installation. Previously shown for every service type,
-            which was both confusing and added unnecessary length to the
-            calculator for chemical wash / gas top-up / repair bookings. */}
-        {isInstallation && (
-          <div className="border-t border-slate-100 pt-4 space-y-3">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500">
-              5. Installation Materials &amp; Add-ons &nbsp;
-              <span className="text-slate-400 font-medium normal-case tracking-normal">Bahan Tambahan · 附加材料</span>
-            </p>
-
-            {/* Copper Pipe & Wire */}
-            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-4 space-y-2.5">
-              <div>
-                <p className="text-xs font-black text-sky-800 mb-0.5">Copper Pipe &amp; Wire (HP-wise rates)</p>
-                <p className="text-[11px] text-sky-600 leading-relaxed">
-                  ✅ First <strong>7 ft are FREE</strong>. Extra footage uses HP-specific rates for copper & wire.
-                </p>
-                <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-0.5 text-[10px] text-sky-800 font-bold">
-                  <span>• Copper: RM {copperRate}/ft</span>
-                  <span>• Wire: RM {wireRate}/ft</span>
-                </div>
-                <p className="text-[10px] text-sky-700 mt-1">For {hpSize} HP unit</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
-                  Total feet needed (indoor to outdoor unit):
-                </p>
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => { setExtraCopperFeet(Math.max(0, extraCopperFeet - 1)); setShowResult(false); }}
-                    className="h-9 w-9 rounded-xl border border-slate-200 bg-white text-slate-700 font-black text-base hover:bg-slate-50 transition-all flex items-center justify-center"
-                  >
-                    −
-                  </button>
-                  <span className="text-xl font-black text-slate-900 w-14 text-center">{extraCopperFeet + FREE_PIPE_FEET} ft</span>
-                  <button
-                    onClick={() => { setExtraCopperFeet(extraCopperFeet + 1); setShowResult(false); }}
-                    className="h-9 w-9 rounded-xl border border-slate-200 bg-white text-slate-700 font-black text-base hover:bg-slate-50 transition-all flex items-center justify-center"
-                  >
-                    +
-                  </button>
-                  {extraCopperFeet > 0 ? (
-                    <span className="text-[11px] text-amber-700 font-semibold">+RM {copperExtraCost.toLocaleString()}</span>
-                  ) : (
-                    <span className="text-[11px] text-emerald-700 font-semibold">FREE 🎉</span>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Outdoor Compressor Bracket */}
-            <div>
-              <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
-                Outdoor compressor bracket already installed?
-                <span className="block text-slate-400 font-normal">Ada bracket outdoor? · 室外机有支架吗？</span>
-              </p>
-              <YesNoSelect value={hasOutdoorBracket} onChange={(v) => { setHasOutdoorBracket(v); setShowResult(false); }} />
-              {hasOutdoorBracket === false && (
-                <div className="mt-2 space-y-1.5">
-                  <p className="text-[11px] font-semibold text-slate-700">Choose bracket type:</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    <button
-                      onClick={() => { setOutdoorBracketType("standard"); setShowResult(false); }}
-                      className={`px-2 py-2 text-[11px] font-bold rounded-lg border transition ${outdoorBracketType === "standard" ? "border-sky-500 bg-sky-50 text-sky-800" : "border-slate-200 bg-white text-slate-700 hover:border-sky-300"}`}
-                    >
-                      Standard — RM {STANDARD_OUTDOOR_BRACKET_PRICE}
-                    </button>
-                    <button
-                      onClick={() => { setOutdoorBracketType("heavy"); setShowResult(false); }}
-                      className={`px-2 py-2 text-[11px] font-bold rounded-lg border transition ${outdoorBracketType === "heavy" ? "border-sky-500 bg-sky-50 text-sky-800" : "border-slate-200 bg-white text-slate-700 hover:border-sky-300"}`}
-                    >
-                      Heavy Duty — RM {HEAVY_DUTY_OUTDOOR_BRACKET_PRICE}
-                    </button>
-                  </div>
-                  <p className="text-[11px] text-amber-700 font-semibold">+RM {outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE} added to estimate ({outdoorBracketType === "heavy" ? "Heavy Duty" : "Standard"})</p>
-                </div>
-              )}
-            </div>
-
-            {/* Aircond Switch */}
-            <div>
-              <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
-                Dedicated aircond switch / plug point already installed?
-                <span className="block text-slate-400 font-normal">Ada switch aircond? · 有冷气专用开关吗？</span>
-              </p>
-              <YesNoSelect value={hasSwitch} onChange={(v) => { setHasSwitch(v); setShowResult(false); }} />
-              {hasSwitch === false && (
-                <p className="text-[11px] text-amber-700 mt-1 font-semibold">+RM {SWITCH_PRICE} added to estimate</p>
-              )}
-            </div>
-
-            {/* PVC Casing — Indoor */}
-            <div>
-              <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
-                Want PVC casing for the indoor wire (unit to switch)?
-                <span className="block text-slate-400 font-normal">室内PVC线槽要吗？</span>
-              </p>
-              <YesNoSelect
-                value={wantsPvcIndoor}
-                onChange={(v) => { setWantsPvcIndoor(v); if (!v) setPvcIndoorFeet(0); setShowResult(false); }}
-                yesLabel="✅ Yes, I want it"
-                noLabel="No thanks"
-              />
-              {wantsPvcIndoor === true && (
-                <div className="flex items-center gap-3 mt-2">
-                  <span className="text-[11px] text-slate-600">Feet needed (RM {PVC_INDOOR_RATE}/ft):</span>
-                  <button
-                    onClick={() => { setPvcIndoorFeet(Math.max(0, pvcIndoorFeet - 1)); setShowResult(false); }}
-                    className="h-7 w-7 rounded-lg border border-slate-200 bg-white text-slate-700 font-black text-sm hover:bg-slate-50 transition-all flex items-center justify-center"
-                  >
-                    −
-                  </button>
-                  <span className="text-sm font-black text-slate-900 w-8 text-center">{pvcIndoorFeet}</span>
-                  <button
-                    onClick={() => { setPvcIndoorFeet(pvcIndoorFeet + 1); setShowResult(false); }}
-                    className="h-7 w-7 rounded-lg border border-slate-200 bg-white text-slate-700 font-black text-sm hover:bg-slate-50 transition-all flex items-center justify-center"
-                  >
-                    +
-                  </button>
-                  {pvcIndoorFeet > 0 && (
-                    <span className="text-[11px] text-amber-700 font-semibold">+RM {pvcIndoorCost}</span>
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* PVC Casing — Outdoor */}
-            <div>
-              <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
-                Want PVC casing for the outdoor copper pipe?
-                <span className="block text-slate-400 font-normal">室外PVC铜管槽要吗？</span>
-              </p>
-              <YesNoSelect
-                value={wantsPvcOutdoor}
-                onChange={(v) => { setWantsPvcOutdoor(v); if (!v) setPvcOutdoorFeet(0); setShowResult(false); }}
-                yesLabel="✅ Yes, I want it"
-                noLabel="No thanks"
-              />
-              {wantsPvcOutdoor === true && (
-                <div className="flex items-center gap-3 mt-2">
-                  <span className="text-[11px] text-slate-600">Feet needed (RM {PVC_OUTDOOR_RATE}/ft):</span>
-                  <button
-                    onClick={() => { setPvcOutdoorFeet(Math.max(0, pvcOutdoorFeet - 1)); setShowResult(false); }}
-                    className="h-7 w-7 rounded-lg border border-slate-200 bg-white text-slate-700 font-black text-sm hover:bg-slate-50 transition-all flex items-center justify-center"
-                  >
-                    −
-                  </button>
-                  <span className="text-sm font-black text-slate-900 w-8 text-center">{pvcOutdoorFeet}</span>
-                  <button
-                    onClick={() => { setPvcOutdoorFeet(pvcOutdoorFeet + 1); setShowResult(false); }}
-                    className="h-7 w-7 rounded-lg border border-slate-200 bg-white text-slate-700 font-black text-sm hover:bg-slate-50 transition-all flex items-center justify-center"
-                  >
-                    +
-                  </button>
-                  {pvcOutdoorFeet > 0 && (
-                    <span className="text-[11px] text-amber-700 font-semibold">+RM {pvcOutdoorCost}</span>
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* Indoor Bracket (old unit) */}
-            <div>
-              <p className="text-[11px] font-semibold text-slate-700 mb-1.5">
-                Replacing an old unit — existing indoor bracket reusable?
-                <span className="block text-slate-400 font-normal">旧机的室内机支架还有吗？</span>
-              </p>
-              <YesNoSelect
-                value={hasIndoorBracket}
-                onChange={(v) => { setHasIndoorBracket(v); setShowResult(false); }}
-                yesLabel="✅ Yes / New unit"
-                noLabel="❌ No / Need new bracket"
-              />
-              {hasIndoorBracket === false && (
-                <p className="text-[11px] text-amber-700 mt-1 font-semibold">+RM {INDOOR_BRACKET_PRICE} added to estimate</p>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Calculate Button */}
-        <button
-          onClick={handleCalculate}
-          className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
-        >
-          Calculate My Estimate →
-        </button>
-
-        {/* Result Block */}
-        {showResult && (
-          <div className="bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200 rounded-2xl p-5 space-y-3">
-            <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-1">Your Estimate</p>
-
-            {/* Base service */}
-            <div className="flex justify-between text-sm">
-              <span className="text-slate-600">{SERVICE_LABELS[service].en} × {units} unit{units > 1 ? "s" : ""}</span>
-              <span className="font-bold text-slate-800">RM {subtotal.toLocaleString()}</span>
-            </div>
-
-            {discount.pct > 0 && (
-              <div className="flex justify-between text-sm">
-                <span className="text-emerald-600 font-semibold">Volume Discount ({discount.label})</span>
-                <span className="font-bold text-emerald-600">− RM {discountAmt.toLocaleString()}</span>
-              </div>
-            )}
-
-            {/* Add-ons breakdown */}
-            {isInstallation && extraCopperFeet > 0 && (
-              <div className="flex justify-between text-sm">
-                <span className="text-slate-600">Extra copper pipe &amp; wire ({extraCopperFeet} ft)</span>
-                <span className="font-bold text-slate-800">RM {copperExtraCost.toLocaleString()}</span>
-              </div>
-            )}
-            {isInstallation && extraCopperFeet === 0 && (
-              <div className="flex justify-between text-xs">
-                <span className="text-emerald-600">✅ Copper pipe &amp; wire (7 ft)</span>
-                <span className="font-semibold text-emerald-600">FREE</span>
-              </div>
-            )}
-            {isInstallation && hasOutdoorBracket === false && (
-              <div className="flex justify-between text-sm">
-                <span className="text-slate-600">
-                  {outdoorBracketType === "heavy" ? "Heavy Duty Compressor / Outdoor Bracket" : "Standard Compressor / Outdoor Bracket"}
-                </span>
-                <span className="font-bold text-slate-800">
-                  RM {outdoorBracketType === "heavy" ? HEAVY_DUTY_OUTDOOR_BRACKET_PRICE : STANDARD_OUTDOOR_BRACKET_PRICE}
-                </span>
-              </div>
-            )}
-            {isInstallation && hasSwitch === false && (
-              <div className="flex justify-between text-sm">
-                <span className="text-slate-600">Aircond switch / plug point</span>
-                <span className="font-bold text-slate-800">RM {SWITCH_PRICE}</span>
-              </div>
-            )}
-            {isInstallation && wantsPvcIndoor === true && pvcIndoorFeet > 0 && (
-              <div className="flex justify-between text-sm">
-                <span className="text-slate-600">PVC casing indoor – {pvcIndoorFeet} ft</span>
-                <span className="font-bold text-slate-800">RM {pvcIndoorCost.toLocaleString()}</span>
-              </div>
-            )}
-            {isInstallation && wantsPvcOutdoor === true && pvcOutdoorFeet > 0 && (
-              <div className="flex justify-between text-sm">
-                <span className="text-slate-600">PVC casing outdoor – {pvcOutdoorFeet} ft</span>
-                <span className="font-bold text-slate-800">RM {pvcOutdoorCost.toLocaleString()}</span>
-              </div>
-            )}
-            {isInstallation && hasIndoorBracket === false && (
-              <div className="flex justify-between text-sm">
-                <span className="text-slate-600">Indoor unit bracket</span>
-                <span className="font-bold text-slate-800">RM {INDOOR_BRACKET_PRICE}</span>
-              </div>
-            )}
-
-            <div className="border-t border-sky-200 pt-3 flex justify-between items-baseline">
-              <span className="text-sm font-black text-slate-900">Estimated Total</span>
-              <span className="text-2xl font-black text-sky-700">RM {grandTotal.toLocaleString()}</span>
-            </div>
-
-            <p className="text-xs text-slate-500 leading-relaxed">
-              * This is a starting estimate based on standard pricing. Final quote confirmed by technician on-site. No hidden charges — all costs discussed before work begins.
-            </p>
-
-            {/* WhatsApp CTA with prefilled quote */}
-            <a
-              href={waLink(waMsg)}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex items-center justify-center gap-2.5 w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-green-500/20 mt-2"
-            >
-              <FaWhatsapp className="h-5 w-5 shrink-0" />
-              WhatsApp This Quote — Book Now
-            </a>
-            <a
-              href={`tel:${sitePublic.phone}`}
-              className="flex items-center justify-center w-full border-2 border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 font-black uppercase tracking-wider py-3 rounded-2xl text-xs transition-all"
-            >
-              Or Call {sitePublic.phoneDisplay}
-            </a>
-          </div>
-        )}
-      </div>
+  return <div className="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
+    <div className="bg-gradient-to-r from-sky-600 to-sky-500 px-6 py-5 text-white"><p className="text-xs font-black uppercase tracking-widest opacity-80 mb-1">Free Instant Estimate</p><h3 className="text-xl font-black">Aircond Service Price Calculator</h3><p className="text-sky-100 text-xs mt-1">Service · installation · dismantle · relocation · materials</p></div>
+    <div className="p-6 space-y-4">
+      <label className="block text-xs font-black uppercase tracking-widest text-slate-500">1. Service<Select value={service} onChange={(value) => { setService(value as ServiceType); setShowResult(false); }}><option value="basic-servicing">Basic Servicing</option><option value="chemical-wash">Chemical Wash</option><option value="chemical-overhaul">Chemical Overhaul</option><option value="gas-topup">Gas Top-Up</option><option value="installation">New Installation</option><option value="dismantle">Dismantle Only</option><option value="relocate-same">Relocate — Reinstall Same Place</option><option value="relocate-other">Relocate — Reinstall Other Place</option><option value="repair">Repair / Diagnostic</option></Select></label>
+      <div className="grid grid-cols-2 gap-3"><label className="block text-xs font-black uppercase tracking-widest text-slate-500">2. Unit Type<Select value={unitType} onChange={(value) => { setUnitType(value as UnitType); setShowResult(false); }}><option value="wall">Wall-Mounted</option><option value="cassette">Ceiling Cassette</option><option value="window">Window Unit</option></Select></label><label className="block text-xs font-black uppercase tracking-widest text-slate-500">3. HP Size<Select value={hp} onChange={(value) => { setHp(value); setShowResult(false); }}><option value="1.0-1.5">1.0 – 1.5 HP</option><option value="2.0">2.0 HP</option><option value="2.5">2.5 HP</option><option value="3.0-3.5">3.0 – 3.5 HP</option></Select></label></div>
+      {service === "gas-topup" && <label className="block text-xs font-black uppercase tracking-widest text-slate-500">Gas Type<Select value={gasType} onChange={(value) => { setGasType(value as GasType); setShowResult(false); }}><option value="r22">R22</option><option value="r410a">R410A</option><option value="r32">R32</option></Select></label>}
+      <label className="block text-xs font-black uppercase tracking-widest text-slate-500">4. Number of Units<input type="number" min="1" max="20" value={units} onChange={(e) => { setUnits(Math.max(1, Math.min(20, Number(e.target.value) || 1))); setShowResult(false); }} className={selectCls} /></label>
+      {includesInstallationMaterials && <div className="border-t border-slate-100 pt-4 space-y-4"><div><p className="text-xs font-black uppercase tracking-widest text-slate-500">5. Installation materials & add-ons</p><p className="text-[11px] text-emerald-700 mt-1 font-semibold">First 7 ft per unit is included free: copper pipe, insulation, electrical wire and drain pipe. Outdoor bracket is a paid optional item.</p></div><div className="grid grid-cols-2 gap-3"><FeetInput label="Copper Pipe Length" value={copperFeet} onChange={setCopperFeet} hint={`Extra: RM ${COPPER_RATE(hp)}/ft`} /><FeetInput label="Electrical Wire Length" value={wireFeet} onChange={setWireFeet} hint="Extra: RM 9/ft" /><FeetInput label="Insulation Length" value={insulationFeet} onChange={setInsulationFeet} hint="Extra: RM 7/ft" /><FeetInput label="Drain Pipe Length" value={drainFeet} onChange={setDrainFeet} hint="Extra: RM 5/ft" /><FeetInput label="Small PVC Casing (Electrical Wire)" value={smallPvcFeet} onChange={setSmallPvcFeet} hint="RM 6/ft" /><FeetInput label="Large PVC Casing (Copper + Wire + Insulation)" value={largePvcFeet} onChange={setLargePvcFeet} hint="RM 12/ft" /></div><label className="block text-[11px] font-bold text-slate-700">Outdoor Bracket (paid special charge only)<Select value={bracket} onChange={(value) => { setBracket(value as typeof bracket); setShowResult(false); }}><option value="none">No bracket needed</option><option value="standard">Standard Compressor / Outdoor Bracket — RM 45</option><option value="heavy">Heavy Duty Compressor / Outdoor Bracket — RM 70</option></Select></label></div>}
+      <button onClick={() => setShowResult(true)} className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm transition-all">Calculate My Estimate →</button>
+      {showResult && <div className="bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200 rounded-2xl p-5 space-y-3"><p className="text-xs font-black uppercase tracking-widest text-sky-700">Your Estimate</p><div className="flex justify-between text-sm"><span>{SERVICE_LABELS[service]} × {units}</span><strong>RM {serviceTotal.toLocaleString()}</strong></div>{discountAmount > 0 && <div className="flex justify-between text-sm text-emerald-700"><span>{discount.label}</span><strong>− RM {discountAmount.toLocaleString()}</strong></div>}{materialLines.map((line) => <div key={line.label} className="flex justify-between gap-3 text-xs"><span className="text-slate-600">{line.label} × {units}</span><strong>RM {(line.amount * units).toLocaleString()}</strong></div>)}<div className="border-t border-sky-200 pt-3 flex justify-between items-baseline"><span className="text-sm font-black">Estimated Total</span><span className="text-2xl font-black text-sky-700">RM {total.toLocaleString()}</span></div><p className="text-xs text-slate-500">Final quote is confirmed by the technician on-site before work begins.</p><a href={waLink(quoteMessage)} target="_blank" rel="nofollow noopener noreferrer" className="flex justify-center items-center gap-2 w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider py-3.5 rounded-2xl text-sm"><FaWhatsapp className="h-5 w-5" /> WhatsApp This Quote — Book Now</a><a href={`tel:${sitePublic.phone}`} className="flex justify-center w-full border-2 border-slate-200 text-slate-700 font-black uppercase tracking-wider py-3 rounded-2xl text-xs">Or Call {sitePublic.phoneDisplay}</a></div>}
     </div>
-  );
+  </div>;
 }

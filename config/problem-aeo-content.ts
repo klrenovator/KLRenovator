@@ -152,7 +152,7 @@ export const problemAEOContent: Record<
       "记录问题是突然出现还是逐渐变差",
       "查看室外机铜管接口是否有油渍（常为漏点）"
     ],
-    technicianChecksEN: ["Manifold gauge pressure test to confirm exact gas level against manufacturer specification", "Electronic leak detector scan along copper pipe joints, flare connections and the indoor/outdoor unit seals", "Nitrogen pressure test on the sealed system if a leak isn't found visually, to pinpoint a hidden micro-leak"],
+    technicianChecksEN: ["Manifold gauge pressure test to confirm exact gas level against manufacturer specification", "Electronic leak detector scan along copper pipe joints, flare connections and the indoor/outdoor unit seals", "Vacuum pump commissioning (500 microns) on the sealed system if a leak isn't found visually, to pinpoint a hidden micro-leak"],
     technicianChecksMS: [
       "Ujian tekanan dengan manifold gauge mengikut jenis gas (R22/R410A/R32)",
       "Pengesanan bocor sebelum top-up — elak isi gas berulang tanpa baiki bocor",
@@ -212,7 +212,7 @@ export const problemAEOContent: Record<
       "检查外露铜管段是否有明显油渍，这是常见的泄漏迹象",
       "检查铜管接口是否有油渍，油渍常提示泄漏点"
     ],
-    technicianChecksEN: ["Electronic refrigerant leak detector scan along all accessible joints, valves and flare connections", "Soap bubble test on suspect joints as a secondary confirmation method", "Nitrogen pressure decay test on the sealed system for leaks too small to detect electronically"],
+    technicianChecksEN: ["Electronic refrigerant leak detector scan along all accessible joints, valves and flare connections", "Soap bubble test on suspect joints as a secondary confirmation method", "pressure decay test on the sealed system for leaks too small to detect electronically"],
     technicianChecksMS: [
       "Imbasan pengesan kebocoran penyejuk elektronik di sepanjang semua sambungan dan injap yang boleh diakses",
       "Ujian buih sabun pada sambungan yang disyaki sebagai kaedah pengesahan kedua",
@@ -224,7 +224,7 @@ export const problemAEOContent: Record<
       "检查铜管接口是否有油渍，油渍常提示泄漏点"
     ],
     extraFaqsEN: [{ q: "How much does it cost to find and fix a refrigerant leak?", a: "Leak detection is typically included in the diagnostic visit (RM 88, waived with repair). The pipe/valve repair itself ranges RM 150-400, plus gas re-charge from RM 2.50/PSI." }, { q: "Can a leak be at the indoor unit even if I only see oil stains outside?", a: "Yes — refrigerant flows through the whole sealed loop, so a leak can occur anywhere along it." }, { q: "Is R32 gas more dangerous to have a leak with than R410A or R22?", a: "R32 is mildly flammable compared to non-flammable R410A/R22, but in small residential quantities with proper installation, the risk is low." }, { q: "Will the leak get worse over time if I don't fix it?", a: "Small leaks usually don't get dramatically worse quickly, but they don't self-heal either — cooling stops entirely once gas runs out." }],
-    extraFaqsMS: [{ q: "Berapa kos untuk mengesan dan membaiki kebocoran penyejuk?", a: "Pengesanan kebocoran biasanya termasuk dalam lawatan diagnostik (RM 88). Pembaikan paip/injap dari RM 150-400." }, { q: "Bolehkah kebocoran berlaku pada unit dalam walaupun saya hanya nampak kesan minyak di luar?", a: "Ya — penyejuk mengalir melalui keseluruhan gelung tertutup." }],
+    extraFaqsMS: [{ q: "Berapa kos untuk mengesan dan membaiki kebocoran penyejuk?", a: "Pengesanan kebocoran biasanya termasuk dalam lawatan diagnostik (RM 88). Gas Leak Repair ialah RM 120 bagi setiap kebocoran; harga gas top-up kekal berasingan mengikut PSI yang diperlukan." }, { q: "Bolehkah kebocoran berlaku pada unit dalam walaupun saya hanya nampak kesan minyak di luar?", a: "Ya — penyejuk mengalir melalui keseluruhan gelung tertutup." }],
     extraFaqsZH: [{ q: "查找并修复冷媒泄漏需要多少费用？", a: "检漏通常包含在诊断上门费（RM 88）内。管道/阀门维修费用约RM 150-400。" }, { q: "即使我只在室外看到油渍，室内机也可能漏气吗？", a: "是的——冷媒流经整个密闭循环系统，泄漏可能发生在任何位置。" }],
   },
   "aircond-compressor-problem": {

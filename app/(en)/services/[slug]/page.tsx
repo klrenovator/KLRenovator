@@ -118,9 +118,9 @@ const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     { q: "Do you quote repair parts before replacing them?", a: "Yes. The technician diagnoses the fault and confirms the repair cost before replacing capacitor, fan motor, PCB, sensor or wiring parts." },
   ],
   "installation": [
-    { q: "Is RM199 installation enough for every home?", a: "RM199 covers standard wall-mounted 1.0–1.5HP installation labour with up to 7ft copper, wire and drain pipe. Extra materials such as longer copper run, bracket or power point are quoted first if needed." },
+    { q: "Is RM199 installation enough for every home?", a: "RM199 covers standard wall-mounted 1.0–1.5HP installation labour with up to 7ft copper pipe, insulation, electrical wire and drain pipe. Extra materials such as longer copper run or power point are quoted first if needed." },
     { q: "Do you vacuum the system during installation?", a: `Yes. ${entityPhrases.vacuumMandatory} Proper vacuuming removes moisture and air from the line before refrigerant release, helping protect the compressor and cooling performance.` },
-    { q: "What copper pipe do you use for installation?", a: `${entityPhrases.copperTypeL} All piping is nitrogen-purged during brazing to prevent internal oxidation.` },
+    { q: "What copper pipe do you use for installation?", a: `${entityPhrases.copperTypeL} All piping is cleanly prepared during brazing to prevent internal oxidation.` },
     { q: "Do you provide electrical wiring for the new unit?", a: `Yes. ${entityPhrases.dedicatedCircuit} We ensure correct MCB sizing per HP, plus an outdoor isolator switch for safety and maintenance access.` },
     { q: "What insulation do you use on the copper pipes?", a: `${entityPhrases.armaflexStandard} ${entityPhrases.armaflexThick}` },
     { q: "Can you install in high-rise condos?", a: "Yes — we regularly install in KLCC, Mont Kiara, Bangsar, Sentul, PJ, and Subang Jaya. We coordinate with building management for lift/loading bay access and follow JMB rules. Our technicians are experienced with service-ledge and balcony installations." },

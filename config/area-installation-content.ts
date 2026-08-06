@@ -101,7 +101,7 @@ function getIntroBody(
       `KL Renovator installs airconds across ${name} and the wider ${state} area. From ${landmarks}, our technicians fit wall-mounted units in condos and apartments, ceiling cassette systems in shops and offices, and window units in older flats — all with vacuum pump commissioning, dedicated electrical wiring, and a 1-month workmanship warranty.`,
       `Whether you are moving into a new home near ${firstLandmark}, upgrading an old non-inverter unit in ${secondLandmark}, or fitting out a commercial space elsewhere in ${name}, KL Renovator handles the full aircond installation from survey to final testing. We service all 20 major brands across ${state}.`,
       `${name} homes and businesses use many different aircond setups — high-rise condos near ${firstLandmark}, landed terraces around ${secondLandmark}, and shoplots along busy commercial strips. KL Renovator's installation team works in all of them, sizing the right HP, running copper pipe, and commissioning every unit properly.`,
-      `Need a new aircond installed in ${name}? KL Renovator dispatches trained HVAC technicians throughout ${state}, including ${landmarks}. Every installation includes 7 ft copper pipe, wiring, drain pipe, a standard outdoor bracket, vacuum pump evacuation, and a 1-month workmanship warranty card.`,
+      `Need a new aircond installed in ${name}? KL Renovator dispatches trained HVAC technicians throughout ${state}, including ${landmarks}. Every installation includes 7 ft copper pipe, insulation, electrical wire and drain pipe, a standard outdoor bracket, vacuum pump evacuation, and a 1-month workmanship warranty card.`,
     ];
     return pick(area.slug, templates);
   }
@@ -111,7 +111,7 @@ function getIntroBody(
       `KL Renovator memasang aircond di seluruh ${name} dan kawasan ${state} yang lebih luas. Dari ${landmarks}, juruteknik kami memasang unit dinding di kondominium dan pangsapuri, sistem ceiling cassette di kedai dan pejabat, serta unit tingkap di flat lama — semuanya dengan pentauliahan pam vakum, pendawaian elektrik khas, dan waranti kerja 1 bulan.`,
       `Sama ada anda berpindah ke rumah baharu berhampiran ${firstLandmark}, menaik taraf unit bukan inverter lama di ${secondLandmark}, atau memasang ruang komersial di ${name}, KL Renovator mengendalikan pemasangan aircond penuh dari tinjauan hingga ujian akhir. Kami menservis semua 20 jenama utama di ${state}.`,
       `Kediaman dan perniagaan di ${name} menggunakan pelbagai jenis aircond — kondominium tinggi berhampiran ${firstLandmark}, teres landed di sekitar ${secondLandmark}, dan kedai di sepanjang lorong komersial yang sibuk. Pasukan pemasangan KL Renovator bekerja di semuanya, menentukan saiz HP yang betul, memasang paip tembaga, dan menauliahkan setiap unit dengan betul.`,
-      `Perlukan aircond baharu dipasang di ${name}? KL Renovator menghantar juruteknik HVAC berlatih di seluruh ${state}, termasuk ${landmarks}. Setiap pemasangan termasuk 7 ft paip tembaga, wayar, paip saliran, braket luar standard, pengosongan pam vakum, dan kad waranti kerja 1 bulan.`,
+      `Perlukan aircond baharu dipasang di ${name}? KL Renovator menghantar juruteknik HVAC berlatih di seluruh ${state}, termasuk ${landmarks}. Setiap pemasangan termasuk 7 ft paip tembaga, wayar, paip saliran luar standard, pengosongan pam vakum, dan kad waranti kerja 1 bulan.`,
     ];
     return pick(area.slug, templates);
   }
@@ -221,11 +221,11 @@ function getWhyItems(
         { title: `Local ${name} Technicians`, body: `Our team knows ${name} building types, JMB procedures, and access constraints, so installations are scheduled efficiently.` },
         { title: "Right HP, Every Time", body: `We measure your room size, ceiling height, and sun exposure before recommending 1HP, 1.5HP, or 2HP for ${name}'s climate.` },
         { title: "Vacuum Pump Standard", body: `Every installation in ${name} includes proper evacuation to protect your compressor and keep manufacturer warranty valid.` },
-        { title: "Price Confirmed First", body: `Copper pipe, wiring, brackets, and extras are quoted before drilling begins — no surprise bills in ${name}.` },
+        { title: "Price Confirmed First", body: `Copper pipe, wirings, and extras are quoted before drilling begins — no surprise bills in ${name}.` },
       ],
       [
         { title: `${firstLandmark} Access Handled`, body: `High-rise work near ${firstLandmark} needs a service-lift slot and a management permit. We arrange both before the van leaves, so the crew is not turned away at the guardhouse.` },
-        { title: "Nitrogen-Purged Brazing", body: `We purge with nitrogen while brazing every joint. It costs us more time but stops internal oxide scale forming in the copper — the slow killer of compressors in ${name}'s humidity.` },
+        { title: "-Purged Brazing", body: `We purge with while brazing every joint. It costs us more time but stops internal oxide scale forming in the copper — the slow killer of compressors in ${name}'s humidity.` },
         { title: "Drain Fall Verified", body: `A drain line laid flat will back up within months. We check the gradient with a level on every ${name} job and water-test before handover.` },
         { title: "Written Warranty Card", body: `You get a physical 1-month workmanship warranty card on completion, not a verbal promise — valid across ${state}.` },
       ],
@@ -250,11 +250,11 @@ function getWhyItems(
         { title: `Juruteknik ${name} Tempatan`, body: `Pasukan kami mengenali jenis bangunan, prosedur JMB, dan kekangan akses di ${name}, jadi pemasangan dijadualkan dengan cekap.` },
         { title: "HP Yang Tepat, Setiap Masa", body: `Kami mengukur saiz bilik, ketinggian siling, dan pendedahan matahari sebelum mencadangkan 1HP, 1.5HP, atau 2HP untuk iklim ${name}.` },
         { title: "Standard Pam Vakum", body: `Setiap pemasangan di ${name} termasuk pengosongan yang betul untuk melindungi pemampat anda dan mengekalkan waranti pengeluar.` },
-        { title: "Harga Disahkan Dahulu", body: `Paip tembaga, wayar, braket, dan tambahan disebut sebelum kerja bermula — tiada bil mengejut di ${name}.` },
+        { title: "Harga Disahkan Dahulu", body: `Paip tembaga, wayar, dan tambahan disebut sebelum kerja bermula — tiada bil mengejut di ${name}.` },
       ],
       [
         { title: `Akses ${firstLandmark} Diuruskan`, body: `Kerja bangunan tinggi berhampiran ${firstLandmark} memerlukan slot lif servis dan permit pengurusan. Kami uruskan kedua-duanya sebelum juruteknik bertolak.` },
-        { title: "Brazing Dibersih Nitrogen", body: `Kami membersihkan dengan nitrogen semasa brazing setiap sambungan. Ia mengambil masa lebih tetapi menghalang kerak oksida dalam paip tembaga — punca utama kerosakan pemampat dalam kelembapan ${name}.` },
+        { title: "Brazing Dibersih ", body: `Kami membersihkan dengan semasa brazing setiap sambungan. Ia mengambil masa lebih tetapi menghalang kerak oksida dalam paip tembaga — punca utama kerosakan pemampat dalam kelembapan ${name}.` },
         { title: "Kecerunan Saliran Disahkan", body: `Paip saliran yang rata akan tersumbat dalam beberapa bulan. Kami memeriksa kecerunan dengan alat aras pada setiap kerja di ${name} dan menguji dengan air sebelum serahan.` },
         { title: "Kad Waranti Bertulis", body: `Anda menerima kad waranti kerja 1 bulan secara fizikal apabila siap, bukan janji lisan — sah di seluruh ${state}.` },
       ],
@@ -352,12 +352,12 @@ function getLocalContext(
         `Before any drilling, our ${name} installation crew checks the three things that go wrong most often here: whether your distribution board has a spare way for a dedicated circuit, the exact copper-pipe run between the indoor and outdoor positions, and — for high-rise work — the building management's lift and service-ledge rules. Getting these right on the first visit is why installations across ${name} and ${position} rarely need a callback.`,
       ],
       [
-        `Installing an aircond in ${name} means planning around how the area is actually built. Around ${L(0)} and ${L(1)} the housing leans toward landed terraces and semi-D homes; elsewhere — ${L(2)}, ${L(3)} and ${L(4)} — high-rise condos and serviced apartments dominate. Each calls for a different HP sizing, bracket setup and drainage plan, which is why we survey before we quote on every ${name} job.`,
+        `Installing an aircond in ${name} means planning around how the area is actually built. Around ${L(0)} and ${L(1)} the housing leans toward landed terraces and semi-D homes; elsewhere — ${L(2)}, ${L(3)} and ${L(4)} — high-rise condos and serviced apartments dominate. Each calls for a different HP sizing setup and drainage plan, which is why we survey before we quote on every ${name} job.`,
         `${name} (${population}, ${state}) is on our standing installation route, so confirmed jobs usually get a same-day or next-day slot rather than a week-long wait. We bring Type L copper for 1.0–2.5 HP units, vacuum pumps for proper commissioning, and the torque specs for all 20 brands — so whether your unit is a Daikin, Panasonic, Mitsubishi or something else, it is fitted to manufacturer standard the first time.`,
       ],
       [
         `From ${L(0)} to ${L(1)}, ${name} spans a range of properties — and the aircond installation detail that matters in one barely applies in another. A landed terrace near ${L(2)} needs wall penetration and bracket alignment; a unit going into a ${L(3)} high-rise needs loading-bay timing and management sign-off. Our ${name} team plans for both before the van leaves, ${position}.`,
-        `We keep ${name} installation simple and transparent: the RM 199 wall-mounted price includes 7 ft of copper pipe, wiring, drain pipe and a standard bracket, with anything beyond that quoted and approved on site. After commissioning we run a 15-minute cooling test and hand over a 1-month workmanship warranty card — valid whether you are in central ${name} or the ${position} fringe.`,
+        `We keep ${name} installation simple and transparent: the RM 199 wall-mounted price includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe, with anything beyond that quoted and approved on site. After commissioning we run a 15-minute cooling test and hand over a 1-month workmanship warranty card — valid whether you are in central ${name} or the ${position} fringe.`,
       ],
     ];
     return pick(area.slug, variants);
@@ -448,7 +448,7 @@ function getFAQs(
     return [
       {
         q: `How much does aircond installation cost in ${name}?`,
-        a: `Wall-mounted installation in ${name} starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, and RM 279–RM 329 for larger units. Ceiling cassette starts from RM 290, and window units from RM 180. Every quote includes 7 ft copper pipe, wiring, drain pipe, and a standard bracket.`,
+        a: `Wall-mounted installation in ${name} starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, and RM 279–RM 329 for larger units. Ceiling cassette starts from RM 290, and window units from RM 180. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. If an outdoor bracket is required, it is quoted separately as a paid special charge before work begins.`,
       },
       {
         q: `How long does aircond installation take in ${name}?`,
@@ -473,7 +473,7 @@ function getFAQs(
     return [
       {
         q: `Berapa harga pemasangan aircond di ${name}?`,
-        a: `Pemasangan dinding di ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran, dan braket standard.`,
+        a: `Pemasangan dinding di ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran standard.`,
       },
       {
         q: `Berapa lama pemasangan aircond di ${name}?`,
@@ -524,7 +524,7 @@ const baseIncluded: Record<AreaInstallationLocale, string[]> = {
     "7 ft copper pipe (liquid + gas lines)",
     "7 ft electrical wiring",
     "7 ft PVC drain pipe",
-    "Standard outdoor bracket",
+    "Outdoor bracket (paid special charge if required)",
     "Vacuum pump commissioning",
     "Refrigerant release & run test",
     "1-month workmanship warranty card",
@@ -555,8 +555,8 @@ const baseExtras: Record<AreaInstallationLocale, string[]> = {
   en: [
     "Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
       "Drain pipe beyond 7 ft: RM 5/ft",
-    "Wire beyond 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
-    "PVC casing / concealment: RM 6–12/ft",
+    "Wire beyond 7 ft: RM 9/ft",
+    "Small PVC casing (electrical wire): RM 6/ft; large PVC casing (copper pipe + wire + insulation): RM 12/ft",
     "Standard compressor / outdoor bracket: RM 45",
     "Heavy-duty compressor / outdoor bracket: RM 70",
     "New electrical plug point: RM 100",
@@ -566,8 +566,8 @@ const baseExtras: Record<AreaInstallationLocale, string[]> = {
   ms: [
     "Paip tembaga melebihi 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)",
       "Paip saliran melebihi 7 ft: RM 5/ft",
-    "Wayar elektrik melebihi 7 ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP)",
-    "Casing PVC / penyembunyian: RM 6–12/ft",
+    "Wayar elektrik melebihi 7 ft: RM 9/ft",
+    "Casing PVC kecil (wayar elektrik): RM 6/kaki; casing PVC besar (paip kuprum + wayar + penebat): RM 12/kaki",
     "Braket kompressor / luaran standard: RM 45",
     "Braket kompressor / luaran heavy-duty: RM 70",
     "Pasang plug point baharu: RM 100",
@@ -578,7 +578,7 @@ const baseExtras: Record<AreaInstallationLocale, string[]> = {
     "超出7尺铜管：RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)",
     "超出7尺排水管：RM 5/尺",
     "超出7尺电线：RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)",
-    "PVC套管/隐藏：RM 6–12/尺",
+    "小型PVC线槽（电线）：RM 6/尺；大型PVC线槽（铜管+电线+保温层）：RM 12/尺",
     "标准室外压缩机/支架：RM 45",
     "重型室外压缩机/支架：RM 70",
     "新增电源插座：RM 100",

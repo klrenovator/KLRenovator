@@ -286,7 +286,7 @@ export const HUB_COPY: Record<
     eyebrow: "Installation Hub",
     h1: "Aircond Installation in KL & Selangor",
     intro:
-      "Everything about getting a new aircond installed — pick your HP size, unit type or property type below. Standard wall-mounted installation starts from RM 199 including 7 ft copper pipe, wiring, drain pipe and bracket, with mandatory vacuum pump commissioning and a 1-month written workmanship warranty.",
+      "Everything about getting a new aircond installed — pick your HP size, unit type or property type below. Standard wall-mounted installation starts from RM 199 including 7 ft copper pipe, insulation, electrical wire and drain pipe and bracket, with mandatory vacuum pump commissioning and a 1-month written workmanship warranty.",
     badges: ["From RM 199", "Same-Day Available", "All 20 Brands", "1-Month Warranty"],
     areasTitle: "Installation Near You",
     areasSub: "We install across 39 areas in Kuala Lumpur and Selangor.",
@@ -303,7 +303,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "How much does aircond installation cost in KL and Selangor?",
-        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP and RM 329 for 3.0 HP. Ceiling cassette starts from RM 290 and window units from RM 180. Every quote includes 7 ft of copper pipe, wiring, drain pipe and a standard bracket. Extra copper pipe is RM 17–27 per foot depending on HP size. Extra drain pipe beyond the included 7 ft is RM 5 per foot.",
+        a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP and RM 329 for 3.0 HP. Ceiling cassette starts from RM 290 and window units from RM 180. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. Any required outdoor bracket is quoted separately as a paid special charge before work begins. Extra copper pipe is RM 17–27 per foot depending on HP size. Extra drain pipe beyond the included 7 ft is RM 5 per foot.",
       },
       {
         q: "How long does an aircond installation take?",
@@ -330,7 +330,7 @@ export const HUB_COPY: Record<
     eyebrow: "Hab Pemasangan",
     h1: "Pemasangan Aircond di KL & Selangor",
     intro:
-      "Semua tentang pemasangan aircond baharu — pilih saiz HP, jenis unit atau jenis hartanah di bawah. Pemasangan dinding standard bermula dari RM 199 termasuk paip kuprum 7 kaki, pendawaian, paip saliran dan bracket, dengan pentauliahan pam vakum wajib dan waranti kerja bertulis 1 bulan.",
+      "Semua tentang pemasangan aircond baharu — pilih saiz HP, jenis unit atau jenis hartanah di bawah. Pemasangan dinding standard bermula dari RM 199 termasuk 7 kaki pertama paip kuprum, penebat, wayar elektrik dan paip saliran, dengan pentauliahan pam vakum wajib dan waranti kerja bertulis 1 bulan. Braket luar, jika diperlukan, ialah caj khas berbayar yang disahkan sebelum kerja bermula.",
     badges: ["Dari RM 199", "Tersedia Hari Sama", "Semua 20 Jenama", "Waranti 1 Bulan"],
     areasTitle: "Pemasangan Berhampiran Anda",
     areasSub: "Kami memasang di 39 kawasan di Kuala Lumpur dan Selangor.",
@@ -347,7 +347,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "Berapakah kos pemasangan aircond di KL dan Selangor?",
-        a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP dan RM 329 untuk 3.0 HP. Keset siling bermula dari RM 290 dan unit tingkap dari RM 180. Setiap sebut harga termasuk paip kuprum 7 kaki, pendawaian, paip saliran dan bracket standard. Paip kuprum tambahan RM 17–27 sekaki bergantung pada saiz HP.",
+        a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP dan RM 329 untuk 3.0 HP. Keset siling bermula dari RM 290 dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 kaki pertama paip kuprum, penebat, wayar elektrik dan paip saliran. Braket luar jika diperlukan akan disebut sebagai caj khas berbayar sebelum kerja bermula. Paip kuprum tambahan RM 17–27 sekaki bergantung pada saiz HP.",
       },
       {
         q: "Berapa lama masa pemasangan aircond?",
@@ -359,7 +359,7 @@ export const HUB_COPY: Record<
       },
       {
         q: "Apakah yang termasuk dalam harga pemasangan standard?",
-        a: "Paip kuprum 7 kaki dengan penebat Armaflex, pendawaian elektrik, paip saliran PVC dengan kecerunan betul, bracket luar standard, pentauliahan pam vakum sehingga 500 mikron, ujian jalan 15 minit, dan kad waranti kerja bertulis 1 bulan. Apa-apa selain itu — paip tambahan, tebukan dinding tersembunyi, akses bangunan tinggi, titik plug baharu — disebut harga dan diluluskan di tapak sebelum kerja bermula.",
+        a: "Paip kuprum 7 kaki dengan penebat Armaflex, pendawaian elektrik, paip saliran PVC dengan kecerunan betul luar standard, pentauliahan pam vakum sehingga 500 mikron, ujian jalan 15 minit, dan kad waranti kerja bertulis 1 bulan. Apa-apa selain itu — paip tambahan, tebukan dinding tersembunyi, akses bangunan tinggi, titik plug baharu — disebut harga dan diluluskan di tapak sebelum kerja bermula.",
       },
       {
         q: "Perlukah saya membeli unit aircond daripada anda?",
