@@ -1,20 +1,12 @@
 import { Metadata } from "next";
 import { BookingForm } from "@/components/booking-form";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 export const metadata: Metadata = {
   title: "Book an Appointment | KL Renovator",
   description:
     "Book aircond servicing, repair or installation online in KL & Selangor. Pick your service and time slot — instant confirmation, no deposit.",
-  // Without this the page inherited the root layout's canonical, which points
-  // at the homepage. Google reported /book as a duplicate of "/" and never
-  // indexed it, even though it is in the sitemap.
-  alternates: {
-    canonical: "https://www.klrenovator.com/book",
-    languages: {
-      "en-MY": "https://www.klrenovator.com/book",
-      "x-default": "https://www.klrenovator.com/book",
-    },
-  },
+  alternates: buildTrilingualHreflang("/book", "en"),
   openGraph: {
     title: "Book an Aircond Appointment Online | KL Renovator",
     description:
@@ -37,7 +29,7 @@ export default function BookPage() {
         </p>
       </div>
 
-      <BookingForm isAdmin={false} />
+      <BookingForm isAdmin={false} forcedLang="en" />
     </div>
   );
 }

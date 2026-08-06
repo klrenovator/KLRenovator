@@ -1,0 +1,35 @@
+import { Metadata } from "next";
+import { BookingForm } from "@/components/booking-form";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+
+export const metadata: Metadata = {
+  title: "Tempah Temujanji Servis Aircond | KL Renovator",
+  description:
+    "Tempah servis aircond, pembaikan atau pemasangan dalam talian di KL & Selangor. Pilih perkhidmatan dan slot masa — pengesahan segera, tanpa deposit.",
+  alternates: buildTrilingualHreflang("/book", "ms"),
+  openGraph: {
+    title: "Tempah Temujanji Aircond Dalam Talian | KL Renovator",
+    description:
+      "Pilih servis dan slot masa anda dalam talian. Servis aircond, baiki dan pemasangan merentasi KL & Selangor.",
+    url: "https://www.klrenovator.com/ms/book",
+    type: "website",
+    locale: "ms_MY",
+  },
+};
+
+export default function BookPageMS() {
+  return (
+    <div className="container mx-auto px-4 py-12 lg:py-24">
+      <div className="mb-8 text-center">
+        <h1 className="mb-4 text-4xl font-black text-slate-900 md:text-5xl">
+          Jadualkan Servis Anda
+        </h1>
+        <p className="mx-auto max-w-2xl text-lg text-slate-600">
+          Pilih servis anda dan tetapkan slot masa yang sesuai. Sistem kami akan mengira anggaran tempoh yang diperlukan untuk temujanji anda secara automatik.
+        </p>
+      </div>
+
+      <BookingForm isAdmin={false} forcedLang="ms" />
+    </div>
+  );
+}

@@ -18,6 +18,8 @@ const FOOTER_LINKS = {
     quickLinks: "Quick Links",
     priceGuides: "Price Guides",
     bookWa: "Book Via WhatsApp",
+    bookOnline: "Book a Slot Online",
+    privacyPolicy: "Privacy Policy",
     navServices: "Services",
     navBlog: "Blog",
     navGallery: "Gallery",
@@ -31,6 +33,8 @@ const FOOTER_LINKS = {
     quickLinks: "Pautan Pantas",
     priceGuides: "Panduan Harga",
     bookWa: "Tempah Via WhatsApp",
+    bookOnline: "Tempah Slot Dalam Talian",
+    privacyPolicy: "Dasar Privasi",
     navServices: "Perkhidmatan",
     navBlog: "Blog",
     navGallery: "Galeri",
@@ -44,6 +48,8 @@ const FOOTER_LINKS = {
     quickLinks: "快速链接",
     priceGuides: "价格指南",
     bookWa: "通过 WhatsApp 预约",
+    bookOnline: "在线预约时段",
+    privacyPolicy: "隐私政策",
     navServices: "服务",
     navBlog: "博客",
     navGallery: "图库",
@@ -135,7 +141,7 @@ export const Footer = () => {
               <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
               <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
               <li><NextLink href={localizedPath("/cuci-aircond-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
-              <li><NextLink href="/book" className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Book a Slot Online</NextLink></li>
+              <li><NextLink href={localizedPath("/book")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{fl.bookOnline}</NextLink></li>
             </ul>
           </div>
 
@@ -182,7 +188,7 @@ export const Footer = () => {
             <NextLink href={localizedPath("/about")} className="hover:text-sky-600 transition-colors font-medium">{fl.navAbout}</NextLink>
             <NextLink href={localizedPath("/faq")} className="hover:text-sky-600 transition-colors font-medium">{fl.navFaq}</NextLink>
             <NextLink href={localizedPath("/contact")} className="hover:text-sky-600 transition-colors font-medium">{fl.navContact}</NextLink>
-            <NextLink href="/privacy-policy" className="hover:text-sky-600 transition-colors font-medium">Privacy Policy</NextLink>
+            <NextLink href={localizedPath("/privacy-policy")} className="hover:text-sky-600 transition-colors font-medium">{fl.privacyPolicy}</NextLink>
           </nav>
         </div>
       </div>

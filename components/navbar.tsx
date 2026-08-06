@@ -95,7 +95,7 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
   if (translatableCategory.test(enPath)) {
     return target === "en" ? enPath : enPath === "/" ? `/${target}` : `/${target}${enPath}`;
   }
-  const staticPages = ["/", "/contact", "/services", "/about", "/faq", "/gallery", "/review", "/near-me"];
+  const staticPages = ["/", "/contact", "/services", "/about", "/faq", "/gallery", "/review", "/near-me", "/book", "/privacy-policy"];
   if (staticPages.includes(enPath)) {
     return target === "en" ? enPath : enPath === "/" ? `/${target}` : `/${target}${enPath}`;
   }
