@@ -201,7 +201,7 @@ const STEPS: Record<string, DiagnosticStep> = {
         result: {
           title: { en: "Likely Low Gas or Faulty Capacitor", ms: "Kemungkinan Gas Rendah atau Kapasitor Rosak", zh: "可能是气体不足或电容器故障" },
           cause: { en: "If the outdoor unit runs but doesn't cool, the most common causes are low refrigerant gas (R22/R410A/R32) or a failed capacitor — both cause warm air output.", ms: "Jika unit luar berjalan tetapi tidak menyejuk, punca paling biasa adalah gas penyejuk rendah atau kapasitor gagal.", zh: "如果室外机运转但不制冷，最常见的原因是冷媒不足（R22/R410A/R32）或电容器故障——两者都导致吹出暖风。" },
-          solution: { en: "Book a diagnostic with KL Renovator. Diagnostic RM 88 (waived if repaired same visit). We'll identify gas loss or capacitor fault on-site.", ms: "Tempah diagnostik dengan KL Renovator. Diagnostik RM 88 (dikecualikan jika diperbaiki dalam lawatan yang sama).", zh: "预约KL Renovator进行诊断。诊断费RM 88（同次上门维修则免收）。我们将现场确认气体不足或电容器故障。" },
+          solution: { en: "Book a diagnostic with KL Renovator. Diagnostic RM 138 (waived if repaired same visit). We'll identify gas loss or capacitor fault on-site.", ms: "Tempah diagnostik dengan KL Renovator. Diagnostik RM 88 (dikecualikan jika diperbaiki dalam lawatan yang sama).", zh: "预约KL Renovator进行诊断。诊断费RM 88（同次上门维修则免收）。我们将现场确认气体不足或电容器故障。" },
           urgency: "medium",
           serviceSlug: "repair",
           serviceName: "Troubleshooting & Gas Check",
@@ -295,7 +295,7 @@ const STEPS: Record<string, DiagnosticStep> = {
         result: {
           title: { en: "Compressor or Fan Motor Issue", ms: "Masalah Kompressor atau Motor Kipas", zh: "压缩机或风扇电机问题" },
           cause: { en: "Loud humming from the outdoor unit is often a failing capacitor, fan motor bearing wear, or compressor starting issue. Left unchecked it can lead to full failure.", ms: "Denguman kuat dari unit luar sering kali kapasitor gagal, haus galas motor kipas, atau masalah permulaan kompressor.", zh: "室外机嗡嗡声通常是电容器失效、风扇电机轴承磨损或压缩机启动问题。不处理可能导致完全故障。" },
-          solution: { en: "Book a diagnostic inspection with KL Renovator. Our technician will identify the specific faulty component. Diagnostic RM 88 (waived if repaired same visit).", ms: "Tempah pemeriksaan diagnostik dengan KL Renovator. Juruteknik kami akan mengenal pasti komponen rosak. Diagnostik RM 88.", zh: "预约KL Renovator进行诊断检查。我们的技术员将确定具体的故障部件。诊断费RM 88（同次上门维修则免收）。" },
+          solution: { en: "Book a diagnostic inspection with KL Renovator. Our technician will identify the specific faulty component. Diagnostic RM 138 (waived if repaired same visit).", ms: "Tempah pemeriksaan diagnostik dengan KL Renovator. Juruteknik kami akan mengenal pasti komponen rosak. Diagnostik RM 88.", zh: "预约KL Renovator进行诊断检查。我们的技术员将确定具体的故障部件。诊断费RM 88（同次上门维修则免收）。" },
           urgency: "medium",
           serviceSlug: "repair",
           serviceName: "Troubleshooting & Repair",
@@ -365,7 +365,7 @@ const STEPS: Record<string, DiagnosticStep> = {
         result: {
           title: { en: "Complete Power Failure", ms: "Kegagalan Kuasa Sepenuhnya", zh: "完全断电故障" },
           cause: { en: "A completely dead unit means power is not reaching the PCB. Check if the MCB has tripped first. If not, the issue is the PCB, capacitor, or wiring.", ms: "Unit yang mati sepenuhnya bermakna kuasa tidak sampai ke PCB. Periksa sama ada MCB jatuh dahulu.", zh: "完全无反应意味着电源没有到达PCB。首先检查MCB是否跳闸。如果没有，问题是PCB、电容器或接线。" },
-          solution: { en: "First check your MCB panel. If MCB is fine but unit is still dead, WhatsApp KL Renovator for a same-day diagnostic. RM 88 (waived if repaired same visit).", ms: "Periksa panel MCB anda dahulu. Jika MCB baik-baik saja tetapi unit masih mati, WhatsApp KL Renovator untuk diagnostik hari sama.", zh: "首先检查MCB面板。如果MCB正常但机器仍然无反应，WhatsApp KL Renovator进行当天诊断。RM 88（同次上门维修则免收）。" },
+          solution: { en: "First check your MCB panel. If MCB is fine but unit is still dead, WhatsApp KL Renovator for a same-day diagnostic. RM 138 (waived if repaired same visit).", ms: "Periksa panel MCB anda dahulu. Jika MCB baik-baik saja tetapi unit masih mati, WhatsApp KL Renovator untuk diagnostik hari sama.", zh: "首先检查MCB面板。如果MCB正常但机器仍然无反应，WhatsApp KL Renovator进行当天诊断。RM 88（同次上门维修则免收）。" },
           urgency: "high",
           serviceSlug: "repair",
           serviceName: "Troubleshooting & Repair",
