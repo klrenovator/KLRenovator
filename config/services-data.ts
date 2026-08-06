@@ -34,31 +34,31 @@ export const servicesData: Record<string, ServiceDetail> = {
   "chemical-wash": {
     slug: "chemical-wash",
     title: "Pressure Chemical Wash",
-    tagline: "High-pressure 80–120 PSI chemical deep-cleaning on-wall — dissolves stubborn biofilm, clears blocked drains, and restores strong airflow. From RM 120 today.",
+    tagline: "High-pressure 80–120 PSI chemical deep-cleaning on-wall — dissolves stubborn biofilm, clears blocked drains, and restores strong airflow. From RM 170 today.",
     description:
-      "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 120 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
+      "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 170 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
     startPrice: "RM 2.50 / PSI",
     heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     ogImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
-    aioSummary: "Pressure chemical wash for airconds in KL & Selangor involves high-pressure (80-120 PSI) alkaline cleaning of internal coils. Starting Price: RM 120. Service Time: 60-75 mins. Warranty: 1-month workmanship. Ideal for restoring airflow and removing microbial odors.",
-    aioSummaryMS: "Cuci kimia tekanan tinggi (80-120 PSI) untuk aircond di KL & Selangor. Harga: RM 120. Tempoh: 60-75 minit. Waranti: 1 bulan. Sesuai untuk pulihkan aliran udara dan membuang bau hapak.",
-    aioSummaryZH: "吉隆坡及雪兰莪高压（80-120 PSI）化学清洗服务。起步价：RM 120。服务时长：60-75分钟。保修：1个月工艺保修。适用于恢复强劲风量及消除霉味。",
+    aioSummary: "Pressure chemical wash for airconds in KL & Selangor involves high-pressure (80-120 PSI) alkaline cleaning of internal coils. Starting Price: RM 170. Service Time: 60-75 mins. Warranty: 1-month workmanship. Ideal for restoring airflow and removing microbial odors.",
+    aioSummaryMS: "Cuci kimia tekanan tinggi (80-120 PSI) untuk aircond di KL & Selangor. Harga: RM 170. Tempoh: 60-75 minit. Waranti: 1 bulan. Sesuai untuk pulihkan aliran udara dan membuang bau hapak.",
+    aioSummaryZH: "吉隆坡及雪兰莪高压（80-120 PSI）化学清洗服务。起步价：RM 170。服务时长：60-75分钟。保修：1个月工艺保修。适用于恢复强劲风量及消除霉味。",
     compareTable: {
       title: "Pressure Chemical Wash vs Chemical Overhaul",
       subtitle: "Help choosing the right deep-cleaning package for your unit.",
-      columns: ["Feature", "Chemical Wash (RM 120)", "Chemical Overhaul (RM 220)"],
+      columns: ["Feature", "Chemical Wash (RM 170)", "Chemical Overhaul (RM 220)"],
       rows: [["Dismantling", "Stays on wall", "Fully removed from wall"], ["Blower Wheel", "Cleaned in place", "Removed & soaked"], ["Drain Pan", "Flushed", "Dismantled & scrubbed"], ["Back Tray", "Surface clean", "Total sanitization"], ["Best For", "Annual maintenance", "Water leaks & ice buildup"], ["Duration", "60 mins", "2.5 hours"]]
     },
     compareTableZH: {
       title: "高压化学清洗 vs 化学大修",
       subtitle: "帮助您为冷气选择合适的深度清洁方案。",
-      columns: ["特点", "化学清洗 (RM 120)", "化学大修 (RM 220)"],
+      columns: ["特点", "化学清洗 (RM 170)", "化学大修 (RM 220)"],
       rows: [["拆卸状态", "挂墙清洗", "完全拆卸"], ["风轮清洁", "原地清洗", "拆下浸泡"], ["接水盘", "冲洗", "拆下刷洗"], ["适用场景", "年度保养", "漏水或结冰"], ["耗时", "60分钟", "2.5小时"]]
     },
     compareTableMS: {
       title: "Cuci Kimia Bertekanan vs Chemical Overhaul",
       subtitle: "Bantuan memilih pakej pembersihan mendalam yang sesuai untuk unit anda.",
-      columns: ["Ciri", "Cuci Kimia (RM 120)", "Overhaul (RM 220)"],
+      columns: ["Ciri", "Cuci Kimia (RM 170)", "Overhaul (RM 220)"],
       rows: [["Pemasangan", "Kekal di dinding", "Dibuka sepenuhnya"], ["Roda Kipas", "Cuci di tempat", "Dibuka & direndam"], ["Dulang Saliran", "Bilas sahaja", "Dibuka & disental"], ["Sesuai Untuk", "Servis tahunan", "Bocor air & ais"], ["Tempoh", "60 minit", "2.5 jam"]]
     },
     highlights: [
@@ -80,7 +80,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a pressure chemical wash cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 170. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 230. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
       },
       {
         q: "How often should I get a chemical wash?",
@@ -92,7 +92,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "What is the technical difference between a pressure chemical wash and a chemical overhaul?",
-        a: "A Pressure Chemical Wash (RM 120) is performed while the air conditioner remains mounted on your wall; high-pressure chemical spray penetrates the evaporator coil fins and blower wheel to flush out microbial buildup and restore cooling efficiency. A Chemical Overhaul (RM 220) involves completely dismantling the indoor unit from the wall so that every individual part—including the back drain tray, fan motor housing, and internal evaporator coils—is removed, chemical-soaked, and inspected separately before reassembly. If you are uncertain which service package suits your unit's condition, WhatsApp our technical team for an honest evaluation.",
+        a: "A Pressure Chemical Wash (RM 170) is performed while the air conditioner remains mounted on your wall; high-pressure chemical spray penetrates the evaporator coil fins and blower wheel to flush out microbial buildup and restore cooling efficiency. A Chemical Overhaul (RM 220) involves completely dismantling the indoor unit from the wall so that every individual part—including the back drain tray, fan motor housing, and internal evaporator coils—is removed, chemical-soaked, and inspected separately before reassembly. If you are uncertain which service package suits your unit's condition, WhatsApp our technical team for an honest evaluation.",
       },
       {
         q: "What preparation is required before the technician arrives for a chemical wash?",
@@ -107,7 +107,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga cuci kimia tekanan di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
+        a: "Dinding 1.0–1.5 HP: RM 170. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 230. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
       },
       {
         q: "Berapa kerap saya perlu buat cuci kimia?",
@@ -119,7 +119,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Apakah perbezaan teknikal antara cuci kimia dan overhaul kimia?",
-        a: "Cuci Kimia Bertekanan (RM 120) dilakukan semasa penghawa dingin kekal terpasang di dinding anda; semburan kimia tekanan tinggi menembusi sirip gegelung dan roda kipas untuk membersihkan penumpukan mikroorganisma dan memulihkan kecekapan penyejukan. Overhaul Kimia (RM 220) melibatkan pembongkaran lengkap unit dalaman dari dinding supaya setiap bahagian—termasuk dulang saliran belakang, perumahan motor kipas, dan gegelung penyejat—dikeluarkan, direndam kimia, dan diperiksa secara berasingan sebelum dipasang semula. Jika tidak pasti pakej mana yang sesuai, WhatsApp pasukan teknikal kami.",
+        a: "Cuci Kimia Bertekanan (RM 170) dilakukan semasa penghawa dingin kekal terpasang di dinding anda; semburan kimia tekanan tinggi menembusi sirip gegelung dan roda kipas untuk membersihkan penumpukan mikroorganisma dan memulihkan kecekapan penyejukan. Overhaul Kimia (RM 220) melibatkan pembongkaran lengkap unit dalaman dari dinding supaya setiap bahagian—termasuk dulang saliran belakang, perumahan motor kipas, dan gegelung penyejat—dikeluarkan, direndam kimia, dan diperiksa secara berasingan sebelum dipasang semula. Jika tidak pasti pakej mana yang sesuai, WhatsApp pasukan teknikal kami.",
       },
       {
         q: "Apakah persediaan yang diperlukan sebelum juruteknik tiba untuk cuci kimia?",
@@ -131,7 +131,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的高压化学清洗费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 170。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 230。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "化学清洗应该多久做一次？",
@@ -143,7 +143,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "高压化学清洗与化学大修在技术上有何不同？",
-        a: "高压化学清洗（RM 120）是在冷气挂在墙上的状态下进行的；高压化学喷雾深入蒸发器盘管翅片和风轮，冲洗掉微生物污垢并恢复制冷效率。化学大修（RM 220）则将室内机从墙上完全拆卸下来，每个独立部件——包括接水盘后部、风扇马达外壳及蒸发器盘管——都单独取出、化学浸泡并全面检查后再重装。如果您不确定哪种服务套餐适合您的机器状况，欢迎WhatsApp咨询我们的技术团队。",
+        a: "高压化学清洗（RM 170）是在冷气挂在墙上的状态下进行的；高压化学喷雾深入蒸发器盘管翅片和风轮，冲洗掉微生物污垢并恢复制冷效率。化学大修（RM 220）则将室内机从墙上完全拆卸下来，每个独立部件——包括接水盘后部、风扇马达外壳及蒸发器盘管——都单独取出、化学浸泡并全面检查后再重装。如果您不确定哪种服务套餐适合您的机器状况，欢迎WhatsApp咨询我们的技术团队。",
       },
       {
         q: "技术员上门进行化学清洗前，我需要做哪些准备工作？",
@@ -153,9 +153,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "能否当天预约化学清洗？", a: "可以 — KL Renovator 经常有当天预约名额用于化学清洗。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
-      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
+      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 170" },
       { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 150" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 180" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 230" },
       { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 200" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 280" },
@@ -181,7 +181,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     compareTable: {
       title: "Chemical Overhaul vs Pressure Chemical Wash",
       subtitle: "Understand why an overhaul is the definitive fix for neglected units.",
-      columns: ["Feature", "Chemical Overhaul (RM 220)", "Pressure Wash (RM 120)"],
+      columns: ["Feature", "Chemical Overhaul (RM 220)", "Pressure Wash (RM 170)"],
       rows: [["Unit Status", "100% Dismantled", "Stays mounted"], ["Back Tray Cleaning", "Yes (Scrubbed)", "No (Surface flush only)"], ["Mould Removal", "100% Guaranteed", "Surface removal only"], ["Water Leak Fix", "Permanent solution", "Temporary fix"], ["Labour Time", "2 - 3 Hours", "1 Hour"], ["Warranty", "1-Month Workmanship", "1-Month Workmanship"]]
     },
     highlights: [
@@ -207,7 +207,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "When do I need a chemical overhaul vs a chemical wash?",
-        a: "Use this decision guide: (1) Water leaking from the indoor unit \u2192 likely overhaul (drain pan/tray blocked or cracked). (2) Ice visible on the coil or copper pipe \u2192 overhaul (coil is so dirty that refrigerant cannot absorb heat, causing freezing). (3) Extremely foul, rotten smell even after cleaning \u2192 overhaul (biofilm deep inside blower barrel and housing). (4) Unit not opened/cleaned in 3+ years \u2192 overhaul. (5) Chemical wash done 6 months ago and problem is back \u2192 overhaul (surface clean not enough). If symptoms are mild \u2014 slightly weak cooling, light musty smell, no leaks \u2014 a chemical wash (RM 120) is likely sufficient. WhatsApp us your symptoms and we will advise honestly.",
+        a: "Use this decision guide: (1) Water leaking from the indoor unit \u2192 likely overhaul (drain pan/tray blocked or cracked). (2) Ice visible on the coil or copper pipe \u2192 overhaul (coil is so dirty that refrigerant cannot absorb heat, causing freezing). (3) Extremely foul, rotten smell even after cleaning \u2192 overhaul (biofilm deep inside blower barrel and housing). (4) Unit not opened/cleaned in 3+ years \u2192 overhaul. (5) Chemical wash done 6 months ago and problem is back \u2192 overhaul (surface clean not enough). If symptoms are mild \u2014 slightly weak cooling, light musty smell, no leaks \u2014 a chemical wash (RM 170) is likely sufficient. WhatsApp us your symptoms and we will advise honestly.",
       },
       {
         q: "My aircond has been leaking water for weeks. Will overhaul stop it permanently?",
@@ -235,7 +235,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Bilakah saya memerlukan overhaul kimia vs cuci kimia?",
-        a: "Gunakan panduan ini: (1) Air bocor dari unit dalaman \u2192 overhaul (dulang longkang tersumbat atau retak). (2) Ais kelihatan pada gegelung atau paip kuprum \u2192 overhaul (gegelung terlalu kotor, bahan pendingin tidak dapat menyerap haba). (3) Bau sangat busuk walaupun selepas dibersihkan \u2192 overhaul (biofilm jauh di dalam barrel kipas). (4) Unit tidak dibuka/dibersihkan 3+ tahun \u2192 overhaul. (5) Cuci kimia 6 bulan lepas dan masalah kembali \u2192 overhaul. Jika simptom ringan \u2014 penyejukan sedikit lemah, bau hapak ringan, tiada bocor \u2014 cuci kimia (RM 120) mungkin mencukupi. WhatsApp kami simptom anda dan kami akan menasihatkan dengan jujur.",
+        a: "Gunakan panduan ini: (1) Air bocor dari unit dalaman \u2192 overhaul (dulang longkang tersumbat atau retak). (2) Ais kelihatan pada gegelung atau paip kuprum \u2192 overhaul (gegelung terlalu kotor, bahan pendingin tidak dapat menyerap haba). (3) Bau sangat busuk walaupun selepas dibersihkan \u2192 overhaul (biofilm jauh di dalam barrel kipas). (4) Unit tidak dibuka/dibersihkan 3+ tahun \u2192 overhaul. (5) Cuci kimia 6 bulan lepas dan masalah kembali \u2192 overhaul. Jika simptom ringan \u2014 penyejukan sedikit lemah, bau hapak ringan, tiada bocor \u2014 cuci kimia (RM 170) mungkin mencukupi. WhatsApp kami simptom anda dan kami akan menasihatkan dengan jujur.",
       },
       {
         q: "Aircond saya telah bocor air berminggu-minggu. Adakah overhaul akan menghentikannya?",
@@ -259,7 +259,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "何时需要化学大修而非化学清洗？",
-        a: "使用此决策指南：（1）室内机漏水\u2192可能需要大修（排水盘堵塞或破裂）。（2）盘管或铜管可见结冰\u2192大修（盘管太脏导致冷媒无法吸热）。（3）即使清洗后仍有极臭气味\u2192大修（生物膜深入风轮桶和外壳内部）。（4）3年以上未打开/清洗\u2192大修。（5）6个月前做了化学清洗但问题复发\u2192大修（表面清洁不够）。如果症状轻微\u2014\u2014冷气稍弱、轻微霉味、无漏水\u2014\u2014化学清洗（RM 120）可能就足够了。WhatsApp我们您的症状，我们会诚实建议。",
+        a: "使用此决策指南：（1）室内机漏水\u2192可能需要大修（排水盘堵塞或破裂）。（2）盘管或铜管可见结冰\u2192大修（盘管太脏导致冷媒无法吸热）。（3）即使清洗后仍有极臭气味\u2192大修（生物膜深入风轮桶和外壳内部）。（4）3年以上未打开/清洗\u2192大修。（5）6个月前做了化学清洗但问题复发\u2192大修（表面清洁不够）。如果症状轻微\u2014\u2014冷气稍弱、轻微霉味、无漏水\u2014\u2014化学清洗（RM 170）可能就足够了。WhatsApp我们您的症状，我们会诚实建议。",
       },
       {
         q: "冷气漏水好几周了\u2014\u2014大修能永久解决吗？",
@@ -331,11 +331,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Can I use my aircond while waiting for a gas top-up appointment?",
-        a: "If the unit is still blowing cool (not cold) air with no ice: yes, you can use it, but it is running inefficiently and your electricity bill is higher than normal for the cooling you are getting. If ice is forming on the indoor coil or copper pipe: turn the unit OFF immediately and run only the fan to defrost it. Running with ice can damage the compressor (liquid refrigerant slugging) \u2014 that turns a RM 120 top-up into a RM 800+ compressor replacement. If you see ice, WhatsApp us \u2014 we can often prioritise your appointment.",
+        a: "If the unit is still blowing cool (not cold) air with no ice: yes, you can use it, but it is running inefficiently and your electricity bill is higher than normal for the cooling you are getting. If ice is forming on the indoor coil or copper pipe: turn the unit OFF immediately and run only the fan to defrost it. Running with ice can damage the compressor (liquid refrigerant slugging) \u2014 that turns a RM 170 top-up into a RM 800+ compressor replacement. If you see ice, WhatsApp us \u2014 we can often prioritise your appointment.",
       },
       {
         q: "Can I top up the gas myself?",
-        a: "No. Refrigerant handling in Malaysia requires certified technicians under the Environmental Quality (Refrigerant Management) Regulations. You need: (a) a manifold gauge set, (b) the correct refrigerant cylinder, (c) a weighing scale, (d) training to read pressures correctly against ambient temperature charts, and (e) an electronic leak detector for safety. Overfilling by even 10\u201315% can cause liquid slugging that destroys the compressor. Using the wrong refrigerant type can cause a chemical reaction that corrodes the system internally. This is not a DIY job \u2014 at RM 120\u2013180 including professional leak check, it is also not expensive.",
+        a: "No. Refrigerant handling in Malaysia requires certified technicians under the Environmental Quality (Refrigerant Management) Regulations. You need: (a) a manifold gauge set, (b) the correct refrigerant cylinder, (c) a weighing scale, (d) training to read pressures correctly against ambient temperature charts, and (e) an electronic leak detector for safety. Overfilling by even 10\u201315% can cause liquid slugging that destroys the compressor. Using the wrong refrigerant type can cause a chemical reaction that corrodes the system internally. This is not a DIY job \u2014 at RM 170\u2013180 including professional leak check, it is also not expensive.",
       },
       { q: "How can I tell if a leak is 'slow' or 'fast'?", a: "A slow leak takes 6-12 months to affect cooling; a fast leak results in warm air within days. KL Renovator's electronic sniffers can detect even the smallest micro-leaks in copper flare joints." }
     ],
@@ -354,7 +354,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Mengapa aircond saya terus kehilangan gas?",
-        a: "Betul \u2014 gas penyejuk tidak 'digunakan'. Ia beredar dalam gelung tertutup. Jika paras rendah, ada kebocoran di suatu tempat. Titik kebocoran biasa: (1) Sambungan flare di unit dalam dan luar \u2014 paling biasa, boleh dibaiki dengan flare semula. (2) Gegelung penyejat atau kondenser \u2014 kebocoran mikro dari kakisan, terutama unit berusia 8+ tahun berhampiran pantai (Klang, Pelabuhan Klang). (3) Teras injap Schrader \u2014 pembaikan mudah, sering terlepas pandang. Jika unit anda memerlukan gas setiap 6\u201312 bulan, kebocoran perlu ditemui dan dibaiki. Gas Leak Repair ialah RM 120 bagi setiap kebocoran; harga gas top-up kekal berasingan mengikut PSI yang diperlukan.",
+        a: "Betul \u2014 gas penyejuk tidak 'digunakan'. Ia beredar dalam gelung tertutup. Jika paras rendah, ada kebocoran di suatu tempat. Titik kebocoran biasa: (1) Sambungan flare di unit dalam dan luar \u2014 paling biasa, boleh dibaiki dengan flare semula. (2) Gegelung penyejat atau kondenser \u2014 kebocoran mikro dari kakisan, terutama unit berusia 8+ tahun berhampiran pantai (Klang, Pelabuhan Klang). (3) Teras injap Schrader \u2014 pembaikan mudah, sering terlepas pandang. Jika unit anda memerlukan gas setiap 6\u201312 bulan, kebocoran perlu ditemui dan dibaiki. Gas Leak Repair ialah RM 170 bagi setiap kebocoran; harga gas top-up kekal berasingan mengikut PSI yang diperlukan.",
       },
       {
         q: "Bolehkah saya menambah gas sendiri?",
@@ -382,7 +382,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "我可以自己充气吗？",
-        a: "不可以。在马来西亚，制冷剂处理根据《环境质量（制冷剂管理）法规》需要认证技术员。充气过量即使10-15%也可能导致压缩机损坏。使用错误类型的制冷剂可能导致系统内部腐蚀的化学反应。这绝非DIY工作\u2014\u2014以RM 120-180的价格（含专业泄漏检查）也并不昂贵。",
+        a: "不可以。在马来西亚，制冷剂处理根据《环境质量（制冷剂管理）法规》需要认证技术员。充气过量即使10-15%也可能导致压缩机损坏。使用错误类型的制冷剂可能导致系统内部腐蚀的化学反应。这绝非DIY工作\u2014\u2014以RM 170-180的价格（含专业泄漏检查）也并不昂贵。",
       },
       { q: "如何判断漏气是“慢漏”还是“快漏”？", a: "慢漏通常需要6-12个月才影响制冷；快漏则会在几天内排空冷媒。KL Renovator 的电子检漏仪可以检测到铜管接头中最微小的渗漏。" },
       { q: "能否当天预约冷媒充注？", a: "可以 — KL Renovator 经常有当天预约名额用于充气服务。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
@@ -402,11 +402,11 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "Troubleshooting & Repairs",
     tagline: "Systematic electrical and mechanical diagnosis for any aircond fault. Error codes decoded, faults pinpointed, transparent quotes. RM 88 diagnostic waived with repair.",
     description:
-      "Your aircond is making a grinding noise at 2am. The timer light is blinking 5 times and the unit will not start. The MCB trips every time the compressor kicks in. These are not 'cleaning' problems \u2014 they are electrical or mechanical faults that need a trained technician with a multimeter, manifold gauges, and brand-specific error-code knowledge. KL Renovator diagnoses and repairs every common aircond fault: failed capacitors (the #1 cause of 'unit hums but fan does not spin'), seized fan motors, burnt contactors, faulty PCB control boards, broken temperature sensors and thermistors, damaged drain pumps, compressor electrical faults, and refrigerant circuit issues. We carry capacitors, contactors, fan motors, sensors, drain pumps, and universal PCB boards in every van. RM 88 diagnostic fee, waived if the repair is done same visit. 3-month parts warranty on every replacement. Before we touch a single wire, you get a clear price \u2014 and the right to say no with no hard feelings.",
-    startPrice: "RM 88",
+      "Your aircond is making a grinding noise at 2am. The timer light is blinking 5 times and the unit will not start. The MCB trips every time the compressor kicks in. These are not 'cleaning' problems \u2014 they are electrical or mechanical faults that need a trained technician with a multimeter, manifold gauges, and brand-specific error-code knowledge. KL Renovator diagnoses and repairs every common aircond fault: failed capacitors (the #1 cause of 'unit hums but fan does not spin'), seized fan motors, burnt contactors, faulty PCB control boards, broken temperature sensors and thermistors, damaged drain pumps, compressor electrical faults, and refrigerant circuit issues. We carry capacitors, contactors, fan motors, sensors, drain pumps, and universal PCB boards in every van. RM 138 diagnostic fee, waived if the repair is done same visit. 3-month parts warranty on every replacement. Before we touch a single wire, you get a clear price \u2014 and the right to say no with no hard feelings.",
+    startPrice: "RM 138",
     heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
     ogImage: "/hero/aircond-repair-technician-klang-valley.webp",
-    aioSummary: "Diagnostic-led aircond repair for all 20+ brands in Malaysia. Diagnostic Fee: RM 88 (waived if repaired). Warranty: 3-month parts warranty. Same-day repair available for capacitors, fan motors, and PCB boards.",
+    aioSummary: "Diagnostic-led aircond repair for all 20+ brands in Malaysia. Diagnostic Fee: RM 138 (waived if repaired). Warranty: 3-month parts warranty. Same-day repair available for capacitors, fan motors, and PCB boards.",
     aioSummaryMS: "Pembaikan aircond berasaskan diagnosis untuk 20+ jenama di Malaysia. Kos Diagnosis: RM 88 (percuma jika baiki). Waranti: 3 bulan untuk alat ganti. Pembaikan hari sama untuk kapasitor, motor kipas, dan papan PCB.",
     aioSummaryZH: "吉隆坡及雪兰莪所有20多个品牌的冷气维修服务。诊断费：RM 88（维修则免除）。保修：零件3个月保修。可提供电容、风扇马达和电路板的当场维修。",
     compareTable: {
@@ -446,7 +446,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Do I have to pay the diagnostic fee even if the repair cannot be done same-day?",
-        a: "The RM 88 diagnostic fee covers the technician's time, equipment, and expertise to identify the exact fault. If we find the fault but the part is not on the van (e.g., a specific Daikin PCB for a 2018 model), we: (a) explain exactly what is needed, (b) quote the part + labour, (c) order the part (usually overnight), (d) return to complete the repair. You only pay the diagnostic fee once \u2014 we do not charge it again on the return visit. If you decide not to proceed with the repair after diagnosis, the RM 88 fee stands (it paid for the diagnosis you received). But approximately 85% of our repair jobs are completed same-visit because our vans are well-stocked.",
+        a: "The RM 138 diagnostic fee covers the technician's time, equipment, and expertise to identify the exact fault. If we find the fault but the part is not on the van (e.g., a specific Daikin PCB for a 2018 model), we: (a) explain exactly what is needed, (b) quote the part + labour, (c) order the part (usually overnight), (d) return to complete the repair. You only pay the diagnostic fee once \u2014 we do not charge it again on the return visit. If you decide not to proceed with the repair after diagnosis, the RM 88 fee stands (it paid for the diagnosis you received). But approximately 85% of our repair jobs are completed same-visit because our vans are well-stocked.",
       },
       {
         q: "My unit makes a loud buzzing/humming noise but the fan does not spin \u2014 what is wrong?",
@@ -509,7 +509,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Capacitor Replacement", price: "RM 150 – 250" },
       { label: "Fan Motor Replacement", price: "RM 250 – 380" },
       { label: "PCB Board Replacement", price: "RM 350 – 600" },
-      { label: "Gas Leak Repair", price: "RM 120 / leak" },
+      { label: "Gas Leak Repair", price: "RM 170 / leak" },
       { label: "Temperature Sensor Replacement", price: "RM 150 – 250" },
       { label: "Contactor Replacement", price: "RM 150 – 200" },
       { label: "Drain Pump Replacement", price: "RM 350 – 550" },
@@ -679,7 +679,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does basic aircond servicing cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 120. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 170. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
       },
       {
         q: "How often should I service my aircond?",
@@ -691,7 +691,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "My aircond still smells or blows weak air after basic servicing — why?",
-        a: "If the smell or weak airflow persists after basic servicing, the issue is deeper than surface-level cleaning can fix. Mould and biofilm have likely colonised the blower wheel and the inner coil layers. At this point, you need a pressure chemical wash (RM 120) or, for units that have not been deep-cleaned in 3+ years or are already leaking water, a full chemical overhaul (RM 220). WhatsApp us after your basic service if the problem returns — we will advise whether the unit needs the next level of cleaning and we will not charge you for advice.",
+        a: "If the smell or weak airflow persists after basic servicing, the issue is deeper than surface-level cleaning can fix. Mould and biofilm have likely colonised the blower wheel and the inner coil layers. At this point, you need a pressure chemical wash (RM 170) or, for units that have not been deep-cleaned in 3+ years or are already leaking water, a full chemical overhaul (RM 220). WhatsApp us after your basic service if the problem returns — we will advise whether the unit needs the next level of cleaning and we will not charge you for advice.",
       },
       {
         q: "Does basic servicing include gas top-up?",
@@ -706,7 +706,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis asas aircond di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 120. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
+        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 170. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
       },
       {
         q: "Berapa kerap saya perlu servis aircond?",
@@ -718,7 +718,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Aircond saya masih berbau atau angin lemah selepas servis asas — kenapa?",
-        a: "Jika bau atau aliran udara lemah berterusan selepas servis asas, masalahnya lebih dalam daripada yang boleh dibaiki oleh pembersihan permukaan. Kulat dan biofilm berkemungkinan telah menjajah roda kipas dan lapisan dalam gegelung. Pada tahap ini, anda memerlukan cuci kimia tekanan (RM 120) atau, untuk unit yang tidak pernah dibersihkan secara mendalam selama 3+ tahun atau sudah bocor air, overhaul kimia penuh (RM 220). WhatsApp kami selepas servis asas anda jika masalah berulang — kami akan menasihatkan sama ada unit memerlukan tahap pembersihan seterusnya dan kami tidak akan mengenakan caj untuk nasihat.",
+        a: "Jika bau atau aliran udara lemah berterusan selepas servis asas, masalahnya lebih dalam daripada yang boleh dibaiki oleh pembersihan permukaan. Kulat dan biofilm berkemungkinan telah menjajah roda kipas dan lapisan dalam gegelung. Pada tahap ini, anda memerlukan cuci kimia tekanan (RM 170) atau, untuk unit yang tidak pernah dibersihkan secara mendalam selama 3+ tahun atau sudah bocor air, overhaul kimia penuh (RM 220). WhatsApp kami selepas servis asas anda jika masalah berulang — kami akan menasihatkan sama ada unit memerlukan tahap pembersihan seterusnya dan kami tidak akan mengenakan caj untuk nasihat.",
       },
       {
         q: "Adakah servis asas termasuk tambah gas?",
@@ -730,7 +730,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪基本冷气保养费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 120。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 170。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "冷气应该多久保养一次？",
@@ -742,7 +742,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "基本保养后冷气仍有异味或风量弱——为什么？",
-        a: "如果基本保养后异味或弱风量持续存在，问题比表面清洁能解决的更深。霉菌和生物膜可能已经在风轮和盘管内层滋生。此时您需要进行压力化学清洗（RM 120），或者对于3年以上未深度清洁或已漏水的机器，需要进行全面化学大修（RM 220）。基本保养后如果问题再次出现，请WhatsApp我们——我们会建议机器是否需要下一级别的清洁，且不收取咨询费。",
+        a: "如果基本保养后异味或弱风量持续存在，问题比表面清洁能解决的更深。霉菌和生物膜可能已经在风轮和盘管内层滋生。此时您需要进行压力化学清洗（RM 170），或者对于3年以上未深度清洁或已漏水的机器，需要进行全面化学大修（RM 220）。基本保养后如果问题再次出现，请WhatsApp我们——我们会建议机器是否需要下一级别的清洁，且不收取咨询费。",
       },
       {
         q: "基本保养包含加气吗？",
@@ -753,13 +753,13 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 99" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 120" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 170" },
       { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Ceiling Cassette · 3.5 – 5.0 HP", price: "RM 250" },
       { label: "Window Unit · 1.0 – 1.5 HP", price: "RM 99" },
-      { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 120" },
+      { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 170" },
     ],
   },
 
@@ -1000,11 +1000,11 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "Emergency Aircond Repair",
     tagline: "Same-day rapid emergency response for complete breakdowns, heavy water leaks, outdoor unit failures, electrical faults, and urgent repairs across KL & Selangor.",
     description:
-      "Your aircond just died at 11pm, the room is 32°C, and you have a presentation at 8am. Or water is dripping onto your TV cabinet and you cannot switch off the unit because the house has no other cooling. This is not a \"book for next Tuesday\" situation — this is when you WhatsApp KL Renovator immediately. We dispatch trained HVAC technicians same-day across all 50+ Klang Valley suburbs within 30–60 minutes of confirmation. The RM 88 diagnostic fee is fully waived if the repair is completed same visit. Our vans carry common spare parts — capacitors, fan motors, PCB boards, sensors, contactors, drain hoses, refrigerant — so most emergencies are fully resolved in the first visit, not just patched temporarily.",
-    startPrice: "RM 88",
+      "Your aircond just died at 11pm, the room is 32°C, and you have a presentation at 8am. Or water is dripping onto your TV cabinet and you cannot switch off the unit because the house has no other cooling. This is not a \"book for next Tuesday\" situation — this is when you WhatsApp KL Renovator immediately. We dispatch trained HVAC technicians same-day across all 50+ Klang Valley suburbs within 30–60 minutes of confirmation. The RM 138 diagnostic fee is fully waived if the repair is completed same visit. Our vans carry common spare parts — capacitors, fan motors, PCB boards, sensors, contactors, drain hoses, refrigerant — so most emergencies are fully resolved in the first visit, not just patched temporarily.",
+    startPrice: "RM 138",
     heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
     ogImage: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp",
-    aioSummary: "30–60 minute rapid response for aircond breakdowns and critical leaks in KL & Selangor. Diagnostic Fee: RM 88 (waived if repaired). Priority triage for infant/elderly households and server rooms. Standard hours 9 AM-6 PM daily; after-hours emergency (6-10 PM) available with RM 50 surcharge.",
+    aioSummary: "30–60 minute rapid response for aircond breakdowns and critical leaks in KL & Selangor. Diagnostic Fee: RM 138 (waived if repaired). Priority triage for infant/elderly households and server rooms. Standard hours 9 AM-6 PM daily; after-hours emergency (6-10 PM) available with RM 50 surcharge.",
     aioSummaryMS: "Respons pantas 30-60 minit untuk kerosakan aircond dan kebocoran kritikal di KL & Selangor. Kos Diagnosis: RM 88 (percuma jika baiki). Triage utama untuk bayi/warga emas dan bilik server. Waktu standard 9 PG-6 PTG setiap hari; kecemasan luar waktu (6-10 malam) dengan surcaj RM 50.",
     aioSummaryZH: "吉隆坡及雪兰莪冷气故障和严重漏水的30-60分钟极速响应。诊断费：RM 88（维修则免除）。优先处理有老人小孩的家庭及服务器机房。每日营业至晚上10时。",
     highlights: [
@@ -1014,12 +1014,12 @@ export const servicesData: Record<string, ServiceDetail> = {
       "Emergency drain-clearing to stop active water leaks over furniture & floors",
       "Safe electrical isolation for burning smells or sparking wiring faults",
       "After-hours emergency support (6-10 PM, +RM 50 surcharge), 7 days a week, including public holidays",
-      "RM 88 diagnostic fee — waived if we complete the repair on-site",
+      "RM 138 diagnostic fee — waived if we complete the repair on-site",
       "Direct WhatsApp hotline to our emergency dispatch desk for instant ETA",
     ],
     process: [
       { step: "WhatsApp Your Emergency", desc: "Tell us your location, brand, unit count, and what happened. Photos of the unit and outdoor condenser help speed diagnosis. We reply within minutes." },
-      { step: "Get Confirmed Price", desc: "Diagnostic fee quoted upfront. Estimated repair range shared based on your description — capacitor ~RM 180, fan motor RM 250–350, PCB RM 300–600. No surprise bills." },
+      { step: "Get Confirmed Price", desc: "Diagnostic fee quoted upfront. Estimated repair range shared based on your description — capacitor ~RM 230, fan motor RM 300–400, PCB RM 400–600. No surprise bills." },
       { step: "Technician Arrives", desc: "Nearest available technician dispatched immediately from our Klang Valley network. Most arrivals in 30–60 minutes. Technician calls when nearby." },
       { step: "Diagnose & Repair", desc: "Full electrical + refrigerant diagnosis on-site. Common repairs completed same visit. Rare parts ordered overnight with priority return the next business day." },
     ],
@@ -1030,7 +1030,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "How much does emergency aircond repair cost in KL & Selangor?",
-        a: "Diagnostic fee is RM 88 during standard hours (9am–6pm), fully waived if the repair is completed on the same visit. After-hours (6pm–10pm) adds a RM 50 surcharge — so RM 138 diagnostic total, also waived if repaired. Most common emergency repairs: capacitor replacement ~RM 180, indoor fan motor ~RM 250–350, PCB board ~RM 300–600, drain clearing ~RM 120. Every repair price is confirmed with you BEFORE any work starts.",
+        a: "Diagnostic fee is RM 88 during standard hours (9am–6pm), fully waived if the repair is completed on the same visit. After-hours (6pm–10pm) adds a RM 50 surcharge — so RM 138 diagnostic total, also waived if repaired. Most common emergency repairs: capacitor replacement ~RM 230, indoor fan motor ~RM 300–400, PCB board ~RM 400–600, drain clearing ~RM 170. Every repair price is confirmed with you BEFORE any work starts.",
       },
       {
         q: "What qualifies as a genuine aircond emergency?",
@@ -1057,7 +1057,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Berapa caj pembaikan aircond kecemasan di KL & Selangor?",
-        a: "Caj diagnostik RM 88 untuk waktu standard (9am–6pm), dikecualikan sepenuhnya jika pembaikan diselesaikan pada lawatan yang sama. Waktu luar (6pm–10pm) dikenakan surcaj RM 50 — jadi jumlah RM 138, juga dikecualikan jika dibaiki. Pembaikan kecemasan paling biasa: penggantian kapasitor ~RM 180, motor kipas dalaman ~RM 250–350, papan PCB ~RM 300–600, pembersihan longkang ~RM 120. Setiap harga pembaikan disahkan dengan anda SEBELUM sebarang kerja dimulakan.",
+        a: "Caj diagnostik RM 88 untuk waktu standard (9am–6pm), dikecualikan sepenuhnya jika pembaikan diselesaikan pada lawatan yang sama. Waktu luar (6pm–10pm) dikenakan surcaj RM 50 — jadi jumlah RM 138, juga dikecualikan jika dibaiki. Pembaikan kecemasan paling biasa: penggantian kapasitor ~RM 230, motor kipas dalaman ~RM 300–400, papan PCB ~RM 400–600, pembersihan longkang ~RM 170. Setiap harga pembaikan disahkan dengan anda SEBELUM sebarang kerja dimulakan.",
       },
       {
         q: "Apakah yang dikira sebagai kecemasan aircond sebenar?",
@@ -1084,7 +1084,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "吉隆坡和雪兰莠紧急冷气维修费用是多少？",
-        a: "标准时间（上午9点至下卡6点）诊断费RM 88，如果同次上门完成维修则全免。非工作时间（下卡6点至晚上10点）加收RM 50——合计RM 138，如果维修也一样免除。最常见紧急维修：电容更换约RM 180，室内风扇电机约RM 250-350，PCB电路板约RM 300-600，排水管疏通约RM 120。每项维修价格在开始任何工作之前与您确认。",
+        a: "标准时间（上午9点至下卡6点）诊断费RM 88，如果同次上门完成维修则全免。非工作时间（下卡6点至晚上10点）加收RM 50——合计RM 138，如果维修也一样免除。最常见紧急维修：电容更换约RM 230，室内风扇电机约RM 250-350，PCB电路板约RM 300-600，排水管疏通约RM 170。每项维修价格在开始任何工作之前与您确认。",
       },
       {
         q: "什么情况算真正的冷气紧急情况？",
@@ -1108,12 +1108,12 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Diagnostic Fee (Standard Hours 9am–6pm)", price: "RM 88" },
       { label: "Diagnostic Fee (waived if repaired same visit)", price: "FREE" },
       { label: "After-Hours Surcharge (6pm–10pm)", price: "RM 50" },
-      { label: "Capacitor Replacement (most common emergency)", price: "RM 180" },
-      { label: "Fan Motor Replacement (indoor)", price: "RM 250–350" },
+      { label: "Capacitor Replacement (most common emergency)", price: "RM 230" },
+      { label: "Fan Motor Replacement (indoor)", price: "RM 300–400" },
       { label: "Fan Motor Replacement (outdoor)", price: "RM 300–450" },
-      { label: "PCB Board Replacement", price: "RM 300–600" },
-      { label: "Emergency Drain Pipe Clearing", price: "RM 120" },
-      { label: "Compressor Replacement (quoted before work)", price: "RM 600–2,000" },
+      { label: "PCB Board Replacement", price: "RM 400–600" },
+      { label: "Emergency Drain Pipe Clearing", price: "RM 170" },
+      { label: "Compressor Replacement (quoted before work)", price: "RM 850–2,000" },
     ],
   },
 };

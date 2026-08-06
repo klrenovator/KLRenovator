@@ -240,7 +240,7 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
         { title: "Chemical Wash — RM 120+", desc: "High-pressure internal coil cleaning. Right for weak airflow, musty smell, gradual cooling loss, or units not serviced in 12+ months." },
         { title: "Chemical Overhaul — RM 220+", desc: "Full dismantle and deep clean. Right for water leaking, ice formation, severe blockage — the permanent fix for drain problems." },
         { title: "Gas Top-up — RM 2.50/PSI", desc: "Precision refrigerant balancing with leak check. Right when cooling drops gradually over weeks or the outdoor unit runs but air stays warm." },
-        { title: "Repair — Diagnostic RM 88", desc: "Component faults: capacitor, fan motor, PCB, sensor. Right for sudden failure, loud noise from the outdoor unit, or error codes. Diagnostic fee is waived if repaired same visit." },
+        { title: "Repair — Diagnostic RM 138", desc: "Component faults: capacitor, fan motor, PCB, sensor. Right for sudden failure, loud noise from the outdoor unit, or error codes. Diagnostic fee is waived if repaired same visit." },
         { title: "Inspection", desc: "When the problem is unclear or a unit has been untouched for years, an inspection gives a written quote for everything needed — no pressure to proceed." },
       ],
       faqs: [

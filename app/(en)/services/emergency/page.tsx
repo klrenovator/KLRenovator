@@ -111,11 +111,11 @@ const emergencyServiceSchema = {
   ],
   offers: {
     "@type": "Offer",
-    price: 88,
+    price: 138,
     priceCurrency: "MYR",
     priceSpecification: {
       "@type": "PriceSpecification",
-      price: 88,
+      price: 138,
       priceCurrency: "MYR",
       description: "Diagnostic from RM 88 (waived if repair done same visit)",
       eligibleQuantity: {
@@ -155,7 +155,7 @@ const faqSchema = {
       name: "How much does emergency aircond repair cost in KL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Diagnostic fee is RM 88 (waived if repair is done on the same visit). Standard hours 9am–6pm apply normal pricing. Jobs between 6pm–10pm carry an overtime surcharge of RM 50. All prices confirmed before work begins.",
+        text: "Diagnostic fee is RM 138 (waived if repair is done on the same visit). Standard hours 9am–6pm apply normal pricing. Jobs between 6pm–10pm carry an overtime surcharge of RM 50. All prices confirmed before work begins.",
       },
     },
     {
@@ -362,12 +362,12 @@ export default function EmergencyPage() {
               <p className="text-xs font-black uppercase tracking-widest text-slate-500">Standard Hours (9am – 6pm)</p>
             </div>
             {[
-              { label: "Diagnostic Fee", price: "RM 88", note: "Waived if repair done same visit" },
-              { label: "Capacitor Replacement (common emergency)", price: "RM 180", note: "" },
-              { label: "Fan Motor Replacement", price: "RM 250–450", note: "" },
-              { label: "PCB Board Replacement", price: "RM 300–600", note: "" },
-              { label: "Compressor Replacement", price: "RM 600–2,000", note: "Quote before work" },
-              { label: "Drain Pipe Emergency Clear", price: "RM 120", note: "" },
+              { label: "Diagnostic Fee", price: "RM 138", note: "Waived if repair done same visit" },
+              { label: "Capacitor Replacement (common emergency)", price: "RM 230", note: "" },
+              { label: "Fan Motor Replacement", price: "RM 300–500", note: "" },
+              { label: "PCB Board Replacement", price: "RM 400–600", note: "" },
+              { label: "Compressor Replacement", price: "RM 850–2,000", note: "Quote before work" },
+              { label: "Drain Pipe Emergency Clear", price: "RM 170", note: "" },
             ].map((row, i) => (
               <div key={i} className={`flex items-start justify-between px-6 py-3.5 ${i % 2 === 0 ? "bg-white" : "bg-slate-50/50"} border-b border-slate-100 last:border-0`}>
                 <div>

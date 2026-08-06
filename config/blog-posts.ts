@@ -593,10 +593,10 @@ export const allPosts: BlogPost[] = [
       <p>Before calling a technician, do these two checks yourself. First, remove the front panel and clean the air filter under running water — a blocked filter alone can reduce cooling output by 20-30% and takes 10 minutes to fix at zero cost. Second, check that the outdoor unit fan is spinning and that there are no objects or debris blocking the airflow around it. If both of these are fine and the unit is still not cooling, the issue requires professional diagnosis.</p>
 
       <h2>What to Do</h2>
-      <p>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. Diagnostic fee RM 88 (waived if repair is done same visit). See: <a href="/problems/aircond-not-cold">Aircond not cold — full guide</a> | <a href="/services/gas-topup">Gas top-up pricing</a></p>
+      <p>WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. Diagnostic fee RM 138 (waived if repair is done same visit). See: <a href="/problems/aircond-not-cold">Aircond not cold — full guide</a> | <a href="/services/gas-topup">Gas top-up pricing</a></p>
 
       <h2>How Long Does a Diagnostic Visit Take?</h2>
-      <p>A full diagnostic visit to identify why your aircond is not cooling takes approximately 30–60 minutes. The technician will check gas pressure with a manifold gauge, inspect the evaporator coil, test the capacitor, verify the thermostat sensor reading, and confirm outdoor unit operation. This covers all 7 causes listed above and gives you a clear diagnosis and repair cost before any work begins. Diagnostic fee RM 88 — waived if repair is carried out on the same visit.</p>
+      <p>A full diagnostic visit to identify why your aircond is not cooling takes approximately 30–60 minutes. The technician will check gas pressure with a manifold gauge, inspect the evaporator coil, test the capacitor, verify the thermostat sensor reading, and confirm outdoor unit operation. This covers all 7 causes listed above and gives you a clear diagnosis and repair cost before any work begins. Diagnostic fee RM 138 — waived if repair is carried out on the same visit.</p>
     `,
     contentMS: `
       <h2>Kenapa Aircond Saya Berjalan Tapi Tidak Menyejukkan?</h2>
@@ -1922,11 +1922,11 @@ export const allPosts: BlogPost[] = [
         <li><strong>Replace if:</strong> compressor needs replacement + unit over 8 years old</li>
         <li><strong>Replace if:</strong> unit uses R22 + over 10 years old</li>
       </ul>
-      <p>Diagnostic fee RM 88 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/repair">Repair service</a> | <a href="/problems/aircond-compressor-problem">Compressor problem guide</a></p>
+      <p>Diagnostic fee RM 138 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/services/repair">Repair service</a> | <a href="/problems/aircond-compressor-problem">Compressor problem guide</a></p>
 
       <h2>Maximising Lifespan — Practical Steps</h2>
       <p>The single most impactful thing you can do to extend your aircond lifespan is never run it with significantly low gas. A unit running with low refrigerant operates at elevated compressor temperature, which degrades the compressor winding insulation progressively. What starts as reduced cooling efficiency becomes a compressor fault within 1–3 years of running with low gas. An annual gas pressure check (included in chemical wash service) catches this before it causes permanent damage.</p>
-      <p>The second most impactful action is annual chemical wash. A clean coil reduces compressor load, which directly reduces operating temperature and extends component life. Units with clean coils consistently last 3–5 years longer than neglected units of the same brand and model. KL Renovator diagnostic fee RM 88 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>.</p>
+      <p>The second most impactful action is annual chemical wash. A clean coil reduces compressor load, which directly reduces operating temperature and extends component life. Units with clean coils consistently last 3–5 years longer than neglected units of the same brand and model. KL Renovator diagnostic fee RM 138 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>.</p>
 
       <h2>Signs Your Unit Still Has Years Left</h2>
       <p>A unit with good remaining lifespan will: cool to the set temperature without running continuously at maximum output; have a compressor that starts cleanly without buzzing or humming; show stable gas pressure readings year over year (no significant drop indicating slow leak); respond normally to remote control and mode changes; and not require repeated repairs to different components. If your unit ticks all these boxes, consistent maintenance will keep it running reliably for many more years regardless of its age.</p>
@@ -2060,7 +2060,7 @@ export const allPosts: BlogPost[] = [
         <li>Replace remote control batteries</li>
         <li>Reset the MCB once (if it trips again, call a technician)</li>
       </ul>
-      <p>Diagnostic fee RM 88 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/problems">All problem guides</a></p>
+      <p>Diagnostic fee RM 138 (waived with repair). WhatsApp <strong>+60 18-298 3573</strong>. See: <a href="/problems">All problem guides</a></p>
 
       <h2>When to Call a Technician Immediately</h2>
       <p>Do not attempt further DIY and call a technician immediately if: the MCB trips repeatedly when the aircond is switched on (electrical fault risk); you can smell burning or see smoke from the indoor or outdoor unit; water is dripping onto electrical outlets or wiring below the indoor unit; or the outdoor unit is making a loud grinding or knocking sound indicating compressor mechanical failure. These are not situations where waiting is safe.</p>
@@ -4014,11 +4014,11 @@ export const allPosts: BlogPost[] = [
       <h3>Does the 3-minute rule apply to inverter airconds?</h3>
       <p>Yes, but inverter compressors ramp up and down gradually rather than switching on/off abruptly. The 3-minute rule still applies for full power-off and restart situations (after power trips, manual off/on).</p>
       <h3>What if my aircon keeps clicking on and off?</h3>
-      <p>Short cycling (on/off every few minutes) is usually caused by: undersized AC for the room, low refrigerant, dirty filter restricting airflow, or a faulty thermostat. Call KL Renovator for diagnosis — diagnostic fee RM 88, waived with same-visit repair.</p>
+      <p>Short cycling (on/off every few minutes) is usually caused by: undersized AC for the room, low refrigerant, dirty filter restricting airflow, or a faulty thermostat. Call KL Renovator for diagnosis — diagnostic fee RM 138, waived with same-visit repair.</p>
       <h3>Is the 3-minute rule only for compressor protection?</h3>
       <p>Primarily yes. The 3-minute delay prevents the compressor from starting under high pressure differential. It also protects the start capacitor and contactor from the high inrush current of a hard start.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircon is short-cycling, clicking, or not starting. See our <a href="/services/repair">Troubleshooting &amp; Repairs</a> service or read about <a href="/problems/aircond-compressor-problem">common compressor problems</a>. Diagnostic fee RM 88, waived with same-visit repair. Installation from RM 199.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircon is short-cycling, clicking, or not starting. See our <a href="/services/repair">Troubleshooting &amp; Repairs</a> service or read about <a href="/problems/aircond-compressor-problem">common compressor problems</a>. Diagnostic fee RM 138, waived with same-visit repair. Installation from RM 199.</p>
     `,
     contentMS: `
       <p><em>Peraturan 3 minit untuk aircond bermaksud menunggu sekurang-kurangnya <strong>3 minit</strong> sebelum mula semula pemampat selepas dimatikan. Ini beri masa untuk tekanan refrigerant di dalam pemampat seimbang semula, mencegah kerosakan kitaran pendek. Abaikan peraturan ini adalah salah satu sebab utama kegagalan pemampat pramatang di rumah Malaysia.</em></p>
@@ -4208,7 +4208,7 @@ export const allPosts: BlogPost[] = [
       <h3>Annual contract for multiple units</h3>
       <p>AMC Standard or Premium. Best value for 2+ units. RM 499/year covers 1 unit comprehensively.</p>
       <h2>What is NOT included in service pricing?</h2>
-      <p>Service pricing covers labour + cleaning. It does NOT include: spare parts (capacitor, fan motor, PCB, sensor, contactor), gas (priced separately as gas top-up), repairs (priced separately as repair), and any electrical/plumbing work. Diagnostic fee for repairs is RM 88, waived with same-visit repair.</p>
+      <p>Service pricing covers labour + cleaning. It does NOT include: spare parts (capacitor, fan motor, PCB, sensor, contactor), gas (priced separately as gas top-up), repairs (priced separately as repair), and any electrical/plumbing work. Diagnostic fee for repairs is RM 138, waived with same-visit repair.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
       <p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>
       <h2>FAQ — AC service price in Malaysia 2026</h2>
@@ -4736,7 +4736,7 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>How KL Renovator fixes a leaking AC</h2>
       <ol>
-        <li>On-site inspection (RM 88 diagnostic fee, waived with same-visit repair).</li>
+        <li>On-site inspection (RM 138 diagnostic fee, waived with same-visit repair).</li>
         <li>Identify root cause (drain blockage, refrigerant leak, tilted unit, etc.).</li>
         <li>Quote the fix clearly before starting work.</li>
         <li>Perform the repair (drain flush, gas top-up, re-level, replace parts).</li>
@@ -4751,7 +4751,7 @@ export const allPosts: BlogPost[] = [
       <h3>How much does it cost to fix a leaking aircond?</h3>
       <p>RM 99-RM 350 depending on the cause. Chemical wash to clear the drain pipe is RM 120 for 1.0-1.5 HP. Gas top-up is from RM 2.50/PSI. Re-leveling is RM 80-150. Drain pump replacement is RM 350-550.</p>
       <h3>Can I fix a leaking aircond myself?</h3>
-      <p>You can clean the filter yourself. For drain pipe blockages, you can try pouring white vinegar down the drain pipe. But for persistent leaks, frozen coils, or gas issues, call a professional. KL Renovator diagnostic is RM 88, waived with same-visit repair.</p>
+      <p>You can clean the filter yourself. For drain pipe blockages, you can try pouring white vinegar down the drain pipe. But for persistent leaks, frozen coils, or gas issues, call a professional. KL Renovator diagnostic is RM 138, waived with same-visit repair.</p>
       <h3>Is a leaking aircond dangerous?</h3>
       <p>The water itself is not dangerous, but it can damage walls, ceilings, and electrical fixtures. Prolonged leaks can cause mould growth (which is a health hazard) and electrical short circuits if water reaches wiring. Fix it promptly.</p>
       <h3>Why does my aircond leak only when it rains?</h3>
@@ -4767,7 +4767,7 @@ export const allPosts: BlogPost[] = [
       <h3>How long does it take to fix a leaking AC?</h3>
       <p>Drain pipe flush: 30-60 minutes. Gas top-up: 1-1.5 hours. Re-level: 30-60 minutes. Drain pump replacement: 1.5-2 hours. Drip tray replacement: 1-2 hours. Most leak fixes are done in a single visit.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircond is leaking water. See our <a href="/problems/aircond-water-leaking">Aircond Water Leaking</a> troubleshooting guide or book a <a href="/services/chemical-overhaul">Chemical Overhaul</a> to fix it permanently. Diagnostic fee RM 88, waived with same-visit repair.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> if your aircond is leaking water. See our <a href="/problems/aircond-water-leaking">Aircond Water Leaking</a> troubleshooting guide or book a <a href="/services/chemical-overhaul">Chemical Overhaul</a> to fix it permanently. Diagnostic fee RM 138, waived with same-visit repair.</p>
     `,
     contentMS: `
       <p><em>Aircond bocor air di Malaysia adalah salah satu masalah AC paling biasa. 8 punca paling biasa adalah: paip saliran tersumbat (40% kes), penapis kotor, coil penyejat beku, refrigerant rendah, unit dalam condong, pam saliran pecah, dulang titis retak, dan dulang air penuh. Kebanyakan penyelesaian berharga RM 99-RM 350. Berikut panduan diagnosis dan penyelesaian penuh.</em></p>
@@ -8854,7 +8854,7 @@ export const allPosts: BlogPost[] = [
       <p>Not necessarily. Here is the full picture: an inverter unit typically uses RM 40–70/month in electricity compared to RM 80–120/month for non-inverter — saving RM 40–50/month. Over 12 months, that is RM 480–600 saved. A PCB replacement every 5–7 years costs RM 350–700. Even with higher repair costs, the electricity savings from an inverter unit more than compensate over its 12–15 year lifespan. The total cost of ownership (purchase + electricity + maintenance) over 10 years is lower for inverter units despite higher per-repair costs.</p>
 
       <h2>Maintenance Differences</h2>
-      <p>Both inverter and non-inverter units need the same basic maintenance: chemical wash every 12 months, basic service every 3–6 months. However, inverter compressors are more sensitive to low gas levels. Running an inverter unit with low refrigerant can damage the compressor more quickly than in non-inverter units. Annual gas pressure checks are especially important for inverter units over 5 years old — the RM 88 diagnostic fee can prevent a RM 1,500+ compressor replacement.</p>
+      <p>Both inverter and non-inverter units need the same basic maintenance: chemical wash every 12 months, basic service every 3–6 months. However, inverter compressors are more sensitive to low gas levels. Running an inverter unit with low refrigerant can damage the compressor more quickly than in non-inverter units. Annual gas pressure checks are especially important for inverter units over 5 years old — the RM 138 diagnostic fee can prevent a RM 1,500+ compressor replacement.</p>
 
       <p>KL Renovator services both inverter and non-inverter units across all 20 brands. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services/repair">Repair & troubleshooting</a> | <a href="/services/basic-servicing">Basic service from RM 99</a></p>
     `,
