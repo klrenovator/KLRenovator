@@ -39,7 +39,7 @@ const COPY: Record<Locale, {
       { type: "Wall-Mounted", hp: "2.0 HP", price: "RM 249" },
       { type: "Wall-Mounted", hp: "3.0 HP", price: "RM 329" },
       { type: "Ceiling Cassette", hp: "1.0 – 1.5 HP", price: "RM 290" },
-      { type: "Window Unit", hp: "1.0 – 2.0 HP", price: "RM 180" },
+      { type: "Window Unit", hp: "1.0 – 2.0 HP", price: "RM 199" },
     ],
     included: [
       "7 ft copper pipe + Armaflex insulation",
@@ -67,7 +67,7 @@ const COPY: Record<Locale, {
       { type: "Dinding", hp: "2.0 HP", price: "RM 249" },
       { type: "Dinding", hp: "3.0 HP", price: "RM 329" },
       { type: "Cassette Siling", hp: "1.0 – 1.5 HP", price: "RM 290" },
-      { type: "Unit Tingkap", hp: "1.0 – 2.0 HP", price: "RM 180" },
+      { type: "Unit Tingkap", hp: "1.0 – 2.0 HP", price: "RM 199" },
     ],
     included: [
       "Paip kuprum 7 kaki + penebat Armaflex",
@@ -95,7 +95,7 @@ const COPY: Record<Locale, {
       { type: "挂壁式", hp: "2.0 HP", price: "RM 249" },
       { type: "挂壁式", hp: "3.0 HP", price: "RM 329" },
       { type: "天花板卡式", hp: "1.0 – 1.5 HP", price: "RM 290" },
-      { type: "窗式机", hp: "1.0 – 2.0 HP", price: "RM 180" },
+      { type: "窗式机", hp: "1.0 – 2.0 HP", price: "RM 199" },
     ],
     included: [
       "7英尺铜管 + Armaflex保温",

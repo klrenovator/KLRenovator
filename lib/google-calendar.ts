@@ -1,13 +1,20 @@
-import { google } from "googleapis";
+import "server-only";
 
 // Ensure you set these in .env.local:
 // GOOGLE_CLIENT_EMAIL
 // GOOGLE_PRIVATE_KEY
 // GOOGLE_CALENDAR_ID
+//
+// Performance note (P2-04): `googleapis` is a large all-Google-APIs package.
+// Ideal is `@googleapis/calendar` for faster cold-start. This file now uses
+// dynamic import so the heavy package is only loaded when a calendar function
+// is actually called, not on every serverless invocation that imports this module.
+// Full swap to `@googleapis/calendar` is tracked as future optimization.
 
-const SCOPES = ["https://www.googleapis.com/auth/calendar"];
+const SCOPES = ["https://www.googleapis.com/auth/calendar"] as const;
 
-export function getCalendarClient() {
+export async function getCalendarClient() {
+  const { google } = await import("googleapis");
   // Robust Private Key Formatting: Handle multiple variations of how Vercel might pass the key
   let privateKey = process.env.GOOGLE_PRIVATE_KEY || "";
   
@@ -40,7 +47,7 @@ export function getCalendarClient() {
 
 export async function getBusySlots(dateStart: Date, dateEnd: Date) {
   try {
-    const calendar = getCalendarClient();
+    const calendar = await getCalendarClient();
     const calendarId = process.env.GOOGLE_CALENDAR_ID;
 
     if (!calendarId) return [];
@@ -69,7 +76,7 @@ export async function createCalendarEvent(eventDetails: {
   end: Date;
 }) {
   try {
-    const calendar = getCalendarClient();
+    const calendar = await getCalendarClient();
     const calendarId = process.env.GOOGLE_CALENDAR_ID;
 
     if (!calendarId) return null;

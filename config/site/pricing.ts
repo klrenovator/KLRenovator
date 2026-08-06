@@ -12,6 +12,8 @@ export const pricing = {
         { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 290" },
         { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 350" },
         { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
+        { label: "Window Unit · 1.0 – 1.5 HP", price: "RM 199" },
+        { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 249" },
       ],
       note: "Standard installation includes 7ft copper pipe, insulation, electrical wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
     },

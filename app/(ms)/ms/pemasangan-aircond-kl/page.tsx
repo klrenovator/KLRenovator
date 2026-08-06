@@ -48,13 +48,13 @@ const PRICING_TABLE = [
   { type: "Ceiling Cassette", hp: "1.0–1.5 HP", price: "RM 290", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
   { type: "Ceiling Cassette", hp: "2.0–3.0 HP", price: "RM 350", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
   { type: "Ceiling Cassette", hp: "3.5–6.0 HP", price: "RM 400", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
-  { type: "Unit Tingkap", hp: "1.0–2.0 HP", price: "RM 180", pipe: "Tidak berkenaan", wire: "Wayar inklusif", drain: "Saliran terbina dalam" },
+  { type: "Unit Tingkap", hp: "1.0–2.0 HP", price: "RM 199", pipe: "Tidak berkenaan", wire: "Wayar inklusif", drain: "Saliran terbina dalam" },
 ];
 
 const BRANDS = siteConfig.brandsSupported;
 
 const FAQS = [
-  { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard. Ceiling cassette dari RM 290. Unit tingkap dari RM 180. Bahan tambahan melebihi 7 kaki dikira per kaki — paip tembaga RM 17–27/kaki, wayar RM 9/kaki, casing PVC kecil RM 6/kaki atau casing PVC besar RM 12/kaki. Semua harga disahkan sebelum kerja bermula. Paip saliran melebihi 7 kaki ialah RM 5/kaki." },
+  { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Bahan tambahan melebihi 7 kaki dikira per kaki — paip tembaga RM 17–27/kaki, wayar RM 9/kaki, casing PVC kecil RM 6/kaki atau casing PVC besar RM 12/kaki. Semua harga disahkan sebelum kerja bermula. Paip saliran melebihi 7 kaki ialah RM 5/kaki." },
   { q: "Berapa lama masa pemasangan aircond?", a: "Pemasangan dinding standard mengambil 3–5 jam untuk satu unit. Ceiling cassette ambil 5–8 jam disebabkan gantungan ceiling dan wayaran pump saliran. Pemasangan multi-unit seluruh rumah biasanya siap dalam 1–2 hari. Slot hari sama tersedia untuk tempahan sebelum 11 PG." },
   { q: "Adakah anda memasang aircond di kondo tinggi di KL?", a: "Ya — kami kerap memasang di kondo merentasi KLCC, Mont Kiara, Bangsar, Sentul, PJ, dan Subang Jaya. Kami urus dengan pengurusan bangunan untuk akses lif/loading bay, ikut prosedur keselamatan, dan pastikan penempatan unit luar mematuhi peraturan JMB. Juruteknik kami berpengalaman dengan pemasangan di tebing servis dan balconi." },
   { q: "Gred paip tembaga apa yang anda guna untuk pemasangan?", a: "Kami guna paip tembaga Type L untuk unit dinding 1.0–2.5 HP dan Type M untuk 3.0 HP+ di mana ketebalan dinding membenarkan. Semua paip dibersihkan semasa brazing untuk elakkan pengoksidaan dalaman. Penebatan Armaflex (9–13mm) standard. Ini melebihi standard minimum Malaysia dan memastikan kebolehypercayaan jangka panjang." },
