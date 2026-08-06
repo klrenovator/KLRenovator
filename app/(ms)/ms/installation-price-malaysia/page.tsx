@@ -59,14 +59,14 @@ const MATERIAL_PRICES = [
   { label: "Paip Kuprum 1.0–1.5 HP", price: "RM 17/kaki" },
   { label: "Paip Kuprum 2.0–2.5 HP", price: "RM 23/kaki" },
   { label: "Paip Kuprum 3.0–3.5 HP", price: "RM 27/kaki" },
-  { label: "Wayar Elektrik 1.0–1.5 HP", price: "RM 9/kaki" },
-  { label: "Wayar Elektrik 2.0–2.5 HP", price: "RM 13/kaki" },
-  { label: "Wayar Elektrik 3.0–4.0 HP", price: "RM 17/kaki" },
+  { label: "Wayar Elektrik", price: "RM 9/kaki" },
+  { label: "Penebat", price: "RM 7/kaki" },
   { label: "Paip saliran melebihi 7 kaki", price: "RM 5/kaki" },
   { label: "Braket Kompressor / Luaran Standard", price: "RM 45" },
   { label: "Braket Kompressor / Luaran Heavy Duty", price: "RM 70" },
   { label: "Braket Universal Dalaman", price: "RM 35" },
-  { label: "Sarung PVC Wayar/Paip Kuprum", price: "RM 6–12/kaki" },
+  { label: "Casing PVC Kecil (Wayar Elektrik)", price: "RM 6/kaki" },
+  { label: "Casing PVC Besar (Paip Kuprum + Wayar + Penebat)", price: "RM 12/kaki" },
   { label: "Pemasangan Titik Plag Elektrik", price: "RM 100" },
   { label: "Kerja Pecah Dinding & Pendam", price: "RM 6/kaki" },
   { label: "Caj Akses Bangunan Tinggi", price: "RM 50–150" },
@@ -76,11 +76,11 @@ const MATERIAL_PRICES = [
 const FAQS = [
   {
     q: "Berapa harga pasang aircond di KL & Selangor 2026?",
-    a: "Dinding 1.0–1.5 HP dari RM 199. 2.0 HP dari RM 249, 2.5 HP dari RM 279, 3.0 HP dari RM 329. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Setiap harga termasuk 7 kaki paip kuprum, pendawaian, paip longkang, braket, vakum, ujian kebocoran dan pentauliahan — disahkan sebelum kami mula.",
+    a: "Dinding 1.0–1.5 HP dari RM 199. 2.0 HP dari RM 249, 2.5 HP dari RM 279, 3.0 HP dari RM 329. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Setiap harga termasuk 7 kaki paip kuprum, penebat, wayar elektrik dan paip longkang, vakum, ujian kebocoran dan pentauliahan — disahkan sebelum kami mula.",
   },
   {
     q: "Apa yang termasuk dalam pemasangan asas RM 199?",
-    a: "Pakej 9 titik: (1) Tinjauan tapak & penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul dengan penebat, (3) Pendawaian elektrik melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum minimum 15 min, (7) Ujian kebocoran tekanan nitrogen, (8) Pentauliahan penuh — penyejukan, aliran udara, termostat, (9) Kad kerja bertulis + waranti kerja 1 bulan.",
+    a: "Pakej 9 titik: (1) Tinjauan tapak & penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul dengan penebat, (3) Pendawaian elektrik melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum minimum 15 min, (7) Pentauliahan pam vakum (500 mikron), (8) Pentauliahan penuh — penyejukan, aliran udara, termostat, (9) Kad kerja bertulis + waranti kerja 1 bulan.",
   },
   {
     q: "Kenapa paip kuprum tambahan dikenakan caj selepas 7 kaki?",
@@ -204,7 +204,7 @@ export default function MsInstallationPricePage() {
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">Senarai Harga Pemasangan</p>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2 speakable">Senarai Harga Pemasangan Aircond Lengkap 2026</h2>
-            <p className="text-sm text-slate-500 mb-6">Semua harga termasuk 7 kaki paip kuprum, pendawaian, paip longkang, braket, vakum, ujian kebocoran & pentauliahan. Disahkan sebelum kerja bermula.</p>
+            <p className="text-sm text-slate-500 mb-6">Semua harga termasuk 7 kaki paip kuprum, penebat, wayar elektrik dan paip longkang, vakum, ujian kebocoran & pentauliahan. Disahkan sebelum kerja bermula.</p>
           </Reveal>
           <Reveal>
             <div className="border border-slate-200 bg-white">
@@ -222,7 +222,7 @@ export default function MsInstallationPricePage() {
             <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
               <p className="text-xs text-emerald-800 leading-relaxed">
                 <span className="font-black">✓ Termasuk percuma dalam setiap pemasangan: </span>
-                7 kaki paip kuprum (bersaiz betul mengikut HP), pendawaian elektrik, paip longkang PVC, braket dinding, evakuasi pam vakum, ujian kebocoran tekanan nitrogen, pentauliahan, kad kerja bertulis.
+                7 kaki paip kuprum (bersaiz betul mengikut HP), pendawaian elektrik, paip longkang PVC dinding, evakuasi pam vakum, pentauliahan pam vakum (500 mikron), pentauliahan, kad kerja bertulis.
               </p>
             </div>
           </Reveal>
@@ -244,7 +244,7 @@ export default function MsInstallationPricePage() {
               { title: buildFreshMetaTitle("Paip Longkang PVC", "ms"), desc: "Ditetapkan dengan kecerunan jatuh yang betul supaya air mengalir secara semula jadi." },
               { title: buildFreshMetaTitle("Braket + Pad Getah", "ms"), desc: "Braket diratakan dan dilekatkan dengan pad getah untuk mengurangkan bunyi getaran pemampat." },
               { title: buildFreshMetaTitle("Evakuasi Pam Vakum", "ms"), desc: "Minimum 15–20 minit. Membuang semua kelembapan dan udara dari paip bahan pendingin." },
-              { title: buildFreshMetaTitle("Ujian Kebocoran Nitrogen", "ms"), desc: "Mengesahkan sifar kebocoran sebelum bahan pendingin dilepaskan. Langkah yang dilangkau oleh pemasang murah." },
+              { title: buildFreshMetaTitle("Ujian Kebocoran ", "ms"), desc: "Mengesahkan sifar kebocoran sebelum bahan pendingin dilepaskan. Langkah yang dilangkau oleh pemasang murah." },
               { title: buildFreshMetaTitle("Pentauliahan Penuh", "ms"), desc: "Output penyejukan diuji pada semua kelajuan kipas, termostat dikalibrasi, aliran udara disahkan." },
               { title: buildFreshMetaTitle("Waranti Kerja 1 Bulan", "ms"), desc: "Jika sebarang masalah berulang kerana kerja kami dalam 1 bulan, kami kembali baiki tanpa caj." },
             ].map((item) => (

@@ -113,7 +113,7 @@ const COPY = {
     faqPage: "dedicated FAQ page →",
     waFaq: "🔧 Aircond Installation Enquiry\n\nHi KL Renovator, I have a question about installation.\n\n📍 My Area:\n❄️ Unit Type:\n📏 HP Size:\n\nPlease send info & pricing.",
     faqs: [
-      { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, wiring, drain pipe, standard bracket, vacuum pump commissioning, and 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 180. All prices confirmed before work begins." },
+      { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, insulation, electrical wire and drain pipe, vacuum pump commissioning, and 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 180. All prices confirmed before work begins." },
       { q: "How long does aircond installation take?", a: "Standard wall-mounted installation takes 3–5 hours for a single unit. Ceiling cassette takes 5–8 hours. Multi-unit whole-house installations typically complete in 1–2 days. Same-day installation available for bookings made before 11 AM." },
       { q: "Which aircond brands does KL Renovator install?", a: "All 20 major brands — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Haier, Hisense, Aux, TCL, Isonic and National. Both inverter and non-inverter models." },
       { q: "Can you install aircond in high-rise condos in KL?", a: "Yes — we regularly install in condos across KLCC, Mont Kiara, Bangsar, Sentul, PJ and Subang Jaya. We coordinate with building management for lift/loading bay access, follow JMB rules, and ensure outdoor unit placement complies with all regulations." },
@@ -142,7 +142,7 @@ const COPY = {
     servicePriceTitle: "Harga Servis Aircond 2026",
     servicePriceDesc: "Senarai harga penuh — asas, cuci kimia, gas, baiki, pemasangan. Semua harga disahkan awal.",
     installGuideTitle: "Panduan Harga Pemasangan",
-    installGuideDesc: "Pemasangan AC baharu dari RM 199. Pecahan bahan penuh, paip kuprum, braket dinding & waranti termasuk.",
+    installGuideDesc: "Pemasangan AC baharu dari RM 199. Pecahan bahan penuh, paip kuprum dinding & waranti termasuk.",
     installKLTitle: "Pemasangan Aircond KL & Selangor",
     installKLDesc: "Pemasangan pakar dari RM 199. Proses 7 langkah, pam vakum, kuprum Type L, waranti 1 bulan. Hari sama tersedia.",
     washGuideTitle: "Panduan Cuci Kimia KL",
@@ -182,7 +182,7 @@ const COPY = {
     faqPage: "halaman FAQ khusus →",
     waFaq: "🔧 Pertanyaan Pemasangan Aircond\n\nHai KL Renovator, saya ada soalan mengenai pemasangan.\n\n📍 Kawasan Saya:\n❄️ Jenis Unit:\n📏 Saiz HP:\n\nSila hantar info & harga.",
     faqs: [
-      { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, pendawaian, paip saliran, bracket standard, vakum pam, dan waranti kerja 1 bulan. Ceiling cassette dari RM 290, unit tingkap dari RM 180. Semua harga disahkan sebelum kerja bermula." },
+      { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard, vakum pam, dan waranti kerja 1 bulan. Ceiling cassette dari RM 290, unit tingkap dari RM 180. Semua harga disahkan sebelum kerja bermula." },
       { q: "Berapa lama pemasangan aircond mengambil masa?", a: "Pemasangan dinding standard mengambil masa 3–5 jam untuk satu unit. Ceiling cassette mengambil 5–8 jam. Pemasangan seluruh rumah biasanya siap dalam 1–2 hari. Pemasangan hari sama tersedia untuk tempahan sebelum 11 pagi." },
       { q: "Jenama aircond apa yang dipasang oleh KL Renovator?", a: "Semua 20 jenama utama — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Haier, Hisense, Aux, TCL, Isonic dan National. Kedua-dua model inverter dan bukan inverter." },
       { q: "Bolehkah anda pasang aircond di kondominium tinggi di KL?", a: "Ya — kami kerap memasang di kondo sekitar KLCC, Mont Kiara, Bangsar, Sentul, PJ dan Subang Jaya. Kami berurusan dengan pengurusan bangunan untuk akses lif/teluk muatan, mematuhi peraturan JMB, dan memastikan penempatan unit luar mematuhi semua peraturan." },

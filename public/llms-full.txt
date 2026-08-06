@@ -97,7 +97,7 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 - Diagnostic Fee: RM 88 (waived if repair done same visit)
 - Capacitor Replacement: RM 150–250
 - Fan Motor Replacement: RM 250–380
-- PCB Board Replacement: RM 280–600
+- PCB Board Replacement: RM 350–600
 - Temperature Sensor Replacement: RM 150–250
 - Contactor Replacement: RM 150–200
 - Drain Pump Replacement: RM 350–550
@@ -105,7 +105,7 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 - URL: https://www.klrenovator.com/services/repair
 
 ### 6. New Unit Installation
-- Wall-Mounted 1.0–1.5 HP: RM 199 (includes 7ft copper pipe, wiring, brackets, drainage)
+- Wall-Mounted 1.0–1.5 HP: RM 199 (includes 7ft copper pipe, wirings, drainage)
 - Wall-Mounted 2.0 HP: RM 249
 - Wall-Mounted 2.5 HP: RM 279
 - Wall-Mounted 3.0 HP: RM 329
@@ -363,7 +363,7 @@ KL Renovator offers free interactive tools on the homepage and dedicated tool pa
 
 ### Installation Cost Calculator
 - Inputs: number of units, HP, aircond type (wall/cassette/window), copper pipe length, electrical wire length, drain pipe length, PVC casing, outdoor bracket, aircond switch, water pump
-- Outputs: labour cost (published per-HP rates RM 199–449 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9–17/ft, drain ~RM 5/ft estimate, PVC RM 6–12/ft, brackets RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 4–10 units, 10% for 10+ units), grand total
+- Outputs: labour cost (published per-HP rates RM 199–449 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9–17/ft, drain ~RM 5/ft estimate, small PVC RM 6/ft or large PVC RM 12/fts RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 4–10 units, 10% for 10+ units), grand total
 - URL: https://www.klrenovator.com/aircond-installation-cost-calculator
 
 ### Gas Top-up Cost Estimator

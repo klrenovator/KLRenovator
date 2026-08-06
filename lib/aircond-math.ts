@@ -37,7 +37,7 @@ export function rmToNumber(price: string): number {
   return Number.isFinite(n) ? n : 0;
 }
 
-/** "RM 6 – 12/ft" → { min: 6, max: 12 } · "RM 199" → { min: 199, max: 199 } */
+/** Parses published RM price strings into minimum/maximum values. */
 export function rmRange(price: string): { min: number; max: number } {
   const nums = price.match(/\d+(?:\.\d+)?/g)?.map(Number) ?? [];
   if (nums.length === 0) return { min: 0, max: 0 };

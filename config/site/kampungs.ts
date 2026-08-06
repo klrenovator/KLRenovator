@@ -1268,7 +1268,7 @@ export const kampungPages = [
       lat: 3.2050,
       lng: 101.7700,
       housingNote: "upscale Hulu Kelang hillside gated bungalows needing careful outdoor placement",
-      description: "Aircond service Ukay Perdana — KL Renovator serves upscale hillside bungalows where outdoor placement, bracket strength and long copper runs matter. Premium install and multi-unit wash with confirmed quotes before drilling. From RM199 install / RM120 wash. WhatsApp +60182983573 with site photos.",
+      description: "Aircond service Ukay Perdana — KL Renovator serves upscale hillside bungalows where outdoor placement strength and long copper runs matter. Premium install and multi-unit wash with confirmed quotes before drilling. From RM199 install / RM120 wash. WhatsApp +60182983573 with site photos.",
       descriptionMS: "Servis aircond Ukay Perdana — KL Renovator melayani banglo bukit upscale di mana penempatan unit luar, kekuatan braket & paip tembaga panjang penting. Pasang premium & cuci multi-unit dengan sebut harga sebelum gerudi. Dari RM199 pasang / RM120 cuci. WhatsApp +60182983573 dengan foto tapak.",
       descriptionZH: "Ukay Perdana 冷气服务 — KL Renovator 服务山坡高档洋房，注重室外机位置、支架强度与长铜管。高端安装与多机清洗，钻孔前确认报价。安装从 RM199 / 清洗 RM120。WhatsApp +60182983573 并发送现场照片。",
       metaTitle: "Aircond Service Ukay Perdana (Hulu Kelang) — RM 99",

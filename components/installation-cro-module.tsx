@@ -53,30 +53,30 @@ export function InstallationCROModule({
   ];
 
   const objectionHandling = [
-    { 
-      question: "What if my condo doesn't allow drilling?", 
-      answer: "We coordinate with building management for JMB approval, use non-drill mounting brackets where permitted, and follow all building rules. 95% of condos we work with have approved installation methods." 
+    {
+      question: "What if my condo doesn't allow drilling?",
+      answer: "We coordinate with building management for JMB approval, use non-drill mounting brackets where permitted, and follow all building rules. 95% of condos we work with have approved installation methods."
     },
-    { 
-      question: "What if the price changes after you arrive?", 
-      answer: "Price is confirmed BEFORE we drill. Every extra material (copper pipe beyond 7ft, trunking, brackets) is quoted and approved by you on-site. No surprises — written guarantee." 
+    {
+      question: "What if the price changes after you arrive?",
+      answer: "Price is confirmed BEFORE we drill. Every extra material (copper pipe beyond 7ft, trunkings) is quoted and approved by you on-site. No surprises — written guarantee."
     },
-    { 
-      question: "What if there's a leak after installation?", 
-      answer: "1-month workmanship warranty covers all installation-related leaks. Our vacuum pump + nitrogen pressure test catches 99% of issues before we leave. If a leak appears within 30 days, we return free." 
+    {
+      question: "What if there's a leak after installation?",
+      answer: "1-month workmanship warranty covers all installation-related leaks. Our vacuum pump + vacuum pump commissioning (500 microns) catches 99% of issues before we leave. If a leak appears within 30 days, we return free."
     },
-    { 
-      question: "What if my electrical panel can't handle a new AC?", 
-      answer: "Our technician checks your DB capacity during the site survey. If a panel upgrade is needed, we quote it upfront — you decide before any work starts." 
+    {
+      question: "What if my electrical panel can't handle a new AC?",
+      answer: "Our technician checks your DB capacity during the site survey. If a panel upgrade is needed, we quote it upfront — you decide before any work starts."
     },
   ];
 
   const pricingGuarantee = [
     "✓ Site survey & quotation — FREE",
     "✓ 7 ft copper pipe (liquid + gas lines) — INCLUDED",
-    "✓ 7 ft electrical wiring — INCLUDED", 
+    "✓ 7 ft electrical wiring — INCLUDED",
     "✓ 7 ft PVC drain pipe — INCLUDED",
-    "✓ Standard outdoor bracket — INCLUDED",
+    "✓ Outdoor bracket (paid special charge if required) — INCLUDED",
     "✓ Vacuum pump commissioning — INCLUDED",
     "✓ Refrigerant release & testing — INCLUDED",
     "✓ 1-month workmanship warranty card — INCLUDED",

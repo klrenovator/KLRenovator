@@ -90,7 +90,7 @@ KL Renovator provides same-day emergency aircond repair across all of KL and Sel
 - Tools hub: https://www.klrenovator.com/tools — all calculators in one place
 - Price Calculator: https://www.klrenovator.com/#tools — estimates cost by service, unit type, HP, units count
 - Diagnostic Tool: https://www.klrenovator.com/#tools — interactive problem→cause→solution guide
-- Installation Cost Calculator: https://www.klrenovator.com/aircond-installation-cost-calculator — labour + copper pipe, wire, drain pipe, PVC casing, bracket, switch, water pump + bundle discounts (4–10 units 5% OFF, 10+ units 10% OFF)
+- Installation Cost Calculator: https://www.klrenovator.com/aircond-installation-cost-calculator — labour + copper pipe, wire, drain pipe, PVC casing, switch, water pump + bundle discounts (4–10 units 5% OFF, 10+ units 10% OFF)
 - Gas Top-up Cost Estimator: https://www.klrenovator.com/aircond-gas-topup-cost-calculator — R22 RM 2.50/PSI, R410A & R32 RM 3.00/PSI, by HP and gas condition
 - Which Aircond Service Do I Need?: https://www.klrenovator.com/which-aircond-service-do-i-need — symptom-based service recommendation (basic service, chemical wash, overhaul, gas top-up, repair, inspection)
 - BTU / HP Calculator: https://www.klrenovator.com/btu-calculator — room size → BTU & HP (trilingual: /ms/btu-calculator, /zh/btu-calculator)

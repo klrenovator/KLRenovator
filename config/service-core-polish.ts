@@ -150,7 +150,7 @@ const CORE_COPY: Record<string, Record<ServiceCorePolishLocale, CoreCopy>> = {
     en: {
       fit: ["New split-unit installation", "Best for correct pipe routing and vacuuming", "Materials quoted before work"],
       before: "Send indoor/outdoor placement photos, horsepower, wall type, copper length estimate and condo management rules if any.",
-      inspect: "Technician confirms pipe route, drain fall, electrical point, bracket requirement and safe outdoor-unit location.",
+      inspect: "Technician confirms pipe route, drain fall, electrical point requirement and safe outdoor-unit location.",
       execute: "Unit is mounted, copper/wiring/drain are routed cleanly, vacuum pump is used and refrigerant is released correctly.",
       test: "Cooling, drainage, vibration, remote control and pipe insulation are checked before handover.",
       handover: "You receive operating advice, warranty reminder and maintenance schedule for the first chemical wash/basic service.",

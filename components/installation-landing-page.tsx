@@ -73,7 +73,7 @@ function PricingRow({
   hp: string;
   labour: string;
   pipe: string;
-  bracket: string;
+  bracket?: string;
   note?: string;
   isHeader?: boolean;
 }) {

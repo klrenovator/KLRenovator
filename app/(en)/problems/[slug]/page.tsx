@@ -382,7 +382,7 @@ export const problemContent: Record<
     warningZH: "制冷剂泄漏不会自行修复。机组将逐渐失去制冷能力，最终停止工作，压缩机因低压运行而损坏。早期检测比更换压缩机便宜得多。",
     faqs: [
       { q: "How do I know if my aircond has a gas leak?", a: "Signs include: unit blows air but not cold, gradual loss of cooling over weeks, ice forming on copper pipes, hissing sound near outdoor unit, or visible oily residue on copper connections. WhatsApp KL Renovator at +60182983573 for same-day leak detection." },
-      { q: "How much does aircond gas leak repair cost in KL?", a: "Leak detection and diagnosis: RM 88 (waived if repaired same visit). Leak sealing + gas recharge: RM 150–350 depending on leak location and gas type. Full breakdown quoted before work starts." },
+      { q: "How much does aircond gas leak repair cost in KL?", a: "Leak detection and diagnosis: RM 88 (waived if repaired same visit). Gas Leak Repair: RM 120 per leak. Gas top-up, if required, remains charged separately by the actual PSI needed. Full breakdown is quoted before work starts." },
       { q: "Can a gas leak be repaired without replacing the whole unit?", a: "Yes — in most cases the leak can be sealed and the system recharged. Only extensive corrosion affecting large sections of the coil would require indoor unit replacement. KL Renovator advises honestly — we do not recommend replacement unless necessary." },
     ],
     faqsBM: [
@@ -844,16 +844,16 @@ export const problemContent: Record<
     warningZH: "错误闪烁代码是冷气内置的诊断系统。忽视它们或在未修复根本故障的情况下反复重置机器可能导致问题恶化——尤其是气体不足或压缩机保护代码。",
     faqs: [
       { q: "How do I know what my aircond error blink code means?", a: "Count the number of blinks, then look up your brand's error code chart (available on KL Renovator's brand pages or WhatsApp us the blink pattern + brand + model). KL Renovator diagnoses all brands remotely via WhatsApp for common codes." },
-      { q: "My aircond shows a blinking light and will not cool — how much will it cost to fix?", a: "Depends on the fault: Low gas: from RM 2.50/PSI (by HP/gas type). Sensor replacement: RM 150–250. PCB fault: RM 280–600. Capacitor: RM 150–250. Diagnostic RM 88 (waived with repair). WhatsApp KL Renovator the error code for a remote estimate." },
+      { q: "My aircond shows a blinking light and will not cool — how much will it cost to fix?", a: "Depends on the fault: Low gas: from RM 2.50/PSI (by HP/gas type). Sensor replacement: RM 150–250. PCB fault: RM 350–600. Capacitor: RM 150–250. Diagnostic RM 88 (waived with repair). WhatsApp KL Renovator the error code for a remote estimate." },
       { q: "Can I reset the error code myself?", a: "You can reset the unit by switching off the MCB for 10 minutes then restoring power. However, if the underlying fault is not fixed, the code will return. KL Renovator repairs the cause, not just resets the code." },
     ],
     faqsBM: [
       { q: "Bagaimana saya tahu apa maksud kod berkelip ralat aircond saya?", a: "Kira bilangan berkelip, kemudian cari carta kod ralat jenama anda (tersedia di halaman jenama KL Renovator atau WhatsApp kami corak berkelip + jenama + model). KL Renovator mendiagnosis semua jenama dari jauh melalui WhatsApp." },
-      { q: "Aircond saya menunjukkan lampu berkelip dan tidak menyejuk — berapa kos untuk membaiki?", a: "Bergantung pada kerosakan: Gas rendah: from RM 2.50/PSI. Penggantian sensor: RM 150–250. Kerosakan PCB: RM 280–600. Kapasitor: RM 150–250. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
+      { q: "Aircond saya menunjukkan lampu berkelip dan tidak menyejuk — berapa kos untuk membaiki?", a: "Bergantung pada kerosakan: Gas rendah: from RM 2.50/PSI. Penggantian sensor: RM 150–250. Kerosakan PCB: RM 350–600. Kapasitor: RM 150–250. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
     ],
     faqsZH: [
       { q: "我如何知道冷气闪烁错误代码的含义？", a: "数闪烁次数，然后查找您品牌的错误代码表（可在KL Renovator的品牌页面查看，或WhatsApp我们闪烁模式+品牌+型号）。KL Renovator通过WhatsApp远程诊断所有品牌的常见代码。" },
-      { q: "冷气显示闪烁灯且不制冷——修复需要多少钱？", a: "取决于故障：气体不足：from RM 2.50/PSI。传感器更换：RM 150-250。PCB故障：RM 280-600。电容器：RM 150-250。诊断费RM 88（维修则免收）。" },
+      { q: "冷气显示闪烁灯且不制冷——修复需要多少钱？", a: "取决于故障：气体不足：from RM 2.50/PSI。传感器更换：RM 150-250。PCB故障：RM 350-600。电容器：RM 150-250。诊断费RM 88（维修则免收）。" },
     ],
   },
   "aircond-water-dripping": {

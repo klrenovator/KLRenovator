@@ -1070,7 +1070,7 @@ export const installationBlogBatch4: BlogPost[] = [
       <p>The first 15-20 minutes involve a walkthrough where the technician assesses positions, pipe routing, and electrical. Your input on preferences is important at this stage.</p>
 
       <h3>✅ 12. Approve the Final Quote</h3>
-      <p>After the site survey, the technician will confirm the final price including any extras (additional pipe, bracket, MCB). Approve or discuss before work begins — no surprises.</p>
+      <p>After the site survey, the technician will confirm the final price including any extras (additional pipe, MCB). Approve or discuss before work begins — no surprises.</p>
 
       <h3>✅ 13. Keep Children & Pets Away from Work Area</h3>
       <p>Drilling, pipe cutting, and electrical work create hazards. Keep children and pets in a different room during the 2-3 hour installation.</p>

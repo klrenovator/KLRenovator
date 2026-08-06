@@ -51,10 +51,10 @@ export const installationBlogBatch3: BlogPost[] = [
       </table>
 
       <h2>2. Parts Warranty (Materials Supplied)</h2>
-      <p>Covers the materials our technician supplied and installed — copper pipe, insulation, brackets, wiring, drain pipe.</p>
+      <p>Covers the materials our technician supplied and installed — copper pipe, insulations, wiring, drain pipe.</p>
       <ul>
         <li><strong>Duration:</strong> 3 months on all supplied materials</li>
-        <li><strong>Covered:</strong> Manufacturing defects in copper pipe, insulation degradation, bracket corrosion, drain pipe cracks</li>
+        <li><strong>Covered:</strong> Manufacturing defects in copper pipe, insulation degradation corrosion, drain pipe cracks</li>
         <li><strong>Not covered:</strong> Damage from external causes (construction work, accidents, pest damage)</li>
       </ul>
 
@@ -307,7 +307,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li>Manifold gauge set — RM 150-300</li>
         <li>Flare tool kit — RM 80-150</li>
         <li>Tubing cutter — RM 30-50</li>
-        <li>Nitrogen tank + regulator — RM 200-400 (rental)</li>
+        <li>tank + regulator — RM 200-400 (rental)</li>
         <li>Hammer drill with masonry bits — RM 200-400</li>
         <li>Torque wrench — RM 80-120</li>
         <li>Electronic leak detector — RM 100-200</li>
@@ -346,7 +346,7 @@ export const installationBlogBatch3: BlogPost[] = [
           <tr><td>Tools (buy/rent)</td><td>RM 800-1,500</td><td>RM 0</td></tr>
           <tr><td>Materials (pipe, insulation, wire)</td><td>RM 150-250</td><td>Included</td></tr>
           <tr><td>Labour (your time)</td><td>4-8 hours</td><td>2-3 hours (their time)</td></tr>
-          <tr><td>Vacuum pump + nitrogen</td><td>RM 300-500 (rent)</td><td>Included</td></tr>
+          <tr><td>Vacuum pump + </td><td>RM 300-500 (rent)</td><td>Included</td></tr>
           <tr><td>Installation fee</td><td>RM 0</td><td>RM 199</td></tr>
           <tr><td>Warranty</td><td>None</td><td>1-month workmanship + 3-month parts</td></tr>
           <tr><td>Risk of mistakes</td><td>High (first time)</td><td>Near zero (500+ installs)</td></tr>
@@ -386,7 +386,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li>Set tolok manifold — RM 150-300</li>
         <li>Kit alat flare — RM 80-150</li>
         <li>Pemotong tiub — RM 30-50</li>
-        <li>Tangki nitrogen + pengawal — RM 200-400 (sewa)</li>
+        <li>Tangki + pengawal — RM 200-400 (sewa)</li>
         <li>Gerudi tukul dengan mata gerudi batu — RM 200-400</li>
         <li>Sepana tork — RM 80-120</li>
         <li>Pengesan kebocoran elektronik — RM 100-200</li>
@@ -425,7 +425,7 @@ export const installationBlogBatch3: BlogPost[] = [
           <tr><td>Alatan (beli/sewa)</td><td>RM 800-1,500</td><td>RM 0</td></tr>
           <tr><td>Bahan (paip, penebat, wayar)</td><td>RM 150-250</td><td>Termasuk</td></tr>
           <tr><td>Buruh (masa anda)</td><td>4-8 jam</td><td>2-3 jam (masa mereka)</td></tr>
-          <tr><td>Pam vakum + nitrogen</td><td>RM 300-500 (sewa)</td><td>Termasuk</td></tr>
+          <tr><td>Pam vakum + </td><td>RM 300-500 (sewa)</td><td>Termasuk</td></tr>
           <tr><td>Yuran pemasangan</td><td>RM 0</td><td>RM 199</td></tr>
           <tr><td>Waranti</td><td>Tiada</td><td>1 bulan kerja + 3 bulan komponen</td></tr>
           <tr><td>Risiko kesilapan</td><td>Tinggi (kali pertama)</td><td>Hampir sifar (500+ pemasangan)</td></tr>
@@ -991,7 +991,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li><strong>Fan performance</strong> — strong crosswinds can disrupt the condenser fan airflow</li>
         <li><strong>Pipe vibration</strong> — exposed pipe runs can vibrate and fatigue at joints</li>
       </ul>
-      <p><strong>Our solution:</strong> Heavy-duty brackets with 4-point bolting, wind shields for exposed units, and additional pipe clamps every 1 meter on exposed runs.</p>
+      <p><strong>Our solution:</strong> Heavy-duty outdoor bracket (paid special charge if required)s with 4-point bolting, wind shields for exposed units, and additional pipe clamps every 1 meter on exposed runs.</p>
 
       <h2>Challenge 3: Service Lift Logistics</h2>
       <p>High-rise condos require service lift booking for equipment transport:</p>
@@ -1018,7 +1018,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <tbody>
           <tr><td>Base installation (1.5 HP)</td><td>RM 219</td><td>RM 219</td></tr>
           <tr><td>Rope access (if needed)</td><td>N/A</td><td>RM 150-300</td></tr>
-          <tr><td>Heavy-duty bracket</td><td>Optional (RM 50)</td><td>Required (RM 80)</td></tr>
+          <tr><td>Heavy-duty outdoor bracket (paid special charge if required)</td><td>Optional (RM 50)</td><td>Required (RM 80)</td></tr>
           <tr><td>Additional pipe (common)</td><td>Usually 7ft included</td><td>Often 15-25ft needed</td></tr>
           <tr><td>Oil traps (vertical runs)</td><td>N/A</td><td>RM 30-50 each</td></tr>
           <tr><td>Service lift coordination</td><td>N/A</td><td>Included</td></tr>

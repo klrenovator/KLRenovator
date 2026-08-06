@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 const INSTALLATION_PROCESS = [
   { step: 1, title: "Tempahan WhatsApp & Survei Tapak", desc: "Hubungi kami via WhatsApp di +60182983573 dengan kawasan anda, jenis unit (dinding, ceiling cassette, tingkap), dan saiz HP. Kami sahkan harga dan jadualkan survei tapak hari sama atau esok. Juruteknik menilai laluan paip, kedudukan unit luar, dan keperluan elektrik.", icon: <FiMessageSquare className="h-5 w-5" /> },
-  { step: 2, title: "Penghantaran Juruteknik & Persediaan", desc: "Juruteknik HVAC berlesen kami tiba dengan semua alat, bahan (paip tembaga, penebatan, braket, wayar), dan peralatan keselamatan. Lapik lindung melindungi lantai dan perabot. Kami sahkan pelan pemasangan tepat dengan anda sebelum mula.", icon: <FaTruck className="h-5 w-5" /> },
+  { step: 2, title: "Penghantaran Juruteknik & Persediaan", desc: "Juruteknik HVAC berlesen kami tiba dengan semua alat, bahan (paip tembaga, penebatan, wayar), dan peralatan keselamatan. Lapik lindung melindungi lantai dan perabot. Kami sahkan pelan pemasangan tepat dengan anda sebelum mula.", icon: <FaTruck className="h-5 w-5" /> },
   { step: 3, title: "Pemasangan Paip Tembaga & Penebatan", desc: "Paip tembaga Type L atau Type M (bergantung saiz HP) dipotong, di-flare, dan dilalukan dengan kemas. Penebatan Armaflex (minimum 9mm) mengelakkan kondensasi dan kehilangan tenaga. Paip disokong dengan braket yang betul — tiada lengkung tajam yang menghalang aliran refrigeran.", icon: <FaWrench className="h-5 w-5" /> },
   { step: 4, title: "Pemasangan Paip Saliran dengan Gradien", desc: "Paip PVC saliran dipasang dengan gradien minimum 1:50 untuk saliran graviti. Periuk anti-siphon mengelakkan aliran balik. Kondensat diuji sebelum ditutup. Untuk kondo tinggi, kami lalukan ke lubang saliran lantai atau saliran balconi mengikut peraturan pengurusan bangunan.", icon: <FaWrench className="h-5 w-5" /> },
   { step: 5, title: "Sambungan Elektrik & Pemeriksaan Breaker", desc: "Litar terpakai dengan rating MCB yang betul (16A untuk 1.0–1.5HP, 20A untuk 2.0–2.5HP, 32A untuk 3.0HP+). Saiz wayar mengikut standard Malaysia. Perlindungan kebocoran bumi disahkan. Isolator unit luar dipasang untuk keselamatan dan akses penyelenggaraan.", icon: <FaBolt className="h-5 w-5" /> },
@@ -38,26 +38,26 @@ const INSTALLATION_PROCESS = [
 ];
 
 const PRICING_TABLE = [
-  { type: "Dinding", hp: "1.0 HP", price: "RM 199", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket standard inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Dinding", hp: "1.5 HP", price: "RM 199", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket standard inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Dinding", hp: "2.0 HP", price: "RM 249", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket standard inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Dinding", hp: "2.5 HP", price: "RM 279", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket standard inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Dinding", hp: "3.0 HP", price: "RM 329", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket standard inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Dinding", hp: "4.0 HP", price: "RM 399", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket heavy-duty inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Dinding", hp: "5.0 HP", price: "RM 449", pipe: "7 kaki paip tembaga inklusif", bracket: "Braket heavy-duty inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
-  { type: "Ceiling Cassette", hp: "1.0–1.5 HP", price: "RM 290", pipe: "7 kaki paip tembaga inklusif", bracket: "Kit gantungan ceiling inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
-  { type: "Ceiling Cassette", hp: "2.0–3.0 HP", price: "RM 350", pipe: "7 kaki paip tembaga inklusif", bracket: "Kit gantungan ceiling inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
-  { type: "Ceiling Cassette", hp: "3.5–6.0 HP", price: "RM 400", pipe: "7 kaki paip tembaga inklusif", bracket: "Kit gantungan ceiling inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
-  { type: "Unit Tingkap", hp: "1.0–2.0 HP", price: "RM 180", pipe: "Tidak berkenaan", bracket: "Pasangan bingkai tingkap", wire: "Wayar inklusif", drain: "Saliran terbina dalam" },
+  { type: "Dinding", hp: "1.0 HP", price: "RM 199", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Dinding", hp: "1.5 HP", price: "RM 199", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Dinding", hp: "2.0 HP", price: "RM 249", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Dinding", hp: "2.5 HP", price: "RM 279", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Dinding", hp: "3.0 HP", price: "RM 329", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Dinding", hp: "4.0 HP", price: "RM 399", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Dinding", hp: "5.0 HP", price: "RM 449", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran inklusif" },
+  { type: "Ceiling Cassette", hp: "1.0–1.5 HP", price: "RM 290", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
+  { type: "Ceiling Cassette", hp: "2.0–3.0 HP", price: "RM 350", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
+  { type: "Ceiling Cassette", hp: "3.5–6.0 HP", price: "RM 400", pipe: "7 kaki paip tembaga inklusif", wire: "Wayar inklusif", drain: "Paip saliran + pump inklusif" },
+  { type: "Unit Tingkap", hp: "1.0–2.0 HP", price: "RM 180", pipe: "Tidak berkenaan", wire: "Wayar inklusif", drain: "Saliran terbina dalam" },
 ];
 
 const BRANDS = siteConfig.brandsSupported;
 
 const FAQS = [
-  { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, wayar, paip saliran, dan braket standard. Ceiling cassette dari RM 290. Unit tingkap dari RM 180. Bahan tambahan melebihi 7 kaki dikira per kaki — paip tembaga RM 17–27/kaki, wayar RM 9/kaki, casing RM 6–12/kaki. Semua harga disahkan sebelum kerja bermula. Paip saliran melebihi 7 kaki ialah RM 5/kaki." },
+  { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard. Ceiling cassette dari RM 290. Unit tingkap dari RM 180. Bahan tambahan melebihi 7 kaki dikira per kaki — paip tembaga RM 17–27/kaki, wayar RM 9/kaki, casing PVC kecil RM 6/kaki atau casing PVC besar RM 12/kaki. Semua harga disahkan sebelum kerja bermula. Paip saliran melebihi 7 kaki ialah RM 5/kaki." },
   { q: "Berapa lama masa pemasangan aircond?", a: "Pemasangan dinding standard mengambil 3–5 jam untuk satu unit. Ceiling cassette ambil 5–8 jam disebabkan gantungan ceiling dan wayaran pump saliran. Pemasangan multi-unit seluruh rumah biasanya siap dalam 1–2 hari. Slot hari sama tersedia untuk tempahan sebelum 11 PG." },
   { q: "Adakah anda memasang aircond di kondo tinggi di KL?", a: "Ya — kami kerap memasang di kondo merentasi KLCC, Mont Kiara, Bangsar, Sentul, PJ, dan Subang Jaya. Kami urus dengan pengurusan bangunan untuk akses lif/loading bay, ikut prosedur keselamatan, dan pastikan penempatan unit luar mematuhi peraturan JMB. Juruteknik kami berpengalaman dengan pemasangan di tebing servis dan balconi." },
-  { q: "Gred paip tembaga apa yang anda guna untuk pemasangan?", a: "Kami guna paip tembaga Type L untuk unit dinding 1.0–2.5 HP dan Type M untuk 3.0 HP+ di mana ketebalan dinding membenarkan. Semua paip dibersihkan nitrogen semasa brazing untuk elakkan pengoksidaan dalaman. Penebatan Armaflex (9–13mm) standard. Ini melebihi standard minimum Malaysia dan memastikan kebolehypercayaan jangka panjang." },
+  { q: "Gred paip tembaga apa yang anda guna untuk pemasangan?", a: "Kami guna paip tembaga Type L untuk unit dinding 1.0–2.5 HP dan Type M untuk 3.0 HP+ di mana ketebalan dinding membenarkan. Semua paip dibersihkan semasa brazing untuk elakkan pengoksidaan dalaman. Penebatan Armaflex (9–13mm) standard. Ini melebihi standard minimum Malaysia dan memastikan kebolehypercayaan jangka panjang." },
   { q: "Mengapa komisen vacuum pump adalah wajib?", a: "Vacuum mengeluarkan kelembapan dan udara dari paip refrigeran. Kelembapan + refrigeran = asid, yang musnahkan lilitan kompresor dan menyumbat tiub kapilari. Bukan-kondensat menaikkan tekanan kepala dan membunuh kecekapan. Kami tarik ke 500 mikron dan pegang 15+ minit. Tiada vacuum = tiada waranti. Ini amalan HVAC terbaik di seluruh dunia." },
   { q: "Bolehkah pemasangan dilakukan semasa musim hujan di Malaysia?", a: "Ya — kami pasang sepanjang tahun. Untuk kerja luar semasa hujan, kami guna kanopi popup dan penutup air-tahan. Pasangan unit dalaman dan paipan berterusan tidak terganggu. Hujan lepet dengan kilat sahaja menghentikan penempatan kompresor luar untuk keselamatan. Slot hari sama mungkin lebih ketat semasa monsun — tempah awal." },
   { q: "Adakah saya perlukan litar elektrik khusus untuk aircond baharu?", a: "Ya — peraturan Malaysia (MS IEC 60364) memerlukan litar terpakai dengan MCB sendiri untuk setiap unit aircond. Kami pasang litar baharu dari kotak DB anda jika tidak wujud, atau sahkan kapasiti litar sedia ada. Unit berkisar masih perlu soket terpakai pada litar terlindung. Kerja elektrik termasuk dalam sebut harga pemasangan kami." },
@@ -101,14 +101,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-function PricingRow({ type, hp, price, pipe, bracket, wire, drain, isHeader = false }: { type: string; hp: string; price: string; pipe: string; bracket: string; wire: string; drain: string; isHeader?: boolean }) {
+function PricingRow({ type, hp, price, pipe, wire, drain, isHeader = false }: { type: string; hp: string; price: string; pipe: string; wire: string; drain: string; isHeader?: boolean }) {
   return (
-    <div className={`grid grid-cols-[1fr_80px_repeat(4,1fr)] gap-4 px-4 py-3 ${isHeader ? "bg-slate-50 font-black text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200" : "border-b border-slate-50 hover:bg-sky-50/30 transition-colors text-sm"}`}>
+    <div className={`grid grid-cols-[1fr_80px_repeat(3,1fr)] gap-4 px-4 py-3 ${isHeader ? "bg-slate-50 font-black text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200" : "border-b border-slate-50 hover:bg-sky-50/30 transition-colors text-sm"}`}>
       <span className={`font-${isHeader ? "black" : "medium"} text-${isHeader ? "slate-700" : "slate-900"}`}>{type}</span>
       <span className="text-center">{hp}</span>
       <span className="text-center text-sky-600 font-black">{price}</span>
       <span className="text-center text-xs text-slate-500">{pipe}</span>
-      <span className="text-center text-xs text-slate-500">{bracket}</span>
       <span className="text-center text-xs text-slate-500">{wire}</span>
       <span className="text-center text-xs text-slate-500">{drain}</span>
     </div>
@@ -186,7 +185,7 @@ export default function PemasanganAircondKLPage() {
           <Reveal delay={100}>
             <div className="overflow-x-auto bg-white border border-slate-200 rounded-2xl">
               <div className="min-w-[900px]">
-                <PricingRow type="Jenis" hp="HP" price="Buruh" pipe="Paip Tembaga" bracket="Braket" wire="Wayar" drain="Paip Saliran" isHeader />
+                <PricingRow type="Jenis" hp="HP" price="Buruh" pipe="Paip Tembaga" wire="Wayar" drain="Paip Saliran" isHeader />
                 {PRICING_TABLE.map((row) => (
                   <PricingRow key={`${row.type}-${row.hp}`} {...row} />
                 ))}
@@ -213,8 +212,8 @@ export default function PemasanganAircondKLPage() {
               <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Caj Tambahan (Hanya Jika Perlu)</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Paip tembaga melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar elektrik melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Casing PVC/penyembunyian: RM 6–12/kaki</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar elektrik melebihi 7 kaki: RM 9/kaki</li>
+                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Casing PVC kecil (wayar elektrik): RM 6/kaki; casing PVC besar (paip kuprum + wayar + penebat): RM 12/kaki</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran standard: RM 45</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran heavy-duty: RM 70</li>
                 <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Soket elektrik baharu: RM 100</li>
@@ -296,7 +295,7 @@ export default function PemasanganAircondKLPage() {
                 <ul className="space-y-2 text-sm text-slate-600">
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tembaga Type L (1.0–2.5 HP) — dinding tebal, rintangan kakisan lebih baik</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tembaga Type M (3.0 HP+) — diluluskan untuk kapasiti lebih besar</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Dibersihkan nitrogen semasa brazing — elakkan pengoksidaan dalaman</li>
+                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Dibersihkan semasa brazing — elakkan pengoksidaan dalaman</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Sambungan flare yang betul — dikencangkan kunci tork mengikut spesifikasi</li>
                   <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tiada kink, lengkung tajam, atau laluan paip undersized</li>
                 </ul>

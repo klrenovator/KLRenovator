@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 };
 
 const VOLUME_TIERS = [
-  { units: "3 Unit", price: "RM 597", save: "Jimat RM 0 vs individu", highlights: ["3× dinding (pelbagai HP ikut keperluan)", "7 kaki paip tembaga, pendawaian, saliran ×3", "3× vakum pam", "Siap dalam 1 hari"], badge: "Popular untuk Rumah 3 Bilik" },
-  { units: "5 Unit", price: "RM 945", save: "Jimat RM 50 vs individu", highlights: ["5× dinding (pelbagai HP)", "7 kaki paip tembaga, pendawaian, saliran ×5", "5× vakum pam", "Siap 1 hari keutamaan", "Penilaian kotak DB percuma"], badge: "Nilai Terbaik", highlight: true },
-  { units: "10+ Unit", price: "Dari RM 1,790", save: "Diskaun volum khas", highlights: ["10+× dinding (pelbagai HP)", "7 kaki paip tembaga, pendawaian, saliran seunit", "Vakum pam setiap unit", "Pasukan projek khusus", "Penilaian DB percuma + pengimbangan beban", "Penjadualan keutamaan — siap 1–2 hari", "Jadual bayaran khas tersedia"], badge: "Pukal / Komersial" },
+  { units: "3 Unit", price: "RM 597", save: "Jimat RM 0 vs individu", highlights: ["3× dinding (pelbagai HP ikut keperluan)", "7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran ×3", "3× vakum pam", "Siap dalam 1 hari"], badge: "Popular untuk Rumah 3 Bilik" },
+  { units: "5 Unit", price: "RM 945", save: "Jimat RM 50 vs individu", highlights: ["5× dinding (pelbagai HP)", "7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran ×5", "5× vakum pam", "Siap 1 hari keutamaan", "Penilaian kotak DB percuma"], badge: "Nilai Terbaik", highlight: true },
+  { units: "10+ Unit", price: "Dari RM 1,790", save: "Diskaun volum khas", highlights: ["10+× dinding (pelbagai HP)", "7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran seunit", "Vakum pam setiap unit", "Pasukan projek khusus", "Penilaian DB percuma + pengimbangan beban", "Penjadualan keutamaan — siap 1–2 hari", "Jadual bayaran khas tersedia"], badge: "Pukal / Komersial" },
 ];
 
 const ROOM_BTU_GUIDE = [
@@ -50,7 +50,7 @@ const PROJECT_TIMELINE = [
 ];
 
 const FAQS = [
-  { q: "Berapa kos pemasangan aircond seluruh rumah untuk rumah 3 bilik di KL?", a: "Pakej 3 unit bermula dari RM 597 untuk unit dinding (1.0–1.5 HP setiap bilik). Pakej 5 unit dari RM 945. Setiap unit termasuk 7 kaki paip tembaga, pendawaian, paip saliran, bracket, vakum pam, dan waranti kerja 1 bulan. Paip tembaga tambahan melebihi 7 kaki dikenakan RM 17–27/kaki. Semua harga disahkan sebelum sebarang kerja bermula." },
+  { q: "Berapa kos pemasangan aircond seluruh rumah untuk rumah 3 bilik di KL?", a: "Pakej 3 unit bermula dari RM 597 untuk unit dinding (1.0–1.5 HP setiap bilik). Pakej 5 unit dari RM 945. Setiap unit termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran, vakum pam, dan waranti kerja 1 bulan. Paip tembaga tambahan melebihi 7 kaki dikenakan RM 17–27/kaki. Semua harga disahkan sebelum sebarang kerja bermula." },
   { q: "Adakah anda tawarkan diskaun volum untuk pemasangan 5 atau lebih unit aircond?", a: "Ya — pakej 5 unit kami menjimatkan RM 50 berbanding tempahan individu, dan termasuk penilaian kapasiti kotak DB percuma. Untuk 10+ unit, kami sediakan harga volum khas dengan pengurusan projek khusus. WhatsApp kami dengan jumlah unit dan jenis hartanah untuk sebut harga tepat." },
   { q: "Bagaimana saya tahu saiz HP yang diperlukan setiap bilik?", a: "Gunakan panduan BTU bilik demi bilik di halaman ini. Bilik tidur kecil (100–150 kaki²): 1.0 HP. Bilik utama (150–250 kaki²): 1.0–1.5 HP. Ruang tamu (250–400 kaki²): 1.5–2.0 HP. Juruteknik kami mengesahkan semua saiz semasa tinjauan tapak percuma — tiada tekaan." },
   { q: "Berapa lama masa untuk pasang 5 unit aircond dalam satu rumah?", a: "5 unit biasanya siap dalam 1 hari penuh (8 PG – 6 PTG) dengan pasukan khusus 2–3 orang. 10+ unit mengambil 1–2 hari. Kami pra-sedia semua bahan malam sebelumnya dan bekerja bilik demi bilik. Rumah landed lebih pantas; kondo mungkin perlu tambahan satu hari untuk akses lif." },

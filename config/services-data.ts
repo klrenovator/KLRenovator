@@ -225,7 +225,7 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Will I lose refrigerant gas during the overhaul?",
         a: "No. Our technician performs a \u2018pump-down\u2019 procedure before removing the indoor unit: the refrigerant is pumped back into the outdoor condenser unit and the service valves are closed, so no gas is lost. The unit is reconnected to the same refrigerant charge after reassembly. If your refrigerant level was already low before the overhaul (which we check during the initial diagnostic), we will inform you and quote a top-up separately. The overhaul itself does not consume or release any refrigerant.",
       },
-      { q: "Does a chemical overhaul include checking for refrigerant leaks?", a: "Yes. Every chemical overhaul includes a mandatory high-pressure nitrogen test or electronic leak sweep after reassembly to ensure the sealed system is 100% airtight." },
+      { q: "Does a chemical overhaul include checking for refrigerant leaks?", a: "Yes. Every chemical overhaul includes a mandatory high-pressure test or electronic leak sweep after reassembly to ensure the sealed system is 100% airtight." },
       { q: "Will my aircond be quieter after an overhaul?", a: "Significantly. By removing heavy sludge from the blower wheel and lubricating fan motor mounts, we eliminate the imbalances that cause vibration and high-frequency noise." }
     ],
     faqsBM: [
@@ -249,7 +249,7 @@ export const servicesData: Record<string, ServiceDetail> = {
         q: "Adakah saya akan kehilangan gas bahan pendingin semasa overhaul?",
         a: "Tidak. Juruteknik kami melakukan prosedur 'pump-down' sebelum mengeluarkan unit dalaman: bahan pendingin dipam kembali ke dalam unit kondenser luar dan injap servis ditutup, jadi tiada gas hilang. Unit disambungkan semula ke cas bahan pendingin yang sama selepas pemasangan semula. Jika tahap bahan pendingin anda sudah rendah sebelum overhaul, kami akan memaklumkan anda.",
       },
-      { q: "Adakah overhaul kimia termasuk pemeriksaan kebocoran gas?", a: "Ya. Setiap overhaul kimia termasuk ujian tekanan nitrogen atau imbasan kebocoran elektronik selepas pemasangan semula untuk memastikan sistem kedap udara 100%." },
+      { q: "Adakah overhaul kimia termasuk pemeriksaan kebocoran gas?", a: "Ya. Setiap overhaul kimia termasuk ujian tekanan imbasan kebocoran elektronik jika diperlukan selepas pemasangan semula untuk memastikan sistem kedap udara 100%." },
       { q: "Adakah aircond saya akan menjadi lebih senyap selepas overhaul?", a: "Ya, secara ketara. Dengan membuang kotoran berat dari roda kipas dan melincirkan motor, kami menghapuskan ketidakseimbangan yang menyebabkan getaran dan bunyi bising." }
     ],
     faqsZH: [
@@ -354,7 +354,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Mengapa aircond saya terus kehilangan gas?",
-        a: "Betul \u2014 gas penyejuk tidak 'digunakan'. Ia beredar dalam gelung tertutup. Jika paras rendah, ada kebocoran di suatu tempat. Titik kebocoran biasa: (1) Sambungan flare di unit dalam dan luar \u2014 paling biasa, boleh dibaiki dengan flare semula. (2) Gegelung penyejat atau kondenser \u2014 kebocoran mikro dari kakisan, terutama unit berusia 8+ tahun berhampiran pantai (Klang, Pelabuhan Klang). (3) Teras injap Schrader \u2014 pembaikan mudah, sering terlepas pandang. Jika unit anda memerlukan gas setiap 6\u201312 bulan, kebocoran perlu ditemui dan dibaiki.",
+        a: "Betul \u2014 gas penyejuk tidak 'digunakan'. Ia beredar dalam gelung tertutup. Jika paras rendah, ada kebocoran di suatu tempat. Titik kebocoran biasa: (1) Sambungan flare di unit dalam dan luar \u2014 paling biasa, boleh dibaiki dengan flare semula. (2) Gegelung penyejat atau kondenser \u2014 kebocoran mikro dari kakisan, terutama unit berusia 8+ tahun berhampiran pantai (Klang, Pelabuhan Klang). (3) Teras injap Schrader \u2014 pembaikan mudah, sering terlepas pandang. Jika unit anda memerlukan gas setiap 6\u201312 bulan, kebocoran perlu ditemui dan dibaiki. Gas Leak Repair ialah RM 120 bagi setiap kebocoran; harga gas top-up kekal berasingan mengikut PSI yang diperlukan.",
       },
       {
         q: "Bolehkah saya menambah gas sendiri?",
@@ -486,7 +486,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪冷气维修费用是多少？",
-        a: "诊断费：RM 88（同次维修则免收）。电容更换：RM 150-250。室内风扇电机：RM 250-380。室外风扇电机：RM 300-450。PCB板：RM 280-600。温度传感器/热敏电阻：RM 150-250。接触器：RM 150-200。排水泵：RM 350-550。压缩机：RM 800-2,000（诊断后报价）。所有价格在开始任何工作前确认。",
+        a: "诊断费：RM 88（同次维修则免收）。电容更换：RM 150-250。室内风扇电机：RM 250-380。室外风扇电机：RM 300-450。PCB板：RM 350-600。温度传感器/热敏电阻：RM 150-250。接触器：RM 150-200。排水泵：RM 350-550。压缩机：RM 800-2,000（诊断后报价）。所有价格在开始任何工作前确认。",
       },
       {
         q: "冷气指示灯闪烁无法开机\u2014\u2014什么意思？",
@@ -508,7 +508,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
       { label: "Capacitor Replacement", price: "RM 150 – 250" },
       { label: "Fan Motor Replacement", price: "RM 250 – 380" },
-      { label: "PCB Board Replacement", price: "RM 280 – 600" },
+      { label: "PCB Board Replacement", price: "RM 350 – 600" },
+      { label: "Gas Leak Repair", price: "RM 120 / leak" },
       { label: "Temperature Sensor Replacement", price: "RM 150 – 250" },
       { label: "Contactor Replacement", price: "RM 150 – 200" },
       { label: "Drain Pump Replacement", price: "RM 350 – 550" },
@@ -522,18 +523,18 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "New Unit Installation",
     tagline: "Professional aircond installation for all brands — clean cable routing, correct pipe sizing, and full vacuum commissioning. Same-day available.",
     description:
-      "A poorly installed aircond can lose 20–30% of its efficiency before it even runs its first hour. Incorrect copper pipe sizing, skipped vacuum evacuation, loose flare connections, or sloppy cable routing will cause gas leaks, premature compressor failure, and electricity bills higher than they should be. KL Renovator installs wall-mounted, ceiling cassette, and window units for homes, condos, shoplots, and offices across KL and Selangor — and we bring genuine HVAC training to every job. Every installation includes: 7ft of correctly sized copper pipe (insulated), electrical wiring, drainage pipe, wall/floor bracket, full vacuum pump evacuation, pressure leak test, and a commissioning run that verifies cooling output, airflow, and thermostat calibration. RM 199 for a standard wall-mounted 1.0–1.5 HP unit — price confirmed before we drill a single hole.",
+      "A poorly installed aircond can lose 20–30% of its efficiency before it even runs its first hour. Incorrect copper pipe sizing, skipped vacuum evacuation, loose flare connections, or sloppy cable routing will cause gas leaks, premature compressor failure, and electricity bills higher than they should be. KL Renovator installs wall-mounted, ceiling cassette, and window units for homes, condos, shoplots, and offices across KL and Selangor — and we bring genuine HVAC training to every job. Every installation includes the first 7ft of correctly sized copper pipe, insulation, electrical wiring, and drainage pipe, plus full vacuum pump evacuation, vacuum pump commissioning (500 microns), and a commissioning run. Outdoor brackets are paid special-charge items when required and are confirmed before work begins that verifies cooling output, airflow, and thermostat calibration. RM 199 for a standard wall-mounted 1.0–1.5 HP unit — price confirmed before we drill a single hole.",
     startPrice: "RM 199",
     heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
     ogImage: "/hero/aircond-installation-wall-mounted-kl.webp",
-    aioSummary: "Professional installation for wall-mounted and ceiling units using vacuum commissioning protocols. Starting Price: RM 199. Includes: 7ft copper pipe, wiring, and bracket. Warranty: 1-month workmanship checklist provided.",
-    aioSummaryMS: "Pemasangan profesional unit dinding dan siling menggunakan protokol komisen vakum. Harga: RM 199. Termasuk: 7 kaki paip kuprum, pendawaian, dan braket. Waranti: Senarai semak kerjatangan 1 bulan disediakan.",
+    aioSummary: "Professional installation for wall-mounted and ceiling units using vacuum commissioning protocols. Starting Price: RM 199. Includes: 7ft copper pipe, wiring. Warranty: 1-month workmanship checklist provided.",
+    aioSummaryMS: "Pemasangan profesional unit dinding dan siling menggunakan protokol komisen vakum. Harga: RM 199. Termasuk: 7 kaki paip kuprum, pendawaian. Waranti: Senarai semak kerjatangan 1 bulan disediakan.",
     aioSummaryZH: "采用抽真空调试标准的专业冷气安装服务。起步价：RM 199。包含：7尺铜管、电线及支架。保修：提供1个月工艺保修清单。",
     highlights: [
       "Expert installation for wall-mounted, ceiling cassette, and window units",
       "Correct-gauge copper piping (7ft included) — no thin-walled 'universal' pipes",
       "Mandatory vacuum pump commissioning — removes air & moisture from the circuit",
-      "Nitrogen pressure leak test performed before releasing the refrigerant charge",
+      "Vacuum pump commissioning (500 microns) completed before commissioning",
       "Clean, professional cable trunking and aesthetic indoor unit mounting",
       "Proper condensate drainage fall-gradient to prevent internal water leaks",
       "Condo management & JMB coordination — we follow all site access rules",
@@ -543,12 +544,12 @@ export const servicesData: Record<string, ServiceDetail> = {
       { step: "Pre-Installation Survey", desc: "Technician checks wall strength, electrical supply capacity, drainage fall, and outdoor condenser placement. Measurements confirmed before any drilling. Condo rules checked — we coordinate with management if needed." },
       { step: "Bracket, Pipe & Cable Run", desc: "Wall bracket levelled and anchored. Copper pipes cut to exact length, flared, insulated, and routed neatly through wall penetration. Drainage pipe set with correct downward gradient so water flows naturally." },
       { step: "Outdoor Unit & Electrical", desc: "Condenser unit mounted on bracket with rubber vibration pads. Electrical isolator switch installed near outdoor unit (required by Malaysian regulations). Wiring routed through dedicated conduit, not shared with other circuits." },
-      { step: "Vacuum, Leak Test & Commission", desc: "System evacuated with vacuum pump for minimum 15–20 minutes to remove all moisture and air. Nitrogen pressure test confirms no leaks. Refrigerant released, cooling tested across all fan speeds, thermostat calibrated, and job card signed." },
+      { step: "Vacuum, Leak Test & Commission", desc: "System evacuated with vacuum pump for minimum 15–20 minutes to remove all moisture and air. Vacuum pump commissioning (500 microns) is completed before commissioning. Refrigerant released, cooling tested across all fan speeds, thermostat calibrated, and job card signed." },
     ],
     faqs: [
       {
         q: "How much does aircond installation cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP installation starts from RM 199 (includes 7ft copper pipe, wiring, drainage, and bracket). 2.0 HP from RM 249, 2.5 HP from RM 279. Ceiling cassette from RM 290. Window unit from RM 199. Additional copper pipe above 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Electrical wire above 7ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). These are the prices you pay — confirmed before we start.",
+        a: "Wall-mounted 1.0–1.5 HP installation starts from RM 199 (includes 7ft copper pipe, insulation, electrical wire and drainage). 2.0 HP from RM 249, 2.5 HP from RM 279. Ceiling cassette from RM 290. Window unit from RM 199. Additional copper pipe above 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Electrical wire above 7ft: RM 9/ft. These are the prices you pay — confirmed before we start.",
       },
       {
         q: "How long does a professional installation take?",
@@ -560,7 +561,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "What exactly is included in the RM 199 installation?",
-        a: "The RM 199 standard wall-mounted package includes: (1) Site survey and wall assessment, (2) 7ft copper pipe correctly sized to your unit's HP with proper insulation, (3) Electrical wiring from isolator to indoor unit through dedicated conduit, (4) PVC drainage pipe with proper fall gradient, (5) Wall bracket with rubber vibration pads, (6) Vacuum pump evacuation (minimum 15 min), (7) Nitrogen pressure leak test, (8) Full commissioning — cooling, airflow, thermostat calibration, (9) Written job card and 1-month workmanship warranty. Extra copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra electrical wire beyond 7ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP).",
+        a: "The RM 199 standard wall-mounted package includes: (1) Site survey and wall assessment, (2) 7ft copper pipe correctly sized to your unit's HP with proper insulation, (3) Electrical wiring from isolator to indoor unit through dedicated conduit, (4) PVC drainage pipe with proper fall gradient, (5) Wall bracket with rubber vibration pads, (6) Vacuum pump evacuation (minimum 15 min), (7) Vacuum pump commissioning (500 microns), (8) Full commissioning — cooling, airflow, thermostat calibration, (9) Written job card and 1-month workmanship warranty. Extra copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Extra electrical wire beyond 7ft: RM 9/ft.",
       },
       {
         q: "Can you install any aircond brand?",
@@ -579,7 +580,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga pemasangan aircond di KL & Selangor?",
-        a: "Pemasangan dinding 1.0–1.5 HP bermula dari RM 199 (termasuk 7 kaki paip kuprum, pendawaian, paip longkang, dan braket). 2.0 HP dari RM 249, 2.5 HP dari RM 279. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP). Ini harga yang anda bayar — disahkan sebelum kami mula.",
+        a: "Pemasangan dinding 1.0–1.5 HP bermula dari RM 199 (termasuk 7 kaki paip kuprum, penebat, wayar elektrik dan paip longkang). 2.0 HP dari RM 249, 2.5 HP dari RM 279. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan melebihi 7 kaki: RM 9/kaki. Ini harga yang anda bayar — disahkan sebelum kami mula.",
       },
       {
         q: "Berapa lama masa pemasangan profesional?",
@@ -591,7 +592,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Apa sebenarnya yang termasuk dalam pemasangan RM 199?",
-        a: "Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak dan penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul mengikut HP unit anda dengan penebat yang betul, (3) Pendawaian elektrik dari pengasing ke unit dalaman melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan jatuh yang betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum (minimum 15 min), (7) Ujian kebocoran tekanan nitrogen, (8) Pentauliahan penuh — penyejukan, aliran udara, penentukuran termostat, (9) Kad kerja bertulis dan waranti mutu kerja 1 bulan. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan melebihi 7 kaki: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).",
+        a: "Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak dan penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul mengikut HP unit anda dengan penebat yang betul, (3) Pendawaian elektrik dari pengasing ke unit dalaman melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan jatuh yang betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum (minimum 15 min), (7) Pentauliahan pam vakum (500 mikron), (8) Pentauliahan penuh — penyejukan, aliran udara, penentukuran termostat, (9) Kad kerja bertulis dan waranti mutu kerja 1 bulan. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan melebihi 7 kaki: RM 9/kaki.",
       },
       {
         q: "Bolehkah anda memasang semua jenama aircond?",
@@ -643,7 +644,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Window Unit · 1.0 – 1.5 HP", price: "RM 199" },
       { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 249" },
     ],
-    priceTableNote: "Standard installation includes 7ft copper pipe, wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
+    priceTableNote: "Standard installation includes 7ft copper pipe, insulation, electrical wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
   },
 
   // ── 6. BASIC SERVICING ───────────────────────────────────────────────────
@@ -877,7 +878,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
     ],
-    priceTableNote: "Installation includes 7ft copper pipe, wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
+    priceTableNote: "Installation includes 7ft copper pipe, insulation, electrical wire, and drain pipe free. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
   },
 
   // ── 8. DISMANTLE & RELOCATION ────────────────────────────────────────────
@@ -886,7 +887,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "Dismantle & Relocation",
     tagline: "Safe pump-down, professional dismantle, and full recommissioning at your new address. Same move-in day installation available. From RM 250 complete.",
     description:
-      "You are moving to a new condo in Petaling Jaya, or your office is relocating from Bangsar to Damansara. You have a perfectly good Daikin inverter unit that is only 3 years old \u2014 replacing it would cost RM 1,500+. Dismantling and relocating it makes financial sense. But this is not a job for general movers or a handyman with a spanner. An aircond relocation involves: safely pumping down the refrigerant into the outdoor condenser (so no gas is lost), disconnecting the electrical isolator, unbolting the indoor unit from the wall bracket, removing the outdoor condenser from its bracket or platform, extracting the copper pipes and wiring through the wall penetration, transporting both units securely to the new location, and then performing a full new installation: new copper pipes, new drainage, new wiring run, vacuum evacuation, and recommissioning. KL Renovator does this start to finish. Complete relocate and reinstall from RM 250 (1.0\u20131.5 HP, same building or nearby). RM 350 for a different-location relocation. Includes refrigerant recovery, 7ft new copper pipe, wiring, drainage, bracket, vacuum, and test. Same-day completion on most moves.",
+      "You are moving to a new condo in Petaling Jaya, or your office is relocating from Bangsar to Damansara. You have a perfectly good Daikin inverter unit that is only 3 years old \u2014 replacing it would cost RM 1,500+. Dismantling and relocating it makes financial sense. But this is not a job for general movers or a handyman with a spanner. An aircond relocation involves: safely pumping down the refrigerant into the outdoor condenser (so no gas is lost), disconnecting the electrical isolator, unbolting the indoor unit from the wall bracket, removing the outdoor condenser from its bracket or platform, extracting the copper pipes and wiring through the wall penetration, transporting both units securely to the new location, and then performing a full new installation: new copper pipes, new drainage, new wiring run, vacuum evacuation, and recommissioning. KL Renovator does this start to finish. Complete relocate and reinstall from RM 250 (1.0\u20131.5 HP, same building or nearby). RM 350 for a different-location relocation. Includes refrigerant recovery, 7ft new copper pipe, wiring, drainage, vacuum, and test. Same-day completion on most moves.",
     startPrice: "RM 90",
     heroImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
     ogImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
@@ -912,7 +913,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does aircond dismantle and relocation cost in KL & Selangor?",
-        a: "Dismantle only (without reinstall): RM 90. Full dismantle + reinstall same building/nearby: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Full dismantle + reinstall different location: RM 350 (1.0\u20131.5 HP). All full-relocation packages include: refrigerant pump-down, safe dismantle, transport, new 7ft copper pipe, new wiring, new drainage, new wall bracket, vacuum commissioning, and full test. Additional copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Additional wire beyond 7ft: RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). If the new location requires roof-mount or high-rise external condenser mounting, additional bracket fees may apply \u2014 confirmed before work.",
+        a: "Dismantle only (without reinstall): RM 90. Full dismantle + reinstall same building/nearby: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Full dismantle + reinstall different location: RM 350 (1.0\u20131.5 HP). All full-relocation packages include: refrigerant pump-down, safe dismantle, transport, new 7ft copper pipe, new wiring, new drainage,  vacuum commissioning, and full test. Additional copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Additional wire beyond 7ft: RM 9/ft. If the new location requires roof-mount or high-rise external condenser mounting, additional bracket fees may apply \u2014 confirmed before work.",
       },
       {
         q: "Will my aircond refrigerant gas be lost during the relocation?",
@@ -924,7 +925,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Can I reuse my existing copper pipes and bracket at the new location?",
-        a: "Copper pipes: No. They are embedded in the wall, cut during removal, and cannot be extracted intact. New copper pipe (7ft included in the relocation package, RM 17/ft for 1.0–1.5 HP beyond) is always used at the new location. Wall bracket: No. The bracket stays on the old wall (it is screwed/bolted in). A new bracket is included in the relocation package and mounted at the new location. The only components that move with you are the indoor unit, outdoor condenser, and remote control. Everything else \u2014 pipes, wiring, drainage, bracket \u2014 is new at the new site.",
+        a: "Copper pipes: No. They are embedded in the wall, cut during removal, and cannot be extracted intact. New copper pipe (7ft included in the relocation package, RM 17/ft for 1.0–1.5 HP beyond) is always used at the new location. Wall bracket: No. The bracket stays on the old wall (it is screwed/bolted in). If a new outdoor bracket is required at the new location, it is quoted separately as a paid special charge before work begins. The only components that move with you are the indoor unit, outdoor condenser, and remote control. Everything else \u2014 pipes, wiring, drainage \u2014 is new at the new site.",
       },
       {
         q: "My new condo has different wall type or ceiling height \u2014 can you still install?",
@@ -939,7 +940,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga tanggal dan pindah aircond di KL & Selangor?",
-        a: "Tanggal sahaja (tanpa pasang semula): RM 90. Tanggal + pasang semula bangunan sama/berdekatan: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Tanggal + pasang semula lokasi berbeza: RM 350 (1.0\u20131.5 HP). Semua pakej penuh termasuk: pam-turun bahan pendingin, tanggal selamat, pengangkutan, 7 kaki paip kuprum baharu, pendawaian baharu, longkang baharu, braket dinding baharu, pentauliahan vakum, dan ujian penuh. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki (1.0–1.5 HP), RM 13/kaki (2.0–2.5 HP), RM 17/kaki (3.0–4.0 HP).",
+        a: "Tanggal sahaja (tanpa pasang semula): RM 90. Tanggal + pasang semula bangunan sama/berdekatan: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Tanggal + pasang semula lokasi berbeza: RM 350 (1.0\u20131.5 HP). Semua pakej penuh termasuk: pam-turun bahan pendingin, tanggal selamat, pengangkutan, 7 kaki paip kuprum baharu, pendawaian baharu, longkang baharu dinding baharu, pentauliahan vakum, dan ujian penuh. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki.",
       },
       {
         q: "Adakah gas aircond saya akan hilang semasa pemindahan?",
@@ -951,7 +952,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Bolehkah saya menggunakan semula paip kuprum dan braket lama di lokasi baharu?",
-        a: "Paip kuprum: Tidak. Ia tertanam di dinding, dipotong semasa penanggalan, dan tidak boleh dikeluarkan secara utuh. Paip kuprum baharu (7 kaki termasuk dalam pakej, RM 17/kaki (1.0–1.5 HP) tambahan) sentiasa digunakan di lokasi baharu. Braket dinding: Tidak. Braket kekal di dinding lama. Braket baharu disertakan dalam pakej pemindahan. Satu-satunya komponen yang berpindah dengan anda adalah unit dalaman, kondenser luar, dan alat kawalan jauh.",
+        a: "Paip kuprum: Tidak. Ia tertanam di dinding, dipotong semasa penanggalan, dan tidak boleh dikeluarkan secara utuh. Paip kuprum baharu (7 kaki termasuk dalam pakej, RM 17/kaki (1.0–1.5 HP) tambahan) sentiasa digunakan di lokasi baharu. Braket dinding: Tidak. Braket kekal di dinding lama. Jika braket luar baharu diperlukan di lokasi baharu, ia disebut sebagai caj khas berbayar sebelum kerja bermula. Satu-satunya komponen yang berpindah dengan anda adalah unit dalaman, kondenser luar, dan alat kawalan jauh.",
       },
       {
         q: "Adakah berbaloi memindahkan unit lama, atau beli yang baharu?",
@@ -990,7 +991,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Dismantle + Reinstall Same Place (2.0–2.5 HP)", price: "RM 290" },
       { label: "Dismantle + Reinstall Other Place", price: "RM 350" },
     ],
-    priceTableNote: "7ft copper pipe, wire, and drain pipe are free with reinstallation. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
+    priceTableNote: "7ft copper pipe, insulation, electrical wire, and drain pipe are free with reinstallation. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",
   },
 
   // ── 9. EMERGENCY AIRCOND REPAIR ──────────────────────────────────────────

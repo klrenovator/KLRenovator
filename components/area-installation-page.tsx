@@ -311,9 +311,9 @@ export function AreaInstallationLandingPage({
             </div>
             <p className="text-xs text-slate-500 mt-3 font-medium">
               {locale === "en"
-                ? "Prices are for standard installation including 7 ft copper pipe, wire, drain pipe, and standard bracket. Extras quoted first."
+                ? "Prices are for standard installation including 7 ft copper pipe, insulation, electrical wire and drain pipe. Extras quoted first."
                 : locale === "ms"
-                  ? "Harga adalah untuk pemasangan standard termasuk 7 ft paip tembaga, wayar, paip saliran, dan braket standard. Tambahan disebut dahulu."
+                  ? "Harga adalah untuk pemasangan standard termasuk 7 ft paip tembaga, wayar, paip saliran standard. Tambahan disebut dahulu."
                   : "价格为标准安装费用，包含7尺铜管、电线、排水管和标准支架。额外费用先报价。"}
             </p>
           </Reveal>

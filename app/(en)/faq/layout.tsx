@@ -52,7 +52,7 @@ export default function FaqLayout({ children }: { children: React.ReactNode }) {
         name: "Are there any hidden charges?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No hidden charges at all. KL Renovator provides a full quote before starting any work. Extra materials (copper pipe, brackets) are quoted and approved by you on-site before installation.",
+          text: "No hidden charges at all. KL Renovator provides a full quote before starting any work. Extra materials (copper pipes) are quoted and approved by you on-site before installation.",
         },
       },
       {

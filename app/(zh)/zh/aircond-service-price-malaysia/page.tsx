@@ -106,7 +106,7 @@ const pricingCategories = [
       { label: "电容更换", price: "RM 150 – 250" },
       { label: "室内风扇马达更换", price: "RM 250 – 380" },
       { label: "室外风扇马达更换", price: "RM 300 – 450" },
-      { label: "PCB 控制板维修/更换", price: "RM 280 – 600" },
+      { label: "PCB 控制板维修/更换", price: "RM 350 – 600" },
       { label: "排水泵更换", price: "RM 350 – 550" },
     ],
   },

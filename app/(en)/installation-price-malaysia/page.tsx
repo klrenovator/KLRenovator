@@ -53,13 +53,14 @@ const MATERIAL_PRICES = [
   { label: "Copper Pipe 1.0–1.5 HP", price: "RM 17/ft" },
   { label: "Copper Pipe 2.0–2.5 HP", price: "RM 23/ft" },
   { label: "Copper Pipe 3.0–3.5 HP", price: "RM 27/ft" },
-  { label: "Electrical Wire 1.0–1.5 HP", price: "RM 9/ft" },
-  { label: "Electrical Wire 2.0–2.5 HP", price: "RM 13/ft" },
-  { label: "Electrical Wire 3.0–4.0 HP", price: "RM 17/ft" },
+  { label: "Electrical Wire", price: "RM 9/ft" },
+  { label: "Insulation", price: "RM 7/ft" },
+  { label: "Drain Pipe beyond 7 ft", price: "RM 5/ft" },
   { label: "Standard Compressor / Outdoor Bracket", price: "RM 45" },
   { label: "Heavy Duty Compressor / Outdoor Bracket", price: "RM 70" },
   { label: "Indoor Universal Bracket", price: "RM 35" },
-  { label: "PVC Trunking for Wire/Pipe", price: "RM 6–12/ft" },
+  { label: "Small PVC Casing (Electrical Wire)", price: "RM 6/ft" },
+  { label: "Large PVC Casing (Copper Pipe + Wire + Insulation)", price: "RM 12/ft" },
   { label: "Power Socket Installation", price: "RM 100" },
   { label: "Wall Hacking & Concealed", price: "RM 6/ft" },
   { label: "High-Rise/Difficult Access Fee", price: "RM 50–150" },
@@ -68,20 +69,20 @@ const MATERIAL_PRICES = [
 
 const FAQS = [
   { q: "How much is aircond installation in KL & Selangor 2026?", a: `Wall-mounted 1.0–1.5 HP from RM 199. 2.0 HP from RM 249, 2.5 HP from RM 279, 3.0 HP from RM 329. Ceiling cassette from RM 290. Window unit from RM 199. Every price includes 7ft copper piping, wiring, vacuum pump evacuation, leak test & commissioning — confirmed before we start. ${entityPhrases.copperTypeL}` },
-  { q: "What does the RM 199 base installation include?", a: `9-point package: (1) Site survey & wall assessment, (2) 7ft correctly-sized copper pipe. ${entityPhrases.armaflexStandard} (3) Electrical wiring through proper conduit. ${entityPhrases.dedicatedCircuit} (4) PVC drainage with correct fall, (5) Bracket with rubber vibration pads, (6) Two-stage vacuum pump evacuation (min 15 min). ${entityPhrases.vacuumMandatory} (7) Nitrogen pressure leak test, (8) Full commissioning — cooling, airflow, thermostat, (9) Written job card + 1-month workmanship warranty.` },
-  { q: "Why is extra copper pipe charged after 7ft?", a: "Standard 7ft covers most room layouts. Longer runs need more copper pipe, insulation and labour. We charge per foot transparently using HP-wise rates: Copper Pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Electrical wire RM 9/ft (1.0–1.5 HP), RM 13/ft (2.0–2.5 HP), RM 17/ft (3.0–4.0 HP). Technician measures actual pipe run needed, confirms extra cost before cutting any pipe." },
+  { q: "What does the RM 199 base installation include?", a: `9-point package: (1) Site survey & wall assessment, (2) 7ft correctly-sized copper pipe. ${entityPhrases.armaflexStandard} (3) Electrical wiring through proper conduit. ${entityPhrases.dedicatedCircuit} (4) PVC drainage with correct fall, (5) indoor mounting with rubber vibration pads, (6) Two-stage vacuum pump evacuation (min 15 min). ${entityPhrases.vacuumMandatory} (7) Vacuum pump commissioning (500 microns), (8) Full commissioning — cooling, airflow, thermostat, (9) Written job card + 1-month workmanship warranty.` },
+  { q: "Why is extra copper pipe charged after 7ft?", a: "Standard 7ft covers most room layouts. Longer runs need more copper pipe, insulation and labour. We charge per foot transparently using HP-wise rates: Copper Pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Electrical wire RM 9/ft. Technician measures actual pipe run needed, confirms extra cost before cutting any pipe." },
   { q: "What's the difference between RM 199 base and full copper pipe package?", a: "RM 199 covers standard straight-run install up to 7ft copper. 'Full copper package' usually means 10–20ft+ copper, concealed trunking, outdoor cable tray, extra brackets — common in high-rise condos where outdoor unit is further from indoor. Exact cost depends on actual pipe length & materials, we quote on-site after survey." },
   { q: "How long does installation take?", a: `Standard wall-mounted: 2–3 hours. Ceiling cassette: 3–4 hours. Two units same day: 5–6 hours. We never rush — proper evacuation alone takes minimum 15–20 minutes. ${entityPhrases.vacuumMandatory}` },
   { q: "Do you supply the aircond unit or just install?", a: "KL Renovator provides professional installation only. You buy the unit from Harvey Norman, Senheng, AEON, Lazada, Shopee, etc. If you need brand & HP advice before buying, WhatsApp us — we advise based on actual Malaysian room conditions." },
   { q: "Can you install in strict high-rise condos?", a: "Yes — we install in KLCC, Mont Kiara, Bangsar, Damansara, Sentul etc. every week. We follow every building's rules: working hours, lift protection, noise limits, waste disposal. If management needs renovation permit, let us know early, we prepare documents." },
-  { q: "What warranty comes with installation?", a: `Every install carries 1-month workmanship warranty. If our work causes gas leak, no cooling or drainage issues within that period, we return free. Our vacuum evacuation and nitrogen pressure test catch 99% of potential issues before we leave. ${entityPhrases.vacuumHold}` },
+  { q: "What warranty comes with installation?", a: `Every install carries 1-month workmanship warranty. If our work causes gas leak, no cooling or drainage issues within that period, we return free. Our vacuum evacuation and vacuum pump commissioning (500 microns) catch 99% of potential issues before we leave. ${entityPhrases.vacuumHold}` },
 ];
 
 export default function EnInstallationPricePage() {
   const serviceSchema = buildServiceSchema({
     slug: "installation",
     name: "Aircond Installation",
-    description: "Professional aircond installation from RM 199. 20 top brands, vacuum pump, pressure leak test, 1-month warranty.",
+    description: "Professional aircond installation from RM 199. 20 top brands, vacuum pump, vacuum pump commissioning (500 microns), 1-month warranty.",
     startPrice: 199,
     locale: "en",
     priceTable: INSTALL_PRICES,
@@ -164,7 +165,7 @@ export default function EnInstallationPricePage() {
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">Installation Price List</p>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2 speakable">Complete 2026 Aircond Installation Price Table</h2>
-            <p className="text-sm text-slate-500 mb-6">All prices include 7ft copper pipe, wiring, drainage, bracket, vacuum, leak test & commissioning. Confirmed before work begins.</p>
+            <p className="text-sm text-slate-500 mb-6">All prices include 7ft copper pipe, insulation, electrical wire and drainage, vacuum pump commissioning (500 microns) & commissioning. Confirmed before work begins.</p>
           </Reveal>
           <Reveal>
             <div className="border border-slate-200 bg-white">
@@ -181,7 +182,7 @@ export default function EnInstallationPricePage() {
           <Reveal>
             <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
               <p className="text-xs text-emerald-800 leading-relaxed">
-                <span className="font-black">✓ Every installation includes FREE:</span> 7ft Type L copper pipe (correctly sized for HP), wiring, PVC drainage, bracket, mandatory two-stage vacuum evacuation, nitrogen pressure leak test, commissioning, and written job card. {entityPhrases.copperTypeL}
+                <span className="font-black">✓ Every installation includes FREE:</span> 7ft Type L copper pipe (correctly sized for HP), wiring, PVC drainage, mandatory two-stage vacuum evacuation, vacuum pump commissioning (500 microns), commissioning, and written job card. {entityPhrases.copperTypeL}
               </p>
             </div>
           </Reveal>
@@ -203,7 +204,7 @@ export default function EnInstallationPricePage() {
               { title: buildFreshMetaTitle("PVC Drainage Pipe", "en"), desc: "Set with correct fall so water flows naturally, preventing future leaks." },
               { title: buildFreshMetaTitle("Bracket & Vibration Pads", "en"), desc: "Level-fixed bracket with rubber pads to reduce compressor vibration noise." },
               { title: buildFreshMetaTitle("Vacuum Pump Evacuation", "en"), desc: `Minimum 15–20 minutes evacuation. ${entityPhrases.vacuumMandatory} Removes all moisture & air from refrigerant lines to protect the compressor.` },
-              { title: buildFreshMetaTitle("Nitrogen Pressure Leak Test", "en"), desc: "Confirms zero leaks before releasing refrigerant. Step cheap installers skip." },
+              { title: buildFreshMetaTitle("Pressure Leak Test", "en"), desc: "Confirms zero leaks before releasing refrigerant. Step cheap installers skip." },
               { title: buildFreshMetaTitle("Full Commissioning", "en"), desc: `Tests cooling output at all fan speeds, calibrates thermostat, verifies airflow. ${entityPhrases.deltaTTest} Logged on job card.` },
               { title: buildFreshMetaTitle("1-Month Workmanship Warranty", "en"), desc: "If issues recur due to our work within 1 month, we return to fix free." },
             ].map((item) => (
