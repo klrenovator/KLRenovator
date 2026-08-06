@@ -138,3 +138,5 @@ Full hierarchical list with every neighbourhood: https://www.klrenovator.com/llm
 - About us: https://www.klrenovator.com/about
 - FAQ: https://www.klrenovator.com/faq
 - Contact: https://www.klrenovator.com/contact
+- Online booking: https://www.klrenovator.com/book (trilingual: /ms/book, /zh/book)
+- Privacy policy: https://www.klrenovator.com/privacy-policy (trilingual: /ms/privacy-policy, /zh/privacy-policy)

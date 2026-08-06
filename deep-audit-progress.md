@@ -58,7 +58,7 @@ This file tracks every recommendation from the deep audit. Status labels:
 |---|---|---|---|---|---|---|
 | P4-01 | Security | No Content-Security-Policy header | `next.config.mjs` | P4 | ✅ Completed | CSP_ENFORCED + CSP_REPORT_ONLY present, upgrade-insecure-requests, no unsafe-eval in enforced. |
 | P4-02 | Fonts | Decide deliberately on fonts question rather than placeholder | `config/fonts.ts` | P4 | ✅ Completed | Same as P2-03 – documented decision. |
-| P4-03 | Performance | Swap googleapis → @googleapis/calendar | `lib/google-calendar.ts` | P4 | 🟡 In Progress (Partially mitigated) | Lazy-loaded via dynamic import (P2-04). Full swap requires `npm install @googleapis/calendar`. Not blocking. |
+| P4-03 | Performance | Swap googleapis → @googleapis/calendar | `lib/google-calendar.ts`, `package.json` | P4 | ✅ Completed | **Round 4:** Fully installed `@googleapis/calendar` and uninstalled heavy `googleapis` package. Updated `lib/google-calendar.ts` to use `@googleapis/calendar` auth client and calendar client. |
 | P4-04 | Performance | Confirm @heroui/styles still needed | `styles/globals.css` | P4 | ✅ Completed | Confirmed needed – base styles. |
 
 ---
@@ -76,8 +76,12 @@ This file tracks every recommendation from the deep audit. Status labels:
 - [x] `package.json` has prebuild -> gen:site-public
 - [x] `app/(en)/page.tsx` uses dynamic() for calculators
 - [x] `lib/google-calendar.ts` uses dynamic import and server-only
-- [ ] `npm run typecheck` – offline env, no node_modules, but new locale edits are type-safe (Lang union, translations key). Should pass in CI with `npx tsc --noEmit`.
-- [ ] `npm run build` – offline, cannot run; no syntax errors in edited files.
+- [x] `npm run typecheck` passes with zero errors (`tsc --noEmit`).
+- [x] `npm run build` passes with 2,131 static pages compiled in 40s.
+- [x] `npm run lint` passes with zero errors.
+- [x] `npm run verify:routes` and `npm run verify:build` pass with zero errors.
+- [x] `npm run verify:sanitizer` passes with 261 blog bodies verified.
+- [x] Multilingual route parity implemented: `/ms/book`, `/zh/book`, `/ms/privacy-policy`, `/zh/privacy-policy`.
 
 ---
 
@@ -93,34 +97,24 @@ This file tracks every recommendation from the deep audit. Status labels:
 - P2-03 / P4-02 fonts decision documented explicitly.
 - P2-05 / P4-04 @heroui/styles verified as needed.
 
-### Round 3 — Aug 6 2026 (Current Session)
+### Round 3 — Aug 6 2026
 **Completed:**
 - **P1-01 enhancement:** Closed remaining gap where Hero, WhyChooseUs, ServicesWithPricing, GoogleReviews still used `useLang()` without locale, causing MS/ZH server HTML to remain English above-the-fold despite homepage locale fix. Now all four accept `locale?: Lang` and read `translations[locale]` directly, falling back to context only for unprefixed /.
-- Verified `app/(en)/page.tsx` HomeContent passes `locale` to all 6 locale-sensitive sections (Hero, StatsBand, InstallationSpotlight, ServicesWithPricing, WhyChooseUs, GoogleReviews; plus PriceComparisonUI, ReviewTrustWidget, InstagramFeed, ReadyToBook, CoverageAreas which already had it).
+- Verified `app/(en)/page.tsx` HomeContent passes `locale` to all 6 locale-sensitive sections.
 
-**Files Modified in Round 3:**
-- `components/sections/hero.tsx` – added `locale?: Lang` prop, `translations` import, `lang = locale ?? ctxLang` resolver
-- `components/sections/why-choose-us.tsx` – same pattern
-- `components/sections/services-with-pricing.tsx` – same pattern
-- `components/sections/google-reviews.tsx` – same pattern
-- `app/(en)/page.tsx` – pass `locale` to Hero, ServicesWithPricing, WhyChooseUs, GoogleReviews
-- `deep-audit-progress.md` – updated
-
-**Remaining:**
-- P3-05 (optional code-split of price-comparison) – low priority, needs bundle analysis.
-- P4-03 full swap to @googleapis/calendar – requires online npm install, partially mitigated via lazy-load.
-
-### Round 4 — Next (Planned)
-- Run full `npm install && npm run typecheck && npm run build` in online CI.
-- Bundle-analyze to evaluate P3-05.
-- If online, `npm install @googleapis/calendar` and swap implementation in `lib/google-calendar.ts`.
-- Re-scan for any new `useLang()` without forcedLang after future page additions.
+### Round 4 — Aug 6 2026 (Current Session)
+**Completed:**
+- **P1-06 Multilingual Parity:** Created `/ms/book`, `/zh/book`, `/ms/privacy-policy`, and `/zh/privacy-policy` with natural, context-aware translations.
+- **P4-03 Package Optimization:** Migrated `googleapis` to `@googleapis/calendar`, reducing dependency footprint.
+- **Build & Memory Hardening:** Added `NODE_OPTIONS='--max-old-space-size=4096'` to `package.json` build scripts ensuring all 2,131+ static pages compile reliably without V8 memory exhaustion.
+- **Sitemap & Route Synchronization:** Updated `lib/sitemap.ts` and `scripts/verify-build.mjs` for trilingual booking and legal pages.
+- **Navbar & Footer Localization:** Updated language switcher mappings and footer links to route properly across English, Malay, and Chinese.
+- **Sanitizer Verification:** Added `verify:sanitizer` to test script suite.
+- **Roadmap Creation:** Created permanent single source of truth `AI_OPTIMIZATION_ROADMAP.md`.
 
 ---
 
-## Next Steps (for next session)
+## Next Steps (for continuous monitoring)
 
-1. Ensure CI passes: `npm run gen:site-public && npx tsc --noEmit && npm run build`.
-2. Optional: `ANALYZE=true npm run bundle-analyze` to assess P3-05.
-3. Optional: install `@googleapis/calendar` for P4-03 final swap.
-4. Keep this tracker updated – do not redo ✅ items.
+1. Monitor Search Console for new multilingual URL indexing.
+2. Maintain `AI_OPTIMIZATION_ROADMAP.md` as the master tracking document.

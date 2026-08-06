@@ -213,8 +213,15 @@ const SIZE_OPTS = [
 
 // ─────────────────────────────────────────────────────────────────────────
 
-export function BookingForm({ isAdmin = false }: { isAdmin?: boolean }) {
-  const { lang } = useLang();
+export function BookingForm({
+  isAdmin = false,
+  forcedLang,
+}: {
+  isAdmin?: boolean;
+  forcedLang?: "en" | "ms" | "zh";
+}) {
+  const { lang: ctxLang } = useLang();
+  const lang = forcedLang ?? ctxLang;
   const t = FORM_TXT[lang as keyof typeof FORM_TXT] || FORM_TXT.en;
 
   const [name, setName] = useState("");

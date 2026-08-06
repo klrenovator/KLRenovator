@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
+import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 // ─────────────────────────────────────────────────────────────────────────
 // Privacy policy.
@@ -11,19 +12,15 @@ import { siteConfig } from "@/config/site";
 // Malaysia's Personal Data Protection Act 2010 a data user must issue a
 // written notice covering what is collected, why, who it is disclosed to,
 // and how the individual can access or correct it.
-//
-// Previously there was no policy page at all — and next.config.mjs actively
-// 301-redirected /privacy-policy to the homepage. That redirect has been
-// removed so this page can serve.
 // ─────────────────────────────────────────────────────────────────────────
 
-const LAST_UPDATED = "05 August 2026";
+const LAST_UPDATED = "06 August 2026";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | KL Renovator",
   description:
     "How KL Renovator (Multicore Dynamics Resources) collects, uses, stores and protects your personal data under Malaysia's PDPA 2010.",
-  alternates: { canonical: "https://www.klrenovator.com/privacy-policy" },
+  alternates: buildTrilingualHreflang("/privacy-policy", "en"),
   robots: { index: true, follow: true },
 };
 
