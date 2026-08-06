@@ -106,8 +106,8 @@ export default function AMCPageZH() {
                 {plan.badging && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-sky-600 text-white text-[10px] font-black uppercase tracking-wider px-4 py-1 rounded-full whitespace-nowrap">{plan.badging}</span>}
                 <div className="text-center mb-6">
                   <h3 className="text-xl font-black text-slate-900">{plan.name}</h3>
-                  <div className="mt-3"><span className="text-4xl font-black text-slate-900">RM {plan.price}</span><span className="text-slate-400 text-sm">{plan.period}</span></div>
-                  <p className="text-xs text-slate-400 mt-1 font-bold">{plan.services}</p>
+                  <div className="mt-3"><span className="text-4xl font-black text-slate-900">RM {plan.price}</span><span className="text-slate-500 text-sm">{plan.period}</span></div>
+                  <p className="text-xs text-slate-500 mt-1 font-bold">{plan.services}</p>
                 </div>
                 <ul className="space-y-3 flex-1">
                   {plan.includes.map((item: string, i: number) => (

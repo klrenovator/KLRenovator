@@ -37,10 +37,10 @@ export default function BrandsIndex() {
           <p className="mt-6 text-xl text-slate-300 max-w-2xl mx-auto">
             One expert. 20 trusted brands. Same-day service across KL & Selangor.
           </p>
-          <p className="mt-2 text-lg text-slate-400">
+          <p className="mt-2 text-lg text-slate-500">
             Satu Juruteknik • 20 Jenama • Servis Hari Sama
           </p>
-          <p className="mt-1 text-lg text-slate-400">
+          <p className="mt-1 text-lg text-slate-500">
             一位技术员 • 20 个品牌 • 当天服务
           </p>
 
@@ -138,7 +138,7 @@ export default function BrandsIndex() {
       <div className="bg-slate-950 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black tracking-tight">Ready for the technician who knows them all?</h2>
-          <p className="mt-3 text-slate-400">Same-day service • Transparent pricing • 1-month warranty</p>
+          <p className="mt-3 text-slate-500">Same-day service • Transparent pricing • 1-month warranty</p>
           
           <div className="mt-8">
             <BookingButton serviceName="All Brands Service" size="lg" />

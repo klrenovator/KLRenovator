@@ -490,7 +490,7 @@ export default async function BrandPageMS({
                       key={i}
                       className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm"
                     >
-                      <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
                         {ts.specification}
                       </div>
                       <div className="text-sm font-semibold text-slate-800">
@@ -543,7 +543,7 @@ export default async function BrandPageMS({
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-slate-400 mt-3">
+                <p className="text-xs text-slate-500 mt-3">
                   Kod ralat tiada dalam senarai? WhatsApp +60182983573 dengan
                   nombor model {brand.name} anda — kami akan mendiagnosisnya.
                 </p>

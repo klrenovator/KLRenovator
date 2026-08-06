@@ -221,7 +221,7 @@ export default async function BrandAreaPageMS({
                 </div>
               ))}
             </div>
-            <p className="text-xs text-slate-400 mt-4 italic">
+            <p className="text-xs text-slate-500 mt-4 italic">
               * Nota: Pengangkutan dan buruh sudah termasuk. Harga disahkan sepenuhnya sebelum kerja bermula.
             </p>
           </div>
@@ -249,7 +249,7 @@ export default async function BrandAreaPageMS({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {techSpecs.slice(0, 4).map((ts, i) => (
                 <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">{ts.specification}</div>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">{ts.specification}</div>
                   <div className="text-sm font-black text-slate-800">{ts.detail}</div>
                 </div>
               ))}
@@ -321,7 +321,7 @@ export default async function BrandAreaPageMS({
           <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight">
             Tempah Servis {brand.name} di {area.name} Hari Ini
           </h2>
-          <p className="mt-3 text-slate-400 text-sm sm:text-base">
+          <p className="mt-3 text-slate-500 text-sm sm:text-base">
             Servis profesional · Slot hari sama · Sebut harga telus &amp; jujur
           </p>
 

@@ -68,3 +68,12 @@ This file collects historical "Round" implementation notes that were previously 
 - Homepage fully server-rendered per locale with independent root layouts and `<html lang>` en-MY/ms-MY/zh-MY; no client JS text-swap for indexable content (P0-01 fixed 2026-08-05).
 - Config split into typed domain collections (config/site/*) — P2-03.
 - Sitemap generated from typed registry with content-aware dates — P2-05 (2026-08-05).
+
+## 2026-08-06 — Deep audit implementation phase
+
+- Archived the new audit as `docs/DEEP_WEBSITE_AUDIT-2026-08-05.md` without replacing the previous `DEEP_WEBSITE_AUDIT.md`.
+- Added `docs/IMPLEMENTATION-TRACKER.md` as the master tracker for both audits.
+- Re-verified prior locale SSR, admin throttling, booking labels, CSP, and server validation work.
+- Standardized window-unit installation references to the calculator/source-of-truth price of RM199.
+- Added a `server-only` guard for the privileged Supabase module and automatic `site-public` generation before builds.
+- Removed the duplicate homepage FAQPage JSON-LD graph and improved readable slate text contrast.

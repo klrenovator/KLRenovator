@@ -480,7 +480,7 @@ export default async function BrandPageZH({
                       key={i}
                       className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm"
                     >
-                      <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
                         {ts.specification}
                       </div>
                       <div className="text-sm font-semibold text-slate-800">
@@ -533,7 +533,7 @@ export default async function BrandPageZH({
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-slate-400 mt-3">
+                <p className="text-xs text-slate-500 mt-3">
                   错误代码未列出？请将您的 {brand.name} 型号及错误发送WhatsApp至
                   +60182983573 — 我们将为您诊断。
                 </p>

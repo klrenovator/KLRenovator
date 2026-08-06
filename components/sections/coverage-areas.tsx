@@ -50,7 +50,7 @@ export const CoverageAreas = ({ locale = "en" }: { locale?: Locale }) => {
           {siteConfig.areaPages.map((area, idx) => (
             <Reveal key={area.slug} delay={idx * 25}>
               <NextLink href={`/areas/${area.slug}`} title={`Aircond Service ${area.name}`} className="flex items-center gap-2.5 p-4 border border-slate-100 rounded-2xl bg-slate-50/50 hover:bg-white hover:border-sky-500 hover:shadow-md transition-all duration-200 group">
-                <FaLocationDot className="h-3.5 w-3.5 text-slate-400 group-hover:text-sky-500 transition-colors shrink-0" />
+                <FaLocationDot className="h-3.5 w-3.5 text-slate-500 group-hover:text-sky-500 transition-colors shrink-0" />
                 <span className="text-xs font-bold text-slate-800 uppercase tracking-wide group-hover:text-sky-600 transition-colors">{area.name}</span>
               </NextLink>
             </Reveal>

@@ -394,7 +394,7 @@ export default async function AreaPage({
                   if (links.length === 0) return null;
                   return (
                   <div className="mt-4">
-                    <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">
+                    <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">
                       {neighbourhoods.length > 0 ? "Neighbourhood Guides" : "Nearby Neighbourhood Guides"}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -567,7 +567,7 @@ export default async function AreaPage({
                     <h3 className="font-black text-slate-900 text-sm">{item.problem}</h3>
                     <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{item.price}</span>
                   </div>
-                  <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.problemMS} · {item.problemZH}</p>
+                  <p className="text-[10px] text-slate-500 font-semibold mb-2">{item.problemMS} · {item.problemZH}</p>
                   <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
                   <NextLink
                     href={`/services/${item.fix === "Chemical Wash" ? "chemical-wash" : item.fix === "Gas Top-Up" ? "gas-topup" : item.fix === "Repair" ? "repair" : "basic-servicing"}`}
@@ -644,7 +644,7 @@ export default async function AreaPage({
                   <h3 className="font-black text-slate-900 text-sm leading-snug mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-xs text-slate-400 font-medium leading-relaxed flex-grow">
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed flex-grow">
                     {service.short}
                   </p>
                   <div className="mt-4 flex items-center gap-1.5 text-sky-600 text-xs font-black uppercase tracking-wider">
@@ -796,7 +796,7 @@ export default async function AreaPage({
           {area.faqsBM?.length > 0 && (
             <Reveal>
               <div className="mt-4">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇲🇾 Bahasa Malaysia</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">🇲🇾 Bahasa Malaysia</p>
                 <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
                   {area.faqsBM.map((faq: { q: string; a: string }, i: number) => (
                     <details key={i} className="group bg-white p-4">
@@ -816,7 +816,7 @@ export default async function AreaPage({
           {area.faqsZH?.length > 0 && (
             <Reveal>
               <div className="mt-4">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">🇨🇳 中文</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">🇨🇳 中文</p>
                 <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
                   {area.faqsZH.map((faq: { q: string; a: string }, i: number) => (
                     <details key={i} className="group bg-white p-4">
@@ -835,7 +835,7 @@ export default async function AreaPage({
           {/* Near Me FAQs — AEO/GEO targeted */}
           <Reveal>
             <div className="mt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">📍 Near Me · Berhampiran Saya · 附近</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">📍 Near Me · Berhampiran Saya · 附近</p>
               <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden">
                 <details className="group bg-white p-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-slate-900 text-sm">
@@ -1063,7 +1063,7 @@ export default async function AreaPage({
                     >
                       <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
                       {problem.name}
-                      <span className="text-slate-400 font-normal"> · {problem.nameMS}</span>
+                      <span className="text-slate-500 font-normal"> · {problem.nameMS}</span>
                     </NextLink>
                   ));
               })()}

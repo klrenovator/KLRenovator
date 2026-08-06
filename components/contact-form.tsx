@@ -43,7 +43,7 @@ export const ContactForm = () => {
   };
 
   const inputCls =
-    "w-full border border-slate-200 bg-slate-50/50 px-4 py-3.5 text-sm text-slate-900 placeholder:text-slate-400 rounded-xl focus:outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-[#0284c7]/20 focus:bg-white transition-all duration-200";
+    "w-full border border-slate-200 bg-slate-50/50 px-4 py-3.5 text-sm text-slate-900 placeholder:text-slate-500 rounded-xl focus:outline-none focus:border-[#0284c7] focus:ring-2 focus:ring-[#0284c7]/20 focus:bg-white transition-all duration-200";
 
   return (
     <form
@@ -176,7 +176,7 @@ export const ContactForm = () => {
 
       <div className="relative flex py-2 items-center">
         <div className="flex-grow border-t border-slate-100"></div>
-        <span className="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-400">OR</span>
+        <span className="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-500">OR</span>
         <div className="flex-grow border-t border-slate-100"></div>
       </div>
 

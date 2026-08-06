@@ -372,7 +372,7 @@ export default function EmergencyPage() {
               <div key={i} className={`flex items-start justify-between px-6 py-3.5 ${i % 2 === 0 ? "bg-white" : "bg-slate-50/50"} border-b border-slate-100 last:border-0`}>
                 <div>
                   <p className="font-semibold text-slate-800 text-sm">{row.label}</p>
-                  {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
+                  {row.note && <p className="text-xs text-slate-500 mt-0.5">{row.note}</p>}
                 </div>
                 <p className="font-black text-sky-700 text-sm shrink-0 ml-4">{row.price}</p>
               </div>
@@ -388,7 +388,7 @@ export default function EmergencyPage() {
             </div>
           </div>
 
-          <p className="text-xs text-slate-400 text-center mt-4">All prices confirmed before work begins. No surprise charges.</p>
+          <p className="text-xs text-slate-500 text-center mt-4">All prices confirmed before work begins. No surprise charges.</p>
         </div>
       </section>
 
@@ -408,12 +408,12 @@ export default function EmergencyPage() {
               <dl className="grid gap-3">
                 {emergencyAIO.facts.map((fact) => (
                   <div key={fact.label} className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 last:border-b-0 last:pb-0">
-                    <dt className="text-[11px] font-black uppercase tracking-widest text-slate-400">{fact.label}</dt>
+                    <dt className="text-[11px] font-black uppercase tracking-widest text-slate-500">{fact.label}</dt>
                     <dd className="text-right text-sm font-black text-slate-900">{fact.value}</dd>
                   </div>
                 ))}
               </dl>
-              <p className="mt-4 text-[11px] leading-relaxed text-slate-400">{emergencyAIO.sourceLine}</p>
+              <p className="mt-4 text-[11px] leading-relaxed text-slate-500">{emergencyAIO.sourceLine}</p>
             </aside>
           </div>
         </div>
@@ -672,7 +672,7 @@ export default function EmergencyPage() {
                 </div>
                 <h3 className="font-black text-slate-900 text-sm mb-1">{s.en.title}</h3>
                 <p className="text-xs text-slate-500 mb-3 leading-relaxed">{s.en.desc}</p>
-                <p className="text-xs text-slate-400 leading-relaxed">{s.ms.title} — {s.zh.title}</p>
+                <p className="text-xs text-slate-500 leading-relaxed">{s.ms.title} — {s.zh.title}</p>
               </div>
             ))}
           </div>
@@ -697,8 +697,8 @@ export default function EmergencyPage() {
                   <h3 className="font-black text-slate-900 text-sm group-hover:text-red-600 transition-colors">{p.en}</h3>
                   <span className="text-slate-300 group-hover:text-red-400 transition-colors text-lg">›</span>
                 </div>
-                <p className="text-xs text-slate-400">{p.ms}</p>
-                <p className="text-xs text-slate-400">{p.zh}</p>
+                <p className="text-xs text-slate-500">{p.ms}</p>
+                <p className="text-xs text-slate-500">{p.zh}</p>
               </NextLink>
             ))}
           </div>
@@ -797,7 +797,7 @@ export default function EmergencyPage() {
       {/* ── RELATED SERVICES ─────────────────────────────────────────────────── */}
       <section className="py-10 px-4 bg-white border-t border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 text-center">Related Services</p>
+          <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4 text-center">Related Services</p>
           <div className="flex flex-wrap justify-center gap-3">
             {siteConfig.services.filter(s => s.slug !== "emergency").map((s) => (
               <NextLink

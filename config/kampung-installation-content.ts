@@ -319,7 +319,7 @@ function getGeneratedFAQs(
     return [
       {
         q: `Berapa harga pemasangan aircond di ${name}?`,
-        a: `Pemasangan dinding di ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 180. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran standard.`,
+        a: `Pemasangan dinding di ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 199. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran standard.`,
       },
       {
         q: `Berapa lama pemasangan aircond di ${name}?`,

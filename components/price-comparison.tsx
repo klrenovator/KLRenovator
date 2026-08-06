@@ -154,13 +154,13 @@ export function PriceComparisonUI({ locale = "en", compact = false, serviceName 
           <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
             {/* Header */}
             <div className="grid grid-cols-[1fr_1fr_1fr] bg-slate-900 text-white">
-              <div className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-slate-400">
+              <div className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-slate-500">
                 &nbsp;
               </div>
               <div className="px-4 py-3 text-center text-xs font-black uppercase tracking-widest bg-sky-600">
                 ✅ {d.klrLabel}
               </div>
-              <div className="px-4 py-3 text-center text-xs font-black uppercase tracking-widest text-slate-400">
+              <div className="px-4 py-3 text-center text-xs font-black uppercase tracking-widest text-slate-500">
                 ❌ {d.themLabel}
               </div>
             </div>

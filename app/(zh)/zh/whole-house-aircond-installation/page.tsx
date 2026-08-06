@@ -108,7 +108,7 @@ export default function WholeHouseInstallationPageZH() {
                 <div className={`relative bg-white border-2 rounded-2xl p-6 sm:p-8 h-full flex flex-col ${tier.highlight ? "border-amber-400 shadow-lg shadow-amber-100" : "border-slate-200 hover:border-sky-300 hover:shadow-md"} transition-all`}>
                   {tier.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full">最佳价值</div>}
                   <div className="mb-4"><div className="inline-flex bg-sky-50 border border-sky-100 text-sky-700 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">{tier.badge}</div><h3 className="font-black text-2xl text-slate-900">{tier.units}</h3></div>
-                  <div className="mb-4"><span className="text-3xl font-black text-sky-600">{tier.price}</span><span className="text-slate-400 text-sm ml-1">人工总计</span></div>
+                  <div className="mb-4"><span className="text-3xl font-black text-sky-600">{tier.price}</span><span className="text-slate-500 text-sm ml-1">人工总计</span></div>
                   <div className="bg-emerald-50 border border-emerald-100 rounded-xl px-3 py-1.5 inline-flex self-start mb-5"><span className="text-xs font-black text-emerald-700">{tier.save}</span></div>
                   <div className="bg-slate-50 rounded-xl p-4 mb-5 flex-1"><ul className="space-y-2">{tier.highlights.map((h: string, j: number) => (<li key={j} className="flex items-start gap-2 text-sm text-slate-700"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" /><span>{h}</span></li>))}</ul></div>
                   <a href={waLink("🏠 " + tier.units + "报价\n\n您好 KL Renovator，我想要 " + tier.units + " 安装套餐。\n\n📍 区域：\n🏠 物业类型：\n\n请确认价格和可用性。")} target="_blank" rel="nofollow noopener noreferrer" className={`inline-flex items-center justify-center gap-2 w-full font-black uppercase text-sm tracking-widest h-12 px-6 rounded-xl transition-all ${tier.highlight ? "bg-amber-500 hover:bg-amber-600 text-white" : "bg-sky-600 hover:bg-sky-700 text-white"}`}><FaWhatsapp className="h-4 w-4" /> 获取{tier.units}报价</a>
@@ -185,9 +185,9 @@ export default function WholeHouseInstallationPageZH() {
             </div>
             <p className="mt-6 text-slate-500 text-sm">覆盖KL及雪兰莪所有区域 — 吉隆坡、八打灵再也、莎阿南、梳邦再也、蕉赖、安邦、蒲种、巴生、白沙罗、孟沙、Mont Kiara、Setapak、黑风洞、布城、赛城等。</p>
             <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-center gap-4">
-              <Link href="/zh/aircond-installation-kl" className="text-sm text-slate-400 hover:text-white transition-colors">← 所有安装服务</Link>
-              <Link href="/zh/new-home-aircond-installation" className="text-sm text-slate-400 hover:text-white transition-colors">新房套餐</Link>
-              <Link href="/zh/installation-price-malaysia" className="text-sm text-slate-400 hover:text-white transition-colors">完整价格指南</Link>
+              <Link href="/zh/aircond-installation-kl" className="text-sm text-slate-500 hover:text-white transition-colors">← 所有安装服务</Link>
+              <Link href="/zh/new-home-aircond-installation" className="text-sm text-slate-500 hover:text-white transition-colors">新房套餐</Link>
+              <Link href="/zh/installation-price-malaysia" className="text-sm text-slate-500 hover:text-white transition-colors">完整价格指南</Link>
             </div>
           </Reveal>
         </div>

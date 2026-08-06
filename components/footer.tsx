@@ -130,7 +130,7 @@ export const Footer = () => {
 
           {/* Price Guides */}
           <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.priceGuides}</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">{fl.priceGuides}</p>
             <ul className="space-y-1.5">
               <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
               <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
@@ -141,7 +141,7 @@ export const Footer = () => {
 
           {/* Free Calculators (trilingual EN/MS/ZH tool pages) */}
           <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Free Calculators</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Free Calculators</p>
             <ul className="space-y-1.5">
               <li><NextLink href={localizedPath("/aircond-installation-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Pemasangan" : lang === "zh" ? "安装费用计算器" : "Installation Cost Calculator"}</NextLink></li>
               <li><NextLink href={localizedPath("/aircond-gas-topup-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Anggaran Kos Tambah Gas" : lang === "zh" ? "加气费用估算器" : "Gas Top-up Cost Estimator"}</NextLink></li>
@@ -153,7 +153,7 @@ export const Footer = () => {
           </div>
 
           <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{fl.blog}</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">{fl.blog}</p>
             <NextLink href={localizedPath("/blog")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.blog} →</NextLink>
           </div>
         </div>
@@ -165,7 +165,7 @@ export const Footer = () => {
             <li><a href={`tel:${sitePublic.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><FaPhone className="h-3.5 w-3.5 text-sky-500 shrink-0" />{sitePublic.phoneDisplay}</a></li>
             <li><a href={`mailto:${sitePublic.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><FaEnvelope className="h-3.5 w-3.5 text-sky-500 shrink-0" />{sitePublic.email}</a></li>
             <li className="flex items-start gap-2.5"><FaLocationDot className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><span className="font-medium">KL &amp; Selangor (Klang Valley)</span></li>
-            <li className="flex items-start gap-2.5"><FaClock className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-400">Emergency bookings accepted</p></div></li>
+            <li className="flex items-start gap-2.5"><FaClock className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-500">Emergency bookings accepted</p></div></li>
           </ul>
           <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" style={{ backgroundColor: "#25D366" }} className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"><FaWhatsapp className="h-4 w-4" /> {fl.bookWa}</a>
         </div>
@@ -173,7 +173,7 @@ export const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
           <p>© {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamics Resources). {t("footer_rights")}</p>
           <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
             <NextLink href={localizedPath("/services")} className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>

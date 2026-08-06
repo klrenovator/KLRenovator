@@ -707,7 +707,7 @@ export function ServiceDetailI18n({
                     ))}
                   </ul>
                 </div>
-                <p className="text-xs text-slate-400 mt-3">{pick("materialsNote")}</p>
+                <p className="text-xs text-slate-500 mt-3">{pick("materialsNote")}</p>
               </div>
             </Reveal>
           )}
@@ -771,11 +771,11 @@ export function ServiceDetailI18n({
                 </p>
                 <dl className="mt-4 grid grid-cols-2 gap-3 text-xs">
                   <div className="rounded-xl bg-slate-50 p-3">
-                    <dt className="font-bold uppercase tracking-wider text-slate-400">{lang === "zh" ? "最后审核" : "Disemak terakhir"}</dt>
+                    <dt className="font-bold uppercase tracking-wider text-slate-500">{lang === "zh" ? "最后审核" : "Disemak terakhir"}</dt>
                     <dd className="mt-1 font-black text-slate-900">3 July 2026</dd>
                   </div>
                   <div className="rounded-xl bg-slate-50 p-3">
-                    <dt className="font-bold uppercase tracking-wider text-slate-400">{lang === "zh" ? "企业" : "Perniagaan"}</dt>
+                    <dt className="font-bold uppercase tracking-wider text-slate-500">{lang === "zh" ? "企业" : "Perniagaan"}</dt>
                     <dd className="mt-1 font-black text-slate-900">SSM Registered</dd>
                   </div>
                 </dl>
@@ -813,12 +813,12 @@ export function ServiceDetailI18n({
                   <dl className="grid gap-3">
                     {aioBlock.facts.map((fact) => (
                       <div key={fact.label} className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 last:border-b-0 last:pb-0">
-                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-400">{fact.label}</dt>
+                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-500">{fact.label}</dt>
                         <dd className="text-right text-sm font-black text-slate-900">{fact.value}</dd>
                       </div>
                     ))}
                   </dl>
-                  <p className="mt-4 text-[11px] leading-relaxed text-slate-400">{aioBlock.sourceLine}</p>
+                  <p className="mt-4 text-[11px] leading-relaxed text-slate-500">{aioBlock.sourceLine}</p>
                 </aside>
               </div>
             </div>
@@ -1138,7 +1138,7 @@ export function ServiceDetailI18n({
                       ? ["Tekanan tinggi 80–120 PSI", "Pembersihan mendalam gegelung & blower", "Larutkan kulat & biofilm", "60–75 min setiap unit", "Disyorkan setiap 12 bulan", "Terbaik selepas 12+ bulan tanpa cuci mendalam"]
                       : ["高压80–120 PSI", "盘管与风轮深层清洁", "溶解霉菌与生物膜", "每台60–75分钟", "建议每12个月一次", "12个月以上未深洗效果最佳"]
                     ).map((item, i) => (
-                      <li key={i} className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">→</span> {item}</li>
+                      <li key={i} className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> {item}</li>
                     ))}
                   </ul>
                 </div>
@@ -1423,7 +1423,7 @@ export function ServiceDetailI18n({
           {faqsSecondary.map((block) => (
             <Reveal key={block.label}>
               <div className="mt-6 border-t border-slate-200 pt-6">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">{block.langTag} {block.label}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{block.langTag} {block.label}</p>
                 <div className="space-y-3">
                   {block.items.map((f, i: number) => (
                     <div key={i} className="bg-white border border-slate-200 p-4">
@@ -1534,7 +1534,7 @@ export function ServiceDetailI18n({
               <div key={item.icon} className="bg-white border border-slate-200 rounded-2xl p-5">
                 <span className="text-2xl mb-3 block">{item.icon}</span>
                 <h3 className="font-black text-slate-900 text-sm mb-0.5">{lang === "ms" ? item.ms : item.zh}</h3>
-                <p className="text-[10px] text-slate-400 font-semibold mb-2">{item.en} · {lang === "ms" ? item.zh : item.ms}</p>
+                <p className="text-[10px] text-slate-500 font-semibold mb-2">{item.en} · {lang === "ms" ? item.zh : item.ms}</p>
                 <p className="text-xs text-slate-600 leading-relaxed">{lang === "ms" ? item.descMS : item.descZH}</p>
               </div>
             ))}
@@ -1591,7 +1591,7 @@ export function ServiceDetailI18n({
                   >
                     <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
                     {problem.name}
-                    <span className="text-slate-400 font-normal"> · {problem.nameMS}</span>
+                    <span className="text-slate-500 font-normal"> · {problem.nameMS}</span>
                   </NextLink>
                 ));
               })()}

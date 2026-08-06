@@ -155,8 +155,8 @@ export default function AMCPage() {
                 <div className="text-center mb-6">
                   <span className="text-3xl mb-2 block">{plan.icon}</span>
                   <h3 className="text-xl font-black text-slate-900">{plan.name}</h3>
-                  <div className="mt-3"><span className="text-4xl font-black text-slate-900">RM {plan.price}</span><span className="text-slate-400 text-sm">{plan.period}</span></div>
-                  <p className="text-xs text-slate-400 mt-1 font-bold">{plan.services}</p>
+                  <div className="mt-3"><span className="text-4xl font-black text-slate-900">RM {plan.price}</span><span className="text-slate-500 text-sm">{plan.period}</span></div>
+                  <p className="text-xs text-slate-500 mt-1 font-bold">{plan.services}</p>
                 </div>
                 <ul className="space-y-3 flex-1">
                   {plan.includes.map((item: string, i: number) => (
@@ -251,7 +251,7 @@ export default function AMCPage() {
       {/* Related */}
       <section className="py-10 px-4 bg-white border-t border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 text-center">Related Services</p>
+          <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4 text-center">Related Services</p>
           <div className="flex flex-wrap justify-center gap-3">
             {siteConfig.services.filter((s: {slug: string}) => s.slug !== "maintenance-contract").map((s: {slug: string; title: string; startPrice: number}) => (
               <NextLink key={s.slug} href={"/services/" + s.slug} className="bg-slate-50 border border-slate-200 hover:border-sky-300 hover:bg-sky-50 text-slate-700 hover:text-sky-700 text-xs font-semibold px-4 py-2 rounded-xl transition-all">

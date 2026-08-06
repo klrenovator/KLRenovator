@@ -103,7 +103,7 @@ export default function BrandsPageMS() {
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-lg">{cat.flag}</span>
                     <h3 className="text-sm font-black uppercase tracking-widest text-slate-700">{cat.name}</h3>
-                    <span className="text-[10px] text-slate-400 font-medium">— {cat.note}</span>
+                    <span className="text-[10px] text-slate-500 font-medium">— {cat.note}</span>
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {catBrands.map((brand) => (
@@ -155,7 +155,7 @@ export default function BrandsPageMS() {
           <Reveal><div className="text-center mb-10">
             <p className="text-xs font-black uppercase tracking-widest text-sky-400 mb-2">Harga Sama — Setiap Jenama</p>
             <h2 className="text-2xl font-black uppercase text-white">Harga Telus Tanpa Ikatan Jenama</h2>
-            <p className="mt-2 text-slate-400 text-sm font-medium">Harga sama untuk Daikin, Panasonic, Mitsubishi — semua 20 jenama.</p>
+            <p className="mt-2 text-slate-500 text-sm font-medium">Harga sama untuk Daikin, Panasonic, Mitsubishi — semua 20 jenama.</p>
           </div></Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -169,7 +169,7 @@ export default function BrandsPageMS() {
               { service: "Pemasangan", price: "Dari RM 199" },
             ].map((item) => (
               <div key={item.service} className="bg-slate-800 border border-slate-700 rounded-xl p-4 text-center">
-                <p className="text-xs font-bold text-slate-400 mb-1">{item.service}</p>
+                <p className="text-xs font-bold text-slate-500 mb-1">{item.service}</p>
                 <p className="text-lg font-black text-sky-400">{item.price}</p>
               </div>
             ))}

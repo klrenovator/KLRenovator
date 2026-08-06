@@ -213,7 +213,7 @@ export function InstallationProof({
                       <cite className="block truncate text-xs font-black not-italic text-slate-900">
                         {review.author}
                       </cite>
-                      <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+                      <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
                         {review.dateDisplay} · {t.verified}
                       </span>
                     </span>
