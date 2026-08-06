@@ -7,7 +7,7 @@ import { Reveal } from "@/components/reveal";
 import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
-import { useLang } from "@/context/language-context";
+import { translations, useLang, type Lang } from "@/context/language-context";
 
 // ─── Service benefit highlights per tab ─────────────────────────────────────
 const residentialHighlights = [
@@ -42,9 +42,12 @@ const commercialExtraInfo = [
   },
 ];
 
-export const ServicesWithPricing = () => {
+export const ServicesWithPricing = ({ locale }: { locale?: Lang } = {}) => {
   const [activeTab, setActiveTab] = useState<"residential" | "commercial">("residential");
-  const { t } = useLang();
+  const { lang: ctxLang, t: ctxT } = useLang();
+  const lang: Lang = locale ?? ctxLang;
+  const t = (key: keyof typeof translations["en"]): string =>
+    ((translations[lang] as Record<string, string>)[key]) ?? ctxT(key);
 
   // ✅ SSR both tabs — Google can crawl commercial content too
   const residentialServices = sitePublic.services.filter(

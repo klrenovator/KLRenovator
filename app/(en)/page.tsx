@@ -325,12 +325,12 @@ function HomeContent({ locale }: { locale: Lang }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeServiceSchema) }} />
 
-      <Hero />
+      <Hero locale={locale} />
       <StatsBand locale={locale} />
       <InstallationSpotlight locale={locale} />
-      <ServicesWithPricing />
-      <WhyChooseUs />
-      <GoogleReviews />
+      <ServicesWithPricing locale={locale} />
+      <WhyChooseUs locale={locale} />
+      <GoogleReviews locale={locale} />
       <div className="max-w-5xl mx-auto px-4 py-12">
         <ReviewTrustWidget locale={locale} />
       </div>

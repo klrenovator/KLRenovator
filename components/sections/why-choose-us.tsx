@@ -13,7 +13,7 @@ import {
 
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
-import { useLang } from "@/context/language-context";
+import { translations, useLang, type Lang } from "@/context/language-context";
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -44,8 +44,11 @@ const COLORS = [
   "bg-teal-50 border-teal-100 text-teal-600 group-hover:bg-teal-500",
 ];
 
-export const WhyChooseUs = () => {
-  const { t } = useLang();
+export const WhyChooseUs = ({ locale }: { locale?: Lang } = {}) => {
+  const { lang: ctxLang, t: ctxT } = useLang();
+  const lang: Lang = locale ?? ctxLang;
+  const t = (key: keyof typeof translations["en"]): string =>
+    ((translations[lang] as Record<string, string>)[key]) ?? ctxT(key);
 
   const FEATURES = [
     { icon: ICONS[0], colorClass: COLORS[0], title: t("why_1_title"), desc: t("why_1_desc") },
