@@ -102,6 +102,12 @@ This file tracks every recommendation from the deep audit. Status labels:
 - **P1-01 enhancement:** Closed remaining gap where Hero, WhyChooseUs, ServicesWithPricing, GoogleReviews still used `useLang()` without locale, causing MS/ZH server HTML to remain English above-the-fold despite homepage locale fix. Now all four accept `locale?: Lang` and read `translations[locale]` directly, falling back to context only for unprefixed /.
 - Verified `app/(en)/page.tsx` HomeContent passes `locale` to all 6 locale-sensitive sections.
 
+### Round 5.1 — Aug 6 2026 (Dead File Cleanup)
+**Completed:**
+- **Deleted 3 dead files:** `config/site-area-pages.ts` (1,888-line stale duplicate of `config/site/areas.ts` — identical content, zero imports), `config/sitemap-registry.ts` (29-line unused sitemap experiment; real logic lives in `lib/sitemap.ts`), `lib/i18n/routing.ts` (44-line unused migration re-export shim; `lib/i18n/` dir removed).
+- **Verified NOT dead (kept):** all 90 hero `.webp` images (each referenced in config), `public/logo/image.png`, SEO verification files (`BingSiteAuth.xml`, `google*.html`, `e7492*.txt`), PWA icons/manifest, `public/.well-known/ai-plugin.json`, `scripts/sql/add-booking-notes.sql` (DB migration record for the live `notes` column), all 7 scripts referenced from `package.json`.
+- **Post-deletion verification:** typecheck ✅, lint ✅, verify:routes ✅, verify:sanitizer ✅ (261 bodies), build ✅ (2,131 pages), verify:build ✅ — all green.
+
 ### Round 5 — Aug 6 2026 (Current Session)
 **Completed:**
 - **Full-suite re-verification:** `npm run typecheck` ✅ (0 errors), `npm run lint` ✅ (0 errors), `npm run verify:routes` ✅ (30 dynamic route contracts), `npm run verify:sanitizer` ✅ (261 blog bodies), `npm run build` ✅ (2,170 app routes / 2,124 sitemap URLs compiled clean), `npm run verify:build` ✅. No `.bak`/leftover files, no TODO/FIXME markers in source, working tree clean.
