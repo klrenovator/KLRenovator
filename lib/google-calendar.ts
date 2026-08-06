@@ -11,7 +11,7 @@ import "server-only";
 // is actually called, not on every serverless invocation that imports this module.
 // Full swap to `@googleapis/calendar` is tracked as future optimization.
 
-const SCOPES = ["https://www.googleapis.com/auth/calendar"] as const;
+const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 
 export async function getCalendarClient() {
   const { google } = await import("googleapis");
