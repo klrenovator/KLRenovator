@@ -34,31 +34,31 @@ export const servicesData: Record<string, ServiceDetail> = {
   "chemical-wash": {
     slug: "chemical-wash",
     title: "Pressure Chemical Wash",
-    tagline: "High-pressure 80–120 PSI chemical deep-cleaning on-wall — dissolves stubborn biofilm, clears blocked drains, and restores strong airflow. From RM 170 today.",
+    tagline: "High-pressure 80–120 PSI chemical deep-cleaning on-wall — dissolves stubborn biofilm, clears blocked drains, and restores strong airflow. From RM 120 today.",
     description:
-      "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 170 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
+      "Our Pressure Chemical Wash service is designed for air conditioners that require deep internal cleaning beyond routine filter maintenance. Over 12 to 18 months of daily operation, evaporator coil fins, blower wheels, and internal fan barrels accumulate dense biofilm, dust mites, and stubborn microbial sludge that basic servicing cannot penetrate. During a pressure chemical wash, KL Renovator technicians apply a food-safe alkaline chemical solution at 80–120 PSI directly into the mounted indoor unit. The foaming chemical dissolves oily residue and biofilm within minutes without damaging sensitive copper coils or fins. Next, a high-pressure pressurised water rinse thoroughly flushes out every dissolved contaminant through the drain tray and pipe, preventing future biological clogs. The entire service takes approximately 60 to 75 minutes per unit with zero mess, as our team deploys heavy-duty waterproof drop sheets and protective canvas bags to safeguard your walls, flooring, and furniture. Priced transparently from RM 120 for 1.0–1.5 HP wall-mounted units, this service restores cooling efficiency to near-new levels and ensures hygienic airflow across your home or office.",
     startPrice: "RM 2.50 / PSI",
     heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     ogImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
-    aioSummary: "Pressure chemical wash for airconds in KL & Selangor involves high-pressure (80-120 PSI) alkaline cleaning of internal coils. Starting Price: RM 170. Service Time: 60-75 mins. Warranty: 1-month workmanship. Ideal for restoring airflow and removing microbial odors.",
-    aioSummaryMS: "Cuci kimia tekanan tinggi (80-120 PSI) untuk aircond di KL & Selangor. Harga: RM 170. Tempoh: 60-75 minit. Waranti: 1 bulan. Sesuai untuk pulihkan aliran udara dan membuang bau hapak.",
-    aioSummaryZH: "吉隆坡及雪兰莪高压（80-120 PSI）化学清洗服务。起步价：RM 170。服务时长：60-75分钟。保修：1个月工艺保修。适用于恢复强劲风量及消除霉味。",
+    aioSummary: "Pressure chemical wash for airconds in KL & Selangor involves high-pressure (80-120 PSI) alkaline cleaning of internal coils. Starting Price: RM 120. Service Time: 60-75 mins. Warranty: 1-month workmanship. Ideal for restoring airflow and removing microbial odors.",
+    aioSummaryMS: "Cuci kimia tekanan tinggi (80-120 PSI) untuk aircond di KL & Selangor. Harga: RM 120. Tempoh: 60-75 minit. Waranti: 1 bulan. Sesuai untuk pulihkan aliran udara dan membuang bau hapak.",
+    aioSummaryZH: "吉隆坡及雪兰莪高压（80-120 PSI）化学清洗服务。起步价：RM 120。服务时长：60-75分钟。保修：1个月工艺保修。适用于恢复强劲风量及消除霉味。",
     compareTable: {
       title: "Pressure Chemical Wash vs Chemical Overhaul",
       subtitle: "Help choosing the right deep-cleaning package for your unit.",
-      columns: ["Feature", "Chemical Wash (RM 170)", "Chemical Overhaul (RM 220)"],
+      columns: ["Feature", "Chemical Wash (RM 120)", "Chemical Overhaul (RM 220)"],
       rows: [["Dismantling", "Stays on wall", "Fully removed from wall"], ["Blower Wheel", "Cleaned in place", "Removed & soaked"], ["Drain Pan", "Flushed", "Dismantled & scrubbed"], ["Back Tray", "Surface clean", "Total sanitization"], ["Best For", "Annual maintenance", "Water leaks & ice buildup"], ["Duration", "60 mins", "2.5 hours"]]
     },
     compareTableZH: {
       title: "高压化学清洗 vs 化学大修",
       subtitle: "帮助您为冷气选择合适的深度清洁方案。",
-      columns: ["特点", "化学清洗 (RM 170)", "化学大修 (RM 220)"],
+      columns: ["特点", "化学清洗 (RM 120)", "化学大修 (RM 220)"],
       rows: [["拆卸状态", "挂墙清洗", "完全拆卸"], ["风轮清洁", "原地清洗", "拆下浸泡"], ["接水盘", "冲洗", "拆下刷洗"], ["适用场景", "年度保养", "漏水或结冰"], ["耗时", "60分钟", "2.5小时"]]
     },
     compareTableMS: {
       title: "Cuci Kimia Bertekanan vs Chemical Overhaul",
       subtitle: "Bantuan memilih pakej pembersihan mendalam yang sesuai untuk unit anda.",
-      columns: ["Ciri", "Cuci Kimia (RM 170)", "Overhaul (RM 220)"],
+      columns: ["Ciri", "Cuci Kimia (RM 120)", "Overhaul (RM 220)"],
       rows: [["Pemasangan", "Kekal di dinding", "Dibuka sepenuhnya"], ["Roda Kipas", "Cuci di tempat", "Dibuka & direndam"], ["Dulang Saliran", "Bilas sahaja", "Dibuka & disental"], ["Sesuai Untuk", "Servis tahunan", "Bocor air & ais"], ["Tempoh", "60 minit", "2.5 jam"]]
     },
     highlights: [
@@ -80,7 +80,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a pressure chemical wash cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 170. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 230. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
       },
       {
         q: "How often should I get a chemical wash?",
@@ -92,7 +92,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "What is the technical difference between a pressure chemical wash and a chemical overhaul?",
-        a: "A Pressure Chemical Wash (RM 170) is performed while the air conditioner remains mounted on your wall; high-pressure chemical spray penetrates the evaporator coil fins and blower wheel to flush out microbial buildup and restore cooling efficiency. A Chemical Overhaul (RM 220) involves completely dismantling the indoor unit from the wall so that every individual part—including the back drain tray, fan motor housing, and internal evaporator coils—is removed, chemical-soaked, and inspected separately before reassembly. If you are uncertain which service package suits your unit's condition, WhatsApp our technical team for an honest evaluation.",
+        a: "A Pressure Chemical Wash (RM 120) is performed while the air conditioner remains mounted on your wall; high-pressure chemical spray penetrates the evaporator coil fins and blower wheel to flush out microbial buildup and restore cooling efficiency. A Chemical Overhaul (RM 220) involves completely dismantling the indoor unit from the wall so that every individual part—including the back drain tray, fan motor housing, and internal evaporator coils—is removed, chemical-soaked, and inspected separately before reassembly. If you are uncertain which service package suits your unit's condition, WhatsApp our technical team for an honest evaluation.",
       },
       {
         q: "What preparation is required before the technician arrives for a chemical wash?",
@@ -107,7 +107,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga cuci kimia tekanan di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 170. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 230. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
+        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
       },
       {
         q: "Berapa kerap saya perlu buat cuci kimia?",
@@ -119,7 +119,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Apakah perbezaan teknikal antara cuci kimia dan overhaul kimia?",
-        a: "Cuci Kimia Bertekanan (RM 170) dilakukan semasa penghawa dingin kekal terpasang di dinding anda; semburan kimia tekanan tinggi menembusi sirip gegelung dan roda kipas untuk membersihkan penumpukan mikroorganisma dan memulihkan kecekapan penyejukan. Overhaul Kimia (RM 220) melibatkan pembongkaran lengkap unit dalaman dari dinding supaya setiap bahagian—termasuk dulang saliran belakang, perumahan motor kipas, dan gegelung penyejat—dikeluarkan, direndam kimia, dan diperiksa secara berasingan sebelum dipasang semula. Jika tidak pasti pakej mana yang sesuai, WhatsApp pasukan teknikal kami.",
+        a: "Cuci Kimia Bertekanan (RM 120) dilakukan semasa penghawa dingin kekal terpasang di dinding anda; semburan kimia tekanan tinggi menembusi sirip gegelung dan roda kipas untuk membersihkan penumpukan mikroorganisma dan memulihkan kecekapan penyejukan. Overhaul Kimia (RM 220) melibatkan pembongkaran lengkap unit dalaman dari dinding supaya setiap bahagian—termasuk dulang saliran belakang, perumahan motor kipas, dan gegelung penyejat—dikeluarkan, direndam kimia, dan diperiksa secara berasingan sebelum dipasang semula. Jika tidak pasti pakej mana yang sesuai, WhatsApp pasukan teknikal kami.",
       },
       {
         q: "Apakah persediaan yang diperlukan sebelum juruteknik tiba untuk cuci kimia?",
@@ -131,7 +131,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的高压化学清洗费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 170。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 230。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "化学清洗应该多久做一次？",
@@ -143,7 +143,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "高压化学清洗与化学大修在技术上有何不同？",
-        a: "高压化学清洗（RM 170）是在冷气挂在墙上的状态下进行的；高压化学喷雾深入蒸发器盘管翅片和风轮，冲洗掉微生物污垢并恢复制冷效率。化学大修（RM 220）则将室内机从墙上完全拆卸下来，每个独立部件——包括接水盘后部、风扇马达外壳及蒸发器盘管——都单独取出、化学浸泡并全面检查后再重装。如果您不确定哪种服务套餐适合您的机器状况，欢迎WhatsApp咨询我们的技术团队。",
+        a: "高压化学清洗（RM 120）是在冷气挂在墙上的状态下进行的；高压化学喷雾深入蒸发器盘管翅片和风轮，冲洗掉微生物污垢并恢复制冷效率。化学大修（RM 220）则将室内机从墙上完全拆卸下来，每个独立部件——包括接水盘后部、风扇马达外壳及蒸发器盘管——都单独取出、化学浸泡并全面检查后再重装。如果您不确定哪种服务套餐适合您的机器状况，欢迎WhatsApp咨询我们的技术团队。",
       },
       {
         q: "技术员上门进行化学清洗前，我需要做哪些准备工作？",
@@ -153,9 +153,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "能否当天预约化学清洗？", a: "可以 — KL Renovator 经常有当天预约名额用于化学清洗。请尽早 WhatsApp +60182983573 以获得最佳的当天时段。" }
     ],
     priceTable: [
-      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 170" },
+      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
       { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 150" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 230" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 180" },
       { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 200" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 220" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 280" },
@@ -679,7 +679,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does basic aircond servicing cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 170. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 120. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
       },
       {
         q: "How often should I service my aircond?",
@@ -691,7 +691,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "My aircond still smells or blows weak air after basic servicing — why?",
-        a: "If the smell or weak airflow persists after basic servicing, the issue is deeper than surface-level cleaning can fix. Mould and biofilm have likely colonised the blower wheel and the inner coil layers. At this point, you need a pressure chemical wash (RM 170) or, for units that have not been deep-cleaned in 3+ years or are already leaking water, a full chemical overhaul (RM 220). WhatsApp us after your basic service if the problem returns — we will advise whether the unit needs the next level of cleaning and we will not charge you for advice.",
+        a: "If the smell or weak airflow persists after basic servicing, the issue is deeper than surface-level cleaning can fix. Mould and biofilm have likely colonised the blower wheel and the inner coil layers. At this point, you need a pressure chemical wash (RM 120) or, for units that have not been deep-cleaned in 3+ years or are already leaking water, a full chemical overhaul (RM 220). WhatsApp us after your basic service if the problem returns — we will advise whether the unit needs the next level of cleaning and we will not charge you for advice.",
       },
       {
         q: "Does basic servicing include gas top-up?",
@@ -706,7 +706,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis asas aircond di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 170. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
+        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 120. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
       },
       {
         q: "Berapa kerap saya perlu servis aircond?",
@@ -718,7 +718,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Aircond saya masih berbau atau angin lemah selepas servis asas — kenapa?",
-        a: "Jika bau atau aliran udara lemah berterusan selepas servis asas, masalahnya lebih dalam daripada yang boleh dibaiki oleh pembersihan permukaan. Kulat dan biofilm berkemungkinan telah menjajah roda kipas dan lapisan dalam gegelung. Pada tahap ini, anda memerlukan cuci kimia tekanan (RM 170) atau, untuk unit yang tidak pernah dibersihkan secara mendalam selama 3+ tahun atau sudah bocor air, overhaul kimia penuh (RM 220). WhatsApp kami selepas servis asas anda jika masalah berulang — kami akan menasihatkan sama ada unit memerlukan tahap pembersihan seterusnya dan kami tidak akan mengenakan caj untuk nasihat.",
+        a: "Jika bau atau aliran udara lemah berterusan selepas servis asas, masalahnya lebih dalam daripada yang boleh dibaiki oleh pembersihan permukaan. Kulat dan biofilm berkemungkinan telah menjajah roda kipas dan lapisan dalam gegelung. Pada tahap ini, anda memerlukan cuci kimia tekanan (RM 120) atau, untuk unit yang tidak pernah dibersihkan secara mendalam selama 3+ tahun atau sudah bocor air, overhaul kimia penuh (RM 220). WhatsApp kami selepas servis asas anda jika masalah berulang — kami akan menasihatkan sama ada unit memerlukan tahap pembersihan seterusnya dan kami tidak akan mengenakan caj untuk nasihat.",
       },
       {
         q: "Adakah servis asas termasuk tambah gas?",
@@ -730,7 +730,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪基本冷气保养费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 170。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 120。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "冷气应该多久保养一次？",
@@ -742,7 +742,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "基本保养后冷气仍有异味或风量弱——为什么？",
-        a: "如果基本保养后异味或弱风量持续存在，问题比表面清洁能解决的更深。霉菌和生物膜可能已经在风轮和盘管内层滋生。此时您需要进行压力化学清洗（RM 170），或者对于3年以上未深度清洁或已漏水的机器，需要进行全面化学大修（RM 220）。基本保养后如果问题再次出现，请WhatsApp我们——我们会建议机器是否需要下一级别的清洁，且不收取咨询费。",
+        a: "如果基本保养后异味或弱风量持续存在，问题比表面清洁能解决的更深。霉菌和生物膜可能已经在风轮和盘管内层滋生。此时您需要进行压力化学清洗（RM 120），或者对于3年以上未深度清洁或已漏水的机器，需要进行全面化学大修（RM 220）。基本保养后如果问题再次出现，请WhatsApp我们——我们会建议机器是否需要下一级别的清洁，且不收取咨询费。",
       },
       {
         q: "基本保养包含加气吗？",
@@ -753,13 +753,13 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 99" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 170" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 120" },
       { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Ceiling Cassette · 3.5 – 5.0 HP", price: "RM 250" },
       { label: "Window Unit · 1.0 – 1.5 HP", price: "RM 99" },
-      { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 170" },
+      { label: "Window Unit · 2.0 – 2.5 HP", price: "RM 120" },
     ],
   },
 
