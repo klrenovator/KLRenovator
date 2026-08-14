@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     padMetaDescription("Bagaimana KL Renovator (Multicore Dynamics Resources) mengumpul, menggunakan, menyimpan dan melindungi data peribadi anda di bawah Akta Perlindungan Data Peribadi (APDP) 2010 Malaysia."),
   alternates: buildTrilingualHreflang("/privacy-policy", "ms"),
+  openGraph: { locale: "ms_MY", alternateLocale: ["en_MY", "zh_MY"] },
   robots: { index: true, follow: true },
 };
 

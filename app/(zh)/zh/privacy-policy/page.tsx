@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     padMetaDescription("KL Renovator (Multicore Dynamics Resources) 如何根据马来西亚《2010年个人数据保护法》(PDPA) 收集、使用、存储和保护您的个人数据。"),
   alternates: buildTrilingualHreflang("/privacy-policy", "zh"),
+  openGraph: { locale: "zh_MY", alternateLocale: ["en_MY", "ms_MY"] },
   robots: { index: true, follow: true },
 };
 
