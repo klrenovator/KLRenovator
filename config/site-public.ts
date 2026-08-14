@@ -132,7 +132,7 @@ export const sitePublic = {
   ],
   "volumeDiscounts": [
     {
-      "units": "4 – 10 units",
+      "units": "5+ units",
       "off": "5% OFF Instant Booking Discount"
     },
     {
@@ -306,6 +306,10 @@ export const sitePublic = {
         {
           "label": "R32 Gas Refill",
           "price": "RM 3.00 / PSI"
+        },
+        {
+          "label": "Gas Leak Repair",
+          "price": "RM 120 / leak"
         }
       ],
       "note": "Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges."
@@ -323,7 +327,7 @@ export const sitePublic = {
         },
         {
           "label": "Fan Motor Replacement",
-          "price": "RM 250 – 380"
+          "price": "RM 350 – 480"
         },
         {
           "label": "PCB Board Replacement",

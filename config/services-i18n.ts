@@ -260,7 +260,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     priceTableMS: [
       { label: "Yuran Diagnostik (dikecualikan dengan pembaikan)", price: "RM 88" },
       { label: "Penggantian Kapasitor", price: "RM 150 – 250" },
-      { label: "Penggantian Motor Kipas", price: "RM 250 – 380" },
+      { label: "Penggantian Motor Kipas", price: "RM 350 – 480" },
       { label: "Penggantian Papan PCB", price: "RM 350 – 600" },
       { label: "Penggantian Penderia Suhu", price: "RM 150 – 250" },
       { label: "Penggantian Kontaktor", price: "RM 150 – 200" },
@@ -270,7 +270,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     priceTableZH: [
       { label: "诊断费（随维修免除）", price: "RM 88" },
       { label: "电容更换", price: "RM 150 – 250" },
-      { label: "风扇电机更换", price: "RM 250 – 380" },
+      { label: "风扇电机更换", price: "RM 350 – 480" },
       { label: "PCB板更换", price: "RM 350 – 600" },
       { label: "温度传感器更换", price: "RM 150 – 250" },
       { label: "接触器更换", price: "RM 150 – 200" },
@@ -422,7 +422,7 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     titleMS: "Servis Ceiling Cassette",
     titleZH: "天花板卡式机服务",
     taglineMS:
-      "Servis pakar untuk unit ceiling cassette komersial — pejabat, kedai, restoran. Cuci kimia, overhaul, dan pembaikan. Penjadualan luar waktu tersedia.",
+      "Servis pakar untuk unit ceiling cassette komersial — pejabat, kedai, restoran. Cuci kimia dan pembaikan. Penjadualan luar waktu tersedia.",
     taglineZH:
       "商业天花板卡式机专业服务——办公室、商店、餐厅。化学清洗、大修和维修。可安排非工作时间。",
     descriptionMS:

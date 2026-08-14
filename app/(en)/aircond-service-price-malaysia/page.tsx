@@ -97,7 +97,7 @@ const pricingCategories = [
     rows: [
       { label: "Diagnostic Fee (waived if repaired same visit)", price: "RM 88" },
       { label: "Capacitor Replacement", price: "RM 150 – 250" },
-      { label: "Indoor Fan Motor Replacement", price: "RM 250 – 380" },
+      { label: "Indoor Fan Motor Replacement", price: "RM 350 – 480" },
       { label: "Outdoor Fan Motor Replacement", price: "RM 300 – 450" },
       { label: "PCB Control Board Repair / Replace", price: "RM 350 – 600" },
       { label: "Drain Pump Replacement", price: "RM 350 – 550" },
@@ -142,7 +142,7 @@ const faqs = [
   },
   {
     q: "Can I get a discount for servicing multiple units?",
-    a: "Yes. We offer 5% OFF Instant Booking Discount for 4–10 units, and 10% OFF Instant Booking Discount for 10+ units during the same visit.",
+    a: "Yes. We offer 5% OFF Instant Booking Discount for 5+ units, and 10% OFF Instant Booking Discount for 10+ units during the same visit.",
   },
   {
     q: "Why is an overhaul more expensive than a chemical wash?",
@@ -305,7 +305,7 @@ export default function PricingPage() {
                   {cat.title === "Gas Top-Up & Refill (Per PSI)" && (
                     <div className="px-6 py-4 bg-amber-50 border-t border-amber-100">
                       <p className="text-xs text-amber-800 leading-relaxed font-medium">
-                        * Gas top-up is charged based on the actual PSI required after inspection by our technician. 
+                        * Gas top-up is charged based on the actual PSI required after inspection by our technician.
                         We only refill the amount needed and provide transparent pricing with no hidden charges.
                       </p>
                     </div>
@@ -322,7 +322,7 @@ export default function PricingPage() {
               <div className="mt-6 grid gap-4 sm:grid-cols-2 text-center max-w-2xl mx-auto">
                 <div className="bg-white/10 rounded-xl p-5 border border-white/20">
                   <p className="text-3xl font-black">5% OFF</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 10 Units</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">5+ Units</p>
                   <p className="text-[10px] text-sky-100 mt-1">Instant Booking Discount</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5 border border-white/20">

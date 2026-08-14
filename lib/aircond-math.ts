@@ -24,7 +24,7 @@ export type HpSize =
 export interface BundleDiscount {
   pct: number;
   label: string;
-  /** Human description e.g. "4–10 units" — mirrors siteConfig.volumeDiscounts */
+  /** Human description e.g. "5+ units" — mirrors siteConfig.volumeDiscounts */
   range: string;
 }
 
@@ -158,8 +158,8 @@ export function waterPumpRange(): { min: number; max: number } {
 
 /** Bundle discount — mirrors siteConfig.volumeDiscounts + live PriceCalculator. */
 export function getBundleDiscount(units: number): BundleDiscount {
-  if (units >= 11) return { pct: 10, label: "10% OFF Instant Booking Discount", range: "10+ units" };
-  if (units >= 4) return { pct: 5, label: "5% OFF Instant Booking Discount", range: "4–10 units" };
+  if (units >= 10) return { pct: 10, label: "10% OFF Instant Booking Discount", range: "10+ units" };
+  if (units >= 5) return { pct: 5, label: "5% OFF Instant Booking Discount", range: "5+ units" };
   return { pct: 0, label: "", range: "" };
 }
 

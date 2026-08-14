@@ -72,7 +72,7 @@ const COPY = {
     servicePriceTitle: "Aircond Service Price 2026",
     servicePriceDesc: "Full service price list — basic, chemical wash, gas, repair, installation. All prices confirmed upfront.",
     installGuideTitle: "Installation Price Guide",
-    installGuideDesc: "New AC installation from RM 199. Full materials breakdown, copper piping, wall bracket & warranty included.",
+    installGuideDesc: "New AC installation from RM 199. Full materials breakdown, copper piping & warranty included.",
     installKLTitle: "Aircond Installation KL & Selangor",
     installKLDesc: "Expert installation from RM 199. 7-step process, vacuum pump, Type L copper, 1-month warranty. Same-day available.",
     washGuideTitle: "Chemical Wash KL Guide",
@@ -250,7 +250,7 @@ const COPY = {
     faqPage: "专用FAQ页面上的100+常见问题 →",
     waFaq: "🔧 冷气安装咨询\n\n你好 KL Renovator，我对安装有疑问。\n\n📍 我的区域：\n❄️ 机型：\n📏 匹数：\n\n请发送信息和价格。",
     faqs: [
-      { q: "吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式安装从RM 199起（1.0–1.5 HP），包含7英尺铜管、电线、排水管、标准支架、真空泵调试和1个月工艺保修。天花板卡式机RM 290起，窗式机RM 199起。所有价格在施工前确认。" },
+      { q: "吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式安装从RM 199起（1.0–1.5 HP），包含7英尺铜管、电线、排水管、真空泵调试和1个月工艺保修。天花板卡式机RM 290起，窗式机RM 199起。所有价格在施工前确认。" },
       { q: "冷气安装需要多长时间？", a: "标准挂壁式安装单台需要3–5小时。天花板卡式机需要5–8小时。全屋多台安装通常1–2天完成。上午11点前预约可安排当天安装。" },
       { q: "KL Renovator安装哪些冷气品牌？", a: "全部20个主要品牌 — 大金、松下、三菱、约克、美的、LG、三星、Carrier、富士通、日立、夏普、Acson、格力、东芝、海尔、海信、Aux、TCL、Isonic和National。变频和非变频机型均可。" },
       { q: "能在吉隆坡高层公寓安装冷气吗？", a: "可以 — 我们经常在KLCC、Mont Kiara、Bangsar、Sentul、PJ和Subang Jaya的公寓安装。我们协调大厦管理处的电梯/卸货区通行，遵守JMB规定，确保室外机位置符合所有规范。" },

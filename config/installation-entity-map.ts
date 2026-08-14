@@ -34,7 +34,7 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Residential/light-commercial air conditioner with separate indoor (evaporator) and outdoor (condenser) units connected by refrigerant piping.",
     aliases: ["split unit", "split AC", "wall-mounted AC", "split system", "ductless mini-split"],
     whereToAppear: ["installation-pages", "service-pages", "hp-guide-pages", "brand-pages"],
-    relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "ArmaflexInsulation", "VacuumPump", "FlareConnection", "BTUMeasurement"],
+    relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "ClosedCellInsulation", "VacuumPump", "FlareConnection", "BTUMeasurement"],
   },
 
   CeilingCassette: {
@@ -43,7 +43,7 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Commercial-grade air conditioner mounted flush in ceiling with 4-way airflow, common in offices, retail, and restaurants.",
     aliases: ["cassette unit", "ceiling-mounted AC", "4-way cassette", "commercial cassette", "ceiling cassette aircon"],
     whereToAppear: ["commercial-pages", "ceiling-cassette-pages", "brand-pages", "installation-pages"],
-    relatedEntities: ["DrainPipePVC", "DrainPump", "CeilingSuspensionKit", "CopperPipeTypeL", "ArmaflexInsulation", "VacuumPump"],
+    relatedEntities: ["DrainPipePVC", "DrainPump", "CeilingSuspensionKit", "CopperPipeTypeL", "ClosedCellInsulation", "VacuumPump"],
   },
 
   WindowUnit: {
@@ -62,7 +62,7 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Thicker-walled copper tubing (Type L) for refrigerant lines 1.0–2.5 HP. Superior corrosion resistance and pressure rating vs Type M.",
     aliases: ["Type L copper", "Type L tubing", "refrigerant copper pipe", "AC copper pipe"],
     whereToAppear: ["installation-pages", "pricing-guide", "materials-section", "hp-guide-pages"],
-    relatedEntities: ["FlareConnection", "ArmaflexInsulation", "VacuumPump", "CleanPipePreparation", "SplitAirConditioner"],
+    relatedEntities: ["FlareConnection", "ClosedCellInsulation", "VacuumPump", "CleanPipePreparation", "SplitAirConditioner"],
   },
 
   CopperPipeTypeM: {
@@ -71,14 +71,14 @@ export const installationEntities: Record<string, InstallationEntity> = {
     description: "Standard-walled copper tubing (Type M) approved for 3.0 HP+ systems where wall thickness permits. Cost-effective for larger capacity.",
     aliases: ["Type M copper", "Type M tubing", "large-capacity copper pipe"],
     whereToAppear: ["installation-pages", "pricing-guide", "hp-guide-pages"],
-    relatedEntities: ["FlareConnection", "ArmaflexInsulation", "VacuumPump", "CleanPipePreparation"],
+    relatedEntities: ["FlareConnection", "ClosedCellInsulation", "VacuumPump", "CleanPipePreparation"],
   },
 
-  ArmaflexInsulation: {
-    name: "Armaflex Insulation (Closed-Cell Elastomeric)",
+  ClosedCellInsulation: {
+    name: "insulation Insulation (Closed-Cell Elastomeric)",
     type: "Material",
-    description: "Closed-cell elastomeric foam insulation (Armaflex/Armaflex-class). Minimum 9mm for standard runs, 13mm for ceiling cassette and long pipe runs (>15 ft). Prevents condensation drips and energy loss.",
-    aliases: ["Armaflex", "closed-cell insulation", "elastomeric foam", "refrigerant pipe insulation", "AC pipe insulation"],
+    description: "Closed-cell elastomeric foam insulation (closed-cell). Minimum 9mm for standard runs, 13mm for ceiling cassette and long pipe runs (>15 ft). Prevents condensation drips and energy loss.",
+    aliases: ["closed-cell insulation", "closed-cell insulation", "elastomeric foam", "refrigerant pipe insulation", "AC pipe insulation"],
     whereToAppear: ["installation-pages", "materials-section", "pricing-guide", "insulation-section"],
     relatedEntities: ["CopperPipeTypeL", "CopperPipeTypeM", "UVResistantTape", "SplitAirConditioner", "CeilingCassette"],
   },
@@ -87,9 +87,9 @@ export const installationEntities: Record<string, InstallationEntity> = {
     name: "UV-Resistant Insulation Tape",
     type: "Material",
     description: "Weather-resistant tape for sealing insulation joints and terminations against UV degradation and moisture ingress.",
-    aliases: ["insulation tape", "UV tape", "pipe wrap tape", "Armaflex tape"],
+    aliases: ["insulation tape", "UV tape", "pipe wrap tape", "insulation tape"],
     whereToAppear: ["installation-pages", "materials-section"],
-    relatedEntities: ["ArmaflexInsulation", "CopperPipeTypeL", "CopperPipeTypeM"],
+    relatedEntities: ["ClosedCellInsulation", "CopperPipeTypeL", "CopperPipeTypeM"],
   },
 
   PVCCasing: {
@@ -458,8 +458,8 @@ export const entityPhrases = {
   copperFlare: "Indoor/outdoor connections use precision 45° SAE flares torqued to spec — no brazing at the unit, leak-free mechanical joints.",
 
   // Materials — Insulation
-  armaflexStandard: "Closed-cell Armaflex insulation (minimum 9mm) on all refrigerant lines prevents condensation drips and energy loss.",
-  armaflexThick: "Ceiling cassettes and pipe runs over 15 ft get 13mm Armaflex for extra thermal protection in unconditioned ceiling spaces.",
+  insulationStandard: "Closed-cell insulation (minimum 9mm) on all refrigerant lines prevents condensation drips and energy loss.",
+  insulationThick: "Ceiling cassettes and pipe runs over 15 ft get 13mm insulation for extra thermal protection in unconditioned ceiling spaces.",
   uvTape: "All insulation joints and terminations are sealed with UV-resistant tape — no exposed foam to degrade in sunlight.",
 
   // Tools — Vacuum

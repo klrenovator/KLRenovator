@@ -84,7 +84,7 @@ const CROSS_SERVICE_MAP: Record<string, string[]> = {
   "repair":                ["chemical-wash", "chemical-overhaul", "gas-topup"],
   "basic-servicing":       ["chemical-wash", "chemical-overhaul"],
   "installation":          ["basic-servicing", "chemical-wash"],
-  "ceiling-cassette":      ["chemical-overhaul", "repair", "gas-topup"],
+  "ceiling-cassette":      ["repair", "gas-topup"],
   "dismantling-relocation":["installation", "chemical-wash"],
   "emergency":             ["repair", "chemical-overhaul", "gas-topup"],
 };
@@ -122,7 +122,7 @@ const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     { q: "Do you vacuum the system during installation?", a: `Yes. ${entityPhrases.vacuumMandatory} Proper vacuuming removes moisture and air from the line before refrigerant release, helping protect the compressor and cooling performance.` },
     { q: "What copper pipe do you use for installation?", a: `${entityPhrases.copperTypeL} All piping is cleanly prepared during brazing to prevent internal oxidation.` },
     { q: "Do you provide electrical wiring for the new unit?", a: `Yes. ${entityPhrases.dedicatedCircuit} We ensure correct MCB sizing per HP, plus an outdoor isolator switch for safety and maintenance access.` },
-    { q: "What insulation do you use on the copper pipes?", a: `${entityPhrases.armaflexStandard} ${entityPhrases.armaflexThick}` },
+    { q: "What insulation do you use on the copper pipes?", a: `${entityPhrases.insulationStandard} ${entityPhrases.insulationThick}` },
     { q: "Can you install in high-rise condos?", a: "Yes — we regularly install in KLCC, Mont Kiara, Bangsar, Sentul, PJ, and Subang Jaya. We coordinate with building management for lift/loading bay access and follow JMB rules. Our technicians are experienced with service-ledge and balcony installations." },
   ],
   "basic-servicing": [
@@ -146,7 +146,7 @@ const SUPPLEMENTAL_SERVICE_FAQS: Record<string, ServiceFaq[]> = {
 const GLOBAL_SERVICE_FAQS: ServiceFaq[] = [
   { q: "Do you confirm the price before starting work?", a: "Yes. KL Renovator confirms the service scope, starting price and any extra material or repair cost before work begins." },
   { q: "Is there a workmanship warranty?", a: "Yes. Eligible workmanship is covered by a 1-month workmanship warranty. Warranty terms are explained clearly before handover." },
-  { q: "Do you offer discounts for multiple units?", a: "Yes. Eligible multi-unit bookings can receive 5% OFF Instant Booking Discount for 4–10 units and 10% OFF Instant Booking Discount for 10+ units, confirmed before booking." },
+  { q: "Do you offer discounts for multiple units?", a: "Yes. Eligible multi-unit bookings can receive 5% OFF Instant Booking Discount for 5+ units and 10% OFF Instant Booking Discount for 10+ units, confirmed before booking." },
 ];
 
 function mergeFaqs(...groups: ServiceFaq[][]): ServiceFaq[] {
@@ -934,7 +934,7 @@ export default async function ServicePage({
         );
       })()}
 
-      
+
       {slug === "basic-servicing" && (
         <section className="py-14 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

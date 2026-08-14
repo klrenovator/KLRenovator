@@ -100,7 +100,7 @@ const STRINGS: Record<Lang, Strings> = {
     title: "Aircond Installation Cost Calculator",
     subtitle: "Labour + materials + bundle discount. Every published price is used as-is; anything unconfirmed is clearly marked as an estimate.",
     unitsLabel: "Number of Units",
-    unitsHint: "Multi-unit jobs get bundle discounts (4–10 units: 5%, 10+: 10%)",
+    unitsHint: "Multi-unit jobs get bundle discounts (5+ units: 5%, 10+: 10%)",
     typeLabel: "Aircond Type",
     hpLabel: "Horsepower (HP)",
     runTitle: "Pipe & Wire Run Lengths (per unit)",
@@ -127,7 +127,7 @@ const STRINGS: Record<Lang, Strings> = {
     material: "Material Cost",
     materialSub: "pipe, wire, add-ons",
     discount: "Bundle Discount",
-    discountSub: "Add 4+ units",
+    discountSub: "Add 5+ units",
     discountNone: "—",
     grandTotal: "Grand Total",
     perUnit: "per unit",
@@ -135,7 +135,7 @@ const STRINGS: Record<Lang, Strings> = {
     breakdown: "Breakdown",
     confirmedQuote: "Get Confirmed Quote",
     startOver: "Start Over",
-    note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft by HP, electrical wire RM 9/ft, insulation RM 7/ft, and drain pipe RM ${DRAIN_PIPE_RATE}/ft. Small PVC casing (electrical wire) is RM 6/ft; large PVC casing (copper pipe + wire + insulation) is RM 12/ft. Outdoor brackets are paid add-ons (RM 45–70), never included free. Multi-unit bundle discounts: 4–10 units 5% OFF, 10+ units 10% OFF.`,
+    note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft by HP, electrical wire RM 9/ft, insulation RM 7/ft, and drain pipe RM ${DRAIN_PIPE_RATE}/ft. Small PVC casing (electrical wire) is RM 6/ft; large PVC casing (copper pipe + wire + insulation) is RM 12/ft. Outdoor brackets are paid add-ons (RM 45–70), never included free. Multi-unit bundle discounts: 5+ units 5% OFF, 10+ units 10% OFF.`,
     waIntro: "I used your Aircond Installation Cost Calculator and would like a confirmed quotation:",
   },
   ms: {
@@ -143,7 +143,7 @@ const STRINGS: Record<Lang, Strings> = {
     title: "Kalkulator Kos Pemasangan Aircond",
     subtitle: "Buruh + bahan + diskaun pakej. Setiap harga diterbitkan digunakan seadanya; apa-apa yang belum disahkan ditanda sebagai anggaran.",
     unitsLabel: "Bilangan Unit",
-    unitsHint: "Kerja berbilang unit dapat diskaun pakej (4–10 unit: 5%, 10+: 10%)",
+    unitsHint: "Kerja berbilang unit dapat diskaun pakej (5+ unit: 5%, 10+: 10%)",
     typeLabel: "Jenis Aircond",
     hpLabel: "Kuasa Kuda (HP)",
     runTitle: "Panjang Paip & Wayar (setiap unit)",
@@ -170,7 +170,7 @@ const STRINGS: Record<Lang, Strings> = {
     material: "Kos Bahan",
     materialSub: "paip, wayar, tambahan",
     discount: "Diskaun Pakej",
-    discountSub: "Tambah 4+ unit",
+    discountSub: "Tambah 5+ unit",
     discountNone: "—",
     grandTotal: "Jumlah Keseluruhan",
     perUnit: "setiap unit",
@@ -178,7 +178,7 @@ const STRINGS: Record<Lang, Strings> = {
     breakdown: "Pecahan",
     confirmedQuote: "Dapatkan Sebut Harga Sah",
     startOver: "Mula Semula",
-    note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27/kaki mengikut HP, wayar elektrik RM 9/kaki, penebat RM 7/kaki dan paip saliran RM ${DRAIN_PIPE_RATE}/kaki. Casing PVC kecil (wayar) RM 6/kaki; casing PVC besar (paip tembaga + wayar + penebat) RM 12/kaki. Pendakap luar ialah item tambahan berbayar (RM 45–70), bukan percuma. Diskaun pakej berbilang unit: 4–10 unit 5% OFF, 10+ unit 10% OFF.`,
+    note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27/kaki mengikut HP, wayar elektrik RM 9/kaki, penebat RM 7/kaki dan paip saliran RM ${DRAIN_PIPE_RATE}/kaki. Casing PVC kecil (wayar) RM 6/kaki; casing PVC besar (paip tembaga + wayar + penebat) RM 12/kaki. Pendakap luar ialah item tambahan berbayar (RM 45–70), bukan percuma. Diskaun pakej berbilang unit: 5+ unit 5% OFF, 10+ unit 10% OFF.`,
     waIntro: "Saya menggunakan Kalkulator Kos Pemasangan Aircond anda dan ingin sebut harga disahkan:",
   },
   zh: {
@@ -186,7 +186,7 @@ const STRINGS: Record<Lang, Strings> = {
     title: "冷气安装费用计算器",
     subtitle: "人工 + 材料 + 批量折扣。所有已公布价格原样使用；任何未确认项目都会明确标注为估算。",
     unitsLabel: "安装台数",
-    unitsHint: "多台安装享批量折扣（4–10台：5%，10台以上：10%）",
+    unitsHint: "多台安装享批量折扣（5+台：5%，10台以上：10%）",
     typeLabel: "冷气类型",
     hpLabel: "匹数（HP）",
     runTitle: "管道与电线长度（每台）",
@@ -221,7 +221,7 @@ const STRINGS: Record<Lang, Strings> = {
     breakdown: "费用明细",
     confirmedQuote: "获取正式报价",
     startOver: "重新开始",
-    note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。室外支架为付费附加项目（RM 45–70），不免费包含。多台批量折扣：4–10台享5%折扣，10台以上享10%折扣。`,
+    note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。室外支架为付费附加项目（RM 45–70），不免费包含。多台批量折扣：5+台享5%折扣，10台以上享10%折扣。`,
     waIntro: "我使用了你们的冷气安装费用计算器，希望获得正式报价：",
   },
 };
@@ -264,8 +264,8 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
     lang === "en"
       ? result.discount.label
       : lang === "ms"
-        ? `${result.discount.pct}% OFF — Diskaun Tempahan Segera (${result.discount.range === "4–10 units" ? "4–10 unit" : "10+ unit"})`
-        : `${result.discount.pct}% 折扣 — 即时预约优惠（${result.discount.range === "4–10 units" ? "4–10台" : "10台以上"}）`;
+        ? `${result.discount.pct}% OFF — Diskaun Tempahan Segera (${result.discount.range === "5+ units" ? "5+ unit" : "10+ unit"})`
+        : `${result.discount.pct}% 折扣 — 即时预约优惠（${result.discount.range === "5+ units" ? "5+台" : "10台以上"}）`;
 
   const unitTypeLabel =
     unitType === "wall"

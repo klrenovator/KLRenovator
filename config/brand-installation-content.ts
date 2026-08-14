@@ -83,7 +83,7 @@ function getIntroBody(
       `KL Renovator installs ${name} airconds across Kuala Lumpur and Selangor. Our technicians are trained on ${name} models including ${models}, sizing the right HP, running copper pipe, and commissioning every unit with vacuum pump evacuation and a 1-month workmanship warranty.`,
       `Whether you are moving into a new home or upgrading an old unit, KL Renovator handles full ${name} aircond installation from survey to final testing. We install all ${name} series including ${models}, using genuine or OEM-equivalent parts and confirming every price before drilling.`,
       `${name} units such as ${models} are popular across KL and Selangor for their reliability. KL Renovator's installers fit wall-mounted, ceiling cassette and window ${name} units, matching the correct HP to your room size and completing every job to manufacturer warranty standards.`,
-      `Need a new ${name} aircond installed? Our team dispatches trained HVAC technicians throughout KL & Selangor. Every ${name} installation includes 7 ft copper pipe, insulation, electrical wire and drain pipe, a standard outdoor bracket, vacuum pump commissioning, and a 1-month workmanship warranty card.`,
+      `Need a new ${name} aircond installed? Our team dispatches trained HVAC technicians throughout KL & Selangor. Every ${name} installation includes 7 ft copper pipe, insulation, electrical wire and drain pipe, vacuum pump commissioning, and a 1-month workmanship warranty card.`,
     ];
     return pick(brand.slug, templates);
   }
@@ -102,7 +102,7 @@ function getIntroBody(
     `KL Renovator 在吉隆坡和雪兰莪提供${name}冷气安装服务。我们的技师接受过${name}机型培训，包括${models}，会准确匹配马力、铺设铜管，并用真空泵抽真空调试，同时提供1个月工艺保修。`,
     `无论您是搬入新家还是升级旧机，KL Renovator 都能完成从勘察到最终测试的完整${name}冷气安装流程。我们安装${name}所有系列，包括${models}，使用原厂或OEM等效配件，并在钻孔施工前确认每一项价格。`,
     `${name}机型如${models}因可靠性高而广受吉隆坡和雪兰莪用户欢迎。KL Renovator 的安装团队精通${name}挂壁式、天花板卡式机和窗口式冷气安装，会根据房间大小匹配正确马力，并按制造商保修标准完成作业。`,
-    `需要安装新${name}冷气？我们的团队会派遣持证HVAC技师覆盖整个吉隆坡及雪兰莪。每次${name}安装均包含7尺铜管、电线、排水管、标准室外机支架、真空泵抽真空以及1个月工艺保修卡。`,
+    `需要安装新${name}冷气？我们的团队会派遣持证HVAC技师覆盖整个吉隆坡及雪兰莪。每次${name}安装均包含7尺铜管、电线、排水管、真空泵抽真空以及1个月工艺保修卡。`,
   ];
   return pick(brand.slug, templates);
 }
@@ -277,7 +277,7 @@ function getFAQs(
   return [
     {
       q: `吉隆坡${name}冷气安装费用是多少？`,
-      a: `${name}挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线、排水管和标准支架。`,
+      a: `${name}挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线和排水管；如需室外支架则另行收费。`,
     },
     {
       q: `KL Renovator可以安装哪些${name}型号？`,
@@ -304,7 +304,6 @@ const baseIncluded: Record<BrandInstallationLocale, string[]> = {
     "7 ft copper pipe (liquid + gas lines)",
     "7 ft electrical wiring",
     "7 ft PVC drain pipe",
-    "Outdoor bracket (paid special charge if required)",
     "Vacuum pump commissioning",
     "Refrigerant release & run test",
     "1-month workmanship warranty card",
@@ -314,7 +313,6 @@ const baseIncluded: Record<BrandInstallationLocale, string[]> = {
     "7 ft paip tembaga (tali cecair + gas)",
     "7 ft wayar elektrik",
     "7 ft paip saliran PVC",
-    "Braket luar standard",
     "Pentauliahan pam vakum",
     "Pelepasan refrigeran & ujian jalan",
     "Kad waranti kerja 1 bulan",
@@ -324,7 +322,6 @@ const baseIncluded: Record<BrandInstallationLocale, string[]> = {
     "7尺铜管（液管+气管）",
     "7尺电线",
     "7尺PVC排水管",
-    "标准室外机支架",
     "真空泵抽真空调试",
     "冷媒释放与运行测试",
     "1个月工艺保修卡",

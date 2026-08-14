@@ -326,7 +326,7 @@ export function buildInstallationHowToSchema(): Record<string, unknown> {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: "How KL Renovator Installs Your Aircond — 7-Step Process",
-    description: "Professional aircond installation process from booking to handover. Vacuum pump commissioning, Type L copper piping, Armaflex insulation, dedicated electrical circuit, 1-month workmanship warranty.",
+    description: "Professional aircond installation process from booking to handover. Vacuum pump commissioning, Type L copper piping, insulation, dedicated electrical circuit, 1-month workmanship warranty.",
     totalTime: "PT4H",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -335,7 +335,7 @@ export function buildInstallationHowToSchema(): Record<string, unknown> {
     },
     supply: [
       { "@type": "HowToSupply", name: "Aircond unit (wall-mounted, ceiling cassette, or window unit)" },
-      { "@type": "HowToSupply", name: "Type L/Type M copper piping with Armaflex insulation" },
+      { "@type": "HowToSupply", name: "Type L/Type M copper piping with insulation" },
       { "@type": "HowToSupply", name: "PVC drain pipe with gradient" },
       { "@type": "HowToSupply", name: "Electrical wiring and MCB" },
       { "@type": "HowToSupply", name: "Mounting brackets and vibration dampers" },
@@ -365,7 +365,7 @@ export function buildInstallationHowToSchema(): Record<string, unknown> {
         "@type": "HowToStep",
         position: 3,
         name: "Copper Piping & Insulation Installation",
-        text: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Armaflex insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.",
+        text: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.",
       },
       {
         "@type": "HowToStep",

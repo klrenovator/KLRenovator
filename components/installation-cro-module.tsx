@@ -45,7 +45,7 @@ export function InstallationCROModule({
 
   const uspPoints = [
     { icon: <FaWrench className="h-5 w-5" />, title: "Vacuum Pump Every Job", description: "Mandatory 500-micron vacuum on every install. No exceptions. Protects your compressor for years." },
-    { icon: <FaBolt className="h-5 w-5" />, title: "Type L Copper & Armaflex", description: "Premium copper piping with 9–13mm Armaflex insulation. No cheap thin-wall substitutes." },
+    { icon: <FaBolt className="h-5 w-5" />, title: "Type L Copper & Insulation", description: "Premium copper piping with 9–13mm insulation. No cheap thin-wall substitutes." },
     { icon: <FaShield className="h-5 w-5" />, title: "Dedicated Circuit & MCB", description: "Proper electrical per MS IEC 60364. Correct breaker sizing, earth leakage, isolator included." },
     { icon: <FaSnowflake className="h-5 w-5" />, title: "Precision Commissioning", description: "15-min run test: pressures, amp draw, thermostat calibration, cooling delta-T verified." },
     { icon: <FaBuilding className="h-5 w-5" />, title: "Written 1-Month Warranty", description: "Job card with checklist signed. Any install-related issue in 30 days — we return free." },
@@ -76,7 +76,6 @@ export function InstallationCROModule({
     "✓ 7 ft copper pipe (liquid + gas lines) — INCLUDED",
     "✓ 7 ft electrical wiring — INCLUDED",
     "✓ 7 ft PVC drain pipe — INCLUDED",
-    "✓ Outdoor bracket (paid special charge if required) — INCLUDED",
     "✓ Vacuum pump commissioning — INCLUDED",
     "✓ Refrigerant release & testing — INCLUDED",
     "✓ 1-month workmanship warranty card — INCLUDED",

@@ -1,7 +1,7 @@
 /**
  * INS-18 Blog Batch 1 (Posts 1-5) — Installation-Focused Blog Posts
  * Round 78 (original) / Round 82 (INS-21 linking) / Round 83 (12.1-12.4 MS/ZH expansion)
- * 
+ *
  * v2: Expanded MS content from 22% → 65% coverage
  * v2: Expanded ZH content from 5% → 55% coverage
  */
@@ -45,7 +45,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Using universal 1/4" pipe for all HP ratings restricts refrigerant flow by 20-30%, forcing the compressor to work harder and increasing TNB bills. Match pipe diameter to HP: 1.0-1.5 HP uses 1/4" + 3/8", while 2.5-3.0 HP needs 3/8" + 5/8".</p>
 
       <h2>Mistake #4: Inadequate Insulation</h2>
-      <p>Thin 6mm insulation or skipping the gas line insulation causes condensation dripping, 10-15% energy loss, and mold growth. We use Armaflex 9mm on liquid lines and 13mm on gas lines as standard.</p>
+      <p>Thin 6mm insulation or skipping the gas line insulation causes condensation dripping, 10-15% energy loss, and mold growth. We use 9mm insulation on liquid lines and 13mm on gas lines as standard.</p>
 
       <h2>Mistake #5: Ignoring Electrical Circuit Capacity</h2>
       <p>Installing a 2.5 HP or 3.0 HP unit on a standard 13A socket without checking circuit capacity risks frequent MCB tripping, melted wiring, and fire hazards. Units 2.5 HP and above need a dedicated 20A MCB circuit.</p>
@@ -71,14 +71,14 @@ export const installationBlogBatch1: BlogPost[] = [
         <tbody>
           <tr><td>Vacuum pump</td><td>Skipped → RM 800 compressor</td><td>Done properly</td></tr>
           <tr><td>Copper pipe</td><td>Type M → RM 600 re-pipe</td><td>Type L, lasts 15+ years</td></tr>
-          <tr><td>Insulation</td><td>Thin → RM 300 water damage</td><td>Armaflex, proper thickness</td></tr>
+          <tr><td>Insulation</td><td>Thin → RM 300 water damage</td><td>Proper-thickness insulation</td></tr>
           <tr><td>Pressure test</td><td>Skipped → RM 360 gas refills</td><td>Done, no leaks</td></tr>
           <tr><td><strong>3-Year Total</strong></td><td><strong>RM 2,210</strong></td><td><strong>RM 199</strong></td></tr>
         </tbody>
       </table>
 
       <h2>KL Renovator's Quality Installation Standard</h2>
-      <p>Every installation by our <a href="/near-me">expert installers near you</a> includes two-stage vacuum evacuation, Type L copper pipe, Armaflex insulation, vacuum pump commissioning (500 microns), electrical circuit check, proper drainage, and a written 1-month workmanship warranty. <strong>From RM 199, same-day available.</strong></p>
+      <p>Every installation by our <a href="/near-me">expert installers near you</a> includes two-stage vacuum evacuation, Type L copper pipe, insulation, vacuum pump commissioning (500 microns), electrical circuit check, proper drainage, and a written 1-month workmanship warranty. <strong>From RM 199, same-day available.</strong></p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a transparent quote within 30 minutes.</p>
     `,
     contentMS: `
@@ -95,7 +95,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Menggunakan paip 1/4" universal untuk semua kadaran HP menyekat aliran penyejuk sebanyak 20-30%, memaksa pemampat bekerja lebih keras dan meningkatkan bil TNB. Padankan diameter paip dengan HP: 1.0-1.5 HP menggunakan 1/4" + 3/8", manakala 2.5-3.0 HP memerlukan 3/8" + 5/8".</p>
 
       <h2>Kesilapan #4: Penebat Tidak Mencukupi</h2>
-      <p>Penebat nipis 6mm atau melangkau penebat saluran gas menyebabkan kondensasi menitis, kehilangan tenaga 10-15%, dan pertumbuhan kulat. Kami menggunakan Armaflex 9mm pada saluran cecair dan 13mm pada saluran gas sebagai standard.</p>
+      <p>Penebat nipis 6mm atau melangkau penebat saluran gas menyebabkan kondensasi menitis, kehilangan tenaga 10-15%, dan pertumbuhan kulat. Kami menggunakan penebat 9mm pada saluran cecair dan 13mm pada saluran gas sebagai standard.</p>
 
       <h2>Kesilapan #5: Mengabaikan Kapasiti Litar Elektrik</h2>
       <p>Memasang unit 2.5 HP atau 3.0 HP pada soket 13A standard tanpa memeriksa kapasiti litar berisiko MCB terpelantik kerap, pendawaian cair, dan bahaya kebakaran. Unit 2.5 HP dan ke atas memerlukan litar MCB 20A khusus.</p>
@@ -121,14 +121,14 @@ export const installationBlogBatch1: BlogPost[] = [
         <tbody>
           <tr><td>Pam vakum</td><td>Dilangkau → RM 800 pemampat</td><td>Dilakukan dengan betul</td></tr>
           <tr><td>Paip tembaga</td><td>Jenis M → RM 600 pasang semula</td><td>Jenis L, tahan 15+ tahun</td></tr>
-          <tr><td>Penebat</td><td>Nipis → RM 300 kerosakan air</td><td>Armaflex, ketebalan betul</td></tr>
+          <tr><td>Penebat</td><td>Nipis → RM 300 kerosakan air</td><td>Penebat, ketebalan betul</td></tr>
           <tr><td>Ujian tekanan</td><td>Dilangkau → RM 360 tambah gas</td><td>Dilakukan, tiada kebocoran</td></tr>
           <tr><td><strong>Jumlah 3 Tahun</strong></td><td><strong>RM 2,210</strong></td><td><strong>RM 199</strong></td></tr>
         </tbody>
       </table>
 
       <h2>Standard Pemasangan Berkualiti KL Renovator</h2>
-      <p>Setiap pemasangan oleh <a href="/near-me">pemasang pakar berhampiran anda</a> termasuk evakuasi vakum dua peringkat, paip tembaga Jenis L, penebat Armaflex, pentauliahan pam vakum (500 mikron), pemeriksaan litar elektrik, saliran betul, dan waranti kerja 1 bulan bertulis. <strong>Dari RM 199, hari sama tersedia.</strong></p>
+      <p>Setiap pemasangan oleh <a href="/near-me">pemasang pakar berhampiran anda</a> termasuk evakuasi vakum dua peringkat, paip tembaga Jenis L, penebat, pentauliahan pam vakum (500 mikron), pemeriksaan litar elektrik, saliran betul, dan waranti kerja 1 bulan bertulis. <strong>Dari RM 199, hari sama tersedia.</strong></p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk sebut harga telus dalam 30 minit.</p>
     `,
     contentZH: `
@@ -145,7 +145,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>对所有匹数使用通用1/4英寸管道会限制冷媒流量20-30%，迫使压缩机更努力工作并增加TNB账单。按匹数匹配管径：1.0-1.5匹使用1/4" + 3/8"，而2.5-3.0匹需要3/8" + 5/8"。</p>
 
       <h2>错误 #4：保温不足</h2>
-      <p>薄的6mm保温或跳过气管保温会导致冷凝滴水、10-15%能量损失和霉菌生长。我们标准使用液管Armaflex 9mm和气管13mm。</p>
+      <p>薄的6mm保温或跳过气管保温会导致冷凝滴水、10-15%能量损失和霉菌生长。我们标准使用液管9mm保温和气管13mm。</p>
 
       <h2>错误 #5：忽视电路容量</h2>
       <p>在标准13A插座上安装2.5匹或3.0匹机组而不检查电路容量，会导致MCB频繁跳闸、电线熔化和火灾危险。2.5匹及以上需要独立的20A MCB电路。</p>
@@ -171,14 +171,14 @@ export const installationBlogBatch1: BlogPost[] = [
         <tbody>
           <tr><td>真空泵</td><td>跳过→RM 800压缩机</td><td>正确完成</td></tr>
           <tr><td>铜管</td><td>M型→RM 600重布管</td><td>L型，寿命15年以上</td></tr>
-          <tr><td>保温</td><td>薄→RM 300水损</td><td>Armaflex，正确厚度</td></tr>
+          <tr><td>保温</td><td>薄→RM 300水损</td><td>保温材料，正确厚度</td></tr>
           <tr><td>压力测试</td><td>跳过→RM 360充气</td><td>完成，无泄漏</td></tr>
           <tr><td><strong>3年总计</strong></td><td><strong>RM 2,210</strong></td><td><strong>RM 199</strong></td></tr>
         </tbody>
       </table>
 
       <h2>KL Renovator 优质安装标准</h2>
-      <p>我们<a href="/near-me">您附近的专家安装人员</a>的每次安装都包括两级真空抽气、L型铜管、Armaflex保温、真空泵调试（500微米）、电路检查、正确排水和书面1个月工艺保修。<strong>RM 199起，可当天安装。</strong></p>
+      <p>我们<a href="/near-me">您附近的专家安装人员</a>的每次安装都包括两级真空抽气、L型铜管、保温、真空泵调试（500微米）、电路检查、正确排水和书面1个月工艺保修。<strong>RM 199起，可当天安装。</strong></p>
       <p>WhatsApp <strong>+60 18-298 3573</strong>，30分钟内获得透明报价。</p>
     `,
   },
@@ -227,7 +227,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Send us your unit type, HP size, brand, and address. We confirm transparent pricing and availability within 30 minutes. Same-day slots available for bookings before 11 AM.</p>
 
       <h3>Step 2: Technician Dispatch (30-60 min)</h3>
-      <p>Our qualified installation specialist is dispatched with all required materials — Type L copper pipe, Armaflex insulations, wiring, vacuum pump, and tank. GPS-tracked arrival with ETA via WhatsApp.</p>
+      <p>Our qualified installation specialist is dispatched with all required materials — Type L copper pipe, insulation, wiring, vacuum pump, and tank. GPS-tracked arrival with ETA via WhatsApp.</p>
 
       <h3>Step 3: Site Survey & Wall Assessment (15-20 min)</h3>
       <p>The technician inspects the installation spot, checks wall strength, electrical circuit capacity, drainage path, and outdoor unit position. Any issues are flagged before work begins — no surprises.</p>
@@ -278,7 +278,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Hantar jenis unit, saiz HP, jenama, dan alamat anda. Kami mengesahkan harga telus dan ketersediaan dalam 30 minit. Slot hari sama tersedia untuk tempahan sebelum 11 pagi.</p>
 
       <h3>Langkah 2: Penghantaran Juruteknik (30-60 min)</h3>
-      <p>Pakar pemasangan berkelayakan kami dihantar dengan semua bahan yang diperlukan — paip tembaga Jenis L, penebat Armaflex, pendakap, pendawaian, pam vakum, dan tangki . Ketibaan dijejaki GPS dengan ETA melalui WhatsApp.</p>
+      <p>Pakar pemasangan berkelayakan kami dihantar dengan semua bahan yang diperlukan — paip tembaga Jenis L, penebat, pendakap, pendawaian, pam vakum, dan tangki . Ketibaan dijejaki GPS dengan ETA melalui WhatsApp.</p>
 
       <h3>Langkah 3: Tinjauan Tapak & Penilaian Dinding (15-20 min)</h3>
       <p>Juruteknik memeriksa lokasi pemasangan, kekuatan dinding, kapasiti litar elektrik, laluan saliran, dan kedudukan unit luar. Sebarang isu dimaklumkan sebelum kerja dimulakan — tiada kejutan.</p>
@@ -329,7 +329,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>发送您的机型、匹数、品牌和地址。我们在30分钟内确认透明价格和可用时间。上午11点前预约可当天安装。</p>
 
       <h3>第2步：技术员派遣（30-60分钟）</h3>
-      <p>我们合格的安装专家携带所有必需材料出发——L型铜管、Armaflex保温棉、支架、电线、真空泵和氮气罐。GPS追踪到达，通过WhatsApp发送预计到达时间。</p>
+      <p>我们合格的安装专家携带所有必需材料出发——L型铜管、保温棉、支架、电线、真空泵和氮气罐。GPS追踪到达，通过WhatsApp发送预计到达时间。</p>
 
       <h3>第3步：现场勘查与墙体评估（15-20分钟）</h3>
       <p>技术员检查安装位置、墙体强度、电路容量、排水路径和室外机位置。任何问题在开工前提出——没有意外。</p>
@@ -584,7 +584,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Not sure about your room size? Use our free <a href="/btu-calculator">BTU Calculator</a> — enter your room dimensions, room type, and sun exposure to get an instant HP recommendation with installation cost.</p>
 
       <h2>Installation Cost by HP Size</h2>
-      <p>KL Renovator's <a href="/aircond-installation-kl">expert installation team</a> offers transparent per-HP pricing from RM 199. Volume discount: 4–10 units 5% OFF Instant Booking Discount, 10+ units 10% OFF Instant Booking Discount. WhatsApp <strong>+60 18-298 3573</strong> — tell us your room size and we'll recommend the perfect HP.</p>
+      <p>KL Renovator's <a href="/aircond-installation-kl">expert installation team</a> offers transparent per-HP pricing from RM 199. Volume discount: 5+ units 5% OFF Instant Booking Discount, 10+ units 10% OFF Instant Booking Discount. WhatsApp <strong>+60 18-298 3573</strong> — tell us your room size and we'll recommend the perfect HP.</p>
     `,
     contentMS: `
       <h2>HP Aircond Mana Yang Sesuai Untuk Bilik Anda?</h2>
@@ -620,7 +620,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Tidak pasti saiz bilik anda? Gunakan <a href="/btu-calculator">Kalkulator BTU</a> percuma kami — masukkan dimensi bilik, jenis bilik, dan pendedahan matahari untuk mendapatkan cadangan HP serta-merta dengan kos pemasangan.</p>
 
       <h2>Kos Pemasangan Mengikut Saiz HP</h2>
-      <p><a href="/aircond-installation-kl">Pasukan pemasangan pakar KL Renovator</a> menawarkan harga telus per-HP dari RM 199. Diskaun volum: 4–10 unit Diskaun Tempahan Segera 5%, 10+ unit Diskaun Tempahan Segera 10%. WhatsApp <strong>+60 18-298 3573</strong> — beritahu saiz bilik anda dan kami cadangkan HP yang sempurna.</p>
+      <p><a href="/aircond-installation-kl">Pasukan pemasangan pakar KL Renovator</a> menawarkan harga telus per-HP dari RM 199. Diskaun volum: 5+ unit Diskaun Tempahan Segera 5%, 10+ unit Diskaun Tempahan Segera 10%. WhatsApp <strong>+60 18-298 3573</strong> — beritahu saiz bilik anda dan kami cadangkan HP yang sempurna.</p>
     `,
     contentZH: `
       <h2>哪种匹数冷气适合您的房间？</h2>
@@ -710,7 +710,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>When the outdoor unit is significantly above or below the indoor unit, gravity affects refrigerant flow. Outdoor above indoor makes oil return harder and may need oil traps every 5-8 meters. Outdoor below indoor is generally easier, but drainage must still flow correctly.</p>
 
       <h2>Additional Copper Pipe Cost</h2>
-      <p>Beyond the included 7ft: 1.0-1.5 HP at RM 18-22/ft, 2.0-2.5 HP at RM 22-28/ft, 3.0 HP at RM 28-35/ft. Every additional foot includes copper pipe, Armaflex insulation, and wiring extension.</p>
+      <p>Beyond the included 7ft: 1.0-1.5 HP at RM 18-22/ft, 2.0-2.5 HP at RM 22-28/ft, 3.0 HP at RM 28-35/ft. Every additional foot includes copper pipe, insulation, and wiring extension.</p>
 
       <h2>Tips for Optimal Pipe Length</h2>
       <ul>
@@ -751,7 +751,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Apabila unit luar berada jauh di atas atau di bawah unit dalaman, graviti mempengaruhi aliran penyejuk. Unit luar di atas menjadikan pemulangan minyak lebih sukar dan mungkin memerlukan perangkap minyak setiap 5-8 meter. Unit luar di bawah umumnya lebih mudah, tetapi saliran masih mesti mengalir dengan betul.</p>
 
       <h2>Kos Paip Tembaga Tambahan</h2>
-      <p>Di luar 7 kaki yang termasuk: 1.0-1.5 HP pada RM 18-22/kaki, 2.0-2.5 HP pada RM 22-28/kaki, 3.0 HP pada RM 28-35/kaki. Setiap kaki tambahan termasuk paip tembaga, penebat Armaflex, dan sambungan pendawaian.</p>
+      <p>Di luar 7 kaki yang termasuk: 1.0-1.5 HP pada RM 18-22/kaki, 2.0-2.5 HP pada RM 22-28/kaki, 3.0 HP pada RM 28-35/kaki. Setiap kaki tambahan termasuk paip tembaga, penebat, dan sambungan pendawaian.</p>
 
       <h2>Petua Untuk Panjang Paip Optimum</h2>
       <ul>
@@ -792,7 +792,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>当室外机明显高于或低于室内机时，重力影响冷媒流动。室外机在上方使回油更困难，可能每5-8米需要油阱。室外机在下方通常更容易，但排水仍须正确流动。</p>
 
       <h2>额外铜管费用</h2>
-      <p>超出包含的7英尺：1.0-1.5匹每英尺RM 18-22，2.0-2.5匹每英尺RM 22-28，3.0匹每英尺RM 28-35。每额外英尺包括铜管、Armaflex保温和电线延长。</p>
+      <p>超出包含的7英尺：1.0-1.5匹每英尺RM 18-22，2.0-2.5匹每英尺RM 22-28，3.0匹每英尺RM 28-35。每额外英尺包括铜管、保温和电线延长。</p>
 
       <h2>最佳管道长度建议</h2>
       <ul>

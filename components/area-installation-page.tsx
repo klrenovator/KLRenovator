@@ -314,7 +314,7 @@ export function AreaInstallationLandingPage({
                 ? "Prices are for standard installation including 7 ft copper pipe, insulation, electrical wire and drain pipe. Extras quoted first."
                 : locale === "ms"
                   ? "Harga adalah untuk pemasangan standard termasuk 7 ft paip tembaga, wayar, paip saliran standard. Tambahan disebut dahulu."
-                  : "价格为标准安装费用，包含7尺铜管、电线、排水管和标准支架。额外费用先报价。"}
+                  : "价格为标准安装费用，包含7尺铜管、电线和排水管。室外支架及其他额外费用先报价。"}
             </p>
           </Reveal>
 

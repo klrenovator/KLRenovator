@@ -104,7 +104,7 @@ const pricingCategories = [
     rows: [
       { label: "诊断费（同次修好则免收）", price: "RM 88" },
       { label: "电容更换", price: "RM 150 – 250" },
-      { label: "室内风扇马达更换", price: "RM 250 – 380" },
+      { label: "室内风扇马达更换", price: "RM 350 – 480" },
       { label: "室外风扇马达更换", price: "RM 300 – 450" },
       { label: "PCB 控制板维修/更换", price: "RM 350 – 600" },
       { label: "排水泵更换", price: "RM 350 – 550" },
@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: "多台机组有折扣吗？",
-    a: "有。同次上门 4–10 台享 5% OFF 即时预订折扣 (5% OFF Instant Booking Discount)，10 台以上享 10% OFF 即时预订折扣 (10% OFF Instant Booking Discount)。",
+    a: "有。同次上门 5+ 台享 5% OFF 即时预订折扣 (5% OFF Instant Booking Discount)，10 台以上享 10% OFF 即时预订折扣 (10% OFF Instant Booking Discount)。",
   },
   {
     q: "为什么化学大修比普通化学清洗贵？",
@@ -325,7 +325,7 @@ export default function ZhPricingPage() {
               <div className="mt-6 grid gap-4 sm:grid-cols-2 text-center max-w-2xl mx-auto">
                 <div className="bg-white/10 rounded-xl p-5 border border-white/20">
                   <p className="text-3xl font-black">5% OFF</p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1">4 – 10 台</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mt-1">5+ 台</p>
                   <p className="text-[10px] text-sky-100 mt-1">即时预订折扣</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5 border border-white/20">
