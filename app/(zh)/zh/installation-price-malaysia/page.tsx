@@ -76,8 +76,8 @@ const MATERIAL_PRICES = [
 ];
 
 const FAQS = [
-  { q: "2026年吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式1.0–1.5 HP从RM 199起。2.0 HP从RM 249起，2.5 HP从RM 279起，3.0 HP从RM 329起。天花板卡式从RM 290起。窗式从RM 199起。每项价格包含7尺铜管、电线、排水管、支架、抽真空、测漏和调试——开工前确认。" },
-  { q: "RM 199基础安装具体包含什么？", a: "9项套餐：（1）现场勘查与墙体评估，（2）7尺正确管径隔热铜管，（3）通过专用线管的电线，（4）带正确下坡度的PVC排水管，（5）带橡胶减震垫的支架，（6）真空泵抽真空最少15分钟，（7）氮气压力测漏，（8）全面调试——制冷、风量、温控器，（9）书面工作卡+1个月工艺保修。" },
+  { q: "2026年吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式1.0–1.5 HP从RM 199起。2.0 HP从RM 249起，2.5 HP从RM 279起，3.0 HP从RM 329起。天花板卡式从RM 290起。窗式从RM 199起。每项价格包含7尺铜管、电线、排水管、抽真空、测漏和调试——开工前确认。" },
+  { q: "RM 199基础安装具体包含什么？", a: "9项套餐：（1）现场勘查与墙体评估，（2）7尺正确管径隔热铜管，（3）通过专用线管的电线，（4）带正确下坡度的PVC排水管，（5）真空泵抽真空最少15分钟，（6）氮气压力测漏，（7）全面调试——制冷、风量、温控器，（8）书面工作卡+1个月工艺保修。" },
   { q: "为什么超过7尺的铜管要额外收费？", a: "标准7尺覆盖大多数房间布局。更长的管路需要更多铜管、隔热材料和人工。我们按尺透明计费（RM 17–27/尺视HP而定）。技术员测量实际需要的管路长度，切割前确认额外费用。" },
   { q: "RM 199基础安装和完整铜管套餐有什么区别？", a: "RM 199覆盖标准直管安装，最多7尺铜管。'完整铜管套餐'通常指10–20尺以上的铜管、隐蔽线槽、室外线缆架，可能还需要额外支架——常见于室外机离室内机较远的高层公寓。具体费用取决于实际管路长度和材料，我们在现场勘查后给出确切报价。" },
   { q: "安装需要多长时间？", a: "标准挂壁式：2–3小时。天花板卡式：3–4小时。同天安装两台：5–6小时。我们从不赶工——仅正确的抽真空就需要最少15–20分钟。" },
@@ -173,7 +173,7 @@ export default function ZhInstallationPricePage() {
           <Reveal>
             <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">安装价格清单</p>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2 speakable">2026年冷气安装完整价格表</h2>
-            <p className="text-sm text-slate-500 mb-6">所有价格含7尺铜管、电线、排水管、支架、抽真空、测漏和调试。开工前确认。</p>
+            <p className="text-sm text-slate-500 mb-6">所有价格含7尺铜管、电线、排水管、抽真空、测漏和调试。开工前确认。</p>
           </Reveal>
           <Reveal>
             <div className="border border-slate-200 bg-white">
@@ -190,7 +190,7 @@ export default function ZhInstallationPricePage() {
           <Reveal>
             <div className="mt-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4">
               <p className="text-xs text-emerald-800 leading-relaxed">
-                <span className="font-black">✓ 每次安装免费包含：</span>7尺铜管（按HP正确配管）、电线、PVC排水管、支架、真空泵抽真空、氮气压力测漏、调试、书面工作卡。
+                <span className="font-black">✓ 每次安装免费包含：</span>7尺铜管（按HP正确配管）、电线、PVC排水管、真空泵抽真空、氮气压力测漏、调试、书面工作卡。
               </p>
             </div>
           </Reveal>

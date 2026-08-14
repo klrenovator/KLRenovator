@@ -80,7 +80,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a pressure chemical wash cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
       },
       {
         q: "How often should I get a chemical wash?",
@@ -107,7 +107,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga cuci kimia tekanan di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
+        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
       },
       {
         q: "Berapa kerap saya perlu buat cuci kimia?",
@@ -131,7 +131,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的高压化学清洗费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：5+台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "化学清洗应该多久做一次？",
@@ -215,7 +215,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "How long does a chemical overhaul take?",
-        a: "Wall-mounted 1.0\u20131.5 HP: 2\u20132.5 hours. Wall-mounted 2.0\u20133.5 HP: 2.5\u20133 hours. Ceiling cassette: 3\u20134 hours (more disassembly due to ceiling grid integration). We do not rush \u2014 proper drying of components before reassembly is critical to prevent electrical shorts. If you have multiple units needing overhaul, we can schedule them on the same day and complete them sequentially.",
+        a: "Wall-mounted 1.0\u20131.5 HP: 2\u20132.5 hours. Wall-mounted 2.0\u20133.5 HP: 2.5\u20133 hours. We do not rush \u2014 proper drying of components before reassembly is critical to prevent electrical shorts. If you have multiple wall-mounted units needing overhaul, we can schedule them on the same day and complete them sequentially.",
       },
       {
         q: "My aircond has ice forming on the indoor coil \u2014 is an overhaul needed?",
@@ -243,7 +243,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Berapa lama masa chemical overhaul?",
-        a: "Dinding 1.0\u20131.5 HP: 2\u20132.5 jam. Dinding 2.0\u20133.5 HP: 2.5\u20133 jam. Ceiling cassette: 3\u20134 jam (lebih banyak kerja pembongkaran kerana integrasi grid siling). Kami tidak tergesa-gesa \u2014 pengeringan komponen yang betul sebelum pemasangan semula adalah kritikal untuk mengelakkan litar pintas elektrik. Jika anda mempunyai berbilang unit yang memerlukan overhaul, kami boleh menjadualkannya pada hari yang sama.",
+        a: "Dinding 1.0\u20131.5 HP: 2\u20132.5 jam. Dinding 2.0\u20133.5 HP: 2.5\u20133 jam. Kami tidak tergesa-gesa \u2014 pengeringan komponen yang betul sebelum pemasangan semula adalah kritikal untuk mengelakkan litar pintas elektrik. Jika anda mempunyai berbilang unit dinding yang memerlukan overhaul, kami boleh menjadualkannya pada hari yang sama.",
       },
       {
         q: "Adakah saya akan kehilangan gas bahan pendingin semasa overhaul?",
@@ -255,7 +255,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 220。挂壁式2.0–2.5 HP：RM 280。挂壁式3.0–3.5 HP：RM 350。所有价格在技术员开始工作前确认。多台折扣适用：4–10台享5%即时预订折扣，10台以上享10%即时预订折扣。",
+        a: "挂壁式1.0–1.5 HP：RM 220。挂壁式2.0–2.5 HP：RM 280。挂壁式3.0–3.5 HP：RM 350。所有价格在技术员开始工作前确认。多台折扣适用：5+台享5%即时预订折扣，10台以上享10%即时预订折扣。",
       },
       {
         q: "何时需要化学大修而非化学清洗？",
@@ -354,7 +354,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Mengapa aircond saya terus kehilangan gas?",
-        a: "Betul \u2014 gas penyejuk tidak 'digunakan'. Ia beredar dalam gelung tertutup. Jika paras rendah, ada kebocoran di suatu tempat. Titik kebocoran biasa: (1) Sambungan flare di unit dalam dan luar \u2014 paling biasa, boleh dibaiki dengan flare semula. (2) Gegelung penyejat atau kondenser \u2014 kebocoran mikro dari kakisan, terutama unit berusia 8+ tahun berhampiran pantai (Klang, Pelabuhan Klang). (3) Teras injap Schrader \u2014 pembaikan mudah, sering terlepas pandang. Jika unit anda memerlukan gas setiap 6\u201312 bulan, kebocoran perlu ditemui dan dibaiki. Gas Leak Repair ialah RM 170 bagi setiap kebocoran; harga gas top-up kekal berasingan mengikut PSI yang diperlukan.",
+        a: "Betul \u2014 gas penyejuk tidak 'digunakan'. Ia beredar dalam gelung tertutup. Jika paras rendah, ada kebocoran di suatu tempat. Titik kebocoran biasa: (1) Sambungan flare di unit dalam dan luar \u2014 paling biasa, boleh dibaiki dengan flare semula. (2) Gegelung penyejat atau kondenser \u2014 kebocoran mikro dari kakisan, terutama unit berusia 8+ tahun berhampiran pantai (Klang, Pelabuhan Klang). (3) Teras injap Schrader \u2014 pembaikan mudah, sering terlepas pandang. Jika unit anda memerlukan gas setiap 6\u201312 bulan, kebocoran perlu ditemui dan dibaiki. Gas Leak Repair ialah RM 120 bagi setiap kebocoran; harga gas top-up kekal berasingan mengikut PSI yang diperlukan.",
       },
       {
         q: "Bolehkah saya menambah gas sendiri?",
@@ -391,9 +391,10 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "R22 Gas Refill", price: "RM 2.50 / PSI" },
       { label: "R410A Gas Refill", price: "RM 3.00 / PSI" },
       { label: "R32 Gas Refill", price: "RM 3.00 / PSI" },
+      { label: "Gas Leak Repair", price: "RM 120 / leak" },
       { label: "Structural Leak Check", price: "RM 88" },
     ],
-    priceTableNote: "Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.", 
+    priceTableNote: "Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.",
   },
 
   // ── 4. REPAIR & TROUBLESHOOTING ──────────────────────────────────────────
@@ -486,7 +487,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪冷气维修费用是多少？",
-        a: "诊断费：RM 88（同次维修则免收）。电容更换：RM 150-250。室内风扇电机：RM 250-380。室外风扇电机：RM 300-450。PCB板：RM 350-600。温度传感器/热敏电阻：RM 150-250。接触器：RM 150-200。排水泵：RM 350-550。压缩机：RM 800-2,000（诊断后报价）。所有价格在开始任何工作前确认。",
+        a: "诊断费：RM 88（同次维修则免收）。电容更换：RM 150-250。室内风扇电机：RM 350-480。室外风扇电机：RM 300-450。PCB板：RM 350-600。温度传感器/热敏电阻：RM 150-250。接触器：RM 150-200。排水泵：RM 350-550。压缩机：RM 800-2,000（诊断后报价）。所有价格在开始任何工作前确认。",
       },
       {
         q: "冷气指示灯闪烁无法开机\u2014\u2014什么意思？",
@@ -507,9 +508,9 @@ export const servicesData: Record<string, ServiceDetail> = {
     priceTable: [
       { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
       { label: "Capacitor Replacement", price: "RM 150 – 250" },
-      { label: "Fan Motor Replacement", price: "RM 250 – 380" },
+      { label: "Fan Motor Replacement", price: "RM 350 – 480" },
       { label: "PCB Board Replacement", price: "RM 350 – 600" },
-      { label: "Gas Leak Repair", price: "RM 170 / leak" },
+      { label: "Gas Leak Repair", price: "RM 120 / leak" },
       { label: "Temperature Sensor Replacement", price: "RM 150 – 250" },
       { label: "Contactor Replacement", price: "RM 150 – 200" },
       { label: "Drain Pump Replacement", price: "RM 350 – 550" },
@@ -529,7 +530,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     ogImage: "/hero/aircond-installation-wall-mounted-kl.webp",
     aioSummary: "Professional installation for wall-mounted and ceiling units using vacuum commissioning protocols. Starting Price: RM 199. Includes: 7ft copper pipe, wiring. Warranty: 1-month workmanship checklist provided.",
     aioSummaryMS: "Pemasangan profesional unit dinding dan siling menggunakan protokol komisen vakum. Harga: RM 199. Termasuk: 7 kaki paip kuprum, pendawaian. Waranti: Senarai semak kerjatangan 1 bulan disediakan.",
-    aioSummaryZH: "采用抽真空调试标准的专业冷气安装服务。起步价：RM 199。包含：7尺铜管、电线及支架。保修：提供1个月工艺保修清单。",
+    aioSummaryZH: "采用抽真空调试标准的专业冷气安装服务。起步价：RM 199。包含：7尺铜管、电线及排水管。保修：提供1个月工艺保修清单。",
     highlights: [
       "Expert installation for wall-mounted, ceiling cassette, and window units",
       "Correct-gauge copper piping (7ft included) — no thin-walled 'universal' pipes",
@@ -679,7 +680,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does basic aircond servicing cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 120. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 99. Wall-mounted 2.0–2.5 HP: RM 120. Wall-mounted 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 depending on HP. Window unit: RM 99–120. Every price is confirmed with you before the technician begins work. Multi-unit discounts: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units on the same visit.",
       },
       {
         q: "How often should I service my aircond?",
@@ -706,7 +707,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis asas aircond di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 120. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
+        a: "Dinding 1.0–1.5 HP: RM 99. Dinding 2.0–2.5 HP: RM 120. Dinding 3.0–3.5 HP: RM 150. Ceiling cassette: RM 150–250 bergantung pada HP. Unit tingkap: RM 99–120. Setiap harga disahkan dengan anda sebelum juruteknik memulakan kerja. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit pada lawatan yang sama.",
       },
       {
         q: "Berapa kerap saya perlu servis aircond?",
@@ -730,7 +731,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪基本冷气保养费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 120。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：4–10台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 99。挂壁式2.0–2.5 HP：RM 120。挂壁式3.0–3.5 HP：RM 150。天花板卡式：RM 150–250视HP而定。窗式：RM 99–120。每项价格在技术员开始工作前与您确认。多台折扣：5+台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "冷气应该多久保养一次？",
@@ -767,7 +768,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   "ceiling-cassette": {
     slug: "ceiling-cassette",
     title: "Ceiling Cassette Service",
-    tagline: "Specialist service for commercial ceiling cassette units — offices, shops & restaurants. Chemical wash, overhaul, and repair. Off-hours scheduling in KL.",
+    tagline: "Specialist service for commercial ceiling cassette units — offices, shops & restaurants. Chemical wash and repair. Off-hours scheduling in KL.",
     description:
       "Ceiling cassettes are the workhorses of Malaysian commercial spaces: the 4-way unit recessed into the ceiling grid of your office, retail shop, restaurant, clinic, or salon. They are more complex than wall-mounted units \u2014 the blower is larger, the drain pan is integrated into the ceiling panel, and a clogged drain does not drip onto the floor (where you see it) but into the ceiling void (where it silently damages your gypsum board for weeks before you notice the stain). KL Renovator specialises in ceiling cassette servicing for commercial premises across the Klang Valley. Our technicians are trained to safely access ceiling-mounted units, remove the heavy cassette panel, chemically clean the blower and coil, deep-clean the drain pan (the #1 source of hidden ceiling leaks), and test everything before closing. We also handle multi-unit commercial sites \u2014 restaurants with 3\u20134 cassettes, offices with 6\u201310, retail floors with mixed cassette and wall-mounted units. Coordinated scheduling, off-hours (evening/weekend) availability, and volume discounts for regular commercial contracts. Pricing is confirmed according to the selected service and unit configuration.",
     startPrice: "RM 150",
@@ -976,7 +977,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "可以在新地点重复使用旧的铜管和支架吗？",
-        a: "铜管：不能。它们嵌入在墙壁中，拆机时被切断，无法完整取出。新铜管（搬迁套餐含7尺，超出RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP））始终在新地点使用。墙支架：不能。支架留在旧墙上。新支架包含在搬迁套餐中。唯一随您移动的部件是室内机、室外冷凝器和遥控器。其他一切\u2014\u2014管道、电线、排水管、支架\u2014\u2014在新地点都是全新的。",
+        a: "铜管：不能。它们嵌入在墙壁中，拆机时被切断，无法完整取出。新铜管（搬迁套餐含7尺，超出RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP））始终在新地点使用。墙支架：不能。支架留在旧墙上。如需要新室外支架，将在开工前作为付费附加项目另行报价。唯一随您移动的部件是室内机、室外冷凝器和遥控器。其他一切\u2014\u2014管道、电线、排水管、支架\u2014\u2014在新地点都是全新的。",
       },
       {
         q: "搬迁旧机器值得吗，还是应该买新的？",

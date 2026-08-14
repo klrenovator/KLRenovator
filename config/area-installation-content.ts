@@ -101,7 +101,7 @@ function getIntroBody(
       `KL Renovator installs airconds across ${name} and the wider ${state} area. From ${landmarks}, our technicians fit wall-mounted units in condos and apartments, ceiling cassette systems in shops and offices, and window units in older flats — all with vacuum pump commissioning, dedicated electrical wiring, and a 1-month workmanship warranty.`,
       `Whether you are moving into a new home near ${firstLandmark}, upgrading an old non-inverter unit in ${secondLandmark}, or fitting out a commercial space elsewhere in ${name}, KL Renovator handles the full aircond installation from survey to final testing. We service all 20 major brands across ${state}.`,
       `${name} homes and businesses use many different aircond setups — high-rise condos near ${firstLandmark}, landed terraces around ${secondLandmark}, and shoplots along busy commercial strips. KL Renovator's installation team works in all of them, sizing the right HP, running copper pipe, and commissioning every unit properly.`,
-      `Need a new aircond installed in ${name}? KL Renovator dispatches trained HVAC technicians throughout ${state}, including ${landmarks}. Every installation includes 7 ft copper pipe, insulation, electrical wire and drain pipe, a standard outdoor bracket, vacuum pump evacuation, and a 1-month workmanship warranty card.`,
+      `Need a new aircond installed in ${name}? KL Renovator dispatches trained HVAC technicians throughout ${state}, including ${landmarks}. Every installation includes 7 ft copper pipe, insulation, electrical wire and drain pipe, vacuum pump evacuation, and a 1-month workmanship warranty card.`,
     ];
     return pick(area.slug, templates);
   }
@@ -121,7 +121,7 @@ function getIntroBody(
     `KL Renovator 在${name}及整个${state}地区提供冷气安装服务。从${landmarks}，我们的技师为公寓和住宅安装挂壁式冷气、为店铺和办公室安装天花板卡式机、为老旧组屋安装窗式冷气——每项安装都包含真空泵抽真空、专用电路布线以及1个月工艺保修。`,
     `无论您是即将搬入${firstLandmark}附近的新家、为${secondLandmark}的旧非变频机升级，还是为${name}的商铺安装冷气，KL Renovator 都能完成从勘察到最终测试的完整安装流程。我们覆盖${state}所有20个主流品牌。`,
     `${name}的住宅和商业场所使用各种不同的冷气配置——${firstLandmark}附近的高层公寓、${secondLandmark}周边的排屋，以及繁忙商业街上的店屋。KL Renovator 的安装团队精通所有场景，会准确匹配马力、铺设铜管并规范调试每台机器。`,
-    `需要在${name}安装新冷气？KL Renovator 派遣持证HVAC技师覆盖整个${state}，包括${landmarks}。每次安装均包含7尺铜管、电线、排水管、标准室外机支架、真空泵抽真空以及1个月工艺保修卡。`,
+    `需要在${name}安装新冷气？KL Renovator 派遣持证HVAC技师覆盖整个${state}，包括${landmarks}。每次安装均包含7尺铜管、电线、排水管、真空泵抽真空以及1个月工艺保修卡。`,
   ];
   return pick(area.slug, templates);
 }
@@ -375,7 +375,7 @@ function getLocalContext(
       ],
       [
         `Dari ${L(0)} ke ${L(1)}, ${name} merangkumi pelbagai jenis hartanah — dan butiran pemasangan aircond yang penting di satu tempat hampir tidak relevan di tempat lain. Rumah teres berhampiran ${L(2)} perlukan tembusan dinding dan penjajaran braket; unit untuk bangunan tinggi ${L(3)} perlukan masa loading bay dan kelulusan pengurusan. Pasukan ${name} kami merancang kedua-duanya sebelum juruteknik bertolak, ${position}.`,
-        `Kami kekalkan pemasangan di ${name} mudah dan telus: harga RM 199 untuk dinding termasuk 7 ft paip tembaga, wayar, paip saliran dan braket standard, dengan apa-apa selepas itu disebut dan diluluskan di tapak. Selepas pentauliahan kami jalankan ujian penyejukan 15 minit dan serahkan kad waranti kerja 1 bulan — sah sama ada anda di tengah ${name} atau pinggir ${position}.`,
+        `Kami kekalkan pemasangan di ${name} mudah dan telus: harga RM 199 untuk dinding termasuk 7 ft paip tembaga, wayar dan paip saliran, dengan apa-apa selepas itu disebut dan diluluskan di tapak. Selepas pentauliahan kami jalankan ujian penyejukan 15 minit dan serahkan kad waranti kerja 1 bulan — sah sama ada anda di tengah ${name} atau pinggir ${position}.`,
       ],
     ];
     return pick(area.slug, variants);
@@ -497,7 +497,7 @@ function getFAQs(
   return [
     {
       q: `${name}的冷气安装费用是多少？`,
-      a: `${name}的挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线、排水管和标准支架。`,
+      a: `${name}的挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线和排水管；如需室外支架则另行收费。`,
     },
     {
       q: `${name}的冷气安装需要多长时间？`,
@@ -524,7 +524,6 @@ const baseIncluded: Record<AreaInstallationLocale, string[]> = {
     "7 ft copper pipe (liquid + gas lines)",
     "7 ft electrical wiring",
     "7 ft PVC drain pipe",
-    "Outdoor bracket (paid special charge if required)",
     "Vacuum pump commissioning",
     "Refrigerant release & run test",
     "1-month workmanship warranty card",
@@ -534,7 +533,6 @@ const baseIncluded: Record<AreaInstallationLocale, string[]> = {
     "7 ft paip tembaga (tali cecair + gas)",
     "7 ft wayar elektrik",
     "7 ft paip saliran PVC",
-    "Braket luar standard",
     "Pentauliahan pam vakum",
     "Pelepasan refrigeran & ujian jalan",
     "Kad waranti kerja 1 bulan",
@@ -544,7 +542,6 @@ const baseIncluded: Record<AreaInstallationLocale, string[]> = {
     "7尺铜管（液管+气管）",
     "7尺电线",
     "7尺PVC排水管",
-    "标准室外机支架",
     "真空泵抽真空调试",
     "冷媒释放与运行测试",
     "1个月工艺保修卡",

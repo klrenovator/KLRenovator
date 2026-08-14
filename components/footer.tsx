@@ -1,6 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
+import { FaFacebookF, FaGoogle, FaInstagram, FaLinkedinIn, FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -89,15 +90,14 @@ export const Footer = () => {
           </NextLink>
           <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
 
-          {/* Compact text badges instead of 7 inline SVG brand icons (~7KB saved per page). */}
-          <div className="flex items-center gap-1.5 pt-1 flex-wrap">
-            <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp KL Renovator" style={{ backgroundColor: "#25D366" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">WA</a>
-            <a href={sitePublic.links.instagram} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Instagram" style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">IG</a>
-            <a href={sitePublic.links.facebook} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Facebook" style={{ backgroundColor: "#1877F2" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">FB</a>
-            <a href={sitePublic.links.tiktok} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator TikTok" style={{ backgroundColor: "#010101" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">TT</a>
-            <a href={sitePublic.links.googleBusiness} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Google Business Profile" style={{ backgroundColor: "#4285F4" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">G</a>
-            <a href={sitePublic.links.twitter} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator X / Twitter" style={{ backgroundColor: "#000000" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">X</a>
-            <a href={sitePublic.links.linkedin} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator LinkedIn" style={{ backgroundColor: "#0A66C2" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">in</a>
+          <div className="flex items-center gap-2 pt-1 flex-wrap">
+            <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp KL Renovator" style={{ backgroundColor: "#25D366" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaWhatsapp className="h-4 w-4" /></a>
+            <a href={sitePublic.links.instagram} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Instagram" style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaInstagram className="h-4 w-4" /></a>
+            <a href={sitePublic.links.facebook} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Facebook" style={{ backgroundColor: "#1877F2" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaFacebookF className="h-4 w-4" /></a>
+            <a href={sitePublic.links.tiktok} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator TikTok" style={{ backgroundColor: "#010101" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaTiktok className="h-4 w-4" /></a>
+            <a href={sitePublic.links.googleBusiness} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Google Business Profile" style={{ backgroundColor: "#4285F4" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaGoogle className="h-4 w-4" /></a>
+            <a href={sitePublic.links.twitter} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator X / Twitter" style={{ backgroundColor: "#000000" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaXTwitter className="h-4 w-4" /></a>
+            <a href={sitePublic.links.linkedin} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator LinkedIn" style={{ backgroundColor: "#0A66C2" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaLinkedinIn className="h-4 w-4" /></a>
           </div>
         </div>
 

@@ -315,7 +315,7 @@ export const HUB_COPY: Record<
       },
       {
         q: "What is included in the standard installation price?",
-        a: "7 ft of copper pipe with Armaflex insulation, electrical wiring, PVC drain pipe with correct gradient, a standard outdoor bracket, vacuum pump commissioning to 500 microns, a 15-minute run test, and a written 1-month workmanship warranty card. Anything beyond that — extra piping, concealed wall hacking, high-rise access, a new plug point — is quoted and approved on site before work starts.",
+        a: "7 ft of copper pipe with insulation, electrical wiring, PVC drain pipe with correct gradient, vacuum pump commissioning to 500 microns, a 15-minute run test, and a written 1-month workmanship warranty card. Anything beyond that — extra piping, concealed wall hacking, high-rise access, a new plug point — is quoted and approved on site before work starts.",
       },
       {
         q: "Do I need to buy the aircond unit from you?",
@@ -359,7 +359,7 @@ export const HUB_COPY: Record<
       },
       {
         q: "Apakah yang termasuk dalam harga pemasangan standard?",
-        a: "Paip kuprum 7 kaki dengan penebat Armaflex, pendawaian elektrik, paip saliran PVC dengan kecerunan betul luar standard, pentauliahan pam vakum sehingga 500 mikron, ujian jalan 15 minit, dan kad waranti kerja bertulis 1 bulan. Apa-apa selain itu — paip tambahan, tebukan dinding tersembunyi, akses bangunan tinggi, titik plug baharu — disebut harga dan diluluskan di tapak sebelum kerja bermula.",
+        a: "Paip kuprum 7 kaki dengan penebat, pendawaian elektrik, paip saliran PVC dengan kecerunan betul, pentauliahan pam vakum sehingga 500 mikron, ujian jalan 15 minit, dan kad waranti kerja bertulis 1 bulan. Apa-apa selain itu — paip tambahan, tebukan dinding tersembunyi, akses bangunan tinggi, titik plug baharu — disebut harga dan diluluskan di tapak sebelum kerja bermula.",
       },
       {
         q: "Perlukah saya membeli unit aircond daripada anda?",
@@ -374,7 +374,7 @@ export const HUB_COPY: Record<
     eyebrow: "安装总览",
     h1: "吉隆坡与雪兰莪冷气安装",
     intro:
-      "新冷气安装的一切资讯 — 在下方按匹数、机型或物业类型选择。标准挂壁式安装 RM 199 起，包含 7 英尺铜管、电线、排水管与支架，并含强制真空泵抽真空程序及 1 个月书面工艺保修。",
+      "新冷气安装的一切资讯 — 在下方按匹数、机型或物业类型选择。标准挂壁式安装 RM 199 起，包含 7 英尺铜管、电线和排水管，并含强制真空泵抽真空程序及 1 个月书面工艺保修。",
     badges: ["RM 199 起", "当天可上门", "全部 20 大品牌", "1 个月保修"],
     areasTitle: "就近安装服务",
     areasSub: "我们的安装服务覆盖吉隆坡及雪兰莪 39 个地区。",
@@ -391,7 +391,7 @@ export const HUB_COPY: Record<
     faqs: [
       {
         q: "在吉隆坡和雪兰莪安装冷气需要多少钱？",
-        a: "挂壁式安装 1.0–1.5 匹 RM 199 起，2.0 匹 RM 249，3.0 匹 RM 329。天花板卡式 RM 290 起，窗式机 RM 199 起。每份报价均包含 7 英尺铜管、电线、排水管及标准支架。额外铜管依匹数每英尺 RM 17–27。",
+        a: "挂壁式安装 1.0–1.5 匹 RM 199 起，2.0 匹 RM 249，3.0 匹 RM 329。天花板卡式 RM 290 起，窗式机 RM 199 起。每份报价均包含 7 英尺铜管、电线和排水管；室外支架另行收费。额外铜管依匹数每英尺 RM 17–27。",
       },
       {
         q: "冷气安装需要多长时间？",
@@ -403,7 +403,7 @@ export const HUB_COPY: Record<
       },
       {
         q: "标准安装价格包含什么？",
-        a: "7 英尺铜管含 Armaflex 保温、电线、具正确坡度的 PVC 排水管、标准室外支架、抽真空至 500 微米、15 分钟试机，以及 1 个月书面工艺保修卡。其他项目 — 额外铜管、埋墙开槽、高楼作业、新增插座 — 均于现场报价并经您同意后才施工。",
+        a: "7 英尺铜管含保温、电线、具正确坡度的 PVC 排水管、抽真空至 500 微米、15 分钟试机，以及 1 个月书面工艺保修卡。其他项目 — 额外铜管、埋墙开槽、高楼作业、新增插座 — 均于现场报价并经您同意后才施工。",
       },
       {
         q: "必须向你们购买冷气机吗？",

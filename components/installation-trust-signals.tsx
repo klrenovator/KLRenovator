@@ -43,7 +43,7 @@ export function InstallationTrustSignals({
     },
     { 
       icon: <FaWrench className="h-5 w-5" />, 
-      label: "Type L Copper & Armaflex Insulation", 
+      label: "Type L Copper & Insulation",
       description: "Premium piping with 9-13mm closed-cell insulation. No cheap thin-wall substitutes.",
       color: "blue"
     },

@@ -151,7 +151,7 @@ const CONTRACT_ROWS = [
 ];
 
 const VOLUME_DISCOUNTS = [
-  { units: "4 – 10 台", off: "5% OFF 即时预订折扣 (5% OFF Instant Booking Discount)" },
+  { units: "5+ 台", off: "5% OFF 即时预订折扣 (5% OFF Instant Booking Discount)" },
   { units: "10+ 台", off: "10% OFF 即时预订折扣 (10% OFF Instant Booking Discount)" },
 ];
 

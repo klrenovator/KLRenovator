@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const INSTALLATION_PROCESS = [
   { step: 1, title: "WhatsApp预约与现场勘察", desc: "通过WhatsApp +60182983573联系我们，提供您的区域、机型（挂壁式、天花板卡式机、窗式机）和匹数。我们确认报价并安排当天或次日现场勘察。技师评估管路走向、室外机位置和电力需求。", icon: <span aria-hidden="true">💬</span> },
   { step: 2, title: "技师派遣与准备工作", desc: "持证HVAC技师携带所有工具、材料（铜管、保温棉、支架、电线）和安全设备到达。保护膜保护地板和家具。开工前与您确认确切安装方案。", icon: <span aria-hidden="true">🚚</span> },
-  { step: 3, title: "铜管与保温安装", desc: "根据匹数使用Type L或Type M铜管，切割、扩口、整齐铺设。Armaflex保温棉（最少9mm）防止冷凝水和能量损失。管路用合适支架固定 — 无下垂、无阻碍制冷剂流动的急弯。", icon: <span aria-hidden="true">🔧</span> },
+  { step: 3, title: "铜管与保温安装", desc: "根据匹数使用Type L或Type M铜管，切割、扩口、整齐铺设。保温棉（最少9mm）防止冷凝水和能量损失。管路用合适支架固定 — 无下垂、无阻碍制冷剂流动的急弯。", icon: <span aria-hidden="true">🔧</span> },
   { step: 4, title: "排水管安装带坡度", desc: "PVC排水管按最小1:50坡度安装，利用重力排水。防虹吸弯管防止回流。封闭前测试冷凝水。高层公寓按大厦管理规定接至最近地漏或阳台排水口。", icon: <span aria-hidden="true">🔧</span> },
   { step: 5, title: "电力连接与断路器检查", desc: "独立回路配正确MCB额定值（1.0–1.5匹16A，2.0–2.5匹20A，3.0匹+ 32A）。线径符合马来西亚标准。漏电保护验证通过。室外机隔离开关便于安全维护。", icon: <span aria-hidden="true">⚡</span> },
   { step: 6, title: "真空泵抽真空（强制步骤）", desc: "双级真空泵将系统抽至500微米以下 — 彻底清除水分和非冷凝气体。此步骤绝不可跳过。跳过抽真空会导致压缩机故障、酸性物质形成、厂家保修失效。我们保持真空15+分钟确认无泄漏。", icon: <span aria-hidden="true">📊</span> },
@@ -52,10 +52,10 @@ const PRICING_TABLE = [
 const BRANDS = siteConfig.brandsSupported;
 
 const FAQS = [
-  { q: "吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式安装RM199起（1.0–1.5匹），含7尺铜管、电线、排水管和标准支架。天花板卡式机RM290起。窗式机RM180起。超出7尺的额外材料按尺收费 — 铜管RM 17–27/尺、电线RM 9/尺、套管RM 6–12/尺。所有价格开工前确认。 超出7尺的排水管为RM 5/尺。" },
+  { q: "吉隆坡和雪兰莪冷气安装费用是多少？", a: "挂壁式安装RM199起（1.0–1.5匹），含7尺铜管、电线和排水管。天花板卡式机RM290起。窗式机RM180起。超出7尺的额外材料按尺收费 — 铜管RM 17–27/尺、电线RM 9/尺、套管RM 6–12/尺。所有价格开工前确认。 超出7尺的排水管为RM 5/尺。" },
   { q: "冷气安装需要多长时间？", a: "标准挂壁式安装单台需3–5小时。天花板卡式机需5–8小时（含吊装和水泵布线）。全屋多台安装通常1–2天完成。上午11点前预约可安排当天安装。" },
   { q: "你们在吉隆坡高层公寓安装冷气吗？", a: "是的 — 我们经常在KLCC、Mont Kiara、Bangsar、Sentul、PJ、Subang Jaya等地的公寓安装。我们协调大厦管理处申请电梯/装卸区，遵守安保程序，确保室外机位置符合JMB规定。技师熟悉服务阳台和阳台安装。" },
-  { q: "安装使用什么等级的铜管？", a: "1.0–2.5匹挂壁式用Type L铜管，3.0匹+用Type M（壁厚允许时）。焊接时通氮气防止内部氧化。Armaflex保温棉9–13mm为标配。这超过马来西亚最低标准，确保长期可靠性。" },
+  { q: "安装使用什么等级的铜管？", a: "1.0–2.5匹挂壁式用Type L铜管，3.0匹+用Type M（壁厚允许时）。焊接时通氮气防止内部氧化。保温棉9–13mm为标配。这超过马来西亚最低标准，确保长期可靠性。" },
   { q: "为什么必须抽真空？", a: "抽真空清除制冷管路内的水分和空气。水分+制冷剂=酸，会烧毁压缩机线圈、堵塞毛细管。非冷凝气体升高高压、降低效率。我们抽至500微米并保持15+分钟。不抽真空=不保修。这是全球HVAC标准最佳实践。" },
   { q: "马来西亚雨季可以安装吗？", a: "可以 — 全年安装。雨天室外作业用帐篷和防水布遮盖。室内机安装和管路不受影响。仅大暴雨雷电天气暂停室外机安装以确保安全。雨季当天名额可能较紧 — 建议早预约。" },
   { q: "新冷气需要独立电路吗？", a: "需要 — 马来西亚法规（MS IEC 60364）要求每台冷气有独立回路和专用MCB。若无现成回路我们从配电箱拉新线，或验证现有回路容量。插电式也需受保护回路上的专用插座。电气工程包含在安装报价内。" },
@@ -152,7 +152,7 @@ export default function AircondInstallationKLZHPage() {
             </h1>
             <p className="mt-5 text-slate-300 font-medium text-base sm:text-lg leading-relaxed max-w-2xl">
               专业挂壁式、天花板卡式机、窗式机安装，覆盖吉隆坡与雪兰莪全域。
-              真空泵抽真空、Type L铜管、Armaflex保温、1个月工艺保修。
+              真空泵抽真空、Type L铜管、保温、1个月工艺保修。
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <TrustBadge icon="✓" label="安装低至RM199" />
@@ -199,7 +199,7 @@ export default function AircondInstallationKLZHPage() {
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7尺铜管(液管+气管)</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7尺电线</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7尺PVC排水管</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 标准室外机支架</li>
+
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 真空泵抽真空调试</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 释放制冷剂测试</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 1个月工艺保修卡</li>
@@ -238,7 +238,7 @@ export default function AircondInstallationKLZHPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: <span aria-hidden="true">🔧</span>, title: "每单必抽真空", desc: "强制500微米真空，无例外。保护您的压缩机使用多年。" },
-              { icon: <span aria-hidden="true">🔌</span>, title: "Type L铜管+Armaflex", desc: "优质铜管配9–13mm Armaflex保温。拒绝劣质薄壁替代品。" },
+              { icon: <span aria-hidden="true">🔌</span>, title: "Type L铜管+insulation", desc: "优质铜管配9–13mm 保温。拒绝劣质薄壁替代品。" },
               { icon: <span aria-hidden="true">⚡</span>, title: "独立回路+正确MCB", desc: "依MS IEC 60364标准布电。断路器选型正确、漏电保护、含隔离开关。" },
               { icon: <span aria-hidden="true">📊</span>, title: "精密调试验收", desc: "15分钟实测：压力、电流、温控校准、制冷温差全验证。" },
               { icon: <span aria-hidden="true">🛡️</span>, title: "书面1个月工艺保修", desc: "签署清单工单。30天内任何安装问题 — 免费上门解决。" },
@@ -304,7 +304,7 @@ export default function AircondInstallationKLZHPage() {
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
                 <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🌡️</span> 保温层</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Armaflex闭孔弹性体 — 最薄9mm</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 闭孔弹性保温材料 — 最薄9mm</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 卡式机/长管路(&gt;15尺)用13mm</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 防冷凝水滴漏、防能耗损失</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 所有接头缠UV抗性胶带</li>

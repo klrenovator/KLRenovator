@@ -56,6 +56,7 @@ export const pricing = {
         { label: "R22 Gas Refill", price: "RM 2.50 / PSI" },
         { label: "R410A Gas Refill", price: "RM 3.00 / PSI" },
         { label: "R32 Gas Refill", price: "RM 3.00 / PSI" },
+        { label: "Gas Leak Repair", price: "RM 120 / leak" },
       ],
       note: "Gas top-up is charged based on the actual PSI required after inspection by our technician. We only refill the amount needed and provide transparent pricing with no hidden charges.",
     },
@@ -64,7 +65,7 @@ export const pricing = {
       rows: [
         { label: "Diagnostic Fee (waived with repair)", price: "RM 88" },
         { label: "Capacitor Replacement", price: "RM 150 – 250" },
-        { label: "Fan Motor Replacement", price: "RM 250 – 380" },
+        { label: "Fan Motor Replacement", price: "RM 350 – 480" },
         { label: "PCB Board Replacement", price: "RM 350 – 600" },
         { label: "Gas Leak Repair", price: "RM 120 / leak" },
         { label: "Temperature Sensor Replacement", price: "RM 150 – 250" },

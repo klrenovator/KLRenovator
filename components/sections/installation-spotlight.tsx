@@ -40,9 +40,8 @@ const COPY: Record<Locale, {
       { type: "Window Unit", hp: "1.0 – 2.0 HP", price: "RM 199" },
     ],
     included: [
-      "7 ft copper pipe + Armaflex insulation",
+      "7 ft copper pipe + insulation",
       "Electrical wiring & drain pipe",
-      "Outdoor bracket (paid special charge if required)",
       "Vacuum pump commissioning (500 microns)",
       "15-minute run & cooling test",
       "1-month written workmanship warranty",
@@ -68,9 +67,8 @@ const COPY: Record<Locale, {
       { type: "Unit Tingkap", hp: "1.0 – 2.0 HP", price: "RM 199" },
     ],
     included: [
-      "Paip kuprum 7 kaki + penebat Armaflex",
+      "Paip kuprum 7 kaki + penebat",
       "Pendawaian elektrik & paip saliran",
-      "Pilihan braket luar berbayar jika diperlukan",
       "Vakum pam (500 mikron)",
       "Ujian jalan & penyejukan 15 minit",
       "Waranti kerja bertulis 1 bulan",
@@ -96,9 +94,8 @@ const COPY: Record<Locale, {
       { type: "窗式机", hp: "1.0 – 2.0 HP", price: "RM 199" },
     ],
     included: [
-      "7英尺铜管 + Armaflex保温",
+      "7英尺铜管 + 保温",
       "电线与排水管",
-      "标准室外机支架",
       "真空泵调试 (500微米)",
       "15分钟运行与制冷测试",
       "1个月书面工艺保修",

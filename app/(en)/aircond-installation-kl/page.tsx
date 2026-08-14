@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const INSTALLATION_PROCESS = [
   { step: 1, title: "WhatsApp Booking & Site Survey", desc: "Contact us via WhatsApp at +60182983573 with your area, unit type (wall-mounted, ceiling cassette, window), and HP size. We confirm pricing and schedule a same-day or next-day site survey. Our technician assesses piping route, outdoor unit placement, and electrical requirements.", icon: <span aria-hidden="true">💬</span> },
   { step: 2, title: "Technician Dispatch & Preparation", desc: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulations, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.", icon: <span aria-hidden="true">🚚</span> },
-  { step: 3, title: "Copper Piping & Insulation Installation", desc: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Armaflex insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.", icon: <span aria-hidden="true">🔧</span> },
+  { step: 3, title: "Copper Piping & Insulation Installation", desc: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.", icon: <span aria-hidden="true">🔧</span> },
   { step: 4, title: "Drain Pipe Installation with Gradient", desc: "PVC drain pipe installed with minimum 1:50 gradient for gravity drainage. Anti-siphon trap prevents backflow. Condensate tested before closing up. For high-rise condos, we route to nearest floor trap or balcony drain per building management rules.", icon: <span aria-hidden="true">🔧</span> },
   { step: 5, title: "Electrical Connection & Breaker Check", desc: "Dedicated circuit with correct MCB rating (16A for 1.0–1.5HP, 20A for 2.0–2.5HP, 32A for 3.0HP+). Wiring sized per Malaysian standards. Earth leakage protection verified. Outdoor unit isolator installed for safety and maintenance access.", icon: <span aria-hidden="true">⚡</span> },
   { step: 6, title: "Vacuum Pump Commissioning (Mandatory)", desc: "Two-stage vacuum pump pulls system down to 500 microns or below — removing all moisture and non-condensables. This step is NON-NEGOTIABLE. Skipping vacuuming causes compressor failure, acid formation, and voids manufacturer warranty. We hold vacuum for 15+ minutes to confirm no leaks.", icon: <span aria-hidden="true">📊</span> },
@@ -57,7 +57,7 @@ const FAQS = [
   { q: "How much does aircond installation cost in KL & Selangor?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft copper pipe, insulation, electrical wire and drain pipe. Ceiling cassette from RM 290. Window unit from RM 199. Extra materials beyond 7 ft are charged per foot using HP-wise rates: Copper pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Wire RM 9/ft. Small PVC casing RM 6/ft; large PVC casing RM 12/ft. All prices confirmed before work begins. Drain pipe beyond the included 7 ft is RM 5/ft. All prices confirmed before work begins." },
   { q: "How long does aircond installation take?", a: "Standard wall-mounted installation takes 3–5 hours for a single unit. Ceiling cassette takes 5–8 hours due to ceiling suspension and drain pump wiring. Multi-unit whole-house installations typically complete in 1–2 days. Same-day installation available for bookings made before 11 AM." },
   { q: "Do you install aircond in high-rise condos in KL?", a: "Yes — we regularly install in condos across KLCC, Mont Kiara, Bangsar, Sentul, PJ, and Subang Jaya. We coordinate with building management for lift/loading bay access, follow security procedures, and ensure outdoor unit placement complies with JMB rules. Our technicians are experienced with service-ledge and balcony installations." },
-  { q: "What copper pipe grade do you use for installation?", a: "We use Type L copper pipe for 1.0–2.5 HP wall-mounted units and Type M for 3.0 HP+ where wall thickness permits. All pipes are cleanly prepared during brazing to prevent oxidation. Armaflex insulation (9–13mm) is standard. This exceeds the minimum Malaysian standard and ensures long-term reliability." },
+  { q: "What copper pipe grade do you use for installation?", a: "We use Type L copper pipe for 1.0–2.5 HP wall-mounted units and Type M for 3.0 HP+ where wall thickness permits. All pipes are cleanly prepared during brazing to prevent oxidation. insulation (9–13mm) is standard. This exceeds the minimum Malaysian standard and ensures long-term reliability." },
   { q: "Why is vacuum pump commissioning mandatory?", a: "Vacuuming removes moisture and air from the refrigerant lines. Moisture + refrigerant = acid, which destroys compressor windings and clogs capillary tubes. Non-condensables raise head pressure and kill efficiency. We pull to 500 microns and hold for 15+ minutes. No vacuum = no warranty. This is standard HVAC best practice worldwide." },
   { q: "Can you install during rainy season in Malaysia?", a: "Yes — we install year-round. For outdoor work during rain, we use pop-up canopies and waterproof covers. Indoor unit mounting and piping continue unaffected. Only heavy lightning storms pause outdoor compressor placement for safety. Same-day slots may be slightly tighter during monsoon — book early." },
   { q: "Do I need a dedicated electrical circuit for my new aircond?", a: "Yes — Malaysian regulations (MS IEC 60364) require a dedicated circuit with its own MCB for each aircond unit. We install a new circuit from your DB box if one doesn't exist, or verify the existing circuit's capacity. Plug-in units still need a dedicated socket on a protected circuit. Electrical work is included in our installation quote." },
@@ -154,7 +154,7 @@ export default function AircondInstallationKLPage() {
             </h1>
             <p className="mt-5 text-slate-300 font-medium text-base sm:text-lg leading-relaxed max-w-2xl">
               Expert wall-mounted, ceiling cassette & window unit installation across Kuala Lumpur and Selangor.
-              Vacuum pump commissioning, Type L copper piping, Armaflex insulation, 1-month workmanship warranty.
+              Vacuum pump commissioning, Type L copper piping, insulation, 1-month workmanship warranty.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <TrustBadge icon="✓" label="Installation From RM 199" />
@@ -201,7 +201,7 @@ export default function AircondInstallationKLPage() {
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 ft copper pipe (liquid + gas lines)</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 ft electrical wiring</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 ft PVC drain pipe</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Outdoor bracket (paid special charge if required)</li>
+
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Vacuum pump commissioning</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Refrigerant release & testing</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 1-month workmanship warranty card</li>
@@ -240,7 +240,7 @@ export default function AircondInstallationKLPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: <span aria-hidden="true">🔧</span>, title: "Vacuum Pump Every Job", desc: "Mandatory 500-micron vacuum on every install. No exceptions. Protects your compressor for years." },
-              { icon: <span aria-hidden="true">🔌</span>, title: "Type L Copper & Armaflex", desc: "Premium copper piping with 9–13mm Armaflex insulation. No cheap thin-wall substitutes." },
+              { icon: <span aria-hidden="true">🔌</span>, title: "Type L Copper & Insulation", desc: "Premium copper piping with 9–13mm insulation. No cheap thin-wall substitutes." },
               { icon: <span aria-hidden="true">⚡</span>, title: "Dedicated Circuit & MCB", desc: "Proper electrical per MS IEC 60364. Correct breaker sizing, earth leakage, isolator included." },
               { icon: <span aria-hidden="true">📊</span>, title: "Precision Commissioning", desc: "15-min run test: pressures, amp draw, thermostat calibration, cooling delta-T verified." },
               { icon: <span aria-hidden="true">🛡️</span>, title: "Written 1-Month Warranty", desc: "Job card with checklist signed. Any install-related issue in 30 days — we return free." },
@@ -306,7 +306,7 @@ export default function AircondInstallationKLPage() {
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
                 <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🌡️</span> Insulation</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Armaflex (closed-cell elastomeric) — minimum 9mm thickness</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> insulation (closed-cell elastomeric) — minimum 9mm thickness</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 13mm for ceiling cassette &amp; long pipe runs (&gt;15 ft)</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Prevents condensation drips & energy loss</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> UV-resistant tape on all joints & terminations</li>
@@ -321,7 +321,7 @@ export default function AircondInstallationKLPage() {
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Dedicated circuit from DB — correct MCB rating per HP</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 2.5mm² cable (1.0–2.5 HP), 4mm² (3.0–5.0 HP)</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Outdoor isolator switch — safety & maintenance access</li>
-                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Heavy-duty outdoor bracket (paid special charge if required)s — vibration-damped, powder-coated</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Paid heavy-duty outdoor bracket — vibration-damped, powder-coated</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Cable trunking — neat, protected, paintable</li>
                 </ul>
               </div>

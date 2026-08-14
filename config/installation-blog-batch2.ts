@@ -79,7 +79,7 @@ export const installationBlogBatch2: BlogPost[] = [
 
       <h2>How to Get the Best Installation Value</h2>
       <ul>
-        <li><strong>Book 4+ units:</strong> Volume discount — 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units</li>
+        <li><strong>Book 5+ units:</strong> Volume discount — 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units</li>
         <li><strong>Plan pipe routing:</strong> Position indoor unit on same wall as outdoor unit to minimize extra pipe</li>
         <li><strong>Choose weekday slots:</strong> Weekend and after-hours slots may have limited availability</li>
         <li><strong>Compare total cost:</strong> A RM 150 "budget" installer who charges RM 50 condo fee + RM 40 parking + RM 30 drilling = RM 270 total. Our RM 199 includes everything.</li>
@@ -135,7 +135,7 @@ export const installationBlogBatch2: BlogPost[] = [
 
       <h2>Cara Mendapatkan Nilai Pemasangan Terbaik</h2>
       <ul>
-        <li><strong>Tempah 4+ unit:</strong> Diskaun volum — Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit</li>
+        <li><strong>Tempah 5+ unit:</strong> Diskaun volum — Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit</li>
         <li><strong>Rancang laluan paip:</strong> Letakkan unit dalaman di dinding yang sama dengan unit luar untuk mengurangkan paip tambahan</li>
         <li><strong>Pilih slot hari bekerja:</strong> Slot hujung minggu dan luar waktu mungkin mempunyai ketersediaan terhad</li>
         <li><strong>Bandingkan jumlah kos:</strong> Pemasang "bajet" RM 150 yang mengenakan caj kondominium RM 50 + parking RM 40 + penggerudian RM 30 = RM 270 jumlah. RM 199 kami termasuk semua.</li>

@@ -104,7 +104,7 @@ const pricingCategories = [
     rows: [
       { label: "Yuran Diagnostik (dikecualikan jika dibaiki)", price: "RM 88" },
       { label: "Tukar Kapasitor", price: "RM 150 – 250" },
-      { label: "Tukar Motor Kipas Dalaman", price: "RM 250 – 380" },
+      { label: "Tukar Motor Kipas Dalaman", price: "RM 350 – 480" },
       { label: "Tukar Motor Kipas Luaran", price: "RM 300 – 450" },
       { label: "Repair / Tukar Papan PCB", price: "RM 350 – 600" },
       { label: "Tukar Pam Longkang", price: "RM 350 – 550" },
@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: "Boleh saya dapat diskaun jika servis banyak unit?",
-    a: "Ya. Diskaun Tempahan Segera 5% untuk 4–10 unit, dan Diskaun Tempahan Segera 10% untuk 10+ unit dalam satu lawatan yang sama.",
+    a: "Ya. Diskaun Tempahan Segera 5% untuk 5+ unit, dan Diskaun Tempahan Segera 10% untuk 10+ unit dalam satu lawatan yang sama.",
   },
   {
     q: "Kenapa harga overhaul lebih mahal dari cuci kimia?",
@@ -312,7 +312,7 @@ export default function HargaServisPage() {
                   {cat.title === "Tambah Gas & Refill (Per PSI)" && (
                     <div className="px-6 py-4 bg-amber-50 border-t border-amber-100">
                       <p className="text-xs text-amber-800 leading-relaxed font-medium">
-                        * Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan oleh juruteknik kami. 
+                        * Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan oleh juruteknik kami.
                         Kami hanya mengisi jumlah yang diperlukan dan menyediakan harga telus tanpa caj tersembunyi.
                       </p>
                     </div>

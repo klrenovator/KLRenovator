@@ -29,7 +29,7 @@ const T = {
     stat3: "5★ Google Rating",
     stat4: "Mon–Sun 9AM–6PM",
     seoP1: "KL Renovator provides professional aircond servicing, chemical wash, chemical overhaul, gas top-up, repairs and new installations across all areas of Kuala Lumpur and Selangor. Our technicians are dispatched daily to residential and commercial properties throughout the Klang Valley.",
-    seoP2: "Whether you need a basic service for a single wall-mounted unit or a full chemical overhaul for a commercial ceiling cassette system, our teams are ready. All services come with transparent pricing confirmed before work begins, and a 1-month workmanship warranty.",
+    seoP2: "Whether you need a basic service for a single wall-mounted unit or chemical wash for a commercial ceiling cassette system, our teams are ready. All services come with transparent pricing confirmed before work begins, and a 1-month workmanship warranty.",
   },
   ms: {
     badge: "Kawasan Liputan",
@@ -49,7 +49,7 @@ const T = {
     stat3: "5★ Rating Google",
     stat4: "Isnin–Ahad 9PG–6PTG",
     seoP1: "KL Renovator menyediakan servis aircond profesional, cuci kimia, overhaul kimia, tambah gas, pembaikan dan pemasangan baru merentasi semua kawasan Kuala Lumpur dan Selangor. Juruteknik kami dihantar setiap hari ke hartanah kediaman dan komersial di seluruh Lembah Klang.",
-    seoP2: "Sama ada anda memerlukan servis asas untuk unit tunggal atau overhaul kimia penuh untuk sistem ceiling cassette komersial, pasukan kami sedia membantu. Semua perkhidmatan disertakan harga telus yang disahkan sebelum kerja bermula, dan waranti kerja 1 bulan.",
+    seoP2: "Sama ada anda memerlukan servis asas untuk unit tunggal atau cuci kimia untuk sistem ceiling cassette komersial, pasukan kami sedia membantu. Semua perkhidmatan disertakan harga telus yang disahkan sebelum kerja bermula, dan waranti kerja 1 bulan.",
   },
   zh: {
     badge: "服务范围",

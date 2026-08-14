@@ -853,7 +853,7 @@ export const installationBlogBatch3: BlogPost[] = [
           <tr><td>Naik taraf kotak DB (lebih slot)</td><td>Tiada kedudukan MCB ganti</td><td>RM 300-600</td></tr>
           <tr><td>Naik taraf kabel utama</td><td>Bekalan masuk terlalu kecil</td><td>RM 800-2,000</td></tr>
           <tr><td>Pendawaian semula litar</td><td>Wayar rosak atau terlalu kecil</td><td>RM 200-500 setiap litar</td></tr>
-          <tr><td>Naik taraf 3 fasa</td><td>4+ unit aircond pada satu fasa</td><td>RM 2,000-5,000 (permohonan TNB)</td></tr>
+          <tr><td>Naik taraf 3 fasa</td><td>5+ unit aircond pada satu fasa</td><td>RM 2,000-5,000 (permohonan TNB)</td></tr>
         </tbody>
       </table>
 
@@ -991,7 +991,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li><strong>Fan performance</strong> — strong crosswinds can disrupt the condenser fan airflow</li>
         <li><strong>Pipe vibration</strong> — exposed pipe runs can vibrate and fatigue at joints</li>
       </ul>
-      <p><strong>Our solution:</strong> Heavy-duty outdoor bracket (paid special charge if required)s with 4-point bolting, wind shields for exposed units, and additional pipe clamps every 1 meter on exposed runs.</p>
+      <p><strong>Our solution:</strong> Paid heavy-duty outdoor brackets with 4-point bolting, wind shields for exposed units, and additional pipe clamps every 1 meter on exposed runs.</p>
 
       <h2>Challenge 3: Service Lift Logistics</h2>
       <p>High-rise condos require service lift booking for equipment transport:</p>

@@ -122,12 +122,12 @@ const GLOBAL_SERVICE_FAQS_I18N: Record<Lang, ServiceFaq[]> = {
   ms: [
     { q: "Adakah harga disahkan sebelum kerja bermula?", a: "Ya. KL Renovator mengesahkan skop servis, harga permulaan dan sebarang kos bahan atau repair tambahan sebelum kerja bermula." },
     { q: "Adakah terdapat waranti kerja?", a: "Ya. Kerja yang layak dilindungi waranti kerja 1 bulan. Terma waranti diterangkan dengan jelas sebelum serahan kerja." },
-    { q: "Ada diskaun untuk banyak unit?", a: "Ya. Tempahan banyak unit yang layak boleh menerima Diskaun Tempahan Segera 5% untuk 4–10 unit dan Diskaun Tempahan Segera 10% untuk 10+ unit, disahkan sebelum tempahan." },
+    { q: "Ada diskaun untuk banyak unit?", a: "Ya. Tempahan banyak unit yang layak boleh menerima Diskaun Tempahan Segera 5% untuk 5+ unit dan Diskaun Tempahan Segera 10% untuk 10+ unit, disahkan sebelum tempahan." },
   ],
   zh: [
     { q: "施工前会确认价格吗？", a: "会。KL Renovator 会在开工前确认服务范围、起步价，以及任何额外材料或维修费用。" },
     { q: "是否有工艺保修？", a: "有。符合条件的施工享有1个月工艺保修，保修条款会在交付前清楚说明。" },
-    { q: "多台冷气有折扣吗？", a: "有。符合条件的多台预约可享4–10台 5% OFF Instant Booking Discount（5% 即时预订折扣），10台以上 10% OFF Instant Booking Discount（10% 即时预订折扣），预约前确认。" },
+    { q: "多台冷气有折扣吗？", a: "有。符合条件的多台预约可享5+台 5% OFF Instant Booking Discount（5% 即时预订折扣），10台以上 10% OFF Instant Booking Discount（10% 即时预订折扣），预约前确认。" },
   ],
 };
 
@@ -362,7 +362,7 @@ export function ServiceDetailI18n({
     "gas-topup": ["chemical-wash", "repair", "chemical-overhaul"],
     repair: ["chemical-wash", "chemical-overhaul", "gas-topup"],
     installation: ["basic-servicing", "chemical-wash"],
-    "ceiling-cassette": ["chemical-overhaul", "repair", "gas-topup"],
+    "ceiling-cassette": ["repair", "gas-topup"],
     "dismantling-relocation": ["installation", "chemical-wash"],
     "basic-servicing": ["chemical-wash", "chemical-overhaul"],
     emergency: ["repair", "chemical-overhaul", "gas-topup"],

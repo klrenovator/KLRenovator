@@ -89,7 +89,7 @@ export const allPosts: BlogPost[] = [
       <p>We are headquartered in Selayang — fastest response time in the area. <a href="/areas/batu-caves">Batu Caves service page</a> | <a href="/areas/selayang">Selayang service page</a> | <a href="/services/chemical-wash">Chemical wash pricing</a></p>
 
       <h2>Volume Discounts for Multiple Units</h2>
-      <p>Many Batu Caves and Selayang households have 2–4 aircond units. Booking all units in one visit saves travel cost and qualifies for volume discounts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. A household with 3 wall-mounted units for chemical wash would pay RM 120 × 3 = RM 360, less 5% = <strong>RM 342</strong> total. WhatsApp us with the number of units for a confirmed quote before booking.</p>
+      <p>Many Batu Caves and Selayang households have 2–4 aircond units. Booking all units in one visit saves travel cost and qualifies for volume discounts: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units. A household with 3 wall-mounted units for chemical wash would pay RM 120 × 3 = RM 360, less 5% = <strong>RM 342</strong> total. WhatsApp us with the number of units for a confirmed quote before booking.</p>
     `,
     contentMS: `
       <h2>Servis Aircond di Batu Caves & Selayang</h2>
@@ -130,7 +130,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator beribu pejabat di Selayang, bermakna juruteknik yang dihantar ke Batu Caves dan Selayang tidak perlu memandu jauh dari bahagian lain KL — masa tindak balas lebih pantas dan slot hari sama lebih kerap tersedia berbanding syarikat yang beribu pejabat di bahagian lain Lembah Klang. Pasukan kami telah menservis beribu-ribu unit khusus di koridor ini, memberikan kami kebiasaan langsung dengan jenis bangunan tempatan, gaya pemasangan, dan masalah khusus yang timbul daripada persekitaran tempatan.</p>
 
       <h2>Diskaun Pukal untuk Banyak Unit</h2>
-      <p>Ramai isi rumah Batu Caves dan Selayang mempunyai 2–4 unit aircond. Menempah semua unit dalam satu lawatan menjimatkan kos perjalanan dan layak untuk diskaun pukal: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Isi rumah dengan 3 unit dinding untuk cuci kimia akan membayar RM 120 × 3 = RM 360. WhatsApp kami dengan bilangan unit untuk sebut harga yang disahkan sebelum menempah.</p>
+      <p>Ramai isi rumah Batu Caves dan Selayang mempunyai 2–4 unit aircond. Menempah semua unit dalam satu lawatan menjimatkan kos perjalanan dan layak untuk diskaun pukal: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Isi rumah dengan 3 unit dinding untuk cuci kimia akan membayar RM 120 × 3 = RM 360. WhatsApp kami dengan bilangan unit untuk sebut harga yang disahkan sebelum menempah.</p>
     `,
     contentZH: `<h2>黑风洞及双溪毛糯冷气服务2026 — 完整指南</h2>
       <p>住在黑风洞或双溪毛糯？<a href="/near-me">KL Renovator的专业冷气技师</a>为您提供全面的冷气服务——从基本保养到化学清洗、维修和安装。</p>
@@ -221,7 +221,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>Volume Discounts Available</h2>
       <ul>
-        <li>4–10 units: 5% OFF Instant Booking Discount</li>
+        <li>5+ units: 5% OFF Instant Booking Discount</li>
         <li>10+ units: 10% OFF Instant Booking Discount</li>
       </ul>
       <h2>How Long Does a Chemical Wash Take?</h2>
@@ -236,7 +236,7 @@ export const allPosts: BlogPost[] = [
       <p>Every chemical wash by KL Renovator comes with a 1-month workmanship warranty. If the drain pipe blocks again within 30 days of service, we return to clear it at no additional charge. This warranty covers workmanship — it does not cover pre-existing mechanical faults that were present before the service. All warranty terms are communicated clearly before work begins. For ongoing protection, an annual maintenance plan is available from RM 499 per year covering 2–4 residential units.</p>
 
       <h2>Warranty and After-Service Guarantee</h2>
-      <p>Every chemical wash by KL Renovator includes a 1-month workmanship warranty. If the drain pipe blocks again within 30 days, we return at no charge. Volume discounts apply when booking multiple units in one visit — 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. For example, 3 wall-mounted 1.5 HP units at RM 120 each becomes RM 360 total. Payment is accepted after the job is completed to your satisfaction — cash, online transfer, or DuitNow QR. No upfront payment required for residential bookings.</p>
+      <p>Every chemical wash by KL Renovator includes a 1-month workmanship warranty. If the drain pipe blocks again within 30 days, we return at no charge. Volume discounts apply when booking multiple units in one visit — 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units. For example, 3 wall-mounted 1.5 HP units at RM 120 each becomes RM 360 total. Payment is accepted after the job is completed to your satisfaction — cash, online transfer, or DuitNow QR. No upfront payment required for residential bookings.</p>
     `,
     contentMS: `
       <h2>Harga Cuci Kimia di Malaysia 2026</h2>
@@ -272,7 +272,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>Diskaun Kuantiti Tersedia</h2>
       <ul>
-        <li>4–10 unit: Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)</li>
+        <li>5+ unit: Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)</li>
         <li>10+ unit: Diskaun Tempahan Segera 10% (10% OFF Instant Booking Discount)</li>
       </ul>
       <h2>Berapa Lama Cuci Kimia Mengambil Masa?</h2>
@@ -287,7 +287,7 @@ export const allPosts: BlogPost[] = [
       <p>Setiap cuci kimia oleh KL Renovator disertakan dengan waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari selepas servis, kami akan kembali membersihkannya tanpa caj tambahan. Waranti ini meliputi kerja — ia tidak meliputi kerosakan mekanikal sedia ada yang wujud sebelum servis. Semua terma waranti disampaikan dengan jelas sebelum kerja bermula. Untuk perlindungan berterusan, pelan penyelenggaraan tahunan tersedia dari RM 499 setahun meliputi 2–4 unit kediaman.</p>
 
       <h2>Waranti dan Jaminan Selepas Servis</h2>
-      <p>Setiap cuci kimia oleh KL Renovator termasuk waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari, kami kembali tanpa caj. Diskaun kuantiti terpakai apabila menempah banyak unit dalam satu lawatan — Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Sebagai contoh, 3 unit dinding 1.5 HP pada RM 120 setiap satu menjadi RM 360 jumlah keseluruhan. Pembayaran diterima selepas kerja selesai dengan memuaskan anda — tunai, pemindahan dalam talian, atau DuitNow QR. Tiada pembayaran pendahuluan diperlukan untuk tempahan kediaman.</p>
+      <p>Setiap cuci kimia oleh KL Renovator termasuk waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari, kami kembali tanpa caj. Diskaun kuantiti terpakai apabila menempah banyak unit dalam satu lawatan — Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Sebagai contoh, 3 unit dinding 1.5 HP pada RM 120 setiap satu menjadi RM 360 jumlah keseluruhan. Pembayaran diterima selepas kerja selesai dengan memuaskan anda — tunai, pemindahan dalam talian, atau DuitNow QR. Tiada pembayaran pendahuluan diperlukan untuk tempahan kediaman.</p>
     `,
     contentZH: `<h2>2026年马来西亚冷气化学清洗价格 — 完整明细</h2>
       <p>化学清洗是冷气深度保养的核心服务。<a href="/near-me">KL Renovator</a>为您提供透明的价格明细，让您了解每一分钱花在哪里。</p>
@@ -1283,7 +1283,7 @@ export const allPosts: BlogPost[] = [
         <li>Installation Wall-Mounted 1.0–1.5 HP: <strong>RM 199</strong></li>
       </ul>
       <h2>Volume Discounts and Additional Information</h2>
-      <p>Booking 4 or more units in the same visit qualifies for volume discounts: 4–10 units saves 5% OFF Instant Booking Discount, 10+ units saves 10% OFF Instant Booking Discount. All prices listed here are for the KL and Selangor service area. Prices are confirmed in writing via WhatsApp before any technician visit. There are never any charges added after the job without your explicit approval first.</p>
+      <p>Booking 4 or more units in the same visit qualifies for volume discounts: 5+ units saves 5% OFF Instant Booking Discount, 10+ units saves 10% OFF Instant Booking Discount. All prices listed here are for the KL and Selangor service area. Prices are confirmed in writing via WhatsApp before any technician visit. There are never any charges added after the job without your explicit approval first.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong>. See also: <a href="/services">All services with full detail</a></p>
 
       <h2>What Determines the Final Price</h2>
@@ -1327,7 +1327,7 @@ export const allPosts: BlogPost[] = [
         <li>Pemasangan Dinding 1.0–1.5 HP: <strong>RM 199</strong></li>
       </ul>
       <h2>Diskaun Kuantiti dan Maklumat Tambahan</h2>
-      <p>Menempah 4 unit atau lebih dalam lawatan yang sama layak mendapat diskaun kuantiti: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Semua harga disahkan secara bertulis melalui WhatsApp sebelum sebarang lawatan juruteknik. Tiada caj ditambah selepas kerja tanpa kelulusan jelas anda terlebih dahulu.</p>
+      <p>Menempah 4 unit atau lebih dalam lawatan yang sama layak mendapat diskaun kuantiti: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Semua harga disahkan secara bertulis melalui WhatsApp sebelum sebarang lawatan juruteknik. Tiada caj ditambah selepas kerja tanpa kelulusan jelas anda terlebih dahulu.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk membuat tempahan. Lihat juga: <a href="/services">Semua perkhidmatan dengan butiran penuh</a></p>
 
       <h2>Apa yang Menentukan Harga Akhir</h2>
@@ -1870,7 +1870,7 @@ export const allPosts: BlogPost[] = [
       <h2>包含什么</h2>
       <ul>
         <li>✅ 7英尺L型铜管</li>
-        <li>✅ Armaflex保温棉</li>
+        <li>✅ 保温棉</li>
         <li>✅ 电线和PVC线管</li>
         <li>✅ PVC排水管</li>
         <li>✅ 支架+防震垫</li>
@@ -2494,7 +2494,7 @@ export const allPosts: BlogPost[] = [
       <p>Jenama premium: Daikin, Mitsubishi Electric, Panasonic — kebolehpercayaan tinggi, waranti panjang. Jenama nilai: Midea, Acson, Hisense — prestasi baik pada harga lebih rendah. Semua 20 jenama dipasang oleh pasukan kami.</p>
 
       <h2>Langkah 5: Bajet Pemasangan</h2>
-      <p>Jangan lupa kos pemasangan! Unit murah dengan pemasangan buruk = masalah selama bertahun-tahun. Pemasangan KL Renovator dari <strong>RM 199</strong> termasuk paip tembaga Jenis L, penebat Armaflex, vakum, dan waranti 1 bulan.</p>
+      <p>Jangan lupa kos pemasangan! Unit murah dengan pemasangan buruk = masalah selama bertahun-tahun. Pemasangan KL Renovator dari <strong>RM 199</strong> termasuk paip tembaga Jenis L, penebat, vakum, dan waranti 1 bulan.</p>
 
       <h2>Dapatkan Nasihat Pembelian Percuma</h2>
       <p>WhatsApp <strong>+60 18-298 3573</strong> dengan saiz bilik dan bajet anda — kami cadangkan unit terbaik untuk keperluan anda. <a href="/aircond-installation-kl">Pasukan pemasangan kami</a> memasang semua 20 jenama utama.</p>`,
@@ -2743,8 +2743,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
     imageAlt: "Aircond indoor unit dismantled for chemical overhaul cleaning in Ampang Selangor",
     lastReviewed: "2026-07-03",
-    content: "<p><em>Chemical overhaul is for heavily choked units. The indoor unit is dismantled, deep-cleaned and reassembled so hidden coils, blower wheel and drain sections can be cleaned properly.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Chemical overhaul price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Ceiling cassette 1.0–3.0HP</td><td>RM430</td><td>Panel/tray strip-down and core cleaning</td></tr><tr><td>Ceiling cassette 3.5–5.0HP</td><td>RM500</td><td>Deep overhaul protocol</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Basic service cleans accessible areas only.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is still not cold after normal service. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Chemical overhaul sesuai untuk unit yang tersumbat teruk. Unit dalam dibuka, dibersihkan secara mendalam dan dipasang semula supaya coil tersembunyi, blower wheel dan bahagian saliran dapat dicuci dengan betul.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Ceiling cassette 1.0–3.0HP</td><td>RM430</td><td>Panel/tray strip-down and core cleaning</td></tr><tr><td>Ceiling cassette 3.5–5.0HP</td><td>RM500</td><td>Deep overhaul protocol</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Servis asas hanya membersihkan kawasan yang boleh diakses.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>Chemical overhaul is for heavily choked units. The indoor unit is dismantled, deep-cleaned and reassembled so hidden coils, blower wheel and drain sections can be cleaned properly.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Chemical overhaul price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Basic service cleans accessible areas only.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is still not cold after normal service. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Chemical overhaul sesuai untuk unit yang tersumbat teruk. Unit dalam dibuka, dibersihkan secara mendalam dan dipasang semula supaya coil tersembunyi, blower wheel dan bahagian saliran dapat dicuci dengan betul.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Servis asas hanya membersihkan kawasan yang boleh diakses.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪冷气化学大修 — 恢复如新制冷状态</h2>
       <p>当化学清洗也无法彻底解决严重的漏水、结冰或风力极弱的问题时，<strong>化学大修 (Chemical Overhaul)</strong> 是最终的解决方案。技师会将室内机完全从墙上拆下，分解成各个部件进行浸泡和深层清洁。<strong>KL Renovator</strong> 提供最专业的大修服务，价格从 <strong>RM 220</strong> 起。</p>
 
@@ -3265,7 +3265,7 @@ export const allPosts: BlogPost[] = [
       <h2>Condo vs landed — how the price differs</h2>
       <p><strong>Condominiums</strong> typically fit within the 7ft copper limit because the outdoor unit sits on the AC ledge directly behind the indoor unit. Add RM 50-100 for management booking. <strong>Landed houses (terrace, semi-D, bungalow)</strong> usually need 15-20ft of copper pipe to run from indoor to outdoor, which adds RM 200-540 to the base price using HP-wise rates (RM 17/ft for 1.0–1.5 HP, RM 23/ft for 2.0–2.5 HP, RM 27/ft for 3.0–3.5 HP).</p>
       <h2>What about multi-unit discounts?</h2>
-      <p>Installing multiple units in the same visit attracts a discount: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. Many landed homeowners in Puchong, Subang and Shah Alam book 3-5 unit installations together.</p>
+      <p>Installing multiple units in the same visit attracts a discount: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units. Many landed homeowners in Puchong, Subang and Shah Alam book 3-5 unit installations together.</p>
       <h2>What is NOT included in the base price?</h2>
       <p>Unit cost, dismantling of old unit (RM 90), ceiling cassette ceiling-grid work, plastering, painting, electrical rewiring of the home, and any concrete cutting. KL Renovator quotes these separately after a site survey.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
@@ -3333,7 +3333,7 @@ export const allPosts: BlogPost[] = [
       <h2>Kondo vs rumah teres — perbezaan harga</h2>
       <p><strong>Kondominium</strong> biasanya muat dalam had 7ft paip tembaga kerana unit luar berada di AC ledge tepat di belakang unit dalam. Tambah RM 50-100 untuk tempahan pengurusan. <strong>Rumah teres (teres, semi-D, banglo)</strong> biasanya perlukan 15-20ft paip tembaga untuk jalankan dari dalam ke luar, yang menambah RM 200-540 kepada harga asas menggunakan kadar mengikut HP (RM 17/kaki untuk 1.0–1.5 HP, RM 23/kaki untuk 2.0–2.5 HP, RM 27/kaki untuk 3.0–3.5 HP).</p>
       <h2>Bagaimana dengan diskaun multi-unit?</h2>
-      <p>Pemasangan beberapa unit dalam lawatan sama menarik diskaun: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Banyak pemilik rumah teres di Puchong, Subang dan Shah Alam tempah 3-5 unit pemasangan bersama.</p>
+      <p>Pemasangan beberapa unit dalam lawatan sama menarik diskaun: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Banyak pemilik rumah teres di Puchong, Subang dan Shah Alam tempah 3-5 unit pemasangan bersama.</p>
       <h2>Apa TIDAK termasuk dalam harga asas?</h2>
       <p>Kos unit, pembongkaran unit lama (RM 90), kerja grid siling ceiling cassette, plaster, cat, pendawaian semula elektrik rumah, dan sebarang pemotongan konkrit. KL Renovator memberi sebut harga berasingan selepas tinjauan tapak.</p>
       <h2>Liputan perkhidmatan di KL &amp; Selangor</h2>
@@ -3436,7 +3436,7 @@ export const allPosts: BlogPost[] = [
       <h2>6. Warranty and Post-Install Support</h2>
       <p>1-month workmanship warranty, manufacturer warranty registration, 6-month WhatsApp check-in, and free service reminder are all included in KL Renovator's RM 199 package. Cheap installs offer none of this — when something goes wrong, you pay again.</p>
       <h2>7. Genuine Parts and Materials</h2>
-      <p>KL Renovator uses inverter-grade copper pipe, proper wall bracket, Armaflex insulation, PVC drain pipe, fire-rated sealant, and original R32/R410A refrigerant. Cheap installs use plumbing-grade copper that corrodes in 3-5 years and generic refrigerants that damage compressors.</p>
+      <p>KL Renovator uses inverter-grade copper pipe, proper wall bracket, insulation, PVC drain pipe, fire-rated sealant, and original R32/R410A refrigerant. Cheap installs use plumbing-grade copper that corrodes in 3-5 years and generic refrigerants that damage compressors.</p>
       <h2>How to verify if your quote is fair</h2>
       <p>Ask for an itemised quote that shows: base installation, copper pipe length and total cost, electrical work, any add-ons. If your installer cannot break this down clearly, that is a red flag. KL Renovator quotes are always itemised before work starts.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
@@ -3479,7 +3479,7 @@ export const allPosts: BlogPost[] = [
       <h2>6. Waranti dan Sokongan Selepas Pasang</h2>
       <p>Waranti kerja 1 bulan, pendaftaran waranti pengeluar, semakan WhatsApp 6 bulan, dan peringatan servis percuma termasuk dalam pakej RM 199 KL Renovator. Pasang murah tidak tawarkan ini — bila ada masalah, anda bayar lagi.</p>
       <h2>7. Alat Ganti dan Bahan Tulen</h2>
-      <p>KL Renovator guna paip tembaga gred inverter dinding betul, penebat Armaflex, paip saliran PVC, sealant kadar api, dan refrigerant R32/R410A asal. Pasang murah guna tembaga gred paip yang menghakis dalam 3-5 tahun dan refrigerant generik yang merosakkan pemampat.</p>
+      <p>KL Renovator guna paip tembaga gred inverter dinding betul, penebat, paip saliran PVC, sealant kadar api, dan refrigerant R32/R410A asal. Pasang murah guna tembaga gred paip yang menghakis dalam 3-5 tahun dan refrigerant generik yang merosakkan pemampat.</p>
       <h2>Bagaimana sahkan sebut harga anda adil</h2>
       <p>Tanya sebut harga terperinci yang tunjuk: pasang asas, panjang paip tembaga dan kos jumlah, kerja elektrik, sebarang add-on. Jika pemasang anda tidak boleh pecahkan ini dengan jelas, itu bendera merah. Sebut harga KL Renovator sentiasa terperinci sebelum kerja bermula.</p>
       <h2>Liputan perkhidmatan di KL &amp; Selangor</h2>
@@ -3512,7 +3512,7 @@ export const allPosts: BlogPost[] = [
       <div class="summary-block"><strong>直接答案：</strong> 专业安装包含抽真空步骤，这是保护压缩机寿命、防止系统酸化的唯一方法。</div>
 
       <h2>2. 材料质量的差异：Type L vs Type M</h2>
-      <p>廉价安装常使用薄铜管（Type M），在 R32 高压系统下极易爆裂导致漏 Gas。KL Renovator 使用更厚、更安全的 <strong>Type L 铜管</strong>。此外，高质量的 Armaflex 保温棉可以防止天花板滴水，其成本也是普通材料的数倍。</p>
+      <p>廉价安装常使用薄铜管（Type M），在 R32 高压系统下极易爆裂导致漏 Gas。KL Renovator 使用更厚、更安全的 <strong>Type L 铜管</strong>。此外，高质量的 保温棉可以防止天花板滴水，其成本也是普通材料的数倍。</p>
 
       <h2>3. 技师的专业技术与安全</h2>
       <p>在高楼公寓作业涉及极高风险。专业的技师拥有高空作业证书和丰富的经验，能够确保室外机水平固定，防止震动噪音。支付的费用中，很大一部分是为这份“安心”和“安全”买单。</p>
@@ -3787,7 +3787,7 @@ export const allPosts: BlogPost[] = [
       <p><strong>Condominiums:</strong> typically 7ft copper limit applies because the outdoor unit sits on the AC ledge directly behind the indoor unit. Add RM 50-100 for management booking fee. Total typical: RM 199-RM 250 + booking.</p>
       <p><strong>Landed houses (terrace, semi-D, bungalow):</strong> usually need 15-20ft copper pipe run, which adds RM 200-540 to the base price using HP-wise rates (RM 17/ft for 1.0–1.5 HP, RM 23/ft for 2.0–2.5 HP, RM 27/ft for 3.0–3.5 HP). Total typical: RM 199 + RM 200-540 = RM 399-RM 739 for 1.5 HP.</p>
       <h2>Multi-unit discount (same visit)</h2>
-      <p>Installing multiple units in the same visit attracts: 5% OFF Instant Booking Discount for 4–10 units, 10% OFF Instant Booking Discount for 10+ units. This applies to both the installation and is a common choice for landed homeowners installing 3-5 units at once.</p>
+      <p>Installing multiple units in the same visit attracts: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units. This applies to both the installation and is a common choice for landed homeowners installing 3-5 units at once.</p>
       <h2>Service coverage across KL &amp; Selangor</h2>
       <p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>
       <h2>FAQ — AC unit installation cost</h2>
@@ -3870,7 +3870,7 @@ export const allPosts: BlogPost[] = [
       <p><strong>Kondominium:</strong> biasanya had 7ft tembaga digunakan kerana unit luar berada di AC ledge tepat di belakang unit dalam. Tambah RM 50-100 untuk yuran tempahan pengurusan. Jumlah biasa: RM 199-RM 250 + tempahan.</p>
       <p><strong>Rumah teres (teres, semi-D, banglo):</strong> biasanya perlukan 15-20ft laluan paip tembaga, yang menambah RM 200-540 kepada harga asas menggunakan kadar mengikut HP (RM 17/kaki untuk 1.0–1.5 HP, RM 23/kaki untuk 2.0–2.5 HP, RM 27/kaki untuk 3.0–3.5 HP). Jumlah biasa: RM 199 + RM 200-540 = RM 399-RM 739 untuk 1.5 HP.</p>
       <h2>Diskaun multi-unit (lawatan sama)</h2>
-      <p>Pemasangan beberapa unit dalam lawatan sama menarik: Diskaun Tempahan Segera 5% untuk 4–10 unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Ini dipakai untuk kedua-dua pemasangan dan pilihan biasa untuk pemilik rumah teres yang pasang 3-5 unit sekaligus.</p>
+      <p>Pemasangan beberapa unit dalam lawatan sama menarik: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Ini dipakai untuk kedua-dua pemasangan dan pilihan biasa untuk pemilik rumah teres yang pasang 3-5 unit sekaligus.</p>
       <h2>Liputan perkhidmatan di KL &amp; Selangor</h2>
       <p>KL Renovator berkhidmat di Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. Kami bekerja pada Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic untuk unit dinding, ceiling cassette dan tingkap sahaja.</p>
       <h2>FAQ — kos pasang unit AC</h2>
@@ -4231,7 +4231,7 @@ export const allPosts: BlogPost[] = [
       <h3>What is the warranty on service work?</h3>
       <p>1-month workmanship warranty on service work. If the same issue recurs within 1 month, KL Renovator returns and redoes the service at no charge.</p>
       <h3>Do you service ceiling cassette units?</h3>
-      <p>Yes. KL Renovator services all ceiling cassette units: basic RM 150-250, chemical wash RM 220-350, overhaul pricing confirmed on-site. Ceiling cassette service is more involved due to height and accessibility.</p>
+      <p>Yes. KL Renovator services all ceiling cassette units: basic RM 150-250 and chemical wash RM 220-350. Ceiling cassette service is more involved due to height and accessibility.</p>
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. See our full <a href="/services/basic-servicing">Basic Servicing</a> and <a href="/services/chemical-wash">Chemical Wash</a> pricing pages, or explore <a href="/services/maintenance-contract">Annual Maintenance Contract</a> plans from RM 299/year. 1-month workmanship warranty included.</p>
     `,
@@ -4332,7 +4332,7 @@ export const allPosts: BlogPost[] = [
       <h3>Apakah waranti pada kerja servis?</h3>
       <p>Waranti kerja 1 bulan untuk kerja servis. Jika isu sama berulang dalam 1 bulan, KL Renovator pulang dan buat semula servis tanpa caj.</p>
       <h3>Adakah anda servis unit ceiling cassette?</h3>
-      <p>Ya. KL Renovator servis semua unit ceiling cassette: asas RM 150-250, cuci kimia RM 220-350, overhaul pricing confirmed on-site. Servis ceiling cassette lebih terlibat kerana ketinggian dan kebolehcapaian.</p>
+      <p>Ya. KL Renovator servis semua unit ceiling cassette: asas RM 150-250 dan cuci kimia RM 220-350. Servis ceiling cassette lebih terlibat kerana ketinggian dan kebolehcapaian.</p>
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC. Lihat harga penuh <a href="/ms/services/basic-servicing">Servis Asas</a> dan <a href="/ms/services/chemical-wash">Cuci Kimia</a>, atau terokai pelan <a href="/ms/services/maintenance-contract">Kontrak Penyelenggaraan Tahunan</a> dari RM 299/tahun.</p>
     `,
@@ -4928,7 +4928,7 @@ export const allPosts: BlogPost[] = [
         <tr><td>Ceiling cassette 3.5-6.0 HP</td><td>4-6 hours</td><td>2</td></tr>
         <tr><td>Old unit replacement (add 30-60 min for dismantle)</td><td>+30-60 min</td><td>1-2</td></tr>
         <tr><td>High-rise condo (30+ floors)</td><td>+30-60 min</td><td>1 + crane crew</td></tr>
-        <tr><td>Multi-unit (4+ units same visit)</td><td>2-3 hours per unit</td><td>1-2</td></tr>
+        <tr><td>Multi-unit (5+ units same visit)</td><td>2-3 hours per unit</td><td>1-2</td></tr>
       </tbody></table>
       <h2>Standard installation timeline (step by step)</h2>
       <p>For a typical 1.5 HP wall-mounted install in a low-rise condo or terrace house:</p>
@@ -5017,7 +5017,7 @@ export const allPosts: BlogPost[] = [
       <h2>Multi-unit installation time savings</h2>
       <p>For multiple units in one visit:</p>
       <ul>
-        <li>4–10 units: 5% OFF Instant Booking Discount + 2-3 hours per unit</li>
+        <li>5+ units: 5% OFF Instant Booking Discount + 2-3 hours per unit</li>
         <li>10+ units: 10% OFF Instant Booking Discount + 2-3 hours per unit (faster than individual bookings)</li>
       </ul>
       <p>4 units: usually 1 day. 5-10 units: 2 days. 10+ units: 3+ days.</p>
@@ -5031,7 +5031,7 @@ export const allPosts: BlogPost[] = [
       <h3>How long to install ceiling cassette?</h3>
       <p>3-4 hours total, requires 2 technicians. Includes suspended ceiling mounting, condensate pump installation, longer pipe runs, and 2-technician electrical work.</p>
       <h3>Can installation be done in 1 day?</h3>
-      <p>Yes, for wall-mounted and ceiling cassette. Multi-unit (4+ units) takes 1-2 days. Large projects (8+ units) take 3+ days.</p>
+      <p>Yes, for wall-mounted and ceiling cassette. Multi-unit (5+ units) takes 1-2 days. Large projects (8+ units) take 3+ days.</p>
       <h3>How long to install 4 airconds?</h3>
       <p>8-12 hours total (sequential), usually 1 day with 2 technicians. 4 units at 2-3 hours each = 8-12 hours with 1-2 technicians working in parallel.</p>
       <h3>Do I need to be at home during installation?</h3>
@@ -5065,7 +5065,7 @@ export const allPosts: BlogPost[] = [
         <tr><td>Ceiling Cassette 3.5-6.0 HP</td><td>4-6 jam</td><td>2</td></tr>
         <tr><td>Penggantian unit lama (tambah 30-60 min untuk buka)</td><td>+30-60 min</td><td>1-2</td></tr>
         <tr><td>Kondo tingkat tinggi (30+ tingkat)</td><td>+30-60 min</td><td>1 + kru kren</td></tr>
-        <tr><td>Pasang berbilang unit (4+ unit lawatan sama)</td><td>2-3 jam seunit</td><td>1-2</td></tr>
+        <tr><td>Pasang berbilang unit (5+ unit lawatan sama)</td><td>2-3 jam seunit</td><td>1-2</td></tr>
       </tbody></table>
       <h2>Garis masa pemasangan standard (langkah demi langkah)</h2>
       <p>Untuk pasang dinding 1.5 HP biasa di kondominium tingkat rendah atau rumah teres:</p>
@@ -5154,7 +5154,7 @@ export const allPosts: BlogPost[] = [
       <h2>Penjimatan masa pasang berbilang unit</h2>
       <p>Untuk berbilang unit dalam satu lawatan:</p>
       <ul>
-        <li>4–10 unit: Diskaun Tempahan Segera 5% + 2-3 jam seunit</li>
+        <li>5+ unit: Diskaun Tempahan Segera 5% + 2-3 jam seunit</li>
         <li>10+ unit: Diskaun Tempahan Segera 10% + 2-3 jam seunit (lebih cepat daripada tempahan individu)</li>
       </ul>
       <p>4 unit biasanya siap dalam 1 hari, 5-10 unit dalam 2 hari, 10+ unit dalam 3+ hari.</p>
@@ -5168,7 +5168,7 @@ export const allPosts: BlogPost[] = [
       <h3>Berapa lama pasang ceiling cassette ambil masa?</h3>
       <p>3-4 jam jumlah, perlukan 2 juruteknik. Termasuk lekapan siling tergantung, pasang pam kondensat, laluan paip lebih panjang, dan kerja elektrik 2 juruteknik.</p>
       <h3>Boleh pasang siap dalam 1 hari?</h3>
-      <p>Ya, untuk dinding dan ceiling cassette. Berbilang unit (4+ unit) ambil 1-2 hari. Projek besar (8+ unit) ambil 3+ hari.</p>
+      <p>Ya, untuk dinding dan ceiling cassette. Berbilang unit (5+ unit) ambil 1-2 hari. Projek besar (8+ unit) ambil 3+ hari.</p>
       <h3>Berapa lama untuk pasang 4 unit aircond?</h3>
       <p>8-12 jam jumlah (berurutan), biasanya 1 hari dengan 2 juruteknik. 4 unit pada 2-3 jam setiap satu = 8-12 jam dengan 1-2 juruteknik bekerja selari.</p>
       <h3>Adakah saya perlu di rumah semasa pemasangan?</h3>
@@ -5617,7 +5617,7 @@ export const allPosts: BlogPost[] = [
 
       <h3>Volume Discounts</h3>
       <ul>
-        <li>4–10 units: <strong>5% OFF Instant Booking Discount</strong></li>
+        <li>5+ units: <strong>5% OFF Instant Booking Discount</strong></li>
         <li>10+ units: <strong>10% OFF Instant Booking Discount</strong></li>
       </ul>
       <p>Discounts apply when booking multiple units in the same visit.</p>
@@ -5710,7 +5710,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Diagnostic fee (waived with repair)</td><td><strong>RM 88</strong></td></tr>
           <tr><td>Capacitor replacement</td><td><strong>RM 150 – 250</strong></td></tr>
-          <tr><td>Indoor fan motor replacement</td><td><strong>RM 250 – 380</strong></td></tr>
+          <tr><td>Indoor fan motor replacement</td><td><strong>RM 350 – 480</strong></td></tr>
           <tr><td>Outdoor fan motor replacement</td><td><strong>RM 300 – 450</strong></td></tr>
           <tr><td>PCB board replacement</td><td><strong>RM 350 – 600</strong></td></tr>
           <tr><td>Temperature sensor replacement</td><td><strong>RM 150 – 250</strong></td></tr>
@@ -5787,7 +5787,7 @@ export const allPosts: BlogPost[] = [
 
       <h3>Diskaun Kuantiti (Volume Discounts)</h3>
       <ul>
-        <li>4–10 unit: <strong>Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)</strong></li>
+        <li>5+ unit: <strong>Diskaun Tempahan Segera 5% (5% OFF Instant Booking Discount)</strong></li>
         <li>10+ unit: <strong>Diskaun Tempahan Segera 10% (10% OFF Instant Booking Discount)</strong></li>
       </ul>
       <p>Diskaun terpakai apabila menempah berbilang unit dalam lawatan yang sama.</p>
@@ -5880,7 +5880,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Yuran Diagnostik (dikecualikan dengan pembaikan)</td><td><strong>RM 88</strong></td></tr>
           <tr><td>Penggantian Kapasitor</td><td><strong>RM 150 - 250</strong></td></tr>
-          <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 250 - 380</strong></td></tr>
+          <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 350 - 480</strong></td></tr>
           <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
           <tr><td>Penggantian Papan PCB</td><td><strong>RM 350 - 600</strong></td></tr>
           <tr><td>Penggantian Sensor Suhu</td><td><strong>RM 150 - 250</strong></td></tr>
@@ -6297,7 +6297,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>The Shift from Platforms to Direct Contractors</h2>
       <p>When Kaodim, once Malaysia's largest local services marketplace, closed its operations, it left thousands of homeowners in Kuala Lumpur and Selangor asking a critical question: <strong>How do we find a reliable aircond technician without a middleman app?</strong></p>
-      
+
       <p>While platform apps like ServisHero or Recommend.my still connect you with freelance technicians, they operate as aggregators. This means they take a commission on every booking, which forces freelancers to either inflate their pricing or cut corners on the job. Direct booking with an established local contractor like KL Renovator represents the modern, smarter alternative for smart homeowners.</p>
 
       <h2>Platform Apps vs. Direct Contractors: A Head-to-Head Comparison</h2>
@@ -6351,7 +6351,7 @@ export const allPosts: BlogPost[] = [
     contentMS: `
       <h2>Peralihan daripada Aplikasi Platform kepada Kontraktor Terus</h2>
       <p>Apabila Kaodim, yang dahulunya merupakan pasaran perkhidmatan tempatan terbesar di Malaysia, menamatkan operasinya, ia meninggalkan ribuan pemilik rumah di Kuala Lumpur dan Selangor dengan soalan penting: <strong>Bagaimanakah cara mencari juruteknik aircond yang boleh dipercayai tanpa aplikasi orang tengah?</strong></p>
-      
+
       <p>Walaupun aplikasi platform seperti ServisHero atau Recommend.my masih menghubungkan anda dengan juruteknik bebas, mereka beroperasi sebagai aggregator. Ini bermakna mereka mengambil komisen daripada setiap tempahan, yang memaksa pekerja bebas sama ada menaikkan harga atau mengurangkan kualiti kerja demi mengekalkan keuntungan. Tempahan terus dengan kontraktor tempatan yang mantap seperti KL Renovator mewakili alternatif moden yang lebih bijak untuk pemilik rumah.</p>
 
       <h2>Aplikasi Platform vs. Kontraktor Terus: Perbandingan Bersemuka</h2>
@@ -6405,7 +6405,7 @@ export const allPosts: BlogPost[] = [
     contentZH: `
       <h2>服务平台向直接承包商的转变</h2>
       <p>当曾经是马来西亚最大的本地服务平台的 Kaodim 停止运营时，给吉隆坡和雪兰莪的数千名业主留下了一个关键问题：<strong>在没有中间人应用程序的情况下，我们该如何寻找可靠的冷气技术员？</strong></p>
-      
+
       <p>虽然像 ServisHero 或 Recommend.my 这样的平台应用程序仍然为您连接自由职业技术员，但它们只是中介。这意味着它们会抽取每次预约的佣金，这迫使技术员要么提高报价，要么偷工减料以维持利润。直接预约像 KL Renovator 这样历史悠久的本地直接承包商，是聪明业主更明智的现代选择。</p>
 
       <h2>平台应用程序 vs. 直接承包商：面对面比较</h2>
@@ -6479,7 +6479,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>The Dilemma of Booking Through Marketplace Platforms</h2>
       <p>When you search for aircond servicing in Kuala Lumpur or Selangor, you will inevitably come across Recommend.my, one of Malaysia's prominent local services directories. Recommend.my allows users to request multiple quotes from freelance service providers, making it seem like a highly convenient starting point.</p>
-      
+
       <p>However, when it comes to HVAC maintenance, relying on freelance bidding platforms often introduces unexpected risks, inconsistent quality, and communication lag. Let's break down how direct booking with a specialized, SSM-registered team like KL Renovator compares to the Recommend.my experience.</p>
 
       <h2>Comparing Recommend.my and KL Renovator</h2>
@@ -6534,7 +6534,7 @@ export const allPosts: BlogPost[] = [
     contentMS: `
       <h2>Dilema Menempah Melalui Platform Pasaran Perkhidmatan</h2>
       <p>Apabila anda mencari servis aircond di Kuala Lumpur atau Selangor, anda pasti akan menemui Recommend.my, salah satu direktori perkhidmatan tempatan yang terkemuka di Malaysia. Recommend.my membolehkan pengguna meminta beberapa sebut harga daripada pembekal perkhidmatan bebas, menjadikannya kelihatan seperti permulaan yang sangat mudah.</p>
-      
+
       <p>Walau bagaimanapun, untuk penyelenggaraan HVAC, bergantung kepada platform pembidaan pekerja bebas sering membawa risiko yang tidak dijangka, kualiti yang tidak konsisten, dan kelewatan komunikasi. Mari kita lihat bagaimana tempahan terus dengan pasukan pakar berdaftar SSM seperti KL Renovator berbanding dengan pengalaman di Recommend.my.</p>
 
       <h2>Perbandingan Antara Recommend.my dan KL Renovator</h2>
@@ -6589,7 +6589,7 @@ export const allPosts: BlogPost[] = [
     contentZH: `
       <h2>通过中介服务平台预约冷气服务的盲区</h2>
       <p>当您在吉隆坡或雪兰莪搜索冷气保养服务时，您肯定会遇到 Recommend.my，这是马来西亚最著名的本地服务目录平台之一。Recommend.my 允许用户向多位自由职业服务商申请报价，这在表面上看起来是一个非常方便的起点。</p>
-      
+
       <p>然而，在涉及专业的 HVAC（冷暖气）维护时，依赖自由职业者的竞价平台往往会带来无法预测的风险、不稳定的质量和沟通延迟。让我们来分析一下，直接预约像 KL Renovator 这样拥有 SSM 注册的专业团队，与 Recommend.my 的平台体验相比有何不同。</p>
 
       <h2>对比 Recommend.my 与 KL Renovator 直接预约</h2>
@@ -6664,7 +6664,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>The Landscape of Local Service Apps</h2>
       <p>ServisHero is one of the most recognizable names in the Malaysian on-demand services sector, providing a platform where customers can hire local freelancers for home cleaning, plumbing, and aircond servicing. While the ease of tapping a button on an app is attractive, there is a distinct difference between booking through a marketplace aggregator and hiring a dedicated, specialized HVAC contractor directly.</p>
-      
+
       <p>Let's evaluate the pros and cons of using ServisHero versus booking directly with KL Renovator for your residential or commercial aircond maintenance in Kuala Lumpur and Selangor.</p>
 
       <h2>ServisHero vs. KL Renovator (Direct Contractor)</h2>
@@ -6714,7 +6714,7 @@ export const allPosts: BlogPost[] = [
     contentMS: `
       <h2>Lanskap Aplikasi Perkhidmatan Tempatan di Malaysia</h2>
       <p>ServisHero adalah salah satu nama yang paling dikenali dalam sektor perkhidmatan atas permintaan di Malaysia, menyediakan platform di mana pelanggan boleh menggaji pekerja bebas tempatan untuk pembersihan rumah, perpipaan, dan servis aircond. Walaupun kemudahan menekan butang pada aplikasi kelihatan menarik, terdapat perbezaan yang ketara antara menempah melalui aggregator pasaran dan menggaji kontraktor HVAC khusus secara terus.</p>
-      
+
       <p>Mari kita nilaikan kebaikan dan keburukan menggunakan ServisHero berbanding menempah secara terus dengan KL Renovator untuk penyelenggaraan aircond kediaman atau komersial anda di Kuala Lumpur dan Selangor.</p>
 
       <h2>ServisHero vs. KL Renovator (Kontraktor Terus)</h2>
@@ -6764,7 +6764,7 @@ export const allPosts: BlogPost[] = [
     contentZH: `
       <h2>本地服务类应用程序的市场现状</h2>
       <p>ServisHero 是马来西亚按需服务领域最知名的名字之一，提供了一个平台，客户可以在这里雇用本地自由职业者进行家庭清洁、管道和冷气保养。虽然在应用程序上轻按按钮的便捷性很有吸引力，但在中介平台和雇用专职、专业的直接 HVAC 承包商之间，存在着明显的质量和责任差异。</p>
-      
+
       <p>让我们对在吉隆坡和雪兰莪使用 ServisHero 与直接向 KL Renovator 预约住宅或商业冷气维护进行全面的优缺点评估。</p>
 
       <h2>ServisHero 对比 KL Renovator 直接预约</h2>
@@ -6834,7 +6834,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>What is Airtasker and How Does It Work for Aircond Services?</h2>
       <p>Airtasker is a crowdsourced freelance marketplace where registered "taskers" compete for home service jobs in Malaysia. For aircond servicing, customers post a job request and wait for freelancers to submit bids. While this creates the illusion of competitive pricing, it introduces a layer of uncertainty that specialized HVAC contractors like KL Renovator simply do not have.</p>
-      
+
       <p>In this guide, we break down exactly how Airtasker aircond jobs work versus booking directly with a licensed, SSM-registered HVAC company, so you can make the most informed decision for your home cooling needs.</p>
 
       <h2>Airtasker vs. KL Renovator (Direct Contractor) — Head-to-Head</h2>
@@ -6895,7 +6895,7 @@ export const allPosts: BlogPost[] = [
     contentMS: `
       <h2>Apakah Airtasker dan Bagaimana Ia Berfungsi untuk Servis Aircond?</h2>
       <p>Airtasker ialah platform pasaran pekerja bebas di mana "tasker" berdaftar bersaing untuk mendapatkan kerja perkhidmatan rumah di Malaysia. Untuk servis aircond, pelanggan menghantar permintaan kerja dan menunggu pekerja bebas mengemukan bidaan. Meskipun ini mewujudkan ilusi harga yang kompetitif, ia memperkenalkan lapisan ketidakpastian yang kontraktor HVAC khusus seperti KL Renovator tidak miliki.</p>
-      
+
       <p>Dalam panduan ini, kami pecahkan dengan tepat bagaimana kerja aircond Airtasker berfungsi berbanding menempah terus dengan syarikat HVAC berlesen dan berdaftar SSM, supaya anda boleh membuat keputusan yang lebih tepat untuk keperluan penyejukan rumah anda.</p>
 
       <h2>Airtasker vs. KL Renovator (Kontraktor Terus) — Bandingkan</h2>
@@ -6954,7 +6954,7 @@ export const allPosts: BlogPost[] = [
     contentZH: `
       <h2>什么是 Airtasker，它如何用于冷气服务？</h2>
       <p>Airtasker 是一个众包自由职业平台，在马来西亚注册的"任务者"在这里竞争家庭服务工作的机会。对于冷气服务，客户发布工作请求并等待自由职业者提交竞标报价。虽然这制造了价格竞争的假象，但它引入了一层不确定性，而像 KL Renovator 这样的专业 HVAC 承包商根本不存在这种不确定性。</p>
-      
+
       <p>在这份指南中，我们详细分析 Airtasker 冷气工作的实际运作方式，以及如何直接预约持证、SSM 注册的 HVAC 公司，让您在选择家庭制冷需求时做出最明智的决定。</p>
 
       <h2>Airtasker 对比 KL Renovator（直接承包商）—— 正面较量</h2>
@@ -7033,7 +7033,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>The RM99 Aircond Service: What's the Catch?</h2>
       <p>If you have been searching for aircond service in Kuala Lumpur or Selangor recently, you have likely seen prices ranging from RM50 to RM250. The RM99 "budget aircond service" is one of the most advertised price points. But is it too cheap? And more importantly — what exactly are you getting for your RM99?</p>
-      
+
       <p>In this honest 2026 guide, we break down the reality of aircond service pricing in Malaysia so you can make an informed decision without falling for hidden charges or substandard workmanship.</p>
 
       <h2>Aircond Service Price Breakdown: What's Included?</h2>
@@ -7137,7 +7137,7 @@ export const allPosts: BlogPost[] = [
     contentMS: `
       <h2>Servis Aircond RM99: Apakah Muslihat Di Sebaliknya?</h2>
       <p>Jika anda telah mencari servis aircond di Kuala Lumpur atau Selangor baru-baru ini, anda mungkin telah melihat harga ranging dari RM50 hingga RM250. Servis aircond RM99 "bajet" adalah salah satu harga yang paling diiklankan. Tetapi adakah ia terlalu murah? Dan lebih penting lagi — apakah yang anda sebenarnya dapat untuk RM99 anda?</p>
-      
+
       <p>Dalam panduan jujur 2026 ini, kami pecahkan realiti harga servis aircond di Malaysia supaya anda boleh membuat keputusan yang tepat tanpa terjebak dengan caj tersembunyi atau kerja yang tidak bermutu.</p>
 
       <h2>Pecahan Harga Servis Aircond: Apa Yang Termasuk?</h2>
@@ -7239,7 +7239,7 @@ export const allPosts: BlogPost[] = [
     contentZH: `
       <h2>RM99 冷气服务：有什么猫腻？</h2>
       <p>如果您最近在吉隆坡或雪兰莪寻找冷气服务，您可能已经看到从 RM50 到 RM250 不等的价格。RM99 "低价冷气服务" 是最常做广告的价格点之一。但它是否太便宜了？更重要的是——您的 RM99 到底能买到什么？</p>
-      
+
       <p>在这份诚实的 2026 年指南中，我们详细分析马来西亚冷气服务的定价现实，让您在不陷入隐藏费用或低质量工艺的情况下做出明智决定。</p>
 
       <h2>冷气服务价格分解：包含什么？</h2>
@@ -7618,7 +7618,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>Why Commercial and Residential Aircond Servicing Are Not the Same</h2>
       <p>Many Malaysian homeowners assume that any aircond technician can handle any aircond unit. While this is technically true for basic filter cleaning, the servicing requirements for a 4-bedroom terrace house split unit system versus a 20-person office with ceiling cassette units are fundamentally different in scale, complexity, safety protocols, and technical expertise.</p>
-      
+
       <p>Understanding these differences helps you choose the right service provider for your specific situation — whether you are managing a home in Petaling Jaya or a commercial kitchen in Shah Alam.</p>
 
       <h2>Commercial vs. Residential Aircond: Key Differences</h2>
@@ -7891,7 +7891,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>Your Aircond Is Probably the Reason Your TNB Bill Is High</h2>
       <p>If you have noticed your monthly electricity bill from TNB (Tenaga Nasional Berhad) increasing despite not changing your usage habits, your aircond unit is almost certainly the cause. In a typical Malaysian 3-bedroom terrace home, a single aircond unit running 8 hours per night can account for 50–70% of the total electricity bill.</p>
-      
+
       <p>The good news: most of the energy efficiency loss from aircond is recoverable through regular professional servicing. In this 2026 guide, we explain exactly how aircond inefficiency translates into higher TNB bills and what you can do about it.</p>
 
       <h2>How Dirty Aircond Increases Your Electricity Bill</h2>
@@ -8127,7 +8127,7 @@ export const allPosts: BlogPost[] = [
         <li><strong>Daikin PCB board:</strong> RM 350–600 (common daikin blue PCB — widely stocked)</li>
         <li><strong>Panasonic PCB board:</strong> RM 400–650 (nanoe-G models have pricier boards)</li>
         <li><strong>Daikin fan motor:</strong> RM 280–380</li>
-        <li><strong>Panasonic fan motor:</strong> RM 250–380</li>
+        <li><strong>Panasonic fan motor:</strong> RM 350–480</li>
       </ul>
       <p>Overall, Daikin has a slight advantage in parts availability and pricing because Daikin's market share in Malaysia is larger — parts are stocked at more suppliers across the country. Panasonic parts are also widely available but certain models with nanoe-X or nanoe-G features have pricier PCB boards. The difference is typically RM 50–100 maximum on major repairs.</p>
 
@@ -8402,7 +8402,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Kualiti kerja</td><td>Bervariasi — tidak konsisten</td><td>Konsisten — SOP standard</td></tr>
           <tr><td>Waranti</td><td>Tiada atau sukar dituntut</td><td>1 bulan bertulis</td></tr>
           <tr><td>Aduan</td><td>Melalui Shopee (lambat)</td><td>WhatsApp terus (pantas)</td></tr>
-          <tr><td>Bahan digunakan</td><td>Tidak diketahui</td><td>Telus — Jenis L, Armaflex</td></tr>
+          <tr><td>Bahan digunakan</td><td>Tidak diketahui</td><td>Telus — Jenis L, insulation</td></tr>
           <tr><td>Rekod servis</td><td>Tiada rekod kekal</td><td>Kad kerja bertulis setiap lawatan</td></tr>
           <tr><td>Juruteknik sama?</td><td>Tidak — berbeza setiap kali</td><td>Ya — mengenali unit anda</td></tr>
         </tbody>
@@ -8840,7 +8840,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Capacitor replacement</td><td>RM 120–180</td><td>RM 150–250</td><td>Inverter capacitors are usually higher-rated and cost more</td></tr>
           <tr><td>PCB board</td><td>RM 200–400</td><td>RM 350–700</td><td>Inverter PCBs are more complex with IGBT modules and PFC circuits</td></tr>
-          <tr><td>Fan motor</td><td>RM 180–280</td><td>RM 250–380</td><td>Inverter fan motors use DC brushless technology — more expensive</td></tr>
+          <tr><td>Fan motor</td><td>RM 180–280</td><td>RM 350–480</td><td>Inverter fan motors use DC brushless technology — more expensive</td></tr>
           <tr><td>Compressor</td><td>RM 600–1,200</td><td>RM 900–2,000</td><td>Inverter compressors are variable-speed with more complex drive electronics</td></tr>
           <tr><td>Temperature sensor</td><td>RM 80–120</td><td>RM 150–250</td><td>Inverter units have multiple sensors (coil, ambient, pipe)</td></tr>
           <tr><td>Gas top-up (R32)</td><td>N/A (mostly R22)</td><td>RM 3.00/PSI–220</td><td>Inverter units use R32 (RM 3.00/PSI); non-inverter units use R22 (RM 2.50/PSI)</td></tr>
@@ -9095,7 +9095,7 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>Komponen</th><th>Pemasangan Asas (RM 120-150)</th><th>KL Renovator (RM 199)</th></tr></thead>
         <tbody>
           <tr><td>Paip tembaga</td><td>Jenis M (nipis, 0.028") atau campuran</td><td>Jenis L (tebal, 0.040") — semua paip</td></tr>
-          <tr><td>Penebat</td><td>6mm busa murah</td><td>Armaflex 9mm cecair + 13mm gas</td></tr>
+          <tr><td>Penebat</td><td>6mm busa murah</td><td>penebat 9mm cecair + 13mm gas</td></tr>
           <tr><td>Pendawaian</td><td>Wayar tanpa konduit, terdedah</td><td>Wayar tembaga dalam konduit PVC</td></tr>
           <tr><td>Paip saliran</td><td>Tiub fleksibel murah</td><td>Paip PVC tegar dengan kecerunan betul</td></tr>
           <tr><td>Vakum</td><td>Selalunya dilangkau sepenuhnya</td><td>15-20 minit wajib — tidak pernah dilangkau</td></tr>
@@ -9109,7 +9109,7 @@ export const allPosts: BlogPost[] = [
       <h2>Kenapa Setiap Bahan Berkualiti Penting</h2>
       <ul>
         <li><strong>Paip tembaga Jenis L:</strong> Dinding 40% lebih tebal daripada Jenis M, tahan tekanan tinggi R410A/R32, tidak bocor selama 15+ tahun. Jenis M selalunya bocor dalam 3-5 tahun</li>
-        <li><strong>Penebat Armaflex 9mm/13mm:</strong> Mencegah kondensasi yang menyebabkan air menitis dan kerosakan siling. Penebat 6mm nipis tidak mencukupi untuk iklim lembap Malaysia</li>
+        <li><strong>Penebat 9mm/13mm:</strong> Mencegah kondensasi yang menyebabkan air menitis dan kerosakan siling. Penebat 6mm nipis tidak mencukupi untuk iklim lembap Malaysia</li>
         <li><strong>Konduit PVC:</strong> Melindungi wayar dari kerosakan fizikal, kelembapan, dan serangga. Wayar terdedah adalah risiko keselamatan</li>
         <li><strong>Paip PVC tegar:</strong> Tidak kendur, retak, atau putus seperti tiub fleksibel yang merosot dalam 2-3 tahun di bawah sinar UV</li>
         <li><strong>Evakuasi vakum 15+ minit:</strong> Membuang kelembapan yang menyebabkan kegagalan pemampat dalam 1-3 tahun. Tanpa vakum, kompresor anda berisiko tinggi</li>

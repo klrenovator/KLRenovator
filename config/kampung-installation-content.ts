@@ -166,7 +166,7 @@ function getIntroBody(
     `KL Renovator 在${name}（${parentName}）提供冷气安装服务。该社区以${housing}为主。我们的技师会准确匹配马力、铺设铜管，并用真空泵抽真空调试，同时提供1个月工艺保修。`,
     `无论您在${name}住的是高层公寓还是有地住宅，KL Renovator 都能完成从勘察到测试的完整安装流程。我们覆盖${state}所有20个主流品牌，包括${firstLandmark}附近的安装项目。`,
     `${name}混合了${housing}。KL Renovator 的安装团队精通所有户型，安装挂壁式、天花板卡式机和窗口式冷气均采用与${parentName}全区一致的品质标准。`,
-    `需要在${name}安装新冷气？我们的${parentName}团队会派遣持证HVAC技师前往该社区。每次安装均包含7尺铜管、电线、排水管、标准室外机支架、真空泵抽真空以及1个月工艺保修卡。`,
+    `需要在${name}安装新冷气？我们的${parentName}团队会派遣持证HVAC技师前往该社区。每次安装均包含7尺铜管、电线、排水管、真空泵抽真空以及1个月工艺保修卡。`,
   ];
   return pick(kampung.slug, templates);
 }
@@ -343,7 +343,7 @@ function getGeneratedFAQs(
   return [
     {
       q: `${name}的冷气安装费用是多少？`,
-      a: `${name}的挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线、排水管和标准支架。`,
+      a: `${name}的挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线和排水管；如需室外支架则另行收费。`,
     },
     {
       q: `${name}的冷气安装需要多长时间？`,
@@ -459,7 +459,7 @@ function getLocalContext(
       ],
       [
         `From ${L(0)} through ${L(1)} to the ${L(2)} end, ${name} covers a mix of property types${housingClause}, and the aircond detail that matters at one address barely applies at another. A unit going into a home near ${L(3)} needs a wall penetration and bracket alignment checked against sun and neighbour noise; a unit for a higher floor needs loading-bay timing. Our ${name} team plans for both before the van leaves.`,
-        `We keep ${name} installation honest and transparent: the RM 199 wall-mounted price covers 7 ft of copper pipe, wiring, drain pipe and a standard bracket, with anything beyond that quoted and approved on site. After commissioning we run a 15-minute cooling test and hand over a 1-month workmanship warranty card — valid whether you are in central ${name} or toward ${position}.`,
+        `We keep ${name} installation honest and transparent: the RM 199 wall-mounted price covers 7 ft of copper pipe, wiring and drain pipe, with anything beyond that quoted and approved on site. After commissioning we run a 15-minute cooling test and hand over a 1-month workmanship warranty card — valid whether you are in central ${name} or toward ${position}.`,
       ],
     ];
     return pick(kampung.slug, variants);
@@ -653,7 +653,6 @@ const baseIncluded: Record<KampungInstallationLocale, string[]> = {
     "7 ft copper pipe (liquid + gas lines)",
     "7 ft electrical wiring",
     "7 ft PVC drain pipe",
-    "Outdoor bracket (paid special charge if required)",
     "Vacuum pump commissioning",
     "Refrigerant release & run test",
     "1-month workmanship warranty card",
@@ -663,7 +662,6 @@ const baseIncluded: Record<KampungInstallationLocale, string[]> = {
     "7 ft paip tembaga (tali cecair + gas)",
     "7 ft wayar elektrik",
     "7 ft paip saliran PVC",
-    "Braket luar standard",
     "Pentauliahan pam vakum",
     "Pelepasan refrigeran & ujian jalan",
     "Kad waranti kerja 1 bulan",
@@ -673,7 +671,6 @@ const baseIncluded: Record<KampungInstallationLocale, string[]> = {
     "7尺铜管（液管+气管）",
     "7尺电线",
     "7尺PVC排水管",
-    "标准室外机支架",
     "真空泵抽真空调试",
     "冷媒释放与运行测试",
     "1个月工艺保修卡",

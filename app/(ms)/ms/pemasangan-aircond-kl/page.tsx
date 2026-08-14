@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const INSTALLATION_PROCESS = [
   { step: 1, title: "Tempahan WhatsApp & Survei Tapak", desc: "Hubungi kami via WhatsApp di +60182983573 dengan kawasan anda, jenis unit (dinding, ceiling cassette, tingkap), dan saiz HP. Kami sahkan harga dan jadualkan survei tapak hari sama atau esok. Juruteknik menilai laluan paip, kedudukan unit luar, dan keperluan elektrik.", icon: <span aria-hidden="true">💬</span> },
   { step: 2, title: "Penghantaran Juruteknik & Persediaan", desc: "Juruteknik HVAC berlesen kami tiba dengan semua alat, bahan (paip tembaga, penebatan, wayar), dan peralatan keselamatan. Lapik lindung melindungi lantai dan perabot. Kami sahkan pelan pemasangan tepat dengan anda sebelum mula.", icon: <span aria-hidden="true">🚚</span> },
-  { step: 3, title: "Pemasangan Paip Tembaga & Penebatan", desc: "Paip tembaga Type L atau Type M (bergantung saiz HP) dipotong, di-flare, dan dilalukan dengan kemas. Penebatan Armaflex (minimum 9mm) mengelakkan kondensasi dan kehilangan tenaga. Paip disokong dengan braket yang betul — tiada lengkung tajam yang menghalang aliran refrigeran.", icon: <span aria-hidden="true">🔧</span> },
+  { step: 3, title: "Pemasangan Paip Tembaga & Penebatan", desc: "Paip tembaga Type L atau Type M (bergantung saiz HP) dipotong, di-flare, dan dilalukan dengan kemas. Penebatan (minimum 9mm) mengelakkan kondensasi dan kehilangan tenaga. Paip disokong dengan braket yang betul — tiada lengkung tajam yang menghalang aliran refrigeran.", icon: <span aria-hidden="true">🔧</span> },
   { step: 4, title: "Pemasangan Paip Saliran dengan Gradien", desc: "Paip PVC saliran dipasang dengan gradien minimum 1:50 untuk saliran graviti. Periuk anti-siphon mengelakkan aliran balik. Kondensat diuji sebelum ditutup. Untuk kondo tinggi, kami lalukan ke lubang saliran lantai atau saliran balconi mengikut peraturan pengurusan bangunan.", icon: <span aria-hidden="true">🔧</span> },
   { step: 5, title: "Sambungan Elektrik & Pemeriksaan Breaker", desc: "Litar terpakai dengan rating MCB yang betul (16A untuk 1.0–1.5HP, 20A untuk 2.0–2.5HP, 32A untuk 3.0HP+). Saiz wayar mengikut standard Malaysia. Perlindungan kebocoran bumi disahkan. Isolator unit luar dipasang untuk keselamatan dan akses penyelenggaraan.", icon: <span aria-hidden="true">⚡</span> },
   { step: 6, title: "Komisen Vacuum Pump (Wajib)", desc: "Vacuum pump dua peringkat menarik sistem ke 500 mikron atau kurang — mengeluarkan semua kelembapan dan bukan-kondensat. Langkah ini TIDAK BOLEH DILEWATKAN. Melangkau vacuum menyebabkan kegagalan kompresor, pembentukan asid, dan membatalkan waranti pengeluar. Kami mengekang vacuum 15+ minit untuk sahkan tiada kebocoran.", icon: <span aria-hidden="true">📊</span> },
@@ -55,7 +55,7 @@ const FAQS = [
   { q: "Berapa harga pemasangan aircond di KL & Selangor?", a: "Pemasangan dinding bermula RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, penebat, wayar elektrik dan paip saliran standard. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Bahan tambahan melebihi 7 kaki dikira per kaki — paip tembaga RM 17–27/kaki, wayar RM 9/kaki, casing PVC kecil RM 6/kaki atau casing PVC besar RM 12/kaki. Semua harga disahkan sebelum kerja bermula. Paip saliran melebihi 7 kaki ialah RM 5/kaki." },
   { q: "Berapa lama masa pemasangan aircond?", a: "Pemasangan dinding standard mengambil 3–5 jam untuk satu unit. Ceiling cassette ambil 5–8 jam disebabkan gantungan ceiling dan wayaran pump saliran. Pemasangan multi-unit seluruh rumah biasanya siap dalam 1–2 hari. Slot hari sama tersedia untuk tempahan sebelum 11 PG." },
   { q: "Adakah anda memasang aircond di kondo tinggi di KL?", a: "Ya — kami kerap memasang di kondo merentasi KLCC, Mont Kiara, Bangsar, Sentul, PJ, dan Subang Jaya. Kami urus dengan pengurusan bangunan untuk akses lif/loading bay, ikut prosedur keselamatan, dan pastikan penempatan unit luar mematuhi peraturan JMB. Juruteknik kami berpengalaman dengan pemasangan di tebing servis dan balconi." },
-  { q: "Gred paip tembaga apa yang anda guna untuk pemasangan?", a: "Kami guna paip tembaga Type L untuk unit dinding 1.0–2.5 HP dan Type M untuk 3.0 HP+ di mana ketebalan dinding membenarkan. Semua paip dibersihkan semasa brazing untuk elakkan pengoksidaan dalaman. Penebatan Armaflex (9–13mm) standard. Ini melebihi standard minimum Malaysia dan memastikan kebolehypercayaan jangka panjang." },
+  { q: "Gred paip tembaga apa yang anda guna untuk pemasangan?", a: "Kami guna paip tembaga Type L untuk unit dinding 1.0–2.5 HP dan Type M untuk 3.0 HP+ di mana ketebalan dinding membenarkan. Semua paip dibersihkan semasa brazing untuk elakkan pengoksidaan dalaman. Penebatan (9–13mm) standard. Ini melebihi standard minimum Malaysia dan memastikan kebolehypercayaan jangka panjang." },
   { q: "Mengapa komisen vacuum pump adalah wajib?", a: "Vacuum mengeluarkan kelembapan dan udara dari paip refrigeran. Kelembapan + refrigeran = asid, yang musnahkan lilitan kompresor dan menyumbat tiub kapilari. Bukan-kondensat menaikkan tekanan kepala dan membunuh kecekapan. Kami tarik ke 500 mikron dan pegang 15+ minit. Tiada vacuum = tiada waranti. Ini amalan HVAC terbaik di seluruh dunia." },
   { q: "Bolehkah pemasangan dilakukan semasa musim hujan di Malaysia?", a: "Ya — kami pasang sepanjang tahun. Untuk kerja luar semasa hujan, kami guna kanopi popup dan penutup air-tahan. Pasangan unit dalaman dan paipan berterusan tidak terganggu. Hujan lepet dengan kilat sahaja menghentikan penempatan kompresor luar untuk keselamatan. Slot hari sama mungkin lebih ketat semasa monsun — tempah awal." },
   { q: "Adakah saya perlukan litar elektrik khusus untuk aircond baharu?", a: "Ya — peraturan Malaysia (MS IEC 60364) memerlukan litar terpakai dengan MCB sendiri untuk setiap unit aircond. Kami pasang litar baharu dari kotak DB anda jika tidak wujud, atau sahkan kapasiti litar sedia ada. Unit berkisar masih perlu soket terpakai pada litar terlindung. Kerja elektrik termasuk dalam sebut harga pemasangan kami." },
@@ -152,7 +152,7 @@ export default function PemasanganAircondKLPage() {
             </h1>
             <p className="mt-5 text-slate-300 font-medium text-base sm:text-lg leading-relaxed max-w-2xl">
               Pemasangan pakar unit dinding, ceiling cassette & tingkap merentasi Kuala Lumpur dan Selangor.
-              Komisen vacuum pump, paip tembaga Type L, penebatan Armaflex, waranti kerja 1 bulan.
+              Komisen vacuum pump, paip tembaga Type L, penebatan, waranti kerja 1 bulan.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <TrustBadge icon="✓" label="Pemasangan Dari RM 199" />
@@ -199,7 +199,7 @@ export default function PemasanganAircondKLPage() {
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 kaki paip tembaga (cecair + gas)</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 kaki wayar elektrik</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 kaki paip PVC saliran</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket standard luar</li>
+
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Komisen vacuum pump</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Pelucahan refrigeran & ujian</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Kad waranti kerja 1 bulan</li>
@@ -238,7 +238,7 @@ export default function PemasanganAircondKLPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: <span aria-hidden="true">🔧</span>, title: "Vacuum Pump Setiap Kerja", desc: "Vacuum 500-mikron wajib pada setiap pemasangan. Tiada pengecualian. Melindungi kompresor anda bertahun-tahun." },
-              { icon: <span aria-hidden="true">🔌</span>, title: "Paip Tembaga Type L & Armaflex", desc: "Paip tembaga premium dengan penebatan Armaflex 9–13mm. Tiada gantian nipis murah." },
+              { icon: <span aria-hidden="true">🔌</span>, title: "Paip Tembaga Type L & Penebatan", desc: "Paip tembaga premium dengan penebatan 9–13mm. Tiada gantian nipis murah." },
               { icon: <span aria-hidden="true">⚡</span>, title: "Litar Terpakai & MCB Betul", desc: "Elektrik mengikut MS IEC 60364. Saiz breaker betul, kebocoran bumi, isolator termasuk." },
               { icon: <span aria-hidden="true">📊</span>, title: "Komisen Presisi", desc: "Ujian 15-minit: tekanan, tarikan amp, kalibrasi termostat, delta-T penyejukan disahkan." },
               { icon: <span aria-hidden="true">🛡️</span>, title: "Waranti 1 Bulan Bertulis", desc: "Kad kerja dengan senarai semak ditandatangani. Mana-mana isu pemasangan dalam 30 hari — kami pulang percuma." },
@@ -304,7 +304,7 @@ export default function PemasanganAircondKLPage() {
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
                 <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🌡️</span> Penebatan</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Armaflex (elastomer sel-terbuka) — minimum ketebalan 9mm</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> insulation (elastomer sel-terbuka) — minimum ketebalan 9mm</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 13mm untuk ceiling cassette &amp; laluan paip panjang (&gt;15 kaki)</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Mencegah tetesan kondensasi & kehilangan tenaga</li>
                   <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Tape UV-rintang pada semua joint & terminasi</li>
