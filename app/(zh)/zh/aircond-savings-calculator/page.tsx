@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/aircond-savings-calculator";
 export const metadata: Metadata = {
   title: clampMetaTitle("变频冷气节省计算器 — 马来西亚"),
   description:
-    "马来西亚免费变频冷气节省计算器。对比旧非变频机与新型变频机 — 每月节省、每年节省和预计回本周期。",
+    padMetaDescription("马来西亚免费变频冷气节省计算器。对比旧非变频机与新型变频机 — 每月节省、每年节省和预计回本周期。"),
   alternates: buildTrilingualHreflang("/aircond-savings-calculator", "zh"),
   openGraph: {
     title: clampMetaTitle("变频冷气节省计算器 — 马来西亚"),

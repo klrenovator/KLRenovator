@@ -4,6 +4,7 @@
 // description (duplicate-title signal across the site).
 
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 import { sitePublic } from "@/config/site-public";
@@ -16,7 +17,7 @@ import { BookingButton } from "@/components/booking-button";
 export const metadata: Metadata = {
   title: "Aircond Brands We Install & Service — KL & Selangor",
   description:
-    "We install and service all 20 aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung and more. Same-day, from RM 99.",
+    padMetaDescription("We install and service all 20 aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung and more. Same-day, from RM 99."),
   alternates: buildTrilingualHreflang("/brands"),
 };
 

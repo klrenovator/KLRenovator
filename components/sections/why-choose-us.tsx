@@ -2,15 +2,6 @@
 
 import Link from "next/link";
 
-import {
-  FaShieldHalved,
-  FaUserCheck,
-  FaToolbox,
-  FaRegClock,
-  FaMoneyBillWave,
-  FaAward,
-} from "react-icons/fa6";
-
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { translations, useLang, type Lang } from "@/context/language-context";
@@ -34,7 +25,7 @@ const GoogleGIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const ICONS = [FaShieldHalved, FaUserCheck, FaToolbox, FaRegClock, FaMoneyBillWave, FaAward];
+const ICONS = ["🛡️", "👷", "🧰", "⏱️", "💸", "🏆"];
 const COLORS = [
   "bg-sky-50 border-sky-100 text-sky-600 group-hover:bg-sky-500",
   "bg-emerald-50 border-emerald-100 text-emerald-600 group-hover:bg-emerald-500",
@@ -108,8 +99,8 @@ export const WhyChooseUs = ({ locale }: { locale?: Lang } = {}) => {
             <Reveal key={f.title} delay={i * 60}>
               <div className="group bg-white border border-slate-100 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-lg hover:border-sky-100 transition-all duration-300 h-full flex flex-col">
                 {/* Icon */}
-                <div className={`inline-flex h-13 w-13 p-3 shrink-0 items-center justify-center border rounded-xl mb-5 transition-all duration-300 group-hover:text-white ${f.colorClass}`}>
-                  <f.icon className="h-6 w-6" />
+                <div className={`inline-flex h-12 w-12 shrink-0 items-center justify-center border rounded-xl mb-5 text-2xl ${f.colorClass}`} aria-hidden="true">
+                  {f.icon}
                 </div>
                 <h3 className="text-base font-black uppercase tracking-tight text-slate-900 mb-2.5">
                   {f.title}

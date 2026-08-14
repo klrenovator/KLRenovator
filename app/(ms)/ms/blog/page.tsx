@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { getBlogPostSummaries } from "@/app/(en)/blog/get-blog-summaries";
 import BlogIndexClient from "@/app/(en)/blog/blog-index-client";
@@ -6,7 +7,7 @@ import BlogIndexClient from "@/app/(en)/blog/blog-index-client";
 export const metadata: Metadata = {
   title: clampMetaTitle("Tips & Panduan Pakar Aircond | KL Renovator Blog"),
   description:
-    "Nasihat praktikal aircond daripada KL Renovator — cuci kimia vs overhaul, sebab aircond tidak sejuk, kekerapan servis, jenis gas R22 R410A R32, dan lebih lagi.",
+    padMetaDescription("Nasihat praktikal aircond daripada KL Renovator — cuci kimia vs overhaul, sebab aircond tidak sejuk, kekerapan servis, jenis gas R22 R410A R32, dan lebih lagi."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/blog",
     languages: {

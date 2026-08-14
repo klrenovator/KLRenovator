@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import NextLink from "next/link";
@@ -12,7 +13,7 @@ import { waLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气品牌服务 KL & Selangor — 一个团队，20个品牌 | KL Renovator"),
-  description: "一个持证团队维护全部20个主要冷气品牌 — 大金、松下、三菱、约克、LG、三星、美的等。当天服务，SSM注册，1个月保修。",
+  description: padMetaDescription("一个持证团队维护全部20个主要冷气品牌 — 大金、松下、三菱、约克、LG、三星、美的等。当天服务，SSM注册，1个月保修。"),
   openGraph: {
     title: clampMetaTitle("一个团队，20个品牌 — 冷气服务 KL & Selangor | KL Renovator"),
     description: "同一持证技术员维护每一个冷气品牌。价格透明，当天预约，1个月保修。WhatsApp +60182983573。",

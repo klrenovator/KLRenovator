@@ -1,11 +1,12 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 export const metadata: Metadata = {
   title: "Book an Appointment | KL Renovator",
   description:
-    "Book aircond servicing, repair or installation online in KL & Selangor. Pick your service and time slot — instant confirmation, no deposit.",
+    padMetaDescription("Book aircond servicing, repair or installation online in KL & Selangor. Pick your service and time slot — instant confirmation, no deposit."),
   alternates: buildTrilingualHreflang("/book", "en"),
   openGraph: {
     title: "Book an Aircond Appointment Online | KL Renovator",

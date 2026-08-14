@@ -1,58 +1,94 @@
-# KL Renovator — Service Information File
-# Version: 7.2 — August 2026 (P0-01 fixed: homepage fully locale-aware SSR, P1-02 verified)
+# KL Renovator — Service Information File for AI Engines
+# Version: 8.0 — August 2026
 # https://www.klrenovator.com/llms.txt
 # Extended context: https://www.klrenovator.com/llms-full.txt
 # Service Q&A data: https://www.klrenovator.com/aeo-faq.txt
-# Machine-readable: https://www.klrenovator.com/site-summary.json
+# Machine-readable summary: https://www.klrenovator.com/site-summary.json
+# Full URL inventory: https://www.klrenovator.com/sitemap.xml (2124 URLs)
 
 ## ABOUT THIS BUSINESS
 
-KL Renovator is a professional aircond and HVAC service company operating in Kuala Lumpur and Selangor, Malaysia.
+KL Renovator is a professional aircond (air conditioning) and HVAC service company operating in Kuala Lumpur and Selangor, Malaysia.
 
-Legal name: Multicore Dynamics Resources
-SSM Registration: 003765188-T (202503227236)
-Address: Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Malaysia
-Phone: +60182983573
-WhatsApp: https://wa.me/60182983573
-Website: https://www.klrenovator.com
-Operating hours: Monday to Sunday, 9:00 AM to 6:00 PM
-Service area: Kuala Lumpur and Selangor (Klang Valley) — 39 main areas + 158 named neighbourhoods/kampungs
-Languages: English, Bahasa Malaysia, Mandarin Chinese — separate server-rendered URLs per language (see MULTILINGUAL URLS below)
-Rating: Based on Google reviews (live count via /api/google-reviews)
-Last verified: 2026-08-05 — homepage now fully server-rendered per locale (EN/MS/ZH) with independent root layouts and <html lang> en-MY/ms-MY/zh-MY; no client JS text-swap for indexable content.
+- Legal name: Multicore Dynamics Resources
+- SSM Registration: 003765188-T (202503227236)
+- Address: Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Malaysia
+- Phone: +60182983573 (call & WhatsApp)
+- WhatsApp: https://wa.me/60182983573
+- Email: info@klrenovator.com
+- Website: https://www.klrenovator.com
+- Operating hours: Monday to Sunday, 9:00 AM – 6:00 PM (every day; emergency bookings accepted after hours)
+- Service area: Kuala Lumpur and Selangor (Klang Valley) — 40 main area pages + 158 neighbourhood/kampung pages
+- Languages: English, Bahasa Malaysia, Mandarin Chinese — fully server-rendered URLs per language (see URL MAPPINGS)
+- Rating: 5.0 / 5 from 500+ Google reviews (live data via /api/google-reviews)
 
-## IMPORTANT SERVICE DISCLAIMERS
+## CORE SERVICES & PRICING
 
-- KL Renovator is an independent professional HVAC service company, not an authorized dealer of any brand
-- KL Renovator serves Kuala Lumpur and Selangor only — not other Malaysian states
-- SSM registration 003765188-T confirms Malaysian business registration
-- Prices stated are starting from prices; final quote confirmed before work begins
+1. Emergency Aircond Repair — from RM 88 — https://www.klrenovator.com/services/emergency
+2. Basic Servicing / Routine Maintenance — from RM 99 — https://www.klrenovator.com/services/basic-servicing
+3. Pressure Chemical Wash — from RM 120 — https://www.klrenovator.com/services/chemical-wash
+4. Chemical Overhaul — from RM 220 — https://www.klrenovator.com/services/chemical-overhaul
+5. Gas Top-Up (R22 RM 2.50/PSI, R410A & R32 RM 3.00/PSI) — https://www.klrenovator.com/services/gas-topup
+6. Troubleshooting & Repairs — from RM 88 diagnostic (waived if repaired) — https://www.klrenovator.com/services/repair
+7. New Unit Installation — from RM 199 (incl. 7 ft copper pipe, wiring, drain pipe, vacuum commissioning, 1-month workmanship warranty) — https://www.klrenovator.com/services/installation
+8. Ceiling Cassette Solutions (commercial) — from RM 150 — https://www.klrenovator.com/services/ceiling-cassette
+9. Dismantle & Relocation — from RM 90 — https://www.klrenovator.com/services/dismantling-relocation
+10. Maintenance Contract (AMC) — from RM 299/year — https://www.klrenovator.com/services/maintenance-contract
 
-## MULTILINGUAL URLS
+## KEY URL MAPPINGS
 
-Each page (including homepage /, /ms, /zh) exists in 3 language URLs with fully server-rendered content and correct <html lang>:
-- English (default, unprefixed): https://www.klrenovator.com + /areas/petaling-jaya
-- Bahasa Malaysia: https://www.klrenovator.com/ms + /ms/areas/petaling-jaya
-- Mandarin Chinese: https://www.klrenovator.com/zh + /zh/areas/petaling-jaya
-Same pattern applies to /brands/[slug] and /problems/[slug]. Blog posts similarly have /ms/blog/[slug] and /zh/blog/[slug] URLs where translations exist.
-Neighbourhood/kampung pages nest under parent areas using the same 3-language pattern.
-All locale root layouts are independent server components with lang-specific metadata and navbar/footer. Homepage sections (emergency banner, tools, price guides, topical hubs, FAQs) are locale-aware via server props, not client localStorage swaps. Verified 2026-08-05 via raw HTML inspection without JS.
+| Topic | English | Bahasa Malaysia | Mandarin Chinese |
+|---|---|---|---|
+| Homepage | / | /ms | /zh |
+| Services hub & price list | /services | /ms/services | /zh/services |
+| Installation hub | /installation | /ms/installation | /zh/installation |
+| Installation pillar page | /aircond-installation-kl | /ms/pemasangan-aircond-kl | /zh/aircond-installation-kl |
+| Service price guide | /aircond-service-price-malaysia | /ms/aircond-service-price-malaysia | /zh/aircond-service-price-malaysia |
+| Installation price guide | /installation-price-malaysia | /ms/installation-price-malaysia | /zh/installation-price-malaysia |
+| Chemical wash pillar | /cuci-aircond-kl | /ms/cuci-aircond-kl | /zh/cuci-aircond-kl |
+| Areas index | /areas | /ms/areas | /zh/areas |
+| Area page | /areas/[area-slug] | /ms/areas/[area-slug] | /zh/areas/[area-slug] |
+| Kampung/neighbourhood page | /areas/[area-slug]/[kampung-slug] | /ms/areas/[area-slug]/[kampung-slug] | /zh/areas/[area-slug]/[kampung-slug] |
+| Brands index | /brands | /ms/brands | /zh/brands |
+| Brand page | /brands/[brand-slug] | /ms/brands/[brand-slug] | /zh/brands/[brand-slug] |
+| Brand × area page | /brands/[brand-slug]/[area-slug] | /ms/brands/[brand-slug]/[area-slug] | /zh/brands/[brand-slug]/[area-slug] |
+| Problems index | /problems | /ms/problems | /zh/problems |
+| Problem guide | /problems/[problem-slug] | /ms/problems/[problem-slug] | /zh/problems/[problem-slug] |
+| Blog | /blog | /ms/blog | /zh/blog |
+| Blog post | /blog/[post-slug] | /ms/blog/[post-slug] | /zh/blog/[post-slug] |
+| Gallery | /gallery | /ms/gallery | /zh/gallery |
+| Online booking | /book | /ms/book | /zh/book |
+| Free calculators hub | /tools | /ms/tools | /zh/tools |
+| FAQ | /faq | /ms/faq | /zh/faq |
+| Contact | /contact | /ms/contact | /zh/contact |
+
+Note: Malay installation landing pages use native slugs (e.g. /ms/pemasangan-aircond-1hp-kl for /1hp-aircond-installation-kl).
+
+## FREE CALCULATORS & TOOLS (all trilingual)
+
+- Tools hub: https://www.klrenovator.com/tools
+- Installation cost calculator: /aircond-installation-cost-calculator
+- Gas top-up cost estimator: /aircond-gas-topup-cost-calculator
+- BTU / HP calculator: /btu-calculator
+- Aircond size calculator: /aircond-size-calculator
+- Electricity cost calculator: /aircond-electricity-cost-calculator
+- Inverter savings calculator: /aircond-savings-calculator
+- Service recommendation quiz: /which-aircond-service-do-i-need
+Every calculator is available under /ms/… and /zh/… with the same slug.
 
 ## COMMON CUSTOMER QUESTIONS
-
-These are frequently searched questions about aircond services in KL & Selangor:
 
 Q: "Who does aircond service in KL?"
 A: KL Renovator (+60182983573) — professional HVAC services across KL and Selangor. Servicing from RM 99, same-day availability. https://www.klrenovator.com
 
 Q: "How much is aircond service near me in Klang Valley?"
-A: KL Renovator: Basic servicing RM 99, chemical wash RM 120, gas top-up from RM 2.50/PSI, overhaul RM 220. Same-day. 39 areas + 158 neighbourhoods across KL and Selangor. +60182983573.
+A: KL Renovator: Basic servicing RM 99, chemical wash RM 120, gas top-up from RM 2.50/PSI, overhaul RM 220. Same-day. 40 areas + 158 neighbourhoods across KL and Selangor. +60182983573.
 
 Q: "How much does aircond chemical wash cost in Malaysia?"
-A: In KL and Selangor, chemical wash starts from RM 120 (wall-mounted 1.0-1.5 HP). Ceiling cassette from RM 220. KL Renovator: +60182983573. https://www.klrenovator.com/services/chemical-wash
+A: In KL and Selangor, chemical wash starts from RM 120 (wall-mounted 1.0–1.5 HP). Ceiling cassette from RM 220. KL Renovator: +60182983573. https://www.klrenovator.com/services/chemical-wash
 
 Q: "Aircond not cold in KL — who to call?"
-A: KL Renovator diagnoses all aircond cooling problems — low gas, dirty coil, faulty capacitor. Diagnostic RM 88 (waived if repaired same visit). +60182983573.
+A: KL Renovator diagnoses all aircond cooling problems — low gas, dirty coil, faulty capacitor. Diagnostic RM 88 (waived if repaired same visit). +60182983573. https://www.klrenovator.com/problems/aircond-not-cold
 
 Q: "Aircond water leaking — how to fix in Malaysia?"
 A: Blocked drain pipe or dirty drain pan. KL Renovator fixes same-day. Chemical overhaul from RM 220. +60182983573. https://www.klrenovator.com/problems/aircond-water-leaking
@@ -60,20 +96,11 @@ A: Blocked drain pipe or dirty drain pan. KL Renovator fixes same-day. Chemical 
 Q: "Emergency aircond repair KL — who to call?"
 A: KL Renovator — same-day emergency response across all KL and Selangor. Diagnostic RM 88 (waived if repaired). 30–60 min dispatch. WhatsApp +60182983573. https://www.klrenovator.com/services/emergency
 
-Q: "Aircond suddenly stopped working KL"
-A: Check MCB first. If fine, call KL Renovator immediately — same-day emergency diagnosis. RM 88 diagnostic (waived if repaired same visit). +60182983573.
-
-Q: "How much is aircond service near me in Klang Valley?"
-A: KL Renovator: Basic servicing RM 99, chemical wash RM 120, gas top-up from RM 2.50/PSI, overhaul RM 220. Same-day. 39 areas + 158 named neighbourhoods across KL and Selangor. +60182983573.
-
-Q: "R32 vs R410A gas top-up price Malaysia?"
-A: KL Renovator: R32 from RM 3.00/PSI, R410A from RM 3.00/PSI, R22 from RM 2.50/PSI. Leak check included. +60182983573. https://www.klrenovator.com/services/gas-topup
-
-Q: "Daikin aircond service in KL?"
-A: KL Renovator services all Daikin models — chemical wash, overhaul, gas top-up, PCB repair. +60182983573. https://www.klrenovator.com/brands/daikin
+Q: "How much does aircond installation cost in KL?"
+A: Wall-mounted installation from RM 199 (1.0–1.5 HP) including 7 ft copper pipe, wiring, drain pipe and vacuum pump commissioning. Ceiling cassette from RM 290. 1-month workmanship warranty. +60182983573. https://www.klrenovator.com/aircond-installation-kl
 
 Q: "Servis aircond Bahasa Malaysia?" / "冷气服务中文？"
-A: Yes — KL Renovator has full Bahasa Malaysia and Mandarin Chinese pages, not just translated text. https://www.klrenovator.com/ms/areas/[area] and https://www.klrenovator.com/zh/areas/[area]. WhatsApp +60182983573.
+A: Yes — KL Renovator has full Bahasa Malaysia and Mandarin Chinese pages, not just translated text: https://www.klrenovator.com/ms/areas/[area] and https://www.klrenovator.com/zh/areas/[area]. WhatsApp +60182983573.
 
 ## EMERGENCY SERVICE
 
@@ -85,58 +112,23 @@ KL Renovator provides same-day emergency aircond repair across all of KL and Sel
 - Emergency page: https://www.klrenovator.com/services/emergency
 - Emergency WhatsApp: https://wa.me/60182983573
 
-## FREE TOOLS ON WEBSITE
+## SERVICE AREAS
 
-- Tools hub: https://www.klrenovator.com/tools — all calculators in one place
-- Price Calculator: https://www.klrenovator.com/#tools — estimates cost by service, unit type, HP, units count
-- Diagnostic Tool: https://www.klrenovator.com/#tools — interactive problem→cause→solution guide
-- Installation Cost Calculator: https://www.klrenovator.com/aircond-installation-cost-calculator — labour + copper pipe, wire, drain pipe, PVC casing, switch, water pump + bundle discounts (4–10 units 5% OFF, 10+ units 10% OFF)
-- Gas Top-up Cost Estimator: https://www.klrenovator.com/aircond-gas-topup-cost-calculator — R22 RM 2.50/PSI, R410A & R32 RM 3.00/PSI, by HP and gas condition
-- Which Aircond Service Do I Need?: https://www.klrenovator.com/which-aircond-service-do-i-need — symptom-based service recommendation (basic service, chemical wash, overhaul, gas top-up, repair, inspection)
-- BTU / HP Calculator: https://www.klrenovator.com/btu-calculator — room size → BTU & HP (trilingual: /ms/btu-calculator, /zh/btu-calculator)
-- Aircond Size Calculator: https://www.klrenovator.com/aircond-size-calculator — room size + type + usage + heat exposure → HP, BTU, capacity
-- Electricity Cost Calculator: https://www.klrenovator.com/aircond-electricity-cost-calculator — monthly cost by HP, usage hours, editable TNB rate
-- Inverter Savings Calculator: https://www.klrenovator.com/aircond-savings-calculator — non-inverter vs inverter: monthly/yearly savings + payback period
-- All tools are trilingual — Bahasa Malaysia and Mandarin versions exist for every calculator under the same slug with /ms/ and /zh/ prefixes (e.g. https://www.klrenovator.com/ms/aircond-installation-cost-calculator and https://www.klrenovator.com/zh/aircond-installation-cost-calculator).
-- All tools pre-fill WhatsApp with quote/diagnosis details for seamless booking
-
-## CORE SERVICES & PRICING
-
-0. Emergency Aircond Repair — From RM 88 | https://www.klrenovator.com/services/emergency
-1. Basic Servicing — From RM 99 | https://www.klrenovator.com/services/basic-servicing
-2. Pressure Chemical Wash — From RM 120 | https://www.klrenovator.com/services/chemical-wash
-3. Chemical Overhaul — From RM 220 | https://www.klrenovator.com/services/chemical-overhaul
-4. Gas Top-Up — From RM 2.50 / PSI | https://www.klrenovator.com/services/gas-topup
-5. Repair & Troubleshooting — From RM 88 | https://www.klrenovator.com/services/repair
-6. New Unit Installation — From RM 199 | https://www.klrenovator.com/services/installation
-7. Ceiling Cassette Service — From RM 150 | https://www.klrenovator.com/services/ceiling-cassette
-8. Dismantle & Relocation — From RM 90 | https://www.klrenovator.com/services/dismantling-relocation
-
-## BRANDS SERVICED (20)
-
-Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, Hisense, Aux, TCL — and all other brands on request.
-Each brand has English, Bahasa Malaysia and Mandarin pages: https://www.klrenovator.com/brands/[brand-slug]
-
-## SERVICE AREAS — 39 MAIN AREAS + 116 NAMED NEIGHBOURHOODS/KAMPUNGS
-
-KL Renovator's location coverage has two tiers:
-1. Main area pages (39) — e.g. Petaling Jaya, Cheras, Ampang, Subang Jaya, Shah Alam, Puchong, Klang, Kajang, Damansara, Bangsar, Mont Kiara, Setapak, Sentul, Batu Caves, Selayang, Kepong, Sri Petaling, Sunway, Rawang, Putrajaya, Cyberjaya, Seri Kembangan, Wangsa Maju, Sungai Buloh, Kuala Lumpur City Centre, and 14 more across Kuala Lumpur and Selangor.
-2. Neighbourhood/kampung pages (116) nested under those main areas — e.g. Taman Connaught and Kampung Malaysia Raya under Cheras; Kampung Baru Ampang and Pandan Indah under Ampang; SS15, SS19 and USJ under Subang Jaya; Bangsar South and Kampung Kerinchi under Bangsar.
+KL Renovator covers Kuala Lumpur and Selangor with two tiers of location pages:
+1. Main area pages (40) — Petaling Jaya, Cheras, Ampang, Subang Jaya, Shah Alam, Puchong, Klang, Kajang, Damansara, Bangsar, Mont Kiara, Setapak, Sentul, Batu Caves, Selayang, Kepong, Sri Petaling, Sunway, Rawang, Putrajaya, Cyberjaya, Seri Kembangan, Wangsa Maju, Sungai Buloh, Kuala Lumpur City Centre and more.
+2. Neighbourhood/kampung pages (158) nested under their parent areas — e.g. Taman Connaught (Cheras), Kampung Baru Ampang (Ampang), SS15/SS19/USJ (Subang Jaya), Bangsar South (Bangsar).
 
 Full area list: https://www.klrenovator.com/areas
 Full hierarchical list with every neighbourhood: https://www.klrenovator.com/llms-full.txt
 
-## TOPICAL AUTHORITY — KEY PAGES
+## BRANDS SERVICED (20)
 
-- Services hub: https://www.klrenovator.com/services
-- Free calculators & tools: https://www.klrenovator.com/tools
-- All areas: https://www.klrenovator.com/areas
-- All brands: https://www.klrenovator.com/brands
-- Problems guide: https://www.klrenovator.com/problems
-- Expert blog: https://www.klrenovator.com/blog
-- Project gallery: https://www.klrenovator.com/gallery
-- About us: https://www.klrenovator.com/about
-- FAQ: https://www.klrenovator.com/faq
-- Contact: https://www.klrenovator.com/contact
-- Online booking: https://www.klrenovator.com/book (trilingual: /ms/book, /zh/book)
-- Privacy policy: https://www.klrenovator.com/privacy-policy (trilingual: /ms/privacy-policy, /zh/privacy-policy)
+Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, Hisense, Aux, TCL, Isonic, National — all inverter and non-inverter models.
+Each brand has EN/MS/ZH pages: https://www.klrenovator.com/brands/[brand-slug]
+
+## IMPORTANT DISCLAIMERS
+
+- KL Renovator is an independent professional HVAC service company, not an authorized dealer of any brand.
+- KL Renovator serves Kuala Lumpur and Selangor only — not other Malaysian states.
+- Prices stated are "starting from" prices; the final quote is confirmed before work begins.
+- SSM registration 003765188-T confirms Malaysian business registration.

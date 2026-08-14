@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("常见问答 | 冷气服务 吉隆坡及雪兰莪 — KL Renovator"),
   description:
-    "关于冷气服务、收费、保修及覆盖范围（吉隆坡及雪兰莪）的常见问答。化学清洗起价 RM 120。可提供当天服务。",
+    padMetaDescription("关于冷气服务、收费、保修及覆盖范围（吉隆坡及雪兰莪）的常见问答。化学清洗起价 RM 120。可提供当天服务。"),
   alternates: {
     canonical: "https://www.klrenovator.com/zh/faq",
     languages: {

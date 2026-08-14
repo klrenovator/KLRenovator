@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
@@ -6,7 +7,7 @@ import { FaqPageI18n } from "@/components/faq-page-i18n";
 export const metadata: Metadata = {
   title: clampMetaTitle("FAQ | 100+ Aircond Questions — KL Renovator"),
   description:
-    "100+ frequently asked questions about aircond installation, servicing, chemical wash, pricing, warranty & coverage in KL & Selangor. Same-day service available.",
+    padMetaDescription("100+ frequently asked questions about aircond installation, servicing, chemical wash, pricing, warranty & coverage in KL & Selangor. Same-day service available."),
   alternates: buildTrilingualHreflang("/faq"),
   openGraph: {
     title: clampMetaTitle("FAQ | Aircond Services KL & Selangor — KL Renovator"),

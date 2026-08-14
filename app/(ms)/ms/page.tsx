@@ -1,9 +1,10 @@
 import Home from "@/app/(en)/page";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pakar Servis Aircond KL & Selangor | KL Renovator",
-  description: "Pemasangan, servis, dan pembaikan aircond pakar di Kuala Lumpur & Selangor. Harga telus, waranti 1 bulan, dan servis hari sama.",
+  description: padMetaDescription("Pemasangan, servis, dan pembaikan aircond pakar di Kuala Lumpur & Selangor. Harga telus, waranti 1 bulan, dan servis hari sama."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms",
     languages: {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/aircond-gas-topup-cost-calculat
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气加气费用计算器 — 马来西亚"),
   description:
-    "马来西亚免费冷气加气费用计算器。按匹数和气体状况估算R22、R410A和R32加气价格。每PSI RM 2.50–3.00。最终费用检查后确认。",
+    padMetaDescription("马来西亚免费冷气加气费用计算器。按匹数和气体状况估算R22、R410A和R32加气价格。每PSI RM 2.50–3.00。最终费用检查后确认。"),
   alternates: buildTrilingualHreflang("/aircond-gas-topup-cost-calculator", "zh"),
   openGraph: {
     title: clampMetaTitle("冷气加气费用计算器 — 马来西亚"),

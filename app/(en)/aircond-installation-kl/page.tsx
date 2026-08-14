@@ -1,21 +1,18 @@
 import { Metadata } from "next";
-import { FaWhatsapp, FaCheck, FaTruck, FaWrench, FaGauge, FaShield, FaClock, FaLocationDot, FaBuilding, FaPlug, FaSnowflake, FaMagnifyingGlass, FaBolt, FaTemperatureHalf } from "react-icons/fa6";
-import { FiArrowRight, FiMapPin, FiPhone, FiMessageSquare } from "react-icons/fi";
+import { InstallationDeferred } from "@/components/installation-deferred";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
-import { InstallationCROModule } from "@/components/installation-cro-module";
 import { ToolLinks } from "@/components/calculators/tool-links";
-import { InstallationTrustSignals } from "@/components/installation-trust-signals";
-import { InstallationProof } from "@/components/installation-proof";
 
 export const metadata: Metadata = {
   title: "Aircond Installation KL & Selangor — From RM199, Same-Day",
-  description: "Aircond installation KL & Selangor from RM199. Wall-mounted, ceiling cassette & window units, all 20 brands. Vacuum pump, 1-month warranty. Same-day.",
+  description: padMetaDescription("Aircond installation KL & Selangor from RM199. Wall-mounted, ceiling cassette & window units, all 20 brands. Vacuum pump, 1-month warranty. Same-day."),
   openGraph: {
     title: "Aircond Installation KL & Selangor — From RM199 | KL Renovator",
     description: "Expert aircond installation from RM199. Wall-mounted, ceiling cassette, all brands. Vacuum pump, copper pipe, 1-month warranty. WhatsApp +60182983573",
@@ -31,13 +28,13 @@ export const metadata: Metadata = {
 };
 
 const INSTALLATION_PROCESS = [
-  { step: 1, title: "WhatsApp Booking & Site Survey", desc: "Contact us via WhatsApp at +60182983573 with your area, unit type (wall-mounted, ceiling cassette, window), and HP size. We confirm pricing and schedule a same-day or next-day site survey. Our technician assesses piping route, outdoor unit placement, and electrical requirements.", icon: <FiMessageSquare className="h-5 w-5" /> },
-  { step: 2, title: "Technician Dispatch & Preparation", desc: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulations, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.", icon: <FaTruck className="h-5 w-5" /> },
-  { step: 3, title: "Copper Piping & Insulation Installation", desc: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Armaflex insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.", icon: <FaWrench className="h-5 w-5" /> },
-  { step: 4, title: "Drain Pipe Installation with Gradient", desc: "PVC drain pipe installed with minimum 1:50 gradient for gravity drainage. Anti-siphon trap prevents backflow. Condensate tested before closing up. For high-rise condos, we route to nearest floor trap or balcony drain per building management rules.", icon: <FaWrench className="h-5 w-5" /> },
-  { step: 5, title: "Electrical Connection & Breaker Check", desc: "Dedicated circuit with correct MCB rating (16A for 1.0–1.5HP, 20A for 2.0–2.5HP, 32A for 3.0HP+). Wiring sized per Malaysian standards. Earth leakage protection verified. Outdoor unit isolator installed for safety and maintenance access.", icon: <FaBolt className="h-5 w-5" /> },
-  { step: 6, title: "Vacuum Pump Commissioning (Mandatory)", desc: "Two-stage vacuum pump pulls system down to 500 microns or below — removing all moisture and non-condensables. This step is NON-NEGOTIABLE. Skipping vacuuming causes compressor failure, acid formation, and voids manufacturer warranty. We hold vacuum for 15+ minutes to confirm no leaks.", icon: <FaGauge className="h-5 w-5" /> },
-  { step: 7, title: "Refrigerant Release, Testing & Handover", desc: "Factory charge released. System runs for 15+ minutes. We verify: cooling output (thermometer at supply/return), running pressures, amp draw, thermostat calibration, zero vibration, zero leaks. Written 1-month workmanship warranty card handed over. Job card with checklist signed.", icon: <FaTemperatureHalf className="h-5 w-5" /> },
+  { step: 1, title: "WhatsApp Booking & Site Survey", desc: "Contact us via WhatsApp at +60182983573 with your area, unit type (wall-mounted, ceiling cassette, window), and HP size. We confirm pricing and schedule a same-day or next-day site survey. Our technician assesses piping route, outdoor unit placement, and electrical requirements.", icon: <span aria-hidden="true">💬</span> },
+  { step: 2, title: "Technician Dispatch & Preparation", desc: "Our certified HVAC technician arrives with all tools, materials (copper pipe, insulations, wiring), and safety equipment. Drop sheets protect your floors and furniture. We confirm the exact installation plan with you before starting.", icon: <span aria-hidden="true">🚚</span> },
+  { step: 3, title: "Copper Piping & Insulation Installation", desc: "Type L or Type M copper pipes (based on HP size) are cut, flared, and routed neatly. Armaflex insulation (minimum 9mm) prevents condensation and energy loss. Pipes are secured with proper brackets — no sagging, no sharp bends that restrict refrigerant flow.", icon: <span aria-hidden="true">🔧</span> },
+  { step: 4, title: "Drain Pipe Installation with Gradient", desc: "PVC drain pipe installed with minimum 1:50 gradient for gravity drainage. Anti-siphon trap prevents backflow. Condensate tested before closing up. For high-rise condos, we route to nearest floor trap or balcony drain per building management rules.", icon: <span aria-hidden="true">🔧</span> },
+  { step: 5, title: "Electrical Connection & Breaker Check", desc: "Dedicated circuit with correct MCB rating (16A for 1.0–1.5HP, 20A for 2.0–2.5HP, 32A for 3.0HP+). Wiring sized per Malaysian standards. Earth leakage protection verified. Outdoor unit isolator installed for safety and maintenance access.", icon: <span aria-hidden="true">⚡</span> },
+  { step: 6, title: "Vacuum Pump Commissioning (Mandatory)", desc: "Two-stage vacuum pump pulls system down to 500 microns or below — removing all moisture and non-condensables. This step is NON-NEGOTIABLE. Skipping vacuuming causes compressor failure, acid formation, and voids manufacturer warranty. We hold vacuum for 15+ minutes to confirm no leaks.", icon: <span aria-hidden="true">📊</span> },
+  { step: 7, title: "Refrigerant Release, Testing & Handover", desc: "Factory charge released. System runs for 15+ minutes. We verify: cooling output (thermometer at supply/return), running pressures, amp draw, thermostat calibration, zero vibration, zero leaks. Written 1-month workmanship warranty card handed over. Job card with checklist signed.", icon: <span aria-hidden="true">🌡️</span> },
 ];
 
 const PRICING_TABLE = [
@@ -68,10 +65,10 @@ const FAQS = [
   { q: "How do I book an aircond installation near me in KL or Selangor?", a: "WhatsApp +60182983573 with your area, unit type (wall-mounted/ceiling cassette/window), HP size, and preferred date. We confirm price and schedule within 30 minutes. Same-day installation available for early bookings. We cover all KL & Selangor areas including Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, and Cyberjaya." },
 ];
 
-function TrustBadge({ icon: Icon, label }: { icon: React.ComponentType<{ className?: string }>; label: string }) {
+function TrustBadge({ icon, label }: { icon: string; label: string }) {
   return (
     <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 px-4 py-2 text-sm font-black uppercase tracking-wider text-white/90">
-      <Icon className="h-4 w-4 text-emerald-400" />
+      <span aria-hidden="true" className="text-emerald-400">{icon}</span>
       {label}
     </span>
   );
@@ -117,6 +114,9 @@ function PricingRow({ type, hp, price, pipe, wire, drain, isHeader = false }: { 
   );
 }
 
+const CRO_TITLE = "Why Choose KL Renovator for Installation?";
+const CRO_SUBTITLE = "Professional aircond installation from RM199 — same-day available, all 20 brands, 1-month workmanship warranty.";
+
 export default function AircondInstallationKLPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", url: "https://www.klrenovator.com" },
@@ -124,14 +124,12 @@ export default function AircondInstallationKLPage() {
   ]);
 
   const serviceSchema = buildInstallationServiceSchema();
-  const howToSchema = buildInstallationHowToSchema();
   const faqSchema = buildInstallationFAQSchema(FAQS);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
@@ -159,17 +157,17 @@ export default function AircondInstallationKLPage() {
               Vacuum pump commissioning, Type L copper piping, Armaflex insulation, 1-month workmanship warranty.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <TrustBadge icon={FaCheck} label="Installation From RM 199" />
-              <TrustBadge icon={FaClock} label="Same-Day Available" />
-              <TrustBadge icon={FaShield} label="1-Month Workmanship Warranty" />
-              <TrustBadge icon={FaTruck} label="All 20 Brands Supported" />
+              <TrustBadge icon="✓" label="Installation From RM 199" />
+              <TrustBadge icon="🕘" label="Same-Day Available" />
+              <TrustBadge icon="🛡️" label="1-Month Workmanship Warranty" />
+              <TrustBadge icon="🚚" label="All 20 Brands Supported" />
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 max-w-md">
               <a href={waLink("🔧 Aircond Installation Enquiry\n\nHi KL Renovator, I need a new aircond installed.\n\n📍 My Area:\n❄️ Unit Type: Wall-Mounted / Ceiling Cassette / Window\n📏 HP Size (if known):\n🏠 Property: Condo / Landed / Office / Shoplot\n\nPlease send quote & available slots.")} target="_blank" rel="nofollow noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase text-sm tracking-widest h-14 px-6 shadow-lg shadow-green-900/40 transition-all">
-                <FaWhatsapp className="h-5 w-5" /> Book Installation via WhatsApp
+                <span aria-hidden="true">💬</span> Book Installation via WhatsApp
               </a>
               <a href={`tel:${siteConfig.phone}`} className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-black uppercase text-sm tracking-widest h-14 px-6 transition-all">
-                <FiPhone className="h-4 w-4 text-sky-300" /> Call +60 18-298 3573
+                <span aria-hidden="true">📞</span> Call +60 18-298 3573
               </a>
             </div>
           </Reveal>
@@ -197,31 +195,31 @@ export default function AircondInstallationKLPage() {
           </Reveal>
           <Reveal delay={200}>
             <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
-              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> What's Included in the Labour Price</h3>
+              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><span aria-hidden="true">✓</span> What's Included in the Labour Price</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Site survey & quotation (free)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft copper pipe (liquid + gas lines)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft electrical wiring</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 ft PVC drain pipe</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Outdoor bracket (paid special charge if required)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Vacuum pump commissioning</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Refrigerant release & testing</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 1-month workmanship warranty card</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Site survey & quotation (free)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 ft copper pipe (liquid + gas lines)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 ft electrical wiring</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 ft PVC drain pipe</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Outdoor bracket (paid special charge if required)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Vacuum pump commissioning</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Refrigerant release & testing</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 1-month workmanship warranty card</li>
               </ul>
             </div>
           </Reveal>
           <Reveal delay={300}>
             <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
-              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Additional Charges (Only If Needed)</h3>
+              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><span aria-hidden="true">🔍</span> Additional Charges (Only If Needed)</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wire beyond 7 ft: RM 9/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Small PVC casing (electrical wire): RM 6/ft; large PVC casing (copper pipe + wire + insulation): RM 12/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Standard compressor / outdoor bracket: RM 45</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Heavy-duty compressor / outdoor bracket: RM 70</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> New electrical plug point: RM 100</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wall hacking/concealment: RM 6/ft</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> High-rise/difficult access: RM 50–150</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Copper pipe beyond 7 ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Wire beyond 7 ft: RM 9/ft</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Small PVC casing (electrical wire): RM 6/ft; large PVC casing (copper pipe + wire + insulation): RM 12/ft</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Standard compressor / outdoor bracket: RM 45</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Heavy-duty compressor / outdoor bracket: RM 70</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> New electrical plug point: RM 100</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Wall hacking/concealment: RM 6/ft</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> High-rise/difficult access: RM 50–150</li>
               </ul>
               <p className="mt-4 text-xs text-amber-600">All extras quoted & approved on-site BEFORE work starts. No surprises.</p>
             </div>
@@ -241,14 +239,14 @@ export default function AircondInstallationKLPage() {
           </Reveal>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: <FaWrench className="h-6 w-6" />, title: "Vacuum Pump Every Job", desc: "Mandatory 500-micron vacuum on every install. No exceptions. Protects your compressor for years." },
-              { icon: <FaPlug className="h-6 w-6" />, title: "Type L Copper & Armaflex", desc: "Premium copper piping with 9–13mm Armaflex insulation. No cheap thin-wall substitutes." },
-              { icon: <FaBolt className="h-6 w-6" />, title: "Dedicated Circuit & MCB", desc: "Proper electrical per MS IEC 60364. Correct breaker sizing, earth leakage, isolator included." },
-              { icon: <FaGauge className="h-6 w-6" />, title: "Precision Commissioning", desc: "15-min run test: pressures, amp draw, thermostat calibration, cooling delta-T verified." },
-              { icon: <FaShield className="h-6 w-6" />, title: "Written 1-Month Warranty", desc: "Job card with checklist signed. Any install-related issue in 30 days — we return free." },
-              { icon: <FaBuilding className="h-6 w-6" />, title: "Condo & JMB Experts", desc: "We handle building approvals, lift booking, service-ledge access, after-hours rules seamlessly." },
-              { icon: <FaSnowflake className="h-6 w-6" />, title: "All 20 Major Brands", desc: "Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Hisense, Aux, TCL, Isonic, National, Sanyo." },
-              { icon: <FaLocationDot className="h-6 w-6" />, title: "KL & Selangor Coverage", desc: "Petaling Jaya, Cheras, Ampang, Subang, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya." },
+              { icon: <span aria-hidden="true">🔧</span>, title: "Vacuum Pump Every Job", desc: "Mandatory 500-micron vacuum on every install. No exceptions. Protects your compressor for years." },
+              { icon: <span aria-hidden="true">🔌</span>, title: "Type L Copper & Armaflex", desc: "Premium copper piping with 9–13mm Armaflex insulation. No cheap thin-wall substitutes." },
+              { icon: <span aria-hidden="true">⚡</span>, title: "Dedicated Circuit & MCB", desc: "Proper electrical per MS IEC 60364. Correct breaker sizing, earth leakage, isolator included." },
+              { icon: <span aria-hidden="true">📊</span>, title: "Precision Commissioning", desc: "15-min run test: pressures, amp draw, thermostat calibration, cooling delta-T verified." },
+              { icon: <span aria-hidden="true">🛡️</span>, title: "Written 1-Month Warranty", desc: "Job card with checklist signed. Any install-related issue in 30 days — we return free." },
+              { icon: <span aria-hidden="true">🏢</span>, title: "Condo & JMB Experts", desc: "We handle building approvals, lift booking, service-ledge access, after-hours rules seamlessly." },
+              { icon: <span aria-hidden="true">❄️</span>, title: "All 20 Major Brands", desc: "Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Hisense, Aux, TCL, Isonic, National, Sanyo." },
+              { icon: <span aria-hidden="true">📍</span>, title: "KL & Selangor Coverage", desc: "Petaling Jaya, Cheras, Ampang, Subang, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 50}>
                 <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-sky-200 hover:shadow-md transition-all">
@@ -294,37 +292,37 @@ export default function AircondInstallationKLPage() {
           <div className="grid gap-8 md:grid-cols-3">
             <Reveal delay={100}>
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><FaPlug className="h-5 w-5 text-sky-600" /> 铜管</h3>
+                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🔌</span> 铜管</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Type L copper (1.0–2.5 HP) — thicker walls, better corrosion resistance</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-5 text-emerald-500 shrink-0" /> Type M copper (3.0 HP+) — approved for larger capacity</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> purged during brazing — prevents internal oxidation</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Proper flare connections — torque-wrench tightened to spec</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> No kinks, sharp bends, or undersized pipe runs</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Type L copper (1.0–2.5 HP) — thicker walls, better corrosion resistance</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Type M copper (3.0 HP+) — approved for larger capacity</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> purged during brazing — prevents internal oxidation</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Proper flare connections — torque-wrench tightened to spec</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> No kinks, sharp bends, or undersized pipe runs</li>
                 </ul>
               </div>
             </Reveal>
             <Reveal delay={150}>
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><FaTemperatureHalf className="h-5 w-5 text-sky-600" /> Insulation</h3>
+                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🌡️</span> Insulation</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Armaflex (closed-cell elastomeric) — minimum 9mm thickness</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> 13mm for ceiling cassette &amp; long pipe runs (&gt;15 ft)</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Prevents condensation drips & energy loss</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> UV-resistant tape on all joints & terminations</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Full coverage — no exposed copper anywhere</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Armaflex (closed-cell elastomeric) — minimum 9mm thickness</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 13mm for ceiling cassette &amp; long pipe runs (&gt;15 ft)</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Prevents condensation drips & energy loss</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> UV-resistant tape on all joints & terminations</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Full coverage — no exposed copper anywhere</li>
                 </ul>
               </div>
             </Reveal>
             <Reveal delay={200}>
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><FaBolt className="h-5 w-5 text-sky-600" /> Electrical & Brackets</h3>
+                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">⚡</span> Electrical & Brackets</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Dedicated circuit from DB — correct MCB rating per HP</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> 2.5mm² cable (1.0–2.5 HP), 4mm² (3.0–5.0 HP)</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Outdoor isolator switch — safety & maintenance access</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Heavy-duty outdoor bracket (paid special charge if required)s — vibration-damped, powder-coated</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Cable trunking — neat, protected, paintable</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Dedicated circuit from DB — correct MCB rating per HP</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 2.5mm² cable (1.0–2.5 HP), 4mm² (3.0–5.0 HP)</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Outdoor isolator switch — safety & maintenance access</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Heavy-duty outdoor bracket (paid special charge if required)s — vibration-damped, powder-coated</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Cable trunking — neat, protected, paintable</li>
                 </ul>
               </div>
             </Reveal>
@@ -393,32 +391,20 @@ export default function AircondInstallationKLPage() {
               <h3 className="font-black text-xl mb-4">Price Confirmed Before We Drill — Guaranteed</h3>
               <p className="text-sky-100 mb-6 max-w-2xl mx-auto">No hidden fees. No "while we're here" surprises. Every extra material is quoted and approved by you on-site before any drilling or cutting begins.</p>
               <a href={waLink("🔧 Installation Quote Request\n\nHi KL Renovator, I want a confirmed price for aircond installation.\n\n📍 Area:\n❄️ Unit Type:\n📏 HP Size:\n🏠 Property Type:\n\nPlease send full breakdown.")} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-                <FaWhatsapp className="h-5 w-5" /> Get Confirmed Price on WhatsApp
+                <span aria-hidden="true">💬</span> Get Confirmed Price on WhatsApp
               </a>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* CRO Module — Installation Page Conversion Optimization */}
-      <InstallationCROModule 
-        title="Why Choose KL Renovator for Installation?"
-        subtitle="Professional aircond installation from RM199 — same-day available, all 20 brands, 1-month workmanship warranty."
-        showObjectionHandling={true}
-        showTrustSignals={true}
-        showPricingGuarantee={true}
-        showUSPBlock={true}
+      {/* CRO + trust + proof load as one viewport-triggered island
+          (was ~95 KB of the initial document). */}
+      <InstallationDeferred
+        locale="en"
+        title={CRO_TITLE}
+        subtitle={CRO_SUBTITLE}
       />
-
-      {/* Installation Trust Signals — INS-17 */}
-      <InstallationTrustSignals variant="default" />
-
-      {/* Real project photos + verified Google reviews.
-          This pillar page previously rendered only two images (logo + hero)
-          and carried no reviews at all, despite 93 real project photos
-          being available in the repo. */}
-      <InstallationProof locale="en" />
-
       {/* FAQ Section */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -446,10 +432,10 @@ export default function AircondInstallationKLPage() {
             <p className="text-slate-300 font-medium mb-8 max-w-xl mx-auto">Same-day slots available across KL & Selangor. Transparent pricing from RM 199. 1-month workmanship warranty. All 20 brands.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={waLink("🔧 Aircond Installation Booking\n\nHi KL Renovator, I want to book installation.\n\n📍 My Area:\n❄️ Unit Type: Wall-Mounted / Ceiling Cassette / Window\n📏 HP Size:\n🏠 Property: Condo / Landed / Office\n\nPreferred date:\n\nPlease confirm price & slot.")} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-                <FaWhatsapp className="h-5 w-5" /> Book via WhatsApp
+                <span aria-hidden="true">💬</span> Book via WhatsApp
               </a>
               <a href={`tel:${siteConfig.phone}`} className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-                <FiPhone className="h-4 w-4" /> Call +60 18-298 3573
+                <span aria-hidden="true">📞</span> Call +60 18-298 3573
               </a>
             </div>
             <p className="mt-6 text-slate-500 text-sm">We serve all KL & Selangor areas — Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya & more.</p>

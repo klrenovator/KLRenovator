@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaClipboardList, FaBolt, FaKey, FaPhone, FaBuilding } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "新房冷气安装 KL & 雪兰莪 — 全屋套餐 | KL Renovator",
-  description: "搬进KL或雪兰莪的新家？1BR、2BR、3BR和4BR住宅的完整冷气安装套餐。RM199/台起。当天安装，透明定价，1个月保修。WhatsApp +60182983573",
+  description: padMetaDescription("搬进KL或雪兰莪的新家？1BR、2BR、3BR和4BR住宅的完整冷气安装套餐。RM199/台起。当天安装，透明定价，1个月保修。WhatsApp +60182983573"),
   openGraph: {
     title: "新房冷气安装 KL & 雪兰莪 — 全屋套餐 | KL Renovator",
     description: "搬新家？1BR–4BR住宅的完整冷气安装套餐。RM199/台起，当天安装，1个月保修。WhatsApp +60182983573",

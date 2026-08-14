@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
@@ -7,7 +8,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Size Calculator Malaysia | BTU Calculator"),
   description:
-    "Free aircond size calculator Malaysia. Calculate the exact BTU & HP you need for your room size. Find 'berapa HP aircond untuk bilik' instantly.",
+    padMetaDescription("Free aircond size calculator Malaysia. Calculate the exact BTU & HP you need for your room size. Find 'berapa HP aircond untuk bilik' instantly."),
   alternates: buildTrilingualHreflang("/btu-calculator"),
   openGraph: {
     title: clampMetaTitle("Aircond Size Calculator Malaysia | BTU Calculator"),

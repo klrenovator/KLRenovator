@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaWhatsapp, FaPhone, FaStar } from "react-icons/fa6";
 
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -163,7 +162,7 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
             className={`h-1 rounded-full transition-all duration-500 ${
               i === current ? "w-8 bg-white" : "w-2 bg-white/35 hover:bg-white/60"
             }`}
-            aria-label={`Slide ${i + 1}: ${HERO_IMAGES[i].alt}`}
+            aria-label={`Slide ${i + 1}`}
           />
         ))}
       </div>
@@ -173,11 +172,7 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
         <div className="max-w-2xl animate-[fade-up_0.7s_ease-out_both]">
           {/* Rating badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 mb-6">
-            <div className="flex items-center gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className="h-3 w-3 text-amber-400" />
-              ))}
-            </div>
+            <span className="text-amber-400 text-xs tracking-tight" aria-hidden="true">★★★★★</span>
             <span className="text-[11px] font-black uppercase tracking-widest text-white/90">
               {t("hero_badge")}
             </span>
@@ -203,14 +198,14 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
               rel="nofollow noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase text-sm tracking-widest h-14 px-6 shadow-lg shadow-green-900/40 transition-all duration-200 active:scale-[0.97]"
             >
-              <FaWhatsapp className="h-5 w-5" />
+              <span aria-hidden="true">💬</span>
               {t("hero_whatsapp")}
             </a>
             <a
               href={`tel:${sitePublic.phone}`}
               className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-black uppercase text-sm tracking-widest h-14 px-6 transition-all duration-200"
             >
-              <FaPhone className="h-4 w-4 text-sky-300" />
+              <span aria-hidden="true">📞</span>
               {t("hero_call")}
             </a>
           </div>

@@ -6,7 +6,7 @@ import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin, FiShield, FiCpu, FiAle
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, padMetaDescription } from "@/lib/seo-description-optimizer";
 import { waLink } from "@/lib/whatsapp";
 import { normalizeHreflangUrls } from "@/lib/hreflang-canonical";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
@@ -53,10 +53,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(titleText),
-    description: clampMetaDescription(descText),
+    description: padMetaDescription(descText),
     openGraph: {
       title: clampMetaTitle(titleText),
-      description: clampMetaDescription(descText),
+      description: padMetaDescription(descText),
       url: msUrl,
       type: "website",
       locale: "ms_MY",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildFreshMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { getServiceOGImages } from "@/config/service-og-images";
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   // snippet and had to pick one. The page body is already English; only the
   // meta description was copied from the Malay twin.
   description:
-    "Aircond chemical wash KL & Selangor from RM120. Same-day slots, 80–120 PSI deep coil clean, 500+ 5★ Google reviews. Fixes musty smell, leaks & weak cooling.",
+    padMetaDescription("Aircond chemical wash KL & Selangor from RM120. Same-day slots, 80–120 PSI deep coil clean, 500+ 5★ Google reviews. Fixes musty smell, leaks & weak cooling."),
   alternates: buildTrilingualHreflang("/cuci-aircond-kl"),
   openGraph: {
     title: buildFreshMetaTitle("Cuci Aircond KL — RM120 | KL Renovator", "en"),

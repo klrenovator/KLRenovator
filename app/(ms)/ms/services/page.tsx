@@ -3,6 +3,7 @@
 // the browser for all three locale variants.
 
 import Image from "next/image";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";

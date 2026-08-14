@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/aircond-size-calculator";
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气尺寸计算器 — 房间面积换算匹数"),
   description:
-    "马来西亚免费冷气尺寸计算器。输入房间大小、类型、使用和受热情况，获取推荐的匹数、BTU和合适的冷气容量。KL Renovator提供准确的房间到匹数换算指南。",
+    padMetaDescription("马来西亚免费冷气尺寸计算器。输入房间大小、类型、使用和受热情况，获取推荐的匹数、BTU和合适的冷气容量。KL Renovator提供准确的房间到匹数换算指南。"),
   alternates: buildTrilingualHreflang("/aircond-size-calculator", "zh"),
   openGraph: {
     title: clampMetaTitle("冷气尺寸计算器 — 房间换算匹数"),

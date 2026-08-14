@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator"),
   description:
-    "Frequently asked questions about KL Renovator aircond services. Chemical wash from RM 120, overhaul from RM 220, gas top-up from RM 2.50/PSI, same-day booking & warranty.",
+    padMetaDescription("Frequently asked questions about KL Renovator aircond services. Chemical wash from RM 120, overhaul from RM 220, gas top-up from RM 2.50/PSI, same-day booking & warranty."),
   alternates: buildTrilingualHreflang("/faq"),
   openGraph: {
     title: clampMetaTitle("Aircond Service FAQ — Pricing, Booking & Coverage | KL Renovator"),

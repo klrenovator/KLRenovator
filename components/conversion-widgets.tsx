@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { ConversionTracking } from "@/components/conversion-tracking";
 import { MobileStickyBar } from "@/components/mobile-sticky-bar";
 import { StickyActions } from "@/components/sticky-actions";
 
@@ -16,11 +15,14 @@ const FloatingBookingButton = dynamic(
 /**
  * The site-wide conversion layer includes WhatsApp/call actions on desktop,
  * the mobile sticky bar, and the floating online booking CTA button.
+ *
+ * ConversionTracking (GA4 click tracking) now mounts immediately in the root
+ * layout instead of here, so conversion events are captured from first paint
+ * rather than after this lazy bundle loads.
  */
 export function ConversionWidgets() {
   return (
     <>
-      <ConversionTracking />
       <StickyActions />
       <MobileStickyBar />
       <FloatingBookingButton />

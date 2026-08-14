@@ -1,10 +1,11 @@
 import Home from "@/app/(en)/page";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "吉隆坡与雪兰莪专业冷气服务 | KL Renovator",
-  description: "吉隆坡与雪兰莪的冷气安装、清洗和维修专家。价格透明，1个月保修，提供当天服务。",
+  description: padMetaDescription("吉隆坡与雪兰莪的冷气安装、清洗和维修专家。价格透明，1个月保修，提供当天服务。"),
   alternates: {
     canonical: "https://www.klrenovator.com/zh",
     languages: {

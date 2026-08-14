@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/aircond-size-calculator";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Size Calculator Malaysia — Room Size to HP"),
   description:
-    "Free aircond size calculator Malaysia. Enter room size, type, usage & heat exposure to find the recommended HP, BTU and suitable aircond capacity. Accurate room-size-to-HP guide from KL Renovator.",
+    padMetaDescription("Free aircond size calculator Malaysia. Enter room size, type, usage & heat exposure to find the recommended HP, BTU and suitable aircond capacity. Accurate room-size-to-HP guide from KL Renovator."),
   alternates: buildTrilingualHreflang("/aircond-size-calculator"),
   openGraph: {
     title: clampMetaTitle("Aircond Size Calculator Malaysia — Room to HP"),

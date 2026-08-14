@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Tips & Expert Guides | KL Renovator Blog"),
   description:
-    "Practical aircond advice from KL Renovator — chemical wash vs overhaul, why aircon not cold, how often to service, refrigerant gas types and more.",
+    padMetaDescription("Practical aircond advice from KL Renovator — chemical wash vs overhaul, why aircon not cold, how often to service, refrigerant gas types and more."),
   alternates: {
     canonical: "https://www.klrenovator.com/blog",
     languages: {

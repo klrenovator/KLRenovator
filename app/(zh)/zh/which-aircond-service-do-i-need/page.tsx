@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/which-aircond-service-do-i-need
 export const metadata: Metadata = {
   title: clampMetaTitle("我需要哪种冷气服务？— 免费推荐"),
   description:
-    "不确定冷气需要基本保养、化学清洗、化学大修、加气还是维修？回答几个快速问题，即可获得KL Renovator的免费服务推荐和价格。",
+    padMetaDescription("不确定冷气需要基本保养、化学清洗、化学大修、加气还是维修？回答几个快速问题，即可获得KL Renovator的免费服务推荐和价格。"),
   alternates: buildTrilingualHreflang("/which-aircond-service-do-i-need", "zh"),
   openGraph: {
     title: clampMetaTitle("我需要哪种冷气服务？"),

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaBuilding, FaStore, FaUtensils, FaHospital, FaServer, FaPhone, FaBolt, FaCalendarCheck } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Commercial Aircond Installation KL — Office & Shoplot",
-  description: "Commercial aircond installation for offices, shoplots, restaurants, clinics & server rooms across KL & Selangor. Ceiling cassette & multi-split. AMC.",
+  description: padMetaDescription("Commercial aircond installation for offices, shoplots, restaurants, clinics & server rooms across KL & Selangor. Ceiling cassette & multi-split. AMC."),
   openGraph: {
     title: "Commercial Aircond Installation KL — Office & Shoplot",
     description: "Commercial aircond installation for offices, shoplots, restaurants, clinics & server rooms. Ceiling cassette, ducted, multi-split. AMC available. WhatsApp +60182983573",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/aircond-electricity-cost-calcul
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气电费计算器 — 马来西亚"),
   description:
-    "马来西亚免费冷气电费计算器。按匹数、每日使用小时数和电费费率估算每月冷气耗电量和国能账单。对比变频节省。",
+    padMetaDescription("马来西亚免费冷气电费计算器。按匹数、每日使用小时数和电费费率估算每月冷气耗电量和国能账单。对比变频节省。"),
   alternates: buildTrilingualHreflang("/aircond-electricity-cost-calculator", "zh"),
   openGraph: {
     title: clampMetaTitle("冷气电费计算器 — 马来西亚"),

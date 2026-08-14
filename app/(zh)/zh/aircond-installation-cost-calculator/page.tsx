@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/aircond-installation-cost-calcu
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气安装费用计算器 — 马来西亚"),
   description:
-    "马来西亚免费冷气安装费用计算器。估算人工、铜管、电线、排水管、支架、开关和水泵费用，自动套用批量折扣。获取KL Renovator正式报价。",
+    padMetaDescription("马来西亚免费冷气安装费用计算器。估算人工、铜管、电线、排水管、支架、开关和水泵费用，自动套用批量折扣。获取KL Renovator正式报价。"),
   alternates: buildTrilingualHreflang("/aircond-installation-cost-calculator", "zh"),
   openGraph: {
     title: clampMetaTitle("冷气安装费用计算器 — 马来西亚"),

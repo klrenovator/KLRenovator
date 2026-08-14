@@ -5,7 +5,6 @@ import NextLink from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { usePathname, useRouter } from "next/navigation";
-import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { HiBars3, HiXMark, HiChevronDown } from "react-icons/hi2";
 
 import { sitePublic } from "@/config/site-public";
@@ -230,7 +229,7 @@ export const Navbar = () => {
               href={`tel:${sitePublic.phone}`}
               className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-slate-200 hover:text-[#0284c7] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600"
             >
-              <FaPhone className="h-3 w-3 text-[#0284c7]" /> {sitePublic.phoneDisplay}
+              <span aria-hidden="true">📞</span> {sitePublic.phoneDisplay}
             </a>
             <a
               href={waLink(rfqMsg)}
@@ -238,7 +237,7 @@ export const Navbar = () => {
               rel="nofollow noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-white hover:text-[#22c55e] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600"
             >
-              <FaWhatsapp className="h-3.5 w-3.5 text-[#22c55e]" /> WhatsApp Online
+              <span aria-hidden="true">💬</span> WhatsApp Online
             </a>
           </div>
         </div>
@@ -332,7 +331,7 @@ export const Navbar = () => {
             href={`tel:${sitePublic.phone}`}
             className="inline-flex items-center gap-2 border-2 border-slate-900 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
           >
-            <FaPhone className="h-3.5 w-3.5" aria-hidden="true" /> {lbl.call}
+            <span aria-hidden="true">📞</span> {lbl.call}
           </a>
           <a
             href={waLink(rfqMsg)}
@@ -340,7 +339,7 @@ export const Navbar = () => {
             rel="nofollow noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
           >
-            <FaWhatsapp className="h-4 w-4" aria-hidden="true" /> {lbl.book}
+            <span aria-hidden="true">💬</span> {lbl.book}
           </a>
         </div>
 
@@ -391,7 +390,7 @@ export const Navbar = () => {
             aria-label="WhatsApp"
             className="inline-flex h-11 w-11 items-center justify-center bg-[#22c55e] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
           >
-            <FaWhatsapp className="h-5 w-5" aria-hidden="true" />
+            <span className="text-lg" aria-hidden="true">💬</span>
           </a>
           <button
             aria-expanded={open}
@@ -444,7 +443,7 @@ export const Navbar = () => {
               href={`tel:${sitePublic.phone}`}
               className="inline-flex items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
             >
-              <FaPhone className="h-3.5 w-3.5 text-white" aria-hidden="true" /> {lbl.call}
+              <span aria-hidden="true">📞</span> {lbl.call}
             </a>
             <a
               href={waLink(rfqMsg)}
@@ -452,7 +451,7 @@ export const Navbar = () => {
               rel="nofollow noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-3 py-3.5 text-xs font-black uppercase tracking-wider text-white transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
             >
-              <FaWhatsapp className="h-4 w-4" aria-hidden="true" /> {lbl.book}
+              <span aria-hidden="true">💬</span> {lbl.book}
             </a>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import Image from "next/image";
@@ -15,7 +16,7 @@ import { PROBLEM_ENTITY_HUBS } from "@/config/problem-entity-hubs";
 export const metadata: Metadata = {
   title: clampMetaTitle("Panduan Masalah Aircond KL & Selangor | KL Renovator"),
   description:
-    "Panduan lengkap masalah aircond di KL & Selangor — tak sejuk, bocor air, bising, berbau & lagi. Diagnosis & baiki. WhatsApp +60182983573.",
+    padMetaDescription("Panduan lengkap masalah aircond di KL & Selangor — tak sejuk, bocor air, bising, berbau & lagi. Diagnosis & baiki. WhatsApp +60182983573."),
   openGraph: {
     title: clampMetaTitle("Panduan Masalah Aircond KL & Selangor | KL Renovator"),
     description:

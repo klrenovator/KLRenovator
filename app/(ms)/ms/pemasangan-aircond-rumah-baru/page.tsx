@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaClipboardList, FaBolt, FaKey, FaPhone, FaBuilding } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond Rumah Baru KL — Pakej Seluruh Rumah",
-  description: "Pakej pemasangan aircond rumah baru di KL & Selangor — 1BR, 2BR, 3BR & 4BR. Dari RM199/unit. Harga telus, waranti 1 bulan, servis hari sama.",
+  description: padMetaDescription("Pakej pemasangan aircond rumah baru di KL & Selangor — 1BR, 2BR, 3BR & 4BR. Dari RM199/unit. Harga telus, waranti 1 bulan, servis hari sama."),
   openGraph: {
     title: "Pemasangan Aircond Rumah Baru KL — Pakej Seluruh Rumah",
     description: "Berpindah ke rumah baru? Pakej pemasangan aircond lengkap untuk 1BR–4BR. Dari RM199/unit, waranti 1 bulan. WhatsApp +60182983573",

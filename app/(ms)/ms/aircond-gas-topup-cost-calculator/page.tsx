@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/ms/aircond-gas-topup-cost-calculat
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Kos Tambah Gas Aircond Malaysia"),
   description:
-    "Kalkulator kos tambah gas aircond Malaysia percuma. Anggarkan harga isi semula R22, R410A & R32 mengikut HP dan keadaan gas. RM 2.50–3.00/PSI. Caj akhir disahkan selepas pemeriksaan.",
+    padMetaDescription("Kalkulator kos tambah gas aircond Malaysia percuma. Anggarkan harga isi semula R22, R410A & R32 mengikut HP dan keadaan gas. RM 2.50–3.00/PSI. Caj akhir disahkan selepas pemeriksaan."),
   alternates: buildTrilingualHreflang("/aircond-gas-topup-cost-calculator", "ms"),
   openGraph: {
     title: clampMetaTitle("Kalkulator Kos Tambah Gas Aircond Malaysia"),

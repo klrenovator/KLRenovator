@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
@@ -23,7 +24,7 @@ const amcWaLink = waLink(amcMsg);
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气年度保养合同 (AMC) 吉隆坡及雪兰莪 — 年度计划从 RM 299 起 | KL Renovator"),
-  description: "吉隆坡和雪兰莪的冷气年度保养合同。相比单次预约节省高达30%。季度保养、优先排程、免费紧急检查。从 RM 299/年起。",
+  description: padMetaDescription("吉隆坡和雪兰莪的冷气年度保养合同。相比单次预约节省高达30%。季度保养、优先排程、免费紧急检查。从 RM 299/年起。"),
   openGraph: {
     title: clampMetaTitle("冷气年度保养合同 (AMC) 吉隆坡及雪兰莪 | KL Renovator"),
     description: "通过年度冷气保养计划节省高达30%。季度保养、优先响应、免费诊断。从 RM 299/年起。",

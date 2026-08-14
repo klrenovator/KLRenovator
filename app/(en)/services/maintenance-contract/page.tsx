@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
@@ -23,7 +24,7 @@ const amcWaLink = waLink(amcMsg);
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Maintenance Contract (AMC) KL & Selangor — Yearly Plans from RM 299 | KL Renovator"),
-  description: "Annual aircond maintenance contract in KL & Selangor. Save 30% vs one-off. Quarterly servicing, priority scheduling, free checks. From RM 299/yr.",
+  description: padMetaDescription("Annual aircond maintenance contract in KL & Selangor. Save 30% vs one-off. Quarterly servicing, priority scheduling, free checks. From RM 299/yr."),
   openGraph: {
     title: clampMetaTitle("Aircond Maintenance Contract (AMC) KL & Selangor | KL Renovator"),
     description: "Save up to 30% with annual aircond maintenance plans. Quarterly servicing, priority response, free diagnostics. From RM 299/year.",
@@ -51,7 +52,7 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Aircond Annual Maintenance Contract (AMC) KL & Selangor",
-  description: "Yearly maintenance plans with quarterly servicing, priority scheduling, and free diagnostics for residential and commercial aircond units across Klang Valley.",
+  description: padMetaDescription("Yearly maintenance plans with quarterly servicing, priority scheduling, and free diagnostics for residential and commercial aircond units across Klang Valley."),
   url: "https://www.klrenovator.com/services/maintenance-contract",
   provider: { "@type": "HVACBusiness", "@id": "https://www.klrenovator.com/#business", name: "KL Renovator", telephone: siteConfig.phone },
   areaServed: [{ "@type": "City", name: "Kuala Lumpur" }, { "@type": "State", name: "Selangor" }],

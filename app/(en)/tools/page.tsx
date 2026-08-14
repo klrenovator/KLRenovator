@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolsHub } from "@/components/calculators/tools-hub";
@@ -8,7 +9,7 @@ const PAGE_URL = "https://www.klrenovator.com/tools";
 export const metadata: Metadata = {
   title: clampMetaTitle("Free Aircond Calculators & Tools Malaysia"),
   description:
-    "Free aircond calculators Malaysia: installation cost, gas top-up cost, BTU & HP, aircond size, electricity cost, inverter savings & service recommendation. Instant estimates from KL Renovator.",
+    padMetaDescription("Free aircond calculators Malaysia: installation cost, gas top-up cost, BTU & HP, aircond size, electricity cost, inverter savings & service recommendation. Instant estimates from KL Renovator."),
   alternates: buildTrilingualHreflang("/tools"),
   openGraph: {
     title: clampMetaTitle("Free Aircond Calculators & Tools — KL Renovator"),

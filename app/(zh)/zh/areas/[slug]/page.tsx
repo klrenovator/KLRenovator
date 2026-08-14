@@ -16,7 +16,7 @@ import { Reveal } from "@/components/reveal";
 import { BookingButton } from "@/components/booking-button";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
-import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
+import { buildServiceAreaGeoCircle } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
 import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
@@ -107,10 +107,18 @@ export default async function AreaPageZH({
       addressCountry: "MY",
     },
     geo: { "@type": "GeoCoordinates", latitude: area.lat, longitude: area.lng },
-    // aligned with the homepage entity by listing the full Klang Valley
-    // service footprint, not only the current landing-page city.
+    // Only THIS area's footprint belongs on the area landing page. The
+    // sitewide entity in the root layout already declares the full Klang
+    // Valley footprint — inlining all 40 areas' geo here added ~10 KB (x2
+    // with the RSC flight payload) to every single area page.
     areaServed: [
-      ...buildAreaServedSchema(),
+      {
+        "@type": "City",
+        name: area.name,
+        containedInPlace: { "@type": "State", name: area.state || "Selangor" },
+        geo: { "@type": "GeoCoordinates", latitude: area.lat, longitude: area.lng },
+        url: `https://www.klrenovator.com/zh/areas/${slug}`,
+      },
       buildServiceAreaGeoCircle(),
     ],
     priceRange: "RM 88 – RM 2,000",

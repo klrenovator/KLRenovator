@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
@@ -23,7 +24,7 @@ const amcWaLink = waLink(amcMsg);
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Kontrak Penyelenggaraan Aircond (AMC) KL & Selangor — Pelan Tahunan dari RM 299 | KL Renovator"),
-  description: "Kontrak penyelenggaraan aircond tahunan KL & Selangor. Jimat 30% berbanding tempahan sekali. Servis suku tahunan, keutamaan, kecemasan percuma. Dari RM 299/thn.",
+  description: padMetaDescription("Kontrak penyelenggaraan aircond tahunan KL & Selangor. Jimat 30% berbanding tempahan sekali. Servis suku tahunan, keutamaan, kecemasan percuma. Dari RM 299/thn."),
   openGraph: {
     title: clampMetaTitle("Kontrak Penyelenggaraan Aircond (AMC) KL & Selangor | KL Renovator"),
     description: "Jimat sehingga 30% dengan pelan penyelenggaraan aircond tahunan. Servis suku tahunan, respons keutamaan, diagnostik percuma. Dari RM 299/tahun.",

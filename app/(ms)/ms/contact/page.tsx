@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -16,7 +17,7 @@ import { CoverageAreas } from "@/components/sections/coverage-areas";
 export const metadata: Metadata = {
   title: clampMetaTitle("Hubungi KL Renovator | Servis Aircond KL & Selangor"),
   description:
-    "Hubungi KL Renovator untuk servis aircond di seluruh KL & Selangor. WhatsApp +60182983573 untuk sebut harga hari sama. Harga telus, tindak balas pantas.",
+    padMetaDescription("Hubungi KL Renovator untuk servis aircond di seluruh KL & Selangor. WhatsApp +60182983573 untuk sebut harga hari sama. Harga telus, tindak balas pantas."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/contact",
     languages: {
@@ -61,7 +62,7 @@ const contactPageSchema = {
   "@id": "https://www.klrenovator.com/ms/contact#contactpage",
   name: "Hubungi KL Renovator — Servis Aircond KL & Selangor",
   description:
-    "Hubungi KL Renovator untuk servis aircond profesional di Kuala Lumpur dan Selangor. Servis hari sama tersedia. WhatsApp +60182983573.",
+    padMetaDescription("Hubungi KL Renovator untuk servis aircond profesional di Kuala Lumpur dan Selangor. Servis hari sama tersedia. WhatsApp +60182983573."),
   url: "https://www.klrenovator.com/ms/contact",
   mainEntity: {
     "@type": "HVACBusiness",

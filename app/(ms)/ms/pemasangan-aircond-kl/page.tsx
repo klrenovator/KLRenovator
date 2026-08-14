@@ -1,18 +1,16 @@
 import { Metadata } from "next";
-import { FaWhatsapp, FaCheck, FaTruck, FaWrench, FaGauge, FaShield, FaClock, FaLocationDot, FaBuilding, FaPlug, FaSnowflake, FaMagnifyingGlass, FaBolt, FaTemperatureHalf } from "react-icons/fa6";
-import { FiMessageSquare, FiPhone } from "react-icons/fi";
+import { InstallationDeferred } from "@/components/installation-deferred";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationHowToSchema, buildInstallationFAQSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
-import { InstallationCROModule } from "@/components/installation-cro-module";
-import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond KL & Selangor — Dari RM199, Hari Sama",
-  description: "Pemasangan aircond pakar dari RM199 — dinding, ceiling cassette & unit tingkap, 20 jenama. Vacuum pump, paip tembaga, waranti 1 bulan. Servis hari sama.",
+  description: padMetaDescription("Pemasangan aircond pakar dari RM199 — dinding, ceiling cassette & unit tingkap, 20 jenama. Vacuum pump, paip tembaga, waranti 1 bulan. Servis hari sama."),
   openGraph: {
     title: "Pemasangan Aircond KL & Selangor — Dari RM199 | KL Renovator",
     description: "Pemasangan aircond profesional dari RM199. Dinding, ceiling cassette, semua jenama. Vacuum pump, paip tembaga, waranti 1 bulan. WhatsApp +60182983573",
@@ -28,13 +26,13 @@ export const metadata: Metadata = {
 };
 
 const INSTALLATION_PROCESS = [
-  { step: 1, title: "Tempahan WhatsApp & Survei Tapak", desc: "Hubungi kami via WhatsApp di +60182983573 dengan kawasan anda, jenis unit (dinding, ceiling cassette, tingkap), dan saiz HP. Kami sahkan harga dan jadualkan survei tapak hari sama atau esok. Juruteknik menilai laluan paip, kedudukan unit luar, dan keperluan elektrik.", icon: <FiMessageSquare className="h-5 w-5" /> },
-  { step: 2, title: "Penghantaran Juruteknik & Persediaan", desc: "Juruteknik HVAC berlesen kami tiba dengan semua alat, bahan (paip tembaga, penebatan, wayar), dan peralatan keselamatan. Lapik lindung melindungi lantai dan perabot. Kami sahkan pelan pemasangan tepat dengan anda sebelum mula.", icon: <FaTruck className="h-5 w-5" /> },
-  { step: 3, title: "Pemasangan Paip Tembaga & Penebatan", desc: "Paip tembaga Type L atau Type M (bergantung saiz HP) dipotong, di-flare, dan dilalukan dengan kemas. Penebatan Armaflex (minimum 9mm) mengelakkan kondensasi dan kehilangan tenaga. Paip disokong dengan braket yang betul — tiada lengkung tajam yang menghalang aliran refrigeran.", icon: <FaWrench className="h-5 w-5" /> },
-  { step: 4, title: "Pemasangan Paip Saliran dengan Gradien", desc: "Paip PVC saliran dipasang dengan gradien minimum 1:50 untuk saliran graviti. Periuk anti-siphon mengelakkan aliran balik. Kondensat diuji sebelum ditutup. Untuk kondo tinggi, kami lalukan ke lubang saliran lantai atau saliran balconi mengikut peraturan pengurusan bangunan.", icon: <FaWrench className="h-5 w-5" /> },
-  { step: 5, title: "Sambungan Elektrik & Pemeriksaan Breaker", desc: "Litar terpakai dengan rating MCB yang betul (16A untuk 1.0–1.5HP, 20A untuk 2.0–2.5HP, 32A untuk 3.0HP+). Saiz wayar mengikut standard Malaysia. Perlindungan kebocoran bumi disahkan. Isolator unit luar dipasang untuk keselamatan dan akses penyelenggaraan.", icon: <FaBolt className="h-5 w-5" /> },
-  { step: 6, title: "Komisen Vacuum Pump (Wajib)", desc: "Vacuum pump dua peringkat menarik sistem ke 500 mikron atau kurang — mengeluarkan semua kelembapan dan bukan-kondensat. Langkah ini TIDAK BOLEH DILEWATKAN. Melangkau vacuum menyebabkan kegagalan kompresor, pembentukan asid, dan membatalkan waranti pengeluar. Kami mengekang vacuum 15+ minit untuk sahkan tiada kebocoran.", icon: <FaGauge className="h-5 w-5" /> },
-  { step: 7, title: "Pelucahan Refrigeran, Ujian & Serah Terima", desc: "Cas kilang dilepaskan. Sistem berjalan 15+ minit. Kami sahkan: output penyejukan (termometer di supply/return), tekanan operasi, tarikan amp, kalibrasi termostat, sifar getaran, sifar kebocoran. Kad waranti kerja 1 bulan bertulis diserahkan. Kad kerja dengan senarai semak ditandatangani.", icon: <FaTemperatureHalf className="h-5 w-5" /> },
+  { step: 1, title: "Tempahan WhatsApp & Survei Tapak", desc: "Hubungi kami via WhatsApp di +60182983573 dengan kawasan anda, jenis unit (dinding, ceiling cassette, tingkap), dan saiz HP. Kami sahkan harga dan jadualkan survei tapak hari sama atau esok. Juruteknik menilai laluan paip, kedudukan unit luar, dan keperluan elektrik.", icon: <span aria-hidden="true">💬</span> },
+  { step: 2, title: "Penghantaran Juruteknik & Persediaan", desc: "Juruteknik HVAC berlesen kami tiba dengan semua alat, bahan (paip tembaga, penebatan, wayar), dan peralatan keselamatan. Lapik lindung melindungi lantai dan perabot. Kami sahkan pelan pemasangan tepat dengan anda sebelum mula.", icon: <span aria-hidden="true">🚚</span> },
+  { step: 3, title: "Pemasangan Paip Tembaga & Penebatan", desc: "Paip tembaga Type L atau Type M (bergantung saiz HP) dipotong, di-flare, dan dilalukan dengan kemas. Penebatan Armaflex (minimum 9mm) mengelakkan kondensasi dan kehilangan tenaga. Paip disokong dengan braket yang betul — tiada lengkung tajam yang menghalang aliran refrigeran.", icon: <span aria-hidden="true">🔧</span> },
+  { step: 4, title: "Pemasangan Paip Saliran dengan Gradien", desc: "Paip PVC saliran dipasang dengan gradien minimum 1:50 untuk saliran graviti. Periuk anti-siphon mengelakkan aliran balik. Kondensat diuji sebelum ditutup. Untuk kondo tinggi, kami lalukan ke lubang saliran lantai atau saliran balconi mengikut peraturan pengurusan bangunan.", icon: <span aria-hidden="true">🔧</span> },
+  { step: 5, title: "Sambungan Elektrik & Pemeriksaan Breaker", desc: "Litar terpakai dengan rating MCB yang betul (16A untuk 1.0–1.5HP, 20A untuk 2.0–2.5HP, 32A untuk 3.0HP+). Saiz wayar mengikut standard Malaysia. Perlindungan kebocoran bumi disahkan. Isolator unit luar dipasang untuk keselamatan dan akses penyelenggaraan.", icon: <span aria-hidden="true">⚡</span> },
+  { step: 6, title: "Komisen Vacuum Pump (Wajib)", desc: "Vacuum pump dua peringkat menarik sistem ke 500 mikron atau kurang — mengeluarkan semua kelembapan dan bukan-kondensat. Langkah ini TIDAK BOLEH DILEWATKAN. Melangkau vacuum menyebabkan kegagalan kompresor, pembentukan asid, dan membatalkan waranti pengeluar. Kami mengekang vacuum 15+ minit untuk sahkan tiada kebocoran.", icon: <span aria-hidden="true">📊</span> },
+  { step: 7, title: "Pelucahan Refrigeran, Ujian & Serah Terima", desc: "Cas kilang dilepaskan. Sistem berjalan 15+ minit. Kami sahkan: output penyejukan (termometer di supply/return), tekanan operasi, tarikan amp, kalibrasi termostat, sifar getaran, sifar kebocoran. Kad waranti kerja 1 bulan bertulis diserahkan. Kad kerja dengan senarai semak ditandatangani.", icon: <span aria-hidden="true">🌡️</span> },
 ];
 
 const PRICING_TABLE = [
@@ -65,10 +63,10 @@ const FAQS = [
   { q: "Bagaimana nak tempah pemasangan aircond berhampiran saya di KL atau Selangor?", a: "WhatsApp +60182983573 dengan kawasan anda, jenis unit (dinding/ceiling cassette/tingkap), saiz HP, dan tarikh keutamaan. Kami sah harga dan jadual dalam 30 minit. Pemasangan hari sama tersedia untuk tempahan awal. Kami meliputi semua kawasan KL & Selangor termasuk Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, dan Cyberjaya." },
 ];
 
-function TrustBadge({ icon: Icon, label }: { icon: React.ComponentType<{ className?: string }>; label: string }) {
+function TrustBadge({ icon, label }: { icon: string; label: string }) {
   return (
     <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 px-4 py-2 text-sm font-black uppercase tracking-wider text-white/90">
-      <Icon className="h-4 w-4 text-emerald-400" />
+      <span aria-hidden="true" className="text-emerald-400">{icon}</span>
       {label}
     </span>
   );
@@ -114,6 +112,9 @@ function PricingRow({ type, hp, price, pipe, wire, drain, isHeader = false }: { 
   );
 }
 
+const CRO_TITLE = "Mengapa KL Renovator untuk Pemasangan?";
+const CRO_SUBTITLE = "Pemasangan aircond profesional dari RM199 — hari sama tersedia, semua 20 jenama, waranti kerja 1 bulan.";
+
 export default function PemasanganAircondKLPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Utama", url: "https://www.klrenovator.com/ms" },
@@ -121,14 +122,12 @@ export default function PemasanganAircondKLPage() {
   ]);
 
   const serviceSchema = buildInstallationServiceSchema();
-  const howToSchema = buildInstallationHowToSchema();
   const faqSchema = buildInstallationFAQSchema(FAQS);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
@@ -156,17 +155,17 @@ export default function PemasanganAircondKLPage() {
               Komisen vacuum pump, paip tembaga Type L, penebatan Armaflex, waranti kerja 1 bulan.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <TrustBadge icon={FaCheck} label="Pemasangan Dari RM 199" />
-              <TrustBadge icon={FaClock} label="Tersedia Hari Sama" />
-              <TrustBadge icon={FaShield} label="Waranti Kerja 1 Bulan" />
-              <TrustBadge icon={FaTruck} label="20 Jenama Disokong" />
+              <TrustBadge icon="✓" label="Pemasangan Dari RM 199" />
+              <TrustBadge icon="🕘" label="Tersedia Hari Sama" />
+              <TrustBadge icon="🛡️" label="Waranti Kerja 1 Bulan" />
+              <TrustBadge icon="🚚" label="20 Jenama Disokong" />
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 max-w-md">
               <a href={waLink("🔧 Pertanyaan Pemasangan Aircond\n\nHai KL Renovator, saya perlukan aircond baharu dipasang.\n\n📍 Kawasan Saya:\n❄️ Jenis Unit: Dinding / Ceiling Cassette / Tingkap\n📏 Saiz HP (jika diketahui):\n🏠 Hartanah: Kondo / Landed / Pejabat / Kedai\n\nSila hantar sebut harga & slot tersedia.")} target="_blank" rel="nofollow noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase text-sm tracking-widest h-14 px-6 shadow-lg shadow-green-900/40 transition-all">
-                <FaWhatsapp className="h-5 w-5" /> Tempah Pemasangan via WhatsApp
+                <span aria-hidden="true">💬</span> Tempah Pemasangan via WhatsApp
               </a>
               <a href={`tel:${siteConfig.phone}`} className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-black uppercase text-sm tracking-widest h-14 px-6 transition-all">
-                <FiPhone className="h-4 w-4 text-sky-300" /> Hubungi +60 18-298 3573
+                <span aria-hidden="true">📞</span> Hubungi +60 18-298 3573
               </a>
             </div>
           </Reveal>
@@ -194,31 +193,31 @@ export default function PemasanganAircondKLPage() {
           </Reveal>
           <Reveal delay={200}>
             <div className="mt-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
-              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><FaCheck className="h-5 w-5" /> Apa Yang Termasuk Dalam Harga Buruh</h3>
+              <h3 className="font-black text-emerald-800 mb-3 flex items-center gap-2"><span aria-hidden="true">✓</span> Apa Yang Termasuk Dalam Harga Buruh</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-emerald-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Survei tapak & sebut harga (percuma)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki paip tembaga (cecair + gas)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki wayar elektrik</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> 7 kaki paip PVC saliran</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket standard luar</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Komisen vacuum pump</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Pelucahan refrigeran & ujian</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Kad waranti kerja 1 bulan</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Survei tapak & sebut harga (percuma)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 kaki paip tembaga (cecair + gas)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 kaki wayar elektrik</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 7 kaki paip PVC saliran</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket standard luar</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Komisen vacuum pump</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Pelucahan refrigeran & ujian</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Kad waranti kerja 1 bulan</li>
               </ul>
             </div>
           </Reveal>
           <Reveal delay={300}>
             <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6">
-              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><FaMagnifyingGlass className="h-5 w-5" /> Caj Tambahan (Hanya Jika Perlu)</h3>
+              <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><span aria-hidden="true">🔍</span> Caj Tambahan (Hanya Jika Perlu)</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Paip tembaga melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Wayar elektrik melebihi 7 kaki: RM 9/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Casing PVC kecil (wayar elektrik): RM 6/kaki; casing PVC besar (paip kuprum + wayar + penebat): RM 12/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran standard: RM 45</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Braket kompressor / luaran heavy-duty: RM 70</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Soket elektrik baharu: RM 100</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Borong dinding/penyembunyian: RM 6/kaki</li>
-                <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 shrink-0" /> Akses kondo tinggi/sukar: RM 50–150</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Paip tembaga melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Wayar elektrik melebihi 7 kaki: RM 9/kaki</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Casing PVC kecil (wayar elektrik): RM 6/kaki; casing PVC besar (paip kuprum + wayar + penebat): RM 12/kaki</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket kompressor / luaran standard: RM 45</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket kompressor / luaran heavy-duty: RM 70</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Soket elektrik baharu: RM 100</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Borong dinding/penyembunyian: RM 6/kaki</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Akses kondo tinggi/sukar: RM 50–150</li>
               </ul>
               <p className="mt-4 text-xs text-amber-600">Semua tambahan dikutip & diluluskan di tapak SEBELUM kerja bermula. Tiada kejutan.</p>
             </div>
@@ -238,14 +237,14 @@ export default function PemasanganAircondKLPage() {
           </Reveal>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: <FaWrench className="h-6 w-6" />, title: "Vacuum Pump Setiap Kerja", desc: "Vacuum 500-mikron wajib pada setiap pemasangan. Tiada pengecualian. Melindungi kompresor anda bertahun-tahun." },
-              { icon: <FaPlug className="h-6 w-6" />, title: "Paip Tembaga Type L & Armaflex", desc: "Paip tembaga premium dengan penebatan Armaflex 9–13mm. Tiada gantian nipis murah." },
-              { icon: <FaBolt className="h-6 w-6" />, title: "Litar Terpakai & MCB Betul", desc: "Elektrik mengikut MS IEC 60364. Saiz breaker betul, kebocoran bumi, isolator termasuk." },
-              { icon: <FaGauge className="h-6 w-6" />, title: "Komisen Presisi", desc: "Ujian 15-minit: tekanan, tarikan amp, kalibrasi termostat, delta-T penyejukan disahkan." },
-              { icon: <FaShield className="h-6 w-6" />, title: "Waranti 1 Bulan Bertulis", desc: "Kad kerja dengan senarai semak ditandatangani. Mana-mana isu pemasangan dalam 30 hari — kami pulang percuma." },
-              { icon: <FaBuilding className="h-6 w-6" />, title: "Pakar Kondo & JMB", desc: "Kami urus kelulusan bangunan, tempahan lif, akses tebing servis, peraturan selepas waktu pejabat dengan lancar." },
-              { icon: <FaSnowflake className="h-6 w-6" />, title: "Semua 20 Jenama Utama", desc: "Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Hisense, Aux, TCL, Isonic, National, Sanyo." },
-              { icon: <FaLocationDot className="h-6 w-6" />, title: "Liputan KL & Selangor", desc: "Petaling Jaya, Cheras, Ampang, Subang, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya." },
+              { icon: <span aria-hidden="true">🔧</span>, title: "Vacuum Pump Setiap Kerja", desc: "Vacuum 500-mikron wajib pada setiap pemasangan. Tiada pengecualian. Melindungi kompresor anda bertahun-tahun." },
+              { icon: <span aria-hidden="true">🔌</span>, title: "Paip Tembaga Type L & Armaflex", desc: "Paip tembaga premium dengan penebatan Armaflex 9–13mm. Tiada gantian nipis murah." },
+              { icon: <span aria-hidden="true">⚡</span>, title: "Litar Terpakai & MCB Betul", desc: "Elektrik mengikut MS IEC 60364. Saiz breaker betul, kebocoran bumi, isolator termasuk." },
+              { icon: <span aria-hidden="true">📊</span>, title: "Komisen Presisi", desc: "Ujian 15-minit: tekanan, tarikan amp, kalibrasi termostat, delta-T penyejukan disahkan." },
+              { icon: <span aria-hidden="true">🛡️</span>, title: "Waranti 1 Bulan Bertulis", desc: "Kad kerja dengan senarai semak ditandatangani. Mana-mana isu pemasangan dalam 30 hari — kami pulang percuma." },
+              { icon: <span aria-hidden="true">🏢</span>, title: "Pakar Kondo & JMB", desc: "Kami urus kelulusan bangunan, tempahan lif, akses tebing servis, peraturan selepas waktu pejabat dengan lancar." },
+              { icon: <span aria-hidden="true">❄️</span>, title: "Semua 20 Jenama Utama", desc: "Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Carrier, Fujitsu, Hitachi, Sharp, Acson, Gree, Toshiba, Hisense, Aux, TCL, Isonic, National, Sanyo." },
+              { icon: <span aria-hidden="true">📍</span>, title: "Liputan KL & Selangor", desc: "Petaling Jaya, Cheras, Ampang, Subang, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 50}>
                 <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-sky-200 hover:shadow-md transition-all">
@@ -291,37 +290,37 @@ export default function PemasanganAircondKLPage() {
           <div className="grid gap-8 md:grid-cols-3">
             <Reveal delay={100}>
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><FaPlug className="h-5 w-5 text-sky-600" /> Paip Tembaga</h3>
+                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🔌</span> Paip Tembaga</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tembaga Type L (1.0–2.5 HP) — dinding tebal, rintangan kakisan lebih baik</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tembaga Type M (3.0 HP+) — diluluskan untuk kapasiti lebih besar</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Dibersihkan semasa brazing — elakkan pengoksidaan dalaman</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Sambungan flare yang betul — dikencangkan kunci tork mengikut spesifikasi</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tiada kink, lengkung tajam, atau laluan paip undersized</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Tembaga Type L (1.0–2.5 HP) — dinding tebal, rintangan kakisan lebih baik</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Tembaga Type M (3.0 HP+) — diluluskan untuk kapasiti lebih besar</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Dibersihkan semasa brazing — elakkan pengoksidaan dalaman</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Sambungan flare yang betul — dikencangkan kunci tork mengikut spesifikasi</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Tiada kink, lengkung tajam, atau laluan paip undersized</li>
                 </ul>
               </div>
             </Reveal>
             <Reveal delay={150}>
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><FaTemperatureHalf className="h-5 w-5 text-sky-600" /> Penebatan</h3>
+                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">🌡️</span> Penebatan</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Armaflex (elastomer sel-terbuka) — minimum ketebalan 9mm</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> 13mm untuk ceiling cassette &amp; laluan paip panjang (&gt;15 kaki)</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Mencegah tetesan kondensasi & kehilangan tenaga</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Tape UV-rintang pada semua joint & terminasi</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Liputan penuh — tiada tembaga terdedah mana-mana</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Armaflex (elastomer sel-terbuka) — minimum ketebalan 9mm</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 13mm untuk ceiling cassette &amp; laluan paip panjang (&gt;15 kaki)</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Mencegah tetesan kondensasi & kehilangan tenaga</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Tape UV-rintang pada semua joint & terminasi</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Liputan penuh — tiada tembaga terdedah mana-mana</li>
                 </ul>
               </div>
             </Reveal>
             <Reveal delay={200}>
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><FaBolt className="h-5 w-5 text-sky-600" /> Elektrik & Braket</h3>
+                <h3 className="font-black text-slate-900 mb-4 flex items-center gap-2"><span aria-hidden="true">⚡</span> Elektrik & Braket</h3>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Litar terpakai dari DB — rating MCB betul mengikut HP</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Kabel 2.5mm² (1.0–2.5 HP), 4mm² (3.0–5.0 HP)</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Suis isolator luar — keselamatan & akses penyelenggaraan</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Braket heavy-duty — getaran-dipekat, powder-coated</li>
-                  <li className="flex items-center gap-2"><FaCheck className="h-4 w-4 text-emerald-500 shrink-0" /> Trunking kabel — kemas, dilindungi, boleh cat</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Litar terpakai dari DB — rating MCB betul mengikut HP</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Kabel 2.5mm² (1.0–2.5 HP), 4mm² (3.0–5.0 HP)</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Suis isolator luar — keselamatan & akses penyelenggaraan</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket heavy-duty — getaran-dipekat, powder-coated</li>
+                  <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Trunking kabel — kemas, dilindungi, boleh cat</li>
                 </ul>
               </div>
             </Reveal>
@@ -390,7 +389,7 @@ export default function PemasanganAircondKLPage() {
               <h3 className="font-black text-xl mb-4">Harga Disahkan Sebelum Kami Borong — Dijamin</h3>
               <p className="text-sky-100 mb-6 max-w-2xl mx-auto">Tiada caj tersembunyi. Tiada kejutan "sambil-sambil". Setiap bahan tambahan dikutip dan diluluskan oleh anda di tapak sebelum sebarang pengeboran atau pemotongan bermula.</p>
               <a href={waLink("🔧 Permintaan Sebut Harga Pemasangan\n\nHai KL Renovator, saya mahu harga disahkan untuk pemasangan aircond.\n\n📍 Kawasan:\n❄️ Jenis Unit:\n📏 Saiz HP:\n🏠 Jenis Hartanah:\n\nSila hantar pecahan penuh.")} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-                <FaWhatsapp className="h-5 w-5" /> Dapatkan Harga Disahkan WhatsApp
+                <span aria-hidden="true">💬</span> Dapatkan Harga Disahkan WhatsApp
               </a>
             </div>
           </Reveal>
@@ -417,17 +416,7 @@ export default function PemasanganAircondKLPage() {
       </section>
 
       {/* CRO Module — Installation Page Conversion Optimization */}
-      <InstallationCROModule 
-        title="Mengapa KL Renovator untuk Pemasangan?"
-        subtitle="Pemasangan aircond profesional dari RM199 — hari sama tersedia, semua 20 jenama, waranti kerja 1 bulan."
-        showObjectionHandling={true}
-        showTrustSignals={true}
-        showPricingGuarantee={true}
-        showUSPBlock={true}
-      />
-
-      {/* Installation Trust Signals — INS-17 */}
-      <InstallationTrustSignals variant="default" />
+      <InstallationDeferred locale="ms" title={CRO_TITLE} subtitle={CRO_SUBTITLE} />
 
       {/* Final CTA */}
       <section className="py-20 sm:py-28 bg-slate-900 text-white">
@@ -437,10 +426,10 @@ export default function PemasanganAircondKLPage() {
             <p className="text-slate-300 font-medium mb-8 max-w-xl mx-auto">Slot hari sama tersedia merentasi KL & Selangor. Harga telus dari RM 199. Waranti kerja 1 bulan. Semua 20 jenama.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={waLink("🔧 Tempahan Pemasangan Aircond\n\nHai KL Renovator, saya mahu tempah pemasangan.\n\n📍 Kawasan Saya:\n❄️ Jenis Unit: Dinding / Ceiling Cassette / Tingkap\n📏 Saiz HP:\n🏠 Hartanah: Kondo / Landed / Pejabat\n\nTarikh keutamaan:\n\nSila sahkan harga & slot.")} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-                <FaWhatsapp className="h-5 w-5" /> Tempah via WhatsApp
+                <span aria-hidden="true">💬</span> Tempah via WhatsApp
               </a>
               <a href={`tel:${siteConfig.phone}`} className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-                <FiPhone className="h-4 w-4" /> Hubungi +60 18-298 3573
+                <span aria-hidden="true">📞</span> Hubungi +60 18-298 3573
               </a>
             </div>
             <p className="mt-6 text-slate-500 text-sm">Kami melayani semua kawasan KL & Selangor — Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya & banyak lagi.</p>

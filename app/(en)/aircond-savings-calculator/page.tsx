@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/aircond-savings-calculator";
 export const metadata: Metadata = {
   title: clampMetaTitle("Inverter Aircond Savings Calculator Malaysia"),
   description:
-    "Free inverter aircond savings calculator Malaysia. Compare your old non-inverter aircond vs a new inverter unit — monthly savings, yearly savings and estimated payback period.",
+    padMetaDescription("Free inverter aircond savings calculator Malaysia. Compare your old non-inverter aircond vs a new inverter unit — monthly savings, yearly savings and estimated payback period."),
   alternates: buildTrilingualHreflang("/aircond-savings-calculator"),
   openGraph: {
     title: clampMetaTitle("Inverter Aircond Savings Calculator Malaysia"),

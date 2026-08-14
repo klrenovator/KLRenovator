@@ -1,7 +1,9 @@
 import { getBlogPostSummaries } from "./get-blog-summaries";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 export const metadata = {
-  title: "Aircond Blog — Tips, Guides & Maintenance Advice KL & Selangor",
-  description: "Expert aircond maintenance tips, chemical wash guides, brand comparisons and repair advice for Kuala Lumpur and Selangor.",
+  title: clampMetaTitle("Aircond Blog — Tips, Guides & Maintenance Advice KL Selangor"),
+  description: padMetaDescription("Expert aircond maintenance tips, chemical wash guides, brand comparisons and repair advice for Kuala Lumpur and Selangor."),
 };
 
 import BlogIndexClient from "./blog-index-client";

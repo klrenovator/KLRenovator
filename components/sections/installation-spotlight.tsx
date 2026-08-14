@@ -1,7 +1,5 @@
 import Image from "next/image";
 import NextLink from "next/link";
-import { FaWhatsapp, FaCheck } from "react-icons/fa6";
-import { FiArrowRight } from "react-icons/fi";
 
 import { waLink } from "@/lib/whatsapp";
 
@@ -147,10 +145,10 @@ export function InstallationSpotlight({ locale = "en" }: { locale?: Locale }) {
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <NextLink href="/installation" className="inline-flex flex-1 items-center justify-center gap-2 bg-slate-900 px-6 py-4 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-slate-800 active:scale-[0.97]">
-                {t.explore} <FiArrowRight className="h-3.5 w-3.5" />
+                {t.explore} <span aria-hidden="true">→</span>
               </NextLink>
               <a href={wa} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex flex-1 items-center justify-center gap-2 bg-[#22c55e] px-6 py-4 text-xs font-black uppercase tracking-widest text-white shadow-md transition-all hover:bg-[#16a34a] active:scale-[0.97]">
-                <FaWhatsapp className="h-4 w-4" /> {t.quote}
+                <span aria-hidden="true">💬</span> {t.quote}
               </a>
             </div>
           </div>
@@ -164,7 +162,7 @@ export function InstallationSpotlight({ locale = "en" }: { locale?: Locale }) {
               <p className="mb-3 text-xs font-black uppercase tracking-widest text-emerald-700">{t.includes}</p>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {t.included.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-slate-700"><FaCheck className="mt-1 h-3 w-3 shrink-0 text-emerald-500" />{item}</li>
+                  <li key={item} className="flex items-start gap-2 text-sm text-slate-700"><span className="mt-1 shrink-0 text-emerald-500 text-xs" aria-hidden="true">✓</span>{item}</li>
                 ))}
               </ul>
             </div>

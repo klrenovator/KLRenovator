@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/ms/which-aircond-service-do-i-need
 export const metadata: Metadata = {
   title: clampMetaTitle("Servis Aircond Mana Yang Saya Perlukan? — Percuma"),
   description:
-    "Tidak pasti aircond anda perlukan servis asas, cuci kimia, overhaul kimia, tambah gas atau pembaikan? Jawab soalan pantas dan dapatkan cadangan servis percuma dengan harga dari KL Renovator.",
+    padMetaDescription("Tidak pasti aircond anda perlukan servis asas, cuci kimia, overhaul kimia, tambah gas atau pembaikan? Jawab soalan pantas dan dapatkan cadangan servis percuma dengan harga dari KL Renovator."),
   alternates: buildTrilingualHreflang("/which-aircond-service-do-i-need", "ms"),
   openGraph: {
     title: clampMetaTitle("Servis Aircond Mana Yang Saya Perlukan?"),

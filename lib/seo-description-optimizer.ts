@@ -76,6 +76,78 @@ export function clampMetaDescription(raw: string, opts?: { min?: number; max?: n
 }
 
 /**
+ * Pad a meta description that is under the minimum length with
+ * locale-appropriate boilerplate (brand + coverage + contact), then clamp.
+ * Many generated excerpts (blog posts, CJK service blurbs) land 10–100
+ * characters short of the 140–160 target; appending one of these
+ * context-neutral closers gets them into range without hand-editing every
+ * page. Padding never pushes past the max — it stops at the first suffix
+ * that fits.
+ */
+const PAD_SUFFIXES: Record<"latin" | "ms" | "zh", string[]> = {
+  latin: [
+    " KL Renovator — same-day aircond service across KL & Selangor.",
+    " Same-day slots across KL & Selangor. Transparent pricing, 1-month warranty.",
+    " Serving all of Kuala Lumpur & Selangor — same-day, all 20 brands.",
+    " WhatsApp +60182983573.",
+    " Same-day service, all brands.",
+    " Free quote before work starts.",
+    " Same-day available.",
+    " Same-day.",
+    " Book online.",
+    " All 20 brands.",
+  ],
+  ms: [
+    " KL Renovator — servis aircond hari sama di seluruh KL & Selangor.",
+    " Liputan penuh KL & Selangor. Servis hari sama, harga telus.",
+    " WhatsApp +60182983573.",
+    " Servis hari sama, semua jenama.",
+    " Sebut harga percuma sebelum kerja.",
+    " Servis hari sama tersedia.",
+    " Hari sama.",
+    " Semua jenama.",
+  ],
+  zh: [
+    " KL Renovator — 吉隆坡及雪兰莪当天空调上门服务，透明报价。",
+    " 覆盖吉隆坡与雪兰莪全境，当天上门，支持全部20个品牌。",
+    " WhatsApp +60182983573。",
+    " 当天上门服务，1个月工艺保修。",
+    " 开工前免费报价。",
+    " 当天服务。",
+    " 快速预约。",
+  ],
+};
+
+function detectPadLang(text: string): "latin" | "ms" | "zh" {
+  if (isCJK(text)) return "zh";
+  // Simple Malay cues — good enough for choosing padding copy.
+  if (/\b(servis|pemasangan|aircond|cuci|waranti|harga|hari sama|selangor)\b/i.test(text) &&
+      /\b(di|dan|untuk|dengan|kami|anda|boleh|dari)\b/i.test(text)) {
+    return "ms";
+  }
+  return "latin";
+}
+
+export function padMetaDescription(raw: string, opts?: { min?: number; max?: number }): string {
+  const clamped = clampMetaDescription(raw, opts);
+  const cjk = isCJK(clamped);
+  const min = opts?.min ?? (cjk ? META_DESC_MIN_CJK : META_DESC_MIN);
+  if (clamped.length >= min) return clamped;
+
+  const maxLen = opts?.max ?? META_DESC_MAX_CJK;
+  const suffixes = PAD_SUFFIXES[detectPadLang(clamped)];
+  let result = clamped.replace(/\s+$/, "");
+  // Add suffixes until the minimum is reached; skip any that would exceed
+  // the max, and stop once nothing else fits.
+  for (const suffix of suffixes) {
+    if (result.length >= min) break;
+    if (result.toLowerCase().includes(suffix.trim().toLowerCase())) continue;
+    if (result.length + suffix.length <= maxLen) result += suffix;
+  }
+  return clampMetaDescription(result, opts);
+}
+
+/**
  * Build unique description for area pages ensuring 140-155
  * Adds area-specific landmark to guarantee uniqueness
  */

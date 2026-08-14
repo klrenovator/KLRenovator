@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator"),
   description:
-    "Soalan lazim mengenai servis aircond, harga, waranti & kawasan liputan di KL & Selangor. Cuci kimia dari RM 120. Servis hari sama tersedia.",
+    padMetaDescription("Soalan lazim mengenai servis aircond, harga, waranti & kawasan liputan di KL & Selangor. Cuci kimia dari RM 120. Servis hari sama tersedia."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/faq",
     languages: {

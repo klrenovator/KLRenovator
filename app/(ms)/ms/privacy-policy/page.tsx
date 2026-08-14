@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
@@ -9,8 +10,9 @@ const LAST_UPDATED = "06 Ogos 2026";
 export const metadata: Metadata = {
   title: "Dasar Privasi | KL Renovator",
   description:
-    "Bagaimana KL Renovator (Multicore Dynamics Resources) mengumpul, menggunakan, menyimpan dan melindungi data peribadi anda di bawah Akta Perlindungan Data Peribadi (APDP) 2010 Malaysia.",
+    padMetaDescription("Bagaimana KL Renovator (Multicore Dynamics Resources) mengumpul, menggunakan, menyimpan dan melindungi data peribadi anda di bawah Akta Perlindungan Data Peribadi (APDP) 2010 Malaysia."),
   alternates: buildTrilingualHreflang("/privacy-policy", "ms"),
+  openGraph: { locale: "ms_MY", alternateLocale: ["en_MY", "zh_MY"] },
   robots: { index: true, follow: true },
 };
 

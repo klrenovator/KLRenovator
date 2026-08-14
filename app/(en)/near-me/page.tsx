@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import NearMeClient from "./near-me-client";
@@ -6,7 +7,7 @@ import NearMeClient from "./near-me-client";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
   description:
-    "Aircond service near you in KL & Selangor. Trained HVAC technicians, same-day slots, transparent pricing, all 20 brands. Chemical wash from RM 120. WhatsApp us.",
+    padMetaDescription("Aircond service near you in KL & Selangor. Trained HVAC technicians, same-day slots, transparent pricing, all 20 brands. Chemical wash from RM 120. WhatsApp us."),
   alternates: buildTrilingualHreflang("/near-me"),
   openGraph: {
     title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),

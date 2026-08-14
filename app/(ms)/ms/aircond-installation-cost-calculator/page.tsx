@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/ms/aircond-installation-cost-calcu
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Kos Pemasangan Aircond Malaysia"),
   description:
-    "Kalkulator kos pemasangan aircond Malaysia percuma. Anggarkan buruh, paip tembaga, wayar, paip saliran, pendakap, suis & pam air dengan diskaun pakej. Dapatkan sebut harga sah dari KL Renovator.",
+    padMetaDescription("Kalkulator kos pemasangan aircond Malaysia percuma. Anggarkan buruh, paip tembaga, wayar, paip saliran, pendakap, suis & pam air dengan diskaun pakej. Dapatkan sebut harga sah dari KL Renovator."),
   alternates: buildTrilingualHreflang("/aircond-installation-cost-calculator", "ms"),
   openGraph: {
     title: clampMetaTitle("Kalkulator Kos Pemasangan Aircond Malaysia"),

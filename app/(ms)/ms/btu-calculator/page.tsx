@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
@@ -7,7 +8,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia | Kira HP Bilik"),
   description:
-    "Kalkulator saiz aircond Malaysia percuma. Kira keperluan BTU & ketahui 'berapa HP aircond untuk bilik' anda dengan cepat & tepat secara online.",
+    padMetaDescription("Kalkulator saiz aircond Malaysia percuma. Kira keperluan BTU & ketahui 'berapa HP aircond untuk bilik' anda dengan cepat & tepat secara online."),
   alternates: buildTrilingualHreflang("/btu-calculator", "ms"),
   // og:locale was inherited from the root layout as en_MY, so Facebook,
   // WhatsApp and LinkedIn previews announced this localized page as English.
