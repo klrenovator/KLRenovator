@@ -6,6 +6,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { usePathname, useRouter } from "next/navigation";
 import { HiBars3, HiXMark, HiChevronDown } from "react-icons/hi2";
+import { FaWhatsapp } from "react-icons/fa";
 
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -235,9 +236,9 @@ export const Navbar = () => {
               href={waLink(rfqMsg)}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-white hover:text-[#22c55e] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600"
+              className="hidden md:inline-flex items-center gap-2 font-black tracking-wide text-white hover:text-[#25D366] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600"
             >
-              <span aria-hidden="true">💬</span> WhatsApp Online
+              <FaWhatsapp aria-hidden="true" className="h-4 w-4 text-[#25D366]" /> WhatsApp Online
             </a>
           </div>
         </div>
@@ -337,9 +338,9 @@ export const Navbar = () => {
             href={waLink(rfqMsg)}
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
+            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1DA851] px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-md transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
           >
-            <span aria-hidden="true">💬</span> {lbl.book}
+            <FaWhatsapp aria-hidden="true" className="h-4 w-4" /> {lbl.book}
           </a>
         </div>
 
@@ -388,9 +389,9 @@ export const Navbar = () => {
             target="_blank"
             rel="nofollow noopener noreferrer"
             aria-label="WhatsApp"
-            className="inline-flex h-11 w-11 items-center justify-center bg-[#22c55e] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
+            className="inline-flex h-11 w-11 items-center justify-center bg-[#25D366] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600 rounded"
           >
-            <span className="text-lg" aria-hidden="true">💬</span>
+            <FaWhatsapp className="h-6 w-6" aria-hidden="true" />
           </a>
           <button
             aria-expanded={open}
