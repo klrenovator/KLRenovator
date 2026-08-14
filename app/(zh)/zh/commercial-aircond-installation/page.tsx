@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaBuilding, FaStore, FaUtensils, FaHospital, FaServer, FaPhone, FaBolt, FaCalendarCheck } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "商业冷气安装 KL & 雪兰莪 — 办公室、店铺、B2B | KL Renovator",
-  description: "商业冷气安装：办公室、店铺、餐厅、诊所及服务器机房。天花板卡式、管道式、多联式系统。AMC保养合约可选。WhatsApp +60182983573",
+  description: padMetaDescription("商业冷气安装：办公室、店铺、餐厅、诊所及服务器机房。天花板卡式、管道式、多联式系统。AMC保养合约可选。WhatsApp +60182983573"),
   openGraph: {
     title: "商业冷气安装 KL & 雪兰莪 — 办公室、店铺、B2B | KL Renovator",
     description: "办公室、店铺、餐厅、诊所及服务器机房冷气安装。天花板卡式、管道式、多联式。AMC可选。WhatsApp +60182983573",

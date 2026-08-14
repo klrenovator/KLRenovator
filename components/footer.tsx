@@ -1,10 +1,6 @@
 "use client";
 
 import NextLink from "next/link";
-import {
-  FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp, FaGoogle, FaXTwitter, FaLinkedin,
-} from "react-icons/fa6";
-import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
@@ -93,14 +89,15 @@ export const Footer = () => {
           </NextLink>
           <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
 
-          <div className="flex items-center gap-2.5 pt-1 flex-wrap">
-            <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp KL Renovator" style={{ backgroundColor: "#25D366" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaWhatsapp className="h-4 w-4" /></a>
-            <a href={sitePublic.links.instagram} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Instagram" style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaInstagram className="h-4 w-4" /></a>
-            <a href={sitePublic.links.facebook} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Facebook" style={{ backgroundColor: "#1877F2" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaFacebook className="h-4 w-4" /></a>
-            <a href={sitePublic.links.tiktok} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator TikTok" style={{ backgroundColor: "#010101" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaTiktok className="h-4 w-4" /></a>
-            <a href={sitePublic.links.googleBusiness} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Google Business Profile" style={{ backgroundColor: "#4285F4" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaGoogle className="h-4 w-4" /></a>
-            <a href={sitePublic.links.twitter} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator X / Twitter" style={{ backgroundColor: "#000000" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaXTwitter className="h-4 w-4" /></a>
-            <a href={sitePublic.links.linkedin} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator LinkedIn" style={{ backgroundColor: "#0A66C2" }} className="p-2.5 rounded-lg text-white transition-opacity hover:opacity-85"><FaLinkedin className="h-4 w-4" /></a>
+          {/* Compact text badges instead of 7 inline SVG brand icons (~7KB saved per page). */}
+          <div className="flex items-center gap-1.5 pt-1 flex-wrap">
+            <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp KL Renovator" style={{ backgroundColor: "#25D366" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">WA</a>
+            <a href={sitePublic.links.instagram} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Instagram" style={{ background: "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">IG</a>
+            <a href={sitePublic.links.facebook} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Facebook" style={{ backgroundColor: "#1877F2" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">FB</a>
+            <a href={sitePublic.links.tiktok} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator TikTok" style={{ backgroundColor: "#010101" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">TT</a>
+            <a href={sitePublic.links.googleBusiness} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator Google Business Profile" style={{ backgroundColor: "#4285F4" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">G</a>
+            <a href={sitePublic.links.twitter} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator X / Twitter" style={{ backgroundColor: "#000000" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">X</a>
+            <a href={sitePublic.links.linkedin} target="_blank" rel="nofollow noopener noreferrer" aria-label="KL Renovator LinkedIn" style={{ backgroundColor: "#0A66C2" }} className="px-2.5 py-1.5 rounded-md text-white text-[11px] font-black transition-opacity hover:opacity-85">in</a>
           </div>
         </div>
 
@@ -168,12 +165,12 @@ export const Footer = () => {
         <div className="space-y-4">
           <p className="text-xs font-black uppercase tracking-wider text-slate-900">{t("footer_dispatch")}</p>
           <ul className="space-y-3 text-xs">
-            <li><a href={`tel:${sitePublic.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><FaPhone className="h-3.5 w-3.5 text-sky-500 shrink-0" />{sitePublic.phoneDisplay}</a></li>
-            <li><a href={`mailto:${sitePublic.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><FaEnvelope className="h-3.5 w-3.5 text-sky-500 shrink-0" />{sitePublic.email}</a></li>
-            <li className="flex items-start gap-2.5"><FaLocationDot className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><span className="font-medium">KL &amp; Selangor (Klang Valley)</span></li>
-            <li className="flex items-start gap-2.5"><FaClock className="h-3.5 w-3.5 text-sky-500 shrink-0 mt-0.5" /><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-500">Emergency bookings accepted</p></div></li>
+            <li><a href={`tel:${sitePublic.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><span className="text-sky-500" aria-hidden="true">📞</span>{sitePublic.phoneDisplay}</a></li>
+            <li><a href={`mailto:${sitePublic.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><span className="text-sky-500" aria-hidden="true">✉️</span>{sitePublic.email}</a></li>
+            <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">📍</span><span className="font-medium">KL &amp; Selangor (Klang Valley)</span></li>
+            <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">🕘</span><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-500">Emergency bookings accepted</p></div></li>
           </ul>
-          <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" style={{ backgroundColor: "#25D366" }} className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"><FaWhatsapp className="h-4 w-4" /> {fl.bookWa}</a>
+          <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" style={{ backgroundColor: "#25D366" }} className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"><span aria-hidden="true">💬</span> {fl.bookWa}</a>
         </div>
       </div>
 

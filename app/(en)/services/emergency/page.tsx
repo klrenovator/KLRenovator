@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
@@ -48,7 +49,7 @@ const emergencyVisualSXO = buildServiceVisualSXOModule("emergency", "en", "Emerg
 export const metadata: Metadata = {
   title: clampMetaTitle("Emergency Aircond Repair KL & Selangor — Same-Day Urgent Service | KL Renovator"),
   description:
-    "Emergency aircond repair in KL & Selangor. Same-day urgent response for breakdowns, water leaking, or complete failure. All brands. Call +60182983573.",
+    padMetaDescription("Emergency aircond repair in KL & Selangor. Same-day urgent response for breakdowns, water leaking, or complete failure. All brands. Call +60182983573."),
   openGraph: {
     title: clampMetaTitle("Emergency Aircond Repair KL & Selangor | KL Renovator"),
     description:
@@ -94,7 +95,7 @@ const emergencyServiceSchema = {
   "@type": "Service",
   name: "Emergency Aircond Repair KL & Selangor",
   description:
-    "Same-day emergency aircond repair and troubleshooting service in Kuala Lumpur and Selangor. KL Renovator responds to urgent aircond breakdowns across the Klang Valley.",
+    padMetaDescription("Same-day emergency aircond repair and troubleshooting service in Kuala Lumpur and Selangor. KL Renovator responds to urgent aircond breakdowns across the Klang Valley."),
   url: "https://www.klrenovator.com/services/emergency",
   datePublished: emergencySchemaParity.datePublished,
   dateModified: emergencySchemaParity.dateModified,

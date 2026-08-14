@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaBuilding, FaStore, FaUtensils, FaHospital, FaServer, FaPhone, FaBolt, FaCalendarCheck } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond Komersial KL — Pejabat & Kedai",
-  description: "Pemasangan aircond komersial untuk pejabat, kedai, restoran, klinik & bilik server di KL & Selangor. Ceiling cassette & multi-split. AMC tersedia.",
+  description: padMetaDescription("Pemasangan aircond komersial untuk pejabat, kedai, restoran, klinik & bilik server di KL & Selangor. Ceiling cassette & multi-split. AMC tersedia."),
   openGraph: {
     title: "Pemasangan Aircond Komersial KL — Pejabat & Kedai",
     description: "Pemasangan aircond untuk pejabat, kedai, restoran, klinik & bilik server. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573",

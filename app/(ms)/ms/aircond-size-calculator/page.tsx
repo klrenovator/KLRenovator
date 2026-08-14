@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/ms/aircond-size-calculator";
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia — Saiz Bilik ke HP"),
   description:
-    "Kalkulator saiz aircond Malaysia percuma. Masukkan saiz bilik, jenis, penggunaan & pendedahan haba untuk mencari HP, BTU dan kapasiti aircond yang disyorkan. Panduan saiz bilik-ke-HP tepat dari KL Renovator.",
+    padMetaDescription("Kalkulator saiz aircond Malaysia percuma. Masukkan saiz bilik, jenis, penggunaan & pendedahan haba untuk mencari HP, BTU dan kapasiti aircond yang disyorkan. Panduan saiz bilik-ke-HP tepat dari KL Renovator."),
   alternates: buildTrilingualHreflang("/aircond-size-calculator", "ms"),
   openGraph: {
     title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia — Bilik ke HP"),

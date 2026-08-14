@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolsHub } from "@/components/calculators/tools-hub";
@@ -8,7 +9,7 @@ const PAGE_URL = "https://www.klrenovator.com/zh/tools";
 export const metadata: Metadata = {
   title: clampMetaTitle("免费冷气计算器与工具 — 马来西亚"),
   description:
-    "马来西亚免费冷气计算器：安装费用、加气费用、BTU与匹数、冷气尺寸、电费、变频节省与服务推荐。KL Renovator即时估算。",
+    padMetaDescription("马来西亚免费冷气计算器：安装费用、加气费用、BTU与匹数、冷气尺寸、电费、变频节省与服务推荐。KL Renovator即时估算。"),
   alternates: buildTrilingualHreflang("/tools", "zh"),
   openGraph: {
     title: clampMetaTitle("免费冷气计算器与工具"),

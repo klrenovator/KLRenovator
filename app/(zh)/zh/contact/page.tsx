@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -16,7 +17,7 @@ import { CoverageAreas } from "@/components/sections/coverage-areas";
 export const metadata: Metadata = {
   title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
   description:
-    "联系 KL Renovator，获取吉隆坡及雪兰莪的冷气服务。WhatsApp +60182983573 获取当天报价。价格透明，响应迅速。",
+    padMetaDescription("联系 KL Renovator，获取吉隆坡及雪兰莪的冷气服务。WhatsApp +60182983573 获取当天报价。价格透明，响应迅速。"),
   alternates: {
     canonical: "https://www.klrenovator.com/zh/contact",
     languages: {
@@ -61,7 +62,7 @@ const contactPageSchema = {
   "@id": "https://www.klrenovator.com/zh/contact#contactpage",
   name: "联系 KL Renovator — 吉隆坡及雪兰莪冷气服务",
   description:
-    "联系 KL Renovator，获取吉隆坡及雪兰莪的专业冷气服务。提供当天服务。WhatsApp +60182983573。",
+    padMetaDescription("联系 KL Renovator，获取吉隆坡及雪兰莪的专业冷气服务。提供当天服务。WhatsApp +60182983573。"),
   url: "https://www.klrenovator.com/zh/contact",
   mainEntity: {
     "@type": "HVACBusiness",

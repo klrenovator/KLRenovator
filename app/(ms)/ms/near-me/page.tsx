@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NearMeClient from "@/app/(en)/near-me/near-me-client";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Servis Aircond Berdekatan — KL & Selangor | KL Renovator"),
   description:
-    "Servis aircond berdekatan anda di KL & Selangor. Juruteknik HVAC terlatih, slot hari sama, harga telus, semua 20 jenama. Cuci kimia dari RM 120. WhatsApp kami.",
+    padMetaDescription("Servis aircond berdekatan anda di KL & Selangor. Juruteknik HVAC terlatih, slot hari sama, harga telus, semua 20 jenama. Cuci kimia dari RM 120. WhatsApp kami."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/near-me",
     languages: {

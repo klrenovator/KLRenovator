@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
@@ -19,7 +20,7 @@ const LAST_UPDATED = "06 August 2026";
 export const metadata: Metadata = {
   title: "Privacy Policy | KL Renovator",
   description:
-    "How KL Renovator (Multicore Dynamics Resources) collects, uses, stores and protects your personal data under Malaysia's PDPA 2010.",
+    padMetaDescription("How KL Renovator (Multicore Dynamics Resources) collects, uses, stores and protects your personal data under Malaysia's PDPA 2010."),
   alternates: buildTrilingualHreflang("/privacy-policy", "en"),
   robots: { index: true, follow: true },
 };

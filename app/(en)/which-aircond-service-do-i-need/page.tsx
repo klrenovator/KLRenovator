@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/which-aircond-service-do-i-need";
 export const metadata: Metadata = {
   title: clampMetaTitle("Which Aircond Service Do I Need? — Free Recommendation"),
   description:
-    "Not sure if your aircond needs basic service, chemical wash, chemical overhaul, gas top-up or repair? Answer 4 quick questions and get a free service recommendation with pricing from KL Renovator.",
+    padMetaDescription("Not sure if your aircond needs basic service, chemical wash, chemical overhaul, gas top-up or repair? Answer 4 quick questions and get a free service recommendation with pricing from KL Renovator."),
   alternates: buildTrilingualHreflang("/which-aircond-service-do-i-need"),
   openGraph: {
     title: clampMetaTitle("Which Aircond Service Do I Need? Free Tool"),

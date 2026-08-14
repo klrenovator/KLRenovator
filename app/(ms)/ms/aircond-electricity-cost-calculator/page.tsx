@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/ms/aircond-electricity-cost-calcul
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Kos Elektrik Aircond Malaysia"),
   description:
-    "Kalkulator kos elektrik aircond Malaysia percuma. Anggarkan penggunaan kuasa bulanan & bil TNB mengikut HP, jam penggunaan harian dan kadar elektrik. Bandingkan penjimatan inverter.",
+    padMetaDescription("Kalkulator kos elektrik aircond Malaysia percuma. Anggarkan penggunaan kuasa bulanan & bil TNB mengikut HP, jam penggunaan harian dan kadar elektrik. Bandingkan penjimatan inverter."),
   alternates: buildTrilingualHreflang("/aircond-electricity-cost-calculator", "ms"),
   openGraph: {
     title: clampMetaTitle("Kalkulator Kos Elektrik Aircond Malaysia"),

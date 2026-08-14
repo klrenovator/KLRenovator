@@ -1,11 +1,12 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 export const metadata: Metadata = {
   title: "Tempah Temujanji Servis Aircond | KL Renovator",
   description:
-    "Tempah servis aircond, pembaikan atau pemasangan dalam talian di KL & Selangor. Pilih perkhidmatan dan slot masa — pengesahan segera, tanpa deposit.",
+    padMetaDescription("Tempah servis aircond, pembaikan atau pemasangan dalam talian di KL & Selangor. Pilih perkhidmatan dan slot masa — pengesahan segera, tanpa deposit."),
   alternates: buildTrilingualHreflang("/book", "ms"),
   openGraph: {
     title: "Tempah Temujanji Aircond Dalam Talian | KL Renovator",

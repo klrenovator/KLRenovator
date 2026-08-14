@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AreasClient } from "./areas-client";
@@ -6,7 +7,7 @@ import { AreasClient } from "./areas-client";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
   description:
-    "KL Renovator services 39 areas across Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & more. Same-day service.",
+    padMetaDescription("KL Renovator services 39 areas across Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & more. Same-day service."),
   openGraph: {
     title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
     description:
@@ -25,7 +26,7 @@ const areaHubSchema = {
   "@id": "https://www.klrenovator.com/areas#page",
   name: "Aircond Service Areas — KL & Selangor",
   description:
-    "KL Renovator provides professional aircond servicing across all areas of Kuala Lumpur and Selangor. View all 38 service areas.",
+    padMetaDescription("KL Renovator provides professional aircond servicing across all areas of Kuala Lumpur and Selangor. View all 38 service areas."),
   url: "https://www.klrenovator.com/areas",
   provider: {
     "@type": "HVACBusiness",

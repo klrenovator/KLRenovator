@@ -1,11 +1,12 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 export const metadata: Metadata = {
   title: "在线预约冷气服务 | KL Renovator",
   description:
-    "在吉隆坡及雪兰莪在线预约冷气清洗、维修或安装服务。选择您的服务与时间段 — 即时确认，无需押金。",
+    padMetaDescription("在吉隆坡及雪兰莪在线预约冷气清洗、维修或安装服务。选择您的服务与时间段 — 即时确认，无需押金。"),
   alternates: buildTrilingualHreflang("/book", "zh"),
   openGraph: {
     title: "在线预约冷气服务 | KL Renovator",

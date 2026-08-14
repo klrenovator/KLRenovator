@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildFreshMetaTitle } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
@@ -18,7 +19,7 @@ const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
   title: buildFreshMetaTitle("Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator", "ms"),
-  description: "Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. 500+ 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573.",
+  description: padMetaDescription("Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. 500+ 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     languages: {

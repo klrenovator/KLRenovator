@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import Image from "next/image";
@@ -15,7 +16,7 @@ import { PROBLEM_ENTITY_HUBS } from "@/config/problem-entity-hubs";
 export const metadata: Metadata = {
   title: clampMetaTitle("吉隆坡冷气故障指南 | KL Renovator"),
   description:
-    "吉隆坡与雪兰莪常见冷气故障指南——不冷、漏水、噪音、异味等。诊断与维修。WhatsApp +60182983573。",
+    padMetaDescription("吉隆坡与雪兰莪常见冷气故障指南——不冷、漏水、噪音、异味等。诊断与维修。WhatsApp +60182983573。"),
   openGraph: {
     title: clampMetaTitle("吉隆坡冷气故障指南 | KL Renovator"),
     description:

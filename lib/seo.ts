@@ -121,8 +121,12 @@ export function buildServiceSchema(args: {
   const inLanguage = locale === "ms" ? "ms-MY" : locale === "zh" ? "zh-MY" : "en-MY";
   const priceDescription = args.priceDescription || `Starting from RM ${args.startPrice}`;
   const parity = serviceSchemaParityFields(locale);
+  // Compact footprint: the full 40-area geo list lives in the root layout's
+  // sitewide #business entity. Repeating it here added ~8 KB (x2 with the RSC
+  // flight payload) to every service/price page.
   const areaServed = args.areasServed || [
-    ...buildAreaServedSchema(),
+    { "@type": "City", name: "Kuala Lumpur" },
+    { "@type": "State", name: "Selangor" },
     buildServiceAreaGeoCircle(),
   ];
 

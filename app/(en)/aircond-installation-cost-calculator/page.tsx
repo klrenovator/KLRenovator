@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/aircond-installation-cost-calculat
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Installation Cost Calculator Malaysia — Free Quote"),
   description:
-    "Free aircond installation cost calculator Malaysia. Estimate labour, copper pipe, wire, drain pipe, switch & water pump costs with bundle discounts. Get a confirmed quote from KL Renovator.",
+    padMetaDescription("Free aircond installation cost calculator Malaysia. Estimate labour, copper pipe, wire, drain pipe, switch & water pump costs with bundle discounts. Get a confirmed quote from KL Renovator."),
   alternates: buildTrilingualHreflang("/aircond-installation-cost-calculator"),
   openGraph: {
     title: clampMetaTitle("Aircond Installation Cost Calculator Malaysia"),

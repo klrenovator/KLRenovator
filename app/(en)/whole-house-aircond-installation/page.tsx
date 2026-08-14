@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaClock, FaBolt, FaBuilding, FaCubes, FaTags, FaPhone, FaSnowflake } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "Whole-House Aircond Installation KL — Multi-Unit Packages",
-  description: "Whole-house aircond installation in KL & Selangor — 3+ units. Volume discounts, room-by-room BTU guide, full-house cooling plan. From RM199/unit.",
+  description: padMetaDescription("Whole-house aircond installation in KL & Selangor — 3+ units. Volume discounts, room-by-room BTU guide, full-house cooling plan. From RM199/unit."),
   openGraph: {
     title: "Whole-House Aircond Installation KL — Multi-Unit Packages",
     description: "3+ aircond units? Volume discounts, BTU room guide, full-house cooling plan. From RM199/unit. Bulk quote via WhatsApp +60182983573",

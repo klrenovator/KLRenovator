@@ -1,17 +1,18 @@
 import { Hero } from "@/components/sections/hero";
 import { InstallationSpotlight } from "@/components/sections/installation-spotlight";
-import dynamic from "next/dynamic";
+import { HomeToolsLazy } from "@/components/home-tools-lazy";
 import { StatsBand } from "@/components/sections/stats-band";
-import { ServicesWithPricing } from "@/components/sections/services-with-pricing";
-import { WhyChooseUs } from "@/components/sections/why-choose-us";
-import { GoogleReviews } from "@/components/sections/google-reviews";
-import { ReviewTrustWidget } from "@/components/review-trust-widget";
-import { CoverageAreas } from "@/components/sections/coverage-areas";
+import {
+  ServicesIsland,
+  WhyChooseUsIsland,
+  ReviewsIsland,
+  TrustStripIsland,
+  CoverageIsland,
+  HubIsland,
+} from "@/components/homepage-islands";
 import { ReadyToBook } from "@/components/sections/ready-to-book";
 import { siteConfig } from "@/config/site";
 import { InstagramFeed } from "@/components/sections/instagram-feed";
-import { PriceComparisonUI } from "@/components/price-comparison";
-import { HOMEPAGE_SILO } from "@/config/topical-authority-map";
 import { waLink } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
@@ -22,20 +23,6 @@ import { HomepageAeoSchemas } from "@/components/homepage-aeo-schemas";
 import type { Metadata } from "next";
 import { LanguageProvider, type Lang } from "@/context/language-context";
 
-const CalculatorLoading = () => (
-  <div className="min-h-32 animate-pulse rounded-2xl bg-slate-100 p-6 text-center text-sm text-slate-500" role="status" aria-live="polite">
-    Loading free aircond tools…
-  </div>
-);
-
-const PriceCalculator = dynamic(
-  () => import("@/components/price-calculator").then((module) => module.PriceCalculator),
-  { loading: CalculatorLoading },
-);
-const DiagnosticTool = dynamic(
-  () => import("@/components/diagnostic-tool").then((module) => module.DiagnosticTool),
-  { loading: CalculatorLoading },
-);
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.klrenovator.com",
@@ -304,19 +291,21 @@ function HomeContent({ locale }: { locale: Lang }) {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     name: locale === "ms" ? "Pemasangan & Servis Aircond Kuala Lumpur & Selangor" : locale === "zh" ? "吉隆坡与雪兰莪冷气安装与服务" : "Aircond Installation & Servicing Kuala Lumpur & Selangor",
+    // Compact offers: full service descriptions live on /services/[slug];
+    // repeating them here cost ~5KB x2 (DOM + RSC flight) on the homepage.
     itemListElement: siteConfig.services.map((service, i) => ({
       "@type": "Offer",
       position: i + 1,
       itemOffered: {
         "@type": "Service",
         name: service.title,
-        description: service.short,
         url: `https://www.klrenovator.com/services/${service.slug}`,
-        provider: { "@type": "HVACBusiness", "@id": "https://www.klrenovator.com/#business" },
       },
-      priceSpecification: { "@type": "PriceSpecification", price: service.startPrice, priceCurrency: "MYR", description: `Starting from RM ${service.startPrice}` },
+      priceSpecification: { "@type": "PriceSpecification", price: service.startPrice, priceCurrency: "MYR" },
     })),
   };
+
+  const prefix = locale === "ms" ? "/ms" : locale === "zh" ? "/zh" : "";
 
   return (
     <>
@@ -328,13 +317,13 @@ function HomeContent({ locale }: { locale: Lang }) {
       <Hero locale={locale} />
       <StatsBand locale={locale} />
       <InstallationSpotlight locale={locale} />
-      <ServicesWithPricing locale={locale} />
-      <WhyChooseUs locale={locale} />
-      <GoogleReviews locale={locale} />
-      <div className="max-w-5xl mx-auto px-4 py-12">
-        <ReviewTrustWidget locale={locale} />
-      </div>
-      <PriceComparisonUI locale={locale} />
+      {/* Below-the-fold sections load as viewport-triggered islands so the
+          initial HTML document stays small (was 600 KB+). All content has
+          dedicated crawlable routes (/services, /areas, /review, …). */}
+      <ServicesIsland locale={locale} />
+      <WhyChooseUsIsland locale={locale} />
+      <ReviewsIsland locale={locale} />
+      <TrustStripIsland locale={locale} />
 
       <section className="bg-gradient-to-r from-red-700 to-rose-600 text-white py-10 px-4">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -360,10 +349,8 @@ function HomeContent({ locale }: { locale: Lang }) {
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">{t.toolsTitle}</h2>
             <p className="text-slate-500 text-sm mt-2">{t.toolsSub}</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <DiagnosticTool />
-            <PriceCalculator />
-          </div>
+          {/* Interactive calculators load client-side only (see HomeToolsLazy) */}
+          <HomeToolsLazy />
           <div className="mt-8">
             <div className="flex flex-wrap justify-center gap-2.5">
               <NextLink href="/aircond-installation-cost-calculator" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:shadow-sm transition-all">{t.installCalc}</NextLink>
@@ -377,7 +364,7 @@ function HomeContent({ locale }: { locale: Lang }) {
         </div>
       </section>
 
-      <CoverageAreas locale={locale} />
+      <CoverageIsland locale={locale} />
 
       <section className="py-12 px-4 bg-white border-t border-slate-100">
         <div className="max-w-6xl mx-auto">
@@ -415,113 +402,26 @@ function HomeContent({ locale }: { locale: Lang }) {
         </div>
       </section>
 
-      <section className="py-14 bg-slate-50 border-t border-slate-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">{t.quickProblems}</p>
-              <ul className="space-y-1.5">
-                {siteConfig.problemPages.slice(0, 6).map((p) => (
-                  <li key={p.slug}><NextLink href={`/problems/${p.slug}`} className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />{p.name}</NextLink></li>
-                ))}
-                <li><NextLink href="/problems" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">{t.allProblems}</NextLink></li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">{t.quickBrands}</p>
-              <ul className="space-y-1.5">
-                {siteConfig.brandPages.slice(0, 6).map((b) => (
-                  <li key={b.slug}><NextLink href={`/brands/${b.slug}`} className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />{b.name} Aircond Service</NextLink></li>
-                ))}
-                <li><NextLink href="/brands" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">{t.allBrands}</NextLink></li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">{t.quickAreas}</p>
-              <ul className="space-y-1.5">
-                {siteConfig.areaPages.slice(0, 6).map((a) => (
-                  <li key={a.slug}><NextLink href={`/areas/${a.slug}`} className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Aircond Service {a.name}</NextLink></li>
-                ))}
-                <li><NextLink href="/areas" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">{t.allAreas}</NextLink></li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-3">{t.quickGuides}</p>
-              <ul className="space-y-1.5">
-                <li><NextLink href="/blog/how-often-service-aircond-malaysia" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />How Often to Service Aircond</NextLink></li>
-                <li><NextLink href="/blog/chemical-wash-vs-chemical-overhaul" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Chemical Wash vs Overhaul</NextLink></li>
-                <li><NextLink href="/blog/aircond-not-cold-reasons" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Why Aircond Not Cold</NextLink></li>
-                <li><NextLink href="/blog/aircond-water-leaking-causes" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Why Aircond Leaking Water</NextLink></li>
-                <li><NextLink href="/blog/r32-r410a-r22-gas-difference" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />R32 vs R410A vs R22 Gas</NextLink></li>
-                <li><NextLink href="/blog/best-aircond-brands-malaysia-2026" className="text-sm font-medium text-slate-700 hover:text-sky-600 flex items-center gap-1 transition"><FiArrowRight className="h-3 w-3 text-sky-400 shrink-0" />Best Aircond Brands Malaysia</NextLink></li>
-                <li><NextLink href="/blog" className="text-xs font-black uppercase tracking-widest text-sky-600 hover:text-sky-800 transition">{t.allGuides}</NextLink></li>
-              </ul>
-            </div>
-          </div>
+      {/* Compact crawlable link bar — the heavy quick-links + topical-hub
+          grids now load as a viewport island below. */}
+      <nav className="py-8 px-4 bg-slate-50 border-t border-slate-100" aria-label="Popular pages">
+        <div className="mx-auto max-w-6xl flex flex-wrap justify-center gap-2 text-xs font-semibold">
+          {[
+            { href: "/services", label: locale === "ms" ? "Perkhidmatan" : locale === "zh" ? "服务" : "Services" },
+            { href: "/installation", label: locale === "ms" ? "Pemasangan" : locale === "zh" ? "安装" : "Installation" },
+            { href: "/problems", label: locale === "ms" ? "Masalah" : locale === "zh" ? "问题" : "Problems" },
+            { href: "/brands", label: locale === "ms" ? "Jenama" : locale === "zh" ? "品牌" : "Brands" },
+            { href: "/areas", label: locale === "ms" ? "Kawasan" : locale === "zh" ? "区域" : "Areas" },
+            { href: "/blog", label: locale === "ms" ? "Panduan" : locale === "zh" ? "指南" : "Guides" },
+            { href: "/tools", label: locale === "ms" ? "Alat Percuma" : locale === "zh" ? "免费工具" : "Free Tools" },
+            { href: "/review", label: locale === "ms" ? "Ulasan" : locale === "zh" ? "评价" : "Reviews" },
+          ].map((item) => (
+            <NextLink key={item.href} href={prefix + item.href} className="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-sky-400 hover:text-sky-600 transition-colors">{item.label}</NextLink>
+          ))}
         </div>
-      </section>
+      </nav>
 
-      <section className="py-16 px-4 bg-white border-t border-slate-100" id="topical-hub">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">{t.resourceEyebrow}</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">{t.resourceTitle}</h2>
-            <p className="text-slate-500 text-sm mt-2">{t.resourceSub}</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-red-50 border border-red-100 rounded-2xl p-5">
-              <p className="text-[10px] font-black uppercase tracking-widest text-red-600 mb-1">{t.problemsCluster}</p>
-              <h3 className="font-black text-slate-900 text-sm mb-3">{t.problemsFix}</h3>
-              <div className="space-y-1.5">
-                {HOMEPAGE_SILO.problems.featured.map((item) => (
-                  <NextLink key={item.slug} href={`/problems/${item.slug}`} className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-red-600 transition-colors"><span className="h-1 w-1 rounded-full bg-red-400 shrink-0" />{item.anchor}</NextLink>
-                ))}
-              </div>
-              <NextLink href="/problems" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-red-600 hover:text-red-800">{t.allProblems}</NextLink>
-            </div>
-            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
-              <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{t.brandsCluster}</p>
-              <h3 className="font-black text-slate-900 text-sm mb-3">{t.brandsBy}</h3>
-              <div className="space-y-1.5">
-                {HOMEPAGE_SILO.brands.featured.map((item) => (
-                  <NextLink key={item.slug} href={`/brands/${item.slug}`} className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-sky-600 transition-colors"><span className="h-1 w-1 rounded-full bg-sky-400 shrink-0" />{item.anchor}</NextLink>
-                ))}
-              </div>
-              <NextLink href="/brands" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-sky-600 hover:text-sky-800">{t.allBrands}</NextLink>
-            </div>
-            <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
-              <p className="text-[10px] font-black uppercase tracking-widest text-emerald-600 mb-1">{t.areasCluster}</p>
-              <h3 className="font-black text-slate-900 text-sm mb-3">{t.areasFind}</h3>
-              <div className="space-y-1.5">
-                {HOMEPAGE_SILO.areas.featured.map((item) => (
-                  <NextLink key={item.slug} href={`/areas/${item.slug}`} className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-emerald-600 transition-colors"><span className="h-1 w-1 rounded-full bg-emerald-400 shrink-0" />{item.anchor}</NextLink>
-                ))}
-              </div>
-              <NextLink href="/areas" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-emerald-600 hover:text-emerald-800">{t.allAreas}</NextLink>
-            </div>
-            <div className="bg-violet-50 border border-violet-100 rounded-2xl p-5">
-              <p className="text-[10px] font-black uppercase tracking-widest text-violet-600 mb-1">{t.guidesCluster}</p>
-              <h3 className="font-black text-slate-900 text-sm mb-3">{t.guidesLearn}</h3>
-              <div className="space-y-1.5">
-                {HOMEPAGE_SILO.blog.featured.map((item) => (
-                  <NextLink key={item.slug} href={`/blog/${item.slug}`} className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-violet-600 transition-colors"><span className="h-1 w-1 rounded-full bg-violet-400 shrink-0" />{item.anchor}</NextLink>
-                ))}
-              </div>
-              <NextLink href="/blog" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-violet-600 hover:text-violet-800">{t.allGuides}</NextLink>
-            </div>
-            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
-              <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{t.installCluster}</p>
-              <h3 className="font-black text-slate-900 text-sm mb-3">{t.installPro}</h3>
-              <div className="space-y-1.5">
-                {HOMEPAGE_SILO.installation.featured.map((item) => (
-                  <NextLink key={item.slug} href={`/blog/${item.slug}`} className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-sky-600 transition-colors"><span className="h-1 w-1 rounded-full bg-sky-400 shrink-0" />{item.anchor}</NextLink>
-                ))}
-              </div>
-              <NextLink href="/aircond-installation-kl" className="inline-flex items-center gap-1 mt-4 text-xs font-black text-sky-600 hover:text-sky-800">{t.installGuideLink}</NextLink>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HubIsland locale={locale} />
 
       <section className="py-20 sm:py-28 bg-white" id="homepage-faq">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

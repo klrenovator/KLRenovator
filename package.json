@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "engines": {
-    "node": ">=22.0.0 <23.0.0"
+    "node": ">=22.0.0"
   },
   "overrides": {
     "sharp": "0.35.3",
@@ -18,9 +18,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
-    "gen:site-public": "npx tsx scripts/gen-site-public.mjs",
+    "gen:site-public": "tsx scripts/gen-site-public.mjs",
     "verify:build": "node scripts/verify-build.mjs",
-    "verify:sanitizer": "npx tsx scripts/verify-sanitizer.mjs",
+    "verify:sanitizer": "tsx scripts/verify-sanitizer.mjs",
     "audit:gsc": "node scripts/gsc-audit.mjs",
     "bundle-analyze": "ANALYZE=true NODE_OPTIONS='--max-old-space-size=4096' next build",
     "verify:routes": "node scripts/verify-route-contracts.mjs",
@@ -68,6 +68,7 @@
     "prettier": "3.5.3",
     "tailwind-variants": "3.2.2",
     "tailwindcss": "4.1.11",
+    "tsx": "^4.23.12",
     "typescript": "5.9.3"
   }
 }

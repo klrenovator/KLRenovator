@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AboutPageI18n } from "@/components/about-page-i18n";
@@ -6,7 +7,7 @@ import { AboutPageI18n } from "@/components/about-page-i18n";
 export const metadata: Metadata = {
   title: clampMetaTitle("About KL Renovator | Trusted Aircond Specialist KL & Selangor"),
   description:
-    "KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 12+ years experience, 5,000+ happy customers, 500+ reviews.",
+    padMetaDescription("KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 12+ years experience, 5,000+ happy customers, 500+ reviews."),
   alternates: buildTrilingualHreflang("/about"),
   openGraph: {
     title: clampMetaTitle("About KL Renovator | Trusted Aircond Specialist KL & Selangor"),

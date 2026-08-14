@@ -1,6 +1,3 @@
-import { FaWhatsapp, FaPhone } from "react-icons/fa6";
-import { FaRegClock, FaShieldAlt } from "react-icons/fa";
-import { FiCheckCircle } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
@@ -58,18 +55,18 @@ export const ReadyToBook = ({ locale = "en" }: { locale?: Locale }) => {
         <Reveal delay={100}>
           <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href={waLink(t.waMsg)} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all rounded-xl">
-              <FaWhatsapp className="h-5 w-5" />{t.quote}
+              <span aria-hidden="true">💬</span> {t.quote}
             </a>
             <a href={`tel:${siteConfig.phone}`} className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-white hover:bg-slate-100 px-8 py-4 text-sm font-black uppercase tracking-widest text-slate-900 transition-all rounded-xl">
-              <FaPhone className="h-4 w-4" />{t.call} {siteConfig.phoneDisplay}
+              <span aria-hidden="true">📞</span> {t.call} {siteConfig.phoneDisplay}
             </a>
           </div>
         </Reveal>
 
         <Reveal delay={180}>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-sky-500 border border-sky-500 rounded-xl overflow-hidden">
-            {[ { icon: FaRegClock, label: t.pills[0] }, { icon: FaShieldAlt, label: t.pills[1] }, { icon: FiCheckCircle, label: t.pills[2] }].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center justify-center gap-2.5 bg-sky-700 hover:bg-sky-600 transition-colors px-4 py-5 text-sm font-black text-white uppercase tracking-wider"><Icon className="h-4 w-4 text-sky-200 shrink-0" />{label}</div>
+            {[ { icon: "🕘", label: t.pills[0] }, { icon: "🛡️", label: t.pills[1] }, { icon: "✅", label: t.pills[2] }].map(({ icon, label }) => (
+              <div key={label} className="flex items-center justify-center gap-2.5 bg-sky-700 hover:bg-sky-600 transition-colors px-4 py-5 text-sm font-black text-white uppercase tracking-wider"><span aria-hidden="true">{icon}</span>{label}</div>
             ))}
           </div>
         </Reveal>

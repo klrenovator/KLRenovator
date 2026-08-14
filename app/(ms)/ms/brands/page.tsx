@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import NextLink from "next/link";
@@ -12,7 +13,7 @@ import { waLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Servis Aircond Mengikut Jenama KL & Selangor — Satu Pasukan, 20 Jenama | KL Renovator"),
-  description: "Pasukan bertauliah menservis 20 jenama aircond utama — Daikin, Panasonic, Mitsubishi, York, LG, Samsung, Midea & lain-lain. Servis hari sama, waranti 1 bulan.",
+  description: padMetaDescription("Pasukan bertauliah menservis 20 jenama aircond utama — Daikin, Panasonic, Mitsubishi, York, LG, Samsung, Midea & lain-lain. Servis hari sama, waranti 1 bulan."),
   openGraph: {
     title: clampMetaTitle("Satu Pasukan, 20 Jenama — Servis Aircond KL & Selangor | KL Renovator"),
     description: "Juruteknik bertauliah yang sama menservis setiap jenama aircond utama. Harga telus, tempahan hari sama, waranti 1 bulan.",

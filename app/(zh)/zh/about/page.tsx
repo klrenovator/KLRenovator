@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { AboutPageI18n } from "@/components/about-page-i18n";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家"),
   description:
-    "KL Renovator（Multicore Dynamics Resources）—— 值得信赖的吉隆坡及雪兰莪冷气专家。12 年以上经验，5,000 多位满意客户，500 多条好评。",
+    padMetaDescription("KL Renovator（Multicore Dynamics Resources）—— 值得信赖的吉隆坡及雪兰莪冷气专家。12 年以上经验，5,000 多位满意客户，500 多条好评。"),
   alternates: {
     canonical: "https://www.klrenovator.com/zh/about",
     languages: {

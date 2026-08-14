@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/aircond-electricity-cost-calculato
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Electricity Cost Calculator Malaysia"),
   description:
-    "Free aircond electricity cost calculator Malaysia. Estimate your monthly aircond power consumption & TNB bill by HP, daily usage hours and electricity rate. Compare inverter savings.",
+    padMetaDescription("Free aircond electricity cost calculator Malaysia. Estimate your monthly aircond power consumption & TNB bill by HP, daily usage hours and electricity rate. Compare inverter savings."),
   alternates: buildTrilingualHreflang("/aircond-electricity-cost-calculator"),
   openGraph: {
     title: clampMetaTitle("Aircond Electricity Cost Calculator Malaysia"),

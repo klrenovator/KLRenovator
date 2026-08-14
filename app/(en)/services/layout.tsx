@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolLinks } from "@/components/calculators/tool-links";
@@ -6,7 +7,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Services & Price List KL Selangor | KL Renovator"),
   description:
-    "Full aircond service price list for KL & Selangor — chemical wash from RM 120, overhaul from RM 220, gas top-up & installation. No hidden fees.",
+    padMetaDescription("Full aircond service price list for KL & Selangor — chemical wash from RM 120, overhaul from RM 220, gas top-up & installation. No hidden fees."),
   alternates: buildTrilingualHreflang("/services"),
   openGraph: {
     title: clampMetaTitle("Aircond Services & Price List | KL Renovator"),

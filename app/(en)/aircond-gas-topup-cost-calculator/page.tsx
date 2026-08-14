@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolPageLayout } from "@/components/calculators/tool-page-layout";
@@ -10,7 +11,7 @@ const PAGE_URL = "https://www.klrenovator.com/aircond-gas-topup-cost-calculator"
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Gas Top-up Cost Calculator Malaysia"),
   description:
-    "Free aircond gas top-up cost calculator Malaysia. Estimate R22, R410A & R32 gas refill price by HP and gas condition. RM 2.50–3.00/PSI. Final charge confirmed after inspection.",
+    padMetaDescription("Free aircond gas top-up cost calculator Malaysia. Estimate R22, R410A & R32 gas refill price by HP and gas condition. RM 2.50–3.00/PSI. Final charge confirmed after inspection."),
   alternates: buildTrilingualHreflang("/aircond-gas-topup-cost-calculator"),
   openGraph: {
     title: clampMetaTitle("Aircond Gas Top-up Cost Calculator Malaysia"),

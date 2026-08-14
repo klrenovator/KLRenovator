@@ -4,15 +4,16 @@ import clsx from "clsx";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { headers } from "next/headers";
+
 
 import { Providers } from "@/app/providers";
 import { siteConfig } from "@/config/site";
-import { buildAreaServedSchema, buildServiceAreaGeoCircle } from "@/lib/seo";
+import { buildServiceAreaGeoCircle } from "@/lib/seo";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ConversionWidgetsLoader } from "@/components/conversion-widgets-loader";
+import { ConversionTracking } from "@/components/conversion-tracking";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
@@ -83,7 +84,7 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export default async function SiteRootLayout({
+export default function SiteRootLayout({
   children,
   locale,
 }: {
@@ -91,30 +92,27 @@ export default async function SiteRootLayout({
   locale: "en" | "ms" | "zh";
 }) {
   const htmlLang = locale === "ms" ? "ms-MY" : locale === "zh" ? "zh-MY" : "en-MY";
-  // P0-04b: read per-request nonce from middleware (x-nonce)
-  let nonce: string | undefined;
-  try {
-    const h = await headers();
-    nonce = h.get("x-nonce") || h.get("x-csp-nonce") || undefined;
-  } catch {
-    nonce = undefined;
-  }
+  // NOTE: this layout previously awaited `headers()` to read a CSP nonce that
+  // the (now removed) middleware injected. The middleware is gone, so the
+  // nonce was always undefined — but the `headers()` call alone forced EVERY
+  // route into dynamic, on-demand server rendering. That turned 2100+ static
+  // pages into serverless function calls and made streaming responses
+  // fragile under load/timeouts (the root cause of 0-byte responses, most
+  // visibly on /book). Removed so all pages prerender statically again.
 
   return (
     <html lang={htmlLang} className="scroll-smooth">
       {/* eslint-disable-next-line @next/next/no-head-element */}
       <head>
-        {/* GTM — nonce attached for CSP enforcement (P0-04b) */}
+        {/* GTM — loaded via static inline bootstrap (CSP allows googletagmanager.com) */}
         {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
-          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-57MCF8NQ');`,
           }}
         />
 
         <script
-          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -135,13 +133,8 @@ export default async function SiteRootLayout({
               currenciesAccepted: "MYR",
               paymentAccepted: "Cash, Bank Transfer, DuitNow",
               image: "https://www.klrenovator.com/logo/image.png",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.klrenovator.com/logo/image.png",
-                width: 1536,
-                height: 1024,
-              },
-              description: siteConfig.description,
+              logo: "https://www.klrenovator.com/logo/image.png",
+              description: siteConfig.metaDescription,
               slogan:
                 "Aircond Installation, Servicing & Repair KL & Selangor",
               foundingDate: "2014",
@@ -187,36 +180,24 @@ export default async function SiteRootLayout({
                   closes: "18:00",
                 },
               ],
+              // Compact areaServed: area NAMES plus one geo circle. The
+              // previous payload inlined all 39 areas with per-area GeoCoordinates
+              // (~7 KB) on EVERY page of the site — twice, since the layout's
+              // head markup is also serialized into the RSC flight payload.
+              // Full per-area schema lives on /areas and each /areas/[slug] page.
               areaServed: [
-                ...buildAreaServedSchema(),
+                ...siteConfig.areaPages.map((area) => area.name),
                 buildServiceAreaGeoCircle(),
               ],
               serviceType: [
                 "Aircon Installation",
-                "Aircon Basic Servicing",
-                "Pressure Chemical Wash",
-                "Chemical Overhaul",
-                "Gas Top-Up R22 R410A R32",
-                "Aircon Repair & Troubleshooting",
+                "Aircon Servicing",
+                "Chemical Wash & Overhaul",
+                "Gas Top-Up",
+                "Aircon Repair",
                 "Dismantle & Relocation",
-                "Ceiling Cassette Service",
                 "Commercial HVAC Maintenance",
-                "Multi-Unit Commercial Air Conditioning Services",
               ],
-              knowsAbout: [
-                "New Unit Installation",
-                "Pressure Chemical Wash Maintenance",
-                "Chemical Overhaul Deep Cleaning",
-                "Precision Gas Top-Up R32 R410A R22 Balancing",
-                "Aircond Water Leaking Troubleshooting",
-                "HVAC Commercial Ceiling Cassette Solutions",
-                "Capacitor Fan Motor PCB Board Repairs",
-                "Commercial Ceiling Cassette Multi-Unit Systems",
-              ],
-              brand: siteConfig.brandsSupported.map((brand) => ({
-                "@type": "Brand",
-                name: brand,
-              })),
               contactPoint: [
                 {
                   "@type": "ContactPoint",
@@ -238,7 +219,6 @@ export default async function SiteRootLayout({
         />
 
         <script
-          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -272,7 +252,6 @@ export default async function SiteRootLayout({
         />
 
         <script
-          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -317,7 +296,6 @@ export default async function SiteRootLayout({
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
-          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
@@ -336,7 +314,6 @@ export default async function SiteRootLayout({
         <Script
           id="google-analytics"
           strategy="afterInteractive"
-          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -352,6 +329,10 @@ export default async function SiteRootLayout({
         >
           Skip to main content
         </a>
+        {/* GA4 conversion tracking mounts immediately (render-null component,
+            one capture-phase click listener) so WhatsApp/phone/booking events
+            are never missed while the lazy widget bundle is still loading. */}
+        <ConversionTracking />
         <Providers initialLang={locale}>
           <div className="relative flex min-h-screen flex-col pb-16 lg:pb-0">
             <Navbar />

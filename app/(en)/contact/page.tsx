@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import Image from "next/image";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: clampMetaTitle("Contact KL Renovator | Aircond Service KL & Selangor"),
   alternates: buildTrilingualHreflang("/contact"),
   description:
-    "Contact KL Renovator for aircond servicing across KL & Selangor. WhatsApp +60182983573 for a same-day quote. Transparent pricing, fast response.",
+    padMetaDescription("Contact KL Renovator for aircond servicing across KL & Selangor. WhatsApp +60182983573 for a same-day quote. Transparent pricing, fast response."),
   openGraph: {
     title: clampMetaTitle("Contact KL Renovator | Aircond Service KL & Selangor"),
     description:
@@ -60,7 +61,7 @@ const contactPageSchema = {
   "@type": "ContactPage",
   name: "Contact KL Renovator",
   url: "https://www.klrenovator.com/contact",
-  description: "Contact KL Renovator for professional aircond services in Kuala Lumpur and Selangor. WhatsApp for fastest response.",
+  description: padMetaDescription("Contact KL Renovator for professional aircond services in Kuala Lumpur and Selangor. WhatsApp for fastest response."),
   mainEntity: {
     "@type": "HVACBusiness",
     "@id": "https://www.klrenovator.com/#business",

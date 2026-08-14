@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { AboutPageI18n } from "@/components/about-page-i18n";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor"),
   description:
-    "KL Renovator (Multicore Dynamics Resources) — pakar aircond dipercayai di KL & Selangor. 12+ tahun pengalaman, 5,000+ pelanggan gembira, 500+ ulasan.",
+    padMetaDescription("KL Renovator (Multicore Dynamics Resources) — pakar aircond dipercayai di KL & Selangor. 12+ tahun pengalaman, 5,000+ pelanggan gembira, 500+ ulasan."),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/about",
     languages: {

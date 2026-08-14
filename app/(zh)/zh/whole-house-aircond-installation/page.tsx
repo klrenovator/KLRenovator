@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { FaWhatsapp, FaCheck, FaShield, FaBolt, FaBuilding, FaCubes, FaTags, FaPhone, FaSnowflake } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ import { InstallationTrustSignals } from "@/components/installation-trust-signal
 
 export const metadata: Metadata = {
   title: "全屋冷气安装 KL & 雪兰莪 — 多台批量套餐 | KL Renovator",
-  description: "在KL或雪兰莪的家安装3台以上冷气？批量折扣阶梯、逐房BTU指南、全屋制冷方案。RM199/台起。WhatsApp批量报价 +60182983573",
+  description: padMetaDescription("在KL或雪兰莪的家安装3台以上冷气？批量折扣阶梯、逐房BTU指南、全屋制冷方案。RM199/台起。WhatsApp批量报价 +60182983573"),
   openGraph: {
     title: "全屋冷气安装 KL & 雪兰莪 — 多台批量套餐 | KL Renovator",
     description: "3台以上冷气？批量折扣、BTU房间指南、全屋制冷方案。RM199/台起。WhatsApp +60182983573",
