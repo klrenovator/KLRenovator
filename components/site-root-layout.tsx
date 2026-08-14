@@ -14,6 +14,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ConversionWidgetsLoader } from "@/components/conversion-widgets-loader";
 import { ConversionTracking } from "@/components/conversion-tracking";
+import { AiSupportAssistant } from "@/components/ai-support-assistant";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.klrenovator.com"),
@@ -339,6 +340,7 @@ export default function SiteRootLayout({
             <main id="main-content" className="flex-1">{children}</main>
             <Footer />
             <ConversionWidgetsLoader />
+            <AiSupportAssistant />
           </div>
         </Providers>
         <Analytics />
