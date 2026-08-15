@@ -138,7 +138,7 @@ const MATERIAL_ROWS = [
   { label: "Casing PVC Kecil (Wayar Elektrik)", price: "RM 6/kaki" },
   { label: "Casing PVC Besar (Paip Kuprum + Wayar + Penebat)", price: "RM 12/kaki" },
   { label: "Pemasangan Titik Plag Elektrik", price: "RM 100" },
-  { label: "Kerja Pecah Dinding & Pendam", price: "RM 6/kaki" },
+  { label: "Kerja Pecah Dinding & Pendam", price: "RM 25/kaki" },
   { label: "Caj Akses Bangunan Tinggi / Sukar", price: "RM 50 – 150" },
   { label: "Dulang Kabel Logam Standard", price: "RM 15/kaki" },
 ];

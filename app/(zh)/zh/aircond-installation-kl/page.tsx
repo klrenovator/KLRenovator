@@ -216,7 +216,7 @@ export default function AircondInstallationKLZHPage() {
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 标准室外压缩机/支架: RM 45</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 重型室外压缩机/支架: RM 70</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 新插座点位: RM 100</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 凿墙/暗管: RM 6/尺</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 凿墙/暗管: RM 25/尺</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 高层/难进场: RM 50–150</li>
               </ul>
               <p className="mt-4 text-xs text-amber-600">所有额外费用现场报价、经您批准后才动工。绝无惊喜。</p>

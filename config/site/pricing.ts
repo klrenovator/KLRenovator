@@ -99,7 +99,7 @@ export const pricing = {
         { label: "Small PVC Casing (Electrical Wire)", price: "RM 6/ft" },
         { label: "Large PVC Casing (Copper Pipe + Wire + Insulation)", price: "RM 12/ft" },
         { label: "Electrical Plug Point Installation", price: "RM 100" },
-        { label: "Wall Hacking & Concealment Work", price: "RM 6/ft" },
+        { label: "Wall Hacking & Concealment Work", price: "RM 25/ft" },
         { label: "High-Rise / Difficult Access Charge", price: "RM 50 – 150" },
         { label: "Standard Metal Cable Tray", price: "RM 15/ft" },
       ],
