@@ -7,9 +7,61 @@ export const META_DESC_MIN = 140;
 export const META_DESC_MAX = 155;
 export const META_DESC_MIN_CJK = 60;
 export const META_DESC_MAX_CJK = 155;
+// ─────────────────────────────────────────────────────────────────────────
+// FORENSIC FIX (2026-08-15) — CJK descriptions must be capped by DISPLAY
+// WIDTH, not character count. Google/Bing SERPs (and every SEO auditor)
+// treat a full-width CJK character as ~2 latin characters. Capping ZH
+// descriptions at 155 *characters* allowed up to ~310 display units, which
+// is why /zh pages were flagged "meta description too long" in bulk.
+// A CJK description may therefore use at most ~77 CJK chars (width 155).
+// ─────────────────────────────────────────────────────────────────────────
+export const META_DESC_MAX_CJK_WIDTH = 155;
 
 function isCJK(text: string): boolean {
   return /[\u4e00-\u9fff]/.test(text);
+}
+
+/** Full-width (CJK ideographs, kana, full-width punctuation) = 2 units. */
+function isWideChar(ch: string): boolean {
+  return /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6\u3000-\u303f]/.test(ch);
+}
+
+/** SERP display width: CJK/full-width chars count as 2, everything else 1. */
+export function metaDisplayWidth(text: string): number {
+  let w = 0;
+  for (const ch of text) w += isWideChar(ch) ? 2 : 1;
+  return w;
+}
+
+/**
+ * Truncate mixed CJK/latin text so its display width fits `maxWidth`,
+ * preferring to cut at a CJK sentence boundary (。！？), then a clause
+ * boundary (；，、 or space). Ensures the result still reads cleanly.
+ */
+function truncateCJKAtWidth(text: string, maxWidth: number): string {
+  const chars = [...text];
+  let w = 0;
+  let hardCut = chars.length;
+  for (let i = 0; i < chars.length; i++) {
+    w += isWideChar(chars[i]) ? 2 : 1;
+    if (w > maxWidth) {
+      hardCut = i;
+      break;
+    }
+  }
+  if (hardCut === chars.length) return text; // already fits
+
+  const slice = chars.slice(0, hardCut).join("");
+  // 1) Prefer ending at a completed sentence.
+  let best = -1;
+  for (const b of ["。", "！", "？"]) best = Math.max(best, slice.lastIndexOf(b));
+  if (best >= 40) return slice.slice(0, best + 1);
+  // 2) Otherwise cut at a clause boundary and close the sentence.
+  best = -1;
+  for (const b of ["；", "，", "、", " "]) best = Math.max(best, slice.lastIndexOf(b));
+  if (best >= 40) return `${slice.slice(0, best)}。`;
+  // 3) Hard cut as last resort.
+  return slice;
 }
 
 function truncateAtWordBoundary(text: string, max: number): string {
@@ -47,6 +99,15 @@ export function clampMetaDescription(raw: string, opts?: { min?: number; max?: n
   const cjk = isCJK(clean);
   const min = opts?.min ?? (cjk ? META_DESC_MIN_CJK : META_DESC_MIN);
   const max = opts?.max ?? META_DESC_MAX_CJK; // max same for both
+
+  // CJK path: clamp by DISPLAY WIDTH (CJK char = 2 units), not char count.
+  // 155 chars of Chinese ≈ 310 display units — double the SERP budget and
+  // the direct cause of the "meta description too long" bulk failures on /zh.
+  if (cjk) {
+    const maxWidth = opts?.max ?? META_DESC_MAX_CJK_WIDTH;
+    if (metaDisplayWidth(clean) <= maxWidth) return clean;
+    return truncateCJKAtWidth(clean, maxWidth).trim();
+  }
 
   let result = clean;
 
@@ -131,7 +192,25 @@ function detectPadLang(text: string): "latin" | "ms" | "zh" {
 export function padMetaDescription(raw: string, opts?: { min?: number; max?: number }): string {
   const clamped = clampMetaDescription(raw, opts);
   const cjk = isCJK(clamped);
-  const min = opts?.min ?? (cjk ? META_DESC_MIN_CJK : META_DESC_MIN);
+
+  // CJK path: measure by display width. A ZH description is "long enough"
+  // at ~120 width (≈60 CJK chars) and must never exceed 155 width. The old
+  // char-count padding pushed already-wide ZH excerpts far past the SERP
+  // budget (e.g. /zh blog posts at 170–250 display width).
+  if (cjk) {
+    const minWidth = (opts?.min ?? META_DESC_MIN_CJK) * 2; // 60 chars ≈ 120 width
+    const maxWidth = opts?.max ?? META_DESC_MAX_CJK_WIDTH;
+    let result = clamped.replace(/\s+$/, "");
+    if (metaDisplayWidth(result) >= minWidth) return clampMetaDescription(result, opts);
+    for (const suffix of PAD_SUFFIXES.zh) {
+      if (metaDisplayWidth(result) >= minWidth) break;
+      if (result.includes(suffix.trim())) continue;
+      if (metaDisplayWidth(result) + metaDisplayWidth(suffix) <= maxWidth) result += suffix;
+    }
+    return clampMetaDescription(result, opts);
+  }
+
+  const min = opts?.min ?? META_DESC_MIN;
   if (clamped.length >= min) return clamped;
 
   const maxLen = opts?.max ?? META_DESC_MAX_CJK;

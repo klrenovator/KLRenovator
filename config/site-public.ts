@@ -443,25 +443,22 @@ export const sitePublic = {
       ]
     },
     "contracts": {
-      "title": "Annual Corporate & Residential Maintenance Contracts",
+      "title": "Annual Maintenance Contract (AMC) Plans",
       "rows": [
         {
-          "label": "Residential Package · 2 – 4 units / year contract",
+          "label": "AMC Basic · per unit / year (2 basic services + 1 chemical wash)",
+          "price": "RM 299"
+        },
+        {
+          "label": "AMC Standard · per unit / year (2 basic services + 2 chemical washes + free emergency check)",
           "price": "RM 499"
         },
         {
-          "label": "Residential Package · 5+ units / year contract",
-          "price": "RM 999"
-        },
-        {
-          "label": "Commercial Package · 5 – 10 units / year contract",
-          "price": "RM 1,999"
-        },
-        {
-          "label": "Commercial Package · 10+ units / year contract",
-          "price": "RM 3,499"
+          "label": "AMC Premium · per unit / year (4 services + 2 chemical washes + 1 overhaul + 15% repair discount)",
+          "price": "RM 899"
         }
-      ]
+      ],
+      "note": "Prices per wall-mounted 1.0–1.5 HP unit. Multi-unit and commercial discounts quoted on enquiry — WhatsApp +60182983573."
     }
   },
   "services": [

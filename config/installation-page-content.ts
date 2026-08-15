@@ -2,8 +2,8 @@
 // Imported by components/installation-landing-page.tsx and each thin page file.
 
 import { Metadata } from "next";
-import { buildInstallationMetaTitle } from "@/lib/seo-title-optimizer";
-import { buildInstallationMetaDesc } from "@/lib/seo-description-optimizer";
+import { clampMetaTitle } from "@/lib/seo-title-optimizer";
+import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 
 export type InstallationLocale = "en" | "ms" | "zh";
 export type InstallationPageKey =
@@ -117,7 +117,7 @@ const basePricing = {
     extras: [
       "超出7尺铜管：RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)",
       "超出7尺排水管：RM 5/尺",
-      "超出7尺电线：RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)",
+      "超出7尺电线：RM 9/尺",
       "小型PVC线槽（电线）：RM 6/尺；大型PVC线槽（铜管+电线+保温层）：RM 12/尺",
       "标准室外压缩机/支架：RM 45",
       "重型室外压缩机/支架：RM 70",
@@ -156,7 +156,7 @@ export const installationPageContent: Record<
   "1hp": {
     en: {
       metaTitle: "1HP Aircond Installation KL — From RM199 | Bedroom Cooling | KL Renovator",
-      metaDescription: "1HP aircond installation in KL & Selangor from RM199. Ideal for bedrooms up to 130 sq ft. Same-day available, 7ft copper pipe included, 1-month warranty. WhatsApp +60182983573",
+      metaDescription: "1HP aircond installation in KL & Selangor from RM199. Ideal for bedrooms up to 130 sq ft. Same-day slots, 7ft copper pipe included, 1-month warranty.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "1HP Aircond Installation KL Selangor",
       eyebrow: "1HP Wall-Mounted Installation Specialists",
@@ -199,7 +199,7 @@ export const installationPageContent: Record<
     },
     ms: {
       metaTitle: "Pemasangan Aircond 1HP KL — Dari RM199 | Sejuk Bilik | KL Renovator",
-      metaDescription: "Pemasangan aircond 1HP di KL & Selangor dari RM199. Sesuai untuk bilik tidur sehingga 130 kaki persegi. Servis hari sama, paip tembaga 7ft disertakan, waranti 1 bulan. WhatsApp +60182983573",
+      metaDescription: "Pemasangan aircond 1HP di KL & Selangor dari RM199. Sesuai untuk bilik tidur sehingga 130 kaki persegi. Hari sama, paip tembaga 7ft, waranti 1 bulan.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "Pemasangan Aircond 1HP KL Selangor",
       eyebrow: "Pakar Pemasangan 1HP Dinding",
@@ -287,7 +287,7 @@ export const installationPageContent: Record<
   "1.5hp": {
     en: {
       metaTitle: "1.5HP Aircond Installation KL — From RM199 | Master Bedroom | KL Renovator",
-      metaDescription: "1.5HP aircond installation in KL & Selangor from RM199. Best for master bedrooms & small living rooms up to 180 sq ft. Same-day, vacuum pump, 1-month warranty. WhatsApp +60182983573",
+      metaDescription: "1.5HP aircond installation in KL & Selangor from RM199. Best for master bedrooms & small living rooms up to 180 sq ft. Same-day, 1-month warranty.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "1.5HP Aircond Installation KL Selangor",
       eyebrow: "1.5HP Wall-Mounted Installation Specialists",
@@ -330,7 +330,7 @@ export const installationPageContent: Record<
     },
     ms: {
       metaTitle: "Pemasangan Aircond 1.5HP KL — Dari RM199 | Bilik Tidur Utama | KL Renovator",
-      metaDescription: "Pemasangan aircond 1.5HP di KL & Selangor dari RM199. Terbaik untuk bilik tidur utama & bilik kecil sehingga 180 kaki persegi. Hari sama, pam vakum, waranti 1 bulan. WhatsApp +60182983573",
+      metaDescription: "Pemasangan aircond 1.5HP di KL & Selangor dari RM199. Terbaik untuk bilik tidur utama & ruang tamu kecil sehingga 180 kaki persegi. Waranti 1 bulan.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "Pemasangan Aircond 1.5HP KL Selangor",
       eyebrow: "Pakar Pemasangan 1.5HP Dinding",
@@ -418,7 +418,7 @@ export const installationPageContent: Record<
   "2hp": {
     en: {
       metaTitle: "2HP Aircond Installation KL — From RM249 | Large Rooms | KL Renovator",
-      metaDescription: "2HP aircond installation in KL & Selangor from RM249. Best for large living rooms, open-plan spaces & master suites up to 250 sq ft. Same-day, 1-month warranty. WhatsApp +60182983573",
+      metaDescription: "2HP aircond installation in KL & Selangor from RM249. Best for large living rooms, open-plan spaces & master suites up to 250 sq ft. 1-month warranty.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "2HP Aircond Installation KL Selangor",
       eyebrow: "2HP Wall-Mounted Installation Specialists",
@@ -461,7 +461,7 @@ export const installationPageContent: Record<
     },
     ms: {
       metaTitle: "Pemasangan Aircond 2HP KL — Dari RM249 | Bilik Besar | KL Renovator",
-      metaDescription: "Pemasangan aircond 2HP di KL & Selangor dari RM249. Terbaik untuk bilik kecil, ruang terbuka & suite utama sehingga 250 kaki persegi. Hari sama, waranti 1 bulan. WhatsApp +60182983573",
+      metaDescription: "Pemasangan aircond 2HP di KL & Selangor dari RM249. Terbaik untuk ruang tamu besar, ruang terbuka & suite utama sehingga 250 kaki persegi. Hari sama.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "Pemasangan Aircond 2HP KL Selangor",
       eyebrow: "Pakar Pemasangan 2HP Dinding",
@@ -549,7 +549,7 @@ export const installationPageContent: Record<
   "wall-mounted": {
     en: {
       metaTitle: "Wall-Mounted Aircond Installation KL — From RM199 | All Brands | KL Renovator",
-      metaDescription: "Wall-mounted aircond installation in KL & Selangor from RM199. Split unit fitting for all 20 brands, 1–5HP. Same-day, vacuum pump, 1-month warranty. WhatsApp +60182983573",
+      metaDescription: "Wall-mounted aircond installation in KL & Selangor from RM199. Split unit fitting for all 20 brands, 1–5HP. Same-day, vacuum pump, 1-month warranty.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp",
       ogImageAlt: "Wall-Mounted Aircond Installation KL Selangor",
       eyebrow: "Wall-Mounted Split Unit Specialists",
@@ -595,7 +595,7 @@ export const installationPageContent: Record<
     },
     ms: {
       metaTitle: "Pemasangan Aircond Dinding KL — Dari RM199 | Semua Jenama | KL Renovator",
-      metaDescription: "Pemasangan aircond dinding di KL & Selangor dari RM199. Pemasangan unit split untuk semua 20 jenama, 1–5HP. Hari sama, pam vakum, waranti 1 bulan. WhatsApp +60182983573",
+      metaDescription: "Pemasangan aircond dinding di KL & Selangor dari RM199. Pemasangan unit split untuk semua 20 jenama, 1–5HP. Hari sama, pam vakum, waranti 1 bulan.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp",
       ogImageAlt: "Pemasangan Aircond Dinding KL Selangor",
       eyebrow: "Pakar Unit Split Dinding",
@@ -689,7 +689,7 @@ export const installationPageContent: Record<
   "ceiling-cassette": {
     en: {
       metaTitle: "Ceiling Cassette Installation KL — From RM290 | Commercial & Homes | KL Renovator",
-      metaDescription: "Ceiling cassette aircond installation in KL & Selangor from RM290. Commercial & residential 4-way cassette fitting. Same-day, drain pump, 1-month warranty. WhatsApp +60182983573",
+      metaDescription: "Ceiling cassette aircond installation in KL & Selangor from RM290. Commercial & residential 4-way cassette fitting. Same-day, 1-month warranty.",
       ogImage: "https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp",
       ogImageAlt: "Ceiling Cassette Installation KL Selangor",
       eyebrow: "Ceiling Cassette Installation Specialists",
@@ -733,7 +733,7 @@ export const installationPageContent: Record<
     },
     ms: {
       metaTitle: "Pemasangan Ceiling Cassette KL — Dari RM290 | Komersial & Rumah | KL Renovator",
-      metaDescription: "Pemasangan aircond ceiling cassette di KL & Selangor dari RM290. Pemasangan 4-way cassette komersial & kediaman. Hari sama, pam saliran, waranti 1 bulan. WhatsApp +60182983573",
+      metaDescription: "Pemasangan aircond ceiling cassette di KL & Selangor dari RM290. Pemasangan 4-way cassette komersial & kediaman. Hari sama, waranti 1 bulan.",
       ogImage: "https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp",
       ogImageAlt: "Pemasangan Ceiling Cassette KL Selangor",
       eyebrow: "Pakar Pemasangan Ceiling Cassette",
@@ -823,7 +823,7 @@ export const installationPageContent: Record<
   "window-unit": {
     en: {
       metaTitle: "Window Unit Installation KL — From RM199 | Budget Cooling | KL Renovator",
-      metaDescription: "Window aircond installation in KL & Selangor from RM199. Budget-friendly window unit fitting for homes, rented rooms & older apartments. Same-day, 1-month warranty. WhatsApp +60182983573",
+      metaDescription: "Window aircond installation in KL & Selangor from RM199. Budget-friendly window unit fitting for homes, rented rooms & older apartments. Same-day.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "Window Aircond Installation KL Selangor",
       eyebrow: "Window Unit Installation Specialists",
@@ -881,7 +881,7 @@ export const installationPageContent: Record<
     },
     ms: {
       metaTitle: "Pemasangan Aircond Tingkap KL — Dari RM199 | Penyejukan Ekonomi | KL Renovator",
-      metaDescription: "Pemasangan aircond tingkap di KL & Selangor dari RM199. Pemasangan unit tingkap mesra bajet untuk rumah, bilik sewa & pangsapuri lama. Hari sama, waranti 1 bulan. WhatsApp +60182983573",
+      metaDescription: "Pemasangan aircond tingkap di KL & Selangor dari RM199. Pemasangan unit tingkap mesra bajet untuk rumah, bilik sewa & pangsapuri lama. Hari sama.",
       ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
       ogImageAlt: "Pemasangan Aircond Tingkap KL Selangor",
       eyebrow: "Pakar Pemasangan Unit Tingkap",
@@ -1049,8 +1049,18 @@ export function getInstallationMetadata(
     ms: getInstallationPath(pageKey, "ms"),
     zh: getInstallationPath(pageKey, "zh"),
   };
-  const optimizedTitle = buildInstallationMetaTitle(c.metaTitle, locale, { type: "hp" });
-  const optimizedDesc = buildInstallationMetaDesc(c.metaDescription, locale, { type: "hp" });
+  // ── FORENSIC FIX (2026-08-15) ────────────────────────────────────────
+  // `c.metaTitle` / `c.metaDescription` are COMPLETE curated strings, but
+  // they were being passed as the `entity` argument of the { type: "hp" }
+  // template builders, which wrap the entity in boilerplate. The result was
+  // corrupted, doubled metadata on every installation landing page, e.g.
+  //   /zh/2hp…  title: "2匹冷气安装 KL — RM249起 | 大房间 | KL Renovator冷气安装吉隆坡 — RM 199起"
+  //   /zh/2hp…  desc : curated ZH desc + "冷气安装覆盖吉隆坡与雪兰莪卧室及办公室。RM 199起…" (≈250 display width)
+  //   /ms/pemasangan-aircond-2hp-kl title: "Pemasangan Aircond Pemasangan Aircond 2HP KL — Dari RM249"
+  // It also stamped the WRONG price (generic RM 199) onto RM249/RM290 pages.
+  // The curated strings are already CTR-optimized — clamp them, never template them.
+  const optimizedTitle = clampMetaTitle(c.metaTitle);
+  const optimizedDesc = clampMetaDescription(c.metaDescription);
   return {
     title: optimizedTitle,
     description: optimizedDesc,

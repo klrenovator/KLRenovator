@@ -211,7 +211,7 @@ export default function AircondInstallationKLZHPage() {
               <h3 className="font-black text-amber-800 mb-3 flex items-center gap-2"><span aria-hidden="true">🔍</span> 额外收费（仅按需）</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-700">
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 超7尺铜管: RM 17/尺 (1.0–1.5 匹), RM 23/尺 (2.0–2.5 匹), RM 27/尺 (3.0–3.5 匹)</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 超7尺电线: RM 9/尺 (1.0–1.5 匹), RM 13/尺 (2.0–2.5 匹), RM 17/尺 (3.0–4.0 匹)</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 超7尺电线: RM 9/尺</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 小型PVC线槽（电线）：RM 6/尺；大型PVC线槽（铜管+电线+保温层）：RM 12/尺</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 标准室外压缩机/支架: RM 45</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> 重型室外压缩机/支架: RM 70</li>

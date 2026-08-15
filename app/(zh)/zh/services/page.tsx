@@ -144,10 +144,9 @@ const MATERIAL_ROWS = [
 ];
 
 const CONTRACT_ROWS = [
-  { label: "住宅套餐 · 2 – 4 台 / 年合约", price: "RM 499" },
-  { label: "住宅套餐 · 5+ 台 / 年合约", price: "RM 999" },
-  { label: "商业套餐 · 5 – 10 台 / 年合约", price: "RM 1,999" },
-  { label: "商业套餐 · 10+ 台 / 年合约", price: "RM 3,499" },
+  { label: "AMC 基础 · 每台 / 年（2次基础保养 + 1次化学清洗）", price: "RM 299" },
+  { label: "AMC 标准 · 每台 / 年（2次基础保养 + 2次化学清洗 + 免费紧急检查）", price: "RM 499" },
+  { label: "AMC 高级 · 每台 / 年（4次保养 + 2次化学清洗 + 1次大修 + 维修85折）", price: "RM 899" },
 ];
 
 const VOLUME_DISCOUNTS = [

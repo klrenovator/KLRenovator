@@ -43,10 +43,10 @@ export async function generateMetadata({
 
   return {
     title: buildBrandMetaTitleWithDate(brand.metaTitleZH || brand.metaTitle, "zh"),
-    description: brand.metaDescZH || brand.metaDesc,
+    description: clampMetaDescription(brand.metaDescZH || brand.metaDesc),
     openGraph: {
       title: buildBrandMetaTitleWithDate(brand.metaTitleZH || brand.metaTitle, "zh"),
-      description: brand.metaDescZH || brand.metaDesc,
+      description: clampMetaDescription(brand.metaDescZH || brand.metaDesc),
       url: zhUrl,
       type: "website",
       locale: "zh_MY",

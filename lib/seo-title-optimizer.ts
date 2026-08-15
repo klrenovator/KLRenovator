@@ -12,6 +12,42 @@ function isCJK(text: string): boolean {
   return /[\u4e00-\u9fff]/.test(text);
 }
 
+// FORENSIC FIX (2026-08-15): CJK titles must be capped by DISPLAY WIDTH
+// (full-width char = 2 units), matching how Google measures the ~600px
+// title budget. 60 *characters* of Chinese is ~120 units — double budget.
+function isWideChar(ch: string): boolean {
+  return /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6\u3000-\u303f]/.test(ch);
+}
+
+function displayWidth(text: string): number {
+  let w = 0;
+  for (const ch of text) w += isWideChar(ch) ? 2 : 1;
+  return w;
+}
+
+/** Truncate CJK/mixed title to a display width, preferring separator cuts. */
+function truncateTitleAtWidth(text: string, maxWidth: number): string {
+  if (displayWidth(text) <= maxWidth) return text;
+  const chars = [...text];
+  let w = 0;
+  let hardCut = chars.length;
+  for (let i = 0; i < chars.length; i++) {
+    w += isWideChar(chars[i]) ? 2 : 1;
+    if (w > maxWidth) {
+      hardCut = i;
+      break;
+    }
+  }
+  const slice = chars.slice(0, hardCut).join("");
+  // Prefer dropping a whole trailing segment (" | Brand", " — suffix").
+  let best = -1;
+  for (const sep of [" | ", " — ", " – ", " - "]) best = Math.max(best, slice.lastIndexOf(sep));
+  if (best >= 10) return slice.slice(0, best).trim();
+  const lastSpace = slice.lastIndexOf(" ");
+  if (lastSpace >= 10) return slice.slice(0, lastSpace).trim();
+  return slice.trim();
+}
+
 function truncateAtWordBoundary(text: string, max: number): string {
   if (text.length <= max) return text;
   // Try to cut at common separators before max
@@ -108,6 +144,11 @@ export function clampMetaTitle(raw: string, opts?: { min?: number; max?: number 
   const cjk = isCJK(title);
   const min = opts?.min ?? (cjk ? META_TITLE_MIN_CJK : META_TITLE_MIN);
   const max = opts?.max ?? (cjk ? META_TITLE_MAX_CJK : META_TITLE_MAX);
+
+  // CJK path: clamp by display width (full-width char = 2 units).
+  if (cjk) {
+    return truncateTitleAtWidth(title, max);
+  }
 
   let result = title;
 

@@ -150,12 +150,12 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 4–8 units: 10% off labour
 8+ units: 15% off labour
 
-## ANNUAL CONTRACTS
+## ANNUAL CONTRACTS (AMC — per wall-mounted 1.0–1.5 HP unit)
 
-Residential 2–4 units/year: RM 499
-Residential 5+ units/year: RM 999
-Commercial 5–10 units/year: RM 1,999
-Commercial 10+ units/year: RM 3,499
+AMC Basic: RM 299/year (2 basic services + 1 chemical wash)
+AMC Standard: RM 499/year (2 basic services + 2 chemical washes + free emergency check)
+AMC Premium: RM 899/year (4 services + 2 chemical washes + 1 chemical overhaul + 15% repair discount)
+Multi-unit & commercial discounts quoted on enquiry.
 
 ## BRANDS SERVICED (20) — Independent Service, Not Authorized Dealer
 
@@ -363,7 +363,7 @@ KL Renovator offers free interactive tools on the homepage and dedicated tool pa
 
 ### Installation Cost Calculator
 - Inputs: number of units, HP, aircond type (wall/cassette/window), copper pipe length, electrical wire length, drain pipe length, PVC casing, outdoor bracket, aircond switch, water pump
-- Outputs: labour cost (published per-HP rates RM 199–449 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9–17/ft, drain ~RM 5/ft estimate, small PVC RM 6/ft or large PVC RM 12/fts RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 5+ units, 10% for 10+ units), grand total
+- Outputs: labour cost (published per-HP rates RM 199–449 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9/ft, drain ~RM 5/ft estimate, small PVC RM 6/ft or large PVC RM 12/fts RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 5+ units, 10% for 10+ units), grand total
 - URL: https://www.klrenovator.com/aircond-installation-cost-calculator
 
 ### Gas Top-up Cost Estimator
