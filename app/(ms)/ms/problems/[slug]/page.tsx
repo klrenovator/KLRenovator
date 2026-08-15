@@ -47,10 +47,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitleMS || problem.metaTitle),
-    description: problem.metaDescMS || problem.metaDesc,
+    description: clampMetaDescription(problem.metaDescMS || problem.metaDesc),
     openGraph: {
       title: clampMetaTitle(problem.metaTitleMS || problem.metaTitle),
-      description: problem.metaDescMS || problem.metaDesc,
+      description: clampMetaDescription(problem.metaDescMS || problem.metaDesc),
       url: msUrl,
       type: "website",
       locale: "ms_MY",

@@ -45,10 +45,10 @@ export async function generateMetadata({
 
   return {
     title: buildBrandMetaTitleWithDate(brand.metaTitleMS || brand.metaTitle, "ms"),
-    description: brand.metaDescMS || brand.metaDesc,
+    description: clampMetaDescription(brand.metaDescMS || brand.metaDesc),
     openGraph: {
       title: buildBrandMetaTitleWithDate(brand.metaTitleMS || brand.metaTitle, "ms"),
-      description: brand.metaDescMS || brand.metaDesc,
+      description: clampMetaDescription(brand.metaDescMS || brand.metaDesc),
       url: msUrl,
       type: "website",
       locale: "ms_MY",

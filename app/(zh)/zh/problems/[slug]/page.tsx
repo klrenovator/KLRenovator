@@ -44,10 +44,10 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitleZH || problem.metaTitle),
-    description: problem.metaDescZH || problem.metaDesc,
+    description: clampMetaDescription(problem.metaDescZH || problem.metaDesc),
     openGraph: {
       title: clampMetaTitle(problem.metaTitleZH || problem.metaTitle),
-      description: problem.metaDescZH || problem.metaDesc,
+      description: clampMetaDescription(problem.metaDescZH || problem.metaDesc),
       url: zhUrl,
       type: "website",
       locale: "zh_MY",

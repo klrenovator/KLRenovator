@@ -358,15 +358,25 @@ for (const [label, re] of FAMILIES) {
 
 // ─────────────────────────────────────────────────────────────────────────
 // 10. Title / description length (truncation in SERPs, not an index error).
+//     FIX (2026-08-15): measure like Google — decode HTML entities first
+//     (&amp; is 1 char, not 5) and count CJK chars as 2 display units.
 // ─────────────────────────────────────────────────────────────────────────
+const decodeEntities = (t) =>
+  t.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+   .replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&#39;/g, "'");
+const isWide = (ch) =>
+  /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6\u3000-\u303f]/.test(ch);
+const displayWidth = (t) => [...t].reduce((a, c) => a + (isWide(c) ? 2 : 1), 0);
+
 let longTitle = 0, longDesc = 0, shortDesc = 0, noDesc = 0;
 for (const p of pages.values()) {
   if (/noindex/i.test(p.robots) || p.route.startsWith("/admin")) continue;
-  const t = p.title.replace(/&amp;/g, "&").replace(/&#x27;/g, "'");
-  if (t.length > 60) longTitle++;
-  if (!p.desc) noDesc++;
-  else if (p.desc.length > 160) longDesc++;
-  else if (p.desc.length < 70) shortDesc++;
+  const t = decodeEntities(p.title);
+  const d = decodeEntities(p.desc || "");
+  if (displayWidth(t) > 60) longTitle++;
+  if (!d) noDesc++;
+  else if (displayWidth(d) > 160) longDesc++;
+  else if (displayWidth(d) < 70) shortDesc++;
 }
 
 // ── Report ───────────────────────────────────────────────────────────────
