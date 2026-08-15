@@ -225,3 +225,18 @@ All 33 CSV-flagged URLs          → old width 172–249 → new width 111–155
 2. GSC: Sitemaps → resubmit `sitemap.xml`; URL-inspect 5–10 of the worst /zh pages to prompt recrawl.
 3. Bing: `POST /api/indexnow?key=$INDEXNOW_TRIGGER_SECRET` with the changed URLs.
 4. Watch GSC CTR on /zh/* and /ms/* over the next 14–21 days — expect snippet CTR to recover to pre-drop levels.
+
+---
+
+## ADDENDUM — Pricing Consistency Fixes (2026-08-15, owner-confirmed)
+
+Owner confirmed the true prices for the 4 conflicts found in Phase 5. All fixed and verified against the rebuilt HTML (2,128 pages: 0 tiered-wire refs, 0 multi-unit AMC refs, 0 corrupted price text).
+
+| # | Item | Was (conflicting) | Owner-confirmed | Files fixed |
+|---|---|---|---|---|
+| 1 | Extra electrical wire beyond 7 ft | EN/MS flat RM 9/ft vs ZH tiered RM 9/13/17 per HP | **Flat RM 9/ft (all HP)** | `config/{area,brand,kampung,installation-page}-installation-content.ts`, `config/services-data.ts` (3 ZH FAQs), `config/blog-posts.ts` (8 refs), `app/(zh)/zh/installation-price-malaysia/page.tsx` (3 tier rows → 1 flat row), `app/(zh)/zh/aircond-installation-kl/page.tsx`, `components/calculators/tools-hub.tsx` (EN/MS/ZH copy), `public/llms-full.txt` |
+| 2 | AMC / maintenance contract | Per-unit RM 299/499/899 vs multi-unit RM 499/999/1,999/3,499 | **Per-unit plans only: Basic RM 299 · Standard RM 499 · Premium RM 899 per unit/year** (multi-unit/commercial = quoted on enquiry) | `config/site/pricing.ts` (contracts block), `app/(ms)/ms/services/page.tsx`, `app/(zh)/zh/services/page.tsx`, EN/MS/ZH commercial-installation pages (AMC cards + FAQs), `config/blog-posts.ts` (12 refs), `public/llms-full.txt`, `public/aeo-faq.txt` |
+| 3 | Ceiling cassette basic servicing | Master RM 150 vs KL FAQ "from RM 220" | **RM 150** (RM 220 = cassette chemical wash — unchanged) | `config/site/areas.ts` KL FAQ (EN+MS) now says "basic servicing from RM 150 (chemical wash from RM 220)" |
+| 4 | Corrupted blog price text | "RM 2.50/PSI-220", ZH "化学清洗从RM 2.50/PSI起", "加气从from RM…" | Chemical wash RM 120, gas RM 2.50/PSI, artifacts removed | `config/blog-posts.ts` (5 corrupted strings in `ac-service-price-malaysia-2026` EN/MS/ZH) |
+
+Verification: `tsc` clean · `next build` exit 0 · gsc-audit 0 errors / 0 metadata issues · built-HTML sweep: 0 remaining conflicts.

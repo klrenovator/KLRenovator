@@ -144,10 +144,9 @@ const MATERIAL_ROWS = [
 ];
 
 const CONTRACT_ROWS = [
-  { label: "Pakej Kediaman · 2 – 4 unit / kontrak tahunan", price: "RM 499" },
-  { label: "Pakej Kediaman · 5+ unit / kontrak tahunan", price: "RM 999" },
-  { label: "Pakej Komersial · 5 – 10 unit / kontrak tahunan", price: "RM 1,999" },
-  { label: "Pakej Komersial · 10+ unit / kontrak tahunan", price: "RM 3,499" },
+  { label: "AMC Asas · seunit / tahun (2 servis asas + 1 cuci kimia)", price: "RM 299" },
+  { label: "AMC Standard · seunit / tahun (2 servis asas + 2 cuci kimia + cek kecemasan percuma)", price: "RM 499" },
+  { label: "AMC Premium · seunit / tahun (4 servis + 2 cuci kimia + 1 overhaul + diskaun 15% pembaikan)", price: "RM 899" },
 ];
 
 const VOLUME_DISCOUNTS = [

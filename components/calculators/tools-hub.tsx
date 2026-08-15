@@ -37,7 +37,7 @@ const HUB_STRINGS: Record<Lang, {
     bottomNote: "Also on our homepage: Price Calculator and Problem Diagnostic Tool — quick cost & diagnosis cards with WhatsApp booking.",
     worksTitle: "How the Estimates Work",
     worksBody:
-      "Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installation labour is per HP (RM 199–449), copper pipe RM 17–27/ft, electrical wire RM 9–17/ft, gas R22 RM 2.50/PSI and R410A/R32 RM 3.00/PSI. Where a figure depends on an on-site inspection — exact gas PSI, drain pipe routing, water pump sizing — the tool shows a range and the technician confirms the final price before any work begins. No hidden charges, ever.",
+      "Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installation labour is per HP (RM 199–449), copper pipe RM 17–27/ft, electrical wire RM 9/ft, gas R22 RM 2.50/PSI and R410A/R32 RM 3.00/PSI. Where a figure depends on an on-site inspection — exact gas PSI, drain pipe routing, water pump sizing — the tool shows a range and the technician confirms the final price before any work begins. No hidden charges, ever.",
     worksBody2: "",
     faqs: [
       { q: "Are KL Renovator's aircond calculators free to use?", a: "Yes — all calculators on this page are completely free, with no registration and no email required. They use KL Renovator's published 2026 pricing so the estimates match real quotes." },
@@ -58,7 +58,7 @@ const HUB_STRINGS: Record<Lang, {
     bottomNote: "Juga di laman utama kami: Kalkulator Harga dan Alat Diagnostik Masalah — kad kos & diagnosis pantas dengan tempahan WhatsApp.",
     worksTitle: "Macam Mana Anggaran Berfungsi",
     worksBody:
-      "Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh pemasangan mengikut HP (RM 199–449), paip tembaga RM 17–27/kaki, wayar elektrik RM 9–17/kaki, gas R22 RM 2.50/PSI dan R410A/R32 RM 3.00/PSI. Apabila angka bergantung pada pemeriksaan di tapak — PSI gas tepat, laluan paip saliran, saiz pam air — alat menunjukkan julat dan juruteknik mengesahkan harga akhir sebelum kerja bermula. Tiada caj tersembunyi, langsung.",
+      "Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh pemasangan mengikut HP (RM 199–449), paip tembaga RM 17–27/kaki, wayar elektrik RM 9/kaki, gas R22 RM 2.50/PSI dan R410A/R32 RM 3.00/PSI. Apabila angka bergantung pada pemeriksaan di tapak — PSI gas tepat, laluan paip saliran, saiz pam air — alat menunjukkan julat dan juruteknik mengesahkan harga akhir sebelum kerja bermula. Tiada caj tersembunyi, langsung.",
     worksBody2: "",
     faqs: [
       { q: "Adakah kalkulator aircond KL Renovator percuma?", a: "Ya — semua kalkulator di halaman ini percuma sepenuhnya, tanpa pendaftaran dan tanpa emel. Ia menggunakan harga 2026 KL Renovator yang diterbitkan supaya anggaran sepadan dengan sebut harga sebenar." },
@@ -79,7 +79,7 @@ const HUB_STRINGS: Record<Lang, {
     bottomNote: "首页还有：价格计算器和问题诊断工具 — 带WhatsApp预约的快速费用与诊断卡片。",
     worksTitle: "估价原理",
     worksBody:
-      "每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9–17、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排水走向、水泵规格 — 工具会给出范围，技术员在动工前确认最终价格。绝无隐藏费用。",
+      "每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排水走向、水泵规格 — 工具会给出范围，技术员在动工前确认最终价格。绝无隐藏费用。",
     worksBody2: "",
     faqs: [
       { q: "KL Renovator的冷气计算器免费使用吗？", a: "是的 — 本页所有计算器完全免费，无需注册或提供邮箱。它们使用KL Renovator已公布的2026年定价，因此估算与实际报价一致。" },

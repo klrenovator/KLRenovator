@@ -233,7 +233,7 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a firm quote. Also see: <a href="/services/chemical-wash">Chemical wash service page</a> | <a href="/services/chemical-overhaul">Chemical overhaul pricing</a></p>
 
       <h2>Warranty After Chemical Wash</h2>
-      <p>Every chemical wash by KL Renovator comes with a 1-month workmanship warranty. If the drain pipe blocks again within 30 days of service, we return to clear it at no additional charge. This warranty covers workmanship — it does not cover pre-existing mechanical faults that were present before the service. All warranty terms are communicated clearly before work begins. For ongoing protection, an annual maintenance plan is available from RM 499 per year covering 2–4 residential units.</p>
+      <p>Every chemical wash by KL Renovator comes with a 1-month workmanship warranty. If the drain pipe blocks again within 30 days of service, we return to clear it at no additional charge. This warranty covers workmanship — it does not cover pre-existing mechanical faults that were present before the service. All warranty terms are communicated clearly before work begins. For ongoing protection, annual maintenance plans (AMC) are available from RM 299 per unit per year.</p>
 
       <h2>Warranty and After-Service Guarantee</h2>
       <p>Every chemical wash by KL Renovator includes a 1-month workmanship warranty. If the drain pipe blocks again within 30 days, we return at no charge. Volume discounts apply when booking multiple units in one visit — 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units. For example, 3 wall-mounted 1.5 HP units at RM 120 each becomes RM 360 total. Payment is accepted after the job is completed to your satisfaction — cash, online transfer, or DuitNow QR. No upfront payment required for residential bookings.</p>
@@ -284,7 +284,7 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp <strong>+60 18-298 3573</strong> untuk sebutan harga yang pasti. Lihat juga: <a href="/services/chemical-wash">Halaman servis cuci kimia</a> | <a href="/services/chemical-overhaul">Harga overhaul kimia</a></p>
 
       <h2>Waranti Selepas Cuci Kimia</h2>
-      <p>Setiap cuci kimia oleh KL Renovator disertakan dengan waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari selepas servis, kami akan kembali membersihkannya tanpa caj tambahan. Waranti ini meliputi kerja — ia tidak meliputi kerosakan mekanikal sedia ada yang wujud sebelum servis. Semua terma waranti disampaikan dengan jelas sebelum kerja bermula. Untuk perlindungan berterusan, pelan penyelenggaraan tahunan tersedia dari RM 499 setahun meliputi 2–4 unit kediaman.</p>
+      <p>Setiap cuci kimia oleh KL Renovator disertakan dengan waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari selepas servis, kami akan kembali membersihkannya tanpa caj tambahan. Waranti ini meliputi kerja — ia tidak meliputi kerosakan mekanikal sedia ada yang wujud sebelum servis. Semua terma waranti disampaikan dengan jelas sebelum kerja bermula. Untuk perlindungan berterusan, pelan penyelenggaraan tahunan (AMC) tersedia dari RM 299 seunit setahun.</p>
 
       <h2>Waranti dan Jaminan Selepas Servis</h2>
       <p>Setiap cuci kimia oleh KL Renovator termasuk waranti kerja 1 bulan. Jika paip longkang tersumbat semula dalam masa 30 hari, kami kembali tanpa caj. Diskaun kuantiti terpakai apabila menempah banyak unit dalam satu lawatan — Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit. Sebagai contoh, 3 unit dinding 1.5 HP pada RM 120 setiap satu menjadi RM 360 jumlah keseluruhan. Pembayaran diterima selepas kerja selesai dengan memuaskan anda — tunai, pemindahan dalam talian, atau DuitNow QR. Tiada pembayaran pendahuluan diperlukan untuk tempahan kediaman.</p>
@@ -790,7 +790,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>基本保养</td><td>RM 99起</td></tr>
           <tr><td>化学清洗</td><td>RM 2.50/PSI起</td></tr>
           <tr><td>化学大修</td><td>RM 220起</td></tr>
-          <tr><td>年度保养合约(AMC)</td><td>RM 499/年起</td></tr>
+          <tr><td>年度保养合约(AMC)</td><td>RM 299/年起（每台）</td></tr>
         </tbody>
       </table>
 
@@ -1220,7 +1220,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>基本保养</td><td>每6-12个月</td><td>RM 99起</td></tr>
           <tr><td>化学清洗</td><td>每12个月</td><td>RM 2.50/PSI起</td></tr>
           <tr><td>化学大修</td><td>每2-3年</td><td>RM 220起</td></tr>
-          <tr><td>年度保养合约</td><td>包含以上</td><td>RM 499/年起</td></tr>
+          <tr><td>年度保养合约</td><td>包含以上</td><td>RM 299/年起（每台）</td></tr>
         </tbody>
       </table>
 
@@ -2180,8 +2180,8 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>Annual Maintenance Contracts</h2>
       <ul>
-        <li>5–10 units / year: <strong>RM 1,999</strong></li>
-        <li>10+ units / year: <strong>RM 3,499</strong></li>
+        <li>AMC Basic (per unit / year): <strong>RM 299</strong></li>
+        <li>AMC Premium (per unit / year): <strong>RM 899</strong></li>
       </ul>
       <p>WhatsApp <strong>+60 18-298 3573</strong> for a commercial quote. See: <a href="/services/ceiling-cassette">Ceiling cassette service</a></p>
 
@@ -2195,7 +2195,7 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp <strong>+60 18-298 3573</strong> for commercial maintenance pricing and site surveys.</p>
 
       <h2>Indoor Air Quality and Staff Productivity</h2>
-      <p>Commercial aircond units that are not regularly maintained become sources of airborne mould spores, bacteria, and allergens. Research consistently shows that poor indoor air quality in offices reduces cognitive performance and increases sick days. A properly maintained HVAC system — with clean coils, sterilised drain pans, and clean blower wheels — provides genuinely cleaner air than a neglected system regardless of what the thermostat reads. For businesses, the productivity cost of staff illness from poor IAQ far exceeds the cost of a maintenance contract. KL Renovator commercial maintenance contracts start from <strong>RM 1,999 per year</strong> for 5–10 units. WhatsApp <strong>+60 18-298 3573</strong> for a site survey and quote.</p>
+      <p>Commercial aircond units that are not regularly maintained become sources of airborne mould spores, bacteria, and allergens. Research consistently shows that poor indoor air quality in offices reduces cognitive performance and increases sick days. A properly maintained HVAC system — with clean coils, sterilised drain pans, and clean blower wheels — provides genuinely cleaner air than a neglected system regardless of what the thermostat reads. For businesses, the productivity cost of staff illness from poor IAQ far exceeds the cost of a maintenance contract. KL Renovator commercial maintenance contracts (AMC) start from <strong>RM 299 per unit per year</strong>; multi-unit commercial discounts quoted on enquiry. WhatsApp <strong>+60 18-298 3573</strong> for a site survey and quote.</p>
     `,
     contentMS: `<h2>Penyelenggaraan HVAC Komersial di KL — Panduan Lengkap untuk Perniagaan</h2>
       <p>Sistem HVAC komersial beroperasi 10-16 jam sehari, mengumpul kotoran 2-3x lebih cepat daripada unit kediaman. <a href="/near-me">Pakar penyelenggaraan komersial kami</a> menerangkan apa yang perniagaan anda perlukan.</p>
@@ -2263,13 +2263,13 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>年度维护合同</h2>
       <ul>
-        <li>5-10台 / 年：<strong>RM 1,999</strong></li>
-        <li>10台以上 / 年：<strong>RM 3,499</strong></li>
+        <li>AMC 基础（每台/年）：<strong>RM 299</strong></li>
+        <li>AMC 高级（每台/年）：<strong>RM 899</strong></li>
       </ul>
       <h2>年度维护合同</h2>
       <ul>
-        <li>5-10台 / 年：<strong>RM 1,999</strong></li>
-        <li>10台以上 / 年：<strong>RM 3,499</strong></li>
+        <li>AMC 基础（每台/年）：<strong>RM 299</strong></li>
+        <li>AMC 高级（每台/年）：<strong>RM 899</strong></li>
       </ul>
       <p>合同客户享有优先当天排程服务，以及合同范围外所需维修工作9折优惠。这确保您的企业在HVAC系统需要紧急关注时无需长时间等待。</p>
       <p>请WhatsApp <strong>+60 18-298 3573</strong> 获取商业报价。</p>
@@ -3212,9 +3212,9 @@ export const allPosts: BlogPost[] = [
     title: "Aircond Installation Cost Malaysia 2026 — Full Price Breakdown",
     titleMS: "Kos Pemasangan Aircond di Malaysia 2026 — Panduan Harga Penuh (KL & Selangor)",
     titleZH: "2026年马来西亚冷气安装费用 — 完整价格指南（吉隆坡与雪兰莪）",
-    excerpt: "Full 2026 aircond installation cost guide for Malaysia. RM 199 base install (1.0-1.5 HP wall-mounted) plus transparent add-ons, HP-wise copper (RM 17–27/ft) and wire (RM 9–17/ft) pricing, and what condo vs landed actually costs. Verified KL Renovator pricing.",
-    excerptMS: "Panduan lengkap kos pemasangan aircond 2026 di Malaysia. Pasang asas RM 199 (1.0-1.5 HP dinding) dengan add-on telus, harga paip tembaga mengikut HP (RM 17–27/kaki) dan wayar (RM 9–17/kaki), dan perbezaan harga kondo vs teres. Harga KL Renovator disahkan.",
-    excerptZH: "完整2026年马来西亚冷气安装费用指南。基础安装RM 199（1.0-1.5 HP壁挂式），透明附加费，按HP差异的铜管（RM 17–27/尺）和电线（RM 9–17/尺）定价，以及公寓与有地房屋的实际费用对比。KL Renovator经核实价格。",
+    excerpt: "Full 2026 aircond installation cost guide for Malaysia. RM 199 base install (1.0-1.5 HP wall-mounted) plus transparent add-ons, HP-wise copper (RM 17–27/ft) and wire (RM 9/ft) pricing, and what condo vs landed actually costs. Verified KL Renovator pricing.",
+    excerptMS: "Panduan lengkap kos pemasangan aircond 2026 di Malaysia. Pasang asas RM 199 (1.0-1.5 HP dinding) dengan add-on telus, harga paip tembaga mengikut HP (RM 17–27/kaki) dan wayar (RM 9/kaki), dan perbezaan harga kondo vs teres. Harga KL Renovator disahkan.",
+    excerptZH: "完整2026年马来西亚冷气安装费用指南。基础安装RM 199（1.0-1.5 HP壁挂式），透明附加费，按HP差异的铜管（RM 17–27/尺）和电线（RM 9/尺）定价，以及公寓与有地房屋的实际费用对比。KL Renovator经核实价格。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -3404,9 +3404,9 @@ export const allPosts: BlogPost[] = [
     title: "Why Is Aircond Installation So Expensive in Malaysia? 7 Real Reasons",
     titleMS: "Mengapa Pemasangan Aircond Mahal di Malaysia? 7 Sebab Sebenar (2026)",
     titleZH: "为什么马来西亚冷气安装这么贵？7个真实原因（2026）",
-    excerpt: "Aircond installation in Malaysia costs more than most people expect. Here are 7 real reasons: certified technician shortage, copper pipe price hike, HP-wise extra fees (RM 17–27/ft copper, RM 9–17/ft wire), insurance, tools, condo compliance and warranty. KL Renovator transparent breakdown.",
-    excerptMS: "Pemasangan aircond di Malaysia lebih mahal daripada jangkaan. Berikut 7 sebab sebenar: kekurangan juruteknik bertauliah, kenaikan harga paip tembaga, caj tambahan mengikut HP (RM 17–27/kaki paip, RM 9–17/kaki wayar), insurans, alat, pematuhan kondo dan waranti. Pecahan telus KL Renovator.",
-    excerptZH: "马来西亚冷气安装比大多数人预期的要贵。以下是7个真实原因：认证技师短缺、铜管价格上涨、按HP差异的额外费用（铜管RM 17–27/尺，电线RM 9–17/尺）、保险、工具、公寓合规和保修。KL Renovator透明细分。",
+    excerpt: "Aircond installation in Malaysia costs more than most people expect. Here are 7 real reasons: certified technician shortage, copper pipe price hike, HP-wise extra fees (RM 17–27/ft copper, RM 9/ft wire), insurance, tools, condo compliance and warranty. KL Renovator transparent breakdown.",
+    excerptMS: "Pemasangan aircond di Malaysia lebih mahal daripada jangkaan. Berikut 7 sebab sebenar: kekurangan juruteknik bertauliah, kenaikan harga paip tembaga, caj tambahan mengikut HP (RM 17–27/kaki paip, RM 9/kaki wayar), insurans, alat, pematuhan kondo dan waranti. Pecahan telus KL Renovator.",
+    excerptZH: "马来西亚冷气安装比大多数人预期的要贵。以下是7个真实原因：认证技师短缺、铜管价格上涨、按HP差异的额外费用（铜管RM 17–27/尺，电线RM 9/尺）、保险、工具、公寓合规和保修。KL Renovator透明细分。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -3447,7 +3447,7 @@ export const allPosts: BlogPost[] = [
       <h3>Can I bring my own copper pipe to save money?</h3>
       <p>Technically yes, but most technicians will not warranty work using customer-supplied materials. KL Renovator's warranty requires we supply all materials.</p>
       <h3>Is the RM 199 quote really the final price?</h3>
-      <p>For standard installations within 7 feet and a single wall penetration, yes. If your site needs extra pipe (HP-wise RM 17–27/ft for copper, RM 9–17/ft for wire), trunking, condensate pump, or has access issues, we will tell you the additional cost BEFORE starting work.</p>
+      <p>For standard installations within 7 feet and a single wall penetration, yes. If your site needs extra pipe (HP-wise RM 17–27/ft for copper, RM 9/ft for wire), trunking, condensate pump, or has access issues, we will tell you the additional cost BEFORE starting work.</p>
       <h3>Why do condo installations cost more?</h3>
       <p>Condo installations add management approval time, lift reservation fees, time window constraints, and trunking for aesthetics. These add RM 50-RM 300 to the typical cost.</p>
       <h3>Do 2.5 HP units cost more to install than 1.0 HP?</h3>
@@ -3490,7 +3490,7 @@ export const allPosts: BlogPost[] = [
       <h3>Boleh saya bawa paip tembaga sendiri?</h3>
       <p>Secara teknikal ya, tetapi kebanyakan juruteknik tidak akan waranti kerja menggunakan bahan pelanggan. Waranti KL Renovator memerlukan kami bekalkan semua bahan.</p>
       <h3>Adakah sebut harga RM 199 betul-betul harga akhir?</h3>
-      <p>Untuk pemasangan standard dalam 7 kaki dan satu penembusan dinding, ya. Jika tapak perlukan paip tambahan (RM 17–27/kaki mengikut HP untuk tembaga, RM 9–17/kaki untuk wayar), trunking, pam kondensat, atau ada isu akses, kami akan beritahu kos tambahan SEBELUM mula kerja.</p>
+      <p>Untuk pemasangan standard dalam 7 kaki dan satu penembusan dinding, ya. Jika tapak perlukan paip tambahan (RM 17–27/kaki mengikut HP untuk tembaga, RM 9/kaki untuk wayar), trunking, pam kondensat, atau ada isu akses, kami akan beritahu kos tambahan SEBELUM mula kerja.</p>
       <h3>Kenapa pemasangan kondo lebih mahal?</h3>
       <p>Pemasangan kondo tambah masa kelulusan pengurusan, yuran tempahan lif, sekatan tetingkap masa, dan trunking untuk estetik. Ini tambah RM 50-RM 300 kepada kos biasa.</p>
       <h3>Adakah unit 2.5 HP lebih mahal untuk pasang?</h3>
@@ -4120,9 +4120,9 @@ export const allPosts: BlogPost[] = [
     title: "AC Service Price Malaysia 2026 — Basic, Chemical Wash, Overhaul",
     titleMS: "Harga Servis AC di Malaysia 2026 — Basic, Cuci Kimia, Overhaul",
     titleZH: "2026年马来西亚AC服务价格 — 基础、化学清洗、大修",
-    excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI-220, AMC from RM 299/year. Verified pricing from klrenovator.com.",
-    excerptMS: "Harga servis AC di Malaysia 2026: servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI-220, AMC dari RM 299/tahun. Harga disahkan dari klrenovator.com.",
-    excerptZH: "2026年马来西亚AC服务价格：基础服务从RM 99起，化学清洗从RM 2.50/PSI起，化学大修从RM 220起，加气从from RM 2.50/PSI起，年度维护合同从RM 299/年起。从klrenovator.com验证价格。",
+    excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI, AMC from RM 299/year. Verified pricing from klrenovator.com.",
+    excerptMS: "Harga servis AC di Malaysia 2026: servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI, AMC dari RM 299/tahun. Harga disahkan dari klrenovator.com.",
+    excerptZH: "2026年马来西亚AC服务价格：基础服务从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，加气从RM 2.50/PSI起，年度维护合同从RM 299/年起。从klrenovator.com验证价格。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -4135,7 +4135,7 @@ export const allPosts: BlogPost[] = [
     imageAlt: "KL Renovator protected aircond chemical service setup in Kuala Lumpur for a Malaysia 2026 service price guide",
     lastReviewed: "2026-07-05",
     content: `
-      <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul from RM 220</strong> (1.0-1.5 HP), <strong>gas top-up from RM 2.50/PSI-220</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
+      <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul from RM 220</strong> (1.0-1.5 HP), <strong>gas top-up from RM 2.50/PSI</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
       <p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots pricing out AC service in KL and Selangor.</p>
       <h2>Quick answer — AC service price Malaysia 2026</h2>
       <p>AC service price in Malaysia 2026:</p>
@@ -4236,7 +4236,7 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. See our full <a href="/services/basic-servicing">Basic Servicing</a> and <a href="/services/chemical-wash">Chemical Wash</a> pricing pages, or explore <a href="/services/maintenance-contract">Annual Maintenance Contract</a> plans from RM 299/year. 1-month workmanship warranty included.</p>
     `,
     contentMS: `
-      <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia dari RM 220</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 2.50/PSI-220</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
+      <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia dari RM 220</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 2.50/PSI</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
       <p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai Malaysia yang menilai harga servis AC di KL dan Selangor.</p>
       <h2>Jawapan ringkas — harga servis AC Malaysia 2026</h2>
       <p>Harga servis AC di Malaysia 2026:</p>
@@ -8600,7 +8600,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>2 units, standard home use</td><td>RM 99 × 4 services = RM 396</td><td>RM 499 (4 basic + 1 chemical wash)</td><td>Saves RM 80 (+ free chemical wash)</td></tr>
           <tr><td>4 units, heavy use (8+ hrs/day)</td><td>RM 99 × 4 = RM 396 basic + RM 120 × 4 = RM 480 chemical = RM 876</td><td>RM 499*</td><td>Saves ~RM 377</td></tr>
-          <tr><td>Small office, 6 ceiling cassette</td><td>RM 200 × 4 = RM 800</td><td>RM 1,999 (commercial AMC)</td><td>Higher upfront but includes priority emergency</td></tr>
+          <tr><td>Small office, 6 ceiling cassette</td><td>RM 200 × 4 = RM 800</td><td>AMC per-unit plans from RM 299/year</td><td>Higher upfront but includes priority emergency</td></tr>
         </tbody>
       </table>
       <p><em>*Heavy use households still need chemical wash; AMC covers 4 basic visits + 1 chemical wash, then additional chemical washes at 20% off.</em></p>
@@ -8612,7 +8612,7 @@ export const allPosts: BlogPost[] = [
       <p>Pay-per-visit is better if: <strong>(1)</strong> You have only 1–2 units that are used lightly (bedroom units running 4–6 hours at night). <strong>(2)</strong> Your units are new (under 2 years old) and under manufacturer warranty — you may need less frequent servicing. <strong>(3)</strong> You are a tenant renting a property — the landlord is typically responsible for maintenance. <strong>(4)</strong> You prefer maximum flexibility and don't want to commit to a contract.</p>
 
       <h2>KL Renovator's AMC Packages</h2>
-      <p>Our residential AMC starts from RM 499/year covering 2–4 units with 4 basic servicing visits + 1 chemical wash + priority emergency response + 15% off repairs. For commercial clients, packages from RM 1,999/year. All packages are SSM-registered, include digital service reports, and can be cancelled with 30 days notice. No lock-in contracts.</p>
+      <p>Our AMC plans start from RM 299/year per unit with 4 basic servicing visits + 1 chemical wash + priority emergency response + 15% off repairs. For commercial clients, per-unit AMC plans from RM 299/year with multi-unit discounts on enquiry. All packages are SSM-registered, include digital service reports, and can be cancelled with 30 days notice. No lock-in contracts.</p>
 
       <p>Calculate your savings: WhatsApp <strong>+60 18-298 3573</strong> with your number of units and usage pattern for a personalised AMC vs pay-per-visit comparison. <a href="/services/maintenance-contract">AMC details</a> | <a href="/services">All services</a></p>
     `,
