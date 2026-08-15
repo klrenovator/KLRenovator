@@ -71,16 +71,6 @@ function buildZH(core, extras) {
   return out;
 }
 
-function replaceField(src, entityMatcher, field, makeValue) {
-  // For every entity block, replace `field: "..."` using entity captures.
-  return src.replace(entityMatcher, (block) => {
-    const value = makeValue(block);
-    if (!value) return block;
-    const re = new RegExp(`(${field}:\\s*")[^"]*(")`);
-    return block.replace(re, `$1${value.replace(/[$]/g, "$$$$")}$2`);
-  });
-}
-
 const grab = (block, key) => (block.match(new RegExp(`${key}:\\s*"([^"]*)"`)) || [])[1];
 
 let report = [];
