@@ -685,7 +685,7 @@ const baseExtras: Record<KampungInstallationLocale, string[]> = {
     "Standard compressor / outdoor bracket: RM 45",
     "Heavy-duty compressor / outdoor bracket: RM 70",
     "New electrical plug point: RM 100",
-    "Wall hacking / concealment: RM 6/ft",
+    "Wall hacking / concealment: RM 25/ft",
     "High-rise / difficult access: RM 50–150",
   ],
   ms: [
@@ -695,7 +695,7 @@ const baseExtras: Record<KampungInstallationLocale, string[]> = {
     "Braket kompressor / luaran standard: RM 45",
     "Braket kompressor / luaran heavy-duty: RM 70",
     "Pasang plug point baharu: RM 100",
-    "Pecah dinding / penyembunyian: RM 6/ft",
+    "Pecah dinding / penyembunyian: RM 25/ft",
     "Tinggi / akses sukar: RM 50–150",
   ],
   zh: [
@@ -705,7 +705,7 @@ const baseExtras: Record<KampungInstallationLocale, string[]> = {
     "标准室外压缩机/支架：RM 45",
     "重型室外压缩机/支架：RM 70",
     "新增电源插座：RM 100",
-    "敲墙/隐藏管线：RM 6/尺",
+    "敲墙/隐藏管线：RM 25/尺",
     "高层/困难施工：RM 50–150",
   ],
 };

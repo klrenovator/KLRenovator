@@ -430,7 +430,7 @@ export const sitePublic = {
         },
         {
           "label": "Wall Hacking & Concealment Work",
-          "price": "RM 6/ft"
+          "price": "RM 25/ft"
         },
         {
           "label": "High-Rise / Difficult Access Charge",

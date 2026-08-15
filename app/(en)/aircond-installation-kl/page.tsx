@@ -218,7 +218,7 @@ export default function AircondInstallationKLPage() {
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Standard compressor / outdoor bracket: RM 45</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Heavy-duty compressor / outdoor bracket: RM 70</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> New electrical plug point: RM 100</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Wall hacking/concealment: RM 6/ft</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Wall hacking/concealment: RM 25/ft</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> High-rise/difficult access: RM 50–150</li>
               </ul>
               <p className="mt-4 text-xs text-amber-600">All extras quoted & approved on-site BEFORE work starts. No surprises.</p>

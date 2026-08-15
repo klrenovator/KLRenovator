@@ -9074,7 +9074,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Outdoor bracket upgrade</td><td>Heavy units or difficult wall surfaces</td><td>RM 25–65</td></tr>
           <tr><td>Small PVC casing (electrical wire)</td><td>Concealing exposed electrical wire</td><td>RM 6/ft</td></tr><tr><td>Large PVC casing (copper pipe + wire + insulation)</td><td>Concealing the complete material run</td><td>RM 12/ft</td></tr>
           <tr><td>New electrical point</td><td>Running a dedicated power supply for the unit</td><td>RM 100</td></tr>
-          <tr><td>Wall hacking for concealed piping</td><td>Burying pipes inside the wall for a clean look</td><td>RM 6/ft</td></tr>
+          <tr><td>Wall hacking for concealed piping</td><td>Burying pipes inside the wall for a clean look</td><td>RM 25/ft</td></tr>
           <tr><td>High-rise/difficult access</td><td>Condos above 5th floor or limited access areas</td><td>RM 50–150</td></tr>
         </tbody>
       </table>

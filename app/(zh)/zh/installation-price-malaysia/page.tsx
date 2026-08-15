@@ -68,7 +68,7 @@ const MATERIAL_PRICES = [
   { label: "小型PVC线槽（电线）", price: "RM 6/尺" },
   { label: "大型PVC线槽（铜管+电线+保温层）", price: "RM 12/尺" },
   { label: "电源插座安装", price: "RM 100" },
-  { label: "墙体开槽与暗装", price: "RM 6/尺" },
+  { label: "墙体开槽与暗装", price: "RM 25/尺" },
   { label: "高层/难进入作业费", price: "RM 50–150" },
   { label: "标准金属线槽", price: "RM 15/尺" },
 ];

@@ -216,7 +216,7 @@ export default function PemasanganAircondKLPage() {
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket kompressor / luaran standard: RM 45</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Braket kompressor / luaran heavy-duty: RM 70</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Soket elektrik baharu: RM 100</li>
-                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Borong dinding/penyembunyian: RM 6/kaki</li>
+                <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Borong dinding/penyembunyian: RM 25/kaki</li>
                 <li className="flex items-center gap-2"><span aria-hidden="true">✓</span> Akses kondo tinggi/sukar: RM 50–150</li>
               </ul>
               <p className="mt-4 text-xs text-amber-600">Semua tambahan dikutip & diluluskan di tapak SEBELUM kerja bermula. Tiada kejutan.</p>

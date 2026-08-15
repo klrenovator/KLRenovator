@@ -63,7 +63,7 @@ const MATERIAL_PRICES = [
   { label: "Small PVC Casing (Electrical Wire)", price: "RM 6/ft" },
   { label: "Large PVC Casing (Copper Pipe + Wire + Insulation)", price: "RM 12/ft" },
   { label: "Power Socket Installation", price: "RM 100" },
-  { label: "Wall Hacking & Concealed", price: "RM 6/ft" },
+  { label: "Wall Hacking & Concealed", price: "RM 25/ft" },
   { label: "High-Rise/Difficult Access Fee", price: "RM 50–150" },
   { label: "Standard Metal Trunking", price: "RM 15/ft" },
 ];
