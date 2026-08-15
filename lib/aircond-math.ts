@@ -121,6 +121,11 @@ export const LARGE_PVC_CASING_RATE = rmToNumber(
   sitePublic.pricing.materials.rows.find((x) => x.label.includes("Large PVC Casing"))?.price ?? "RM 12/ft",
 );
 
+/** Wall hacking & concealment work (chasing pipes inside the wall) — published rate. */
+export const WALL_HACKING_RATE = rmToNumber(
+  sitePublic.pricing.materials.rows.find((x) => x.label.includes("Wall Hacking"))?.price ?? "RM 25/ft",
+);
+
 /** Free run included with every installation (published in pricing notes). */
 export const FREE_RUN_FEET = 7;
 
@@ -322,6 +327,8 @@ export interface InstallationEstimateInput {
   smallPvcFeet: number;
   /** Large PVC casing (copper pipe + wire + insulation) length in feet. */
   largePvcFeet: number;
+  /** Wall hacking & concealment work length in feet (pipes chased inside the wall). */
+  wallHackingFeet?: number;
   needsOutdoorBracket: boolean;
   heavyDutyBracket: boolean;
   needsIndoorBracket: boolean;
@@ -434,6 +441,18 @@ export function calculateInstallationEstimate(input: InstallationEstimateInput):
       label: "Large PVC Casing (Copper Pipe + Wire + Insulation)",
       detail: `${input.largePvcFeet} ft × ${formatRM(LARGE_PVC_CASING_RATE)}/ft × ${u} unit${u > 1 ? "s" : ""}`,
       amount: amt,
+    });
+  }
+
+  // Wall hacking & concealment work (concealed piping inside the wall)
+  const wallHackingFeet = input.wallHackingFeet ?? 0;
+  if (wallHackingFeet > 0) {
+    const amt = Math.round(wallHackingFeet * WALL_HACKING_RATE * u);
+    lineItems.push({
+      label: "Wall Hacking & Concealment Work",
+      detail: `${wallHackingFeet} ft × ${formatRM(WALL_HACKING_RATE)}/ft × ${u} unit${u > 1 ? "s" : ""}`,
+      amount: amt,
+      note: "Includes hacking, concealed piping and patch-back; final scope confirmed on-site",
     });
   }
 
