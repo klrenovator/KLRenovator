@@ -65,9 +65,9 @@ const pricingCategories = [
       { label: "高压化学清洗 · 挂机 1.0 – 1.5 HP", price: "RM 120" },
       { label: "高压化学清洗 · 挂机 2.0 – 2.5 HP", price: "RM 150" },
       { label: "高压化学清洗 · 挂机 3.0 HP", price: "RM 180" },
-      { label: "化学大修 · 挂机 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "化学大修 · 挂机 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "化学大修 · 挂机 3.0 – 3.5 HP", price: "RM 350" },
+      { label: "化学大修（仅限挂壁式） · 挂机 1.0 – 1.5 HP", price: "RM 420" },
+      { label: "化学大修（仅限挂壁式） · 挂机 2.0 – 2.5 HP", price: "RM 490" },
+      { label: "化学大修（仅限挂壁式） · 挂机 3.0 – 3.5 HP", price: "RM 560" },
     ],
   },
   {

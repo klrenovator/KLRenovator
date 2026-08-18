@@ -99,18 +99,18 @@ export const serviceI18n: Record<string, ServiceI18n> = {
     ],
   },
 
-  // ── 2. CHEMICAL OVERHAUL ───────────────────────────────────────────────
+  // ── 2. CHEMICAL OVERHAUL (Wall-Mounted Aircon only) ───────────────────
   "chemical-overhaul": {
-    titleMS: "Overhaul Kimia",
-    titleZH: "化学大修",
+    titleMS: "Overhaul Kimia (Unit Dinding Sahaja)",
+    titleZH: "化学大修（仅限挂壁式冷气）",
     taglineMS:
-      "Pembongkaran lengkap dan cucian mendalam setiap komponen dalaman — penyelesaian muktamad untuk kebocoran air berterusan, pembentukan ais, dan pengabaian bertahun-tahun. Dari RM 220.",
+      "Unit dinding sahaja — pembongkaran lengkap dan cucian mendalam setiap komponen dalaman. Penyelesaian muktamad untuk kebocoran air berterusan, pembentukan ais, dan pengabaian bertahun-tahun. Jenis aircond lain memerlukan sebut harga berasingan di tapak. Dari RM 420.",
     taglineZH:
-      "每个内部零件的完全拆卸和深度清洁——持续漏水、结冰和多年未维护的终极解决方案。从RM 220起。",
+      "仅限挂壁式冷气——每个内部零件的完全拆卸和深度清洁。持续漏水、结冰和多年未维护的终极解决方案。其他冷气类型需另行现场报价。从 RM 420 起。",
     descriptionMS:
-      "Apabila cuci kimia tidak mencukupi — apabila air telah menitis ke dinding anda selama berminggu-minggu, apabila anda boleh melihat ais terbentuk pada paip kuprum, apabila bau dari unit membuat seluruh bilik tidak selesa — masalahnya telah melampaui apa yang boleh dibaiki oleh cucian terpasang. Overhaul kimia adalah servis aircond paling teliti yang kami lakukan. Kami mengeluarkan seluruh unit dalaman dari dinding, membukanya sekeping demi sekeping, dan mencuci mendalam setiap komponen: gegelung penyejat, roda kipas, barrel kipas, dulang longkang, dulang titisan, perumahan dalaman, louvre, dan semua penutup plastik. Setiap bahagian direndam dalam larutan kimia selamat dimakan, digosok jika perlu, kemudian dibilas pada tekanan tinggi sehingga bersih seperti kilang. Dulang longkang — hampir selalu punca utama kebocoran berterusan — mendapat perhatian individu dan disahkan kalis air sebelum pemasangan semula. Ini adalah servis yang menghidupkan semula unit yang terabai. RM 220 untuk dinding 1.0–1.5 HP.",
+      "Overhaul Kimia ditawarkan untuk unit dinding sahaja. Apabila cuci kimia tidak mencukupi — apabila air telah menitis ke dinding anda selama berminggu-minggu, apabila anda boleh melihat ais terbentuk pada paip kuprum, apabila bau dari unit membuat seluruh bilik tidak selesa — masalahnya telah melampaui apa yang boleh dibaiki oleh cucian terpasang. Overhaul kimia adalah servis aircond paling teliti yang kami lakukan. Kami mengeluarkan seluruh unit dalaman dari dinding, membukanya sekeping demi sekeping, dan mencuci mendalam setiap komponen: gegelung penyejat, roda kipas, barrel kipas, dulang longkang, dulang titisan, perumahan dalaman, louvre, dan semua penutup plastik. Setiap bahagian direndam dalam larutan kimia selamat dimakan, digosok jika perlu, kemudian dibilas pada tekanan tinggi sehingga bersih seperti kilang. Dulang longkang — hampir selalu punca utama kebocoran berterusan — mendapat perhatian individu dan disahkan kalis air sebelum pemasangan semula. Ini adalah servis yang menghidupkan semula unit dinding yang terabai. Dinding 1.0–1.5 HP: RM 420. Jenis aircond lain (ceiling cassette, ducted, floor-standing, portable, window) memerlukan sebut harga berasingan di tapak.",
     descriptionZH:
-      "当化学清洗不够用时——当水滴在墙上流了好几周，当您能看到铜管上结冰，当机器的气味让整个房间都不舒服——问题已经超出了挂墙清洗能解决的范围。化学大修是我们提供的最彻底的冷气服务。我们将整个室内机从墙上取下，逐件拆开，深度清洁每一个零件：蒸发器盘管、风轮、风扇桶、排水盘、滴水盘、内部壳体、百叶窗和所有塑料罩。每个零件浸泡在食品级安全化学溶液中，需要时刷洗，然后高压冲洗至工厂般干净。排水盘——几乎总是持续漏水的根本原因——得到单独关注并在重装前确认防水。这就是让被忽视的机器重获新生的服务。挂壁式1.0-1.5 HP RM 220。耗时2-3小时。",
+      "化学大修仅针对挂壁式冷气提供。 当化学清洗不够用时——当水滴在墙上流了好几周，当您能看到铜管上结冰，当机器的气味让整个房间都不舒服——问题已经超出了挂墙清洗能解决的范围。化学大修是我们提供的最彻底的冷气服务。我们将整个室内机从墙上取下，逐件拆开，深度清洁每一个零件：蒸发器盘管、风轮、风扇桶、排水盘、滴水盘、内部壳体、百叶窗和所有塑料罩。每个零件浸泡在食品级安全化学溶液中，需要时刷洗，然后高压冲洗至工厂般干净。排水盘——几乎总是持续漏水的根本原因——得到单独关注并在重装前确认防水。这就是让被忽视的挂壁式机器重获新生的服务。挂壁式 1.0–1.5 HP：RM 420。其他冷气类型（天花板卡式、风管机、落地式、移动式、窗式）需另行现场报价。",
     highlightsMS: [
       "Unit dalaman penuh dikeluarkan dari dinding dan dibongkar sepenuhnya",
       "Setiap komponen direndam & dicuci mendalam: gegelung, kipas, dulang longkang, perumahan, louvre",
@@ -144,14 +144,14 @@ export const serviceI18n: Record<string, ServiceI18n> = {
       { step: "高压冲洗与重装", desc: "每个零件在高压下冲洗至水流完全清澈。零件晾干，然后按相反顺序小心重装。检查所有螺丝扭矩。机器重新安装到墙支架上，释放制冷剂，运行15-20分钟测试制冷，用水测试排水通道。" },
     ],
     priceTableMS: [
-      { label: "Dinding · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Dinding · 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Dinding · 3.0 – 3.5 HP", price: "RM 350" },
+      { label: "Dinding · 1.0 – 1.5 HP", price: "RM 420" },
+      { label: "Dinding · 2.0 – 2.5 HP", price: "RM 490" },
+      { label: "Dinding · 3.0 – 3.5 HP", price: "RM 560" },
     ],
     priceTableZH: [
-      { label: "挂壁式 · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "挂壁式 · 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "挂壁式 · 3.0 – 3.5 HP", price: "RM 350" },
+      { label: "挂壁式 · 1.0 – 1.5 HP", price: "RM 420" },
+      { label: "挂壁式 · 2.0 – 2.5 HP", price: "RM 490" },
+      { label: "挂壁式 · 3.0 – 3.5 HP", price: "RM 560" },
     ],
   },
 

@@ -106,9 +106,9 @@
       },
       {
         "@type": "Offer",
-        "name": "Chemical Overhaul",
-        "description": "Full unit dismantle and deep chemical clean. Best for water leaking and ice formation.",
-        "price": "220",
+        "name": "Chemical Overhaul (Wall-Mounted Aircon only)",
+        "description": "Full unit dismantle and deep chemical clean of a wall-mounted indoor unit. Best for water leaking and ice formation on wall-mounted aircons. Ceiling cassette, ducted, floor-standing, portable, window and other non-wall-mounted aircon types require a separate on-site quote.",
+        "price": "420",
         "priceCurrency": "MYR",
         "url": "https://www.klrenovator.com/services/chemical-overhaul"
       },

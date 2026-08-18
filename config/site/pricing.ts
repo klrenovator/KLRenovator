@@ -43,12 +43,13 @@ export const pricing = {
       ],
     },
     chemicalOverhaul: {
-      title: "Chemical Overhaul",
+      title: "Chemical Overhaul (Wall-Mounted Aircon only)",
       rows: [
-        { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
-        { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
-        { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 350" },
+        { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 420" },
+        { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 490" },
+        { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 560" },
       ],
+      note: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation.",
     },
     gasTopup: {
       title: "Gas Top-Up & Refill (Per PSI)",

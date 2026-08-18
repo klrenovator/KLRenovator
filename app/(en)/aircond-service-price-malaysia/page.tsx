@@ -58,9 +58,9 @@ const pricingCategories = [
       { label: "Pressure Chemical Wash · Wall 1.0 – 1.5 HP", price: "RM 120" },
       { label: "Pressure Chemical Wash · Wall 2.0 – 2.5 HP", price: "RM 150" },
       { label: "Pressure Chemical Wash · Wall 3.0 HP", price: "RM 180" },
-      { label: "Chemical Overhaul · Wall 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Chemical Overhaul · Wall 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Chemical Overhaul · Wall 3.0 – 3.5 HP", price: "RM 350" },
+      { label: "Chemical Overhaul (Wall-Mounted Aircon only) · Wall 1.0 – 1.5 HP", price: "RM 420" },
+      { label: "Chemical Overhaul (Wall-Mounted Aircon only) · Wall 2.0 – 2.5 HP", price: "RM 490" },
+      { label: "Chemical Overhaul (Wall-Mounted Aircon only) · Wall 3.0 – 3.5 HP", price: "RM 560" },
     ],
   },
   {

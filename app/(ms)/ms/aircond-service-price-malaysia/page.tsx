@@ -65,9 +65,9 @@ const pricingCategories = [
       { label: "Cuci Kimia Tekanan · Dinding 1.0 – 1.5 HP", price: "RM 120" },
       { label: "Cuci Kimia Tekanan · Dinding 2.0 – 2.5 HP", price: "RM 150" },
       { label: "Cuci Kimia Tekanan · Dinding 3.0 HP", price: "RM 180" },
-      { label: "Chemical Overhaul · Dinding 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Chemical Overhaul · Dinding 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Chemical Overhaul · Dinding 3.0 – 3.5 HP", price: "RM 350" },
+      { label: "Chemical Overhaul (Unit Dinding Sahaja) · 1.0 – 1.5 HP", price: "RM 420" },
+      { label: "Chemical Overhaul (Unit Dinding Sahaja) · 2.0 – 2.5 HP", price: "RM 490" },
+      { label: "Chemical Overhaul (Unit Dinding Sahaja) · 3.0 – 3.5 HP", price: "RM 560" },
     ],
   },
   {

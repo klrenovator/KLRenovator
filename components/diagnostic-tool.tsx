@@ -248,7 +248,7 @@ const STEPS: Record<string, DiagnosticStep> = {
         result: {
           title: { en: "Severe Drain Blockage or Dirty Drain Pan", ms: "Sekatan Longkang Teruk atau Dulang Longkang Kotor", zh: "严重排水堵塞或排水盘脏污" },
           cause: { en: "Heavy continuous leaking means the drain pipe is fully blocked and the drain pan is overflowing. Requires a chemical overhaul to dismantle and deep-clean the drain system.", ms: "Kebocoran teruk berterusan bermakna paip longkang tersumbat sepenuhnya dan dulang longkang melimpah.", zh: "持续大量漏水意味着排水管完全堵塞且排水盘溢出。需要化学大修来拆开并深度清洁排水系统。" },
-          solution: { en: "Book an emergency chemical overhaul with KL Renovator. The unit will be fully dismantled, drain pan cleaned, and drain line cleared. From RM 220.", ms: "Tempah overhaul kimia kecemasan dengan KL Renovator. Unit akan ditanggal sepenuhnya, dulang longkang dibersihkan. Dari RM 220.", zh: "紧急预约KL Renovator化学大修。机器将完全拆开，排水盘清洁，排水管疏通。从RM 220起。" },
+          solution: { en: "Book an emergency chemical overhaul (Wall-Mounted Aircon only) with KL Renovator. The unit will be fully dismantled, drain pan cleaned, and drain line cleared. Wall-mounted 1.0–1.5 HP from RM 420. Other aircon types require a separate on-site quote.", ms: "Tempah overhaul kimia kecemasan (Unit Dinding Sahaja) dengan KL Renovator. Unit akan ditanggal sepenuhnya, dulang longkang dibersihkan. Dinding 1.0–1.5 HP dari RM 420. Jenis aircond lain memerlukan sebut harga berasingan di tapak.", zh: "紧急预约 KL Renovator 化学大修（仅限挂壁式冷气）。机器将完全拆开，排水盘清洁，排水管疏通。挂壁式 1.0–1.5 HP 起价 RM 420。其他冷气类型需另行现场报价。" },
           urgency: "high",
           serviceSlug: "chemical-overhaul",
           serviceName: "Chemical Overhaul (Emergency)",

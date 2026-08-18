@@ -208,7 +208,7 @@ export default async function BrandAreaPageEN({
               {[
                 { name: "Basic Servicing", price: "From RM 99" },
                 { name: "Pressure Chemical Wash", price: "From RM 120" },
-                { name: "Chemical Overhaul", price: "From RM 220" },
+                { name: "Chemical Overhaul (Wall-Mounted Aircon only)", price: "From RM 420" },
                 { name: "R32/R410A Gas Top-up", price: "From RM 3.00/PSI" },
               ].map((p) => (
                 <div key={p.name} className="flex justify-between bg-white border border-slate-200 p-3.5 rounded-xl text-sm font-bold">
