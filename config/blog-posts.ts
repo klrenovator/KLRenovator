@@ -3,6 +3,7 @@ import { installationBlogBatch2 } from "./installation-blog-batch2";
 import { installationBlogBatch3 } from "./installation-blog-batch3";
 import { installationBlogBatch4 } from "./installation-blog-batch4";
 import { newBlogBatch1 } from "./new-blog-batch1";
+import { newBlogBatch2 } from "./new-blog-batch2";
 
 
 /** Listing-safe fields only — avoids shipping full HTML bodies to blog index client bundle */
@@ -9665,6 +9666,9 @@ export const allPosts: BlogPost[] = [
 
   // ─── New multilingual SEO blogs (Batch 1): additions only, no replacements ──
   ...newBlogBatch1,
+
+  // ─── New multilingual SEO blogs (Batch 2): additions only, no replacements ──
+  ...newBlogBatch2,
 
 ];
 
