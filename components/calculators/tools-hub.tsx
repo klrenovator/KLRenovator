@@ -182,7 +182,7 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
                 {lang === "ms" ? "Harga Servis Aircond 2026" : lang === "zh" ? "2026年冷气服务价格" : "Aircond Service Price 2026"}
               </p>
               <p className="text-xs text-slate-500 mt-1.5">
-                {lang === "ms" ? "Asas RM 99 · Cuci kimia RM 120 · Overhaul RM 220 · Gas RM 2.50/PSI." : lang === "zh" ? "基本RM 99 · 化学清洗RM 120 · 大修RM 220 · 气体RM 2.50/PSI。" : "Basic RM 99 · Chemical wash RM 120 · Overhaul RM 220 · Gas RM 2.50/PSI — full published list."}
+                {lang === "ms" ? "Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI." : lang === "zh" ? "基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起价 RM 420 · 气体RM 2.50/PSI。" : "Basic RM 99 · Chemical wash RM 120 · Chemical Overhaul (Wall-Mounted only) from RM 420 · Gas RM 2.50/PSI — full published list."}
               </p>
             </NextLink>
             <NextLink href={`${localePrefix}/installation-price-malaysia`} className="group rounded-2xl border border-slate-200 bg-white p-5 hover:border-sky-400 hover:shadow-md transition-all">

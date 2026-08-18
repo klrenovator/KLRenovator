@@ -73,7 +73,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Basic Service: from <strong>RM 99</strong></li>
         <li>Chemical Wash: from <strong>RM 120</strong></li>
-        <li>Chemical Overhaul: from <strong>RM 220</strong></li>
+        <li>Chemical Overhaul (Wall-Mounted Aircon only): from <strong>RM 420</strong></li>
         <li>Gas Top-Up R32/R410A: from <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>No hidden charges. All prices confirmed before work begins.</p>
@@ -114,7 +114,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Servis Asas: dari <strong>RM 99</strong></li>
         <li>Cuci Kimia: dari <strong>RM 120</strong></li>
-        <li>Overhaul Kimia: dari <strong>RM 220</strong></li>
+        <li>Overhaul Kimia (Unit Dinding Sahaja): dari <strong>RM 420</strong></li>
         <li>Tambah Gas R32/R410A: dari <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>Tiada caj tersembunyi. Semua harga disahkan sebelum kerja bermula.</p>
@@ -149,7 +149,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>基本保养</td><td>RM 99起</td><td>30-45分钟</td></tr>
           <tr><td>化学清洗</td><td>RM 2.50/PSI起</td><td>60-75分钟</td></tr>
-          <tr><td>化学大修</td><td>RM 220起</td><td>2-2.5小时</td></tr>
+          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420起</td><td>2-2.5小时</td></tr>
           <tr><td>充气</td><td>RM 2.50/PSI起</td><td>30-45分钟</td></tr>
           <tr><td>维修</td><td>RM 88诊断费</td><td>视问题而定</td></tr>
           <tr><td>安装</td><td>RM 199起</td><td>2-3小时</td></tr>
@@ -370,13 +370,13 @@ export const allPosts: BlogPost[] = [
       <p>If both gas and coil cleaning have been done but cooling is still poor, the evaporator coil fins may be severely bent or the blower wheel may be so coated with grime that only a full clean will restore airflow.</p>
 
       <h2>What Happens If You Delay an Overhaul?</h2>
-      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul that costs RM 220–350 is far less expensive than a compressor replacement at RM 600–2,000 or a complete new unit installation.</p>
+      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–560 is far less expensive than a compressor replacement at RM 600–2,000 or a complete new unit installation.</p>
 
       <h2>What to Do</h2>
-      <p>Chemical overhaul starts from <strong>RM 220</strong> for a wall-mounted 1.0–1.5 HP unit. WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. See also: <a href="/services/chemical-overhaul">Chemical overhaul service page</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking guide</a></p>
+      <p>Chemical overhaul (Wall-Mounted Aircon only) starts from <strong>RM 420</strong> for a wall-mounted 1.0–1.5 HP unit. WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. See also: <a href="/services/chemical-overhaul">Chemical overhaul service page</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking guide</a></p>
 
       <h2>Can You Delay an Overhaul?</h2>
-      <p>You can delay, but every week of continued use in a unit that needs an overhaul increases the risk of secondary damage. A cracked drain pan left unaddressed can leak onto electrical components and cause a PCB board failure. A severely fouled coil forces the compressor to run at high temperature, degrading compressor insulation. A unit that costs RM 220–350 to overhaul today can become a unit that costs RM 600–1,500 to repair in 6 months if the root cause is left unaddressed. Early action is always the more economical choice.</p>
+      <p>You can delay, but every week of continued use in a unit that needs an overhaul increases the risk of secondary damage. A cracked drain pan left unaddressed can leak onto electrical components and cause a PCB board failure. A severely fouled coil forces the compressor to run at high temperature, degrading compressor insulation. A unit that costs RM 420–560 to overhaul today can become a unit that costs RM 600–1,500 to repair in 6 months if the root cause is left unaddressed. Early action is always the more economical choice.</p>
     `,
     contentMS: `
       <h2>Apabila Cuci Kimia Tidak Mencukupi</h2>
@@ -398,13 +398,13 @@ export const allPosts: BlogPost[] = [
       <p>Jika kedua-dua gas dan pembersihan gegelung telah dilakukan tetapi penyejukan masih lemah, sirip gegelung evaporator mungkin sangat bengkok atau roda blower mungkin sangat kotor sehingga hanya pembersihan penuh yang akan memulihkan aliran udara.</p>
 
       <h2>Apa yang Berlaku Jika Anda Menangguhkan Overhaul?</h2>
-      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia berharga RM 220–350 jauh lebih murah berbanding penggantian kompressor pada RM 600–2,000 atau pemasangan unit baru yang lengkap.</p>
+      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–560 jauh lebih murah berbanding penggantian kompressor pada RM 600–2,000 atau pemasangan unit baru yang lengkap.</p>
 
       <h2>Apa yang Perlu Dilakukan</h2>
-      <p>Overhaul kimia bermula dari <strong>RM 220</strong> untuk unit dinding 1.0–1.5 HP. WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>.</p>
+      <p>Overhaul kimia (Unit Dinding Sahaja) bermula dari <strong>RM 420</strong> untuk unit dinding 1.0–1.5 HP. WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>.</p>
 
       <h2>Bolehkah Anda Menangguhkan Overhaul?</h2>
-      <p>Anda boleh menangguhkan, tetapi setiap minggu penggunaan berterusan dalam unit yang memerlukan overhaul meningkatkan risiko kerosakan sekunder. Dulang longkang yang retak dan dibiarkan boleh bocor ke komponen elektrik dan menyebabkan kegagalan papan PCB. Gegelung yang sangat tercemar memaksa kompressor berfungsi pada suhu tinggi, merosakkan penebat kompressor. Unit yang kos overhaul RM 220–350 hari ini boleh menjadi unit yang kos pembaikan RM 600–1,500 dalam masa 6 bulan jika sebab utama dibiarkan tidak ditangani. Tindakan awal sentiasa pilihan yang lebih ekonomik.</p>
+      <p>Anda boleh menangguhkan, tetapi setiap minggu penggunaan berterusan dalam unit yang memerlukan overhaul meningkatkan risiko kerosakan sekunder. Dulang longkang yang retak dan dibiarkan boleh bocor ke komponen elektrik dan menyebabkan kegagalan papan PCB. Gegelung yang sangat tercemar memaksa kompressor berfungsi pada suhu tinggi, merosakkan penebat kompressor. Unit yang kos overhaul RM 420–560 hari ini boleh menjadi unit yang kos pembaikan RM 600–1,500 dalam masa 6 bulan jika sebab utama dibiarkan tidak ditangani. Tindakan awal sentiasa pilihan yang lebih ekonomik.</p>
     `,
     contentZH: `<h2>5个迹象表明您的冷气需要化学大修</h2>
       <p>化学大修是冷气最彻底的保养方式——完全拆卸室内机进行深度清洗。<a href="/near-me">KL Renovator的专业技师</a>告诉您何时需要这项服务。</p>
@@ -479,17 +479,17 @@ export const allPosts: BlogPost[] = [
         <li>A chemical wash was done but cooling didn't improve</li>
         <li>Very heavy mould or blockage inside the unit</li>
       </ul>
-      <p>A chemical overhaul takes <strong>2–3 hours per unit</strong> and starts from <strong>RM 220</strong>.</p>
+      <p>A chemical overhaul (Wall-Mounted Aircon only) takes <strong>2–3 hours per unit</strong> and starts from <strong>RM 420</strong>.</p>
 
       <h2>Side-by-Side Comparison</h2>
       <ul>
         <li><strong>Chemical Wash:</strong> Unit stays mounted · 45–90 min · From RM 120 · Best for routine maintenance</li>
-        <li><strong>Chemical Overhaul:</strong> Unit fully dismantled · 2–3 hours · From RM 220 · Best for severe issues</li>
+        <li><strong>Chemical Overhaul (Wall-Mounted Aircon only):</strong> Unit fully dismantled · 2–3 hours · From RM 420 · Best for severe issues. Other aircon types require a separate on-site quote.</li>
       </ul>
       <p>Not sure which you need? WhatsApp us a photo at <strong>+60 18-298 3573</strong> and our team will advise you honestly.</p>
 
       <h2>Time and Cost Summary</h2>
-      <p>Chemical wash from <strong>RM 120</strong>, takes 45–90 minutes — ideal for units serviced within the past 18 months with no persistent problems. Chemical overhaul from <strong>RM 220</strong>, takes 2–3 hours — necessary when a wash alone cannot fix the issue. In both cases, all prices are confirmed before work starts and there are no hidden charges.</p>
+      <p>Chemical wash from <strong>RM 120</strong>, takes 45–90 minutes — ideal for units serviced within the past 18 months with no persistent problems. Chemical overhaul (Wall-Mounted Aircon only) from <strong>RM 420</strong>, takes 2–3 hours — necessary when a wash alone cannot fix the issue. In both cases, all prices are confirmed before work starts and there are no hidden charges.</p>
       <p>Related: <a href="/services/chemical-wash">Chemical wash service</a> | <a href="/services/chemical-overhaul">Chemical overhaul service</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking</a></p>
 
       <h2>Warranty Coverage for Both Services</h2>
@@ -507,10 +507,10 @@ export const allPosts: BlogPost[] = [
       <h2>Perbandingan Sebelah-Menyebelah</h2>
       <ul>
         <li><strong>Cuci Kimia:</strong> Unit kekal dipasang · 45–90 minit · Dari RM 120 · Terbaik untuk penyelenggaraan rutin</li>
-        <li><strong>Overhaul Kimia:</strong> Unit dibuka sepenuhnya · 2–3 jam · Dari RM 220 · Terbaik untuk masalah teruk</li>
+        <li><strong>Overhaul Kimia (Unit Dinding Sahaja):</strong> Unit dibuka sepenuhnya · 2–3 jam · Dari RM 420 · Terbaik untuk masalah teruk. Jenis aircond lain memerlukan sebut harga berasingan di tapak.</li>
       </ul>
       <h2>Masa dan Kos — Ringkasan</h2>
-      <p>Cuci kimia dari <strong>RM 120</strong>, mengambil masa 45–90 minit — sesuai untuk unit yang diservisi dalam tempoh 18 bulan yang lalu tanpa masalah berterusan. Overhaul kimia dari <strong>RM 220</strong>, mengambil masa 2–3 jam — diperlukan apabila basuhan sahaja tidak dapat menyelesaikan masalah. Dalam kedua-dua kes, semua harga disahkan sebelum kerja bermula dan tiada caj tersembunyi.</p>
+      <p>Cuci kimia dari <strong>RM 120</strong>, mengambil masa 45–90 minit — sesuai untuk unit yang diservisi dalam tempoh 18 bulan yang lalu tanpa masalah berterusan. Overhaul kimia (Unit Dinding Sahaja) dari <strong>RM 420</strong>, mengambil masa 2–3 jam — diperlukan apabila basuhan sahaja tidak dapat menyelesaikan masalah. Dalam kedua-dua kes, semua harga disahkan sebelum kerja bermula dan tiada caj tersembunyi.</p>
       <p>Tidak pasti yang mana anda perlukan? WhatsApp foto kepada kami di <strong>+60 18-298 3573</strong> dan pasukan kami akan memberi nasihat jujur.</p>
 
       <h2>Liputan Waranti untuk Kedua-dua Perkhidmatan</h2>
@@ -521,7 +521,7 @@ export const allPosts: BlogPost[] = [
 
       <h2>完整对比表</h2>
       <table>
-        <thead><tr><th>项目</th><th>化学清洗 (RM 2.50/PSI起)</th><th>化学大修 (RM 220起)</th></tr></thead>
+        <thead><tr><th>项目</th><th>化学清洗 (RM 2.50/PSI起)</th><th>化学大修（仅限挂壁式冷气）(RM 420起)</th></tr></thead>
         <tbody>
           <tr><td>拆卸</td><td>不拆卸——在墙上清洗</td><td>完全拆卸室内机</td></tr>
           <tr><td>蒸发器</td><td>高压冲洗</td><td>拆卸浸泡清洗</td></tr>
@@ -634,7 +634,7 @@ export const allPosts: BlogPost[] = [
       <p><strong>症状：</strong>铜管结冰，制冷效果差，电费增加。<br><strong>解决：</strong>专业检漏+充气。R22 为 RM 2.50/PSI，R410A 为 RM 3.00/PSI，R32 为 RM 3.00/PSI。</p>
 
       <h2>原因 #3: 蒸发器脏污</h2>
-      <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 2.50/PSI起）或化学大修（RM 220起）。</p>
+      <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 2.50/PSI起）或化学大修（仅限挂壁式冷气，RM 420起）。</p>
 
       <h2>原因 #4: 压缩机故障</h2>
       <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 600-1,200）。如果是旧机器，可能需要考虑更换新机。</p>
@@ -789,7 +789,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>基本保养</td><td>RM 99起</td></tr>
           <tr><td>化学清洗</td><td>RM 2.50/PSI起</td></tr>
-          <tr><td>化学大修</td><td>RM 220起</td></tr>
+          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420起</td></tr>
           <tr><td>年度保养合约(AMC)</td><td>RM 299/年起（每台）</td></tr>
         </tbody>
       </table>
@@ -940,7 +940,7 @@ export const allPosts: BlogPost[] = [
       <p>Same-day slots frequently available. See: <a href="/problems/aircond-water-leaking">Aircond water leaking full guide</a> | <a href="/services/chemical-overhaul">Chemical overhaul service</a></p>
 
       <h2>Cost to Fix a Leaking Aircond</h2>
-      <p>Most water leaking issues are resolved during a chemical wash (from RM 120) which clears blocked drain pipes — the most common cause. If the drain pan is cracked or the unit has not been serviced in years, a chemical overhaul (from RM 220) addresses all internal causes comprehensively. Acting quickly prevents secondary water damage to walls, ceilings, and floors that can cost far more than the service itself.</p>
+      <p>Most water leaking issues are resolved during a chemical wash (from RM 120) which clears blocked drain pipes — the most common cause. If the drain pan is cracked or the unit has not been serviced in years, a chemical overhaul (Wall-Mounted Aircon only, from RM 420) addresses all internal causes comprehensively. Acting quickly prevents secondary water damage to walls, ceilings, and floors that can cost far more than the service itself.</p>
       <h2>Prevention</h2>
       <p>The best way to prevent water leaking is consistent maintenance. A drain pipe flush every 3–4 months as part of basic servicing (RM 99) prevents algae and mould blockages from forming. An annual chemical wash removes biofilm buildup that basic servicing cannot reach. Most leaking cases in Malaysia happen because the drain pipe has been left unserviced for 18 months or more.</p>
       <p>Same-day slots frequently available. WhatsApp <strong>+60 18-298 3573</strong>.</p>
@@ -969,7 +969,7 @@ export const allPosts: BlogPost[] = [
       <p>Slot hari yang sama kerap tersedia. Lihat: <a href="/problems/aircond-water-leaking">Panduan lengkap aircond bocor air</a> | <a href="/services/chemical-overhaul">Perkhidmatan overhaul kimia</a></p>
 
       <h2>Kos untuk Membaiki Aircond yang Bocor</h2>
-      <p>Kebanyakan masalah bocor air diselesaikan semasa cuci kimia (dari RM 120) yang membersihkan paip longkang tersumbat — punca paling biasa. Jika dulang longkang retak atau unit tidak diservis selama bertahun-tahun, overhaul kimia (dari RM 220) menangani semua punca dalaman secara menyeluruh. Tindakan segera mengelakkan kerosakan air sekunder pada dinding, siling, dan lantai yang boleh menelan kos lebih tinggi daripada servis itu sendiri.</p>
+      <p>Kebanyakan masalah bocor air diselesaikan semasa cuci kimia (dari RM 120) yang membersihkan paip longkang tersumbat — punca paling biasa. Jika dulang longkang retak atau unit tidak diservis selama bertahun-tahun, overhaul kimia (Unit Dinding Sahaja, dari RM 420) menangani semua punca dalaman secara menyeluruh. Tindakan segera mengelakkan kerosakan air sekunder pada dinding, siling, dan lantai yang boleh menelan kos lebih tinggi daripada servis itu sendiri.</p>
       <h2>Pencegahan</h2>
       <p>Cara terbaik untuk mengelakkan bocor air adalah penyelenggaraan yang konsisten. Pembasuhan paip longkang setiap 3–4 bulan sebagai sebahagian daripada servis asas (RM 99) mengelakkan penyumbatan alga dan kulat daripada terbentuk. Cuci kimia tahunan membuang pembentukan biofilm yang tidak dapat dicapai oleh servis asas. Kebanyakan kes bocor di Malaysia berlaku kerana paip longkang tidak diservis selama 18 bulan atau lebih.</p>
       <p>Slot hari yang sama kerap tersedia. WhatsApp <strong>+60 18-298 3573</strong>.</p>
@@ -1219,7 +1219,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>基本保养</td><td>每6-12个月</td><td>RM 99起</td></tr>
           <tr><td>化学清洗</td><td>每12个月</td><td>RM 2.50/PSI起</td></tr>
-          <tr><td>化学大修</td><td>每2-3年</td><td>RM 220起</td></tr>
+          <tr><td>化学大修（仅限挂壁式冷气）</td><td>每2-3年</td><td>RM 420起</td></tr>
           <tr><td>年度保养合约</td><td>包含以上</td><td>RM 299/年起（每台）</td></tr>
         </tbody>
       </table>
@@ -1340,7 +1340,7 @@ export const allPosts: BlogPost[] = [
     `,
     contentZH: `<h2>2026年吉隆坡与雪兰莪冷气服务价格指南 — 完整透明明细</h2>
       <p>很多屋主在预约前最关心一件事：<strong>到底要花多少钱？</strong> 本指南由 <strong>KL Renovator</strong> 整理 2026 年吉隆坡与雪兰莪常用冷气服务的公开起步价，帮助您对比市场、避免隐藏收费。价格会因马力、机型、楼层与材料而略有调整，但我们坚持<strong>开工前确认总价</strong>。</p>
-      <div class="summary-block"><strong>直接答案：</strong> 壁挂式 1.0–1.5HP 基本保养从 RM 99 起，高压化学清洗从 RM 120 起，化学大修从 RM 220 起，新机安装从 RM 199 起；诊断费 RM 88（同次修好可豁免）。</div>
+      <div class="summary-block"><strong>直接答案：</strong> 壁挂式 1.0–1.5HP 基本保养从 RM 99 起，高压化学清洗从 RM 120 起，化学大修（仅限挂壁式冷气）从 RM 420 起，新机安装从 RM 199 起；诊断费 RM 88（同次修好可豁免）。</div>
 
       <h2>核心服务价格总表（2026）</h2>
       <table>
@@ -1348,7 +1348,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>基本保养</td><td>RM 99</td><td>RM 120</td><td>RM 150</td></tr>
           <tr><td>化学清洗</td><td>RM 120</td><td>RM 150</td><td>RM 220</td></tr>
-          <tr><td>化学大修</td><td>RM 220</td><td>RM 280</td><td>RM 350</td></tr>
+          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420</td><td>RM 490</td><td>RM 560</td></tr>
           <tr><td>充气 R22</td><td colspan='3'>RM 2.50 / PSI</td></tr>
           <tr><td>充气 R410A</td><td colspan='3'>RM 3.00 / PSI</td></tr>
           <tr><td>充气 R32</td><td colspan='3'>RM 3.00 / PSI</td></tr>
@@ -1362,7 +1362,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li><strong>基本保养（RM 99 起）：</strong> 滤网、面板、排水初步疏通与运行检查。适合定期维护、机器仍制冷正常时。</li>
         <li><strong>高压化学清洗（RM 120 起）：</strong> 针对盘管与风机上的霉菌、油污和生物膜。适合异味、风量变小、不够冷但仍未严重漏水。</li>
-        <li><strong>化学大修（RM 220 起）：</strong> 室内机拆卸深度清洗。适合反复漏水、结冰、严重堵塞或长期未深度保养。</li>
+        <li><strong>化学大修（仅限挂壁式冷气，RM 420 起）：</strong> 室内机拆卸深度清洗。适合反复漏水、结冰、严重堵塞或长期未深度保养。</li>
       </ul>
       <div class="summary-block"><strong>直接答案：</strong> 仍正常制冷选基本保养；有霉味/弱风选化学清洗；反复漏水或严重堵塞选化学大修。</div>
 
@@ -2746,7 +2746,7 @@ export const allPosts: BlogPost[] = [
     content: "<p><em>Chemical overhaul is for heavily choked units. The indoor unit is dismantled, deep-cleaned and reassembled so hidden coils, blower wheel and drain sections can be cleaned properly.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Chemical overhaul price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Basic service cleans accessible areas only.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is still not cold after normal service. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
     contentMS: "<p><em>Chemical overhaul sesuai untuk unit yang tersumbat teruk. Unit dalam dibuka, dibersihkan secara mendalam dan dipasang semula supaya coil tersembunyi, blower wheel dan bahagian saliran dapat dicuci dengan betul.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Servis asas hanya membersihkan kawasan yang boleh diakses.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪冷气化学大修 — 恢复如新制冷状态</h2>
-      <p>当化学清洗也无法彻底解决严重的漏水、结冰或风力极弱的问题时，<strong>化学大修 (Chemical Overhaul)</strong> 是最终的解决方案。技师会将室内机完全从墙上拆下，分解成各个部件进行浸泡和深层清洁。<strong>KL Renovator</strong> 提供最专业的大修服务，价格从 <strong>RM 220</strong> 起。</p>
+      <p>当化学清洗也无法彻底解决严重的漏水、结冰或风力极弱的问题时，<strong>化学大修 (Chemical Overhaul，仅限挂壁式冷气)</strong> 是最终的解决方案。技师会将挂壁式室内机完全从墙上拆下，分解成各个部件进行浸泡和深层清洁。<strong>KL Renovator</strong> 提供最专业的大修服务，价格从 <strong>RM 420</strong> 起。其他冷气类型需另行现场报价。</p>
 
       <h2>什么是化学大修？</h2>
       <p>大修不仅仅是清洗表面，它涉及到完整的拆卸，包括卸下蒸发器盘管、风轮和水槽。通过将这些部件浸泡在专用化学药剂中，可以彻底清除所有死角的灰尘、霉菌和粘液。完成后，我们会重新安装并抽真空，确保系统恢复到最佳性能。</p>
@@ -2766,8 +2766,8 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>机型</th><th>价格</th><th>服务内容</th></tr></thead>
         <tbody>
           <tr><td>壁挂式 (1.0–1.5 HP)</td><td>RM 220</td><td>完整拆卸、药剂浸泡、重新安装、抽真空</td></tr>
-          <tr><td>壁挂式 (2.0–2.5 HP)</td><td>RM 280</td><td>大功率壁挂机深度大修方案</td></tr>
-          <tr><td>壁挂式 (3.0–3.5 HP)</td><td>RM 350</td><td>全屋主力机大修协议</td></tr>
+          <tr><td>壁挂式 (2.0–2.5 HP)</td><td>RM 490</td><td>大功率壁挂机深度大修方案</td></tr>
+          <tr><td>壁挂式 (3.0–3.5 HP)</td><td>RM 560</td><td>全屋主力机大修协议</td></tr>
         </tbody>
       </table>
 
@@ -3071,7 +3071,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>轻微灰尘味</td><td>基本保养 (Basic Service)</td><td>RM 99</td></tr>
           <tr><td>明显霉味/酸味</td><td>高压化学清洗 (Chemical Wash)</td><td>RM 120</td></tr>
-          <tr><td>恶臭/持续不散</td><td>化学大修 (Chemical Overhaul)</td><td>RM 220</td></tr>
+          <tr><td>恶臭/持续不散</td><td>化学大修 (Chemical Overhaul，仅限挂壁式冷气)</td><td>RM 420</td></tr>
           <tr><td>老鼠/害虫异味</td><td>拆卸清理与消毒</td><td>联系报价</td></tr>
         </tbody>
       </table>
@@ -4120,9 +4120,9 @@ export const allPosts: BlogPost[] = [
     title: "AC Service Price Malaysia 2026 — Basic, Chemical Wash, Overhaul",
     titleMS: "Harga Servis AC di Malaysia 2026 — Basic, Cuci Kimia, Overhaul",
     titleZH: "2026年马来西亚AC服务价格 — 基础、化学清洗、大修",
-    excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI, AMC from RM 299/year. Verified pricing from klrenovator.com.",
-    excerptMS: "Harga servis AC di Malaysia 2026: servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI, AMC dari RM 299/tahun. Harga disahkan dari klrenovator.com.",
-    excerptZH: "2026年马来西亚AC服务价格：基础服务从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，加气从RM 2.50/PSI起，年度维护合同从RM 299/年起。从klrenovator.com验证价格。",
+    excerpt: "AC service price in Malaysia 2026: basic service from RM 99, chemical wash from RM 120, chemical overhaul (Wall-Mounted Aircon only) from RM 420, gas top-up from RM 2.50/PSI, AMC from RM 299/year. Verified pricing from klrenovator.com.",
+    excerptMS: "Harga servis AC di Malaysia 2026: servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia (Unit Dinding Sahaja) dari RM 420, tambah gas dari RM 2.50/PSI, AMC dari RM 299/tahun. Harga disahkan dari klrenovator.com.",
+    excerptZH: "2026年马来西亚AC服务价格：基础服务从RM 99起，化学清洗从RM 120起，化学大修（仅限挂壁式冷气）从RM 420起，加气从RM 2.50/PSI起，年度维护合同从RM 299/年起。从klrenovator.com验证价格。",
     category: "Pricing & Cost Guides",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -4135,7 +4135,7 @@ export const allPosts: BlogPost[] = [
     imageAlt: "KL Renovator protected aircond chemical service setup in Kuala Lumpur for a Malaysia 2026 service price guide",
     lastReviewed: "2026-07-05",
     content: `
-      <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul from RM 220</strong> (1.0-1.5 HP), <strong>gas top-up from RM 2.50/PSI</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
+      <p><em>AC service price in Malaysia 2026: <strong>basic service from RM 99</strong> (1.0-1.5 HP), <strong>chemical wash from RM 120</strong> (1.0-1.5 HP), <strong>chemical overhaul (Wall-Mounted Aircon only) from RM 420</strong> (1.0-1.5 HP), <strong>gas top-up from RM 2.50/PSI</strong> per job, and <strong>AMC from RM 299/year</strong>. Verified published pricing from klrenovator.com.</em></p>
       <p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots pricing out AC service in KL and Selangor.</p>
       <h2>Quick answer — AC service price Malaysia 2026</h2>
       <p>AC service price in Malaysia 2026:</p>
@@ -4146,9 +4146,9 @@ export const allPosts: BlogPost[] = [
         <li>Chemical wash 1.0-1.5 HP: <strong>RM 120</strong></li>
         <li>Chemical wash 2.0-2.5 HP: RM 150</li>
         <li>Chemical wash 3.0 HP: RM 180</li>
-        <li>Chemical overhaul 1.0-1.5 HP: <strong>RM 220</strong></li>
-        <li>Chemical overhaul 2.0-2.5 HP: RM 280</li>
-        <li>Chemical overhaul 3.0-3.5 HP: RM 350</li>
+        <li>Chemical overhaul (Wall-Mounted Aircon only) 1.0-1.5 HP: <strong>RM 420</strong></li>
+        <li>Chemical overhaul (Wall-Mounted Aircon only) 2.0-2.5 HP: RM 490</li>
+        <li>Chemical overhaul (Wall-Mounted Aircon only) 3.0-3.5 HP: RM 560</li>
         <li>Gas top-up: from RM 2.50/PSI per job</li>
         <li>AMC Basic: RM 299/year</li>
         <li>AMC Standard: RM 499/year</li>
@@ -4159,7 +4159,7 @@ export const allPosts: BlogPost[] = [
       <h2>What is chemical wash?</h2>
       <p>Chemical wash is a deeper clean using acid-based or alkaline-based cleaning chemicals. It removes mould, algae, and stubborn grime from the indoor evaporator coil and outdoor condenser coil. Recommended every 6 months. From <strong>RM 120</strong> for 1.0-1.5 HP.</p>
       <h2>What is chemical overhaul?</h2>
-      <p>Chemical overhaul is the most thorough service: the indoor unit is fully dismantled, every part (fan wheel, coil, drain pan, filter housing, blower housing) is individually cleaned with chemicals, and the outdoor unit is also chemically washed. Recommended every 2-3 years or when the AC has been neglected. From <strong>RM 220</strong> for 1.0-1.5 HP.</p>
+      <p>Chemical overhaul (Wall-Mounted Aircon only) is the most thorough service: the indoor unit is fully dismantled, every part (fan wheel, coil, drain pan, filter housing, blower housing) is individually cleaned with chemicals, and the outdoor unit is also chemically washed. Recommended every 2-3 years or when the AC has been neglected. From <strong>RM 420</strong> for wall-mounted 1.0-1.5 HP.</p>
       <h2>Full price table — basic service</h2>
       <table><thead><tr><th>Unit Size</th><th>Basic Service</th><th>Frequency</th></tr></thead><tbody>
         <tr><td>1.0-1.5 HP</td><td>RM 99</td><td>Every 1-2 months</td></tr>
@@ -4204,7 +4204,7 @@ export const allPosts: BlogPost[] = [
       <h3>Heavy use (24/7 shop, restaurant, server room)</h3>
       <p>Chemical wash every 3 months. RM 120 × 4 = RM 480/year for 1.0-1.5 HP.</p>
       <h3>AC smells bad, weak cooling, water leaking</h3>
-      <p>Chemical overhaul. The unit needs full dismantling. RM 220 for 1.0-1.5 HP.</p>
+      <p>Chemical overhaul (Wall-Mounted Aircon only). The unit needs full dismantling. From RM 420 for 1.0-1.5 HP.</p>
       <h3>Annual contract for multiple units</h3>
       <p>AMC Standard or Premium. Best value for 2+ units. RM 499/year covers 1 unit comprehensively.</p>
       <h2>What is NOT included in service pricing?</h2>
@@ -4213,7 +4213,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>
       <h2>FAQ — AC service price in Malaysia 2026</h2>
       <h3>How much is AC service in Malaysia?</h3>
-      <p>Basic service from RM 99 (1.0-1.5 HP), chemical wash from RM 120, chemical overhaul from RM 220. Prices published on klrenovator.com.</p>
+      <p>Basic service from RM 99 (1.0-1.5 HP), chemical wash from RM 120, chemical overhaul (Wall-Mounted Aircon only) from RM 420. Prices published on klrenovator.com.</p>
       <h3>How often should I service my aircond?</h3>
       <p>Basic service every 1-2 months for regular home use. Chemical wash every 6 months. Overhaul every 2-3 years. AMC bundles are cheaper if you stay disciplined.</p>
       <h3>Is chemical wash necessary?</h3>
@@ -4236,7 +4236,7 @@ export const allPosts: BlogPost[] = [
       <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service. See our full <a href="/services/basic-servicing">Basic Servicing</a> and <a href="/services/chemical-wash">Chemical Wash</a> pricing pages, or explore <a href="/services/maintenance-contract">Annual Maintenance Contract</a> plans from RM 299/year. 1-month workmanship warranty included.</p>
     `,
     contentMS: `
-      <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia dari RM 220</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 2.50/PSI</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
+      <p><em>Harga servis AC di Malaysia 2026: <strong>servis asas dari RM 99</strong> (1.0-1.5 HP), <strong>cuci kimia dari RM 120</strong> (1.0-1.5 HP), <strong>overhaul kimia (Unit Dinding Sahaja) dari RM 420</strong> (1.0-1.5 HP), <strong>tambah gas dari RM 2.50/PSI</strong> setiap kerja, dan <strong>AMC dari RM 299/tahun</strong>. Harga diterbitkan disahkan dari klrenovator.com.</em></p>
       <p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai Malaysia yang menilai harga servis AC di KL dan Selangor.</p>
       <h2>Jawapan ringkas — harga servis AC Malaysia 2026</h2>
       <p>Harga servis AC di Malaysia 2026:</p>
@@ -4247,9 +4247,9 @@ export const allPosts: BlogPost[] = [
         <li>Cuci kimia 1.0-1.5 HP: <strong>RM 120</strong></li>
         <li>Cuci kimia 2.0-2.5 HP: RM 150</li>
         <li>Cuci kimia 3.0 HP: RM 180</li>
-        <li>Overhaul kimia 1.0-1.5 HP: <strong>RM 220</strong></li>
-        <li>Overhaul kimia 2.0-2.5 HP: RM 280</li>
-        <li>Overhaul kimia 3.0-3.5 HP: RM 350</li>
+        <li>Overhaul kimia (Unit Dinding Sahaja) 1.0-1.5 HP: <strong>RM 420</strong></li>
+        <li>Overhaul kimia (Unit Dinding Sahaja) 2.0-2.5 HP: RM 490</li>
+        <li>Overhaul kimia (Unit Dinding Sahaja) 3.0-3.5 HP: RM 560</li>
         <li>Tambah gas: dari RM 2.50/PSI setiap kerja</li>
         <li>AMC Basic: RM 299/tahun</li>
         <li>AMC Standard: RM 499/tahun</li>
@@ -4260,7 +4260,7 @@ export const allPosts: BlogPost[] = [
       <h2>Apakah cuci kimia?</h2>
       <p>Cuci kimia adalah cucian lebih mendalam menggunakan bahan kimia berasaskan asid atau alkali. Ia buang kulat, alga, dan kotoran degil dari coil penyejat dalaman dan coil pemeluwap luar. Disyorkan setiap 6 bulan. Dari <strong>RM 120</strong> untuk 1.0-1.5 HP.</p>
       <h2>Apakah overhaul kimia?</h2>
-      <p>Overhaul kimia adalah servis paling menyeluruh: unit dalam dibuka sepenuhnya, setiap bahagian (kipas roda, coil, dulang saliran, perumahan penapis, perumahan blower) dicuci secara individu dengan bahan kimia, dan unit luar juga dicuci kimia. Disyorkan setiap 2-3 tahun atau apabila AC diabaikan. Dari <strong>RM 220</strong> untuk 1.0-1.5 HP.</p>
+      <p>Overhaul kimia (Unit Dinding Sahaja) adalah servis paling menyeluruh: unit dinding dibuka sepenuhnya, setiap bahagian (kipas roda, coil, dulang saliran, perumahan penapis, perumahan blower) dicuci secara individu dengan bahan kimia, dan unit luar juga dicuci kimia. Disyorkan setiap 2-3 tahun atau apabila AC diabaikan. Dari <strong>RM 420</strong> untuk dinding 1.0-1.5 HP. Jenis aircond lain memerlukan sebut harga berasingan di tapak.</p>
       <h2>Jadual harga penuh — servis asas</h2>
       <table><thead><tr><th>Saiz Unit</th><th>Servis Asas</th><th>Kekerapan</th></tr></thead><tbody>
         <tr><td>1.0-1.5 HP</td><td>RM 99</td><td>Setiap 1-2 bulan</td></tr>
@@ -4305,7 +4305,7 @@ export const allPosts: BlogPost[] = [
       <h3>Guna berat (kedai 24/7, restoran, bilik pelayan)</h3>
       <p>Cuci kimia setiap 3 bulan. RM 120 × 4 = RM 480/tahun untuk 1.0-1.5 HP.</p>
       <h3>AC berbau busuk, sejuk lemah, air bocor</h3>
-      <p>Overhaul kimia. Unit perlu dibuka sepenuhnya. RM 220 untuk 1.0-1.5 HP.</p>
+      <p>Overhaul kimia (Unit Dinding Sahaja). Unit dinding perlu dibuka sepenuhnya. Dari RM 420 untuk 1.0-1.5 HP.</p>
       <h3>Kontrak tahunan untuk berbilang unit</h3>
       <p>AMC Standard atau Premium. Nilai terbaik untuk 2+ unit. RM 499/tahun meliputi 1 unit secara menyeluruh.</p>
       <h2>Apa TIDAK termasuk dalam harga servis?</h2>
@@ -4314,7 +4314,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator berkhidmat di Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. Kami bekerja pada Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic untuk unit dinding, ceiling cassette dan tingkap sahaja.</p>
       <h2>FAQ — harga servis AC di Malaysia 2026</h2>
       <h3>Berapakah servis AC di Malaysia?</h3>
-      <p>Servis asas dari RM 99 (1.0-1.5 HP), cuci kimia dari RM 120, overhaul kimia dari RM 220. Harga diterbitkan di klrenovator.com.</p>
+      <p>Servis asas dari RM 99 (1.0-1.5 HP), cuci kimia dari RM 120, overhaul kimia (Unit Dinding Sahaja) dari RM 420. Harga diterbitkan di klrenovator.com.</p>
       <h3>Berapa kerap saya patut servis aircond saya?</h3>
       <p>Servis asas setiap 1-2 bulan untuk kegunaan rumah biasa. Cuci kimia setiap 6 bulan. Overhaul setiap 2-3 tahun. Bundle AMC lebih murah jika anda kekal disiplin.</p>
       <h3>Adakah cuci kimia perlu?</h3>
@@ -4345,7 +4345,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>基本服务 (Basic Service)</td><td>RM 100 - 130</td><td><strong>RM 99</strong></td></tr>
           <tr><td>化学清洗 (Chemical Wash)</td><td>RM 120 - 160</td><td><strong>RM 120</strong></td></tr>
-          <tr><td>化学大修 (Overhaul)</td><td>RM 220 - 280</td><td><strong>RM 220</strong></td></tr>
+          <tr><td>化学大修 (Overhaul，仅限挂壁式冷气)</td><td>RM 420 - 490</td><td><strong>RM 420</strong></td></tr>
           <tr><td>充气 (Gas Top-up R32)</td><td>RM 3.00 / PSI</td><td><strong>RM 3.00 / PSI</strong></td></tr>
           <tr><td>故障诊断费</td><td>RM 50 - 100</td><td><strong>RM 50起</strong></td></tr>
         </tbody>
@@ -4502,7 +4502,7 @@ export const allPosts: BlogPost[] = [
       <h3>Does ceiling fan with AC really save electricity?</h3>
       <p>Yes. A ceiling fan uses 30-50W. Running both at 26°C feels like 24°C. You can set AC 1-2°C higher with the fan, saving 5-10% on AC electricity. Net effect: cooling costs less overall.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service to keep your unit running efficiently. Read more on <a href="/blog/how-to-reduce-aircond-electricity-bill-malaysia">reducing your aircond electricity bill</a> or book a <a href="/services/chemical-wash">Chemical Wash</a>. Basic service from RM 99, chemical wash from RM 120, full overhaul from RM 220.</p>
+      <p>WhatsApp KL Renovator at <strong>+60182983573</strong> for AC service to keep your unit running efficiently. Read more on <a href="/blog/how-to-reduce-aircond-electricity-bill-malaysia">reducing your aircond electricity bill</a> or book a <a href="/services/chemical-wash">Chemical Wash</a>. Basic service from RM 99, chemical wash from RM 120, full overhaul (Wall-Mounted Aircon only) from RM 420.</p>
     `,
     contentMS: `
       <p><em>1 jam elektrik AC di Malaysia berharga RM 0.20-0.45 untuk unit inverter 1.0-1.5 HP, RM 0.30-0.55 untuk non-inverter. Kos bergantung pada saiz HP, inverter vs non-inverter, dan blok tarif TNB. Pecahan penuh di bawah.</em></p>
@@ -4618,7 +4618,7 @@ export const allPosts: BlogPost[] = [
       <h3>Adakah kipas siling dengan AC benar-benar jimat elektrik?</h3>
       <p>Ya. Kipas siling guna 30-50W. Menjalankan kedua-duanya pada 26°C rasa seperti 24°C. Anda boleh tetapkan AC 1-2°C lebih tinggi dengan kipas, jimat 5-10% elektrik AC. Kesan bersih: kos penyejukan kurang keseluruhan.</p>
       <h2>Ready to book?</h2>
-      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC supaya unit anda berjalan dengan cekap. Baca lebih lanjut tentang <a href="/ms/blog/how-to-reduce-aircond-electricity-bill-malaysia">mengurangkan bil elektrik aircond</a> atau tempah <a href="/ms/services/chemical-wash">Cuci Kimia</a>. Servis asas dari RM 99, cuci kimia dari RM 120, overhaul penuh dari RM 220.</p>
+      <p>WhatsApp KL Renovator di <strong>+60182983573</strong> untuk servis AC supaya unit anda berjalan dengan cekap. Baca lebih lanjut tentang <a href="/ms/blog/how-to-reduce-aircond-electricity-bill-malaysia">mengurangkan bil elektrik aircond</a> atau tempah <a href="/ms/services/chemical-wash">Cuci Kimia</a>. Servis asas dari RM 99, cuci kimia dari RM 120, overhaul penuh (Unit Dinding Sahaja) dari RM 420.</p>
     `,
     contentZH: `<h2>开一小时冷气要多少钱？— 马来西亚 2026 电费实时算</h2>
       <p>随着 TNB 电费单的调整，很多房主都在问：“我开一个小时冷气到底花多少钱？” <strong>KL Renovator</strong> 专家为您提供基于 2026 年最新费率的精准估算。</p>
@@ -4876,7 +4876,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>轻微滴水</td><td>疏通排水管 + 基本保养</td><td>RM 99</td></tr>
           <tr><td>顽固漏水/有异味</td><td>高压化学清洗 (Chemical Wash)</td><td>RM 120</td></tr>
-          <tr><td>严重喷水/结冰</td><td>化学大修 (Overhaul)</td><td>RM 220</td></tr>
+          <tr><td>严重喷水/结冰</td><td>化学大修 (Overhaul，仅限挂壁式冷气)</td><td>RM 420</td></tr>
           <tr><td>安装不当导致</td><td>重新调整位置与坡度</td><td>联系报价</td></tr>
         </tbody>
       </table>
@@ -5466,7 +5466,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Basic servicing: from <strong>RM 99</strong></li>
         <li>Chemical wash: from <strong>RM 120</strong></li>
-        <li>Chemical overhaul: from <strong>RM 220</strong></li>
+        <li>Chemical overhaul (Wall-Mounted Aircon only): from <strong>RM 420</strong></li>
         <li>Gas top-up (R32/R410A): from <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>No hidden surcharge for inverter units. All prices confirmed before work starts.</p>
@@ -5530,7 +5530,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Servis asas: dari <strong>RM 99</strong></li>
         <li>Cuci kimia: dari <strong>RM 120</strong></li>
-        <li>Chemical overhaul: dari <strong>RM 220</strong></li>
+        <li>Chemical overhaul (Unit Dinding Sahaja): dari <strong>RM 420</strong></li>
         <li>Tambah gas (R32/R410A): dari <strong>RM 3.00/PSI</strong></li>
       </ul>
       <p>Tiada caj tambahan tersembunyi untuk unit inverter. Semua harga disahkan sebelum kerja bermula.</p>
@@ -5613,7 +5613,7 @@ export const allPosts: BlogPost[] = [
     content: `
       <h2>Aircond Service Prices Malaysia 2026 — Complete Transparent Guide</h2>
       <p>KL Renovator publishes transparent aircond service prices across Kuala Lumpur and Selangor. No hidden charges — every price is confirmed on WhatsApp before the technician starts work. Prices below apply from July 2026 and may change without prior notice.</p>
-      <div class="summary-block"><strong>Direct answer:</strong> Basic servicing starts from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI, and new installation from RM 199 (wall-mounted 1.0–1.5HP).</div>
+      <div class="summary-block"><strong>Direct answer:</strong> Basic servicing starts from RM 99, chemical wash from RM 120, chemical overhaul (Wall-Mounted Aircon only) from RM 420, gas top-up from RM 2.50/PSI, and new installation from RM 199 (wall-mounted 1.0–1.5HP).</div>
 
       <h3>Volume Discounts</h3>
       <ul>
@@ -5960,7 +5960,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td><strong>基本保养 (Basic)</strong></td><td>RM 99</td><td>滤网、面板清洗及运行检查</td></tr>
           <tr><td><strong>高压化学清洗</strong></td><td>RM 120</td><td>药剂清洗盘管及冲洗排水管</td></tr>
-          <tr><td><strong>化学大修 (Overhaul)</strong></td><td>RM 220</td><td>完整拆卸、深度浸泡清洗</td></tr>
+          <tr><td><strong>化学大修 (Overhaul，仅限挂壁式冷气)</strong></td><td>RM 420</td><td>完整拆卸、深度浸泡清洗</td></tr>
           <tr><td><strong>冷媒补充 (Gas R32)</strong></td><td>RM 3.00 / PSI</td><td>根据压力平衡加注</td></tr>
           <tr><td><strong>故障诊断 (Diagnostic)</strong></td><td>RM 88 / RM 50</td><td>检查故障原因（如修则免）</td></tr>
           <tr><td><strong>新机安装 (Install)</strong></td><td>RM 199起</td><td>标准安装包含7ft铜管</td></tr>
@@ -8151,7 +8151,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Servis asas</td><td>RM 99</td><td>RM 99</td><td>Sama</td></tr>
           <tr><td>Cuci kimia</td><td>RM 120</td><td>RM 120</td><td>Sama</td></tr>
-          <tr><td>Overhaul kimia</td><td>RM 220</td><td>RM 220</td><td>Sama</td></tr>
+          <tr><td>Overhaul kimia (Unit Dinding Sahaja)</td><td>RM 420</td><td>RM 420</td><td>Sama</td></tr>
           <tr><td>Tambah gas R32</td><td>RM 3.00/PSI</td><td>RM 3.00/PSI</td><td>Sama</td></tr>
           <tr><td>Kapasitor ganti</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
           <tr><td>PCB board</td><td>RM 200-400</td><td>RM 300-350</td><td>Daikin sedikit lebih mahal</td></tr>
@@ -9351,7 +9351,7 @@ export const allPosts: BlogPost[] = [
       <h2>Apa Yang Berlaku Jika Anda Tunggu Terlalu Lama</h2>
       <ul>
         <li>Penapis yang sangat kotor boleh menyebabkan kompresor bekerja berlebihan dan gagal pramatang</li>
-        <li>Biofilm yang tebal memerlukan overhaul kimia (RM 220+) dan bukan hanya cuci kimia (RM 120)</li>
+        <li>Biofilm yang tebal memerlukan overhaul kimia (Unit Dinding Sahaja, RM 420+) dan bukan hanya cuci kimia (RM 120)</li>
         <li>Kulat yang dibiarkan boleh meresap ke dalam bahan penebat dan sangat sukar dibuang</li>
         <li>Kekotoran pada gegelung mengurangkan kecekapan sehingga 30%, meningkatkan bil elektrik secara signifikan</li>
       </ul>
@@ -9541,7 +9541,7 @@ export const allPosts: BlogPost[] = [
     imageAlt: "KL Renovator aircond service for rental properties in KL",
     content: `
       <h2>Who Pays for Aircond Service in a Rental Property?</h2>
-      <p>Aircond disputes between tenants and landlords in Malaysia are surprisingly common. A tenant's aircond stops cooling, the tenant calls a technician who says it needs a chemical overhaul, and suddenly there is a RM 220 bill — who pays? The answer depends on the type of service or repair, what the tenancy agreement says, and Malaysian rental market conventions.</p>
+      <p>Aircond disputes between tenants and landlords in Malaysia are surprisingly common. A tenant's aircond stops cooling, the tenant calls a technician who says it needs a chemical overhaul, and suddenly there is a RM 420 bill — who pays? The answer depends on the type of service or repair, what the tenancy agreement says, and Malaysian rental market conventions.</p>
 
       <h2>Standard Responsibility Split</h2>
       <table>
@@ -9549,7 +9549,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Routine basic servicing (filter cleaning, basic check)</td><td>Tenant — it is light maintenance similar to changing light bulbs</td><td>RM 99</td></tr>
           <tr><td>Chemical wash (annual deep cleaning)</td><td>Landlord — it is preventive maintenance that preserves the asset's value</td><td>RM 120</td></tr>
-          <tr><td>Chemical overhaul (severe cleaning)</td><td>Landlord — the unit needs it due to normal wear and tear</td><td>RM 220</td></tr>
+          <tr><td>Chemical overhaul (severe cleaning, Wall-Mounted Aircon only)</td><td>Landlord — the unit needs it due to normal wear and tear</td><td>RM 420</td></tr>
           <tr><td>Minor repair (capacitor, sensor)</td><td>Landlord — normal wear and tear</td><td>RM 150–250</td></tr>
           <tr><td>Major repair (compressor, PCB)</td><td>Landlord — structural component of the property</td><td>RM 400–2,000</td></tr>
           <tr><td>Damage caused by tenant misuse</td><td>Tenant — e.g., unit damaged by not cleaning filter for 2 years</td><td>Varies</td></tr>

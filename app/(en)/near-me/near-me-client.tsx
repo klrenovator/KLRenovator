@@ -62,7 +62,7 @@ const T = {
     faqs: [
       { q: "How do I find a reliable aircond technician near me?", a: "WhatsApp KL Renovator at +60182983573 with your area and the problem — we match you with the nearest available slot and a trained HVAC technician. We cover all of Kuala Lumpur and Selangor, including high-rise condos, landed homes, shoplots and offices." },
       { q: "Do you offer same-day aircond service near me?", a: "Yes — same-day slots are frequently available across KL & Selangor. For the best chance, WhatsApp us early in the day with your location and the issue (not cooling, water leaking, strange noise, or a routine service)." },
-      { q: "How much does aircond service cost near me?", a: "Basic servicing from RM 99, pressure chemical wash from RM 120 (1.0–1.5 HP wall-mounted), chemical overhaul from RM 220, and gas top-up from RM 2.50/PSI. Every price is confirmed before any work begins — no hidden charges, no surprise call-out fees." },
+      { q: "How much does aircond service cost near me?", a: "Basic servicing from RM 99, pressure chemical wash from RM 120 (1.0–1.5 HP wall-mounted), chemical overhaul (Wall-Mounted Aircon only) from RM 420, and gas top-up from RM 2.50/PSI. Every price is confirmed before any work begins — no hidden charges, no surprise call-out fees." },
       { q: "Which areas of KL & Selangor do you cover?", a: "We cover the entire Klang Valley — Kuala Lumpur, Petaling Jaya, Cheras, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Kajang, Setia Alam, Bangsar, Mont Kiara, Kepong, Sri Petaling, Bukit Jalil, Putrajaya, Cyberjaya and 30+ more neighbourhoods." },
       { q: "Which aircond brands do you service near me?", a: "All major brands — Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic." },
       { q: "Is there a call-out or travelling charge?", a: "No hidden call-out fee — pricing is transparent and quoted upfront based on the service and unit type. You'll always know the price before the technician starts work." },
@@ -121,7 +121,7 @@ const T = {
     faqs: [
       { q: "Bagaimana saya mencari juruteknik aircond yang dipercayai berdekatan saya?", a: "WhatsApp KL Renovator di +60182983573 dengan kawasan dan masalah anda — kami padankan anda dengan slot terdekat yang tersedia dan juruteknik HVAC terlatih." },
       { q: "Adakah anda menawarkan servis aircond hari sama berdekatan saya?", a: "Ya — slot hari sama kerap tersedia di seluruh KL & Selangor. Untuk peluang terbaik, WhatsApp kami awal pagi dengan lokasi dan isu anda." },
-      { q: "Berapa harga servis aircond berdekatan saya?", a: "Servis asas dari RM 99, cuci kimia bertekanan dari RM 120 (1.0–1.5 HP dinding), overhaul kimia dari RM 220, dan tambah gas dari RM 2.50/PSI. Setiap harga disahkan sebelum kerja bermula." },
+      { q: "Berapa harga servis aircond berdekatan saya?", a: "Servis asas dari RM 99, cuci kimia bertekanan dari RM 120 (1.0–1.5 HP dinding), overhaul kimia (Unit Dinding Sahaja) dari RM 420, dan tambah gas dari RM 2.50/PSI. Setiap harga disahkan sebelum kerja bermula." },
       { q: "Kawasan mana di KL & Selangor yang anda liputi?", a: "Kami meliputi seluruh Lembah Klang — Kuala Lumpur, Petaling Jaya, Cheras, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Kajang, Setia Alam, Bangsar, Mont Kiara, Kepong, Sri Petaling, Bukit Jalil, Putrajaya, Cyberjaya dan 30+ kawasan lagi." },
       { q: "Jenama aircond mana yang anda servis berdekatan saya?", a: "Semua jenama utama — Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic." },
       { q: "Adakah terdapat caj keluar atau perjalanan?", a: "Tiada caj keluar tersembunyi — harga adalah telus dan disebut terlebih dahulu berdasarkan perkhidmatan dan jenis unit." },
@@ -180,7 +180,7 @@ const T = {
     faqs: [
       { q: "如何在附近找到可靠的冷气技术员？", a: "WhatsApp KL Renovator至+60182983573，告知您的地区和问题——我们为您匹配最近的可用档期和训练有素的HVAC技术员。覆盖吉隆坡和雪兰莪全区。" },
       { q: "您在附近提供当天冷气服务吗？", a: "是的——KL及雪兰莪全区经常有当天名额。为获得最佳机会，请尽早在当天通过WhatsApp告知我们您的位置和问题。" },
-      { q: "附近冷气服务费用是多少？", a: "基本保养从RM 99起，加压化学清洗从RM 120起（1.0–1.5 HP挂壁式），化学大修从RM 220起，充冷媒从RM 2.50/PSI起。所有价格在开工前确认——无隐藏费用。" },
+      { q: "附近冷气服务费用是多少？", a: "基本保养从RM 99起，加压化学清洗从RM 120起（1.0–1.5 HP挂壁式），化学大修（仅限挂壁式冷气）从RM 420起，充冷媒从RM 2.50/PSI起。所有价格在开工前确认——无隐藏费用。" },
       { q: "您覆盖KL及雪兰莪哪些地区？", a: "我们覆盖整个巴生谷——吉隆坡、白蒲、茨厂街、沙阿南、梳邦再也、蒲种、巴生、安邦、加影、武吉免登、蒙基亚拉、葛冬及30+个地区。" },
       { q: "您在附近服务哪些冷气品牌？", a: "所有主要品牌——大金、松下、三菱、约克、爱信、开利、美的、海尔、东芝、日立、三星、LG、夏普、富士通、格力、National、海信、Aux、TCL及Isonic。" },
       { q: "有上门费或交通费吗？", a: "无隐藏上门费——收费透明，根据服务和机型事先报价。技术员开工前您始终知道价格。" },

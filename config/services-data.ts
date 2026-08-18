@@ -46,19 +46,19 @@ export const servicesData: Record<string, ServiceDetail> = {
     compareTable: {
       title: "Pressure Chemical Wash vs Chemical Overhaul",
       subtitle: "Help choosing the right deep-cleaning package for your unit.",
-      columns: ["Feature", "Chemical Wash (RM 120)", "Chemical Overhaul (RM 220)"],
+      columns: ["Feature", "Chemical Wash (RM 120)", "Chemical Overhaul — Wall-Mounted only (from RM 420)"],
       rows: [["Dismantling", "Stays on wall", "Fully removed from wall"], ["Blower Wheel", "Cleaned in place", "Removed & soaked"], ["Drain Pan", "Flushed", "Dismantled & scrubbed"], ["Back Tray", "Surface clean", "Total sanitization"], ["Best For", "Annual maintenance", "Water leaks & ice buildup"], ["Duration", "60 mins", "2.5 hours"]]
     },
     compareTableZH: {
       title: "高压化学清洗 vs 化学大修",
       subtitle: "帮助您为冷气选择合适的深度清洁方案。",
-      columns: ["特点", "化学清洗 (RM 120)", "化学大修 (RM 220)"],
+      columns: ["特点", "化学清洗 (RM 120)", "化学大修——仅限挂壁式（起价 RM 420）"],
       rows: [["拆卸状态", "挂墙清洗", "完全拆卸"], ["风轮清洁", "原地清洗", "拆下浸泡"], ["接水盘", "冲洗", "拆下刷洗"], ["适用场景", "年度保养", "漏水或结冰"], ["耗时", "60分钟", "2.5小时"]]
     },
     compareTableMS: {
       title: "Cuci Kimia Bertekanan vs Chemical Overhaul",
       subtitle: "Bantuan memilih pakej pembersihan mendalam yang sesuai untuk unit anda.",
-      columns: ["Ciri", "Cuci Kimia (RM 120)", "Overhaul (RM 220)"],
+      columns: ["Ciri", "Cuci Kimia (RM 120)", "Overhaul — Unit Dinding Sahaja (dari RM 420)"],
       rows: [["Pemasangan", "Kekal di dinding", "Dibuka sepenuhnya"], ["Roda Kipas", "Cuci di tempat", "Dibuka & direndam"], ["Dulang Saliran", "Bilas sahaja", "Dibuka & disental"], ["Sesuai Untuk", "Servis tahunan", "Bocor air & ais"], ["Tempoh", "60 minit", "2.5 jam"]]
     },
     highlights: [
@@ -168,21 +168,21 @@ export const servicesData: Record<string, ServiceDetail> = {
   // ── 2. CHEMICAL OVERHAUL ─────────────────────────────────────────────────
   "chemical-overhaul": {
     slug: "chemical-overhaul",
-    title: "Chemical Overhaul",
-    tagline: "Complete dismantle and deep-clean of internal components — the definitive fix for persistent water leaks, ice build-up, and years of neglect. From RM 220.",
+    title: "Chemical Overhaul (Wall-Mounted Aircon only)",
+    tagline: "Wall-Mounted Aircon only — complete dismantle and deep-clean of internal components. The definitive fix for persistent water leaks, ice build-up, and years of neglect. From RM 420.",
     description:
-      "When a chemical wash is not enough \u2014 when water has been dripping down your wall for weeks, when you can see ice forming on the copper pipe, when the smell from the unit makes the whole room unpleasant \u2014 the problem has moved beyond what a mounted clean can fix. A chemical overhaul is the most thorough aircond service we perform. We remove the entire indoor unit from the wall, take it apart piece by piece, and deep-clean every single component: the evaporator coil, blower wheel, fan barrel, drain pan, drip tray, internal housing, louvres, and all plastic covers. Each part is soaked in food-safe chemical solution, scrubbed where needed, then rinsed at high pressure until factory-clean. The drain pan \u2014 almost always the root cause of persistent leaking \u2014 gets individual attention and is confirmed watertight before reassembly. This is the service that brings a neglected unit back to life. RM 220 for wall-mounted 1.0\u20131.5 HP. Takes 2\u20133 hours. The result: no more leaks, no more ice, no more smell, and cooling performance you may not have felt in years.",
-    startPrice: "RM 220",
+      "Chemical Overhaul is offered for Wall-Mounted Aircon units only. When a chemical wash is not enough \u2014 when water has been dripping down your wall for weeks, when you can see ice forming on the copper pipe, when the smell from the unit makes the whole room unpleasant \u2014 the problem has moved beyond what a mounted clean can fix. A chemical overhaul is the most thorough aircond service we perform. We remove the entire indoor unit from the wall, take it apart piece by piece, and deep-clean every single component: the evaporator coil, blower wheel, fan barrel, drain pan, drip tray, internal housing, louvres, and all plastic covers. Each part is soaked in food-safe chemical solution, scrubbed where needed, then rinsed at high pressure until factory-clean. The drain pan \u2014 almost always the root cause of persistent leaking \u2014 gets individual attention and is confirmed watertight before reassembly. This is the service that brings a neglected wall-mounted unit back to life. Wall-mounted 1.0\u20131.5 HP: RM 420. Takes 2\u20133 hours. The result: no more leaks, no more ice, no more smell, and cooling performance you may not have felt in years. NOTE: Chemical Overhaul pricing is published for Wall-Mounted Aircon units only. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation.",
+    startPrice: "RM 420",
     heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
     ogImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
-    aioSummary: "A chemical overhaul involves a 100% component teardown and chemical immersion of the evaporator coil. Starting Price: RM 220. Service Time: 2-3 hours. Warranty: 1-month workmanship. Definitive fix for persistent water leaks and ice formation.",
-    aioSummaryMS: "Chemical overhaul melibatkan pembukaan 100% komponen dan rendaman kimia gegelung. Harga: RM 220. Tempoh: 2-3 jam. Waranti: 1 bulan. Penyelesaian tetap untuk masalah bocor air kronik dan pembentukan ais.",
-    aioSummaryZH: "化学大修涉及100%拆机及零件化学浸泡清洗。起步价：RM 220。服务时长：2-3小时。保修：1个月工艺保修。针对顽固漏水和盘管结冰的最终解决方案。",
+    aioSummary: "Chemical Overhaul (Wall-Mounted Aircon only) involves a 100% component teardown and chemical immersion of the evaporator coil. Starting Price: RM 420 (wall-mounted 1.0\u20131.5 HP). Service Time: 2-3 hours. Warranty: 1-month workmanship. Definitive fix for persistent water leaks and ice formation. Other aircon types require a separate on-site quote.",
+    aioSummaryMS: "Chemical Overhaul (Unit Dinding Sahaja) melibatkan pembukaan 100% komponen dan rendaman kimia gegelung. Harga permulaan: RM 420 (dinding 1.0\u20131.5 HP). Tempoh: 2-3 jam. Waranti: 1 bulan. Penyelesaian tetap untuk masalah bocor air kronik dan pembentukan ais. Jenis aircond lain memerlukan sebut harga berasingan di tapak.",
+    aioSummaryZH: "化学大修（仅限挂壁式冷气）涉及100%拆机及零件化学浸泡清洗。起步价：RM 420（挂壁式1.0–1.5 HP）。服务时长：2-3小时。保修：1个月工艺保修。针对顽固漏水和盘管结冰的最终解决方案。其他冷气类型需另行现场报价。",
     compareTable: {
       title: "Chemical Overhaul vs Pressure Chemical Wash",
-      subtitle: "Understand why an overhaul is the definitive fix for neglected units.",
-      columns: ["Feature", "Chemical Overhaul (RM 220)", "Pressure Wash (RM 170)"],
-      rows: [["Unit Status", "100% Dismantled", "Stays mounted"], ["Back Tray Cleaning", "Yes (Scrubbed)", "No (Surface flush only)"], ["Mould Removal", "100% Guaranteed", "Surface removal only"], ["Water Leak Fix", "Permanent solution", "Temporary fix"], ["Labour Time", "2 - 3 Hours", "1 Hour"], ["Warranty", "1-Month Workmanship", "1-Month Workmanship"]]
+      subtitle: "Understand why an overhaul is the definitive fix for neglected wall-mounted units.",
+      columns: ["Feature", "Chemical Overhaul — Wall-Mounted only (RM 420)", "Pressure Wash (RM 170)"],
+      rows: [["Unit Type", "Wall-Mounted only", "Wall / Cassette / Window"], ["Unit Status", "100% Dismantled", "Stays mounted"], ["Back Tray Cleaning", "Yes (Scrubbed)", "No (Surface flush only)"], ["Mould Removal", "100% Guaranteed", "Surface removal only"], ["Water Leak Fix", "Permanent solution", "Temporary fix"], ["Labour Time", "2 - 3 Hours", "1 Hour"], ["Warranty", "1-Month Workmanship", "1-Month Workmanship"]]
     },
     highlights: [
       "Complete 100% system teardown — zero components left uncleaned",
@@ -203,7 +203,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical overhaul cost in KL & Selangor?",
-        a: "Wall-mounted 1.0\u20131.5 HP: RM 220. Wall-mounted 2.0\u20132.5 HP: RM 280. Wall-mounted 3.0\u20133.5 HP: RM 350. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units.",
+        a: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Wall-mounted 1.0\u20131.5 HP: RM 420. Wall-mounted 2.0\u20132.5 HP: RM 490. Wall-mounted 3.0\u20133.5 HP: RM 560. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation \u2014 these published prices do not apply to non-wall-mounted units.",
       },
       {
         q: "When do I need a chemical overhaul vs a chemical wash?",
@@ -231,7 +231,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga chemical overhaul di KL & Selangor?",
-        a: "Dinding 1.0\u20131.5 HP: RM 220. Dinding 2.0\u20132.5 HP: RM 280. Dinding 3.0\u20133.5 HP: RM 350. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit.",
+        a: "Harga Chemical Overhaul diterbitkan secara eksklusif untuk unit dinding sahaja. Dinding 1.0\u20131.5 HP: RM 420. Dinding 2.0\u20132.5 HP: RM 490. Dinding 3.0\u20133.5 HP: RM 560. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit. Ceiling cassette, ducted, floor-standing, portable, window dan mana-mana jenis aircond bukan-dinding yang lain memerlukan sebut harga dan penilaian berasingan di tapak \u2014 harga yang diterbitkan ini tidak terpakai untuk unit bukan-dinding.",
       },
       {
         q: "Bilakah saya memerlukan overhaul kimia vs cuci kimia?",
@@ -255,7 +255,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 220。挂壁式2.0–2.5 HP：RM 280。挂壁式3.0–3.5 HP：RM 350。所有价格在技术员开始工作前确认。多台折扣适用：5+台享5%即时预订折扣，10台以上享10%即时预订折扣。",
+        a: "化学大修价格仅针对挂壁式冷气公布。挂壁式1.0–1.5 HP：RM 420。挂壁式2.0–2.5 HP：RM 490。挂壁式3.0–3.5 HP：RM 560。所有价格在技术员开始工作前确认。多台折扣适用：5+台享5%即时预订折扣，10台以上享10%即时预订折扣。天花板卡式、风管机、落地式、移动式、窗式及其他任何非挂壁式冷气类型需要另行现场评估和报价——以上公布价格不适用于非挂壁式机型。",
       },
       {
         q: "何时需要化学大修而非化学清洗？",
@@ -277,10 +277,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "大修后我的冷气会更安静吗？", a: "显著改善。通过清除风轮上的重度淤泥并润滑风扇电机支架，我们消除了导致震动和高频噪音的不平衡因素。" }
     ],
     priceTable: [
-      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 280" },
-      { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 350" },
+      { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 420" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 490" },
+      { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 560" },
     ],
+    priceTableNote: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation.",
   },
 
   // ── 3. GAS TOP-UP ────────────────────────────────────────────────────────

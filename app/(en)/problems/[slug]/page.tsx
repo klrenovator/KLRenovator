@@ -163,16 +163,16 @@ export const problemContent: Record<
     warningZH: "长期不处理的漏水冷气会导致墙壁和天花板发霉、家具受水损坏、电气短路风险以及长期结构损坏。请立即修复。",
     faqs: [
       { q: "Why is my aircond dripping water inside the room?", a: "The indoor unit drips water when the drain pipe is blocked and the drain pan overflows. KL Renovator clears the blockage in one visit — starting from RM 120 for a drain clear and chemical wash." },
-      { q: "How much does it cost to fix a leaking aircond in KL?", a: "Drain pipe clearing starts from RM 120. Chemical wash (recommended to prevent recurrence) from RM 120. Chemical overhaul for severe or recurring leaks from RM 220. Drain pump installation RM 300–400." },
+      { q: "How much does it cost to fix a leaking aircond in KL?", a: "Drain pipe clearing starts from RM 120. Chemical wash (recommended to prevent recurrence) from RM 120. Chemical overhaul (Wall-Mounted Aircon only) for severe or recurring leaks from RM 420. Drain pump installation RM 300–400." },
       { q: "My aircond has been leaking for weeks. Is it serious?", a: "Yes. Prolonged leaking causes mould growth, ceiling damage and potential electrical risks. Book KL Renovator immediately via WhatsApp +60182983573 for same-day assessment." },
     ],
     faqsBM: [
       { q: "Mengapa aircond saya menitis air di dalam bilik?", a: "Unit dalaman menitis apabila paip longkang tersumbat dan dulang longkang melimpah. KL Renovator membersihkan halangan dalam satu lawatan — bermula dari RM 120." },
-      { q: "Berapa kos untuk membaiki aircond bocor di KL?", a: "Pembersihan paip longkang bermula dari RM 120. Cuci kimia dari RM 120. Overhaul kimia untuk kebocoran teruk dari RM 220." },
+      { q: "Berapa kos untuk membaiki aircond bocor di KL?", a: "Pembersihan paip longkang bermula dari RM 120. Cuci kimia dari RM 120. Overhaul kimia (Unit Dinding Sahaja) untuk kebocoran teruk dari RM 420." },
     ],
     faqsZH: [
       { q: "为什么我的冷气在室内滴水？", a: "当排水管堵塞、排水盘溢水时，室内机就会滴水。KL Renovator一次上门即可清通堵塞，化学清洗从RM 120起。" },
-      { q: "在KL修理漏水冷气需要多少费用？", a: "排水管清通从RM 120起。化学清洗从RM 120起。严重漏水的化学大修从RM 220起。排水泵安装RM 300–400。" },
+      { q: "在KL修理漏水冷气需要多少费用？", a: "排水管清通从RM 120起。化学清洗从RM 120起。严重漏水的化学大修（仅限挂壁式冷气）从RM 420起。排水泵安装RM 300–400。" },
     ],
   },
   "aircond-bad-smell": {
@@ -200,8 +200,8 @@ export const problemContent: Record<
       "电气焦糊味——线路绝缘层或部件故障（紧急情况）",
       "化学气味——制冷剂泄漏（立即关机）",
     ],
-    solutionEN: "A chemical wash (from RM 120) uses a food-safe chemical solution to kill mould and bacteria on the evaporator coil and blower wheel, permanently eliminating the smell. For severe mould infestation, a chemical overhaul (from RM 220) fully dismantles and sterilises every component.",
-    solutionBM: "Cuci kimia (dari RM 120) menggunakan larutan kimia selamat makanan untuk membunuh kulat dan bakteria pada gegelung dan roda penghembus, menghapuskan bau secara kekal. Untuk serangan kulat teruk, overhaul kimia (dari RM 220) membongkar dan mensterilkan setiap komponen.",
+    solutionEN: "A chemical wash (from RM 120) uses a food-safe chemical solution to kill mould and bacteria on the evaporator coil and blower wheel, permanently eliminating the smell. For severe mould infestation on wall-mounted units, a chemical overhaul (Wall-Mounted Aircon only, from RM 420) fully dismantles and sterilises every component.",
+    solutionBM: "Cuci kimia (dari RM 120) menggunakan larutan kimia selamat makanan untuk membunuh kulat dan bakteria pada gegelung dan roda penghembus, menghapuskan bau secara kekal. Untuk serangan kulat teruk pada unit dinding, overhaul kimia (Unit Dinding Sahaja, dari RM 420) membongkar dan mensterilkan setiap komponen.",
     solutionZH: "化学清洗（从RM 120起）使用食品级化学溶液杀死蒸发盘管和鼓风机叶轮上的霉菌和细菌，永久消除异味。对于严重的霉菌侵扰，化学大修（从RM 220起）完全拆卸并消毒每个部件。",
     warningEN: "If you smell burning plastic or a sweet chemical/gas odour from the aircond, switch it off immediately and do not restart it. These smells indicate electrical failure or refrigerant leak.",
     warningBM: "Jika anda menghidu bau plastik terbakar atau bau kimia/gas yang manis dari aircond, matikannya serta-merta dan jangan hidupkan semula.",

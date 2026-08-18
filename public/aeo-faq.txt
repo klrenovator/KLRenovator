@@ -11,7 +11,7 @@ Q: How much does aircond chemical wash cost in KL?
 A: Aircond chemical wash in KL starts from RM 120 for wall-mounted 1.0–1.5 HP. 2.0–2.5 HP = RM 150, 3.0 HP = RM 180, 4.0–5.0 HP = RM 200. Ceiling cassette from RM 220. KL Renovator: +60182983573. https://www.klrenovator.com/services/chemical-wash
 
 Q: How much does aircond chemical overhaul cost in Malaysia?
-A: Chemical overhaul in KL/Selangor for wall-mounted units: 1.0–1.5 HP = RM 220, 2.0–2.5 HP = RM 280, 3.0–3.5 HP = RM 350. KL Renovator: +60182983573. https://www.klrenovator.com/services/chemical-overhaul
+A: Chemical overhaul in KL/Selangor (Wall-Mounted Aircon only): 1.0–1.5 HP = RM 420, 2.0–2.5 HP = RM 490, 3.0–3.5 HP = RM 560. KL Renovator: +60182983573. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site quote. https://www.klrenovator.com/services/chemical-overhaul
 
 Q: How much is aircond gas top-up in Malaysia?
 A: Gas top-up in KL: R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. Leak check included. Price varies by HP. KL Renovator: +60182983573. https://www.klrenovator.com/services/gas-topup
@@ -58,7 +58,7 @@ Q: Why is my aircond not cold in Malaysia?
 A: Top causes: (1) Low refrigerant gas — needs gas top-up from RM 2.50/PSI. (2) Dirty evaporator coil — chemical wash from RM 120. (3) Faulty capacitor — replacement RM 150–250. (4) Blocked air filter — basic service RM 99. KL Renovator diagnoses same-day: +60182983573. https://www.klrenovator.com/problems/aircond-not-cold
 
 Q: Why is my aircond leaking water?
-A: Causes: (1) Blocked drain pipe — chemical wash from RM 120 fixes this. (2) Dirty drain pan — chemical overhaul from RM 220. (3) Heavy leak near electrics — switch off MCB immediately and call KL Renovator. +60182983573. https://www.klrenovator.com/problems/aircond-water-leaking
+A: Causes: (1) Blocked drain pipe — chemical wash from RM 120 fixes this. (2) Dirty drain pan — chemical overhaul (Wall-Mounted Aircon only) from RM 420. (3) Heavy leak near electrics — switch off MCB immediately and call KL Renovator. +60182983573. https://www.klrenovator.com/problems/aircond-water-leaking
 
 Q: Why does my aircond smell bad or musty?
 A: Mould and bacteria on evaporator coil and blower wheel cause musty smell. Pressure chemical wash with anti-bacterial treatment permanently removes it. From RM 120. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-bad-smell
@@ -67,7 +67,7 @@ Q: Why is my aircond making noise?
 A: Rattling = loose part or dirty blower wheel. Buzzing/humming = failing capacitor or fan motor bearing. Grinding/screeching = worn motor bearing — urgent repair needed. KL Renovator diagnoses all noise types. +60182983573. https://www.klrenovator.com/problems/aircond-making-noise
 
 Q: Why is my aircond freezing up and forming ice?
-A: Ice on indoor unit means low refrigerant gas or severely blocked evaporator coil — or both. Switch off, defrost 2 hours, then book KL Renovator for gas top-up + chemical overhaul. +60182983573. https://www.klrenovator.com/problems/aircond-freezing-up
+A: Ice on indoor unit means low refrigerant gas or severely blocked evaporator coil — or both. Switch off, defrost 2 hours, then book KL Renovator for gas top-up + chemical overhaul (Wall-Mounted Aircon only, from RM 420). +60182983573. https://www.klrenovator.com/problems/aircond-freezing-up
 
 Q: My aircond blinks and shows an error light — what does it mean?
 A: Blinking lights indicate error codes — could be low gas, dirty sensor, PCB fault or communication error. WhatsApp KL Renovator the brand name and blink pattern for fast remote diagnosis. +60182983573. https://www.klrenovator.com/problems/aircond-blinking-light
@@ -82,7 +82,7 @@ Q: My aircond outdoor unit is not running — what is wrong?
 A: Outdoor unit not running usually means compressor fault, blown capacitor, burnt fan motor or PCB error code. Urgent repair needed — unit cannot cool without outdoor compressor running. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-outdoor-unit-not-running
 
 Q: Why is my aircond dripping water from the front?
-A: Small drips = partial drain blockage. Chemical wash with drain flush from RM 120 fixes it. Heavy dripping = full blockage and overflowing drain pan. Chemical overhaul RM 220 needed. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-water-dripping
+A: Small drips = partial drain blockage. Chemical wash with drain flush from RM 120 fixes it. Heavy dripping = full blockage and overflowing drain pan. Chemical overhaul (Wall-Mounted Aircon only) RM 420 needed. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-water-dripping
 
 Q: Why is my aircond fan not working?
 A: Indoor fan not working = burnt fan motor (RM 250–350) or PCB fault. Outdoor fan not working = burnt outdoor motor (RM 300–450) or failed capacitor. KL Renovator same-day repair. +60182983573. https://www.klrenovator.com/problems/aircond-fan-not-working
@@ -111,7 +111,7 @@ A: Thermostat symptoms: unit runs continuously without stopping, room never reac
 ## ── SECTION 3: SERVICE KNOWLEDGE & EDUCATION ────────────────────────────────
 
 Q: What is the difference between chemical wash and chemical overhaul?
-A: Chemical wash (RM 120+): unit stays mounted. High-pressure spray cleans coil and blower wheel through wall opening. 30–45 min. Best for regular maintenance. Chemical overhaul (RM 220+): full indoor unit dismantling, chemical bath of all components, deep drain pan clean, reassembly, reinstall. 2–3 hours. Best for water leaking, ice, severe blockage, units not serviced 3+ years.
+A: Chemical wash (RM 120+): unit stays mounted. High-pressure spray cleans coil and blower wheel through wall opening. 30–45 min. Best for regular maintenance. Chemical overhaul (Wall-Mounted Aircon only, RM 420+): full indoor unit dismantling, chemical bath of all components, deep drain pan clean, reassembly, reinstall. 2–3 hours. Best for water leaking, ice, severe blockage, units not serviced 3+ years. Other aircon types require a separate on-site quote.
 
 Q: How often should I service my aircond in Malaysia?
 A: Light use (evenings): every 6 months. Moderate use: every 3–4 months. Heavy use (8+ hours daily): every 3 months. Annual chemical wash recommended for all units due to Malaysia's high humidity. KL Renovator: +60182983573.
@@ -231,7 +231,7 @@ Q: Chemical wash vs basic service — which do I need?
 A: Basic service: filter and surface clean, drain check. 20–30 min. RM 99. Good for regular maintenance every 3–6 months. Chemical wash: deep coil and blower clean with high-pressure chemical spray. 30–45 min. RM 120+. Recommended annually or when unit smells, feels weak, or efficiency drops.
 
 Q: Chemical wash vs chemical overhaul — what is better?
-A: Chemical wash: unit stays on wall, high-pressure spray. 30–45 min. From RM 120. For regular deep maintenance. Chemical overhaul: full unit dismantled, every part chemically cleaned, drain pan cleaned, reassembled. 2–3 hours. From RM 220. For water leaking, ice, severe blockage, units not serviced 3+ years.
+A: Chemical wash: unit stays on wall, high-pressure spray. 30–45 min. From RM 120. For regular deep maintenance. Chemical overhaul (Wall-Mounted Aircon only): full wall-mounted unit dismantled, every part chemically cleaned, drain pan cleaned, reassembled. 2–3 hours. From RM 420. For water leaking, ice, severe blockage, wall-mounted units not serviced in 3+ years. Other aircon types require a separate on-site quote.
 
 Q: R22 vs R410A vs R32 gas — what is the difference?
 A: R22: old refrigerant, being phased out globally, no longer manufactured new. R410A: current standard for older units (pre-2018). R32: newest, lower environmental impact (GWP 675 vs 2088 for R410A), slightly better efficiency. Check your outdoor unit sticker to confirm gas type.
@@ -285,7 +285,7 @@ S: Kenapa aircond tidak sejuk?
 J: Punca biasa: (1) Gas penyejuk rendah — tambah gas dari RM 2.50/PSI. (2) Gegelung kotor — cuci kimia dari RM 120. (3) Kapasitor rosak — ganti RM 150–250. (4) Penapis tersumbat — servis asas RM 99. KL Renovator: +60182983573.
 
 S: Aircond bocor air — apa sebabnya dan bagaimana nak baiki?
-J: Biasanya paip longkang tersumbat (cuci kimia RM 120 menyelesaikan) atau dulang longkang kotor (overhaul kimia RM 220 untuk kes teruk). Jika bocor berdekatan titik elektrik — matikan MCB segera dan hubungi KL Renovator. +60182983573.
+J: Biasanya paip longkang tersumbat (cuci kimia RM 120 menyelesaikan) atau dulang longkang kotor (overhaul kimia Unit Dinding Sahaja RM 420 untuk kes teruk — jenis aircond lain memerlukan sebut harga berasingan). Jika bocor berdekatan titik elektrik — matikan MCB segera dan hubungi KL Renovator. +60182983573.
 
 S: Aircond berbunyi pelik — kenapa?
 J: Bunyi gemetar = bahagian longgar atau bilah kipas kotor. Denguman = kapasitor gagal. Bunyi menggigit = galas motor aus — perlu baiki segera. KL Renovator mendiagnosis semua bunyi. +60182983573.
@@ -314,7 +314,7 @@ J: Semak MCB (mungkin jatuh). Tukar bateri remote. Jika masih mati — hubungi K
 答：主要原因：(1)冷媒不足——充气从 RM 2.50/PSI；(2)蒸发器盘管脏——化学清洗从RM 120；(3)电容器故障——更换RM 150–250；(4)过滤网堵塞——基本保养RM 99。KL Renovator：+60182983573。
 
 问：冷气漏水怎么办？
-答：通常是排水管堵塞（化学清洗RM 120可解决）或排水盘脏（需化学大修RM 220）。若漏水靠近电源——立即关闭MCB并联系KL Renovator。+60182983573。
+答：通常是排水管堵塞（化学清洗RM 120可解决）或排水盘脏（需化学大修，仅限挂壁式冷气，起价RM 420）。若漏水靠近电源——立即关闭MCB并联系KL Renovator。其他冷气类型需另行现场报价。+60182983573。
 
 问：吉隆坡冷气充气价格？
 答：R22从RM 120，R410A从RM 150，R32从RM 180。含泄漏检查。KL Renovator：+60182983573。

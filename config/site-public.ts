@@ -276,21 +276,22 @@ export const sitePublic = {
       ]
     },
     "chemicalOverhaul": {
-      "title": "Chemical Overhaul",
+      "title": "Chemical Overhaul (Wall-Mounted Aircon only)",
       "rows": [
         {
           "label": "Wall-Mounted · 1.0 – 1.5 HP",
-          "price": "RM 220"
+          "price": "RM 420"
         },
         {
           "label": "Wall-Mounted · 2.0 – 2.5 HP",
-          "price": "RM 280"
+          "price": "RM 490"
         },
         {
           "label": "Wall-Mounted · 3.0 – 3.5 HP",
-          "price": "RM 350"
+          "price": "RM 560"
         }
-      ]
+      ],
+      "note": "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation."
     },
     "gasTopup": {
       "title": "Gas Top-Up & Refill (Per PSI)",
@@ -500,11 +501,11 @@ export const sitePublic = {
     },
     {
       "slug": "chemical-overhaul",
-      "title": "Chemical Overhaul",
-      "short": "Complete dismantling of the indoor unit for the ultimate deep-clean. Permanently resolves severe water leaking, ice formation, and extreme blockage.",
-      "startPrice": 220,
+      "title": "Chemical Overhaul (Wall-Mounted Aircon only)",
+      "short": "Wall-Mounted Aircon only — complete dismantling of the indoor unit for the ultimate deep-clean. Permanently resolves severe water leaking, ice formation, and extreme blockage. Other aircon types require a separate on-site quote.",
+      "startPrice": 420,
       "icon": "sparkles",
-      "targetProblem": "Water leaking, ice formation, complete blockage, system choking.",
+      "targetProblem": "Water leaking, ice formation, complete blockage, system choking — wall-mounted units.",
       "category": "both"
     },
     {
