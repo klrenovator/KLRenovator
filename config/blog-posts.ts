@@ -6,6 +6,16 @@ import { newBlogBatch1 } from "./new-blog-batch1";
 import { newBlogBatch2 } from "./new-blog-batch2";
 import { newBlogBatch3 } from "./new-blog-batch3";
 import { newBlogBatch4 } from "./new-blog-batch4";
+import { newBlogBatch5 } from "./new-blog-batch5";
+import { newBlogBatch6 } from "./new-blog-batch6";
+import { newBlogBatch7 } from "./new-blog-batch7";
+import { newBlogBatch8 } from "./new-blog-batch8";
+import { newBlogBatch9 } from "./new-blog-batch9";
+import { newBlogBatch10 } from "./new-blog-batch10";
+import { newBlogBatch11 } from "./new-blog-batch11";
+import { newBlogBatch12 } from "./new-blog-batch12";
+import { newBlogBatch13 } from "./new-blog-batch13";
+import { newBlogBatch14 } from "./new-blog-batch14";
 
 export type BlogFaq = {
   q: string;
@@ -9688,6 +9698,18 @@ export const allPosts: BlogPost[] = [
 
   // ─── New multilingual SEO blogs (Batch 4): additions only, no replacements ──
   ...newBlogBatch4,
+
+  // ─── New multilingual SEO blogs (Batch 5–14): additions only, no replacements ──
+  ...newBlogBatch5,
+  ...newBlogBatch6,
+  ...newBlogBatch7,
+  ...newBlogBatch8,
+  ...newBlogBatch9,
+  ...newBlogBatch10,
+  ...newBlogBatch11,
+  ...newBlogBatch12,
+  ...newBlogBatch13,
+  ...newBlogBatch14,
 
 ];
 
