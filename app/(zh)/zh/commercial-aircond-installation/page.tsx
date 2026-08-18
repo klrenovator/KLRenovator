@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "zh_MY",
     url: "https://www.klrenovator.com/zh/commercial-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp", width: 1200, height: 630, alt: "商业冷气安装 KL 雪兰莪" }],
+    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "商业冷气安装 KL 雪兰莪" }],
   },
-  twitter: { card: "summary_large_image", title: "商业冷气安装 KL & 雪兰莪 — B2B | KL Renovator", description: "办公室、店铺、餐厅、诊所及服务器机房。天花板卡式、管道式、多联式。AMC可选。WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp"] },
+  twitter: { card: "summary_large_image", title: "商业冷气安装 KL & 雪兰莪 — B2B | KL Renovator", description: "办公室、店铺、餐厅、诊所及服务器机房。天花板卡式、管道式、多联式。AMC可选。WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/zh/commercial-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/commercial-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-komersial", "zh-MY": "https://www.klrenovator.com/zh/commercial-aircond-installation", "x-default": "https://www.klrenovator.com/commercial-aircond-installation" } },
 };
@@ -74,7 +74,7 @@ export default function CommercialInstallationPageZH() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
-        <Image src="/hero/aircond-ceiling-cassette-installation-commercial.webp" alt="商业冷气安装 办公室 店铺 餐厅 KL 雪兰莪" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
+        <Image src="/logo/image.png" alt="商业冷气安装 办公室 店铺 餐厅 KL 雪兰莪" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/50" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <Reveal>

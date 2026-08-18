@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/midea-aircond-chemical-wash-klang-61.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — 冷气电费计算器",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("冷气电费计算器"),
     description: "按匹数与使用情况估算每月冷气电费。",
-    images: ["https://www.klrenovator.com/hero/midea-aircond-chemical-wash-klang-61.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

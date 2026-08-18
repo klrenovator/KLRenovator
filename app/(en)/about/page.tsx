@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp",
+        url: "https://www.klrenovator.com/hero/generic-aircond-gas-topup-kuala-lumpur-107.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Trusted Aircond Specialist Kuala Lumpur & Selangor",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("About KL Renovator | Trusted Aircond Specialist KL & Selangor"),
     description: "12+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across KL & Selangor.",
-    images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp"],
+    images: ["https://www.klrenovator.com/hero/generic-aircond-gas-topup-kuala-lumpur-107.webp"],
   },
 };
 

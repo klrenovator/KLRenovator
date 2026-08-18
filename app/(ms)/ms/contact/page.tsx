@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     locale: "ms_MY",
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
-      { url: "https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp", width: 1200, height: 630, alt: "Hubungi KL Renovator — Servis Aircond KL & Selangor" },
+      { url: "https://www.klrenovator.com/hero/aircond-pcb-board-replacement-kl.webp", width: 1200, height: 630, alt: "Hubungi KL Renovator — Servis Aircond KL & Selangor" },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: clampMetaTitle("Hubungi KL Renovator | Servis Aircond KL & Selangor"),
     description: "Tindak balas terpantas melalui WhatsApp — servis aircond hari sama di seluruh KL & Selangor. Cuci kimia dari RM 120.",
-    images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp"],
+    images: ["https://www.klrenovator.com/hero/aircond-pcb-board-replacement-kl.webp"],
   },
 };
 
@@ -129,7 +129,7 @@ export default function ContactPageMS() {
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-sensor-replacement-klang-valley.webp"
+            src="/hero/aircond-pcb-board-replacement-kl.webp"
             alt="Juruteknik KL Renovator menyervis unit aircond di Kuala Lumpur"
             fill
             sizes="100vw"

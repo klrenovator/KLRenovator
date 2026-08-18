@@ -18,7 +18,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Kuala Lumpur oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Kuala Lumpur冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Kuala Lumpur 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+      heroImage: "/hero/york-aircond-water-leaking-fix-puchong-48.webp",
       faqs: [
         { q: "Do you service aircond in high-rise condos and apartments across Kuala Lumpur?", a: "Yes — KL Renovator regularly services wall-mounted and ceiling-cassette units in KL high-rises including KLCC, Mont Kiara, Bangsar, Sentul and Desa ParkCity. We follow each building's security and access procedure and carry insurance coverage for peace of mind. WhatsApp +60182983573 with your unit details." },
         { q: "How much does aircond servicing cost in Kuala Lumpur?", a: "Basic servicing from RM 99, pressure chemical wash from RM 120 (1.0–1.5 HP wall-mounted), chemical overhaul from RM 220, and gas top-up from RM 2.50/PSI (R22, R410A or R32) in KL. Ceiling cassette basic servicing from RM 150 (chemical wash from RM 220); window units priced on inspection. Every price is confirmed before any work begins — no hidden charges." },
@@ -64,7 +64,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Petaling Jaya oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Petaling Jaya冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Petaling Jaya 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-new-installation-petaling-jaya.webp",
+      heroImage: "/hero/samsung-aircond-ceiling-cassette-service-kuala-lumpur-8.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Petaling Jaya?", a: "Yes — KL Renovator covers all PJ zones including SS2, Damansara Utama, Tropicana, Kelana Jaya, Ara Damansara and Taman Jaya. Chemical wash from RM 120, same-day available. WhatsApp +60182983573." },
         { q: "My SS2 house is older — will old wiring cause problems during servicing?", a: "Older PJ landed homes (SS2, Taman Jaya, Section 14) often have aged capacitors and worn wiring behind the aircond unit. Our technicians inspect the electrical connection during every chemical wash and flag any fire-risk wiring before it becomes a bigger problem — we carry common replacement parts on the van for these jobs." },
@@ -113,7 +113,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Cheras oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Cheras冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Cheras 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+      heroImage: "/hero/tcl-aircond-ceiling-cassette-service-subang-jaya-32.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Cheras?", a: "Yes — KL Renovator covers all Cheras areas including Taman Connaught, Batu 9, Batu 11, Miharja, Maluri and Taman Mutiara. Same-day service available. WhatsApp +60182983573." },
         { q: "My aircond in Taman Connaught is old — will you check the wiring too?", a: "Yes. Many Taman Connaught terrace units are 8-10+ years old, so during a standard chemical wash our technicians also check capacitor condition and wiring insulation, flagging anything that looks worn before it causes a breakdown." },
@@ -162,7 +162,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Shah Alam oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Shah Alam冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Shah Alam 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
+      heroImage: "/hero/aircond-compressor-installation-new-kl.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Shah Alam?", a: "Yes — KL Renovator covers all Shah Alam sections including Section 7, 13, 14, 17, Bukit Jelutong, Kota Kemuning, Setia Alam and Glenmarie. WhatsApp +60182983573." },
         { q: "Do factory and warehouse aircond units need more frequent servicing in Shah Alam's industrial zones?", a: "Yes — units running 12+ hours a day in Section 13/15 factories and warehouses accumulate dust and lose cooling faster than residential units. We recommend chemical wash every 6-8 months for industrial-zone equipment instead of the standard annual cycle." },
@@ -210,7 +210,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Subang Jaya oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Subang Jaya冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Subang Jaya 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+      heroImage: "/hero/aircond-new-compressor-installation-rawang.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Subang Jaya?", a: "Yes — KL Renovator covers all Subang Jaya areas including USJ, SS15, SS16, SS17, Putra Heights and Subang Bestari. Same-day service available. WhatsApp +60182983573." },
         { q: "My condo's outdoor unit is on a shared ledge — can you still service it safely?", a: "Yes — many USJ, SS15 and SS16 condos have shared outdoor-unit ledges. Our technicians follow building management's access and safety procedures and are experienced working in confined ledge spaces without disturbing neighbouring units." },
@@ -258,7 +258,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Ampang oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Ampang冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Ampang 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-ampang-selangor.webp",
+      heroImage: "/hero/mitsubishi-aircond-compressor-replacement-shah-alam-58.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Ampang?", a: "Yes — KL Renovator covers all Ampang areas including Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda and Ulu Klang. Same-day slots available. WhatsApp +60182983573." },
         { q: "My aircond in Ukay Perdana needs a long pipe run because of the hillside — is that extra cost?", a: "Hillside homes in Ukay Perdana often need longer copper pipe runs and extra outdoor-unit bracket support due to steeper terrain and larger multi-split systems. We inspect the site and quote the exact pipe length and bracket work before starting." },
@@ -306,7 +306,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Puchong oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Puchong冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Puchong 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+      heroImage: "/hero/panasonic-aircond-compressor-replacement-puchong-46.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Puchong?", a: "Yes — KL Renovator covers all Puchong areas including IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana and Bukit Puchong. WhatsApp +60182983573." },
         { q: "I want to upgrade my old non-inverter unit in Puchong Jaya to an inverter model — is it complicated?", a: "Usually straightforward. Many older Puchong Jaya homes need a short copper pipe extension or re-routing since outdoor unit placement has often shifted over the years. We'll assess your existing piping and quote before any work starts." },
@@ -354,7 +354,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Klang oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Klang冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Klang 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-compressor-installation-new-kl.webp",
+      heroImage: "/hero/tcl-aircond-compressor-replacement-kuala-lumpur-10.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Klang?", a: "Yes — KL Renovator covers Klang including Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru and Teluk Pulai. Same-day service available. WhatsApp +60182983573." },
         { q: "Why does my aircond near Port Klang smell musty faster than friends' units inland?", a: "Coastal humidity around Port Klang and Pandamaran is higher year-round than inland Klang Valley areas, so mould and bacteria build up faster inside the evaporator coil. We recommend chemical wash every 6-9 months for units in these areas instead of the standard 12-month cycle." },
@@ -402,7 +402,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Kajang oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Kajang冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Kajang 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+      heroImage: "/hero/york-aircond-compressor-replacement-klang-70.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Kajang?", a: "Yes — KL Renovator covers Kajang including Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian and surrounding areas. WhatsApp +60182983573." },
         { q: "I rent a student apartment in Bangi — do I need a full chemical overhaul or something cheaper?", a: "For most student rentals with a tighter budget, basic servicing plus a targeted gas pressure check is usually enough unless there's visible water leaking or ice formation. We'll always recommend the cheapest option that actually fixes the problem, not the most expensive." },
@@ -450,7 +450,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Batu Caves oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Batu Caves冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Batu Caves 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
+      heroImage: "/hero/generic-aircond-dismantle-relocation-kuala-lumpur-134.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Batu Caves?", a: "Yes — KL Renovator is headquartered in Selayang, right next to Batu Caves. We cover all Batu Caves areas including Taman Batu Muda, Taman Sri Murni, Taman Sri Rajang and the Rawang corridor. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in Batu Caves?", a: "Basic service from RM 99, chemical wash from RM 120 (1.0-1.5 HP), chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Batu Caves. All prices confirmed before work. No hidden charges." },
@@ -496,7 +496,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Damansara oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Damansara冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Damansara 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+      heroImage: "/hero/generic-aircond-dismantle-relocation-petaling-jaya-135.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Damansara?", a: "Yes — KL Renovator covers all Damansara areas including Damansara Utama, Damansara Jaya, Damansara Perdana, Kota Damansara, Damansara Damai and the One Utama vicinity. WhatsApp +60182983573." },
         { q: "Do you service office ceiling cassette units around Damansara Perdana?", a: "Yes — Damansara Perdana has a concentration of office towers using ceiling cassette systems. We offer commercial servicing scheduled around business hours to avoid disrupting operations." },
@@ -544,7 +544,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Bangsar oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Bangsar冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Bangsar 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
+      heroImage: "/hero/generic-aircond-dismantle-relocation-puchong-148.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Bangsar?", a: "Yes — KL Renovator covers Bangsar including Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam and surrounding areas. Same-day available. WhatsApp +60182983573." },
         { q: "My aircond in a Bangsar Baru bungalow is over 10 years old — what should I check first?", a: "Older Bangsar Baru homes commonly develop capacitor wear and wiring insulation issues after a decade of use. We check both during a standard chemical wash and will flag anything that needs replacing before it causes a breakdown." },
@@ -592,7 +592,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Mont Kiara oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Mont Kiara冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Mont Kiara 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-double-unit-kl.webp",
+      heroImage: "/hero/isonic-aircond-dismantle-relocation-subang-jaya-33.webp",
       faqs: [
         { q: "Do you coordinate with building management for condo access in Mont Kiara?", a: "Yes — most Mont Kiara condos require security registration and sometimes a loading-bay booking for equipment. We handle this coordination directly with building management so you don\u2019t have to." },
         { q: "Does KL Renovator service aircond in Mont Kiara?", a: "Yes — KL Renovator covers Mont Kiara, Sri Hartamas, Solaris Dutamas and Duta Nusantara. We regularly service high-rise condo units here, including coordinating lift/loading-bay access for technicians and equipment. WhatsApp +60182983573 to book." },
@@ -639,7 +639,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Setapak oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Setapak冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Setapak 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+      heroImage: "/hero/mitsubishi-aircond-dismantle-relocation-klang-69.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Setapak?", a: "Yes — KL Renovator covers Setapak, Taman Setapak, Taman Sri Rampai and the Gombak border area. Same-day technicians are usually available given our regular coverage route through Wangsa Maju and Setapak together." },
         { q: "Do you service older walk-up apartments in Setapak?", a: "Yes — Setapak has many older low-rise walk-up flats alongside newer condos. Our technicians carry the right ladder/scaffold setup for outdoor compressor units mounted on older low-rise blocks without lift access." },
@@ -686,7 +686,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Sentul oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Sentul冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Sentul 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-compressor-bracket-installation-kl.webp",
+      heroImage: "/hero/panasonic-aircond-dismantle-relocation-shah-alam-57.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Sentul?", a: "Yes — KL Renovator covers Sentul, Sentul Park, Jalan Ipoh and the Brickfields border area. We service both landed homes near Jalan Ipoh and the newer high-rise developments around Sentul Park." },
         { q: "Do you service the newer condos near Sentul Park?", a: "Yes — the Sentul Park area has several newer condo developments. We're familiar with the management/JMB approval process some of these buildings require for outdoor unit access, and can guide you through it before the appointment." },
@@ -733,7 +733,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Selayang oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Selayang冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Selayang 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
+      heroImage: "/hero/tcl-aircond-dismantle-relocation-petaling-jaya-21.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Selayang?", a: "Yes — KL Renovator covers Selayang, Selayang Mall, Taman Selayang Baru and the Batu Caves/Gombak/Rawang corridor. This area is part of our regular northern Klang Valley route." },
         { q: "Do you service landed houses and shoplots in Selayang?", a: "Yes — Selayang has a mix of terrace houses and commercial shoplots, especially near Selayang Mall. We service both residential split units and shoplot ceiling-mounted units, with separate pricing for commercial work." },
@@ -780,7 +780,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Putrajaya oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Putrajaya冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Putrajaya 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Putrajaya?", a: "Yes — KL Renovator services all Putrajaya Presincts (Presint 1 through 20), including government quarters, landed homes and commercial units. WhatsApp +60182983573 with your Presint number to confirm a slot." },
         { q: "Do you service government quarters and offices in Putrajaya?", a: "Yes — alongside residential Presincts, we service government office buildings and quarters in Putrajaya, including commercial-grade and ceiling cassette units common in administrative blocks." },
@@ -827,7 +827,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Cyberjaya oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Cyberjaya冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Cyberjaya 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Cyberjaya?", a: "Yes — KL Renovator covers Cyberjaya including Shaftsbury, Tamarind Square, Cyberia and Jade Hills. We service both residential condos and commercial office units in the tech-park area." },
         { q: "Do you service commercial office aircond systems in Cyberjaya?", a: "Yes — Cyberjaya has a high concentration of office buildings and data-centre-adjacent commercial units. We handle commercial servicing contracts and ceiling cassette systems common in this kind of building." },
@@ -874,7 +874,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Kepong oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Kepong冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Kepong 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Kepong?", a: "Yes — KL Renovator covers Kepong, Kepong Baru, Metro Prima, Sri Damansara, Desa Jaya and Taman Ehsan. WhatsApp +60182983573 with your specific neighbourhood for fastest scheduling." },
         { q: "Do you service both older and newer housing areas in Kepong?", a: "Yes — Kepong has a mix of older landed neighbourhoods (Kepong Baru, Taman Ehsan) and newer developments (Metro Prima, Sri Damansara). Our technicians carry the right parts for both older non-inverter units and newer inverter systems." },
@@ -921,7 +921,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Sri Petaling oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Sri Petaling冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Sri Petaling 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Sri Petaling?", a: "Yes — KL Renovator covers Sri Petaling, Bukit Jalil, OUG (Taman Overseas Union), Kuchai Lama and Salak South. Same-day technicians regularly cover this whole cluster together." },
         { q: "Do you service condos near Bukit Jalil sports complex?", a: "Yes — the Bukit Jalil area near the sports complex has several condo developments. We're familiar with the loading-bay and management approval process common in these buildings." },
@@ -968,7 +968,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Sunway oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Sunway冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Sunway 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Sunway?", a: "Yes — KL Renovator covers Bandar Sunway, Sunway Mentari, the area near Sunway Pyramid and Sunway Velocity, plus the USJ/Putra Heights border. WhatsApp +60182983573 to confirm coverage for your block." },
         { q: "Do you service high-rise condos near Sunway Pyramid?", a: "Yes — the high-rise condos and serviced apartments near Sunway Pyramid and Sunway Velocity are a regular part of our coverage. We coordinate lift access and management approval ahead of the appointment where needed." },
@@ -1015,7 +1015,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Rawang oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Rawang冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Rawang 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-new-installation-rawang-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Rawang?", a: "Yes — KL Renovator covers Rawang, Taman Rawang Perdana, Kundang, Bandar Country Homes and Serendah. This is part of our northern Klang Valley route alongside Selayang and Batu Caves." },
         { q: "Do you service landed houses in Bandar Country Homes and Kundang?", a: "Yes — Bandar Country Homes and Kundang are mostly terrace and semi-detached landed housing. We carry standard copper piping and outdoor unit mounting equipment suited to these layouts." },
@@ -1062,7 +1062,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Semenyih oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Semenyih冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Semenyih 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Semenyih?", a: "Yes — KL Renovator covers Semenyih Town, Taman Pelangi, Kajang South and Bangi Lama, as part of our wider Kajang-Semenyih coverage route. WhatsApp +60182983573 to confirm a same-day slot." },
         { q: "Do you service new township developments near Semenyih?", a: "Yes — newer townships in the Semenyih corridor (including Setia Ecohill and Eco Majestic nearby) are part of our regular coverage. We're familiar with the gated-community visitor registration process common here." },
@@ -1109,7 +1109,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Seri Kembangan oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Seri Kembangan冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Seri Kembangan 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-sensor-replacement-klang-valley.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Seri Kembangan?", a: "Yes — KL Renovator covers Seri Kembangan, Balakong, Taman Equine and Serdang. WhatsApp +60182983573 with your specific neighbourhood for fastest same-day scheduling." },
         { q: "Do you service the equestrian park / Taman Equine landed homes?", a: "Yes — Taman Equine and surrounding landed neighbourhoods in Seri Kembangan are regularly serviced by our technicians, who carry standard split-unit installation and repair equipment suited to this housing type." },
@@ -1156,7 +1156,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Desa ParkCity oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Desa Parkcity冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Desa ParkCity 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Desa ParkCity?", a: "Yes — KL Renovator covers Desa ParkCity including The Waterfront and the Central Park area, plus neighbouring Kepong and Sri Damansara. WhatsApp +60182983573 to book a technician." },
         { q: "Do you service premium landed homes and condos in Desa ParkCity?", a: "Yes — Desa ParkCity has a mix of premium landed bungalows/semi-Ds and condominiums around The Waterfront. We're familiar with the gated-community access procedures common throughout this township." },
@@ -1203,7 +1203,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Taman Melawati oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Taman Melawati冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Taman Melawati 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Taman Melawati?", a: "Yes — KL Renovator covers Taman Melawati, the area near Melawati Mall, and the Hulu Kelang/Ampang Jaya border. WhatsApp +60182983573 to check same-day availability." },
         { q: "Do you service landed homes near Melawati Mall?", a: "Yes — most homes in Taman Melawati are double or single-storey terrace houses. We're used to the typical pipe-run distances and outdoor unit placements in this area, which keeps quotes consistent and accurate." },
@@ -1250,7 +1250,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Hulu Kelang oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Hulu Kelang冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Hulu Kelang 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-ampang-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Hulu Kelang?", a: "Yes — KL Renovator covers Hulu Kelang, Taman Keramat, Ukay Perdana and the Taman Melawati/Taman AU border area. WhatsApp +60182983573 to book." },
         { q: "Do you service hillside bungalows in Ukay Perdana?", a: "Yes — Ukay Perdana has several hillside bungalow developments. Our technicians budget extra time for steeper driveway/compound access when servicing outdoor compressor units in these properties." },
@@ -1297,7 +1297,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Bandar Puteri oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Bandar Puteri冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Bandar Puteri 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-new-installation-petaling-jaya.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Puteri?", a: "Yes — KL Renovator covers Bandar Puteri Puchong, including the area near IOI City Mall and Bukit Puchong. WhatsApp +60182983573 for same-day scheduling." },
         { q: "Do you service shop offices and landed homes in Bandar Puteri?", a: "Yes — Bandar Puteri has a mix of double-storey shop offices and terrace landed homes. We service both, with separate commercial pricing for shop-office ceiling cassette and split units." },
@@ -1344,7 +1344,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Bandar Botanic oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Bandar Botanic冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Bandar Botanic 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-compressor-flaring-repair-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Botanic?", a: "Yes — KL Renovator covers Bandar Botanic, near the Botanic Golf Course and the Klang/Kota Kemuning border area. WhatsApp +60182983573 to book." },
         { q: "Do you service landed homes near the Botanic Golf Course?", a: "Yes — Bandar Botanic is mostly terrace and semi-detached landed housing. We carry the standard equipment suited to typical Bandar Botanic outdoor unit placements and pipe-run distances." },
@@ -1391,7 +1391,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Glenmarie oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Glenmarie冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Glenmarie 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Glenmarie?", a: "Yes — KL Renovator covers Glenmarie, including the HICOM Glenmarie industrial/commercial area, near Shah Alam and Subang Airport. WhatsApp +60182983573 for commercial or residential quotes." },
         { q: "Do you service industrial and commercial units in HICOM Glenmarie?", a: "Yes — HICOM Glenmarie has a significant concentration of factories, warehouses and commercial offices. We handle commercial ceiling cassette and wall-mounted unit servicing with separate commercial contract pricing." },
@@ -1438,7 +1438,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Kota Kemuning oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Kota Kemuning冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Kota Kemuning 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-wall-mounted-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Kota Kemuning?", a: "Yes — KL Renovator covers Kota Kemuning, near Shah Alam, Telok Panglima Garang and the Kemuning Utama/Bukit Jelutong border. WhatsApp +60182983573 to book." },
         { q: "Do you service gated landed communities in Kota Kemuning?", a: "Yes — Kota Kemuning has several gated terrace and semi-D communities. We're familiar with the visitor registration/security gate procedures common across this township and can handle the guardhouse call ourselves if needed." },
@@ -1483,7 +1483,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Bukit Jelutong oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Bukit Jelutong冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Bukit Jelutong 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Bukit Jelutong?", a: "Yes — KL Renovator covers Bukit Jelutong, near Shah Alam, Kota Kemuning, Glenmarie and the PKNS Bukit Jelutong commercial area. WhatsApp +60182983573 to book." },
         { q: "Do you service the PKNS commercial area in Bukit Jelutong?", a: "Yes — the PKNS Bukit Jelutong area has shop offices and small commercial units alongside residential terraces. We service both, with commercial pricing quoted separately for shop-office systems." },
@@ -1528,7 +1528,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Setia Alam oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Setia Alam冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Setia Alam 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-new-compressor-installation-rawang.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Setia Alam?", a: "Yes — KL Renovator covers Setia Alam, including the area near Setia City Mall and Eco Ardence, plus the Shah Alam/Klang border. WhatsApp +60182983573 to book." },
         { q: "Do you service newer terrace and semi-D homes in Setia Alam?", a: "Yes — Setia Alam has many newer-build terrace and semi-D homes, often still under warranty for built-in aircon units. We can advise if a job might be covered by your developer/manufacturer warranty before quoting." },
@@ -1576,7 +1576,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond SS2 oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "SS2冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 SS2 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in SS2?", a: "Yes — KL Renovator covers SS2 Petaling Jaya, including the area near SS2 Pasar Malam, Damansara Utama and Kelana Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service older shop apartments near SS2 Pasar Malam?", a: "Yes — many properties near SS2 Pasar Malam are older shop apartments with aircond units installed years ago. Our technicians check capacitor and wiring condition as standard on older units like these during every visit." },
@@ -1623,7 +1623,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Ara Damansara oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573. Waranti kerja 1 bulan.",
       metaTitleZH: "Ara Damansara冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Ara Damansara 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Ara Damansara?", a: "Yes — KL Renovator covers Ara Damansara, including Oasis Ara Damansara and the Subang Jaya/Glenmarie border area. WhatsApp +60182983573 to book." },
         { q: "Do you service the Oasis Ara Damansara office/condo towers?", a: "Yes — Oasis Ara Damansara has both office towers and condo developments. We service commercial office units and residential condo split systems, with separate quotes for each." },
@@ -1670,7 +1670,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Bandar Utama oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Bandar Utama冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Bandar Utama 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-pcb-board-replacement-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Bandar Utama?", a: "Yes — KL Renovator covers Bandar Utama, including the area near One Utama Shopping Centre, Tropicana and the Damansara/Petaling Jaya border. WhatsApp +60182983573 to book." },
         { q: "Do you service condos and landed homes near One Utama?", a: "Yes — Bandar Utama has both high-rise condos and landed bungalow/semi-D homes near One Utama. We service both property types with technicians familiar with each layout's typical access requirements." },
@@ -1717,7 +1717,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Sungai Buloh oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Sungai Buloh冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Sungai Buloh 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-repair-technician-klang-valley.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Sungai Buloh?", a: "Yes — KL Renovator covers Sungai Buloh, including the Kota Damansara, Rawang and Elmina border areas. WhatsApp +60182983573 to book." },
         { q: "Do you service newer township developments like Elmina?", a: "Yes — Elmina and other newer Sungai Buloh townships are part of our regular coverage. Many homes here are recently built, so we check if work might still fall under developer warranty before quoting." },
@@ -1764,7 +1764,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Wangsa Maju oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Wangsa Maju冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Wangsa Maju 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-installation-kuala-lumpur.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Wangsa Maju?", a: "Yes — KL Renovator covers Wangsa Maju across all numbered Sections, plus the area near Wangsa Walk Mall, Taman Sri Rampai and the Gombak/Setapak border. WhatsApp +60182983573 with your Section number." },
         { q: "Do you service condos near Wangsa Walk Mall?", a: "Yes — the area around Wangsa Walk Mall has several condo developments. We're familiar with the lift access and management approval process common in these buildings." },
@@ -1811,7 +1811,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Balakong oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. Tempahan hari sama, harga telus, waranti 1 bulan.",
       metaTitleZH: "Balakong冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Balakong 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。WhatsApp +60182983573。",
-      heroImage: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in Balakong?", a: "Yes — KL Renovator covers Balakong, including the area near Taman Len Seng and the Seri Kembangan/Cheras/Pandan Indah border. WhatsApp +60182983573 to book." },
         { q: "Do you service industrial/factory units near Balakong?", a: "Yes — Balakong has a significant light-industrial and factory presence alongside residential areas. We service commercial/industrial-grade aircond units here with separate commercial pricing and contract options." },
@@ -1858,7 +1858,7 @@ export const areaPages = [
       metaDescMS: "Servis aircond Kuala Lumpur City Centre oleh KL Renovator: cuci kimia, overhaul, tambah gas & pembaikan semua jenama. WhatsApp +60182983573.",
       metaTitleZH: "Kuala Lumpur City Centre冷气服务 — RM 99起 当天预约",
       metaDescZH: "KL Renovator 为 Kuala Lumpur City Centre 提供专业冷气服务：化学清洗、大修、加气及维修。当天预约，价格透明，1个月工艺保修。",
-      heroImage: "/hero/aircond-installation-double-unit-kl.webp",
+      heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in KL City Centre?", a: "Yes — KL Renovator covers all KL City Centre zones including Jalan Ampang, Kampung Attap, Chow Kit and Pudu. Same-day service available. WhatsApp +60182983573." },
         { q: "How much does aircond service cost in KL City Centre?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in KL City Centre. All prices confirmed before work begins." },

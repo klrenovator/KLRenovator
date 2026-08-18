@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Kalkulator Kos Tambah Gas Aircond Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Kalkulator Kos Tambah Gas Aircond Malaysia"),
     description: "Anggaran harga tambah gas R22, R410A & R32 mengikut HP — dari RM 2.50/PSI.",
-    images: ["https://www.klrenovator.com/hero/aircond-gas-topup-r32-r410a-selangor.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

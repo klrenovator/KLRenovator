@@ -40,7 +40,7 @@ export const newBlogBatch9: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 10,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/aircond-pcb-board-replacement-kl.webp",
+    image: "/hero/sharp-aircond-chemical-wash-rawang-114.webp",
     imageAlt:
       "Indoor aircond PCB board being inspected for replacement after an electrical fault in Kuala Lumpur",
     faqs: [

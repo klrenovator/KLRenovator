@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "Juruteknik aircond KL Renovator — servis tempatan seluruh KL & Selangor",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: clampMetaTitle("Servis Aircond Berdekatan — KL & Selangor | KL Renovator"),
     description:
       "Servis aircond tempatan di seluruh KL & Selangor. Slot hari sama, cuci kimia dari RM 120, semua jenama.",
-    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

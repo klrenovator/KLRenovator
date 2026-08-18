@@ -126,7 +126,7 @@ export default function EnInstallationPricePage() {
       {/* Hero */}
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
-          <Image src="/hero/aircond-installation-kuala-lumpur.webp" alt="Malaysia aircond installation price 2026" fill sizes="100vw" className="object-cover" loading="eager" decoding="async" />
+          <Image src="/logo/image.png" alt="Malaysia aircond installation price 2026" fill sizes="100vw" className="object-cover" loading="eager" decoding="async" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">

@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "zh_MY",
     url: "https://www.klrenovator.com/zh/whole-house-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-double-unit-kl.webp", width: 1200, height: 630, alt: "全屋冷气安装 KL 雪兰莪" }],
+    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "全屋冷气安装 KL 雪兰莪" }],
   },
-  twitter: { card: "summary_large_image", title: "全屋冷气安装 KL & 雪兰莪 — 批量套餐 | KL Renovator", description: "多台冷气安装含批量折扣。BTU指南，项目时间线，RM199/台起。WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-double-unit-kl.webp"] },
+  twitter: { card: "summary_large_image", title: "全屋冷气安装 KL & 雪兰莪 — 批量套餐 | KL Renovator", description: "多台冷气安装含批量折扣。BTU指南，项目时间线，RM199/台起。WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/zh/whole-house-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/whole-house-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", "zh-MY": "https://www.klrenovator.com/zh/whole-house-aircond-installation", "x-default": "https://www.klrenovator.com/whole-house-aircond-installation" } },
 };
@@ -75,7 +75,7 @@ export default function WholeHouseInstallationPageZH() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
-        <Image src="/hero/aircond-installation-double-unit-kl.webp" alt="全屋多台冷气安装 吉隆坡 雪兰莪" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
+        <Image src="/logo/image.png" alt="全屋多台冷气安装 吉隆坡 雪兰莪" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/50" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <Reveal>

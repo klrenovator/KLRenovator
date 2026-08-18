@@ -53,7 +53,7 @@ export const newBlogBatch3: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 12,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/acson-aircond-pcb-board-repair-klang-71.webp",
+    image: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp",
     imageAlt:
       "KL Renovator technician inspecting an exposed indoor aircond control board during PCB diagnosis in Klang",
     faqs: [

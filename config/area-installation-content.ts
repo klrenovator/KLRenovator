@@ -656,7 +656,7 @@ export function getAreaInstallationContent(
     metaDescription,
     ogTitle: metaTitle,
     ogDescription: metaDescription,
-    ogImage: area.heroImage || "/hero/aircond-installation-kuala-lumpur.webp",
+    ogImage: "/logo/image.png",
     ogImageAlt:
       locale === "en"
         ? `Aircond installation in ${name}`

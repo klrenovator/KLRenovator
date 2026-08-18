@@ -127,7 +127,7 @@ export function InstallationHubPage({ locale }: { locale: HubLocale }) {
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-slate-900 px-4 py-16 sm:py-20">
         <Image
-          src="/hero/aircond-installation-kuala-lumpur.webp"
+          src="/logo/image.png"
           alt="KL Renovator technician installing a wall-mounted aircond unit in Kuala Lumpur"
           fill
           priority

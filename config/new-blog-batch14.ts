@@ -39,7 +39,7 @@ export const newBlogBatch14: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 11,
     relatedService: "Basic Servicing / Routine Maintenance",
-    image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    image: "/hero/generic-aircond-chemical-wash-shah-alam-137.webp",
     imageAlt:
       "Routine aircond basic servicing and filter cleaning in a Kuala Lumpur home",
     faqs: [

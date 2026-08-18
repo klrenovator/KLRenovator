@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-double-unit-kl.webp", width: 1200, height: 630, alt: "Pemasangan Aircond Seluruh Rumah KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Pemasangan Aircond Seluruh Rumah KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Seluruh Rumah KL & Selangor | KL Renovator", description: "Pemasangan berbilang unit dengan diskaun volum. Panduan BTU, garis masa projek, dari RM199/unit. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-double-unit-kl.webp"] },
+  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Seluruh Rumah KL & Selangor | KL Renovator", description: "Pemasangan berbilang unit dengan diskaun volum. Panduan BTU, garis masa projek, dari RM199/unit. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", languages: { "en-MY": "https://www.klrenovator.com/whole-house-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", "zh-MY": "https://www.klrenovator.com/zh/whole-house-aircond-installation", "x-default": "https://www.klrenovator.com/whole-house-aircond-installation" } },
 };
@@ -75,7 +75,7 @@ export default function WholeHouseInstallationPageMS() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
-        <Image src="/hero/aircond-installation-double-unit-kl.webp" alt="Pemasangan aircond seluruh rumah berbilang unit Kuala Lumpur Selangor" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
+        <Image src="/logo/image.png" alt="Pemasangan aircond seluruh rumah berbilang unit Kuala Lumpur Selangor" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/50" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <Reveal>

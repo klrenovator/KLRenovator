@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-new-installation-petaling-jaya.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — 变频冷气节省计算器",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("变频冷气节省计算器"),
     description: "非变频 vs 变频 — 节省与回本周期一键计算。",
-    images: ["https://www.klrenovator.com/hero/aircond-new-installation-petaling-jaya.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

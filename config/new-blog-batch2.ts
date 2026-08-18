@@ -48,7 +48,7 @@ export const newBlogBatch2: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 11,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/generic-aircond-chemical-wash-subang-jaya-154.webp",
     imageAlt:
       "Canvas protection laid out by KL Renovator before a professional chemical wash, keeping the customer's home clean in KL",
     content: `

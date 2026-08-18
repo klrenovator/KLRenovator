@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import NextLink from "next/link";
-import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin } from "react-icons/fi";
 

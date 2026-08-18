@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     locale: "zh_MY",
     url: "https://www.klrenovator.com/zh/aircond-installation-kl",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: "吉隆坡雪兰莪冷气安装" }],
+    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "吉隆坡雪兰莪冷气安装" }],
   },
-  twitter: { card: "summary_large_image", title: "冷气安装 吉隆坡 & 雪兰莪 — RM199起 | KL Renovator", description: "专业冷气安装RM199起。当天服务，所有品牌，1个月工艺保修。WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"] },
+  twitter: { card: "summary_large_image", title: "冷气安装 吉隆坡 & 雪兰莪 — RM199起 | KL Renovator", description: "专业冷气安装RM199起。当天服务，所有品牌，1个月工艺保修。WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/zh/aircond-installation-kl", languages: { "en-MY": "https://www.klrenovator.com/aircond-installation-kl", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-kl", "zh-MY": "https://www.klrenovator.com/zh/aircond-installation-kl", "x-default": "https://www.klrenovator.com/aircond-installation-kl" } },
 };
@@ -133,7 +133,7 @@ export default function AircondInstallationKLZHPage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
         <Image
-          src="/hero/aircond-installation-kuala-lumpur.webp"
+          src="/logo/image.png"
           alt="KL Renovator技师进行专业冷气安装 吉隆坡"
           fill
           priority

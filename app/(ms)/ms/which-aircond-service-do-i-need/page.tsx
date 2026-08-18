@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Alat Cadangan Servis Aircond Percuma",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Servis Aircond Mana Yang Saya Perlukan?"),
     description: "Jawab 4 soalan — dapatkan servis aircond yang betul dengan harga.",
-    images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

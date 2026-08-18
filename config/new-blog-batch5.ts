@@ -59,7 +59,7 @@ export const newBlogBatch5: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 12,
     relatedService: "Dismantle & Relocation",
-    image: "/hero/aux-aircond-dismantle-relocation-kuala-lumpur-9.webp",
+    image: "/hero/generic-aircond-dismantle-relocation-ampang-158.webp",
     imageAlt:
       "Aux outdoor aircond unit being prepared for professional dismantle and replacement in Kuala Lumpur",
     faqs: [

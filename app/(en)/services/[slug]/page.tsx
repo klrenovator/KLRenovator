@@ -159,53 +159,7 @@ function mergeFaqs(...groups: ServiceFaq[][]): ServiceFaq[] {
   });
 }
 
-const SERVICE_PROOF_IMAGES: Record<string, { src: string; alt: string; title: string }[]> = {
-  "chemical-wash": [
-    { src: "/hero/aircond-pressure-chemical-wash-selangor.webp", alt: "Pressure chemical wash on a wall-mounted aircond unit in Selangor", title: "Pressure chemical wash" },
-    { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: "Chemical wash canvas setup protecting a home during aircond cleaning in Kepong KL", title: "Protected indoor cleaning" },
-    { src: "/hero/aircond-chemical-service-canvas-wrap-kl.webp", alt: "Aircond chemical service canvas wrap used by KL Renovator technician in Kuala Lumpur", title: "Clean workflow" },
-  ],
-  "chemical-overhaul": [
-    { src: "/hero/aircond-chemical-overhaul-ampang-selangor.webp", alt: "Aircond indoor unit dismantled for chemical overhaul in Ampang Selangor", title: "Full dismantle overhaul" },
-    { src: "/hero/lg-aircond-chemical-overhaul-klang-62.webp", alt: "LG aircond indoor unit opened for chemical overhaul in Klang", title: "Deep internal cleaning" },
-    { src: "/hero/mitsubishi-aircond-chemical-overhaul-petaling-jaya-14.webp", alt: "Mitsubishi aircond chemical overhaul service in Petaling Jaya", title: "Brand-safe reassembly" },
-  ],
-  "gas-topup": [
-    { src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp", alt: "R32 and R410A aircond gas top-up with pressure balancing in Selangor", title: "Pressure-balanced gas top-up" },
-    { src: "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp", alt: "York R410A gas top-up and leak check in Kuala Lumpur", title: "R410A service" },
-    { src: "/hero/acson-aircond-gas-topup-r32-subang-jaya-27.webp", alt: "Acson R32 aircond gas top-up service in Subang Jaya", title: "R32 inverter support" },
-  ],
-  "repair": [
-    { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "KL Renovator technician diagnosing aircond repair issue in Klang Valley", title: "On-site diagnosis" },
-    { src: "/hero/aircond-pcb-board-replacement-kl.webp", alt: "Aircond PCB board replacement and repair in Kuala Lumpur", title: "PCB repair" },
-    { src: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp", alt: "TCL aircond troubleshooting and capacitor testing in Shah Alam", title: "Electrical troubleshooting" },
-  ],
-  "installation": [
-    { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Wall-mounted aircond installation with copper piping in Kuala Lumpur", title: "Wall-mounted installation" },
-    { src: "/hero/aircond-installation-double-unit-kl.webp", alt: "Double aircond installation completed by KL Renovator in KL", title: "Multi-unit installation" },
-    { src: "/hero/aircond-compressor-bracket-installation-kl.webp", alt: "Outdoor compressor bracket installation for aircond in Kuala Lumpur", title: "Outdoor bracket setup" },
-  ],
-  "basic-servicing": [
-    { src: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp", alt: "Acson aircond basic servicing and filter cleaning in Kuala Lumpur", title: "Routine basic service" },
-    { src: "/hero/samsung-aircond-basic-servicing-puchong-41.webp", alt: "Samsung aircond basic servicing and maintenance in Puchong", title: "Filter and airflow check" },
-    { src: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp", alt: "Midea aircond basic servicing in Petaling Jaya", title: "Preventive maintenance" },
-  ],
-  "ceiling-cassette": [
-    { src: "/hero/aircond-ceiling-cassette-installation-commercial.webp", alt: "Commercial ceiling cassette aircond installation in Klang Valley", title: "Ceiling cassette work" },
-    { src: "/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp", alt: "Panasonic ceiling cassette aircond service at a Klang commercial property", title: "Commercial servicing" },
-    { src: "/hero/tcl-aircond-ceiling-cassette-service-subang-jaya-32.webp", alt: "TCL ceiling cassette aircond deep service in Subang Jaya office", title: "Office cassette service" },
-  ],
-  "dismantling-relocation": [
-    { src: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp", alt: "Daikin aircond dismantle and relocation service in Puchong", title: "Careful dismantling" },
-    { src: "/hero/panasonic-aircond-dismantle-relocation-shah-alam-57.webp", alt: "Panasonic aircond dismantle for relocation in Shah Alam", title: "Safe relocation" },
-    { src: "/hero/tcl-aircond-dismantle-relocation-petaling-jaya-21.webp", alt: "TCL aircond removed for customer relocation in Petaling Jaya", title: "Move-out support" },
-  ],
-  "emergency": [
-    { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "Emergency aircond repair technician dispatched across Klang Valley", title: "Emergency diagnosis" },
-    { src: "/hero/aircond-pcb-board-replacement-2-klang-valley.webp", alt: "Aircond PCB board replacement during urgent repair in Klang Valley", title: "Critical repair" },
-    { src: "/hero/aircond-sensor-replacement-klang-valley.webp", alt: "Aircond temperature sensor replacement in Klang Valley", title: "Fast fault isolation" },
-  ],
-};
+// Proof strip uses the same unique hero already assigned to this service page.
 
 // ─── Trilingual static UI labels ─────────────────────────────────────────────
 const SECTION_LABELS = {
@@ -427,7 +381,7 @@ export default async function ServicePage({
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src={data.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}
+            src={data.heroImage}
             alt={`KL Renovator ${data.title} — KL & Selangor`}
             fill
             priority={true}
@@ -1484,6 +1438,108 @@ export default async function ServicePage({
       })()}
 
       {/* Gallery + Near Me Hub — orphan-link fix */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+              Proof + Coverage · Bukti + Liputan · 真实案例 + 覆盖范围
+            </p>
+            <h2 className="text-lg font-black text-slate-900 mb-6">
+              See Real Before &amp; After Results and Check Same-Day Coverage Near You
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <NextLink
+                href="/gallery"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Before &amp; After Gallery
+                </p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  See real KL Renovator job photos before you book
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  View real chemical wash, overhaul, installation and repair results from homes, condos, offices and shoplots across KL &amp; Selangor.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  View Gallery <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+
+              <NextLink
+                href="/near-me"
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
+                  Near Me Hub
+                </p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Check same-day aircond service availability near you
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  Use our Klang Valley near-me hub to confirm nearby coverage, compare areas, and choose the fastest route to WhatsApp booking.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
+                  Open Near Me Page <FiArrowRight className="h-3 w-3" />
+                </span>
+              </NextLink>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-14 sm:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <Reveal>
+              <div>
+                <p className={eyebrow()}>Book it · Tempah · 预约</p>
+                <h2 className="mt-3">
+                  <span className={title({ size: "md" })}>Book your </span>
+                  <span className={title({ size: "md", color: "brand" })}>{data.title}.</span>
+                </h2>
+                <p className={subtitle({ class: "mt-4" })}>
+                  {t("sendMessage", "en")}
+                </p>
+                <p className="mt-1 text-sm text-slate-500 font-medium">
+                  {t("sendMessage", "ms")}
+                </p>
+                <p className="mt-0.5 text-sm text-slate-500 font-medium">
+                  {t("sendMessage", "zh")}
+                </p>
+                <div className="mt-6">
+                  <BookingButton serviceName={data.title} size="lg" />
+                </div>
+
+                <div className="mt-10">
+                  <p className={eyebrow()}>Other Services · Perkhidmatan Lain · 其他服务</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {siteConfig.services
+                      .filter((s) => s.slug !== slug)
+                      .map((s) => (
+                        <NextLink
+                          key={s.slug}
+                          href={`/services/${s.slug}`}
+                          className="inline-flex items-center gap-1.5 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:border-sky-500 hover:text-sky-600 transition"
+                        >
+                          {s.title} <FiArrowRight className="h-3 w-3" />
+                        </NextLink>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <ContactForm />
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+    </>
+  );
+}lery + Near Me Hub — orphan-link fix */}
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>

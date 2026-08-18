@@ -154,7 +154,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
         <div className="absolute inset-0 opacity-[0.07]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/hero/aircond-gas-topup-r32-r410a-selangor.webp"
+            src="/hero/lg-aircond-gas-topup-r32-shah-alam-51.webp"
             alt="HVAC technician servicing aircond unit KL Selangor"
             className="w-full h-full object-cover object-center"
             loading="lazy"

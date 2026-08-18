@@ -152,7 +152,7 @@ export function InstallationSpotlight({ locale = "en" }: { locale?: Locale }) {
 
           <div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200">
-              <Image src="/hero/aircond-installation-wall-mounted-kl.webp" alt="Professional wall-mounted aircond installation by KL Renovator in Kuala Lumpur" fill sizes="(max-width: 1024px) 100vw, 600px" loading="lazy" decoding="async" quality={74} className="object-cover" />
+              <Image src="/hero/york-aircond-chemical-wash-puchong-37.webp" alt="Professional aircond chemical wash by KL Renovator in Puchong Selangor" fill sizes="(max-width: 1024px) 100vw, 600px" loading="lazy" decoding="async" quality={74} className="object-cover" />
             </div>
 
             <div className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-5">

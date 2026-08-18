@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+        url: "https://www.klrenovator.com/hero/york-aircond-chemical-wash-puchong-37.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Expert aircond installation & servicing across Kuala Lumpur & Selangor",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"],
+    images: ["https://www.klrenovator.com/hero/york-aircond-chemical-wash-puchong-37.webp"],
   },
 };
 

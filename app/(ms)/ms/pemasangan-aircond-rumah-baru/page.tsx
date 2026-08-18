@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: "Pemasangan Aircond Rumah Baru KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Pemasangan Aircond Rumah Baru KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Rumah Baru KL — Pakej Seluruh Rumah", description: "Pakej pemasangan aircond lengkap untuk rumah baru. 1BR–4BR, pakar kondo & landed, timeline 48 jam. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"] },
+  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Rumah Baru KL — Pakej Seluruh Rumah", description: "Pakej pemasangan aircond lengkap untuk rumah baru. 1BR–4BR, pakar kondo & landed, timeline 48 jam. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", languages: { "en-MY": "https://www.klrenovator.com/new-home-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", "zh-MY": "https://www.klrenovator.com/zh/new-home-aircond-installation", "x-default": "https://www.klrenovator.com/new-home-aircond-installation" } },
 };
@@ -72,7 +72,7 @@ export default function PemasanganAircondRumahBaruPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
-        <Image src="/hero/aircond-installation-kuala-lumpur.webp" alt="Pemasangan aircond rumah baru Kuala Lumpur Selangor" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
+        <Image src="/logo/image.png" alt="Pemasangan aircond rumah baru Kuala Lumpur Selangor" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/50" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <Reveal>

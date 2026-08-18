@@ -41,7 +41,7 @@ export const newBlogBatch8: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 10,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/aircond-sensor-replacement-klang-valley.webp",
+    image: "/hero/panasonic-aircond-chemical-wash-petaling-jaya-13.webp",
     imageAlt:
       "Indoor aircond sensor and control area being inspected during a KL Renovator service visit",
     faqs: [

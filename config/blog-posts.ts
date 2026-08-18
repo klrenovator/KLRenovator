@@ -73,7 +73,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 5,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    image: "/hero/daikin-aircond-basic-servicing-ampang-140.webp",
     imageAlt: "KL Renovator technician preparing a protected chemical wash setup for an aircond service visit in Greater KL",
     content: `
       <h2>Aircon Servicing in Batu Caves & Selayang</h2>
@@ -210,7 +210,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 4,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
     imageAlt: "Pressure chemical wash on a wall-mounted aircond unit with cleaning canvas in Selangor",
     content: `
       <h2>Chemical Wash Prices in Malaysia 2026</h2>
@@ -478,7 +478,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "June 2026",
     readTime: 5,
     relatedService: "Chemical Overhaul",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/generic-aircond-chemical-overhaul-cheras-106.webp",
     imageAlt: "Chemical wash canvas wrapped around an indoor aircond unit during deep cleaning in Kuala Lumpur",
     content: `
       <h2>What Is a Chemical Wash?</h2>
@@ -595,7 +595,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 6,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/aircond-sensor-replacement-klang-valley.webp",
     imageAlt: "KL Renovator technician diagnosing an aircond not cold problem in Klang Valley",
     content: `
       <h2>Why Is My Aircond Running But Not Cooling?</h2>
@@ -706,7 +706,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 4,
     relatedService: "Basic Servicing / Routine Maintenance",
-    image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    image: "/hero/generic-aircond-basic-servicing-ampang-104.webp",
     imageAlt: "Routine aircond basic servicing with filter and coil cleaning in Kuala Lumpur",
     content: `
       <h2>Why Malaysia Needs More Frequent Servicing</h2>
@@ -838,7 +838,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2026",
     readTime: 5,
     relatedService: "Gas Top-Up / Precision Balancing",
-    image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    image: "/hero/acson-aircond-gas-topup-r410a-petaling-jaya-16.webp",
     imageAlt: "Aircond refrigerant gas top-up and pressure balancing for R32 and R410A units in Selangor",
     content: `
       <h2>The Three Main Refrigerant Types in Malaysia</h2>
@@ -942,7 +942,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "February 2026",
     readTime: 4,
     relatedService: "Chemical Overhaul",
-    image: "/hero/panasonic-aircond-water-leaking-fix-petaling-jaya-24.webp",
+    image: "/hero/acson-aircond-water-leaking-fix-shah-alam-60.webp",
     imageAlt: "Aircond water leaking repair with drain pipe clearing in Petaling Jaya",
     content: `
       <h2>Why Is My Aircon Leaking Water?</h2>
@@ -1045,7 +1045,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/daikin-aircond-new-installation-klang-67.webp",
+    image: "/hero/generic-aircond-basic-servicing-ampang-149.webp",
     imageAlt: "New Daikin wall-mounted aircond installation completed in Klang",
     content: `
       <h2>Top Aircond Brands in Malaysia 2026</h2>
@@ -1150,7 +1150,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "June 2026",
     readTime: 6,
     relatedService: "Basic Servicing / Routine Maintenance",
-    image: "/hero/samsung-aircond-basic-servicing-puchong-41.webp",
+    image: "/hero/generic-aircond-basic-servicing-cheras-124.webp",
     imageAlt: "Samsung aircond filter cleaning and maintenance inspection during service in Puchong",
     content: `
       <h2>Why a Maintenance Checklist Matters</h2>
@@ -1268,7 +1268,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "June 2026",
     readTime: 5,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    image: "/hero/generic-aircond-basic-servicing-cheras-133.webp",
     imageAlt: "Aircond service visit with chemical wash canvas setup for transparent pricing guide in KL",
     content: `
       <h2>Aircond Service Pricing KL & Selangor 2026</h2>
@@ -1438,7 +1438,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/mitsubishi-aircond-gas-topup-r32-kuala-lumpur-3.webp",
+    image: "/hero/generic-aircond-basic-servicing-kuala-lumpur-125.webp",
     imageAlt: "Mitsubishi inverter aircond checked during R32 refrigerant service in Kuala Lumpur",
     content: `
       <h2>Inverter vs Non-Inverter — The Simple Explanation</h2>
@@ -1555,7 +1555,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/daikin-aircond-pcb-board-repair-petaling-jaya-23.webp",
+    image: "/hero/generic-aircond-basic-servicing-kuala-lumpur-161.webp",
     imageAlt: "Daikin aircond PCB inspection and repair by KL Renovator technician in Petaling Jaya",
     content: `
       <h2>Daikin vs Panasonic — Malaysia's Top Two Brands</h2>
@@ -1669,7 +1669,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "May 2026",
     readTime: 6,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp",
+    image: "/hero/generic-aircond-basic-servicing-kuala-lumpur-98.webp",
     imageAlt: "Cleaned Midea aircond during basic servicing to improve cooling efficiency in Petaling Jaya",
     content: `
       <h2>Why Your Aircond Bill is High</h2>
@@ -1784,7 +1784,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    image: "/hero/aircond-installation-ampang-selangor.webp",
     imageAlt: "Wall-mounted aircond installation with copper piping and bracket work in Kuala Lumpur",
     content: `
       <h2>Choosing the Right HP for Your Room</h2>
@@ -1924,7 +1924,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "April 2026",
     readTime: 5,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/aircond-compressor-installation-new-kl.webp",
+    image: "/hero/generic-aircond-basic-servicing-puchong-103.webp",
     imageAlt: "Outdoor aircond compressor installation and inspection for long-term unit lifespan in KL",
     content: `
       <h2>Average Aircond Lifespan in Malaysia</h2>
@@ -2051,7 +2051,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2026",
     readTime: 8,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp",
+    image: "/hero/aux-aircond-troubleshooting-repair-puchong-42.webp",
     imageAlt: "TCL aircond troubleshooting visit with capacitor testing in Shah Alam",
     content: `
       <h2>How to Diagnose Your Aircond Problem</h2>
@@ -2185,7 +2185,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "March 2026",
     readTime: 6,
     relatedService: "Ceiling Cassette Solutions",
-    image: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+    image: "/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
     imageAlt: "Ceiling cassette aircond service for a light commercial property in Klang Valley",
     content: `
       <h2>Why Commercial HVAC Maintenance is Different</h2>
@@ -2316,7 +2316,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "February 2026",
     readTime: 5,
     relatedService: "Gas Top-Up / Precision Balancing",
-    image: "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp",
+    image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
     imageAlt: "York aircond R410A gas top-up performed with pressure checking in Kuala Lumpur",
     content: `
       <h2>Myth 1 — "Gas needs to be topped up every year"</h2>
@@ -2427,7 +2427,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "January 2026",
     readTime: 8,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-new-installation-petaling-jaya.webp",
+    image: "/hero/generic-aircond-basic-servicing-shah-alam-110.webp",
     imageAlt: "New wall-mounted aircond installation for a Malaysian home in Petaling Jaya",
     content: `
       <h2>Step 1 — Choose the Right HP</h2>
@@ -2573,7 +2573,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 9,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    image: "/hero/aircond-installation-double-unit-kl.webp",
     imageAlt: "Wall-mounted aircond installation with copper piping and bracket setup by KL Renovator in Kuala Lumpur",
     lastReviewed: "2026-07-03",
     content: "<p><em>A good installation is not just about hanging the indoor unit. Correct HP sizing, copper pipe quality, vacuuming, drainage slope and outdoor airflow decide whether your new aircond stays cold, quiet and efficient.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does correct HP sizing matter?</h2>\n<p>A room that is too large for the selected HP forces the compressor to run non-stop. A unit that is too large short-cycles and leaves the room humid. KL Renovator checks room size, ceiling height, sunlight exposure and usage before recommending wall-mounted, ceiling cassette or window units.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A room that is too large for the selected HP forces the compressor to run non-stop.</div>\n<h2>What is included in the RM199 base installation?</h2>\n<p>Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe. Extra materials are quoted before work starts, so customers do not pay for accessories they already have.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Our standard wall-mounted 1.0–1.5HP installation starts from RM199 and includes labour plus up to 7ft copper pipe, wiring and drain pipe.</div>\n<h2>Transparent installation price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM199</td><td>Labour + up to 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr><tr><td>Wall-mounted 2.0HP</td><td>RM249</td><td>Standard installation protocol</td></tr><tr><td>Wall-mounted 2.5HP</td><td>RM279</td><td>Standard installation protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM290</td><td>Standard installation protocol</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM199</td><td>Standard installation protocol</td></tr></tbody></table>\n<h2>Why must the installer vacuum the copper line?</h2>\n<p>Vacuuming removes moisture and air before refrigerant is released. Skipping this step can create acid inside the system, damage compressor oil and shorten the life of a new inverter aircond.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Vacuuming removes moisture and air before refrigerant is released.</div>\n<h2>Where should the indoor and outdoor units be placed?</h2>\n<p>The indoor unit needs clear air intake and proper drainage slope. The outdoor condenser needs strong support, anti-vibration stability and open discharge space so hot air does not circulate back into the unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> The indoor unit needs clear air intake and proper drainage slope.</div>\n<h2>Which brands can KL Renovator install?</h2>\n<p>Our technicians install and service Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp and many more brands. We focus on residential homes, condominiums, terrace houses, offices and shoplots using wall-mounted, ceiling cassette and window units.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Our technicians install and service Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp and many more brands.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for a professional new aircond installation quote before work starts. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/installation\">New Unit Installation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -2624,7 +2624,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Basic Servicing / Routine Maintenance",
-    image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    image: "/hero/generic-aircond-basic-servicing-shah-alam-146.webp",
     imageAlt: "Routine wall-mounted aircond basic servicing with filter cleaning in Kuala Lumpur",
     lastReviewed: "2026-07-03",
     content: "<p><em>Basic servicing removes surface dust, checks airflow, tests electrical parts and keeps a healthy unit efficient. In Malaysia’s humidity, most active units should be serviced every 3–6 months.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is included in basic servicing?</h2>\n<p>Technicians wash the filters, wipe the cover, check blower airflow and electrical terminals, and confirm the drain flow is normal.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Technicians wash the filters, wipe the cover, check blower airflow and electrical terminals, and confirm the drain flow is normal.</div>\n<h2>When is basic servicing enough?</h2>\n<p>It is suitable when the aircond is still cooling, not leaking water and not producing strong odours. If dirt has entered deep coils, a chemical wash may be better.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> It is suitable when the aircond is still cooling, not leaking water and not producing strong odours.</div>\n<h2>Basic servicing price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM99</td><td>Filter wash, cover wipe, basic electrical test</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM120</td><td>Routine maintenance protocol</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM 150</td><td>Routine maintenance protocol</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM 150</td><td>Panel cleaning and inspection</td></tr><tr><td>Window unit 1.0–1.5HP</td><td>RM99</td><td>Slide-out clean and operating test</td></tr></tbody></table>\n<h2>How often should Malaysian homes service airconds?</h2>\n<p>Heavy-use bedrooms and offices usually need servicing every 3–4 months. Light-use guest rooms can often be maintained every 6 months.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Heavy-use bedrooms and offices usually need servicing every 3–4 months.</div>\n<h2>How does servicing reduce TNB bills?</h2>\n<p>Clean filters and coils reduce compressor strain. When airflow is not blocked, the system reaches target temperature faster and runs with less wasted energy.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Clean filters and coils reduce compressor strain.</div>\n<h2>Which brands are covered?</h2>\n<p>KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator services Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator to schedule basic servicing near you in KL or Selangor. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/basic-servicing\">Basic Servicing / Routine Maintenance</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -2696,7 +2696,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
     imageAlt: "High-pressure chemical wash flushing dirt from an indoor aircond unit in Selangor",
     lastReviewed: "2026-07-03",
     content: "<p><em>A pressure chemical wash clears slime, dust and algae from the coil, blower and drain path without fully dismantling the indoor unit. It is often the fastest fix for moderate leaking, weak airflow and musty smell.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Condensation should flow through the drain pipe.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Chemical wash price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A professional technician protects the PCB and electrical area before washing.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator before the leak damages your wall, ceiling or furniture. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -2765,7 +2765,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Chemical Overhaul",
-    image: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    image: "/hero/generic-aircond-chemical-overhaul-cheras-142.webp",
     imageAlt: "Aircond indoor unit dismantled for chemical overhaul cleaning in Ampang Selangor",
     lastReviewed: "2026-07-03",
     content: "<p><em>Chemical overhaul is for heavily choked units. The indoor unit is dismantled, deep-cleaned and reassembled so hidden coils, blower wheel and drain sections can be cleaned properly.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Chemical overhaul price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM220</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM280</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM350</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Basic service cleans accessible areas only.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is still not cold after normal service. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -2836,7 +2836,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Gas Top-Up / Precision Balancing",
-    image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    image: "/hero/aux-aircond-gas-topup-r410a-klang-64.webp",
     imageAlt: "Aircond R32 and R410A refrigerant gas top-up with pressure balancing in Selangor",
     lastReviewed: "2026-07-03",
     content: "<p><em>Gas top-up should be pressure-checked, not guessed. If gas is low, the technician should consider leakage, valve condition and correct refrigerant type before refilling.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Does aircond gas naturally run out?</h2>\n<p>No. Refrigerant works in a sealed loop. Low gas usually indicates a leak at copper piping, flare joints, valves or coils.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> No.</div>\n<h2>What are signs of low refrigerant?</h2>\n<p>Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Penyejukan perlahan, aliran udara panas, ais pada injap luar, bunyi desisan dan bil elektrik tinggi boleh menunjukkan gas rendah.</div>\n<h2>Refrigerant top-up guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>R32</td><td>from RM 3.00/PSI</td><td>Modern inverter systems</td></tr><tr><td>R410A</td><td>from RM 3.00/PSI</td><td>Mid-generation inverter systems</td></tr><tr><td>R22</td><td>from RM 2.50/PSI</td><td>Older non-inverter systems</td></tr><tr><td>Leak check</td><td>included/basic check</td><td>Recommended before repeated top-up</td></tr></tbody></table>\n<h2>Why is overcharging dangerous?</h2>\n<p>Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Terlalu banyak penyejuk meningkatkan beban kompressor dan boleh menyebabkan trip, terlalu panas dan kegagalan awal.</div>\n<h2>Which gas types are supported?</h2>\n<p>KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator handles R32, R410A and R22 with separate proper procedures and pressure checks.</div>\n<h2>Should I repair the leak first?</h2>\n<p>If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> If a leak is found, repairing the leak before refilling saves money and prevents repeated top-ups.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for pressure-checked gas top-up and honest leak advice. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/gas-topup\">Gas Top-Up / Precision Balancing</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -2900,7 +2900,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp",
+    image: "/hero/daikin-aircond-water-leaking-fix-kuala-lumpur-12.webp",
     imageAlt: "Aircond troubleshooting repair with capacitor testing by KL Renovator in Shah Alam",
     lastReviewed: "2026-07-03",
     content: "<p><em>Professional repair starts with diagnosis: electrical load, capacitor condition, PCB signals, fan motor, refrigerant pressure and drainage are checked before parts are recommended.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why should you not force-run a faulty aircond?</h2>\n<p>A tripping or blinking unit may have electrical or compressor faults. Force-running can burn wiring, PCB or compressor components.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A tripping or blinking unit may have electrical or compressor faults.</div>\n<h2>What does a technician check first?</h2>\n<p>Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemeriksaan yang betul termasuk voltan, kapasitor, terminal pendawaian, motor kipas, isyarat ralat PCB, tekanan gas dan keadaan saliran.</div>\n<h2>Common repair price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>On-site diagnostics</td><td>from RM88/RM50 depending current page policy</td><td>Multi-point electrical and pressure check</td></tr><tr><td>Capacitor replacement</td><td>from RM80</td><td>Terminal cleanup and current test</td></tr><tr><td>Fan motor/blower repair</td><td>from RM 150</td><td>Motor replacement and sound check</td></tr><tr><td>PCB board repair/swap</td><td>from RM180</td><td>Circuit diagnosis and testing</td></tr><tr><td>Wiring rectification</td><td>from RM90</td><td>Safety check and insulation repair</td></tr></tbody></table>\n<h2>What causes DB box tripping?</h2>\n<p>Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Punca biasa termasuk pendawaian pintas, kapasitor rosak, kerosakan belitan kompressor atau air mencapai bahagian elektrik.</div>\n<h2>What causes loud aircond noise?</h2>\n<p>Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bunyi mungkin datang dari roda blower retak, ketidakseimbangan kipas kotor, selongsong longgar, galas kipas luar atau pemasangan kompressor.</div>\n<h2>Is diagnostic fee waived if repair proceeds?</h2>\n<p>On-site repair policy may waive the inspection fee if the approved repair is completed in the same visit; the final quote is confirmed before work starts.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> On-site repair policy may waive the inspection fee if the approved repair is completed in the same visit; the final quote is confirmed before work starts.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is blinking, tripping or making unusual noise. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/repair\">Troubleshooting & Repairs</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -2953,7 +2953,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Dismantle & Relocation",
-    image: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp",
+    image: "/hero/aircond-installation-kuala-lumpur.webp",
     imageAlt: "Daikin aircond dismantle and relocation service by KL Renovator in Puchong",
     lastReviewed: "2026-07-03",
     content: "<p><em>Safe dismantling protects the compressor and refrigerant. Proper reinstallation needs correct bracket support, copper pipe routing, vacuuming and drainage slope.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What happens during aircond dismantling?</h2>\n<p>Technicians pump down/recover refrigerant where appropriate, safely isolate power, remove the indoor and outdoor units, and prepare the site for reinstallation.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Technicians pump down/recover refrigerant where appropriate, safely isolate power, remove the indoor and outdoor units, and prepare the site for reinstallation.</div>\n<h2>Why is cheap dismantling risky?</h2>\n<p>Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Memotong paip tanpa prosedur betul boleh kehilangan penyejuk, membiarkan lembapan masuk ke sistem dan meningkatkan kos pemasangan semula.</div>\n<h2>Dismantle and installation guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Dismantle 1.0–1.5HP</td><td>from RM80/RM90</td><td>Removal and pipe protection</td></tr><tr><td>Dismantle 2.0–3.0HP</td><td>from RM 2.50/PSI</td><td>Removal and pipe protection</td></tr><tr><td>New wall-mounted installation</td><td>from RM199</td><td>Labour + up to 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr><tr><td>Ceiling cassette installation</td><td>from RM290</td><td>Standard hanging and testing protocol</td></tr></tbody></table>\n<h2>What matters during reinstallation?</h2>\n<p>Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemasangan betul, kualiti paip tembaga, cerun saliran, penyedutan vakum dan aliran udara luar menentukan prestasi jangka panjang.</div>\n<h2>Can old pipes be reused?</h2>\n<p>Only if pipe size, insulation, cleanliness and condition are suitable. Otherwise new copper line is safer.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Only if pipe size, insulation, cleanliness and condition are suitable.</div>\n<h2>Where do we support relocation?</h2>\n<p>KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers relocation work across Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby neighbourhoods.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for safe dismantling, shifting and reinstallation. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/dismantling-relocation\">Dismantle & Relocation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -3011,7 +3011,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "New Unit Installation",
-    image: "/hero/mitsubishi-aircond-gas-topup-r32-kuala-lumpur-3.webp",
+    image: "/hero/generic-aircond-basic-servicing-shah-alam-155.webp",
     imageAlt: "Mitsubishi inverter aircond system checked during service in Kuala Lumpur",
     lastReviewed: "2026-07-03",
     content: "<p><em>Inverter airconds save most when used for long hours daily because the compressor slows down instead of restarting at full power. Non-inverters can still make sense for occasional-use rooms.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>How does a non-inverter aircond work?</h2>\n<p>Ia menjalankan kompressor pada kuasa penuh, berhenti apabila suhu sasaran dicapai, kemudian mulakan semula pada kuasa penuh apabila suhu meningkat.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia menjalankan kompressor pada kuasa penuh, berhenti apabila suhu sasaran dicapai, kemudian mulakan semula pada kuasa penuh apabila suhu meningkat.</div>\n<h2>How does an inverter aircond save electricity?</h2>\n<p>Ia menyesuaikan kelajuan kompressor dan mengelakkan permulaan semula arus tinggi berulang, terutamanya semasa penggunaan malam yang panjang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia menyesuaikan kelajuan kompressor dan mengelakkan permulaan semula arus tinggi berulang, terutamanya semasa penggunaan malam yang panjang.</div>\n<h2>Inverter vs non-inverter comparison</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Smart inverter</td><td>Higher upfront cost</td><td>Best for daily long-hour use; can reduce energy use significantly</td></tr><tr><td>Non-inverter</td><td>Lower upfront cost</td><td>Best for occasional use and simple budgets</td></tr><tr><td>Professional sizing</td><td>Essential</td><td>Prevents overwork, short-cycling and high bills</td></tr></tbody></table>\n<h2>Who should choose inverter?</h2>\n<p>Bilik tidur, pejabat rumah dan bilik yang digunakan lebih empat jam sehari biasanya mendapat manfaat daripada penjimatan inverter dan operasi lebih senyap.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat rumah dan bilik yang digunakan lebih empat jam sehari biasanya mendapat manfaat daripada penjimatan inverter dan operasi lebih senyap.</div>\n<h2>Who can choose non-inverter?</h2>\n<p>Bilik tetamu atau ruang penggunaan sekali-sekala mungkin tidak menggunakan cukup jam untuk memulihkan harga belian yang lebih tinggi dengan cepat.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tetamu atau ruang penggunaan sekali-sekala mungkin tidak menggunakan cukup jam untuk memulihkan harga belian yang lebih tinggi dengan cepat.</div>\n<h2>Why does installation still matter?</h2>\n<p>Wrong HP sizing, bad room sealing or poor outdoor airflow can wipe out expected inverter savings.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Wrong HP sizing, bad room sealing or poor outdoor airflow can wipe out expected inverter savings.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for sizing advice before buying a new aircond. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/installation\">New Unit Installation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -3070,7 +3070,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
     imageAlt: "Aircond chemical service canvas setup for odor removal and deep cleaning in Kuala Lumpur",
     lastReviewed: "2026-07-03",
     content: "<p><em>Bad smell usually comes from mould, bacteria, stagnant drain water or pests inside the indoor unit. Perfume only hides the smell; cleaning removes the source.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What causes musty aircond smell?</h2>\n<p>Moisture remains on the coil and blower after cooling. Dust and humidity form mould and bacteria that release musty odour.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Moisture remains on the coil and blower after cooling.</div>\n<h2>What causes sour vinegar smell?</h2>\n<p>Bau masam sering datang dari bakteria dalam air longkang bertakung yang bercampur dengan habuk, zarah kulit dan bahan cemar dalaman.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bau masam sering datang dari bakteria dalam air longkang bertakung yang bercampur dengan habuk, zarah kulit dan bahan cemar dalaman.</div>\n<h2>Odor treatment guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Mild dusty smell</td><td>Basic servicing</td><td>Filter wash and tray check</td></tr><tr><td>Sour/musty smell</td><td>Chemical wash</td><td>Coil and blower chemical cleaning</td></tr><tr><td>Severe rotten smell</td><td>Chemical overhaul</td><td>Full dismantle and deep sanitation</td></tr></tbody></table>\n<h2>What causes rotten smell?</h2>\n<p>Bau yang sangat busuk mungkin menunjukkan pencemaran perosak atau pengumpulan biologi berat di dalam selongsong atau laluan saliran.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bau yang sangat busuk mungkin menunjukkan pencemaran perosak atau pengumpulan biologi berat di dalam selongsong atau laluan saliran.</div>\n<h2>Which service removes smell?</h2>\n<p>轻微异味可能需要基本保养；中度异味通常需要化学清洗；严重持续异味可能需要化学大修。</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> 轻微异味可能需要基本保养；中度异味通常需要化学清洗；严重持续异味可能需要化学大修。</div>\n<h2>How can you reduce smell returning?</h2>\n<p>Servis secara berkala, jaga penapis bersih dan jalankan mod kipas sebentar selepas penyejukan berat untuk membantu mengeringkan unit dalam.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Servis secara berkala, jaga penapis bersih dan jalankan mod kipas sebentar selepas penyejukan berat untuk membantu mengeringkan unit dalam.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator to remove aircond smell at the source. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -3131,7 +3131,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Gas Top-Up / Precision Balancing",
-    image: "/hero/york-aircond-gas-topup-r410a-kuala-lumpur-4.webp",
+    image: "/hero/generic-aircond-gas-topup-ampang-122.webp",
     imageAlt: "York aircond R410A gas top-up and pressure check in Kuala Lumpur",
     lastReviewed: "2026-07-03",
     content: "<p><em>R32, R410A and R22 use different pressures and oils. Mixing refrigerants or charging to the wrong PSI can damage the compressor and reduce cooling efficiency.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is R32 gas?</h2>\n<p>R32 is common in newer inverter systems. It offers strong cooling efficiency and lower environmental impact compared with older refrigerants.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> R32 is common in newer inverter systems.</div>\n<h2>What is R410A gas?</h2>\n<p>R410A is a higher-pressure blended refrigerant used in many mid-generation inverter units. It requires proper gauges and compatible equipment.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> R410A is a higher-pressure blended refrigerant used in many mid-generation inverter units.</div>\n<h2>Gas type comparison</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>R32</td><td>Approx 130–150 PSI</td><td>Modern inverter units</td></tr><tr><td>R410A</td><td>Approx 120–140 PSI</td><td>Mid-generation inverter units</td></tr><tr><td>R22</td><td>Approx 60–70 PSI</td><td>Older non-inverter units</td></tr></tbody></table>\n<h2>What is R22 gas?</h2>\n<p>R22 is an older refrigerant used by many legacy non-inverter units. It is phased out for new equipment but still exists in older properties.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> R22 is an older refrigerant used by many legacy non-inverter units.</div>\n<h2>Can different gases be mixed?</h2>\n<p>No. Different refrigerants operate at different pressures and use different oil compatibility. Mixing can damage the compressor.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> No.</div>\n<h2>How do I know my gas type?</h2>\n<p>Check the label on the outdoor unit or WhatsApp a clear photo to KL Renovator before booking.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Check the label on the outdoor unit or WhatsApp a clear photo to KL Renovator before booking.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator for safe gas identification and pressure balancing. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/gas-topup\">Gas Top-Up / Precision Balancing</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -3188,7 +3188,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-double-unit-kl.webp",
+    image: "/hero/aircond-installation-wall-mounted-kl.webp",
     imageAlt: "KL Renovator double aircond installation setup with transparent RM199 base pricing in Kuala Lumpur",
     lastReviewed: "2026-07-03",
     content: "<p><em>A fixed package can charge you for accessories you already have. KL Renovator’s RM199 base installation is modular: labour plus up to 7ft copper pipe, insulation, electrical wire and drain pipe, with add-ons quoted only when needed.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why can RM300 packages overcharge some homes?</h2>\n<p>Many condos and renovated homes already have AC ledgess, switches or piping points. A rigid package may still charge for accessories you do not use.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Many condos and renovated homes already have AC ledgess, switches or piping points.</div>\n<h2>What does RM199 include?</h2>\n<p>Pemasangan asas termasuk buruh serta paip tembaga, penebat, wayar elektrik dan paip saliran sehingga 7 kaki untuk pemasangan dinding standard 1.0-1.5HP.0–1.5HP installation.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemasangan asas termasuk buruh serta paip tembaga, penebat, wayar elektrik dan paip saliran sehingga 7 kaki untuk pemasangan dinding standard 1.0-1.5HP.</div>\n<h2>Fixed package vs modular pricing</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Base installation</td><td>RM300+ fixed package</td><td>KL Renovator from RM199</td></tr><tr><td>Existing bracket</td><td>Often still charged</td><td>No forced new bracket</td></tr><tr><td>Existing switch</td><td>Often still charged</td><td>No forced new switch</td></tr><tr><td>Extra materials</td><td>Hidden inside package or extra</td><td>Quoted item-by-item before work</td></tr></tbody></table>\n<h2>What if I need extra materials?</h2>\n<p>Extra copper, wiring, casings or power point work is quoted clearly before work starts.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Extra copper, wiring, casings or power point work is quoted clearly before work starts.</div>\n<h2>Is quality reduced because price starts lower?</h2>\n<p>No. Proper vacuuming, safe mounting, drainage slope and vacuum pump commissioning remains part of professional workmanship.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> No.</div>\n<h2>Who benefits most from modular pricing?</h2>\n<p>Pemilik kondominium, rumah teres dengan titik sedia ada dan pejabat dengan infrastruktur AC yang disediakan biasanya paling banyak menjimatkan.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Pemilik kondominium, rumah teres dengan titik sedia ada dan pejabat dengan infrastruktur AC yang disediakan biasanya paling banyak menjimatkan.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator and send photos of your bracket/switch area for an honest quote. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/installation\">New Unit Installation</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
@@ -3248,7 +3248,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 9,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-double-unit-kl.webp",
+    image: "/hero/aircond-new-installation-petaling-jaya.webp",
     imageAlt: "KL Renovator double aircond installation setup in Kuala Lumpur for a Malaysia 2026 installation cost guide",
     lastReviewed: "2026-07-05",
     content: `
@@ -3440,7 +3440,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-compressor-bracket-installation-kl.webp",
+    image: "/hero/aircond-new-installation-rawang-selangor.webp",
     imageAlt: "KL Renovator bracket and outdoor compressor installation work in Kuala Lumpur showing real cost components behind aircond installation in Malaysia",
     lastReviewed: "2026-07-05",
     content: `
@@ -3569,7 +3569,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    image: "/hero/aux-aircond-new-installation-subang-jaya-31.webp",
     imageAlt: "1.0 HP wall-mounted bedroom aircond installation in Kuala Lumpur by KL Renovator",
     lastReviewed: "2026-07-05",
     content: `
@@ -3753,7 +3753,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp",
     imageAlt: "KL Renovator wall-mounted aircond installation in Kuala Lumpur used for Malaysia 2026 AC unit installation cost guidance",
     lastReviewed: "2026-07-05",
     content: `
@@ -3975,7 +3975,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "Aircon Repair",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/generic-aircond-basic-servicing-subang-jaya-100.webp",
     imageAlt: "KL Renovator technician diagnosing compressor restart behaviour on an aircond in Klang Valley",
     lastReviewed: "2026-07-05",
     content: `
@@ -4156,7 +4156,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 8,
     relatedService: "Aircon Servicing",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/generic-aircond-chemical-overhaul-cheras-160.webp",
     imageAlt: "KL Renovator protected aircond chemical service setup in Kuala Lumpur for a Malaysia 2026 service price guide",
     lastReviewed: "2026-07-05",
     content: `
@@ -4410,7 +4410,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "Aircon Servicing",
-    image: "/hero/lg-aircond-basic-servicing-subang-jaya-29.webp",
+    image: "/hero/hisense-aircond-basic-servicing-ampang-113.webp",
     imageAlt: "LG wall-mounted aircond servicing in Subang Jaya used for a Malaysia per-hour electricity cost and efficiency guide",
     lastReviewed: "2026-07-05",
     content: `
@@ -4701,7 +4701,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "Aircon Repair",
-    image: "/hero/daikin-aircond-water-leaking-fix-kuala-lumpur-12.webp",
+    image: "/hero/generic-aircond-water-leak-fix-klang-102.webp",
     imageAlt: "KL Renovator technician fixing a Daikin aircond water leak in Kuala Lumpur by clearing the drain path",
     lastReviewed: "2026-07-05",
     content: `
@@ -4936,7 +4936,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/daikin-aircond-new-installation-ampang-131.webp",
     imageAlt: "KL Renovator wall-mounted aircond installation in Kuala Lumpur showing a typical 2 to 3 hour installation workflow in Malaysia",
     lastReviewed: "2026-07-05",
     content: `
@@ -5262,7 +5262,7 @@ export const allPosts: BlogPost[] = [
     lastReviewed: "2026-07-07",
     readTime: 7,
     relatedService: "Maintenance Contract",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/lg-aircond-basic-servicing-subang-jaya-29.webp",
     imageAlt: "KL Renovator technician performing scheduled annual maintenance on residential aircond units in KL",
     content: `
       <h2>Why an Aircond Maintenance Contract Saves You Money in 2026</h2>
@@ -5424,7 +5424,7 @@ export const allPosts: BlogPost[] = [
     lastReviewed: "2026-07-07",
     readTime: 8,
     relatedService: "Basic Servicing",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp",
     imageAlt: "KL Renovator technician servicing both inverter and non-inverter aircond units in KL",
     content: `
       <h2>Inverter vs Non-Inverter: Why Your Service Approach Should Differ</h2>
@@ -5633,7 +5633,7 @@ export const allPosts: BlogPost[] = [
     lastReviewed: "2026-07-11",
     readTime: 8,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/samsung-aircond-basic-servicing-puchong-41.webp",
     imageAlt: "KL Renovator transparent pricing guide for all aircond services in Malaysia 2026",
     content: `
       <h2>Aircond Service Prices Malaysia 2026 — Complete Transparent Guide</h2>
@@ -6036,7 +6036,7 @@ export const allPosts: BlogPost[] = [
     category: "Buying Guide",
     categoryMS: "Panduan Pembelian",
     categoryZH: "购买指南",
-    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    image: "/hero/daikin-aircond-new-installation-klang-67.webp",
     imageAlt: "Memilih HP aircond untuk bilik Malaysia — panduan lengkap",
     readTime: 7,
     tags: ["hp aircond", "saiz bilik", "panduan membeli", "aircond malaysia", "jimat bil TNB"],
@@ -6110,7 +6110,7 @@ export const allPosts: BlogPost[] = [
     category: "Pricing & Cost Guide",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/generic-aircond-troubleshooting-repair-petaling-jaya-108.webp",
     imageAlt: "Baiki atau tukar aircond Malaysia — panduan keputusan",
     readTime: 8,
     tags: ["baiki aircond", "tukar aircond", "repair vs replace", "kos aircond", "aircond rosak"],
@@ -6216,7 +6216,7 @@ export const allPosts: BlogPost[] = [
     category: "Maintenance Guide",
     categoryMS: "Panduan Penyelenggaraan",
     categoryZH: "保养指南",
-    image: "/hero/acson-aircond-basic-servicing-kuala-lumpur-5.webp",
+    image: "/hero/sharp-aircond-basic-servicing-cheras-115.webp",
     imageAlt: "Servis aircond rumah sewa Airbnb Malaysia",
     readTime: 7,
     tags: ["airbnb aircond", "rumah sewa", "servis berkala", "tuan rumah", "aircond maintenance"],
@@ -6317,7 +6317,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "chemical-wash",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    image: "/hero/tcl-aircond-basic-servicing-klang-65.webp",
     imageAlt: "KL Renovator professional aircond servicing setup using protective canvas in Kuala Lumpur",
     content: `
       <h2>The Shift from Platforms to Direct Contractors</h2>
@@ -6499,7 +6499,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "chemical-wash",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    image: "/hero/generic-aircond-troubleshooting-repair-petaling-jaya-153.webp",
     imageAlt: "KL Renovator high pressure chemical washing service for aircond unit in KL Selangor",
     content: `
       <h2>The Dilemma of Booking Through Marketplace Platforms</h2>
@@ -6684,7 +6684,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "chemical-wash",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    image: "/hero/generic-aircond-troubleshooting-repair-puchong-130.webp",
     imageAlt: "KL Renovator high pressure chemical washing service for aircond unit in KL Selangor",
     content: `
       <h2>The Landscape of Local Service Apps</h2>
@@ -6854,7 +6854,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "basic-servicing",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/isonic-aircond-troubleshooting-repair-klang-66.webp",
     imageAlt: "Professional aircond servicing by KL Renovator in Kuala Lumpur Selangor",
     content: `
       <h2>What is Airtasker and How Does It Work for Aircond Services?</h2>
@@ -7053,7 +7053,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 4,
     relatedService: "basic-servicing",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/lg-aircond-troubleshooting-repair-petaling-jaya-18.webp",
     imageAlt: "KL Renovator professional aircond service technician in Kuala Lumpur",
     content: `
       <h2>The RM99 Aircond Service: What's the Catch?</h2>
@@ -7382,7 +7382,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "emergency",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/midea-aircond-troubleshooting-repair-kuala-lumpur-6.webp",
     imageAlt: "KL Renovator local aircond technician responding to service call in Klang Valley",
     content: `
       <h2>Why "Near Me" Aircond Searches Lead to App Frustration</h2>
@@ -7638,7 +7638,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "ceiling-cassette",
-    image: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
+    image: "/hero/generic-aircond-ceiling-cassette-service-puchong-112.webp",
     imageAlt: "Commercial ceiling cassette aircond unit servicing by KL Renovator in Klang Valley",
     content: `
       <h2>Why Commercial and Residential Aircond Servicing Are Not the Same</h2>
@@ -7911,7 +7911,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "basic-servicing",
-    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    image: "/hero/samsung-aircond-troubleshooting-repair-subang-jaya-30.webp",
     imageAlt: "Energy efficient aircond servicing by KL Renovator in Kuala Lumpur Selangor",
     content: `
       <h2>Your Aircond Is Probably the Reason Your TNB Bill Is High</h2>
@@ -8130,7 +8130,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "chemical-wash",
-    image: "/hero/daikin-aircond-new-installation-klang-67.webp",
+    image: "/hero/tcl-aircond-troubleshooting-repair-shah-alam-54.webp",
     imageAlt: "Daikin and Panasonic aircond units serviced by KL Renovator in Klang Valley",
     content: `
       <h2>Daikin vs Panasonic: Which Is Cheaper to Maintain in Malaysia?</h2>
@@ -8260,7 +8260,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "repair",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/daikin-aircond-new-installation-rawang-132.webp",
     imageAlt: "KL Renovator independent HVAC technician performing aircond repair in Klang Valley",
     content: `
       <h2>Authorized Service Center vs Independent HVAC Company: The Real Picture</h2>
@@ -8383,7 +8383,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "basic-servicing",
-    image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
+    image: "/hero/generic-aircond-new-installation-kuala-lumpur-116.webp",
     imageAlt: "Professional aircond servicing with protective canvas by KL Renovator in KL",
     content: `
       <h2>The Truth About E-Commerce Aircond Service Vouchers</h2>
@@ -8499,7 +8499,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "chemical-wash",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/generic-aircond-new-installation-kuala-lumpur-152.webp",
     imageAlt: "KL Renovator registered HVAC company servicing aircond in KL",
     content: `
       <h2>The Problem With Social Media Aircond Service Ads</h2>
@@ -8613,7 +8613,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "maintenance-contract",
-    image: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    image: "/hero/generic-aircond-new-installation-petaling-jaya-117.webp",
     imageAlt: "KL Renovator maintenance contract service in Kuala Lumpur",
     content: `
       <h2>AMC or Pay-Per-Visit — What's Right for You?</h2>
@@ -8741,7 +8741,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "gas-topup",
-    image: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    image: "/hero/generic-aircond-gas-topup-cheras-151.webp",
     imageAlt: "Aircond gas top-up with leak check by KL Renovator in Selangor",
     content: `
       <h2>Why Gas Top-Up Without a Leak Check Is a Waste of Money</h2>
@@ -8853,7 +8853,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 6,
     relatedService: "repair",
-    image: "/hero/mitsubishi-aircond-gas-topup-r32-kuala-lumpur-3.webp",
+    image: "/hero/generic-aircond-new-installation-petaling-jaya-126.webp",
     imageAlt: "Inverter aircond repair by KL Renovator in Kuala Lumpur",
     content: `
       <h2>Inverter vs Non-Inverter — The Real Repair Cost Difference</h2>
@@ -8978,7 +8978,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "emergency",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/generic-aircond-new-installation-petaling-jaya-144.webp",
     imageAlt: "KL Renovator emergency aircond service dispatch in Klang Valley",
     content: `
       <h2>When You Really Need Same-Day Aircond Service</h2>
@@ -9082,7 +9082,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/generic-aircond-new-installation-puchong-139.webp",
     imageAlt: "Professional aircond installation by KL Renovator in Kuala Lumpur",
     content: `
       <h2>Understanding Aircond Installation Packages in Malaysia</h2>
@@ -9202,7 +9202,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "emergency",
-    image: "/hero/aircond-installation-wall-mounted-kl.webp",
+    image: "/hero/generic-aircond-new-installation-rawang-159.webp",
     imageAlt: "KL Renovator WhatsApp booking service in KL",
     content: `
       <h2>Booking Methods Compared — Which Gets You a Technician Fastest?</h2>
@@ -9315,7 +9315,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "chemical-wash",
-    image: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    image: "/hero/daikin-aircond-chemical-wash-kuala-lumpur-1.webp",
     imageAlt: "Chemical wash frequency comparison for aircond units in KL",
     content: `
       <h2>Finding the Right Chemical Wash Schedule for Your Aircond</h2>
@@ -9444,7 +9444,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "repair",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/generic-aircond-new-installation-subang-jaya-109.webp",
     imageAlt: "KL Renovator aircond service with written warranty in KL",
     content: `
       <h2>Understanding Aircond Service Warranties in Malaysia</h2>
@@ -9562,7 +9562,7 @@ export const allPosts: BlogPost[] = [
     dateDisplay: "July 2026",
     readTime: 5,
     relatedService: "maintenance-contract",
-    image: "/hero/aircond-installation-double-unit-kl.webp",
+    image: "/hero/generic-aircond-new-installation-subang-jaya-118.webp",
     imageAlt: "KL Renovator aircond service for rental properties in KL",
     content: `
       <h2>Who Pays for Aircond Service in a Rental Property?</h2>

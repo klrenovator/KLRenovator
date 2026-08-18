@@ -57,7 +57,7 @@ export const newBlogBatch4: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 12,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/midea-aircond-chemical-wash-klang-61.webp",
+    image: "/hero/hisense-aircond-chemical-wash-klang-111.webp",
     imageAlt:
       "Wall-mounted aircond with canvas protection laid out below during a professional chemical wash service in Klang",
     faqs: [

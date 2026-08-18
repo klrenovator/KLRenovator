@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator 冷气专业技术人员 — 覆盖吉隆坡与雪兰莪全区服务",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: clampMetaTitle("附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator"),
     description:
       "吉隆坡与雪兰莪全区本地上门冷气服务。当天时段可约，高压药水清洗从 RM 120 起。",
-    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

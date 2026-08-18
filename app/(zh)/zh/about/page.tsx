@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp",
+        url: "https://www.klrenovator.com/hero/generic-aircond-gas-topup-kuala-lumpur-107.webp",
         width: 1200,
         height: 630,
         alt: "关于 KL Renovator — 值得信赖的吉隆坡及雪兰莪冷气专家",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家"),
     description: "12 年以上 HVAC 专业经验，5,000 多位满意客户，500 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。",
-    images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp"],
+    images: ["https://www.klrenovator.com/hero/generic-aircond-gas-topup-kuala-lumpur-107.webp"],
   },
 };
 
