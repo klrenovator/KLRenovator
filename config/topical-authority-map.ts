@@ -177,6 +177,7 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
 export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
   "chemical-wash": [
     "diy-aircond-cleaning-vs-chemical-wash-malaysia",
+    "aircond-cleaning-after-haze-malaysia",
     "pressure-chemical-wash-leaking-aircond-kl-selangor",
     "smelly-aircond-foul-musty-odor-kl-selangor",
     "aircond-chemical-wash-price-malaysia-2026",
@@ -256,6 +257,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
   ],
   "basic-servicing": [
     "regular-aircond-basic-servicing-kl-selangor-2026",
+    "aircond-cleaning-after-haze-malaysia",
     "how-often-service-aircond-malaysia",
     "aircond-maintenance-checklist-malaysia",
     "how-to-reduce-aircond-electricity-bill-malaysia",
@@ -506,6 +508,7 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-dismantle-reinstallation-guide-malaysia": ["dismantling-relocation", "installation", "gas-topup"],
   "diy-aircond-cleaning-vs-chemical-wash-malaysia": ["chemical-wash", "basic-servicing"],
   "aircond-error-codes-blinking-lights-guide-malaysia": ["repair", "emergency"],
+  "aircond-cleaning-after-haze-malaysia": ["chemical-wash", "basic-servicing"],
 };
 
 
