@@ -20,6 +20,7 @@ import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
+import { buildServiceProofPhotos } from "@/config/service-gallery";
 
 type Lang = "ms" | "zh";
 
@@ -466,9 +467,17 @@ export function ServiceDetailI18n({
 
   const stepColors = ["bg-sky-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500", "bg-rose-500", "bg-teal-500"];
   const highlightColors = ["bg-sky-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500", "bg-rose-500", "bg-teal-500", "bg-indigo-500", "bg-orange-500"];
-  const proofImages = data.heroImage
-    ? [{ src: data.heroImage, alt: `KL Renovator ${tTitle}`, title: tTitle }]
-    : [];
+  // At least 3 photos of THIS service, captioned in the page language.
+  const proofImages = buildServiceProofPhotos({
+    slug,
+    lang,
+    heroImage: data.heroImage,
+    heroTitle: tTitle,
+    heroAlt:
+      lang === "ms"
+        ? `KL Renovator ${tTitle} — foto kerja sebenar di KL & Selangor`
+        : `KL Renovator ${tTitle} — 吉隆坡与雪兰莪真实施工照片`,
+  });
 
   // ── Render ──────────────────────────────────────────────────────────────
   return (
@@ -1191,7 +1200,7 @@ export function ServiceDetailI18n({
               </p>
             </div>
           </Reveal>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {proofImages.map((img, i) => (
               <Reveal key={img.src} delay={i * 80}>
                 <figure className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all">
@@ -1200,7 +1209,7 @@ export function ServiceDetailI18n({
                       src={img.src}
                       alt={img.alt}
                       fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                       decoding="async"

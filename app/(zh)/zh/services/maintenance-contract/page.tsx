@@ -10,6 +10,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
+import { ServiceWorkPhotos } from "@/components/service-work-photos";
 
 const amcMsg = [
   "Hi KL Renovator，我对年度冷气保养合同（AMC）感兴趣。",
@@ -123,6 +124,18 @@ export default function AMCPageZH() {
           </div>
         </div>
       </section>
+
+      <ServiceWorkPhotos
+        slug="maintenance-contract"
+        lang="zh"
+        eyebrow="真实合约保养"
+        heading="您的 AMC 上门服务实况"
+        intro="吉隆坡及雪兰莪 AMC 客户的定期保养实况——每季上门、多机住宅、预防性检查以及优先当天响应。"
+        heroImage="/hero/aux-aircond-basic-servicing-shah-alam-53.webp"
+        heroTitle="定期 AMC 保养 — 莎阿南"
+        heroAlt="KL Renovator 技术员在莎阿南为 Aux 冷气执行年度保养合约的定期服务"
+        className="py-14 px-4 bg-white border-y border-slate-100"
+      />
 
       <section className="py-14 px-4 bg-slate-50">
         <div className="max-w-3xl mx-auto text-center">
