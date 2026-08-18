@@ -7,6 +7,7 @@ import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/seo";
 import { InstallationProof } from "@/components/installation-proof";
+import { ServiceWorkPhotos } from "@/components/service-work-photos";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import {
   INSTALLATION_HUB_GROUPS,
@@ -44,6 +45,35 @@ const ACCENT: Record<
 function prefix(locale: HubLocale) {
   return locale === "en" ? "" : `/${locale}`;
 }
+
+const HUB_PHOTO_COPY = {
+  en: {
+    eyebrow: "Real Installation Work",
+    heading: "Recent Aircond Installations",
+    intro:
+      "Actual installation jobs completed by KL Renovator across Kuala Lumpur & Selangor — bracket mounting, concealed copper piping, vacuum commissioning and a cleaned-up handover.",
+    heroTitle: "Fresh Copper & Drain Set-Up — Petaling Jaya",
+    heroAlt:
+      "New aircond installation with clean copper pipe and drain line set-up in Petaling Jaya",
+  },
+  ms: {
+    eyebrow: "Kerja Pemasangan Sebenar",
+    heading: "Pemasangan Aircond Terkini",
+    intro:
+      "Kerja pemasangan sebenar oleh KL Renovator di sekitar Kuala Lumpur & Selangor — pemasangan bracket, paip kuprum tersembunyi, vakum commissioning dan serahan yang bersih.",
+    heroTitle: "Pemasangan Paip Kuprum & Paip Air — Petaling Jaya",
+    heroAlt:
+      "Pemasangan aircond baharu dengan paip kuprum dan paip air yang kemas di Petaling Jaya",
+  },
+  zh: {
+    eyebrow: "真实安装施工",
+    heading: "近期冷气安装实况",
+    intro:
+      "KL Renovator 在吉隆坡及雪兰莪完成的实际安装工程——支架安装、隐藏式铜管、抽真空调试，以及清理干净后交付。",
+    heroTitle: "全新铜管与排水管布设 — 八打灵再也",
+    heroAlt: "八打灵再也新冷气安装，铜管与排水管布设整齐",
+  },
+} as const;
 
 export function InstallationHubPage({ locale }: { locale: HubLocale }) {
   const t = HUB_COPY[locale];
@@ -226,6 +256,19 @@ export function InstallationHubPage({ locale }: { locale: HubLocale }) {
           </section>
         );
       })}
+
+      {/* ── Real installation photos ─────────────────────────────────── */}
+      <ServiceWorkPhotos
+        slug="installation-hub"
+        lang={locale}
+        eyebrow={HUB_PHOTO_COPY[locale].eyebrow}
+        heading={HUB_PHOTO_COPY[locale].heading}
+        intro={HUB_PHOTO_COPY[locale].intro}
+        heroImage="/hero/aircond-new-installation-petaling-jaya.webp"
+        heroTitle={HUB_PHOTO_COPY[locale].heroTitle}
+        heroAlt={HUB_PHOTO_COPY[locale].heroAlt}
+        className="border-t border-slate-100 bg-white px-4 py-14"
+      />
 
       {/* ── Real photos + reviews ────────────────────────────────────── */}
       <InstallationProof locale={locale} />

@@ -10,6 +10,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiShield, FiCalendar, FiDroplet, FiTool, FiZap, FiClock, FiStar, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
+import { ServiceWorkPhotos } from "@/components/service-work-photos";
 
 const amcMsg = [
   "Hi KL Renovator, I am interested in an Annual Maintenance Contract (AMC) for my aircond unit(s).",
@@ -194,6 +195,19 @@ export default function AMCPage() {
           </div>
         </div>
       </section>
+
+      {/* Real AMC service photos */}
+      <ServiceWorkPhotos
+        slug="maintenance-contract"
+        lang="en"
+        eyebrow="Real Contract Servicing"
+        heading="What Your AMC Visits Look Like"
+        intro="Scheduled maintenance work carried out for AMC customers across KL & Selangor — quarterly servicing, multi-unit homes, preventive checks and priority same-day response."
+        heroImage="/hero/aux-aircond-basic-servicing-shah-alam-53.webp"
+        heroTitle="Scheduled AMC Servicing — Shah Alam"
+        heroAlt="KL Renovator technician carrying out a scheduled maintenance contract service on an Aux aircond in Shah Alam"
+        className="py-14 px-4 bg-white border-y border-slate-100"
+      />
 
       {/* How It Works */}
       <section className="py-14 px-4 bg-white">

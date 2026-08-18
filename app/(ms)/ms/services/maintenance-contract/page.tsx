@@ -10,6 +10,7 @@ import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 import { FiCheck, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
+import { ServiceWorkPhotos } from "@/components/service-work-photos";
 
 const amcMsg = [
   "Hi KL Renovator, saya berminat dengan Kontrak Penyelenggaraan Tahunan (AMC) untuk unit aircond saya.",
@@ -123,6 +124,18 @@ export default function AMCPageMS() {
           </div>
         </div>
       </section>
+
+      <ServiceWorkPhotos
+        slug="maintenance-contract"
+        lang="ms"
+        eyebrow="Servis Kontrak Sebenar"
+        heading="Beginilah Rupa Lawatan AMC Anda"
+        intro="Kerja penyelenggaraan berjadual untuk pelanggan AMC di seluruh KL & Selangor — servis suku tahunan, rumah berbilang unit, semakan pencegahan dan respons keutamaan hari sama."
+        heroImage="/hero/aux-aircond-basic-servicing-shah-alam-53.webp"
+        heroTitle="Servis AMC Berjadual — Shah Alam"
+        heroAlt="Juruteknik KL Renovator menjalankan servis kontrak penyelenggaraan berjadual pada aircond Aux di Shah Alam"
+        className="py-14 px-4 bg-white border-y border-slate-100"
+      />
 
       <section className="py-14 px-4 bg-slate-50">
         <div className="max-w-3xl mx-auto text-center">

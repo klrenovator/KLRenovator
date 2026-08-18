@@ -25,6 +25,7 @@ import { buildServiceAIOAnswerBlock } from "@/config/service-aio-answer-blocks";
 import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass";
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
+import { buildServiceProofPhotos } from "@/config/service-gallery";
 import { buildServiceRouteAlternates } from "@/config/service-route-qa";
 import { anchor } from "@/config/anchor-text-diversity";
 import { PriceComparisonUI } from "@/components/price-comparison";
@@ -257,9 +258,15 @@ export default async function ServicePage({
   const enhancedFaqsZH = data.faqsZH ?? [];
 
   const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
-  const proofImages = data.heroImage
-    ? [{ src: data.heroImage, alt: `KL Renovator ${data.title} — real job photo`, title: data.title }]
-    : [];
+  // Every service page shows at least 3 photos of THAT service (hero photo +
+  // the service-specific set in config/service-gallery.ts).
+  const proofImages = buildServiceProofPhotos({
+    slug,
+    lang: "en",
+    heroImage: data.heroImage,
+    heroTitle: data.title,
+    heroAlt: `KL Renovator ${data.title} — real job photo in KL & Selangor`,
+  });
 
   const serviceSchema = buildServiceSchema({
     slug,
@@ -1032,7 +1039,7 @@ export default async function ServicePage({
               </p>
             </div>
           </Reveal>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {proofImages.map((img, i) => (
               <Reveal key={img.src} delay={i * 80}>
                 <figure className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all">
@@ -1041,7 +1048,7 @@ export default async function ServicePage({
                       src={img.src}
                       alt={img.alt}
                       fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                       decoding="async"

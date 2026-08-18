@@ -16,6 +16,7 @@ import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass"
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 import { buildServiceRouteAlternates } from "@/config/service-route-qa";
+import { ServiceWorkPhotos } from "@/components/service-work-photos";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -32,6 +33,7 @@ const emergencyMsg = [
 
 const emergencyWaLink = waLink(emergencyMsg);
 const emergencyData = servicesData["emergency"];
+
 const emergencySchemaParity = serviceSchemaParityFields("en");
 const emergencyCorePolish = buildServiceCorePolishModule("emergency", "en", "Emergency Aircond Repair", 88);
 const emergencyCRO = buildServiceCRORefinementModule("emergency", "en", "Emergency Aircond Repair");
@@ -679,6 +681,19 @@ export default function EmergencyPage() {
           </div>
         </div>
       </section>
+
+      {/* ── REAL EMERGENCY JOB PHOTOS ────────────────────────────────────────── */}
+      <ServiceWorkPhotos
+        slug="emergency"
+        lang="en"
+        accent="red"
+        eyebrow="Real Emergency Call-Outs"
+        heading="Emergency Aircond Jobs We Handled"
+        intro="Actual same-day emergency work across KL & Selangor — heavy water leaks stopped, blocked drains cleared, tripping units diagnosed and total breakdowns triaged on arrival."
+        heroImage={emergencyData?.heroImage}
+        heroTitle="Emergency PCB Board Repair — Klang"
+        heroAlt="KL Renovator technician repairing a faulty aircond PCB board during an emergency call-out in Klang"
+      />
 
       {/* ── COMMON EMERGENCY PROBLEMS ────────────────────────────────────────── */}
       <section className="py-14 px-4 bg-slate-50">

@@ -7,11 +7,70 @@ import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { translations, useLang, type Lang } from "@/context/language-context";
 
-// Homepage-only photograph — must not be reused on any other page.
+// Homepage-only slideshow — these photographs must not be reused on any other
+// page (service pages have their own photo sets in config/service-gallery.ts).
+// Only the current + previous slides are ever mounted, so the extra photos are
+// fetched progressively as the slideshow advances, not all at once.
 const HERO_IMAGES = [
   {
     src: "/hero/york-aircond-chemical-wash-puchong-37.webp",
     alt: "KL Renovator technician performing professional aircond chemical wash in Puchong, Selangor",
+  },
+  {
+    src: "/hero/daikin-aircond-new-installation-ampang-131.webp",
+    alt: "New Daikin wall-mounted aircond installation completed by KL Renovator in Ampang, Selangor",
+  },
+  {
+    src: "/hero/isonic-aircond-ceiling-cassette-service-puchong-44.webp",
+    alt: "Ceiling cassette aircond serviced by KL Renovator technicians in a Puchong shoplot",
+  },
+  {
+    src: "/hero/aux-aircond-new-installation-subang-jaya-31.webp",
+    alt: "Aux aircond unit being installed with neat copper piping in a Subang Jaya home",
+  },
+  {
+    src: "/hero/sharp-aircond-chemical-wash-rawang-114.webp",
+    alt: "Sharp aircond indoor unit receiving a high-pressure chemical wash in Rawang, Selangor",
+  },
+  {
+    src: "/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
+    alt: "Ceiling cassette unit panel opened for chemical cleaning in a Petaling Jaya office",
+  },
+  {
+    src: "/hero/aux-aircond-gas-topup-r410a-klang-64.webp",
+    alt: "R410A refrigerant gas top-up with manifold gauges on an outdoor unit in Klang",
+  },
+  {
+    src: "/hero/generic-aircond-chemical-overhaul-klang-129.webp",
+    alt: "Aircond indoor unit dismantled for a full chemical overhaul deep clean in Klang",
+  },
+  {
+    src: "/hero/daikin-aircond-basic-servicing-ampang-140.webp",
+    alt: "Routine aircond basic servicing — filter wash and airflow check — in Ampang",
+  },
+  {
+    src: "/hero/isonic-aircond-new-installation-shah-alam-55.webp",
+    alt: "New aircond installation in progress at a Shah Alam terrace house",
+  },
+  {
+    src: "/hero/generic-aircond-new-installation-kuala-lumpur-152.webp",
+    alt: "Wall-mounted aircond installed with concealed piping in a Kuala Lumpur condominium",
+  },
+  {
+    src: "/hero/midea-aircond-chemical-overhaul-shah-alam-50.webp",
+    alt: "Midea aircond parts deep-cleaned individually during a chemical overhaul in Shah Alam",
+  },
+  {
+    src: "/hero/generic-aircond-basic-servicing-kuala-lumpur-161.webp",
+    alt: "KL Renovator technician completing a scheduled aircond service in Kuala Lumpur",
+  },
+  {
+    src: "/hero/generic-aircond-new-installation-petaling-jaya-126.webp",
+    alt: "Outdoor compressor mounted on a heavy-duty bracket during installation in Petaling Jaya",
+  },
+  {
+    src: "/hero/generic-aircond-chemical-overhaul-shah-alam-128.webp",
+    alt: "Blower wheel and drain tray scrubbed clean during an aircond overhaul in Shah Alam",
   },
 ];
 
