@@ -270,6 +270,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
   ],
   "dismantling-relocation": [
+    "aircond-dismantle-reinstallation-guide-malaysia",
     "aircond-installation-dismantling-kl-selangor-price-guide",
     "professional-new-aircond-installation-kl-selangor-2026",
     "rm199-vs-rm300-aircond-installation-kl-renovator",
@@ -500,6 +501,7 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-installation-multiple-units-one-compressor": ["installation", "basic-servicing"],
   "aircond-installation-electrical-requirements-malaysia": ["installation", "repair"],
   "aircond-installation-checklist-homeowner-malaysia": ["installation", "basic-servicing", "maintenance-contract"],
+  "aircond-dismantle-reinstallation-guide-malaysia": ["dismantling-relocation", "installation", "gas-topup"],
 };
 
 
