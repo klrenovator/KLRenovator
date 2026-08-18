@@ -151,18 +151,18 @@ export const PROBLEM_SERVICE_MAP: Record<string, { primary: string; secondary?: 
 
 // ── PROBLEM → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
-  "aircond-not-cold": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia", "aircond-gas-topup-myths-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026", "best-hp-aircond-bedroom-size-guide-malaysia"],
+  "aircond-not-cold": ["new-aircond-not-cold-first-month-malaysia", "aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-troubleshooting-guide-malaysia", "aircond-gas-topup-myths-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026", "best-hp-aircond-bedroom-size-guide-malaysia"],
   "aircond-water-leaking": ["aircond-water-leaking-causes", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "aircond-maintenance-checklist-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
   "aircond-making-noise": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia", "how-often-service-aircond-malaysia", "aircond-outdoor-unit-placement-malaysia"],
-  "aircond-bad-smell": ["how-often-service-aircond-malaysia", "aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "aircond-maintenance-checklist-malaysia"],
+  "aircond-bad-smell": ["aircond-mould-prevention-malaysia", "how-often-service-aircond-malaysia", "aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "aircond-maintenance-checklist-malaysia"],
   "aircond-freezing-up": ["aircond-not-cold-reasons", "r32-r410a-r22-gas-difference", "aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
   "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-piping-distance-maximum-malaysia"],
   "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
   "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2026", "10-costly-aircond-installation-mistakes-malaysia-2026"],
-  "aircond-pcb-problem": ["aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
+  "aircond-pcb-problem": ["aircond-power-surge-protection-malaysia", "aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
   "aircond-fan-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-tripping-power": ["aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-installation-electrical-requirements-malaysia", "aircond-installation-old-house-wiring-malaysia"],
-  "aircond-remote-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
+  "aircond-tripping-power": ["aircond-power-surge-protection-malaysia", "aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-installation-electrical-requirements-malaysia", "aircond-installation-old-house-wiring-malaysia"],
+  "aircond-remote-not-working": ["aircond-remote-timer-features-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
   "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "chemical-wash-vs-chemical-overhaul", "concealed-piping-aircond-installation-malaysia"],
   "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-outdoor-unit-placement-malaysia", "aircond-installation-electrical-requirements-malaysia"],
   "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "best-hp-aircond-bedroom-size-guide-malaysia"],
@@ -176,6 +176,8 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
 // ── SERVICE → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
   "chemical-wash": [
+    "aircond-mould-prevention-malaysia",
+    "aircond-servicing-calendar-malaysia",
     "diy-aircond-cleaning-vs-chemical-wash-malaysia",
     "aircond-cleaning-after-haze-malaysia",
     "pressure-chemical-wash-leaking-aircond-kl-selangor",
@@ -190,6 +192,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "facebook-instagram-aircond-ads-vs-company-malaysia-2026",
   ],
   "chemical-overhaul": [
+    "aircond-mould-prevention-malaysia",
     "aircond-chemical-overhaul-kl-selangor-cooling-efficiency",
     "signs-your-aircon-needs-chemical-overhaul-malaysia",
     "chemical-wash-vs-chemical-overhaul",
@@ -205,6 +208,10 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "gas-topup-with-vs-without-leak-check-malaysia-2026",
   ],
   "repair": [
+    "aircond-remote-timer-features-guide-malaysia",
+    "aircond-power-surge-protection-malaysia",
+    "aircond-checklist-buying-used-home-malaysia",
+    "new-aircond-not-cold-first-month-malaysia",
     "aircond-error-codes-blinking-lights-guide-malaysia",
     "baiki-vs-tukar-baru-aircond-malaysia",
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
@@ -217,6 +224,10 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-service-warranty-comparison-malaysia-2026",
   ],
   "installation": [
+    "mitsubishi-vs-daikin-aircond-malaysia",
+    "old-aircond-disposal-replacement-malaysia",
+    "aircond-outdoor-bracket-safety-rust-malaysia",
+    "new-aircond-not-cold-first-month-malaysia",
     // Pre-INS-18 installation blogs
     "cara-pilih-hp-aircond-bilik-malaysia",
     "professional-new-aircond-installation-kl-selangor-2026",
@@ -256,6 +267,8 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-installation-checklist-homeowner-malaysia",
   ],
   "basic-servicing": [
+    "aircond-for-baby-kids-room-malaysia",
+    "aircond-servicing-calendar-malaysia",
     "regular-aircond-basic-servicing-kl-selangor-2026",
     "aircond-cleaning-after-haze-malaysia",
     "how-often-service-aircond-malaysia",
@@ -274,6 +287,8 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
   ],
   "dismantling-relocation": [
+    "old-aircond-disposal-replacement-malaysia",
+    "aircond-checklist-buying-used-home-malaysia",
     "aircond-dismantle-reinstallation-guide-malaysia",
     "aircond-installation-dismantling-kl-selangor-price-guide",
     "professional-new-aircond-installation-kl-selangor-2026",
@@ -282,6 +297,8 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-lifespan-malaysia",
   ],
   "emergency": [
+    "aircond-power-surge-protection-malaysia",
+    "new-aircond-not-cold-first-month-malaysia",
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
     "aircond-troubleshooting-guide-malaysia",
     "aircond-not-cold-reasons",
@@ -291,6 +308,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "online-vs-whatsapp-aircond-booking-malaysia-2026",
   ],
   "maintenance-contract": [
+    "aircond-servicing-calendar-malaysia",
     "servis-aircond-rumah-sewa-airbnb-malaysia",
     "aircond-maintenance-contract-malaysia-2026",
     "how-often-service-aircond-malaysia",

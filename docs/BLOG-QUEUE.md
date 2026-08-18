@@ -8,16 +8,16 @@ Status legend: ✅ published · 🔨 next to build · ⬜ queued
 | 2 | DIY Aircond Cleaning vs Professional Chemical Wash | `diy-aircond-cleaning-vs-chemical-wash-malaysia` | ✅ PR #53 (2026-08-18) |
 | 3 | Aircond Error Codes & Blinking Lights Decoder (Malaysia) | `aircond-error-codes-blinking-lights-guide-malaysia` | ✅ PR #54 (2026-08-18) |
 | 4 | Post-Haze Aircond Cleaning Guide (Malaysia) | `aircond-cleaning-after-haze-malaysia` | ✅ this session (2026-08-18) |
-| 5 | Old Aircond Disposal & Responsible Replacement | `old-aircond-disposal-replacement-malaysia` | ⬜ |
-| 6 | Mitsubishi vs Daikin Aircond Comparison (Malaysia) | `mitsubishi-vs-daikin-aircond-malaysia` | ⬜ |
-| 7 | Aircond Mould Prevention in Malaysia's Humid Climate | `aircond-mould-prevention-malaysia` | ⬜ |
-| 8 | Aircond Remote & Timer Features You Are Not Using | `aircond-remote-timer-features-guide-malaysia` | ⬜ |
-| 9 | Power Surge & Voltage Fluctuation Protection for Aircond | `aircond-power-surge-protection-malaysia` | ⬜ |
-| 10 | Aircond for Baby & Kids' Rooms: Temperature, Cleaning, Safety | `aircond-for-baby-kids-room-malaysia` | ⬜ |
-| 11 | Aircond Inspection Checklist When Buying a Used Home | `aircond-checklist-buying-used-home-malaysia` | ⬜ |
-| 12 | New Aircond Not Cold? First-30-Days Troubleshooting | `new-aircond-not-cold-first-month-malaysia` | ⬜ |
-| 13 | Aircond Outdoor Bracket Safety & Rust Check | `aircond-outdoor-bracket-safety-rust-malaysia` | ⬜ |
-| 14 | Malaysia Aircond Servicing Calendar: When to Book What | `aircond-servicing-calendar-malaysia` | ⬜ |
+| 5 | Old Aircond Disposal & Responsible Replacement | `old-aircond-disposal-replacement-malaysia` | ✅ this session (2026-08-18) |
+| 6 | Mitsubishi vs Daikin Aircond Comparison (Malaysia) | `mitsubishi-vs-daikin-aircond-malaysia` | ✅ this session (2026-08-18) |
+| 7 | Aircond Mould Prevention in Malaysia's Humid Climate | `aircond-mould-prevention-malaysia` | ✅ this session (2026-08-18) |
+| 8 | Aircond Remote & Timer Features You Are Not Using | `aircond-remote-timer-features-guide-malaysia` | ✅ this session (2026-08-18) |
+| 9 | Power Surge & Voltage Fluctuation Protection for Aircond | `aircond-power-surge-protection-malaysia` | ✅ this session (2026-08-18) |
+| 10 | Aircond for Baby & Kids' Rooms: Temperature, Cleaning, Safety | `aircond-for-baby-kids-room-malaysia` | ✅ this session (2026-08-18) |
+| 11 | Aircond Inspection Checklist When Buying a Used Home | `aircond-checklist-buying-used-home-malaysia` | ✅ this session (2026-08-18) |
+| 12 | New Aircond Not Cold? First-30-Days Troubleshooting | `new-aircond-not-cold-first-month-malaysia` | ✅ this session (2026-08-18) |
+| 13 | Aircond Outdoor Bracket Safety & Rust Check | `aircond-outdoor-bracket-safety-rust-malaysia` | ✅ this session (2026-08-18) |
+| 14 | Malaysia Aircond Servicing Calendar: When to Book What | `aircond-servicing-calendar-malaysia` | ✅ this session (2026-08-18) |
 
 ## Rules (from the Master AI Agent Prompt)
 
