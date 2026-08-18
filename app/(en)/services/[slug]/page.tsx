@@ -257,7 +257,9 @@ export default async function ServicePage({
   const enhancedFaqsZH = data.faqsZH ?? [];
 
   const iconName = siteConfig.services.find((s) => s.slug === slug)?.icon ?? "sparkles";
-  const proofImages = SERVICE_PROOF_IMAGES[slug] ?? SERVICE_PROOF_IMAGES["installation"];
+  const proofImages = data.heroImage
+    ? [{ src: data.heroImage, alt: `KL Renovator ${data.title} — real job photo`, title: data.title }]
+    : [];
 
   const serviceSchema = buildServiceSchema({
     slug,
@@ -1438,108 +1440,6 @@ export default async function ServicePage({
       })()}
 
       {/* Gallery + Near Me Hub — orphan-link fix */}
-      <section className="py-10 bg-white border-t border-slate-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
-              Proof + Coverage · Bukti + Liputan · 真实案例 + 覆盖范围
-            </p>
-            <h2 className="text-lg font-black text-slate-900 mb-6">
-              See Real Before &amp; After Results and Check Same-Day Coverage Near You
-            </h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              <NextLink
-                href="/gallery"
-                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
-              >
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
-                  Before &amp; After Gallery
-                </p>
-                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
-                  See real KL Renovator job photos before you book
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  View real chemical wash, overhaul, installation and repair results from homes, condos, offices and shoplots across KL &amp; Selangor.
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
-                  View Gallery <FiArrowRight className="h-3 w-3" />
-                </span>
-              </NextLink>
-
-              <NextLink
-                href="/near-me"
-                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
-              >
-                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">
-                  Near Me Hub
-                </p>
-                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
-                  Check same-day aircond service availability near you
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  Use our Klang Valley near-me hub to confirm nearby coverage, compare areas, and choose the fastest route to WhatsApp booking.
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600">
-                  Open Near Me Page <FiArrowRight className="h-3 w-3" />
-                </span>
-              </NextLink>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-14 sm:py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-            <Reveal>
-              <div>
-                <p className={eyebrow()}>Book it · Tempah · 预约</p>
-                <h2 className="mt-3">
-                  <span className={title({ size: "md" })}>Book your </span>
-                  <span className={title({ size: "md", color: "brand" })}>{data.title}.</span>
-                </h2>
-                <p className={subtitle({ class: "mt-4" })}>
-                  {t("sendMessage", "en")}
-                </p>
-                <p className="mt-1 text-sm text-slate-500 font-medium">
-                  {t("sendMessage", "ms")}
-                </p>
-                <p className="mt-0.5 text-sm text-slate-500 font-medium">
-                  {t("sendMessage", "zh")}
-                </p>
-                <div className="mt-6">
-                  <BookingButton serviceName={data.title} size="lg" />
-                </div>
-
-                <div className="mt-10">
-                  <p className={eyebrow()}>Other Services · Perkhidmatan Lain · 其他服务</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {siteConfig.services
-                      .filter((s) => s.slug !== slug)
-                      .map((s) => (
-                        <NextLink
-                          key={s.slug}
-                          href={`/services/${s.slug}`}
-                          className="inline-flex items-center gap-1.5 border border-slate-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:border-sky-500 hover:text-sky-600 transition"
-                        >
-                          {s.title} <FiArrowRight className="h-3 w-3" />
-                        </NextLink>
-                      ))}
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={100}>
-              <ContactForm />
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-    </>
-  );
-}lery + Near Me Hub — orphan-link fix */}
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
