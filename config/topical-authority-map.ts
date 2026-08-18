@@ -217,7 +217,8 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-service-warranty-comparison-malaysia-2026",
   ],
   "installation": [
-    // Pre-INS-18 installation blogs
+    // Replacement and pre-INS-18 installation blogs
+    "old-aircond-disposal-replacement-malaysia",
     "cara-pilih-hp-aircond-bilik-malaysia",
     "professional-new-aircond-installation-kl-selangor-2026",
     "rm199-vs-rm300-aircond-installation-kl-renovator",
@@ -274,6 +275,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
   ],
   "dismantling-relocation": [
+    "old-aircond-disposal-replacement-malaysia",
     "aircond-dismantle-reinstallation-guide-malaysia",
     "aircond-installation-dismantling-kl-selangor-price-guide",
     "professional-new-aircond-installation-kl-selangor-2026",
@@ -509,6 +511,7 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "diy-aircond-cleaning-vs-chemical-wash-malaysia": ["chemical-wash", "basic-servicing"],
   "aircond-error-codes-blinking-lights-guide-malaysia": ["repair", "emergency"],
   "aircond-cleaning-after-haze-malaysia": ["chemical-wash", "basic-servicing"],
+  "old-aircond-disposal-replacement-malaysia": ["dismantling-relocation", "installation", "repair"],
 };
 
 

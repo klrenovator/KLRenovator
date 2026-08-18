@@ -6,6 +6,7 @@ import { newBlogBatch1 } from "./new-blog-batch1";
 import { newBlogBatch2 } from "./new-blog-batch2";
 import { newBlogBatch3 } from "./new-blog-batch3";
 import { newBlogBatch4 } from "./new-blog-batch4";
+import { newBlogBatch5 } from "./new-blog-batch5";
 
 export type BlogFaq = {
   q: string;
@@ -9688,6 +9689,9 @@ export const allPosts: BlogPost[] = [
 
   // ─── New multilingual SEO blogs (Batch 4): additions only, no replacements ──
   ...newBlogBatch4,
+
+  // ─── New multilingual SEO blogs (Batch 5): additions only, no replacements ──
+  ...newBlogBatch5,
 
 ];
 

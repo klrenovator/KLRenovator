@@ -8,7 +8,7 @@ Status legend: ✅ published · 🔨 next to build · ⬜ queued
 | 2 | DIY Aircond Cleaning vs Professional Chemical Wash | `diy-aircond-cleaning-vs-chemical-wash-malaysia` | ✅ PR #53 (2026-08-18) |
 | 3 | Aircond Error Codes & Blinking Lights Decoder (Malaysia) | `aircond-error-codes-blinking-lights-guide-malaysia` | ✅ PR #54 (2026-08-18) |
 | 4 | Post-Haze Aircond Cleaning Guide (Malaysia) | `aircond-cleaning-after-haze-malaysia` | ✅ this session (2026-08-18) |
-| 5 | Old Aircond Disposal & Responsible Replacement | `old-aircond-disposal-replacement-malaysia` | ⬜ |
+| 5 | Old Aircond Disposal & Responsible Replacement | `old-aircond-disposal-replacement-malaysia` | ✅ this session (2026-08-18) |
 | 6 | Mitsubishi vs Daikin Aircond Comparison (Malaysia) | `mitsubishi-vs-daikin-aircond-malaysia` | ⬜ |
 | 7 | Aircond Mould Prevention in Malaysia's Humid Climate | `aircond-mould-prevention-malaysia` | ⬜ |
 | 8 | Aircond Remote & Timer Features You Are Not Using | `aircond-remote-timer-features-guide-malaysia` | ⬜ |
