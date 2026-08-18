@@ -4,10 +4,18 @@ import { installationBlogBatch3 } from "./installation-blog-batch3";
 import { installationBlogBatch4 } from "./installation-blog-batch4";
 import { newBlogBatch1 } from "./new-blog-batch1";
 import { newBlogBatch2 } from "./new-blog-batch2";
+import { newBlogBatch3 } from "./new-blog-batch3";
 
+export type BlogFaq = {
+  q: string;
+  a: string;
+};
 
-/** Listing-safe fields only — avoids shipping full HTML bodies to blog index client bundle */
-export type BlogPostSummary = Omit<BlogPost, "content" | "contentMS" | "contentZH">;
+/** Listing-safe fields only — avoids shipping full HTML bodies or FAQ schema data to blog index client bundle */
+export type BlogPostSummary = Omit<
+  BlogPost,
+  "content" | "contentMS" | "contentZH" | "faqs" | "faqsMS" | "faqsZH"
+>;
 
 export type BlogPost = {
   slug: string;
@@ -28,6 +36,10 @@ export type BlogPost = {
   relatedService: string;
   image: string;
   imageAlt: string;
+  /** Optional visible Q&A mirrored into locale-specific FAQPage structured data. */
+  faqs?: BlogFaq[];
+  faqsMS?: BlogFaq[];
+  faqsZH?: BlogFaq[];
   content: string;
   contentMS: string;
   contentZH: string;
@@ -9670,10 +9682,21 @@ export const allPosts: BlogPost[] = [
   // ─── New multilingual SEO blogs (Batch 2): additions only, no replacements ──
   ...newBlogBatch2,
 
+  // ─── New multilingual SEO blogs (Batch 3): additions only, no replacements ──
+  ...newBlogBatch3,
+
 ];
 
-/** Lightweight list for blog index / cards — no content HTML bodies */
+/** Lightweight list for blog index / cards — no content HTML bodies or FAQ schema data */
 export const allPostSummaries: BlogPostSummary[] = allPosts.map(
-  ({ content: _c, contentMS: _ms, contentZH: _zh, ...summary }) => summary,
+  ({
+    content: _c,
+    contentMS: _ms,
+    contentZH: _zh,
+    faqs: _faqs,
+    faqsMS: _faqsMS,
+    faqsZH: _faqsZH,
+    ...summary
+  }) => summary,
 );
 

@@ -158,6 +158,8 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
 
   const serviceHref = localizedPath(`/services/${(BLOG_SERVICE_MAP[post.slug]?.[0] ?? "chemical-wash")}`);
   const areasHref = localizedPath("/areas/kuala-lumpur");
+  const localizedFaqs =
+    (lang === "ms" ? post.faqsMS : lang === "zh" ? post.faqsZH : post.faqs) ?? [];
 
   // BlogPosting Schema
   const blogPostingSchema = {
@@ -238,11 +240,33 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
     ],
   };
 
+  // Only posts with authored, visible locale-specific Q&A emit FAQPage.
+  // Existing blogs without these optional fields keep their current schema.
+  const faqSchema = localizedFaqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${postUrl}#faq`,
+        inLanguage: schemaLang,
+        mainEntity: localizedFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
       {/* Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
 
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
