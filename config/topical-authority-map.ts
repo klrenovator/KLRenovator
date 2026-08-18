@@ -176,6 +176,7 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
 // ── SERVICE → BLOG MAP (expanded) ─────────────────────────────────────────────
 export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
   "chemical-wash": [
+    "diy-aircond-cleaning-vs-chemical-wash-malaysia",
     "pressure-chemical-wash-leaking-aircond-kl-selangor",
     "smelly-aircond-foul-musty-odor-kl-selangor",
     "aircond-chemical-wash-price-malaysia-2026",
@@ -502,6 +503,7 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-installation-electrical-requirements-malaysia": ["installation", "repair"],
   "aircond-installation-checklist-homeowner-malaysia": ["installation", "basic-servicing", "maintenance-contract"],
   "aircond-dismantle-reinstallation-guide-malaysia": ["dismantling-relocation", "installation", "gas-topup"],
+  "diy-aircond-cleaning-vs-chemical-wash-malaysia": ["chemical-wash", "basic-servicing"],
 };
 
 
