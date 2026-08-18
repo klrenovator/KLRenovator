@@ -159,16 +159,16 @@ export const PROBLEM_BLOG_MAP_V2: Record<string, string[]> = {
   "aircond-low-gas": ["r32-r410a-r22-gas-difference", "aircond-not-cold-reasons", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-piping-distance-maximum-malaysia"],
   "aircond-gas-leak": ["r32-r410a-r22-gas-difference", "aircond-gas-topup-myths-malaysia", "aircond-troubleshooting-guide-malaysia", "10-costly-aircond-installation-mistakes-malaysia-2026"],
   "aircond-compressor-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "best-aircond-brands-malaysia-2026", "10-costly-aircond-installation-mistakes-malaysia-2026"],
-  "aircond-pcb-problem": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
+  "aircond-pcb-problem": ["aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
   "aircond-fan-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-maintenance-checklist-malaysia"],
-  "aircond-tripping-power": ["aircond-troubleshooting-guide-malaysia", "aircond-installation-electrical-requirements-malaysia", "aircond-installation-old-house-wiring-malaysia"],
+  "aircond-tripping-power": ["aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-installation-electrical-requirements-malaysia", "aircond-installation-old-house-wiring-malaysia"],
   "aircond-remote-not-working": ["aircond-troubleshooting-guide-malaysia", "aircond-maintenance-checklist-malaysia"],
   "aircond-indoor-unit-leaking": ["aircond-water-leaking-causes", "signs-your-aircon-needs-chemical-overhaul-malaysia", "chemical-wash-vs-chemical-overhaul", "concealed-piping-aircond-installation-malaysia"],
   "aircond-outdoor-unit-not-running": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-outdoor-unit-placement-malaysia", "aircond-installation-electrical-requirements-malaysia"],
   "aircond-high-electricity-bill": ["how-to-reduce-aircond-electricity-bill-malaysia", "inverter-vs-non-inverter-aircond-malaysia", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "best-hp-aircond-bedroom-size-guide-malaysia"],
   "aircond-weak-airflow": ["aircond-chemical-wash-price-malaysia-2026", "how-often-service-aircond-malaysia", "aircond-maintenance-checklist-malaysia", "best-hp-aircond-bedroom-size-guide-malaysia"],
   "aircond-not-turning-on": ["aircond-troubleshooting-guide-malaysia", "aircond-lifespan-malaysia", "aircond-installation-electrical-requirements-malaysia"],
-  "aircond-blinking-light": ["aircond-troubleshooting-guide-malaysia", "aircond-installation-warranty-what-covers-malaysia"],
+  "aircond-blinking-light": ["aircond-error-codes-blinking-lights-guide-malaysia", "aircond-troubleshooting-guide-malaysia", "aircond-installation-warranty-what-covers-malaysia"],
   "aircond-water-dripping": ["aircond-water-leaking-causes", "aircond-chemical-wash-price-malaysia-2026", "signs-your-aircon-needs-chemical-overhaul-malaysia", "concealed-piping-aircond-installation-malaysia"],
   "aircond-thermostat-problems": ["aircond-troubleshooting-guide-malaysia", "how-often-service-aircond-malaysia"],
 };
@@ -204,6 +204,7 @@ export const SERVICE_BLOG_MAP_V2: Record<string, string[]> = {
     "gas-topup-with-vs-without-leak-check-malaysia-2026",
   ],
   "repair": [
+    "aircond-error-codes-blinking-lights-guide-malaysia",
     "baiki-vs-tukar-baru-aircond-malaysia",
     "aircond-troubleshooting-repair-kl-selangor-leaks-noise-wiring",
     "aircond-troubleshooting-guide-malaysia",
@@ -504,6 +505,7 @@ export const BLOG_SERVICE_MAP: Record<string, string[]> = {
   "aircond-installation-checklist-homeowner-malaysia": ["installation", "basic-servicing", "maintenance-contract"],
   "aircond-dismantle-reinstallation-guide-malaysia": ["dismantling-relocation", "installation", "gas-topup"],
   "diy-aircond-cleaning-vs-chemical-wash-malaysia": ["chemical-wash", "basic-servicing"],
+  "aircond-error-codes-blinking-lights-guide-malaysia": ["repair", "emergency"],
 };
 
 
