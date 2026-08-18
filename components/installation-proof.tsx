@@ -1,4 +1,3 @@
-import Image from "next/image";
 import NextLink from "next/link";
 import { FaStar, FaCamera, FaQuoteLeft } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
@@ -21,39 +20,8 @@ import { googleReviews, googlePlace } from "@/config/reviews";
 
 export type ProofLocale = "en" | "ms" | "zh";
 
-/** Real installation photos (subset of GALLERY_ITEMS, installation only). */
-const INSTALLATION_PHOTOS = [
-  {
-    src: "/hero/aircond-installation-kuala-lumpur.webp",
-    alt: "KL Renovator technician installing a wall-mounted aircond unit in a Kuala Lumpur apartment",
-    caption: "Wall-mounted install · Kuala Lumpur",
-  },
-  {
-    src: "/hero/aircond-bracket-installation-kl-renovator.webp",
-    alt: "Outdoor compressor bracket securely mounted on wall during aircond installation by KL Renovator",
-    caption: "Outdoor bracket mounting · KL",
-  },
-  {
-    src: "/hero/aircond-ceiling-cassette-installation-commercial.webp",
-    alt: "Ceiling cassette aircond unit being fitted in a commercial office space in KL",
-    caption: "Ceiling cassette · Commercial office",
-  },
-  {
-    src: "/hero/aircond-new-installation-petaling-jaya.webp",
-    alt: "Fresh aircond installation with clean copper pipe and drain line setup in Petaling Jaya",
-    caption: "Copper pipe & drain routing · PJ",
-  },
-  {
-    src: "/hero/aircond-installation-double-unit-kl.webp",
-    alt: "Two wall-mounted aircond units installed side by side in a Kuala Lumpur home",
-    caption: "Multi-unit install · KL home",
-  },
-  {
-    src: "/hero/aircond-compressor-installation-new-kl.webp",
-    alt: "Brand new aircond outdoor compressor unit being connected and sealed by KL Renovator technician",
-    caption: "Compressor connection & sealing · KL",
-  },
-] as const;
+/** Installation photos are not inlined here — each page already has its own
+ *  unique hero, and repeating a shared photo set would violate one-photo-one-location. */
 
 const COPY: Record<
   ProofLocale,
@@ -118,51 +86,22 @@ export function InstallationProof({
   showReviews?: boolean;
 }) {
   const t = COPY[locale];
-  const photos = INSTALLATION_PHOTOS.slice(0, photoCount);
   const reviews = googleReviews.slice(0, reviewCount);
 
   return (
     <>
-      {/* ── Real project photos ─────────────────────────────────────── */}
-      <section className="border-t border-slate-100 bg-white px-4 py-14">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-8 text-center">
-            <p className="mb-2 inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-sky-600">
-              <FaCamera className="h-3.5 w-3.5" />
-              {t.photoEyebrow}
-            </p>
-            <h2 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl">
-              {t.photoTitle}
-            </h2>
-            <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600">{t.photoSub}</p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-            {photos.map((photo) => (
-              <figure
-                key={photo.src}
-                className="group overflow-hidden rounded-2xl border border-slate-100 bg-slate-50"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 380px"
-                    loading="lazy"
-                    decoding="async"
-                    quality={72}
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <figcaption className="px-3 py-2.5 text-[11px] font-bold uppercase tracking-wide text-slate-600">
-                  {photo.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-
-          <div className="mt-7 text-center">
+      {/* Photos live on /gallery so this reusable block never repeats a job photo. */}
+      <section className="border-t border-slate-100 bg-white px-4 py-10">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="mb-2 inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-sky-600">
+            <FaCamera className="h-3.5 w-3.5" />
+            {t.photoEyebrow}
+          </p>
+          <h2 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl">
+            {t.photoTitle}
+          </h2>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600">{t.photoSub}</p>
+          <div className="mt-6">
             <NextLink
               href={`${localePrefix(locale)}/gallery`}
               className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-sky-600 transition-colors hover:text-sky-800"

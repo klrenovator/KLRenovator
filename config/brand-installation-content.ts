@@ -426,7 +426,7 @@ export function getBrandInstallationContent(
     metaDescription,
     ogTitle: metaTitle,
     ogDescription: metaDescription,
-    ogImage: brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp",
+    ogImage: "/logo/image.png",
     ogImageAlt:
       locale === "en"
         ? `${name} aircond installation`

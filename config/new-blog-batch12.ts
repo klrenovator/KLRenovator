@@ -38,7 +38,7 @@ export const newBlogBatch12: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 10,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/daikin-aircond-new-installation-klang-67.webp",
+    image: "/hero/generic-aircond-chemical-wash-rawang-150.webp",
     imageAlt:
       "Newly installed Daikin wall-mounted aircond with clean copper piping in Klang",
     faqs: [

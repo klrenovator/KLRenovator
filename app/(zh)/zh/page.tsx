@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "KL Renovator",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/york-aircond-chemical-wash-puchong-37.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator - 吉隆坡与雪兰莪冷气专家",

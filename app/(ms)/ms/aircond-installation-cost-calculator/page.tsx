@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Kalkulator Kos Pemasangan Aircond Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Kalkulator Kos Pemasangan Aircond Malaysia"),
     description: "Anggaran kos pemasangan aircond serta-merta — buruh & bahan dengan diskaun pakej.",
-    images: ["https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

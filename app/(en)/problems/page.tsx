@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp",
+        url: "https://www.klrenovator.com/hero/midea-aircond-gas-topup-r32-puchong-39.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator Aircond Problems Guide — KL & Selangor",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Aircond Problems Guide KL & Selangor | KL Renovator"),
     description: "Complete aircond problems guide — not cold, water leaking, noise, bad smell, blinking lights. Same-day service.",
-    images: ["https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp"],
+    images: ["https://www.klrenovator.com/hero/midea-aircond-gas-topup-r32-puchong-39.webp"],
   },
   alternates: buildTrilingualHreflang("/problems"),
 };
@@ -72,7 +72,7 @@ export default function ProblemsPage() {
       <section className="py-16 sm:py-24 bg-white border-b border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-repair-technician-klang-valley.webp"
+            src="/hero/midea-aircond-gas-topup-r32-puchong-39.webp"
             alt="KL Renovator aircond repair technician diagnosing problems"
             fill
             sizes="100vw"

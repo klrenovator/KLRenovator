@@ -157,7 +157,7 @@ export const installationPageContent: Record<
     en: {
       metaTitle: "1HP Aircond Installation KL — From RM199 | Bedroom Cooling | KL Renovator",
       metaDescription: "1HP aircond installation in KL & Selangor from RM199. Ideal for bedrooms up to 130 sq ft. Same-day slots, 7ft copper pipe included, 1-month warranty.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "1HP Aircond Installation KL Selangor",
       eyebrow: "1HP Wall-Mounted Installation Specialists",
       h1: "1HP Aircond Installation KL & Selangor",
@@ -200,7 +200,7 @@ export const installationPageContent: Record<
     ms: {
       metaTitle: "Pemasangan Aircond 1HP KL — Dari RM199 | Sejuk Bilik | KL Renovator",
       metaDescription: "Pemasangan aircond 1HP di KL & Selangor dari RM199. Sesuai untuk bilik tidur sehingga 130 kaki persegi. Hari sama, paip tembaga 7ft, waranti 1 bulan.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Pemasangan Aircond 1HP KL Selangor",
       eyebrow: "Pakar Pemasangan 1HP Dinding",
       h1: "Pemasangan Aircond 1HP KL & Selangor",
@@ -243,7 +243,7 @@ export const installationPageContent: Record<
     zh: {
       metaTitle: "1匹冷气安装 KL — RM199起 | 卧室制冷 | KL Renovator",
       metaDescription: "吉隆坡和雪兰莪1匹冷气安装RM199起。适合130平方英尺以下卧室。当天服务，含7尺铜管，1个月保修。WhatsApp +60182983573",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "1匹冷气安装 吉隆坡雪兰莪",
       eyebrow: "1匹挂壁式冷气安装专家",
       h1: "1匹冷气安装 吉隆坡 & 雪兰莪",
@@ -288,7 +288,7 @@ export const installationPageContent: Record<
     en: {
       metaTitle: "1.5HP Aircond Installation KL — From RM199 | Master Bedroom | KL Renovator",
       metaDescription: "1.5HP aircond installation in KL & Selangor from RM199. Best for master bedrooms & small living rooms up to 180 sq ft. Same-day, 1-month warranty.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "1.5HP Aircond Installation KL Selangor",
       eyebrow: "1.5HP Wall-Mounted Installation Specialists",
       h1: "1.5HP Aircond Installation KL & Selangor",
@@ -331,7 +331,7 @@ export const installationPageContent: Record<
     ms: {
       metaTitle: "Pemasangan Aircond 1.5HP KL — Dari RM199 | Bilik Tidur Utama | KL Renovator",
       metaDescription: "Pemasangan aircond 1.5HP di KL & Selangor dari RM199. Terbaik untuk bilik tidur utama & ruang tamu kecil sehingga 180 kaki persegi. Waranti 1 bulan.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Pemasangan Aircond 1.5HP KL Selangor",
       eyebrow: "Pakar Pemasangan 1.5HP Dinding",
       h1: "Pemasangan Aircond 1.5HP KL & Selangor",
@@ -374,7 +374,7 @@ export const installationPageContent: Record<
     zh: {
       metaTitle: "1.5匹冷气安装 KL — RM199起 | 主卧客厅 | KL Renovator",
       metaDescription: "吉隆坡和雪兰莪1.5匹冷气安装RM199起。适合180平方英尺以下主卧和小客厅。当天服务、真空泵调试、1个月保修。WhatsApp +60182983573",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "1.5匹冷气安装 吉隆坡雪兰莪",
       eyebrow: "1.5匹挂壁式冷气安装专家",
       h1: "1.5匹冷气安装 吉隆坡 & 雪兰莪",
@@ -419,7 +419,7 @@ export const installationPageContent: Record<
     en: {
       metaTitle: "2HP Aircond Installation KL — From RM249 | Large Rooms | KL Renovator",
       metaDescription: "2HP aircond installation in KL & Selangor from RM249. Best for large living rooms, open-plan spaces & master suites up to 250 sq ft. 1-month warranty.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "2HP Aircond Installation KL Selangor",
       eyebrow: "2HP Wall-Mounted Installation Specialists",
       h1: "2HP Aircond Installation KL & Selangor",
@@ -462,7 +462,7 @@ export const installationPageContent: Record<
     ms: {
       metaTitle: "Pemasangan Aircond 2HP KL — Dari RM249 | Bilik Besar | KL Renovator",
       metaDescription: "Pemasangan aircond 2HP di KL & Selangor dari RM249. Terbaik untuk ruang tamu besar, ruang terbuka & suite utama sehingga 250 kaki persegi. Hari sama.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Pemasangan Aircond 2HP KL Selangor",
       eyebrow: "Pakar Pemasangan 2HP Dinding",
       h1: "Pemasangan Aircond 2HP KL & Selangor",
@@ -505,7 +505,7 @@ export const installationPageContent: Record<
     zh: {
       metaTitle: "2匹冷气安装 KL — RM249起 | 大房间 | KL Renovator",
       metaDescription: "吉隆坡和雪兰莪2匹冷气安装RM249起。适合250平方英尺以下大客厅、开放式空间和主卧套房。当天服务，1个月保修。WhatsApp +60182983573",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "2匹冷气安装 吉隆坡雪兰莪",
       eyebrow: "2匹挂壁式冷气安装专家",
       h1: "2匹冷气安装 吉隆坡 & 雪兰莪",
@@ -550,7 +550,7 @@ export const installationPageContent: Record<
     en: {
       metaTitle: "Wall-Mounted Aircond Installation KL — From RM199 | All Brands | KL Renovator",
       metaDescription: "Wall-mounted aircond installation in KL & Selangor from RM199. Split unit fitting for all 20 brands, 1–5HP. Same-day, vacuum pump, 1-month warranty.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Wall-Mounted Aircond Installation KL Selangor",
       eyebrow: "Wall-Mounted Split Unit Specialists",
       h1: "Wall-Mounted Aircond Installation KL & Selangor",
@@ -596,7 +596,7 @@ export const installationPageContent: Record<
     ms: {
       metaTitle: "Pemasangan Aircond Dinding KL — Dari RM199 | Semua Jenama | KL Renovator",
       metaDescription: "Pemasangan aircond dinding di KL & Selangor dari RM199. Pemasangan unit split untuk semua 20 jenama, 1–5HP. Hari sama, pam vakum, waranti 1 bulan.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Pemasangan Aircond Dinding KL Selangor",
       eyebrow: "Pakar Unit Split Dinding",
       h1: "Pemasangan Aircond Dinding KL & Selangor",
@@ -642,7 +642,7 @@ export const installationPageContent: Record<
     zh: {
       metaTitle: "挂壁式冷气安装 KL — RM199起 | 全品牌 | KL Renovator",
       metaDescription: "吉隆坡和雪兰莪挂壁式冷气安装RM199起。分体机安装覆盖20个品牌，1–5匹。当天服务、真空泵调试、1个月保修。WhatsApp +60182983573",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-wall-mounted-kl.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "挂壁式冷气安装 吉隆坡雪兰莪",
       eyebrow: "挂壁式分体机安装专家",
       h1: "挂壁式冷气安装 吉隆坡 & 雪兰莪",
@@ -690,7 +690,7 @@ export const installationPageContent: Record<
     en: {
       metaTitle: "Ceiling Cassette Installation KL — From RM290 | Commercial & Homes | KL Renovator",
       metaDescription: "Ceiling cassette aircond installation in KL & Selangor from RM290. Commercial & residential 4-way cassette fitting. Same-day, 1-month warranty.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Ceiling Cassette Installation KL Selangor",
       eyebrow: "Ceiling Cassette Installation Specialists",
       h1: "Ceiling Cassette Installation KL & Selangor",
@@ -734,7 +734,7 @@ export const installationPageContent: Record<
     ms: {
       metaTitle: "Pemasangan Ceiling Cassette KL — Dari RM290 | Komersial & Rumah | KL Renovator",
       metaDescription: "Pemasangan aircond ceiling cassette di KL & Selangor dari RM290. Pemasangan 4-way cassette komersial & kediaman. Hari sama, waranti 1 bulan.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Pemasangan Ceiling Cassette KL Selangor",
       eyebrow: "Pakar Pemasangan Ceiling Cassette",
       h1: "Pemasangan Ceiling Cassette KL & Selangor",
@@ -778,7 +778,7 @@ export const installationPageContent: Record<
     zh: {
       metaTitle: "天花板卡式冷气安装 KL — RM290起 | 商用与住宅 | KL Renovator",
       metaDescription: "吉隆坡和雪兰莪天花板卡式机安装RM290起。商用与住宅四向卡式机安装。当天服务、含排水泵、1个月保修。WhatsApp +60182983573",
-      ogImage: "https://www.klrenovator.com/hero/aircond-ceiling-cassette-installation-commercial.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "天花板卡式机安装 吉隆坡雪兰莪",
       eyebrow: "天花板卡式机安装专家",
       h1: "天花板卡式冷气安装 吉隆坡 & 雪兰莪",
@@ -824,7 +824,7 @@ export const installationPageContent: Record<
     en: {
       metaTitle: "Window Unit Installation KL — From RM199 | Budget Cooling | KL Renovator",
       metaDescription: "Window aircond installation in KL & Selangor from RM199. Budget-friendly window unit fitting for homes, rented rooms & older apartments. Same-day.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Window Aircond Installation KL Selangor",
       eyebrow: "Window Unit Installation Specialists",
       h1: "Window Aircond Installation KL & Selangor",
@@ -882,7 +882,7 @@ export const installationPageContent: Record<
     ms: {
       metaTitle: "Pemasangan Aircond Tingkap KL — Dari RM199 | Penyejukan Ekonomi | KL Renovator",
       metaDescription: "Pemasangan aircond tingkap di KL & Selangor dari RM199. Pemasangan unit tingkap mesra bajet untuk rumah, bilik sewa & pangsapuri lama. Hari sama.",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "Pemasangan Aircond Tingkap KL Selangor",
       eyebrow: "Pakar Pemasangan Unit Tingkap",
       h1: "Pemasangan Aircond Tingkap KL & Selangor",
@@ -940,7 +940,7 @@ export const installationPageContent: Record<
     zh: {
       metaTitle: "窗口式冷气安装 KL — RM199起 | 经济制冷 | KL Renovator",
       metaDescription: "吉隆坡和雪兰莪窗口式冷气安装RM199起。适合出租屋、旧公寓和经济型家庭。当天服务、1个月保修。WhatsApp +60182983573",
-      ogImage: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+      ogImage: "https://www.klrenovator.com/logo/image.png",
       ogImageAlt: "窗口式冷气安装 吉隆坡雪兰莪",
       eyebrow: "窗口式冷气安装专家",
       h1: "窗口式冷气安装 吉隆坡 & 雪兰莪",

@@ -782,7 +782,7 @@ export function getKampungInstallationContent(
     metaDescription,
     ogTitle: metaTitle,
     ogDescription: metaDescription,
-    ogImage: parent.heroImage || "/hero/aircond-installation-kuala-lumpur.webp",
+    ogImage: "/logo/image.png",
     ogImageAlt:
       locale === "en"
         ? `Aircond installation in ${name}`

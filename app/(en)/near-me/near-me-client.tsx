@@ -192,9 +192,9 @@ const T = {
 };
 
 const workPhotos = [
-  { src: "/hero/aircond-repair-technician-klang-valley.webp", alt: "KL Renovator technician servicing an aircond unit in Klang Valley" },
-  { src: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp", alt: "Pressure chemical wash being carried out on an aircond unit in Kepong, KL" },
-  { src: "/hero/aircond-installation-wall-mounted-kl.webp", alt: "Wall-mounted aircond installation by KL Renovator in Kuala Lumpur" },
+  { src: "/logo/image.png", alt: "KL Renovator technician servicing an aircond unit in Klang Valley" },
+  { src: "/logo/image.png", alt: "Pressure chemical wash being carried out on an aircond unit in Kepong, KL" },
+  { src: "/logo/image.png", alt: "Wall-mounted aircond installation by KL Renovator in Kuala Lumpur" },
 ];
 
 export default function NearMeClient({ initialLang }: { initialLang?: "en" | "ms" | "zh" } = {}) {

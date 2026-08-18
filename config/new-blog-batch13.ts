@@ -38,7 +38,7 @@ export const newBlogBatch13: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 10,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-bracket-installation-kl-renovator.webp",
+    image: "/hero/generic-aircond-chemical-wash-shah-alam-119.webp",
     imageAlt:
       "Outdoor aircond compressor bracket being installed by KL Renovator in Kuala Lumpur",
     faqs: [

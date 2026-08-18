@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     locale: "en_MY",
     url: "https://www.klrenovator.com/aircond-installation-kl",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp", width: 1200, height: 630, alt: "Aircond Installation KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Aircond Installation KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Aircond Installation KL & Selangor — From RM199 | KL Renovator", description: "Professional aircond installation from RM199. Same-day, all brands, 1-month warranty. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"] },
+  twitter: { card: "summary_large_image", title: "Aircond Installation KL & Selangor — From RM199 | KL Renovator", description: "Professional aircond installation from RM199. Same-day, all brands, 1-month warranty. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/aircond-installation-kl", languages: { "en-MY": "https://www.klrenovator.com/aircond-installation-kl", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-kl", "zh-MY": "https://www.klrenovator.com/zh/aircond-installation-kl", "x-default": "https://www.klrenovator.com/aircond-installation-kl" } },
 };
@@ -135,7 +135,7 @@ export default function AircondInstallationKLPage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
         <Image
-          src="/hero/aircond-installation-kuala-lumpur.webp"
+          src="/logo/image.png"
           alt="KL Renovator technician performing professional aircond installation Kuala Lumpur"
           fill
           priority

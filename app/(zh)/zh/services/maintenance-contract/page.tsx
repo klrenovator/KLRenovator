@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website", locale: "zh_MY", alternateLocale: ["en_MY", "ms_MY"],
     images: getServiceOGImages("maintenance-contract", "zh"),
   },
-  twitter: { card: "summary_large_image", title: clampMetaTitle("冷气年度保养合同 吉隆坡及雪兰莪 | KL Renovator"), description: "年度计划节省高达30%。从 RM 299/年起。", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
+  twitter: { card: "summary_large_image", title: clampMetaTitle("冷气年度保养合同 吉隆坡及雪兰莪 | KL Renovator"), description: "年度计划节省高达30%。从 RM 299/年起。", images: ["https://www.klrenovator.com/hero/aux-aircond-basic-servicing-shah-alam-53.webp"] },
   alternates: {
     canonical: "https://www.klrenovator.com/zh/services/maintenance-contract",
     languages: { "en-MY": "https://www.klrenovator.com/services/maintenance-contract", "ms-MY": "https://www.klrenovator.com/ms/services/maintenance-contract", "zh-MY": "https://www.klrenovator.com/zh/services/maintenance-contract", "x-default": "https://www.klrenovator.com/services/maintenance-contract" },

@@ -53,7 +53,7 @@ export async function generateMetadata({
       alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
-          url: `https://www.klrenovator.com${brand.heroImage || "/hero/aircond-installation-kuala-lumpur.webp"}`,
+          url: `https://www.klrenovator.com${brand.heroImage || "/logo/image.png"}`,
           width: 1200,
           height: 630,
           alt: `Aircond Service ${brand.name} KL & Selangor — KL Renovator`,

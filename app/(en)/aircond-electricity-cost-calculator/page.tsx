@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/hero/midea-aircond-chemical-wash-klang-61.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Aircond Electricity Cost Calculator Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Aircond Electricity Cost Calculator Malaysia"),
     description: "Estimate your monthly aircond electricity bill by HP & usage.",
-    images: ["https://www.klrenovator.com/hero/midea-aircond-chemical-wash-klang-61.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

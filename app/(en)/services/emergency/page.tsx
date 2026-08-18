@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-repair-technician-klang-valley.webp",
+        url: "https://www.klrenovator.com/hero/acson-aircond-pcb-board-repair-klang-71.webp",
         width: 1200,
         height: 630,
         alt: "Emergency Aircond Repair KL Renovator Same-Day Service",

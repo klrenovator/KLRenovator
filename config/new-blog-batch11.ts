@@ -38,7 +38,7 @@ export const newBlogBatch11: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 11,
     relatedService: "Troubleshooting & Repairs",
-    image: "/hero/aircond-repair-technician-klang-valley.webp",
+    image: "/hero/generic-aircond-chemical-wash-rawang-105.webp",
     imageAlt:
       "KL Renovator technician inspecting an indoor aircond unit during a diagnostic visit in the Klang Valley",
     faqs: [

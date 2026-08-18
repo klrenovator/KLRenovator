@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-new-installation-petaling-jaya.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Kalkulator Penjimatan Aircond Inverter Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Kalkulator Penjimatan Aircond Inverter Malaysia"),
     description: "Bukan inverter vs inverter — penjimatan & tempoh pulangan dalam satu klik.",
-    images: ["https://www.klrenovator.com/hero/aircond-new-installation-petaling-jaya.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

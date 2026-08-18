@@ -7,47 +7,11 @@ import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { translations, useLang, type Lang } from "@/context/language-context";
 
-// SEO-optimised filenames — keyword-rich, no date-stamps
+// Homepage-only photograph — must not be reused on any other page.
 const HERO_IMAGES = [
   {
-    src: "/hero/aircond-installation-kuala-lumpur.webp",
-    alt: "KL Renovator technician performing professional aircond installation Kuala Lumpur",
-  },
-  {
-    src: "/hero/aircond-installation-wall-mounted-kl.webp",
-    alt: "Professional wall-mounted aircond installation service KL Renovator Selangor",
-  },
-  {
-    src: "/hero/aircond-pressure-chemical-wash-selangor.webp",
-    alt: "Aircond pressure chemical wash deep cleaning indoor unit Selangor",
-  },
-  {
-    src: "/hero/aircond-repair-technician-klang-valley.webp",
-    alt: "HVAC technician aircond repair troubleshooting Klang Valley KL Renovator",
-  },
-  {
-    src: "/hero/aircond-compressor-flaring-repair-kl.webp",
-    alt: "Aircond compressor copper pipe flaring repair Kuala Lumpur",
-  },
-  {
-    src: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
-    alt: "Aircond gas top-up R32 R410A R22 refrigerant balancing Selangor",
-  },
-  {
-    src: "/hero/aircond-pcb-board-replacement-kl.webp",
-    alt: "Daikin Panasonic Mitsubishi aircond PCB board replacement Kuala Lumpur",
-  },
-  {
-    src: "/hero/aircond-installation-ampang-selangor.webp",
-    alt: "Ceiling cassette aircond installation commercial office Ampang Selangor",
-  },
-  {
-    src: "/hero/aircond-bracket-installation-kl-renovator.webp",
-    alt: "Aircond outdoor bracket installation copper pipe routing Shah Alam Subang",
-  },
-  {
-    src: "/hero/aircond-sensor-replacement-klang-valley.webp",
-    alt: "KL Renovator aircond temperature sensor replacement Klang Valley Malaysia",
+    src: "/hero/york-aircond-chemical-wash-puchong-37.webp",
+    alt: "KL Renovator technician performing professional aircond chemical wash in Puchong, Selangor",
   },
 ];
 

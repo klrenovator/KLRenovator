@@ -38,7 +38,7 @@ export const newBlogBatch10: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 10,
     relatedService: "Basic Servicing / Routine Maintenance",
-    image: "/hero/samsung-aircond-basic-servicing-puchong-41.webp",
+    image: "/hero/generic-aircond-chemical-wash-puchong-121.webp",
     imageAlt:
       "Wall-mounted aircond receiving basic servicing and filter cleaning in a Puchong home",
     faqs: [

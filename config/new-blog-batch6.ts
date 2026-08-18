@@ -50,7 +50,7 @@ export const newBlogBatch6: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 11,
     relatedService: "New Unit Installation",
-    image: "/hero/mitsubishi-aircond-chemical-wash-subang-jaya-25.webp",
+    image: "/hero/midea-aircond-chemical-wash-klang-61.webp",
     imageAlt:
       "Mitsubishi wall-mounted aircond receiving a professional chemical wash in Subang Jaya",
     faqs: [

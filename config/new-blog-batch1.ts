@@ -43,7 +43,7 @@ export const newBlogBatch1: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 12,
     relatedService: "Dismantle & Relocation",
-    image: "/hero/mitsubishi-aircond-dismantle-relocation-klang-69.webp",
+    image: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp",
     imageAlt:
       "Mitsubishi split-unit outdoor condenser being prepared for professional dismantle and relocation in Klang",
     content: `

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+        url: "https://www.klrenovator.com/hero/lg-aircond-gas-topup-r32-shah-alam-51.webp",
         width: 1200,
         height: 630,
         alt: "Soalan Lazim KL Renovator — Servis Aircond KL & Selangor",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator"),
     description: "Jawapan jujur mengenai harga servis aircond, waranti & kawasan liputan. WhatsApp untuk sebut harga hari sama.",
-    images: ["https://www.klrenovator.com/hero/aircond-gas-topup-r32-r410a-selangor.webp"],
+    images: ["https://www.klrenovator.com/hero/lg-aircond-gas-topup-r32-shah-alam-51.webp"],
   },
 };
 

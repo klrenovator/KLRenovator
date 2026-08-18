@@ -13,7 +13,7 @@ export type ServiceOGImage = {
 
 export const SERVICE_OG_IMAGES: Record<string, ServiceOGImage> = {
   "chemical-wash": {
-    url: "/hero/aircond-pressure-chemical-wash-selangor.webp",
+    url: "/hero/acson-aircond-chemical-wash-shah-alam-49.webp",
     width: 1200,
     height: 630,
     alt: "KL Renovator Pressure Chemical Wash — Deep cleaning wall-mounted aircond in Selangor",
@@ -21,7 +21,7 @@ export const SERVICE_OG_IMAGES: Record<string, ServiceOGImage> = {
     altZH: "KL Renovator 高压化学清洗 — 雪兰莪壁挂式冷气深度清洁",
   },
   "chemical-overhaul": {
-    url: "/hero/aircond-chemical-overhaul-ampang-selangor.webp",
+    url: "/hero/acson-aircond-chemical-overhaul-puchong-38.webp",
     width: 1200,
     height: 630,
     alt: "KL Renovator Chemical Overhaul — Full dismantle deep clean in Ampang Selangor",
@@ -29,7 +29,7 @@ export const SERVICE_OG_IMAGES: Record<string, ServiceOGImage> = {
     altZH: "KL Renovator 化学大修 — 安邦雪兰莪全面拆卸深度清洁",
   },
   "gas-topup": {
-    url: "/hero/aircond-gas-topup-r32-r410a-selangor.webp",
+    url: "/hero/acson-aircond-gas-topup-r32-subang-jaya-27.webp",
     width: 1200,
     height: 630,
     alt: "KL Renovator Gas Top-Up — R32 R410A precision balancing in Selangor",
@@ -69,7 +69,7 @@ export const SERVICE_OG_IMAGES: Record<string, ServiceOGImage> = {
     altZH: "KL Renovator 天花板卡式机 — 商业安装与服务",
   },
   "dismantling-relocation": {
-    url: "/hero/daikin-aircond-dismantle-relocation-puchong-45.webp",
+    url: "/hero/aux-aircond-dismantle-relocation-kuala-lumpur-9.webp",
     width: 1200,
     height: 630,
     alt: "KL Renovator Dismantle & Relocation — Safe aircond removal in Puchong",
@@ -85,7 +85,7 @@ export const SERVICE_OG_IMAGES: Record<string, ServiceOGImage> = {
     altZH: "KL Renovator 紧急维修 — 吉隆坡雪兰莪当天紧急冷气服务",
   },
   "maintenance-contract": {
-    url: "/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+    url: "/hero/aux-aircond-basic-servicing-shah-alam-53.webp",
     width: 1200,
     height: 630,
     alt: "KL Renovator Maintenance Contract — Annual AMC servicing with canvas protection",
@@ -94,7 +94,7 @@ export const SERVICE_OG_IMAGES: Record<string, ServiceOGImage> = {
   },
   // Fallback for any unknown slug
   _default: {
-    url: "/hero/aircond-installation-kuala-lumpur.webp",
+    url: "/logo/image.png",
     width: 1200,
     height: 630,
     alt: "KL Renovator Aircond Service — Expert servicing across KL & Selangor",

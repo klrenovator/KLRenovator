@@ -46,7 +46,7 @@ export const newBlogBatch7: BlogPost[] = [
     lastReviewed: "2026-08-18",
     readTime: 11,
     relatedService: "Pressure Chemical Wash",
-    image: "/hero/panasonic-aircond-chemical-overhaul-kuala-lumpur-2.webp",
+    image: "/hero/mitsubishi-aircond-chemical-wash-subang-jaya-25.webp",
     imageAlt:
       "Panasonic indoor unit opened for a professional chemical overhaul deep clean in Kuala Lumpur",
     faqs: [

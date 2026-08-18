@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website", locale: "ms_MY", alternateLocale: ["en_MY", "zh_MY"],
     images: getServiceOGImages("maintenance-contract", "ms"),
   },
-  twitter: { card: "summary_large_image", title: clampMetaTitle("Kontrak Penyelenggaraan Aircond KL & Selangor | KL Renovator"), description: "Jimat sehingga 30% dengan pelan tahunan. Dari RM 299/tahun.", images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"] },
+  twitter: { card: "summary_large_image", title: clampMetaTitle("Kontrak Penyelenggaraan Aircond KL & Selangor | KL Renovator"), description: "Jimat sehingga 30% dengan pelan tahunan. Dari RM 299/tahun.", images: ["https://www.klrenovator.com/hero/aux-aircond-basic-servicing-shah-alam-53.webp"] },
   alternates: {
     canonical: "https://www.klrenovator.com/ms/services/maintenance-contract",
     languages: { "en-MY": "https://www.klrenovator.com/services/maintenance-contract", "ms-MY": "https://www.klrenovator.com/ms/services/maintenance-contract", "zh-MY": "https://www.klrenovator.com/zh/services/maintenance-contract", "x-default": "https://www.klrenovator.com/services/maintenance-contract" },

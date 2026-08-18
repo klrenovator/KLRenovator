@@ -97,7 +97,7 @@ export default function BlogIndexClient({ posts, initialLang = "en" }: { posts: 
       <section className="py-16 sm:py-24 bg-white relative overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-chemical-overhaul-ampang-selangor.webp"
+            src="/logo/image.png"
             alt="KL Renovator aircond tips and guides Kuala Lumpur"
             fill
             sizes="100vw"

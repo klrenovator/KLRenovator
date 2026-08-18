@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     locale: "zh_MY",
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
-      { url: "https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp", width: 1200, height: 630, alt: "联系 KL Renovator — 吉隆坡及雪兰莪冷气服务" },
+      { url: "https://www.klrenovator.com/hero/aircond-pcb-board-replacement-kl.webp", width: 1200, height: 630, alt: "联系 KL Renovator — 吉隆坡及雪兰莪冷气服务" },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
     description: "最快响应 via WhatsApp — 吉隆坡及雪兰莪当天冷气服务。化学清洗从 RM 120 起。",
-    images: ["https://www.klrenovator.com/hero/aircond-sensor-replacement-klang-valley.webp"],
+    images: ["https://www.klrenovator.com/hero/aircond-pcb-board-replacement-kl.webp"],
   },
 };
 
@@ -129,7 +129,7 @@ export default function ContactPageZH() {
       <section className="relative bg-white overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.07]">
           <Image
-            src="/hero/aircond-sensor-replacement-klang-valley.webp"
+            src="/hero/aircond-pcb-board-replacement-kl.webp"
             alt="KL Renovator 技术员在吉隆坡维修冷气"
             fill
             sizes="100vw"

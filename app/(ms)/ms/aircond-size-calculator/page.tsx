@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Kalkulator Saiz Aircond Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia"),
     description: "Saiz bilik ke HP & BTU — cari kapasiti aircond yang betul.",
-    images: ["https://www.klrenovator.com/hero/aircond-installation-ampang-selangor.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

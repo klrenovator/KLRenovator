@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "KL Renovator — 我需要哪种冷气服务？",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("我需要哪种冷气服务？"),
     description: "回答4个问题 — 获得正确的冷气服务和价格。",
-    images: ["https://www.klrenovator.com/hero/aircond-chemical-service-canvas-wrap-kl.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 

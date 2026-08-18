@@ -29,7 +29,7 @@ export const installationBlogBatch1: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 8,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/generic-aircond-new-installation-subang-jaya-127.webp",
     imageAlt: "KL Renovator technician performing quality aircond installation with vacuum pump in KL home",
     content: `
       <h2>10 Installation Mistakes That Cost Malaysian Homeowners Thousands</h2>
@@ -203,7 +203,7 @@ export const installationBlogBatch1: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/generic-aircond-new-installation-subang-jaya-145.webp",
     imageAlt: "Timeline of professional aircond installation process by KL Renovator technicians",
     content: `
       <h2>How Long Does Aircond Installation Actually Take?</h2>
@@ -380,7 +380,7 @@ export const installationBlogBatch1: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 7,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/isonic-aircond-new-installation-shah-alam-55.webp",
     imageAlt: "KL Renovator installing aircond in a KL condominium with proper JMB compliance",
     content: `
       <h2>Condo Aircond Installation: What Every Malaysian Owner Needs to Know</h2>
@@ -548,7 +548,7 @@ export const installationBlogBatch1: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 6,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/lg-aircond-new-installation-kuala-lumpur-7.webp",
     imageAlt: "Room size to aircond HP sizing guide for Malaysian homes by KL Renovator",
     content: `
       <h2>Which HP Aircond Is Right for Your Room?</h2>
@@ -680,7 +680,7 @@ export const installationBlogBatch1: BlogPost[] = [
     lastReviewed: "2026-07-16",
     readTime: 5,
     relatedService: "New Unit Installation",
-    image: "/hero/aircond-installation-kuala-lumpur.webp",
+    image: "/hero/samsung-aircond-new-installation-petaling-jaya-19.webp",
     imageAlt: "KL Renovator technician measuring copper pipe length during aircond installation in KL",
     content: `
       <h2>Does Aircond Pipe Length Really Affect Cooling?</h2>

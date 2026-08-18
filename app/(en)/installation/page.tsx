@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "KL Renovator",
     images: [
       {
-        url: "https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp",
+        url: "https://www.klrenovator.com/logo/image.png",
         width: 1200,
         height: 630,
         alt: "Aircond installation KL & Selangor — KL Renovator",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: t.metaTitle,
     description: t.metaDescription,
-    images: ["https://www.klrenovator.com/hero/aircond-installation-kuala-lumpur.webp"],
+    images: ["https://www.klrenovator.com/logo/image.png"],
   },
 };
 
