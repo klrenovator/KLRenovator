@@ -553,6 +553,21 @@ export default async function AreaPageMS({
               Lihat hasil kerja sebenar dan semak liputan berhampiran {area.name}
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
+              {/* Link to this area's own installation page — those pages had
+                  zero inbound internal links (sitemap-only). */}
+              <NextLink
+                data-testid="area-installation-cta"
+                href={`/ms/areas/${slug}/installation`}
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Servis pemasangan</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Pemasangan Aircond di {area.name}
+                </h3>
+                <p className="mt-1 text-sm text-slate-600 font-medium">
+                  Pemasangan unit baharu — pentauliahan vacuum pump, paip tembaga Type-L dan waranti kerja 1 bulan. Dari RM 199.
+                </p>
+              </NextLink>
               <NextLink
                 href="/ms/gallery"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
