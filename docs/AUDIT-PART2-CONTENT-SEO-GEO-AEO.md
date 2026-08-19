@@ -79,9 +79,17 @@ These are genuine content work, not markup, and are too large to complete safely
 | **C5** | No price/comparison table on commercial pages | 1,782 | [#62](https://github.com/klrenovator/KLRenovator/issues/62) |
 | **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) |
 | **C7b** | No author/expert attribution + external citations | 1,698 / 2,164 | [#64](https://github.com/klrenovator/KLRenovator/issues/64) |
-| **C9** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
+| **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
+| **C9b** | Definition blocks + comparison content missing | 1,912 / 1,820 | [#72](https://github.com/klrenovator/KLRenovator/issues/72) |
+| **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) |
+| **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
 | — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
+| — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) |
+| — | Near-empty commercial + IAQ clusters | new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) |
 | — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) |
+
+**Every open finding in this document is now tracked as a GitHub issue.** Nothing is
+left unfiled. A ready-to-paste continuation prompt lives in `docs/NEXT-SESSION-PROMPT.md`.
 
 ---
 
