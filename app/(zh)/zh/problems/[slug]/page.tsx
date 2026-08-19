@@ -16,6 +16,7 @@ import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
+import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/problems/[slug] — Mandarin problem page. Mirrors /ms/problems/[slug].
@@ -164,16 +165,11 @@ export default async function ProblemPageZH({
         </div>
       </section>
 
-      {aeo && (
-        <section className="py-8 bg-sky-50 border-b border-sky-100">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <Reveal>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">直接解答</p>
-              <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">{aeo.directAnswerZH}</p>
-            </Reveal>
-          </div>
-        </section>
-      )}
+      <ProblemAeoBlocks
+        slug={slug}
+        locale="zh"
+        pageUrl={`https://www.klrenovator.com/zh/problems/${slug}`}
+      />
 
       {aeo && (
         <section className="py-10 bg-white border-b border-slate-100">

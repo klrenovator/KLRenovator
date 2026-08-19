@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
@@ -68,11 +68,21 @@ export default function WholeHouseInstallationPage() {
     { name: "Whole-House Aircond Installation", url: "https://www.klrenovator.com/whole-house-aircond-installation" },
   ]);
   const faqSchema = buildFaqSchema(FAQS);
+  const howToSchema = buildHowToSchema({
+    name: "How to install aircond across a whole house in KL — 4 steps",
+    description: "Whole-house aircond installation from free site survey to multi-unit commissioning. Volume labour from RM 597 for three wall-mounted units.",
+    url: "https://www.klrenovator.com/whole-house-aircond-installation",
+    totalTime: "PT16H",
+    estimatedCost: { currency: "MYR", value: "597" },
+    steps: PROJECT_TIMELINE.map((s) => ({ name: s.title, text: s.desc })),
+    inLanguage: "en-MY",
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
@@ -166,25 +176,27 @@ export default function WholeHouseInstallationPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal><div className="text-center max-w-3xl mx-auto mb-12">
             <p className={eyebrow()}>Project Timeline</p>
-            <h2 className="mt-3"><span className={title({ size: "sm" })}>From Empty Rooms to </span><span className={title({ size: "sm", color: "brand" })}>Fully Cooled Home</span></h2>
+            <h2 className="mt-3"><span className={title({ size: "sm" })}>How to Install a Whole-House Aircond — </span><span className={title({ size: "sm", color: "brand" })}>4 Steps</span></h2>
             <p className="mt-4 text-slate-600 font-medium">Our streamlined multi-unit process — managed by a dedicated project team from quote to handover.</p>
           </div></Reveal>
-          <div className="max-w-3xl mx-auto space-y-6">
+          <ol className="max-w-3xl mx-auto space-y-6">
             {PROJECT_TIMELINE.map((phase, i) => (
-              <Reveal key={phase.phase} delay={i * 120}>
-                <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-sky-300 hover:shadow-md transition-all">
-                  <div className="flex items-start gap-4">
-                    <div className="inline-flex p-3 bg-sky-50 border border-sky-100 text-sky-600 rounded-xl shrink-0">{phase.icon}</div>
-                    <div>
-                      <p className="text-xs font-black uppercase tracking-widest text-sky-500 mb-1">{phase.phase}</p>
-                      <h3 className="font-black text-lg text-slate-900 mb-2">{phase.title}</h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">{phase.desc}</p>
+              <li key={phase.phase} className="list-none">
+                <Reveal delay={i * 120}>
+                  <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-sky-300 hover:shadow-md transition-all">
+                    <div className="flex items-start gap-4">
+                      <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-600 text-sm font-black text-white shrink-0">{i + 1}</div>
+                      <div>
+                        <p className="text-xs font-black uppercase tracking-widest text-sky-500 mb-1">{phase.phase}</p>
+                        <h3 className="font-black text-lg text-slate-900 mb-2">{phase.title}</h3>
+                        <p className="text-slate-600 text-sm leading-relaxed">{phase.desc}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Reveal>
+                </Reveal>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

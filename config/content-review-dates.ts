@@ -34,11 +34,11 @@ export const CONTENT_REVIEW_DATES = {
   /** config/site/areas.ts — the 40 main area landing pages. */
   areas: "2026-08-18",
   /** config/site/kampungs.ts — the 158 neighbourhood/kampung pages. */
-  kampungs: "2026-08-18",
+  kampungs: "2026-08-19",
   /** config/site/brands.ts + brand-area combos — 20 brands × priority areas. */
-  brands: "2026-08-18",
+  brands: "2026-08-19",
   /** config/site/problems.ts — the 20 problem/diagnostic pages. */
-  problems: "2026-08-18",
+  problems: "2026-08-19",
   /** config/site/services.ts + services-data.ts — the 10 service pages. */
   services: "2026-08-18",
 } as const;

@@ -16,6 +16,7 @@ import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
+import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/problems/[slug] — Bahasa Malaysia problem page.
@@ -167,16 +168,11 @@ export default async function ProblemPageMS({
         </div>
       </section>
 
-      {aeo && (
-        <section className="py-8 bg-sky-50 border-b border-sky-100">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <Reveal>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">Jawapan Terus</p>
-              <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">{aeo.directAnswerMS}</p>
-            </Reveal>
-          </div>
-        </section>
-      )}
+      <ProblemAeoBlocks
+        slug={slug}
+        locale="ms"
+        pageUrl={`https://www.klrenovator.com/ms/problems/${slug}`}
+      />
 
       {aeo && (
         <section className="py-10 bg-white border-b border-slate-100">
