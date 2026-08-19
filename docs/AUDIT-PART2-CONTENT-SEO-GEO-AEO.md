@@ -39,7 +39,7 @@ and `audit:gsc` pass.
 | **C1** | 360 brand-area pages orphaned | **Fixed** — `brand-area-combo-links.ts` now links to `/brands/{brand}/{area}`. Verified 360 unique brand-area URLs receive internal links (was 0). Only prerendered pairs are linked, so no 404s. |
 | **C4** | 267 blog posts showed FAQs without schema | **Partly fixed** — new `lib/blog-derived-faq.ts` extracts each post's own question headings + answers. EN posts with FAQPage 12 → 67; site-wide 1,862 → **2,028**. The 34 EN posts with no question headings correctly still emit none. |
 | **C7** | 1,824 pages with no freshness signal | **Largely fixed** — `config/content-review-dates.ts` + WebPage nodes on area/kampung/brand-area templates. Pages with `dateModified` 339 → **1,293**. |
-| **C8** | 971 pages missing `og:image` | **Fixed** — `lib/og-image-pool.ts` deterministically maps pages onto 22 real job photos (all verified on disk). Missing og:image 971 → **89**. |
+| **C8** | 971 pages missing `og:image` | **Fixed** — `lib/og-image-pool.ts` deterministically maps pages onto 22 real job photos (all verified on disk). A second pass cleared the remaining logo-only pages (installation content configs, 47 static routes, `brands/[slug]` fallback) and fixed a `??`-vs-`||` bug that suppressed the tag on the 25 areas whose config carries `heroImage: ""`. **og:image now present on 2,170 / 2,172 built pages** — the only exceptions are `_not-found` and `_global-error`. |
 | **C10** | "Uniqueness Matrix" jargon + `20D.33` task ID visible on 474 pages | **Fixed** — now "Aircond Service in {Name} — What to Expect" (+ MS/ZH). Zero pages leak the task ID. |
 | — | 120 area-installation pages orphaned | **Fixed** — each area page now links its own `/installation` child. **Site-wide orphans 443 → 23.** |
 
@@ -65,22 +65,23 @@ expert-attribution work in C7.
 
 ### Requires a maintainer — not fixable from this session
 
-| # | Item | Blocker |
-|---|---|---|
-| **C2** | 638 month-stamped titles go stale without a monthly rebuild | Workflow file written to **`docs/monthly-refresh.workflow.yml`** with setup notes in **`docs/MONTHLY-TITLE-REFRESH.md`**. It could not be committed to `.github/workflows/` — the GitHub App lacks the `workflows` permission. A maintainer must copy it in and add the `VERCEL_DEPLOY_HOOK_URL` secret. A lower-maintenance alternative (year-only stamps) is documented. |
+| # | Item | Issue | Blocker |
+|---|---|---|---|
+| **C2** | 638 month-stamped titles go stale without a monthly rebuild | [#67](https://github.com/klrenovator/KLRenovator/issues/67) | Workflow file written to **`docs/monthly-refresh.workflow.yml`** with setup notes in **`docs/MONTHLY-TITLE-REFRESH.md`**. It could not be committed to `.github/workflows/` — the GitHub App lacks the `workflows` permission. A maintainer must copy it in and add the `VERCEL_DEPLOY_HOOK_URL` secret. A lower-maintenance alternative (year-only stamps) is documented. |
+| — | "5.0 from 500+ Google reviews" repeated 150× but `config/reviews.ts` holds 9 review objects | [#68](https://github.com/klrenovator/KLRenovator/issues/68) | The real review count can only be confirmed against the live Google Business Profile, which is unreachable from the build sandbox. Editing 150 marketing claims downward on a guess would be worse than leaving them. Needs someone with GBP access. |
 
 ### Still open — needs content authoring
 
-These are genuine content work, not markup, and are too large to complete safely in one session:
+These are genuine content work, not markup, and are too large to complete safely in one session. All are tracked as GitHub issues:
 
-| # | Item | Pages |
-|---|---|---|
-| **C5** | No price/comparison table on commercial pages | 1,782 |
-| **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 |
-| **C7b** | No author/expert attribution outside blog & service | 1,698 |
-| **C9** | HowTo schema missing where step content exists | 137 |
-| — | External citations to authorities (TNB, Energy Commission, SIRIM) | 2,164 |
-| — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new |
+| # | Item | Pages | Issue |
+|---|---|---|---|
+| **C5** | No price/comparison table on commercial pages | 1,782 | [#62](https://github.com/klrenovator/KLRenovator/issues/62) |
+| **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) |
+| **C7b** | No author/expert attribution + external citations | 1,698 / 2,164 | [#64](https://github.com/klrenovator/KLRenovator/issues/64) |
+| **C9** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
+| — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
+| — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) |
 
 ---
 
