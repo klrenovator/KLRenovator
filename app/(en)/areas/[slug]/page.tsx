@@ -22,6 +22,7 @@ import { getFreshDate } from "@/lib/dates";
 import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
 
 
 function getAreaImage(heroImage?: string) {
@@ -67,6 +68,12 @@ export async function generateMetadata({
       type: "website",
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
+      images: [{
+        url: area.heroImage ?? pickHeroImage(`area-${area.slug}`, [area.slug]),
+        width: 1200,
+        height: 630,
+        alt: `Aircond service in ${area.name}, ${area.state} — KL Renovator`,
+      }],
     },
     alternates: {
       canonical: enUrl,

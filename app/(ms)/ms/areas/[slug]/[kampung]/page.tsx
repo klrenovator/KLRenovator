@@ -13,6 +13,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
+import { buildOgImage } from "@/lib/og-image-pool";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug]/[kampung] — Bahasa Malaysia kampung page.
@@ -55,6 +56,7 @@ export async function generateMetadata({
       type: "website",
       locale: "ms_MY",
       alternateLocale: ["en_MY", "zh_MY"],
+      images: [buildOgImage(`kampung-${k.parentSlug}-${k.slug}`, `Servis aircond di ${k.name} — KL Renovator`, [k.parentSlug])],
     },
     alternates: {
       canonical: msUrl,

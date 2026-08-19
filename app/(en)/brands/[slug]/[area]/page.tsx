@@ -17,6 +17,7 @@ import {
   brandAreaFaqs,
 } from "@/config/brand-area-uniqueness";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
+import { buildOgImage } from "@/lib/og-image-pool";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (English)
@@ -61,6 +62,7 @@ export async function generateMetadata({
       type: "website",
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
+      images: [buildOgImage(`brand-area-${brand.slug}-${area.slug}`, `${brand.name} aircond service in ${area.name} — KL Renovator`, [brand.slug, area.slug])],
     },
     alternates: normalizeHreflangUrls({
       en: enUrl,

@@ -134,21 +134,21 @@ const TEXT = {
   en: {
     eyebrow: "Brand service areas",
     heading: (brand: string) => `${brand} AC Service by Priority Area`,
-    intro: (brand: string) => `Choose the closest ${brand} service area below. Each card opens a local area page where you can check coverage, common service needs and booking details.`,
+    intro: (brand: string) => `Choose the closest ${brand} service area below. Each card opens the local ${brand} service page for that area, with coverage, common service needs and booking details.`,
     allAreasLabel: "All KL & Selangor areas",
     description: (brand: string, area: AreaRecord, focus: string, summary: string) => `${focus} for ${brand} units in ${area.name}, ${area.state}. ${summary}`,
   },
   ms: {
     eyebrow: "Kawasan servis jenama",
     heading: (brand: string) => `Servis Aircond ${brand} Mengikut Kawasan Utama`,
-    intro: (brand: string) => `Pilih kawasan servis ${brand} yang paling dekat di bawah. Setiap kad membuka halaman kawasan tempatan untuk menyemak liputan, keperluan servis biasa dan butiran tempahan.`,
+    intro: (brand: string) => `Pilih kawasan servis ${brand} yang paling dekat di bawah. Setiap kad membuka halaman servis ${brand} bagi kawasan tersebut — liputan, keperluan servis biasa dan butiran tempahan.`,
     allAreasLabel: "Semua kawasan KL & Selangor",
     description: (brand: string, area: AreaRecord, focus: string, summary: string) => `${focus} untuk unit ${brand} di ${area.name}, ${area.state}. ${summary}`,
   },
   zh: {
     eyebrow: "品牌服务区域",
     heading: (brand: string) => `${brand}冷气重点区域服务`,
-    intro: (brand: string) => `从下方选择最接近的${brand}服务区域。每张卡都会打开本地区域页面，方便您查看覆盖范围、常见服务需求和预约详情。`,
+    intro: (brand: string) => `从下方选择最接近的${brand}服务区域。每张卡都会打开该区域的${brand}冷气服务页面，方便您查看覆盖范围、常见服务需求和预约详情。`,
     allAreasLabel: "所有KL与雪兰莪区域",
     description: (brand: string, area: AreaRecord, focus: string, summary: string) => `${focus}，适用于${area.name}, ${area.state}的${brand}冷气。${summary}`,
   },
@@ -157,6 +157,33 @@ const TEXT = {
 function areaHref(locale: BrandAreaComboLocale, slug: string) {
   if (locale === "en") return `/areas/${slug}`;
   return `/${locale}/areas/${slug}`;
+}
+
+/**
+ * Link target for a brand × area card.
+ *
+ * These cards exist to surface the brand-area pages (`/brands/{brand}/{area}`),
+ * but they used to point at the generic area page instead — so all 360
+ * brand-area pages ended up in sitemap.xml with ZERO internal links pointing
+ * at them (verified: 0 occurrences of `href="/brands/daikin/petaling-jaya"`
+ * across every prerendered page). They were crawlable only via the sitemap.
+ *
+ * `generateStaticParams()` only prerenders pairs returned by
+ * `brandAreaPairs()`, which skips areas missing from `siteConfig.areaPages`.
+ * The combo list can also fall back to arbitrary areas to pad a brand up to
+ * 6 cards, and those padded pairs have no page. So we link to the brand-area
+ * page only when the pair is real, and fall back to the area page otherwise —
+ * linking to a 404 would be worse than the original bug.
+ */
+function comboHref(
+  locale: BrandAreaComboLocale,
+  brandSlug: string,
+  areaSlug: string,
+  hasBrandAreaPage: boolean,
+) {
+  if (!hasBrandAreaPage) return areaHref(locale, areaSlug);
+  if (locale === "en") return `/brands/${brandSlug}/${areaSlug}`;
+  return `/${locale}/brands/${brandSlug}/${areaSlug}`;
 }
 
 function allAreasHref(locale: BrandAreaComboLocale) {
@@ -182,6 +209,10 @@ export function buildBrandAreaComboModule(
     .slice(0, 6 - selectedAreas.length);
   const t = TEXT[locale];
 
+  // Areas drawn from the brand's own priority list have a prerendered
+  // /brands/{brand}/{area} page; padded fallback areas do not.
+  const prioritySet = new Set(prioritySlugs);
+
   const combos = [...selectedAreas, ...fallbackAreas].map((area, idx) => {
     const landmarks = area.landmarks?.slice(0, 2).join(" / ");
     const landmarkTag = landmarks || area.state;
@@ -189,7 +220,7 @@ export function buildBrandAreaComboModule(
     return {
       // 10.9: Diverse title per card instead of repetitive "[Brand] AC Service [Area]"
       title: diverseComboTitle(locale, brand.name, area.name, idx),
-      href: areaHref(locale, area.slug),
+      href: comboHref(locale, brand.slug, area.slug, prioritySet.has(area.slug)),
       eyebrow: copy.label,
       description: t.description(brand.name, area, copy.label, copy.summary),
       tags: [...copy.tags, landmarkTag].slice(0, 4),

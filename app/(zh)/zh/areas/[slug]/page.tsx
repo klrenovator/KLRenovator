@@ -21,6 +21,7 @@ import { getFreshDateZH } from "@/lib/dates";
 import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -63,6 +64,12 @@ export async function generateMetadata({
       type: "website",
       locale: "zh_MY",
       alternateLocale: ["en_MY", "ms_MY"],
+      images: [{
+        url: area.heroImage ?? pickHeroImage(`area-${area.slug}`, [area.slug]),
+        width: 1200,
+        height: 630,
+        alt: `${area.name}冷气服务 — KL Renovator`,
+      }],
     },
     alternates: {
       canonical: zhUrl,

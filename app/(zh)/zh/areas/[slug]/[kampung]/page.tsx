@@ -13,6 +13,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
+import { buildOgImage } from "@/lib/og-image-pool";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug]/[kampung] — Mandarin kampung page.
@@ -54,6 +55,7 @@ export async function generateMetadata({
       type: "website",
       locale: "zh_MY",
       alternateLocale: ["en_MY", "ms_MY"],
+      images: [buildOgImage(`kampung-${k.parentSlug}-${k.slug}`, `${k.name}冷气服务 — KL Renovator`, [k.parentSlug])],
     },
     alternates: {
       canonical: zhUrl,

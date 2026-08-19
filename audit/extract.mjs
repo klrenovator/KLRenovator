@@ -22,7 +22,6 @@ const unescapeHtml = (t) =>
 
 const stripTags = (h) => unescapeHtml(h.replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
 
-const isCJK = (t) => /[\u4e00-\u9fff]/.test(t);
 // Google's SERP budget approximation: CJK glyphs occupy ~2 latin units
 const displayWidth = (t) => {
   let w = 0;
@@ -32,7 +31,7 @@ const displayWidth = (t) => {
 // word count that works for CJK too (CJK: 1 char ~= 1 word-equivalent / 1.6)
 const wordCount = (t) => {
   const cjk = (t.match(/[\u4e00-\u9fff]/g) || []).length;
-  const latin = (t.replace(/[\u4e00-\u9fff]/g, " ").match(/[A-Za-z0-9][A-Za-z0-9''\-]*/g) || []).length;
+  const latin = (t.replace(/[\u4e00-\u9fff]/g, " ").match(/[A-Za-z0-9][A-Za-z0-9''-]*/g) || []).length;
   return latin + Math.round(cjk / 1.6);
 };
 
@@ -191,7 +190,6 @@ for (const file of files) {
     .filter((u) => !/klrenovator\.com/.test(u) && !/wa\.me|whatsapp|tel:/.test(u));
 
   // trust / expert signals in visible text
-  const lower = text.toLowerCase();
   const signals = {
     price: /rm\s?\d/i.test(text),
     warranty: /warrant|waranti|保修|保用/i.test(text),
