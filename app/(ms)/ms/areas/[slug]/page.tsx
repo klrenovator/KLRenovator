@@ -21,6 +21,8 @@ import { getFreshDateMS } from "@/lib/dates";
 import { buildUniqueAreaFAQ_MS } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -76,6 +78,12 @@ export async function generateMetadata({
       type: "website",
       locale: "ms_MY",
       alternateLocale: ["en_MY", "zh_MY"],
+      images: [{
+        url: area.heroImage || pickHeroImage(`area-${area.slug}`, [area.slug]),
+        width: 1200,
+        height: 630,
+        alt: `Servis aircond di ${area.name}, ${area.state} — KL Renovator`,
+      }],
     },
     alternates: {
       canonical: msUrl,
@@ -111,7 +119,7 @@ export default async function AreaPageMS({
     telephone: siteConfig.phone,
     email: siteConfig.email,
     description: area.descriptionMS || area.description,
-    image: "https://www.klrenovator.com/logo/image.png",
+    image: `https://www.klrenovator.com${pickHeroImage(`area:${slug}`, [slug])}`,
     logo: "https://www.klrenovator.com/logo/image.png",
     address: {
       "@type": "PostalAddress",
@@ -164,6 +172,7 @@ export default async function AreaPageMS({
     description: clampMetaDescription(area.metaDescMS || area.metaDesc),
     url: msUrl,
     inLanguage: "ms-MY",
+    dateModified: reviewDateFor("areas"),
   };
 
   const otherMsAreas = siteConfig.areaPages
@@ -544,6 +553,21 @@ export default async function AreaPageMS({
               Lihat hasil kerja sebenar dan semak liputan berhampiran {area.name}
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
+              {/* Link to this area's own installation page — those pages had
+                  zero inbound internal links (sitemap-only). */}
+              <NextLink
+                data-testid="area-installation-cta"
+                href={`/ms/areas/${slug}/installation`}
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Servis pemasangan</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Pemasangan Aircond di {area.name}
+                </h3>
+                <p className="mt-1 text-sm text-slate-600 font-medium">
+                  Pemasangan unit baharu — pentauliahan vacuum pump, paip tembaga Type-L dan waranti kerja 1 bulan. Dari RM 199.
+                </p>
+              </NextLink>
               <NextLink
                 href="/ms/gallery"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"

@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-kl",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Pemasangan Aircond KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp", width: 1200, height: 630, alt: "Pemasangan Aircond KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Pemasangan Aircond KL & Selangor — Dari RM199 | KL Renovator", description: "Pemasangan aircond profesional dari RM199. Hari sama, semua jenama, waranti 1 bulan. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "Pemasangan Aircond KL & Selangor — Dari RM199 | KL Renovator", description: "Pemasangan aircond profesional dari RM199. Hari sama, semua jenama, waranti 1 bulan. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/ms/pemasangan-aircond-kl", languages: { "en-MY": "https://www.klrenovator.com/aircond-installation-kl", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-kl", "zh-MY": "https://www.klrenovator.com/zh/aircond-installation-kl", "x-default": "https://www.klrenovator.com/aircond-installation-kl" } },
 };

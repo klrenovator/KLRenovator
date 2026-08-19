@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ms_MY",
     alternateLocale: ["en_MY", "zh_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/acson-aircond-chemical-overhaul-puchong-38.webp",
+      width: 1200,
+      height: 630,
+      alt: "Kawasan servis aircond di Kuala Lumpur dan Selangor — KL Renovator",
+    }],
   },
   alternates: {
     canonical: "https://www.klrenovator.com/ms/areas",

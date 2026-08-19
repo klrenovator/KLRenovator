@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/hisense-aircond-basic-servicing-ampang-113.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Free Aircond Calculators & Tools Malaysia",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Free Aircond Calculators & Tools Malaysia"),
     description: "Installation cost, gas top-up, BTU, size, electricity & savings calculators — free.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/hisense-aircond-basic-servicing-ampang-113.webp"],
   },
 };
 

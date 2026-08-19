@@ -456,8 +456,8 @@ const SERVICE_BUNDLES: Record<ProfileKey, string[]> = {
 
 const TEXT = {
   en: {
-    eyebrow: "20D.33 Area Uniqueness Matrix · Sub-area de-templating",
-    heading: (name: string) => `${name} Aircond Service Uniqueness Matrix`,
+    eyebrow: "Local service profile",
+    heading: (name: string) => `Aircond Service in ${name} — What to Expect`,
     intro: (name: string, parentName: string, state: string, profile: string, route: string) =>
       `Every neighbourhood inside ${parentName} has a different cooling, access and dispatch pattern. For ${name}, KL Renovator treats this as a ${profile.toLowerCase()} job in ${state}, not a generic ${parentName} copy. The matrix below fixes the service angle for this exact sub-area: property type, access constraint, likely aircond fault, technician kit, route planning and the best internal service pages to check before booking. ${route}`,
     rowLabels: {
@@ -476,8 +476,8 @@ const TEXT = {
       lat && lng ? `Local GPS anchor: ${lat.toFixed(4)}, ${lng.toFixed(4)}.` : "Local GPS anchor is checked from the confirmed WhatsApp pin.",
   },
   ms: {
-    eyebrow: "20D.33 Matriks Keunikan Kawasan · Elak salinan generik",
-    heading: (name: string) => `Matriks Servis Aircond ${name}`,
+    eyebrow: "Profil servis setempat",
+    heading: (name: string) => `Servis Aircond di ${name} — Apa Yang Perlu Anda Tahu`,
     intro: (name: string, parentName: string, state: string, profile: string, route: string) =>
       `Setiap sub-kawasan dalam ${parentName} mempunyai corak cooling, akses dan dispatch yang berbeza. Untuk ${name}, KL Renovator menganggap kerja ini sebagai profil ${profile.toLowerCase()} di ${state}, bukan salinan generik ${parentName}. Matriks di bawah menetapkan sudut servis untuk kawasan tepat ini: jenis hartanah, kekangan akses, risiko kerosakan aircond, kit juruteknik, laluan dispatch dan halaman servis dalaman terbaik sebelum tempahan. ${route}`,
     rowLabels: {
@@ -496,8 +496,8 @@ const TEXT = {
       lat && lng ? `Anchor GPS setempat: ${lat.toFixed(4)}, ${lng.toFixed(4)}.` : "Anchor GPS setempat disemak melalui pin WhatsApp yang disahkan.",
   },
   zh: {
-    eyebrow: "20D.33 区域独特矩阵 · 避免通用复制内容",
-    heading: (name: string) => `${name}冷气服务独特矩阵`,
+    eyebrow: "本地服务概况",
+    heading: (name: string) => `${name}冷气服务 — 服务详情一览`,
     intro: (name: string, parentName: string, state: string, profile: string, route: string) =>
       `${parentName}内每个社区的制冷问题、通行方式和派工路线都不同。对于${name}，KL Renovator会把它视为${state}的「${profile}」服务，不使用通用${parentName}文案。下面的矩阵固定此子区域的服务角度：物业类型、通行限制、常见冷气故障、技师工具、派工路线，以及预约前最适合查看的内部服务页面。${route}`,
     rowLabels: {

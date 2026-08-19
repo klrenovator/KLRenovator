@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — 冷气加气费用计算器",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("冷气加气费用计算器 — 马来西亚"),
     description: "按匹数估算R22、R410A和R32加气价格 — 每PSI RM 2.50起。",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp"],
   },
 };
 

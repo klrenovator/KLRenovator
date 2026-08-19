@@ -44,3 +44,8 @@ bun.lockb
 # Original image backups (pre-optimization)
 /public/hero_originals/
 /public/logo_originals/
+
+# Part 2 audit raw data (regenerate with node audit/extract.mjs)
+audit/pages.json
+audit/findings.json
+audit/gaps.json

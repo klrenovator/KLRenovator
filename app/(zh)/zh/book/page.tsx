@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     url: "https://www.klrenovator.com/zh/book",
     type: "website",
     locale: "zh_MY",
+    images: [{
+      url: "https://www.klrenovator.com/hero/lg-aircond-basic-servicing-subang-jaya-29.webp",
+      width: 1200,
+      height: 630,
+      alt: "预约 KL Renovator 吉隆坡雪兰莪冷气服务",
+    }],
   },
 };
 

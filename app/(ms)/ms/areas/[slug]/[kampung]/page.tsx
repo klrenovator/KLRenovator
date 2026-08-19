@@ -13,6 +13,8 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
+import { buildOgImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug]/[kampung] — Bahasa Malaysia kampung page.
@@ -55,6 +57,7 @@ export async function generateMetadata({
       type: "website",
       locale: "ms_MY",
       alternateLocale: ["en_MY", "zh_MY"],
+      images: [buildOgImage(`kampung-${k.parentSlug}-${k.slug}`, `Servis aircond di ${k.name} — KL Renovator`, [k.parentSlug])],
     },
     alternates: {
       canonical: msUrl,
@@ -89,6 +92,26 @@ export default async function KampungPageMS({
     ],
   };
 
+
+  // Freshness signal. Date is a hand-maintained constant, not new Date() —
+  // see config/content-review-dates.ts.
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${msUrl}#webpage`,
+    name: `Servis Aircond ${k.name} — KL Renovator`,
+    description: clampMetaDescription(k.metaDescMS || k.metaDesc),
+    url: msUrl,
+    inLanguage: "ms-MY",
+    dateModified: reviewDateFor("kampungs"),
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+  };
+
   const faqSchema = k.faqsBM?.length
     ? {
         "@context": "https://schema.org",
@@ -120,6 +143,7 @@ export default async function KampungPageMS({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">

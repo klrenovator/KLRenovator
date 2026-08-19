@@ -11,8 +11,18 @@ export const metadata: Metadata = {
   title: "Dasar Privasi | KL Renovator",
   description:
     padMetaDescription("Bagaimana KL Renovator (Multicore Dynamics Resources) mengumpul, menggunakan, menyimpan dan melindungi data peribadi anda di bawah Akta Perlindungan Data Peribadi (APDP) 2010 Malaysia."),
+  openGraph: {
+    type: "website",
+    locale: "ms_MY",
+    alternateLocale: ["en_MY", "zh_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
+      width: 1200,
+      height: 630,
+      alt: "Dasar privasi KL Renovator",
+    }],
+  },
   alternates: buildTrilingualHreflang("/privacy-policy", "ms"),
-  openGraph: { locale: "ms_MY", alternateLocale: ["en_MY", "zh_MY"] },
   robots: { index: true, follow: true },
 };
 

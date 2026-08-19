@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_MY",
     alternateLocale: ["en_MY", "ms_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/toshiba-aircond-gas-topup-rawang-141.webp",
+      width: 1200,
+      height: 630,
+      alt: "KL Renovator 冷气服务客户评价",
+    }],
   },
 };
 

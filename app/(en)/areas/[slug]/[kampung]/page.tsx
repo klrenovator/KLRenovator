@@ -13,6 +13,8 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
+import { buildOgImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /areas/[slug]/[kampung] — English kampung/neighbourhood page.
@@ -58,6 +60,7 @@ export async function generateMetadata({
       type: "website",
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
+      images: [buildOgImage(`kampung-${k.parentSlug}-${k.slug}`, `Aircond service in ${k.name} — KL Renovator`, [k.parentSlug])],
     },
     alternates: {
       canonical: enUrl,
@@ -105,6 +108,28 @@ export default async function KampungPage({
     ],
   };
 
+
+  // WebPage node carries the freshness signal. `dateModified` comes from a
+  // hand-maintained constant (config/content-review-dates.ts), NOT from
+  // new Date() — auto-bumping the date on every deploy is exactly what
+  // Google's structured-data spam policy treats as deceptive.
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${enUrl}#webpage`,
+    name: `Aircond Service ${k.name} — KL Renovator`,
+    description: clampMetaDescription(k.metaDesc),
+    url: enUrl,
+    inLanguage: "en-MY",
+    dateModified: reviewDateFor("kampungs"),
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+  };
+
   const faqSchema = k.faqs?.length
     ? {
         "@context": "https://schema.org",
@@ -140,6 +165,7 @@ export default async function KampungPage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">

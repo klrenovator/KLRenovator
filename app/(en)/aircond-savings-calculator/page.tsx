@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/lg-aircond-chemical-overhaul-klang-62.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Inverter Aircond Savings Calculator Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Inverter Aircond Savings Calculator Malaysia"),
     description: "Non-inverter vs inverter — savings & payback period in one click.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/lg-aircond-chemical-overhaul-klang-62.webp"],
   },
 };
 

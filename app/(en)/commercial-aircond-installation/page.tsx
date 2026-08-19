@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "en_MY",
     url: "https://www.klrenovator.com/commercial-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Commercial Aircond Installation KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp", width: 1200, height: 630, alt: "Commercial Aircond Installation KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Commercial Aircond Installation KL & Selangor — B2B | KL Renovator", description: "Office, shoplot, restaurant, clinic & server room aircond installation. Ceiling cassette, ducted, multi-split systems. AMC available. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "Commercial Aircond Installation KL & Selangor — B2B | KL Renovator", description: "Office, shoplot, restaurant, clinic & server room aircond installation. Ceiling cassette, ducted, multi-split systems. AMC available. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/commercial-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/commercial-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-komersial", "zh-MY": "https://www.klrenovator.com/zh/commercial-aircond-installation", "x-default": "https://www.klrenovator.com/commercial-aircond-installation" } },
 };

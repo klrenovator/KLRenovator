@@ -22,6 +22,8 @@ import { getFreshDate } from "@/lib/dates";
 import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 
 function getAreaImage(heroImage?: string) {
@@ -67,6 +69,12 @@ export async function generateMetadata({
       type: "website",
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
+      images: [{
+        url: area.heroImage || pickHeroImage(`area-${area.slug}`, [area.slug]),
+        width: 1200,
+        height: 630,
+        alt: `Aircond service in ${area.name}, ${area.state} — KL Renovator`,
+      }],
     },
     alternates: {
       canonical: enUrl,
@@ -100,7 +108,7 @@ export default async function AreaPage({
     telephone: siteConfig.phone,
     email: siteConfig.email,
     description: area.description,
-    image: "https://www.klrenovator.com/logo/image.png",
+    image: `https://www.klrenovator.com${pickHeroImage(`area:${slug}`, [slug])}`,
     logo: "https://www.klrenovator.com/logo/image.png",
     address: {
       "@type": "PostalAddress",
@@ -189,6 +197,7 @@ export default async function AreaPage({
     description: clampMetaDescription(area.metaDesc),
     url: `https://www.klrenovator.com/areas/${slug}`,
     inLanguage: "en-MY",
+    dateModified: reviewDateFor("areas"),
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
     about: { "@id": "https://www.klrenovator.com/#business" },
     speakable: {
@@ -842,6 +851,22 @@ export default async function AreaPage({
               See Real Work in {area.name} and Explore Nearby Coverage
             </h2>
             <div className="grid gap-4 lg:grid-cols-2">
+              {/* Link to this area's own installation page. Those 120 pages
+                  (40 areas x 3 locales) had zero inbound internal links —
+                  sitemap-only, so they were effectively uncrawlable. */}
+              <NextLink
+                data-testid="area-installation-cta"
+                href={`/areas/${slug}/installation`}
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">Installation service</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  Aircond Installation in {area.name}
+                </h3>
+                <p className="mt-1 text-sm text-slate-600 font-medium">
+                  New unit installation for {area.name} — vacuum-pump commissioning, Type-L copper piping and a 1-month workmanship warranty. From RM 199.
+                </p>
+              </NextLink>
               <NextLink
                 href="/gallery"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"

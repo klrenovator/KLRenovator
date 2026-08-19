@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "en_MY",
     url: "https://www.klrenovator.com/new-home-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "New Home Aircond Installation KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/acson-aircond-chemical-overhaul-puchong-38.webp", width: 1200, height: 630, alt: "New Home Aircond Installation KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "New Home Aircond Installation KL — Full House Package", description: "Complete aircond installation for new homes. 1BR–4BR packages, condo & landed expertise, 48-hour timeline. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "New Home Aircond Installation KL — Full House Package", description: "Complete aircond installation for new homes. 1BR–4BR packages, condo & landed expertise, 48-hour timeline. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/acson-aircond-chemical-overhaul-puchong-38.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/new-home-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/new-home-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", "zh-MY": "https://www.klrenovator.com/zh/new-home-aircond-installation", "x-default": "https://www.klrenovator.com/new-home-aircond-installation" } },
 };

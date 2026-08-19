@@ -17,6 +17,8 @@ import {
   brandAreaFaqs,
 } from "@/config/brand-area-uniqueness";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
+import { buildOgImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (English)
@@ -61,6 +63,7 @@ export async function generateMetadata({
       type: "website",
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
+      images: [buildOgImage(`brand-area-${brand.slug}-${area.slug}`, `${brand.name} aircond service in ${area.name} — KL Renovator`, [brand.slug, area.slug])],
     },
     alternates: normalizeHreflangUrls({
       en: enUrl,
@@ -127,6 +130,26 @@ export default async function BrandAreaPageEN({
     })),
   };
 
+
+  // Freshness signal for the 360 brand-area pages, which previously had no
+  // date at all. Hand-maintained constant — see config/content-review-dates.ts.
+  const pageUrl = `https://www.klrenovator.com/brands/${slug}/${areaSlug}`;
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    name: `${brand.name} Aircond Service ${area.name} — KL Renovator`,
+    url: pageUrl,
+    inLanguage: "en-MY",
+    dateModified: reviewDateFor("brands"),
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+  };
+
   const techSpecs = BRAND_TECH_SPECS[slug] ?? BRAND_TECH_SPECS._default;
   const errorCodes = BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES._default;
 
@@ -134,6 +157,7 @@ export default async function BrandAreaPageEN({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb Navigation */}

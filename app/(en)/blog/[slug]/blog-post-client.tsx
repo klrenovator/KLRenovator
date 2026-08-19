@@ -12,6 +12,7 @@ import { Reveal } from "@/components/reveal";
 import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 import { sitePublic } from "@/config/site-public";
 import { useLang } from "@/context/language-context";
+import { deriveFaqsFromContent } from "@/lib/blog-derived-faq";
 
 // UI Labels
 const UI = {
@@ -158,8 +159,36 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
 
   const serviceHref = localizedPath(`/services/${(BLOG_SERVICE_MAP[post.slug]?.[0] ?? "chemical-wash")}`);
   const areasHref = localizedPath("/areas/kuala-lumpur");
-  const localizedFaqs =
+  const authoredFaqs =
     (lang === "ms" ? post.faqsMS : lang === "zh" ? post.faqsZH : post.faqs) ?? [];
+  // Hand-authored FAQs win. Otherwise derive Q&A from the post's own visible
+  // question headings so the other ~267 posts stop hiding their Q&A from
+  // search engines. See lib/blog-derived-faq.ts for why we don't just
+  // schema-ify the generic 3-question block (it would be identical on 300+
+  // URLs = FAQ spam).
+  const localizedFaqs =
+    authoredFaqs.length > 0 ? authoredFaqs : deriveFaqsFromContent(content);
+
+  // Fallback only — used when a post has neither authored FAQs nor any
+  // question headings to derive from. Deliberately NOT emitted as schema.
+  const genericReaderFaqs =
+    lang === "zh"
+      ? [
+          { q: "我可以当天预约吗？", a: "可以，视技术员路线和材料需求而定。最快方式是 WhatsApp +60182983573。" },
+          { q: "施工前会确认价格吗？", a: "会。KL Renovator 会先确认范围、价格和任何额外材料。" },
+          { q: "是否有保修？", a: "符合条件的施工服务享有1个月工艺保修。" },
+        ]
+      : lang === "ms"
+        ? [
+            { q: "Boleh tempah servis hari sama?", a: "Boleh, bergantung kepada laluan juruteknik dan keperluan bahan. Cara terpantas ialah WhatsApp +60182983573." },
+            { q: "Adakah harga disahkan sebelum kerja?", a: "Ya. KL Renovator mengesahkan skop, harga dan sebarang bahan tambahan dahulu." },
+            { q: "Adakah ada waranti?", a: "Kerja servis yang layak dilindungi waranti kerja 1 bulan." },
+          ]
+        : [
+            { q: "Can I book same-day service?", a: "Yes, depending on technician route and material needs. The fastest way is WhatsApp +60182983573." },
+            { q: "Will the price be confirmed before work starts?", a: "Yes. KL Renovator confirms scope, price and any extra materials first." },
+            { q: "Is there a warranty?", a: "Eligible workmanship is covered by a 1-month workmanship warranty." },
+          ];
 
   // BlogPosting Schema
   const blogPostingSchema = {
@@ -375,21 +404,22 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 </div>
               </section>
 
+              {/* Reader FAQs.
+                  Previously three hard-coded questions repeated on every
+                  post — identical copy on 300+ URLs. Now driven by the same
+                  `localizedFaqs` used for FAQPage schema, so the visible Q&A
+                  and the markup always match (Google requires the FAQ to be
+                  visible on-page). The generic booking/price/warranty trio is
+                  kept only as a fallback for posts with no question headings. */}
               <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 not-prose shadow-sm">
                 <h2 className="text-lg font-black uppercase tracking-tight text-slate-950">{ui.readerFaq}</h2>
                 <div className="mt-4 space-y-4 text-sm text-slate-700">
-                  <div>
-                    <h3 className="font-black text-slate-900">{lang === "zh" ? "我可以当天预约吗？" : lang === "ms" ? "Boleh tempah servis hari sama?" : "Can I book same-day service?"}</h3>
-                    <p className="mt-1">{lang === "zh" ? "可以，视技术员路线和材料需求而定。最快方式是 WhatsApp +60182983573。" : lang === "ms" ? "Boleh, bergantung kepada laluan juruteknik dan keperluan bahan. Cara terpantas ialah WhatsApp +60182983573." : "Yes, depending on technician route and material needs. The fastest way is WhatsApp +60182983573."}</p>
-                  </div>
-                  <div>
-                    <h3 className="font-black text-slate-900">{lang === "zh" ? "施工前会确认价格吗？" : lang === "ms" ? "Adakah harga disahkan sebelum kerja?" : "Will the price be confirmed before work starts?"}</h3>
-                    <p className="mt-1">{lang === "zh" ? "会。KL Renovator 会先确认范围、价格和任何额外材料。" : lang === "ms" ? "Ya. KL Renovator mengesahkan skop, harga dan sebarang bahan tambahan dahulu." : "Yes. KL Renovator confirms scope, price and any extra materials first."}</p>
-                  </div>
-                  <div>
-                    <h3 className="font-black text-slate-900">{lang === "zh" ? "是否有保修？" : lang === "ms" ? "Adakah ada waranti?" : "Is there a warranty?"}</h3>
-                    <p className="mt-1">{lang === "zh" ? "符合条件的施工服务享有1个月工艺保修。" : lang === "ms" ? "Kerja servis yang layak dilindungi waranti kerja 1 bulan." : "Eligible workmanship is covered by a 1-month workmanship warranty."}</p>
-                  </div>
+                  {(localizedFaqs.length > 0 ? localizedFaqs : genericReaderFaqs).map((faq) => (
+                    <div key={faq.q}>
+                      <h3 className="font-black text-slate-900">{faq.q}</h3>
+                      <p className="mt-1">{faq.a}</p>
+                    </div>
+                  ))}
                 </div>
               </section>
 

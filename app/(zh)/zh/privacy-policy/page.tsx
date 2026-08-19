@@ -11,8 +11,18 @@ export const metadata: Metadata = {
   title: "隐私政策 | KL Renovator",
   description:
     padMetaDescription("KL Renovator (Multicore Dynamics Resources) 如何根据马来西亚《2010年个人数据保护法》(PDPA) 收集、使用、存储和保护您的个人数据。"),
+  openGraph: {
+    type: "website",
+    locale: "zh_MY",
+    alternateLocale: ["en_MY", "ms_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
+      width: 1200,
+      height: 630,
+      alt: "KL Renovator 隐私政策",
+    }],
+  },
   alternates: buildTrilingualHreflang("/privacy-policy", "zh"),
-  openGraph: { locale: "zh_MY", alternateLocale: ["en_MY", "ms_MY"] },
   robots: { index: true, follow: true },
 };
 

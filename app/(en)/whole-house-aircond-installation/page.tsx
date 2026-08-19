@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "en_MY",
     url: "https://www.klrenovator.com/whole-house-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Whole-House Aircond Installation KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp", width: 1200, height: 630, alt: "Whole-House Aircond Installation KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Whole-House Aircond Installation KL & Selangor — Bulk Packages | KL Renovator", description: "Multi-unit aircond installation with volume discounts. BTU guide, project timeline, from RM199/unit. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "Whole-House Aircond Installation KL & Selangor — Bulk Packages | KL Renovator", description: "Multi-unit aircond installation with volume discounts. BTU guide, project timeline, from RM199/unit. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/whole-house-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/whole-house-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", "zh-MY": "https://www.klrenovator.com/zh/whole-house-aircond-installation", "x-default": "https://www.klrenovator.com/whole-house-aircond-installation" } },
 };

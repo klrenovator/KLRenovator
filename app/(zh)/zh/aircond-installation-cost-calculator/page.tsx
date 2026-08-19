@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/aux-aircond-basic-servicing-shah-alam-53.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — 冷气安装费用计算器",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("冷气安装费用计算器 — 马来西亚"),
     description: "即时冷气安装费用估算 — 人工与材料，含批量折扣。",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/aux-aircond-basic-servicing-shah-alam-53.webp"],
   },
 };
 

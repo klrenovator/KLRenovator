@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_MY",
     alternateLocale: ["en_MY", "ms_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/generic-aircond-basic-servicing-ampang-104.webp",
+      width: 1200,
+      height: 630,
+      alt: "吉隆坡与雪兰莪冷气服务价格表 — KL Renovator",
+    }],
   },
 };
 

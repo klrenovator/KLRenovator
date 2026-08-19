@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/sharp-aircond-basic-servicing-cheras-115.webp",
+      width: 1200,
+      height: 630,
+      alt: "Aircond BTU and horsepower size calculator — KL Renovator",
+    }],
   },
 };
 

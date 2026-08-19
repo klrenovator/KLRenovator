@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Aircond Size Calculator Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Aircond Size Calculator Malaysia"),
     description: "Room size to HP & BTU — find the right aircond capacity.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp"],
   },
 };
 

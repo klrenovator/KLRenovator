@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/aux-aircond-basic-servicing-shah-alam-53.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Aircond Installation Cost Calculator Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Aircond Installation Cost Calculator Malaysia"),
     description: "Instant aircond installation cost estimate — labour & materials with bundle discounts.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/aux-aircond-basic-servicing-shah-alam-53.webp"],
   },
 };
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_MY",
     alternateLocale: ["en_MY", "ms_MY"],
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://www.klrenovator.com/hero/sharp-aircond-basic-servicing-cheras-115.webp", width: 1200, height: 630 }],
   },
 };
 

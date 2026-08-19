@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "KL Renovator",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/acson-aircond-chemical-overhaul-puchong-38.webp",
         width: 1200,
         height: 630,
         alt: "Aircond installation KL & Selangor — KL Renovator",

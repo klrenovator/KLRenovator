@@ -21,6 +21,8 @@ import { getFreshDateZH } from "@/lib/dates";
 import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -63,6 +65,12 @@ export async function generateMetadata({
       type: "website",
       locale: "zh_MY",
       alternateLocale: ["en_MY", "ms_MY"],
+      images: [{
+        url: area.heroImage || pickHeroImage(`area-${area.slug}`, [area.slug]),
+        width: 1200,
+        height: 630,
+        alt: `${area.name}冷气服务 — KL Renovator`,
+      }],
     },
     alternates: {
       canonical: zhUrl,
@@ -98,7 +106,7 @@ export default async function AreaPageZH({
     telephone: siteConfig.phone,
     email: siteConfig.email,
     description: area.descriptionZH || area.description,
-    image: "https://www.klrenovator.com/logo/image.png",
+    image: `https://www.klrenovator.com${pickHeroImage(`area:${slug}`, [slug])}`,
     logo: "https://www.klrenovator.com/logo/image.png",
     address: {
       "@type": "PostalAddress",
@@ -151,6 +159,7 @@ export default async function AreaPageZH({
     description: clampMetaDescription(area.metaDescZH || area.metaDesc),
     url: zhUrl,
     inLanguage: "zh-MY",
+    dateModified: reviewDateFor("areas"),
   };
 
   const otherZhAreas = siteConfig.areaPages
@@ -531,6 +540,21 @@ export default async function AreaPageZH({
               查看 {area.name} 附近的真实作业照片与服务覆盖范围
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
+              {/* Link to this area's own installation page — those pages had
+                  zero inbound internal links (sitemap-only). */}
+              <NextLink
+                data-testid="area-installation-cta"
+                href={`/zh/areas/${slug}/installation`}
+                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">安装服务</p>
+                <h3 className="text-base font-black text-slate-900 group-hover:text-sky-700 transition-colors">
+                  {area.name}冷气安装
+                </h3>
+                <p className="mt-1 text-sm text-slate-600 font-medium">
+                  全新冷气安装：真空泵调试、Type-L 铜管，并提供 1 个月工艺保修。RM 199 起。
+                </p>
+              </NextLink>
               <NextLink
                 href="/zh/gallery"
                 className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-sky-400 hover:bg-white hover:shadow-md"

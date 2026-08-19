@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/york-aircond-chemical-overhaul-subang-jaya-26.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator aircond technician — local service across KL & Selangor",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
     description:
       "Local aircond servicing across KL & Selangor. Same-day slots, chemical wash from RM 120, all brands.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/york-aircond-chemical-overhaul-subang-jaya-26.webp"],
   },
 };
 
