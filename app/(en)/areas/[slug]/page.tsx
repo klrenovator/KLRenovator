@@ -23,6 +23,7 @@ import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 
 function getAreaImage(heroImage?: string) {
@@ -196,6 +197,7 @@ export default async function AreaPage({
     description: clampMetaDescription(area.metaDesc),
     url: `https://www.klrenovator.com/areas/${slug}`,
     inLanguage: "en-MY",
+    dateModified: reviewDateFor("areas"),
     isPartOf: { "@id": "https://www.klrenovator.com/#website" },
     about: { "@id": "https://www.klrenovator.com/#business" },
     speakable: {

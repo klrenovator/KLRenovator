@@ -22,6 +22,7 @@ import { buildUniqueAreaFAQ_MS } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -171,6 +172,7 @@ export default async function AreaPageMS({
     description: clampMetaDescription(area.metaDescMS || area.metaDesc),
     url: msUrl,
     inLanguage: "ms-MY",
+    dateModified: reviewDateFor("areas"),
   };
 
   const otherMsAreas = siteConfig.areaPages

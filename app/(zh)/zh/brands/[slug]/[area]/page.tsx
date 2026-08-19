@@ -18,6 +18,7 @@ import {
 } from "@/config/brand-area-uniqueness";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { buildOgImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (Chinese)
@@ -133,6 +134,26 @@ export default async function BrandAreaPageZH({
     })),
   };
 
+
+  // Freshness signal for the 360 brand-area pages, which previously had no
+  // date at all. Hand-maintained constant — see config/content-review-dates.ts.
+  const pageUrl = `https://www.klrenovator.com/zh/brands/${slug}/${areaSlug}`;
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    name: `${area.name}${brand.name}冷气服务 — KL Renovator`,
+    url: pageUrl,
+    inLanguage: "zh-MY",
+    dateModified: reviewDateFor("brands"),
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+  };
+
   const techSpecs = BRAND_TECH_SPECS[slug] ?? BRAND_TECH_SPECS._default;
   const errorCodes = BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES._default;
 
@@ -140,6 +161,7 @@ export default async function BrandAreaPageZH({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb Navigation */}

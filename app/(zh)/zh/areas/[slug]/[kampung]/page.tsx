@@ -14,6 +14,7 @@ import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
 import { buildOgImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug]/[kampung] — Mandarin kampung page.
@@ -90,6 +91,26 @@ export default async function KampungPageZH({
     ],
   };
 
+
+  // Freshness signal. Date is a hand-maintained constant, not new Date() —
+  // see config/content-review-dates.ts.
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${zhUrl}#webpage`,
+    name: `${k.name}冷气服务 — KL Renovator`,
+    description: clampMetaDescription(k.metaDescZH || k.metaDesc),
+    url: zhUrl,
+    inLanguage: "zh-MY",
+    dateModified: reviewDateFor("kampungs"),
+    isPartOf: { "@id": "https://www.klrenovator.com/#website" },
+    about: { "@id": "https://www.klrenovator.com/#business" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+  };
+
   const faqSchema = k.faqsZH?.length
     ? {
         "@context": "https://schema.org",
@@ -121,6 +142,7 @@ export default async function KampungPageZH({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">

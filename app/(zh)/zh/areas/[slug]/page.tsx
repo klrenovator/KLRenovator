@@ -22,6 +22,7 @@ import { buildUniqueAreaFAQ_ZH } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
+import { reviewDateFor } from "@/config/content-review-dates";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -158,6 +159,7 @@ export default async function AreaPageZH({
     description: clampMetaDescription(area.metaDescZH || area.metaDesc),
     url: zhUrl,
     inLanguage: "zh-MY",
+    dateModified: reviewDateFor("areas"),
   };
 
   const otherZhAreas = siteConfig.areaPages
