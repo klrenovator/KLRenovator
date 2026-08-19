@@ -3,10 +3,84 @@
 ## Content · SEO · GEO · AEO
 
 **Site:** https://klrenovator.com
-**Date:** 2026-08-19 · **Branch:** `arena/01a019d1-klrenovator` · **Mode:** AUDIT ONLY — no source files changed
+**Date:** 2026-08-19 · **Branch:** `arena/01a019d1-klrenovator`
+**Mode:** audit + remediation — the audit below is the original finding set; see **[§0 Remediation status](#0-remediation-status)** for what has since been fixed.
 **Method:** full production build (`next build`) → **2,169 prerendered HTML pages parsed** → site-wide pattern analysis (headings, schema, link graph, 8-gram shingle similarity, entity/trust signal detection)
 
 > Evidence base: every number below is measured from rendered HTML, not from source config. Tooling committed in `audit/` (`extract.mjs`, `analyze.mjs`, `gaps.mjs`); raw data in `audit/pages.json`, `audit/findings.json`, `audit/gaps.json`.
+
+---
+
+## 0. Remediation status
+
+Fixes applied after the audit, on this branch (see `git log`).
+All verified against a fresh production build; `typecheck`, `lint`, `verify:build`
+and `audit:gsc` pass.
+
+### Score movement
+
+| Score | At audit | Now | Δ |
+|---|---|---|---|
+| Content | 94 | **98** | +4 |
+| GEO | 53 | **59** | +6 |
+| AEO | 38 | **40** | +2 |
+
+| Component | At audit | Now |
+|---|---|---|
+| Internal linking | 59 | **98** |
+| FAQ coverage (AEO) | 86 | **94** |
+| Freshness (GEO) | 22 | **66** |
+| Citation-worthiness (GEO) | 5 | 18 |
+
+### Fixed
+
+| # | Finding | Result |
+|---|---|---|
+| **C1** | 360 brand-area pages orphaned | **Fixed** — `brand-area-combo-links.ts` now links to `/brands/{brand}/{area}`. Verified 360 unique brand-area URLs receive internal links (was 0). Only prerendered pairs are linked, so no 404s. |
+| **C4** | 267 blog posts showed FAQs without schema | **Partly fixed** — new `lib/blog-derived-faq.ts` extracts each post's own question headings + answers. EN posts with FAQPage 12 → 67; site-wide 1,862 → **2,028**. The 34 EN posts with no question headings correctly still emit none. |
+| **C7** | 1,824 pages with no freshness signal | **Largely fixed** — `config/content-review-dates.ts` + WebPage nodes on area/kampung/brand-area templates. Pages with `dateModified` 339 → **1,293**. |
+| **C8** | 971 pages missing `og:image` | **Fixed** — `lib/og-image-pool.ts` deterministically maps pages onto 22 real job photos (all verified on disk). Missing og:image 971 → **89**. |
+| **C10** | "Uniqueness Matrix" jargon + `20D.33` task ID visible on 474 pages | **Fixed** — now "Aircond Service in {Name} — What to Expect" (+ MS/ZH). Zero pages leak the task ID. |
+| — | 120 area-installation pages orphaned | **Fixed** — each area page now links its own `/installation` child. **Site-wide orphans 443 → 23.** |
+
+### Corrected finding — C3 was wrong
+
+**The original C3 recommendation (add `AggregateRating`) has been withdrawn and must not be implemented.**
+
+Google's self-serving review policy (Sept 2019, restated Dec 2025) makes
+`LocalBusiness`/`Organization` **and all subtypes — including `HVACBusiness` —
+ineligible for review rich results when the business controls the reviews.**
+Adding `aggregateRating` would:
+
+- never render stars,
+- report as **"Invalid items"** in the Search Console review-snippet report, and
+- **fail this repo's own CI** — `scripts/gsc-audit.mjs` §9a already treats
+  `aggregateRating` on those types as a build-breaking error.
+
+The correct channel for star ratings is the Google Business Profile, which
+already carries the 5.0/500+ rating and surfaces it in the local pack and Maps
+without any on-site markup. The GEO concern behind C3 (AI engines can't verify
+the quality claim) remains valid and is better served by the freshness and
+expert-attribution work in C7.
+
+### Requires a maintainer — not fixable from this session
+
+| # | Item | Blocker |
+|---|---|---|
+| **C2** | 638 month-stamped titles go stale without a monthly rebuild | Workflow file written to **`docs/monthly-refresh.workflow.yml`** with setup notes in **`docs/MONTHLY-TITLE-REFRESH.md`**. It could not be committed to `.github/workflows/` — the GitHub App lacks the `workflows` permission. A maintainer must copy it in and add the `VERCEL_DEPLOY_HOOK_URL` secret. A lower-maintenance alternative (year-only stamps) is documented. |
+
+### Still open — needs content authoring
+
+These are genuine content work, not markup, and are too large to complete safely in one session:
+
+| # | Item | Pages |
+|---|---|---|
+| **C5** | No price/comparison table on commercial pages | 1,782 |
+| **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 |
+| **C7b** | No author/expert attribution outside blog & service | 1,698 |
+| **C9** | HowTo schema missing where step content exists | 137 |
+| — | External citations to authorities (TNB, Energy Commission, SIRIM) | 2,164 |
+| — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new |
 
 ---
 
@@ -133,7 +207,12 @@ The module renders a "Daikin in Petaling Jaya" card that **links to the generic 
 
 ---
 
-### 🔴 C3 — Zero Review/AggregateRating schema despite "5.0 from 500+ reviews"
+### ~~🔴 C3 — Zero Review/AggregateRating schema~~ — ⚠️ WITHDRAWN, SEE §0
+
+> **This finding was wrong.** `HVACBusiness` is a `LocalBusiness` subtype and is
+> ineligible for review rich results under Google's self-serving review policy.
+> Adding `aggregateRating` would fail this repo's own `audit:gsc` check.
+> Original text kept below for the record.
 
 **0 of 2,169 pages** emit `AggregateRating` or `Review` structured data. Verified by grep across all built HTML.
 
