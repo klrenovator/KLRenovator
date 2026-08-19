@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Aircond Gas Top-up Cost Calculator Malaysia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Aircond Gas Top-up Cost Calculator Malaysia"),
     description: "R22, R410A & R32 gas top-up price estimate by HP — from RM 2.50/PSI.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/panasonic-aircond-ceiling-cassette-service-klang-68.webp"],
   },
 };
 

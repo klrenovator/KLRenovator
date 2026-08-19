@@ -4,7 +4,7 @@
 # Extended context: https://www.klrenovator.com/llms-full.txt
 # Service Q&A data: https://www.klrenovator.com/aeo-faq.txt
 # Machine-readable summary: https://www.klrenovator.com/site-summary.json
-# Full URL inventory: https://www.klrenovator.com/sitemap.xml (2124 URLs)
+# Full URL inventory: https://www.klrenovator.com/sitemap.xml (2166 URLs)
 
 ## ABOUT THIS BUSINESS
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     locale: "ms_MY",
     alternateLocale: ["en_MY", "zh_MY"],
     images: [
-      { url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Galeri Projek Aircond KL Renovator" },
+      { url: "https://www.klrenovator.com/hero/midea-aircond-chemical-overhaul-shah-alam-50.webp", width: 1200, height: 630, alt: "Galeri Projek Aircond KL Renovator" },
     ],
   },
   alternates: {

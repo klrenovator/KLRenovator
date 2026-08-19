@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Pemasangan Aircond Rumah Baru KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/lg-aircond-chemical-overhaul-klang-62.webp", width: 1200, height: 630, alt: "Pemasangan Aircond Rumah Baru KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Rumah Baru KL — Pakej Seluruh Rumah", description: "Pakej pemasangan aircond lengkap untuk rumah baru. 1BR–4BR, pakar kondo & landed, timeline 48 jam. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Rumah Baru KL — Pakej Seluruh Rumah", description: "Pakej pemasangan aircond lengkap untuk rumah baru. 1BR–4BR, pakar kondo & landed, timeline 48 jam. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/lg-aircond-chemical-overhaul-klang-62.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", languages: { "en-MY": "https://www.klrenovator.com/new-home-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", "zh-MY": "https://www.klrenovator.com/zh/new-home-aircond-installation", "x-default": "https://www.klrenovator.com/new-home-aircond-installation" } },
 };

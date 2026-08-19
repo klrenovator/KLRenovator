@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "zh_MY",
     url: "https://www.klrenovator.com/zh/whole-house-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "全屋冷气安装 KL 雪兰莪" }],
+    images: [{ url: "https://www.klrenovator.com/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp", width: 1200, height: 630, alt: "全屋冷气安装 KL 雪兰莪" }],
   },
-  twitter: { card: "summary_large_image", title: "全屋冷气安装 KL & 雪兰莪 — 批量套餐 | KL Renovator", description: "多台冷气安装含批量折扣。BTU指南，项目时间线，RM199/台起。WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "全屋冷气安装 KL & 雪兰莪 — 批量套餐 | KL Renovator", description: "多台冷气安装含批量折扣。BTU指南，项目时间线，RM199/台起。WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/zh/whole-house-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/whole-house-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", "zh-MY": "https://www.klrenovator.com/zh/whole-house-aircond-installation", "x-default": "https://www.klrenovator.com/whole-house-aircond-installation" } },
 };

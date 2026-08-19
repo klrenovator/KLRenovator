@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "en_MY",
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/daikin-aircond-basic-servicing-ampang-140.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Which Aircond Service Do I Need? Free Recommendation Tool",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Which Aircond Service Do I Need? Free Tool"),
     description: "Answer 4 questions — get the right aircond service with pricing.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/daikin-aircond-basic-servicing-ampang-140.webp"],
   },
 };
 

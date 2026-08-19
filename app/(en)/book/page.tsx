@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     url: "https://www.klrenovator.com/book",
     type: "website",
     locale: "en_MY",
+    images: [{
+      url: "https://www.klrenovator.com/hero/lg-aircond-basic-servicing-subang-jaya-29.webp",
+      width: 1200,
+      height: 630,
+      alt: "Book an aircond service with KL Renovator in KL and Selangor",
+    }],
   },
 };
 

@@ -8,6 +8,7 @@ import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle, buildBrandMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
 import { BRAND_PROBLEM_MAP, BRAND_SERVICE_MAP } from "@/config/topical-authority-map";
 import { Reveal } from "@/components/reveal";
 import { title } from "@/components/primitives";
@@ -53,7 +54,7 @@ export async function generateMetadata({
       alternateLocale: ["ms_MY", "zh_MY"],
       images: [
         {
-          url: `https://www.klrenovator.com${brand.heroImage || "/logo/image.png"}`,
+          url: `https://www.klrenovator.com${brand.heroImage || pickHeroImage(`brand:${brand.slug}`, [brand.slug])}`,
           width: 1200,
           height: 630,
           alt: `Aircond Service ${brand.name} KL & Selangor — KL Renovator`,

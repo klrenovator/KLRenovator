@@ -66,7 +66,7 @@ export async function generateMetadata({
       locale: "zh_MY",
       alternateLocale: ["en_MY", "ms_MY"],
       images: [{
-        url: area.heroImage ?? pickHeroImage(`area-${area.slug}`, [area.slug]),
+        url: area.heroImage || pickHeroImage(`area-${area.slug}`, [area.slug]),
         width: 1200,
         height: 630,
         alt: `${area.name}冷气服务 — KL Renovator`,
@@ -106,7 +106,7 @@ export default async function AreaPageZH({
     telephone: siteConfig.phone,
     email: siteConfig.email,
     description: area.descriptionZH || area.description,
-    image: "https://www.klrenovator.com/logo/image.png",
+    image: `https://www.klrenovator.com${pickHeroImage(`area:${slug}`, [slug])}`,
     logo: "https://www.klrenovator.com/logo/image.png",
     address: {
       "@type": "PostalAddress",

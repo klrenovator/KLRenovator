@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "zh_MY",
     url: "https://www.klrenovator.com/zh/commercial-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "商业冷气安装 KL 雪兰莪" }],
+    images: [{ url: "https://www.klrenovator.com/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp", width: 1200, height: 630, alt: "商业冷气安装 KL 雪兰莪" }],
   },
-  twitter: { card: "summary_large_image", title: "商业冷气安装 KL & 雪兰莪 — B2B | KL Renovator", description: "办公室、店铺、餐厅、诊所及服务器机房。天花板卡式、管道式、多联式。AMC可选。WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "商业冷气安装 KL & 雪兰莪 — B2B | KL Renovator", description: "办公室、店铺、餐厅、诊所及服务器机房。天花板卡式、管道式、多联式。AMC可选。WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/daikin-aircond-ceiling-cassette-service-shah-alam-56.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/zh/commercial-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/commercial-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-komersial", "zh-MY": "https://www.klrenovator.com/zh/commercial-aircond-installation", "x-default": "https://www.klrenovator.com/commercial-aircond-installation" } },
 };

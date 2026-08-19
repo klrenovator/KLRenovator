@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Pemasangan Aircond Seluruh Rumah KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/daikin-aircond-basic-servicing-ampang-140.webp", width: 1200, height: 630, alt: "Pemasangan Aircond Seluruh Rumah KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Seluruh Rumah KL & Selangor | KL Renovator", description: "Pemasangan berbilang unit dengan diskaun volum. Panduan BTU, garis masa projek, dari RM199/unit. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Seluruh Rumah KL & Selangor | KL Renovator", description: "Pemasangan berbilang unit dengan diskaun volum. Panduan BTU, garis masa projek, dari RM199/unit. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/daikin-aircond-basic-servicing-ampang-140.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", languages: { "en-MY": "https://www.klrenovator.com/whole-house-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah", "zh-MY": "https://www.klrenovator.com/zh/whole-house-aircond-installation", "x-default": "https://www.klrenovator.com/whole-house-aircond-installation" } },
 };

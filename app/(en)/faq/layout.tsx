@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     alternateLocale: ["ms_MY", "zh_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/toshiba-aircond-gas-topup-rawang-141.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — Aircond Service FAQ KL & Selangor",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("Aircond Service FAQ | KL Renovator"),
     description: "Aircond pricing, booking and service FAQs for KL & Selangor. Chemical wash from RM 120.",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/toshiba-aircond-gas-topup-rawang-141.webp"],
   },
 };
 

@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "zh_MY",
     url: "https://www.klrenovator.com/zh/new-home-aircond-installation",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "新房冷气安装 KL 雪兰莪" }],
+    images: [{ url: "https://www.klrenovator.com/hero/acson-aircond-chemical-overhaul-puchong-38.webp", width: 1200, height: 630, alt: "新房冷气安装 KL 雪兰莪" }],
   },
-  twitter: { card: "summary_large_image", title: "新房冷气安装 KL & 雪兰莪 — 全屋套餐 | KL Renovator", description: "新家冷气安装完整套餐。1BR–4BR，公寓和排屋专家，48小时时间线。WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "新房冷气安装 KL & 雪兰莪 — 全屋套餐 | KL Renovator", description: "新家冷气安装完整套餐。1BR–4BR，公寓和排屋专家，48小时时间线。WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/acson-aircond-chemical-overhaul-puchong-38.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/zh/new-home-aircond-installation", languages: { "en-MY": "https://www.klrenovator.com/new-home-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-rumah-baru", "zh-MY": "https://www.klrenovator.com/zh/new-home-aircond-installation", "x-default": "https://www.klrenovator.com/new-home-aircond-installation" } },
 };

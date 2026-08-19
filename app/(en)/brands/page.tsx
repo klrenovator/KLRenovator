@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   title: "Aircond Brands We Install & Service — KL & Selangor",
   description:
     padMetaDescription("We install and service all 20 aircond brands in KL & Selangor — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung and more. Same-day, from RM 99."),
+  openGraph: {
+    type: "website",
+    locale: "en_MY",
+    images: [{
+      url: "https://www.klrenovator.com/hero/isonic-aircond-compressor-replacement-petaling-jaya-22.webp",
+      width: 1200,
+      height: 630,
+      alt: "Aircond brands serviced by KL Renovator in KL and Selangor",
+    }],
+  },
   alternates: buildTrilingualHreflang("/brands"),
 };
 

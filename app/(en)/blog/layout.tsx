@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_MY",
     alternateLocale: ["ms_MY", "zh_MY"],
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "KL Renovator aircond guides & tips KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/isonic-aircond-compressor-replacement-petaling-jaya-22.webp", width: 1200, height: 630, alt: "KL Renovator aircond guides & tips KL Selangor" }],
   },
 };
 
@@ -61,7 +61,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
       name: "KL Renovator",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/isonic-aircond-compressor-replacement-petaling-jaya-22.webp",
       },
     },
     inLanguage: ["en", "ms", "zh"],

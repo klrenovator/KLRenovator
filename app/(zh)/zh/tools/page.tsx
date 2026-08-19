@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     images: [
       {
-        url: "https://www.klrenovator.com/logo/image.png",
+        url: "https://www.klrenovator.com/hero/hisense-aircond-basic-servicing-ampang-113.webp",
         width: 1200,
         height: 630,
         alt: "KL Renovator — 免费冷气计算器与工具",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clampMetaTitle("免费冷气计算器与工具"),
     description: "安装费用、加气、BTU、尺寸、电费和节省计算器 — 免费。",
-    images: ["https://www.klrenovator.com/logo/image.png"],
+    images: ["https://www.klrenovator.com/hero/hisense-aircond-basic-servicing-ampang-113.webp"],
   },
 };
 

@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website", locale: "ms_MY",
     url: "https://www.klrenovator.com/ms/pemasangan-aircond-komersial",
     siteName: "KL Renovator",
-    images: [{ url: "https://www.klrenovator.com/logo/image.png", width: 1200, height: 630, alt: "Pemasangan Aircond Komersial KL Selangor" }],
+    images: [{ url: "https://www.klrenovator.com/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp", width: 1200, height: 630, alt: "Pemasangan Aircond Komersial KL Selangor" }],
   },
-  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Komersial KL & Selangor — B2B | KL Renovator", description: "Pejabat, kedai, restoran, klinik & bilik server. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573", images: ["https://www.klrenovator.com/logo/image.png"] },
+  twitter: { card: "summary_large_image", title: "Pemasangan Aircond Komersial KL & Selangor — B2B | KL Renovator", description: "Pejabat, kedai, restoran, klinik & bilik server. Ceiling cassette, ducted, multi-split. AMC tersedia. WhatsApp +60182983573", images: ["https://www.klrenovator.com/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp"] },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.klrenovator.com/ms/pemasangan-aircond-komersial", languages: { "en-MY": "https://www.klrenovator.com/commercial-aircond-installation", "ms-MY": "https://www.klrenovator.com/ms/pemasangan-aircond-komersial", "zh-MY": "https://www.klrenovator.com/zh/commercial-aircond-installation", "x-default": "https://www.klrenovator.com/commercial-aircond-installation" } },
 };

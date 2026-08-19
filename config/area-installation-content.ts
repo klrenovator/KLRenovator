@@ -5,6 +5,7 @@
 import { siteConfig } from "@/config/site";
 import { buildInstallationMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildInstallationMetaDesc } from "@/lib/seo-description-optimizer";
+import { pickHeroImage } from "@/lib/og-image-pool";
 
 export type AreaInstallationLocale = "en" | "ms" | "zh";
 
@@ -656,7 +657,7 @@ export function getAreaInstallationContent(
     metaDescription,
     ogTitle: metaTitle,
     ogDescription: metaDescription,
-    ogImage: "/logo/image.png",
+    ogImage: pickHeroImage(`area-installation:${slug}`, [slug]),
     ogImageAlt:
       locale === "en"
         ? `Aircond installation in ${name}`

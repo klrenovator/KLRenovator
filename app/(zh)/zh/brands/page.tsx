@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_MY",
     alternateLocale: ["en_MY", "ms_MY"],
+    images: [{
+      url: "https://www.klrenovator.com/hero/isonic-aircond-compressor-replacement-petaling-jaya-22.webp",
+      width: 1200,
+      height: 630,
+      alt: "KL Renovator 服务的冷气品牌",
+    }],
   },
   alternates: buildTrilingualHreflang("/brands", "zh"),
 };

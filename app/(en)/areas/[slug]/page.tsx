@@ -70,7 +70,7 @@ export async function generateMetadata({
       locale: "en_MY",
       alternateLocale: ["ms_MY", "zh_MY"],
       images: [{
-        url: area.heroImage ?? pickHeroImage(`area-${area.slug}`, [area.slug]),
+        url: area.heroImage || pickHeroImage(`area-${area.slug}`, [area.slug]),
         width: 1200,
         height: 630,
         alt: `Aircond service in ${area.name}, ${area.state} — KL Renovator`,
@@ -108,7 +108,7 @@ export default async function AreaPage({
     telephone: siteConfig.phone,
     email: siteConfig.email,
     description: area.description,
-    image: "https://www.klrenovator.com/logo/image.png",
+    image: `https://www.klrenovator.com${pickHeroImage(`area:${slug}`, [slug])}`,
     logo: "https://www.klrenovator.com/logo/image.png",
     address: {
       "@type": "PostalAddress",
