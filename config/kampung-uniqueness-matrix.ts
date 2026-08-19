@@ -457,7 +457,7 @@ const SERVICE_BUNDLES: Record<ProfileKey, string[]> = {
 const TEXT = {
   en: {
     eyebrow: "Local service profile",
-    heading: (name: string) => `Aircond Service in ${name} — What to Expect`,
+    heading: (name: string) => `What should I expect from aircond service in ${name}?`,
     intro: (name: string, parentName: string, state: string, profile: string, route: string) =>
       `Every neighbourhood inside ${parentName} has a different cooling, access and dispatch pattern. For ${name}, KL Renovator treats this as a ${profile.toLowerCase()} job in ${state}, not a generic ${parentName} copy. The matrix below fixes the service angle for this exact sub-area: property type, access constraint, likely aircond fault, technician kit, route planning and the best internal service pages to check before booking. ${route}`,
     rowLabels: {
@@ -471,13 +471,13 @@ const TEXT = {
     serviceHeading: "Best-fit service pages for this neighbourhood",
     serviceIntro: (name: string) => `These links are selected for ${name}'s property/access pattern so users do not land on a generic area page first.`,
     bookingTip: (name: string, parentName: string) =>
-      `For fastest dispatch, WhatsApp your exact road, building or house type in ${name}, plus a photo of the indoor unit and outdoor compressor. We confirm pricing before work and keep the booking linked to the correct ${parentName} route.`,
+      `For fastest dispatch, WhatsApp your exact road, building or house type in ${name}, plus a photo of the indoor unit and outdoor compressor. We confirm pricing before work and keep the booking linked to the correct ${parentName} route so the van already carries the wash kit and copper that this street usually needs.`,
     coords: (lat?: number, lng?: number) =>
       lat && lng ? `Local GPS anchor: ${lat.toFixed(4)}, ${lng.toFixed(4)}.` : "Local GPS anchor is checked from the confirmed WhatsApp pin.",
   },
   ms: {
     eyebrow: "Profil servis setempat",
-    heading: (name: string) => `Servis Aircond di ${name} — Apa Yang Perlu Anda Tahu`,
+    heading: (name: string) => `Apa yang perlu anda jangkakan daripada servis aircond di ${name}?`,
     intro: (name: string, parentName: string, state: string, profile: string, route: string) =>
       `Setiap sub-kawasan dalam ${parentName} mempunyai corak cooling, akses dan dispatch yang berbeza. Untuk ${name}, KL Renovator menganggap kerja ini sebagai profil ${profile.toLowerCase()} di ${state}, bukan salinan generik ${parentName}. Matriks di bawah menetapkan sudut servis untuk kawasan tepat ini: jenis hartanah, kekangan akses, risiko kerosakan aircond, kit juruteknik, laluan dispatch dan halaman servis dalaman terbaik sebelum tempahan. ${route}`,
     rowLabels: {
@@ -491,13 +491,13 @@ const TEXT = {
     serviceHeading: "Halaman servis terbaik untuk kawasan ini",
     serviceIntro: (name: string) => `Pautan ini dipilih mengikut corak hartanah dan akses ${name}, supaya pengguna tidak bergantung pada halaman kawasan generik sahaja.`,
     bookingTip: (name: string, parentName: string) =>
-      `Untuk dispatch paling pantas, WhatsApp jalan tepat, nama bangunan atau jenis rumah di ${name}, bersama foto unit dalam dan kompressor luar. Harga disahkan sebelum kerja dan tempahan dikaitkan dengan laluan ${parentName} yang betul.`,
+      `Untuk dispatch paling pantas, WhatsApp jalan tepat, nama bangunan atau jenis rumah di ${name}, bersama foto unit dalam dan kompressor luar. Harga disahkan sebelum kerja dan tempahan dikaitkan dengan laluan ${parentName} yang betul supaya van sudah bawa kit cucian dan paip tembaga yang biasa diperlukan di situ.`,
     coords: (lat?: number, lng?: number) =>
       lat && lng ? `Anchor GPS setempat: ${lat.toFixed(4)}, ${lng.toFixed(4)}.` : "Anchor GPS setempat disemak melalui pin WhatsApp yang disahkan.",
   },
   zh: {
     eyebrow: "本地服务概况",
-    heading: (name: string) => `${name}冷气服务 — 服务详情一览`,
+    heading: (name: string) => `${name}的冷气服务应该注意什么？`,
     intro: (name: string, parentName: string, state: string, profile: string, route: string) =>
       `${parentName}内每个社区的制冷问题、通行方式和派工路线都不同。对于${name}，KL Renovator会把它视为${state}的「${profile}」服务，不使用通用${parentName}文案。下面的矩阵固定此子区域的服务角度：物业类型、通行限制、常见冷气故障、技师工具、派工路线，以及预约前最适合查看的内部服务页面。${route}`,
     rowLabels: {
@@ -511,7 +511,7 @@ const TEXT = {
     serviceHeading: "此区域最适合的服务页面",
     serviceIntro: (name: string) => `这些链接按${name}的物业和通行模式选择，避免用户只停留在通用区域页面。`,
     bookingTip: (name: string, parentName: string) =>
-      `为了最快派工，请WhatsApp发送${name}的准确道路、大楼名称或房屋类型，并附上室内机和室外压缩机照片。施工前确认价格，并把预约归入正确的${parentName}路线。`,
+      `为了最快派工，请WhatsApp发送${name}的准确道路、大楼名称或房屋类型，并附上室内机和室外压缩机照片。施工前确认价格，并把预约归入正确的${parentName}路线，车上会带上这条街常用的清洗剂和铜管。`,
     coords: (lat?: number, lng?: number) =>
       lat && lng ? `本地GPS锚点：${lat.toFixed(4)}, ${lng.toFixed(4)}。` : "本地GPS锚点会根据确认后的WhatsApp定位检查。",
   },

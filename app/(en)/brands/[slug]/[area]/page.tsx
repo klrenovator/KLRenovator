@@ -220,10 +220,10 @@ export default async function BrandAreaPageEN({
       {/* Core Body Content */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl font-black uppercase tracking-tight text-slate-950 mb-6">
-            Expert {brand.name} Aircond Solutions in {area.name}
+          <h2 className="text-2xl font-black tracking-tight text-slate-950 mb-3">
+            How do you service {brand.name} aircond in {area.name}?
           </h2>
-          <p className="text-slate-700 font-medium leading-relaxed mb-6">{areaIntro}</p>
+          <p className="text-slate-700 font-medium leading-relaxed mb-6 speakable">{areaIntro}</p>
 
           {/* Pricing Table */}
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-10">
@@ -298,11 +298,21 @@ export default async function BrandAreaPageEN({
           {/* Local conditions — area-specific, prevents these 360 pages
               from being near-duplicates of one another */}
           <div className="mb-10">
-            <h3 className="font-black text-lg text-slate-900 mb-4 uppercase flex items-center gap-2">
-              <FiMapPin className="text-sky-500" /> {`Local Conditions in ${area.name}`}
+            <h3 className="font-black text-lg text-slate-900 mb-3 flex items-center gap-2">
+              <FiMapPin className="text-sky-500" /> {`What local conditions affect ${brand.name} units in ${area.name}?`}
             </h3>
-            <p className="text-slate-700 font-medium leading-relaxed">{areaLocalNote}</p>
+            <p className="text-slate-700 font-medium leading-relaxed speakable">{areaLocalNote}</p>
           </div>
+
+          {/* First FAQ is also a visible direct-answer block (H2 + p). */}
+          {areaFaqs[0] && (
+            <div className="mb-10">
+              <h2 className="text-2xl font-black tracking-tight text-slate-950">
+                {areaFaqs[0].q}
+              </h2>
+              <p className="mt-3 text-slate-700 font-medium leading-relaxed speakable">{areaFaqs[0].a}</p>
+            </div>
+          )}
 
           {/* Area-aware FAQ */}
           <div className="mb-10">
