@@ -13,6 +13,8 @@ import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 import { sitePublic } from "@/config/site-public";
 import { useLang } from "@/context/language-context";
 import { deriveFaqsFromContent } from "@/lib/blog-derived-faq";
+import { ComparisonBlock, DefinitionBlocks } from "@/components/aeo-explainer-blocks";
+import type { ExplainerBundle } from "@/lib/aeo-explainer-select";
 
 // UI Labels
 const UI = {
@@ -128,10 +130,16 @@ interface Props {
   // forcedLang overrides useLang() so crawlers/visitors always see the
   // language matching the URL they requested.
   forcedLang?: "en" | "ms" | "zh";
+  /**
+   * Definition + comparison blocks resolved on the server from this post's
+   * own body text (issue #72). All three locales are supplied because the
+   * unprefixed /blog/[slug] route toggles language client-side.
+   */
+  explainers?: ExplainerBundle;
 }
 
 // Client Component
-export function BlogPostClient({ post, related, forcedLang }: Props) {
+export function BlogPostClient({ post, related, forcedLang, explainers }: Props) {
   const { lang: contextLang } = useLang();
   const lang = forcedLang ?? contextLang;
   const ui = UI[lang];
@@ -387,11 +395,17 @@ export function BlogPostClient({ post, related, forcedLang }: Props) {
                 dangerouslySetInnerHTML={{ __html: diversifyBlogAnchors(content, lang) }}
               />
 
+              {/* Definition + comparison blocks (issue #72). Chosen server-side
+                  from this post's own body, so a drainage guide gets drainage
+                  terms and an energy guide gets MEPS / inverter — never a
+                  generic glossary pasted onto 300 URLs. */}
+              <DefinitionBlocks locale={lang} terms={explainers?.[lang].terms || []} seed={post.slug} />
+              <ComparisonBlock locale={lang} comparison={explainers?.[lang].comparison || null} seed={post.slug} />
+
               <section className="mt-10 rounded-2xl border border-sky-100 bg-sky-50/70 p-5 not-prose">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">
                   {ui.quickAnswer}
-                </p>
-                <p className="text-sm font-semibold leading-relaxed text-slate-700">
+                </p>                <p className="text-sm font-semibold leading-relaxed text-slate-700">
                   {quickAnswer}
                 </p>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">

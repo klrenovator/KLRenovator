@@ -17,6 +17,7 @@ import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 import { buildServiceRouteAlternates } from "@/config/service-route-qa";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 // ── Emergency-specific WhatsApp message ──────────────────────────────────────
 const emergencyMsg = [
@@ -827,6 +828,9 @@ export default function EmergencyPage() {
           </div>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="en" presetId="service:emergency" />
     </>
   );
 }

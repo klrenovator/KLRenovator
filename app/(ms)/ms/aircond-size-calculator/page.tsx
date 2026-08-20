@@ -53,6 +53,7 @@ export default function MsAircondSizeCalculatorPage() {
       pageUrl={PAGE_URL}
       howToName={c.howToName}
       howItWorksTitle={c.howItWorksTitle}
+      explainerPreset="tool:size"
     />
   );
 }

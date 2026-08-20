@@ -7,6 +7,7 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const metadata: Metadata = {
   title: "冷气安装 吉隆坡 & 雪兰莪 — RM199起 | 当天服务 | KL Renovator",
@@ -446,6 +447,9 @@ export default function AircondInstallationKLZHPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="zh" presetId="install:kl" />
     </>
   );
 }

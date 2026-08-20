@@ -9,6 +9,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const metadata: Metadata = {
   title: "全屋冷气安装 KL & 雪兰莪 — 多台批量套餐 | KL Renovator",
@@ -205,6 +206,9 @@ export default function WholeHouseInstallationPageZH() {
           </Reveal>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="zh" presetId="install:whole-house" />
     </>
   );
 }

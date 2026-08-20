@@ -12,6 +12,7 @@ import NextLink from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 import { Reveal } from "@/components/reveal";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildFaqSchema } from "@/lib/seo";
 import { ToolLinks } from "./tool-links";
@@ -43,6 +44,8 @@ export interface ToolPageProps {
   lang?: "en" | "ms" | "zh";
   /** Extra content sections rendered between factors and FAQs. */
   children?: ReactNode;
+  /** Curated definition + comparison preset id (see config/aeo-explainers.ts). */
+  explainerPreset?: string;
 }
 
 const BASE = "https://www.klrenovator.com";
@@ -123,6 +126,7 @@ export function ToolPageLayout({
   howItWorksTitle,
   lang = "en",
   children,
+  explainerPreset,
 }: ToolPageProps) {
   const t = LAYOUT_STRINGS[lang];
   const localePrefix = lang === "en" ? "" : `/${lang}`;
@@ -226,6 +230,10 @@ export function ToolPageLayout({
 
       {/* Extra content (pricing reference, comparison, etc.) */}
       {children}
+
+      {/* Definition + comparison blocks (issue #72) — the units this
+          calculator asks for, defined in plain language. */}
+      {explainerPreset ? <PageExplainers locale={lang} presetId={explainerPreset} /> : null}
 
       {/* FAQs */}
       <section className="py-14 bg-white border-t border-slate-100">

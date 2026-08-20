@@ -53,6 +53,7 @@ export default function ZhInstallationCostCalculatorPage() {
       pageUrl={PAGE_URL}
       howToName={c.howToName}
       howItWorksTitle={c.howItWorksTitle}
+      explainerPreset="tool:installation"
     />
   );
 }

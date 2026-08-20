@@ -53,6 +53,7 @@ export default function ZhWhichAircondServicePage() {
       pageUrl={PAGE_URL}
       howToName={c.howToName}
       howItWorksTitle={c.howItWorksTitle}
+      explainerPreset="tool:service"
     />
   );
 }

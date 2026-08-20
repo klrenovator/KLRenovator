@@ -9,6 +9,7 @@ import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/seo";
 import { InstallationProof } from "@/components/installation-proof";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import {
   INSTALLATION_HUB_GROUPS,
   HUB_COPY,
@@ -376,6 +377,9 @@ export function InstallationHubPage({ locale }: { locale: HubLocale }) {
           </div>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72). */}
+      <PageExplainers locale={locale} presetId="install:hub" />
 
       {/* Free calculator tools */}
       <section className="py-12 bg-slate-50 border-t border-slate-100">

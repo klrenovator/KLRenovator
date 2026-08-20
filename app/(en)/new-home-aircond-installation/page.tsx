@@ -9,6 +9,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const metadata: Metadata = {
   title: "New Home Aircond Installation KL — Full House Package",
@@ -282,6 +283,9 @@ export default function NewHomeInstallationPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="en" presetId="install:new-home" />
     </>
   );
 }

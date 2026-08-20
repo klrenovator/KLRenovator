@@ -15,6 +15,7 @@ import { buildServiceSchema } from "@/lib/seo";
 import { getFreshDateZH } from "@/lib/dates";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const dynamic = "force-static";
 
@@ -473,6 +474,9 @@ export default function ZhPricingPage() {
       </section>
 
       <PriceComparisonUI locale="zh" />
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="zh" presetId="service:price-guide" />
     </>
   );
 }

@@ -9,6 +9,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema, buildInstallationHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const metadata: Metadata = {
   title: "Aircond Installation KL & Selangor — From RM199, Same-Day",
@@ -451,6 +452,9 @@ export default function AircondInstallationKLPage() {
           <ToolLinks />
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="en" presetId="install:kl" />
     </>
   );
 }

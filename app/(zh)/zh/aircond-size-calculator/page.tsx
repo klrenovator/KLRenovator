@@ -53,6 +53,7 @@ export default function ZhAircondSizeCalculatorPage() {
       pageUrl={PAGE_URL}
       howToName={c.howToName}
       howItWorksTitle={c.howItWorksTitle}
+      explainerPreset="tool:size"
     />
   );
 }
