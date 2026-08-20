@@ -7,6 +7,7 @@ import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond KL & Selangor — Dari RM199, Hari Sama",
@@ -446,6 +447,9 @@ export default function PemasanganAircondKLPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="ms" presetId="install:kl" />
     </>
   );
 }

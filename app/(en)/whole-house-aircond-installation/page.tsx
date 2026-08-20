@@ -9,6 +9,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const metadata: Metadata = {
   title: "Whole-House Aircond Installation KL — Multi-Unit Packages",
@@ -234,6 +235,9 @@ export default function WholeHouseInstallationPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="en" presetId="install:whole-house" />
     </>
   );
 }

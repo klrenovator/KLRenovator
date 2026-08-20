@@ -11,6 +11,7 @@ import { FiCheck, FiChevronRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 const amcMsg = [
   "Hi KL Renovator, saya berminat dengan Kontrak Penyelenggaraan Tahunan (AMC) untuk unit aircond saya.",
@@ -168,6 +169,9 @@ export default function AMCPageMS() {
           </div>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="ms" presetId="service:maintenance-contract" />
     </>
   );
 }

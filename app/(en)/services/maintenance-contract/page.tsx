@@ -11,6 +11,7 @@ import { FiCheck, FiShield, FiCalendar, FiDroplet, FiTool, FiZap, FiClock, FiSta
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 const amcMsg = [
   "Hi KL Renovator, I am interested in an Annual Maintenance Contract (AMC) for my aircond unit(s).",
@@ -276,6 +277,9 @@ export default function AMCPage() {
           </div>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="en" presetId="service:maintenance-contract" />
     </>
   );
 }

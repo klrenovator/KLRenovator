@@ -1636,6 +1636,15 @@ export const EXPLAINER_PRESETS: Record<string, ExplainerPreset> = {
   "install:ceiling-cassette": { terms: ["ceiling-cassette", "drain-pipe", "vacuum-install"], comparison: "wall-vs-cassette" },
   "install:window-unit": { terms: ["outdoor-condenser", "isolator-mcb", "drain-pipe"], comparison: "window-vs-split" },
   "install:hub": { terms: ["vacuum-install", "flare-joint", "workmanship-warranty"], comparison: "condo-vs-landed" },
+  "install:kl": { terms: ["vacuum-install", "isolator-mcb", "flare-joint"], comparison: "condo-vs-landed" },
+  "install:commercial": { terms: ["ceiling-cassette", "outdoor-condenser", "workmanship-warranty"], comparison: "wall-vs-cassette" },
+  "install:whole-house": { terms: ["horsepower", "btu", "isolator-mcb"], comparison: "single-vs-multiple-units" },
+  "install:new-home": { terms: ["flare-joint", "drain-pipe", "vacuum-install"], comparison: "standard-vs-extended-piping" },
+  "install:price": { terms: ["horsepower", "workmanship-warranty", "flare-joint"], comparison: "standard-vs-extended-piping" },
+
+  /* ── price / service landing pages outside the /services tree ── */
+  "service:price-guide": { terms: ["chemical-wash", "basic-service", "gas-topup"], comparison: "wash-vs-basic" },
+  "service:cuci-aircond": { terms: ["chemical-wash", "blower-wheel", "evaporator-coil"], comparison: "wash-vs-overhaul" },
 };
 
 /** Resolve a curated preset into the actual entries, dropping unknown ids. */

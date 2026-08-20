@@ -12,6 +12,7 @@ import { BookingButton } from "@/components/booking-button";
 import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const dynamic = "force-static";
 
@@ -402,6 +403,9 @@ export default function MsInstallationPricePage() {
       </section>
 
       <PriceComparisonUI locale="ms" />
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="ms" presetId="install:price" />
     </>
   );
 }

@@ -16,6 +16,7 @@ import { getFreshDate } from "@/lib/dates";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 
 export const dynamic = "force-static";
 
@@ -473,6 +474,9 @@ export default function PricingPage() {
         </div>
       </section>
       <PriceComparisonUI locale="en" />
+
+      {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      <PageExplainers locale="en" presetId="service:price-guide" />
     </>
   );
 }
