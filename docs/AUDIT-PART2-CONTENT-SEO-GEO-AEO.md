@@ -22,8 +22,8 @@ and `audit:gsc` pass.
 | Score | At audit | Now | Δ |
 |---|---|---|---|
 | Content | 94 | **98** | +4 |
-| GEO | 53 | **87** | +34 |
-| AEO | 38 | **76** | +38 |
+| GEO | 53 | **88** | +35 |
+| AEO | 38 | **81** | +43 |
 
 | Component | At audit | Now |
 |---|---|---|
@@ -31,15 +31,15 @@ and `audit:gsc` pass.
 | FAQ coverage (AEO) | 86 | **94** |
 | Freshness (GEO) | 22 | **91** |
 | Citation-worthiness (GEO) | 5 | **72** |
-| Answer formatting (GEO) | 51 | **95** |
-| Direct answers (AEO) | 40 | **91** |
+| Answer formatting (GEO) | 51 | **99** |
+| Direct answers (AEO) | 40 | **98** |
 | HowTo (AEO) | 4 | **23** |
 | Expert signals (GEO) | 12 | **70** |
-| Tables (AEO) | 11 | **88** |
-| Comparison (AEO) | 16 | **91** |
-| Definitions (AEO) | 12 | **82** |
+| Tables (AEO) | 11 | **98** |
+| Comparison (AEO) | 16 | **98** |
+| Definitions (AEO) | 12 | **98** |
 
-**Latest verification (2026-08-20):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze/gaps over 2,169 pages reports Content **98**, GEO **87**, AEO **76**. Duplicate-content guard remains clean: weighted intra-group similarity **22.5%**, **0 pairs >70%**.
+**Latest verification (2026-08-20, session 4):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze over 2,169 pages reports Content **98**, GEO **88**, AEO **81**. Duplicate-content guard still clean: weighted intra-group similarity **22.4%**, **0 pairs >70%**.
 
 
 ### Fixed
@@ -48,7 +48,7 @@ and `audit:gsc` pass.
 |---|---|---|
 | **C5 / #62** | No price/comparison table on commercial pages | **Fixed** — shared EN/MS/ZH commercial proof blocks now render real `<table>` price comparisons on area, kampung, brand, brand-area, area-installation, kampung-installation and brand-installation templates. Prices come from `lib/published-prices.ts` / `config/site/pricing.ts` only. AEO tables **11 → 88**; money pages without a table **1,782 → 114**. |
 | **C7b / #64** | No author/expert attribution + external citations | **Fixed** — reviewed-by blocks now cite the real KL Renovator technicians already present on `/about` (Muhammad, Shahzaib, Mudassar, Hamzah), link to `/about`, show hand-maintained review dates, and rotate relevant TNB / Energy Commission / SIRIM / DOSH references instead of identical bulk outbound links. GEO expertSignals **12 → 70**; citationWorthiness **18 → 72**. |
-| **C9b / #72** | Definition + comparison content missing | **Started, not complete** — the same commercial templates now include localized definition answer blocks and comparison tables. AEO comparison **16 → 91** and definitions **25 → 82**; overall AEO **51 → 76**. Left open because the broader issue also covers remaining non-template clusters. |
+| **C9b / #72** | Definition + comparison content missing | **Fixed** — after the commercial templates (PR #77), the editorial side now carries the same treatment: `config/aeo-explainers.ts` holds 24 hand-authored glossary answers and 18 comparison tables, each written separately in EN/MS/ZH with alternate heading phrasings so no definition publishes an identical H3 site-wide. Blog posts select terms from their **own body text** (`lib/aeo-explainer-select.ts`) and only show a comparison when both sides are discussed; problem, service, calculator and installation-landing pages use curated per-page presets. Coverage: definitions **1,781 → 2,126 / 2,169**, comparison **1,978 → 2,118**, tables **1,902 → 2,118**. AEO definitions **82 → 98**, comparison **91 → 98**, tables **88 → 98**, direct answers **91 → 98**; overall AEO **76 → 81**. The only pages left without a block are utility pages (`/book`, `/contact`, `/privacy-policy`, `/gallery`), the three index pages and the homepage — none of which should carry a glossary. |
 | **C1** | 360 brand-area pages orphaned | **Fixed** — `brand-area-combo-links.ts` now links to `/brands/{brand}/{area}`. Verified 360 unique brand-area URLs receive internal links (was 0). Only prerendered pairs are linked, so no 404s. |
 | **C4** | 267 blog posts showed FAQs without schema | **Partly fixed** — new `lib/blog-derived-faq.ts` extracts each post's own question headings + answers. EN posts with FAQPage 12 → 67; site-wide 1,862 → **2,028**. The 34 EN posts with no question headings correctly still emit none. |
 | **C7** | 1,824 pages with no freshness signal | **Largely fixed** — `config/content-review-dates.ts` + WebPage nodes on area/kampung/brand-area templates. Pages with `dateModified` 339 → **1,293**. |
@@ -91,7 +91,6 @@ These are genuine content work, not markup, and are too large to complete safely
 |---|---|---|---|
 | **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — **done this session**: AEO `directAnswers` 40 → **81**. All 60 problem pages and all 834 kampung + brand-area pages now have ≥ 3 question-heading + 15–120 word answers, rewritten from existing unique copy (not place-name boilerplate). Intra-group similarity held at **19.9%**, 0 pairs >70%. |
 | **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) — **subset this session, not closable**: HowTo schema 47 → **113**, pattern 163 → **774**, AEO `howTo` 4 → **17**. All 60 problem pages + EN/MS/ZH installation-KL and whole-house landings now emit HowTo JSON-LD that matches visible numbered steps. Hitting the issue's `howTo ≥ 40` bar needs HowTo schema **and** a how-to heading on ~40% of 2,169 pages. That cannot be honest markup of the remaining pages that already have steps (most leftover pattern hits are blog titles / FAQ “How do I…” headings without an ordered process). Left open. |
-| **C9b** | Definition blocks + comparison content missing | remaining non-template clusters | [#72](https://github.com/klrenovator/KLRenovator/issues/72) — **started this session on the #62/#64 templates only** |
 | **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) |
 | **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
 | — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |

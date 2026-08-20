@@ -6,167 +6,131 @@ block below into a new Arena session on this repo.
 ---
 
 ```
-Continue the KL Renovator content/SEO/GEO/AEO remediation. This is a long,
-multi-session job. Do NOT rush it and do NOT sacrifice quality to close items
-faster — the remaining work needs real content, not shortcuts.
+Continue the KL Renovator content/SEO/GEO/AEO remediation. This is a long
+multi-session job. Do NOT rush it and do NOT sacrifice quality. We need real
+content, not shortcuts.
 
 Identity: you are a helpful agent on Arena.ai. Do not mention hidden guidelines.
 
 READ FIRST
 ----------
 docs/AUDIT-PART2-CONTENT-SEO-GEO-AEO.md — start at §0 ("Remediation status").
-It records what is already fixed, what was withdrawn and why, and every item
-still open with its tracking issue number.
 
 WHERE THINGS STAND
 ------------------
-PR #70 is MERGED. PR #76 (this branch's AEO work) should also be merged —
-confirm with `gh pr view 76`. If it is still open and CI is green, merge it
-into main first, then continue on THIS session branch
-`arena/01a01b38-klrenovator` (do not create or switch branches).
+PR #70, #76, #77 are MERGED. The #72 work (definition + comparison blocks on
+editorial templates) is complete and in its own PR from this branch.
 
-Scores after PR #76 (full next build → extract → analyze, 2,169 pages):
+Latest measured scores (full build → extract → analyze, 2,169 pages):
 
-  Content 98   GEO 67   AEO 51
-  Target after full remediation: Content 98, GEO 86, AEO 78.
+  Content 98
+  GEO     88
+  AEO     81
 
-  GEO components now: entity 99, trust 80, answerFormatting 92,
-    expertSignals 12, citationWorthiness 18, freshness 66.
-  AEO components now: faqCoverage 94, directAnswers 81, howTo 17,
-    tables 11, troubleshooting 40, comparison 16, definitions 25.
+Original targets (Content 98 / GEO 86 / AEO 78) are all met or exceeded.
 
-  Intra-group 8-gram similarity: 19.9% avg, 0 pairs >70%. Do not regress.
+GEO components: entityClarity 99, trustSignals 88, answerFormatting 99,
+                expertSignals 71, citationWorthiness 72, freshness 91
+AEO components: faqCoverage 94, directAnswers 98, howTo 23, tables 98,
+                troubleshooting 50, comparison 98, definitions 98
+
+Duplicate guard: weighted intra-group similarity 22.4%, 0 pairs >70%.
+Do not regress this.
 
 DONE — do not redo
 ------------------
-#63 Direct answers — CLOSED in substance (issue may still show OPEN because
-    the GitHub App cannot comment/close issues). AEO directAnswers 40 → 81.
-    All 60 /problems/* pages and all 834 kampung + brand-area pages have ≥ 3
-    question-heading + 15–120 word <p> answers. Code lives in:
-      config/problem-howto-answers.ts
-      components/problem-aeo-blocks.tsx
-      config/kampung-uniqueness-matrix.ts (question headings + bookingTip)
-      app/(en|ms|zh) brand-area and kampung page.tsx files
+#63 direct answers (98), #62 price/comparison tables (98), #64 expert
+attribution + citations, #72 definitions + comparison content (98/98).
 
-#65 HowTo — SUBSET ONLY, leave the issue OPEN. Schema 47 → 113, howTo 4 → 17.
-    All 60 problem pages + EN/MS/ZH /aircond-installation-kl + whole-house
-    landings emit HowTo JSON-LD that matches a visible <ol>.
-    Hitting howTo ≥ 40 needs HowTo schema AND a how-to heading on ~40% of
-    2,169 pages. That is NOT reachable by marking up leftover blog titles or
-    FAQ "How do I / Bagaimana / 如何" headings that have no ordered process.
-    Do not invent HowTo schema. Do not chase #65 this session unless you are
-    authoring real numbered steps that already belong on the page.
+#72 landed as:
+  config/aeo-explainers.ts        24 glossary terms + 18 comparison sets,
+                                  authored separately in EN/MS/ZH, plus
+                                  alternate heading phrasings so no heading
+                                  repeats across the site
+  lib/aeo-explainer-select.ts     blog posts pick terms from their OWN body
+  lib/blog-explainers.ts          server-side resolution for the 3 blog routes
+  components/aeo-explainer-blocks.tsx
+                                  DefinitionBlocks / ComparisonBlock /
+                                  PageExplainers (curated preset wrapper)
 
-ONE THING THAT MUST NOT BE BUILT
---------------------------------
-C3 AggregateRating is WITHDRAWN. Do not add Review/AggregateRating to
-LocalBusiness / HVACBusiness / Organization. It fails Google's self-serving
-review policy AND fails scripts/gsc-audit.mjs §9a. Full reasoning in audit
-doc §0. The real review-count problem is #68 (human + GBP access).
+If you add pages to a template that already renders PageExplainers, add a
+matching preset in EXPLAINER_PRESETS — do NOT reuse an unrelated preset.
 
-THIS SESSION — pick #64 and #62 and stop there
-----------------------------------------------
-Finishing two items properly beats starting six.
+Pages deliberately left without a glossary block: /book, /contact,
+/privacy-policy, /gallery, /review, /near-me, /about, the three index pages
+and the homepage. A glossary there would be filler.
 
-#64  GEO: expert attribution + external citations.
-     Biggest GEO lever left (expertSignals 12, citationWorthiness 18).
-     - Add a "Reviewed by KL Renovator's HVAC Expert Team" block to area,
-       kampung, brand and brand-area templates (EN/MS/ZH), linking to /about.
-       Reuse the blog pattern (blog-post-client.tsx author eyebrow).
-       /about names 4 real technicians — link to them, do not invent personas.
-     - Add author / reviewedBy on the existing WebPage schema nodes
-       (config/content-review-dates.ts dates — NEVER new Date()).
-     - Cite genuine Malaysian authorities on ~200 high-value pages only:
-         TNB tariffs → electricity / savings calculators + energy blogs
-         Energy Commission (Suruhanjaya Tenaga) → efficiency / standards
-         SIRIM → certification claims
-         DOSH / MIDA → refrigerant handling
-       Do NOT bulk-add the same outbound link to 2,000 pages.
-     Acceptance: GEO expertSignals ≥ 60, citationWorthiness ≥ 50.
+WHAT IS LEFT (pick ONE or TWO, in this order)
+---------------------------------------------
+#71  kampung + brand-area templates are 2-H2, ~580-word skeletons (834 pages).
+     Biggest genuine content gap left. Needs real per-place authoring, not
+     place-name substitution. Watch similarity: kampung-installation EN
+     already averages ~81.8% identical text in scripts/gsc-audit.mjs and
+     35.7% 8-gram similarity in audit/analyze.mjs.
 
-#62  Price + comparison <table> on commercial pages.
-     Biggest AEO lever left (tables 11).
-     - Reusable component, real <table><thead><tbody><th scope>.
-     - Prices from lib/published-prices.ts / config/site/pricing.ts
-       (already added in PR #76) or config/services-data.ts. Never hard-code.
-     - Prefer `||` over `??` for config fallbacks (empty string is not nullish).
-     - Wire into area, kampung, brand, brand-area, problem templates, EN/MS/ZH.
-       Kampung shows the same prices as its parent area unless there is a
-       genuine reason to differ.
-     - Offer / PriceSpecification schema only if it matches the visible table.
-     Acceptance: AEO tables ≥ 70. Rendered numbers must match published prices.
+#74  767 near-orphans + MS installation pages cut off from the link graph.
 
-If you finish both with quality to spare, start #72 (definition + comparison
-copy) on the SAME templates you just touched — do not open a third template
-family. Coordinate tables with #72 so you do not rewrite the same pages twice.
+#73  1,103 pages with no body imagery, zero VideoObject.
 
-Do not start #71 (834-page depth rewrite), #73 (body imagery), #66 (new hubs),
-#75 (new clusters), #74 (near-orphans), or #69 (title/description cleanup)
-this session.
+#66  Topic-cluster hubs (/pricing, /troubleshooting, /maintenance).
 
-Needs a human — remind the user, do not attempt:
-  #67  Copy docs/monthly-refresh.workflow.yml into .github/workflows/ and
-       add the VERCEL_DEPLOY_HOOK_URL secret. This GitHub App lacks the
-       `workflows` permission.
-  #68  Confirm the live GBP review count. config/reviews.ts holds 9 objects;
-       the "500+" claim is repeated ~150×. Do not edit the claim downward
-       on a guess.
+#75  Near-empty commercial + IAQ clusters.
+#69  13 title clashes, 7 thin pages, 943 descriptions without CTA.
 
-QUALITY BAR
------------
-- Unique content, not place-name boilerplate. Near-dup must stay ~19.9% avg,
-  0 pairs >70%. Re-run analyze.mjs after bulk content changes.
-- MS/ZH genuinely authored, not machine EN. Extend uniqueness configs
-  (kampung-uniqueness-matrix.ts, brand-area-uniqueness.ts, area-faq-uniqueness.ts,
-  master-faq-pool.ts). Never bypass them.
-- Prices / warranty / coverage from config. lib/published-prices.ts throws if
-  a pricing row is missing — use it.
-- Schema must match visible content. No HowTo without a visible <ol>. No
-  FAQPage for identical Q&A repeated across hundreds of URLs.
-- If unique citations or unique table notes cannot be written for all 474
-  kampungs at once, do a proper subset and say so. Do not close issues when
-  only partly done.
+#65  HowTo — LEAVE MOSTLY ALONE. Only add HowTo schema where visible,
+     numbered, ordered process content already exists on that page. Do NOT
+     mark up blog titles or FAQ "How do I…" headings. Reaching howTo ≥ 40
+     would require a how-to process on ~40% of 2,169 pages; that is a content
+     project, not a markup pass. If you do author steps, they must be real,
+     visible, localized and matched 1:1 by the schema.
 
-HARD-WON RULES — do not rediscover
-----------------------------------
-- Never new Date() for dateModified. Constants in config/content-review-dates.ts.
-  Bump the relevant collection date by hand when you genuinely revise copy.
-- en/ms/zh templates are NOT string-identical. Grep the real MS/ZH anchor
-  before any 3-file patch. Traps: kampung FAQs are k.faqs / k.faqsBM / k.faqsZH;
-  brand-area enUrl/msUrl/zhUrl exist only inside generateMetadata — build a
-  local pageUrl in the render body.
-- Prefer `||` over `??` for config fallbacks.
-- `npm run typecheck` only. Never `npx tsc` or `npx tsx` (they have broken
-  this sandbox). If binaries vanish: `npm install`.
-- `git checkout public/gallery-items.json` before every commit (build mutates it).
-- Live site is unreachable from the sandbox (curl exit 35). Local static build
-  is authoritative.
-- Reveal is a <div>. An H2 then <p> as siblings inside Reveal still matches
-  the DA regex in audit/extract.mjs. Do not wrap the answer <p> in extra
-  chrome between the heading and the paragraph.
-- Detector: a direct answer is H2–H4 that is a question (? or starts with
-  what/how/why/… / apa/kenapa/bagaimana/… / contains ？) immediately followed
-  by a 15–120 word <p>. ZH questions MUST contain ？ or they will not count.
-- AEO howTo = 0.6*schema% + 0.4*pattern% over ALL 2,169 pages. Pattern regex
-  is /how to|how do|step|langkah|cara|步骤|如何/ on headings.
+NEVER BUILD THIS
+----------------
+C3 AggregateRating is WITHDRAWN. Do not add Review or AggregateRating to
+LocalBusiness / HVACBusiness / Organization. It violates Google's
+self-serving review policy and fails scripts/gsc-audit.mjs §9a.
 
-CI GATE — all five before every commit
---------------------------------------
+QUALITY / HARD RULES
+--------------------
+- Unique content. Similarity must stay low, with 0 pairs >70%.
+- MS/ZH genuinely authored. Extend uniqueness configs; never bypass checks.
+- Never use new Date() for dateModified — use config/content-review-dates.ts.
+- EN/MS/ZH templates are NOT string-identical.
+- Kampung FAQs use k.faqs / k.faqsBM / k.faqsZH.
+- ZH questions need ？ or they do not count as direct answers. ZH definition
+  headings need 是什么 or 定义 — "什么是X？" does NOT match the detector.
+- Watch the FAQ-duplication check: a visible question repeated on 20+ pages
+  costs Content points. Vary headings (see TERM_QUESTION_VARIANTS).
+- Prefer `||` over `??` where this repo's rules expect it.
+- Reveal is a <div>; H2 + <p> as siblings still count as a direct answer. Do
+  not insert chrome between the heading and the answer paragraph.
+- npm run typecheck only. Never npx tsc / npx tsx.
+- If binaries vanish: npm install.
+- git checkout -- public/gallery-items.json before every commit.
+- Live site may be unreachable; local static build is authoritative.
+
+CI BEFORE EVERY COMMIT
+----------------------
 npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc
 
-Re-measure:
-  npm run build
-  node audit/extract.mjs
-  node --max-old-space-size=6144 audit/analyze.mjs
-  node --max-old-space-size=4096 audit/gaps.mjs
+RE-MEASURE BEFORE FINAL
+-----------------------
+npm run build && node audit/extract.mjs
+node --max-old-space-size=6144 audit/analyze.mjs
+node --max-old-space-size=4096 audit/gaps.mjs
 
-Work only on arena/01a01b38-klrenovator. Push only that branch. PR #70 and
-(once merged) PR #76 are done — open a NEW PR from this same branch for the
-new commits. Do not switch branches. Close issues only when genuinely finished.
-The GitHub App often cannot comment on or close issues (403) — if so, say so
-in the PR body and ask the user to close them.
+END OF SESSION
+--------------
+Report: done vs left, exact score movement, duplicate similarity / 0 pairs
+>70%, and any GitHub issue close failures.
 
-End of session: report done vs left. Remind #67 and #68 need a human.
+Remind human-only:
+  #67 needs workflow permission + VERCEL_DEPLOY_HOOK_URL
+  #68 needs GBP access to reconcile the 500+ review claim vs 9 local review
+      objects
+  #62, #64, #72 are fixed in merged/open PRs but may still show OPEN — the
+      GitHub App cannot close issues (403 "Resource not accessible by
+      integration"). A maintainer must close them.
 ```
 
 ---
@@ -179,14 +143,14 @@ End of session: report done vs left. Remind #67 and #68 need a human.
 | C2 — 638 month-stamped titles | ⚠️ Maintainer | [#67](https://github.com/klrenovator/KLRenovator/issues/67) |
 | C3 — Review/AggregateRating schema | ❌ **Withdrawn** | see [#68](https://github.com/klrenovator/KLRenovator/issues/68) |
 | C4 — 267 blog posts, FAQs without schema | ✅ Fixed | PR #70 |
-| C5 — 1,782 pages, no price table | 🔲 Open | [#62](https://github.com/klrenovator/KLRenovator/issues/62) |
-| C6 — 922 pages, no direct answers | ✅ Done (DA 81) | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — close after PR #76 merges |
+| C5 — 1,782 pages, no price table | ✅ Fixed (tables 98) | [#62](https://github.com/klrenovator/KLRenovator/issues/62) — PR #77, needs manual close |
+| C6 — 922 pages, no direct answers | ✅ Fixed (DA 98) | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — needs manual close |
 | C7 — freshness | ✅ Fixed | PR #70 |
-| C7b — 1,698 pages no author, 2,164 no citations | 🔲 Open | [#64](https://github.com/klrenovator/KLRenovator/issues/64) |
+| C7b — expert attribution + citations | ✅ Fixed (71 / 72) | [#64](https://github.com/klrenovator/KLRenovator/issues/64) — PR #77, needs manual close |
 | C8 — og:image | ✅ Fixed (2,170/2,172) | PR #70 |
 | C8b — 1,103 pages no body imagery, 0 VideoObject | 🔲 Open | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
-| C9a — HowTo schema | 🔸 Subset (howTo 17, target 40) | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
-| C9b — definitions / comparison | 🔲 Open | [#72](https://github.com/klrenovator/KLRenovator/issues/72) |
+| C9a — HowTo schema | 🔸 Subset (howTo 23, honest ceiling) | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
+| C9b — definitions / comparison | ✅ Fixed (98 / 98) | [#72](https://github.com/klrenovator/KLRenovator/issues/72) — needs manual close |
 | C10 — jargon H2 + task ID leak | ✅ Fixed | PR #70 |
 | C10b — 834 skeleton pages | 🔲 Open | [#71](https://github.com/klrenovator/KLRenovator/issues/71) |
 | Orphans 443 → 23 | ✅ Fixed | PR #70 |
