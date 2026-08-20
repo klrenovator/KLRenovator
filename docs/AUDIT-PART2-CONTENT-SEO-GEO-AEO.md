@@ -41,6 +41,28 @@ and `audit:gsc` pass.
 
 **Latest verification (2026-08-20, session 4):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze over 2,169 pages reports Content **98**, GEO **88**, AEO **81**. Duplicate-content guard still clean: weighted intra-group similarity **22.4%**, **0 pairs >70%**.
 
+**Session 5 (2026-08-20) — issue #71 content depth on kampung + brand-area templates:**
+- `config/kampung-depth.ts` (474 pages): two new authored H2 sections per kampung
+  page — "How does the first aircond visit to X usually run?" (4-step ordered
+  checklist, profile-selected, 4 wording variants per locale × 7 profiles × 3
+  locales) and "What local signals do we plan for in X?" (4-dimension mini-table
+  with per-dimension independent variant picking).
+- `config/brand-area-depth.ts` (360 pages): two new authored H2 sections per
+  brand-area page — "How does our first {brand} visit in {area} usually run?"
+  (per brand-family × area-profile, 4 variants per locale) and "Common {brand}
+  jobs we get called for in {area}" (4-row job-frequency table per area-profile,
+  4 variants, MS/ZH row wording authored per (profile, variant)).
+- All EN/MS/ZH copy authored separately, not machine-mirrored.
+- Word count (EN): kampung 974 → 1,338 (+364), brand-area 962 → 1,278 (+316).
+  H2 depth: kampung 6 → 8, brand-area 5 → 7. Same movement in MS and ZH.
+- Duplicate guard *improved*: weighted intra-group similarity **22.4 → 20.8**;
+  0 pairs >70% held across every template group. Per-template moves:
+  kampung|en 29.9 → 23.1, kampung|ms 30.3 → 23.2, kampung|zh 10.1 → 8.1,
+  brand-area|en 25.1 → 21.7, brand-area|ms 25.2 → 21.9, brand-area|zh 11.2 → 9.7.
+- Scores held at Content **98**, GEO **88**, AEO **81** with all component sub-
+  scores unchanged (FAQ nudged 82 → 83). No new review-count claim added
+  (owner-handled per #68).
+
 
 ### Fixed
 
@@ -91,7 +113,7 @@ These are genuine content work, not markup, and are too large to complete safely
 |---|---|---|---|
 | **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — **done this session**: AEO `directAnswers` 40 → **81**. All 60 problem pages and all 834 kampung + brand-area pages now have ≥ 3 question-heading + 15–120 word answers, rewritten from existing unique copy (not place-name boilerplate). Intra-group similarity held at **19.9%**, 0 pairs >70%. |
 | **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) — **subset this session, not closable**: HowTo schema 47 → **113**, pattern 163 → **774**, AEO `howTo` 4 → **17**. All 60 problem pages + EN/MS/ZH installation-KL and whole-house landings now emit HowTo JSON-LD that matches visible numbered steps. Hitting the issue's `howTo ≥ 40` bar needs HowTo schema **and** a how-to heading on ~40% of 2,169 pages. That cannot be honest markup of the remaining pages that already have steps (most leftover pattern hits are blog titles / FAQ “How do I…” headings without an ordered process). Left open. |
-| **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) |
+| **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) — **done session 5**: two new authored H2 pillars per template, per-place variants selected by profile × slug hash. Word count EN 974 → 1,338 (kampung) and 962 → 1,278 (brand-area); H2 depth 6 → 8 (kampung) and 5 → 7 (brand-area). MS/ZH authored separately. Duplicate guard improved — weighted 22.4 → 20.8, 0 pairs >70% held. |
 | **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
 | — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
 | — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) |
