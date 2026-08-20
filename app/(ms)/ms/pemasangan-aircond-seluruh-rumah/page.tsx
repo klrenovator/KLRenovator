@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
@@ -68,11 +68,21 @@ export default function WholeHouseInstallationPageMS() {
     { name: "Pemasangan Aircond Seluruh Rumah", url: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah" },
   ]);
   const faqSchema = buildFaqSchema(FAQS);
+  const howToSchema = buildHowToSchema({
+    name: "Cara pasang aircond seluruh rumah di KL — 4 langkah",
+    description: "Pemasangan aircond seluruh rumah dari tinjauan tapak percuma hingga komisen berbilang unit. Upah volum dari RM 597 untuk tiga unit dinding.",
+    url: "https://www.klrenovator.com/ms/pemasangan-aircond-seluruh-rumah",
+    totalTime: "PT16H",
+    estimatedCost: { currency: "MYR", value: "597" },
+    steps: PROJECT_TIMELINE.map((s) => ({ name: s.title, text: s.desc })),
+    inLanguage: "ms-MY",
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
         <Image src="/logo/image.png" alt="Pemasangan aircond seluruh rumah berbilang unit Kuala Lumpur Selangor" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
@@ -149,18 +159,20 @@ export default function WholeHouseInstallationPageMS() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal><div className="text-center max-w-3xl mx-auto mb-12">
             <p className={eyebrow()}>Garis Masa Projek</p>
-            <h2 className="mt-3"><span className={title({ size: "sm" })}>Dari Bilik Kosong ke </span><span className={title({ size: "sm", color: "brand" })}>Rumah Sejuk Sepenuhnya</span></h2>
+            <h2 className="mt-3"><span className={title({ size: "sm" })}>Cara Pasang Aircond Seluruh Rumah — </span><span className={title({ size: "sm", color: "brand" })}>4 Langkah</span></h2>
             <p className="mt-4 text-slate-600 font-medium">Proses berbilang unit kami yang lancar — diuruskan oleh pasukan projek khusus dari sebut harga hingga penyerahan.</p>
           </div></Reveal>
-          <div className="max-w-3xl mx-auto space-y-6">
+          <ol className="max-w-3xl mx-auto space-y-6">
             {PROJECT_TIMELINE.map((phase, i) => (
-              <Reveal key={phase.phase} delay={i * 120}>
-                <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-sky-300 hover:shadow-md transition-all">
-                  <div className="flex items-start gap-4"><div className="inline-flex p-3 bg-sky-50 border border-sky-100 text-sky-600 rounded-xl shrink-0">{phase.icon}</div><div><p className="text-xs font-black uppercase tracking-widest text-sky-500 mb-1">{phase.phase}</p><h3 className="font-black text-lg text-slate-900 mb-2">{phase.title}</h3><p className="text-slate-600 text-sm leading-relaxed">{phase.desc}</p></div></div>
-                </div>
-              </Reveal>
+              <li key={phase.phase} className="list-none">
+                <Reveal delay={i * 120}>
+                  <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-sky-300 hover:shadow-md transition-all">
+                    <div className="flex items-start gap-4"><div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-600 text-sm font-black text-white shrink-0">{i + 1}</div><div><p className="text-xs font-black uppercase tracking-widest text-sky-500 mb-1">{phase.phase}</p><h3 className="font-black text-lg text-slate-900 mb-2">{phase.title}</h3><p className="text-slate-600 text-sm leading-relaxed">{phase.desc}</p></div></div>
+                  </div>
+                </Reveal>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

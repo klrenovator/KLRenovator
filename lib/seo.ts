@@ -319,6 +319,61 @@ export function buildInstallationServiceSchema(): Record<string, unknown> {
 }
 
 /**
+ * Generic HowTo JSON-LD. Schema must match visible numbered steps on the
+ * same page — never emit this without a matching `<ol>` / numbered process.
+ */
+export function buildHowToSchema(args: {
+  name: string;
+  description: string;
+  url?: string;
+  totalTime?: string;
+  estimatedCost?: { currency: string; value: string };
+  supply?: readonly string[];
+  tool?: readonly string[];
+  steps: ReadonlyArray<{ name: string; text: string; url?: string }>;
+  inLanguage?: string;
+}): Record<string, unknown> {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: args.name,
+    description: args.description,
+    step: args.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      ...(s.url ? { url: s.url } : {}),
+    })),
+  };
+
+  if (args.url) schema.url = args.url;
+  if (args.totalTime) schema.totalTime = args.totalTime;
+  if (args.inLanguage) schema.inLanguage = args.inLanguage;
+  if (args.estimatedCost) {
+    schema.estimatedCost = {
+      "@type": "MonetaryAmount",
+      currency: args.estimatedCost.currency,
+      value: args.estimatedCost.value,
+    };
+  }
+  if (args.supply?.length) {
+    schema.supply = args.supply.map((name) => ({
+      "@type": "HowToSupply",
+      name,
+    }));
+  }
+  if (args.tool?.length) {
+    schema.tool = args.tool.map((name) => ({
+      "@type": "HowToTool",
+      name,
+    }));
+  }
+
+  return schema;
+}
+
+/**
  * Build HowTo Schema for the 7-step installation process
  */
 export function buildInstallationHowToSchema(): Record<string, unknown> {

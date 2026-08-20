@@ -19,6 +19,7 @@ import {
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
+import { publishedPrices } from "@/lib/published-prices";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (Bahasa Malaysia)
@@ -224,10 +225,10 @@ export default async function BrandAreaPageMS({
       {/* Core Body Content */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl font-black uppercase tracking-tight text-slate-950 mb-6">
-            Penyelesaian Servis Aircond {brand.name} Profesional di {area.name}
+          <h2 className="text-2xl font-black tracking-tight text-slate-950 mb-3">
+            Bagaimana servis aircond {brand.name} di {area.name} dijalankan?
           </h2>
-          <p className="text-slate-700 font-medium leading-relaxed mb-6">{areaIntro}</p>
+          <p className="text-slate-700 font-medium leading-relaxed mb-6 speakable">{areaIntro}</p>
 
           {/* Pricing Table */}
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-10">
@@ -236,7 +237,7 @@ export default async function BrandAreaPageMS({
               {[
                 { name: "Servis Asas", price: "Dari RM 99" },
                 { name: "Cuci Kimia Bertekanan", price: "Dari RM 120" },
-                { name: "Overhaul Kimia", price: "Dari RM 220" },
+                { name: "Overhaul Kimia (Unit Dinding)", price: `Dari ${publishedPrices.overhaul15}` },
                 { name: "Isi Gas R32/R410A", price: "Dari RM 3.00/PSI" },
               ].map((p) => (
                 <div key={p.name} className="flex justify-between bg-white border border-slate-200 p-3.5 rounded-xl text-sm font-bold">
@@ -302,11 +303,20 @@ export default async function BrandAreaPageMS({
           {/* Local conditions — area-specific, prevents these 360 pages
               from being near-duplicates of one another */}
           <div className="mb-10">
-            <h3 className="font-black text-lg text-slate-900 mb-4 uppercase flex items-center gap-2">
-              <FiMapPin className="text-sky-500" /> {`Keadaan Tempatan di ${area.name}`}
+            <h3 className="font-black text-lg text-slate-900 mb-3 flex items-center gap-2">
+              <FiMapPin className="text-sky-500" /> {`Apakah keadaan tempatan yang menjejaskan unit ${brand.name} di ${area.name}?`}
             </h3>
-            <p className="text-slate-700 font-medium leading-relaxed">{areaLocalNote}</p>
+            <p className="text-slate-700 font-medium leading-relaxed speakable">{areaLocalNote}</p>
           </div>
+
+          {areaFaqs[0] && (
+            <div className="mb-10">
+              <h2 className="text-2xl font-black tracking-tight text-slate-950">
+                {areaFaqs[0].q}
+              </h2>
+              <p className="mt-3 text-slate-700 font-medium leading-relaxed speakable">{areaFaqs[0].a}</p>
+            </div>
+          )}
 
           {/* Area-aware FAQ */}
           <div className="mb-10">

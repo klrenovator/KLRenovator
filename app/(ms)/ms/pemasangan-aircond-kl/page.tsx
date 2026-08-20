@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 
 export const metadata: Metadata = {
@@ -123,12 +123,22 @@ export default function PemasanganAircondKLPage() {
 
   const serviceSchema = buildInstallationServiceSchema();
   const faqSchema = buildInstallationFAQSchema(FAQS);
+  const howToSchema = buildHowToSchema({
+    name: "Cara Pasang Aircond di KL & Selangor — 7 Langkah",
+    description: "Proses pemasangan aircond profesional dari tempahan WhatsApp hingga serah terima. Vakum 500 mikron, paip tembaga Type L, waranti kerja 1 bulan.",
+    url: "https://www.klrenovator.com/ms/pemasangan-aircond-kl",
+    totalTime: "PT4H",
+    estimatedCost: { currency: "MYR", value: "199" },
+    steps: INSTALLATION_PROCESS.map((s) => ({ name: s.title, text: s.desc })),
+    inLanguage: "ms-MY",
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
@@ -264,7 +274,7 @@ export default function PemasanganAircondKLPage() {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p className={eyebrow()}>Proses Pemasangan 7 Langkah Kami</p>
-              <h2 className="mt-3"><span className={title({ size: "sm" })}>Daripada Tempahan ke </span><span className={title({ size: "sm", color: "brand" })}>Keselesaan Sejuk</span></h2>
+              <h2 className="mt-3"><span className={title({ size: "sm" })}>Cara Pasang Aircond — </span><span className={title({ size: "sm", color: "brand" })}>7 Langkah</span></h2>
               <p className="mt-4 text-slate-600 font-medium">Setiap pemasangan mengikuti urutan tepat ini — tiada pintasan, tiada kejutan.</p>
             </div>
           </Reveal>

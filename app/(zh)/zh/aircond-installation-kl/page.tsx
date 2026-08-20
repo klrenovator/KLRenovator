@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 
 export const metadata: Metadata = {
@@ -123,12 +123,22 @@ export default function AircondInstallationKLZHPage() {
 
   const serviceSchema = buildInstallationServiceSchema();
   const faqSchema = buildInstallationFAQSchema(FAQS);
+  const howToSchema = buildHowToSchema({
+    name: "如何安装冷气 — 7个步骤",
+    description: "从 WhatsApp 预约到交付的专业冷气安装流程。500 微米真空、Type L 铜管、1 个月工艺保修。",
+    url: "https://www.klrenovator.com/zh/aircond-installation-kl",
+    totalTime: "PT4H",
+    estimatedCost: { currency: "MYR", value: "199" },
+    steps: INSTALLATION_PROCESS.map((s) => ({ name: s.title, text: s.desc })),
+    inLanguage: "zh-MY",
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
@@ -264,7 +274,7 @@ export default function AircondInstallationKLZHPage() {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p className={eyebrow()}>7步标准安装流程</p>
-              <h2 className="mt-3"><span className={title({ size: "sm" })}>从预约到 </span><span className={title({ size: "sm", color: "brand" })}>舒适制冷</span></h2>
+              <h2 className="mt-3"><span className={title({ size: "sm" })}>如何安装冷气 — </span><span className={title({ size: "sm", color: "brand" })}>7个步骤</span></h2>
               <p className="mt-4 text-slate-600 font-medium">每单安装严格遵循此流程 — 不走捷径、无隐藏惊喜。</p>
             </div>
           </Reveal>

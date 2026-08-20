@@ -163,7 +163,10 @@ export default async function KampungPageMS({
               <span className={title({ size: "lg" })}>Servis Aircond </span>
               <span className={title({ size: "lg", color: "brand" })}>{k.name}</span>
             </h1>
-            <p className="mt-5 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+            <h2 className="mt-6 text-xl sm:text-2xl font-black tracking-tight text-slate-950">
+              Apakah yang termasuk dalam servis aircond di {k.name}?
+            </h2>
+            <p className="mt-3 text-base sm:text-lg text-slate-700 leading-relaxed font-medium speakable">
               {k.descriptionMS}
             </p>
 
@@ -197,8 +200,14 @@ export default async function KampungPageMS({
             <h2 id={`${uniquenessMatrix.id}-heading`} className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
               {uniquenessMatrix.heading}
             </h2>
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700 max-w-4xl">
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700 max-w-4xl speakable">
               {uniquenessMatrix.intro}
+            </p>
+            <h2 className="mt-8 text-xl sm:text-2xl font-black tracking-tight text-slate-950">
+              Bagaimana nak tempah servis aircond di {k.name}?
+            </h2>
+            <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700 max-w-4xl speakable">
+              {uniquenessMatrix.bookingTip}
             </p>
 
             <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

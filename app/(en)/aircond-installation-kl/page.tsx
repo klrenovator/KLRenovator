@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildInstallationServiceSchema, buildInstallationFAQSchema, buildInstallationHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { ToolLinks } from "@/components/calculators/tool-links";
 
@@ -125,12 +125,14 @@ export default function AircondInstallationKLPage() {
 
   const serviceSchema = buildInstallationServiceSchema();
   const faqSchema = buildInstallationFAQSchema(FAQS);
+  const howToSchema = buildInstallationHowToSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
@@ -266,7 +268,7 @@ export default function AircondInstallationKLPage() {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p className={eyebrow()}>Our 7-Step Installation Process</p>
-              <h2 className="mt-3"><span className={title({ size: "sm" })}>From Booking to </span><span className={title({ size: "sm", color: "brand" })}>Cool Comfort</span></h2>
+              <h2 className="mt-3"><span className={title({ size: "sm" })}>How to Install an Aircond — </span><span className={title({ size: "sm", color: "brand" })}>7 Steps</span></h2>
               <p className="mt-4 text-slate-600 font-medium">Every installation follows this exact sequence — no shortcuts, no surprises.</p>
             </div>
           </Reveal>

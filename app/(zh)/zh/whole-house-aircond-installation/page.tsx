@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
-import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 
@@ -68,11 +68,21 @@ export default function WholeHouseInstallationPageZH() {
     { name: "全屋冷气安装", url: "https://www.klrenovator.com/zh/whole-house-aircond-installation" },
   ]);
   const faqSchema = buildFaqSchema(FAQS);
+  const howToSchema = buildHowToSchema({
+    name: "如何为整屋安装冷气 — 4个步骤",
+    description: "全屋冷气安装：从免费现场勘察到多台调试。三台挂壁式批量人工从 RM 597 起。",
+    url: "https://www.klrenovator.com/zh/whole-house-aircond-installation",
+    totalTime: "PT16H",
+    estimatedCost: { currency: "MYR", value: "597" },
+    steps: PROJECT_TIMELINE.map((s) => ({ name: s.title, text: s.desc })),
+    inLanguage: "zh-MY",
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center bg-slate-900 overflow-hidden">
         <Image src="/logo/image.png" alt="全屋多台冷气安装 吉隆坡 雪兰莪" fill priority sizes="100vw" className="object-cover object-center opacity-40" quality={80} />
@@ -149,18 +159,20 @@ export default function WholeHouseInstallationPageZH() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal><div className="text-center max-w-3xl mx-auto mb-12">
             <p className={eyebrow()}>项目时间线</p>
-            <h2 className="mt-3"><span className={title({ size: "sm" })}>从空房间到</span><span className={title({ size: "sm", color: "brand" })}>完全制冷之家</span></h2>
+            <h2 className="mt-3"><span className={title({ size: "sm" })}>如何为整屋安装冷气 — </span><span className={title({ size: "sm", color: "brand" })}>4个步骤</span></h2>
             <p className="mt-4 text-slate-600 font-medium">我们流畅的多台流程 — 由专属项目团队从报价到交接全程管理。</p>
           </div></Reveal>
-          <div className="max-w-3xl mx-auto space-y-6">
+          <ol className="max-w-3xl mx-auto space-y-6">
             {PROJECT_TIMELINE.map((phase, i) => (
-              <Reveal key={phase.phase} delay={i * 120}>
-                <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-sky-300 hover:shadow-md transition-all">
-                  <div className="flex items-start gap-4"><div className="inline-flex p-3 bg-sky-50 border border-sky-100 text-sky-600 rounded-xl shrink-0">{phase.icon}</div><div><p className="text-xs font-black uppercase tracking-widest text-sky-500 mb-1">{phase.phase}</p><h3 className="font-black text-lg text-slate-900 mb-2">{phase.title}</h3><p className="text-slate-600 text-sm leading-relaxed">{phase.desc}</p></div></div>
-                </div>
-              </Reveal>
+              <li key={phase.phase} className="list-none">
+                <Reveal delay={i * 120}>
+                  <div className="relative bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-sky-300 hover:shadow-md transition-all">
+                    <div className="flex items-start gap-4"><div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-600 text-sm font-black text-white shrink-0">{i + 1}</div><div><p className="text-xs font-black uppercase tracking-widest text-sky-500 mb-1">{phase.phase}</p><h3 className="font-black text-lg text-slate-900 mb-2">{phase.title}</h3><p className="text-slate-600 text-sm leading-relaxed">{phase.desc}</p></div></div>
+                  </div>
+                </Reveal>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

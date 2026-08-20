@@ -22,8 +22,8 @@ and `audit:gsc` pass.
 | Score | At audit | Now | Δ |
 |---|---|---|---|
 | Content | 94 | **98** | +4 |
-| GEO | 53 | **59** | +6 |
-| AEO | 38 | **40** | +2 |
+| GEO | 53 | **67** | +14 |
+| AEO | 38 | **51** | +13 |
 
 | Component | At audit | Now |
 |---|---|---|
@@ -31,6 +31,9 @@ and `audit:gsc` pass.
 | FAQ coverage (AEO) | 86 | **94** |
 | Freshness (GEO) | 22 | **66** |
 | Citation-worthiness (GEO) | 5 | 18 |
+| Answer formatting (GEO) | 51 | **92** |
+| Direct answers (AEO) | 40 | **81** |
+| HowTo (AEO) | 4 | **17** |
 
 ### Fixed
 
@@ -77,9 +80,9 @@ These are genuine content work, not markup, and are too large to complete safely
 | # | Item | Pages | Issue |
 |---|---|---|---|
 | **C5** | No price/comparison table on commercial pages | 1,782 | [#62](https://github.com/klrenovator/KLRenovator/issues/62) |
-| **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) |
+| **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — **done this session**: AEO `directAnswers` 40 → **81**. All 60 problem pages and all 834 kampung + brand-area pages now have ≥ 3 question-heading + 15–120 word answers, rewritten from existing unique copy (not place-name boilerplate). Intra-group similarity held at **19.9%**, 0 pairs >70%. |
 | **C7b** | No author/expert attribution + external citations | 1,698 / 2,164 | [#64](https://github.com/klrenovator/KLRenovator/issues/64) |
-| **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
+| **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) — **subset this session, not closable**: HowTo schema 47 → **113**, pattern 163 → **774**, AEO `howTo` 4 → **17**. All 60 problem pages + EN/MS/ZH installation-KL and whole-house landings now emit HowTo JSON-LD that matches visible numbered steps. Hitting the issue's `howTo ≥ 40` bar needs HowTo schema **and** a how-to heading on ~40% of 2,169 pages. That cannot be honest markup of the remaining pages that already have steps (most leftover pattern hits are blog titles / FAQ “How do I…” headings without an ordered process). Left open. |
 | **C9b** | Definition blocks + comparison content missing | 1,912 / 1,820 | [#72](https://github.com/klrenovator/KLRenovator/issues/72) |
 | **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) |
 | **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |

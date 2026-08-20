@@ -14,6 +14,7 @@ import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
+import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 
 // This route is backed by a finite typed content registry.
 // Unknown slugs must be a real 404, never an indexable fallback page.
@@ -1203,23 +1204,11 @@ export default async function ProblemPage({
         </div>
       </section>
 
-      {/* Direct Answer — AEO quotable block, shown right at the top for AI Overviews/LLMs */}
-      {aeo && (
-        <section className="py-8 bg-sky-50 border-b border-sky-100">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <Reveal>
-              <div className="max-w-3xl speakable">
-                <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">
-                  Direct Answer · Jawapan Terus · 直接解答
-                </p>
-                <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">{aeo.directAnswerEN}</p>
-                <p className="mt-2 text-xs text-slate-500 font-medium leading-relaxed border-l-2 border-sky-200 pl-3">{aeo.directAnswerMS}</p>
-                <p className="mt-2 text-xs text-slate-500 font-medium leading-relaxed border-l-2 border-slate-200 pl-3">{aeo.directAnswerZH}</p>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      )}
+      <ProblemAeoBlocks
+        slug={slug}
+        locale="en"
+        pageUrl={`https://www.klrenovator.com/problems/${slug}`}
+      />
 
       {/* Warning */}
       <section className="py-8 bg-red-50 border-b border-red-100">
