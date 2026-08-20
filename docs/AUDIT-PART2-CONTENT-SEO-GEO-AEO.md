@@ -41,6 +41,28 @@ and `audit:gsc` pass.
 
 **Latest verification (2026-08-20, session 4):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze over 2,169 pages reports Content **98**, GEO **88**, AEO **81**. Duplicate-content guard still clean: weighted intra-group similarity **22.4%**, **0 pairs >70%**.
 
+**Session 6 (2026-08-20) — issue #74 link-graph patch (near-orphans + MS installation cluster):**
+- Contextual parent→child links, not a related-links strip. Area brand chips now
+  point at real `/brands/{brand}/{area}` pairs (gated on `brandAreaPairs()`).
+  Kampung pages link their installation child; brand pages link brand-installation;
+  brand-area / area-installation / brand-installation pages stitch the rest of
+  the money graph with hashed EN/MS/ZH inline anchors
+  (`config/orphan-cross-links.ts` + `components/money-cross-links.tsx`).
+- MS installation landings (`/ms/pemasangan-aircond-*`) now receive in-content
+  links from MS area pages (authored MS copy, native slugs). Same treatment in
+  ZH. All 10 MS installation pages have ≥ 3 inbound.
+- Near-orphans **767 → 190**. brand-area 360 → 0 (median inbound 4),
+  brand-installation 60 → 0 (median 9), area-installation 120 → 24 (median 7),
+  kampung-installation 66 → 24 (median 5), installation-landing 12 → 2 (median 17).
+  Leftover 190 is almost all blog-post (108) + kampung (26) + the 24+24 install
+  tail — out of this session's template set.
+- Duplicate guard *improved*: weighted **20.8 → 20.5**, 0 pairs >70% held.
+  kampung|en 23.1 → 22.3, area|en 41.5 → 40.4. brand-area|en 21.7 → 21.8
+  (0.1, sampling noise on the 90-page sample). kampung-install EN gsc-audit
+  warning unchanged at 81.8%.
+- Scores held at Content **98**, GEO **88**, AEO **81**. internalLinking **98 → 100**.
+  No new review-count claim (owner-handled per #68). No AggregateRating.
+
 **Session 5 (2026-08-20) — issue #71 content depth on kampung + brand-area templates:**
 - `config/kampung-depth.ts` (474 pages): two new authored H2 sections per kampung
   page — "How does the first aircond visit to X usually run?" (4-step ordered
@@ -116,7 +138,7 @@ These are genuine content work, not markup, and are too large to complete safely
 | **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) — **done session 5**: two new authored H2 pillars per template, per-place variants selected by profile × slug hash. Word count EN 974 → 1,338 (kampung) and 962 → 1,278 (brand-area); H2 depth 6 → 8 (kampung) and 5 → 7 (brand-area). MS/ZH authored separately. Duplicate guard improved — weighted 22.4 → 20.8, 0 pairs >70% held. |
 | **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
 | — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
-| — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) |
+| — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — **done session 6**: near-orphans 767 → **190**; all 10 MS installation landings ≥ 3 inbound; brand-area / brand-installation off the near-orphan list. Weighted similarity 20.8 → 20.5, 0 pairs >70%. Needs manual close. |
 | — | Near-empty commercial + IAQ clusters | new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) |
 | — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) |
 

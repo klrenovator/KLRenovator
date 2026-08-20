@@ -17,6 +17,8 @@ import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
+import { brandInstallCta } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/brands/[slug] — Mandarin brand page. Mirrors /ms/brands/[slug].
@@ -457,6 +459,9 @@ export default async function BrandPageZH({
                   </span>
                 </NextLink>
               ))}
+            </div>
+            <div className="mt-6">
+              <MoneyCrossLinks block={brandInstallCta(slug, brand.name, "zh")} />
             </div>
           </Reveal>
         </div>

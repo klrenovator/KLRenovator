@@ -25,6 +25,8 @@ import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
+import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 
 
 function getAreaImage(heroImage?: string) {
@@ -833,7 +835,7 @@ export default async function AreaPage({
               {siteConfig.brandPages.map((brand) => (
                 <NextLink
                   key={brand.slug}
-                  href={`/brands/${brand.slug}`}
+                  href={brandChipHref("en", brand.slug, slug)}
                   className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition rounded-xl"
                 >
                   {brand.name} Aircond Service {area.name}
@@ -903,6 +905,9 @@ export default async function AreaPage({
                   Open Near Me Page <FiArrowRight className="h-3 w-3" />
                 </span>
               </NextLink>
+            </div>
+            <div className="mt-6">
+              <MoneyCrossLinks block={areaInstallClusterBlock(slug, area.name, "en")} />
             </div>
 
             {(() => {

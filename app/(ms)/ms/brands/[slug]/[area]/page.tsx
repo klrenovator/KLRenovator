@@ -22,6 +22,8 @@ import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
 import { publishedPrices } from "@/lib/published-prices";
+import { brandAreaLocalLinks } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (Bahasa Malaysia)
@@ -393,6 +395,10 @@ export default async function BrandAreaPageMS({
                 </details>
               ))}
             </div>
+          </div>
+
+          <div className="mb-10">
+            <MoneyCrossLinks block={brandAreaLocalLinks(slug, brand.name, areaSlug, area.name, "ms")} />
           </div>
 
           {/* Independent Service Disclaimer */}
