@@ -17,6 +17,8 @@ import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
+import { brandInstallCta } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /brands/[slug] — English brand page.
@@ -464,6 +466,9 @@ export default async function BrandPageEN({
                   </span>
                 </NextLink>
               ))}
+            </div>
+            <div className="mt-6">
+              <MoneyCrossLinks block={brandInstallCta(slug, brand.name, "en")} />
             </div>
           </Reveal>
         </div>

@@ -21,6 +21,8 @@ import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
+import { brandAreaLocalLinks } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 import { publishedPrices } from "@/lib/published-prices";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -393,6 +395,10 @@ export default async function BrandAreaPageZH({
                 </details>
               ))}
             </div>
+          </div>
+
+          <div className="mb-10">
+            <MoneyCrossLinks block={brandAreaLocalLinks(slug, brand.name, areaSlug, area.name, "zh")} />
           </div>
 
           {/* Independent Service Disclaimer */}

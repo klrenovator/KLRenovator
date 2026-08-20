@@ -18,6 +18,8 @@ import {
   getAreaInstallationContent,
   type AreaInstallationLocale,
 } from "@/config/area-installation-content";
+import { areaInstallBrandLinks } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 
 function TrustBadge({ label }: { label: string }) {
   return (
@@ -386,6 +388,18 @@ export function AreaInstallationLandingPage({
 
       <LocalPriceComparisonTable locale={locale} name={c.h1} />
       <ExpertReviewBlock locale={locale} name={c.h1} context="installation" seed={`area-installation-${slug}-${locale}`} />
+
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <MoneyCrossLinks
+            block={areaInstallBrandLinks(
+              slug,
+              c.h1.replace(/Aircond Installation |Pemasangan Aircond |冷气安装 /, ""),
+              locale,
+            )}
+          />
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">

@@ -17,6 +17,8 @@ import { kampungGamePlan, kampungSignals } from "@/config/kampung-depth";
 import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
+import { kampungChildBlock } from "@/config/orphan-cross-links";
+import { MoneyCrossLinks } from "@/components/money-cross-links";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug]/[kampung] — Mandarin kampung page.
@@ -375,6 +377,16 @@ export default async function KampungPageZH({
           </div>
         </section>
       )}
+
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <MoneyCrossLinks
+              block={kampungChildBlock(k.slug, k.name, slug, parentArea?.name || slug, "zh")}
+            />
+          </Reveal>
+        </div>
+      </section>
 
       <section className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
