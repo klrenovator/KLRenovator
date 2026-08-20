@@ -18,6 +18,7 @@ import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/problems/[slug] — Mandarin problem page. Mirrors /ms/problems/[slug].
@@ -497,6 +498,14 @@ export default async function ProblemPageZH({
       </section>
 
       {/* Topic hub (issue #66) — every problem page links back to /troubleshooting */}
+      <JobPhotoStrip
+        locale="zh"
+        variant="problem"
+        place={problem.nameZH || problem.name}
+        hints={problem.relatedService ? [problem.relatedService] : []}
+        seed={`problem-${problem.slug}-zh`}
+      />
+
       <TopicHubCta hubId="troubleshooting" locale="zh" />
     </>
   );

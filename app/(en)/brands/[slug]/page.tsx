@@ -19,6 +19,7 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandInstallCta } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /brands/[slug] — English brand page.
@@ -381,6 +382,15 @@ export default async function BrandPageEN({
         </div>
       </section>
 
+
+      <JobPhotoStrip
+        locale="en"
+        variant="brand"
+        place={brand.name}
+        brand={brand.name}
+        hints={[brand.slug]}
+        seed={`brand-${brand.slug}-en`}
+      />
 
       <LocalPriceComparisonTable locale="en" name={brand.name} />
       <ExpertReviewBlock locale="en" name={brand.name} context="brand" seed={`brand-${brand.slug}-en`} />

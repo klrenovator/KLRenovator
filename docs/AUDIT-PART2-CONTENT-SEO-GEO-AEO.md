@@ -41,6 +41,32 @@ and `audit:gsc` pass.
 
 **Latest verification (2026-08-20, session 4):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze over 2,169 pages reports Content **98**, GEO **88**, AEO **81**. Duplicate-content guard still clean: weighted intra-group similarity **22.4%**, **0 pairs >70%**.
 
+**Session 8 (2026-08-21) — issue #73 body imagery (C8b) on the location / brand / problem templates:**
+- Added a shared `JobPhotoStrip` server component (`components/job-photo-strip.tsx`)
+  backed by `config/place-job-photos.ts`. Each strip renders **3 distinct real
+  job photos** from `/public/hero`, deterministically selected per page with
+  brand / area / service hint-matching (a Daikin-in-PJ page gets actual Daikin,
+  PJ-area photos; a Cheras kampung gets Cheras-area photos), plus page-specific
+  **trilingual alt + caption text** and one `ImageObject` JSON-LD node per photo.
+- Wired into all 5 previously text-only templates × EN/MS/ZH (15 `page.tsx`
+  files): kampung (474), brand-area (360), area (120), brand (60), problem (60).
+- **Pages with 0 `<img>` in body: 1,103 → 45.** The 5 target templates are now
+  at **100% image coverage** (0 zero-image, avg 3.0 imgs/page, `ImageObject` on
+  every page). The leftover 45 are calculators (21), utility/index pages and the
+  price/service utility routes — all outside the C8b template set.
+- **0 images missing alt** held (page-specific, never a repeated template
+  string; a/an article + full-width place interpolation authored per locale).
+- Duplicate guard *improved*: weighted intra-group similarity **20.5 → 20.3**,
+  **0 pairs >70%** across all 42 template groups (kampung|en 22.3→22.1,
+  brand-area|en 21.8→21.9 sampling noise, area|en 40.4→39.8). Images/alt are
+  short and place-varied, so text similarity did not rise.
+- Scores held exactly: Content **98**, GEO **88**, AEO **81**; every component
+  sub-score unchanged. `typecheck`/`lint`/`build`/`verify:build`/`audit:gsc`
+  pass (only the pre-existing kampung-install EN 81.8% warning remains).
+- **VideoObject:** still 0 site-wide. No video assets exist in the repo, so
+  there is nothing to mark up honestly — left for when real video is produced
+  (tracked under #73). No review-count claim or AggregateRating added.
+
 **Session 6 (2026-08-20) — issue #74 link-graph patch (near-orphans + MS installation cluster):**
 - Contextual parent→child links, not a related-links strip. Area brand chips now
   point at real `/brands/{brand}/{area}` pairs (gated on `brandAreaPairs()`).
@@ -136,7 +162,7 @@ These are genuine content work, not markup, and are too large to complete safely
 | **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — **done this session**: AEO `directAnswers` 40 → **81**. All 60 problem pages and all 834 kampung + brand-area pages now have ≥ 3 question-heading + 15–120 word answers, rewritten from existing unique copy (not place-name boilerplate). Intra-group similarity held at **19.9%**, 0 pairs >70%. |
 | **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) — **subset this session, not closable**: HowTo schema 47 → **113**, pattern 163 → **774**, AEO `howTo` 4 → **17**. All 60 problem pages + EN/MS/ZH installation-KL and whole-house landings now emit HowTo JSON-LD that matches visible numbered steps. Hitting the issue's `howTo ≥ 40` bar needs HowTo schema **and** a how-to heading on ~40% of 2,169 pages. That cannot be honest markup of the remaining pages that already have steps (most leftover pattern hits are blog titles / FAQ “How do I…” headings without an ordered process). Left open. |
 | **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) — **done session 5**: two new authored H2 pillars per template, per-place variants selected by profile × slug hash. Word count EN 974 → 1,338 (kampung) and 962 → 1,278 (brand-area); H2 depth 6 → 8 (kampung) and 5 → 7 (brand-area). MS/ZH authored separately. Duplicate guard improved — weighted 22.4 → 20.8, 0 pairs >70% held. |
-| **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
+| **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — **done session 8**: body-image pages 1,103 → **45**; all 5 target templates (kampung / brand-area / area / brand / problem) at 100% coverage with 3 real job photos, page-specific trilingual alt, and `ImageObject` schema each. VideoObject still 0 — no video assets exist to mark up (leave open for the video half). Weighted similarity 20.5 → 20.3, 0 pairs >70%. Needs manual close. |
 | — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
 | — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — **done session 6**: near-orphans 767 → **190**; all 10 MS installation landings ≥ 3 inbound; brand-area / brand-installation off the near-orphan list. Weighted similarity 20.8 → 20.5, 0 pairs >70%. Needs manual close. |
 | — | Near-empty commercial + IAQ clusters | new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) |

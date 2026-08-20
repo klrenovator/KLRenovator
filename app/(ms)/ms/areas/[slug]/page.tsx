@@ -26,6 +26,7 @@ import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -431,6 +432,13 @@ export default async function AreaPageMS({
         </section>
       )}
 
+
+      <JobPhotoStrip
+        locale="ms"
+        place={area.name}
+        hints={[area.slug]}
+        seed={`area-${area.slug}-ms`}
+      />
 
       <LocalPriceComparisonTable locale="ms" name={area.name} />
       <ExpertReviewBlock locale="ms" name={area.name} context="area" seed={`area-${area.slug}-ms`} />

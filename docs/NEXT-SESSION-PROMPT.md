@@ -110,10 +110,14 @@ The site currently emits NO aggregateRating — keep it that way.
 
 THIS SESSION — pick ONE, do not start the others unless asked
 -------------------------------------------------------------
-#73  1,103 pages with no body imagery, zero VideoObject.
-#66  Topic-cluster hubs (/pricing, /troubleshooting, /maintenance).
 #75  Near-empty commercial + IAQ clusters.
 #69  13 title clashes, 7 thin pages, 943 descriptions without CTA.
+
+(#73 body imagery was completed in session 8, PR pending — body-image
+ pages 1,103 → 45, all 5 target templates at 100% coverage with 3 real
+ job photos + trilingual alt + ImageObject schema each. The VideoObject
+ half stays open on #73: there are no video assets in the repo to mark
+ up honestly. #66 topic hubs shipped earlier as PR #81.)
 
 #65 HowTo — leave alone. Only add HowTo schema where visible, numbered,
 ordered process content already exists. Do NOT mark up blog titles or FAQ
@@ -168,7 +172,8 @@ Report: done vs left, exact score movement, duplicate similarity and pairs
 The GitHub App cannot close issues (403 "Resource not accessible by
 integration") — if issues need closing, say so and ask the owner. Issues
 that still need manual closing from prior sessions:
-  #62, #63, #64, #71, #72, #74
+  #62, #63, #64, #71, #72, #74, and #73 (image half done session 8 —
+  close it if the VideoObject half is out of scope, else keep open for video)
 
 Human-only note: #68 (review-count copy) is deliberately owner-handled and
 must not be edited by an agent.
@@ -189,7 +194,7 @@ must not be edited by an agent.
 | C7 — freshness | ✅ Fixed | PR #70 |
 | C7b — expert attribution + citations | ✅ Fixed (71 / 72) | [#64](https://github.com/klrenovator/KLRenovator/issues/64) — PR #77, needs manual close |
 | C8 — og:image | ✅ Fixed (2,170/2,172) | PR #70 |
-| C8b — 1,103 pages no body imagery, 0 VideoObject | 🔲 Open | [#73](https://github.com/klrenovator/KLRenovator/issues/73) |
+| C8b — 1,103 pages no body imagery, 0 VideoObject | ✅ Images done (45 left, all out-of-scope); VideoObject still 0 (no assets) | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — session 8, needs manual close (or keep open for the video half) |
 | C9a — HowTo schema | 🔸 Subset (howTo 23, honest ceiling) | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
 | C9b — definitions / comparison | ✅ Fixed (98 / 98) | [#72](https://github.com/klrenovator/KLRenovator/issues/72) — needs manual close |
 | C10 — jargon H2 + task ID leak | ✅ Fixed | PR #70 |

@@ -16,6 +16,7 @@ import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // This route is backed by a finite typed content registry.
 // Unknown slugs must be a real 404, never an indexable fallback page.
@@ -1711,6 +1712,14 @@ export default async function ProblemPage({
           </section>
         );
       })()}
+
+      <JobPhotoStrip
+        locale="en"
+        variant="problem"
+        place={problem.name}
+        hints={problem.relatedService ? [problem.relatedService] : []}
+        seed={`problem-${problem.slug}-en`}
+      />
 
       {/* Gallery Proof — orphan-link fix */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">

@@ -24,6 +24,7 @@ import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-are
 import { publishedPrices } from "@/lib/published-prices";
 import { brandAreaLocalLinks } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (Bahasa Malaysia)
@@ -413,6 +414,14 @@ export default async function BrandAreaPageMS({
           </div>
         </div>
       </section>
+
+      <JobPhotoStrip
+        locale="ms"
+        place={area.name}
+        brand={brand.name}
+        hints={[brand.slug, area.slug]}
+        seed={`brand-area-${brand.slug}-${area.slug}-ms`}
+      />
 
       {/* CTA Footer Section */}
       <section className="py-14 bg-slate-950 text-white border-t border-slate-800">

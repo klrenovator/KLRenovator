@@ -23,6 +23,7 @@ import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/comme
 import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
 import { brandAreaLocalLinks } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (English)
@@ -409,6 +410,14 @@ export default async function BrandAreaPageEN({
           </div>
         </div>
       </section>
+
+      <JobPhotoStrip
+        locale="en"
+        place={area.name}
+        brand={brand.name}
+        hints={[brand.slug, area.slug]}
+        seed={`brand-area-${brand.slug}-${area.slug}-en`}
+      />
 
       {/* CTA Footer Section */}
       <section className="py-14 bg-slate-950 text-white border-t border-slate-800">

@@ -27,6 +27,7 @@ import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 
 function getAreaImage(heroImage?: string) {
@@ -676,6 +677,13 @@ export default async function AreaPage({
         );
       })()}
 
+
+      <JobPhotoStrip
+        locale="en"
+        place={area.name}
+        hints={[area.slug]}
+        seed={`area-${area.slug}-en`}
+      />
 
       <LocalPriceComparisonTable locale="en" name={area.name} />
       <ExpertReviewBlock locale="en" name={area.name} context="area" seed={`area-${area.slug}-en`} />

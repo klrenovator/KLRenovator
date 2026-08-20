@@ -18,6 +18,7 @@ import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/problems/[slug] — Bahasa Malaysia problem page.
@@ -500,6 +501,14 @@ export default async function ProblemPageMS({
       </section>
 
       {/* Topic hub (issue #66) — every problem page links back to /troubleshooting */}
+      <JobPhotoStrip
+        locale="ms"
+        variant="problem"
+        place={problem.nameMS || problem.name}
+        hints={problem.relatedService ? [problem.relatedService] : []}
+        seed={`problem-${problem.slug}-ms`}
+      />
+
       <TopicHubCta hubId="troubleshooting" locale="ms" />
     </>
   );

@@ -26,6 +26,7 @@ import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -418,6 +419,13 @@ export default async function AreaPageZH({
         </section>
       )}
 
+
+      <JobPhotoStrip
+        locale="zh"
+        place={area.name}
+        hints={[area.slug]}
+        seed={`area-${area.slug}-zh`}
+      />
 
       <LocalPriceComparisonTable locale="zh" name={area.name} />
       <ExpertReviewBlock locale="zh" name={area.name} context="area" seed={`area-${area.slug}-zh`} />

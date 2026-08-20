@@ -19,6 +19,7 @@ import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { kampungChildBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /areas/[slug]/[kampung] — English kampung/neighbourhood page.
@@ -327,6 +328,13 @@ export default async function KampungPage({
           </Reveal>
         </div>
       </section>
+
+      <JobPhotoStrip
+        locale="en"
+        place={k.name}
+        hints={[k.parentSlug]}
+        seed={`kampung-${k.parentSlug}-${k.slug}-en`}
+      />
 
       <LocalPriceComparisonTable locale="en" name={k.name} />
       <ExpertReviewBlock locale="en" name={k.name} context="kampung" seed={`kampung-${k.slug}-en`} />
