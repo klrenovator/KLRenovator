@@ -15,6 +15,7 @@ import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-auth
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
 import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug]/[kampung] — Mandarin kampung page.
@@ -246,6 +247,10 @@ export default async function KampungPageZH({
           </Reveal>
         </div>
       </section>
+
+
+      <LocalPriceComparisonTable locale="zh" name={k.name} />
+      <ExpertReviewBlock locale="zh" name={k.name} context="kampung" seed={`kampung-${k.slug}-zh`} />
 
       {k.faqsZH?.length > 0 && (
         <section className="py-10 bg-white">

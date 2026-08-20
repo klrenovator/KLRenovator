@@ -16,6 +16,7 @@ import { waLink } from "@/lib/whatsapp";
 import { buildBrandAreaComboModule } from "@/config/brand-area-combo-links";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /brands/[slug] — English brand page.
@@ -377,6 +378,10 @@ export default async function BrandPageEN({
           </Reveal>
         </div>
       </section>
+
+
+      <LocalPriceComparisonTable locale="en" name={brand.name} />
+      <ExpertReviewBlock locale="en" name={brand.name} context="brand" seed={`brand-${brand.slug}-en`} />
 
       {brand.faqs?.length > 0 && (
         <section className="py-10 bg-slate-50 border-t border-slate-100">

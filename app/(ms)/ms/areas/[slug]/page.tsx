@@ -23,6 +23,7 @@ import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-opti
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -427,6 +428,10 @@ export default async function AreaPageMS({
           </div>
         </section>
       )}
+
+
+      <LocalPriceComparisonTable locale="ms" name={area.name} />
+      <ExpertReviewBlock locale="ms" name={area.name} context="area" seed={`area-${area.slug}-ms`} />
 
       {/* FAQ */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">

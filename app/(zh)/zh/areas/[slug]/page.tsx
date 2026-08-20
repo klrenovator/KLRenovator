@@ -23,6 +23,7 @@ import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -414,6 +415,10 @@ export default async function AreaPageZH({
           </div>
         </section>
       )}
+
+
+      <LocalPriceComparisonTable locale="zh" name={area.name} />
+      <ExpertReviewBlock locale="zh" name={area.name} context="area" seed={`area-${area.slug}-zh`} />
 
       {/* FAQ */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">

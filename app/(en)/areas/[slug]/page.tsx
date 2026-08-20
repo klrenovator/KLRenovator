@@ -24,6 +24,7 @@ import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-opti
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 
 
 function getAreaImage(heroImage?: string) {
@@ -672,6 +673,10 @@ export default async function AreaPage({
           </section>
         );
       })()}
+
+
+      <LocalPriceComparisonTable locale="en" name={area.name} />
+      <ExpertReviewBlock locale="en" name={area.name} context="area" seed={`area-${area.slug}-en`} />
 
       {/* FAQ Section — area-specific + BM + ZH */}
       <section className="py-16 bg-slate-50">
