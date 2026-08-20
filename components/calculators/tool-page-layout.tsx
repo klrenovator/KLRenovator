@@ -16,6 +16,7 @@ import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildFaqSchema } from "@/lib/seo";
 import { ToolLinks } from "./tool-links";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 export interface ToolPageProps {
   /** Small uppercase eyebrow above the H1. */
@@ -277,6 +278,9 @@ export function ToolPageLayout({
           </div>
         </div>
       </section>
+
+      {/* Topic hub (issue #66) — every calculator links back to /pricing */}
+      <TopicHubCta hubId="pricing" locale={lang} />
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-sky-700 to-sky-600 text-white py-12 px-4">

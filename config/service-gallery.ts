@@ -149,6 +149,135 @@ export const SERVICE_GALLERY: Record<string, ServiceGalleryPhoto[]> = {
     },
   ],
 
+  // ── TOPIC HUB · PRICING (issue #66) ───────────────────────────────────
+  "topic-hub-pricing": [
+    {
+      src: "/hero/aux-aircond-basic-servicing-shah-alam-53.webp",
+      title: {
+        en: "Basic Servicing in Shah Alam",
+        ms: "Servis Asas di Shah Alam",
+        zh: "莎阿南基本保养",
+      },
+      alt: {
+        en: "KL Renovator technician carrying out a basic aircond service on a wall-mounted unit in Shah Alam",
+        ms: "Juruteknik KL Renovator menjalankan servis asas aircond pada unit dinding di Shah Alam",
+        zh: "KL Renovator 技术员在莎阿南为挂壁式冷气进行基本保养",
+      },
+    },
+    {
+      src: "/hero/generic-aircond-basic-servicing-cheras-124.webp",
+      title: {
+        en: "Filter Wash in Cheras",
+        ms: "Cuci Penapis di Cheras",
+        zh: "蕉赖滤网清洗",
+      },
+      alt: {
+        en: "Aircond filter being removed and washed during a basic service in Cheras, Kuala Lumpur",
+        ms: "Penapis aircond dibuka dan dicuci semasa servis asas di Cheras, Kuala Lumpur",
+        zh: "吉隆坡蕉赖基本保养中拆下并清洗冷气滤网",
+      },
+    },
+    {
+      src: "/hero/midea-aircond-basic-servicing-petaling-jaya-17.webp",
+      title: {
+        en: "Drain Flush in Petaling Jaya",
+        ms: "Bilas Saliran di Petaling Jaya",
+        zh: "八打灵再也排水管冲洗",
+      },
+      alt: {
+        en: "Drain pipe flushed with a wet-dry pump during basic servicing in Petaling Jaya",
+        ms: "Paip saliran dibilas dengan pam basah-kering semasa servis asas di Petaling Jaya",
+        zh: "八打灵再也基本保养中以干湿泵冲洗排水管",
+      },
+    },
+  ],
+
+  // ── TOPIC HUB · TROUBLESHOOTING (issue #66) ───────────────────────────
+  "topic-hub-troubleshooting": [
+    {
+      src: "/hero/aux-aircond-troubleshooting-repair-puchong-42.webp",
+      title: {
+        en: "Diagnosis in Puchong",
+        ms: "Diagnosis di Puchong",
+        zh: "蒲种检测诊断",
+      },
+      alt: {
+        en: "Technician testing an aircond with a multimeter during a fault diagnosis in Puchong",
+        ms: "Juruteknik menguji aircond dengan multimeter semasa diagnosis kerosakan di Puchong",
+        zh: "技术员在蒲种以万用表检测冷气故障",
+      },
+    },
+    {
+      src: "/hero/panasonic-aircond-pcb-board-repair-subang-jaya-35.webp",
+      title: {
+        en: "PCB Repair in Subang Jaya",
+        ms: "Baiki PCB di Subang Jaya",
+        zh: "梳邦再也电路板维修",
+      },
+      alt: {
+        en: "Panasonic aircond PCB board being inspected and repaired on-site in Subang Jaya",
+        ms: "Papan PCB aircond Panasonic diperiksa dan dibaiki di tapak di Subang Jaya",
+        zh: "梳邦再也现场检查并维修 Panasonic 冷气电路板",
+      },
+    },
+    {
+      src: "/hero/daikin-aircond-water-leaking-fix-kuala-lumpur-12.webp",
+      title: {
+        en: "Leak Fix in Kuala Lumpur",
+        ms: "Baiki Bocor di Kuala Lumpur",
+        zh: "吉隆坡漏水维修",
+      },
+      alt: {
+        en: "Daikin aircond drain issue being repaired to stop water leaking in Kuala Lumpur",
+        ms: "Masalah saliran aircond Daikin dibaiki untuk menghentikan bocor air di Kuala Lumpur",
+        zh: "吉隆坡维修 Daikin 冷气排水问题以止住漏水",
+      },
+    },
+  ],
+
+  // ── TOPIC HUB · MAINTENANCE (issue #66) ───────────────────────────────
+  "topic-hub-maintenance": [
+    {
+      src: "/hero/daikin-aircond-chemical-wash-kuala-lumpur-1.webp",
+      title: {
+        en: "Chemical Wash in Kuala Lumpur",
+        ms: "Cuci Kimia di Kuala Lumpur",
+        zh: "吉隆坡化学清洗",
+      },
+      alt: {
+        en: "Pressure chemical wash being applied to a Daikin aircond coil in Kuala Lumpur",
+        ms: "Cuci kimia bertekanan disapu pada gegelung aircond Daikin di Kuala Lumpur",
+        zh: "吉隆坡为 Daikin 冷气盘管进行高压化学清洗",
+      },
+    },
+    {
+      src: "/hero/generic-aircond-chemical-wash-petaling-jaya-99.webp",
+      title: {
+        en: "Deep Clean in Petaling Jaya",
+        ms: "Cucian Mendalam di Petaling Jaya",
+        zh: "八打灵再也深度清洗",
+      },
+      alt: {
+        en: "Blower wheel and coil fins being deep-cleaned during a chemical wash in Petaling Jaya",
+        ms: "Roda blower dan sirip gegelung dicuci mendalam semasa cuci kimia di Petaling Jaya",
+        zh: "八打灵再也化学清洗中深度清洁风轮与盘管翅片",
+      },
+    },
+    {
+      src: "/hero/generic-aircond-chemical-wash-rawang-150.webp",
+      title: {
+        en: "Maintenance Visit in Rawang",
+        ms: "Lawatan Penyelenggaraan di Rawang",
+        zh: "万挠保养上门",
+      },
+      alt: {
+        en: "Routine maintenance chemical wash carried out on a wall-mounted aircond in Rawang",
+        ms: "Cuci kimia penyelenggaraan rutin dijalankan pada aircond dinding di Rawang",
+        zh: "万挠为挂壁式冷气进行例行保养化学清洗",
+      },
+    },
+  ],
+
   // ── PRESSURE CHEMICAL WASH ─────────────────────────────────────────────
   "chemical-wash": [
     {

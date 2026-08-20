@@ -13,6 +13,7 @@ import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 export const dynamic = "force-static";
 
@@ -351,6 +352,9 @@ export default function ZhInstallationPricePage() {
       <PriceComparisonUI locale="zh" />
 
       {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      {/* Topic hub (issue #66) */}
+      <TopicHubCta hubId="pricing" locale="zh" />
+
       <PageExplainers locale="zh" presetId="install:price" />
     </>
   );

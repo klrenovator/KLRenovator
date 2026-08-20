@@ -131,6 +131,18 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Topic Hubs (issue #66) */}
+          <div className="pt-2 border-t border-slate-100">
+            <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-2">
+              {lang === "ms" ? "Hab Topik" : lang === "zh" ? "主题总览" : "Topic Hubs"}
+            </p>
+            <ul className="space-y-1.5">
+              <li><NextLink href={localizedPath("/pricing")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{lang === "ms" ? "Semua Harga →" : lang === "zh" ? "全部价格 →" : "All Pricing Guides →"}</NextLink></li>
+              <li><NextLink href={localizedPath("/troubleshooting")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penyelesaian Masalah" : lang === "zh" ? "故障排查" : "Troubleshooting"}</NextLink></li>
+              <li><NextLink href={localizedPath("/maintenance")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penyelenggaraan" : lang === "zh" ? "保养与维修" : "Maintenance"}</NextLink></li>
+            </ul>
+          </div>
+
           {/* Price Guides */}
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">{fl.priceGuides}</p>

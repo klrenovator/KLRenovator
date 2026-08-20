@@ -12,6 +12,7 @@ import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 const amcMsg = [
   "Hi KL Renovator，我对年度冷气保养合同（AMC）感兴趣。",
@@ -171,6 +172,9 @@ export default function AMCPageZH() {
       </section>
 
       {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      {/* Topic hub (issue #66) */}
+      <TopicHubCta hubId="maintenance" locale="zh" />
+
       <PageExplainers locale="zh" presetId="service:maintenance-contract" />
     </>
   );

@@ -1,0 +1,40 @@
+## Summary
+
+Builds 3 new topic-cluster hubs — /pricing, /troubleshooting, /maintenance — each in EN/MS/ZH (9 new routes), modelled on the existing /installation hub.
+
+Closes #66.
+
+## What's included
+
+### Core content (config/topic-hubs.ts)
+- 3 hubs x 3 languages = 9 standalone page files
+- Each hub: hero section, 4 curated group cards with real price badges, comparison table, authored editorial section with direct-answer H2+paragraph, full cluster-member index (derived from real blog/service/problem/tool configs — never stale), 5 FAQs with FAQPage schema, photo proof gallery, cross-hub linking strip, closing CTA, PageExplainers blocks
+
+### Architecture
+- **config/topic-hubs.ts** — Authored trilingual copy + group data + hub member slug lists (derived from real configs so slugs never rot)
+- **components/topic-hub-page.tsx** — Server component hub renderer (hero, cards, table, editorial with direct answer, member index, photo proof, FAQs, cross-hub strip, CTA, explainers)
+- **config/topic-hub-links.ts** — Lightweight client-safe registry for member-to-hub CTAs (BLOG_CATEGORY_HUB and SERVICE_HUB_MAP)
+- **components/topic-hub-cta.tsx** — Reusable member-to-hub CTA strip
+
+### Member-to-hub backlinks (two-way linking)
+- Blog posts: via category matching (Pricing & Cost Guide to /pricing, Troubleshooting to /troubleshooting, Maintenance Guide/Chemical Services to /maintenance)
+- Problem pages (EN/MS/ZH): to /troubleshooting
+- Service pages (dynamic EN/MS/ZH + static maintenance-contract): via SERVICE_HUB_MAP
+- Calculator pages: to /pricing (in ToolPageLayout)
+- /aircond-service-price-malaysia (EN/MS/ZH): to /pricing
+- /installation-price-malaysia (EN/MS/ZH): to /pricing
+
+### Navigation and sitemap
+- Navbar: /pricing added (EN: Pricing, MS: Harga, ZH: price label)
+- Footer: Topic Hubs section with links to all 3 hubs
+- Sitemap: all 9 routes added at priority 0.95 to 0.88
+- PageExplainers presets: 3 new hub-specific presets
+- Service gallery: 9 new photos (3 per hub) in config/service-gallery.ts
+
+## Verification
+
+- npm run typecheck: pass
+- npm run lint: pass
+- npm run build: pass (2175 sitemap URLs, 2181 prerendered pages)
+- npm run verify:build: pass
+- npm run audit:gsc: pass (only pre-existing kampung-install warning)

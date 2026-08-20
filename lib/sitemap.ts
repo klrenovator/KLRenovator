@@ -125,6 +125,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.97, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
     { url: `${BASE}/ms/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.92, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
     { url: `${BASE}/zh/installation`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/installation", ms: "/ms/installation", zh: "/zh/installation" }) },
+
+    // ── Topic-cluster hubs (issue #66) — pricing / troubleshooting / maintenance ──
+    { url: `${BASE}/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.96, alternates: buildTrilingual({ en: "/pricing", ms: "/ms/pricing", zh: "/zh/pricing" }) },
+    { url: `${BASE}/ms/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.91, alternates: buildTrilingual({ en: "/pricing", ms: "/ms/pricing", zh: "/zh/pricing" }) },
+    { url: `${BASE}/zh/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.89, alternates: buildTrilingual({ en: "/pricing", ms: "/ms/pricing", zh: "/zh/pricing" }) },
+    { url: `${BASE}/troubleshooting`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/troubleshooting", ms: "/ms/troubleshooting", zh: "/zh/troubleshooting" }) },
+    { url: `${BASE}/ms/troubleshooting`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/troubleshooting", ms: "/ms/troubleshooting", zh: "/zh/troubleshooting" }) },
+    { url: `${BASE}/zh/troubleshooting`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/troubleshooting", ms: "/ms/troubleshooting", zh: "/zh/troubleshooting" }) },
+    { url: `${BASE}/maintenance`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/maintenance", ms: "/ms/maintenance", zh: "/zh/maintenance" }) },
+    { url: `${BASE}/ms/maintenance`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/maintenance", ms: "/ms/maintenance", zh: "/zh/maintenance" }) },
+    { url: `${BASE}/zh/maintenance`, lastModified: now, changeFrequency: "weekly", priority: 0.88, alternates: buildTrilingual({ en: "/maintenance", ms: "/ms/maintenance", zh: "/zh/maintenance" }) },
     { url: `${BASE}/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.96, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
     { url: `${BASE}/ms/pemasangan-aircond-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.93, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },
     { url: `${BASE}/zh/aircond-installation-kl`, lastModified: now, changeFrequency: "monthly", priority: 0.90, alternates: buildTrilingual({ en: "/aircond-installation-kl", ms: "/ms/pemasangan-aircond-kl", zh: "/zh/aircond-installation-kl" }) },

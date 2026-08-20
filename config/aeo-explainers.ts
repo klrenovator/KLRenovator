@@ -1645,6 +1645,11 @@ export const EXPLAINER_PRESETS: Record<string, ExplainerPreset> = {
   /* ── price / service landing pages outside the /services tree ── */
   "service:price-guide": { terms: ["chemical-wash", "basic-service", "gas-topup"], comparison: "wash-vs-basic" },
   "service:cuci-aircond": { terms: ["chemical-wash", "blower-wheel", "evaporator-coil"], comparison: "wash-vs-overhaul" },
+
+  /* ── topic-cluster hubs (issue #66) — one preset per hub ── */
+  "pricing:hub": { terms: ["basic-service", "chemical-wash", "gas-topup"], comparison: "wash-vs-basic" },
+  "troubleshooting:hub": { terms: ["compressor", "capacitor", "refrigerant-types"], comparison: "repair-vs-replace" },
+  "maintenance:hub": { terms: ["basic-service", "blower-wheel", "evaporator-coil"], comparison: "frequency" },
 };
 
 /** Resolve a curated preset into the actual entries, dropping unknown ids. */
