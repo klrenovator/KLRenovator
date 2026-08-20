@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FiCheck, FiArrowRight, FiChevronRight } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { servicesData } from "@/config/services-data";
 import { serviceI18n } from "@/config/services-i18n";
 import { allPosts } from "@/config/blog-posts";
@@ -1705,6 +1706,9 @@ export function ServiceDetailI18n({
           </div>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72) — curated per service. */}
+      <PageExplainers locale={lang} presetId={`service:${slug}`} />
     </>
   );
 }

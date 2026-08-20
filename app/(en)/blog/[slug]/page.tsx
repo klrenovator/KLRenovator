@@ -7,6 +7,7 @@ import { clampMetaDescription, padMetaDescription } from "@/lib/seo-description-
 import { buildFaqSchema } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { sanitizeBlogPost } from "@/lib/blog-html-sanitize";
+import { explainersForPost } from "@/lib/blog-explainers";
 import { BlogPostClient } from "./blog-post-client";
 
 // ─── Static Params (Server Only) ─────────────────────────────────────────────
@@ -81,5 +82,5 @@ export default async function BlogPostPage({
 
   // Sanitise the authored article HTML once, on the server, before it can
   // reach any `dangerouslySetInnerHTML` in the client (audit item P0-05).
-  return <BlogPostClient post={sanitizeBlogPost(post)} related={related} />;
+  return <BlogPostClient post={sanitizeBlogPost(post)} related={related} explainers={explainersForPost(post)} />;
 }

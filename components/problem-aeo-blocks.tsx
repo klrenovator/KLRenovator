@@ -11,6 +11,7 @@
  */
 
 import { buildHowToSchema } from "@/lib/seo";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import {
   getProblemAeoCopy,
   type ProblemAeoLocale,
@@ -104,6 +105,10 @@ export function ProblemAeoBlocks({
           </ol>
         </div>
       </section>
+
+      {/* Definition + comparison blocks (issue #72). Curated per problem so
+          a capacitor page defines the capacitor, not a generic glossary. */}
+      <PageExplainers locale={locale} presetId={`problem:${slug}`} />
     </>
   );
 }

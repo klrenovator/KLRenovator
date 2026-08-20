@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { ToolLinks } from "@/components/calculators/tool-links";
 
 export const metadata: Metadata = {
@@ -30,6 +31,8 @@ export default function BtuCalculatorPageMS() {
   return (
     <>
       <BtuCalculator lang="ms" />
+      {/* Definition + comparison blocks (issue #72) — sizing units explained. */}
+      <PageExplainers locale="ms" presetId="tool:btu" />
       <section className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ToolLinks lang="ms" heading="Kalkulator Aircond Percuma" />

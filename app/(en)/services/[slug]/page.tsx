@@ -1,5 +1,6 @@
 import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { notFound } from "next/navigation";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import type { Metadata } from "next";
 import NextLink from "next/link";
 import Image from "next/image";
@@ -1546,6 +1547,8 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* Definition + comparison blocks (issue #72) — curated per service. */}
+      <PageExplainers locale="en" presetId={`service:${slug}`} />
     </>
   );
 }

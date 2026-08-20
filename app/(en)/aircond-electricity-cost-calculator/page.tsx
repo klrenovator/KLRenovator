@@ -53,6 +53,7 @@ export default function ElectricityCostCalculatorPage() {
       pageUrl={PAGE_URL}
       howToName={c.howToName}
       howItWorksTitle={c.howItWorksTitle}
+      explainerPreset="tool:electricity"
     />
   );
 }

@@ -53,6 +53,7 @@ export default function MsInstallationCostCalculatorPage() {
       pageUrl={PAGE_URL}
       howToName={c.howToName}
       howItWorksTitle={c.howItWorksTitle}
+      explainerPreset="tool:installation"
     />
   );
 }

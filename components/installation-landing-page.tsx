@@ -33,6 +33,7 @@ import {
 } from "@/lib/seo";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationProof } from "@/components/installation-proof";
+import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import {
   getInstallationContent,
   getInstallationCanonical,
@@ -314,6 +315,10 @@ export function InstallationLandingPage({
           These pages previously rendered only two images (logo + hero) and
           carried no social proof at all — see components/installation-proof.tsx */}
       <InstallationProof locale={locale} />
+
+      {/* Definition + comparison blocks (issue #72) — the install steps and
+          sizing units this page prices, defined in plain language. */}
+      <PageExplainers locale={locale} presetId={`install:${pageKey}`} />
 
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-slate-50" id="faq">
