@@ -13,6 +13,7 @@ import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationProof } from "@/components/installation-proof";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import {
   getAreaInstallationContent,
   type AreaInstallationLocale,
@@ -382,6 +383,9 @@ export function AreaInstallationLandingPage({
       {/* Real project photos + verified reviews — these pages previously
           shipped zero social proof and only two images. */}
       <InstallationProof locale={locale} photoCount={3} reviewCount={3} />
+
+      <LocalPriceComparisonTable locale={locale} name={c.h1} />
+      <ExpertReviewBlock locale={locale} name={c.h1} context="installation" seed={`area-installation-${slug}-${locale}`} />
 
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">

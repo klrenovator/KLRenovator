@@ -19,6 +19,7 @@ import {
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { publishedPrices } from "@/lib/published-prices";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -317,6 +318,10 @@ export default async function BrandAreaPageMS({
               <p className="mt-3 text-slate-700 font-medium leading-relaxed speakable">{areaFaqs[0].a}</p>
             </div>
           )}
+
+
+          <LocalPriceComparisonTable locale="ms" name={`${brand.name} in ${area.name}`} />
+          <ExpertReviewBlock locale="ms" name={`${brand.name} in ${area.name}`} context="brand-area" seed={`brand-area-${brand.slug}-${area.slug}-ms`} />
 
           {/* Area-aware FAQ */}
           <div className="mb-10">

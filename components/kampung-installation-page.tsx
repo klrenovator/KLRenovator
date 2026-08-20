@@ -13,6 +13,7 @@ import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationProof } from "@/components/installation-proof";
+import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import {
   getKampungInstallationContent,
   type KampungInstallationLocale,
@@ -449,6 +450,9 @@ export function KampungInstallationLandingPage({
       {/* Real project photos + verified reviews — these pages previously
           shipped zero social proof and only two images. */}
       <InstallationProof locale={locale} photoCount={3} reviewCount={3} />
+
+      <LocalPriceComparisonTable locale={locale} name={areaName} />
+      <ExpertReviewBlock locale={locale} name={areaName} context="installation" seed={`kampung-installation-${parentSlug}-${kampungSlug}-${locale}`} />
 
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-white" id="faq">
