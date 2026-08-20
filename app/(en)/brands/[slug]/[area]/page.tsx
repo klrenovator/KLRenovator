@@ -20,6 +20,7 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
+import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (English)
@@ -153,6 +154,10 @@ export default async function BrandAreaPageEN({
 
   const techSpecs = BRAND_TECH_SPECS[slug] ?? BRAND_TECH_SPECS._default;
   const errorCodes = BRAND_ERROR_CODES[slug] ?? BRAND_ERROR_CODES._default;
+
+  // Content depth §71 — per-pair visit plan + common jobs table
+  const visitPlan = brandAreaFirstVisitPlan(brand, area, "en");
+  const commonJobs = brandAreaCommonJobs(brand, area, "en");
 
   return (
     <>
@@ -315,6 +320,55 @@ export default async function BrandAreaPageEN({
             </div>
           )}
 
+
+          {/* Content depth §71 — first-visit plan (per brand-family × area-profile) */}
+          <section id="brand-area-visit-plan" aria-labelledby="brand-area-visit-plan-heading" className="mb-10">
+            <h2 id="brand-area-visit-plan-heading" className="speakable text-2xl font-black tracking-tight text-slate-950">
+              {visitPlan.heading}
+            </h2>
+            <p className="mt-3 text-slate-700 font-medium leading-relaxed speakable">{visitPlan.intro}</p>
+            <ol className="mt-6 space-y-3">
+              {visitPlan.steps.map((step, i) => (
+                <li key={i} className="flex gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-500 text-xs font-black text-white">{i + 1}</span>
+                  <div>
+                    <p className="text-sm font-black text-slate-950">{step.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-700">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-5 text-sm leading-relaxed text-slate-600">{visitPlan.closing}</p>
+          </section>
+
+          {/* Content depth §71 — common jobs table */}
+          <section id="brand-area-common-jobs" aria-labelledby="brand-area-common-jobs-heading" className="mb-10">
+            <h2 id="brand-area-common-jobs-heading" className="speakable text-2xl font-black tracking-tight text-slate-950">
+              {commonJobs.heading}
+            </h2>
+            <p className="mt-3 text-slate-700 font-medium leading-relaxed speakable">{commonJobs.intro}</p>
+            <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+              <table className="w-full text-sm">
+                <thead className="bg-slate-100 text-xs font-black uppercase tracking-wider text-slate-500">
+                  <tr>
+                    <th className="px-4 py-2.5 text-left">Job</th>
+                    <th className="px-4 py-2.5 text-left">Frequency</th>
+                    <th className="px-4 py-2.5 text-left">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {commonJobs.rows.map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="px-4 py-3 font-black text-slate-950 align-top">{row.job}</td>
+                      <td className="px-4 py-3 font-bold text-sky-700 align-top whitespace-nowrap">{row.frequency}</td>
+                      <td className="px-4 py-3 text-slate-700 align-top">{row.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-slate-600">{commonJobs.closing}</p>
+          </section>
 
           <LocalPriceComparisonTable locale="en" name={`${brand.name} in ${area.name}`} />
           <ExpertReviewBlock locale="en" name={`${brand.name} in ${area.name}`} context="brand-area" seed={`brand-area-${brand.slug}-${area.slug}-en`} />

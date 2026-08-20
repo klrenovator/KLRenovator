@@ -13,6 +13,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-authority-map";
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
+import { kampungGamePlan, kampungSignals } from "@/config/kampung-depth";
 import { buildOgImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
@@ -161,6 +162,8 @@ export default async function KampungPage({
     .filter((b): b is NonNullable<typeof b> => Boolean(b));
 
   const uniquenessMatrix = buildKampungUniquenessMatrix(k, parentArea, "en");
+  const gamePlan = kampungGamePlan(k, parentArea, "en");
+  const signals = kampungSignals(k, parentArea, "en");
 
   return (
     <>
@@ -265,6 +268,63 @@ export default async function KampungPage({
         </div>
       </section>
 
+
+      {/* Content depth §71 — game plan: real ordered mini-checklist for
+          this exact kampung. Per-slug variant + profile keeps neighbouring
+          pages from repeating the same sequence. */}
+      <section id="kampung-game-plan" aria-labelledby="kampung-game-plan-heading" className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 id="kampung-game-plan-heading" className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
+              {gamePlan.heading}
+            </h2>
+            <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700 max-w-3xl speakable">
+              {gamePlan.intro}
+            </p>
+            <ol className="mt-6 space-y-3">
+              {gamePlan.steps.map((step, i) => (
+                <li key={i} className="flex gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-500 text-xs font-black text-white">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="text-sm font-black text-slate-950">{step.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-700">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-5 text-sm leading-relaxed text-slate-600 max-w-3xl">{gamePlan.closing}</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Content depth §71 — local signals: 4-dimension mini-table with
+          per-dimension variant selection so 6 kampungs in the same parent
+          area produce 4^N different combinations rather than one shared
+          paragraph. */}
+      <section id="kampung-signals" aria-labelledby="kampung-signals-heading" className="py-12 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 id="kampung-signals-heading" className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">
+              {signals.heading}
+            </h2>
+            <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700 max-w-3xl speakable">
+              {signals.intro}
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {signals.rows.map((row) => (
+                <div key={row.dimension} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-[11px] font-black uppercase tracking-widest text-slate-500">{row.dimension}</p>
+                  <p className="mt-2 text-sm font-black text-slate-950">{row.value}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{row.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-slate-600 max-w-3xl">{signals.closing}</p>
+          </Reveal>
+        </div>
+      </section>
 
       <LocalPriceComparisonTable locale="en" name={k.name} />
       <ExpertReviewBlock locale="en" name={k.name} context="kampung" seed={`kampung-${k.slug}-en`} />
