@@ -12,6 +12,8 @@ import { Reveal } from "@/components/reveal";
 import { waLink, rfqMsgForService } from "@/lib/whatsapp";
 import { sitePublic } from "@/config/site-public";
 import { useLang } from "@/context/language-context";
+import { TopicHubCta } from "@/components/topic-hub-cta";
+import { BLOG_CATEGORY_HUB } from "@/config/topic-hub-links";
 import { deriveFaqsFromContent } from "@/lib/blog-derived-faq";
 import { ComparisonBlock, DefinitionBlocks } from "@/components/aeo-explainer-blocks";
 import type { ExplainerBundle } from "@/lib/aeo-explainer-select";
@@ -648,6 +650,19 @@ export function BlogPostClient({ post, related, forcedLang, explainers }: Props)
           </div>
         </div>
       </section>
+
+      {/* Topic hub banner (issue #66) — only when this post's category belongs to a hub */}
+      {(() => {
+        const hubId = BLOG_CATEGORY_HUB[post.category];
+        if (!hubId) return null;
+        return (
+          <TopicHubCta
+            hubId={hubId}
+            locale={lang}
+            className="py-10 bg-white border-t border-slate-200"
+          />
+        );
+      })()}
 
       {/* Related Posts */}
       {related.length > 0 && (

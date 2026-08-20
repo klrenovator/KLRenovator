@@ -15,6 +15,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { entityPhrases } from "@/config/installation-entity-map";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 export const dynamic = "force-static";
 
@@ -345,6 +346,9 @@ export default function EnInstallationPricePage() {
       <PriceComparisonUI locale="en" />
 
       {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      {/* Topic hub (issue #66) */}
+      <TopicHubCta hubId="pricing" locale="en" />
+
       <PageExplainers locale="en" presetId="install:price" />
     </>
   );

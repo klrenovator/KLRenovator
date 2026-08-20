@@ -12,6 +12,7 @@ import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 const amcMsg = [
   "Hi KL Renovator, saya berminat dengan Kontrak Penyelenggaraan Tahunan (AMC) untuk unit aircond saya.",
@@ -171,6 +172,9 @@ export default function AMCPageMS() {
       </section>
 
       {/* Definition + comparison blocks (issue #72) — curated for this page. */}
+      {/* Topic hub (issue #66) */}
+      <TopicHubCta hubId="maintenance" locale="ms" />
+
       <PageExplainers locale="ms" presetId="service:maintenance-contract" />
     </>
   );

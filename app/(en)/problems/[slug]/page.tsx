@@ -15,6 +15,7 @@ import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 // This route is backed by a finite typed content registry.
 // Unknown slugs must be a real 404, never an indexable fallback page.
@@ -1772,6 +1773,9 @@ export default async function ProblemPage({
           </div>
         </div>
       </section>
+
+      {/* Topic hub (issue #66) — every problem page links back to /troubleshooting */}
+      <TopicHubCta hubId="troubleshooting" locale="en" />
 
       <section className="py-16 bg-sky-600">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">

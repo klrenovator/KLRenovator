@@ -22,6 +22,9 @@ const LANG_OPTIONS: { code: LangCode; flag: string; label: string }[] = [
 
 const INSTALLATION_SLUG_MAP: Record<string, { ms: string; zh: string }> = {
   "/installation": { ms: "/ms/installation", zh: "/zh/installation" },
+  "/pricing": { ms: "/ms/pricing", zh: "/zh/pricing" },
+  "/troubleshooting": { ms: "/ms/troubleshooting", zh: "/zh/troubleshooting" },
+  "/maintenance": { ms: "/ms/maintenance", zh: "/zh/maintenance" },
   "/aircond-installation-kl": {
     ms: "/ms/pemasangan-aircond-kl",
     zh: "/zh/aircond-installation-kl",
@@ -119,19 +122,19 @@ function getTranslatedPath(pathname: string, target: LangCode): string | null {
 
 const NAV_LABELS = {
   en: {
-    home: "Home", installation: "Installation", services: "Services", blog: "Blog",
+    home: "Home", installation: "Installation", pricing: "Pricing", services: "Services", blog: "Blog",
     about: "About", faq: "FAQ", contact: "Contact", tools: "Tools",
     call: "Call Support", book: "Book Now",
     topbar: "Same-Day Aircond Installation & Servicing Across KL & Selangor — From RM199",
   },
   ms: {
-    home: "Utama", installation: "Pemasangan", services: "Perkhidmatan", blog: "Blog",
+    home: "Utama", installation: "Pemasangan", pricing: "Harga", services: "Perkhidmatan", blog: "Blog",
     about: "Tentang Kami", faq: "Soalan Lazim", contact: "Hubungi", tools: "Alat",
     call: "Hubungi Kami", book: "Tempah Sekarang",
     topbar: "Pemasangan & Servis Aircond Hari Sama KL & Selangor — Dari RM199",
   },
   zh: {
-    home: "首页", installation: "冷气安装", services: "服务", blog: "博客",
+    home: "首页", installation: "冷气安装", pricing: "价格", services: "服务", blog: "博客",
     about: "关于我们", faq: "常见问答", contact: "联系我们", tools: "计算工具",
     call: "致电支持", book: "立即预约",
     topbar: "当天冷气安装与服务，覆盖吉隆坡及雪兰莪 — RM199起",
@@ -202,6 +205,7 @@ export const Navbar = () => {
   const SIMPLE_LINKS = [
     { label: lbl.home, href: "/", localize: true },
     { label: lbl.installation, href: "/installation", localize: true },
+    { label: lbl.pricing, href: "/pricing", localize: true },
     { label: lbl.services, href: "/services", localize: true },
     { label: lbl.tools, href: "/tools", localize: true },
     { label: lbl.blog, href: "/blog", localize: true },

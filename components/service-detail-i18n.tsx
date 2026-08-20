@@ -14,6 +14,8 @@ import { ContactForm } from "@/components/contact-form";
 import { ServiceIcon } from "@/components/service-icon";
 import { title, subtitle, eyebrow } from "@/components/primitives";
 import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-authority-map";
+import { TopicHubCta } from "@/components/topic-hub-cta";
+import { SERVICE_HUB_MAP } from "@/config/topic-hub-links";
 import { buildServiceSchema } from "@/lib/seo";
 import { buildServiceCorePolishModule } from "@/config/service-core-polish";
 import { buildServiceCRORefinementModule } from "@/config/service-cro-refinement";
@@ -1706,6 +1708,14 @@ export function ServiceDetailI18n({
           </div>
         </div>
       </section>
+
+      {/* Topic hub (issue #66) — maintenance-family services link to /maintenance,
+          repair to /troubleshooting, gas top-up to /pricing. */}
+      {(() => {
+        const hubId = SERVICE_HUB_MAP[slug];
+        if (!hubId) return null;
+        return <TopicHubCta hubId={hubId} locale={lang} />;
+      })()}
 
       {/* Definition + comparison blocks (issue #72) — curated per service. */}
       <PageExplainers locale={lang} presetId={`service:${slug}`} />

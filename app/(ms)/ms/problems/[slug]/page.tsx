@@ -17,6 +17,7 @@ import { title } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
+import { TopicHubCta } from "@/components/topic-hub-cta";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/problems/[slug] — Bahasa Malaysia problem page.
@@ -497,6 +498,9 @@ export default async function ProblemPageMS({
           </Reveal>
         </div>
       </section>
+
+      {/* Topic hub (issue #66) — every problem page links back to /troubleshooting */}
+      <TopicHubCta hubId="troubleshooting" locale="ms" />
     </>
   );
 }

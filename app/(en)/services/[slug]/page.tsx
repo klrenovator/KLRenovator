@@ -28,6 +28,8 @@ import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 import { buildServiceProofPhotos } from "@/config/service-gallery";
 import { buildServiceRouteAlternates } from "@/config/service-route-qa";
+import { TopicHubCta } from "@/components/topic-hub-cta";
+import { SERVICE_HUB_MAP } from "@/config/topic-hub-links";
 import { anchor } from "@/config/anchor-text-diversity";
 import { PriceComparisonUI } from "@/components/price-comparison";
 
@@ -1548,6 +1550,14 @@ export default async function ServicePage({
       </section>
 
       {/* Definition + comparison blocks (issue #72) — curated per service. */}
+      {/* Topic hub (issue #66) — maintenance-family services link to /maintenance,
+          repair to /troubleshooting, gas top-up to /pricing. */}
+      {(() => {
+        const hubId = SERVICE_HUB_MAP[slug];
+        if (!hubId) return null;
+        return <TopicHubCta hubId={hubId} locale="en" />;
+      })()}
+
       <PageExplainers locale="en" presetId={`service:${slug}`} />
     </>
   );
