@@ -2,6 +2,7 @@ import NextLink from "next/link";
 import { FaWhatsapp, FaGoogle } from "react-icons/fa6";
 import { FiStar, FiCheck, FiArrowRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
+import { GoogleReviewWidget } from "@/components/google-review-widget";
 import { waLink } from "@/lib/whatsapp";
 import { reviewCountLabel, reviewRatingLabel } from "@/config/reviews";
 
@@ -197,6 +198,12 @@ export function ReviewPageI18n({ lang }: { lang: Lang }) {
           <p className="text-xs text-slate-500">
             {d.googleNote}
           </p>
+
+          {/* Official Google review widget — keyless link widget (rating +
+              review count come from config/reviews.ts via useGoogleReviewStats). */}
+          <div className="mt-8 text-left">
+            <GoogleReviewWidget locale={lang} />
+          </div>
         </div>
       </section>
 
