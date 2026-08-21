@@ -18,6 +18,7 @@ import {
 } from "@/config/brand-area-uniqueness";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { buildOgImage } from "@/lib/og-image-pool";
+import { buildHowToSchema } from "@/lib/seo";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
@@ -162,12 +163,24 @@ export default async function BrandAreaPageEN({
   const visitPlan = brandAreaFirstVisitPlan(brand, area, "en");
   const commonJobs = brandAreaCommonJobs(brand, area, "en");
 
+  // HowTo JSON-LD mirrors the visible numbered <ol> visit-plan steps exactly
+  // (issue #65). Steps are per-brand-family × area-profile so the schema
+  // never diverges from what is rendered.
+  const howToSchema = buildHowToSchema({
+    name: visitPlan.heading,
+    description: visitPlan.intro,
+    url: pageUrl,
+    inLanguage: "en-MY",
+    steps: visitPlan.steps.map((s) => ({ name: s.title, text: s.body })),
+  });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Breadcrumb Navigation */}
       <div className="bg-slate-50 border-b border-slate-200">
