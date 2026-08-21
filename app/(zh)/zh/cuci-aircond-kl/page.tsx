@@ -126,6 +126,7 @@ export default function Page() {
           </div>
           <div className="mt-10 text-center">
             <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 rounded-2xl bg-[#22c55e] px-8 py-4 text-sm font-black uppercase tracking-wider text-white shadow-lg hover:bg-[#16a34a]"><FaWhatsapp className="h-5 w-5"/> 立即预约吉隆坡冷气清洗</a>
+            <p className="mt-5 text-sm text-slate-600">想了解化学清洗到底清除什么、又如何影响房间空气？请阅读我们的<NextLink href="/zh/indoor-air-quality-aircond" className="font-bold text-sky-600 hover:text-sky-700">室内空气质量与化学清洗指南</NextLink>。</p>
           </div>
         </div>
       </section>

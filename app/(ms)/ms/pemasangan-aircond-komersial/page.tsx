@@ -135,6 +135,7 @@ export default function CommercialInstallationPageMS() {
           <p className="mt-6 text-slate-500 text-sm">Meliputi hartanah komersial di semua kawasan KL & Selangor — KLCC, Bangsar South, Damansara Perdana, Mont Kiara, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras & banyak lagi.</p>
           <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-center gap-4">
             <Link href="/ms/pemasangan-aircond-kl" className="text-sm text-slate-500 hover:text-white transition-colors">← Semua Perkhidmatan Pemasangan</Link>
+            <Link href="/ms/servis-aircond-komersial" className="text-sm text-slate-500 hover:text-white transition-colors">Servis & AMC Komersial</Link>
             <Link href="/ms/services/maintenance-contract" className="text-sm text-slate-500 hover:text-white transition-colors">Butiran AMC</Link>
             <Link href="/ms/faq" className="text-sm text-slate-500 hover:text-white transition-colors">Lebih Banyak Soalan Lazim</Link>
           </div>

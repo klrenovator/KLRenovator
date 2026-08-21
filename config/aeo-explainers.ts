@@ -1646,6 +1646,10 @@ export const EXPLAINER_PRESETS: Record<string, ExplainerPreset> = {
   "service:price-guide": { terms: ["chemical-wash", "basic-service", "gas-topup"], comparison: "wash-vs-basic" },
   "service:cuci-aircond": { terms: ["chemical-wash", "blower-wheel", "evaporator-coil"], comparison: "wash-vs-overhaul" },
 
+  /* ── commercial + IAQ hubs (issue #75) ── */
+  "service:commercial": { terms: ["ceiling-cassette", "chemical-wash", "workmanship-warranty"], comparison: "frequency" },
+  "service:iaq": { terms: ["chemical-wash", "evaporator-coil", "blower-wheel"], comparison: "wash-vs-overhaul" },
+
   /* ── topic-cluster hubs (issue #66) — one preset per hub ── */
   "pricing:hub": { terms: ["basic-service", "chemical-wash", "gas-topup"], comparison: "wash-vs-basic" },
   "troubleshooting:hub": { terms: ["compressor", "capacitor", "refrigerant-types"], comparison: "repair-vs-replace" },
