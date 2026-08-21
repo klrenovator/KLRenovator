@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ReviewPageI18n } from "@/components/review-page-i18n";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Thank You — Rate Your KL Renovator Service | KL Renovator"),
@@ -23,5 +24,21 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewPage() {
-  return <ReviewPageI18n lang="en" />;
+  return (
+    <>
+      <ReviewPageI18n lang="en" />
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/review"
+            pageUrl="https://www.klrenovator.com/review"
+            title="Thank You — Rate Your KL Renovator Service"
+            locale="en"
+            hints={["basic-servicing"]}
+            sizes="(min-width: 1024px) 672px, (min-width: 640px) 80vw, 100vw"
+          />
+        </div>
+      </section>
+    </>
+  );
 }

@@ -118,9 +118,10 @@ deliberately-held ones:
   #73 VideoObject half — no video assets exist to mark up honestly.
 
 Completed in recent sessions (PRs pending / merged):
-  #73 body imagery (session 8) — 1,103 → 45 zero-image pages, all 5 target
-      templates at 100% coverage with 3 real photos + trilingual alt +
-      ImageObject each.
+  #73 body imagery (completion) — 1,103 → 0 zero-image pages. The 5
+      programmatic templates retain 3 real photos each; calculators, indexes
+      and utility pages now have a deterministic primary photo with trilingual
+      alt + ImageObject as well.
   #75 commercial + IAQ clusters (session 9) — two trilingual hubs, in
       sitemap/footer, cross-linked from cluster members.
   #69 SEO cleanup (session 9) — acronym title casing, thin pages 7→0,
@@ -202,7 +203,7 @@ must not be edited by an agent.
 | C7 — freshness | ✅ Fixed | PR #70 |
 | C7b — expert attribution + citations | ✅ Fixed (71 / 72) | [#64](https://github.com/klrenovator/KLRenovator/issues/64) — PR #77, needs manual close |
 | C8 — og:image | ✅ Fixed (2,170/2,172) | PR #70 |
-| C8b — 1,103 pages no body imagery, 0 VideoObject | ✅ Images done (45 left, all out-of-scope); VideoObject still 0 (no assets) | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — session 8, needs manual close (or keep open for the video half) |
+| C8b — 1,103 pages no body imagery, 0 VideoObject | ✅ Images complete (0 left); VideoObject still 0 (no assets) | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — body-imagery acceptance criteria complete; keep open only if video production remains in scope |
 | C9a — HowTo schema | 🔸 Subset (howTo 23, honest ceiling) | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
 | C9b — definitions / comparison | ✅ Fixed (98 / 98) | [#72](https://github.com/klrenovator/KLRenovator/issues/72) — needs manual close |
 | C10 — jargon H2 + task ID leak | ✅ Fixed | PR #70 |

@@ -5,6 +5,7 @@ import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia | Kira HP Bilik"),
@@ -31,6 +32,18 @@ export default function BtuCalculatorPageMS() {
   return (
     <>
       <BtuCalculator lang="ms" />
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/ms/btu-calculator"
+            pageUrl="https://www.klrenovator.com/ms/btu-calculator"
+            title="Kalkulator Saiz Aircond Malaysia | Kira HP Bilik"
+            locale="ms"
+            hints={["new-installation"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
+        </div>
+      </section>
       {/* Definition + comparison blocks (issue #72) — sizing units explained. */}
       <PageExplainers locale="ms" presetId="tool:btu" />
       <section className="py-12 bg-slate-50 border-t border-slate-100">

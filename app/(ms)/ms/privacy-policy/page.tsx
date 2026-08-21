@@ -4,6 +4,7 @@ import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 const LAST_UPDATED = "06 Ogos 2026";
 
@@ -46,6 +47,16 @@ export default function PrivacyPolicyPageMS() {
         Terakhir dikemas kini: {LAST_UPDATED} · Dikeluarkan di bawah Akta Perlindungan Data Peribadi 2010 (Malaysia)
       </p>
 
+      <div className="mt-8 max-w-xl">
+        <PrimaryJobPhoto
+          seed="https://www.klrenovator.com/ms/privacy-policy"
+          pageUrl="https://www.klrenovator.com/ms/privacy-policy"
+          title="Dasar Privasi KL Renovator"
+          locale="ms"
+          hints={["basic-servicing"]}
+          sizes="(min-width: 1024px) 576px, (min-width: 640px) 80vw, 100vw"
+        />
+      </div>
       <div className="mt-8">
         <Section title="1. Siapa Kami">
           <p>

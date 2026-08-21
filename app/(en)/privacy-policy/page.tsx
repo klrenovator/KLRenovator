@@ -4,6 +4,7 @@ import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 // ─────────────────────────────────────────────────────────────────────────
 // Privacy policy.
@@ -56,6 +57,16 @@ export default function PrivacyPolicyPage() {
         (Malaysia)
       </p>
 
+      <div className="mt-8 max-w-xl">
+        <PrimaryJobPhoto
+          seed="https://www.klrenovator.com/privacy-policy"
+          pageUrl="https://www.klrenovator.com/privacy-policy"
+          title="KL Renovator Privacy Policy"
+          locale="en"
+          hints={["basic-servicing"]}
+          sizes="(min-width: 1024px) 576px, (min-width: 640px) 80vw, 100vw"
+        />
+      </div>
       <div className="mt-8">
         <Section title="1. Who we are">
           <p>

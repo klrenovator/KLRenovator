@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { TOOLS } from "@/config/tools";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildFaqSchema } from "@/lib/seo";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -127,13 +128,28 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
 
       {/* Hero */}
       <section className="py-14 sm:py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.72fr] lg:gap-12 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3">{t.eyebrow}</p>
-            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">
-              {t.h1a} <span className="text-sky-500">{t.h1b}</span>
-            </h1>
-            <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">{t.intro}</p>
+            <div className="text-center lg:text-left">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3">{t.eyebrow}</p>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">
+                {t.h1a} <span className="text-sky-500">{t.h1b}</span>
+              </h1>
+              <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">{t.intro}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <PrimaryJobPhoto
+              seed={`tools-index:${lang}`}
+              pageUrl={`https://www.klrenovator.com${lang === "en" ? "" : `/${lang}`}/tools`}
+              title={`${t.h1a} ${t.h1b}`}
+              locale={lang}
+              hints={["basic-servicing"]}
+              priority
+              showCaption={false}
+              sizes="(min-width: 1024px) 420px, (min-width: 640px) 42vw, 100vw"
+              aspectClassName="aspect-[16/10]"
+            />
           </Reveal>
         </div>
       </section>

@@ -12,6 +12,7 @@ import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const dynamic = "force-static";
 
@@ -124,6 +125,19 @@ export default function Page() {
             </ul>
             <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" className="mt-4 block text-center rounded-xl bg-slate-950 text-white py-3 text-xs font-black uppercase tracking-wider">Dapatkan Slot →</a>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/ms/cuci-aircond-kl"
+            pageUrl="https://www.klrenovator.com/ms/cuci-aircond-kl"
+            title="Cuci Aircond KL & Selangor"
+            locale="ms"
+            hints={["chemical-wash", "kuala-lumpur"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
         </div>
       </section>
 

@@ -184,7 +184,7 @@ const AREA_TOKENS = [
  * build stays static and a missing file surfaces at review time, not runtime.
  * The order here does not matter — selection is hash-driven.
  */
-const HERO_FILES: readonly string[] = [
+export const HERO_JOB_PHOTO_FILES: readonly string[] = [
   "acson-aircond-basic-servicing-kuala-lumpur-5",
   "acson-aircond-chemical-overhaul-puchong-38",
   "acson-aircond-chemical-wash-shah-alam-49",
@@ -352,7 +352,7 @@ function parsePhoto(file: string): JobPhoto {
   return { file, brand, service, area };
 }
 
-const POOL: readonly JobPhoto[] = HERO_FILES.map(parsePhoto);
+const POOL: readonly JobPhoto[] = HERO_JOB_PHOTO_FILES.map(parsePhoto);
 
 /** FNV-1a — stable across rebuilds, not tied to any V8 internal. */
 function hashKey(key: string): number {

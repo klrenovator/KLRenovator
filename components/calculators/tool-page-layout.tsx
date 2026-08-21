@@ -17,6 +17,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { buildFaqSchema } from "@/lib/seo";
 import { ToolLinks } from "./tool-links";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export interface ToolPageProps {
   /** Small uppercase eyebrow above the H1. */
@@ -169,6 +170,17 @@ export function ToolPageLayout({
     })),
   };
 
+  // Keep calculator imagery relevant to the task it helps visitors estimate.
+  // The selector still falls back through the full 157-photo pool, so every
+  // canonical calculator URL gets a stable, real job photo.
+  const photoHints = pageUrl.includes("gas-topup")
+    ? ["gas-topup"]
+    : pageUrl.includes("installation")
+      ? ["new-installation"]
+      : pageUrl.includes("which-aircond-service")
+        ? ["troubleshooting-repair"]
+        : ["basic-servicing"];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -177,15 +189,32 @@ export function ToolPageLayout({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <section className="py-14 sm:py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center mb-12">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3">{eyebrow}</p>
-              <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">{h1}</h1>
-              <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">{intro}</p>
-            </div>
-          </Reveal>
-          <Reveal>{calculator}</Reveal>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 grid items-center gap-8 lg:grid-cols-[1fr_0.72fr] lg:gap-12">
+            <Reveal>
+              <div className="text-center lg:text-left">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-600 mb-3">{eyebrow}</p>
+                <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 uppercase">{h1}</h1>
+                <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">{intro}</p>
+              </div>
+            </Reveal>
+            <Reveal delay={80}>
+              <PrimaryJobPhoto
+                seed={pageUrl}
+                pageUrl={pageUrl}
+                title={h1}
+                locale={lang}
+                hints={photoHints}
+                priority
+                showCaption={false}
+                sizes="(min-width: 1024px) 420px, (min-width: 640px) 42vw, 100vw"
+                aspectClassName="aspect-[16/10]"
+              />
+            </Reveal>
+          </div>
+          <div className="mx-auto max-w-4xl">
+            <Reveal>{calculator}</Reveal>
+          </div>
         </div>
       </section>
 

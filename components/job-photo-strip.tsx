@@ -134,16 +134,20 @@ export function JobPhotoStrip({
 
   if (photos.length === 0) return null;
 
-  const imageSchema = photos.map((photo) => ({
+  const imageSchema = photos.map((photo, index) => ({
     "@context": "https://schema.org",
     "@type": "ImageObject",
+    name: photo.caption,
     contentUrl: `https://www.klrenovator.com${photo.src}`,
     url: `https://www.klrenovator.com${photo.src}`,
     caption: photo.alt,
+    description: photo.alt,
     creditText: "KL Renovator",
     creator: { "@type": "Organization", name: "KL Renovator" },
     copyrightNotice: "© KL Renovator",
-    representativeOfPage: false,
+    // The lead image is the page's primary visual proof; the other two add
+    // service variety without competing for representative-image status.
+    representativeOfPage: index === 0,
   }));
 
   return (
