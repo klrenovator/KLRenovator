@@ -5,6 +5,7 @@ import NextImage from "next/image";
 import { FaWhatsapp, FaXmark, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { Reveal } from "@/components/reveal";
 import { waLink } from "@/lib/whatsapp";
+import { useGoogleReviewStats, reviewCountLabelFor } from "@/lib/use-google-review-stats";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -45,7 +46,7 @@ const UI: Record<Lang, {
   en: {
     headerTitle: "Real Work Gallery",
     headerDesc: "93 genuine project photos — no stock images. Every photo is real work completed by our HVAC technicians across Klang Valley.",
-    trustReviews: "500+ 5-Star Google Reviews",
+    trustReviews: "{count} 5-Star Google Reviews",
     trustWarranty: "1-Month Workmanship Warranty",
     trustSSM: "SSM Registered Business",
     trustPrice: "Price Confirmed Before Work",
@@ -81,7 +82,7 @@ const UI: Record<Lang, {
   ms: {
     headerTitle: "Galeri Kerja Sebenar",
     headerDesc: "93 gambar projek sebenar — tiada gambar stok. Setiap gambar adalah kerja sebenar yang dilakukan oleh juruteknik HVAC kami di seluruh Lembah Klang.",
-    trustReviews: "500+ Ulasan 5 Bintang Google",
+    trustReviews: "{count} Ulasan 5 Bintang Google",
     trustWarranty: "Waranti Mutu Kerja 1 Bulan",
     trustSSM: "Perniagaan Berdaftar SSM",
     trustPrice: "Harga Disahkan Sebelum Kerja",
@@ -117,7 +118,7 @@ const UI: Record<Lang, {
   zh: {
     headerTitle: "真实项目画廊",
     headerDesc: "93 张真实项目照片——没有 stock 图片。每张照片都是我们 HVAC 技术员在巴生谷完成的实际工作。",
-    trustReviews: "500+ 条 Google 5 星好评",
+    trustReviews: "{count} 条 Google 5 星好评",
     trustWarranty: "1 个月工艺保修",
     trustSSM: "SSM 注册企业",
     trustPrice: "开工前确认价格",
@@ -160,7 +161,9 @@ const UI: Record<Lang, {
  * filter or clicks "show all".
  */
 export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialItems: GalleryItem[] }) {
-  const t = UI[lang];
+  const { total } = useGoogleReviewStats();
+  const countLabel = reviewCountLabelFor(total);
+  const t = { ...UI[lang], trustReviews: UI[lang].trustReviews.replaceAll("{count}", countLabel) };
   const [activeCategory, setActiveCategory] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showBefore, setShowBefore] = useState(false);

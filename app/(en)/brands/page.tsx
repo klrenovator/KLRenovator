@@ -14,6 +14,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { anchor } from "@/config/anchor-text-diversity";
 import { BookingButton } from "@/components/booking-button";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: "Aircond Brands We Install & Service — KL & Selangor",
@@ -73,7 +74,7 @@ export default function BrandsIndex() {
         <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest text-slate-600">
           <span>✓ SSM Registered</span>
           <span>✓ 1-Month Workmanship Warranty</span>
-          <span>✓ 500+ 5-Star Google Reviews</span>
+          <span>✓ {reviewCountLabel} 5-Star Google Reviews</span>
           <span>✓ Same-Day Available</span>
           <span>✓ Price Confirmed Before Work</span>
         </div>

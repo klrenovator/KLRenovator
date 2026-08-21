@@ -5,6 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 import { Reveal } from "@/components/reveal";
 import { googlePlace, googleReviews, type Review } from "@/config/reviews";
+import { reviewRatingLabelFor } from "@/lib/use-google-review-stats";
 import { title, eyebrow } from "@/components/primitives";
 import { translations, useLang, type Lang } from "@/context/language-context";
 
@@ -132,7 +133,7 @@ export const GoogleReviews = ({ locale }: { locale?: Lang } = {}) => {
                 <GoogleGIcon className="h-6 w-6" />
                 <div>
                   <p className="text-2xl font-black text-slate-950 leading-none">
-                    {meta.rating} / 5
+                    {reviewRatingLabelFor(meta.rating)} / 5
                   </p>
                   <p className="mt-1 text-[11px] uppercase tracking-wider font-black text-slate-500">
                     Google Reviews · {meta.total}+

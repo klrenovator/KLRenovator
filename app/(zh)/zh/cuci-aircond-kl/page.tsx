@@ -13,6 +13,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const dynamic = "force-static";
 
@@ -21,7 +22,7 @@ const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
   title: buildFreshMetaTitle("吉隆坡冷气清洗 2026 — 化学清洗 RM120 | KL Renovator", "zh"),
-  description: padMetaDescription("吉隆坡冷气清洗 — 化学清洗 RM120 起。KL Renovator 当天上门。全巴生谷覆盖。500+五星好评。1个月保修。WhatsApp +60182983573。"),
+  description: padMetaDescription(`吉隆坡冷气清洗 — 化学清洗 RM120 起。KL Renovator 当天上门。全巴生谷覆盖。${reviewCountLabel}五星好评。1个月保修。WhatsApp +60182983573。`),
   alternates: {
     canonical: "https://www.klrenovator.com/zh/cuci-aircond-kl",
     languages: {
@@ -66,7 +67,7 @@ export default function Page() {
   const schema = buildServiceSchema({
     slug: "chemical-wash",
     name: "吉隆坡冷气清洗",
-    description: "吉隆坡冷气清洗化学清洗 RM120。当天上门。500+五星好评。",
+    description: `吉隆坡冷气清洗化学清洗 RM120。当天上门。${reviewCountLabel}五星好评。`,
     startPrice: 120,
     locale: "zh",
     priceTable: pricing,
@@ -91,7 +92,7 @@ export default function Page() {
           <div>
             <span className="inline-flex rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-sky-700">吉隆坡冷气清洗 • 2026</span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight text-slate-950">吉隆坡冷气清洗 &amp; 雪兰莪 — <span className="text-sky-600">RM120</span></h1>
-            <p className="mt-4 text-lg text-slate-700 max-w-xl">高压 80–120 PSI 化学清洗。去除异味、漏水、风弱。巴生谷当天上门。<strong>500+ 五星好评</strong>。1个月保修。</p>
+            <p className="mt-4 text-lg text-slate-700 max-w-xl">高压 80–120 PSI 化学清洗。去除异味、漏水、风弱。巴生谷当天上门。<strong>{reviewCountLabel} 五星好评</strong>。1个月保修。</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#22c55e] px-7 py-4 text-sm font-black uppercase tracking-wider text-white shadow-lg hover:bg-[#16a34a]"><FaWhatsapp className="h-5 w-5"/> WhatsApp 预约</a>
               <a href="tel:+60182983573" className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-slate-900 px-7 py-4 text-sm font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white"><FaPhone className="h-4 w-4"/> +60182983573</a>
@@ -123,7 +124,7 @@ export default function Page() {
       <section className="bg-slate-50 py-12 border-y border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-[15px] leading-relaxed text-slate-700 space-y-4">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-950">吉隆坡冷气清洗 — 巴生谷第一</h2>
-          <p>搜索 <strong>“吉隆坡冷气清洗”</strong>、<strong>“cuci aircond KL”</strong>、<strong>“aircond service KL”</strong>？您来对地方了。KL Renovator — <strong>500+ 五星 Google 好评</strong>，SSM注册，透明收费 <strong>RM120</strong> 起。我们提供真正的 <strong>80–120 PSI 高压化学清洗</strong> —— 食品级化学剂溶解盘管与风轮内的生物膜、霉菌与吉隆坡道路灰尘。</p>
+          <p>搜索 <strong>“吉隆坡冷气清洗”</strong>、<strong>“cuci aircond KL”</strong>、<strong>“aircond service KL”</strong>？您来对地方了。KL Renovator — <strong>{reviewCountLabel} 五星 Google 好评</strong>，SSM注册，透明收费 <strong>RM120</strong> 起。我们提供真正的 <strong>80–120 PSI 高压化学清洗</strong> —— 食品级化学剂溶解盘管与风轮内的生物膜、霉菌与吉隆坡道路灰尘。</p>
           <p>我们每天在KL解决的常见问题：<em>冷气不冷</em>、<em>漏水</em>、<em>异味</em>、<em>风弱</em>、<em>电费升高</em>。60–75分钟完成，机器保持挂墙，立即可以使用。覆盖：<strong>KLCC、Bangsar、Mont Kiara、Damansara、PJ、Subang Jaya、Shah Alam、Klang、Puchong、Cheras、Ampang、Kajang、Kepong、Setapak、Gombak、Rawang</strong> —— 全巴生谷。立即WhatsApp — <strong>当天</strong>可约。</p>
         </div>
       </section>

@@ -17,6 +17,7 @@ import { BLOG_CATEGORY_HUB } from "@/config/topic-hub-links";
 import { deriveFaqsFromContent } from "@/lib/blog-derived-faq";
 import { ComparisonBlock, DefinitionBlocks } from "@/components/aeo-explainer-blocks";
 import type { ExplainerBundle } from "@/lib/aeo-explainer-select";
+import { reviewCountLabel } from "@/config/reviews";
 
 // UI Labels
 const UI = {
@@ -39,7 +40,7 @@ const UI = {
     authorTitle: "KL Renovator's HVAC Expert Team",
     authorDesc: "This article links back to the same field team that services wall-mounted, ceiling cassette and window units across KL & Selangor. Meet the 4 real technicians behind KL Renovator, see their experience, and review our service standards before you book.",
     authorCta: "Meet the team",
-    authorTrust: ["10+ years HVAC experience", "20 major brands serviced", "500+ Google reviews", "1-month workmanship warranty"],
+    authorTrust: ["10+ years HVAC experience", "20 major brands serviced", `${reviewCountLabel} Google reviews`, "1-month workmanship warranty"],
     authorSchemaDescription: "Field-reviewed by KL Renovator's HVAC Expert Team, serving wall-mounted, ceiling cassette and window units across KL & Selangor.",
     related: "Related Articles",
     alsoServing: "Also serving:",
@@ -72,7 +73,7 @@ const UI = {
     authorTitle: "Pasukan Pakar HVAC KL Renovator",
     authorDesc: "Artikel ini berpaut terus kepada pasukan lapangan yang sama yang menservis unit dinding, ceiling cassette dan window di KL & Selangor. Lihat 4 juruteknik sebenar di sebalik KL Renovator, pengalaman mereka, dan standard kerja kami sebelum anda membuat tempahan.",
     authorCta: "Lihat pasukan kami",
-    authorTrust: ["10+ tahun pengalaman HVAC", "20 jenama utama diservis", "500+ ulasan Google", "Waranti kerjatangan 1 bulan"],
+    authorTrust: ["10+ tahun pengalaman HVAC", "20 jenama utama diservis", `${reviewCountLabel} ulasan Google`, "Waranti kerjatangan 1 bulan"],
     authorSchemaDescription: "Disemak oleh Pasukan Pakar HVAC KL Renovator yang menservis unit dinding, ceiling cassette dan window di KL & Selangor.",
     related: "Artikel Berkaitan",
     alsoServing: "Juga meliputi:",
@@ -105,7 +106,7 @@ const UI = {
     authorTitle: "KL Renovator HVAC\u4e13\u5bb6\u56e2\u961f",
     authorDesc: "\u8fd9\u7bc7\u6587\u7ae0\u76f4\u63a5\u8fde\u5230\u540c\u4e00\u652f\u73b0\u573a\u56e2\u961f\uff0c\u8be5\u56e2\u961f\u5728 KL \u548c Selangor \u4e3a\u6302\u58c1\u5f0f\u3001\u5929\u82b1\u5361\u5f0f\u548c\u7a97\u5f0f\u51b7\u6c14\u63d0\u4f9b\u670d\u52a1\u3002\u9884\u7ea6\u524d\u60a8\u53ef\u4ee5\u67e5\u770b KL Renovator \u80cc\u540e 4 \u4f4d\u771f\u5b9e\u6280\u672f\u5458\u7684\u7ecf\u9a8c\u548c\u670d\u52a1\u6807\u51c6\u3002",
     authorCta: "\u8ba4\u8bc6\u6211\u4eec\u7684\u56e2\u961f",
-    authorTrust: ["10+ \u5e74 HVAC \u7ecf\u9a8c", "\u7ef4\u4fee 20 \u4e2a\u4e3b\u6d41\u54c1\u724c", "500+ Google \u8bc4\u4ef7", "1 \u4e2a\u6708\u5de5\u827a\u4fdd\u4fee"],
+    authorTrust: ["10+ \u5e74 HVAC \u7ecf\u9a8c", "\u7ef4\u4fee 20 \u4e2a\u4e3b\u6d41\u54c1\u724c", `${reviewCountLabel} Google \u8bc4\u4ef7`, "1 \u4e2a\u6708\u5de5\u827a\u4fdd\u4fee"],
     authorSchemaDescription: "\u7531 KL Renovator HVAC \u4e13\u5bb6\u56e2\u961f\u5ba1\u6838\uff0c\u4e3a KL \u548c Selangor \u7684\u6302\u58c1\u5f0f\u3001\u5929\u82b1\u5361\u5f0f\u548c\u7a97\u5f0f\u51b7\u6c14\u63d0\u4f9b\u670d\u52a1\u3002",
     related: "\u76f8\u5173\u6587\u7ae0",
     alsoServing: "\u540c\u65f6\u670d\u52a1\uff1a",
@@ -626,10 +627,10 @@ export function BlogPostClient({ post, related, forcedLang, explainers }: Props)
           </h2>
           <p className="text-sm text-slate-600 mb-5">
             {lang === "zh" 
-              ? "\u8986\u76d6\u5409\u9686\u5761\u53ca\u96ea\u5170\u83ab\u5168\u533a\u3002\u4ef7\u683c\u900f\u660e\uff0c\u65bd\u5de5\u524d\u786e\u8ba4\u30022026\u5e74500+\u4e94\u661f\u597d\u8bc4\u3002"
+              ? `\u8986\u76d6\u5409\u9686\u5761\u53ca\u96ea\u5170\u83ab\u5168\u533a\u3002\u4ef7\u683c\u900f\u660e\uff0c\u65bd\u5de5\u524d\u786e\u8ba4\u30022026\u5e74${reviewCountLabel}\u4e94\u661f\u597d\u8bc4\u3002`
               : lang === "ms" 
-              ? "Meliputi semua kawasan KL & Selangor. Harga telus, disahkan sebelum kerja. 500+ ulasan bintang 5."
-              : "Covering all of KL & Selangor. Transparent pricing confirmed before work starts. 500+ 5-star reviews."}
+              ? `Meliputi semua kawasan KL & Selangor. Harga telus, disahkan sebelum kerja. ${reviewCountLabel} ulasan bintang 5.`
+              : `Covering all of KL & Selangor. Transparent pricing confirmed before work starts. ${reviewCountLabel} 5-star reviews.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

@@ -1,7 +1,7 @@
 "use client";
 
 import { FiStar, FiMapPin } from "react-icons/fi";
-import { sitePublic } from "@/config/site-public";
+import { useGoogleReviewStats, reviewCountLabelFor, reviewRatingLabelFor } from "@/lib/use-google-review-stats";
 
 interface ReviewTrustWidgetProps {
   locale?: "en" | "ms" | "zh";
@@ -9,22 +9,27 @@ interface ReviewTrustWidgetProps {
 }
 
 export function ReviewTrustWidget({ locale = "en", compact = false }: ReviewTrustWidgetProps) {
+  // Live Google review stats via /api/google-reviews; falls back to the
+  // verified figures in config/reviews.ts when env vars are not configured.
+  const { rating, total } = useGoogleReviewStats();
+  const countLabel = reviewCountLabelFor(total);
+
   const data = {
     en: {
       title: "Real Customers. Real Results.",
-      subtitle: "500+ five-star Google reviews from homeowners across KL & Selangor",
+      subtitle: `${countLabel} five-star Google reviews from homeowners across KL & Selangor`,
       cta: "Read Google Reviews",
       link: "https://www.google.com/search?q=KL+Renovator+reviews",
     },
     ms: {
       title: "Pelanggan Sebenar. Hasil Sebenar.",
-      subtitle: "Lebih 500 ulasan 5-bintang Google daripada pemilik rumah di KL & Selangor",
+      subtitle: `${countLabel} ulasan 5-bintang Google daripada pemilik rumah di KL & Selangor`,
       cta: "Baca Ulasan Google",
       link: "https://www.google.com/search?q=KL+Renovator+reviews",
     },
     zh: {
       title: "真实客户 · 真实结果",
-      subtitle: "来自吉隆坡与雪兰莪屋主的 500+ 条五星 Google 评价",
+      subtitle: `来自吉隆坡与雪兰莪屋主的 ${countLabel} 条五星 Google 评价`,
       cta: "查看 Google 评价",
       link: "https://www.google.com/search?q=KL+Renovator+reviews",
     },
@@ -44,10 +49,10 @@ export function ReviewTrustWidget({ locale = "en", compact = false }: ReviewTrus
         </div>
         <div>
           <div className="flex items-center gap-1.5">
-            <span className="text-3xl font-black text-emerald-700">5.0</span>
+            <span className="text-3xl font-black text-emerald-700">{reviewRatingLabelFor(rating)}</span>
             <span className="text-emerald-600">/ 5</span>
           </div>
-          <p className="text-xs font-bold text-emerald-600">Based on 500+ reviews</p>
+          <p className="text-xs font-bold text-emerald-600">Based on {countLabel} reviews</p>
         </div>
       </div>
 

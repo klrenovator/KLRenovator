@@ -14,6 +14,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const dynamic = "force-static";
 
@@ -162,7 +163,7 @@ export default function ZhInstallationPricePage() {
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 含7尺铜管</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 强制抽真空</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1个月保修</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+五星好评</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> {reviewCountLabel}五星好评</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> SSM注册</span>
         </div>
       </section>

@@ -13,6 +13,7 @@ import { waLink } from "@/lib/whatsapp";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { reviewCountLabel } from "@/config/reviews";
 
 const amcMsg = [
   "Hi KL Renovator, I am interested in an Annual Maintenance Contract (AMC) for my aircond unit(s).",
@@ -253,7 +254,7 @@ export default function AMCPage() {
       <section className="py-16 px-4 bg-gradient-to-br from-sky-700 to-slate-800 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-black mb-4">Ready to Never Worry About Your Aircond Again?</h2>
-          <p className="text-sky-200 mb-8 text-sm max-w-md mx-auto">Join 500+ Klang Valley customers who trust KL Renovator with their aircond maintenance. WhatsApp us now — we will recommend the right plan for you.</p>
+          <p className="text-sky-200 mb-8 text-sm max-w-md mx-auto">Join {reviewCountLabel} Klang Valley customers who trust KL Renovator with their aircond maintenance. WhatsApp us now — we will recommend the right plan for you.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={amcWaLink} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider px-8 py-4 rounded-2xl text-sm shadow-xl transition-all">
               <FaWhatsapp className="h-5 w-5" /> Get My AMC Plan

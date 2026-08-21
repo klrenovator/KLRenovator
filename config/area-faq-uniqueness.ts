@@ -1,3 +1,4 @@
+import { reviewCountLabel, reviewCount } from "./reviews";
 // config/area-faq-uniqueness.ts
 // Purpose: Vary FAQ schema questions slightly across area pages to avoid duplicate schema flags.
 // Each area page keeps its own unique faqs from siteConfig (faqs / faqsBM / faqsZH) but we
@@ -42,7 +43,7 @@ const EN_NEARME_SETS: Array<
       },
       {
         q: `Who is the best aircond repair technician near me in ${area.name}?`,
-        a: `KL Renovator's trained technicians are highly rated across ${area.name} and Klang Valley. With 500+ five-star reviews, transparent pricing from RM 99, and a 1-month workmanship warranty, we are trusted for aircond repair near ${lm1} and across ${area.state}.`,
+        a: `KL Renovator's trained technicians are highly rated across ${area.name} and Klang Valley. With ${reviewCountLabel} five-star reviews, transparent pricing from RM 99, and a 1-month workmanship warranty, we are trusted for aircond repair near ${lm1} and across ${area.state}.`,
       },
     ];
   },
@@ -87,7 +88,7 @@ const MS_NEARME_SETS: Array<
       },
       {
         q: `Siapa juruteknik baiki aircond terbaik berhampiran saya di ${area.name}?`,
-        a: `Juruteknik terlatih KL Renovator mendapat penarafan tinggi di ${area.name}. Dengan 500+ ulasan 5-bintang, harga telus dari RM 99 dan jaminan 1 bulan, kami dipercayai untuk baiki aircond berhampiran ${lm1} dan seluruh ${area.state}.`,
+        a: `Juruteknik terlatih KL Renovator mendapat penarafan tinggi di ${area.name}. Dengan ${reviewCountLabel} ulasan 5-bintang, harga telus dari RM 99 dan jaminan 1 bulan, kami dipercayai untuk baiki aircond berhampiran ${lm1} dan seluruh ${area.state}.`,
       },
     ];
   },
@@ -132,7 +133,7 @@ const ZH_NEARME_SETS: Array<
       },
       {
         q: `${area.name}附近最好的冷气维修技术员是谁？`,
-        a: `KL Renovator 训练有素的技术员在${area.name}获得高度评价，拥有500多个五星好评，价格从RM 99起透明，享有1个月工艺保修，值得信赖，覆盖${lm1}及整个${area.state}。`,
+        a: `KL Renovator 训练有素的技术员在${area.name}获得高度评价，拥有${reviewCount}多个五星好评，价格从RM 99起透明，享有1个月工艺保修，值得信赖，覆盖${lm1}及整个${area.state}。`,
       },
     ];
   },

@@ -13,6 +13,7 @@ import { waLink } from "@/lib/whatsapp";
 import { ServiceWorkPhotos } from "@/components/service-work-photos";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { reviewCountLabel } from "@/config/reviews";
 
 const amcMsg = [
   "Hi KL Renovator，我对年度冷气保养合同（AMC）感兴趣。",
@@ -161,7 +162,7 @@ export default function AMCPageZH() {
       <section className="py-16 px-4 bg-gradient-to-br from-sky-700 to-slate-800 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-black mb-4">准备好不再为冷气烦恼了吗？</h2>
-          <p className="text-sky-200 mb-8 text-sm max-w-md mx-auto">加入 500+ 信赖 KL Renovator 冷气保养的巴生谷客户。立即 WhatsApp 联系我们——我们会为您推荐合适的方案。</p>
+          <p className="text-sky-200 mb-8 text-sm max-w-md mx-auto">加入 {reviewCountLabel} 信赖 KL Renovator 冷气保养的巴生谷客户。立即 WhatsApp 联系我们——我们会为您推荐合适的方案。</p>
           <a href={amcWaLink} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-wider px-8 py-4 rounded-2xl text-sm shadow-xl transition-all">
             <FaWhatsapp className="h-5 w-5" /> 获取我的 AMC 方案
           </a>

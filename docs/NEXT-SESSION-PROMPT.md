@@ -86,13 +86,15 @@ Pages deliberately left without a glossary block: /book, /contact,
 /privacy-policy, /gallery, /review, /near-me, /about, the three index pages
 and the homepage. A glossary there would be filler.
 
-OUT OF SCOPE — review-count copy (#68)
---------------------------------------
-The owner is handling the "500+ Google reviews" claim personally and has
-asked that it not be edited by an agent.
-
-  - Do NOT modify, rewrite or remove any existing review-count string, and do
-    NOT change config/reviews.ts (`totalReviews`, `averageRating`).
+RESOLVED — review-count copy (#68)
+----------------------------------
+Verified against the Google Business Profile: 88 reviews at 5.0 (2026-08-21).
+`config/reviews.ts` (`googlePlace.totalReviews = 88`) is the single source of
+truth; all 150+ hardcoded "500+" claims now derive from it or from live
+`/api/google-reviews` data. If you add new copy, never hardcode a review
+count — use `reviewCountLabel` / `reviewCount` / `reviewRatingLabel` from
+`config/reviews.ts`, and keep the static files in `public/` in sync (see
+WHERE_TO_UPDATE.md).
   - Do NOT introduce any NEW review-count claim in copy you write. Use
     other proof instead — published prices, the 1-month workmanship
     warranty, 20 brands serviced, 10+ years experience, SSM registration,
@@ -213,4 +215,4 @@ must not be edited by an agent.
 | Cluster hubs | 🔲 Open | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
 | Commercial + IAQ clusters | ✅ Done (session 9) | [#75](https://github.com/klrenovator/KLRenovator/issues/75) — needs manual close |
 | Title clashes, thin pages, description CTAs | ✅ Done (session 9) | [#69](https://github.com/klrenovator/KLRenovator/issues/69) — needs manual close |
-| "500+ reviews" vs 9 review objects | ⚠️ Maintainer | [#68](https://github.com/klrenovator/KLRenovator/issues/68) |
+| "500+ reviews" vs 9 review objects | ✅ Fixed (88 reviews @ 5.0) | [#68](https://github.com/klrenovator/KLRenovator/issues/68) |

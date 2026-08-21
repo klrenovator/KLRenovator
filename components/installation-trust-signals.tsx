@@ -5,6 +5,7 @@ import { FiArrowRight, FiPhone } from "react-icons/fi";
 import NextLink from "next/link";
 import { sitePublic } from "@/config/site-public";
 import { waLink } from "@/lib/whatsapp";
+import { useGoogleReviewStats, reviewCountLabelFor } from "@/lib/use-google-review-stats";
 
 interface InstallationTrustSignalsProps {
   variant?: "default" | "compact" | "inline";
@@ -15,6 +16,11 @@ export function InstallationTrustSignals({
   variant = "default",
   className = "",
 }: InstallationTrustSignalsProps) {
+
+  // Live review count via /api/google-reviews, falling back to
+  // config/reviews.ts when the env vars are not configured.
+  const { total } = useGoogleReviewStats();
+  const countLabel = reviewCountLabelFor(total);
 
   const trustBadges = [
     { 
@@ -73,7 +79,7 @@ export function InstallationTrustSignals({
     },
     { 
       icon: <FaUserCheck className="h-5 w-5" />, 
-      label: "500+ 5-Star Google Reviews", 
+      label: `${countLabel} 5-Star Google Reviews`, 
       description: "Trusted by 5,000+ Klang Valley customers. Real reviews from real installation jobs.",
       color: "amber"
     },

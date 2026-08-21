@@ -16,6 +16,7 @@ import { newBlogBatch11 } from "./new-blog-batch11";
 import { newBlogBatch12 } from "./new-blog-batch12";
 import { newBlogBatch13 } from "./new-blog-batch13";
 import { newBlogBatch14 } from "./new-blog-batch14";
+import { reviewCountLabel, reviewCount, reviewRatingLabel } from "./reviews";
 
 export type BlogFaq = {
   q: string;
@@ -184,7 +185,7 @@ export const allPosts: BlogPost[] = [
       <h2>为什么选择KL Renovator</h2>
       <ul>
         <li>✅ SSM注册公司（003765188-T）</li>
-        <li>✅ 500+ Google真实评价</li>
+        <li>✅ ${reviewCountLabel} Google真实评价</li>
         <li>✅ 当天服务可用</li>
         <li>✅ 1个月工艺保修</li>
         <li>✅ 透明定价——开工前确认</li>
@@ -2929,7 +2930,7 @@ export const allPosts: BlogPost[] = [
       </table>
 
       <h2>精准诊断的重要性</h2>
-      <p>很多技师会跳过检查直接让您“加 Gas”或“换新机”。KL Renovator 坚持先进行电气和压力测量。例如，如果只是 RM 80 的电容坏了，我们绝不会让您花 RM 500 换主板。这就是为什么我们有 500+ 的 Google 真实评价。</p>
+      <p>很多技师会跳过检查直接让您“加 Gas”或“换新机”。KL Renovator 坚持先进行电气和压力测量。例如，如果只是 RM 80 的电容坏了，我们绝不会让您花 RM 500 换主板。这就是为什么我们有 ${reviewCountLabel} 的 Google 真实评价。</p>
 
       <h2>服务范围与响应</h2>
       <p>我们提供<strong>当天紧急维修服务</strong>，覆盖吉隆坡、PJ、Subang、Shah Alam 等区域。技师到场前会先给您预估报价，透明公开。</p>
@@ -3315,7 +3316,7 @@ export const allPosts: BlogPost[] = [
       <h3>Why is the same job quoted RM 99 elsewhere?</h3>
       <p>Some operators quote RM 99 without copper pipe, vacuum testing or warranty. The real cost appears as add-ons during the visit. Always ask what is included.</p>
       <h3>Is KL Renovator pricing really the published website price?</h3>
-      <p>Yes. This guide mirrors the prices shown on klrenovator.com. KL Renovator is rated 5.0 by 500+ Google reviews for transparent pricing in KL and Selangor.</p>
+      <p>Yes. This guide mirrors the prices shown on klrenovator.com. KL Renovator is rated ${reviewRatingLabel} by ${reviewCountLabel} Google reviews for transparent pricing in KL and Selangor.</p>
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator at <strong>+60182983573</strong> with your unit size, brand and a photo of the install location for an exact quote. Related service: <a href="/services/installation">New Unit Installation</a>. See also our <a href="/areas">KL &amp; Selangor service areas</a>.</p>
     `,
@@ -3383,7 +3384,7 @@ export const allPosts: BlogPost[] = [
       <h3>Mengapa kerja yang sama disebut RM 99 di tempat lain?</h3>
       <p>Sesetengah pengendali menyebut RM 99 tanpa paip tembaga, ujian vakum atau waranti. Kos sebenar muncul sebagai add-on semasa lawatan. Sentiasa tanya apa yang termasuk.</p>
       <h3>Adakah harga KL Renovator benar-benar harga laman web yang diterbitkan?</h3>
-      <p>Ya. Panduan ini mencerminkan harga yang ditunjukkan di klrenovator.com. KL Renovator dinilai 5.0 oleh 500+ ulasan Google untuk harga telus di KL dan Selangor.</p>
+      <p>Ya. Panduan ini mencerminkan harga yang ditunjukkan di klrenovator.com. KL Renovator dinilai ${reviewRatingLabel} oleh ${reviewCountLabel} ulasan Google untuk harga telus di KL dan Selangor.</p>
       <h2>Ready to book?</h2>
       <p>WhatsApp KL Renovator di <strong>+60182983573</strong> dengan saiz unit, jenama dan gambar lokasi pemasangan untuk sebut harga tepat. Perkhidmatan berkaitan: <a href="/ms/services/installation">Pemasangan Unit Baru</a>. Lihat juga <a href="/ms/areas/kuala-lumpur">kawasan perkhidmatan KL &amp; Selangor</a>.</p>
     `,
@@ -5250,9 +5251,9 @@ export const allPosts: BlogPost[] = [
     title: "Aircond Maintenance Contract Malaysia 2026",
     titleMS: "Kontrak Penyelenggaraan Aircond Malaysia 2026 — Jimat 30% Berbanding Servis Individu",
     titleZH: "2026年马来西亚冷气保养合约 — 比单次服务省30%",
-    excerpt: "Is an annual aircond maintenance contract worth it in Malaysia? We break down the real cost savings, what's included, and why 500+ KL homeowners chose AMC over pay-per-service in 2026.",
-    excerptMS: "Adakah kontrak penyelenggaraan aircond tahunan berbaloi di Malaysia? Kami huraikan penjimatan kos sebenar, apa yang termasuk, dan mengapa 500+ pemilik rumah KL memilih AMC berbanding servis individu pada 2026.",
-    excerptZH: "马来西亚的年度冷气保养合约值得吗？我们分析实际节省费用、包含内容，以及为什么500+吉隆坡业主在2026年选择AMC而非单次服务。",
+    excerpt: `Is an annual aircond maintenance contract worth it in Malaysia? We break down the real cost savings, what's included, and why ${reviewCountLabel} KL homeowners chose AMC over pay-per-service in 2026.`,
+    excerptMS: `Adakah kontrak penyelenggaraan aircond tahunan berbaloi di Malaysia? Kami huraikan penjimatan kos sebenar, apa yang termasuk, dan mengapa ${reviewCountLabel} pemilik rumah KL memilih AMC berbanding servis individu pada 2026.`,
+    excerptZH: `马来西亚的年度冷气保养合约值得吗？我们分析实际节省费用、包含内容，以及为什么${reviewCountLabel}吉隆坡业主在2026年选择AMC而非单次服务。`,
     category: "Pricing & Cost Guide",
     categoryMS: "Panduan Harga & Kos",
     categoryZH: "价格与费用指南",
@@ -5804,7 +5805,7 @@ export const allPosts: BlogPost[] = [
       <details><summary><strong>Are same-day slots really available?</strong></summary><p>Yes — same-day slots are often available, especially around Batu Caves, Selayang and central Klang Valley where our teams are based. WhatsApp early morning for the best chance.</p></details>
       <details><summary><strong>What is included in the RM 199 installation package?</strong></summary><p>Standard wall-mounted RM 199 includes: (1) site survey &amp; wall assessment, (2) 7ft correctly sized insulated copper, (3) electrical wiring via dedicated conduit, (4) PVC drain with proper fall, (5) indoor mounting with anti-vibration pads, (6) vacuum pump evacuation min. 15 minutes, (7) vacuum pump commissioning (500 microns), (8) full commissioning, (9) written job card + 1-month workmanship warranty.</p></details>
       <details><summary><strong>How are volume discounts calculated?</strong></summary><p>Example: 3 × wall-mounted 1.5 HP chemical wash = RM 120 × 3 = RM 360, less 5% = <strong>RM 342</strong>. 5 units = RM 120 × 5 = RM 600, less 10% = <strong>RM 540</strong>. Discount is calculated automatically on the WhatsApp quote.</p></details>
-      <details><summary><strong>Is KL Renovator SSM-registered?</strong></summary><p>Yes — KL Renovator operates under Multicore Dynamics Resources (SSM registered). Technicians are trained HVAC specialists. 500+ five-star Google reviews.</p></details>
+      <details><summary><strong>Is KL Renovator SSM-registered?</strong></summary><p>Yes — KL Renovator operates under Multicore Dynamics Resources (SSM registered). Technicians are trained HVAC specialists. ${reviewCountLabel} five-star Google reviews.</p></details>
     `,
     contentMS: `
       <h2>Harga Servis Aircond Malaysia 2026 - Panduan Lengkap &amp; Telus</h2>
@@ -5974,7 +5975,7 @@ export const allPosts: BlogPost[] = [
       <details><summary><strong>Adakah slot hari sama benar-benar tersedia?</strong></summary><p>Ya, slot hari sama kerap tersedia terutamanya untuk Batu Caves, Selayang, dan kawasan Lembah Klang sekitar di mana pasukan kami beribu pejabat. WhatsApp awal pagi untuk peluang terbaik.</p></details>
       <details><summary><strong>Apa yang termasuk dalam pakej pemasangan RM 199?</strong></summary><p>Pakej standard dinding RM 199 merangkumi: (1) Tinjauan tapak &amp; penilaian dinding, (2) 7 kaki paip kuprum bersaiz betul dengan penebat, (3) Pendawaian elektrik melalui konduit khusus, (4) Paip longkang PVC dengan kecerunan betul, (5) Braket dinding dengan pad getah getaran, (6) Evakuasi pam vakum minimum 15 min, (7) Pentauliahan pam vakum (500 mikron), (8) Pentauliahan penuh, (9) Kad kerja bertulis + waranti kerja 1 bulan.</p></details>
       <details><summary><strong>Bagaimana diskaun kuantiti dikira?</strong></summary><p>Contoh: 3 unit dinding 1.5 HP untuk cuci kimia = RM 120 x 3 = RM 360, kurang 5% = <strong>RM 342</strong>. 5 unit = RM 120 x 5 = RM 600, kurang 10% = <strong>RM 540</strong>. Diskaun dikira automatik pada sebut harga WhatsApp.</p></details>
-      <details><summary><strong>Adakah KL Renovator berdaftar SSM?</strong></summary><p>Ya, KL Renovator adalah syarikat berdaftar SSM (Multicore Dynamic Resources). Semua juruteknik berlesen &amp; berlatiah HVAC. 500+ ulasan 5 bintang di Google Maps.</p></details>
+      <details><summary><strong>Adakah KL Renovator berdaftar SSM?</strong></summary><p>Ya, KL Renovator adalah syarikat berdaftar SSM (Multicore Dynamic Resources). Semua juruteknik berlesen &amp; berlatiah HVAC. ${reviewCountLabel} ulasan 5 bintang di Google Maps.</p></details>
     `,
     contentZH: `<h2>2026 马来西亚冷气服务价格指南 — 吉隆坡与雪兰莪最新报价</h2>
       <p>正在寻找透明、合理的冷气服务价格？在 2026 年，由于物料和交通成本波动，了解市场价可以避免被坑。<strong>KL Renovator</strong> 坚持价格公开透明，开工前确认，绝无隐藏费用。</p>
@@ -6550,7 +6551,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator does not compete in race-to-the-bottom bidding. We charge a fair, transparent rate that allows us to employ certified technicians, use premium-grade materials, and take the necessary time (45–60 minutes for a chemical wash, 2–3 hours for an overhaul) to do the job right the first time.</p>
 
       <h2>The Value of Business Legitimacy</h2>
-      <p>Unlike anonymous freelance profiles, KL Renovator is registered under Multicore Dynamics Resources (SSM: 003765188-T). We have serviced over 5,000 satisfied customers across KL and Selangor, backed by more than 500 five-star Google reviews. We don't hide behind a platform interface — our reputation is directly on the line with every visit.</p>
+      <p>Unlike anonymous freelance profiles, KL Renovator is registered under Multicore Dynamics Resources (SSM: 003765188-T). We have serviced over 5,000 satisfied customers across KL and Selangor, backed by more than ${reviewCount} five-star Google reviews. We don't hide behind a platform interface — our reputation is directly on the line with every visit.</p>
 
       <h2>Switch to Direct, Hassle-Free Aircond Booking</h2>
       <p>Say goodbye to waiting for multiple quotes and dealing with inconsistent freelancers. WhatsApp us directly at <strong>+60 18-298 3573</strong>. We will confirm your upfront price and schedule a technician to your home or office in minutes.</p>
@@ -6605,7 +6606,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator tidak bersaing dalam pembidaan harga murah yang mengurangkan kualiti. Kami mengenakan kadar harga yang adil dan telus yang membolehkan kami menggaji juruteknik bertauliah, menggunakan bahan premium, dan mengambil masa yang secukupnya (45–60 minit untuk cuci kimia, 2–3 jam untuk overhaul) untuk melakukan kerja dengan betul pada kali pertama.</p>
 
       <h2>Nilai Sah Perniagaan Berdaftar</h2>
-      <p>Tidak seperti profil pekerja bebas tanpa nama, KL Renovator berdaftar di bawah Multicore Dynamics Resources (SSM: 003765188-T). Kami telah melayani lebih 5,000 pelanggan yang berpuas hati di seluruh KL dan Selangor, disokong oleh lebih 500 ulasan Google lima bintang. Reputasi kami dipertaruhkan secara langsung dalam setiap lawatan servis kami.</p>
+      <p>Tidak seperti profil pekerja bebas tanpa nama, KL Renovator berdaftar di bawah Multicore Dynamics Resources (SSM: 003765188-T). Kami telah melayani lebih 5,000 pelanggan yang berpuas hati di seluruh KL dan Selangor, disokong oleh lebih ${reviewCount} ulasan Google lima bintang. Reputasi kami dipertaruhkan secara langsung dalam setiap lawatan servis kami.</p>
 
       <h2>Beralih kepada Tempahan Aircond Terus Tanpa Kerumitan</h2>
       <p>Katakan selamat tinggal kepada proses menunggu sebut harga dan berurusan dengan pekerja bebas yang tidak konsisten. Sila WhatsApp kami terus di <strong>+60 18-298 3573</strong>. Kami akan mengesahkan harga telus anda dan menjadualkan juruteknik ke rumah atau pejabat anda dalam beberapa minit.</p>
@@ -6660,7 +6661,7 @@ export const allPosts: BlogPost[] = [
       <p>KL Renovator 从不参与恶性低价竞标。我们收取合理、透明的费用，这使我们能够聘请合格的持证技术员，使用优质的原厂材料，并投入充足的时间（化学清洗 45–60 分钟，大修 2–3 小时）确保每一次上门服务都一次性做到最好。</p>
 
       <h2>合法注册企业的保障</h2>
-      <p>与平台上匿名的个人自由职业者不同，KL Renovator 是在 Multicore Dynamics Resources (SSM: 003765188-T) 旗下合法注册并运营的。我们已为吉隆坡和雪兰莪的 5,000 多名满意客户提供服务，拥有超过 500 条五星级 Google 真实评价。我们的信誉直接体现在每一次服务 visit 中。</p>
+      <p>与平台上匿名的个人自由职业者不同，KL Renovator 是在 Multicore Dynamics Resources (SSM: 003765188-T) 旗下合法注册并运营的。我们已为吉隆坡和雪兰莪的 5,000 多名满意客户提供服务，拥有超过 ${reviewCount} 条五星级 Google 真实评价。我们的信誉直接体现在每一次服务 visit 中。</p>
 
       <h2>转向直接、无忧的冷气服务预约</h2>
       <p>告别漫长的等待报价和不稳定的自由职业技术员。直接通过 <strong>+60 18-298 3573</strong> WhatsApp 我们。我们将在几分钟内为您确认价格并安排技术人员上门。</p>
@@ -6733,7 +6734,7 @@ export const allPosts: BlogPost[] = [
       <p>If your aircond starts leaking water on your wooden floors or tripping your main electrical breaker, you cannot afford to wait for app-support tickets to resolve. Direct booking with KL Renovator gives you instant, 1-on-1 WhatsApp contact with our dispatch center. We confirm slots in minutes and can have a technician at your door in 30–60 minutes for urgent emergencies.</p>
 
       <h2>Make the Smarter, Safer Choice for Your Home</h2>
-      <p>Enjoy reliable, SSM-registered service (Multicore Dynamics Resources — SSM: 003765188-T) backed by over 500 five-star Google reviews. Skip the app commission markups and book directly today.</p>
+      <p>Enjoy reliable, SSM-registered service (Multicore Dynamics Resources — SSM: 003765188-T) backed by over ${reviewCount} five-star Google reviews. Skip the app commission markups and book directly today.</p>
       <p>WhatsApp our team at <strong>+60 18-298 3573</strong> for an instant upfront quote. <a href="/services">Check our service rates</a> | <a href="/areas">View our coverage map</a> | <a href="/services/chemical-wash">Our chemical wash details</a></p>
     `,
     contentMS: `
@@ -6783,7 +6784,7 @@ export const allPosts: BlogPost[] = [
       <p>Jika aircond anda mula bocor air pada lantai kayu atau mencetuskan litar elektrik utama anda, anda tidak boleh menunggu tiket sokongan aplikasi diselesaikan. Tempahan terus dengan KL Renovator memberikan anda hubungan WhatsApp 1-ke-1 yang serta-merta dengan pusat dispatch kami. Kami mengesahkan slot dalam beberapa minit dan boleh menghantar juruteknik ke rumah anda dalam masa 30–60 minit untuk kecemasan segera.</p>
 
       <h2>Buat Pilihan yang Lebih Bijak dan Selamat untuk Rumah Anda</h2>
-      <p>Nikmati servis berdaftar SSM yang boleh dipercayai (Multicore Dynamics Resources — SSM: 003765188-T) disokong oleh lebih 500 ulasan Google lima bintang. Elakkan markup komisen aplikasi dan tempah terus hari ini.</p>
+      <p>Nikmati servis berdaftar SSM yang boleh dipercayai (Multicore Dynamics Resources — SSM: 003765188-T) disokong oleh lebih ${reviewCount} ulasan Google lima bintang. Elakkan markup komisen aplikasi dan tempah terus hari ini.</p>
       <p>WhatsApp pasukan kami di <strong>+60 18-298 3573</strong> untuk sebut harga upfront serta-merta. <a href="/ms/services">Semak kadar servis kami</a> | <a href="/ms/areas">Lihat kawasan liputan kami</a> | <a href="/ms/services/chemical-wash">Butiran cuci kimia kami</a></p>
     `,
     contentZH: `
@@ -6833,7 +6834,7 @@ export const allPosts: BlogPost[] = [
       <p>如果您的冷气开始在木地板上滴水，或者导致总电闸跳闸，您绝对无法承受等待平台客服工单处理的拖延。直接预约 KL Renovator，您可以与我们的派单中心建立即时、 1 对 1 的 WhatsApp 直接联系。我们在几分钟内确认预约，并可在 30–60 分钟内派技术人员赶到现场处理紧急情况。</p>
 
       <h2>为您的家做出更明智、更安全的选择</h2>
-      <p>享受合法注册企业 (Multicore Dynamics Resources — SSM: 003765188-T) 的高标准专业服务，拥有超过 500 条五星级 Google 真实评价。省去应用平台的中介费，今天就直接向我们预约。</p>
+      <p>享受合法注册企业 (Multicore Dynamics Resources — SSM: 003765188-T) 的高标准专业服务，拥有超过 ${reviewCount} 条五星级 Google 真实评价。省去应用平台的中介费，今天就直接向我们预约。</p>
       <p>立即通过 <strong>+60 18-298 3573</strong> WhatsApp 我们的团队，获取即时报价。 <a href="/zh/services">检查我们的服务收费</a> | <a href="/zh/areas">检查我们的服务覆盖区域</a> | <a href="/zh/services/chemical-wash">化学清洗流程</a></p>
     `
   }
@@ -8362,7 +8363,7 @@ export const allPosts: BlogPost[] = [
       </table>
 
       <h2>为什么选择 KL Renovator？</h2>
-      <p>我们虽然是独立公司，但我们的标准比肩官方。我们使用高质量的加厚铜管（Type L），坚持完整的抽真空流程，并且拥有 500+ Google 真实评价。最重要的是，我们能解决由于安装不当导致的官方不予保修的问题。</p>
+      <p>我们虽然是独立公司，但我们的标准比肩官方。我们使用高质量的加厚铜管（Type L），坚持完整的抽真空流程，并且拥有 ${reviewCountLabel} Google 真实评价。最重要的是，我们能解决由于安装不当导致的官方不予保修的问题。</p>
 
       <h2>立即预约快速服务</h2>
       <p>不想排队等一周？WhatsApp <strong>+60 18-298 3573</strong>，获取当天的专家上门服务。查看我们的 <a href="/zh/services/repair">故障诊断流程</a>。</p>`
@@ -8518,7 +8519,7 @@ export const allPosts: BlogPost[] = [
       <p>Before booking any aircond service from a social media ad, take these 3 minutes to verify: <strong>(1)</strong> Ask for their SSM registration number and verify it at the SSM eInfo portal. <strong>(2)</strong> Check Google Maps for their physical address and look at Google Reviews — a company with 500+ genuine 5-star reviews over several years is real; a company with 5 reviews all from last week is suspicious. <strong>(3)</strong> WhatsApp them and see how they respond — a professional company answers questions clearly, provides transparent pricing, and does not pressure you to book immediately.</p>
 
       <h2>KL Renovator: The Registered Choice</h2>
-      <p>KL Renovator operates under Multicore Dynamics Resources (SSM: 003765188-T) with a physical office at Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur. We have served 5,000+ customers with 500+ verified Google 5-star reviews. Our pricing is published transparently on our website — RM 99 standard service, RM 120 chemical wash. We accept payment after the job is done. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services">Full service list</a> | <a href="/about">About us</a></p>
+      <p>KL Renovator operates under Multicore Dynamics Resources (SSM: 003765188-T) with a physical office at Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur. We have served 5,000+ customers with ${reviewCountLabel} verified Google 5-star reviews. Our pricing is published transparently on our website — RM 99 standard service, RM 120 chemical wash. We accept payment after the job is done. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services">Full service list</a> | <a href="/about">About us</a></p>
     `,
     contentMS: `<h2>Juruteknik Aircond Iklan FB/IG vs Syarikat Berdaftar — Mana Lebih Selamat?</h2>
       <p>Media sosial dipenuhi iklan servis aircond murah dengan harga RM 40-60. Tetapi adakah mereka boleh dipercayai? <a href="/near-me">Pakar kami</a> menerangkan risiko dan cara memilih dengan selamat.</p>
@@ -8530,7 +8531,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Harga diiklankan</td><td>RM 40-80</td><td>RM 99</td></tr>
           <tr><td>Pendaftaran SSM</td><td>Selalunya tiada</td><td>Ya (003765188-T)</td></tr>
           <tr><td>Alamat fizikal</td><td>Tiada</td><td>Ya — boleh dilawati</td></tr>
-          <tr><td>Ulasan disahkan</td><td>Selalunya palsu atau dibeli</td><td>500+ ulasan Google sebenar</td></tr>
+          <tr><td>Ulasan disahkan</td><td>Selalunya palsu atau dibeli</td><td>${reviewCountLabel} ulasan Google sebenar</td></tr>
           <tr><td>Waranti</td><td>Janji lisan sahaja</td><td>1 bulan bertulis</td></tr>
           <tr><td>Insurans liabiliti</td><td>Tiada</td><td>Ya — melindungi harta anda</td></tr>
           <tr><td>Boleh ditemui semula?</td><td>Selalunya hilang selepas beberapa bulan</td><td>Ya — beroperasi sejak bertahun-tahun</td></tr>
@@ -8560,7 +8561,7 @@ export const allPosts: BlogPost[] = [
       </ol>
 
       <h2>KL Renovator — Syarikat Berdaftar Yang Boleh Dipercayai</h2>
-      <p>SSM berdaftar (003765188-T), alamat fizikal yang boleh dilawati, 500+ ulasan Google disahkan dari pelanggan sebenar, waranti bertulis pada setiap kerja, insurans liabiliti perniagaan yang melindungi harta anda, dan juruteknik terlatih yang berpengalaman.</p>
+      <p>SSM berdaftar (003765188-T), alamat fizikal yang boleh dilawati, ${reviewCountLabel} ulasan Google disahkan dari pelanggan sebenar, waranti bertulis pada setiap kerja, insurans liabiliti perniagaan yang melindungi harta anda, dan juruteknik terlatih yang berpengalaman.</p>
       <p>WhatsApp <strong>+60 18-298 3573</strong> — tempah dengan keyakinan, bukan risiko.</p>`,
     contentZH: `<h2>警惕 FB/IG 上的“超低价”冷气广告 — 如何识别专业正规公司</h2>
       <p>在刷 Facebook 或 Instagram 时，您是否见过“全城最低 RM 40 洗冷气”的广告？这些广告往往是由个体零散工发布的。<strong>KL Renovator</strong> 提示您：冷气是昂贵的家用电器，交给“三无”游击队风险巨大。</p>
@@ -8576,7 +8577,7 @@ export const allPosts: BlogPost[] = [
       <h2>正规公司（如 KL Renovator）的识别标志</h2>
       <ol>
         <li><strong>SSM 商业注册：</strong> 我们是正式注册的企业（003765188-T）。</li>
-        <li><strong>多渠道评价：</strong> 拥有 500+ Google 真实好评，而非刷出来的虚假点赞。</li>
+        <li><strong>多渠道评价：</strong> 拥有 ${reviewCountLabel} Google 真实好评，而非刷出来的虚假点赞。</li>
         <li><strong>透明的社交媒体：</strong> 我们的 FB/IG 展示的是真实的施工案例和有用的科普知识，而非单纯的价格战。</li>
       </ol>
 

@@ -13,6 +13,7 @@ import { volumeDiscounts } from "./site/volume-discounts";
 import { stats } from "./site/stats";
 import { links } from "./site/links";
 import { areaNames } from "./site/core";
+import { googlePlace } from "./reviews";
 
 export const siteConfig = {
   name: "KL Renovator",
@@ -42,9 +43,9 @@ export const siteConfig = {
   hours: "Mon–Sun · 9:00 AM – 6:00 PM (Everyday Open)",
   googleMapsEmbed: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   googleBusinessProfile: "https://share.google/HhXvqWDkefZ5bzNdL",
-  reviewCount: 500,
-  reviewRating: 5,
-  reviewLastUpdated: "2026-07-11",
+  reviewCount: googlePlace.totalReviews,
+  reviewRating: googlePlace.averageRating,
+  reviewLastUpdated: googlePlace.lastUpdated,
 
   navItems: [
     { label: "Home", href: "/" },

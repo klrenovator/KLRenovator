@@ -37,7 +37,7 @@ export const sitePublic = {
   "whatsappLink": "https://wa.me/60182983573?text=Hi%20KL%20Renovator,%20I%20want%20to%20book%20an%20aircond%20service%20for%20my%20home/office.",
   "email": "info@klrenovator.com",
   "hours": "Mon–Sun · 9:00 AM – 6:00 PM (Everyday Open)",
-  "reviewCount": 500,
+  "reviewCount": 88,
   "reviewRating": 5,
   "areas": [
     "Kuala Lumpur",
@@ -123,7 +123,7 @@ export const sitePublic = {
     },
     {
       "label": "5-Star Verified Reviews",
-      "value": "500+"
+      "value": "88+"
     },
     {
       "label": "Emergency Response Time",

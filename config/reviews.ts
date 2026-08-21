@@ -18,10 +18,23 @@ export const googlePlace = {
   name: "KL Renovator",
   mapsUrl: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   reviewsUrl: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
-  averageRating: 5,
-  totalReviews: 500,
-  lastUpdated: "2026-07-11",
+  // True Google Business Profile figures (verified 2026-08-21 — see issue #68).
+  // `averageRating` is a number; use `reviewRatingLabel` for the "5.0" string.
+  averageRating: 5.0,
+  totalReviews: 88,
+  lastUpdated: "2026-08-21",
 };
+
+/**
+ * Single source of truth for review-count copy used across the site.
+ * Always derive UI claims from these instead of hardcoding numbers, and
+ * keep `totalReviews` / `averageRating` in sync with the Google Business
+ * Profile (the /api/google-reviews endpoint overrides these at runtime
+ * when GOOGLE_PLACES_API_KEY + GOOGLE_PLACE_ID are configured).
+ */
+export const reviewCount = googlePlace.totalReviews;            // 88
+export const reviewCountLabel = `${googlePlace.totalReviews}+`; // "88+"
+export const reviewRatingLabel = googlePlace.averageRating.toFixed(1); // "5.0"
 
 /**
 Real Google reviews — copied from the KL Renovator Google Business listing.

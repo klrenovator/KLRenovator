@@ -24,6 +24,7 @@ import { buildServiceHVACEntityModule } from "@/config/service-hvac-entity-pass"
 import { serviceSchemaParityFields } from "@/config/service-schema-parity";
 import { buildServiceVisualSXOModule } from "@/config/service-visual-sxo-polish";
 import { buildServiceProofPhotos } from "@/config/service-gallery";
+import { reviewCountLabel, reviewCount } from "@/config/reviews";
 
 type Lang = "ms" | "zh";
 
@@ -259,8 +260,8 @@ export function ServiceDetailI18n({
 
   // ── Trust strip ────────────────────────────────────────────────────────
   const TRUST: Record<Lang, string[]> = {
-    ms: ["Jaminan Kerjatangan 1 Bulan", "Harga Disahkan Sebelum Kerja", "500+ Ulasan Google 5 Bintang", "Hari Sama Tersedia", "Berdaftar SSM"],
-    zh: ["工艺保修1个月", "工作前确认价格", "500+ 谷歌五星好评", "可提供当天服务", "SSM注册"],
+    ms: ["Jaminan Kerjatangan 1 Bulan", "Harga Disahkan Sebelum Kerja", `${reviewCountLabel} Ulasan Google 5 Bintang`, "Hari Sama Tersedia", "Berdaftar SSM"],
+    zh: ["工艺保修1个月", "工作前确认价格", `${reviewCountLabel} 谷歌五星好评`, "可提供当天服务", "SSM注册"],
   };
 
   // ── Why choose us (generic, translated) ────────────────────────────────
@@ -285,7 +286,7 @@ export function ServiceDetailI18n({
     },
     {
       icon: "⭐",
-      en: "500+ 5-Star Reviews", ms: "500+ Ulasan Bintang 5", zh: "500+五星好评",
+      en: `${reviewCountLabel} 5-Star Reviews`, ms: `${reviewCountLabel} Ulasan Bintang 5`, zh: `${reviewCountLabel}五星好评`,
       descMS: "Rekod prestasi kami bercakap sendiri. 5,000+ pelanggan dilayan di seluruh KL dan Selangor dengan keputusan 5 bintang yang konsisten.",
       descZH: "我们的业绩说明一切。已在吉隆坡和雪兰莪服务 5,000 多名客户，始终如一的五星好评。",
     },
@@ -1041,13 +1042,13 @@ export function ServiceDetailI18n({
               </p>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
                 {lang === "ms"
-                  ? "Servis Aircond Murah KL — RM 99, Waranti 1 Bulan, 500+ Ulasan"
-                  : "便宜冷气保养吉隆坡 — RM 99，1个月保修，500+好评"}
+                  ? `Servis Aircond Murah KL — RM 99, Waranti 1 Bulan, ${reviewCountLabel} Ulasan`
+                  : `便宜冷气保养吉隆坡 — RM 99，1个月保修，${reviewCountLabel}好评`}
               </h2>
               <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
                 {lang === "ms"
-                  ? <>Cari &quot;servis aircond murah KL&quot; atau &quot;cuci aircond murah near me&quot;? Servis Asas KL Renovator bermula dari <strong>RM 99</strong> sahaja setiap unit dinding — harga telus tanpa caj tersembunyi. Setiap servis termasuk pemeriksaan diagnostik penuh, cuci penapis mendalam, bilas longkang, semburan gegelung, pemeriksaan keselamatan elektrik, dan ujian prestasi penyejukan. Disokong oleh <strong>waranti kerja 1 bulan</strong> dan lebih <strong>500 ulasan 5-bintang Google</strong>, anda mendapat nilai sebenar tanpa memotong sudut.</>
-                  : <>搜索&quot;便宜冷气保养&quot;或&quot;aircond service murah&quot;？KL Renovator的基本保养仅从<strong>RM 99</strong>起（挂壁式）——透明收费，无隐藏费用。每次服务包含全面诊断检查、滤网深度清洗、排水管冲洗、盘管抗菌喷涂、电气安全检查和制冷性能测试。凭<strong>1个月工艺保修</strong>和超过<strong>500条Google五星好评</strong>，您获得的是真正的价值，而非偷工减料。</>
+                  ? <>Cari &quot;servis aircond murah KL&quot; atau &quot;cuci aircond murah near me&quot;? Servis Asas KL Renovator bermula dari <strong>RM 99</strong> sahaja setiap unit dinding — harga telus tanpa caj tersembunyi. Setiap servis termasuk pemeriksaan diagnostik penuh, cuci penapis mendalam, bilas longkang, semburan gegelung, pemeriksaan keselamatan elektrik, dan ujian prestasi penyejukan. Disokong oleh <strong>waranti kerja 1 bulan</strong> dan lebih <strong>{reviewCount} ulasan 5-bintang Google</strong>, anda mendapat nilai sebenar tanpa memotong sudut.</>
+                  : <>搜索&quot;便宜冷气保养&quot;或&quot;aircond service murah&quot;？KL Renovator的基本保养仅从<strong>RM 99</strong>起（挂壁式）——透明收费，无隐藏费用。每次服务包含全面诊断检查、滤网深度清洗、排水管冲洗、盘管抗菌喷涂、电气安全检查和制冷性能测试。凭<strong>1个月工艺保修</strong>和超过<strong>{reviewCount}条Google五星好评</strong>，您获得的是真正的价值，而非偷工减料。</>
                 }
               </p>
 
@@ -1064,8 +1065,8 @@ export function ServiceDetailI18n({
                   <p className="text-3xl font-black text-emerald-700 mt-2">RM 99</p>
                   <ul className="mt-4 space-y-2 text-sm text-emerald-800">
                     {(lang === "ms"
-                      ? ["Pemeriksaan & servis 8 titik", "Cuci penapis mendalam + bilas longkang", "Semburan anti-bakteria gegelung", "Pemeriksaan keselamatan elektrik", "Ujian suhu penyejukan", "Waranti kerja 1 bulan", "Berdaftar SSM, 500+ ulasan 5★"]
-                      : ["8项检查与保养服务", "滤网深度清洗+排水管冲洗", "盘管抗菌喷涂", "电气安全检查", "制冷温度测试", "1个月工艺保修", "SSM注册，500+五星好评"]
+                      ? ["Pemeriksaan & servis 8 titik", "Cuci penapis mendalam + bilas longkang", "Semburan anti-bakteria gegelung", "Pemeriksaan keselamatan elektrik", "Ujian suhu penyejukan", "Waranti kerja 1 bulan", `Berdaftar SSM, ${reviewCountLabel} ulasan 5★`]
+                      : ["8项检查与保养服务", "滤网深度清洗+排水管冲洗", "盘管抗菌喷涂", "电气安全检查", "制冷温度测试", "1个月工艺保修", `SSM注册，${reviewCountLabel}五星好评`]
                     ).map((item, i) => (
                       <li key={i} className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> {item}</li>
                     ))}
@@ -1233,7 +1234,7 @@ export function ServiceDetailI18n({
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "工艺保修" : "Waranti kerja"}</p>
               </div>
               <div className="rounded-2xl border border-sky-100 bg-white p-5 text-center">
-                <p className="text-2xl font-black text-sky-600">500+</p>
+                <p className="text-2xl font-black text-sky-600">{reviewCountLabel}</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "Google五星好评" : "Ulasan Google 5 bintang"}</p>
               </div>
               <div className="rounded-2xl border border-amber-100 bg-white p-5 text-center">

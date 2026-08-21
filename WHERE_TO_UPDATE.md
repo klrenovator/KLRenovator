@@ -24,6 +24,24 @@ have two options:
 File: `config/reviews.ts`
 Replace the `googleReviews` array with your real reviews.
 
+### Keeping review counts truthful (issue #68)
+`config/reviews.ts` → `googlePlace` (`totalReviews`, `averageRating`,
+`lastUpdated`) is the single source of truth for every review-count claim
+on the site. UI copy derives from it via `reviewCountLabel` ("88+"),
+`reviewCount` and `reviewRatingLabel` ("5.0"); client widgets hydrate live
+figures from `/api/google-reviews` when `GOOGLE_PLACES_API_KEY` +
+`GOOGLE_PLACE_ID` are set. When the GBP count changes:
+1. Update `googlePlace` in `config/reviews.ts` (also `reviewCount`/
+   `reviewRating` inside `config/site/core.ts` are derived from it).
+2. Run `npm run gen:site-public` (regenerates `config/site-public.ts` and
+   `public/homepage-data.json`).
+3. Sync the static AI-facing files, which cannot import config:
+   `public/llms.txt`, `public/llms-full.txt`, `public/aeo-faq.txt`,
+   `public/.well-known/ai-plugin.json`, `public/site-summary.json`.
+4. Verify with:
+   `grep -rn "88+" --include="*.txt" --include="*.json" public/` (replace
+   `88+` with the new figure).
+
 ## 💰 Pricing
 File: `config/site.ts` → `siteConfig.pricing.*`
 Or: `config/services-data.ts` → `priceTable` for detailed service pages.

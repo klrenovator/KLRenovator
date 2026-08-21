@@ -27,6 +27,7 @@ import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/comme
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
 import { JobPhotoStrip } from "@/components/job-photo-strip";
+import { reviewCountLabel } from "@/config/reviews";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/areas/[slug] — Bahasa Malaysia area page.
@@ -483,7 +484,7 @@ export default async function AreaPageMS({
                   <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                    Juruteknik terlatih KL Renovator mendapat penarafan tinggi di {area.name} dan Lembah Klang. Dengan 500+ ulasan bintang 5, harga telus, dan jaminan kerjatangan 1 bulan, kami adalah pilihan dipercayai untuk baiki dan servis aircond berhampiran anda.
+                    Juruteknik terlatih KL Renovator mendapat penarafan tinggi di {area.name} dan Lembah Klang. Dengan {reviewCountLabel} ulasan bintang 5, harga telus, dan jaminan kerjatangan 1 bulan, kami adalah pilihan dipercayai untuk baiki dan servis aircond berhampiran anda.
                   </p>
                 </details>
               </div>

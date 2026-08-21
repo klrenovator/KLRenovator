@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { AboutPageI18n } from "@/components/about-page-i18n";
+import { reviewCountLabel, reviewCount } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家"),
   description:
-    padMetaDescription("KL Renovator（Multicore Dynamics Resources）—— 值得信赖的吉隆坡及雪兰莪冷气专家。12 年以上经验，5,000 多位满意客户，500 多条好评。"),
+    padMetaDescription(`KL Renovator（Multicore Dynamics Resources）—— 值得信赖的吉隆坡及雪兰莪冷气专家。12 年以上经验，5,000 多位满意客户，${reviewCount} 多条好评。`),
   alternates: {
     canonical: "https://www.klrenovator.com/zh/about",
     languages: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: clampMetaTitle("关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家"),
     description:
-      "KL Renovator（Multicore Dynamics Resources）—— 12 年以上 HVAC 专业经验，5,000 多位满意客户，500 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。",
+      `KL Renovator（Multicore Dynamics Resources）—— 12 年以上 HVAC 专业经验，5,000 多位满意客户，${reviewCount} 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。`,
     url: "https://www.klrenovator.com/zh/about",
     type: "website",
     locale: "zh_MY",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: clampMetaTitle("关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家"),
-    description: "12 年以上 HVAC 专业经验，5,000 多位满意客户，500 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。",
+    description: `12 年以上 HVAC 专业经验，5,000 多位满意客户，${reviewCount} 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。`,
     images: ["https://www.klrenovator.com/hero/generic-aircond-gas-topup-kuala-lumpur-107.webp"],
   },
 };

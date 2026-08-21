@@ -7,6 +7,7 @@
  */
 
 import type { BlogPost } from "./blog-posts";
+import { reviewCountLabel } from "./reviews";
 
 export const installationBlogBatch3: BlogPost[] = [
   // ═══════════════════════════════════════════════════════════════════════
@@ -105,7 +106,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li>Blame the manufacturer for installation-caused issues</li>
         <li>Charge for "return visits" even for their own mistakes</li>
       </ul>
-      <p>KL Renovator is an <strong>SSM-registered company</strong> (003765188-T) with a physical address, 500+ verified reviews, and a written warranty on every job. We'll be here when you need us.</p>
+      <p>KL Renovator is an <strong>SSM-registered company</strong> (003765188-T) with a physical address, ${reviewCountLabel} verified reviews, and a written warranty on every job. We'll be here when you need us.</p>
 
       <h2>Book with Confidence</h2>
       <p>Every <a href="/aircond-installation-kl">KL Renovator installation</a> comes with a written 1-month workmanship warranty, 3-month parts warranty, and full manufacturer warranty protection. From <strong>RM 199</strong>, same-day available.</p>
@@ -185,7 +186,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li>Salahkan pengeluar untuk isu yang disebabkan pemasangan</li>
         <li>Caj untuk "lawatan semula" walaupun untuk kesilapan mereka sendiri</li>
       </ul>
-      <p>KL Renovator adalah <strong>syarikat berdaftar SSM</strong> (003765188-T) dengan alamat fizikal, 500+ ulasan disahkan, dan waranti bertulis pada setiap kerja. Kami akan ada apabila anda perlukan kami.</p>
+      <p>KL Renovator adalah <strong>syarikat berdaftar SSM</strong> (003765188-T) dengan alamat fizikal, ${reviewCountLabel} ulasan disahkan, dan waranti bertulis pada setiap kerja. Kami akan ada apabila anda perlukan kami.</p>
 
       <h2>Tempah Dengan Keyakinan</h2>
       <p>Setiap <a href="/aircond-installation-kl">pemasangan KL Renovator</a> datang dengan waranti kerja 1 bulan bertulis, waranti komponen 3 bulan, dan perlindungan penuh waranti pengeluar. Dari <strong>RM 199</strong>, hari sama tersedia.</p>
@@ -265,7 +266,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <li>将安装引起的问题归咎于制造商</li>
         <li>即使是他们自己的错误也收"返修费"</li>
       </ul>
-      <p>KL Renovator是<strong>SSM注册公司</strong>（003765188-T），有实体地址、500+验证评价，每项工作都有书面保修。您需要时我们就在这里。</p>
+      <p>KL Renovator是<strong>SSM注册公司</strong>（003765188-T），有实体地址、${reviewCountLabel}验证评价，每项工作都有书面保修。您需要时我们就在这里。</p>
 
       <h2>放心预约</h2>
       <p>每次<a href="/aircond-installation-kl">KL Renovator安装</a>均附带书面1个月工艺保修、3个月零件保修和完整的制造商保修保护。<strong>RM 199起</strong>，可当天安装。</p>

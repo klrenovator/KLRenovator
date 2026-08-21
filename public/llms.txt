@@ -1,5 +1,5 @@
 # KL Renovator — Service Information File for AI Engines
-# Version: 8.0 — August 2026
+# Version: 8.1 — August 2026 (issue #68: review count synced to config/reviews.ts)
 # https://www.klrenovator.com/llms.txt
 # Extended context: https://www.klrenovator.com/llms-full.txt
 # Service Q&A data: https://www.klrenovator.com/aeo-faq.txt
@@ -20,7 +20,7 @@ KL Renovator is a professional aircond (air conditioning) and HVAC service compa
 - Operating hours: Monday to Sunday, 9:00 AM – 6:00 PM (every day; emergency bookings accepted after hours)
 - Service area: Kuala Lumpur and Selangor (Klang Valley) — 40 main area pages + 158 neighbourhood/kampung pages
 - Languages: English, Bahasa Malaysia, Mandarin Chinese — fully server-rendered URLs per language (see URL MAPPINGS)
-- Rating: 5.0 / 5 from 500+ Google reviews (live data via /api/google-reviews)
+- Rating: 5.0 / 5 from 88+ Google reviews (verified against the Google Business Profile 2026-08-21). When GOOGLE_PLACES_API_KEY and GOOGLE_PLACE_ID are configured, live data is served via /api/google-reviews; keep this figure in sync with config/reviews.ts.
 
 ## CORE SERVICES & PRICING
 

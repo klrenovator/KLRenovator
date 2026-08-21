@@ -27,6 +27,7 @@ import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/comme
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
 import { JobPhotoStrip } from "@/components/job-photo-strip";
+import { reviewCountLabel, reviewCount } from "@/config/reviews";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/areas/[slug] — Mandarin (Chinese) area page.
@@ -470,7 +471,7 @@ export default async function AreaPageZH({
                     <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                    KL Renovator 训练有素的技术员在 {area.name} 和吉隆坡谷获得高度评价。拥有500多个五星好评、透明的 upfront 定价和一个月工艺保修，我们是您附近冷气维修和服务的信赖选择。
+                    KL Renovator 训练有素的技术员在 {area.name} 和吉隆坡谷获得高度评价。拥有{reviewCount}多个五星好评、透明的 upfront 定价和一个月工艺保修，我们是您附近冷气维修和服务的信赖选择。
                   </p>
                 </details>
               </div>
