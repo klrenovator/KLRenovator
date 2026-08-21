@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气品牌服务 KL & Selangor — 一个团队，20个品牌 | KL Renovator"),
@@ -74,7 +75,7 @@ export default function BrandsPageZH() {
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
               不同于品牌独家授权商，KL Renovator的HVAC团队经过交叉培训，能处理马来西亚全部20个主流冷气品牌。一个团队。一个标准。每一个品牌。<br />
-              <strong className="text-slate-900">SSM注册 · 1个月保修 · 500+条Google好评。</strong>
+              <strong className="text-slate-900">SSM注册 · 1个月保修 · {reviewCountLabel}条Google好评。</strong>
             </p>
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
               {STATS.map((s) => (

@@ -16,6 +16,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 import { entityPhrases } from "@/config/installation-entity-map";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const dynamic = "force-static";
 
@@ -157,7 +158,7 @@ export default function EnInstallationPricePage() {
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 7ft Copper Pipe</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Mandatory Vacuum</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Warranty</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Reviews</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> {reviewCountLabel} 5-Star Reviews</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> SSM Registered</span>
         </div>
       </section>

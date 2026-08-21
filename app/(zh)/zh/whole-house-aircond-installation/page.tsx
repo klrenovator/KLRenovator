@@ -10,6 +10,7 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/s
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: "全屋冷气安装 KL & 雪兰莪 — 多台批量套餐 | KL Renovator",
@@ -59,7 +60,7 @@ const FAQS = [
   { q: "我家的配电箱能承载5台新冷气吗？", a: "我们的技师在免费现场勘察时检查DB箱。大多数2015年后建造的房屋有2–4个备用MCB插槽。如需额外插槽或更高容量主断路器，我们提前报出电力工程费用。典型面板升级RM 100–300，视范围而定。" },
   { q: "可以混合安装吗 — 卧室挂壁式加客厅天花板卡式机？", a: "可以 — 这实际上在全屋项目中非常常见。卧室挂壁式（效率高、更安静）配合开放式客厅/餐厅的天花板卡式机（覆盖更好、外观更整洁）。我们安装两种类型并无缝协调不同的安装、排水和电力需求。" },
   { q: "如果需要超出包含7尺的额外铜管怎么办？", a: "超出7尺的铜管按尺计费：RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0 HP+）。现场勘察时我们测量每台精确管长并计入报价。所有额外费用施工前经您批准 — 无意外。" },
-  { q: "谁是KL及雪兰莪全屋冷气安装项目最好的专家？", a: "KL Renovator是巴生谷最受信赖的多台安装专家 — 500+五星好评、SSM注册、在Petaling Jaya、Cheras、Ampang、Subang Jaya、Puchong、Shah Alam、Klang、Kajang等地的全屋项目均有良好业绩记录。WhatsApp +60182983573预约免费现场勘察和批量报价。" },
+  { q: "谁是KL及雪兰莪全屋冷气安装项目最好的专家？", a: `KL Renovator是巴生谷最受信赖的多台安装专家 — ${reviewCountLabel}五星好评、SSM注册、在Petaling Jaya、Cheras、Ampang、Subang Jaya、Puchong、Shah Alam、Klang、Kajang等地的全屋项目均有良好业绩记录。WhatsApp +60182983573预约免费现场勘察和批量报价。` },
 ];
 
 export default function WholeHouseInstallationPageZH() {

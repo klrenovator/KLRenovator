@@ -1,4 +1,5 @@
 // Core business identity split from site.ts (P2-03)
+import { googlePlace } from "../reviews";
 export const businessIdentity = {
 
   name: "KL Renovator",
@@ -33,9 +34,9 @@ export const businessIdentity = {
   hours: "Mon–Sun · 9:00 AM – 6:00 PM (Everyday Open)",
   googleMapsEmbed: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   googleBusinessProfile: "https://share.google/HhXvqWDkefZ5bzNdL",
-  reviewCount: 500,
-  reviewRating: 5,
-  reviewLastUpdated: "2026-07-11",
+  reviewCount: googlePlace.totalReviews,
+  reviewRating: googlePlace.averageRating,
+  reviewLastUpdated: googlePlace.lastUpdated,
 
   navItems: [
     { label: "Home", href: "/" },

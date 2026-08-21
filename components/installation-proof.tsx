@@ -3,6 +3,7 @@ import { FaStar, FaCamera, FaQuoteLeft } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 
 import { googleReviews, googlePlace } from "@/config/reviews";
+import { reviewRatingLabel } from "@/config/reviews";
 
 // ─────────────────────────────────────────────────────────────────────────
 // Social proof block for installation pages.
@@ -44,7 +45,7 @@ const COPY: Record<
     galleryCta: "See all 93 project photos",
     reviewEyebrow: "Verified Google Reviews",
     reviewTitle: "What Customers Say",
-    reviewSub: "Rated 5.0 on Google Business Profile.",
+    reviewSub: `Rated ${reviewRatingLabel} on Google Business Profile.`,
     verified: "Verified Google review",
   },
   ms: {
@@ -55,7 +56,7 @@ const COPY: Record<
     galleryCta: "Lihat semua 93 gambar projek",
     reviewEyebrow: "Ulasan Google Disahkan",
     reviewTitle: "Kata Pelanggan Kami",
-    reviewSub: "Penarafan 5.0 di Google Business Profile.",
+    reviewSub: `Penarafan ${reviewRatingLabel} di Google Business Profile.`,
     verified: "Ulasan Google disahkan",
   },
   zh: {
@@ -65,7 +66,7 @@ const COPY: Record<
     galleryCta: "查看全部 93 张项目照片",
     reviewEyebrow: "已验证的 Google 评价",
     reviewTitle: "客户怎么说",
-    reviewSub: "Google 商家资料 5.0 星评价。",
+    reviewSub: `Google 商家资料 ${reviewRatingLabel} 星评价。`,
     verified: "已验证 Google 评价",
   },
 };

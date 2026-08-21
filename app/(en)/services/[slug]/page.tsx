@@ -229,6 +229,7 @@ const SECTION_LABELS = {
 
 // ── Service → Blog relevance map ─────────────────────────────────────────────
 import { SERVICE_PROBLEM_MAP, SERVICE_BLOG_MAP_V2 } from "@/config/topical-authority-map";
+import { reviewCountLabel, reviewCount } from "@/config/reviews";
 
 const SERVICE_BLOG_MAP: Record<string, string[]> = {
   "chemical-wash": ["aircond-chemical-wash-price-malaysia-2026", "chemical-wash-vs-chemical-overhaul", "signs-your-aircon-needs-chemical-overhaul-malaysia", "how-often-service-aircond-malaysia"],
@@ -615,7 +616,7 @@ export default async function ServicePage({
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-bold uppercase tracking-widest">
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Workmanship Warranty</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Price Confirmed Before Work</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Google Reviews</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> {reviewCountLabel} 5-Star Google Reviews</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Same-Day Available</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> SSM Registered</span>
         </div>
@@ -909,10 +910,10 @@ export default async function ServicePage({
                 Affordable Aircond Service · Servis Aircond Murah KL · 便宜冷气保养
               </p>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 speakable">
-                Affordable Aircond Service KL — RM 99, 1-Month Warranty, 500+ Reviews
+                Affordable Aircond Service KL — RM 99, 1-Month Warranty, {reviewCountLabel} Reviews
               </h2>
               <p className="text-base text-slate-600 leading-relaxed max-w-3xl mb-6">
-                Searching &quot;servis aircond murah KL&quot; or &quot;affordable aircond cleaning near me&quot;? KL Renovator&apos;s Basic Servicing starts from just <strong>RM 99</strong> per wall-mounted unit — transparent pricing with no hidden charges. Every service includes a full diagnostic check, filter deep-wash, drain flush, coil spray, electrical safety inspection, and cooling performance test. Backed by a <strong>1-month workmanship warranty</strong> and over <strong>500 five-star Google reviews</strong>, you get genuine value without cutting corners.
+                Searching &quot;servis aircond murah KL&quot; or &quot;affordable aircond cleaning near me&quot;? KL Renovator&apos;s Basic Servicing starts from just <strong>RM 99</strong> per wall-mounted unit — transparent pricing with no hidden charges. Every service includes a full diagnostic check, filter deep-wash, drain flush, coil spray, electrical safety inspection, and cooling performance test. Backed by a <strong>1-month workmanship warranty</strong> and over <strong>{reviewCount} five-star Google reviews</strong>, you get genuine value without cutting corners.
               </p>
 
               {/* Comparison table */}
@@ -929,7 +930,7 @@ export default async function ServicePage({
                     <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> Electrical safety check</li>
                     <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> Cooling temperature test</li>
                     <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> 1-month workmanship warranty</li>
-                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> SSM registered, 500+ 5★ reviews</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">✓</span> SSM registered, {reviewCountLabel} 5★ reviews</li>
                   </ul>
                 </div>
 
@@ -1072,7 +1073,7 @@ export default async function ServicePage({
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Workmanship warranty</p>
               </div>
               <div className="rounded-2xl border border-sky-100 bg-white p-5 text-center">
-                <p className="text-2xl font-black text-sky-600">500+</p>
+                <p className="text-2xl font-black text-sky-600">{reviewCountLabel}</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600">Google 5-star reviews</p>
               </div>
               <div className="rounded-2xl border border-amber-100 bg-white p-5 text-center">
@@ -1331,7 +1332,7 @@ export default async function ServicePage({
               { icon: "💰", title: "Transparent Pricing", ms: "Harga Telus", zh: "价格透明", desc: "Full price confirmed before work starts. No hidden charges, no surprise additions. What we quote is what you pay." },
               { icon: "📋", title: "Quote Before Work", ms: "Sebut Harga Dahulu", zh: "施工前报价", desc: "We diagnose first, quote second, work third. You approve every cost before our wrench touches your unit." },
               { icon: "🔧", title: "Trained Technicians", ms: "Juruteknik Terlatih", zh: "训练有素的技术员", desc: "Every technician is trained and experienced in all brands and unit types. We bring the right tools and parts." },
-              { icon: "⭐", title: "500+ 5-Star Reviews", ms: "500+ Ulasan Bintang 5", zh: "500+五星好评", desc: "Our track record speaks for itself. 5,000+ customers served across KL and Selangor with consistent 5-star results." },
+              { icon: "⭐", title: `${reviewCountLabel} 5-Star Reviews`, ms: `${reviewCountLabel} Ulasan Bintang 5`, zh: `${reviewCountLabel}五星好评`, desc: "Our track record speaks for itself. 5,000+ customers served across KL and Selangor with consistent 5-star results." },
               { icon: "🛡️", title: "1-Month Warranty", ms: "Waranti 1 Bulan", zh: "一个月保修", desc: "All workmanship covered for 1 month. Parts covered for 3 months. If an issue recurs within warranty, we return free." },
               { icon: "🚀", title: "Same-Day Service", ms: "Servis Hari Sama", zh: "当天服务", desc: "WhatsApp us your location and problem. We confirm a same-day slot in minutes for most areas across Klang Valley." },
             ].map((item) => (

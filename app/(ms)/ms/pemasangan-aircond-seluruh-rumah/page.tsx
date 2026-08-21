@@ -10,6 +10,7 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/s
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: "Pemasangan Aircond Seluruh Rumah KL — Pakej Pukal",
@@ -59,7 +60,7 @@ const FAQS = [
   { q: "Bolehkah panel elektrik rumah saya menampung 5 unit aircond baru?", a: "Juruteknik kami memeriksa kotak DB semasa tinjauan tapak percuma. Kebanyakan rumah dibina selepas 2015 mempunyai 2–4 slot MCB simpanan. Jika anda perlukan slot tambahan atau pemutus utama kapasiti lebih tinggi, kami sebut harga kerja elektrik awal. Naik taraf panel biasa antara RM 100–300." },
   { q: "Adakah anda pasang jenis campuran — dinding di bilik tidur dan ceiling cassette di ruang tamu?", a: "Ya — ini sebenarnya sangat biasa untuk projek seluruh rumah. Unit dinding di bilik tidur (cekap, lebih senyap) dengan ceiling cassette di ruang tamu/makan pelan terbuka (liputan lebih baik, rupa lebih bersih). Kami pasang kedua-dua jenis dan selaras keperluan pemasangan, saliran, dan elektrik dengan lancar." },
   { q: "Bagaimana jika saya perlukan paip tembaga tambahan melebihi 7 kaki termasuk?", a: "Paip tembaga melebihi 7 kaki dikenakan setiap kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0 HP+). Semasa tinjauan tapak, kami ukur panjang paip tepat untuk setiap unit dan masukkan dalam sebut harga anda. Anda luluskan semua tambahan sebelum kerja bermula." },
-  { q: "Siapa pakar pemasangan aircond terbaik berhampiran saya untuk projek seluruh rumah di KL & Selangor?", a: "KL Renovator adalah pakar pemasangan berbilang unit paling dipercayai di Lembah Klang — dengan 500+ ulasan 5-bintang, pendaftaran SSM, dan rekod prestasi terbukti untuk projek seluruh rumah di Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, dan banyak lagi. WhatsApp +60182983573 untuk tinjauan tapak percuma dan sebut harga pukal." },
+  { q: "Siapa pakar pemasangan aircond terbaik berhampiran saya untuk projek seluruh rumah di KL & Selangor?", a: `KL Renovator adalah pakar pemasangan berbilang unit paling dipercayai di Lembah Klang — dengan ${reviewCountLabel} ulasan 5-bintang, pendaftaran SSM, dan rekod prestasi terbukti untuk projek seluruh rumah di Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, dan banyak lagi. WhatsApp +60182983573 untuk tinjauan tapak percuma dan sebut harga pukal.` },
 ];
 
 export default function WholeHouseInstallationPageMS() {

@@ -14,6 +14,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const dynamic = "force-static";
 
@@ -115,7 +116,7 @@ const WHY_ITEMS = [
   { title: buildFreshMetaTitle("Harga Telus", "ms"), zh: "价格透明", desc: "Harga penuh disahkan sebelum kerja dimulakan. Tiada caj tersembunyi." },
   { title: buildFreshMetaTitle("Paip Kuprum Betul", "ms"), zh: "正确铜管", desc: "Diameter paip dipadankan mengikut HP unit anda — bukan saiz universal nipis." },
   { title: buildFreshMetaTitle("Vakum Wajib", "ms"), zh: "强制抽真空", desc: "Kami tidak pernah langkau vakum pam. Ini melindungi pemampat anda." },
-  { title: buildFreshMetaTitle("500+ Ulasan 5★", "ms"), zh: "500+五星好评", desc: "Rekod prestasi kami bercakap sendiri di seluruh Lembah Klang." },
+  { title: buildFreshMetaTitle(`${reviewCountLabel} Ulasan 5★`, "ms"), zh: `${reviewCountLabel}五星好评`, desc: "Rekod prestasi kami bercakap sendiri di seluruh Lembah Klang." },
   { title: buildFreshMetaTitle("Waranti 1 Bulan", "ms"), zh: "一个月保修", desc: "Semua pemasangan dilindungi waranti kerja 1 bulan." },
   { title: buildFreshMetaTitle("Hari Sama Tersedia", "ms"), zh: "当天可安装", desc: "WhatsApp lokasi anda — kami sahkan slot terdekat dalam minit." },
 ];
@@ -196,7 +197,7 @@ export default function MsInstallationPricePage() {
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 7 Kaki Kuprum Termasuk</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Pam Vakum Wajib</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Waranti 1 Bulan</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ Ulasan 5★</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> {reviewCountLabel} Ulasan 5★</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Berdaftar SSM</span>
         </div>
       </section>

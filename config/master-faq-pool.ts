@@ -1,3 +1,4 @@
+import { reviewCountLabel } from "./reviews";
 /**
  * Master FAQ Pool — INS-23
  * Aggregates the best FAQs from all site sources into one authoritative hub.
@@ -173,7 +174,7 @@ const EN_FAQS: MasterFaqItem[] = [
   { category: "warranty", q: "Is KL Renovator a registered business?", a: "Yes. KL Renovator operates under Multicore Dynamics Resources, registered with SSM (registration: 003765188-T). We are a legitimate, registered business — not an unregistered freelancer.", source: "/about" },
   { category: "warranty", q: "Will your installation void my aircond manufacturer warranty?", a: "No. Our installation follows all manufacturer guidelines — correct copper pipe sizing, vacuum evacuation, proper electrical connections, and correct refrigerant handling. Your manufacturer warranty remains fully intact after our installation.", source: "/aircond-installation-kl" },
   { category: "warranty", q: "What happens if there is a problem after service?", a: "If any issue related to our work arises within the warranty period, WhatsApp us with your job card details and we will schedule a free return visit. We stand behind our work — customer satisfaction is our priority.", source: "/services/repair" },
-  { category: "warranty", q: "Do you have customer reviews I can read?", a: "Yes, we have 500+ verified customer reviews on Google and our review page. Reviews cover installation, servicing, chemical wash, and repair jobs across KL and Selangor. We also share before-and-after photos on our gallery page.", source: "/review" },
+  { category: "warranty", q: "Do you have customer reviews I can read?", a: `Yes, we have ${reviewCountLabel} verified customer reviews on Google and our review page. Reviews cover installation, servicing, chemical wash, and repair jobs across KL and Selangor. We also share before-and-after photos on our gallery page.`, source: "/review" },
   { category: "warranty", q: "Are your technicians trained and certified?", a: "Yes. All KL Renovator technicians are trained in HVAC installation, servicing, and repair. They carry CIDEC/energy commission competency certifications where applicable, and undergo regular training on new refrigerant types (R32, R410A) and inverter technology.", source: "/about" },
   { category: "warranty", q: "Do you carry insurance?", a: "Yes. KL Renovator carries business liability insurance that covers any accidental damage to your property during our work. In over 5 years of operation, we have never needed to make an insurance claim — but the coverage gives you peace of mind.", source: "/about" },
   { category: "warranty", q: "What is your job card system?", a: "Every job — whether installation, service, or repair — generates a written job card documenting: unit details, work performed, materials used, gas pressure readings, warranty start date, and technician signature. Keep your job card for any warranty claims.", source: "/aircond-installation-kl" },
@@ -295,7 +296,7 @@ const MS_FAQS: MasterFaqItem[] = [
   { category: "warranty", q: "Adakah KL Renovator perniagaan berdaftar?", a: "Ya. KL Renovator beroperasi di bawah Multicore Dynamics Resources, berdaftar SSM (003765188-T).", source: "/about" },
   { category: "warranty", q: "Adakah pemasangan membatalkan waranti pengeluar?", a: "Tidak. Pemasangan kami mengikut semua garis panduan pengeluar. Waranti pengeluar anda kekal terpelihara.", source: "/aircond-installation-kl" },
   { category: "warranty", q: "Apa berlaku jika ada masalah selepas servis?", a: "Jika masalah berkaitan timbul dalam tempoh waranti, WhatsApp kami dengan butiran kad kerja dan kami jadualkan lawatan semula percuma.", source: "/services/repair" },
-  { category: "warranty", q: "Adakah ulasan pelanggan yang boleh dibaca?", a: "Ya, kami mempunyai 500+ ulasan pelanggan yang disahkan di Google dan halaman ulasan kami.", source: "/review" },
+  { category: "warranty", q: "Adakah ulasan pelanggan yang boleh dibaca?", a: `Ya, kami mempunyai ${reviewCountLabel} ulasan pelanggan yang disahkan di Google dan halaman ulasan kami.`, source: "/review" },
   { category: "warranty", q: "Adakah juruteknik anda terlatih?", a: "Ya. Semua juruteknik terlatih dalam pemasangan, servis, dan pembaikan HVAC dengan pensijilan kompetensi.", source: "/about" },
   { category: "warranty", q: "Adakah anda mempunyai insurans?", a: "Ya. KL Renovator mempunyai insurans liabiliti perniagaan yang melindungi sebarang kerosakan tidak sengaja.", source: "/about" },
   { category: "warranty", q: "Apa itu sistem kad kerja anda?", a: "Setiap kerja menjana kad kerja bertulis yang mendokumenkan: butiran unit, kerja dilakukan, bahan digunakan, bacaan tekanan gas, tarikh mula waranti.", source: "/aircond-installation-kl" },
@@ -417,7 +418,7 @@ const ZH_FAQS: MasterFaqItem[] = [
   { category: "warranty", q: "KL Renovator 是注册公司吗？", a: "是的。KL Renovator 隶属 Multicore Dynamics Resources，SSM 注册（003765188-T）。", source: "/about" },
   { category: "warranty", q: "安装会影响原厂保修吗？", a: "不会。我们严格遵循品牌安装规范，原厂保修完全保留。", source: "/aircond-installation-kl" },
   { category: "warranty", q: "服务后出问题怎么办？", a: "保修期内相关问题，WhatsApp 附上工单详情，我们安排免费返修。", source: "/services/repair" },
-  { category: "warranty", q: "有客户评价吗？", a: "有，Google 和我们的评价页面有 500+ 条真实客户评价。", source: "/review" },
+  { category: "warranty", q: "有客户评价吗？", a: `有，Google 和我们的评价页面有 ${reviewCountLabel} 条真实客户评价。`, source: "/review" },
   { category: "warranty", q: "技术员有资质吗？", a: "是的。所有技术员受过 HVAC 专业培训，持有相关资质认证。", source: "/about" },
   { category: "warranty", q: "有保险吗？", a: "有。KL Renovator 投保商业责任险，覆盖工作期间的意外财产损失。", source: "/about" },
   { category: "warranty", q: "工单系统是什么？", a: "每项工作均生成书面工单，记录：机组详情、施工内容、使用材料、气压读数、保修起始日和技术员签名。", source: "/aircond-installation-kl" },

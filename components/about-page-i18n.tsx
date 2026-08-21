@@ -13,6 +13,7 @@ import { title, eyebrow, subtitle } from "@/components/primitives";
 import { StatsBand } from "@/components/sections/stats-band";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
+import { reviewCountLabel, reviewCount } from "@/config/reviews";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -53,13 +54,13 @@ const DATA: Record<Lang, {
 }> = {
   en: {
     metaTitle: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
-    metaDescription: "KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 12+ years experience, 5,000+ happy customers, 500+ reviews.",
+    metaDescription: `KL Renovator (Multicore Dynamics Resources) — trusted aircond specialist in KL & Selangor. 12+ years experience, 5,000+ happy customers, ${reviewCountLabel} reviews.`,
     ogTitle: "About KL Renovator | Trusted Aircond Specialist KL & Selangor",
-    ogDescription: "KL Renovator (Multicore Dynamics Resources) — 12+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.",
-    twitterDescription: "12+ years HVAC expertise, 5,000+ happy customers, 500+ 5-star reviews. Professional aircond servicing across KL & Selangor.",
+    ogDescription: `KL Renovator (Multicore Dynamics Resources) — 12+ years HVAC expertise, 5,000+ happy customers, ${reviewCountLabel} 5-star reviews. Professional aircond servicing across Kuala Lumpur & Selangor.`,
+    twitterDescription: `12+ years HVAC expertise, 5,000+ happy customers, ${reviewCountLabel} 5-star reviews. Professional aircond servicing across KL & Selangor.`,
     breadcrumbHome: "Home",
     breadcrumbAbout: "About",
-    schemaDescription: "Professional HVAC and air conditioning service company in Kuala Lumpur and Selangor. 12+ years experience, 5,000+ customers, 500+ 5-star reviews.",
+    schemaDescription: `Professional HVAC and air conditioning service company in Kuala Lumpur and Selangor. 12+ years experience, 5,000+ customers, ${reviewCountLabel} 5-star reviews.`,
     orgDescription: "KL Renovator (Multicore Dynamics Resources) is a professional HVAC and aircond servicing company based in Selayang, serving all of Kuala Lumpur and Selangor since 2014. Specialized in chemical wash, chemical overhaul, gas top-up, repair, and new unit installation.",
     heroEyebrow: "About KL Renovator",
     heroTitle: ["Built on craft.", "Driven by trust."],
@@ -133,13 +134,13 @@ const DATA: Record<Lang, {
   },
   ms: {
     metaTitle: "Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor",
-    metaDescription: "KL Renovator (Multicore Dynamics Resources) — pakar aircond dipercayai di KL & Selangor. 12+ tahun pengalaman, 5,000+ pelanggan gembira, 500+ ulasan.",
+    metaDescription: `KL Renovator (Multicore Dynamics Resources) — pakar aircond dipercayai di KL & Selangor. 12+ tahun pengalaman, 5,000+ pelanggan gembira, ${reviewCountLabel} ulasan.`,
     ogTitle: "Tentang KL Renovator | Pakar Aircond Dipercayai KL & Selangor",
-    ogDescription: "KL Renovator (Multicore Dynamics Resources) — 12+ tahun kepakaran HVAC, 5,000+ pelanggan gembira, 500+ ulasan 5 bintang. Servis aircond profesional merentasi Kuala Lumpur & Selangor.",
-    twitterDescription: "12+ tahun kepakaran HVAC, 5,000+ pelanggan gembira, 500+ ulasan 5 bintang. Servis aircond profesional merentasi KL & Selangor.",
+    ogDescription: `KL Renovator (Multicore Dynamics Resources) — 12+ tahun kepakaran HVAC, 5,000+ pelanggan gembira, ${reviewCountLabel} ulasan 5 bintang. Servis aircond profesional merentasi Kuala Lumpur & Selangor.`,
+    twitterDescription: `12+ tahun kepakaran HVAC, 5,000+ pelanggan gembira, ${reviewCountLabel} ulasan 5 bintang. Servis aircond profesional merentasi KL & Selangor.`,
     breadcrumbHome: "Utama",
     breadcrumbAbout: "Tentang Kami",
-    schemaDescription: "Syarikat servis HVAC dan pendingin hawa profesional di Kuala Lumpur dan Selangor. 12+ tahun pengalaman, 5,000+ pelanggan, 500+ ulasan 5 bintang.",
+    schemaDescription: `Syarikat servis HVAC dan pendingin hawa profesional di Kuala Lumpur dan Selangor. 12+ tahun pengalaman, 5,000+ pelanggan, ${reviewCountLabel} ulasan 5 bintang.`,
     orgDescription: "KL Renovator (Multicore Dynamics Resources) adalah syarikat servis HVAC dan aircond profesional yang berpangkalan di Selayang, melayani seluruh Kuala Lumpur dan Selangor sejak 2014. Pakar dalam cuci kimia, overhaul kimia, tambah gas, pembaikan, dan pemasangan unit baharu.",
     heroEyebrow: "Tentang KL Renovator",
     heroTitle: ["Dibina atas kecekapan.", "Didorong oleh kepercayaan."],
@@ -213,13 +214,13 @@ const DATA: Record<Lang, {
   },
   zh: {
     metaTitle: "关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家",
-    metaDescription: "KL Renovator（Multicore Dynamics Resources）—— 值得信赖的吉隆坡及雪兰莪冷气专家。12 年以上经验，5,000 多位满意客户，500 多条好评。",
+    metaDescription: `KL Renovator（Multicore Dynamics Resources）—— 值得信赖的吉隆坡及雪兰莪冷气专家。12 年以上经验，5,000 多位满意客户，${reviewCount} 多条好评。`,
     ogTitle: "关于 KL Renovator | 值得信赖的吉隆坡及雪兰莪冷气专家",
-    ogDescription: "KL Renovator（Multicore Dynamics Resources）—— 12 年以上 HVAC 专业经验，5,000 多位满意客户，500 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。",
-    twitterDescription: "12 年以上 HVAC 专业经验，5,000 多位满意客户，500 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。",
+    ogDescription: `KL Renovator（Multicore Dynamics Resources）—— 12 年以上 HVAC 专业经验，5,000 多位满意客户，${reviewCount} 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。`,
+    twitterDescription: `12 年以上 HVAC 专业经验，5,000 多位满意客户，${reviewCount} 多条五星好评。专业冷气服务，覆盖吉隆坡及雪兰莪全区。`,
     breadcrumbHome: "首页",
     breadcrumbAbout: "关于我们",
-    schemaDescription: "位于吉隆坡及雪兰莪的专业暖通空调及冷气服务公司。12 年以上经验，5,000 多位客户，500 多条五星好评。",
+    schemaDescription: `位于吉隆坡及雪兰莪的专业暖通空调及冷气服务公司。12 年以上经验，5,000 多位客户，${reviewCount} 多条五星好评。`,
     orgDescription: "KL Renovator（Multicore Dynamics Resources）是一家总部位于士拉央的专业 HVAC 及冷气服务公司，自 2014 年起服务整个吉隆坡及雪兰莪。专精化学清洗、化学大修、充冷媒、维修及新机安装。",
     heroEyebrow: "关于 KL Renovator",
     heroTitle: ["精于工艺。", "以信为本。"],

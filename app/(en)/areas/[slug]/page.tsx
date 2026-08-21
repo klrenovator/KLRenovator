@@ -28,6 +28,7 @@ import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/comme
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
 import { JobPhotoStrip } from "@/components/job-photo-strip";
+import { reviewCountLabel } from "@/config/reviews";
 
 
 function getAreaImage(heroImage?: string) {
@@ -384,7 +385,7 @@ export default async function AreaPage({
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> All Brands Serviced</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Price Confirmed Before Work</span>
           <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 1-Month Workmanship Warranty</span>
-          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 500+ 5-Star Reviews</span>
+          <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> {reviewCountLabel} 5-Star Reviews</span>
         </div>
       </section>
 
@@ -781,7 +782,7 @@ export default async function AreaPage({
                     <FiChevronRight className="h-4 w-4 transition-transform group-open:rotate-90 text-sky-500 shrink-0" />
                   </summary>
                   <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                    KL Renovator&apos;s trained technicians are highly rated across {area.name} and Klang Valley. With 500+ five-star reviews, transparent upfront pricing, and a 1-month workmanship warranty, we are the trusted choice for aircond repair and service near you.
+                    KL Renovator&apos;s trained technicians are highly rated across {area.name} and Klang Valley. With {reviewCountLabel} five-star reviews, transparent upfront pricing, and a 1-month workmanship warranty, we are the trusted choice for aircond repair and service near you.
                   </p>
                 </details>
                 <details className="group bg-white p-5">

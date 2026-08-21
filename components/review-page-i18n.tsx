@@ -3,6 +3,7 @@ import { FaWhatsapp, FaGoogle } from "react-icons/fa6";
 import { FiStar, FiCheck, FiArrowRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { waLink } from "@/lib/whatsapp";
+import { reviewCountLabel, reviewRatingLabel } from "@/config/reviews";
 
 type Lang = "en" | "ms" | "zh";
 
@@ -46,8 +47,8 @@ const DATA: Record<Lang, {
     googleButton: "Write a Google Review",
     googleNote: "You need a Google account (Gmail) to leave a review. It takes about 60 seconds.",
     stats: [
-      { stat: "500+", label: "Google Reviews" },
-      { stat: "5.0 ★", label: "Average Rating" },
+      { stat: reviewCountLabel, label: "Google Reviews" },
+      { stat: `${reviewRatingLabel} ★`, label: "Average Rating" },
       { stat: "5,000+", label: "Customers Served" },
     ],
     feedbackTitle: "Something Not Right?",
@@ -79,8 +80,8 @@ const DATA: Record<Lang, {
     googleButton: "Tulis Ulasan Google",
     googleNote: "Anda memerlukan akaun Google (Gmail) untuk meninggalkan ulasan. Ia mengambil masa kira-kira 60 saat.",
     stats: [
-      { stat: "500+", label: "Ulasan Google" },
-      { stat: "5.0 ★", label: "Penarafan Purata" },
+      { stat: reviewCountLabel, label: "Ulasan Google" },
+      { stat: `${reviewRatingLabel} ★`, label: "Penarafan Purata" },
       { stat: "5,000+", label: "Pelanggan Dilayan" },
     ],
     feedbackTitle: "Ada Yang Tidak Kena?",
@@ -112,8 +113,8 @@ const DATA: Record<Lang, {
     googleButton: "撰写 Google 评价",
     googleNote: "您需要一个 Google 账号（Gmail）才能留评价。大约只需 60 秒。",
     stats: [
-      { stat: "500+", label: "Google 评价" },
-      { stat: "5.0 ★", label: "平均评分" },
+      { stat: reviewCountLabel, label: "Google 评价" },
+      { stat: `${reviewRatingLabel} ★`, label: "平均评分" },
       { stat: "5,000+", label: "服务客户数" },
     ],
     feedbackTitle: "有问题没解决？",

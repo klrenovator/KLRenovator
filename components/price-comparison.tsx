@@ -6,6 +6,7 @@ import { waLink } from "@/lib/whatsapp";
 import { FaWhatsapp } from "react-icons/fa6";
 import NextLink from "next/link";
 import { sitePublic } from "@/config/site-public";
+import { useGoogleReviewStats, reviewCountLabelFor } from "@/lib/use-google-review-stats";
 
 // ═══════════════════════════════════════════════════════════════════════
 // 20K.111 — Price Transparency Market Comparison UI
@@ -59,11 +60,11 @@ const DATA: Record<ComparisonLocale, {
       { icon: "warranty", label: "Workmanship Warranty", klr: "1-month written workmanship warranty on every service. If it fails within 30 days, we return free.", them: "Most offer no warranty. If they do, it's verbal only — no written guarantee.", klrGood: true },
       { icon: "registered", label: "Business Registration", klr: `SSM registered (${sitePublic.ssm}). Legitimate Malaysian business with a track record.`, them: "Many are unregistered freelancers operating from a personal phone number.", klrGood: true },
       { icon: "parts", label: "Parts & Materials", klr: "Genuine or OEM-equivalent parts from trusted Malaysian suppliers. Quote before replacement.", them: "Unknown part sources. Some use recycled or counterfeit components.", klrGood: true },
-      { icon: "reviews", label: "Verified Reviews", klr: `500+ Google Reviews with real job photos. Read what actual customers say.`, them: "Few or no reviews — or fake reviews from inactive accounts.", klrGood: true },
+      { icon: "reviews", label: "Verified Reviews", klr: `{count} Google Reviews with real job photos. Read what actual customers say.`, them: "Few or no reviews — or fake reviews from inactive accounts.", klrGood: true },
     ],
     ctaText: "Get Your Transparent Quote Now",
     ctaSub: "Same-day service available. Price confirmed before we touch your unit.",
-    trustPills: ["SSM Registered", "1-Month Warranty", "500+ Reviews", "Price Confirmed First"],
+    trustPills: ["SSM Registered", "1-Month Warranty", "{count} Reviews", "Price Confirmed First"],
   },
   ms: {
     badge: "Kenapa Pilih KL Renovator",
@@ -78,11 +79,11 @@ const DATA: Record<ComparisonLocale, {
       { icon: "warranty", label: "Waranti Kerja", klr: "Waranti kerja bertulis 1 bulan untuk setiap servis. Jika rosak dalam 30 hari, kami kembali percuma.", them: "Kebanyakan tidak menawarkan waranti. Jika ada pun, hanya secara lisan — tiada jaminan bertulis.", klrGood: true },
       { icon: "registered", label: "Pendaftaran Perniagaan", klr: `Berdaftar SSM (${sitePublic.ssm}). Perniagaan Malaysia yang sah dengan rekod prestasi.`, them: "Ramai adalah pekerja bebas tidak berdaftar yang beroperasi dari nombor telefon peribadi.", klrGood: true },
       { icon: "parts", label: "Alat Ganti & Bahan", klr: "Alat ganti asli atau setara OEM daripada pembekal Malaysia yang dipercayai. Sebut harga sebelum penggantian.", them: "Sumber alat ganti tidak diketahui. Ada yang menggunakan komponen kitar semula atau tiruan.", klrGood: true },
-      { icon: "reviews", label: "Ulasan Disahkan", klr: `500+ Ulasan Google dengan foto kerja sebenar. Baca apa kata pelanggan sebenar.`, them: "Sedikit atau tiada ulasan — atau ulasan palsu dari akaun tidak aktif.", klrGood: true },
+      { icon: "reviews", label: "Ulasan Disahkan", klr: `{count} Ulasan Google dengan foto kerja sebenar. Baca apa kata pelanggan sebenar.`, them: "Sedikit atau tiada ulasan — atau ulasan palsu dari akaun tidak aktif.", klrGood: true },
     ],
     ctaText: "Dapatkan Sebut Harga Telus Anda Sekarang",
     ctaSub: "Servis hari sama tersedia. Harga disahkan sebelum kami sentuh unit anda.",
-    trustPills: ["Berdaftar SSM", "Waranti 1 Bulan", "500+ Ulasan", "Harga Disahkan Dahulu"],
+    trustPills: ["Berdaftar SSM", "Waranti 1 Bulan", "{count} Ulasan", "Harga Disahkan Dahulu"],
   },
   zh: {
     badge: "为什么选择 KL Renovator",
@@ -97,11 +98,11 @@ const DATA: Record<ComparisonLocale, {
       { icon: "warranty", label: "工艺保修", klr: "每次服务提供 1 个月书面工艺保修。若 30 天内出现问题，我们免费返工。", them: "多数不提供保修。即使有，也只口头承诺——没有书面保证。", klrGood: true },
       { icon: "registered", label: "商业注册", klr: `SSM 注册（${sitePublic.ssm}）。合法的马来西亚企业，有业绩记录。`, them: "很多是使用个人电话号码运营的未注册自由职业者。", klrGood: true },
       { icon: "parts", label: "零件与材料", klr: "来自可信赖马来西亚供应商的正品或等同等部件。更换前先报价。", them: "零件来源不明。有些使用回收或假冒组件。", klrGood: true },
-      { icon: "reviews", label: "真实评价", klr: `500+ 条 Google 评价，附真实工作照片。阅读真实客户的评价。`, them: "评价很少或没有——或来自不活跃账户的虚假评价。", klrGood: true },
+      { icon: "reviews", label: "真实评价", klr: `{count} 条 Google 评价，附真实工作照片。阅读真实客户的评价。`, them: "评价很少或没有——或来自不活跃账户的虚假评价。", klrGood: true },
     ],
     ctaText: "立即获取透明报价",
     ctaSub: "提供当天服务。价格在接触您的机器前确认。",
-    trustPills: ["SSM 注册", "1 个月保修", "500+ 评价", "先确认价格"],
+    trustPills: ["SSM 注册", "1 个月保修", "{count} 评价", "先确认价格"],
   },
 };
 
@@ -115,7 +116,17 @@ interface Props {
 }
 
 export function PriceComparisonUI({ locale = "en", compact = false, serviceName }: Props) {
-  const d = DATA[locale];
+  // Live review count via /api/google-reviews with config fallback; the
+  // `{count}` placeholders in DATA are filled from the live figure.
+  const { total } = useGoogleReviewStats();
+  const countLabel = reviewCountLabelFor(total);
+  const d = {
+    ...DATA[locale],
+    rows: DATA[locale].rows.map((r) =>
+      r.icon === "reviews" ? { ...r, klr: r.klr.replaceAll("{count}", countLabel) } : r,
+    ),
+    trustPills: DATA[locale].trustPills.map((p) => p.replaceAll("{count}", countLabel)),
+  };
   const rows = compact ? d.rows.slice(0, 4) : d.rows;
   const waMsg = serviceName
     ? `Hi KL Renovator, I'd like a transparent quote for: ${serviceName}. My location is:`

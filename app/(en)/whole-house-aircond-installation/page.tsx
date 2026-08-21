@@ -10,6 +10,7 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema } from "@/lib/s
 import { title, eyebrow } from "@/components/primitives";
 import { InstallationTrustSignals } from "@/components/installation-trust-signals";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: "Whole-House Aircond Installation KL — Multi-Unit Packages",
@@ -59,7 +60,7 @@ const FAQS = [
   { q: "Can my home's electrical panel handle 5 new aircond units?", a: "Our technician checks your DB box during the free site survey. Most homes built after 2015 have 2–4 spare MCB slots. If you need additional slots or a higher-capacity main breaker, we quote the electrical work upfront. Typical panel upgrades range from RM 100–300 depending on scope." },
   { q: "Do you install mixed types — wall-mounted in bedrooms plus ceiling cassette in the living room?", a: "Yes — this is actually very common for whole-house projects. Wall-mounted units in bedrooms (efficient, quieter) with a ceiling cassette in the open-plan living/dining area (better coverage, cleaner look). We install both types and coordinate the different mounting, drainage, and electrical requirements seamlessly." },
   { q: "What if I need additional copper pipe beyond the included 7 ft per unit?", a: "Copper pipe beyond 7 ft is charged per foot: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0 HP+). During the site survey, we measure the exact pipe length for every unit and include it in your quote. You approve all extras before work starts — no surprises." },
-  { q: "Who are the best aircond installation specialists near me for whole-house projects in KL & Selangor?", a: "KL Renovator is the most trusted multi-unit installation specialist across Klang Valley — with 500+ 5-star reviews, SSM registration, and a proven track record of whole-house projects in Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, and beyond. WhatsApp +60182983573 for your free site survey and bulk quote." },
+  { q: "Who are the best aircond installation specialists near me for whole-house projects in KL & Selangor?", a: `KL Renovator is the most trusted multi-unit installation specialist across Klang Valley — with ${reviewCountLabel} 5-star reviews, SSM registration, and a proven track record of whole-house projects in Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Klang, Kajang, and beyond. WhatsApp +60182983573 for your free site survey and bulk quote.` },
 ];
 
 export default function WholeHouseInstallationPage() {

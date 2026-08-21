@@ -9,6 +9,7 @@ import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 import { useLang } from "@/context/language-context";
+import { reviewCountLabel } from "@/config/reviews";
 
 // ── Translations ─────────────────────────────────────────────────────────────
 const T = {
@@ -16,7 +17,7 @@ const T = {
     breadcrumb: "Aircond Service Near Me",
     badge: "Local Aircond Service · KL & Selangor",
     h1: "Aircond Service Near Me in KL & Selangor",
-    hero_desc: "Searching for a reliable aircond technician near you? KL Renovator dispatches trained HVAC technicians across Kuala Lumpur and Selangor — same-day slots, transparent pricing and all brands serviced. Trusted by 500+ homeowners and businesses.",
+    hero_desc: `Searching for a reliable aircond technician near you? KL Renovator dispatches trained HVAC technicians across Kuala Lumpur and Selangor — same-day slots, transparent pricing and all brands serviced. Trusted by ${reviewCountLabel} homeowners and businesses.`,
     hero_wa: "WhatsApp Us for a Same-Day Slot",
     hero_call: "Call",
     hero_hours: "Mon–Sun, 9:00 AM – 6:00 PM · Reply within 30 minutes on WhatsApp",
@@ -28,7 +29,7 @@ const T = {
       { t: "Transparent pricing", d: "Every job is quoted before we start. No hidden call-out fees, no surprise charges." },
       { t: "All brands & types", d: "Wall-mounted, ceiling cassette and window units — inverter and non-inverter, all 20 major brands." },
       { t: "1-month workmanship warranty", d: "Every service and repair is backed by our workmanship warranty for your peace of mind." },
-      { t: "500+ happy customers", d: "Trusted by households and businesses across the Klang Valley for honest, reliable aircond work." },
+      { t: `${reviewCountLabel} happy customers`, d: "Trusted by households and businesses across the Klang Valley for honest, reliable aircond work." },
     ],
     how_badge: "How it works",
     how_h2: "Getting an aircond technician near you takes 4 simple steps",
@@ -75,7 +76,7 @@ const T = {
     breadcrumb: "Servis Aircond Berdekatan",
     badge: "Servis Aircond Tempatan · KL & Selangor",
     h1: "Servis Aircond Berdekatan di KL & Selangor",
-    hero_desc: "Mencari juruteknik aircond yang dipercayai berdekatan anda? KL Renovator menghantar juruteknik HVAC terlatih ke seluruh Kuala Lumpur dan Selangor — slot hari sama, harga telus dan semua jenama diservis. Dipercayai 500+ pemilik rumah dan perniagaan.",
+    hero_desc: `Mencari juruteknik aircond yang dipercayai berdekatan anda? KL Renovator menghantar juruteknik HVAC terlatih ke seluruh Kuala Lumpur dan Selangor — slot hari sama, harga telus dan semua jenama diservis. Dipercayai ${reviewCountLabel} pemilik rumah dan perniagaan.`,
     hero_wa: "WhatsApp Kami untuk Slot Hari Sama",
     hero_call: "Hubungi",
     hero_hours: "Isnin–Ahad, 9:00 PG – 6:00 PTG · Balas dalam 30 minit melalui WhatsApp",
@@ -87,7 +88,7 @@ const T = {
       { t: "Harga telus", d: "Setiap kerja diberi sebut harga sebelum kami mulakan. Tiada caj keluar tersembunyi, tiada caj mengejut." },
       { t: "Semua jenama & jenis", d: "Unit dinding, ceiling cassette dan tingkap — penyongsang dan bukan penyongsang, semua 20 jenama utama." },
       { t: "Waranti kerja 1 bulan", d: "Setiap servis dan pembaikan disokong oleh waranti kerja kami untuk ketenangan fikiran anda." },
-      { t: "500+ pelanggan gembira", d: "Dipercayai oleh isi rumah dan perniagaan di seluruh Lembah Klang untuk kerja aircond yang jujur dan boleh dipercayai." },
+      { t: `${reviewCountLabel} pelanggan gembira`, d: "Dipercayai oleh isi rumah dan perniagaan di seluruh Lembah Klang untuk kerja aircond yang jujur dan boleh dipercayai." },
     ],
     how_badge: "Cara ia berfungsi",
     how_h2: "Mendapatkan juruteknik aircond berdekatan anda hanya 4 langkah mudah",
@@ -134,7 +135,7 @@ const T = {
     breadcrumb: "附近冷气服务",
     badge: "本地冷气服务 · 吉隆坡及雪兰莪",
     h1: "附近冷气服务 — 吉隆坡及雪兰莪",
-    hero_desc: "寻找附近可靠的冷气技术员？KL Renovator 在吉隆坡和雪兰莪全区派遣专业HVAC技术人员——当天预约、透明收费、覆盖所有品牌。已获500+住户和企业信赖。",
+    hero_desc: `寻找附近可靠的冷气技术员？KL Renovator 在吉隆坡和雪兰莪全区派遣专业HVAC技术人员——当天预约、透明收费、覆盖所有品牌。已获${reviewCountLabel}住户和企业信赖。`,
     hero_wa: "WhatsApp 预约当天服务",
     hero_call: "致电",
     hero_hours: "周一至周日 上午9时–下午6时 · WhatsApp 30分钟内回复",
@@ -146,7 +147,7 @@ const T = {
       { t: "透明收费", d: "每项工作开始前先报价。无隐藏上门费，无意外收费。" },
       { t: "覆盖所有品牌及类型", d: "挂壁式、天花板卡式机和窗式机——变频和非变频，全部20个主要品牌。" },
       { t: "1个月工艺保修", d: "每项服务和维修均附我们的工艺保修，让您放心。" },
-      { t: "500+满意客户", d: "获巴生谷各地住户和企业信赖，提供诚实可靠的冷气服务。" },
+      { t: `${reviewCountLabel}满意客户`, d: "获巴生谷各地住户和企业信赖，提供诚实可靠的冷气服务。" },
     ],
     how_badge: "服务流程",
     how_h2: "4个简单步骤获得附近冷气技术员上门服务",

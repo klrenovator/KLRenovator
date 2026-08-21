@@ -11,6 +11,7 @@ import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Servis Aircond Mengikut Jenama KL & Selangor — Satu Pasukan, 20 Jenama | KL Renovator"),
@@ -74,7 +75,7 @@ export default function BrandsPageMS() {
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
               Tak seperti ejen eksklusif jenama, pasukan HVAC KL Renovator dilatih silang untuk semua 20 jenama aircond utama di Malaysia. Satu pasukan. Satu standard. Setiap jenama.<br />
-              <strong className="text-slate-900">Berdaftar SSM · Waranti 1 bulan · 500+ ulasan Google.</strong>
+              <strong className="text-slate-900">Berdaftar SSM · Waranti 1 bulan · {reviewCountLabel} ulasan Google.</strong>
             </p>
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
               {STATS.map((s) => (

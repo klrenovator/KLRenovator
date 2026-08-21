@@ -13,6 +13,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const dynamic = "force-static";
 
@@ -21,7 +22,7 @@ const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
   title: buildFreshMetaTitle("Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator", "ms"),
-  description: padMetaDescription("Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. 500+ 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573."),
+  description: padMetaDescription(`Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. ${reviewCountLabel} 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573.`),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     languages: {
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: buildFreshMetaTitle("Cuci Aircond KL — RM120 | KL Renovator", "ms"),
-    description: "Chemical wash RM120. Same-day KL & Selangor. 500+ 5-star. Waranti 1 bulan.",
+    description: `Chemical wash RM120. Same-day KL & Selangor. ${reviewCountLabel} 5-star. Waranti 1 bulan.`,
     url: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     locale: "ms_MY",
     type: "website",
@@ -71,7 +72,7 @@ export default function Page() {
   const baseSchema = buildServiceSchema({
     slug: "chemical-wash",
     name: "Cuci Aircond KL & Selangor",
-    description: "Cuci aircond KL chemical wash RM120. Same-day KL & Selangor. 500+ 5★ review.",
+    description: `Cuci aircond KL chemical wash RM120. Same-day KL & Selangor. ${reviewCountLabel} 5★ review.`,
     startPrice: 120,
     locale: "ms",
     priceTable: pricing,
@@ -104,7 +105,7 @@ export default function Page() {
           <div>
             <span className="inline-flex rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-sky-700">Cuci Aircond KL #1 • 2026</span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight text-slate-950">Cuci Aircond KL &amp; Selangor — <span className="text-sky-600">RM120</span></h1>
-            <p className="mt-4 text-lg text-slate-700 max-w-xl">Chemical wash tekanan tinggi 80–120 PSI. Hapuskan bau, bocor, angin lemah. Same-day Klang Valley. <strong>500+ 5★ Google</strong>. Waranti 1 bulan.</p>
+            <p className="mt-4 text-lg text-slate-700 max-w-xl">Chemical wash tekanan tinggi 80–120 PSI. Hapuskan bau, bocor, angin lemah. Same-day Klang Valley. <strong>{reviewCountLabel} 5★ Google</strong>. Waranti 1 bulan.</p>
             <div className="mt-5 flex flex-wrap gap-2 text-[11px] font-bold">
               <span className="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1.5 text-emerald-800">✓ Same-Day</span>
               <span className="rounded-full bg-sky-50 border border-sky-200 px-3 py-1.5 text-sky-800">✓ RM120 Disahkan Dulu</span>
@@ -145,7 +146,7 @@ export default function Page() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-950">Cuci Aircond KL — Chemical Wash No.1 Lembah Klang</h2>
           <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-slate-700">
-            <p>Cari <strong>“cuci aircond KL”</strong>, <strong>“cuci aircond Selangor”</strong>, <strong>“servis aircond murah KL”</strong>? Anda di halaman tepat. KL Renovator — <strong>500+ review 5-bintang</strong>, SSM berdaftar, harga telus <strong>RM120</strong>. Chemical wash <strong>80–120 PSI</strong> larutkan biofilm, kulat & habuk jalan KL dalam coil & blower anda — bukan sembur air biasa.</p>
+            <p>Cari <strong>“cuci aircond KL”</strong>, <strong>“cuci aircond Selangor”</strong>, <strong>“servis aircond murah KL”</strong>? Anda di halaman tepat. KL Renovator — <strong>{reviewCountLabel} review 5-bintang</strong>, SSM berdaftar, harga telus <strong>RM120</strong>. Chemical wash <strong>80–120 PSI</strong> larutkan biofilm, kulat & habuk jalan KL dalam coil & blower anda — bukan sembur air biasa.</p>
             <p>Masalah harian KL yang kami selesaikan: <em>aircond tak sejuk</em>, <em>air bocor</em>, <em>bau hapak</em>, <em>angin lemah</em>, <em>bil TNB naik</em>. 60–75 minit siap, unit kekal di dinding, terus boleh guna. Liputan: <strong>KLCC, Bangsar, Mont Kiara, Damansara, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Ampang, Kajang, Kepong, Setapak, Gombak, Rawang</strong> — seluruh Klang Valley. WhatsApp sekarang — slot <strong>same-day</strong>.</p>
           </div>
         </div>

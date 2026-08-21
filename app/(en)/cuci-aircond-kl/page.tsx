@@ -14,6 +14,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { reviewCountLabel } from "@/config/reviews";
 
 export const dynamic = "force-static";
 
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   // snippet and had to pick one. The page body is already English; only the
   // meta description was copied from the Malay twin.
   description:
-    padMetaDescription("Aircond chemical wash KL & Selangor from RM120. Same-day slots, 80–120 PSI deep coil clean, 500+ 5★ Google reviews. Fixes musty smell, leaks & weak cooling."),
+    padMetaDescription(`Aircond chemical wash KL & Selangor from RM120. Same-day slots, 80–120 PSI deep coil clean, ${reviewCountLabel} 5★ Google reviews. Fixes musty smell, leaks & weak cooling.`),
   alternates: buildTrilingualHreflang("/cuci-aircond-kl"),
   openGraph: {
     title: buildFreshMetaTitle("Cuci Aircond KL — RM120 | KL Renovator", "en"),
@@ -64,7 +65,7 @@ export default function Page() {
   const schema = buildServiceSchema({
     slug: "chemical-wash",
     name: "Aircond Chemical Wash KL & Selangor",
-    description: "Aircond chemical wash KL RM120. Same-day Klang Valley. 500+ 5-star reviews.",
+    description: `Aircond chemical wash KL RM120. Same-day Klang Valley. ${reviewCountLabel} 5-star reviews.`,
     startPrice: 120,
     locale: "en",
     priceTable: pricing,
@@ -91,7 +92,7 @@ export default function Page() {
           <div>
             <span className="inline-flex rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-sky-700">Aircond Chemical Wash KL • 2026</span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight text-slate-950">Aircond Chemical Wash KL &amp; Selangor — <span className="text-sky-600">RM120</span></h1>
-            <p className="mt-4 text-lg text-slate-700 max-w-xl">High-pressure 80–120 PSI chemical wash. Eliminate smell, leaking, weak airflow. Same-day Klang Valley. <strong>500+ 5★ Google</strong>. 1-month workmanship warranty.</p>
+            <p className="mt-4 text-lg text-slate-700 max-w-xl">High-pressure 80–120 PSI chemical wash. Eliminate smell, leaking, weak airflow. Same-day Klang Valley. <strong>{reviewCountLabel} 5★ Google</strong>. 1-month workmanship warranty.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#22c55e] px-7 py-4 text-sm font-black uppercase tracking-wider text-white shadow-lg hover:bg-[#16a34a]"><FaWhatsapp className="h-5 w-5"/> WhatsApp Book Now</a>
               <a href="tel:+60182983573" className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-slate-900 px-7 py-4 text-sm font-black uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white"><FaPhone className="h-4 w-4"/> +60182983573</a>
@@ -124,7 +125,7 @@ export default function Page() {
       <section className="bg-slate-50 py-12 border-y border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-[15px] leading-relaxed text-slate-700 space-y-4">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-950">Aircond Chemical Wash KL — Klang Valley’s #1</h2>
-          <p>Searching <strong>“aircond chemical wash KL”</strong>, <strong>“aircond service KL”</strong>, <strong>“cuci aircond KL”</strong>? You’re in the right place. KL Renovator — <strong>500+ 5-star Google reviews</strong>, SSM registered, transparent pricing from <strong>RM120</strong>. We deliver true <strong>80–120 PSI high-pressure chemical wash</strong> — food-grade alkaline dissolves biofilm, mould, and KL road dust deep inside your coil & blower wheel.</p>
+          <p>Searching <strong>“aircond chemical wash KL”</strong>, <strong>“aircond service KL”</strong>, <strong>“cuci aircond KL”</strong>? You’re in the right place. KL Renovator — <strong>{reviewCountLabel} 5-star Google reviews</strong>, SSM registered, transparent pricing from <strong>RM120</strong>. We deliver true <strong>80–120 PSI high-pressure chemical wash</strong> — food-grade alkaline dissolves biofilm, mould, and KL road dust deep inside your coil & blower wheel.</p>
           <p>Daily KL issues we fix: <em>not cold</em>, <em>water leaking</em>, <em>musty smell</em>, <em>weak airflow</em>, <em>high TNB bill</em>. 60–75 min per unit, stays mounted, use immediately. Full coverage: <strong>KLCC, Bangsar, Mont Kiara, Damansara, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Ampang, Kajang, Kepong, Setapak, Gombak, Rawang</strong> — all Klang Valley. WhatsApp now — <strong>same-day</strong> slots.</p>
         </div>
       </section>
