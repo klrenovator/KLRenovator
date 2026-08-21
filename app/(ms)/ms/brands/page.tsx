@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Servis Aircond Mengikut Jenama KL & Selangor — Satu Pasukan, 20 Jenama | KL Renovator"),
@@ -130,6 +131,19 @@ export default function BrandsPageMS() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/ms/brands"
+            pageUrl="https://www.klrenovator.com/ms/brands"
+            title="Servis Aircond Mengikut Jenama KL & Selangor"
+            locale="ms"
+            hints={["basic-servicing"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
         </div>
       </section>
 

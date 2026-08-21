@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 import { BookingSupportInfo } from "@/components/booking-support-info";
 
 export const metadata: Metadata = {
@@ -35,6 +36,17 @@ export default function BookPageZH() {
         <p className="mx-auto max-w-2xl text-lg text-slate-600">
           选择所需服务并挑选合适的时间段。系统将自动计算服务所需预计时长。
         </p>
+      </div>
+
+      <div className="mx-auto mb-10 max-w-2xl">
+        <PrimaryJobPhoto
+          seed="https://www.klrenovator.com/zh/book"
+          pageUrl="https://www.klrenovator.com/zh/book"
+          title="在线预约冷气服务"
+          locale="zh"
+          hints={["basic-servicing"]}
+          sizes="(min-width: 1024px) 672px, (min-width: 640px) 80vw, 100vw"
+        />
       </div>
 
       <BookingForm isAdmin={false} forcedLang="zh" />

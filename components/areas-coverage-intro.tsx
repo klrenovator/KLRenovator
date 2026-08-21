@@ -5,6 +5,8 @@
  * how local dispatch works, in EN/MS/ZH. No review-count claim, no rating.
  */
 
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+
 type Locale = "en" | "ms" | "zh";
 
 const COPY: Record<
@@ -51,6 +53,16 @@ export function AreasCoverageIntro({ locale }: { locale: Locale }) {
           {t.paras.map((p, i) => (
             <p key={i} className="text-sm sm:text-base leading-relaxed text-slate-600">{p}</p>
           ))}
+        </div>
+        <div className="mt-8 max-w-2xl">
+          <PrimaryJobPhoto
+            seed={`areas-index:${locale}`}
+            pageUrl={`https://www.klrenovator.com${locale === "en" ? "" : `/${locale}`}/areas`}
+            title={t.heading}
+            locale={locale}
+            hints={["klang-valley"]}
+            sizes="(min-width: 1024px) 672px, (min-width: 640px) 80vw, 100vw"
+          />
         </div>
       </div>
     </section>

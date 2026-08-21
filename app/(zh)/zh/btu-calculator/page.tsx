@@ -5,6 +5,7 @@ import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { BtuCalculator } from "@/components/btu-calculator";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { ToolLinks } from "@/components/calculators/tool-links";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("马来西亚冷气马力计算器 | BTU 计算工具"),
@@ -31,6 +32,18 @@ export default function BtuCalculatorPageZH() {
   return (
     <>
       <BtuCalculator lang="zh" />
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/zh/btu-calculator"
+            pageUrl="https://www.klrenovator.com/zh/btu-calculator"
+            title="马来西亚冷气马力计算器 | BTU 计算工具"
+            locale="zh"
+            hints={["new-installation"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
+        </div>
+      </section>
       {/* Definition + comparison blocks (issue #72) — sizing units explained. */}
       <PageExplainers locale="zh" presetId="tool:btu" />
       <section className="py-12 bg-slate-50 border-t border-slate-100">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { ReviewPageI18n } from "@/components/review-page-i18n";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("感谢您 — 为 KL Renovator 的服务评分 | KL Renovator"),
@@ -34,5 +35,21 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewPageZH() {
-  return <ReviewPageI18n lang="zh" />;
+  return (
+    <>
+      <ReviewPageI18n lang="zh" />
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/zh/review"
+            pageUrl="https://www.klrenovator.com/zh/review"
+            title="感谢您 — 为 KL Renovator 的服务评分"
+            locale="zh"
+            hints={["basic-servicing"]}
+            sizes="(min-width: 1024px) 672px, (min-width: 640px) 80vw, 100vw"
+          />
+        </div>
+      </section>
+    </>
+  );
 }

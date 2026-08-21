@@ -17,6 +17,7 @@ import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const dynamic = "force-static";
 
@@ -279,6 +280,21 @@ export default function ZhPricingPage() {
               >
                 联系我们：{siteConfig.phoneDisplay}
               </a>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="mx-auto mt-10 max-w-2xl">
+              <PrimaryJobPhoto
+                seed="https://www.klrenovator.com/zh/aircond-service-price-malaysia"
+                pageUrl="https://www.klrenovator.com/zh/aircond-service-price-malaysia"
+                title="2026年冷气服务价格"
+                locale="zh"
+                hints={["basic-servicing"]}
+                priority
+                showCaption={false}
+                sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+                aspectClassName="aspect-[16/8]"
+              />
             </div>
           </Reveal>
         </div>

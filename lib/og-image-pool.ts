@@ -20,31 +20,16 @@
  * social cards is accurate — not stock imagery.
  */
 
-/** Real job photos in /public/hero, filtered to the ones that parse cleanly. */
-export const HERO_IMAGE_POOL: readonly string[] = [
-  "acson-aircond-basic-servicing-kuala-lumpur-5.webp",
-  "aux-aircond-basic-servicing-shah-alam-53.webp",
-  "daikin-aircond-basic-servicing-ampang-140.webp",
-  "generic-aircond-basic-servicing-ampang-104.webp",
-  "hisense-aircond-basic-servicing-ampang-113.webp",
-  "isonic-aircond-ceiling-cassette-service-puchong-44.webp",
-  "lg-aircond-basic-servicing-subang-jaya-29.webp",
-  "midea-aircond-basic-servicing-petaling-jaya-17.webp",
-  "mitsubishi-aircond-chemical-overhaul-petaling-jaya-14.webp",
-  "panasonic-aircond-ceiling-cassette-service-klang-68.webp",
-  "samsung-aircond-basic-servicing-puchong-41.webp",
-  "sharp-aircond-basic-servicing-cheras-115.webp",
-  "tcl-aircond-basic-servicing-klang-65.webp",
-  "toshiba-aircond-gas-topup-rawang-141.webp",
-  "york-aircond-chemical-overhaul-subang-jaya-26.webp",
-  "acson-aircond-chemical-overhaul-puchong-38.webp",
-  "aux-aircond-ceiling-cassette-service-petaling-jaya-20.webp",
-  "daikin-aircond-ceiling-cassette-service-shah-alam-56.webp",
-  "hisense-aircond-chemical-wash-klang-111.webp",
-  "isonic-aircond-compressor-replacement-petaling-jaya-22.webp",
-  "lg-aircond-chemical-overhaul-klang-62.webp",
-  "midea-aircond-chemical-overhaul-shah-alam-50.webp",
-];
+/**
+ * Every real job photograph in `/public/hero`. The filename registry is
+ * shared with the body-image selector so OG cards and rendered content draw
+ * from the same verified 157-photo pool.
+ */
+import { HERO_JOB_PHOTO_FILES } from "@/config/place-job-photos";
+
+export const HERO_IMAGE_POOL: readonly string[] = HERO_JOB_PHOTO_FILES.map(
+  (file) => `${file}.webp`,
+);
 
 /** FNV-1a — small, stable, and not tied to any Node/V8 internals. */
 function hashKey(key: string): number {

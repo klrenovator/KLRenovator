@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { BookingSupportInfo } from "@/components/booking-support-info";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: "Tempah Temujanji Servis Aircond | KL Renovator",
@@ -35,6 +36,17 @@ export default function BookPageMS() {
         <p className="mx-auto max-w-2xl text-lg text-slate-600">
           Pilih servis anda dan tetapkan slot masa yang sesuai. Sistem kami akan mengira anggaran tempoh yang diperlukan untuk temujanji anda secara automatik.
         </p>
+      </div>
+
+      <div className="mx-auto mb-10 max-w-2xl">
+        <PrimaryJobPhoto
+          seed="https://www.klrenovator.com/ms/book"
+          pageUrl="https://www.klrenovator.com/ms/book"
+          title="Tempah Temujanji Servis Aircond Dalam Talian"
+          locale="ms"
+          hints={["basic-servicing"]}
+          sizes="(min-width: 1024px) 672px, (min-width: 640px) 80vw, 100vw"
+        />
       </div>
 
       <BookingForm isAdmin={false} forcedLang="ms" />

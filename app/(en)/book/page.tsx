@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { BookingSupportInfo } from "@/components/booking-support-info";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: "Book an Appointment | KL Renovator",
@@ -35,6 +36,17 @@ export default function BookPage() {
         <p className="mx-auto max-w-2xl text-lg text-slate-600">
           Select your service and choose an available time slot. Our system will automatically calculate the required duration for your appointment.
         </p>
+      </div>
+
+      <div className="mx-auto mb-10 max-w-2xl">
+        <PrimaryJobPhoto
+          seed="https://www.klrenovator.com/book"
+          pageUrl="https://www.klrenovator.com/book"
+          title="Book an Aircond Appointment Online"
+          locale="en"
+          hints={["basic-servicing"]}
+          sizes="(min-width: 1024px) 672px, (min-width: 640px) 80vw, 100vw"
+        />
       </div>
 
       <BookingForm isAdmin={false} forcedLang="en" />

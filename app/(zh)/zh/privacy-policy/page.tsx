@@ -4,6 +4,7 @@ import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 const LAST_UPDATED = "2026年8月6日";
 
@@ -46,6 +47,16 @@ export default function PrivacyPolicyPageZH() {
         最后更新：{LAST_UPDATED} · 依据马来西亚《2010年个人数据保护法》(PDPA) 发布
       </p>
 
+      <div className="mt-8 max-w-xl">
+        <PrimaryJobPhoto
+          seed="https://www.klrenovator.com/zh/privacy-policy"
+          pageUrl="https://www.klrenovator.com/zh/privacy-policy"
+          title="KL Renovator 隐私政策"
+          locale="zh"
+          hints={["basic-servicing"]}
+          sizes="(min-width: 1024px) 576px, (min-width: 640px) 80vw, 100vw"
+        />
+      </div>
       <div className="mt-8">
         <Section title="1. 我们是谁">
           <p>

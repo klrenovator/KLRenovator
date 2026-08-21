@@ -12,6 +12,7 @@ import { buildServiceSchema } from "@/lib/seo";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const dynamic = "force-static";
 
@@ -106,6 +107,19 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section className="border-b border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/zh/cuci-aircond-kl"
+            pageUrl="https://www.klrenovator.com/zh/cuci-aircond-kl"
+            title="吉隆坡冷气清洗与雪兰莪"
+            locale="zh"
+            hints={["chemical-wash", "kuala-lumpur"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
+        </div>
+      </section>
+
       <section className="bg-slate-50 py-12 border-y border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-[15px] leading-relaxed text-slate-700 space-y-4">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-950">吉隆坡冷气清洗 — 巴生谷第一</h2>

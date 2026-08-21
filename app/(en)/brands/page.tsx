@@ -13,6 +13,7 @@ import { Reveal } from "@/components/reveal";
 import { PriceComparisonUI } from "@/components/price-comparison";
 import { anchor } from "@/config/anchor-text-diversity";
 import { BookingButton } from "@/components/booking-button";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: "Aircond Brands We Install & Service — KL & Selangor",
@@ -139,6 +140,19 @@ export default function BrandsIndex() {
           ))}
         </div>
       </div>
+
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/brands"
+            pageUrl="https://www.klrenovator.com/brands"
+            title="Aircond Brands We Install & Service — KL & Selangor"
+            locale="en"
+            hints={["basic-servicing"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
+        </div>
+      </section>
 
       {/* Price Comparison */}
       <div className="max-w-6xl mx-auto px-4 pb-16">

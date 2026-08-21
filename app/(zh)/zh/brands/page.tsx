@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { waLink } from "@/lib/whatsapp";
+import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气品牌服务 KL & Selangor — 一个团队，20个品牌 | KL Renovator"),
@@ -130,6 +131,19 @@ export default function BrandsPageZH() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <PrimaryJobPhoto
+            seed="https://www.klrenovator.com/zh/brands"
+            pageUrl="https://www.klrenovator.com/zh/brands"
+            title="冷气品牌服务 KL & Selangor"
+            locale="zh"
+            hints={["basic-servicing"]}
+            sizes="(min-width: 1024px) 768px, (min-width: 640px) 80vw, 100vw"
+          />
         </div>
       </section>
 

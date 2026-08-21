@@ -1,7 +1,15 @@
-# Image usage map — one photograph, one location
+# Image usage map — real job photo catalog
 
-Gallery catalog (`/gallery` + `GALLERY_ITEMS`) is the photo library.
-Every other page/section below is assigned at most one unique work photo.
+Gallery catalog (`/gallery` + `GALLERY_ITEMS`) is the canonical library of
+157 KL Renovator work photos. The explicit editorial assignments below use at
+most one unique photo per listed slot.
+
+Programmatic body imagery (kampung, brand-area, area, brand, problem, tool,
+index and utility pages) deterministically reuses this same verified pool via
+`config/place-job-photos.ts`. The route key and brand/area/service hints keep a
+URL's selection stable across builds while distributing the photos across the
+site; those URL-level reuse assignments are intentionally generated rather
+than manually listed here.
 
 ## Services (10 unique)
 
