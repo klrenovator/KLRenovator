@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
+import { BookingSupportInfo } from "@/components/booking-support-info";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 
 export const metadata: Metadata = {
@@ -37,6 +38,10 @@ export default function BookPage() {
       </div>
 
       <BookingForm isAdmin={false} forcedLang="en" />
+
+      <div className="mt-12 -mx-4">
+        <BookingSupportInfo locale="en" />
+      </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AreasClient } from "./areas-client";
+import { AreasCoverageIntro } from "@/components/areas-coverage-intro";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
@@ -66,6 +67,7 @@ export default function AreasPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(areaHubSchema) }}
       />
       <AreasClient forcedLang="en" />
+      <AreasCoverageIntro locale="en" />
     </>
   );
 }

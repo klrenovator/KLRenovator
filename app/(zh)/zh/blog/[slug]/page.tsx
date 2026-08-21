@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { allPosts } from "@/config/blog-posts";
 import { getRelatedPosts } from "@/app/(en)/blog/get-related-posts";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription, padMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, padMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { sanitizeBlogPost } from "@/lib/blog-html-sanitize";
 import { explainersForPost } from "@/lib/blog-explainers";
 import { BlogPostClient } from "@/app/(en)/blog/[slug]/blog-post-client";
@@ -37,7 +37,7 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(post.titleZH.length + 16 <= 60 ? `${post.titleZH} | KL Renovator` : post.titleZH),
-    description: padMetaDescription(post.excerptZH),
+    description: ensureCtaDescription(padMetaDescription(post.excerptZH)),
     openGraph: {
       title: clampMetaTitle(post.titleZH),
       description: padMetaDescription(post.excerptZH),

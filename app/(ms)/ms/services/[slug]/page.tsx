@@ -1,4 +1,4 @@
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle, buildServiceMetaTitleWithDate } from "@/lib/seo-title-optimizer";
 import { getServiceOGImages } from "@/config/service-og-images";
 import type { Metadata } from "next";
@@ -37,7 +37,7 @@ export async function generateMetadata({
   const price = service?.startPrice ?? "";
   return {
     title: buildServiceMetaTitleWithDate(`${i18.titleMS} KL & Selangor — Dari RM ${price}`, "ms"),
-    description: clampMetaDescription(i18.taglineMS),
+    description: ensureCtaDescription(clampMetaDescription(i18.taglineMS)),
     openGraph: {
       title: clampMetaTitle(`${i18.titleMS} | KL Renovator`),
       description: clampMetaDescription(i18.taglineMS),

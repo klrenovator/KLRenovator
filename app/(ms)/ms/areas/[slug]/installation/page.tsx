@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
+import { ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { AreaInstallationLandingPage } from "@/components/area-installation-page";
 import { getAreaInstallationContent, getAllAreaInstallationSlugs } from "@/config/area-installation-content";
 
@@ -29,7 +30,7 @@ export async function generateMetadata({
 
   return {
     title: c.metaTitle,
-    description: c.metaDescription,
+    description: ensureCtaDescription(c.metaDescription),
     openGraph: {
       title: c.ogTitle,
       description: c.ogDescription,

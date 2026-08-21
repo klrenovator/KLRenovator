@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { servicesData } from "@/config/services-data";
 import { allPosts } from "@/config/blog-posts";
 import { problemAEOContent } from "@/config/problem-aeo-content";
@@ -41,7 +41,7 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitle),
-    description: clampMetaDescription(problem.metaDesc),
+    description: ensureCtaDescription(clampMetaDescription(problem.metaDesc)),
     openGraph: {
       title: clampMetaTitle(problem.metaTitle),
       description: clampMetaDescription(problem.metaDesc),

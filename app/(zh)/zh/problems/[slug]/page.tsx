@@ -6,7 +6,7 @@ import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-ico
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { problemContent } from "@/app/(en)/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
 import { PROBLEM_BRAND_MAP, PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
@@ -47,7 +47,7 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitleZH || problem.metaTitle),
-    description: clampMetaDescription(problem.metaDescZH || problem.metaDesc),
+    description: ensureCtaDescription(clampMetaDescription(problem.metaDescZH || problem.metaDesc)),
     openGraph: {
       title: clampMetaTitle(problem.metaTitleZH || problem.metaTitle),
       description: clampMetaDescription(problem.metaDescZH || problem.metaDesc),

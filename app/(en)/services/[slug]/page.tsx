@@ -1,4 +1,4 @@
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { notFound } from "next/navigation";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import type { Metadata } from "next";
@@ -58,7 +58,7 @@ export async function generateMetadata({
 
   return {
     title: buildServiceMetaTitleWithDate(`${data.title} KL & Selangor — From RM ${service.startPrice}`, "en"),
-    description: clampMetaDescription(data.tagline),
+    description: ensureCtaDescription(clampMetaDescription(data.tagline)),
     openGraph: {
       title: clampMetaTitle(`${data.title} | KL Renovator`),
       description: clampMetaDescription(data.tagline),

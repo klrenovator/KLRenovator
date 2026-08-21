@@ -13,6 +13,7 @@ import { siteConfig } from "@/config/site";
 import { googlePlace } from "@/config/reviews";
 import { Reveal } from "@/components/reveal";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
+import { BookingSupportInfo } from "@/components/booking-support-info";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { title, eyebrow } from "@/components/primitives";
 
@@ -401,6 +402,7 @@ export default function ContactPage() {
       </section>
 
       <CoverageAreas />
+      <BookingSupportInfo locale="en" />
     </>
   );
 }

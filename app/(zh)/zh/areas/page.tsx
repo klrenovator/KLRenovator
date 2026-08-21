@@ -3,6 +3,7 @@ import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { clampMetaDescription, padMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AreasClient } from "@/app/(en)/areas/areas-client";
+import { AreasCoverageIntro } from "@/components/areas-coverage-intro";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气服务区域 KL & Selangor | KL Renovator"),
@@ -33,5 +34,10 @@ export const metadata: Metadata = {
 };
 
 export default function AreasPageZH() {
-  return <AreasClient forcedLang="zh" />;
+  return (
+    <>
+      <AreasClient forcedLang="zh" />
+      <AreasCoverageIntro locale="zh" />
+    </>
+  );
 }
