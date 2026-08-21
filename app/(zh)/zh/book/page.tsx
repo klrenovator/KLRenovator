@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { BookingForm } from "@/components/booking-form";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
+import { BookingSupportInfo } from "@/components/booking-support-info";
 
 export const metadata: Metadata = {
   title: "在线预约冷气服务 | KL Renovator",
@@ -37,6 +38,10 @@ export default function BookPageZH() {
       </div>
 
       <BookingForm isAdmin={false} forcedLang="zh" />
+
+      <div className="mt-12 -mx-4">
+        <BookingSupportInfo locale="zh" />
+      </div>
     </div>
   );
 }

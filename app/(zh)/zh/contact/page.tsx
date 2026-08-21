@@ -13,6 +13,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
+import { BookingSupportInfo } from "@/components/booking-support-info";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
@@ -292,6 +293,7 @@ export default function ContactPageZH() {
       </section>
 
       <CoverageAreas />
+      <BookingSupportInfo locale="zh" />
     </>
   );
 }

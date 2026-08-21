@@ -41,6 +41,8 @@ export const CONTENT_REVIEW_DATES = {
   problems: "2026-08-19",
   /** config/site/services.ts + services-data.ts — the 10 service pages. */
   services: "2026-08-18",
+  /** config/commercial-iaq-content.ts — the commercial + IAQ hubs (issue #75). */
+  commercialIaq: "2026-08-21",
 } as const;
 
 export type ContentCollection = keyof typeof CONTENT_REVIEW_DATES;

@@ -275,6 +275,9 @@ export default function AMCPage() {
                 {s.title} — from RM {s.startPrice}
               </NextLink>
             ))}
+            <NextLink href="/commercial-aircond-service" className="bg-indigo-50 border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold px-4 py-2 rounded-xl transition-all">
+              Commercial Service &amp; AMC for businesses
+            </NextLink>
           </div>
         </div>
       </section>

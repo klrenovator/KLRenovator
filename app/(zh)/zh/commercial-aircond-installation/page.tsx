@@ -133,6 +133,7 @@ export default function CommercialInstallationPageZH() {
           <p className="mt-6 text-slate-500 text-sm">覆盖KL及雪兰莪所有商业物业 — KLCC、Bangsar South、Damansara Perdana、Mont Kiara、PJ、Subang Jaya、Shah Alam、Klang、Puchong、Cheras等。</p>
           <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-center gap-4">
             <Link href="/zh/aircond-installation-kl" className="text-sm text-slate-500 hover:text-white transition-colors">← 所有安装服务</Link>
+            <Link href="/zh/commercial-aircond-service" className="text-sm text-slate-500 hover:text-white transition-colors">商用保养与 AMC</Link>
             <Link href="/zh/services/maintenance-contract" className="text-sm text-slate-500 hover:text-white transition-colors">AMC详情</Link>
             <Link href="/zh/faq" className="text-sm text-slate-500 hover:text-white transition-colors">更多常见问题</Link>
           </div>

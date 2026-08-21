@@ -71,6 +71,8 @@ export const Footer = () => {
         "/aircond-installation-kl": "/ms/pemasangan-aircond-kl",
         "/new-home-aircond-installation": "/ms/pemasangan-aircond-rumah-baru",
         "/commercial-aircond-installation": "/ms/pemasangan-aircond-komersial",
+        "/commercial-aircond-service": "/ms/servis-aircond-komersial",
+        "/indoor-air-quality-aircond": "/ms/kualiti-udara-dalaman-aircond",
       };
       return malaySlugs[path] ?? `/ms${path}`;
     }
@@ -128,6 +130,7 @@ export const Footer = () => {
               <li><NextLink href={localizedPath("/btu-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">BTU &amp; HP Calculator</NextLink></li>
               <li><NextLink href={localizedPath("/new-home-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">New Home Package</NextLink></li>
               <li><NextLink href={localizedPath("/commercial-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Commercial &amp; Shoplot</NextLink></li>
+              <li><NextLink href={localizedPath("/commercial-aircond-service")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Servis & AMC Komersial" : lang === "zh" ? "商用保养与 AMC" : "Commercial Service & AMC"}</NextLink></li>
             </ul>
           </div>
 
@@ -150,6 +153,7 @@ export const Footer = () => {
               <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
               <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
               <li><NextLink href={localizedPath("/cuci-aircond-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
+              <li><NextLink href={localizedPath("/indoor-air-quality-aircond")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kualiti Udara Dalaman" : lang === "zh" ? "室内空气质量" : "Indoor Air Quality"}</NextLink></li>
               <li><NextLink href={localizedPath("/book")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{fl.bookOnline}</NextLink></li>
             </ul>
           </div>

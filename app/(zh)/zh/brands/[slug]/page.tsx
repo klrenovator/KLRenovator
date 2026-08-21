@@ -19,6 +19,7 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandInstallCta } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /zh/brands/[slug] — Mandarin brand page. Mirrors /ms/brands/[slug].
@@ -374,6 +375,15 @@ export default async function BrandPageZH({
         </div>
       </section>
 
+
+      <JobPhotoStrip
+        locale="zh"
+        variant="brand"
+        place={brand.name}
+        brand={brand.name}
+        hints={[brand.slug]}
+        seed={`brand-${brand.slug}-zh`}
+      />
 
       <LocalPriceComparisonTable locale="zh" name={brand.name} />
       <ExpertReviewBlock locale="zh" name={brand.name} context="brand" seed={`brand-${brand.slug}-zh`} />

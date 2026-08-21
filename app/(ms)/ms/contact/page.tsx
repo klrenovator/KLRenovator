@@ -13,6 +13,7 @@ import { waLink, rfqMsg } from "@/lib/whatsapp";
 import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
+import { BookingSupportInfo } from "@/components/booking-support-info";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Hubungi KL Renovator | Servis Aircond KL & Selangor"),
@@ -294,6 +295,7 @@ export default function ContactPageMS() {
       </section>
 
       <CoverageAreas />
+      <BookingSupportInfo locale="ms" />
     </>
   );
 }

@@ -186,6 +186,7 @@ export default function CommercialInstallationPage() {
             <p className="mt-6 text-slate-500 text-sm">Serving commercial properties across all KL & Selangor areas — KLCC, Bangsar South, Damansara Perdana, Mont Kiara, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras & more.</p>
             <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap justify-center gap-4">
               <Link href="/aircond-installation-kl" className="text-sm text-slate-500 hover:text-white transition-colors">← All Installation Services</Link>
+              <Link href="/commercial-aircond-service" className="text-sm text-slate-500 hover:text-white transition-colors">Commercial Servicing &amp; AMC</Link>
               <Link href="/services/maintenance-contract" className="text-sm text-slate-500 hover:text-white transition-colors">AMC Details</Link>
               <Link href="/faq" className="text-sm text-slate-500 hover:text-white transition-colors">More FAQs</Link>
             </div>

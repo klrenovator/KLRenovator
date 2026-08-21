@@ -67,6 +67,7 @@ export const publishedPrices = {
 
   basic15: price("basicServicing", "1.0 – 1.5"),
   basic25: price("basicServicing", "2.0 – 2.5"),
+  basicCassette15: price("basicServicing", "Cassette · 1.0"),
 
   installWall15: price("installation", "1.0 HP"),
   installWall20: price("installation", "2.0 HP"),

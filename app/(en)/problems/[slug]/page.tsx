@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { servicesData } from "@/config/services-data";
 import { allPosts } from "@/config/blog-posts";
 import { problemAEOContent } from "@/config/problem-aeo-content";
@@ -16,6 +16,7 @@ import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // This route is backed by a finite typed content registry.
 // Unknown slugs must be a real 404, never an indexable fallback page.
@@ -40,7 +41,7 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitle),
-    description: clampMetaDescription(problem.metaDesc),
+    description: ensureCtaDescription(clampMetaDescription(problem.metaDesc)),
     openGraph: {
       title: clampMetaTitle(problem.metaTitle),
       description: clampMetaDescription(problem.metaDesc),
@@ -1711,6 +1712,14 @@ export default async function ProblemPage({
           </section>
         );
       })()}
+
+      <JobPhotoStrip
+        locale="en"
+        variant="problem"
+        place={problem.name}
+        hints={problem.relatedService ? [problem.relatedService] : []}
+        seed={`problem-${problem.slug}-en`}
+      />
 
       {/* Gallery Proof — orphan-link fix */}
       <section className="py-10 bg-slate-50 border-t border-slate-100">

@@ -6,7 +6,7 @@ import { FiCheck, FiArrowRight, FiChevronRight, FiMapPin, FiShield, FiCpu, FiAle
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle, buildBrandMetaTitleWithDate } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription, padMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, padMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { waLink } from "@/lib/whatsapp";
 import { normalizeHreflangUrls } from "@/lib/hreflang-canonical";
 import { BRAND_ERROR_CODES, BRAND_TECH_SPECS } from "@/config/brand-specs";
@@ -23,6 +23,7 @@ import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/comme
 import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
 import { brandAreaLocalLinks } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // ROUND 14.1 — Brand-Specific Area Page (English)
@@ -59,7 +60,7 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(titleText),
-    description: padMetaDescription(descText),
+    description: ensureCtaDescription(padMetaDescription(descText)),
     openGraph: {
       title: clampMetaTitle(titleText),
       description: padMetaDescription(descText),
@@ -409,6 +410,14 @@ export default async function BrandAreaPageEN({
           </div>
         </div>
       </section>
+
+      <JobPhotoStrip
+        locale="en"
+        place={area.name}
+        brand={brand.name}
+        hints={[brand.slug, area.slug]}
+        seed={`brand-area-${brand.slug}-${area.slug}-en`}
+      />
 
       {/* CTA Footer Section */}
       <section className="py-14 bg-slate-950 text-white border-t border-slate-800">

@@ -21,12 +21,13 @@ import { AREA_PROBLEM_MAP, AREA_BLOG_MAP } from "@/config/topical-authority-map"
 import { getFreshDate } from "@/lib/dates";
 import { buildUniqueAreaFAQ_EN } from "@/config/area-faq-uniqueness";
 import { clampMetaTitle, buildAreaMetaTitleWithDate } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandChipHref, areaInstallClusterBlock } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 
 function getAreaImage(heroImage?: string) {
@@ -64,7 +65,7 @@ export async function generateMetadata({
 
   return {
     title: metaTitle,
-    description: clampMetaDescription(area.metaDesc),
+    description: ensureCtaDescription(clampMetaDescription(area.metaDesc)),
     openGraph: {
       title: area.metaTitle,
       description: clampMetaDescription(area.metaDesc),
@@ -676,6 +677,13 @@ export default async function AreaPage({
         );
       })()}
 
+
+      <JobPhotoStrip
+        locale="en"
+        place={area.name}
+        hints={[area.slug]}
+        seed={`area-${area.slug}-en`}
+      />
 
       <LocalPriceComparisonTable locale="en" name={area.name} />
       <ExpertReviewBlock locale="en" name={area.name} context="area" seed={`area-${area.slug}-en`} />

@@ -128,6 +128,7 @@ export default function Page() {
           </div>
           <div className="mt-10 text-center">
             <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 rounded-2xl bg-[#22c55e] px-8 py-4 text-sm font-black uppercase tracking-wider text-white shadow-lg hover:bg-[#16a34a]"><FaWhatsapp className="h-5 w-5"/> Book Chemical Wash KL Now</a>
+            <p className="mt-5 text-sm text-slate-600">Wondering what a chemical wash actually removes and how it affects the air in your room? Read our <NextLink href="/indoor-air-quality-aircond" className="font-bold text-sky-600 hover:text-sky-700">indoor air quality &amp; chemical wash guide</NextLink>.</p>
           </div>
         </div>
       </section>

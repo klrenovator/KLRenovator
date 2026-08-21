@@ -19,6 +19,7 @@ import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandInstallCta } from "@/config/orphan-cross-links";
 import { MoneyCrossLinks } from "@/components/money-cross-links";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/brands/[slug] — Bahasa Malaysia brand page.
@@ -383,6 +384,15 @@ export default async function BrandPageMS({
         </div>
       </section>
 
+
+      <JobPhotoStrip
+        locale="ms"
+        variant="brand"
+        place={brand.name}
+        brand={brand.name}
+        hints={[brand.slug]}
+        seed={`brand-${brand.slug}-ms`}
+      />
 
       <LocalPriceComparisonTable locale="ms" name={brand.name} />
       <ExpertReviewBlock locale="ms" name={brand.name} context="brand" seed={`brand-${brand.slug}-ms`} />

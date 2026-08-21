@@ -227,6 +227,55 @@ export function padMetaDescription(raw: string, opts?: { min?: number; max?: num
 }
 
 /**
+ * Ensure a meta description carries a call to action (issue #69).
+ *
+ * The audit flags any description that contains none of the CTA cues the
+ * search-snippet analyzer looks for (whatsapp / book / tempah / call / 预约 /
+ * hubungi / 联系). Many generated descriptions are already at a good length but
+ * end on a factual note with no next step, which costs SERP click-through.
+ *
+ * This appends ONE short, locale-appropriate CTA clause when a description has
+ * none — trimming the base first if needed so the result still respects the
+ * 155-char / 155-width clamp. It is a no-op when a CTA is already present, so
+ * it never double-stacks and never overrides hand-written CTAs. It does not add
+ * any review count or rating (owner-handled per #68).
+ */
+const CTA_CUE = /whatsapp|book|tempah|call|预约|hubungi|联系/i;
+
+const CTA_SUFFIX: Record<"latin" | "ms" | "zh", string> = {
+  latin: " WhatsApp us to book.",
+  ms: " WhatsApp untuk tempah.",
+  zh: " 立即 WhatsApp 预约。",
+};
+
+export function ensureCtaDescription(raw: string, opts?: { min?: number; max?: number }): string {
+  const clamped = clampMetaDescription(raw, opts);
+  if (CTA_CUE.test(clamped)) return clamped;
+
+  const cjk = isCJK(clamped);
+  const suffix = CTA_SUFFIX[cjk ? "zh" : detectPadLang(clamped)];
+  const maxBudget = cjk ? (opts?.max ?? META_DESC_MAX_CJK_WIDTH) : (opts?.max ?? META_DESC_MAX_CJK);
+  const measure = cjk ? metaDisplayWidth : (s: string) => s.length;
+
+  let base = clamped.replace(/\s+$/, "");
+  const suffixSize = measure(suffix);
+
+  // Trim whole words / characters off the base until the CTA fits.
+  while (base.length > 0 && measure(base) + suffixSize > maxBudget) {
+    if (cjk) {
+      base = base.slice(0, -1);
+    } else {
+      const cut = base.replace(/\s*\S+$/, "");
+      base = cut.length && cut.length < base.length ? cut : base.slice(0, -1);
+    }
+    base = base.replace(/[\s,;:—-]+$/, "");
+  }
+
+  if (base.length === 0) return clamped; // pathological; keep original
+  return clampMetaDescription(base + suffix, opts);
+}
+
+/**
  * Build unique description for area pages ensuring 140-155
  * Adds area-specific landmark to guarantee uniqueness
  */

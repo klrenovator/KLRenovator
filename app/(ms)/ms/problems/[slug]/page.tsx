@@ -6,7 +6,7 @@ import { FiArrowRight, FiChevronRight, FiAlertTriangle, FiTool } from "react-ico
 
 import { siteConfig } from "@/config/site";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
-import { clampMetaDescription } from "@/lib/seo-description-optimizer";
+import { clampMetaDescription, ensureCtaDescription } from "@/lib/seo-description-optimizer";
 import { problemContent } from "@/app/(en)/problems/[slug]/page";
 import { problemAEOContent } from "@/config/problem-aeo-content";
 import { PROBLEM_BRAND_MAP, PROBLEM_BLOG_MAP_V2, PROBLEM_SERVICE_MAP } from "@/config/topical-authority-map";
@@ -18,6 +18,7 @@ import { waLink } from "@/lib/whatsapp";
 import { FiCheckCircle, FiUserCheck } from "react-icons/fi";
 import { ProblemAeoBlocks } from "@/components/problem-aeo-blocks";
 import { TopicHubCta } from "@/components/topic-hub-cta";
+import { JobPhotoStrip } from "@/components/job-photo-strip";
 
 // ─────────────────────────────────────────────────────────────────────────
 // /ms/problems/[slug] — Bahasa Malaysia problem page.
@@ -49,7 +50,7 @@ export async function generateMetadata({
 
   return {
     title: clampMetaTitle(problem.metaTitleMS || problem.metaTitle),
-    description: clampMetaDescription(problem.metaDescMS || problem.metaDesc),
+    description: ensureCtaDescription(clampMetaDescription(problem.metaDescMS || problem.metaDesc)),
     openGraph: {
       title: clampMetaTitle(problem.metaTitleMS || problem.metaTitle),
       description: clampMetaDescription(problem.metaDescMS || problem.metaDesc),
@@ -500,6 +501,14 @@ export default async function ProblemPageMS({
       </section>
 
       {/* Topic hub (issue #66) — every problem page links back to /troubleshooting */}
+      <JobPhotoStrip
+        locale="ms"
+        variant="problem"
+        place={problem.nameMS || problem.name}
+        hints={problem.relatedService ? [problem.relatedService] : []}
+        seed={`problem-${problem.slug}-ms`}
+      />
+
       <TopicHubCta hubId="troubleshooting" locale="ms" />
     </>
   );

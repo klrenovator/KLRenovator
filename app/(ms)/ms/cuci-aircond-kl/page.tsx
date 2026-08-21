@@ -171,7 +171,7 @@ export default function Page() {
       <section className="py-8 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
           <p>
-            Lihat juga: <NextLink href="/ms/services/chemical-wash" className="text-sky-700 font-bold hover:underline">Chemical Wash Service Page</NextLink> • <NextLink href="/ms/services/basic-servicing" className="text-sky-700 font-bold hover:underline">Servis Asas RM99</NextLink> • <NextLink href="/ms/services/maintenance-contract" className="text-sky-700 font-bold hover:underline">Kontrak Penyelenggaraan</NextLink>
+            Lihat juga: <NextLink href="/ms/services/chemical-wash" className="text-sky-700 font-bold hover:underline">Chemical Wash Service Page</NextLink> • <NextLink href="/ms/services/basic-servicing" className="text-sky-700 font-bold hover:underline">Servis Asas RM99</NextLink> • <NextLink href="/ms/services/maintenance-contract" className="text-sky-700 font-bold hover:underline">Kontrak Penyelenggaraan</NextLink> • <NextLink href="/ms/kualiti-udara-dalaman-aircond" className="text-sky-700 font-bold hover:underline">Kualiti Udara Dalaman</NextLink>
           </p>
         </div>
       </section>
