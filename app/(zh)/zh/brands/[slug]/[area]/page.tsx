@@ -18,6 +18,7 @@ import {
 } from "@/config/brand-area-uniqueness";
 import { serviceAnchor } from "@/config/anchor-text-diversity";
 import { buildOgImage } from "@/lib/og-image-pool";
+import { buildHowToSchema } from "@/lib/seo";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { brandAreaFirstVisitPlan, brandAreaCommonJobs } from "@/config/brand-area-depth";
@@ -167,12 +168,22 @@ export default async function BrandAreaPageZH({
   const visitPlan = brandAreaFirstVisitPlan(brand, area, "zh");
   const commonJobs = brandAreaCommonJobs(brand, area, "zh");
 
+  // HowTo JSON-LD 与页面可见的编号 <ol> 上门流程完全对应（问题 #65）。
+  const howToSchema = buildHowToSchema({
+    name: visitPlan.heading,
+    description: visitPlan.intro,
+    url: pageUrl,
+    inLanguage: "zh-MY",
+    steps: visitPlan.steps.map((s) => ({ name: s.title, text: s.body })),
+  });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Breadcrumb Navigation */}
       <div className="bg-slate-50 border-b border-slate-200">

@@ -15,6 +15,7 @@ import { getProblemsForKampung, getBlogsForKampung } from "@/config/topical-auth
 import { buildKampungUniquenessMatrix } from "@/config/kampung-uniqueness-matrix";
 import { kampungGamePlan, kampungSignals } from "@/config/kampung-depth";
 import { buildOgImage } from "@/lib/og-image-pool";
+import { buildHowToSchema } from "@/lib/seo";
 import { reviewDateFor } from "@/config/content-review-dates";
 import { ExpertReviewBlock, LocalPriceComparisonTable } from "@/components/commercial-proof-blocks";
 import { kampungChildBlock } from "@/config/orphan-cross-links";
@@ -168,12 +169,24 @@ export default async function KampungPage({
   const gamePlan = kampungGamePlan(k, parentArea, "en");
   const signals = kampungSignals(k, parentArea, "en");
 
+  // HowTo JSON-LD mirrors the visible <ol> game-plan steps exactly — required
+  // so Google can match the schema to the numbered, ordered process on the
+  // page (issue #65). No tool/supply/totalTime because they vary by visit.
+  const howToSchema = buildHowToSchema({
+    name: gamePlan.heading,
+    description: gamePlan.intro,
+    url: enUrl,
+    inLanguage: "en-MY",
+    steps: gamePlan.steps.map((s) => ({ name: s.title, text: s.body })),
+  });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <section className="py-14 sm:py-20 bg-slate-50 border-b border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
