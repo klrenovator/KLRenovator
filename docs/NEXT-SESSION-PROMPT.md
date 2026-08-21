@@ -108,16 +108,23 @@ LocalBusiness / HVACBusiness / Organization anywhere. It violates Google's
 self-serving review policy and fails scripts/gsc-audit.mjs section 9a.
 The site currently emits NO aggregateRating — keep it that way.
 
-THIS SESSION — pick ONE, do not start the others unless asked
--------------------------------------------------------------
-#75  Near-empty commercial + IAQ clusters.
-#69  13 title clashes, 7 thin pages, 943 descriptions without CTA.
+THIS SESSION — nothing scoped is left; ask the owner what to prioritise
+-----------------------------------------------------------------------
+All content/SEO/GEO/AEO items from the audit are now done except the two
+deliberately-held ones:
+  #67  monthly title-refresh workflow — owner/maintainer, do not touch.
+  #68  review-count copy — owner-handled, do not touch.
+  #65  HowTo >= 40 — a content project, out of scope for a markup pass.
+  #73 VideoObject half — no video assets exist to mark up honestly.
 
-(#73 body imagery was completed in session 8, PR pending — body-image
- pages 1,103 → 45, all 5 target templates at 100% coverage with 3 real
- job photos + trilingual alt + ImageObject schema each. The VideoObject
- half stays open on #73: there are no video assets in the repo to mark
- up honestly. #66 topic hubs shipped earlier as PR #81.)
+Completed in recent sessions (PRs pending / merged):
+  #73 body imagery (session 8) — 1,103 → 45 zero-image pages, all 5 target
+      templates at 100% coverage with 3 real photos + trilingual alt +
+      ImageObject each.
+  #75 commercial + IAQ clusters (session 9) — two trilingual hubs, in
+      sitemap/footer, cross-linked from cluster members.
+  #69 SEO cleanup (session 9) — acronym title casing, thin pages 7→0,
+      descriptions without CTA 956→89.
 
 #65 HowTo — leave alone. Only add HowTo schema where visible, numbered,
 ordered process content already exists. Do NOT mark up blog titles or FAQ
@@ -172,8 +179,9 @@ Report: done vs left, exact score movement, duplicate similarity and pairs
 The GitHub App cannot close issues (403 "Resource not accessible by
 integration") — if issues need closing, say so and ask the owner. Issues
 that still need manual closing from prior sessions:
-  #62, #63, #64, #71, #72, #74, and #73 (image half done session 8 —
-  close it if the VideoObject half is out of scope, else keep open for video)
+  #62, #63, #64, #71, #72, #74, #75, #69, and #73 (image half done
+  session 8 — close #73 if the VideoObject half is out of scope, else
+  keep it open for video)
 
 Human-only note: #68 (review-count copy) is deliberately owner-handled and
 must not be edited by an agent.
@@ -202,6 +210,6 @@ must not be edited by an agent.
 | Orphans 443 → 23 | ✅ Fixed | PR #70 |
 | 767 near-orphans + MS pages cut off | ✅ Fixed (190 left) | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — this session, needs manual close |
 | Cluster hubs | 🔲 Open | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
-| Commercial + IAQ clusters | 🔲 Open | [#75](https://github.com/klrenovator/KLRenovator/issues/75) |
-| Title clashes, thin pages, description CTAs | 🔲 Open | [#69](https://github.com/klrenovator/KLRenovator/issues/69) |
+| Commercial + IAQ clusters | ✅ Done (session 9) | [#75](https://github.com/klrenovator/KLRenovator/issues/75) — needs manual close |
+| Title clashes, thin pages, description CTAs | ✅ Done (session 9) | [#69](https://github.com/klrenovator/KLRenovator/issues/69) — needs manual close |
 | "500+ reviews" vs 9 review objects | ⚠️ Maintainer | [#68](https://github.com/klrenovator/KLRenovator/issues/68) |

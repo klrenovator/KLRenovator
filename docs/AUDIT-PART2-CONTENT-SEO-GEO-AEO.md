@@ -41,6 +41,51 @@ and `audit:gsc` pass.
 
 **Latest verification (2026-08-20, session 4):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze over 2,169 pages reports Content **98**, GEO **88**, AEO **81**. Duplicate-content guard still clean: weighted intra-group similarity **22.4%**, **0 pairs >70%**.
 
+**Session 9 (2026-08-21) — issues #75 (commercial + IAQ clusters) and #69 (SEO cleanup):**
+
+*#75 — two near-empty commercially significant clusters built out (§7.5):*
+- New **commercial B2B service hub** `/commercial-aircond-service` (+ native
+  `/ms/servis-aircond-komersial`, `/zh/commercial-aircond-service`): servicing,
+  chemical wash and AMC for offices, shoplots, F&B and clinics — distinct from
+  the existing commercial *installation* landing, which it cross-links.
+- New **indoor air quality hub** `/indoor-air-quality-aircond` (+ native MS/ZH
+  slugs): what a dirty coil/blower does to room air and exactly what a chemical
+  wash removes, with a cleaning-cadence table. Strict no-medical-claim
+  discipline + a visible disclaimer.
+- Authored trilingual content in `config/commercial-iaq-content.ts` (EN/MS/ZH
+  written separately). Every price resolves from `lib/published-prices.ts`
+  (added `basicCassette15`). Shared server components `commercial-hub-page.tsx`
+  / `iaq-hub-page.tsx` emit FAQPage + Service + WebPage + BreadcrumbList +
+  ImageObject schema, 3 real job photos each, `service:commercial` /
+  `service:iaq` explainer presets, and TNB / Energy Commission / DOSH citations.
+- Wired into sitemap (all 6 routes, all resolve), footer (EN/MS/ZH), and
+  cross-linked from commercial-installation, maintenance-contract and the
+  cuci-aircond chemical-wash guide. New `commercialIaq` review-date collection.
+- Each hub 1,349–1,604 words, 6 FAQs, 2 tables, 3 images. No aggregateRating,
+  no review-count claim.
+
+*#69 — title casing, thin pages, meta-description CTAs:*
+- **Title casing:** kampung metaTitle acronyms were title-cased and degraded
+  (`Ss15`, `Pj Old Town`, `Usj`, `Ss21`, `Pjs`). Restored correct casing across
+  EN/MS/ZH so the SS15/16/19 Subang Jaya titles read correctly. Duplicate
+  titles remain 0.
+- **Thin pages 7 → 0:** `BookingSupportInfo` (coverage + response-time + 4 FAQs
+  with FAQPage schema) below the form on `/book` and `/contact`, and
+  `AreasCoverageIntro` on the `/areas` index — all EN/MS/ZH, authored per
+  locale. `/book` 140→434 words, `/contact` 276→570, `/areas` 280→490.
+  `thinContent` 99 → **100**.
+- **Descriptions without CTA 956 → 89** (target < 200): new
+  `ensureCtaDescription()` appends one short locale-appropriate CTA when a
+  description lacks a CTA cue, trimming first to respect the 155 clamp (no-op
+  when a CTA already exists). Applied to kampung-installation, brand-area,
+  blog, problem, service, area, area-installation and brand-installation
+  templates. 0 duplicate descriptions introduced. The remaining 89 are static
+  calculators / index / utility pages with inline metadata.
+
+Duplicate guard held both times: weighted **20.3%**, **0 pairs >70%**. Scores
+held at Content **98**, GEO **88**, AEO **81**. `typecheck`/`lint`/`build`/
+`verify:build`/`audit:gsc` pass (only the pre-existing kampung-install warning).
+
 **Session 8 (2026-08-21) — issue #73 body imagery (C8b) on the location / brand / problem templates:**
 - Added a shared `JobPhotoStrip` server component (`components/job-photo-strip.tsx`)
   backed by `config/place-job-photos.ts`. Each strip renders **3 distinct real
@@ -165,8 +210,8 @@ These are genuine content work, not markup, and are too large to complete safely
 | **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — **done session 8**: body-image pages 1,103 → **45**; all 5 target templates (kampung / brand-area / area / brand / problem) at 100% coverage with 3 real job photos, page-specific trilingual alt, and `ImageObject` schema each. VideoObject still 0 — no video assets exist to mark up (leave open for the video half). Weighted similarity 20.5 → 20.3, 0 pairs >70%. Needs manual close. |
 | — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
 | — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — **done session 6**: near-orphans 767 → **190**; all 10 MS installation landings ≥ 3 inbound; brand-area / brand-installation off the near-orphan list. Weighted similarity 20.8 → 20.5, 0 pairs >70%. Needs manual close. |
-| — | Near-empty commercial + IAQ clusters | new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) |
-| — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) |
+| — | Near-empty commercial + IAQ clusters | 6 new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) — **done session 9**: commercial B2B service hub + IAQ hub, trilingual, in sitemap/footer, cross-linked from cluster members. Needs manual close. |
+| — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) — **done session 9**: acronym title casing fixed, thin pages 7→0, descriptions without CTA 956→89 (<200 target met). Needs manual close. |
 
 **Every open finding in this document is now tracked as a GitHub issue.** Nothing is
 left unfiled. A ready-to-paste continuation prompt lives in `docs/NEXT-SESSION-PROMPT.md`.
