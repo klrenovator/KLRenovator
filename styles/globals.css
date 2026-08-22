@@ -97,21 +97,86 @@ body {
   .kl-marquee { animation: none; }
 }
 
-/* ── Floating booking button — smooth continuous orbit ring ── */
-/* Owner request: the "Check Live Slots & Book" pill keeps a ring that
-   rotates smoothly around it at all times. The pill text itself never
-   rotates (readability + WCAG 2.2.2 — it is decorative and paused under
-   prefers-reduced-motion). */
-@keyframes klr-orbit {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+/* ── Floating booking button — travels around the viewport ── */
+@keyframes klr-roam-viewport {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  25% { transform: translate3d(var(--klr-roam-x), 0, 0); }
+  50% { transform: translate3d(var(--klr-roam-x), var(--klr-roam-y), 0); }
+  75% { transform: translate3d(0, var(--klr-roam-y), 0); }
 }
-.klr-orbit-ring {
-  animation: klr-orbit 8s linear infinite;
+
+.klr-roaming-booking {
+  --klr-roam-x: calc(100vw - 100% - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right));
+  --klr-roam-y: calc(100vh - 100% - 11.5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  position: fixed;
+  top: calc(5.5rem + env(safe-area-inset-top));
+  left: calc(1rem + env(safe-area-inset-left));
+  animation: klr-roam-viewport 32s linear infinite;
   will-change: transform;
 }
+
+@supports (height: 100dvh) {
+  .klr-roaming-booking {
+    --klr-roam-y: calc(100dvh - 100% - 11.5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+}
+
+/* Stop the moving target while somebody is interacting with it. */
+.klr-roaming-booking:hover,
+.klr-roaming-booking:focus-within {
+  animation-play-state: paused;
+}
+
+/* On desktop there is no 4rem mobile action bar, so use more of the screen. */
+@media (min-width: 1024px) {
+  .klr-roaming-booking {
+    --klr-roam-x: calc(100vw - 100% - 4rem - env(safe-area-inset-left) - env(safe-area-inset-right));
+    --klr-roam-y: calc(100vh - 100% - 7.5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    top: calc(6rem + env(safe-area-inset-top));
+    left: calc(2rem + env(safe-area-inset-left));
+  }
+
+  @supports (height: 100dvh) {
+    .klr-roaming-booking {
+      --klr-roam-y: calc(100dvh - 100% - 7.5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    }
+  }
+}
+
+.klr-roaming-booking--static {
+  top: auto;
+  right: 2rem;
+  bottom: 2rem;
+  left: auto;
+  animation: none;
+  transform: none;
+  will-change: auto;
+}
+
+@media (max-width: 1023px) {
+  .klr-roaming-booking--static {
+    right: 1rem;
+    bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .klr-orbit-ring { animation: none; }
+  .klr-roaming-booking {
+    top: auto;
+    right: 2rem;
+    bottom: 2rem;
+    left: auto;
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 1023px) {
+  .klr-roaming-booking {
+    right: 1rem;
+    bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
 }
 
 /* ── Scrollbar ────────────────────────────────────────────── */
