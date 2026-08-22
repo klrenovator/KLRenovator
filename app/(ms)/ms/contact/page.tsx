@@ -14,6 +14,8 @@ import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { BookingSupportInfo } from "@/components/booking-support-info";
+import { GoogleReviewWidget } from "@/components/google-review-widget";
+import { GoogleMapCard } from "@/components/google-map-card";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Hubungi KL Renovator | Servis Aircond KL & Selangor"),
@@ -290,6 +292,29 @@ export default function ContactPageMS() {
               </div>
             </Reveal>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ── Google reviews widget + keyless Maps embed ── */}
+      <section className="border-t border-slate-100 bg-slate-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="max-w-2xl">
+              <p className={eyebrow()}>Ulasan & Lokasi</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>Penarafan </span>
+                <span className={title({ size: "sm", color: "brand" })}>5 bintang di Google.</span>
+              </h2>
+              <p className="mt-4 text-slate-600 font-medium">
+                Baca apa kata pemilik rumah Lembah Klang tentang kami — atau tinggalkan ulasan anda sendiri. Kedua-duanya membuka Google secara terus.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:items-start">
+            <GoogleReviewWidget locale="ms" />
+            <GoogleMapCard locale="ms" includeSprite={false} />
           </div>
         </div>
       </section>

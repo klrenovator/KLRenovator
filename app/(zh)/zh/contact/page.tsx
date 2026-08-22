@@ -14,6 +14,8 @@ import { Reveal } from "@/components/reveal";
 import { title, eyebrow } from "@/components/primitives";
 import { CoverageAreas } from "@/components/sections/coverage-areas";
 import { BookingSupportInfo } from "@/components/booking-support-info";
+import { GoogleReviewWidget } from "@/components/google-review-widget";
+import { GoogleMapCard } from "@/components/google-map-card";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("联系 KL Renovator | 吉隆坡及雪兰莪冷气服务"),
@@ -288,6 +290,29 @@ export default function ContactPageZH() {
               </div>
             </Reveal>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ── Google reviews widget + keyless Maps embed ── */}
+      <section className="border-t border-slate-100 bg-slate-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="max-w-2xl">
+              <p className={eyebrow()}>评价与位置</p>
+              <h2 className="mt-3">
+                <span className={title({ size: "sm" })}>谷歌 </span>
+                <span className={title({ size: "sm", color: "brand" })}>五星好评。</span>
+              </h2>
+              <p className="mt-4 text-slate-600 font-medium">
+                看看巴生谷屋主对我们的评价，或留下您自己的评价。两者都会直接打开 Google。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:items-start">
+            <GoogleReviewWidget locale="zh" />
+            <GoogleMapCard locale="zh" includeSprite={false} />
           </div>
         </div>
       </section>
