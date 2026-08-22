@@ -46,7 +46,7 @@ export const StatsBand = ({ locale = "en" }: { locale?: Locale }) => {
                 <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-sky-400 to-sky-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-sky-50 border border-sky-100 text-sky-500 mb-5 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300">{icons[i]}</div>
                 <p className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-none">{s.value}</p>
-                <p className="mt-2.5 text-xs sm:text-sm font-semibold text-slate-500 leading-snug max-w-[140px]">{labels[i] || s.label}</p>
+                <p className="mt-2.5 text-xs sm:text-sm font-semibold text-slate-600 leading-snug max-w-[140px]">{labels[i] || s.label}</p>
               </div>
             ))}
           </div>

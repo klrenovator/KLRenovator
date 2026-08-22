@@ -55,7 +55,7 @@ export function GoogleMapCard({
       <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-4">
         <GoogleGIcon className="h-6 w-6 shrink-0" />
         <div>
-          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-600">
             {d.eyebrow}
           </p>
           <p className="text-sm font-black text-slate-950">{d.title}</p>

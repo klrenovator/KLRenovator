@@ -295,14 +295,14 @@ export function ToolPageLayout({
               className="group rounded-2xl border border-slate-200 bg-white p-5 hover:border-sky-400 hover:shadow-md transition-all"
             >
               <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">{t.linkCard1Title}</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{t.linkCard1Desc}</p>
+              <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">{t.linkCard1Desc}</p>
             </NextLink>
             <NextLink
               href={`${localePrefix}/installation-price-malaysia`}
               className="group rounded-2xl border border-slate-200 bg-white p-5 hover:border-sky-400 hover:shadow-md transition-all"
             >
               <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">{t.linkCard2Title}</p>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{t.linkCard2Desc}</p>
+              <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">{t.linkCard2Desc}</p>
             </NextLink>
           </div>
         </div>

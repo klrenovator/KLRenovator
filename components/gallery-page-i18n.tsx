@@ -231,7 +231,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
             <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
               {t.headerTitle}
             </h1>
-            <p className="mt-4 text-slate-500 max-w-xl mx-auto text-sm sm:text-base">
+            <p className="mt-4 text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
               {t.headerDesc}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -291,7 +291,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
       <section className="py-12 sm:py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {filtered.length === 0 ? (
-            <p className="text-center text-slate-500 py-20">{t.noPhotos}</p>
+            <p className="text-center text-slate-600 py-20">{t.noPhotos}</p>
           ) : (
             <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((item, index) => (
@@ -328,7 +328,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                     <div className="p-4">
                       <p className="font-black text-slate-900 text-sm leading-snug">{item.title}</p>
                       {item.desc && (
-                        <p className="text-xs text-slate-500 mt-1.5 line-clamp-2 font-medium">{item.desc}</p>
+                        <p className="text-xs text-slate-600 mt-1.5 line-clamp-2 font-medium">{item.desc}</p>
                       )}
                     </div>
                   </button>
@@ -359,7 +359,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                   &#10024; {t.beforeAfterTitle}
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black text-slate-900">{t.beforeAfterTitle}</h2>
-                <p className="mt-3 text-sm text-slate-500 max-w-lg mx-auto">{t.beforeAfterDesc}</p>
+                <p className="mt-3 text-sm text-slate-600 max-w-lg mx-auto">{t.beforeAfterDesc}</p>
               </div>
               {/* Before/After Pairs Grid */}
               <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2">
@@ -377,7 +377,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                   </div>
                   <div className="p-4">
                     <p className="font-black text-slate-900 text-sm">Chemical Wash Results</p>
-                    <p className="text-xs text-slate-500 mt-1">Mould, biofilm and years of dirt removed. Cooling restored to near-new levels. Customer confirmed 6&deg;C temperature drop after service.</p>
+                    <p className="text-xs text-slate-600 mt-1">Mould, biofilm and years of dirt removed. Cooling restored to near-new levels. Customer confirmed 6&deg;C temperature drop after service.</p>
                   </div>
                 </div>
                 {/* Installation Pair */}
@@ -394,7 +394,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                   </div>
                   <div className="p-4">
                     <p className="font-black text-slate-900 text-sm">New Installation Results</p>
-                    <p className="text-xs text-slate-500 mt-1">Professional install with correct pipe sizing, clean trunking, and full vacuum commissioning. 1-month workmanship warranty.</p>
+                    <p className="text-xs text-slate-600 mt-1">Professional install with correct pipe sizing, clean trunking, and full vacuum commissioning. 1-month workmanship warranty.</p>
                   </div>
                 </div>
                 {/* Overhaul Pair */}
@@ -411,7 +411,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                   </div>
                   <div className="p-4">
                     <p className="font-black text-slate-900 text-sm">Chemical Overhaul Results</p>
-                    <p className="text-xs text-slate-500 mt-1">Every component individually deep-cleaned and reassembled. Water leaking permanently fixed. Cooling restored to factory spec.</p>
+                    <p className="text-xs text-slate-600 mt-1">Every component individually deep-cleaned and reassembled. Water leaking permanently fixed. Cooling restored to factory spec.</p>
                   </div>
                 </div>
                 {/* Repair Pair */}
@@ -428,14 +428,14 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                   </div>
                   <div className="p-4">
                     <p className="font-black text-slate-900 text-sm">Repair & Troubleshooting Results</p>
-                    <p className="text-xs text-slate-500 mt-1">Faulty components diagnosed and replaced. 3-month parts warranty. Same-day repair completed on first visit.</p>
+                    <p className="text-xs text-slate-600 mt-1">Faulty components diagnosed and replaced. 3-month parts warranty. Same-day repair completed on first visit.</p>
                   </div>
                 </div>
               </div>
               {/* Before/After CTA */}
               <div className="mt-8 text-center bg-gradient-to-r from-amber-50 to-sky-50 rounded-xl p-6 border border-amber-100">
                 <p className="font-black text-slate-900 text-lg">{t.beforeAfterCTATitle}</p>
-                <p className="text-sm text-slate-500 mt-1 mb-4">{t.beforeAfterCTADesc}</p>
+                <p className="text-sm text-slate-600 mt-1 mb-4">{t.beforeAfterCTADesc}</p>
                 <a
                   href={waLink("Hi KL Renovator, I saw your before/after gallery and want similar results for my aircond. Please advise on pricing.")}
                   target="_blank"
@@ -455,7 +455,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
             <div className="mt-12 bg-sky-50 border border-sky-100 rounded-2xl p-8 text-center">
               <p className="text-2xl mb-2">📸</p>
               <h3 className="font-black text-slate-900 mb-2">{t.ctaTitle}</h3>
-              <p className="text-sm text-slate-500 mb-6 max-w-md mx-auto">
+              <p className="text-sm text-slate-600 mb-6 max-w-md mx-auto">
                 {t.ctaDesc}
               </p>
               <a
@@ -530,7 +530,7 @@ export function GalleryPageI18n({ lang, initialItems }: { lang: Lang; initialIte
                 </span>
                 <h3 className="font-black text-slate-900 mt-2">{currentItem.title}</h3>
                 {currentItem.desc && (
-                  <p className="text-sm text-slate-500 mt-1">{currentItem.desc}</p>
+                  <p className="text-sm text-slate-600 mt-1">{currentItem.desc}</p>
                 )}
               </div>
               <a

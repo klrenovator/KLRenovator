@@ -123,7 +123,7 @@ export function InstallationCROModule({
                   {signal.icon}
                 </div>
                 <h4 className="font-black text-sm text-slate-900 mb-1">{signal.label}</h4>
-                <p className="text-xs text-slate-500">{signal.description}</p>
+                <p className="text-xs text-slate-600">{signal.description}</p>
               </div>
             ))}
           </div>
@@ -185,7 +185,7 @@ export function InstallationCROModule({
           >
             <FaCommentDots className="h-5 w-5" /> {ctaText}
           </a>
-          <p className="mt-4 text-xs text-slate-500">
+          <p className="mt-4 text-xs text-slate-600">
             We serve all KL & Selangor areas — Petaling Jaya, Cheras, Ampang, Subang Jaya, Puchong, Shah Alam, Damansara, Klang, Kajang, Bangsar, Mont Kiara, Setapak, Batu Caves, Putrajaya, Cyberjaya & more.
           </p>
         </div>

@@ -107,7 +107,7 @@ export function GoogleReviewWidget({
       <div className="flex items-center gap-4">
         <GoogleGIcon className="h-9 w-9 shrink-0" />
         <div className="min-w-0">
-          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-600">
             {d.badge}
           </p>
           <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -117,7 +117,7 @@ export function GoogleReviewWidget({
               starClassName="h-4 w-4"
               label={`${ratingLabel} ${d.outOfFive}`}
             />
-            <span className="text-xs font-bold text-slate-500">{d.outOfFive}</span>
+            <span className="text-xs font-bold text-slate-600">{d.outOfFive}</span>
           </div>
           <p className="mt-1 text-xs font-bold text-slate-600">{d.reviewsLabel(countLabel)}</p>
         </div>
@@ -148,7 +148,7 @@ export function GoogleReviewWidget({
         </a>
       </div>
 
-      <p className="mt-3 text-[11px] leading-relaxed text-slate-500">{d.note}</p>
+      <p className="mt-3 text-[11px] leading-relaxed text-slate-600">{d.note}</p>
     </div>
   );
 }

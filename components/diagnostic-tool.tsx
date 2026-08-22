@@ -559,7 +559,7 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
         {path.length > 0 && (
           <div className="mb-4 flex flex-wrap gap-1.5">
             {path.map((p, i) => (
-              <span key={i} className="text-[10px] bg-slate-100 text-slate-500 px-2 py-1 rounded-full font-medium">
+              <span key={i} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded-full font-medium">
                 {p}
               </span>
             ))}
@@ -572,7 +572,7 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
             <div>
               <p className="font-black text-slate-900 text-base sm:text-lg leading-snug mb-1">{step.question[lang]}</p>
               {lang === "en" && (
-                <p className="text-xs text-slate-500">{step.question.ms} &nbsp;|&nbsp; {step.question.zh}</p>
+                <p className="text-xs text-slate-600">{step.question.ms} &nbsp;|&nbsp; {step.question.zh}</p>
               )}
             </div>
             <div className="space-y-2.5">
@@ -587,7 +587,7 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
                     <span className="text-slate-300 group-hover:text-violet-400 transition-colors text-lg shrink-0 ml-2">›</span>
                   </span>
                   {lang === "en" && (
-                    <span className="text-xs text-slate-500 font-normal block mt-0.5">
+                    <span className="text-xs text-slate-600 font-normal block mt-0.5">
                       {option.label.ms} &nbsp;|&nbsp; {option.label.zh}
                     </span>
                   )}
@@ -595,7 +595,7 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
               ))}
             </div>
             {history.length > 0 && (
-              <button onClick={handleBack} className="text-xs text-slate-500 hover:text-slate-600 font-semibold transition-colors">
+              <button onClick={handleBack} className="text-xs text-slate-600 hover:text-slate-600 font-semibold transition-colors">
                 {ui.goBack}
               </button>
             )}
@@ -616,17 +616,17 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
 
               <div className="space-y-3">
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{ui.likelyCause}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-1">{ui.likelyCause}</p>
                   <p className="text-sm text-slate-700 leading-relaxed">{result.cause[lang]}</p>
                   {lang === "en" && (
                     <>
-                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">{result.cause.ms}</p>
-                      <p className="text-xs text-slate-500 leading-relaxed">{result.cause.zh}</p>
+                      <p className="text-xs text-slate-600 mt-1 leading-relaxed">{result.cause.ms}</p>
+                      <p className="text-xs text-slate-600 leading-relaxed">{result.cause.zh}</p>
                     </>
                   )}
                 </div>
                 <div className="border-t border-slate-200 pt-3">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{ui.recommendedAction}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-1">{ui.recommendedAction}</p>
                   <p className="text-sm text-slate-700 leading-relaxed font-medium">{result.solution[lang]}</p>
                 </div>
               </div>
@@ -635,7 +635,7 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
             {/* Service link */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs text-slate-500 font-medium mb-0.5">{ui.recommendedService}</p>
+                <p className="text-xs text-slate-600 font-medium mb-0.5">{ui.recommendedService}</p>
                 <p className="font-black text-slate-900 text-sm">{result.serviceName}</p>
               </div>
               <Link
@@ -678,7 +678,7 @@ export function DiagnosticTool({ lang = "en" }: { lang?: DiagLang }) {
 
             <button
               onClick={handleReset}
-              className="w-full text-xs text-slate-500 hover:text-slate-600 font-semibold py-2 transition-colors"
+              className="w-full text-xs text-slate-600 hover:text-slate-600 font-semibold py-2 transition-colors"
             >
               {ui.startNew}
             </button>

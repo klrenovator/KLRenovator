@@ -133,7 +133,7 @@ export function InstallationProof({
                 <span className="text-sm font-bold text-slate-700">
                   {googlePlace.averageRating.toFixed(1)}
                 </span>
-                <span className="text-sm text-slate-500">· {t.reviewSub}</span>
+                <span className="text-sm text-slate-600">· {t.reviewSub}</span>
               </div>
             </div>
 
@@ -153,7 +153,7 @@ export function InstallationProof({
                       <cite className="block truncate text-xs font-black not-italic text-slate-900">
                         {review.author}
                       </cite>
-                      <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+                      <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-600">
                         {review.dateDisplay} · {t.verified}
                       </span>
                     </span>

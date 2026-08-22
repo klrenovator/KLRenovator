@@ -21,7 +21,7 @@ const ReviewCard = ({ r }: { r: Review }) => (
       </div>
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-black text-slate-950">{r.author}</p>
-        <p className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">{r.dateDisplay || r.date}</p>
+        <p className="text-[11px] uppercase tracking-wider text-slate-600 font-bold">{r.dateDisplay || r.date}</p>
       </div>
       <GoogleGIcon className="h-5 w-5 shrink-0" />
     </div>
@@ -102,7 +102,7 @@ export const GoogleReviews = ({ locale }: { locale?: Lang } = {}) => {
                   <p className="text-2xl font-black text-slate-950 leading-none">
                     {reviewRatingLabelFor(meta.rating)} / 5
                   </p>
-                  <p className="mt-1 text-[11px] uppercase tracking-wider font-black text-slate-500">
+                  <p className="mt-1 text-[11px] uppercase tracking-wider font-black text-slate-600">
                     Google Reviews · {meta.total}+
                   </p>
                 </div>

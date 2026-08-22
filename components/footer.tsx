@@ -80,7 +80,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-white text-slate-500 border-t border-slate-200">
+    <footer className="w-full bg-white text-slate-600 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* Brand Block */}
@@ -90,7 +90,7 @@ export const Footer = () => {
               KL <span className="text-sky-500">RENOVATOR</span>
             </p>
           </NextLink>
-          <p className="text-xs leading-relaxed text-slate-500">{t("footer_desc")}</p>
+          <p className="text-xs leading-relaxed text-slate-600">{t("footer_desc")}</p>
 
           <div className="flex items-center gap-2 pt-1 flex-wrap">
             <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp KL Renovator" style={{ backgroundColor: "#25D366" }} className="grid h-9 w-9 place-items-center rounded-full text-white transition-opacity hover:opacity-85"><FaWhatsapp className="h-4 w-4" /></a>
@@ -109,7 +109,7 @@ export const Footer = () => {
           <ul className="space-y-2">
             {sitePublic.services.map((s, idx) => (
               <li key={s.slug}>
-                <NextLink href={localizedPath(`/services/${s.slug}`)} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">
+                <NextLink href={localizedPath(`/services/${s.slug}`)} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">
                   {serviceAnchor(s.slug, (lang as "en" | "ms" | "zh"), idx)}
                 </NextLink>
               </li>
@@ -126,11 +126,11 @@ export const Footer = () => {
             <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-2">Aircond Installation</p>
             <ul className="space-y-1.5">
               <li><NextLink href={localizedPath("/installation")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">All Installation Services →</NextLink></li>
-              <li><NextLink href={localizedPath("/aircond-installation-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation KL &amp; Selangor</NextLink></li>
-              <li><NextLink href={localizedPath("/btu-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">BTU &amp; HP Calculator</NextLink></li>
-              <li><NextLink href={localizedPath("/new-home-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">New Home Package</NextLink></li>
-              <li><NextLink href={localizedPath("/commercial-aircond-installation")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Commercial &amp; Shoplot</NextLink></li>
-              <li><NextLink href={localizedPath("/commercial-aircond-service")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Servis & AMC Komersial" : lang === "zh" ? "商用保养与 AMC" : "Commercial Service & AMC"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-installation-kl")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">Installation KL &amp; Selangor</NextLink></li>
+              <li><NextLink href={localizedPath("/btu-calculator")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">BTU &amp; HP Calculator</NextLink></li>
+              <li><NextLink href={localizedPath("/new-home-aircond-installation")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">New Home Package</NextLink></li>
+              <li><NextLink href={localizedPath("/commercial-aircond-installation")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">Commercial &amp; Shoplot</NextLink></li>
+              <li><NextLink href={localizedPath("/commercial-aircond-service")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Servis & AMC Komersial" : lang === "zh" ? "商用保养与 AMC" : "Commercial Service & AMC"}</NextLink></li>
             </ul>
           </div>
 
@@ -141,38 +141,38 @@ export const Footer = () => {
             </p>
             <ul className="space-y-1.5">
               <li><NextLink href={localizedPath("/pricing")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{lang === "ms" ? "Semua Harga →" : lang === "zh" ? "全部价格 →" : "All Pricing Guides →"}</NextLink></li>
-              <li><NextLink href={localizedPath("/troubleshooting")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penyelesaian Masalah" : lang === "zh" ? "故障排查" : "Troubleshooting"}</NextLink></li>
-              <li><NextLink href={localizedPath("/maintenance")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penyelenggaraan" : lang === "zh" ? "保养与维修" : "Maintenance"}</NextLink></li>
+              <li><NextLink href={localizedPath("/troubleshooting")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penyelesaian Masalah" : lang === "zh" ? "故障排查" : "Troubleshooting"}</NextLink></li>
+              <li><NextLink href={localizedPath("/maintenance")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penyelenggaraan" : lang === "zh" ? "保养与维修" : "Maintenance"}</NextLink></li>
             </ul>
           </div>
 
           {/* Price Guides */}
           <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">{fl.priceGuides}</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-2">{fl.priceGuides}</p>
             <ul className="space-y-1.5">
-              <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
-              <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
-              <li><NextLink href={localizedPath("/cuci-aircond-kl")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
-              <li><NextLink href={localizedPath("/indoor-air-quality-aircond")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kualiti Udara Dalaman" : lang === "zh" ? "室内空气质量" : "Indoor Air Quality"}</NextLink></li>
-              <li><NextLink href={localizedPath("/book")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{fl.bookOnline}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-service-price-malaysia")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">Aircond Service Price 2026</NextLink></li>
+              <li><NextLink href={localizedPath("/installation-price-malaysia")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">Installation Price Guide</NextLink></li>
+              <li><NextLink href={localizedPath("/cuci-aircond-kl")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">Chemical Wash KL Guide</NextLink></li>
+              <li><NextLink href={localizedPath("/indoor-air-quality-aircond")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kualiti Udara Dalaman" : lang === "zh" ? "室内空气质量" : "Indoor Air Quality"}</NextLink></li>
+              <li><NextLink href={localizedPath("/book")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{fl.bookOnline}</NextLink></li>
             </ul>
           </div>
 
           {/* Free Calculators (trilingual EN/MS/ZH tool pages) */}
           <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Free Calculators</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-2">Free Calculators</p>
             <ul className="space-y-1.5">
-              <li><NextLink href={localizedPath("/aircond-installation-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Pemasangan" : lang === "zh" ? "安装费用计算器" : "Installation Cost Calculator"}</NextLink></li>
-              <li><NextLink href={localizedPath("/aircond-gas-topup-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Anggaran Kos Tambah Gas" : lang === "zh" ? "加气费用估算器" : "Gas Top-up Cost Estimator"}</NextLink></li>
-              <li><NextLink href={localizedPath("/aircond-size-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Saiz Aircond" : lang === "zh" ? "冷气尺寸计算器" : "Aircond Size Calculator"}</NextLink></li>
-              <li><NextLink href={localizedPath("/aircond-electricity-cost-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Elektrik" : lang === "zh" ? "电费计算器" : "Electricity Cost Calculator"}</NextLink></li>
-              <li><NextLink href={localizedPath("/aircond-savings-calculator")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penjimatan Inverter" : lang === "zh" ? "变频节省计算器" : "Inverter Savings Calculator"}</NextLink></li>
-              <li><NextLink href={localizedPath("/which-aircond-service-do-i-need")} className="text-xs text-slate-500 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Servis Mana Yang Saya Perlukan?" : lang === "zh" ? "我需要哪种服务？" : "Which Service Do I Need?"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-installation-cost-calculator")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Pemasangan" : lang === "zh" ? "安装费用计算器" : "Installation Cost Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-gas-topup-cost-calculator")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Anggaran Kos Tambah Gas" : lang === "zh" ? "加气费用估算器" : "Gas Top-up Cost Estimator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-size-calculator")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Saiz Aircond" : lang === "zh" ? "冷气尺寸计算器" : "Aircond Size Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-electricity-cost-calculator")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Kalkulator Kos Elektrik" : lang === "zh" ? "电费计算器" : "Electricity Cost Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/aircond-savings-calculator")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Penjimatan Inverter" : lang === "zh" ? "变频节省计算器" : "Inverter Savings Calculator"}</NextLink></li>
+              <li><NextLink href={localizedPath("/which-aircond-service-do-i-need")} className="text-xs text-slate-600 hover:text-sky-600 transition-colors font-medium">{lang === "ms" ? "Servis Mana Yang Saya Perlukan?" : lang === "zh" ? "我需要哪种服务？" : "Which Service Do I Need?"}</NextLink></li>
             </ul>
           </div>
 
           <div className="pt-2 border-t border-slate-100">
-            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">{fl.blog}</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-2">{fl.blog}</p>
             <NextLink href={localizedPath("/blog")} className="text-xs font-black text-sky-600 hover:text-sky-700 transition-colors">{fl.blog} →</NextLink>
           </div>
         </div>
@@ -184,7 +184,7 @@ export const Footer = () => {
             <li><a href={`tel:${sitePublic.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><span className="text-sky-500" aria-hidden="true">📞</span>{sitePublic.phoneDisplay}</a></li>
             <li><a href={`mailto:${sitePublic.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><span className="text-sky-500" aria-hidden="true">✉️</span>{sitePublic.email}</a></li>
             <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">📍</span><span className="font-medium">KL &amp; Selangor (Klang Valley)</span></li>
-            <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">🕘</span><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-500">Emergency bookings accepted</p></div></li>
+            <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">🕘</span><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-600">Emergency bookings accepted</p></div></li>
           </ul>
           <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" style={{ backgroundColor: "#25D366" }} className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"><span aria-hidden="true">💬</span> {fl.bookWa}</a>
         </div>
@@ -192,7 +192,7 @@ export const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-600">
           <p>© {new Date().getFullYear()} KL RENOVATOR (Multicore Dynamics Resources). {t("footer_rights")}</p>
           <nav className="flex items-center gap-4 flex-wrap justify-center" aria-label="Footer navigation">
             <NextLink href={localizedPath("/services")} className="hover:text-sky-600 transition-colors font-medium">{fl.navServices}</NextLink>

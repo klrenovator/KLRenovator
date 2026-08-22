@@ -337,7 +337,7 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
           <FaWrench className="h-4 w-4" /> {s.eyebrow}
         </p>
         <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">{s.title}</h2>
-        <p className="text-sm text-slate-500 mt-1">{s.subtitle}</p>
+        <p className="text-sm text-slate-600 mt-1">{s.subtitle}</p>
       </div>
 
       <div className="space-y-6">
@@ -384,7 +384,7 @@ export function InstallationCostCalculator({ lang = "en" }: { lang?: Lang }) {
             <div className="flex items-end">
               <label className="flex items-center gap-3 w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-sky-400 transition-colors">
                 <input type="checkbox" checked={needsWaterPump} onChange={(e) => { setNeedsWaterPump(e.target.checked); setShowResult(false); }} className="h-4 w-4 accent-sky-600" />
-                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaWater className="text-sky-600" /> {s.pumpCheck} <span className="text-[10px] text-slate-500 font-semibold">{s.pumpSub}</span></span>
+                <span className="text-sm font-bold text-slate-800 flex items-center gap-2"><FaWater className="text-sky-600" /> {s.pumpCheck} <span className="text-[10px] text-slate-600 font-semibold">{s.pumpSub}</span></span>
               </label>
             </div>
           </div>

@@ -221,7 +221,7 @@ function CoverageIslandInner({ locale = "en" }: { locale?: Lang }) {
               key={area.slug}
               href={href(`/areas/${area.parentSlug}/${area.slug}`)}
               title={`Aircond Service ${area.name}`}
-              className="text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100 border border-slate-200 hover:border-sky-400 hover:text-sky-600 hover:bg-white transition-colors px-2.5 py-1 rounded-full"
+              className="text-[11px] font-bold text-slate-600 uppercase tracking-wider bg-slate-100 border border-slate-200 hover:border-sky-400 hover:text-sky-600 hover:bg-white transition-colors px-2.5 py-1 rounded-full"
             >
               {area.name}
             </NextLink>
@@ -317,7 +317,7 @@ function HubIslandInner({ locale = "en" }: { locale?: Lang }) {
         <div className="text-center mb-12">
           <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">{t.resourceEyebrow}</p>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">{t.resourceTitle}</h2>
-          <p className="text-slate-500 text-sm mt-2">{t.resourceSub}</p>
+          <p className="text-slate-600 text-sm mt-2">{t.resourceSub}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {HUB_META.map(({ key, href, all }) => (

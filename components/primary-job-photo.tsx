@@ -100,7 +100,7 @@ export function PrimaryJobPhoto({
         />
       </div>
       {showCaption ? (
-        <figcaption className="border-t border-slate-100 px-4 py-3 text-xs leading-relaxed text-slate-500">
+        <figcaption className="border-t border-slate-100 px-4 py-3 text-xs leading-relaxed text-slate-600">
           {caption}
         </figcaption>
       ) : null}

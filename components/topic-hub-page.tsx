@@ -384,7 +384,7 @@ export function TopicHubPage({
                 <h3 className="text-sm font-black leading-snug text-slate-900 group-hover:text-sky-700 transition-colors">
                   {link.label[locale]}
                 </h3>
-                <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-slate-500">
+                <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-slate-600">
                   {link.blurb[locale]}
                 </p>
                 <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-sky-600">

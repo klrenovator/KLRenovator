@@ -152,7 +152,7 @@ export const WhyChooseUs = ({ locale }: { locale?: Lang } = {}) => {
               WhatsApp Us
             </a>
           </div>
-          <p className="mt-3 text-[11px] text-slate-500">No deposit · Price confirmed before work · 1-month warranty</p>
+          <p className="mt-3 text-[11px] text-slate-600">No deposit · Price confirmed before work · 1-month warranty</p>
         </Reveal>
 
       </div>

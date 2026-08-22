@@ -89,8 +89,8 @@ function PricingRow({
       <span className={isHeader ? "" : "font-medium text-slate-900"}>{hp}</span>
       <span className="text-center">{labour}</span>
       <span className="text-center text-sky-600 font-black">{pipe}</span>
-      <span className="text-center text-xs text-slate-500">{bracket}</span>
-      <span className="text-center text-xs text-slate-500">{note || "—"}</span>
+      <span className="text-center text-xs text-slate-600">{bracket}</span>
+      <span className="text-center text-xs text-slate-600">{note || "—"}</span>
     </div>
   );
 }

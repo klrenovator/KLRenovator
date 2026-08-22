@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { calculateDurationMinutes, calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { MAX_NOTES_LENGTH } from "@/lib/booking-validation";
 import { useLang } from "@/context/language-context";
@@ -268,6 +268,53 @@ export function BookingForm({
   const [success, setSuccess] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
   const [fetchedOnce, setFetchedOnce] = useState(false);
+  const addressInputRef = useRef<HTMLInputElement>(null);
+  const [isGooglePlacesReady, setIsGooglePlacesReady] = useState(false);
+
+  // Google Places Autocomplete – optional future, loads only if public key exists
+  useEffect(() => {
+    const apiKey = (process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY || "") as string;
+    if (!apiKey) return;
+    if (typeof window === "undefined") return;
+    // @ts-ignore
+    if (window.google?.maps?.places) {
+      setIsGooglePlacesReady(true);
+      return;
+    }
+    const existing = document.querySelector(`script[data-klr-places="true"]`);
+    if (existing) {
+      existing.addEventListener("load", () => setIsGooglePlacesReady(true));
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&loading=async`;
+    script.async = true;
+    script.defer = true;
+    script.dataset.klrPlaces = "true";
+    script.onload = () => setIsGooglePlacesReady(true);
+    document.head.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    if (!isGooglePlacesReady) return;
+    if (!addressInputRef.current) return;
+    try {
+      // @ts-ignore
+      const autocomplete = new window.google.maps.places.Autocomplete(addressInputRef.current, {
+        componentRestrictions: { country: "my" },
+        fields: ["formatted_address", "geometry", "name"],
+        types: ["address"],
+      });
+      autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        if (place?.formatted_address) {
+          setAddress(place.formatted_address);
+        }
+      });
+    } catch (e) {
+      console.warn("Google Places autocomplete failed:", e);
+    }
+  }, [isGooglePlacesReady]);
 
   // Admin manual override
   const [manualHours, setManualHours] = useState("");
@@ -482,7 +529,7 @@ export function BookingForm({
         <p className="text-slate-600 mb-4">{t.successDesc}</p>
         {generatedLink && (
           <>
-            <p className="text-sm text-slate-500 mb-3">
+            <p className="text-sm text-slate-600 mb-3">
               {isAdmin
                 ? ""
                 : (lang === "ms"
@@ -562,12 +609,16 @@ export function BookingForm({
       </div>
 
       <div>
-        <label htmlFor="booking-address" className="block text-sm font-semibold text-slate-700">{t.address}</label>
-        <textarea
+        <label htmlFor="booking-address" className="block text-sm font-semibold text-slate-700">
+          {t.address}
+          {isGooglePlacesReady && <span className="ml-2 text-[10px] font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Google Autocomplete Active</span>}
+        </label>
+        <input
+          ref={addressInputRef}
           id="booking-address"
+          type="text"
           required
           autoComplete="street-address"
-          rows={2}
           list="booking-areas"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
@@ -579,7 +630,7 @@ export function BookingForm({
             <option key={a} value={a} />
           ))}
         </datalist>
-        <p className="mt-1 text-[11px] text-slate-500">Start typing area – e.g. Subang Jaya, Puchong, Mont Kiara</p>
+        <p className="mt-1 text-[11px] text-slate-600">Start typing area – e.g. Subang Jaya, Puchong, Mont Kiara {isGooglePlacesReady ? "· Powered by Google" : "· Suggestions from 48 KL areas"}</p>
       </div>
 
       {/* Honeypot — visually hidden, never focusable. Bots fill it, humans don't. */}
@@ -600,7 +651,7 @@ export function BookingForm({
         {lineItems.map((item, idx) => (
           <div key={idx} className="relative rounded-xl border border-slate-200 bg-slate-50/50 p-4 space-y-3 shadow-sm">
             <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
-              <span className="text-xs font-black uppercase tracking-wider text-slate-500">
+              <span className="text-xs font-black uppercase tracking-wider text-slate-600">
                 {t.itemHeader.replace("{N}", (idx + 1).toString())}
               </span>
               {lineItems.length > 1 && (
@@ -731,7 +782,7 @@ export function BookingForm({
                   </option>
                 ))}
               </select>
-              <p className="mt-1 text-[11px] leading-snug text-slate-500">{t.propertyHelp}</p>
+              <p className="mt-1 text-[11px] leading-snug text-slate-600">{t.propertyHelp}</p>
             </div>
 
             <div>
@@ -764,7 +815,7 @@ export function BookingForm({
                   </option>
                 ))}
               </select>
-              <p className="mt-1 text-[11px] leading-snug text-slate-500">{t.pipeHelp}</p>
+              <p className="mt-1 text-[11px] leading-snug text-slate-600">{t.pipeHelp}</p>
             </div>
 
             <div>
@@ -794,7 +845,7 @@ export function BookingForm({
       <div>
         <label htmlFor="booking-notes" className="block text-sm font-semibold text-slate-700">
           {t.notes}{" "}
-          <span className="font-normal text-slate-500">({t.optional})</span>
+          <span className="font-normal text-slate-600">({t.optional})</span>
         </label>
         <textarea
           id="booking-notes"
@@ -806,8 +857,8 @@ export function BookingForm({
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
         />
         <div className="mt-1 flex items-start justify-between gap-3">
-          <p className="text-[11px] leading-snug text-slate-500">{t.notesHelp}</p>
-          <span className="shrink-0 text-[11px] tabular-nums text-slate-500">
+          <p className="text-[11px] leading-snug text-slate-600">{t.notesHelp}</p>
+          <span className="shrink-0 text-[11px] tabular-nums text-slate-600">
             {notes.length}/{MAX_NOTES_LENGTH}
           </span>
         </div>

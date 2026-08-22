@@ -245,7 +245,7 @@ export function SizeCalculator({ lang = "en" }: { lang?: Lang }) {
           <FaHome className="h-4 w-4" /> {s.eyebrow}
         </p>
         <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">{s.title}</h2>
-        <p className="text-sm text-slate-500 mt-1">{s.subtitle}</p>
+        <p className="text-sm text-slate-600 mt-1">{s.subtitle}</p>
       </div>
 
       <div className="space-y-6">
@@ -255,7 +255,7 @@ export function SizeCalculator({ lang = "en" }: { lang?: Lang }) {
             <NumberField label={s.length} value={length} onChange={(v) => { setLength(Math.max(3, Math.min(100, v))); setShowResult(false); }} min={3} max={100} suffix="ft" />
             <NumberField label={s.width} value={width} onChange={(v) => { setWidth(Math.max(3, Math.min(100, v))); setShowResult(false); }} min={3} max={100} suffix="ft" />
           </div>
-          <p className="mt-2 text-xs text-slate-500">
+          <p className="mt-2 text-xs text-slate-600">
             {length} × {width} = <strong>{Math.round(areaSqft)} sqft</strong>
           </p>
         </div>
