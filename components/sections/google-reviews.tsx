@@ -13,7 +13,13 @@ import { reviewRatingLabelFor } from "@/lib/use-google-review-stats";
 import { title, eyebrow } from "@/components/primitives";
 import { translations, useLang, type Lang } from "@/context/language-context";
 
-const ReviewCard = ({ r }: { r: Review }) => (
+const OWNER_REPLY_LABEL: Record<Lang, string> = {
+  en: "Response from the owner",
+  ms: "Balasan daripada pemilik",
+  zh: "商家回复",
+};
+
+const ReviewCard = ({ r, lang = "en" }: { r: Review; lang?: Lang }) => (
   <article className="flex h-[300px] w-[320px] sm:w-[350px] shrink-0 flex-col bg-white border border-slate-200 hover:border-slate-300 transition-colors p-5 shadow-sm hover:shadow-md">
     <div className="flex items-start gap-3">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-sky-700 text-white text-xs font-black uppercase">
@@ -29,9 +35,21 @@ const ReviewCard = ({ r }: { r: Review }) => (
     <GoogleStars count={r.rating} className="mt-3" />
 
     <span className="mt-3 text-sky-500 text-lg leading-none" aria-hidden="true">&#10077;</span>
-    <p className="mt-2 line-clamp-5 text-sm leading-relaxed text-slate-700 font-medium">
+    <p className={`mt-2 text-sm leading-relaxed text-slate-700 font-medium ${r.ownerReply ? "line-clamp-3" : "line-clamp-5"}`}>
       {r.text}
     </p>
+
+    {/* Owner's public GBP reply — pasted manually (see config/reviews.ts:
+        the Places API cannot return replies). Hidden when not provided. */}
+    {r.ownerReply ? (
+      <div className="mt-2 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2">
+        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-slate-500">
+          {OWNER_REPLY_LABEL[lang] ?? OWNER_REPLY_LABEL.en}
+          {r.ownerReplyDate ? <span className="ml-1 font-bold normal-case tracking-normal text-slate-400">· {r.ownerReplyDate}</span> : null}
+        </p>
+        <p className="mt-1 line-clamp-3 text-xs leading-relaxed text-slate-600">{r.ownerReply}</p>
+      </div>
+    ) : null}
 
     <div className="mt-auto flex items-center justify-between pt-3 border-t border-slate-100">
       <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.18em] text-sky-700">
@@ -124,7 +142,7 @@ export const GoogleReviews = ({ locale }: { locale?: Lang } = {}) => {
           className={`kl-marquee flex w-max gap-5 px-6 py-4 ${paused ? "[animation-play-state:paused]" : "group-hover:[animation-play-state:paused]"}`}
         >
           {looped.map((r, i) => (
-            <ReviewCard key={`${r.author}-${i}`} r={r} />
+            <ReviewCard key={`${r.author}-${i}`} r={r} lang={lang} />
           ))}
         </div>
         <div className="mt-4 flex justify-center">

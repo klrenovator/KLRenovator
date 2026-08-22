@@ -12,6 +12,19 @@ export type Review = {
   date: string;        // ISO 8601 — e.g. "2026-05-01" — used in schema
   dateDisplay: string; // Human readable — e.g. "May 2026" — shown on site
   profileImage?: string;
+  /**
+   * OWNER REPLY — your public reply to this review on the Google Business
+   * Profile ("Response from the owner"). Paste it here to have it render on
+   * the website's review card.
+   *
+   * IMPORTANT: Google's Places API does NOT return owner replies (it only
+   * returns author, rating, text and date), so replies can never be
+   * auto-synced — they must be pasted manually from the GBP listing.
+   * Note: if the live Places API mode is ever enabled, live reviews replace
+   * the curated list and pasted replies will not show for those live items.
+   */
+  ownerReply?: string;
+  ownerReplyDate?: string; // Human readable — e.g. "May 2026"
 };
 
 export const googlePlace = {

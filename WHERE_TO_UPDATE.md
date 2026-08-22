@@ -11,7 +11,10 @@ File: `styles/globals.css`
 We cannot auto-scrape reviews from `maps.app.goo.gl` short-links, so you
 have two options:
 
-**OPTION A — live reviews (recommended):**
+**OPTION A — live reviews:** not recommended if you want owner replies to
+show. Google's Places API never returns owner replies, and live mode
+replaces the curated list (see the note in `app/api/google-reviews/route.ts`).
+To enable anyway:
 1. Enable the Places API in Google Cloud
 2. Create `.env.local` with:
    ```
@@ -20,9 +23,25 @@ have two options:
    ```
 3. Restart `npm run dev` — homepage will fetch live reviews every hour
 
-**OPTION B — manual (paste reviews in):**
+**OPTION B — manual (recommended):**
 File: `config/reviews.ts`
 Replace the `googleReviews` array with your real reviews.
+
+### Showing your GBP replies ("Response from the owner")
+Your public replies on the Google Business Profile do **not** appear
+automatically (the API cannot return them). To show a reply on the
+website's review card, paste it into that review in `config/reviews.ts`:
+```ts
+{
+  author: "…", initials: "…", rating: 5,
+  text: "…", date: "2026-05-01", dateDisplay: "May 2026",
+  ownerReply: "Thank you for the kind words! — KL Renovator",
+  ownerReplyDate: "May 2026",
+},
+```
+The card renders it in a grey "Response from the owner" block
+(Balasan daripada pemilik / 商家回复 on MS/ZH). Reviews without the field
+render exactly as before.
 
 ### Keeping review counts truthful (issue #68)
 `config/reviews.ts` → `googlePlace` (`totalReviews`, `averageRating`,
