@@ -44,7 +44,7 @@ The enquiry drop was **not** caused by broken WhatsApp buttons, broken booking f
 ### Bug D — 237 source strings contain literal `"..."` truncation artifacts
 Someone hand-truncated `metaDescMS` strings in `config/site/{areas,brands,problems,kampungs}.ts` and left a literal ellipsis mid-word (`"…harga telus &..."`). Google renders that as content — it looks broken in the SERP and kills CTR on every Malay brand/problem/area/kampung page.
 
-**Fix:** `scripts/fix-meta-descriptions.mjs` (committed, idempotent) regenerated **396 source meta descriptions** as complete sentences: MS/EN at 140–155 chars, ZH at ≤155 display width — every one keeps primary keyword + "KL & Selangor" local intent + KL Renovator brand + WhatsApp CTA.
+**Fix:** a one-time verified codemod regenerated **396 source meta descriptions** as complete sentences: MS/EN at 140–155 chars, ZH at ≤155 display width — every one keeps primary keyword + "KL & Selangor" local intent + KL Renovator brand + WhatsApp CTA. The completed migration script was retired during repository cleanup; the permanent regression guard is `scripts/gsc-audit.mjs`.
 
 ---
 
@@ -208,7 +208,7 @@ Static prerender means **the corrupted metadata is baked into the cached pages �
 | `config/installation-page-content.ts` | **Bug A fix** — curated meta strings clamped, no longer re-templated; 12 over-length EN/MS descriptions rewritten to 140–155 |
 | `app/(ms)/ms/brands/[slug]/page.tsx`, `app/(ms)/ms/problems/[slug]/page.tsx`, `app/(zh)/zh/brands/[slug]/page.tsx`, `app/(zh)/zh/problems/[slug]/page.tsx` | **Bug C fix** — descriptions now pass through `clampMetaDescription` |
 | `config/site/areas.ts`, `brands.ts`, `problems.ts`, `kampungs.ts` | **Bug B+D fix** — 396 meta descriptions regenerated (no `...` artifacts, ZH ≤155 width, MS/EN 140–155 chars, keyword+geo+brand+CTA preserved) |
-| `scripts/fix-meta-descriptions.mjs` | New idempotent codemod that performed and documents the data rewrite |
+| One-time metadata codemod (retired after migration) | Rewrote the corrupted source strings; `scripts/gsc-audit.mjs` now guards the result |
 | `scripts/gsc-audit.mjs` | Auditor now decodes HTML entities and measures CJK by display width (it previously under-reported the exact class of bug that shipped) |
 
 ### Verification (run on the final build)

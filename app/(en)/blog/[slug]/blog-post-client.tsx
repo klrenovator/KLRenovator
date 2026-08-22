@@ -180,26 +180,9 @@ export function BlogPostClient({ post, related, forcedLang, explainers }: Props)
   const localizedFaqs =
     authoredFaqs.length > 0 ? authoredFaqs : deriveFaqsFromContent(content);
 
-  // Fallback only — used when a post has neither authored FAQs nor any
-  // question headings to derive from. Deliberately NOT emitted as schema.
-  const genericReaderFaqs =
-    lang === "zh"
-      ? [
-          { q: "我可以当天预约吗？", a: "可以，视技术员路线和材料需求而定。最快方式是 WhatsApp +60182983573。" },
-          { q: "施工前会确认价格吗？", a: "会。KL Renovator 会先确认范围、价格和任何额外材料。" },
-          { q: "是否有保修？", a: "符合条件的施工服务享有1个月工艺保修。" },
-        ]
-      : lang === "ms"
-        ? [
-            { q: "Boleh tempah servis hari sama?", a: "Boleh, bergantung kepada laluan juruteknik dan keperluan bahan. Cara terpantas ialah WhatsApp +60182983573." },
-            { q: "Adakah harga disahkan sebelum kerja?", a: "Ya. KL Renovator mengesahkan skop, harga dan sebarang bahan tambahan dahulu." },
-            { q: "Adakah ada waranti?", a: "Kerja servis yang layak dilindungi waranti kerja 1 bulan." },
-          ]
-        : [
-            { q: "Can I book same-day service?", a: "Yes, depending on technician route and material needs. The fastest way is WhatsApp +60182983573." },
-            { q: "Will the price be confirmed before work starts?", a: "Yes. KL Renovator confirms scope, price and any extra materials first." },
-            { q: "Is there a warranty?", a: "Eligible workmanship is covered by a 1-month workmanship warranty." },
-          ];
+  // Posts with no authored FAQ and no usable question/answer section render no
+  // Reader FAQ block. Repeating a generic booking/price/warranty trio on those
+  // pages would recreate the duplicate-content and schema-parity gap from C4.
 
   // BlogPosting Schema
   const blogPostingSchema = {
@@ -421,24 +404,22 @@ export function BlogPostClient({ post, related, forcedLang, explainers }: Props)
                 </div>
               </section>
 
-              {/* Reader FAQs.
-                  Previously three hard-coded questions repeated on every
-                  post — identical copy on 300+ URLs. Now driven by the same
-                  `localizedFaqs` used for FAQPage schema, so the visible Q&A
-                  and the markup always match (Google requires the FAQ to be
-                  visible on-page). The generic booking/price/warranty trio is
-                  kept only as a fallback for posts with no question headings. */}
-              <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 not-prose shadow-sm">
-                <h2 className="text-lg font-black uppercase tracking-tight text-slate-950">{ui.readerFaq}</h2>
-                <div className="mt-4 space-y-4 text-sm text-slate-700">
-                  {(localizedFaqs.length > 0 ? localizedFaqs : genericReaderFaqs).map((faq) => (
-                    <div key={faq.q}>
-                      <h3 className="font-black text-slate-900">{faq.q}</h3>
-                      <p className="mt-1">{faq.a}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              {/* Reader FAQs use the exact same locale-specific entries as
+                  FAQPage JSON-LD, so visible Q&A and schema cannot diverge.
+                  Posts without unique authored/derived entries omit both. */}
+              {localizedFaqs.length > 0 && (
+                <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 not-prose shadow-sm">
+                  <h2 className="text-lg font-black uppercase tracking-tight text-slate-950">{ui.readerFaq}</h2>
+                  <div className="mt-4 space-y-4 text-sm text-slate-700">
+                    {localizedFaqs.map((faq) => (
+                      <div key={faq.q}>
+                        <h3 className="font-black text-slate-900">{faq.q}</h3>
+                        <p className="mt-1">{faq.a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               <section className="mt-8 rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white p-6 not-prose shadow-sm">
                 <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">

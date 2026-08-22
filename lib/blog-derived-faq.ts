@@ -3,10 +3,11 @@
  *
  * Why this exists
  * ---------------
- * Every blog post renders a visible "Reader FAQs" block, but `FAQPage`
- * structured data was only emitted for the handful of posts that had
- * hand-authored `faqs` in config — 36 of 303 pages. The other 267 showed
- * Q&A to users and hid it from search engines.
+ * Every blog post originally rendered a visible "Reader FAQs" block, but
+ * `FAQPage` structured data was only emitted for the handful of posts that had
+ * hand-authored `faqs` in config — 36 of 303 pages. The other 267 showed Q&A
+ * to users and hid it from search engines. The renderer now uses these derived
+ * entries for both surfaces and omits both when no unique Q&A can be derived.
  *
  * The naive fix (schema-ify the hard-coded 3-question block) would publish
  * the SAME three questions on 300+ URLs. That is textbook FAQ-schema spam
@@ -60,21 +61,17 @@ export function deriveFaqsFromContent(content: string, limit = 5): DerivedFaq[] 
   const out: DerivedFaq[] = [];
   const seen = new Set<string>();
 
-  // Capture each h2/h3 plus everything up to the next heading of either level.
-  const sectionRe = /<h([23])[^>]*>([\s\S]*?)<\/h\1>([\s\S]*?)(?=<h[23][^>]*>|$)/g;
+  const addPair = (questionHtml: string, answerHtml: string) => {
+    if (out.length >= limit) return;
 
-  let match: RegExpExecArray | null;
-  while ((match = sectionRe.exec(content)) !== null) {
-    if (out.length >= limit) break;
-
-    const question = toText(match[2]);
-    if (!question || !isQuestion(question)) continue;
+    const question = toText(questionHtml);
+    if (!question || !isQuestion(question)) return;
 
     const key = question.toLowerCase();
-    if (seen.has(key)) continue;
+    if (seen.has(key)) return;
 
-    const answer = toText(match[3]);
-    if (answer.length < 40) continue;
+    const answer = toText(answerHtml);
+    if (answer.length < 40) return;
 
     let trimmed = answer.slice(0, 320);
     if (answer.length > 320) {
@@ -84,14 +81,30 @@ export function deriveFaqsFromContent(content: string, limit = 5): DerivedFaq[] 
         trimmed.lastIndexOf("。"),
         trimmed.lastIndexOf("! "),
       );
+      const lastSpace = trimmed.lastIndexOf(" ");
       trimmed =
         lastStop > 120
           ? trimmed.slice(0, lastStop + 1)
-          : `${trimmed.slice(0, trimmed.lastIndexOf(" "))}…`;
+          : `${trimmed.slice(0, lastSpace > 0 ? lastSpace : trimmed.length)}…`;
     }
 
     seen.add(key);
     out.push({ q: question, a: trimmed.trim() });
+  };
+
+  // Some long-form guides use semantic disclosure FAQs rather than headings:
+  // <details><summary>Question?</summary><p>Answer.</p></details>. Parse these
+  // first so an existing visible FAQ section receives matching schema too.
+  const detailsRe = /<details[^>]*>[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = detailsRe.exec(content)) !== null && out.length < limit) {
+    addPair(match[1], match[2]);
+  }
+
+  // Capture each h2/h3 plus everything up to the next heading of either level.
+  const sectionRe = /<h([23])[^>]*>([\s\S]*?)<\/h\1>([\s\S]*?)(?=<h[23][^>]*>|$)/g;
+  while ((match = sectionRe.exec(content)) !== null && out.length < limit) {
+    addPair(match[2], match[3]);
   }
 
   return out;
