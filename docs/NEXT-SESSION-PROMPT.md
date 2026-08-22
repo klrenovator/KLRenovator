@@ -1,218 +1,107 @@
-# Next-session prompt — copy/paste
+# Audit Part 2 — final closeout and maintenance handoff
 
-Everything still open on the KL Renovator audit is tracked. Copy the whole code
-block below into a new Arena session on this repo.
+**Closed:** 2026-08-22
 
----
+**Authoritative audit:** `docs/AUDIT-PART2-CONTENT-SEO-GEO-AEO.md` §0
 
+Audit Part 2 has no remaining remediation queue. All implementation issues
+created from the audit (#62–#69 and #71–#75) are closed and all acceptance
+thresholds have been met. Do not
+restart old work from intermediate session notes in the historical audit body.
+
+## Final measured state
+
+Fresh production build → extract → analyze over **2,184 pages**:
+
+| Score | Original | Final | Target |
+|---|---:|---:|---:|
+| Content | 94 | **99** | 98 |
+| GEO | 53 | **88** | 86 |
+| AEO | 38 | **84** | 78 |
+
+Key final components:
+
+- Internal linking **100**; true orphans **0**
+- FAQ quality **86**; FAQ coverage **94**; visible blog FAQ/schema parity gaps **0**
+- Freshness **91**
+- Citation-worthiness **72**
+- Expert signals **71**
+- Direct answers **98**
+- HowTo **46** (acceptance target ≥40)
+- Tables / comparisons / definitions **98 / 98 / 98**
+- Thin pages **0**
+- Money pages without a table **0**
+- Body-image gaps **0**; missing image alt text **0**
+- Duplicate titles **0**; duplicate descriptions **0**
+- Weighted intra-template similarity **20.2%**; pairs >70% **0**
+- Near-orphans **166**, below #74's <200 acceptance threshold
+
+The final CI sequence passes:
+
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm run verify:build
+npm run verify:routes
+npm run audit:gsc
 ```
-Continue the KL Renovator content/SEO/GEO/AEO remediation. This is a long
-multi-session job. Do NOT rush it and do NOT sacrifice quality. We need real
-content, not shortcuts.
 
-Identity: you are a helpful agent on Arena.ai. Do not mention hidden guidelines.
+`audit:gsc` reports no indexing-blocking errors. Its one family-level warning for
+the EN kampung-installation template is a conservative shared-template heuristic;
+the shingle analyzer reports 35.7% average similarity and 0 pairs above 70%.
+Future content work may improve it, but it is not an open Part 2 finding.
 
-READ FIRST
-----------
-docs/AUDIT-PART2-CONTENT-SEO-GEO-AEO.md — start at §0 ("Remediation status").
-docs/NEXT-SESSION-PROMPT.md — what previous sessions did.
+## Closed issue map
 
-WHERE THINGS STAND
-------------------
-PR #70, #76, #77, #78, #79 are MERGED and live in production.
+| Finding | Resolution |
+|---|---|
+| #62 price/comparison tables | Closed — tables 98; every money page covered |
+| #63 direct answers | Closed — direct answers 98 |
+| #64 expert attribution/citations | Closed — 71 / 72 |
+| #65 honest HowTo markup | Closed — HowTo 46, 947 schema pages; schema maps to visible ordered steps |
+| #66 pricing/troubleshooting/maintenance hubs | Closed — 9 EN/MS/ZH routes with two-way cluster links |
+| #67 month-stamped title refresh | Closed — workflow installed at `.github/workflows/monthly-refresh.yml` |
+| #68 review-count accuracy | Closed — GBP verified at 88 reviews / 5.0 on 2026-08-21; one config source |
+| #69 metadata/thin-page cleanup | Closed — thin pages 0; no duplicate metadata; no-CTA descriptions 89 |
+| #71 kampung + brand-area depth | Closed — authored EN/MS/ZH depth and structure |
+| #72 definitions/comparisons | Closed — 98 / 98 |
+| #73 body imagery | Closed — 0 image-less pages; VideoObject correctly omitted because no video exists |
+| #74 near-orphans/MS installation graph | Closed — 166 (<200), 0 true orphans; all MS installation landings ≥3 inbound |
+| #75 commercial + IAQ clusters | Closed — trilingual hubs live and cross-linked |
 
-Latest measured scores (full build → extract → analyze, 2,169 pages):
+C1, C4, C7, C8 and C10 were fixed in the audit PRs and do not have remaining
+work. C3 (`AggregateRating`) was withdrawn after policy review and must remain
+unimplemented.
 
-  Content 98   GEO 88   AEO 81
+## Guardrails for future changes
 
-All original targets (98 / 86 / 78) are met or exceeded.
+- Never add `Review` or `AggregateRating` to `LocalBusiness`, `HVACBusiness`, or
+  `Organization`; `scripts/gsc-audit.mjs` intentionally rejects it.
+- Never hardcode a Google review count. Use `reviewCount`, `reviewCountLabel`,
+  and `reviewRatingLabel` from `config/reviews.ts`; follow `WHERE_TO_UPDATE.md`.
+- Only emit HowTo schema when the same ordered steps are visible on the page.
+  A blog title or FAQ question containing “how” is not a HowTo.
+- Every price, warranty, and coverage figure must come from config.
+  `lib/published-prices.ts` is the published-price boundary.
+- Use `config/content-review-dates.ts` for `dateModified`; never generate a fake
+  freshness date with `new Date()`.
+- Preserve genuinely authored EN/MS/ZH content and the 0-pairs->70% duplicate
+  guard. Do not mass-copy an English paragraph into other locales.
+- Keep all real photos' page-specific alt text and do not fabricate video
+  metadata without a real public video asset.
+- Generated audit JSON (`audit/pages.json`, `audit/findings.json`,
+  `audit/gaps.json`) is intentionally ignored. Recreate it from a fresh build.
 
-GEO: entityClarity 99, trustSignals 88, answerFormatting 99,
-     expertSignals 71, citationWorthiness 72, freshness 91
-AEO: faqCoverage 94, directAnswers 98, howTo 23, tables 98,
-     troubleshooting 50, comparison 98, definitions 98
+## Re-audit commands
 
-Duplicate guard: weighted intra-group similarity 20.5%, 0 pairs >70%.
-DO NOT REGRESS THIS.
-
-Per-template similarity (all clean, 0 pairs >70%):
-  kampung|en 22.3     kampung|ms 22.3     kampung|zh 7.9
-  brand-area|en 21.8  brand-area|ms 21.9  brand-area|zh 9.6
-  kampung-installation|en 35.7  (pre-existing warning, see below)
-  area|en 40.4        area|ms 38.9        area|zh 19.3
-
-ALREADY DONE — do not redo
---------------------------
-#62 price/comparison tables · #63 direct answers · #64 expert
-attribution + citations · #67 monthly refresh workflow (owner installed) ·
-#72 definitions + comparison content · #71 content depth for kampung +
-brand-area templates (session 5, PR #79 merged) ·
-#74 near-orphans + MS installation cluster (session 6).
-
-#74 landed as:
-  config/orphan-cross-links.ts     hashed EN/MS/ZH inline money-page
-                                   cross-links (area→brand-area chips,
-                                   kampung→install child, brand→brand-install,
-                                   brand-area↔install, MS/ZH installation
-                                   landings from area pages)
-  components/money-cross-links.tsx inline paragraph renderer — NOT a
-                                   related-links strip
-  Near-orphans 767 → 190. brand-area median inbound 4, brand-installation 9,
-  area-installation 7, kampung-installation 5, installation-landing 17.
-  All 10 MS /ms/pemasangan-aircond-* pages have ≥ 3 inbound.
-  Leftover 190 is mostly blog-post (108) + kampung (26) + a 24+24 install
-  tail on areas with few kampung/brand-area children.
-
-#71 landed as:
-  config/kampung-depth.ts     kampungGamePlan + kampungSignals
-                              (474 pages, +364 EN words, +2 H2)
-  config/brand-area-depth.ts  brandAreaFirstVisitPlan + brandAreaCommonJobs
-                              (360 pages, +316 EN words, +2 H2)
-  Wired into 6 page.tsx files (en/ms/zh × kampung + brand-area).
-
-#72 machinery (extend it, never duplicate it):
-  config/aeo-explainers.ts          24 glossary terms + 18 comparison sets,
-                                    EN/MS/ZH authored separately, plus
-                                    heading variants (anti-boilerplate)
-  lib/aeo-explainer-select.ts       blog posts pick terms from their OWN body
-  lib/blog-explainers.ts            server-side resolution for blog routes
-  components/aeo-explainer-blocks.tsx  DefinitionBlocks / ComparisonBlock /
-                                    PageExplainers (curated preset wrapper)
-
-If you add pages to a template that renders PageExplainers, add a matching
-preset in EXPLAINER_PRESETS — never reuse an unrelated preset.
-
-Pages deliberately left without a glossary block: /book, /contact,
-/privacy-policy, /gallery, /review, /near-me, /about, the three index pages
-and the homepage. A glossary there would be filler.
-
-RESOLVED — review-count copy (#68)
-----------------------------------
-Verified against the Google Business Profile: 88 reviews at 5.0 (2026-08-21).
-`config/reviews.ts` (`googlePlace.totalReviews = 88`) is the single source of
-truth; all 150+ hardcoded "500+" claims now derive from it or from live
-`/api/google-reviews` data. If you add new copy, never hardcode a review
-count — use `reviewCountLabel` / `reviewCount` / `reviewRatingLabel` from
-`config/reviews.ts`, and keep the static files in `public/` in sync (see
-WHERE_TO_UPDATE.md).
-  - Do NOT introduce any NEW review-count claim in copy you write. Use
-    other proof instead — published prices, the 1-month workmanship
-    warranty, 20 brands serviced, 10+ years experience, SSM registration,
-    the real technician team on /about.
-  - Do NOT put any review count or rating into structured data (see below).
-  - If you notice other unverifiable numeric claims while working, list them
-    in your final report for the owner. Do not silently change them.
-
-NEVER BUILD THIS
-----------------
-C3 AggregateRating is WITHDRAWN. Do not add Review or AggregateRating to
-LocalBusiness / HVACBusiness / Organization anywhere. It violates Google's
-self-serving review policy and fails scripts/gsc-audit.mjs section 9a.
-The site currently emits NO aggregateRating — keep it that way.
-
-THIS SESSION — nothing scoped is left; ask the owner what to prioritise
------------------------------------------------------------------------
-All content/SEO/GEO/AEO items from the audit are now done except the two
-deliberately-held ones:
-  #67  monthly title-refresh workflow — owner/maintainer, do not touch.
-  #68  review-count copy — owner-handled, do not touch.
-  #65  HowTo >= 40 — a content project, out of scope for a markup pass.
-  #73 VideoObject half — no video assets exist to mark up honestly.
-
-Completed in recent sessions (PRs pending / merged):
-  #73 body imagery (completion) — 1,103 → 0 zero-image pages. The 5
-      programmatic templates retain 3 real photos each; calculators, indexes
-      and utility pages now have a deterministic primary photo with trilingual
-      alt + ImageObject as well.
-  #75 commercial + IAQ clusters (session 9) — two trilingual hubs, in
-      sitemap/footer, cross-linked from cluster members.
-  #69 SEO cleanup (session 9) — acronym title casing, thin pages 7→0,
-      descriptions without CTA 956→89.
-
-#65 HowTo — leave alone. Only add HowTo schema where visible, numbered,
-ordered process content already exists. Do NOT mark up blog titles or FAQ
-"How do I..." headings. Reaching howTo >= 40 is a content project, not a
-markup pass.
-
-QUALITY / HARD RULES
---------------------
-- Unique content. Similarity must stay ≤ 20.5% weighted, with 0 pairs >70%.
-- MS/ZH genuinely authored. Extend uniqueness configs; never bypass checks.
-- Never use new Date() for dateModified — use config/content-review-dates.ts,
-  and bump the collection date by hand when you genuinely revise copy.
-- EN/MS/ZH templates are NOT string-identical. Grep the real MS/ZH anchor
-  before any 3-file patch.
-- Kampung FAQs use k.faqs / k.faqsBM / k.faqsZH.
-- ZH questions need the full-width ？ or they do not count as direct answers.
-  ZH definition headings need 是什么 or 定义 — "什么是X？" does NOT match.
-- A visible question repeated on 20+ pages costs Content points (the FAQ
-  duplication check). Vary headings.
-- Reveal is a <div>; H2 + <p> as siblings still count as a direct answer. Do
-  not insert chrome between the heading and the answer paragraph.
-- Every price / warranty / coverage figure comes from config.
-  lib/published-prices.ts throws if a pricing row is missing — use it.
-- Prefer `||` over `??` for config fallbacks (empty string is not nullish).
-- npm run typecheck only. Never npx tsc / npx tsx.
-- If binaries vanish: npm install.
-- git checkout -- public/gallery-items.json before every commit.
-- Live site is reachable; the local static build is still authoritative.
-
-CI BEFORE EVERY COMMIT
-----------------------
-npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc
-
-RE-MEASURE BEFORE FINAL
------------------------
-npm run build && node audit/extract.mjs
+```bash
+npm run build
+node audit/extract.mjs
 node --max-old-space-size=6144 audit/analyze.mjs
 node --max-old-space-size=4096 audit/gaps.mjs
-
-Pre-existing warnings you will see (do not treat as regressions):
-  ⚠ kampung-install EN: 158 pages average 81.8% identical text
-    — pre-existing on the kampung-installation template. Untouched by
-      recent sessions. Fixing it means extending
-      config/kampung-installation-content.ts with real per-place variance,
-      not a template restructure.
-
-END OF SESSION
---------------
-Report: done vs left, exact score movement, duplicate similarity and pairs
->70%, and any GitHub issue close failures.
-
-The GitHub App cannot close issues (403 "Resource not accessible by
-integration") — if issues need closing, say so and ask the owner. Issues
-that still need manual closing from prior sessions:
-  #62, #63, #64, #71, #72, #74, #75, #69, and #73 (image half done
-  session 8 — close #73 if the VideoObject half is out of scope, else
-  keep it open for video)
-
-Human-only note: #68 (review-count copy) is deliberately owner-handled and
-must not be edited by an agent.
 ```
 
----
-
-## Coverage check — every audit finding is filed
-
-| Audit finding | Status | Issue / PR |
-|---|---|---|
-| C1 — 360 brand-area pages, zero inbound links | ✅ Fixed | PR #70 |
-| C2 — 638 month-stamped titles | ⚠️ Maintainer | [#67](https://github.com/klrenovator/KLRenovator/issues/67) |
-| C3 — Review/AggregateRating schema | ❌ **Withdrawn** | see [#68](https://github.com/klrenovator/KLRenovator/issues/68) |
-| C4 — 267 blog posts, FAQs without schema | ✅ Fixed | PR #70 |
-| C5 — 1,782 pages, no price table | ✅ Fixed (tables 98) | [#62](https://github.com/klrenovator/KLRenovator/issues/62) — PR #77, needs manual close |
-| C6 — 922 pages, no direct answers | ✅ Fixed (DA 98) | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — needs manual close |
-| C7 — freshness | ✅ Fixed | PR #70 |
-| C7b — expert attribution + citations | ✅ Fixed (71 / 72) | [#64](https://github.com/klrenovator/KLRenovator/issues/64) — PR #77, needs manual close |
-| C8 — og:image | ✅ Fixed (2,170/2,172) | PR #70 |
-| C8b — 1,103 pages no body imagery, 0 VideoObject | ✅ Images complete (0 left); VideoObject still 0 (no assets) | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — body-imagery acceptance criteria complete; keep open only if video production remains in scope |
-| C9a — HowTo schema | 🔸 Subset (howTo 23, honest ceiling) | [#65](https://github.com/klrenovator/KLRenovator/issues/65) |
-| C9b — definitions / comparison | ✅ Fixed (98 / 98) | [#72](https://github.com/klrenovator/KLRenovator/issues/72) — needs manual close |
-| C10 — jargon H2 + task ID leak | ✅ Fixed | PR #70 |
-| C10b — 834 skeleton pages | ✅ Fixed | [#71](https://github.com/klrenovator/KLRenovator/issues/71) — PR #79, needs manual close |
-| Orphans 443 → 23 | ✅ Fixed | PR #70 |
-| 767 near-orphans + MS pages cut off | ✅ Fixed (190 left) | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — this session, needs manual close |
-| Cluster hubs | 🔲 Open | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
-| Commercial + IAQ clusters | ✅ Done (session 9) | [#75](https://github.com/klrenovator/KLRenovator/issues/75) — needs manual close |
-| Title clashes, thin pages, description CTAs | ✅ Done (session 9) | [#69](https://github.com/klrenovator/KLRenovator/issues/69) — needs manual close |
-| "500+ reviews" vs 9 review objects | ✅ Fixed (88 reviews @ 5.0) | [#68](https://github.com/klrenovator/KLRenovator/issues/68) |
+A future session should only open new work for a newly observed regression,
+measured search-performance opportunity, or newly supplied real asset. There is
+no unfinished Audit Part 2 implementation item to resume.

@@ -13,33 +13,63 @@
 
 ## 0. Remediation status
 
-Fixes applied after the audit, on this branch (see `git log`).
-All verified against a fresh production build; `typecheck`, `lint`, `verify:build`
-and `audit:gsc` pass.
+Fixes applied after the audit are recorded below. All results are verified from
+rendered production-build HTML rather than inferred from source files.
+
+### Final closeout — 2026-08-22
+
+**Audit Part 2 is complete.** Every implementation issue filed from this audit
+(#62–#69 and #71–#75) is closed, all acceptance thresholds are met, and there
+are no open GitHub issues. The final batches added the three trilingual topic hubs (#66),
+raised honest HowTo coverage above its target (#65), installed the monthly title
+refresh workflow (#67), corrected the verified Google review count (#68), and
+finished body-image coverage (#73).
+
+The original C3 recommendation remains **withdrawn**: do not add self-serving
+`Review` or `AggregateRating` markup to `LocalBusiness`, `HVACBusiness`, or
+`Organization`. Video markup is also intentionally absent because the repository
+contains no real video asset to describe; fabricating `VideoObject` data is not a
+valid remediation.
+
+Final fresh verification over **2,184 audited pages**:
+
+- Content **99**, GEO **88**, AEO **84** — original targets 98 / 86 / 78 met.
+- HowTo **46** (target ≥40), direct answers **98**, tables/comparison/definitions
+  **98**, internal linking **100**, FAQ quality **86**.
+- 0 thin pages, 0 duplicate titles/descriptions, 0 true orphans, 0 money pages
+  without a table, 0 pages without a body image, and 0 image-alt gaps.
+- Weighted intra-template similarity **20.2%** with **0 pairs >70%**.
+- `typecheck`, `lint`, `build`, `verify:build`, `verify:routes`, and `audit:gsc`
+  pass; GSC reports no indexing-blocking errors.
+
+Sections 1–9 preserve the **original 2026-08-19 audit snapshot** for historical
+comparison. Where an intermediate session note below says “open”, this final
+closeout and the updated status tables in §0 are authoritative.
 
 ### Score movement
 
 | Score | At audit | Now | Δ |
 |---|---|---|---|
-| Content | 94 | **98** | +4 |
+| Content | 94 | **99** | +5 |
 | GEO | 53 | **88** | +35 |
-| AEO | 38 | **81** | +43 |
+| AEO | 38 | **84** | +46 |
 
 | Component | At audit | Now |
 |---|---|---|
-| Internal linking | 59 | **98** |
+| Internal linking | 59 | **100** |
+| FAQ quality (Content) | 79 | **86** |
 | FAQ coverage (AEO) | 86 | **94** |
 | Freshness (GEO) | 22 | **91** |
 | Citation-worthiness (GEO) | 5 | **72** |
 | Answer formatting (GEO) | 51 | **99** |
 | Direct answers (AEO) | 40 | **98** |
-| HowTo (AEO) | 4 | **23** |
-| Expert signals (GEO) | 12 | **70** |
+| HowTo (AEO) | 4 | **46** |
+| Expert signals (GEO) | 12 | **71** |
 | Tables (AEO) | 11 | **98** |
 | Comparison (AEO) | 16 | **98** |
 | Definitions (AEO) | 12 | **98** |
 
-**Latest verification (2026-08-20, session 4):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run audit:gsc` passed. Fresh extract/analyze over 2,169 pages reports Content **98**, GEO **88**, AEO **81**. Duplicate-content guard still clean: weighted intra-group similarity **22.4%**, **0 pairs >70%**.
+**Latest verification (2026-08-22):** `npm run typecheck && npm run lint && npm run build && npm run verify:build && npm run verify:routes && npm run audit:gsc` passed. Fresh extract/analyze over 2,184 pages reports Content **99**, GEO **88**, AEO **84**. Duplicate-content guard is clean: weighted intra-group similarity **20.2%**, **0 pairs >70%**.
 
 **Session 9 (2026-08-21) — issues #75 (commercial + IAQ clusters) and #69 (SEO cleanup):**
 
@@ -177,11 +207,11 @@ held at Content **98**, GEO **88**, AEO **81**. `typecheck`/`lint`/`build`/
 
 | # | Finding | Result |
 |---|---|---|
-| **C5 / #62** | No price/comparison table on commercial pages | **Fixed** — shared EN/MS/ZH commercial proof blocks now render real `<table>` price comparisons on area, kampung, brand, brand-area, area-installation, kampung-installation and brand-installation templates. Prices come from `lib/published-prices.ts` / `config/site/pricing.ts` only. AEO tables **11 → 88**; money pages without a table **1,782 → 114**. |
-| **C7b / #64** | No author/expert attribution + external citations | **Fixed** — reviewed-by blocks now cite the real KL Renovator technicians already present on `/about` (Muhammad, Shahzaib, Mudassar, Hamzah), link to `/about`, show hand-maintained review dates, and rotate relevant TNB / Energy Commission / SIRIM / DOSH references instead of identical bulk outbound links. GEO expertSignals **12 → 70**; citationWorthiness **18 → 72**. |
+| **C5 / #62** | No price/comparison table on commercial pages | **Fixed** — shared EN/MS/ZH commercial proof blocks render real `<table>` price comparisons on area, kampung, brand, brand-area, area-installation, kampung-installation and brand-installation templates. Prices come from `lib/published-prices.ts` / `config/site/pricing.ts` only. Final audit: tables **98** and **0 / 1,786** money pages without a table. |
+| **C7b / #64** | No author/expert attribution + external citations | **Fixed** — reviewed-by blocks cite the real KL Renovator technicians already present on `/about` (Muhammad, Shahzaib, Mudassar, Hamzah), link to `/about`, show hand-maintained review dates, and rotate relevant TNB / Energy Commission / SIRIM / DOSH references instead of identical bulk outbound links. Final GEO expertSignals **71**; citationWorthiness **72**. |
 | **C9b / #72** | Definition + comparison content missing | **Fixed** — after the commercial templates (PR #77), the editorial side now carries the same treatment: `config/aeo-explainers.ts` holds 24 hand-authored glossary answers and 18 comparison tables, each written separately in EN/MS/ZH with alternate heading phrasings so no definition publishes an identical H3 site-wide. Blog posts select terms from their **own body text** (`lib/aeo-explainer-select.ts`) and only show a comparison when both sides are discussed; problem, service, calculator and installation-landing pages use curated per-page presets. Coverage: definitions **1,781 → 2,126 / 2,169**, comparison **1,978 → 2,118**, tables **1,902 → 2,118**. AEO definitions **82 → 98**, comparison **91 → 98**, tables **88 → 98**, direct answers **91 → 98**; overall AEO **76 → 81**. The only pages left without a block are utility pages (`/book`, `/contact`, `/privacy-policy`, `/gallery`), the three index pages and the homepage — none of which should carry a glossary. |
 | **C1** | 360 brand-area pages orphaned | **Fixed** — `brand-area-combo-links.ts` now links to `/brands/{brand}/{area}`. Verified 360 unique brand-area URLs receive internal links (was 0). Only prerendered pairs are linked, so no 404s. |
-| **C4** | 267 blog posts showed FAQs without schema | **Partly fixed** — new `lib/blog-derived-faq.ts` extracts each post's own question headings + answers. EN posts with FAQPage 12 → 67; site-wide 1,862 → **2,028**. The 34 EN posts with no question headings correctly still emit none. |
+| **C4** | 267 blog posts showed FAQs without schema | **Fixed honestly** — `lib/blog-derived-faq.ts` extracts each post's own question headings + answers and uses the same entries for the visible Reader FAQ and `FAQPage`. Posts with no unique authored/derived Q&A now omit both surfaces instead of repeating the old generic booking/price/warranty trio. Final result: **0 visible blog FAQ/schema parity gaps** without publishing duplicate FAQ spam. |
 | **C7** | 1,824 pages with no freshness signal | **Largely fixed** — `config/content-review-dates.ts` + WebPage nodes on area/kampung/brand-area templates. Pages with `dateModified` 339 → **1,293**. |
 | **C8** | 971 pages missing `og:image` | **Fixed** — `lib/og-image-pool.ts` deterministically maps pages onto 22 real job photos (all verified on disk). A second pass cleared the remaining logo-only pages (installation content configs, 47 static routes, `brands/[slug]` fallback) and fixed a `??`-vs-`||` bug that suppressed the tag on the 25 areas whose config carries `heroImage: ""`. **og:image now present on 2,170 / 2,172 built pages** — the only exceptions are `_not-found` and `_global-error`. |
 | **C10** | "Uniqueness Matrix" jargon + `20D.33` task ID visible on 474 pages | **Fixed** — now "Aircond Service in {Name} — What to Expect" (+ MS/ZH). Zero pages leak the task ID. |
@@ -201,36 +231,37 @@ Adding `aggregateRating` would:
 - **fail this repo's own CI** — `scripts/gsc-audit.mjs` §9a already treats
   `aggregateRating` on those types as a build-breaking error.
 
-The correct channel for star ratings is the Google Business Profile, which
-already carries the 5.0/500+ rating and surfaces it in the local pack and Maps
-without any on-site markup. The GEO concern behind C3 (AI engines can't verify
-the quality claim) remains valid and is better served by the freshness and
-expert-attribution work in C7.
+The correct channel for star ratings is the Google Business Profile, verified at
+**5.0 from 88 reviews on 2026-08-21**, which surfaces in the local pack and Maps
+without ineligible on-site rating markup. The GEO concern behind C3 is instead
+served by accurate visible GBP links, freshness, expert attribution, and
+citations.
 
-### Requires a maintainer — not fixable from this session
+### Resolved maintainer items
 
-| # | Item | Issue | Blocker |
+| # | Item | Issue | Resolution |
 |---|---|---|---|
-| **C2** | 638 month-stamped titles go stale without a monthly rebuild | [#67](https://github.com/klrenovator/KLRenovator/issues/67) | Workflow file written to **`docs/monthly-refresh.workflow.yml`** with setup notes in **`docs/MONTHLY-TITLE-REFRESH.md`**. It could not be committed to `.github/workflows/` — the GitHub App lacks the `workflows` permission. A maintainer must copy it in and add the `VERCEL_DEPLOY_HOOK_URL` secret. A lower-maintenance alternative (year-only stamps) is documented. |
-| — | "5.0 from 500+ Google reviews" repeated 150× but `config/reviews.ts` holds 9 review objects | [#68](https://github.com/klrenovator/KLRenovator/issues/68) | The real review count can only be confirmed against the live Google Business Profile, which is unreachable from the build sandbox. Editing 150 marketing claims downward on a guess would be worse than leaving them. Needs someone with GBP access. |
+| **C2** | 638 month-stamped titles need a monthly rebuild | [#67](https://github.com/klrenovator/KLRenovator/issues/67) | **Resolved** — `.github/workflows/monthly-refresh.yml` is installed; manual workflow runs completed successfully on 2026-08-20. Setup/maintenance notes remain in `docs/MONTHLY-TITLE-REFRESH.md`. |
+| — | Inaccurate hardcoded “500+ Google reviews” copy | [#68](https://github.com/klrenovator/KLRenovator/issues/68) | **Resolved** — GBP verified at 88 reviews / 5.0 on 2026-08-21. `config/reviews.ts` is the single source of truth, site copy derives from its helpers, and keyless official Google review links are live. |
 
-### Still open — needs content authoring
+### Follow-up content issues — all resolved
 
-These are genuine content work, not markup, and are too large to complete safely in one session. All are tracked as GitHub issues:
+These items were filed after the initial audit and completed in subsequent
+sessions. Their issues are closed:
 
 | # | Item | Pages | Issue |
 |---|---|---|---|
 | **C6** | Zero direct-answer blocks (kampung, brand-area, problem) | 922 | [#63](https://github.com/klrenovator/KLRenovator/issues/63) — **done this session**: AEO `directAnswers` 40 → **81**. All 60 problem pages and all 834 kampung + brand-area pages now have ≥ 3 question-heading + 15–120 word answers, rewritten from existing unique copy (not place-name boilerplate). Intra-group similarity held at **19.9%**, 0 pairs >70%. |
-| **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) — **subset this session, not closable**: HowTo schema 47 → **113**, pattern 163 → **774**, AEO `howTo` 4 → **17**. All 60 problem pages + EN/MS/ZH installation-KL and whole-house landings now emit HowTo JSON-LD that matches visible numbered steps. Hitting the issue's `howTo ≥ 40` bar needs HowTo schema **and** a how-to heading on ~40% of 2,169 pages. That cannot be honest markup of the remaining pages that already have steps (most leftover pattern hits are blog titles / FAQ “How do I…” headings without an ordered process). Left open. |
+| **C9a** | HowTo schema missing where step content exists | 137 | [#65](https://github.com/klrenovator/KLRenovator/issues/65) — **fixed to the honest-content ceiling**: 947 pages now emit HowTo schema mapped directly from visible ordered steps; AEO `howTo` **4 → 46**, exceeding the ≥40 acceptance target. Regex-only matches such as blog titles and FAQ questions remain correctly unmarked. |
 | **C10** | kampung + brand-area are 2-H2, ~580-word skeletons | 834 | [#71](https://github.com/klrenovator/KLRenovator/issues/71) — **done session 5**: two new authored H2 pillars per template, per-place variants selected by profile × slug hash. Word count EN 974 → 1,338 (kampung) and 962 → 1,278 (brand-area); H2 depth 6 → 8 (kampung) and 5 → 7 (brand-area). MS/ZH authored separately. Duplicate guard improved — weighted 22.4 → 20.8, 0 pairs >70% held. |
 | **C8b** | No content imagery in body (og:image is done) + zero VideoObject | 1,103 | [#73](https://github.com/klrenovator/KLRenovator/issues/73) — **body imagery complete**: 1,103 → **0** zero-image pages. Kampung / brand-area / area / brand / problem retain 3 real job photos each; tools, indexes and utility routes now receive a deterministic responsive primary photo. All 157 owned photos are represented in the build; page-specific trilingual alt and `ImageObject` coverage remain intact. VideoObject still 0 — no video assets exist to mark up honestly. |
-| — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 3 new | [#66](https://github.com/klrenovator/KLRenovator/issues/66) |
-| — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — **done session 6**: near-orphans 767 → **190**; all 10 MS installation landings ≥ 3 inbound; brand-area / brand-installation off the near-orphan list. Weighted similarity 20.8 → 20.5, 0 pairs >70%. Needs manual close. |
-| — | Near-empty commercial + IAQ clusters | 6 new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) — **done session 9**: commercial B2B service hub + IAQ hub, trilingual, in sitemap/footer, cross-linked from cluster members. Needs manual close. |
-| — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) — **done session 9**: acronym title casing fixed, thin pages 7→0, descriptions without CTA 956→89 (<200 target met). Needs manual close. |
+| — | Topic-cluster hubs (`/pricing`, `/troubleshooting`, `/maintenance`) | 9 routes | [#66](https://github.com/klrenovator/KLRenovator/issues/66) — **done**: all three hubs ship in EN/MS/ZH with two-way cluster links, tables, FAQs/schema, and sitemap/navigation coverage. |
+| — | 767 near-orphans + MS installation pages cut off | 767 | [#74](https://github.com/klrenovator/KLRenovator/issues/74) — **done**: all 10 MS installation landings have ≥3 inbound; brand-area / brand-installation are off the near-orphan list. Final state: **0 true orphans** and **166 near-orphans**, down from 767 and below the <200 acceptance threshold. |
+| — | Near-empty commercial + IAQ clusters | 6 new | [#75](https://github.com/klrenovator/KLRenovator/issues/75) — **done**: commercial B2B service hub + IAQ hub, trilingual, in sitemap/footer, cross-linked from cluster members. |
+| — | 13 title clashes, 7 thin pages, 943 descriptions without CTA | — | [#69](https://github.com/klrenovator/KLRenovator/issues/69) — **done**: acronym title casing fixed, thin pages 7→0, descriptions without CTA 956→89 (<200 target met). |
 
-**Every open finding in this document is now tracked as a GitHub issue.** Nothing is
-left unfiled. A ready-to-paste continuation prompt lives in `docs/NEXT-SESSION-PROMPT.md`.
+**Nothing is left unfiled or open.** `docs/NEXT-SESSION-PROMPT.md` is now an
+audit closeout/maintenance handoff rather than a remediation queue.
 
 ---
 
