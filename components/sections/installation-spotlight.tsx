@@ -131,14 +131,27 @@ export function InstallationSpotlight({ locale = "en" }: { locale?: Locale }) {
                 <span className="text-right">{t.from}</span>
               </div>
               {t.rows.map((row) => (
-                <div key={`${row.type}-${row.hp}`} className="grid grid-cols-[1.4fr_1fr_auto] gap-3 border-b border-slate-50 px-4 py-2.5 text-sm last:border-0">
+                <div key={`${row.type}-${row.hp}`} className="grid grid-cols-[1.4fr_1fr_auto] gap-3 border-b border-slate-50 px-4 py-2.5 text-sm last:border-0 hover:bg-slate-50/50 transition-colors">
                   <span className="font-semibold text-slate-900">{row.type}</span>
-                  <span className="text-slate-500">{row.hp}</span>
+                  <span className="text-slate-600">{row.hp}</span>
                   <span className="text-right font-black text-sky-600">{row.price}</span>
                 </div>
               ))}
             </div>
-            <p className="mt-2 text-[11px] leading-relaxed text-slate-500">{t.extra}</p>
+            {/* Extra pipe cost – now prominent amber badge, not tiny 11px */}
+            <div className="mt-3 flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2.5">
+              <span className="mt-0.5 text-amber-600 text-xs" aria-hidden="true">⚠️</span>
+              <div>
+                <p className="text-[11px] font-black uppercase tracking-widest text-amber-800">Important – Extra Pipe</p>
+                <p className="mt-1 text-xs leading-relaxed text-amber-900 font-medium">{t.extra}</p>
+              </div>
+            </div>
+            {/* Quick estimator link */}
+            <div className="mt-3">
+              <NextLink href="/aircond-installation-cost-calculator" className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:text-sky-800 underline">
+                🔧 Calculate exact total with pipe run →
+              </NextLink>
+            </div>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <NextLink href="/installation" className="inline-flex flex-1 items-center justify-center gap-2 bg-slate-900 px-6 py-4 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-slate-800 active:scale-[0.97]">
@@ -152,7 +165,7 @@ export function InstallationSpotlight({ locale = "en" }: { locale?: Locale }) {
 
           <div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200">
-              <Image src="/hero/york-aircond-chemical-wash-puchong-37.webp" alt="Professional aircond chemical wash by KL Renovator in Puchong Selangor" fill sizes="(max-width: 1024px) 100vw, 600px" loading="lazy" decoding="async" quality={74} className="object-cover" />
+              <Image src="/hero/york-aircond-chemical-wash-puchong-37.webp" alt="Professional aircond chemical wash by KL Renovator in Puchong Selangor" fill sizes="(max-width: 1024px) 100vw, 600px" loading="lazy" decoding="async" quality={70} className="object-cover" />
             </div>
 
             <div className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-5">

@@ -506,9 +506,31 @@ export function BookingForm({
     );
   }
 
+  const currentStep = !selectedDate ? 1 : !selectedSlot ? 2 : !name || !phone || !address ? 3 : 4;
+
   return (
     <form onSubmit={handleSubmit} className="mx-auto w-full max-w-lg space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">{isAdmin ? t.adminTitle : t.title}</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-2">{isAdmin ? t.adminTitle : t.title}</h2>
+      
+      {/* Stepper – visual progress, improves perceived speed & reduces friction */}
+      <div className="mb-6 flex items-center justify-between gap-2" aria-label="Booking progress">
+        {[
+          { n: 1, label: lang === "ms" ? "Servis" : lang === "zh" ? "服务" : "Service" },
+          { n: 2, label: lang === "ms" ? "Jadual" : lang === "zh" ? "时间" : "Schedule" },
+          { n: 3, label: lang === "ms" ? "Maklumat" : lang === "zh" ? "信息" : "Details" },
+          { n: 4, label: lang === "ms" ? "Sah" : lang === "zh" ? "确认" : "Confirm" },
+        ].map((s, idx) => (
+          <div key={s.n} className="flex flex-1 items-center gap-2">
+            <div className={`grid h-7 w-7 place-items-center rounded-full text-xs font-black border-2 transition-colors ${
+              currentStep >= s.n ? "bg-sky-600 border-sky-600 text-white" : "bg-white border-slate-200 text-slate-400"
+            }`}>
+              {s.n}
+            </div>
+            <span className={`text-[11px] font-bold uppercase tracking-wider ${currentStep >= s.n ? "text-slate-900" : "text-slate-400"}`}>{s.label}</span>
+            {idx < 3 && <div className={`ml-2 h-0.5 flex-1 ${currentStep > s.n ? "bg-sky-600" : "bg-slate-200"}`} />}
+          </div>
+        ))}
+      </div>
       
       <div>
         <label htmlFor="booking-name" className="block text-sm font-semibold text-slate-700">{t.name}</label>
@@ -546,11 +568,18 @@ export function BookingForm({
           required
           autoComplete="street-address"
           rows={2}
+          list="booking-areas"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           placeholder={t.addressPh}
         />
+        <datalist id="booking-areas">
+          {sitePublic.areas.map((a) => (
+            <option key={a} value={a} />
+          ))}
+        </datalist>
+        <p className="mt-1 text-[11px] text-slate-500">Start typing area – e.g. Subang Jaya, Puchong, Mont Kiara</p>
       </div>
 
       {/* Honeypot — visually hidden, never focusable. Bots fill it, humans don't. */}

@@ -37,11 +37,14 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   overflow-x: clip;
-  font-size: 15px;
+  font-size: 16px; /* increased from 15px for MY readability – audit Part 3 */
 }
 
 @media (min-width: 640px) {
   html { font-size: 16px; }
+}
+@media (min-width: 1024px) {
+  html { font-size: 17px; /* slightly larger on desktop for premium readability */ }
 }
 
 body {

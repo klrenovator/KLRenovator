@@ -16,10 +16,15 @@ export const ContactForm = () => {
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
-  const handle = (e: React.FormEvent) => {
+  const handle = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
+    setError("");
+    setSuccess(false);
+
     const msg = [
       "Hi KL Renovator 👋",
       "",
@@ -35,11 +40,37 @@ export const ContactForm = () => {
       "",
       "Please share price and available time. Thank you!",
     ].join("\n");
+
     trackQuoteSubmit("contact_form", { service: form.service, area: form.area, units: form.units });
-    // window.open does NOT get the implicit noopener that anchor target=_blank
-    // links get, so pass it explicitly (audit item P2-10).
-    window.open(waLink(msg), "_blank", "noopener,noreferrer");
-    setTimeout(() => setSubmitting(false), 1000);
+
+    // 1. Try to persist lead server-side first (prevents loss if WhatsApp blocked)
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          area: form.area,
+          service: form.service,
+          units: form.units,
+          hp: form.hp,
+          message: form.message,
+        }),
+      });
+      // Don't block on failure – continue to WhatsApp
+    } catch {
+      // Silently continue – WhatsApp is primary
+    }
+
+    // 2. Open WhatsApp – keep original green #22c55e button color
+    try {
+      window.open(waLink(msg), "_blank", "noopener,noreferrer");
+      setSuccess(true);
+    } catch {
+      setError("Could not open WhatsApp. Please try again or call us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputCls =
@@ -164,26 +195,39 @@ export const ContactForm = () => {
         />
       </div>
 
-      {/* Extreme Visual CTR Pure Green WhatsApp Direct Dispatch Button */}
+      {/* Status */}
+      {error && (
+        <div role="alert" className="rounded-xl bg-red-50 border border-red-200 p-3 text-sm text-red-800">
+          {error}
+        </div>
+      )}
+      {success && (
+        <div role="status" className="rounded-xl bg-emerald-50 border border-emerald-200 p-3 text-sm text-emerald-800">
+          ✅ Lead saved! WhatsApp should have opened. If not, please{" "}
+          <a href={waLink(`Hi KL Renovator, I just submitted contact form: ${form.name} in ${form.area} needs ${form.service}`)} target="_blank" rel="noopener noreferrer" className="font-bold underline">click here</a>.
+        </div>
+      )}
+
+      {/* Extreme Visual CTR Pure Green WhatsApp Direct Dispatch Button – keep original #22c55e */}
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-5 py-4 text-sm font-black uppercase tracking-wider text-white rounded-xl disabled:opacity-60 transition-all active:scale-[0.98] shadow-lg shadow-green-500/20"
+        className="inline-flex w-full items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] px-5 py-4 text-sm font-black uppercase tracking-wider text-white rounded-xl disabled:opacity-60 transition-all active:scale-[0.98] shadow-lg shadow-green-500/20 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
       >
-        <FaWhatsapp className="h-5 w-5 animate-pulse" />
+        <FaWhatsapp className="h-5 w-5 animate-pulse" aria-hidden="true" />
         {submitting ? "Opening WhatsApp..." : "Send via WhatsApp"}
       </button>
 
-      <div className="relative flex py-2 items-center">
+      <div className="relative flex py-2 items-center" aria-hidden="true">
         <div className="flex-grow border-t border-slate-100"></div>
-        <span className="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-500">OR</span>
+        <span className="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-600">OR</span>
         <div className="flex-grow border-t border-slate-100"></div>
       </div>
 
-      <p className="text-center text-xs text-slate-500 font-medium">
+      <p className="text-center text-xs text-slate-600 font-medium">
         Prefer calling? Speak with us directly —{" "}
         <a
-          className="font-black text-[#0284c7] hover:text-[#0369a1] underline transition-all"
+          className="font-black text-[#0284c7] hover:text-[#0369a1] underline transition-all focus:outline-none focus:ring-2 focus:ring-sky-500 rounded"
           href={`tel:${sitePublic.phone}`}
         >
           {sitePublic.phoneDisplay}
