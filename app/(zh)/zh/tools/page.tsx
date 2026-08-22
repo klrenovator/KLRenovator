@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { ToolsHub } from "@/components/calculators/tools-hub";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 const PAGE_URL = "https://www.klrenovator.com/zh/tools";
 
@@ -37,5 +38,13 @@ export const metadata: Metadata = {
 };
 
 export default function ZhToolsPage() {
-  return <ToolsHub lang="zh" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "免费工具", url: "https://www.klrenovator.com/zh/tools" },
+      ]} />
+      <ToolsHub lang="zh" />
+    </>
+  );
 }

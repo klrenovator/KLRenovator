@@ -17,6 +17,8 @@ const FOOTER_LINKS = {
     bookWa: "Book Via WhatsApp",
     bookOnline: "Book a Slot Online",
     privacyPolicy: "Privacy Policy",
+    terms: "Terms of Service",
+    registered: "Registered Business",
     navServices: "Services",
     navBlog: "Blog",
     navGallery: "Gallery",
@@ -32,6 +34,8 @@ const FOOTER_LINKS = {
     bookWa: "Tempah Via WhatsApp",
     bookOnline: "Tempah Slot Dalam Talian",
     privacyPolicy: "Dasar Privasi",
+    terms: "Terma Perkhidmatan",
+    registered: "Perniagaan Berdaftar",
     navServices: "Perkhidmatan",
     navBlog: "Blog",
     navGallery: "Galeri",
@@ -47,6 +51,8 @@ const FOOTER_LINKS = {
     bookWa: "通过 WhatsApp 预约",
     bookOnline: "在线预约时段",
     privacyPolicy: "隐私政策",
+    terms: "服务条款",
+    registered: "注册企业",
     navServices: "服务",
     navBlog: "博客",
     navGallery: "图库",
@@ -183,8 +189,9 @@ export const Footer = () => {
           <ul className="space-y-3 text-xs">
             <li><a href={`tel:${sitePublic.phone}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium"><span className="text-sky-500" aria-hidden="true">📞</span>{sitePublic.phoneDisplay}</a></li>
             <li><a href={`mailto:${sitePublic.email}`} className="flex items-center gap-2.5 hover:text-sky-600 transition-colors font-medium break-all"><span className="text-sky-500" aria-hidden="true">✉️</span>{sitePublic.email}</a></li>
-            <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">📍</span><span className="font-medium">KL &amp; Selangor (Klang Valley)</span></li>
+            <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">📍</span><div><p className="font-medium">KL &amp; Selangor (Klang Valley)</p><p className="mt-0.5 text-slate-500 leading-snug">{sitePublic.address}</p></div></li>
             <li className="flex items-start gap-2.5"><span className="text-sky-500 mt-0.5" aria-hidden="true">🕘</span><div><p className="text-slate-700 font-bold">{t("footer_hours")}</p><p className="mt-0.5 text-slate-600">Emergency bookings accepted</p></div></li>
+            <li className="flex items-start gap-2.5 border-t border-slate-100 pt-3"><span className="text-sky-500 mt-0.5" aria-hidden="true">✅</span><div><p className="text-slate-700 font-bold">{fl.registered}</p><p className="mt-0.5 text-slate-600 leading-snug">{sitePublic.parentCompany} · SSM {sitePublic.ssmFull}</p></div></li>
           </ul>
           <a href={waLink(rfqMsg)} target="_blank" rel="nofollow noopener noreferrer" style={{ backgroundColor: "#25D366" }} className="inline-flex items-center gap-2 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-opacity hover:opacity-85 mt-2 rounded-xl"><span aria-hidden="true">💬</span> {fl.bookWa}</a>
         </div>
@@ -202,6 +209,7 @@ export const Footer = () => {
             <NextLink href={localizedPath("/faq")} className="hover:text-sky-600 transition-colors font-medium">{fl.navFaq}</NextLink>
             <NextLink href={localizedPath("/contact")} className="hover:text-sky-600 transition-colors font-medium">{fl.navContact}</NextLink>
             <NextLink href={localizedPath("/privacy-policy")} className="hover:text-sky-600 transition-colors font-medium">{fl.privacyPolicy}</NextLink>
+            <NextLink href={localizedPath("/terms-of-service")} className="hover:text-sky-600 transition-colors font-medium">{fl.terms}</NextLink>
           </nav>
         </div>
       </div>

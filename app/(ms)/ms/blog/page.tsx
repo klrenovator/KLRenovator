@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { getBlogPostSummaries } from "@/app/(en)/blog/get-blog-summaries";
 import BlogIndexClient from "@/app/(en)/blog/blog-index-client";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Tips & Panduan Pakar Aircond | KL Renovator Blog"),
@@ -30,5 +31,13 @@ export const metadata: Metadata = {
 
 export default function BlogPageMS() {
   const posts = getBlogPostSummaries();
-  return <BlogIndexClient posts={posts} initialLang="ms" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Blog", url: "https://www.klrenovator.com/ms/blog" },
+      ]} />
+      <BlogIndexClient posts={posts} initialLang="ms" />
+    </>
+  );
 }

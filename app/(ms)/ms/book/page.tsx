@@ -4,6 +4,7 @@ import { BookingForm } from "@/components/booking-form";
 import { BookingSupportInfo } from "@/components/booking-support-info";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Tempah Temujanji Servis Aircond | KL Renovator",
@@ -29,6 +30,10 @@ export const metadata: Metadata = {
 export default function BookPageMS() {
   return (
     <div className="container mx-auto px-4 py-12 lg:py-24">
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Tempah Slot", url: "https://www.klrenovator.com/ms/book" },
+      ]} />
       <div className="mb-8 text-center">
         <h1 className="mb-4 text-4xl font-black text-slate-900 md:text-5xl">
           Jadualkan Servis Anda

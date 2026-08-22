@@ -4,13 +4,14 @@ import { clampMetaDescription, padMetaDescription } from "@/lib/seo-description-
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AreasClient } from "@/app/(en)/areas/areas-client";
 import { AreasCoverageIntro } from "@/components/areas-coverage-intro";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气服务区域 KL & Selangor | KL Renovator"),
-  description: padMetaDescription("KL Renovator 服务吉隆坡和雪兰莪39个区域 — 八打灵再也、蕉赖、莎阿南、梳邦、安邦、蒲种等。当天服务。"),
+  description: padMetaDescription("KL Renovator 服务吉隆坡和雪兰莪40个区域 — 八打灵再也、蕉赖、莎阿南、梳邦、安邦、蒲种等。当天服务。"),
   openGraph: {
     title: clampMetaTitle("冷气服务区域 KL & Selangor | KL Renovator"),
-    description: clampMetaDescription("吉隆坡和雪兰莪所有区域的专业冷气服务。当天可用。覆盖38个区域。"),
+    description: clampMetaDescription("吉隆坡和雪兰莪所有区域的专业冷气服务。当天可用。覆盖40个区域。"),
     url: "https://www.klrenovator.com/zh/areas",
     type: "website",
     locale: "zh_MY",
@@ -36,6 +37,10 @@ export const metadata: Metadata = {
 export default function AreasPageZH() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "服务地区", url: "https://www.klrenovator.com/zh/areas" },
+      ]} />
       <AreasClient forcedLang="zh" />
       <AreasCoverageIntro locale="zh" />
     </>

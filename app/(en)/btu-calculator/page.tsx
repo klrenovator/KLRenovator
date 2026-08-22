@@ -6,6 +6,7 @@ import { BtuCalculator } from "@/components/btu-calculator";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Size Calculator Malaysia | BTU Calculator"),
@@ -32,6 +33,10 @@ export const metadata: Metadata = {
 export default function BtuCalculatorPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.klrenovator.com/" },
+        { name: "BTU Calculator", url: "https://www.klrenovator.com/btu-calculator" },
+      ]} />
       <BtuCalculator lang="en" />
       <section className="border-t border-slate-100 bg-white py-12">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

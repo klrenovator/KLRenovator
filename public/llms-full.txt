@@ -168,9 +168,9 @@ Bahasa Malaysia: https://www.klrenovator.com/ms/brands/[brand-slug]
 Mandarin: https://www.klrenovator.com/zh/brands/[brand-slug]
 Examples: https://www.klrenovator.com/brands/daikin | https://www.klrenovator.com/brands/panasonic
 
-## SERVICE AREAS — 39 MAIN AREAS + 116 NAMED NEIGHBOURHOODS/KAMPUNGS
+## SERVICE AREAS — 40 MAIN AREAS + 162 NAMED NEIGHBOURHOODS/KAMPUNGS
 
-KL Renovator covers two tiers of location pages: 39 main area pages, and 116
+KL Renovator covers two tiers of location pages: 40 main area pages, and 162
 dedicated neighbourhood/kampung pages nested under the relevant main area
 (e.g. https://www.klrenovator.com/areas/cheras/taman-connaught). Each
 neighbourhood page has genuinely distinct content reflecting its real housing
@@ -191,7 +191,7 @@ area's text with the name swapped in.
 - Setapak — https://www.klrenovator.com/areas/setapak
   Neighbourhoods: Danau Kota, Taman Ibu Kota, Genting Klang, Kampung Padang Balang
 - Sentul — https://www.klrenovator.com/areas/sentul
-  Neighbourhoods: Sentul Timur, Sentul Barat, Bandar Baru Sentul, Kampung Baru Sentul
+  Neighbourhoods: Sentul Timur, Sentul Barat, Bandar Baru Sentul, Kampung Baru Sentul, Jalan Ipoh
 - Kepong — https://www.klrenovator.com/areas/kepong
   Neighbourhoods: Bandar Menjalara, Metro Prima, Jinjang Utara, Jinjang Selatan, Taman Kepong, Kepong Baru
 - Sri Petaling — https://www.klrenovator.com/areas/sri-petaling
@@ -204,6 +204,7 @@ area's text with the name swapped in.
   Neighbourhoods: Wangsa Maju (Section 1–10), Sri Rampai, Setiawangsa, Kampung Warisan
 - Kuala Lumpur City Centre — https://www.klrenovator.com/areas/kuala-lumpur-city-centre
   Neighbourhoods: Jalan Ampang, Kampung Attap, Chow Kit, Pudu
+- Old Klang Road (Jalan Klang Lama) — https://www.klrenovator.com/areas/kuala-lumpur/old-klang-road
 
 ### KUALA LUMPUR / SELANGOR BORDER
 
@@ -212,7 +213,7 @@ area's text with the name swapped in.
 - Ampang — https://www.klrenovator.com/areas/ampang
   Neighbourhoods: Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Dagang, Kampung Baru Ampang, Lembah Jaya
 - Damansara — https://www.klrenovator.com/areas/damansara
-  Neighbourhoods: Damansara Utama (SS21), Damansara Jaya, Mutiara Damansara, Damansara Perdana, Kota Damansara
+  Neighbourhoods: Damansara Utama (SS21), Damansara Jaya, Mutiara Damansara, Damansara Perdana, Kota Damansara, Taman Tun Dr Ismail (TTDI), Damansara Heights (Bukit Damansara)
 
 ### SELANGOR
 

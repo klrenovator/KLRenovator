@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import NearMeClient from "./near-me-client";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Near Me — KL & Selangor | KL Renovator"),
@@ -36,5 +37,13 @@ export const metadata: Metadata = {
 };
 
 export default function NearMePage() {
-  return <NearMeClient initialLang="en" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.klrenovator.com/" },
+        { name: "Aircond Service Near Me", url: "https://www.klrenovator.com/near-me" },
+      ]} />
+      <NearMeClient initialLang="en" />
+    </>
+  );
 }

@@ -76,6 +76,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.30, alternates: buildTrilingual({ en: "/privacy-policy", ms: "/ms/privacy-policy", zh: "/zh/privacy-policy" }) },
     { url: `${BASE}/ms/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.25, alternates: buildTrilingual({ en: "/privacy-policy", ms: "/ms/privacy-policy", zh: "/zh/privacy-policy" }) },
     { url: `${BASE}/zh/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.25, alternates: buildTrilingual({ en: "/privacy-policy", ms: "/ms/privacy-policy", zh: "/zh/privacy-policy" }) },
+    // Part 4 legal-gap fix: Terms of Service (EN/MS/ZH)
+    { url: `${BASE}/terms-of-service`, lastModified: now, changeFrequency: "yearly", priority: 0.30, alternates: buildTrilingual({ en: "/terms-of-service", ms: "/ms/terms-of-service", zh: "/zh/terms-of-service" }) },
+    { url: `${BASE}/ms/terms-of-service`, lastModified: now, changeFrequency: "yearly", priority: 0.25, alternates: buildTrilingual({ en: "/terms-of-service", ms: "/ms/terms-of-service", zh: "/zh/terms-of-service" }) },
+    { url: `${BASE}/zh/terms-of-service`, lastModified: now, changeFrequency: "yearly", priority: 0.25, alternates: buildTrilingual({ en: "/terms-of-service", ms: "/ms/terms-of-service", zh: "/zh/terms-of-service" }) },
     { url: `${BASE}/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.96, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
     { url: `${BASE}/ms/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.95, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },
     { url: `${BASE}/zh/cuci-aircond-kl`, lastModified: now, changeFrequency: "weekly", priority: 0.90, alternates: buildTrilingual({ en: "/cuci-aircond-kl", ms: "/ms/cuci-aircond-kl", zh: "/zh/cuci-aircond-kl" }) },

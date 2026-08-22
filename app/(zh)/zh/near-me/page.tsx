@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import NearMeClient from "@/app/(en)/near-me/near-me-client";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("附近冷气服务 — 吉隆坡及雪兰莪 | KL Renovator"),
@@ -43,5 +44,13 @@ export const metadata: Metadata = {
 };
 
 export default function NearMePageZH() {
-  return <NearMeClient initialLang="zh" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "附近冷气服务", url: "https://www.klrenovator.com/zh/near-me" },
+      ]} />
+      <NearMeClient initialLang="zh" />
+    </>
+  );
 }

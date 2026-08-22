@@ -6,6 +6,7 @@ import { BtuCalculator } from "@/components/btu-calculator";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Kalkulator Saiz Aircond Malaysia | Kira HP Bilik"),
@@ -31,6 +32,10 @@ export const metadata: Metadata = {
 export default function BtuCalculatorPageMS() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Kalkulator BTU", url: "https://www.klrenovator.com/ms/btu-calculator" },
+      ]} />
       <BtuCalculator lang="ms" />
       <section className="border-t border-slate-100 bg-white py-12">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

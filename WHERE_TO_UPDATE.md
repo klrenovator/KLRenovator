@@ -79,6 +79,25 @@ File: `config/site.ts`
 - `phone`, `phoneDisplay`, `whatsapp`, `email`, `address`, `hours`
 - `links.googleMaps`, `links.whatsapp`, socials
 
+⚠️ **NAP single source of truth (Part 4 audit):** `address*` fields here feed the
+sitewide LocalBusiness/Organization schema, the installation service schema
+(`lib/seo.ts`), the About page, the footer and `config/site-public.ts`. Never
+hardcode the address in a page component — derive it from `siteConfig`. After
+changing it, run `npm run gen:site-public` and update the GBP + social
+profiles to match (NAP must be identical everywhere).
+
+## ⚖️ Legal pages
+- EN `/privacy-policy`, `/terms-of-service` · MS `/ms/privacy-policy`,
+  `/ms/terms-of-service` · ZH `/zh/privacy-policy`, `/zh/terms-of-service`
+- Terms content mirrors rules stated on the site (payment after completion,
+  1-month workmanship warranty, on-site extra quotes). If business policy
+  changes, update all 3 language versions together and bump `LAST_UPDATED`.
+
+## 💳 Payment copy
+Standard line everywhere: "Cash · Bank Transfer · DuitNow · E-Wallet — paid
+after completion, no upfront payment" (schema `paymentAccepted`, contact page
+trust block, Terms §4, master FAQ pool). Keep these in sync if methods change.
+
 ## ❓ FAQs
 File: `app/faq/page.tsx` — edit the `FAQS` object (separate `en`, `ms`, `zh` arrays).
 Note: FAQ schema/snippets shown on other pages (services, areas, brands, problems)

@@ -5,6 +5,7 @@ import NextLink from "next/link";
 import { siteConfig } from "@/config/site";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 const LAST_UPDATED = "06 Ogos 2026";
 
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="border-b border-slate-100 py-7 last:border-0">
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Dasar Privasi", url: "https://www.klrenovator.com/ms/privacy-policy" },
+      ]} />
       <h2 className="mb-3 text-lg font-black text-slate-900">{title}</h2>
       <div className="space-y-3 text-sm leading-relaxed text-slate-700">{children}</div>
     </section>

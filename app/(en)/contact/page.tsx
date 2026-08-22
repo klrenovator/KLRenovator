@@ -59,31 +59,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const contactPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Contact KL Renovator",
-  url: "https://www.klrenovator.com/contact",
-  description: padMetaDescription("Contact KL Renovator for professional aircond services in Kuala Lumpur and Selangor. WhatsApp for fastest response."),
-  mainEntity: {
-    "@type": "HVACBusiness",
-    "@id": "https://www.klrenovator.com/#business",
-    name: "KL Renovator",
-    telephone: "+60182983573",
-    email: "info@klrenovator.com",
-    url: "https://www.klrenovator.com",
-    openingHours: "Mo-Su 09:00-18:00",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Jalan Kiara, Mont Kiara",
-      addressLocality: "Batu Caves",
-      postalCode: "68100",
-      addressRegion: "Selangor",
-      addressCountry: "MY",
-    },
-  },
-};
-
 const SERVICES_QUICK = [
   "Pressure Chemical Wash",
   "Chemical Overhaul",
@@ -337,10 +312,30 @@ export default function ContactPage() {
                       <p className="font-black text-slate-950 text-sm mb-1">KL &amp; Selangor (Klang Valley)</p>
                       <p className="text-xs text-slate-600 leading-snug">{siteConfig.address}</p>
                     </div>
-                  </div>
                 </div>
 
-                {/* Services List */}
+                {/* Business identity & payment confidence (Part 4 trust fix) */}
+                <div className="mt-px grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200">
+                  <div className="bg-white p-5">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <FiCheck className="h-3.5 w-3.5 text-sky-500" />
+                      <p className="text-[11px] text-slate-500 font-black uppercase tracking-wider">Registered Business</p>
+                    </div>
+                    <p className="text-sm font-black text-slate-950">{siteConfig.parentCompany}</p>
+                    <p className="text-xs text-slate-600 mt-0.5">SSM {siteConfig.ssmFull}</p>
+                  </div>
+                  <div className="bg-white p-5">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <FiCheck className="h-3.5 w-3.5 text-sky-500" />
+                      <p className="text-[11px] text-slate-500 font-black uppercase tracking-wider">Payment Methods</p>
+                    </div>
+                    <p className="text-sm font-black text-slate-950">Cash · Bank Transfer · DuitNow · E-Wallet</p>
+                    <p className="text-xs text-slate-600 mt-0.5">Pay only after the job is done &amp; verified — no upfront payment.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Services List */}
                 <div className="mt-8 bg-slate-50 border border-slate-200 p-6">
                   <p className="text-xs font-black uppercase tracking-widest text-slate-700 mb-4">
                     Services We Cover

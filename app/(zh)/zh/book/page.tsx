@@ -4,6 +4,7 @@ import { BookingForm } from "@/components/booking-form";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 import { BookingSupportInfo } from "@/components/booking-support-info";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "在线预约冷气服务 | KL Renovator",
@@ -29,6 +30,10 @@ export const metadata: Metadata = {
 export default function BookPageZH() {
   return (
     <div className="container mx-auto px-4 py-12 lg:py-24">
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "在线预约", url: "https://www.klrenovator.com/zh/book" },
+      ]} />
       <div className="mb-8 text-center">
         <h1 className="mb-4 text-4xl font-black text-slate-900 md:text-5xl">
           预约您的冷气服务

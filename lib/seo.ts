@@ -254,13 +254,17 @@ export function buildInstallationServiceSchema(): Record<string, unknown> {
       name: "KL Renovator",
       telephone: "+60182983573",
       url: "https://www.klrenovator.com/",
+      // Part 4 NAP fix: reference the single source of truth (config/site/core.ts)
+      // instead of a hardcoded second address. The previous hardcoded
+      // "A-22-09 Magnaville Selayang" block conflicted with the sitewide
+      // LocalBusiness address and the Google Business Profile listing.
       address: {
         "@type": "PostalAddress",
-        streetAddress: "A-22-09 Magnaville Selayang",
-        postalCode: "68100",
-        addressLocality: "Batu Caves",
-        addressRegion: "Selangor",
-        addressCountry: "MY",
+        streetAddress: siteConfig.addressStreet,
+        postalCode: siteConfig.addressPostal,
+        addressLocality: siteConfig.addressCity,
+        addressRegion: siteConfig.addressState,
+        addressCountry: siteConfig.addressCountry,
       },
       areaServed: [
         { "@type": "State", name: "Kuala Lumpur" },
