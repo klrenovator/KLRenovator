@@ -262,6 +262,9 @@ export function BookingForm({
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
   const [selectedSlot, setSelectedSlot] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingSlots, setLoadingSlots] = useState(false);
+  const [slotsError, setSlotsError] = useState("");
+  const [formError, setFormError] = useState("");
   const [success, setSuccess] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
   const [fetchedOnce, setFetchedOnce] = useState(false);
@@ -320,6 +323,9 @@ export function BookingForm({
     if (!selectedDate) return;
 
     const controller = new AbortController();
+    setLoadingSlots(true);
+    setSlotsError("");
+    setAvailableSlots([]);
 
     (async () => {
       try {
@@ -327,20 +333,43 @@ export function BookingForm({
           `/api/bookings/availability?date=${selectedDate}&duration=${apiDurationMinutes}`,
           { signal: controller.signal },
         );
+        if (!res.ok) throw new Error("Failed to load slots");
         const data = await res.json();
         setAvailableSlots(data.availableSlots ?? []);
         setFetchedOnce(true);
       } catch (error) {
-        if ((error as Error)?.name !== "AbortError") console.error(error);
+        if ((error as Error)?.name !== "AbortError") {
+          console.error(error);
+          setSlotsError(
+            lang === "ms"
+              ? "Gagal memuatkan slot masa. Sila cuba lagi."
+              : lang === "zh"
+                ? "加载时间段失败，请重试。"
+                : "Failed to load time slots. Please try again."
+          );
+          setFetchedOnce(true);
+        }
+      } finally {
+        setLoadingSlots(false);
       }
     })();
 
     return () => controller.abort();
-  }, [selectedDate, apiDurationMinutes]);
+  }, [selectedDate, apiDurationMinutes, lang]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedSlot) return alert("Please select a time slot");
+    setFormError("");
+    if (!selectedSlot) {
+      setFormError(
+        lang === "ms"
+          ? "Sila pilih slot masa"
+          : lang === "zh"
+            ? "请选择时间段"
+            : "Please select a time slot"
+      );
+      return;
+    }
 
     setLoading(true);
     try {
@@ -431,11 +460,17 @@ export function BookingForm({
           setGeneratedLink(`https://wa.me/${sitePublic.whatsapp}?text=${encodeURIComponent(pubMsg)}`);
         }
       } else {
-        alert(data.error || "Failed to book");
+        setFormError(data.error || (lang === "ms" ? "Gagal menempah" : lang === "zh" ? "预约失败" : "Failed to book"));
       }
     } catch (error) {
       console.error(error);
-      alert("An error occurred");
+      setFormError(
+        lang === "ms"
+          ? "Ralat berlaku. Sila cuba lagi."
+          : lang === "zh"
+            ? "发生错误，请重试。"
+            : "An error occurred. Please try again."
+      );
     }
     setLoading(false);
   };
@@ -797,40 +832,66 @@ export function BookingForm({
         />
       </div>
 
-      {selectedDate && fetchedOnce && (
+      {selectedDate && (
         <div>
           <p id="avail-times-label" className="block text-sm font-semibold text-slate-700 mb-2">{t.availTimes}</p>
-          <div role="group" aria-labelledby="avail-times-label">
-          {availableSlots.length > 0 ? (
-            <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
-              {availableSlots.map((slot) => {
-                const timeStr = new Date(slot).toLocaleTimeString("en-US", {
-                  hour: "numeric",
-                  minute: "2-digit",
-                  hour12: true,
-                  timeZone: "Asia/Kuala_Lumpur",
-                });
-                return (
-                  <button
-                    key={slot}
-                    type="button"
-                    onClick={() => setSelectedSlot(slot)}
-                    className={`rounded-lg px-2 py-2 text-sm font-semibold transition ${
-                      selectedSlot === slot
-                        ? "bg-sky-600 text-white shadow-md"
-                        : "bg-sky-50 text-sky-800 hover:bg-sky-100 border border-sky-100"
-                    }`}
-                  >
-                    {timeStr}
-                  </button>
-                );
-              })}
-            </div>
-          ) : (
-            <div className="rounded-lg bg-red-50 p-3 border border-red-100 text-red-800 text-sm">
-              {t.noSlots}
-            </div>
-          )}
+          <div role="group" aria-labelledby="avail-times-label" aria-busy={loadingSlots}>
+            {loadingSlots ? (
+              <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2" aria-live="polite">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i} className="h-9 rounded-lg bg-slate-100 animate-pulse border border-slate-200" />
+                ))}
+              </div>
+            ) : slotsError ? (
+              <div className="rounded-lg bg-red-50 p-3 border border-red-200 text-red-800 text-sm flex items-center justify-between gap-3">
+                <span>{slotsError}</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setFetchedOnce(false);
+                    setSelectedDate(selectedDate);
+                  }}
+                  className="shrink-0 text-xs font-bold underline hover:no-underline"
+                >
+                  {lang === "ms" ? "Cuba lagi" : lang === "zh" ? "重试" : "Retry"}
+                </button>
+              </div>
+            ) : fetchedOnce ? (
+              availableSlots.length > 0 ? (
+                <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
+                  {availableSlots.map((slot) => {
+                    const timeStr = new Date(slot).toLocaleTimeString("en-US", {
+                      hour: "numeric",
+                      minute: "2-digit",
+                      hour12: true,
+                      timeZone: "Asia/Kuala_Lumpur",
+                    });
+                    return (
+                      <button
+                        key={slot}
+                        type="button"
+                        onClick={() => {
+                          setSelectedSlot(slot);
+                          setFormError("");
+                        }}
+                        aria-pressed={selectedSlot === slot}
+                        className={`rounded-lg px-2 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-1 ${
+                          selectedSlot === slot
+                            ? "bg-sky-600 text-white shadow-md"
+                            : "bg-sky-50 text-sky-800 hover:bg-sky-100 border border-sky-100"
+                        }`}
+                      >
+                        {timeStr}
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="rounded-lg bg-amber-50 p-3 border border-amber-200 text-amber-900 text-sm">
+                  {t.noSlots}
+                </div>
+              )
+            ) : null}
           </div>
         </div>
       )}
@@ -860,7 +921,15 @@ export function BookingForm({
       <div role="status" aria-live="polite" className="sr-only">
         {loading ? t.processing : ""}
         {success ? t.successTitle : ""}
+        {formError ? formError : ""}
       </div>
+
+      {formError && (
+        <div role="alert" className="rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-800 flex items-start gap-2">
+          <span className="mt-0.5">⚠️</span>
+          <span>{formError}</span>
+        </div>
+      )}
 
       <button
         type="submit"

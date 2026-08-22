@@ -334,7 +334,7 @@ export default function SiteRootLayout({
             are never missed while the lazy widget bundle is still loading. */}
         <ConversionTracking />
         <Providers initialLang={locale}>
-          <div className="relative flex min-h-screen flex-col pb-16 lg:pb-0">
+          <div className="relative flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pb-0">
             <Navbar />
             <main id="main-content" className="flex-1">{children}</main>
             <Footer />

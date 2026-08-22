@@ -53,6 +53,7 @@ export const GoogleReviews = ({ locale }: { locale?: Lang } = {}) => {
   // HTML (~45 KB of duplicate cards on every homepage). The duplicate set
   // is now appended client-side after mount — SSR ships one set only.
   const [mounted, setMounted] = useState(false);
+  const [paused, setPaused] = useState(false);
   const { lang: ctxLang, t: ctxT } = useLang();
   const lang: Lang = locale ?? ctxLang;
   const t = (key: keyof typeof translations["en"]): string =>
@@ -119,10 +120,22 @@ export const GoogleReviews = ({ locale }: { locale?: Lang } = {}) => {
           WebkitMaskImage: "linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%)",
         }}
       >
-        <div className="kl-marquee flex w-max gap-5 px-6 py-4 group-hover:[animation-play-state:paused]">
+        <div
+          className={`kl-marquee flex w-max gap-5 px-6 py-4 ${paused ? "[animation-play-state:paused]" : "group-hover:[animation-play-state:paused]"}`}
+        >
           {looped.map((r, i) => (
             <ReviewCard key={`${r.author}-${i}`} r={r} />
           ))}
+        </div>
+        <div className="mt-4 flex justify-center">
+          <button
+            onClick={() => setPaused(!paused)}
+            aria-label={paused ? "Play reviews" : "Pause reviews"}
+            aria-pressed={paused}
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:border-slate-300 hover:text-slate-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+          >
+            {paused ? "▶ Play" : "⏸ Pause"} Reviews
+          </button>
         </div>
       </div>
 
