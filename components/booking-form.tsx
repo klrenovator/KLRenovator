@@ -223,6 +223,7 @@ export function BookingForm({
   const { lang: ctxLang } = useLang();
   const lang = forcedLang ?? ctxLang;
   const t = FORM_TXT[lang as keyof typeof FORM_TXT] || FORM_TXT.en;
+  const privacyHref = lang === "en" ? "/privacy-policy" : `/${lang}/privacy-policy`;
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -849,7 +850,7 @@ export function BookingForm({
         />
         <label htmlFor="booking-consent" className="leading-snug">
           {t.consentLabel}{" "}
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline hover:text-sky-800 font-semibold">
+          <a href={privacyHref} target="_blank" rel="noopener noreferrer" className="text-sky-600 underline hover:text-sky-800 font-semibold">
             {t.privacyLink}
           </a>
         </label>

@@ -5,9 +5,10 @@
  * match the service being viewed — installation photos on the installation
  * page, chemical wash photos on the chemical wash page, and so on.
  *
- * Rules kept in sync with `docs/IMAGE-USAGE-MAP.md`:
- *  - Photos listed here are NOT reused on another page (the gallery catalogue
- *    and blog posts are the only shared consumers).
+ * Rules:
+ *  - Use only real, company-owned photos registered in
+ *    `config/gallery-items.ts` and present under `/public/hero`.
+ *  - Photos listed here are not reused by another dedicated service gallery.
  *  - Each photo carries its own trilingual title + alt text so the same grid
  *    can be rendered on the EN, MS and ZH routes without duplicate alt text.
  *
