@@ -34,6 +34,8 @@ const out = {
   whatsapp: c.whatsapp,
   whatsappLink: c.whatsappLink,
   email: c.email,
+  address: c.address,
+  parentCompany: c.parentCompany,
   hours: c.hours,
   reviewCount: c.reviewCount,
   reviewRating: c.reviewRating,

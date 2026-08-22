@@ -142,6 +142,18 @@ export function FloatingBookingButton() {
         className="group relative flex items-center justify-center rounded-full bg-slate-900 text-white font-bold text-[13px] sm:text-[14px] px-5 py-3 sm:px-6 sm:py-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.25)] border border-slate-700/80 hover:bg-slate-800 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all touch-manipulation"
         aria-label={TEXT[lang as keyof typeof TEXT] || TEXT.en}
       >
+        {/* Orbit ring — decorative ring that rotates smoothly around the
+            pill, continuously (owner request). Skipped entirely for
+            prefers-reduced-motion users; the CSS class also self-disables. */}
+        {!prefersReducedMotion && (
+          <span className="pointer-events-none absolute inset-0 grid place-items-center" aria-hidden="true">
+            <span
+              className="klr-orbit-ring block aspect-square rounded-full border-2 border-dashed border-sky-400/80"
+              style={{ height: "calc(100% + 16px)" }}
+            />
+          </span>
+        )}
+
         {/* Pulse glow – disabled for reduced-motion users */}
         {!prefersReducedMotion && (
           <span

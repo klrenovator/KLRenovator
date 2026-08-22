@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("常见问答 | 冷气服务 吉隆坡及雪兰莪 — KL Renovator"),
@@ -42,5 +43,13 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPageZH() {
-  return <FaqPageI18n lang="zh" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "常见问答", url: "https://www.klrenovator.com/zh/faq" },
+      ]} />
+      <FaqPageI18n lang="zh" />
+    </>
+  );
 }

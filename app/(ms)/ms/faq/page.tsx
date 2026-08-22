@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { FaqPageI18n } from "@/components/faq-page-i18n";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Soalan Lazim | Servis Aircond KL & Selangor — KL Renovator"),
@@ -42,5 +43,13 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPageMS() {
-  return <FaqPageI18n lang="ms" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Soalan Lazim", url: "https://www.klrenovator.com/ms/faq" },
+      ]} />
+      <FaqPageI18n lang="ms" />
+    </>
+  );
 }

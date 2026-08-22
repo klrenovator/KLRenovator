@@ -8,11 +8,11 @@ import { AreasCoverageIntro } from "@/components/areas-coverage-intro";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
   description:
-    padMetaDescription("KL Renovator services 39 areas across Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & more. Same-day service."),
+    padMetaDescription("KL Renovator services 40 areas across Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & more. Same-day service."),
   openGraph: {
     title: clampMetaTitle("Aircond Service Areas — KL & Selangor | KL Renovator"),
     description:
-      "Professional aircond servicing across all KL & Selangor areas. Same-day available. 38 areas covered.",
+      "Professional aircond servicing across all KL & Selangor areas. Same-day available. 40 areas covered.",
     url: "https://www.klrenovator.com/areas",
     type: "website",
     locale: "en_MY",
@@ -33,7 +33,7 @@ const areaHubSchema = {
   "@id": "https://www.klrenovator.com/areas#page",
   name: "Aircond Service Areas — KL & Selangor",
   description:
-    padMetaDescription("KL Renovator provides professional aircond servicing across all areas of Kuala Lumpur and Selangor. View all 38 service areas."),
+    padMetaDescription("KL Renovator provides professional aircond servicing across all areas of Kuala Lumpur and Selangor. View all 40 service areas."),
   url: "https://www.klrenovator.com/areas",
   provider: {
     "@type": "HVACBusiness",

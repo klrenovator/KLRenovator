@@ -15,6 +15,7 @@ import { anchor } from "@/config/anchor-text-diversity";
 import { BookingButton } from "@/components/booking-button";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 import { reviewCountLabel } from "@/config/reviews";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Aircond Brands We Install & Service — KL & Selangor",
@@ -36,6 +37,10 @@ export const metadata: Metadata = {
 export default function BrandsIndex() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.klrenovator.com/" },
+        { name: "Brands", url: "https://www.klrenovator.com/brands" },
+      ]} />
       {/* Hero / USP Header */}
       <div className="bg-slate-950 text-white py-20">
         <div className="max-w-5xl mx-auto px-4 text-center">

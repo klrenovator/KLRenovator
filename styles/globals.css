@@ -97,6 +97,23 @@ body {
   .kl-marquee { animation: none; }
 }
 
+/* ── Floating booking button — smooth continuous orbit ring ── */
+/* Owner request: the "Check Live Slots & Book" pill keeps a ring that
+   rotates smoothly around it at all times. The pill text itself never
+   rotates (readability + WCAG 2.2.2 — it is decorative and paused under
+   prefers-reduced-motion). */
+@keyframes klr-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.klr-orbit-ring {
+  animation: klr-orbit 8s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .klr-orbit-ring { animation: none; }
+}
+
 /* ── Scrollbar ────────────────────────────────────────────── */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

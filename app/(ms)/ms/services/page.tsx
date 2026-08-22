@@ -15,6 +15,7 @@ import { ServiceIcon } from "@/components/service-icon";
 import { title, eyebrow } from "@/components/primitives";
 import { sitePublic } from "@/config/site-public";
 import { waLink, rfqMsg } from "@/lib/whatsapp";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 function StaticPriceTable({
   serviceTitle,
@@ -31,6 +32,10 @@ function StaticPriceTable({
 }) {
   return (
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Perkhidmatan", url: "https://www.klrenovator.com/ms/services" },
+      ]} />
       <div className="w-full flex items-center justify-between px-6 py-5 bg-slate-50">
         <div>
           <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-1">

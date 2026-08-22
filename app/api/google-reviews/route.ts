@@ -14,6 +14,13 @@ import { rateLimit, clientIp } from "@/lib/rate-limit";
  *
  * Without these, the endpoint returns 204 so the homepage
  * falls back to curated reviews in `config/reviews.ts`.
+ *
+ * NOTE — OWNER REPLIES: the Places API does NOT return business owner
+ * replies (only author_name, rating, text, relative_time_description,
+ * profile_photo_url). When live mode is enabled it REPLACES the curated
+ * list, so pasted `ownerReply` fields in config/reviews.ts will not show
+ * for the live items. Keep the site keyless (recommended) to display
+ * curated reviews WITH owner replies.
  */
 
 export const dynamic = "force-dynamic";

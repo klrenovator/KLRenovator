@@ -1,0 +1,91 @@
+{
+  "totalPages": 2214,
+  "noH1": [
+    "/admin/bookings"
+  ],
+  "multiH1": [],
+  "dupH1": [],
+  "emptyButtons": [],
+  "placeholderHits": [],
+  "domLarge": [],
+  "noIndexCount": 5,
+  "noIndexSample": [
+    "/_not-found",
+    "/admin/bookings",
+    "/ms/review",
+    "/review",
+    "/zh/review"
+  ],
+  "noBreadcrumbCount": 6,
+  "noBreadcrumbSample": [
+    "/_global-error",
+    "/_not-found",
+    "/admin/bookings",
+    "/ms/review",
+    "/review",
+    "/zh/review"
+  ],
+  "addressVariants": {
+    "\"streetAddress\":\"Jalan Kiara, Mont Kiara\"": [
+      "/1.5hp-aircond-installation-kl",
+      "/1hp-aircond-installation-kl",
+      "/2hp-aircond-installation-kl",
+      "/about",
+      "/admin/bookings",
+      "/aircond-electricity-cost-calculator"
+    ]
+  },
+  "phoneVariants": {
+    "\"telephone\":\"+60182983573\"": 6986
+  },
+  "foundingDates": [
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/1.5hp-aircond-installation-kl"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/1hp-aircond-installation-kl"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/2hp-aircond-installation-kl"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/about"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/about"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/admin/bookings"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/aircond-electricity-cost-calculator"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/aircond-gas-topup-cost-calculator"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/aircond-installation-cost-calculator"
+    },
+    {
+      "f": "\"foundingDate\":\"2014\"",
+      "url": "/aircond-installation-kl"
+    }
+  ],
+  "ratingClaimsSample": [],
+  "brokenLinks": [],
+  "orphanCount": 3,
+  "orphans": [
+    "/_global-error",
+    "/_not-found",
+    "/admin/bookings"
+  ]
+}

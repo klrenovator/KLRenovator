@@ -3,6 +3,7 @@ import { padMetaDescription } from "@/lib/seo-description-optimizer";
 import { clampMetaTitle } from "@/lib/seo-title-optimizer";
 import { getBlogPostSummaries } from "@/app/(en)/blog/get-blog-summaries";
 import BlogIndexClient from "@/app/(en)/blog/blog-index-client";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气小贴士及专家指南 | KL Renovator Blog"),
@@ -30,5 +31,13 @@ export const metadata: Metadata = {
 
 export default function BlogPageZH() {
   const posts = getBlogPostSummaries();
-  return <BlogIndexClient posts={posts} initialLang="zh" />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "博客", url: "https://www.klrenovator.com/zh/blog" },
+      ]} />
+      <BlogIndexClient posts={posts} initialLang="zh" />
+    </>
+  );
 }

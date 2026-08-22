@@ -14,6 +14,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 import { reviewCountLabel } from "@/config/reviews";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const dynamic = "force-static";
 
@@ -79,6 +80,10 @@ export default function Page() {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "吉隆坡冷气清洗", url: "https://www.klrenovator.com/zh/cuci-aircond-kl" },
+      ]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(serviceSchema)}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(faqSchema)}}/>
       <div className="bg-slate-50 border-b border-slate-200">

@@ -1,10 +1,9 @@
 "use client";
 
-import { FiArrowUpRight, FiEdit3 } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 import { GoogleGIcon, GoogleIconSprites, GoogleStars } from "@/components/google-brand-icons";
 import { googlePlace } from "@/config/reviews";
-import { sitePublic } from "@/config/site-public";
 import {
   reviewCountLabelFor,
   reviewRatingLabelFor,
@@ -40,7 +39,6 @@ const COPY: Record<
     outOfFive: string;
     blurb: string;
     read: string;
-    write: string;
     note: string;
   }
 > = {
@@ -51,8 +49,7 @@ const COPY: Record<
     blurb:
       "Verified reviews from real KL & Selangor customers, published on our Google Business Profile.",
     read: "Read our reviews on Google",
-    write: "Write a review",
-    note: "Opens Google — a free Google account is all you need. Takes about 60 seconds.",
+    note: "Opens Google Maps in a new tab — every review is from a verified KL & Selangor customer.",
   },
   ms: {
     badge: "Ulasan Google",
@@ -61,8 +58,7 @@ const COPY: Record<
     blurb:
       "Ulasan disahkan daripada pelanggan sebenar di KL & Selangor, diterbitkan di Profil Perniagaan Google kami.",
     read: "Baca ulasan kami di Google",
-    write: "Tulis ulasan",
-    note: "Membuka Google — anda hanya perlukan akaun Google percuma. Ambil masa kira-kira 60 saat.",
+    note: "Membuka Google Maps dalam tab baharu — setiap ulasan daripada pelanggan tersahkan KL & Selangor.",
   },
   zh: {
     badge: "谷歌评价",
@@ -70,8 +66,7 @@ const COPY: Record<
     outOfFive: "满分 5 分",
     blurb: "来自吉隆坡与雪兰莪真实客户的已验证评价，发布于我们的 Google 商家资料。",
     read: "在 Google 上查看评价",
-    write: "撰写评价",
-    note: "将打开 Google — 只需一个免费的 Google 账号，大约 60 秒即可完成。",
+    note: "在新标签页打开 Google 地图 — 每条评价均来自已验证的吉隆坡与雪兰莪客户。",
   },
 };
 
@@ -125,26 +120,19 @@ export function GoogleReviewWidget({
 
       <p className="mt-4 text-sm font-medium leading-relaxed text-slate-600">{d.blurb}</p>
 
-      {/* Actions — both are plain links to Google. No API, no key. */}
-      <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
+      {/* Actions — plain link to Google. The former "Write a review" CTA was
+          removed at the owner's request (worried about bad-faith reviews);
+          reading reviews stays. No API, no key. */}
+      <div className="mt-5">
         <a
           href={googlePlace.reviewsUrl}
           target="_blank"
           rel="nofollow noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 border-2 border-[#4285F4] bg-white px-4 py-3 text-xs font-black uppercase tracking-widest text-slate-700 transition-all hover:bg-slate-50"
+          className="inline-flex w-full items-center justify-center gap-2 border-2 border-[#4285F4] bg-white px-4 py-3 text-xs font-black uppercase tracking-widest text-slate-700 transition-all hover:bg-slate-50"
         >
           <GoogleGIcon className="h-4 w-4 shrink-0" />
           <span className="text-center">{d.read}</span>
           <FiArrowUpRight className="h-4 w-4 shrink-0 text-[#4285F4]" />
-        </a>
-        <a
-          href={sitePublic.links.googleBusiness}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 border-2 border-slate-900 bg-slate-900 px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-slate-800"
-        >
-          <FiEdit3 className="h-4 w-4 shrink-0" />
-          <span className="text-center">{d.write}</span>
         </a>
       </div>
 

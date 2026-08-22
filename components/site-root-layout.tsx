@@ -139,7 +139,7 @@ export default function SiteRootLayout({
               email: siteConfig.email,
               priceRange: "RM88 - RM2000",
               currenciesAccepted: "MYR",
-              paymentAccepted: "Cash, Bank Transfer, DuitNow",
+              paymentAccepted: "Cash, Bank Transfer, DuitNow, E-Wallet",
               image: "https://www.klrenovator.com/logo/image.png",
               logo: "https://www.klrenovator.com/logo/image.png",
               description: siteConfig.metaDescription,
@@ -273,15 +273,10 @@ export default function SiteRootLayout({
               publisher: {
                 "@id": "https://www.klrenovator.com/#organization",
               },
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate:
-                    "https://www.klrenovator.com/services/{search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
+              // Part 4 schema fix: the previous SearchAction block advertised a
+              // sitelinks search box targeting /services/{search_term_string},
+              // but the site has no search endpoint — those URLs 404. Removed
+              // until a real search results page exists.
             }),
           }}
         />

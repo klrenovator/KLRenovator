@@ -11,7 +11,10 @@ File: `styles/globals.css`
 We cannot auto-scrape reviews from `maps.app.goo.gl` short-links, so you
 have two options:
 
-**OPTION A — live reviews (recommended):**
+**OPTION A — live reviews:** not recommended if you want owner replies to
+show. Google's Places API never returns owner replies, and live mode
+replaces the curated list (see the note in `app/api/google-reviews/route.ts`).
+To enable anyway:
 1. Enable the Places API in Google Cloud
 2. Create `.env.local` with:
    ```
@@ -20,9 +23,25 @@ have two options:
    ```
 3. Restart `npm run dev` — homepage will fetch live reviews every hour
 
-**OPTION B — manual (paste reviews in):**
+**OPTION B — manual (recommended):**
 File: `config/reviews.ts`
 Replace the `googleReviews` array with your real reviews.
+
+### Showing your GBP replies ("Response from the owner")
+Your public replies on the Google Business Profile do **not** appear
+automatically (the API cannot return them). To show a reply on the
+website's review card, paste it into that review in `config/reviews.ts`:
+```ts
+{
+  author: "…", initials: "…", rating: 5,
+  text: "…", date: "2026-05-01", dateDisplay: "May 2026",
+  ownerReply: "Thank you for the kind words! — KL Renovator",
+  ownerReplyDate: "May 2026",
+},
+```
+The card renders it in a grey "Response from the owner" block
+(Balasan daripada pemilik / 商家回复 on MS/ZH). Reviews without the field
+render exactly as before.
 
 ### Keeping review counts truthful (issue #68)
 `config/reviews.ts` → `googlePlace` (`totalReviews`, `averageRating`,
@@ -78,6 +97,25 @@ alternates) and to the `toolPages` array in `components/navbar.tsx`
 File: `config/site.ts`
 - `phone`, `phoneDisplay`, `whatsapp`, `email`, `address`, `hours`
 - `links.googleMaps`, `links.whatsapp`, socials
+
+⚠️ **NAP single source of truth (Part 4 audit):** `address*` fields here feed the
+sitewide LocalBusiness/Organization schema, the installation service schema
+(`lib/seo.ts`), the About page, the footer and `config/site-public.ts`. Never
+hardcode the address in a page component — derive it from `siteConfig`. After
+changing it, run `npm run gen:site-public` and update the GBP + social
+profiles to match (NAP must be identical everywhere).
+
+## ⚖️ Legal pages
+- EN `/privacy-policy`, `/terms-of-service` · MS `/ms/privacy-policy`,
+  `/ms/terms-of-service` · ZH `/zh/privacy-policy`, `/zh/terms-of-service`
+- Terms content mirrors rules stated on the site (payment after completion,
+  1-month workmanship warranty, on-site extra quotes). If business policy
+  changes, update all 3 language versions together and bump `LAST_UPDATED`.
+
+## 💳 Payment copy
+Standard line everywhere: "Cash · Bank Transfer · DuitNow · E-Wallet — paid
+after completion, no upfront payment" (schema `paymentAccepted`, contact page
+trust block, Terms §4, master FAQ pool). Keep these in sync if methods change.
 
 ## ❓ FAQs
 File: `app/faq/page.tsx` — edit the `FAQS` object (separate `en`, `ms`, `zh` arrays).

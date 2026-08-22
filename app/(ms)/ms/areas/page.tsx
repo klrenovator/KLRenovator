@@ -4,13 +4,14 @@ import { clampMetaDescription } from "@/lib/seo-description-optimizer";
 import { buildTrilingualHreflang } from "@/lib/hreflang-canonical";
 import { AreasClient } from "@/app/(en)/areas/areas-client";
 import { AreasCoverageIntro } from "@/components/areas-coverage-intro";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("Kawasan Servis Aircond KL & Selangor | KL Renovator"),
-  description: clampMetaDescription("KL Renovator servis 39 kawasan di Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & lebih. Servis hari sama."),
+  description: clampMetaDescription("KL Renovator servis 40 kawasan di Kuala Lumpur & Selangor — Petaling Jaya, Cheras, Shah Alam, Subang, Ampang, Puchong & lebih. Servis hari sama."),
   openGraph: {
     title: clampMetaTitle("Kawasan Servis Aircond KL & Selangor | KL Renovator"),
-    description: clampMetaDescription("Servis aircond profesional di semua kawasan KL & Selangor. Tersedia hari sama. 38 kawasan diliputi."),
+    description: clampMetaDescription("Servis aircond profesional di semua kawasan KL & Selangor. Tersedia hari sama. 40 kawasan diliputi."),
     url: "https://www.klrenovator.com/ms/areas",
     type: "website",
     locale: "ms_MY",
@@ -36,6 +37,10 @@ export const metadata: Metadata = {
 export default function AreasPageMS() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Laman Utama", url: "https://www.klrenovator.com/" },
+        { name: "Kawasan Servis", url: "https://www.klrenovator.com/ms/areas" },
+      ]} />
       <AreasClient forcedLang="ms" />
       <AreasCoverageIntro locale="ms" />
     </>

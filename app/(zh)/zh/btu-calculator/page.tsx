@@ -6,6 +6,7 @@ import { BtuCalculator } from "@/components/btu-calculator";
 import { PageExplainers } from "@/components/aeo-explainer-blocks";
 import { ToolLinks } from "@/components/calculators/tool-links";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: clampMetaTitle("马来西亚冷气马力计算器 | BTU 计算工具"),
@@ -31,6 +32,10 @@ export const metadata: Metadata = {
 export default function BtuCalculatorPageZH() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "首页", url: "https://www.klrenovator.com/" },
+        { name: "BTU 计算器", url: "https://www.klrenovator.com/zh/btu-calculator" },
+      ]} />
       <BtuCalculator lang="zh" />
       <section className="border-t border-slate-100 bg-white py-12">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
