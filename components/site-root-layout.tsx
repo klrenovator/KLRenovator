@@ -109,10 +109,7 @@ export default function SiteRootLayout({
           rel="preload"
           as="image"
           href="/hero/york-aircond-chemical-wash-puchong-37.webp"
-          // @ts-ignore – Next.js allows imageSrcSet for responsive preload
-          // @ts-expect-error
           imageSrcSet="/_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=360&q=75 360w, /_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=750&q=75 750w, /_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=1920&q=75 1920w"
-          // @ts-ignore
           imageSizes="(max-width: 640px) 100vw, 100vw"
         />
         {/* GTM — loaded via static inline bootstrap (CSP allows googletagmanager.com) */}
