@@ -13,7 +13,7 @@ const TEXT = {
 };
 
 const DISMISS_KEY = "klr-floating-booking-dismissed";
-const DISMISS_HOURS = 24; // re-show after 24h
+const DISMISS_MINUTES = 5; // re-show after 5 minutes (user requested)
 
 export function FloatingBookingButton() {
   const { lang } = useLang();
@@ -28,14 +28,14 @@ export function FloatingBookingButton() {
   const rafRef = useRef<number | null>(null);
   const lastLiftRef = useRef(false);
 
-  // Mount + dismiss check (24h expiry)
+  // Mount + dismiss check (5 min expiry – user requested)
   useEffect(() => {
     setIsMounted(true);
     try {
       const raw = localStorage.getItem(DISMISS_KEY);
       if (raw) {
         const ts = parseInt(raw, 10);
-        if (!Number.isNaN(ts) && Date.now() - ts < DISMISS_HOURS * 3600 * 1000) {
+        if (!Number.isNaN(ts) && Date.now() - ts < DISMISS_MINUTES * 60 * 1000) {
           setIsDismissed(true);
         } else {
           localStorage.removeItem(DISMISS_KEY);
@@ -128,10 +128,10 @@ export function FloatingBookingButton() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Dismiss button – small, accessible, does NOT remove permanently (24h) */}
+        {/* Dismiss button – small, accessible, hides for 5 min only */}
         <button
           onClick={handleDismiss}
-          aria-label="Dismiss booking button for 24 hours"
+          aria-label="Dismiss booking button for 5 minutes"
           className="absolute -top-2 -right-2 z-20 grid h-7 w-7 place-items-center rounded-full bg-white text-slate-500 border border-slate-200 shadow-md hover:bg-slate-50 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-colors"
         >
           <HiXMark className="h-4 w-4" aria-hidden="true" />
@@ -168,7 +168,7 @@ export function FloatingBookingButton() {
 
         {/* Helper text – only on desktop hover/focus, explains dismiss */}
         <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 mb-2 hidden group-hover:block lg:group-hover:block whitespace-nowrap rounded-lg bg-slate-900 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-xl opacity-0 group-hover:opacity-100 transition-opacity">
-          Click X to hide for 24h
+          Click X to hide for 5 min
         </span>
       </motion.div>
     </AnimatePresence>
