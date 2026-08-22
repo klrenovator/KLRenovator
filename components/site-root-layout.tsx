@@ -104,6 +104,17 @@ export default function SiteRootLayout({
     <html lang={htmlLang} className="scroll-smooth">
       {/* eslint-disable-next-line @next/next/no-head-element */}
       <head>
+        {/* Preload LCP hero image – audit Part 3 performance fix */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero/york-aircond-chemical-wash-puchong-37.webp"
+          // @ts-ignore – Next.js allows imageSrcSet for responsive preload
+          // @ts-expect-error
+          imageSrcSet="/_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=360&q=75 360w, /_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=750&q=75 750w, /_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=1920&q=75 1920w"
+          // @ts-ignore
+          imageSizes="(max-width: 640px) 100vw, 100vw"
+        />
         {/* GTM — loaded via static inline bootstrap (CSP allows googletagmanager.com) */}
         {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
@@ -334,7 +345,7 @@ export default function SiteRootLayout({
             are never missed while the lazy widget bundle is still loading. */}
         <ConversionTracking />
         <Providers initialLang={locale}>
-          <div className="relative flex min-h-screen flex-col pb-16 lg:pb-0">
+          <div className="relative flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pb-0">
             <Navbar />
             <main id="main-content" className="flex-1">{children}</main>
             <Footer />

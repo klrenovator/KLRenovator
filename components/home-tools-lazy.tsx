@@ -13,7 +13,7 @@ import dynamic from "next/dynamic";
 
 const CalculatorLoading = () => (
   <div
-    className="min-h-32 animate-pulse rounded-2xl bg-slate-100 p-6 text-center text-sm text-slate-500"
+    className="min-h-32 animate-pulse rounded-2xl bg-slate-100 p-6 text-center text-sm text-slate-600"
     role="status"
     aria-live="polite"
   >

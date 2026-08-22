@@ -184,7 +184,7 @@ export function JobPhotoStrip({
                   decoding="async"
                 />
               </div>
-              <figcaption className="p-4 text-xs leading-relaxed text-slate-500">
+              <figcaption className="p-4 text-xs leading-relaxed text-slate-600">
                 {photo.caption}
               </figcaption>
             </figure>

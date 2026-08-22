@@ -124,7 +124,7 @@ export function InstallationTrustSignals({
               </div>
               <div>
                 <h4 className={`font-black text-sm ${colorTextClasses[badge.color as keyof typeof colorTextClasses]}`}>{badge.label}</h4>
-                <p className="text-xs text-slate-500 mt-0.5 line-clamp-2">{badge.description}</p>
+                <p className="text-xs text-slate-600 mt-0.5 line-clamp-2">{badge.description}</p>
               </div>
             </div>
           </div>

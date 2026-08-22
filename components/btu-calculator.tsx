@@ -466,7 +466,7 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                     />
                   </div>
                 </div>
-                <p className="mt-2 text-xs text-slate-500">
+                <p className="mt-2 text-xs text-slate-600">
                   {length} × {width} = <strong>{length * width}</strong> sqft
                 </p>
 

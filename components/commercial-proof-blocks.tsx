@@ -192,7 +192,7 @@ export function LocalPriceComparisonTable({ locale, name }: { locale: Locale; na
             </tbody>
           </table>
         </div>
-        <p className="mt-3 text-xs leading-relaxed text-slate-500">{t.note}</p>
+        <p className="mt-3 text-xs leading-relaxed text-slate-600">{t.note}</p>
       </div>
     </section>
   );
@@ -224,7 +224,7 @@ export function ExpertReviewBlock({
             <h2 className="mt-2 text-xl font-black tracking-tight text-slate-950">
               {t.reviewedBy} {tech.name}, {tech.role[locale]}
             </h2>
-            <p className="mt-1 text-xs font-bold uppercase tracking-widest text-slate-500">
+            <p className="mt-1 text-xs font-bold uppercase tracking-widest text-slate-600">
               {t.lastReviewed}: {reviewDate}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-700">{t.expertBody(name)}</p>

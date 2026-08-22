@@ -105,7 +105,7 @@ export const WhyChooseUs = ({ locale }: { locale?: Lang } = {}) => {
                 <h3 className="text-base font-black uppercase tracking-tight text-slate-900 mb-2.5">
                   {f.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed font-medium flex-grow">
+                <p className="text-sm text-slate-600 leading-relaxed font-medium flex-grow">
                   {f.desc}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export const WhyChooseUs = ({ locale }: { locale?: Lang } = {}) => {
         {/* Brands row */}
         <Reveal>
           <div className="mt-14 bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 text-center mb-6">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-600 text-center mb-6">
               All Brands We Service
             </p>
             <div className="flex flex-wrap justify-center gap-3">
@@ -133,19 +133,26 @@ export const WhyChooseUs = ({ locale }: { locale?: Lang } = {}) => {
           </div>
         </Reveal>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA – changed from WhatsApp green to Book Online slate to reduce CTA cannibalization (keeps WhatsApp green original elsewhere) */}
         <Reveal>
-          <div className="mt-10 text-center">
+          <div className="mt-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              href={locale === "ms" ? "/ms/book" : locale === "zh" ? "/zh/book" : "/book"}
+              className="inline-flex items-center gap-2.5 bg-slate-900 hover:bg-slate-800 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-md hover:shadow-slate-200 transition-all duration-200"
+            >
+              📅 Check Live Slots & Book Online
+            </Link>
             <a
               href={waLink(rfqMsg)}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-md hover:shadow-green-200 transition-all duration-200"
+              className="inline-flex items-center gap-2.5 border-2 border-slate-200 hover:border-slate-900 text-slate-700 hover:text-slate-900 font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl transition-all duration-200 bg-white"
             >
-              <FaWhatsapp className="h-5 w-5" />
-              Book Your Service — WhatsApp Us Now
+              <FaWhatsapp className="h-5 w-5 text-[#22c55e]" />
+              WhatsApp Us
             </a>
           </div>
+          <p className="mt-3 text-[11px] text-slate-600">No deposit · Price confirmed before work · 1-month warranty</p>
         </Reveal>
 
       </div>

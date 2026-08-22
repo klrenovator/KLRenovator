@@ -52,7 +52,7 @@ const ServiceCard = ({ slug, name, short, problem, href }: {
   <div className="flex flex-col h-full bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-sky-100 transition-all duration-300">
     <div className="flex-grow">
       <h3 className="text-base font-black text-slate-950 tracking-tight leading-snug">❄️ {name}</h3>
-      <p className="mt-2 text-sm text-slate-500 font-medium leading-relaxed">{short}</p>
+      <p className="mt-2 text-sm text-slate-600 font-medium leading-relaxed">{short}</p>
       <p className="mt-3 flex items-start gap-2 text-xs font-bold text-slate-600 bg-green-50 border border-green-100 rounded-lg p-2.5">
         <span className="mt-0.5 shrink-0 text-[#22c55e]" aria-hidden="true">✓</span>
         <span>{problem}</span>
@@ -175,7 +175,7 @@ export const ServicesWithPricing = ({ locale }: { locale?: Lang } = {}) => {
                     <FaBuilding className="h-5 w-5" />
                   </div>
                   <h4 className="font-black text-slate-900 text-sm mb-2">{item.title}</h4>
-                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>

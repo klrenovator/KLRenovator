@@ -128,7 +128,7 @@ export function KampungInstallationLandingPage({
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-1 text-xs text-slate-600" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-sky-600 transition">Home</Link>
             <FiChevronRight className="h-3 w-3" />
             <Link href="/areas" className="hover:text-sky-600 transition">Service Areas</Link>
@@ -327,7 +327,7 @@ export function KampungInstallationLandingPage({
                 ))}
               </div>
             </div>
-            <p className="text-xs text-slate-500 mt-3 font-medium">
+            <p className="text-xs text-slate-600 mt-3 font-medium">
               {locale === "en"
                 ? "Prices are for standard installation including 7 ft copper pipe, insulation, electrical wire and drain pipe. Extras quoted first."
                 : locale === "ms"

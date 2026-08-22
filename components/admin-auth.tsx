@@ -70,7 +70,7 @@ export function AdminAuth({ children }: { children: React.ReactNode }) {
   if (status === "checking") {
     return (
       <div className="flex min-h-[50vh] items-center justify-center p-4">
-        <p className="text-sm font-semibold text-slate-500">Checking session…</p>
+        <p className="text-sm font-semibold text-slate-600">Checking session…</p>
       </div>
     );
   }

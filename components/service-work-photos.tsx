@@ -56,7 +56,7 @@ export function ServiceWorkPhotos({
             {eyebrow}
           </p>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900">{heading}</h2>
-          <p className="text-slate-500 text-sm mt-2 max-w-2xl mx-auto leading-relaxed">{intro}</p>
+          <p className="text-slate-600 text-sm mt-2 max-w-2xl mx-auto leading-relaxed">{intro}</p>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -80,7 +80,7 @@ export function ServiceWorkPhotos({
                 <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">
                   {photo.title}
                 </h3>
-                <p className="mt-1 text-xs leading-relaxed text-slate-500">{photo.alt}</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">{photo.alt}</p>
               </figcaption>
             </figure>
           ))}

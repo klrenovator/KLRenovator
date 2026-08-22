@@ -168,7 +168,7 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
                   <h2 className="font-black text-slate-900 text-base leading-snug group-hover:text-sky-700 transition-colors">
                     {lang === "ms" ? tool.titleMS : lang === "zh" ? tool.titleZH : tool.title}
                   </h2>
-                  <p className="text-sm text-slate-500 mt-2 leading-relaxed flex-1">
+                  <p className="text-sm text-slate-600 mt-2 leading-relaxed flex-1">
                     {lang === "ms" ? tool.descMS : lang === "zh" ? tool.descZH : tool.desc}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-sky-600 group-hover:gap-2 transition-all">
@@ -179,7 +179,7 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
             ))}
           </div>
         </div>
-        <p className="mt-8 text-center text-xs text-slate-500">
+        <p className="mt-8 text-center text-xs text-slate-600">
           {t.bottomNote}
         </p>
       </section>
@@ -197,7 +197,7 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
               <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">
                 {lang === "ms" ? "Harga Servis Aircond 2026" : lang === "zh" ? "2026年冷气服务价格" : "Aircond Service Price 2026"}
               </p>
-              <p className="text-xs text-slate-500 mt-1.5">
+              <p className="text-xs text-slate-600 mt-1.5">
                 {lang === "ms" ? "Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI." : lang === "zh" ? "基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起价 RM 420 · 气体RM 2.50/PSI。" : "Basic RM 99 · Chemical wash RM 120 · Chemical Overhaul (Wall-Mounted only) from RM 420 · Gas RM 2.50/PSI — full published list."}
               </p>
             </NextLink>
@@ -205,7 +205,7 @@ export function ToolsHub({ lang = "en" }: { lang?: Lang }) {
               <p className="font-black text-slate-900 text-sm group-hover:text-sky-700 transition-colors">
                 {lang === "ms" ? "Panduan Harga Pemasangan" : lang === "zh" ? "安装价格指南" : "Installation Price Guide"}
               </p>
-              <p className="text-xs text-slate-500 mt-1.5">
+              <p className="text-xs text-slate-600 mt-1.5">
                 {lang === "ms" ? "Pemasangan dari RM 199 dengan pecahan bahan penuh." : lang === "zh" ? "安装从RM 199起，含完整材料明细和保修条款。" : "Installation from RM 199 with full materials breakdown and warranty terms."}
               </p>
             </NextLink>

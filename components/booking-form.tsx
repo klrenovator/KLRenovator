@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { calculateDurationMinutes, calculateTotalDurationMinutes } from "@/lib/booking-config";
 import { MAX_NOTES_LENGTH } from "@/lib/booking-validation";
 import { useLang } from "@/context/language-context";
@@ -262,9 +262,59 @@ export function BookingForm({
   const [availableSlots, setAvailableSlots] = useState<string[]>([]);
   const [selectedSlot, setSelectedSlot] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingSlots, setLoadingSlots] = useState(false);
+  const [slotsError, setSlotsError] = useState("");
+  const [formError, setFormError] = useState("");
   const [success, setSuccess] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
   const [fetchedOnce, setFetchedOnce] = useState(false);
+  const addressInputRef = useRef<HTMLInputElement>(null);
+  const [isGooglePlacesReady, setIsGooglePlacesReady] = useState(false);
+
+  // Google Places Autocomplete – optional future, loads only if public key exists
+  useEffect(() => {
+    const apiKey = (process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY || "") as string;
+    if (!apiKey) return;
+    if (typeof window === "undefined") return;
+    // @ts-ignore
+    if (window.google?.maps?.places) {
+      setIsGooglePlacesReady(true);
+      return;
+    }
+    const existing = document.querySelector(`script[data-klr-places="true"]`);
+    if (existing) {
+      existing.addEventListener("load", () => setIsGooglePlacesReady(true));
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&loading=async`;
+    script.async = true;
+    script.defer = true;
+    script.dataset.klrPlaces = "true";
+    script.onload = () => setIsGooglePlacesReady(true);
+    document.head.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    if (!isGooglePlacesReady) return;
+    if (!addressInputRef.current) return;
+    try {
+      // @ts-ignore
+      const autocomplete = new window.google.maps.places.Autocomplete(addressInputRef.current, {
+        componentRestrictions: { country: "my" },
+        fields: ["formatted_address", "geometry", "name"],
+        types: ["address"],
+      });
+      autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        if (place?.formatted_address) {
+          setAddress(place.formatted_address);
+        }
+      });
+    } catch (e) {
+      console.warn("Google Places autocomplete failed:", e);
+    }
+  }, [isGooglePlacesReady]);
 
   // Admin manual override
   const [manualHours, setManualHours] = useState("");
@@ -320,6 +370,9 @@ export function BookingForm({
     if (!selectedDate) return;
 
     const controller = new AbortController();
+    setLoadingSlots(true);
+    setSlotsError("");
+    setAvailableSlots([]);
 
     (async () => {
       try {
@@ -327,20 +380,43 @@ export function BookingForm({
           `/api/bookings/availability?date=${selectedDate}&duration=${apiDurationMinutes}`,
           { signal: controller.signal },
         );
+        if (!res.ok) throw new Error("Failed to load slots");
         const data = await res.json();
         setAvailableSlots(data.availableSlots ?? []);
         setFetchedOnce(true);
       } catch (error) {
-        if ((error as Error)?.name !== "AbortError") console.error(error);
+        if ((error as Error)?.name !== "AbortError") {
+          console.error(error);
+          setSlotsError(
+            lang === "ms"
+              ? "Gagal memuatkan slot masa. Sila cuba lagi."
+              : lang === "zh"
+                ? "加载时间段失败，请重试。"
+                : "Failed to load time slots. Please try again."
+          );
+          setFetchedOnce(true);
+        }
+      } finally {
+        setLoadingSlots(false);
       }
     })();
 
     return () => controller.abort();
-  }, [selectedDate, apiDurationMinutes]);
+  }, [selectedDate, apiDurationMinutes, lang]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedSlot) return alert("Please select a time slot");
+    setFormError("");
+    if (!selectedSlot) {
+      setFormError(
+        lang === "ms"
+          ? "Sila pilih slot masa"
+          : lang === "zh"
+            ? "请选择时间段"
+            : "Please select a time slot"
+      );
+      return;
+    }
 
     setLoading(true);
     try {
@@ -431,11 +507,17 @@ export function BookingForm({
           setGeneratedLink(`https://wa.me/${sitePublic.whatsapp}?text=${encodeURIComponent(pubMsg)}`);
         }
       } else {
-        alert(data.error || "Failed to book");
+        setFormError(data.error || (lang === "ms" ? "Gagal menempah" : lang === "zh" ? "预约失败" : "Failed to book"));
       }
     } catch (error) {
       console.error(error);
-      alert("An error occurred");
+      setFormError(
+        lang === "ms"
+          ? "Ralat berlaku. Sila cuba lagi."
+          : lang === "zh"
+            ? "发生错误，请重试。"
+            : "An error occurred. Please try again."
+      );
     }
     setLoading(false);
   };
@@ -447,7 +529,7 @@ export function BookingForm({
         <p className="text-slate-600 mb-4">{t.successDesc}</p>
         {generatedLink && (
           <>
-            <p className="text-sm text-slate-500 mb-3">
+            <p className="text-sm text-slate-600 mb-3">
               {isAdmin
                 ? ""
                 : (lang === "ms"
@@ -471,9 +553,31 @@ export function BookingForm({
     );
   }
 
+  const currentStep = !selectedDate ? 1 : !selectedSlot ? 2 : !name || !phone || !address ? 3 : 4;
+
   return (
     <form onSubmit={handleSubmit} className="mx-auto w-full max-w-lg space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">{isAdmin ? t.adminTitle : t.title}</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-2">{isAdmin ? t.adminTitle : t.title}</h2>
+      
+      {/* Stepper – visual progress, improves perceived speed & reduces friction */}
+      <div className="mb-6 flex items-center justify-between gap-2" aria-label="Booking progress">
+        {[
+          { n: 1, label: lang === "ms" ? "Servis" : lang === "zh" ? "服务" : "Service" },
+          { n: 2, label: lang === "ms" ? "Jadual" : lang === "zh" ? "时间" : "Schedule" },
+          { n: 3, label: lang === "ms" ? "Maklumat" : lang === "zh" ? "信息" : "Details" },
+          { n: 4, label: lang === "ms" ? "Sah" : lang === "zh" ? "确认" : "Confirm" },
+        ].map((s, idx) => (
+          <div key={s.n} className="flex flex-1 items-center gap-2">
+            <div className={`grid h-7 w-7 place-items-center rounded-full text-xs font-black border-2 transition-colors ${
+              currentStep >= s.n ? "bg-sky-600 border-sky-600 text-white" : "bg-white border-slate-200 text-slate-400"
+            }`}>
+              {s.n}
+            </div>
+            <span className={`text-[11px] font-bold uppercase tracking-wider ${currentStep >= s.n ? "text-slate-900" : "text-slate-400"}`}>{s.label}</span>
+            {idx < 3 && <div className={`ml-2 h-0.5 flex-1 ${currentStep > s.n ? "bg-sky-600" : "bg-slate-200"}`} />}
+          </div>
+        ))}
+      </div>
       
       <div>
         <label htmlFor="booking-name" className="block text-sm font-semibold text-slate-700">{t.name}</label>
@@ -505,17 +609,28 @@ export function BookingForm({
       </div>
 
       <div>
-        <label htmlFor="booking-address" className="block text-sm font-semibold text-slate-700">{t.address}</label>
-        <textarea
+        <label htmlFor="booking-address" className="block text-sm font-semibold text-slate-700">
+          {t.address}
+          {isGooglePlacesReady && <span className="ml-2 text-[10px] font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Google Autocomplete Active</span>}
+        </label>
+        <input
+          ref={addressInputRef}
           id="booking-address"
+          type="text"
           required
           autoComplete="street-address"
-          rows={2}
+          list="booking-areas"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
           placeholder={t.addressPh}
         />
+        <datalist id="booking-areas">
+          {sitePublic.areas.map((a) => (
+            <option key={a} value={a} />
+          ))}
+        </datalist>
+        <p className="mt-1 text-[11px] text-slate-600">Start typing area – e.g. Subang Jaya, Puchong, Mont Kiara {isGooglePlacesReady ? "· Powered by Google" : "· Suggestions from 48 KL areas"}</p>
       </div>
 
       {/* Honeypot — visually hidden, never focusable. Bots fill it, humans don't. */}
@@ -536,7 +651,7 @@ export function BookingForm({
         {lineItems.map((item, idx) => (
           <div key={idx} className="relative rounded-xl border border-slate-200 bg-slate-50/50 p-4 space-y-3 shadow-sm">
             <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
-              <span className="text-xs font-black uppercase tracking-wider text-slate-500">
+              <span className="text-xs font-black uppercase tracking-wider text-slate-600">
                 {t.itemHeader.replace("{N}", (idx + 1).toString())}
               </span>
               {lineItems.length > 1 && (
@@ -667,7 +782,7 @@ export function BookingForm({
                   </option>
                 ))}
               </select>
-              <p className="mt-1 text-[11px] leading-snug text-slate-500">{t.propertyHelp}</p>
+              <p className="mt-1 text-[11px] leading-snug text-slate-600">{t.propertyHelp}</p>
             </div>
 
             <div>
@@ -700,7 +815,7 @@ export function BookingForm({
                   </option>
                 ))}
               </select>
-              <p className="mt-1 text-[11px] leading-snug text-slate-500">{t.pipeHelp}</p>
+              <p className="mt-1 text-[11px] leading-snug text-slate-600">{t.pipeHelp}</p>
             </div>
 
             <div>
@@ -730,7 +845,7 @@ export function BookingForm({
       <div>
         <label htmlFor="booking-notes" className="block text-sm font-semibold text-slate-700">
           {t.notes}{" "}
-          <span className="font-normal text-slate-500">({t.optional})</span>
+          <span className="font-normal text-slate-600">({t.optional})</span>
         </label>
         <textarea
           id="booking-notes"
@@ -742,8 +857,8 @@ export function BookingForm({
           className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
         />
         <div className="mt-1 flex items-start justify-between gap-3">
-          <p className="text-[11px] leading-snug text-slate-500">{t.notesHelp}</p>
-          <span className="shrink-0 text-[11px] tabular-nums text-slate-500">
+          <p className="text-[11px] leading-snug text-slate-600">{t.notesHelp}</p>
+          <span className="shrink-0 text-[11px] tabular-nums text-slate-600">
             {notes.length}/{MAX_NOTES_LENGTH}
           </span>
         </div>
@@ -797,40 +912,66 @@ export function BookingForm({
         />
       </div>
 
-      {selectedDate && fetchedOnce && (
+      {selectedDate && (
         <div>
           <p id="avail-times-label" className="block text-sm font-semibold text-slate-700 mb-2">{t.availTimes}</p>
-          <div role="group" aria-labelledby="avail-times-label">
-          {availableSlots.length > 0 ? (
-            <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
-              {availableSlots.map((slot) => {
-                const timeStr = new Date(slot).toLocaleTimeString("en-US", {
-                  hour: "numeric",
-                  minute: "2-digit",
-                  hour12: true,
-                  timeZone: "Asia/Kuala_Lumpur",
-                });
-                return (
-                  <button
-                    key={slot}
-                    type="button"
-                    onClick={() => setSelectedSlot(slot)}
-                    className={`rounded-lg px-2 py-2 text-sm font-semibold transition ${
-                      selectedSlot === slot
-                        ? "bg-sky-600 text-white shadow-md"
-                        : "bg-sky-50 text-sky-800 hover:bg-sky-100 border border-sky-100"
-                    }`}
-                  >
-                    {timeStr}
-                  </button>
-                );
-              })}
-            </div>
-          ) : (
-            <div className="rounded-lg bg-red-50 p-3 border border-red-100 text-red-800 text-sm">
-              {t.noSlots}
-            </div>
-          )}
+          <div role="group" aria-labelledby="avail-times-label" aria-busy={loadingSlots}>
+            {loadingSlots ? (
+              <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2" aria-live="polite">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i} className="h-9 rounded-lg bg-slate-100 animate-pulse border border-slate-200" />
+                ))}
+              </div>
+            ) : slotsError ? (
+              <div className="rounded-lg bg-red-50 p-3 border border-red-200 text-red-800 text-sm flex items-center justify-between gap-3">
+                <span>{slotsError}</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setFetchedOnce(false);
+                    setSelectedDate(selectedDate);
+                  }}
+                  className="shrink-0 text-xs font-bold underline hover:no-underline"
+                >
+                  {lang === "ms" ? "Cuba lagi" : lang === "zh" ? "重试" : "Retry"}
+                </button>
+              </div>
+            ) : fetchedOnce ? (
+              availableSlots.length > 0 ? (
+                <div className="grid grid-cols-3 gap-2 max-h-56 overflow-y-auto pr-2">
+                  {availableSlots.map((slot) => {
+                    const timeStr = new Date(slot).toLocaleTimeString("en-US", {
+                      hour: "numeric",
+                      minute: "2-digit",
+                      hour12: true,
+                      timeZone: "Asia/Kuala_Lumpur",
+                    });
+                    return (
+                      <button
+                        key={slot}
+                        type="button"
+                        onClick={() => {
+                          setSelectedSlot(slot);
+                          setFormError("");
+                        }}
+                        aria-pressed={selectedSlot === slot}
+                        className={`rounded-lg px-2 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-1 ${
+                          selectedSlot === slot
+                            ? "bg-sky-600 text-white shadow-md"
+                            : "bg-sky-50 text-sky-800 hover:bg-sky-100 border border-sky-100"
+                        }`}
+                      >
+                        {timeStr}
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="rounded-lg bg-amber-50 p-3 border border-amber-200 text-amber-900 text-sm">
+                  {t.noSlots}
+                </div>
+              )
+            ) : null}
           </div>
         </div>
       )}
@@ -860,7 +1001,15 @@ export function BookingForm({
       <div role="status" aria-live="polite" className="sr-only">
         {loading ? t.processing : ""}
         {success ? t.successTitle : ""}
+        {formError ? formError : ""}
       </div>
+
+      {formError && (
+        <div role="alert" className="rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-800 flex items-start gap-2">
+          <span className="mt-0.5">⚠️</span>
+          <span>{formError}</span>
+        </div>
+      )}
 
       <button
         type="submit"

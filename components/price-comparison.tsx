@@ -144,7 +144,7 @@ export function PriceComparisonUI({ locale = "en", compact = false, serviceName 
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight text-slate-950">
               {d.heading}
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
               {d.subheading}
             </p>
           </div>
@@ -165,13 +165,13 @@ export function PriceComparisonUI({ locale = "en", compact = false, serviceName 
           <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
             {/* Header */}
             <div className="grid grid-cols-[1fr_1fr_1fr] bg-slate-900 text-white">
-              <div className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-slate-500">
+              <div className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-slate-600">
                 &nbsp;
               </div>
               <div className="px-4 py-3 text-center text-xs font-black uppercase tracking-widest bg-sky-600">
                 ✅ {d.klrLabel}
               </div>
-              <div className="px-4 py-3 text-center text-xs font-black uppercase tracking-widest text-slate-500">
+              <div className="px-4 py-3 text-center text-xs font-black uppercase tracking-widest text-slate-600">
                 ❌ {d.themLabel}
               </div>
             </div>
@@ -196,7 +196,7 @@ export function PriceComparisonUI({ locale = "en", compact = false, serviceName 
                     </div>
                     {/* Them */}
                     <div className="px-4 py-3 border-l border-slate-100">
-                      <p className="text-xs text-slate-500 leading-relaxed italic">{row.them}</p>
+                      <p className="text-xs text-slate-600 leading-relaxed italic">{row.them}</p>
                     </div>
                   </div>
                 );

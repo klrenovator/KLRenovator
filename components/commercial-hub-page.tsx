@@ -240,7 +240,7 @@ export function CommercialHubPage({ locale }: { locale: HubLocale }) {
                     <tr key={i} className={i % 2 ? "bg-slate-50/40" : "bg-white"}>
                       <td className="px-5 py-3.5 font-bold text-slate-900">{row.service[locale]}</td>
                       <td className="px-5 py-3.5 font-black text-indigo-600 whitespace-nowrap">{row.price[locale]}</td>
-                      <td className="px-5 py-3.5 text-slate-500">{row.note[locale]}</td>
+                      <td className="px-5 py-3.5 text-slate-600">{row.note[locale]}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -301,16 +301,16 @@ export function CommercialHubPage({ locale }: { locale: HubLocale }) {
       {/* Sources + related */}
       <section className="py-12 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{t.sources}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-3">{t.sources}</p>
           <ul className="space-y-2 mb-6">
             {HUB_CITATIONS.map((c) => (
               <li key={c.href} className="text-sm leading-relaxed text-slate-600">
                 <a href={c.href} target="_blank" rel="nofollow noopener noreferrer" className="text-indigo-700 font-semibold hover:underline">{c.label}</a>
-                <span className="text-slate-500"> — {c[locale]}</span>
+                <span className="text-slate-600"> — {c[locale]}</span>
               </li>
             ))}
           </ul>
-          <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{t.relatedHeading}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-3">{t.relatedHeading}</p>
           <div className="flex flex-wrap gap-2">
             {[
               { href: localizedPath(locale, "/commercial-aircond-installation"), label: t.relatedInstall },

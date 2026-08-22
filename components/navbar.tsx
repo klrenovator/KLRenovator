@@ -168,6 +168,8 @@ export const Navbar = () => {
 
   const desktopLangRef = useRef<HTMLDivElement>(null);
   const mobileLangRef = useRef<HTMLDivElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setOpen(false);
@@ -180,6 +182,50 @@ export const Navbar = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Lock body scroll when mobile drawer open – prevents background scroll
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
+  // Focus trap for mobile drawer – WCAG 2.4.3
+  useEffect(() => {
+    if (!open) {
+      // Return focus to hamburger when drawer closes
+      hamburgerRef.current?.focus();
+      return;
+    }
+    const drawer = drawerRef.current;
+    if (!drawer) return;
+    const focusable = drawer.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    first?.focus();
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    drawer.addEventListener("keydown", handleTab as any);
+    return () => drawer.removeEventListener("keydown", handleTab as any);
+  }, [open]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -398,6 +444,7 @@ export const Navbar = () => {
             <FaWhatsapp className="h-6 w-6" aria-hidden="true" />
           </a>
           <button
+            ref={hamburgerRef}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-controls="mobile-drawer"
@@ -411,6 +458,7 @@ export const Navbar = () => {
 
       {open && (
         <div
+          ref={drawerRef}
           id="mobile-drawer"
           role="dialog"
           aria-modal="true"

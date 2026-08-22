@@ -496,7 +496,7 @@ export function ServiceDetailI18n({
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-1 text-xs text-slate-600" aria-label="Breadcrumb">
             <NextLink href={`${langPrefix}/`} className="hover:text-sky-600 transition">{pick("home")}</NextLink>
             <FiChevronRight className="h-3 w-3" />
             <NextLink href={`${langPrefix}/services`} className="hover:text-sky-600 transition">{pick("services")}</NextLink>
@@ -535,7 +535,7 @@ export function ServiceDetailI18n({
                   <span className="bg-sky-500 text-white px-3 py-1.5 font-bold uppercase tracking-wider">
                     {pick("fromWord")} {data.startPrice}
                   </span>
-                  <span className="text-slate-500 font-semibold uppercase tracking-wider text-xs">{pick("allKlSelangorTag")}</span>
+                  <span className="text-slate-600 font-semibold uppercase tracking-wider text-xs">{pick("allKlSelangorTag")}</span>
                 </div>
                 <div className="mt-8">
                   <BookingButton serviceName={tTitle} size="lg" />
@@ -591,7 +591,7 @@ export function ServiceDetailI18n({
                 <span className={title({ size: "sm" })}>{SPLIT.pricing[lang][0]}</span>
                 <span className={title({ size: "sm", color: "brand" })}>{SPLIT.pricing[lang][1]}</span>
               </h2>
-              <p className="mt-2 text-xs text-slate-500">{pick("pricingNote")}</p>
+              <p className="mt-2 text-xs text-slate-600">{pick("pricingNote")}</p>
             </div>
           </Reveal>
           <Reveal>
@@ -663,7 +663,7 @@ export function ServiceDetailI18n({
           {(slug === "installation" || slug === "dismantling-relocation" || slug === "ceiling-cassette") && (
             <Reveal>
               <div className="mt-10">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{pick("materialsSectionTitle")}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-1">{pick("materialsSectionTitle")}</p>
                 <h3 className="text-base font-black text-slate-900 mb-4">{pick("materialsTitle")}</h3>
                 <div className="border border-slate-200 bg-white">
                   <ul className="divide-y divide-slate-200">
@@ -675,7 +675,7 @@ export function ServiceDetailI18n({
                     ))}
                   </ul>
                 </div>
-                <p className="text-xs text-slate-500 mt-3">{pick("materialsNote")}</p>
+                <p className="text-xs text-slate-600 mt-3">{pick("materialsNote")}</p>
               </div>
             </Reveal>
           )}
@@ -726,7 +726,7 @@ export function ServiceDetailI18n({
                 </div>
               </div>
               <aside className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-500">
+                <p className="text-xs font-black uppercase tracking-widest text-slate-600">
                   {lang === "zh" ? "专家审核" : "Disemak Pakar"}
                 </p>
                 <p className="mt-2 text-base font-black text-slate-950">
@@ -739,11 +739,11 @@ export function ServiceDetailI18n({
                 </p>
                 <dl className="mt-4 grid grid-cols-2 gap-3 text-xs">
                   <div className="rounded-xl bg-slate-50 p-3">
-                    <dt className="font-bold uppercase tracking-wider text-slate-500">{lang === "zh" ? "最后审核" : "Disemak terakhir"}</dt>
+                    <dt className="font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "最后审核" : "Disemak terakhir"}</dt>
                     <dd className="mt-1 font-black text-slate-900">3 July 2026</dd>
                   </div>
                   <div className="rounded-xl bg-slate-50 p-3">
-                    <dt className="font-bold uppercase tracking-wider text-slate-500">{lang === "zh" ? "企业" : "Perniagaan"}</dt>
+                    <dt className="font-bold uppercase tracking-wider text-slate-600">{lang === "zh" ? "企业" : "Perniagaan"}</dt>
                     <dd className="mt-1 font-black text-slate-900">SSM Registered</dd>
                   </div>
                 </dl>
@@ -771,7 +771,7 @@ export function ServiceDetailI18n({
                 <div>
                   <p className="text-xs font-black uppercase tracking-widest text-sky-700 mb-2">{aioBlock.eyebrow}</p>
                   <h2 className="speakable text-2xl sm:text-3xl font-black tracking-tight text-slate-950">{aioBlock.heading}</h2>
-                  <p className="mt-4 text-xs font-black uppercase tracking-widest text-slate-500">{aioBlock.directAnswerLabel}</p>
+                  <p className="mt-4 text-xs font-black uppercase tracking-widest text-slate-600">{aioBlock.directAnswerLabel}</p>
                   <p className="mt-2 text-base leading-relaxed text-slate-700">{aioBlock.directAnswer}</p>
                   <p className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4 text-sm font-semibold leading-relaxed text-emerald-900">
                     {aioBlock.quoteLine}
@@ -781,12 +781,12 @@ export function ServiceDetailI18n({
                   <dl className="grid gap-3">
                     {aioBlock.facts.map((fact) => (
                       <div key={fact.label} className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 last:border-b-0 last:pb-0">
-                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-500">{fact.label}</dt>
+                        <dt className="text-[11px] font-black uppercase tracking-widest text-slate-600">{fact.label}</dt>
                         <dd className="text-right text-sm font-black text-slate-900">{fact.value}</dd>
                       </div>
                     ))}
                   </dl>
-                  <p className="mt-4 text-[11px] leading-relaxed text-slate-500">{aioBlock.sourceLine}</p>
+                  <p className="mt-4 text-[11px] leading-relaxed text-slate-600">{aioBlock.sourceLine}</p>
                 </aside>
               </div>
             </div>
@@ -872,7 +872,7 @@ export function ServiceDetailI18n({
 
               <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500">{visualSXOModule.comparisonTitle}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-600">{visualSXOModule.comparisonTitle}</p>
                   <p className="text-[11px] font-black uppercase tracking-widest text-sky-700">{visualSXOModule.compareAgainstLabel}</p>
                 </div>
                 <div className="overflow-hidden rounded-2xl border border-slate-200">
@@ -916,7 +916,7 @@ export function ServiceDetailI18n({
                   <span className="rounded-full bg-white border border-emerald-200 px-3 py-1.5 text-xs font-black text-emerald-700">{corePolish.warrantyBadge}</span>
                 </div>
                 <div className="mt-6 rounded-2xl bg-white border border-sky-100 p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{corePolish.quickFitTitle}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-3">{corePolish.quickFitTitle}</p>
                   <ul className="space-y-2">
                     {corePolish.quickFit.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm font-semibold text-slate-700">
@@ -929,7 +929,7 @@ export function ServiceDetailI18n({
               </div>
 
               <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">{corePolish.stepsTitle}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-4">{corePolish.stepsTitle}</p>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {corePolish.steps.map((step, i) => (
                     <div key={step.title} className="rounded-2xl bg-slate-50 border border-slate-200 p-4">
@@ -1018,7 +1018,7 @@ export function ServiceDetailI18n({
                           {lang === "ms" ? (problem.nameMS ?? problem.name) : lang === "zh" ? (problem.nameZH ?? problem.name) : problem.name}
                         </h3>
                       </div>
-                      <p className="text-xs text-slate-500 leading-relaxed">
+                      <p className="text-xs text-slate-600 leading-relaxed">
                         {lang === "ms" ? (problem.descriptionMS ? `${problem.descriptionMS.slice(0, 120)}...` : problem.nameMS ?? problem.name)
                           : lang === "zh" ? (problem.descriptionZH ? `${problem.descriptionZH.slice(0, 120)}...` : problem.nameZH ?? problem.name)
                           : (problem.description ? `${problem.description.slice(0, 120)}...` : `Learn what causes ${problem.name.toLowerCase()} and how ${tTitle} fixes it.`)}
@@ -1098,7 +1098,7 @@ export function ServiceDetailI18n({
                     {lang === "ms" ? "Cuci Kimia (Bila Perlu)" : "化学清洗（按需）"}
                   </h3>
                   <p className="text-3xl font-black text-slate-600 mt-2">RM 120</p>
-                  <p className="text-xs text-slate-500 font-bold mt-1">
+                  <p className="text-xs text-slate-600 font-bold mt-1">
                     {lang === "ms" ? "Untuk kotoran berat / bau / angin lemah" : "重度脏污/异味/风弱时使用"}
                   </p>
                   <ul className="mt-4 space-y-2 text-sm text-slate-600">
@@ -1106,7 +1106,7 @@ export function ServiceDetailI18n({
                       ? ["Tekanan tinggi 80–120 PSI", "Pembersihan mendalam gegelung & blower", "Larutkan kulat & biofilm", "60–75 min setiap unit", "Disyorkan setiap 12 bulan", "Terbaik selepas 12+ bulan tanpa cuci mendalam"]
                       : ["高压80–120 PSI", "盘管与风轮深层清洁", "溶解霉菌与生物膜", "每台60–75分钟", "建议每12个月一次", "12个月以上未深洗效果最佳"]
                     ).map((item, i) => (
-                      <li key={i} className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">→</span> {item}</li>
+                      <li key={i} className="flex items-start gap-2"><span className="text-slate-600 mt-0.5">→</span> {item}</li>
                     ))}
                   </ul>
                 </div>
@@ -1221,7 +1221,7 @@ export function ServiceDetailI18n({
                   </div>
                   <figcaption className="p-4">
                     <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{img.title}</h3>
-                    <p className="mt-1 text-xs leading-relaxed text-slate-500">{img.alt}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-600">{img.alt}</p>
                   </figcaption>
                 </figure>
               </Reveal>
@@ -1305,7 +1305,7 @@ export function ServiceDetailI18n({
                     >
                       <p className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1">{postCategory}</p>
                       <h3 className="text-sm font-black text-slate-900 leading-snug">{postTitle}</h3>
-                      <p className="mt-2 text-xs text-slate-500 line-clamp-3">{postExcerpt}</p>
+                      <p className="mt-2 text-xs text-slate-600 line-clamp-3">{postExcerpt}</p>
                     </NextLink>
                   );
                 })}
@@ -1326,7 +1326,7 @@ export function ServiceDetailI18n({
                 <div className="text-center mb-10">
                   <p className={eyebrow()}>{tri("overview")}</p>
                   <h2 className="mt-3 text-2xl sm:text-3xl font-black text-slate-900">{table.title}</h2>
-                  <p className="mt-2 text-slate-500 font-medium">{table.subtitle}</p>
+                  <p className="mt-2 text-slate-600 font-medium">{table.subtitle}</p>
                 </div>
 
                 <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
@@ -1334,7 +1334,7 @@ export function ServiceDetailI18n({
                     <thead>
                       <tr className="bg-slate-50 border-b border-slate-200">
                         {table.columns.map((col, idx) => (
-                          <th key={idx} className={`px-6 py-4 text-xs font-black uppercase tracking-wider ${idx === 0 ? "text-slate-500" : "text-sky-700"}`}>
+                          <th key={idx} className={`px-6 py-4 text-xs font-black uppercase tracking-wider ${idx === 0 ? "text-slate-600" : "text-sky-700"}`}>
                             {col}
                           </th>
                         ))}
@@ -1391,7 +1391,7 @@ export function ServiceDetailI18n({
           {faqsSecondary.map((block) => (
             <Reveal key={block.label}>
               <div className="mt-6 border-t border-slate-200 pt-6">
-                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">{block.langTag} {block.label}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-3">{block.langTag} {block.label}</p>
                 <div className="space-y-3">
                   {block.items.map((f, i: number) => (
                     <div key={i} className="bg-white border border-slate-200 p-4">
@@ -1410,7 +1410,7 @@ export function ServiceDetailI18n({
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">{tTitle} {pick("availableAreas")}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-4">{tTitle} {pick("availableAreas")}</p>
             <div className="flex flex-wrap gap-2">
               {siteConfig.areaPages.map((area) => (
                 <NextLink
@@ -1439,15 +1439,15 @@ export function ServiceDetailI18n({
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-white border border-slate-200 rounded-xl p-4">
                 <h3 className="font-bold text-slate-900 text-sm mb-1">{LABELS.klCoverage[lang]}</h3>
-                <p className="text-xs text-slate-500">{LABELS.klCoverageDesc[lang]}</p>
+                <p className="text-xs text-slate-600">{LABELS.klCoverageDesc[lang]}</p>
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-4">
                 <h3 className="font-bold text-slate-900 text-sm mb-1">{LABELS.klangValleyCoverage[lang]}</h3>
-                <p className="text-xs text-slate-500">{LABELS.klangValleyCoverageDesc[lang]}</p>
+                <p className="text-xs text-slate-600">{LABELS.klangValleyCoverageDesc[lang]}</p>
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-4">
                 <h3 className="font-bold text-slate-900 text-sm mb-1">{LABELS.selangorCoverage[lang]}</h3>
-                <p className="text-xs text-slate-500">{LABELS.selangorCoverageDesc[lang]}</p>
+                <p className="text-xs text-slate-600">{LABELS.selangorCoverageDesc[lang]}</p>
               </div>
             </div>
           </Reveal>
@@ -1458,7 +1458,7 @@ export function ServiceDetailI18n({
       <section className="py-10 bg-slate-50 border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">{tTitle} {pick("allBrands")}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-4">{tTitle} {pick("allBrands")}</p>
             <div className="flex flex-wrap gap-2">
               {siteConfig.brandPages.map((brand) => (
                 <NextLink
@@ -1502,7 +1502,7 @@ export function ServiceDetailI18n({
               <div key={item.icon} className="bg-white border border-slate-200 rounded-2xl p-5">
                 <span className="text-2xl mb-3 block">{item.icon}</span>
                 <h3 className="font-black text-slate-900 text-sm mb-0.5">{lang === "ms" ? item.ms : item.zh}</h3>
-                <p className="text-[10px] text-slate-500 font-semibold mb-2">{item.en} · {lang === "ms" ? item.zh : item.ms}</p>
+                <p className="text-[10px] text-slate-600 font-semibold mb-2">{item.en} · {lang === "ms" ? item.zh : item.ms}</p>
                 <p className="text-xs text-slate-600 leading-relaxed">{lang === "ms" ? item.descMS : item.descZH}</p>
               </div>
             ))}
@@ -1516,7 +1516,7 @@ export function ServiceDetailI18n({
         return (
           <section className="py-10 px-4 bg-white border-t border-slate-100">
             <div className="max-w-5xl mx-auto">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{tri("alsoConsider")}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-1">{tri("alsoConsider")}</p>
               <h2 className="text-base font-black text-slate-900 mb-4">{pick("relatedServices")}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {crossServices.map((s) => (
@@ -1530,7 +1530,7 @@ export function ServiceDetailI18n({
                       <FiArrowRight className="h-3.5 w-3.5 text-slate-300 group-hover:text-sky-500 transition-colors shrink-0" />
                     </div>
                     <p className="text-xs text-sky-700 font-black">{pick("fromWord")} RM {s.startPrice}</p>
-                    <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{svcShort(s)}</p>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed line-clamp-2">{svcShort(s)}</p>
                   </NextLink>
                 ))}
               </div>
@@ -1543,7 +1543,7 @@ export function ServiceDetailI18n({
       <section className="py-10 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{tri("problemsFixed")}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-600 mb-1">{tri("problemsFixed")}</p>
             <h2 className="text-base font-black text-slate-900 mb-4">{pick("problemsFixes")}</h2>
             <div className="flex flex-wrap gap-2">
               {(() => {
@@ -1559,7 +1559,7 @@ export function ServiceDetailI18n({
                   >
                     <FiArrowRight className="h-3 w-3 text-red-400 shrink-0" />
                     {problem.name}
-                    <span className="text-slate-500 font-normal"> · {problem.nameMS}</span>
+                    <span className="text-slate-600 font-normal"> · {problem.nameMS}</span>
                   </NextLink>
                 ));
               })()}
@@ -1589,7 +1589,7 @@ export function ServiceDetailI18n({
                 >
                   <span className="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-2">{post.category}</span>
                   <span className="font-bold text-sm text-slate-900 group-hover:text-sky-600 transition leading-snug mb-2">{post.title}</span>
-                  <span className="text-xs text-slate-500 mt-auto">{post.readTime} min read</span>
+                  <span className="text-xs text-slate-600 mt-auto">{post.readTime} min read</span>
                 </NextLink>
               ))}
             </div>

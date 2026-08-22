@@ -93,6 +93,7 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
   // once the image has actually finished loading, so we never fade-in a
   // half-loaded/placeholder frame.
   const [visible, setVisible] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   const { lang: ctxLang, t: ctxT } = useLang();
   const lang: Lang = locale ?? ctxLang;
@@ -115,6 +116,7 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
     // animations — the slideshow was the one place that ignored it.
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (motionQuery.matches) return;
+    if (isPaused) return;
 
     const timer = window.setInterval(() => {
       setCurrent((prev) => {
@@ -125,7 +127,7 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
       });
     }, 5000);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const currentImage = HERO_IMAGES[current];
   const previousImage = previous !== null ? HERO_IMAGES[previous] : null;
@@ -176,18 +178,30 @@ export const Hero = ({ locale }: { locale?: Lang } = {}) => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950/60 to-transparent z-10" />
       </div>
 
-      {/* Slide Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2">
-        {HERO_IMAGES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setSlide(i)}
-            className={`h-1 rounded-full transition-all duration-500 ${
-              i === current ? "w-8 bg-white" : "w-2 bg-white/35 hover:bg-white/60"
-            }`}
-            aria-label={`Slide ${i + 1}`}
-          />
-        ))}
+      {/* Slide Indicators + Pause Control – accessible */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+        <div className="flex gap-2" role="tablist" aria-label="Hero slideshow">
+          {HERO_IMAGES.map((_, i) => (
+            <button
+              key={i}
+              role="tab"
+              onClick={() => setSlide(i)}
+              aria-selected={i === current}
+              aria-current={i === current ? "true" : undefined}
+              aria-label={`Slide ${i + 1} of ${HERO_IMAGES.length}`}
+              className={`h-1 rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900 ${
+                i === current ? "w-8 bg-white" : "w-2 bg-white/35 hover:bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={() => setIsPaused(!isPaused)}
+          aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
+          className="ml-2 grid h-7 w-7 place-items-center rounded-full bg-white/15 hover:bg-white/25 border border-white/20 text-white text-[10px] font-black backdrop-blur-sm transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          {isPaused ? "▶" : "⏸"}
+        </button>
       </div>
 
       {/* Content */}

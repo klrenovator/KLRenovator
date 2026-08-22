@@ -317,12 +317,13 @@ function HomeContent({ locale }: { locale: Lang }) {
       <Hero locale={locale} />
       <StatsBand locale={locale} />
       <InstallationSpotlight locale={locale} />
+      {/* Reviews moved up for trust above fold – audit Part 3 CRO fix */}
+      <ReviewsIsland locale={locale} />
       {/* Below-the-fold sections load as viewport-triggered islands so the
           initial HTML document stays small (was 600 KB+). All content has
           dedicated crawlable routes (/services, /areas, /review, …). */}
       <ServicesIsland locale={locale} />
       <WhyChooseUsIsland locale={locale} />
-      <ReviewsIsland locale={locale} />
       <TrustStripIsland locale={locale} />
 
       <section className="bg-gradient-to-r from-red-700 to-rose-600 text-white py-10 px-4">

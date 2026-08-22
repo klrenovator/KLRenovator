@@ -73,7 +73,7 @@ export const CoverageAreas = ({ locale = "en" }: { locale?: Locale }) => {
               key={area.slug}
               href={href(`/areas/${area.parentSlug}/${area.slug}`)}
               title={`Aircond Service ${area.name}`}
-              className="text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100 border border-slate-200 hover:border-sky-400 hover:text-sky-600 hover:bg-white transition-colors px-2.5 py-1 rounded-full"
+              className="text-[11px] font-bold text-slate-600 uppercase tracking-wider bg-slate-100 border border-slate-200 hover:border-sky-400 hover:text-sky-600 hover:bg-white transition-colors px-2.5 py-1 rounded-full"
             >
               {area.name}
             </NextLink>

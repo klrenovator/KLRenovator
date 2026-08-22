@@ -66,12 +66,12 @@ export function NumberField({
           className={`${inputCls} ${suffix ? "pr-12" : ""} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
         />
         {suffix && (
-          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-black text-slate-500">
+          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-black text-slate-600">
             {suffix}
           </span>
         )}
       </div>
-      {hint && <p className="mt-1.5 text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="mt-1.5 text-xs text-slate-600">{hint}</p>}
     </div>
   );
 }
@@ -101,9 +101,9 @@ export function SelectField({
             </option>
           ))}
         </select>
-        <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
+        <FiChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-600" />
       </div>
-      {hint && <p className="mt-1.5 text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="mt-1.5 text-xs text-slate-600">{hint}</p>}
     </div>
   );
 }
@@ -144,7 +144,7 @@ export function PillGroup<T extends string>({
             }`}
           >
             {o.label}
-            {o.sub && <span className={`block text-[10px] font-semibold mt-0.5 ${value === o.value ? "opacity-80" : "text-slate-500"}`}>{o.sub}</span>}
+            {o.sub && <span className={`block text-[10px] font-semibold mt-0.5 ${value === o.value ? "opacity-80" : "text-slate-600"}`}>{o.sub}</span>}
           </button>
         ))}
       </div>
@@ -188,7 +188,7 @@ export function CalculateButton({ onClick, children, color = "sky" }: { onClick:
 /** Small print / disclaimer line inside calculator cards. */
 export function CalcNote({ children }: { children: ReactNode }) {
   return (
-    <p className="mt-4 text-xs text-slate-500 leading-relaxed bg-slate-50 border border-slate-100 rounded-xl px-4 py-3">
+    <p className="mt-4 text-xs text-slate-600 leading-relaxed bg-slate-50 border border-slate-100 rounded-xl px-4 py-3">
       {children}
     </p>
   );

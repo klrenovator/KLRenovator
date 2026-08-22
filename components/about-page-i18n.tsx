@@ -440,7 +440,7 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
       {/* Breadcrumb Nav */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1 text-xs text-slate-500" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-1 text-xs text-slate-600" aria-label="Breadcrumb">
             <NextLink href={lang === "en" ? "/" : `/${lang}/`} className="hover:text-sky-600 transition">
               {d.breadcrumbHome}
             </NextLink>
@@ -568,7 +568,7 @@ export function AboutPageI18n({ lang }: { lang: Lang }) {
                     <p className="mt-1 text-xs font-bold uppercase tracking-widest text-sky-600">
                       {member.role}
                     </p>
-                    <p className="mt-1 text-sm font-bold text-slate-500">{member.experience}</p>
+                    <p className="mt-1 text-sm font-bold text-slate-600">{member.experience}</p>
                     <p className="mt-3 text-sm text-slate-600 leading-relaxed font-medium">
                       {member.bio}
                     </p>

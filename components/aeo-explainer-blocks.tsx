@@ -78,7 +78,7 @@ export function DefinitionBlocks({
           <div key={term.id} className="border-t border-slate-100 pt-4 first:border-t-0 first:pt-0">
             <h3 className="text-base font-black text-slate-900">{pickTermQuestion(term, locale, seed)}</h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-700">{term.answer[locale]}</p>
-            <p className="mt-2 text-sm leading-relaxed text-slate-500">{term.practical[locale]}</p>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">{term.practical[locale]}</p>
           </div>
         ))}
       </div>
