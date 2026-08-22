@@ -6,7 +6,7 @@ import { ReviewPageI18n } from "@/components/review-page-i18n";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("Thank You — Rate Your KL Renovator Service | KL Renovator"),
+  title: clampMetaTitle("Thank You for Choosing KL Renovator | KL Renovator"),
   description:
     padMetaDescription("Thank you for choosing KL Renovator. We hope your aircond is working perfectly. If you're happy with the service, we'd love a quick Google review!"),
   openGraph: {

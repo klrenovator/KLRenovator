@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { FaWhatsapp, FaGoogle } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import { FiStar, FiCheck, FiArrowRight } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { GoogleReviewWidget } from "@/components/google-review-widget";
@@ -15,9 +15,6 @@ const DATA: Record<Lang, {
   reviewBadge: string;
   reviewTitle: string;
   reviewDesc: string;
-  steps: { n: string; title: string; desc: string }[];
-  googleButton: string;
-  googleNote: string;
   stats: { stat: string; label: string }[];
   feedbackTitle: string;
   feedbackDesc: string;
@@ -35,18 +32,10 @@ const DATA: Record<Lang, {
   en: {
     heroTitle: "Thank You for Choosing KL Renovator!",
     heroSub: "Terima kasih kerana memilih KL Renovator!",
-    heroDesc: "We hope your aircond is running perfectly. If our technician did a great job, a quick Google review makes a huge difference to our small business — and helps other Malaysians find reliable service.",
-    reviewBadge: "Takes 60 Seconds",
-    reviewTitle: "Leave Us a Google Review",
-    reviewDesc: "Your review directly helps other Malaysian homeowners and businesses find a trustworthy aircond technician. We read every review personally.",
-    steps: [
-      { n: "1", title: "Tap the button below", desc: "Opens Google Maps for KL Renovator in a new tab" },
-      { n: "2", title: "Click the star rating", desc: "Tap 5 stars if you're happy with the service" },
-      { n: "3", title: "Write a short review", desc: "What service? How was the technician? Was it same-day?" },
-      { n: "4", title: "Tap Post", desc: "Done — your review helps other Malaysians find reliable service" },
-    ],
-    googleButton: "Write a Google Review",
-    googleNote: "You need a Google account (Gmail) to leave a review. It takes about 60 seconds.",
+    heroDesc: "We hope your aircond is running perfectly. If anything at all needs our attention, WhatsApp us directly below — we take every concern seriously.",
+    reviewBadge: "Verified Google Reviews",
+    reviewTitle: "See What Our Customers Say",
+    reviewDesc: `Real reviews from real KL & Selangor customers on our Google Business Profile — currently ${reviewCountLabel} five-star reviews.`,
     stats: [
       { stat: reviewCountLabel, label: "Google Reviews" },
       { stat: `${reviewRatingLabel} ★`, label: "Average Rating" },
@@ -68,18 +57,10 @@ const DATA: Record<Lang, {
   ms: {
     heroTitle: "Terima Kasih Kerana Memilih KL Renovator!",
     heroSub: "感谢您选择KL Renovator！",
-    heroDesc: "Kami harap aircond anda berfungsi dengan sempurna. Jika juruteknik kami melakukan kerja yang cemerlang, ulasan Google yang ringkas akan memberi kesan besar kepada perniagaan kecil kami — dan membantu rakyat Malaysia lain mendapatkan servis yang boleh dipercayai.",
-    reviewBadge: "Hanya 60 Saat",
-    reviewTitle: "Tinggalkan Ulasan Google Kami",
-    reviewDesc: "Ulasan anda secara langsung membantu pemilik rumah dan perniagaan Malaysia lain menemui juruteknik aircond yang boleh dipercayai. Kami membaca setiap ulasan secara peribadi.",
-    steps: [
-      { n: "1", title: "Ketik butang di bawah", desc: "Membuka Google Maps untuk KL Renovator dalam tab baharu" },
-      { n: "2", title: "Ketik penarafan bintang", desc: "Ketik 5 bintang jika anda berpuas hati dengan servis" },
-      { n: "3", title: "Tulis ulasan ringkas", desc: "Servis apa? Bagaimanakah juruteknik? Adakah hari sama?" },
-      { n: "4", title: "Ketik Hantar", desc: "Selesai — ulasan anda membantu rakyat Malaysia lain mendapatkan servis yang boleh dipercayai" },
-    ],
-    googleButton: "Tulis Ulasan Google",
-    googleNote: "Anda memerlukan akaun Google (Gmail) untuk meninggalkan ulasan. Ia mengambil masa kira-kira 60 saat.",
+    heroDesc: "Kami harap aircond anda berfungsi dengan sempurna. Jika ada apa-apa yang memerlukan perhatian kami, WhatsApp kami terus di bawah — kami mengambil serius setiap kebimbangan.",
+    reviewBadge: "Ulasan Google Disahkan",
+    reviewTitle: "Lihat Kata Pelanggan Kami",
+    reviewDesc: `Ulasan sebenar daripada pelanggan sebenar KL & Selangor di Profil Perniagaan Google kami — kini ${reviewCountLabel} ulasan lima bintang.`,
     stats: [
       { stat: reviewCountLabel, label: "Ulasan Google" },
       { stat: `${reviewRatingLabel} ★`, label: "Penarafan Purata" },
@@ -101,18 +82,11 @@ const DATA: Record<Lang, {
   zh: {
     heroTitle: "感谢您选择 KL Renovator！",
     heroSub: "Terima kasih kerana memilih KL Renovator!",
-    heroDesc: "我们希望您的冷气运行完美。如果我们的技术员做得很好，一个快速的 Google 评价将对我们的小企业产生巨大影响——并帮助其他马来西亚人找到可靠的服务。",
-    reviewBadge: "只需 60 秒",
-    reviewTitle: "给我们留一个 Google 评价",
-    reviewDesc: "您的评价直接帮助其他马来西亚房主和企业找到值得信赖的冷气技术员。我们亲自阅读每一条评价。",
-    steps: [
-      { n: "1", title: "点击下方按钮", desc: "在新标签页中打开 KL Renovator 的 Google Maps" },
-      { n: "2", title: "点击星级评分", desc: "如果您对服务满意，请点 5 星" },
-      { n: "3", title: "写一条简短评价", desc: "什么服务？技术员怎么样？是当天服务吗？" },
-      { n: "4", title: "点击发布", desc: "完成——您的评价帮助其他马来西亚人找到可靠的服务" },
-    ],
-    googleButton: "撰写 Google 评价",
-    googleNote: "您需要一个 Google 账号（Gmail）才能留评价。大约只需 60 秒。",
+    heroDesc: "我们希望您的冷气运行完美。如有任何需要我们关注的地方，请直接通过下方的 WhatsApp 联系我们——我们认真对待每一个问题。",
+    reviewBadge: "已验证的 Google 评价",
+    reviewTitle: "看看客户怎么说",
+    reviewDesc: `来自吉隆坡与雪兰莪真实客户在我们 Google 商家资料上的真实评价——目前已有 ${reviewCountLabel} 条五星评价。"`,
+
     stats: [
       { stat: reviewCountLabel, label: "Google 评价" },
       { stat: `${reviewRatingLabel} ★`, label: "平均评分" },
@@ -153,50 +127,16 @@ export function ReviewPageI18n({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* Review CTA */}
+      {/* Reviews showcase — the former "leave us a review" funnel (steps,
+          star picker, Write a Google Review button) was removed at the
+          owner's request. This page now thanks the customer and shows the
+          existing verified reviews only. */}
       <section className="py-14 px-4 bg-white">
         <div className="max-w-xl mx-auto text-center">
           <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-2">{d.reviewBadge}</p>
           <h2 className="text-2xl font-black text-slate-900 mb-4">{d.reviewTitle}</h2>
           <p className="text-sm text-slate-600 mb-8 leading-relaxed">
             {d.reviewDesc}
-          </p>
-
-          {/* Steps */}
-          <div className="text-left space-y-3 mb-8">
-            {d.steps.map((s) => (
-              <div key={s.n} className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-600 text-white text-xs font-black">
-                  {s.n}
-                </div>
-                <div>
-                  <p className="font-black text-slate-900 text-sm">{s.title}</p>
-                  <p className="text-xs text-slate-600 mt-0.5">{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Stars display */}
-          <div className="flex justify-center gap-1 mb-6">
-            {[1,2,3,4,5].map((i) => (
-              <FiStar key={i} className="h-8 w-8 text-amber-400 fill-amber-400" />
-            ))}
-          </div>
-
-          {/* Google Review Button */}
-          <a
-            href={siteConfig.googleBusinessProfile}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 w-full bg-white border-2 border-slate-900 hover:bg-slate-900 hover:text-white text-slate-900 font-black uppercase tracking-wider py-4 rounded-2xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg mb-4 group"
-          >
-            <FaGoogle className="h-5 w-5 text-[#4285F4] group-hover:text-white transition-colors" />
-            {d.googleButton}
-          </a>
-
-          <p className="text-xs text-slate-600">
-            {d.googleNote}
           </p>
 
           {/* Official Google review widget — keyless link widget (rating +

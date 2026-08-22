@@ -5,7 +5,7 @@ import { ReviewPageI18n } from "@/components/review-page-i18n";
 import { PrimaryJobPhoto } from "@/components/primary-job-photo";
 
 export const metadata: Metadata = {
-  title: clampMetaTitle("感谢您 — 为 KL Renovator 的服务评分 | KL Renovator"),
+  title: clampMetaTitle("感谢您选择 KL Renovator | KL Renovator"),
   description:
     padMetaDescription("感谢您选择 KL Renovator。我们希望您的冷气运行完美。如果您对服务满意，我们很乐意收到您的一个简短 Google 评价！"),
   alternates: {
