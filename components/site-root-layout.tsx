@@ -104,14 +104,21 @@ export default function SiteRootLayout({
     <html lang={htmlLang} className="scroll-smooth">
       {/* eslint-disable-next-line @next/next/no-head-element */}
       <head>
-        {/* Preload LCP hero image – audit Part 3 performance fix */}
+        {/* Early connection hints for third-party analytics. Establishes
+            DNS/TLS to the GTM/GA4/Clarity origins up front so they can start
+            faster without blocking first paint. */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link
-          rel="preload"
-          as="image"
-          href="/hero/york-aircond-chemical-wash-puchong-37.webp"
-          imageSrcSet="/_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=360&q=75 360w, /_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=750&q=75 750w, /_next/image?url=%2Fhero%2Fyork-aircond-chemical-wash-puchong-37.webp&w=1920&q=75 1920w"
-          imageSizes="(max-width: 640px) 100vw, 100vw"
+          rel="preconnect"
+          href="https://www.google-analytics.com"
+          crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        {/* The LCP hero image is preloaded automatically by next/image through
+            the `priority` prop on the first hero slide (correct quality + srcset
+            for the visitor's device). A hand-written preload here was redundant
+            and mismatched (q=75 vs the component's q=76), causing a wasted
+            duplicate fetch that actually hurt LCP — so it is removed. */}
         {/* GTM — loaded via static inline bootstrap (CSP allows googletagmanager.com) */}
         {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
@@ -298,7 +305,7 @@ export default function SiteRootLayout({
 
         <Script
           id="microsoft-clarity"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
