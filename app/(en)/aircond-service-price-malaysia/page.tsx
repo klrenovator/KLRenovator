@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
     buildFreshMetaTitle(`Aircond Service Price Malaysia — Transparent Price List`, "en")
   );
   const metaDesc = clampMetaDescription(
-    `Latest ${freshDate} aircond service prices in KL & Selangor. Basic service RM99, chemical wash RM120, overhaul RM220, gas top-up from RM2.50/PSI, install RM199. No hidden charges.`
+    `Latest ${freshDate} aircond service prices in KL & Selangor. Basic service RM99, chemical wash RM120, overhaul RM420, gas top-up from RM2.50/PSI, install RM199. No hidden charges.`
   );
 
   return {

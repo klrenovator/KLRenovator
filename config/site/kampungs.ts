@@ -4465,9 +4465,9 @@ export const kampungPages = [
       lat: 3.1536,
       lng: 101.6616,
       housingNote: "premium bungalow and semi-D residential roads sitting beside office towers along Jalan Semantan with multi-unit and tenancy-churn servicing demand",
-      description: "Aircond service Damansara Heights (Bukit Damansara) — KL Renovator covers the premium bungalow and semi-D roads off Jalan Bukit Damansara plus the office towers and shop offices along Jalan Semantan. Bungalow jobs here are typically multi-unit whole-house systems, while offices need early-morning or weekend slots so cooling never stops during trading hours. Landlords between tenancies often book full chemical overhauls before handover. Basic RM99, chemical wash RM120, overhaul from RM 220, install from RM199. WhatsApp +60182983573.",
-      descriptionMS: "Servis aircond Damansara Heights (Bukit Damansara) — KL Renovator meliputi jalan banglo dan semi-D premium di Jalan Bukit Damansara serta menara pejabat dan shop office di Jalan Semantan. Kerja banglo di sini biasanya sistem pelbagai unit seluruh rumah, manakala pejabat perlukan slot awal pagi atau hujung minggu supaya penyejukan tidak terganggu waktu bekerja. Tuan rumah antara penyewa kerap tempah overhaul kimia penuh sebelum serahan. Asas RM99, cuci kimia RM120, overhaul dari RM 220, pasang dari RM199. WhatsApp +60182983573.",
-      descriptionZH: "白沙罗高原（Bukit Damansara）冷气服务 — KL Renovator 覆盖Bukit Damansara路的高端洋房与半独立式住宅区，以及Jalan Semantan沿线的办公楼与店式办公室。洋房工程通常为全屋多机系统，办公楼则需清晨或周末时段以免影响营业。业主换租期间常在交房前预约全面化学大修。基本 RM99、化学清洗 RM120、大修 RM 220 起、安装 RM199 起。WhatsApp +60182983573。",
+      description: "Aircond service Damansara Heights (Bukit Damansara) — KL Renovator covers the premium bungalow and semi-D roads off Jalan Bukit Damansara plus the office towers and shop offices along Jalan Semantan. Bungalow jobs here are typically multi-unit whole-house systems, while offices need early-morning or weekend slots so cooling never stops during trading hours. Landlords between tenancies often book full chemical overhauls before handover. Basic RM99, chemical wash RM120, overhaul from RM 420, install from RM199. WhatsApp +60182983573.",
+      descriptionMS: "Servis aircond Damansara Heights (Bukit Damansara) — KL Renovator meliputi jalan banglo dan semi-D premium di Jalan Bukit Damansara serta menara pejabat dan shop office di Jalan Semantan. Kerja banglo di sini biasanya sistem pelbagai unit seluruh rumah, manakala pejabat perlukan slot awal pagi atau hujung minggu supaya penyejukan tidak terganggu waktu bekerja. Tuan rumah antara penyewa kerap tempah overhaul kimia penuh sebelum serahan. Asas RM99, cuci kimia RM120, overhaul dari RM 420, pasang dari RM199. WhatsApp +60182983573.",
+      descriptionZH: "白沙罗高原（Bukit Damansara）冷气服务 — KL Renovator 覆盖Bukit Damansara路的高端洋房与半独立式住宅区，以及Jalan Semantan沿线的办公楼与店式办公室。洋房工程通常为全屋多机系统，办公楼则需清晨或周末时段以免影响营业。业主换租期间常在交房前预约全面化学大修。基本 RM99、化学清洗 RM120、大修 RM 420 起、安装 RM199 起。WhatsApp +60182983573。",
       metaTitle: "Aircond Service Damansara Heights — RM 99 Same Day",
       metaDesc: "Professional aircond service in Damansara Heights: chemical wash, overhaul, repair & installation for homes and offices. Same-day, 1-month warranty.",
       metaTitleMS: "Servis Aircond Damansara Heights — RM 99 Hari Sama",
@@ -4477,15 +4477,15 @@ export const kampungPages = [
       faqs: [
         { q: "Can you service office aircond in Damansara Heights outside working hours?", a: "Yes — offices along Jalan Semantan and the surrounding towers regularly book our early-morning, evening or weekend slots for wall-mounted and ceiling-cassette servicing so business hours are never interrupted." },
         { q: "Do you handle whole-house multi-unit systems in Damansara Heights bungalows?", a: "Yes — whole-house multi-unit servicing and installation is a core service on this route. Per-unit pricing is confirmed upfront, and every unit gets the same vacuum-pump commissioning and testing checklist." },
-        { q: "I'm a landlord preparing a unit for new tenants — how fast can you complete a full chemical overhaul?", a: "Chemical overhaul from RM 220 per wall-mounted unit is usually completed same-day for a standard unit count; WhatsApp +60182983573 with your unit list and handover date and we will schedule backwards from it." },
+        { q: "I'm a landlord preparing a unit for new tenants — how fast can you complete a full chemical overhaul?", a: "Chemical overhaul from RM 420 per wall-mounted unit is usually completed same-day for a standard unit count; WhatsApp +60182983573 with your unit list and handover date and we will schedule backwards from it." },
       ],
       faqsBM: [
         { q: "Boleh servis aircond pejabat di Damansara Heights luar waktu bekerja?", a: "Ya — pejabat di sepanjang Jalan Semantan kerap menempah slot awal pagi, petang atau hujung minggu kami untuk servis dinding dan ceiling cassette tanpa ganggu waktu kerja." },
-        { q: "Saya tuan rumah menyediakan unit untuk penyewa baharu — berapa cepat overhaul kimia penuh boleh siap?", a: "Overhaul kimia dari RM 220 setiap unit dinding biasanya siap hari sama untuk bilangan unit standard; WhatsApp +60182983573 dengan senarai unit dan tarikh serahan." },
+        { q: "Saya tuan rumah menyediakan unit untuk penyewa baharu — berapa cepat overhaul kimia penuh boleh siap?", a: "Overhaul kimia dari RM 420 setiap unit dinding biasanya siap hari sama untuk bilangan unit standard; WhatsApp +60182983573 dengan senarai unit dan tarikh serahan." },
       ],
       faqsZH: [
         { q: "可以在办公时间之外为白沙罗高原的办公室服务吗？", a: "可以——Jalan Semantan沿线的办公室经常预约我们的清晨、傍晚或周末时段进行挂壁式与天花板卡式机保养，完全不影响营业。" },
-        { q: "我是房东，正在为新房客准备房源，全面化学大修多快能完成？", a: "挂壁式化学大修每台 RM 220 起，标准数量通常当天完成；请把机数与交房日期WhatsApp至 +60182983573，我们会倒排时间。" },
+        { q: "我是房东，正在为新房客准备房源，全面化学大修多快能完成？", a: "挂壁式化学大修每台 RM 420 起，标准数量通常当天完成；请把机数与交房日期WhatsApp至 +60182983573，我们会倒排时间。" },
       ],
     },
     {

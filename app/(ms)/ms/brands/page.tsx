@@ -183,7 +183,7 @@ export default function BrandsPageMS() {
             {[
               { service: "Servis Asas", price: "Dari RM 99" },
               { service: "Cuci Kimia", price: "Dari RM 120" },
-              { service: "Overhaul Kimia", price: "Dari RM 220" },
+              { service: "Overhaul Kimia", price: "Dari RM 420" },
               { service: "Tambah Gas R22", price: "RM 2.50 / PSI" },
               { service: "Tambah Gas R410A", price: "RM 3.00 / PSI" },
               { service: "Tambah Gas R32", price: "RM 3.00 / PSI" },

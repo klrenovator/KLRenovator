@@ -56,7 +56,7 @@ const breadcrumbSchema = {
 const plans = [
   { name: "Asas", price: "299", period: "/tahun", color: "bg-slate-700", border: "border-slate-300", badging: "Paling Berpatutan", services: "3 lawatan/tahun", includes: ["2 Servis Asas (nilai RM 99 setiap satu)", "1 Cuci Kimia Tekanan (nilai RM 120)", "Penjadualan keutamaan", "Harga terkunci 12 bulan", "Talian WhatsApp terus untuk pelanggan AMC"] },
   { name: "Standard", price: "499", period: "/tahun", color: "bg-sky-600", border: "border-sky-300", badging: "Nilai Terbaik", services: "4 lawatan/tahun", includes: ["2 Servis Asas", "2 Cuci Kimia Tekanan", "1 Diagnostik Kecemasan Percuma (nilai RM 88)", "Penjadualan keutamaan + respons hari sama", "Harga terkunci 12 bulan", "10% diskaun untuk buruh pembaikan tambahan"] },
-  { name: "Premium", price: "899", period: "/tahun", color: "bg-amber-600", border: "border-amber-300", badging: "Perlindungan Maksimum", services: "7 lawatan/tahun", includes: ["4 Servis Asas (suku tahunan)", "2 Cuci Kimia Tekanan", "1 Overhaul Kimia (nilai RM 220)", "2 Diagnostik Kecemasan Percuma (nilai RM 176)", "Keutamaan + hari sama + luar waktu", "15% diskaun untuk buruh pembaikan tambahan", "Pemeriksaan tekanan gas percuma setiap lawatan"] },
+  { name: "Premium", price: "899", period: "/tahun", color: "bg-amber-600", border: "border-amber-300", badging: "Perlindungan Maksimum", services: "7 lawatan/tahun", includes: ["4 Servis Asas (suku tahunan)", "2 Cuci Kimia Tekanan", "1 Overhaul Kimia (nilai RM 420)", "2 Diagnostik Kecemasan Percuma (nilai RM 176)", "Keutamaan + hari sama + luar waktu", "15% diskaun untuk buruh pembaikan tambahan", "Pemeriksaan tekanan gas percuma setiap lawatan"] },
 ];
 
 export default function AMCPageMS() {

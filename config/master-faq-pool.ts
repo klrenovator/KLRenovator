@@ -356,7 +356,7 @@ const ZH_FAQS: MasterFaqItem[] = [
   { category: "servicing", q: "什么是年度保养合约（AMC）？", a: "年度保养合约包括定时保养（每年 2–4 次）、优先预约、维修折扣和免费诊断。适合办公室和多台冷气的住宅。", source: "/services/maintenance-contract" },
   { category: "servicing", q: "自己清洗滤网可以代替专业保养吗？", a: "每 2–4 周清洗滤网很好。但专业保养能清洁您无法接触的内部部件——蒸发器深层清洗、风轮、排水盘和气压检查。", source: "/services/basic-servicing" },
   { category: "servicing", q: "冷气有异味是什么原因？", a: "霉味通常表示蒸发器或排水盘上有微生物生长。化学清洗能杀灭并去除导致异味的生物膜。", source: "/services/chemical-wash" },
-  { category: "servicing", q: "化学清洗和化学大修有什么区别？", a: "化学清洗（起价 RM 120）在安装状态下清洗。化学大修（起价 RM 220）完全拆卸进行深层清洁。", source: "/services/chemical-wash" },
+  { category: "servicing", q: "化学清洗和化学大修有什么区别？", a: "化学清洗（起价 RM 120）在安装状态下清洗。化学大修（起价 RM 420）完全拆卸进行深层清洁。", source: "/services/chemical-wash" },
 
   // ─── 化学清洗 (8 questions) ───────────────────────────────────────────────
   { category: "chemical-wash", q: "化学清洗费用是多少？", a: "化学清洗 1.0–1.5 HP 壁挂式起价 RM 120。天花板卡式机起价 RM 220。所有价格在开工前确认。", source: "/services/chemical-wash" },

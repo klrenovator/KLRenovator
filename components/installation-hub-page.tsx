@@ -282,7 +282,13 @@ export function InstallationHubPage({ locale }: { locale: HubLocale }) {
             <p className="mt-1.5 text-sm text-slate-600">{t.areasSub}</p>
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3 lg:grid-cols-4">
-            {siteConfig.areaPages.slice(0, 20).map((area) => (
+            {/* All 40 areas, not just the first 20 — the heading above promises
+                "40 areas" and every /areas/<slug>/installation page is a real,
+                sitemapped landing page. Previously only the first 20 got a link
+                here, leaving 20 installation pages reachable only via their own
+                area page (4 of them — SS2, Ara Damansara, Bandar Puteri,
+                Bukit Jelutong — had exactly 1 inbound link site-wide). */}
+            {siteConfig.areaPages.map((area) => (
               <NextLink
                 key={area.slug}
                 href={`${prefix(locale)}/areas/${area.slug}/installation`}

@@ -205,7 +205,7 @@ export const problemContent: Record<
     ],
     solutionEN: "A chemical wash (from RM 120) uses a food-safe chemical solution to kill mould and bacteria on the evaporator coil and blower wheel, permanently eliminating the smell. For severe mould infestation on wall-mounted units, a chemical overhaul (Wall-Mounted Aircon only, from RM 420) fully dismantles and sterilises every component.",
     solutionBM: "Cuci kimia (dari RM 120) menggunakan larutan kimia selamat makanan untuk membunuh kulat dan bakteria pada gegelung dan roda penghembus, menghapuskan bau secara kekal. Untuk serangan kulat teruk pada unit dinding, overhaul kimia (Unit Dinding Sahaja, dari RM 420) membongkar dan mensterilkan setiap komponen.",
-    solutionZH: "化学清洗（从RM 120起）使用食品级化学溶液杀死蒸发盘管和鼓风机叶轮上的霉菌和细菌，永久消除异味。对于严重的霉菌侵扰，化学大修（从RM 220起）完全拆卸并消毒每个部件。",
+    solutionZH: "化学清洗（从RM 120起）使用食品级化学溶液杀死蒸发盘管和鼓风机叶轮上的霉菌和细菌，永久消除异味。对于严重的霉菌侵扰，化学大修（从RM 420起）完全拆卸并消毒每个部件。",
     warningEN: "If you smell burning plastic or a sweet chemical/gas odour from the aircond, switch it off immediately and do not restart it. These smells indicate electrical failure or refrigerant leak.",
     warningBM: "Jika anda menghidu bau plastik terbakar atau bau kimia/gas yang manis dari aircond, matikannya serta-merta dan jangan hidupkan semula.",
     warningZH: "如果您闻到冷气机发出塑料燃烧气味或甜味化学/气体气味，请立即关机，不要重新启动。",
@@ -344,7 +344,7 @@ export const problemContent: Record<
     faqs: [
       { q: "Why is there ice forming on my aircond?", a: "Ice on the indoor unit (evaporator coil or copper pipes) means either the refrigerant gas is low, the coil is severely blocked, or the fan is not moving enough air. Switch off the unit and WhatsApp KL Renovator — +60182983573. Most cases fixed same-day." },
       { q: "What should I do if my aircond is frozen?", a: "Step 1: Switch off the aircond from the remote or MCB. Step 2: If your unit has a fan-only mode, run it to help defrost. Step 3: Wait 1–2 hours until all ice melts. Step 4: WhatsApp KL Renovator at +60182983573 for a gas check + chemical overhaul." },
-      { q: "How much does it cost to fix an aircond that keeps freezing?", a: "Gas top-up from RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). Chemical overhaul (if coil blocked) from RM 220. Often both are needed — KL Renovator checks and quotes before work. Diagnostic RM 88 (waived with repair)." },
+      { q: "How much does it cost to fix an aircond that keeps freezing?", a: "Gas top-up from RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). Chemical overhaul (if coil blocked) from RM 420. Often both are needed — KL Renovator checks and quotes before work. Diagnostic RM 88 (waived with repair)." },
     ],
     faqsBM: [
       { q: "Kenapa ais terbentuk pada aircond saya?", a: "Ais pada unit dalam bermakna gas penyejuk rendah, gegelung tersumbat teruk, atau kipas tidak cukup mengalirkan udara. Matikan unit dan WhatsApp KL Renovator — +60182983573." },
@@ -636,16 +636,16 @@ export const problemContent: Record<
     warningBM: "Air yang bocor dari unit dalam ke perabot, dinding, atau titik elektrik adalah bahaya keselamatan. Jika air berhampiran mana-mana soket elektrik, matikan MCB aircond segera dan hubungi KL Renovator untuk servis kecemasan.",
     warningZH: "室内机漏水到家具、墙壁或电源插座是安全隐患。如果水靠近任何电源插座或灯具，立即关闭冷气MCB并致电KL Renovator进行紧急服务。",
     faqs: [
-      { q: "Water is dripping from the front of my aircond — what is causing it?", a: "The drain pipe is almost certainly blocked. Chemical wash with drain flush (from RM 120) fixes minor dripping. If water is flowing heavily, a chemical overhaul (from RM 220) is needed to deep-clean the drain pan." },
+      { q: "Water is dripping from the front of my aircond — what is causing it?", a: "The drain pipe is almost certainly blocked. Chemical wash with drain flush (from RM 120) fixes minor dripping. If water is flowing heavily, a chemical overhaul (from RM 420) is needed to deep-clean the drain pan." },
       { q: "Is water leaking from an aircond dangerous?", a: "Minor dripping is not immediately dangerous but will damage walls, ceilings and furniture. Heavy leaking near electrical points is a safety emergency — switch off the MCB and call KL Renovator immediately: +60182983573." },
-      { q: "How much does it cost to fix an aircond leaking water from the indoor unit?", a: "Chemical wash with drain flush: from RM 120. Chemical overhaul (for severe/persistent leaks): from RM 220. Emergency same-day service available. All prices confirmed before work." },
+      { q: "How much does it cost to fix an aircond leaking water from the indoor unit?", a: "Chemical wash with drain flush: from RM 120. Chemical overhaul (for severe/persistent leaks): from RM 420. Emergency same-day service available. All prices confirmed before work." },
     ],
     faqsBM: [
-      { q: "Air menitis dari bahagian depan aircond saya — apa puncanya?", a: "Paip saliran hampir pasti tersumbat. Cuci kimia dengan pembilasan saliran (dari RM 120) membaiki titisan kecil. Jika air mengalir teruk, overhaul kimia (dari RM 220) diperlukan." },
+      { q: "Air menitis dari bahagian depan aircond saya — apa puncanya?", a: "Paip saliran hampir pasti tersumbat. Cuci kimia dengan pembilasan saliran (dari RM 120) membaiki titisan kecil. Jika air mengalir teruk, overhaul kimia (dari RM 420) diperlukan." },
       { q: "Adakah bocor air dari aircond berbahaya?", a: "Titisan kecil tidak berbahaya segera tetapi akan merosakkan dinding dan perabot. Bocoran teruk berhampiran titik elektrik adalah kecemasan keselamatan — matikan MCB dan hubungi KL Renovator: +60182983573." },
     ],
     faqsZH: [
-      { q: "水从冷气前方滴落——是什么原因？", a: "排水管几乎肯定堵塞了。含排水冲洗的化学清洗（从RM 120起）可修复轻微滴水。如果水流量大，则需要化学大修（从RM 220起）深度清洁排水盘。" },
+      { q: "水从冷气前方滴落——是什么原因？", a: "排水管几乎肯定堵塞了。含排水冲洗的化学清洗（从RM 120起）可修复轻微滴水。如果水流量大，则需要化学大修（从RM 420起）深度清洁排水盘。" },
       { q: "冷气漏水危险吗？", a: "轻微滴水不会立即危险，但会损坏墙壁和家具。靠近电源插座的大量漏水是安全紧急情况——立即关闭MCB并致电KL Renovator：+60182983573。" },
     ],
   },
@@ -763,7 +763,7 @@ export const problemContent: Record<
     warningZH: "弱气流通常被视为正常，但实际上不是——这意味着机组比应该的工作更努力，消耗更多电力，冷却房间更慢。化学清洗可恢复性能并降低您的电费。",
     faqs: [
       { q: "Why is my aircond blowing weak air even though it is cold?", a: "A dirty blower wheel is the most likely cause — it can reduce airflow by 40% while still producing cold air. Chemical wash (from RM 120) cleans the blower wheel and restores full airflow. Most customers notice the difference immediately." },
-      { q: "How much does chemical wash cost to fix weak airflow?", a: "Pressure chemical wash from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Chemical overhaul (for severely blocked units) from RM 220. All confirmed before work." },
+      { q: "How much does chemical wash cost to fix weak airflow?", a: "Pressure chemical wash from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Chemical overhaul (for severely blocked units) from RM 420. All confirmed before work." },
       { q: "How long does it take to fix weak airflow from an aircond?", a: "A chemical wash takes 30–45 minutes per unit. KL Renovator tests airflow at the vents after service to confirm the improvement. Same-day service available." },
     ],
     faqsBM: [
@@ -888,17 +888,17 @@ export const problemContent: Record<
     warningBM: "Titisan kecil yang diabaikan menjadi kebocoran besar. Dulang saliran yang tersumbat dan melimpah boleh menodai siling dan menyebabkan pertumbuhan kulat. Baiki titisan awal — ia adalah servis yang cepat dan murah.",
     warningZH: "忽视的小滴水会变成大漏水。溢出的堵塞排水盘会污染天花板、损坏石膏板，并最终导致墙腔内发霉。及早修复滴水——这是一项快速且价格合理的服务。",
     faqs: [
-      { q: "Why is water dripping from my aircond?", a: "The most common cause is a partially blocked drain pipe. Chemical wash with drain flush (from RM 120) fixes it in 30–45 minutes. If dripping persists, a chemical overhaul (from RM 220) deep-cleans the drain pan." },
+      { q: "Why is water dripping from my aircond?", a: "The most common cause is a partially blocked drain pipe. Chemical wash with drain flush (from RM 120) fixes it in 30–45 minutes. If dripping persists, a chemical overhaul (from RM 420) deep-cleans the drain pan." },
       { q: "Is water dripping from an aircond serious?", a: "Minor dripping is not immediately dangerous but should be fixed promptly to avoid ceiling stains, wall damage and mould. If water is dripping near electrical points, switch off the MCB immediately and call KL Renovator: +60182983573." },
-      { q: "How much does it cost to fix aircond water dripping?", a: "Chemical wash (fixes most dripping): from RM 120. Chemical overhaul (for severe or persistent dripping): from RM 220. Both include drain flush and are confirmed before work starts." },
+      { q: "How much does it cost to fix aircond water dripping?", a: "Chemical wash (fixes most dripping): from RM 120. Chemical overhaul (for severe or persistent dripping): from RM 420. Both include drain flush and are confirmed before work starts." },
     ],
     faqsBM: [
-      { q: "Kenapa air menitis dari aircond saya?", a: "Punca paling biasa adalah paip saliran tersumbat sebahagian. Cuci kimia dengan pembilasan saliran (dari RM 120) membaikinya dalam 30–45 minit. Jika titisan berterusan, overhaul kimia (dari RM 220) membersihkan dulang saliran secara mendalam." },
-      { q: "Berapa kos membaiki aircond yang menitis air?", a: "Cuci kimia (membaiki kebanyakan titisan): dari RM 120. Overhaul kimia (untuk titisan teruk): dari RM 220. Kedua-duanya termasuk pembilasan saliran dan disahkan sebelum kerja bermula." },
+      { q: "Kenapa air menitis dari aircond saya?", a: "Punca paling biasa adalah paip saliran tersumbat sebahagian. Cuci kimia dengan pembilasan saliran (dari RM 120) membaikinya dalam 30–45 minit. Jika titisan berterusan, overhaul kimia (dari RM 420) membersihkan dulang saliran secara mendalam." },
+      { q: "Berapa kos membaiki aircond yang menitis air?", a: "Cuci kimia (membaiki kebanyakan titisan): dari RM 120. Overhaul kimia (untuk titisan teruk): dari RM 420. Kedua-duanya termasuk pembilasan saliran dan disahkan sebelum kerja bermula." },
     ],
     faqsZH: [
-      { q: "为什么我的冷气在滴水？", a: "最常见的原因是排水管部分堵塞。含排水冲洗的化学清洗（从RM 120起）可在30-45分钟内修复。如果持续滴水，则需要化学大修（从RM 220起）深度清洁排水盘。" },
-      { q: "修复冷气滴水需要多少钱？", a: "化学清洗（修复大多数滴水）：从RM 120起。化学大修（严重或持续滴水）：从RM 220起。两者均含排水冲洗，施工前确认价格。" },
+      { q: "为什么我的冷气在滴水？", a: "最常见的原因是排水管部分堵塞。含排水冲洗的化学清洗（从RM 120起）可在30-45分钟内修复。如果持续滴水，则需要化学大修（从RM 420起）深度清洁排水盘。" },
+      { q: "修复冷气滴水需要多少钱？", a: "化学清洗（修复大多数滴水）：从RM 120起。化学大修（严重或持续滴水）：从RM 420起。两者均含排水冲洗，施工前确认价格。" },
     ],
   },
   "aircond-thermostat-problems": {
@@ -1403,7 +1403,7 @@ export default async function ProblemPage({
                         ["Diagnostic", "RM 88*"],
                         ["Chemical Wash", "From RM 120"],
                         ["Gas Top-Up", "From RM 2.50 / PSI"],
-                        ["Chemical Overhaul", "From RM 220"],
+                        ["Chemical Overhaul", "From RM 420"],
                         ["Repairs / Parts", "RM 150–600"],
                       ].map(([label, price]) => (
                         <div key={label} className="flex justify-between items-center text-xs font-bold border-b border-sky-500 pb-2 last:border-0 last:pb-0">

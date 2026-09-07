@@ -56,7 +56,7 @@ const breadcrumbSchema = {
 const plans = [
   { name: "基础", price: "299", period: "/年", color: "bg-slate-700", border: "border-slate-300", badging: "最实惠", services: "3 次/年", includes: ["2 次基本保养 (价值 RM 99/次)", "1 次高压化学清洗 (价值 RM 120)", "优先排程", "12 个月锁定价格", "AMC 客户专属 WhatsApp 专线"] },
   { name: "标准", price: "499", period: "/年", color: "bg-sky-600", border: "border-sky-300", badging: "最佳性价比", services: "4 次/年", includes: ["2 次基本保养", "2 次高压化学清洗", "1 次免费紧急诊断 (价值 RM 88)", "优先排程 + 当天响应", "12 个月锁定价格", "额外维修人工费 9 折"] },
-  { name: "尊享", price: "899", period: "/年", color: "bg-amber-600", border: "border-amber-300", badging: "全面保护", services: "7 次/年", includes: ["4 次基本保养 (季度)", "2 次高压化学清洗", "1 次化学大修 (价值 RM 220)", "2 次免费紧急诊断 (价值 RM 176)", "优先 + 当天 + 非工作时间响应", "额外维修人工费 85 折", "每次上门免费气压检查"] },
+  { name: "尊享", price: "899", period: "/年", color: "bg-amber-600", border: "border-amber-300", badging: "全面保护", services: "7 次/年", includes: ["4 次基本保养 (季度)", "2 次高压化学清洗", "1 次化学大修 (价值 RM 420)", "2 次免费紧急诊断 (价值 RM 176)", "优先 + 当天 + 非工作时间响应", "额外维修人工费 85 折", "每次上门免费气压检查"] },
 ];
 
 export default function AMCPageZH() {

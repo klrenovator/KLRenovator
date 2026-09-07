@@ -7,7 +7,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 export const metadata: Metadata = {
   title: clampMetaTitle("Aircond Services & Price List KL Selangor | KL Renovator"),
   description:
-    padMetaDescription("Full aircond service price list for KL & Selangor — chemical wash from RM 120, overhaul from RM 220, gas top-up & installation. No hidden fees."),
+    padMetaDescription("Full aircond service price list for KL & Selangor — chemical wash from RM 120, overhaul from RM 420, gas top-up & installation. No hidden fees."),
   alternates: buildTrilingualHreflang("/services"),
   openGraph: {
     title: clampMetaTitle("Aircond Services & Price List | KL Renovator"),

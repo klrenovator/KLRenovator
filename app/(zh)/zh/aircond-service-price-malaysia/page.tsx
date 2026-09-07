@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     buildFreshMetaTitle(`马来西亚冷气服务价格 — 透明价目表`, "zh")
   );
   const metaDesc = clampMetaDescription(
-    `${freshDate}吉隆坡及雪兰莪冷气服务价格。基本保养RM99，化学清洗RM120，大修RM220，加气从RM2.50/PSI起，安装RM199。无隐藏费用。`
+    `${freshDate}吉隆坡及雪兰莪冷气服务价格。基本保养RM99，化学清洗RM120，大修RM420，加气从RM2.50/PSI起，安装RM199。无隐藏费用。`
   );
 
   return {

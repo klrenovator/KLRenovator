@@ -444,8 +444,9 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                 </label>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-600 mb-2">{s.length} ({s.feet})</label>
+                    <label htmlFor="btu-length" className="block text-xs font-bold text-slate-600 mb-2">{s.length} ({s.feet})</label>
                     <input
+                      id="btu-length"
                       type="number"
                       value={length}
                       onChange={(e) => { setLength(Number(e.target.value)); setShowResult(false); }}
@@ -455,8 +456,9 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-600 mb-2">{s.width} ({s.feet})</label>
+                    <label htmlFor="btu-width" className="block text-xs font-bold text-slate-600 mb-2">{s.width} ({s.feet})</label>
                     <input
+                      id="btu-width"
                       type="number"
                       value={width}
                       onChange={(e) => { setWidth(Number(e.target.value)); setShowResult(false); }}
@@ -482,8 +484,9 @@ export function BtuCalculator({ lang }: { lang: Lang }) {
                 </label>
                 {!useStandardHeight && (
                   <div className="mt-3 max-w-[160px]">
-                    <label className="block text-xs font-bold text-slate-600 mb-2">{s.height} ({s.feet})</label>
+                    <label htmlFor="btu-height" className="block text-xs font-bold text-slate-600 mb-2">{s.height} ({s.feet})</label>
                     <input
+                      id="btu-height"
                       type="number"
                       value={height}
                       onChange={(e) => { setHeight(Number(e.target.value)); setShowResult(false); }}

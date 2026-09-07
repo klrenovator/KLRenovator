@@ -391,7 +391,7 @@ export default async function AreaPageMS({
             <ul className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200 text-sm">
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Servis Asas:</strong> dari RM 99</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Cuci Kimia:</strong> dari RM 120</span></li>
-              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Overhaul Kimia:</strong> dari RM 220</span></li>
+              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Overhaul Kimia:</strong> dari RM 420</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>Tambah Gas:</strong> dari RM 2.50/PSI</span></li>
             </ul>
             <p className="mt-4 text-xs text-slate-500 font-medium">

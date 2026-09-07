@@ -56,7 +56,7 @@ const faqs = [
   { q: "How much is aircond chemical wash in KL 2026?", a: "RM120 for wall-mounted 1.0–1.5 HP. 2.0–2.5 HP RM150. 3.0 HP RM180. Cassette from RM220. Price confirmed before work. Multi-unit: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units." },
   { q: "Do you cover all KL & Selangor?", a: "Yes — entire Klang Valley: Kuala Lumpur, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Ampang, Kajang, Damansara, Bangsar, Mont Kiara, Kepong, Setapak, Gombak, Selayang, Rawang, Seri Kembangan. Same-day Mon–Sun." },
   { q: "Chemical wash vs basic service?", a: "Basic RM99 = surface clean. Chemical wash RM120 = 80–120 PSI pressure chemical penetrates coil fins & blower, dissolves mould/biofilm. Smell / weak airflow / 12+ months no deep clean = chemical wash." },
-  { q: "Will chemical wash stop water leaking?", a: "Usually yes if drain is biofilm-clogged. If leak persists, drain pan may be cracked — needs chemical overhaul RM220. We check honestly on site." },
+  { q: "Will chemical wash stop water leaking?", a: "Usually yes if drain is biofilm-clogged. If leak persists, drain pan may be cracked — needs chemical overhaul RM420. We check honestly on site." },
   { q: "How long per unit?", a: "60–75 minutes wall-mounted 1.0–1.5 HP. Unit stays mounted. Use immediately after." },
   { q: "Is the chemical safe?", a: "Yes. Food-grade alkaline, biodegradable, phosphate-free. No toxic fumes. Fully rinsed. Safe immediately." },
   { q: "Same-day booking available?", a: "Yes. WhatsApp +60182983573. We confirm nearest slot in minutes. Mon–Sun 9am–10pm." },
