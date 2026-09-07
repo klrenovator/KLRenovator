@@ -50,7 +50,7 @@ export const problemAEOContent: Record<
   "aircond-water-leaking": {
     directAnswerEN: "Water leaking from an indoor unit is caused by a blocked drain pipe in roughly 7 out of 10 cases KL Renovator sees in Malaysia's humid climate. A chemical wash (from RM 120) usually clears it; if the leak is severe or recurring, a full chemical overhaul (Wall-Mounted Aircon only, from RM 420) removes the blockage permanently.",
     directAnswerMS: "Kebocoran air dari unit dalam disebabkan oleh paip longkang tersumbat dalam kira-kira 7 daripada 10 kes yang KL Renovator lihat dalam iklim lembap Malaysia. Cuci kimia (dari RM 120) biasanya membersihkannya; jika bocor teruk, overhaul kimia penuh (Unit Dinding Sahaja, dari RM 420) membuang sekatan secara kekal.",
-    directAnswerZH: "在马来西亚潮湿气候下，KL Renovator遇到的室内机漏水案例中，约七成是排水管堵塞造成的。化学清洗（从 RM 2.50/PSI 起）通常能解决；若漏水严重或反复发生，全面化学大修（从RM 220起）可永久清除堵塞。",
+    directAnswerZH: "在马来西亚潮湿气候下，KL Renovator遇到的室内机漏水案例中，约七成是排水管堵塞造成的。化学清洗（从 RM 120 起）通常能解决；若漏水严重或反复发生，全面化学大修（从RM 420起）可永久清除堵塞。",
     diyChecksEN: ["Place a towel or basin under the leak immediately to protect flooring/furniture", "Check if the unit is tilted — indoor units should slope slightly toward the drain outlet, a common installation fault", "Turn off the unit if leaking heavily near electrical wiring or sockets, for safety"],
     diyChecksMS: [
       "Matikan unit dan perhatikan dari mana air menitis (panel depan, paip longkang, atau dinding belakang)",
@@ -80,7 +80,7 @@ export const problemAEOContent: Record<
   "aircond-bad-smell": {
     directAnswerEN: "A musty or sour smell from your aircond is almost always mould and bacteria growing on the evaporator coil and blower wheel — it's not usually a sign of a broken part. A pressure chemical wash (from RM 120) removes it completely in most cases; a chemical overhaul (Wall-Mounted Aircon only, from RM 420) is needed for heavily neglected units.",
     directAnswerMS: "Bau hapak atau masam dari aircond hampir selalu adalah kulat dan bakteria yang tumbuh pada gegelung evaporator dan roda blower — bukan tanda alat ganti rosak. Cuci kimia tekanan (dari RM 120) menghilangkannya sepenuhnya dalam kebanyakan kes.",
-    directAnswerZH: "冷气发出霉味或酸味几乎总是因为蒸发器盘管和风轮上滋生了霉菌和细菌——通常不是零件损坏的迹象。压力化学清洗（从 RM 2.50/PSI 起）在大多数情况下能彻底去除异味。",
+    directAnswerZH: "冷气发出霉味或酸味几乎总是因为蒸发器盘管和风轮上滋生了霉菌和细菌——通常不是零件损坏的迹象。压力化学清洗（从 RM 120 起）在大多数情况下能彻底去除异味。",
     diyChecksEN: ["Check and wash the air filter — a dirty filter traps dust that feeds mould growth and holds smell", "Run the unit in \"Fan\" mode for 30 minutes with the door open before switching off, to dry out internal moisture", "Check for a musty smell specifically after long idle periods (indicates internal mould, not an external source)"],
     diyChecksMS: [
       "Semak dan basuh penapis udara — penapis kotor memerangkap habuk yang menyuburkan kulat",
@@ -560,7 +560,7 @@ export const problemAEOContent: Record<
   "aircond-water-dripping": {
     directAnswerEN: "Dripping (as opposed to a heavier leak) is usually an early-stage sign of drain pipe or drain pan buildup — catching it now with a chemical wash (from RM 120) is cheaper and easier than waiting for it to worsen into a full leak requiring a chemical overhaul (Wall-Mounted Aircon only, from RM 420).",
     directAnswerMS: "Menitis (berbanding kebocoran lebih teruk) biasanya tanda peringkat awal penumpukan paip atau dulang longkang — menanganinya sekarang dengan cuci kimia (dari RM 120) lebih murah.",
-    directAnswerZH: "滴水（相较于更严重的漏水）通常是排水管或排水盘积垢的早期迹象——现在进行化学清洗（从 RM 2.50/PSI 起）比等到情况恶化更省钱。",
+    directAnswerZH: "滴水（相较于更严重的漏水）通常是排水管或排水盘积垢的早期迹象——现在进行化学清洗（从 RM 120 起）比等到情况恶化更省钱。",
     diyChecksEN: ["Note whether it's a slow drip versus a steady trickle — this indicates how advanced the blockage is", "Place a small container to catch drips and monitor if the rate increases", "Check if dripping only happens right after the unit starts cooling versus continuously"],
     diyChecksMS: [
       "Perhatikan sama ada ia titisan perlahan berbanding aliran tetap",

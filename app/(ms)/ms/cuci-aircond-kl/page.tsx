@@ -62,7 +62,7 @@ const faqs = [
   { q: "Kawasan mana cover cuci aircond KL?", a: "Seluruh Klang Valley: KL, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Ampang, Kajang, Damansara, Bangsar, Mont Kiara, Kepong, Setapak, Gombak, Selayang, Rawang, Seri Kembangan. Same-day Isnin–Ahad." },
   { q: "Berapa kerap perlu cuci aircond di KL?", a: "Standard 12 bulan. Ground floor / tepi highway / construction: 6–8 bulan. Heavy use 8+ jam: 6 bulan servis asas + chemical wash tahunan." },
   { q: "Beza chemical wash vs servis biasa RM99?", a: "Servis biasa: permukaan sahaja. Chemical wash RM120: kimia 80–120 PSI tembus coil & blower, larutkan biofilm & kulat. Bau / angin lemah / 12+ bulan tak deep clean = chemical wash." },
-  { q: "Cuci aircond boleh stop air bocor?", a: "Ya jika punca drain tersumbat biofilm. Kalau bocor berterusan lepas cuci, drain pan retak — perlu chemical overhaul RM220. Kami check jujur semasa servis." },
+  { q: "Cuci aircond boleh stop air bocor?", a: "Ya jika punca drain tersumbat biofilm. Kalau bocor berterusan lepas cuci, drain pan retak — perlu chemical overhaul RM420. Kami check jujur semasa servis." },
   { q: "Berapa lama 1 unit?", a: "60–75 minit wall-mounted 1.0–1.5 HP. Unit kekal di dinding. Boleh guna serta-merta." },
   { q: "Chemical selamat?", a: "Ya. Food-grade alkaline, biodegradable, phosphate-free. Tiada wap toksik. Canvas lindungi lantai/perabot. Selamat guna serta-merta." },
   { q: "Boleh same-day hari ini?", a: "Boleh. WhatsApp +60182983573 lokasi anda. Kami confirm slot terdekat 2–5 minit. Isnin–Ahad 9am–10pm." },

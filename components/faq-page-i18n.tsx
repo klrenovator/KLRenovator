@@ -184,6 +184,7 @@ export function FaqPageI18n({ lang }: { lang: Lang }) {
             <FaMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-600" />
             <input
               type="text"
+              aria-label={hero.searchPlaceholder}
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);

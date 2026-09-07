@@ -183,7 +183,7 @@ export default function BrandsPageZH() {
             {[
               { service: "基本保养", price: "RM 99 起" },
               { service: "化学清洗", price: "RM 120 起" },
-              { service: "化学大修", price: "RM 220 起" },
+              { service: "化学大修", price: "RM 420 起" },
               { service: "R22 充气", price: "RM 2.50 / PSI" },
               { service: "R410A 充气", price: "RM 3.00 / PSI" },
               { service: "R32 充气", price: "RM 3.00 / PSI" },

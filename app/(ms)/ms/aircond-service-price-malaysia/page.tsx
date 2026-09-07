@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     buildFreshMetaTitle(`Harga Servis Aircond Malaysia — Senarai Harga Telus`, "ms")
   );
   const metaDesc = clampMetaDescription(
-    `Senarai harga servis aircond ${freshDate} di KL & Selangor. Servis asas RM99, cuci kimia RM120, overhaul RM220, tambah gas dari RM2.50/PSI, pasang RM199. Tiada caj tersembunyi.`
+    `Senarai harga servis aircond ${freshDate} di KL & Selangor. Servis asas RM99, cuci kimia RM120, overhaul RM420, tambah gas dari RM2.50/PSI, pasang RM199. Tiada caj tersembunyi.`
   );
 
   return {

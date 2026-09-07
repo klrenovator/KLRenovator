@@ -6,7 +6,7 @@ import { ToolLinks } from "@/components/calculators/tool-links";
 export const metadata: Metadata = {
   title: clampMetaTitle("冷气服务与价格表 KL & Selangor | KL Renovator"),
   description:
-    padMetaDescription("吉隆坡及雪兰莪冷气服务价格表 — 化学清洗从RM 120起，大修从RM 220起，加气与安装。无隐藏费用。"),
+    padMetaDescription("吉隆坡及雪兰莪冷气服务价格表 — 化学清洗从RM 120起，大修从RM 420起，加气与安装。无隐藏费用。"),
   alternates: {
     canonical: "https://www.klrenovator.com/zh/services",
     languages: {

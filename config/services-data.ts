@@ -92,7 +92,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "What is the technical difference between a pressure chemical wash and a chemical overhaul?",
-        a: "A Pressure Chemical Wash (RM 120) is performed while the air conditioner remains mounted on your wall; high-pressure chemical spray penetrates the evaporator coil fins and blower wheel to flush out microbial buildup and restore cooling efficiency. A Chemical Overhaul (RM 220) involves completely dismantling the indoor unit from the wall so that every individual part—including the back drain tray, fan motor housing, and internal evaporator coils—is removed, chemical-soaked, and inspected separately before reassembly. If you are uncertain which service package suits your unit's condition, WhatsApp our technical team for an honest evaluation.",
+        a: "A Pressure Chemical Wash (RM 120) is performed while the air conditioner remains mounted on your wall; high-pressure chemical spray penetrates the evaporator coil fins and blower wheel to flush out microbial buildup and restore cooling efficiency. A Chemical Overhaul (RM 420) involves completely dismantling the indoor unit from the wall so that every individual part—including the back drain tray, fan motor housing, and internal evaporator coils—is removed, chemical-soaked, and inspected separately before reassembly. If you are uncertain which service package suits your unit's condition, WhatsApp our technical team for an honest evaluation.",
       },
       {
         q: "What preparation is required before the technician arrives for a chemical wash?",
@@ -119,7 +119,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Apakah perbezaan teknikal antara cuci kimia dan overhaul kimia?",
-        a: "Cuci Kimia Bertekanan (RM 120) dilakukan semasa penghawa dingin kekal terpasang di dinding anda; semburan kimia tekanan tinggi menembusi sirip gegelung dan roda kipas untuk membersihkan penumpukan mikroorganisma dan memulihkan kecekapan penyejukan. Overhaul Kimia (RM 220) melibatkan pembongkaran lengkap unit dalaman dari dinding supaya setiap bahagian—termasuk dulang saliran belakang, perumahan motor kipas, dan gegelung penyejat—dikeluarkan, direndam kimia, dan diperiksa secara berasingan sebelum dipasang semula. Jika tidak pasti pakej mana yang sesuai, WhatsApp pasukan teknikal kami.",
+        a: "Cuci Kimia Bertekanan (RM 120) dilakukan semasa penghawa dingin kekal terpasang di dinding anda; semburan kimia tekanan tinggi menembusi sirip gegelung dan roda kipas untuk membersihkan penumpukan mikroorganisma dan memulihkan kecekapan penyejukan. Overhaul Kimia (RM 420) melibatkan pembongkaran lengkap unit dalaman dari dinding supaya setiap bahagian—termasuk dulang saliran belakang, perumahan motor kipas, dan gegelung penyejat—dikeluarkan, direndam kimia, dan diperiksa secara berasingan sebelum dipasang semula. Jika tidak pasti pakej mana yang sesuai, WhatsApp pasukan teknikal kami.",
       },
       {
         q: "Apakah persediaan yang diperlukan sebelum juruteknik tiba untuk cuci kimia?",
@@ -143,7 +143,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "高压化学清洗与化学大修在技术上有何不同？",
-        a: "高压化学清洗（RM 120）是在冷气挂在墙上的状态下进行的；高压化学喷雾深入蒸发器盘管翅片和风轮，冲洗掉微生物污垢并恢复制冷效率。化学大修（RM 220）则将室内机从墙上完全拆卸下来，每个独立部件——包括接水盘后部、风扇马达外壳及蒸发器盘管——都单独取出、化学浸泡并全面检查后再重装。如果您不确定哪种服务套餐适合您的机器状况，欢迎WhatsApp咨询我们的技术团队。",
+        a: "高压化学清洗（RM 120）是在冷气挂在墙上的状态下进行的；高压化学喷雾深入蒸发器盘管翅片和风轮，冲洗掉微生物污垢并恢复制冷效率。化学大修（RM 420）则将室内机从墙上完全拆卸下来，每个独立部件——包括接水盘后部、风扇马达外壳及蒸发器盘管——都单独取出、化学浸泡并全面检查后再重装。如果您不确定哪种服务套餐适合您的机器状况，欢迎WhatsApp咨询我们的技术团队。",
       },
       {
         q: "技术员上门进行化学清洗前，我需要做哪些准备工作？",
@@ -693,7 +693,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "My aircond still smells or blows weak air after basic servicing — why?",
-        a: "If the smell or weak airflow persists after basic servicing, the issue is deeper than surface-level cleaning can fix. Mould and biofilm have likely colonised the blower wheel and the inner coil layers. At this point, you need a pressure chemical wash (RM 120) or, for units that have not been deep-cleaned in 3+ years or are already leaking water, a full chemical overhaul (RM 220). WhatsApp us after your basic service if the problem returns — we will advise whether the unit needs the next level of cleaning and we will not charge you for advice.",
+        a: "If the smell or weak airflow persists after basic servicing, the issue is deeper than surface-level cleaning can fix. Mould and biofilm have likely colonised the blower wheel and the inner coil layers. At this point, you need a pressure chemical wash (RM 120) or, for units that have not been deep-cleaned in 3+ years or are already leaking water, a full chemical overhaul (RM 420). WhatsApp us after your basic service if the problem returns — we will advise whether the unit needs the next level of cleaning and we will not charge you for advice.",
       },
       {
         q: "Does basic servicing include gas top-up?",
@@ -720,7 +720,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Aircond saya masih berbau atau angin lemah selepas servis asas — kenapa?",
-        a: "Jika bau atau aliran udara lemah berterusan selepas servis asas, masalahnya lebih dalam daripada yang boleh dibaiki oleh pembersihan permukaan. Kulat dan biofilm berkemungkinan telah menjajah roda kipas dan lapisan dalam gegelung. Pada tahap ini, anda memerlukan cuci kimia tekanan (RM 120) atau, untuk unit yang tidak pernah dibersihkan secara mendalam selama 3+ tahun atau sudah bocor air, overhaul kimia penuh (RM 220). WhatsApp kami selepas servis asas anda jika masalah berulang — kami akan menasihatkan sama ada unit memerlukan tahap pembersihan seterusnya dan kami tidak akan mengenakan caj untuk nasihat.",
+        a: "Jika bau atau aliran udara lemah berterusan selepas servis asas, masalahnya lebih dalam daripada yang boleh dibaiki oleh pembersihan permukaan. Kulat dan biofilm berkemungkinan telah menjajah roda kipas dan lapisan dalam gegelung. Pada tahap ini, anda memerlukan cuci kimia tekanan (RM 120) atau, untuk unit yang tidak pernah dibersihkan secara mendalam selama 3+ tahun atau sudah bocor air, overhaul kimia penuh (RM 420). WhatsApp kami selepas servis asas anda jika masalah berulang — kami akan menasihatkan sama ada unit memerlukan tahap pembersihan seterusnya dan kami tidak akan mengenakan caj untuk nasihat.",
       },
       {
         q: "Adakah servis asas termasuk tambah gas?",
@@ -744,7 +744,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "基本保养后冷气仍有异味或风量弱——为什么？",
-        a: "如果基本保养后异味或弱风量持续存在，问题比表面清洁能解决的更深。霉菌和生物膜可能已经在风轮和盘管内层滋生。此时您需要进行压力化学清洗（RM 120），或者对于3年以上未深度清洁或已漏水的机器，需要进行全面化学大修（RM 220）。基本保养后如果问题再次出现，请WhatsApp我们——我们会建议机器是否需要下一级别的清洁，且不收取咨询费。",
+        a: "如果基本保养后异味或弱风量持续存在，问题比表面清洁能解决的更深。霉菌和生物膜可能已经在风轮和盘管内层滋生。此时您需要进行压力化学清洗（RM 120），或者对于3年以上未深度清洁或已漏水的机器，需要进行全面化学大修（RM 420）。基本保养后如果问题再次出现，请WhatsApp我们——我们会建议机器是否需要下一级别的清洁，且不收取咨询费。",
       },
       {
         q: "基本保养包含加气吗？",

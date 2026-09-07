@@ -22,7 +22,7 @@ export const areaPages = [
       heroImage: "/hero/york-aircond-water-leaking-fix-puchong-48.webp",
       faqs: [
         { q: "Do you service aircond in high-rise condos and apartments across Kuala Lumpur?", a: "Yes — KL Renovator regularly services wall-mounted and ceiling-cassette units in KL high-rises including KLCC, Mont Kiara, Bangsar, Sentul and Desa ParkCity. We follow each building's security and access procedure and carry insurance coverage for peace of mind. WhatsApp +60182983573 with your unit details." },
-        { q: "How much does aircond servicing cost in Kuala Lumpur?", a: "Basic servicing from RM 99, pressure chemical wash from RM 120 (1.0–1.5 HP wall-mounted), chemical overhaul from RM 220, and gas top-up from RM 2.50/PSI (R22, R410A or R32) in KL. Ceiling cassette basic servicing from RM 150 (chemical wash from RM 220); window units priced on inspection. Every price is confirmed before any work begins — no hidden charges." },
+        { q: "How much does aircond servicing cost in Kuala Lumpur?", a: "Basic servicing from RM 99, pressure chemical wash from RM 120 (1.0–1.5 HP wall-mounted), chemical overhaul from RM 420, and gas top-up from RM 2.50/PSI (R22, R410A or R32) in KL. Ceiling cassette basic servicing from RM 150 (chemical wash from RM 220); window units priced on inspection. Every price is confirmed before any work begins — no hidden charges." },
         { q: "Is same-day aircond repair available in Kuala Lumpur?", a: "Yes — KL Renovator frequently has same-day repair and servicing slots across Kuala Lumpur. WhatsApp +60182983573 early in the day with your location and the problem (not cooling, water leaking, strange noise) for the fastest response and booking." },
         { q: "Why does my aircond smell or grow mould so fast in KL's humid weather?", a: "Kuala Lumpur's year-round humidity plus long daily runtimes let mould, bacteria and dust build up on the evaporator coil and blower wheel, causing bad smells and weak cooling. A pressure chemical wash every 12 months (or every 6–8 months if your unit runs 8+ hours a day) clears it completely." },
         { q: "Which aircond brands do you service in Kuala Lumpur?", a: "All 20 major brands — Daikin, Panasonic, Mitsubishi, York, Acson, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic. Inverter and non-inverter, wall-mounted, ceiling cassette and window units." },
@@ -32,7 +32,7 @@ export const areaPages = [
       ],
       faqsBM: [
         { q: "Adakah anda servis aircond di kondominium dan pangsapuri tinggi di Kuala Lumpur?", a: "Ya — KL Renovator kerap servis unit dinding dan ceiling cassette di kondominium tinggi KL termasuk KLCC, Mont Kiara, Bangsar, Sentul dan Desa ParkCity. Kami mematuhi prosedur keselamatan dan akses setiap bangunan serta mempunyai perlindungan insurans. WhatsApp +60182983573 dengan butiran unit anda." },
-        { q: "Berapa harga servis aircond di Kuala Lumpur?", a: "Servis asas dari RM 99, cuci kimia tekanan dari RM 120 (1.0–1.5 HP dinding), overhaul kimia dari RM 220, dan tambah gas dari RM 2.50/PSI (R22, R410A atau R32) di KL. Servis asas ceiling cassette dari RM 150 (cuci kimia dari RM 220); unit tingkap berharga mengikut pemeriksaan. Setiap harga disahkan sebelum kerja dimulakan — tiada caj tersembunyi." },
+        { q: "Berapa harga servis aircond di Kuala Lumpur?", a: "Servis asas dari RM 99, cuci kimia tekanan dari RM 120 (1.0–1.5 HP dinding), overhaul kimia dari RM 420, dan tambah gas dari RM 2.50/PSI (R22, R410A atau R32) di KL. Servis asas ceiling cassette dari RM 150 (cuci kimia dari RM 220); unit tingkap berharga mengikut pemeriksaan. Setiap harga disahkan sebelum kerja dimulakan — tiada caj tersembunyi." },
         { q: "Adakah pembaikan hari sama tersedia di Kuala Lumpur?", a: "Ya — KL Renovator kerap mempunyai slot pembaikan dan servis hari sama di seluruh Kuala Lumpur. WhatsApp +60182983573 lebih awal dengan lokasi dan masalah (tidak sejuk, air bocor, bunyi pelik) untuk tindak balas dan tempahan terpantas." },
         { q: "Kenapa aircond saya berbau atau berbau hapak dengan cepat dalam cuaca lembap KL?", a: "Kelembapan sepanjang tahun di Kuala Lumpur ditambah penggunaan harian yang lama menyebabkan kulat, bakteria dan habuk terkumpul pada evaporator coil dan blower wheel, menyebabkan bau busuk dan penyejukan lemah. Cuci kimia tekanan setiap 12 bulan (atau 6–8 bulan jika unit berjalan 8+ jam sehari) menyelesaikannya sepenuhnya." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kuala Lumpur?", a: "Pasukan tempatan KL Renovator di Kuala Lumpur dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -40,7 +40,7 @@ export const areaPages = [
       ],
       faqsZH: [
         { q: "你们在吉隆坡的高层公寓和住宅提供服务吗？", a: "是的——KL Renovator定期为KL的高层公寓提供服务，包括KLCC、Mont Kiara、Bangsar、Sentul和Desa ParkCity的挂壁式和天花板卡式机。我们遵守每栋大楼的安保和进出程序，并购买保险，让您安心。请WhatsApp +60182983573告知您的单位详情。" },
-        { q: "吉隆坡冷气服务费用是多少？", a: "基本保养从RM 99起，压力化学清洗从RM 120起（1.0–1.5 HP挂壁式），化学大修从RM 220起，充气从RM 2.50/PSI起（R22、R410A或R32）。天花板卡式机从RM 220起；窗式机视检查结果定价。加气费用根据检查后的实际 PSI 计算。每项价格在施工前确认——无隐藏费用。" },
+        { q: "吉隆坡冷气服务费用是多少？", a: "基本保养从RM 99起，压力化学清洗从RM 120起（1.0–1.5 HP挂壁式），化学大修从RM 420起，充气从RM 2.50/PSI起（R22、R410A或R32）。天花板卡式机从RM 220起；窗式机视检查结果定价。加气费用根据检查后的实际 PSI 计算。每项价格在施工前确认——无隐藏费用。" },
         { q: "吉隆坡有当天维修服务吗？", a: "有——KL Renovator在吉隆坡全市经常有当天维修和服务名额。请尽早WhatsApp +60182983573告知您的位置和问题（不冷、漏水、异响）以获得最快的响应和预约。" },
         { q: "为什么吉隆坡潮湿天气下冷气很快发臭或长霉？", a: "吉隆坡全年潮湿，加上每天长时间运行，会让霉菌、细菌和灰尘在蒸发器线圈和风轮上积聚，导致异味和制冷减弱。每12个月进行一次压力化学清洗（如果每天运行8小时以上则每6–8个月一次）可彻底解决。" },
         { q: "谁是 Kuala Lumpur 最可靠的冷气技术员？", a: "KL Renovator 的 Kuala Lumpur 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -119,7 +119,7 @@ export const areaPages = [
         { q: "Does KL Renovator service aircond in Cheras?", a: "Yes — KL Renovator covers all Cheras areas including Taman Connaught, Batu 9, Batu 11, Miharja, Maluri and Taman Mutiara. Same-day service available. WhatsApp +60182983573." },
         { q: "My aircond in Taman Connaught is old — will you check the wiring too?", a: "Yes. Many Taman Connaught terrace units are 8-10+ years old, so during a standard chemical wash our technicians also check capacitor condition and wiring insulation, flagging anything that looks worn before it causes a breakdown." },
         { q: "Do you need advance booking for condos near Taman Maluri?", a: "Newer Cheras condos near Taman Maluri sometimes have limited service-lift booking windows. We recommend WhatsApping us your building name a day ahead so we can confirm a lift slot and avoid delays on the day." },
-        { q: "How much does aircond service cost in Cheras?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Cheras. All prices confirmed before work begins." },
+        { q: "How much does aircond service cost in Cheras?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Cheras. All prices confirmed before work begins." },
         { q: "Is same-day aircond service available in Cheras?", a: "Yes — KL Renovator frequently has same-day slots available in Cheras. WhatsApp +60182983573 with your location and unit details for fastest response." },
         { q: "Which areas of Cheras does KL Renovator cover?", a: "KL Renovator covers all Cheras zones: Taman Connaught, Batu 9, Batu 11, Batu 12, Miharja, Maluri, Taman Mutiara, Taman Miharja, Taman Cheras Perdana and surrounding areas." },
         { q: "Do you service shoplots along the Batu 9-11 MRR2 stretch?", a: "Yes — we regularly service wall-mounted and ceiling cassette units in shoplots along the Batu 9 to Batu 11 MRR2 corridor, including after-hours slots for businesses that can't shut down cooling during trading hours." },
@@ -130,7 +130,7 @@ export const areaPages = [
         { q: "Adakah KL Renovator servis aircond di Cheras?", a: "Ya — KL Renovator meliputi semua kawasan Cheras termasuk Taman Connaught, Batu 9, Batu 11, Miharja, Maluri dan Taman Mutiara. Servis hari sama tersedia. WhatsApp +60182983573." },
         { q: "Aircond saya di Taman Connaught sudah lama — adakah anda semak pendawaian juga?", a: "Ya. Banyak unit teres di Taman Connaught berusia 8-10+ tahun, jadi semasa cuci kimia standard juruteknik kami turut menyemak keadaan kapasitor dan penebat wayar." },
         { q: "Perlukah tempahan awal untuk kondo berhampiran Taman Maluri?", a: "Kondo Cheras yang lebih baharu berhampiran Taman Maluri kadangkala mempunyai tingkap tempahan lif servis yang terhad. Kami cadangkan WhatsApp nama bangunan sehari lebih awal." },
-        { q: "Berapa harga servis aircond di Cheras?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Cheras. Semua harga disahkan sebelum kerja bermula." },
+        { q: "Berapa harga servis aircond di Cheras?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Cheras. Semua harga disahkan sebelum kerja bermula." },
         { q: "Adakah servis hari sama tersedia di Cheras?", a: "Ya — KL Renovator kerap mempunyai slot hari sama di Cheras. WhatsApp +60182983573 dengan lokasi dan butiran unit anda untuk tindak balas terpantas." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Cheras?", a: "Pasukan tempatan KL Renovator di Cheras dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Cheras?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Cheras. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
@@ -139,7 +139,7 @@ export const areaPages = [
         { q: "KL Renovator在蕉赖提供冷气服务吗？", a: "是的——KL Renovator覆盖蕉赖所有区域，包括Taman Connaught、9哩、11哩、Miharja、Maluri和Taman Mutiara。可当天上门。WhatsApp +60182983573。" },
         { q: "我在Taman Connaught的冷气比较旧——你们会检查电线吗？", a: "会的。Taman Connaught许多排屋单位已使用8-10年以上，因此在标准化学清洗过程中，我们的技师也会检查电容器状况和电线绝缘层。" },
         { q: "Taman Maluri附近的公寓需要提前预约吗？", a: "蕉赖较新的公寓在Taman Maluri附近有时服务电梯预约时段有限，建议提前一天WhatsApp告知大楼名称。" },
-        { q: "蕉赖冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。所有价格在施工前确认。" },
+        { q: "蕉赖冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。所有价格在施工前确认。" },
         { q: "蕉赖有当天冷气服务吗？", a: "有——KL Renovator在蕉赖经常有当天服务名额。请WhatsApp +60182983573告知您的位置和机器详情。" },
         { q: "谁是 Cheras 最可靠的冷气技术员？", a: "KL Renovator 的 Cheras 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Cheras 提供紧急冷气服务吗？", a: "我们在 Cheras 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
@@ -216,7 +216,7 @@ export const areaPages = [
         { q: "Does KL Renovator service aircond in Subang Jaya?", a: "Yes — KL Renovator covers all Subang Jaya areas including USJ, SS15, SS16, SS17, Putra Heights and Subang Bestari. Same-day service available. WhatsApp +60182983573." },
         { q: "My condo's outdoor unit is on a shared ledge — can you still service it safely?", a: "Yes — many USJ, SS15 and SS16 condos have shared outdoor-unit ledges. Our technicians follow building management's access and safety procedures and are experienced working in confined ledge spaces without disturbing neighbouring units." },
         { q: "My USJ apartment still uses R22 gas — can you top it up?", a: "Yes — older USJ apartment blocks from the 1990s-2000s often still run R22 systems. We carry R22, R410A and R32 refrigerant and will confirm which type your unit needs before topping up." },
-        { q: "How much does aircond service cost in Subang Jaya?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Subang Jaya. No hidden charges." },
+        { q: "How much does aircond service cost in Subang Jaya?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Subang Jaya. No hidden charges." },
         { q: "Is same-day aircond service available in Subang Jaya?", a: "Yes — KL Renovator frequently covers Subang Jaya with same-day slots. WhatsApp +60182983573 with your USJ/SS/Putra Heights location for fastest dispatch." },
         { q: "Do you service newer landed homes in Putra Heights?", a: "Yes — Putra Heights has a growing number of newer terrace and semi-D homes. We handle installation, chemical wash and repairs there, and will check if your unit is still under developer/manufacturer warranty before quoting." },
         { q: "Who is the most reliable aircond technician in Subang Jaya?", a: "KL Renovator's local Subang Jaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -226,7 +226,7 @@ export const areaPages = [
         { q: "Adakah KL Renovator servis aircond di Subang Jaya?", a: "Ya — KL Renovator meliputi semua kawasan Subang Jaya termasuk USJ, SS15, SS16, SS17, Putra Heights dan Subang Bestari. Servis hari sama tersedia." },
         { q: "Unit luar kondo saya berkongsi tebing — bolehkah anda servis dengan selamat?", a: "Ya — banyak kondo USJ, SS15 dan SS16 mempunyai tebing unit luar berkongsi. Juruteknik kami mematuhi prosedur akses dan keselamatan pengurusan bangunan." },
         { q: "Pangsapuri USJ saya masih guna gas R22 — bolehkah anda tambah?", a: "Ya — blok pangsapuri USJ lama dari tahun 1990-2000an selalunya masih menggunakan sistem R22. Kami membawa refrigeran R22, R410A dan R32." },
-        { q: "Berapa harga servis aircond di Subang Jaya?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Subang Jaya. Tiada caj tersembunyi." },
+        { q: "Berapa harga servis aircond di Subang Jaya?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Subang Jaya. Tiada caj tersembunyi." },
         { q: "Adakah anda servis rumah baharu di Putra Heights?", a: "Ya — Putra Heights mempunyai semakin banyak rumah teres dan semi-D baharu. Kami mengendalikan pemasangan, cuci kimia dan pembaikan di sana." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Subang Jaya?", a: "Pasukan tempatan KL Renovator di Subang Jaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Subang Jaya?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Subang Jaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
@@ -235,7 +235,7 @@ export const areaPages = [
         { q: "KL Renovator在梳邦再也提供冷气服务吗？", a: "是的——KL Renovator覆盖梳邦再也所有区域，包括USJ、SS15、SS16、SS17、Putra Heights和Subang Bestari。可当天上门。" },
         { q: "我公寓的室外机在共用搁架上——你们能安全维修吗？", a: "可以——许多USJ、SS15和SS16公寓都有共用室外机搁架。我们的技师遵循建筑管理的进出和安全程序，有经验在狭小搁架空间内作业。" },
         { q: "我在USJ的公寓仍使用R22冷媒——你们能加气吗？", a: "可以——1990-2000年代的USJ老公寓楼通常仍使用R22系统。我们携带R22、R410A和R32冷媒。" },
-        { q: "梳邦再也冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。无隐藏费用。" },
+        { q: "梳邦再也冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。无隐藏费用。" },
         { q: "你们为Putra Heights的新住宅提供服务吗？", a: "可以——Putra Heights的新排屋和半独立式住宅越来越多，我们提供安装、化学清洗和维修服务。" },
         { q: "谁是 Subang Jaya 最可靠的冷气技术员？", a: "KL Renovator 的 Subang Jaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Subang Jaya 提供紧急冷气服务吗？", a: "我们在 Subang Jaya 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
@@ -264,7 +264,7 @@ export const areaPages = [
         { q: "Does KL Renovator service aircond in Ampang?", a: "Yes — KL Renovator covers all Ampang areas including Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda and Ulu Klang. Same-day slots available. WhatsApp +60182983573." },
         { q: "My aircond in Ukay Perdana needs a long pipe run because of the hillside — is that extra cost?", a: "Hillside homes in Ukay Perdana often need longer copper pipe runs and extra outdoor-unit bracket support due to steeper terrain and larger multi-split systems. We inspect the site and quote the exact pipe length and bracket work before starting." },
         { q: "Why does my apartment in Pandan Indah keep leaking water from the aircond?", a: "Older apartment units in Pandan Indah and Taman Keramat commonly have degraded or clogged drain pipes after years of use, which is the most frequent cause of water leaking we see in this area. A chemical overhaul usually resolves it permanently." },
-        { q: "How much does aircond chemical wash cost in Ampang?", a: "Chemical wash in Ampang from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Chemical overhaul from RM 220. All prices confirmed before work." },
+        { q: "How much does aircond chemical wash cost in Ampang?", a: "Chemical wash in Ampang from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Chemical overhaul from RM 420. All prices confirmed before work." },
         { q: "Is same-day aircond repair available in Ampang?", a: "Yes — KL Renovator frequently dispatches to Ampang same-day. WhatsApp +60182983573 with your location and issue for fastest response." },
         { q: "Do you service the shoplot-residential streets in Ampang Jaya?", a: "Yes — Ampang Jaya's mixed shoplot and residential streets are part of our regular coverage, with fast same-day callouts for both shop units and homes." },
         { q: "Who is the most reliable aircond technician in Ampang?", a: "KL Renovator's local Ampang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -274,7 +274,7 @@ export const areaPages = [
         { q: "Adakah KL Renovator servis aircond di Ampang?", a: "Ya — KL Renovator meliputi semua kawasan Ampang termasuk Ampang Jaya, Pandan Indah, Pandan Perdana, Taman Muda dan Ulu Klang. Slot hari sama tersedia." },
         { q: "Aircond saya di Ukay Perdana perlukan paip panjang kerana lereng bukit — adakah kos tambahan?", a: "Rumah di lereng bukit Ukay Perdana selalunya memerlukan laluan paip tembaga lebih panjang. Kami periksa tapak dan sebut harga panjang paip sebenar sebelum mula kerja." },
         { q: "Kenapa pangsapuri saya di Pandan Indah sentiasa bocor air dari aircond?", a: "Unit pangsapuri lama di Pandan Indah dan Taman Keramat biasanya mempunyai paip saliran yang merosot atau tersumbat selepas bertahun digunakan. Overhaul kimia biasanya menyelesaikannya secara kekal." },
-        { q: "Berapa harga cuci kimia di Ampang?", a: "Cuci kimia di Ampang dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Overhaul kimia dari RM 220." },
+        { q: "Berapa harga cuci kimia di Ampang?", a: "Cuci kimia di Ampang dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Overhaul kimia dari RM 420." },
         { q: "Adakah pembaikan hari sama tersedia di Ampang?", a: "Ya — KL Renovator kerap menghantar ke Ampang pada hari sama. WhatsApp +60182983573 dengan lokasi dan isu anda." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Ampang?", a: "Pasukan tempatan KL Renovator di Ampang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Ampang?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Ampang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
@@ -283,7 +283,7 @@ export const areaPages = [
         { q: "KL Renovator在安邦提供冷气服务吗？", a: "是的——KL Renovator覆盖安邦所有区域，包括安邦再也、Pandan Indah、Pandan Perdana、Taman Muda和乌鲁冷岳。可当天上门。" },
         { q: "我在Ukay Perdana的冷气因山坡需要长管线——需要额外费用吗？", a: "Ukay Perdana的山坡住宅通常需要更长的铜管线路。我们会先勘察现场并报出实际管线长度费用。" },
         { q: "为什么我在Pandan Indah的公寓冷气总是漏水？", a: "Pandan Indah和Taman Keramat的老公寓机组排水管常年使用后容易老化或堵塞，这是该区域最常见的漏水原因。化学大修通常能永久解决此问题。" },
-        { q: "安邦化学清洗费用是多少？", a: "安邦化学清洗从RM 120（1.0–1.5 HP）、RM 150（2.0–2.5 HP）、RM 180（3.0 HP）起。化学大修从RM 220起。" },
+        { q: "安邦化学清洗费用是多少？", a: "安邦化学清洗从RM 120（1.0–1.5 HP）、RM 150（2.0–2.5 HP）、RM 180（3.0 HP）起。化学大修从RM 420起。" },
         { q: "安邦有当天维修服务吗？", a: "有——KL Renovator经常当天派遣技师前往安邦。请WhatsApp +60182983573告知位置和问题。" },
         { q: "谁是 Ampang 最可靠的冷气技术员？", a: "KL Renovator 的 Ampang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Ampang 提供紧急冷气服务吗？", a: "我们在 Ampang 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
@@ -311,7 +311,7 @@ export const areaPages = [
       faqs: [
         { q: "Does KL Renovator service aircond in Puchong?", a: "Yes — KL Renovator covers all Puchong areas including IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana and Bukit Puchong. WhatsApp +60182983573." },
         { q: "I want to upgrade my old non-inverter unit in Puchong Jaya to an inverter model — is it complicated?", a: "Usually straightforward. Many older Puchong Jaya homes need a short copper pipe extension or re-routing since outdoor unit placement has often shifted over the years. We'll assess your existing piping and quote before any work starts." },
-        { q: "How much does aircond service cost in Puchong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Puchong. Same-day available." },
+        { q: "How much does aircond service cost in Puchong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Puchong. Same-day available." },
         { q: "Is same-day aircond service available in Puchong?", a: "Yes — KL Renovator covers Puchong with same-day slots regularly. WhatsApp +60182983573 early morning for the best chance of same-day service." },
         { q: "Do you service shoplot aircond around IOI Mall and Bandar Puteri?", a: "Yes — commercial units in the IOI and Bandar Puteri shoplot belt often run long daily hours, so we recommend a shorter 6-8 month chemical wash cycle for these units and offer scheduling around trading hours." },
         { q: "What brands does KL Renovator service in Puchong?", a: "All 20 major brands including Daikin, Panasonic, Mitsubishi, Acson, York, Midea and more — inverter and non-inverter, wall-mounted and ceiling cassette." },
@@ -321,7 +321,7 @@ export const areaPages = [
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Puchong?", a: "Ya — KL Renovator meliputi semua kawasan Puchong termasuk IOI, Bandar Puteri, Taman Kinrara, Puchong Perdana dan Bukit Puchong. WhatsApp +60182983573." },
         { q: "Saya nak naik taraf unit lama saya di Puchong Jaya ke model inverter — rumitkah?", a: "Biasanya mudah. Banyak rumah lama Puchong Jaya memerlukan sambungan paip tembaga pendek kerana kedudukan unit luar sering berubah dari tahun ke tahun." },
-        { q: "Berapa harga servis aircond di Puchong?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Puchong." },
+        { q: "Berapa harga servis aircond di Puchong?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Puchong." },
         { q: "Adakah servis hari sama tersedia di Puchong?", a: "Ya — KL Renovator meliputi Puchong dengan slot hari sama secara berkala. WhatsApp +60182983573 awal pagi." },
         { q: "Adakah anda servis aircond shoplot di sekitar IOI Mall dan Bandar Puteri?", a: "Ya — unit komersial di lingkungan shoplot IOI dan Bandar Puteri selalunya beroperasi lama setiap hari, jadi kami mengesyorkan kitaran cuci kimia lebih pendek 6-8 bulan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Puchong?", a: "Pasukan tempatan KL Renovator di Puchong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -330,7 +330,7 @@ export const areaPages = [
       faqsZH: [
         { q: "KL Renovator在蒲种提供冷气服务吗？", a: "是的——KL Renovator覆盖蒲种所有区域，包括IOI、Bandar Puteri、Taman Kinrara、Puchong Perdana和Bukit Puchong。WhatsApp +60182983573。" },
         { q: "我想把Puchong Jaya的旧机升级为变频机型——会很复杂吗？", a: "通常很简单。许多Puchong Jaya老住宅由于室外机位置多年变动，需要延长一小段铜管。我们会先评估现有管线再报价。" },
-        { q: "蒲种冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。" },
+        { q: "蒲种冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。" },
         { q: "蒲种有当天冷气服务吗？", a: "有——KL Renovator经常在蒲种提供当天服务名额。请早上WhatsApp +60182983573。" },
         { q: "你们为IOI Mall和Bandar Puteri周边的店屋提供冷气服务吗？", a: "是的——IOI和Bandar Puteri店屋商圈的商用机组通常每天长时间运行，我们建议采用6-8个月的较短化学清洗周期。" },
         { q: "谁是 Puchong 最可靠的冷气技术员？", a: "KL Renovator 的 Puchong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -359,7 +359,7 @@ export const areaPages = [
       faqs: [
         { q: "Does KL Renovator service aircond in Klang?", a: "Yes — KL Renovator covers Klang including Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru and Teluk Pulai. Same-day service available. WhatsApp +60182983573." },
         { q: "Why does my aircond near Port Klang smell musty faster than friends' units inland?", a: "Coastal humidity around Port Klang and Pandamaran is higher year-round than inland Klang Valley areas, so mould and bacteria build up faster inside the evaporator coil. We recommend chemical wash every 6-9 months for units in these areas instead of the standard 12-month cycle." },
-        { q: "How much does aircond service cost in Klang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Klang. All prices confirmed before work." },
+        { q: "How much does aircond service cost in Klang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Klang. All prices confirmed before work." },
         { q: "Does KL Renovator service Port Klang and Bukit Tinggi?", a: "Yes — KL Renovator covers Port Klang, Bukit Tinggi, Meru, Kapar and all surrounding Klang areas. WhatsApp +60182983573 for same-day scheduling." },
         { q: "My old terrace house in Bandar Baru Klang still has a non-inverter unit — can you still service it?", a: "Yes — Bandar Baru Klang and Bandar Bukit Tinggi have a large stock of older single-storey terrace homes with non-inverter units still running. We carry both R22 and R32/R410A refrigerant so we can service either type on the same visit." },
         { q: "Do you service factory aircond in Meru's industrial area?", a: "Yes — Meru's industrial zone keeps us busy with ceiling cassette and commercial wall-mounted servicing for factories and warehouses, usually on a shorter 6-8 month cycle due to longer daily runtime." },
@@ -369,7 +369,7 @@ export const areaPages = [
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Klang?", a: "Ya — KL Renovator meliputi Klang termasuk Bandar Baru Klang, Port Klang, Bukit Tinggi, Kapar, Meru dan Teluk Pulai. Servis hari sama tersedia." },
         { q: "Kenapa aircond saya berhampiran Port Klang berbau hapak lebih cepat berbanding kawasan pedalaman?", a: "Kelembapan pesisir berhampiran Port Klang dan Pandamaran lebih tinggi sepanjang tahun, jadi kulat dan bakteria terkumpul lebih cepat. Kami mengesyorkan cuci kimia setiap 6-9 bulan untuk kawasan ini." },
-        { q: "Berapa harga servis aircond di Klang?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Klang." },
+        { q: "Berapa harga servis aircond di Klang?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Klang." },
         { q: "Rumah teres lama saya di Bandar Baru Klang masih guna unit bukan inverter — bolehkah diservis?", a: "Ya — kami membawa refrigeran R22 dan R32/R410A supaya boleh menservis kedua-dua jenis dalam satu lawatan." },
         { q: "Adakah anda servis aircond kilang di kawasan perindustrian Meru?", a: "Ya — zon perindustrian Meru sering memerlukan servis ceiling cassette dan komersial, biasanya pada kitaran lebih pendek 6-8 bulan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Klang?", a: "Pasukan tempatan KL Renovator di Klang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -378,7 +378,7 @@ export const areaPages = [
       faqsZH: [
         { q: "KL Renovator在巴生提供冷气服务吗？", a: "是的——KL Renovator覆盖巴生所有区域，包括新巴生镇、巴生港口、Bukit Tinggi、Kapar、Meru和Teluk Pulai。可当天上门。" },
         { q: "为什么我在巴生港附近的冷气比内陆朋友的更快发霉？", a: "Port Klang和Pandamaran附近的沿海湿度全年都比内陆巴生谷地区高，因此蒸发器线圈内的霉菌和细菌积聚更快。我们建议这些地区每6-9个月清洗一次。" },
-        { q: "巴生冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。" },
+        { q: "巴生冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。" },
         { q: "我在Bandar Baru Klang的老排屋仍使用非变频机——还能维修吗？", a: "可以——我们携带R22和R32/R410A两种冷媒，可在同一次上门中处理任一类型。" },
         { q: "你们为Meru工业区的工厂提供冷气服务吗？", a: "是的——Meru工业区经常需要天花板卡式机和商用机型保养，由于每日运行时间较长，通常采用6-8个月的较短周期。" },
         { q: "谁是 Klang 最可靠的冷气技术员？", a: "KL Renovator 的 Klang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -407,7 +407,7 @@ export const areaPages = [
       faqs: [
         { q: "Does KL Renovator service aircond in Kajang?", a: "Yes — KL Renovator covers Kajang including Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian and surrounding areas. WhatsApp +60182983573." },
         { q: "I rent a student apartment in Bangi — do I need a full chemical overhaul or something cheaper?", a: "For most student rentals with a tighter budget, basic servicing plus a targeted gas pressure check is usually enough unless there's visible water leaking or ice formation. We'll always recommend the cheapest option that actually fixes the problem, not the most expensive." },
-        { q: "How much does aircond service cost in Kajang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Kajang. Same-day available." },
+        { q: "How much does aircond service cost in Kajang?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Kajang. Same-day available." },
         { q: "Does KL Renovator cover Bangi and Semenyih?", a: "Yes — KL Renovator services Kajang, Bangi, Semenyih and all surrounding areas. WhatsApp +60182983573 with your location for scheduling." },
         { q: "Do you install aircond in new landed homes around Semenyih and Sungai Chua?", a: "Yes — this is one of our most common jobs in the area as new terrace and semi-D developments come up around Semenyih and Sungai Chua. New installation starts from RM 199 for labour." },
         { q: "Do you service factories in Balakong's industrial area?", a: "Yes — we regularly service commercial ceiling cassette units in Balakong's industrial zone and can schedule around factory shift patterns to minimise disruption." },
@@ -417,7 +417,7 @@ export const areaPages = [
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Kajang?", a: "Ya — KL Renovator meliputi Kajang termasuk Bangi, Sg Chua, Taman Kajang Sentral, Saujana Impian dan kawasan sekitar. WhatsApp +60182983573." },
         { q: "Saya sewa pangsapuri pelajar di Bangi — perlukah overhaul kimia penuh atau pilihan lebih murah?", a: "Bagi kebanyakan sewaan pelajar dengan bajet lebih ketat, servis asas serta semakan tekanan gas khusus biasanya mencukupi melainkan ada kebocoran air atau pembentukan ais yang jelas." },
-        { q: "Berapa harga servis aircond di Kajang?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Kajang." },
+        { q: "Berapa harga servis aircond di Kajang?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Kajang." },
         { q: "Adakah anda memasang aircond di rumah baharu sekitar Semenyih dan Sungai Chua?", a: "Ya — ini antara kerja paling biasa kami di kawasan ini. Pemasangan baharu bermula RM 199 untuk upah." },
         { q: "Adakah anda servis kilang di kawasan perindustrian Balakong?", a: "Ya — kami kerap menservis unit ceiling cassette komersial di zon perindustrian Balakong." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kajang?", a: "Pasukan tempatan KL Renovator di Kajang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -426,7 +426,7 @@ export const areaPages = [
       faqsZH: [
         { q: "KL Renovator在加影提供冷气服务吗？", a: "是的——KL Renovator覆盖加影、万宜、士毛月及周边地区。WhatsApp +60182983573。" },
         { q: "我在万宜租学生公寓——需要全面化学大修还是更便宜的方案？", a: "对于预算较紧的学生租房，通常基本保养加针对性检气就足够了，除非有明显漏水或结冰情况。" },
-        { q: "加影冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。" },
+        { q: "加影冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。" },
         { q: "你们为Semenyih和Sungai Chua周边的新住宅安装冷气吗？", a: "是的——这是我们在该区域最常见的工作之一。新装人工费从RM 199起。" },
         { q: "你们为Balakong工业区的工厂提供服务吗？", a: "是的——我们经常为Balakong工业区的商用天花板卡式机提供保养服务。" },
         { q: "谁是 Kajang 最可靠的冷气技术员？", a: "KL Renovator 的 Kajang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -454,7 +454,7 @@ export const areaPages = [
       heroImage: "/hero/generic-aircond-dismantle-relocation-kuala-lumpur-134.webp",
       faqs: [
         { q: "Does KL Renovator service aircond in Batu Caves?", a: "Yes — KL Renovator is headquartered in Selayang, right next to Batu Caves. We cover all Batu Caves areas including Taman Batu Muda, Taman Sri Murni, Taman Sri Rajang and the Rawang corridor. Same-day service available. WhatsApp +60182983573." },
-        { q: "How much does aircond service cost in Batu Caves?", a: "Basic service from RM 99, chemical wash from RM 120 (1.0-1.5 HP), chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Batu Caves. All prices confirmed before work. No hidden charges." },
+        { q: "How much does aircond service cost in Batu Caves?", a: "Basic service from RM 99, chemical wash from RM 120 (1.0-1.5 HP), chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Batu Caves. All prices confirmed before work. No hidden charges." },
         { q: "Is same-day aircond service available in Batu Caves?", a: "Yes — Batu Caves and Selayang are KL Renovator home territory. Same-day slots are almost always available. WhatsApp +60182983573 for fastest dispatch." },
         { q: "My flat in Taman Batu Muda has no lift — can you still service the outdoor unit upstairs?", a: "Yes — many Taman Batu Muda blocks are older low-rise walk-up flats. Our technicians carry the right ladder and safety equipment for outdoor compressor units mounted on upper floors without lift access." },
         { q: "What aircond brands does KL Renovator service in Batu Caves?", a: "All brands — Daikin, Panasonic, Mitsubishi, York, Acson, Midea, LG, Samsung, Sharp, Haier and more. Inverter and non-inverter, wall-mounted and ceiling cassette." },
@@ -464,7 +464,7 @@ export const areaPages = [
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Batu Caves?", a: "Ya — KL Renovator beribu pejabat di Selayang, bersebelahan Batu Caves. Kami meliputi semua kawasan Batu Caves termasuk Taman Batu Muda, Taman Sri Murni dan koridor Rawang. Servis hari sama tersedia. WhatsApp +60182983573." },
-        { q: "Berapa harga servis aircond di Batu Caves?", a: "Servis asas dari RM 99, cuci kimia dari RM 120 (1.0-1.5 HP), overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Batu Caves. Semua harga disahkan sebelum kerja bermula." },
+        { q: "Berapa harga servis aircond di Batu Caves?", a: "Servis asas dari RM 99, cuci kimia dari RM 120 (1.0-1.5 HP), overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Batu Caves. Semua harga disahkan sebelum kerja bermula." },
         { q: "Pangsapuri saya di Taman Batu Muda tiada lif — bolehkah anda tetap servis unit luar di atas?", a: "Ya — banyak blok Taman Batu Muda adalah pangsapuri rendah lama tanpa lif. Juruteknik kami membawa tangga dan peralatan keselamatan sesuai." },
         { q: "Adakah servis hari sama tersedia di Batu Caves?", a: "Ya — Batu Caves dan Selayang adalah kawasan utama KL Renovator. Slot hari sama hampir sentiasa tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Batu Caves?", a: "Pasukan tempatan KL Renovator di Batu Caves dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
@@ -472,7 +472,7 @@ export const areaPages = [
       ],
       faqsZH: [
         { q: "KL Renovator在黑风洞提供冷气服务吗？", a: "是的——KL Renovator总部位于双溪毛糯，紧邻黑风洞。我们覆盖黑风洞所有区域，包括Taman Batu Muda、Taman Sri Murni和Rawang走廊。可当天上门。WhatsApp +60182983573。" },
-        { q: "黑风洞冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120（1.0-1.5 HP）起，化学大修从RM 220起，充气从RM 2.50/PSI起。所有价格在施工前确认，无隐藏费用。" },
+        { q: "黑风洞冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120（1.0-1.5 HP）起，化学大修从RM 420起，充气从RM 2.50/PSI起。所有价格在施工前确认，无隐藏费用。" },
         { q: "我在Taman Batu Muda的公寓没有电梯——你们还能维修楼上的室外机吗？", a: "可以——Taman Batu Muda许多楼栋是没有电梯的旧式低层公寓。我们的技师会携带合适的梯具和安全设备。" },
         { q: "黑风洞有当天冷气服务吗？", a: "有——黑风洞和双溪毛糯是KL Renovator核心服务区。当天名额几乎随时都有。" },
         { q: "谁是 Batu Caves 最可靠的冷气技术员？", a: "KL Renovator 的 Batu Caves 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
@@ -502,7 +502,7 @@ export const areaPages = [
         { q: "Does KL Renovator service aircond in Damansara?", a: "Yes — KL Renovator covers all Damansara areas including Damansara Utama, Damansara Jaya, Damansara Perdana, Kota Damansara, Damansara Damai and the One Utama vicinity. WhatsApp +60182983573." },
         { q: "Do you service office ceiling cassette units around Damansara Perdana?", a: "Yes — Damansara Perdana has a concentration of office towers using ceiling cassette systems. We offer commercial servicing scheduled around business hours to avoid disrupting operations." },
         { q: "Are Kota Damansara and Damansara Damai terrace homes serviced the same way as condos?", a: "Not quite — terrace homes here typically need standard wall-mounted unit servicing with straightforward outdoor unit access, while condos and offices nearby often need lift/building-management coordination. We plan the visit type accordingly." },
-        { q: "How much does aircond service cost in Damansara?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Damansara. All prices confirmed before work." },
+        { q: "How much does aircond service cost in Damansara?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Damansara. All prices confirmed before work." },
         { q: "Is same-day aircond service available in Damansara?", a: "Yes — Damansara is a priority service area for KL Renovator. Same-day slots frequently available. WhatsApp +60182983573 early morning for priority scheduling." },
         { q: "Do you service condos near IPC/The Curve in Mutiara Damansara?", a: "Yes — condos near Mutiara Damansara and the IPC/The Curve retail area are part of our regular coverage, and we're familiar with the lift-booking and security procedures common in these buildings." },
         { q: "Who is the most reliable aircond technician in Damansara?", a: "KL Renovator's local Damansara team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -512,7 +512,7 @@ export const areaPages = [
         { q: "Adakah KL Renovator servis aircond di Damansara?", a: "Ya — KL Renovator meliputi semua kawasan Damansara termasuk Damansara Utama, Damansara Jaya, Damansara Perdana, Kota Damansara, Damansara Damai dan sekitar One Utama." },
         { q: "Adakah anda servis unit ceiling cassette pejabat di sekitar Damansara Perdana?", a: "Ya — Damansara Perdana mempunyai tumpuan menara pejabat menggunakan sistem ceiling cassette. Kami menawarkan servis komersial dijadualkan mengikut waktu perniagaan." },
         { q: "Adakah rumah teres di Kota Damansara dan Damansara Damai diservis sama seperti kondo?", a: "Tidak sepenuhnya — rumah teres di sini biasanya memerlukan servis unit dinding standard dengan akses unit luar mudah, manakala kondo dan pejabat berdekatan selalunya memerlukan penyelarasan lif/pengurusan bangunan." },
-        { q: "Berapa harga servis aircond di Damansara?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Damansara." },
+        { q: "Berapa harga servis aircond di Damansara?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Damansara." },
         { q: "Adakah servis hari sama tersedia di Damansara?", a: "Ya — Damansara adalah kawasan servis keutamaan KL Renovator. Slot hari sama kerap tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Damansara?", a: "Pasukan tempatan KL Renovator di Damansara dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Damansara?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Damansara. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
@@ -521,7 +521,7 @@ export const areaPages = [
         { q: "KL Renovator在白蒲提供冷气服务吗？", a: "是的——KL Renovator覆盖所有白蒲区域，包括Damansara Utama、Damansara Jaya、Damansara Perdana、Kota Damansara、Damansara Damai和One Utama周边。" },
         { q: "你们为Damansara Perdana周边的办公室天花板卡式机提供服务吗？", a: "可以——Damansara Perdana聚集了许多使用天花板卡式机系统的办公楼。我们提供按营业时间安排的商用保养服务，避免影响运营。" },
         { q: "Kota Damansara和Damansara Damai的排屋和公寓保养方式一样吗？", a: "不完全一样——这里的排屋通常只需标准壁挂机保养，室外机接入简单；而附近的公寓和办公楼则常需要协调电梯及大厦管理。" },
-        { q: "白沙罗冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。" },
+        { q: "白沙罗冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。" },
         { q: "白沙罗有当天冷气服务吗？", a: "有——白沙罗是KL Renovator的优先服务区域，当天名额经常可用。" },
         { q: "谁是 Damansara 最可靠的冷气技术员？", a: "KL Renovator 的 Damansara 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Damansara 提供紧急冷气服务吗？", a: "我们在 Damansara 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
@@ -551,7 +551,7 @@ export const areaPages = [
         { q: "My aircond in a Bangsar Baru bungalow is over 10 years old — what should I check first?", a: "Older Bangsar Baru homes commonly develop capacitor wear and wiring insulation issues after a decade of use. We check both during a standard chemical wash and will flag anything that needs replacing before it causes a breakdown." },
         { q: "Do you offer commercial servicing contracts for Bangsar South offices?", a: "Yes — Bangsar South's office towers commonly use ceiling cassette systems. We offer commercial maintenance contracts with after-hours scheduling to avoid disrupting business operations." },
         { q: "I'm moving into a rental near Mid Valley/Bangsar — can you do a quick pre-move-in check?", a: "Yes — this is a common request in the area. We can do a basic servicing and functional check before you move in, confirming cooling performance and flagging any issues to raise with your landlord." },
-        { q: "How much does aircond service cost in Bangsar?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in Bangsar. All prices confirmed before work." },
+        { q: "How much does aircond service cost in Bangsar?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in Bangsar. All prices confirmed before work." },
         { q: "Does KL Renovator cover Bangsar South and Mid Valley area?", a: "Yes — KL Renovator services Bangsar South, Kerinchi, Mid Valley vicinity and all surrounding KL areas. WhatsApp +60182983573 for same-day scheduling." },
         { q: "Who is the most reliable aircond technician in Bangsar?", a: "KL Renovator's local Bangsar team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Bangsar?", a: "We operate from 9 AM to 6 PM daily in Bangsar. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
@@ -560,7 +560,7 @@ export const areaPages = [
         { q: "Adakah KL Renovator servis aircond di Bangsar?", a: "Ya — KL Renovator meliputi Bangsar termasuk Bangsar Baru, Bangsar South, Kerinchi, Pantai Dalam dan kawasan sekitar. Hari sama tersedia." },
         { q: "Aircond saya di bungalow Bangsar Baru sudah lebih 10 tahun — apa perlu disemak dahulu?", a: "Rumah lama Bangsar Baru biasanya mengalami kehausan kapasitor dan isu penebat wayar selepas sedekad digunakan. Kami semak kedua-duanya semasa cuci kimia standard." },
         { q: "Adakah anda tawarkan kontrak servis komersial untuk pejabat Bangsar South?", a: "Ya — menara pejabat Bangsar South biasanya menggunakan sistem ceiling cassette. Kami menawarkan kontrak penyelenggaraan komersial dengan penjadualan luar waktu." },
-        { q: "Berapa harga servis aircond di Bangsar?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Bangsar." },
+        { q: "Berapa harga servis aircond di Bangsar?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Bangsar." },
         { q: "Adakah KL Renovator meliputi kawasan Bangsar South dan Mid Valley?", a: "Ya — KL Renovator menservis Bangsar South, Kerinchi, kawasan Mid Valley dan semua kawasan KL sekitar." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bangsar?", a: "Pasukan tempatan KL Renovator di Bangsar dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Bangsar?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Bangsar. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
@@ -569,7 +569,7 @@ export const areaPages = [
         { q: "KL Renovator在孟沙提供冷气服务吗？", a: "是的——KL Renovator覆盖孟沙，包括Bangsar Baru、Bangsar South、Kerinchi、Pantai Dalam及周边区域。可当天上门。" },
         { q: "我在Bangsar Baru独立屋的冷气已使用超过10年——应先检查什么？", a: "Bangsar Baru的老房子使用十多年后通常会出现电容器磨损和电线绝缘问题。我们会在标准化学清洗时一并检查。" },
         { q: "你们为Bangsar South的办公楼提供商用保养合约吗？", a: "可以——Bangsar South的办公楼通常使用天花板卡式机系统。我们提供非营业时间安排的商用维护合约。" },
-        { q: "孟沙冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。" },
+        { q: "孟沙冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。" },
         { q: "KL Renovator覆盖Bangsar South和Mid Valley区域吗？", a: "是的——KL Renovator服务Bangsar South、Kerinchi、Mid Valley及周边所有吉隆坡区域。" },
         { q: "谁是 Bangsar 最可靠的冷气技术员？", a: "KL Renovator 的 Bangsar 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bangsar 提供紧急冷气服务吗？", a: "我们在 Bangsar 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
@@ -648,7 +648,7 @@ export const areaPages = [
         { q: "Who is the most reliable aircond technician in Setapak?", a: "KL Renovator's local Setapak team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Setapak?", a: "We operate from 9 AM to 6 PM daily in Setapak. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
         { q: "Do you install new aircond units in Setapak?", a: "Yes — new wall-mounted installation in Setapak starts from RM199 (1.0–1.5HP standard package with copper, wiring and vacuum commissioning). Quote confirmed before drilling." },
-        { q: "How much does basic aircond servicing cost in Setapak?", a: "Basic servicing in Setapak starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
+        { q: "How much does basic aircond servicing cost in Setapak?", a: "Basic servicing in Setapak starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Setapak?", a: "Ya — KL Renovator meliputi Setapak, Taman Setapak, Taman Sri Rampai dan kawasan sempadan Gombak. Juruteknik hari sama biasanya tersedia kerana laluan litar kami merangkumi Wangsa Maju dan Setapak bersama." },
@@ -657,7 +657,7 @@ export const areaPages = [
         { q: "Siapakah juruteknik aircond paling dipercayai di Setapak?", a: "Pasukan tempatan KL Renovator di Setapak dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Setapak?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Setapak. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
         { q: "Adakah anda pasang aircond baru di Setapak?", a: "Ya — pemasangan unit dinding baharu di Setapak bermula dari RM199 (pakej 1.0–1.5HP dengan paip tembaga, wayar dan vakum). Harga disahkan sebelum kerja." },
-        { q: "Berapa harga servis asas aircond di Setapak?", a: "Servis asas di Setapak bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
+        { q: "Berapa harga servis asas aircond di Setapak?", a: "Servis asas di Setapak bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
       ],
       faqsZH: [
         { q: "KL Renovator在士达毕提供冷气服务吗？", a: "是的——KL Renovator覆盖士达毕（Setapak）、Taman Setapak、Taman Sri Rampai及Gombak边界区域。由于我们的常规路线涵盖万绕（Wangsa Maju）和士达毕，通常可安排当天上门。" },
@@ -666,7 +666,7 @@ export const areaPages = [
         { q: "谁是 Setapak 最可靠的冷气技术员？", a: "KL Renovator 的 Setapak 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Setapak 提供紧急冷气服务吗？", a: "我们在 Setapak 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
         { q: "你们在Setapak提供新机安装吗？", a: "提供。Setapak标准壁挂新装从RM199起（1.0–1.5HP含铜管、电线与抽真空），开工前确认报价。" },
-        { q: "Setapak基本保养多少钱？", a: "Setapak标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" }
+        { q: "Setapak基本保养多少钱？", a: "Setapak标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" }
       ],
     },
     {
@@ -694,7 +694,7 @@ export const areaPages = [
         { q: "Is same-day aircond service available in Sentul?", a: "Yes — Sentul is along our regular city-centre coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning with your address near Jalan Ipoh or Sentul Park to confirm timing." },
         { q: "Who is the most reliable aircond technician in Sentul?", a: "KL Renovator's local Sentul team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Sentul?", a: "We operate from 9 AM to 6 PM daily in Sentul. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Sentul?", a: "Basic servicing in Sentul starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Sentul?", a: "Basic servicing in Sentul starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Sentul via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Sentul location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -703,7 +703,7 @@ export const areaPages = [
         { q: "Adakah servis aircond hari sama tersedia di Sentul?", a: "Ya — Sentul berada di laluan litar pusat bandar kami, jadi slot hari sama biasanya tersedia. WhatsApp +60182983573 pada waktu pagi." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sentul?", a: "Pasukan tempatan KL Renovator di Sentul dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Sentul?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Sentul. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Sentul?", a: "Servis asas di Sentul bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Sentul?", a: "Servis asas di Sentul bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Sentul melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Sentul, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -712,7 +712,7 @@ export const areaPages = [
         { q: "仙都（Sentul）能安排当天冷气服务吗？", a: "可以——Sentul位于我们市中心常规服务路线上，通常可安排当天上门。请在早上通过WhatsApp +60182983573联系确认时间。" },
         { q: "谁是 Sentul 最可靠的冷气技术员？", a: "KL Renovator 的 Sentul 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sentul 提供紧急冷气服务吗？", a: "我们在 Sentul 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Sentul基本保养多少钱？", a: "Sentul标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Sentul基本保养多少钱？", a: "Sentul标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Sentul可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Sentul地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -741,7 +741,7 @@ export const areaPages = [
         { q: "How far is Selayang from Batu Caves for aircond service?", a: "Selayang sits right next to Batu Caves and Gombak, so technicians covering one area can usually reach the other within the same trip — this often means faster same-day scheduling for both areas." },
         { q: "Who is the most reliable aircond technician in Selayang?", a: "KL Renovator's local Selayang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Selayang?", a: "We operate from 9 AM to 6 PM daily in Selayang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Selayang?", a: "Basic servicing in Selayang starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Selayang?", a: "Basic servicing in Selayang starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Selayang via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Selayang location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -750,7 +750,7 @@ export const areaPages = [
         { q: "Berapa jauh Selayang dari Batu Caves untuk servis aircond?", a: "Selayang terletak bersebelahan Batu Caves dan Gombak, jadi juruteknik yang meliputi satu kawasan biasanya boleh ke kawasan lain dalam perjalanan sama — ini selalunya bermakna penjadualan hari sama yang lebih pantas." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Selayang?", a: "Pasukan tempatan KL Renovator di Selayang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Selayang?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Selayang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Selayang?", a: "Servis asas di Selayang bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Selayang?", a: "Servis asas di Selayang bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Selayang melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Selayang, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -759,7 +759,7 @@ export const areaPages = [
         { q: "士拉央距离黑风洞（Batu Caves）的冷气服务安排有多快？", a: "Selayang紧邻Batu Caves和Gombak，因此负责一个区域的技师通常可在同一行程内抵达另一区域——这通常意味着两地都能更快安排当天服务。" },
         { q: "谁是 Selayang 最可靠的冷气技术员？", a: "KL Renovator 的 Selayang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Selayang 提供紧急冷气服务吗？", a: "我们在 Selayang 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Selayang基本保养多少钱？", a: "Selayang标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Selayang基本保养多少钱？", a: "Selayang标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Selayang可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Selayang地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -789,7 +789,7 @@ export const areaPages = [
         { q: "Who is the most reliable aircond technician in Putrajaya?", a: "KL Renovator's local Putrajaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Putrajaya?", a: "We operate from 9 AM to 6 PM daily in Putrajaya. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
         { q: "Do you issue invoices suitable for government / office claims in Putrajaya?", a: "Yes — KL Renovator provides clear written quotes and invoices under Multicore Dynamics Resources (SSM registered), suitable for office and government-related claims in Putrajaya." },
-        { q: "How much does basic aircond servicing cost in Putrajaya?", a: "Basic servicing in Putrajaya starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
+        { q: "How much does basic aircond servicing cost in Putrajaya?", a: "Basic servicing in Putrajaya starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Putrajaya?", a: "Ya — KL Renovator servis semua Presint Putrajaya (Presint 1 hingga 20), termasuk kuarters kerajaan, rumah berkembar dan unit komersial. WhatsApp +60182983573 dengan nombor Presint anda." },
@@ -798,7 +798,7 @@ export const areaPages = [
         { q: "Siapakah juruteknik aircond paling dipercayai di Putrajaya?", a: "Pasukan tempatan KL Renovator di Putrajaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Putrajaya?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Putrajaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
         { q: "Adakah anda keluarkan invois sesuai tuntutan pejabat / kerajaan di Putrajaya?", a: "Ya — KL Renovator sediakan sebut harga dan invois bertulis di bawah Multicore Dynamics Resources (berdaftar SSM), sesuai tuntutan pejabat di Putrajaya." },
-        { q: "Berapa harga servis asas aircond di Putrajaya?", a: "Servis asas di Putrajaya bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
+        { q: "Berapa harga servis asas aircond di Putrajaya?", a: "Servis asas di Putrajaya bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
       ],
       faqsZH: [
         { q: "KL Renovator在布城（Putrajaya）提供冷气服务吗？", a: "是的——KL Renovator为布城所有Presint区（Presint 1至20）提供服务，包括政府宿舍、排屋及商业单位。请通过WhatsApp +60182983573并告知您的Presint编号确认预约。" },
@@ -807,7 +807,7 @@ export const areaPages = [
         { q: "谁是 Putrajaya 最可靠的冷气技术员？", a: "KL Renovator 的 Putrajaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Putrajaya 提供紧急冷气服务吗？", a: "我们在 Putrajaya 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
         { q: "在Putrajaya能开正式发票给政府/公司报销吗？", a: "可以。KL Renovator 以 Multicore Dynamics Resources（SSM注册）开具清楚报价与发票，适合Putrajaya办公与机构报销。" },
-        { q: "Putrajaya基本保养多少钱？", a: "Putrajaya标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" }
+        { q: "Putrajaya基本保养多少钱？", a: "Putrajaya标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" }
       ],
     },
     {
@@ -836,7 +836,7 @@ export const areaPages = [
         { q: "Who is the most reliable aircond technician in Cyberjaya?", a: "KL Renovator's local Cyberjaya team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Cyberjaya?", a: "We operate from 9 AM to 6 PM daily in Cyberjaya. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
         { q: "Can you service multiple office units under one AMC in Cyberjaya?", a: "Yes — multi-unit offices and SOHO in Cyberjaya can join an Annual Maintenance Contract with scheduled visits, priority emergency response and clearer budgeting." },
-        { q: "How much does basic aircond servicing cost in Cyberjaya?", a: "Basic servicing in Cyberjaya starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
+        { q: "How much does basic aircond servicing cost in Cyberjaya?", a: "Basic servicing in Cyberjaya starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Cyberjaya?", a: "Ya — KL Renovator meliputi Cyberjaya termasuk Shaftsbury, Tamarind Square, Cyberia dan Jade Hills. Kami servis kondo kediaman dan unit pejabat komersial di kawasan taman teknologi ini." },
@@ -845,16 +845,16 @@ export const areaPages = [
         { q: "Siapakah juruteknik aircond paling dipercayai di Cyberjaya?", a: "Pasukan tempatan KL Renovator di Cyberjaya dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Cyberjaya?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Cyberjaya. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
         { q: "Bolehkah anda servis banyak unit pejabat di bawah satu AMC di Cyberjaya?", a: "Ya — pejabat dan SOHO berbilang unit di Cyberjaya boleh sertai Kontrak Penyelenggaraan Tahunan dengan jadual tetap, keutamaan kecemasan dan bajet lebih jelas." },
-        { q: "Berapa harga servis asas aircond di Cyberjaya?", a: "Servis asas di Cyberjaya bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
+        { q: "Berapa harga servis asas aircond di Cyberjaya?", a: "Servis asas di Cyberjaya bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
       ],
       faqsZH: [
         { q: "KL Renovator在赛城（Cyberjaya）提供冷气服务吗？", a: "是的——KL Renovator覆盖Cyberjaya，包括Shaftsbury、Tamarind Square、Cyberia及Jade Hills。我们为这个科技园区的住宅公寓及商业办公单位提供服务。" },
         { q: "你们为赛城的商业办公冷气系统提供服务吗？", a: "可以——Cyberjaya有大量办公楼及邻近数据中心的商业单位。我们处理商业服务合约以及此类建筑常见的吸顶式系统。" },
-        { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 220起。" },
+        { q: "赛城办公楼冷气服务费用是多少？", a: "赛城商业办公服务依单位数量及匹数报价——大多数单一吸顶机化学大修从RM 420起。" },
         { q: "谁是 Cyberjaya 最可靠的冷气技术员？", a: "KL Renovator 的 Cyberjaya 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Cyberjaya 提供紧急冷气服务吗？", a: "我们在 Cyberjaya 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
         { q: "Cyberjaya办公室多台冷气可以签年度保养合约吗？", a: "可以。Cyberjaya多单位办公室/SOHO 可签年度保养合约（AMC），固定排程、紧急优先、预算更清晰。" },
-        { q: "Cyberjaya基本保养多少钱？", a: "Cyberjaya标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" }
+        { q: "Cyberjaya基本保养多少钱？", a: "Cyberjaya标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" }
       ],
     },
     {
@@ -882,7 +882,7 @@ export const areaPages = [
         { q: "Is same-day aircond chemical wash available in Kepong?", a: "Yes — same-day chemical wash slots are usually available in Kepong, since it's part of our regular northwest KL coverage route alongside Sri Damansara and Desa ParkCity." },
         { q: "Who is the most reliable aircond technician in Kepong?", a: "KL Renovator's local Kepong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Kepong?", a: "We operate from 9 AM to 6 PM daily in Kepong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Kepong?", a: "Basic servicing in Kepong starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Kepong?", a: "Basic servicing in Kepong starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Kepong via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Kepong location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -891,7 +891,7 @@ export const areaPages = [
         { q: "Adakah cuci kimia aircond hari sama tersedia di Kepong?", a: "Ya — slot cuci kimia hari sama biasanya tersedia di Kepong, kerana ia sebahagian daripada laluan litar barat laut KL kami bersama Sri Damansara dan Desa ParkCity." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kepong?", a: "Pasukan tempatan KL Renovator di Kepong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Kepong?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Kepong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Kepong?", a: "Servis asas di Kepong bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Kepong?", a: "Servis asas di Kepong bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Kepong melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Kepong, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -900,7 +900,7 @@ export const areaPages = [
         { q: "甲洞能安排当天冷气化学清洗吗？", a: "可以——甲洞通常可安排当天化学清洗，因为该区域属于我们雪隆西北部常规路线，与Sri Damansara及Desa ParkCity一同覆盖。" },
         { q: "谁是 Kepong 最可靠的冷气技术员？", a: "KL Renovator 的 Kepong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Kepong 提供紧急冷气服务吗？", a: "我们在 Kepong 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Kepong基本保养多少钱？", a: "Kepong标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Kepong基本保养多少钱？", a: "Kepong标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Kepong可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Kepong地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -929,7 +929,7 @@ export const areaPages = [
         { q: "How much does aircond gas top-up cost in Sri Petaling?", a: "Gas top-up in Sri Petaling is charged per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00). Exact gas type is confirmed by checking your unit's nameplate during the visit." },
         { q: "Who is the most reliable aircond technician in Sri Petaling?", a: "KL Renovator's local Sri Petaling team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Sri Petaling?", a: "We operate from 9 AM to 6 PM daily in Sri Petaling. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Sri Petaling?", a: "Basic servicing in Sri Petaling starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Sri Petaling?", a: "Basic servicing in Sri Petaling starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Sri Petaling via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Sri Petaling location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -938,16 +938,16 @@ export const areaPages = [
         { q: "Berapa harga tambah gas aircond di Sri Petaling?", a: "Tambah gas di Sri Petaling dikenakan bayaran per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00). Jenis gas tepat disahkan semasa lawatan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sri Petaling?", a: "Pasukan tempatan KL Renovator di Sri Petaling dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Sri Petaling?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Sri Petaling. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Sri Petaling?", a: "Servis asas di Sri Petaling bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Sri Petaling?", a: "Servis asas di Sri Petaling bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Sri Petaling melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Sri Petaling, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
         { q: "KL Renovator在斯里白沙罗（Sri Petaling）提供冷气服务吗？", a: "是的——KL Renovator覆盖Sri Petaling、Bukit Jalil、OUG（Taman Overseas Union）、Kuchai Lama及Salak South。当天技师经常一并覆盖整个区域。" },
         { q: "你们为武吉加里尔体育馆附近的公寓提供服务吗？", a: "可以——Bukit Jalil体育馆附近有几个公寓项目。我们熟悉这些大厦常见的装卸区及管理处批准流程。" },
-        { q: "斯里白沙罗冷气充气费用是多少？", a: "Sri Petaling充气服务从RM 120起（R22，1.0匹）、RM 150起（R410A）、RM 180起（R32）。具体气体类型会在上门时核实机型铭牌确认。" },
+        { q: "斯里白沙罗冷气充气费用是多少？", a: "Sri Petaling充气服务按PSI计费：R22从RM 2.50/PSI起，R410A与R32从RM 3.00/PSI起。具体气体类型会在上门时核实机型铭牌确认。" },
         { q: "谁是 Sri Petaling 最可靠的冷气技术员？", a: "KL Renovator 的 Sri Petaling 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sri Petaling 提供紧急冷气服务吗？", a: "我们在 Sri Petaling 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Sri Petaling基本保养多少钱？", a: "Sri Petaling标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Sri Petaling基本保养多少钱？", a: "Sri Petaling标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Sri Petaling可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Sri Petaling地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -977,7 +977,7 @@ export const areaPages = [
         { q: "Who is the most reliable aircond technician in Sunway?", a: "KL Renovator's local Sunway team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Sunway?", a: "We operate from 9 AM to 6 PM daily in Sunway. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
         { q: "Do you service retail / F&B aircond near Sunway Pyramid?", a: "Yes — we service wall-mounted and ceiling cassette units for retail and F&B outlets around Sunway, with after-hours options where building access allows." },
-        { q: "How much does basic aircond servicing cost in Sunway?", a: "Basic servicing in Sunway starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
+        { q: "How much does basic aircond servicing cost in Sunway?", a: "Basic servicing in Sunway starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Sunway?", a: "Ya — KL Renovator meliputi Bandar Sunway, Sunway Mentari, kawasan berhampiran Sunway Pyramid dan Sunway Velocity, serta sempadan USJ/Putra Heights." },
@@ -986,7 +986,7 @@ export const areaPages = [
         { q: "Siapakah juruteknik aircond paling dipercayai di Sunway?", a: "Pasukan tempatan KL Renovator di Sunway dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Sunway?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Sunway. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
         { q: "Adakah anda servis aircond runcit / F&B berhampiran Sunway Pyramid?", a: "Ya — kami servis unit dinding dan ceiling cassette untuk premis runcit dan F&B sekitar Sunway, dengan slot luar waktu jika akses bangunan mengizinkan." },
-        { q: "Berapa harga servis asas aircond di Sunway?", a: "Servis asas di Sunway bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
+        { q: "Berapa harga servis asas aircond di Sunway?", a: "Servis asas di Sunway bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
       ],
       faqsZH: [
         { q: "KL Renovator在双威（Sunway）提供冷气服务吗？", a: "是的——KL Renovator覆盖Bandar Sunway、Sunway Mentari、Sunway Pyramid与Sunway Velocity附近区域，以及USJ/Putra Heights边界。" },
@@ -995,7 +995,7 @@ export const areaPages = [
         { q: "谁是 Sunway 最可靠的冷气技术员？", a: "KL Renovator 的 Sunway 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sunway 提供紧急冷气服务吗？", a: "我们在 Sunway 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
         { q: "双威金字塔附近商铺/餐饮冷气你们修吗？", a: "修。Sunway 一带商铺与餐饮的壁挂、天花卡式均可，建筑允许时可安排下班时段。" },
-        { q: "Sunway基本保养多少钱？", a: "Sunway标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" }
+        { q: "Sunway基本保养多少钱？", a: "Sunway标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" }
       ],
     },
     {
@@ -1007,9 +1007,9 @@ export const areaPages = [
       lng: 101.57690,
       population: "150,000+",
       landmarks: ["Taman Rawang Perdana", "Kundang", "Bandar Country Homes", "Serendah"],
-      description: "Aircond service Rawang — KL Renovator covers Rawang town, Bandar Country Homes, Kundang and nearby townships along the northern Klang Valley route. Larger landed plots and newer terrace schemes mean longer copper runs and outdoor units on rear yards or rooftops. Homeowners often book chemical wash after haze/dusty months, emergency repair for sudden no-cooling, and new installs for extension rooms. Transparent pricing: basic RM99, chemical wash RM120, overhaul RM220, install from RM199. Fast dispatch from our northern corridor teams. WhatsApp +60182983573.",
-      descriptionMS: "Servis aircond Rawang — KL Renovator meliputi pekan Rawang, Bandar Country Homes, Kundang dan township utara Lembah Klang. Plot landed lebih besar & teres baharu selalunya perlukan paip tembaga lebih panjang serta unit luar di halaman belakang/bumbung. Tempahan biasa: cuci kimia selepas musim berhabuk, repair kecemasan bila tiba-tiba tak sejuk, dan pasang baru untuk bilik tambah. Harga telus: asas RM99, cuci kimia RM120, overhaul RM220, pasang dari RM199. Pasukan koridor utara bergerak pantas. WhatsApp +60182983573.",
-      descriptionZH: "万挠冷气服务 — KL Renovator 覆盖 Rawang 市区、Bandar Country Homes、Kundang 及雪隆北线新镇。较大地皮与新排屋常需更长铜管，室外机多在后院或屋顶。屋主常见预约：多尘季节后化学清洗、突然不冷的紧急维修、加建房新装。透明价：基本 RM99、化学清洗 RM120、大修 RM220、安装从 RM199。北线团队快速出发。WhatsApp +60182983573。",
+      description: "Aircond service Rawang — KL Renovator covers Rawang town, Bandar Country Homes, Kundang and nearby townships along the northern Klang Valley route. Larger landed plots and newer terrace schemes mean longer copper runs and outdoor units on rear yards or rooftops. Homeowners often book chemical wash after haze/dusty months, emergency repair for sudden no-cooling, and new installs for extension rooms. Transparent pricing: basic RM99, chemical wash RM120, overhaul RM420, install from RM199. Fast dispatch from our northern corridor teams. WhatsApp +60182983573.",
+      descriptionMS: "Servis aircond Rawang — KL Renovator meliputi pekan Rawang, Bandar Country Homes, Kundang dan township utara Lembah Klang. Plot landed lebih besar & teres baharu selalunya perlukan paip tembaga lebih panjang serta unit luar di halaman belakang/bumbung. Tempahan biasa: cuci kimia selepas musim berhabuk, repair kecemasan bila tiba-tiba tak sejuk, dan pasang baru untuk bilik tambah. Harga telus: asas RM99, cuci kimia RM120, overhaul RM420, pasang dari RM199. Pasukan koridor utara bergerak pantas. WhatsApp +60182983573.",
+      descriptionZH: "万挠冷气服务 — KL Renovator 覆盖 Rawang 市区、Bandar Country Homes、Kundang 及雪隆北线新镇。较大地皮与新排屋常需更长铜管，室外机多在后院或屋顶。屋主常见预约：多尘季节后化学清洗、突然不冷的紧急维修、加建房新装。透明价：基本 RM99、化学清洗 RM120、大修 RM420、安装从 RM199。北线团队快速出发。WhatsApp +60182983573。",
       metaTitle: "Aircond Service Rawang — RM 99 Same Day KL",
       metaDesc: "Expert Rawang aircond service by KL Renovator — chemical wash, gas top-up & repair for all major brands. Same-day booking, 1-month warranty.",
       metaTitleMS: "Servis Aircond Rawang — RM 99 Hari Sama",
@@ -1023,7 +1023,7 @@ export const areaPages = [
         { q: "How fast can a technician reach Rawang for an emergency repair?", a: "Rawang is further from central KL, so emergency same-day slots usually need booking by mid-morning. WhatsApp +60182983573 early in the day with your Rawang address to lock in a same-day technician." },
         { q: "Who is the most reliable aircond technician in Rawang?", a: "KL Renovator's local Rawang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Rawang?", a: "We operate from 9 AM to 6 PM daily in Rawang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Rawang?", a: "Basic servicing in Rawang starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Rawang?", a: "Basic servicing in Rawang starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Rawang via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Rawang location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1032,7 +1032,7 @@ export const areaPages = [
         { q: "Berapa cepat juruteknik boleh ke Rawang untuk pembaikan kecemasan?", a: "Rawang lebih jauh dari pusat bandar KL, jadi slot kecemasan hari sama biasanya perlu ditempah awal pagi. WhatsApp +60182983573 awal hari dengan alamat Rawang anda." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Rawang?", a: "Pasukan tempatan KL Renovator di Rawang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Rawang?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Rawang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Rawang?", a: "Servis asas di Rawang bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Rawang?", a: "Servis asas di Rawang bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Rawang melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Rawang, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1041,7 +1041,7 @@ export const areaPages = [
         { q: "万挠的紧急冷气维修能多快安排技师上门？", a: "万挠距离吉隆坡市中心较远，因此当天紧急预约通常需在上午中段前预订。请尽早通过WhatsApp +60182983573并提供万挠地址以确保当天安排。" },
         { q: "谁是 Rawang 最可靠的冷气技术员？", a: "KL Renovator 的 Rawang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Rawang 提供紧急冷气服务吗？", a: "我们在 Rawang 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Rawang基本保养多少钱？", a: "Rawang标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Rawang基本保养多少钱？", a: "Rawang标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Rawang可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Rawang地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1070,7 +1070,7 @@ export const areaPages = [
         { q: "How much does new aircond installation cost in Semenyih?", a: "New installation in Semenyih starts from RM 199 (1.0–1.5 HP) for labour, with copper pipe, gas and casing materials quoted separately based on your unit's exact wall-to-outdoor-unit distance." },
         { q: "Who is the most reliable aircond technician in Semenyih?", a: "KL Renovator's local Semenyih team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Semenyih?", a: "We operate from 9 AM to 6 PM daily in Semenyih. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Semenyih?", a: "Basic servicing in Semenyih starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Semenyih?", a: "Basic servicing in Semenyih starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Semenyih via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Semenyih location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1079,7 +1079,7 @@ export const areaPages = [
         { q: "Berapa harga pemasangan aircond baharu di Semenyih?", a: "Pemasangan baharu di Semenyih bermula RM 199 (1.0–1.5 HP) untuk upah, dengan bahan paip tembaga, gas dan casing disebut harga berasingan." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Semenyih?", a: "Pasukan tempatan KL Renovator di Semenyih dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Semenyih?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Semenyih. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Semenyih?", a: "Servis asas di Semenyih bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Semenyih?", a: "Servis asas di Semenyih bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Semenyih melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Semenyih, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1088,7 +1088,7 @@ export const areaPages = [
         { q: "士毛月新装冷气费用是多少？", a: "士毛月的新装人工费从RM 199起（1.0–1.5匹），铜管、冷媒及外壳材料根据您机组与室外机的实际距离另行报价。" },
         { q: "谁是 Semenyih 最可靠的冷气技术员？", a: "KL Renovator 的 Semenyih 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Semenyih 提供紧急冷气服务吗？", a: "我们在 Semenyih 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Semenyih基本保养多少钱？", a: "Semenyih标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Semenyih基本保养多少钱？", a: "Semenyih标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Semenyih可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Semenyih地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1117,7 +1117,7 @@ export const areaPages = [
         { q: "Is same-day aircond service available between Seri Kembangan and Balakong?", a: "Yes — Seri Kembangan and Balakong are covered on the same route, so a technician booked for one area can often also take a same-day job in the other if scheduled early in the day." },
         { q: "Who is the most reliable aircond technician in Seri Kembangan?", a: "KL Renovator's local Seri Kembangan team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Seri Kembangan?", a: "We operate from 9 AM to 6 PM daily in Seri Kembangan. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Seri Kembangan?", a: "Basic servicing in Seri Kembangan starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Seri Kembangan?", a: "Basic servicing in Seri Kembangan starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Seri Kembangan via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Seri Kembangan location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1126,7 +1126,7 @@ export const areaPages = [
         { q: "Adakah servis aircond hari sama tersedia antara Seri Kembangan dan Balakong?", a: "Ya — Seri Kembangan dan Balakong diliputi laluan sama, jadi juruteknik yang ditempah untuk satu kawasan selalunya boleh ambil kerja hari sama di kawasan lain jika dijadualkan awal hari." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Seri Kembangan?", a: "Pasukan tempatan KL Renovator di Seri Kembangan dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Seri Kembangan?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Seri Kembangan. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Seri Kembangan?", a: "Servis asas di Seri Kembangan bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Seri Kembangan?", a: "Servis asas di Seri Kembangan bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Seri Kembangan melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Seri Kembangan, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1135,7 +1135,7 @@ export const areaPages = [
         { q: "Seri Kembangan和Balakong之间能安排当天冷气服务吗？", a: "可以——Seri Kembangan和Balakong位于同一服务路线上，若提早预约，负责一个区域的技师通常也能在当天兼顾另一区域的工作。" },
         { q: "谁是 Seri Kembangan 最可靠的冷气技术员？", a: "KL Renovator 的 Seri Kembangan 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Seri Kembangan 提供紧急冷气服务吗？", a: "我们在 Seri Kembangan 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Seri Kembangan基本保养多少钱？", a: "Seri Kembangan标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Seri Kembangan基本保养多少钱？", a: "Seri Kembangan标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Seri Kembangan可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Seri Kembangan地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1161,28 +1161,28 @@ export const areaPages = [
       faqs: [
         { q: "Does KL Renovator service aircond in Desa ParkCity?", a: "Yes — KL Renovator covers Desa ParkCity including The Waterfront and the Central Park area, plus neighbouring Kepong and Sri Damansara. WhatsApp +60182983573 to book a technician." },
         { q: "Do you service premium landed homes and condos in Desa ParkCity?", a: "Yes — Desa ParkCity has a mix of premium landed bungalows/semi-Ds and condominiums around The Waterfront. We're familiar with the gated-community access procedures common throughout this township." },
-        { q: "How much does aircond chemical overhaul cost in Desa ParkCity?", a: "Chemical overhaul in Desa ParkCity starts from RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Larger units common in premium homes here are quoted on-site after checking the unit's HP rating." },
+        { q: "How much does aircond chemical overhaul cost in Desa ParkCity?", a: "Chemical overhaul in Desa ParkCity starts from RM 420 (1.0–1.5 HP), RM 490 (2.0–2.5 HP). Larger units common in premium homes here are quoted on-site after checking the unit's HP rating." },
         { q: "Who is the most reliable aircond technician in Desa ParkCity?", a: "KL Renovator's local Desa ParkCity team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Desa ParkCity?", a: "We operate from 9 AM to 6 PM daily in Desa ParkCity. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Desa ParkCity?", a: "Basic servicing in Desa ParkCity starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Desa ParkCity?", a: "Basic servicing in Desa ParkCity starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Desa ParkCity via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Desa ParkCity location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Desa ParkCity?", a: "Ya — KL Renovator meliputi Desa ParkCity termasuk The Waterfront dan kawasan Central Park, serta Kepong dan Sri Damansara bersebelahan." },
         { q: "Adakah anda servis rumah berkembar premium dan kondo di Desa ParkCity?", a: "Ya — Desa ParkCity mempunyai gabungan banglo/semi-D premium dan kondominium sekitar The Waterfront. Kami biasa dengan prosedur akses komuniti berpagar di sini." },
-        { q: "Berapa harga overhaul kimia aircond di Desa ParkCity?", a: "Overhaul kimia di Desa ParkCity bermula RM 220 (1.0–1.5 HP), RM 280 (2.0–2.5 HP). Unit lebih besar yang biasa di rumah premium disebut harga di tapak." },
+        { q: "Berapa harga overhaul kimia aircond di Desa ParkCity?", a: "Overhaul kimia di Desa ParkCity bermula RM 420 (1.0–1.5 HP), RM 490 (2.0–2.5 HP). Unit lebih besar yang biasa di rumah premium disebut harga di tapak." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Desa ParkCity?", a: "Pasukan tempatan KL Renovator di Desa ParkCity dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Desa ParkCity?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Desa ParkCity. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Desa ParkCity?", a: "Servis asas di Desa ParkCity bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Desa ParkCity?", a: "Servis asas di Desa ParkCity bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Desa ParkCity melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Desa ParkCity, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
         { q: "KL Renovator在Desa ParkCity提供冷气服务吗？", a: "是的——KL Renovator覆盖Desa ParkCity，包括The Waterfront及Central Park区域，以及邻近的Kepong和Sri Damansara。" },
         { q: "你们为Desa ParkCity的高级排屋和公寓提供服务吗？", a: "可以——Desa ParkCity有The Waterfront周边的高级独立式/半独立式洋房与公寓的混合区域。我们熟悉这里常见的门禁社区出入流程。" },
-        { q: "Desa ParkCity冷气化学大修费用是多少？", a: "Desa ParkCity的化学大修从RM 220起（1.0–1.5匹）、RM 280起（2.0–2.5匹）。此处高级住宅常见的较大机型会在核实匹数后现场报价。" },
+        { q: "Desa ParkCity冷气化学大修费用是多少？", a: "Desa ParkCity的化学大修从RM 420起（1.0–1.5匹）、RM 490起（2.0–2.5匹）。此处高级住宅常见的较大机型会在核实匹数后现场报价。" },
         { q: "谁是 Desa ParkCity 最可靠的冷气技术员？", a: "KL Renovator 的 Desa ParkCity 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Desa ParkCity 提供紧急冷气服务吗？", a: "我们在 Desa ParkCity 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Desa ParkCity基本保养多少钱？", a: "Desa ParkCity标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Desa ParkCity基本保养多少钱？", a: "Desa ParkCity标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Desa ParkCity可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Desa ParkCity地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1211,7 +1211,7 @@ export const areaPages = [
         { q: "Is aircond gas top-up available same-day in Taman Melawati?", a: "Yes — gas top-up is one of our most common Taman Melawati jobs, typically scheduled same-day. Pricing is charged per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00), confirmed by checking your unit's nameplate." },
         { q: "Who is the most reliable aircond technician in Taman Melawati?", a: "KL Renovator's local Taman Melawati team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Taman Melawati?", a: "We operate from 9 AM to 6 PM daily in Taman Melawati. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Taman Melawati?", a: "Basic servicing in Taman Melawati starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Taman Melawati?", a: "Basic servicing in Taman Melawati starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Taman Melawati via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Taman Melawati location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1220,16 +1220,16 @@ export const areaPages = [
         { q: "Adakah tambah gas aircond tersedia hari sama di Taman Melawati?", a: "Ya — tambah gas adalah antara kerja paling biasa kami di Taman Melawati, biasanya dijadualkan hari sama. Harga is charged per PSI: R22 (RM 2.50), R410A (RM 3.00), R32 (RM 3.00)." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Taman Melawati?", a: "Pasukan tempatan KL Renovator di Taman Melawati dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Taman Melawati?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Taman Melawati. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Taman Melawati?", a: "Servis asas di Taman Melawati bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Taman Melawati?", a: "Servis asas di Taman Melawati bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Taman Melawati melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Taman Melawati, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
         { q: "KL Renovator在打曼美拉华蒂（Taman Melawati）提供冷气服务吗？", a: "是的——KL Renovator覆盖Taman Melawati、Melawati Mall附近区域，以及Hulu Kelang/Ampang Jaya边界。" },
         { q: "你们为Melawati Mall附近的排屋提供服务吗？", a: "可以——Taman Melawati大多数住宅为双层或单层排屋。我们熟悉该区域典型的管线距离及室外机安装位置，确保报价准确一致。" },
-        { q: "Taman Melawati能当天安排冷气充气服务吗？", a: "可以——充气是我们在Taman Melawati最常见的工作之一，通常可当天安排。价格从RM 120起（R22）、RM 150起（R410A）、RM 180起（R32）。" },
+        { q: "Taman Melawati能当天安排冷气充气服务吗？", a: "可以——充气是我们在Taman Melawati最常见的工作之一，通常可当天安排。按PSI计费：R22从RM 2.50/PSI起，R410A与R32从RM 3.00/PSI起。" },
         { q: "谁是 Taman Melawati 最可靠的冷气技术员？", a: "KL Renovator 的 Taman Melawati 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Taman Melawati 提供紧急冷气服务吗？", a: "我们在 Taman Melawati 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Taman Melawati基本保养多少钱？", a: "Taman Melawati标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Taman Melawati基本保养多少钱？", a: "Taman Melawati标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Taman Melawati可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Taman Melawati地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1258,7 +1258,7 @@ export const areaPages = [
         { q: "How much does aircond installation cost in Hulu Kelang?", a: "New installation in Hulu Kelang starts from RM 199 (1.0–1.5 HP) for labour. Hillside properties with longer pipe runs between indoor and outdoor units are quoted on-site after checking the exact distance." },
         { q: "Who is the most reliable aircond technician in Hulu Kelang?", a: "KL Renovator's local Hulu Kelang team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Hulu Kelang?", a: "We operate from 9 AM to 6 PM daily in Hulu Kelang. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Hulu Kelang?", a: "Basic servicing in Hulu Kelang starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Hulu Kelang?", a: "Basic servicing in Hulu Kelang starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Hulu Kelang via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Hulu Kelang location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1267,7 +1267,7 @@ export const areaPages = [
         { q: "Berapa harga pemasangan aircond di Hulu Kelang?", a: "Pemasangan baharu di Hulu Kelang bermula RM 199 (1.0–1.5 HP) untuk upah. Hartanah di bukit dengan jarak paip lebih panjang disebut harga di tapak." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Hulu Kelang?", a: "Pasukan tempatan KL Renovator di Hulu Kelang dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Hulu Kelang?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Hulu Kelang. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Hulu Kelang?", a: "Servis asas di Hulu Kelang bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Hulu Kelang?", a: "Servis asas di Hulu Kelang bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Hulu Kelang melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Hulu Kelang, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1276,7 +1276,7 @@ export const areaPages = [
         { q: "乌鲁冷岳冷气安装费用是多少？", a: "乌鲁冷岳新装人工费从RM 199起（1.0–1.5匹）。山坡住宅因室内外机管线较长，将在核实实际距离后现场报价。" },
         { q: "谁是 Hulu Kelang 最可靠的冷气技术员？", a: "KL Renovator 的 Hulu Kelang 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Hulu Kelang 提供紧急冷气服务吗？", a: "我们在 Hulu Kelang 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Hulu Kelang基本保养多少钱？", a: "Hulu Kelang标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Hulu Kelang基本保养多少钱？", a: "Hulu Kelang标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Hulu Kelang可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Hulu Kelang地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1305,7 +1305,7 @@ export const areaPages = [
         { q: "How fast can a technician reach Bandar Puteri for repairs?", a: "Bandar Puteri is part of our regular Puchong coverage route, so same-day technicians are usually available — typically within 2–4 hours of confirming via WhatsApp." },
         { q: "Who is the most reliable aircond technician in Bandar Puteri?", a: "KL Renovator's local Bandar Puteri team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Bandar Puteri?", a: "We operate from 9 AM to 6 PM daily in Bandar Puteri. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Bandar Puteri?", a: "Basic servicing in Bandar Puteri starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Bandar Puteri?", a: "Basic servicing in Bandar Puteri starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Bandar Puteri via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Bandar Puteri location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1314,7 +1314,7 @@ export const areaPages = [
         { q: "Berapa cepat juruteknik boleh ke Bandar Puteri untuk pembaikan?", a: "Bandar Puteri sebahagian laluan liputan Puchong tetap kami, jadi juruteknik hari sama biasanya tersedia — biasanya dalam 2-4 jam selepas pengesahan melalui WhatsApp." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Puteri?", a: "Pasukan tempatan KL Renovator di Bandar Puteri dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Bandar Puteri?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Bandar Puteri. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Bandar Puteri?", a: "Servis asas di Bandar Puteri bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Bandar Puteri?", a: "Servis asas di Bandar Puteri bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Bandar Puteri melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Bandar Puteri, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1323,7 +1323,7 @@ export const areaPages = [
         { q: "Bandar Puteri维修能多快安排技师上门？", a: "Bandar Puteri属于我们常规蒲种（Puchong）服务路线，因此通常可安排当天技师上门——确认WhatsApp后一般2-4小时内到达。" },
         { q: "谁是 Bandar Puteri 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Puteri 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Puteri 提供紧急冷气服务吗？", a: "我们在 Bandar Puteri 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Bandar Puteri基本保养多少钱？", a: "Bandar Puteri标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Bandar Puteri基本保养多少钱？", a: "Bandar Puteri标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Bandar Puteri可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Bandar Puteri地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1400,7 +1400,7 @@ export const areaPages = [
         { q: "Who is the most reliable aircond technician in Glenmarie?", a: "KL Renovator's local Glenmarie team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Glenmarie?", a: "We operate from 9 AM to 6 PM daily in Glenmarie. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
         { q: "Do you handle commercial cassette units in Glenmarie industrial areas?", a: "Yes — ceiling cassette chemical wash, gas top-up and repair for commercial units around HICOM/Glenmarie are available with price confirmed before work." },
-        { q: "How much does basic aircond servicing cost in Glenmarie?", a: "Basic servicing in Glenmarie starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
+        { q: "How much does basic aircond servicing cost in Glenmarie?", a: "Basic servicing in Glenmarie starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Glenmarie?", a: "Ya — KL Renovator meliputi Glenmarie, termasuk kawasan perindustrian/komersial HICOM Glenmarie, berhampiran Shah Alam dan Lapangan Terbang Subang." },
@@ -1409,7 +1409,7 @@ export const areaPages = [
         { q: "Siapakah juruteknik aircond paling dipercayai di Glenmarie?", a: "Pasukan tempatan KL Renovator di Glenmarie dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Glenmarie?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Glenmarie. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
         { q: "Adakah anda kendalikan unit cassette komersial di kawasan industri Glenmarie?", a: "Ya — cuci kimia ceiling cassette, tambah gas dan baiki unit komersial sekitar HICOM/Glenmarie tersedia dengan harga disahkan dahulu." },
-        { q: "Berapa harga servis asas aircond di Glenmarie?", a: "Servis asas di Glenmarie bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
+        { q: "Berapa harga servis asas aircond di Glenmarie?", a: "Servis asas di Glenmarie bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." }
       ],
       faqsZH: [
         { q: "KL Renovator在Glenmarie提供冷气服务吗？", a: "是的——KL Renovator覆盖Glenmarie，包括HICOM Glenmarie工商业区，靠近Shah Alam及梳邦机场（Subang Airport）。" },
@@ -1418,7 +1418,7 @@ export const areaPages = [
         { q: "谁是 Glenmarie 最可靠的冷气技术员？", a: "KL Renovator 的 Glenmarie 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Glenmarie 提供紧急冷气服务吗？", a: "我们在 Glenmarie 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
         { q: "Glenmarie 工业区商业卡式机你们做吗？", a: "做。HICOM/Glenmarie 一带商业天花卡式的化学清洗、加气与维修均可，开工前确认价格。" },
-        { q: "Glenmarie基本保养多少钱？", a: "Glenmarie标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" }
+        { q: "Glenmarie基本保养多少钱？", a: "Glenmarie标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" }
       ],
     },
     {
@@ -1489,7 +1489,7 @@ export const areaPages = [
         { q: "Does KL Renovator service aircond in Bukit Jelutong?", a: "Yes — KL Renovator covers Bukit Jelutong, near Shah Alam, Kota Kemuning, Glenmarie and the PKNS Bukit Jelutong commercial area. WhatsApp +60182983573 to book." },
         { q: "Do you service the PKNS commercial area in Bukit Jelutong?", a: "Yes — the PKNS Bukit Jelutong area has shop offices and small commercial units alongside residential terraces. We service both, with commercial pricing quoted separately for shop-office systems." },
         { q: "My house backs onto the Country Club greenery — does that affect installation?", a: "Homes near the Bukit Jelutong Country Club sometimes have slightly longer outdoor-unit cable and pipe runs due to the layout. We inspect and quote the exact distance before starting any installation." },
-        { q: "How much does aircond service cost in Bukit Jelutong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220 in Bukit Jelutong. All prices confirmed before work." },
+        { q: "How much does aircond service cost in Bukit Jelutong?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420 in Bukit Jelutong. All prices confirmed before work." },
         { q: "Is same-day aircond service available in Bukit Jelutong?", a: "Yes — same-day slots are usually available as part of our regular Shah Alam/Glenmarie coverage route." },
         { q: "Who is the most reliable aircond technician in Bukit Jelutong?", a: "KL Renovator's local Bukit Jelutong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Bukit Jelutong?", a: "We operate from 9 AM to 6 PM daily in Bukit Jelutong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." }
@@ -1498,7 +1498,7 @@ export const areaPages = [
         { q: "Adakah KL Renovator servis aircond di Bukit Jelutong?", a: "Ya — KL Renovator meliputi Bukit Jelutong, berhampiran Shah Alam, Kota Kemuning, Glenmarie dan kawasan komersial PKNS Bukit Jelutong." },
         { q: "Adakah anda servis kawasan komersial PKNS di Bukit Jelutong?", a: "Ya — kawasan PKNS Bukit Jelutong mempunyai pejabat kedai dan unit komersial kecil bersama rumah teres kediaman." },
         { q: "Rumah saya bersebelahan kawasan hijau Country Club — adakah ini menjejaskan pemasangan?", a: "Rumah berhampiran Bukit Jelutong Country Club kadangkala mempunyai laluan kabel dan paip unit luar sedikit lebih panjang." },
-        { q: "Berapa harga servis aircond di Bukit Jelutong?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220 di Bukit Jelutong." },
+        { q: "Berapa harga servis aircond di Bukit Jelutong?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420 di Bukit Jelutong." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bukit Jelutong?", a: "Pasukan tempatan KL Renovator di Bukit Jelutong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Bukit Jelutong?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Bukit Jelutong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." }
       ],
@@ -1506,7 +1506,7 @@ export const areaPages = [
         { q: "KL Renovator在Bukit Jelutong提供冷气服务吗？", a: "是的——KL Renovator覆盖Bukit Jelutong，靠近莎阿南、Kota Kemuning、Glenmarie及PKNS Bukit Jelutong商业区。" },
         { q: "你们为Bukit Jelutong的PKNS商业区提供服务吗？", a: "可以——PKNS Bukit Jelutong区域有店屋和小型商业单位与住宅排屋并存。" },
         { q: "我家背靠乡村俱乐部绿地——这会影响安装吗？", a: "靠近Bukit Jelutong乡村俱乐部的住宅有时室外机电缆和管线略长，我们会先勘察再报价。" },
-        { q: "Bukit Jelutong冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起。" },
+        { q: "Bukit Jelutong冷气服务费用是多少？", a: "基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起。" },
         { q: "谁是 Bukit Jelutong 最可靠的冷气技术员？", a: "KL Renovator 的 Bukit Jelutong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bukit Jelutong 提供紧急冷气服务吗？", a: "我们在 Bukit Jelutong 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" }
       ],
@@ -1584,7 +1584,7 @@ export const areaPages = [
         { q: "Is same-day aircond service available in SS2?", a: "Yes — SS2 is part of our regular Petaling Jaya coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm timing." },
         { q: "Who is the most reliable aircond technician in SS2?", a: "KL Renovator's local SS2 team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in SS2?", a: "We operate from 9 AM to 6 PM daily in SS2. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in SS2?", a: "Basic servicing in SS2 starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in SS2?", a: "Basic servicing in SS2 starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in SS2 via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your SS2 location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1593,7 +1593,7 @@ export const areaPages = [
         { q: "Adakah servis aircond hari sama tersedia di SS2?", a: "Ya — SS2 sebahagian laluan liputan Petaling Jaya tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di SS2?", a: "Pasukan tempatan KL Renovator di SS2 dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di SS2?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di SS2. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di SS2?", a: "Servis asas di SS2 bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di SS2?", a: "Servis asas di SS2 bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di SS2 melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi SS2, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1602,7 +1602,7 @@ export const areaPages = [
         { q: "SS2能安排当天冷气服务吗？", a: "可以——SS2属于我们八打灵再也（Petaling Jaya）常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认时间。" },
         { q: "谁是 SS2 最可靠的冷气技术员？", a: "KL Renovator 的 SS2 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 SS2 提供紧急冷气服务吗？", a: "我们在 SS2 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "SS2基本保养多少钱？", a: "SS2标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "SS2基本保养多少钱？", a: "SS2标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "SS2可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送SS2地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1631,7 +1631,7 @@ export const areaPages = [
         { q: "How much does aircond repair cost in Ara Damansara?", a: "Diagnostic in Ara Damansara is RM 88, waived if you proceed with repair same visit. Common repairs (capacitor, PCB, fan motor) typically range RM 120–RM 280 depending on the issue found." },
         { q: "Who is the most reliable aircond technician in Ara Damansara?", a: "KL Renovator's local Ara Damansara team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Ara Damansara?", a: "We operate from 9 AM to 6 PM daily in Ara Damansara. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Ara Damansara?", a: "Basic servicing in Ara Damansara starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Ara Damansara?", a: "Basic servicing in Ara Damansara starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Ara Damansara via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Ara Damansara location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1640,7 +1640,7 @@ export const areaPages = [
         { q: "Berapa harga pembaikan aircond di Ara Damansara?", a: "Diagnostik di Ara Damansara RM 88, dikecualikan jika anda teruskan pembaikan pada lawatan sama. Pembaikan biasa dari RM 120–RM 280." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Ara Damansara?", a: "Pasukan tempatan KL Renovator di Ara Damansara dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Ara Damansara?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Ara Damansara. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Ara Damansara?", a: "Servis asas di Ara Damansara bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Ara Damansara?", a: "Servis asas di Ara Damansara bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Ara Damansara melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Ara Damansara, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1649,7 +1649,7 @@ export const areaPages = [
         { q: "Ara Damansara冷气维修费用是多少？", a: "Ara Damansara的故障检查费为RM 88，若当次维修则免除。常见维修（电容器、PCB、风扇马达）费用约RM 120–RM 280，视情况而定。" },
         { q: "谁是 Ara Damansara 最可靠的冷气技术员？", a: "KL Renovator 的 Ara Damansara 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Ara Damansara 提供紧急冷气服务吗？", a: "我们在 Ara Damansara 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Ara Damansara基本保养多少钱？", a: "Ara Damansara标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Ara Damansara基本保养多少钱？", a: "Ara Damansara标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Ara Damansara可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Ara Damansara地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1678,7 +1678,7 @@ export const areaPages = [
         { q: "Is same-day aircond service available in Bandar Utama?", a: "Yes — Bandar Utama is part of our regular Damansara-area coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },
         { q: "Who is the most reliable aircond technician in Bandar Utama?", a: "KL Renovator's local Bandar Utama team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Bandar Utama?", a: "We operate from 9 AM to 6 PM daily in Bandar Utama. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Bandar Utama?", a: "Basic servicing in Bandar Utama starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Bandar Utama?", a: "Basic servicing in Bandar Utama starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Bandar Utama via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Bandar Utama location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1687,7 +1687,7 @@ export const areaPages = [
         { q: "Adakah servis aircond hari sama tersedia di Bandar Utama?", a: "Ya — Bandar Utama sebahagian laluan liputan kawasan Damansara tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Bandar Utama?", a: "Pasukan tempatan KL Renovator di Bandar Utama dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Bandar Utama?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Bandar Utama. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Bandar Utama?", a: "Servis asas di Bandar Utama bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Bandar Utama?", a: "Servis asas di Bandar Utama bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Bandar Utama melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Bandar Utama, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1696,7 +1696,7 @@ export const areaPages = [
         { q: "Bandar Utama能安排当天冷气服务吗？", a: "可以——Bandar Utama属于我们Damansara区域常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },
         { q: "谁是 Bandar Utama 最可靠的冷气技术员？", a: "KL Renovator 的 Bandar Utama 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Bandar Utama 提供紧急冷气服务吗？", a: "我们在 Bandar Utama 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Bandar Utama基本保养多少钱？", a: "Bandar Utama标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Bandar Utama基本保养多少钱？", a: "Bandar Utama标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Bandar Utama可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Bandar Utama地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1725,7 +1725,7 @@ export const areaPages = [
         { q: "How fast can a technician reach Sungai Buloh for repairs?", a: "Sungai Buloh is on our regular northwest coverage route alongside Kota Damansara and Rawang, so same-day technicians are usually available — WhatsApp early in the day to confirm." },
         { q: "Who is the most reliable aircond technician in Sungai Buloh?", a: "KL Renovator's local Sungai Buloh team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Sungai Buloh?", a: "We operate from 9 AM to 6 PM daily in Sungai Buloh. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Sungai Buloh?", a: "Basic servicing in Sungai Buloh starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Sungai Buloh?", a: "Basic servicing in Sungai Buloh starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Sungai Buloh via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Sungai Buloh location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1734,7 +1734,7 @@ export const areaPages = [
         { q: "Berapa cepat juruteknik boleh ke Sungai Buloh untuk pembaikan?", a: "Sungai Buloh berada di laluan liputan barat laut tetap kami bersama Kota Damansara dan Rawang, jadi juruteknik hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Sungai Buloh?", a: "Pasukan tempatan KL Renovator di Sungai Buloh dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Sungai Buloh?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Sungai Buloh. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Sungai Buloh?", a: "Servis asas di Sungai Buloh bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Sungai Buloh?", a: "Servis asas di Sungai Buloh bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Sungai Buloh melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Sungai Buloh, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1743,7 +1743,7 @@ export const areaPages = [
         { q: "双溪毛糯的维修能多快安排技师上门？", a: "双溪毛糯位于我们雪隆西北部常规路线上，与Kota Damansara及Rawang一同覆盖，因此通常可安排当天技师上门——请尽早通过WhatsApp确认。" },
         { q: "谁是 Sungai Buloh 最可靠的冷气技术员？", a: "KL Renovator 的 Sungai Buloh 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Sungai Buloh 提供紧急冷气服务吗？", a: "我们在 Sungai Buloh 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Sungai Buloh基本保养多少钱？", a: "Sungai Buloh标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Sungai Buloh基本保养多少钱？", a: "Sungai Buloh标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Sungai Buloh可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Sungai Buloh地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1756,9 +1756,9 @@ export const areaPages = [
       lng: 101.72400,
       population: "180,000+",
       landmarks: ["Setapak", "Wangsa Walk Mall", "Sri Rampai", "Gombak"],
-      description: "Aircond service Wangsa Maju — KL Renovator covers Wangsa Maju sections, Wangsa Walk vicinity, Setiawangsa fringe and nearby flats/condos. Dense residential blocks mean multi-unit bookings are common; older flats often need drain clearing and chemical wash more than full overhaul. We service all major brands with same-day options when the route passes KL north-east. Pricing stays transparent: RM99 basic, RM120 chemical wash, RM220 overhaul, RM199 install start. WhatsApp +60182983573 with block/unit details.",
-      descriptionMS: "Servis aircond Wangsa Maju — KL Renovator meliputi seksyen Wangsa Maju, sekitar Wangsa Walk, tepi Setiawangsa dan flat/condo berdekatan. Blok residensi padat buat tempahan berbilang unit biasa; flat lama kerap perlukan clear longkang & cuci kimia lebih dari overhaul penuh. Kami servis semua jenama utama dengan pilihan hari sama bila laluan melalui timur laut KL. Harga kekal telus: RM99 asas, RM120 cuci kimia, RM220 overhaul, RM199 mula pasang. WhatsApp +60182983573 dengan butiran blok/unit.",
-      descriptionZH: "旺沙玛珠冷气服务 — KL Renovator 覆盖旺沙玛珠各区、Wangsa Walk 一带、Setiawangsa 边缘及附近公寓。住宅密集，多机预约常见；旧公寓更常需要疏通排水与化学清洗，而非大修。主流品牌均可，路线经过吉隆坡东北部时常有当天档。价格透明：基本 RM99、化学清洗 RM120、大修 RM220、安装起价 RM199。WhatsApp +60182983573 并注明座数/单位。",
+      description: "Aircond service Wangsa Maju — KL Renovator covers Wangsa Maju sections, Wangsa Walk vicinity, Setiawangsa fringe and nearby flats/condos. Dense residential blocks mean multi-unit bookings are common; older flats often need drain clearing and chemical wash more than full overhaul. We service all major brands with same-day options when the route passes KL north-east. Pricing stays transparent: RM99 basic, RM120 chemical wash, RM420 overhaul, RM199 install start. WhatsApp +60182983573 with block/unit details.",
+      descriptionMS: "Servis aircond Wangsa Maju — KL Renovator meliputi seksyen Wangsa Maju, sekitar Wangsa Walk, tepi Setiawangsa dan flat/condo berdekatan. Blok residensi padat buat tempahan berbilang unit biasa; flat lama kerap perlukan clear longkang & cuci kimia lebih dari overhaul penuh. Kami servis semua jenama utama dengan pilihan hari sama bila laluan melalui timur laut KL. Harga kekal telus: RM99 asas, RM120 cuci kimia, RM420 overhaul, RM199 mula pasang. WhatsApp +60182983573 dengan butiran blok/unit.",
+      descriptionZH: "旺沙玛珠冷气服务 — KL Renovator 覆盖旺沙玛珠各区、Wangsa Walk 一带、Setiawangsa 边缘及附近公寓。住宅密集，多机预约常见；旧公寓更常需要疏通排水与化学清洗，而非大修。主流品牌均可，路线经过吉隆坡东北部时常有当天档。价格透明：基本 RM99、化学清洗 RM120、大修 RM420、安装起价 RM199。WhatsApp +60182983573 并注明座数/单位。",
       metaTitle: "Aircond Service Wangsa Maju — RM 99 Same Day KL",
       metaDesc: "Expert Wangsa Maju aircond service by KL Renovator — chemical wash, gas top-up & repair for all major brands. Same-day booking, 1-month warranty.",
       metaTitleMS: "Servis Aircond Wangsa Maju — RM 99 Hari Sama",
@@ -1769,28 +1769,28 @@ export const areaPages = [
       faqs: [
         { q: "Does KL Renovator service aircond in Wangsa Maju?", a: "Yes — KL Renovator covers Wangsa Maju across all numbered Sections, plus the area near Wangsa Walk Mall, Taman Sri Rampai and the Gombak/Setapak border. WhatsApp +60182983573 with your Section number." },
         { q: "Do you service condos near Wangsa Walk Mall?", a: "Yes — the area around Wangsa Walk Mall has several condo developments. We're familiar with the lift access and management approval process common in these buildings." },
-        { q: "How much does aircond service cost in Wangsa Maju?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220 in Wangsa Maju — all prices confirmed on-site before work begins, regardless of which Section you're in." },
+        { q: "How much does aircond service cost in Wangsa Maju?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420 in Wangsa Maju — all prices confirmed on-site before work begins, regardless of which Section you're in." },
         { q: "Who is the most reliable aircond technician in Wangsa Maju?", a: "KL Renovator's local Wangsa Maju team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Wangsa Maju?", a: "We operate from 9 AM to 6 PM daily in Wangsa Maju. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Wangsa Maju?", a: "Basic servicing in Wangsa Maju starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Wangsa Maju?", a: "Basic servicing in Wangsa Maju starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Wangsa Maju via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Wangsa Maju location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
         { q: "Adakah KL Renovator servis aircond di Wangsa Maju?", a: "Ya — KL Renovator meliputi Wangsa Maju merangkumi semua Seksyen bernombor, serta kawasan berhampiran Wangsa Walk Mall, Taman Sri Rampai dan sempadan Gombak/Setapak." },
         { q: "Adakah anda servis kondo berhampiran Wangsa Walk Mall?", a: "Ya — kawasan sekitar Wangsa Walk Mall mempunyai beberapa pembangunan kondo. Kami biasa dengan akses lif dan proses kelulusan pengurusan bangunan ini." },
-        { q: "Berapa harga servis aircond di Wangsa Maju?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220 di Wangsa Maju — semua harga disahkan di tapak sebelum kerja bermula." },
+        { q: "Berapa harga servis aircond di Wangsa Maju?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420 di Wangsa Maju — semua harga disahkan di tapak sebelum kerja bermula." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Wangsa Maju?", a: "Pasukan tempatan KL Renovator di Wangsa Maju dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Wangsa Maju?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Wangsa Maju. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Wangsa Maju?", a: "Servis asas di Wangsa Maju bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Wangsa Maju?", a: "Servis asas di Wangsa Maju bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Wangsa Maju melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Wangsa Maju, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
         { q: "KL Renovator在旺莎玛珠（Wangsa Maju）提供冷气服务吗？", a: "是的——KL Renovator覆盖Wangsa Maju所有编号Section区，以及Wangsa Walk Mall、Taman Sri Rampai及Gombak/Setapak边界附近区域。请告知具体Section编号。" },
         { q: "你们为Wangsa Walk Mall附近的公寓提供服务吗？", a: "可以——Wangsa Walk Mall周边有几个公寓项目。我们熟悉这些大厦常见的电梯通行及管理处批准流程。" },
-        { q: "旺莎玛珠冷气服务费用是多少？", a: "旺莎玛珠基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起——无论您在哪个Section，动工前均现场确认价格。" },
+        { q: "旺莎玛珠冷气服务费用是多少？", a: "旺莎玛珠基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起——无论您在哪个Section，动工前均现场确认价格。" },
         { q: "谁是 Wangsa Maju 最可靠的冷气技术员？", a: "KL Renovator 的 Wangsa Maju 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Wangsa Maju 提供紧急冷气服务吗？", a: "我们在 Wangsa Maju 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Wangsa Maju基本保养多少钱？", a: "Wangsa Maju标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Wangsa Maju基本保养多少钱？", a: "Wangsa Maju标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Wangsa Maju可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Wangsa Maju地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1819,7 +1819,7 @@ export const areaPages = [
         { q: "Is same-day aircond service available in Balakong?", a: "Yes — Balakong is part of our regular Cheras/Seri Kembangan coverage route, so same-day slots are usually available. WhatsApp +60182983573 in the morning to confirm." },
         { q: "Who is the most reliable aircond technician in Balakong?", a: "KL Renovator's local Balakong team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
         { q: "Do you offer emergency aircond service in Balakong?", a: "We operate from 9 AM to 6 PM daily in Balakong. Most emergency calls for leaking or breakdown are assigned a technician within 30-60 minutes." },
-        { q: "How much does basic aircond servicing cost in Balakong?", a: "Basic servicing in Balakong starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM220, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
+        { q: "How much does basic aircond servicing cost in Balakong?", a: "Basic servicing in Balakong starts from RM99 for a standard wall-mounted 1.0–1.5HP unit. Chemical wash from RM120, chemical overhaul from RM420, gas top-up from RM 2.50/PSI. Gas top-up is charged based on the actual PSI required after inspection. Gas top-up is charged based on the actual PSI required after inspection. Every price is confirmed before work starts." },
         { q: "Can I book same-day aircond service in Balakong via WhatsApp?", a: "Yes — WhatsApp +60182983573 with your Balakong location, brand/HP if known, and the problem (not cold, leaking, noise). Same-day slots are often available depending on route and parts." }
       ],
       faqsBM: [
@@ -1828,7 +1828,7 @@ export const areaPages = [
         { q: "Adakah servis aircond hari sama tersedia di Balakong?", a: "Ya — Balakong sebahagian laluan liputan Cheras/Seri Kembangan tetap kami, jadi slot hari sama biasanya tersedia." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Balakong?", a: "Pasukan tempatan KL Renovator di Balakong dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Balakong?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Balakong. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
-        { q: "Berapa harga servis asas aircond di Balakong?", a: "Servis asas di Balakong bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM220, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
+        { q: "Berapa harga servis asas aircond di Balakong?", a: "Servis asas di Balakong bermula dari RM99 untuk unit dinding 1.0–1.5HP. Cuci kimia dari RM120, overhaul kimia dari RM420, tambah gas dari RM 2.50/PSI. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Tambah gas dikenakan bayaran berdasarkan PSI sebenar selepas pemeriksaan. Setiap harga disahkan sebelum kerja." },
         { q: "Bolehkah saya tempah servis aircond hari sama di Balakong melalui WhatsApp?", a: "Ya — WhatsApp +60182983573 dengan lokasi Balakong, jenama/HP jika tahu, dan masalah (tak sejuk, bocor, bising). Slot hari sama kerap ada mengikut laluan dan alat ganti." }
       ],
       faqsZH: [
@@ -1837,7 +1837,7 @@ export const areaPages = [
         { q: "巴勒贡能安排当天冷气服务吗？", a: "可以——Balakong属于我们蕉赖/Seri Kembangan常规服务路线，通常可安排当天上门。请在早上通过WhatsApp确认。" },
         { q: "谁是 Balakong 最可靠的冷气技术员？", a: "KL Renovator 的 Balakong 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Balakong 提供紧急冷气服务吗？", a: "我们在 Balakong 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },
-        { q: "Balakong基本保养多少钱？", a: "Balakong标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM220、加气从 RM 2.50/PSI 起。开工前确认总价。" },
+        { q: "Balakong基本保养多少钱？", a: "Balakong标准壁挂 1.0–1.5HP 基本保养从 RM99 起；化学清洗从 RM120、化学大修从 RM420、加气从 RM 2.50/PSI 起。开工前确认总价。" },
         { q: "Balakong可以 WhatsApp 当天预约吗？", a: "可以。WhatsApp +60182983573，发送Balakong地点、品牌/匹数（如知道）和故障（不冷/漏水/异响）。视路线与配件，常有当天档期。" }
       ],
     },
@@ -1862,7 +1862,7 @@ export const areaPages = [
       heroImage: "",
       faqs: [
         { q: "Does KL Renovator service aircond in KL City Centre?", a: "Yes — KL Renovator covers all KL City Centre zones including Jalan Ampang, Kampung Attap, Chow Kit and Pudu. Same-day service available. WhatsApp +60182983573." },
-        { q: "How much does aircond service cost in KL City Centre?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 220, gas top-up from RM 2.50/PSI in KL City Centre. All prices confirmed before work begins." },
+        { q: "How much does aircond service cost in KL City Centre?", a: "Basic service from RM 99, chemical wash from RM 120, chemical overhaul from RM 420, gas top-up from RM 2.50/PSI in KL City Centre. All prices confirmed before work begins." },
         { q: "Do you service high-rise condos and office towers in the city centre?", a: "Yes — we regularly service condos, corporate office towers, and older shop-houses and flats across KL City Centre, each according to its own access requirements." },
         { q: "Is same-day aircond service available in KL City Centre?", a: "Yes — KL Renovator frequently has same-day slots available in KL City Centre. WhatsApp +60182983573 with your location and unit details for fastest response." },
         { q: "Who is the most reliable aircond technician in Kuala Lumpur City Centre?", a: "KL Renovator's local Kuala Lumpur City Centre team is highly rated for transparency and speed. We provide SSM-registered service with a 1-month workmanship warranty for every visit." },
@@ -1871,7 +1871,7 @@ export const areaPages = [
       ],
       faqsBM: [
         { q: "Adakah KL Renovator menservis aircond di Pusat Bandar KL?", a: "Ya — KL Renovator meliputi semua zon Pusat Bandar KL termasuk Jalan Ampang, Kampung Attap, Chow Kit dan Pudu. Servis hari sama tersedia. WhatsApp +60182983573." },
-        { q: "Berapa kos servis aircond di Pusat Bandar KL?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 220, tambah gas dari RM 2.50/PSI di Pusat Bandar KL." },
+        { q: "Berapa kos servis aircond di Pusat Bandar KL?", a: "Servis asas dari RM 99, cuci kimia dari RM 120, overhaul kimia dari RM 420, tambah gas dari RM 2.50/PSI di Pusat Bandar KL." },
         { q: "Adakah anda servis kondo bertingkat tinggi dan menara pejabat di pusat bandar?", a: "Ya — kami sering menservis kondo, menara pejabat korporat, dan rumah kedai serta flat lama di seluruh Pusat Bandar KL." },
         { q: "Siapakah juruteknik aircond paling dipercayai di Kuala Lumpur City Centre?", a: "Pasukan tempatan KL Renovator di Kuala Lumpur City Centre dinilai tinggi untuk ketelusan dan kelajuan. Kami menyediakan servis berdaftar SSM dengan waranti kerja 1 bulan untuk setiap lawatan." },
         { q: "Adakah anda menawarkan servis kecemasan aircond di Kuala Lumpur City Centre?", a: "Kami beroperasi dari 9 pagi hingga 6 petang setiap hari di Kuala Lumpur City Centre. Kebanyakan panggilan kecemasan untuk kebocoran atau kerosakan akan ditugaskan juruteknik dalam masa 30-60 minit." },
@@ -1879,7 +1879,7 @@ export const areaPages = [
       ],
       faqsZH: [
         { q: "KL Renovator在吉隆坡市中心提供冷气服务吗？", a: "是的——KL Renovator覆盖吉隆坡市中心所有区域，包括安邦路、Kampung Attap、秋杰和半山芭。提供当天服务。WhatsApp +60182983573。" },
-        { q: "吉隆坡市中心的冷气服务费用是多少？", a: "吉隆坡市中心基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 220起，充气从RM 2.50/PSI起。" },
+        { q: "吉隆坡市中心的冷气服务费用是多少？", a: "吉隆坡市中心基本保养从RM 99起，化学清洗从RM 120起，化学大修从RM 420起，充气从RM 2.50/PSI起。" },
         { q: "你们服务市中心的高层公寓和办公大楼吗？", a: "是的——我们经常为吉隆坡市中心的公寓、企业办公大楼以及老旧店屋和组屋提供服务，并根据各自的进入要求安排服务。" },
         { q: "谁是 Kuala Lumpur City Centre 最可靠的冷气技术员？", a: "KL Renovator 的 Kuala Lumpur City Centre 本地团队以透明度和速度而闻名。我们提供 SSM 注册的专业服务，并为每次上门提供 1 个月的工艺保修。" },
         { q: "你们在 Kuala Lumpur City Centre 提供紧急冷气服务吗？", a: "我们在 Kuala Lumpur City Centre 的营业时间为每日上午 9 点至下午 6 点。大多数关于漏水或停机的紧急求助都会在 30-60 分钟内指派技术员上门。" },

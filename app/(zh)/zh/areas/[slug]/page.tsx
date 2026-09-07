@@ -378,7 +378,7 @@ export default async function AreaPageZH({
             <ul className="grid gap-px bg-slate-200 sm:grid-cols-2 border border-slate-200 text-sm">
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>基本保养：</strong>从 RM 99 起</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>化学清洗：</strong>从 RM 120 起</span></li>
-              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>化学大修：</strong>从 RM 220 起</span></li>
+              <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>化学大修：</strong>从 RM 420 起</span></li>
               <li className="bg-white px-4 py-3 flex items-start gap-2"><FiCheck className="mt-0.5 h-4 w-4 text-sky-600 shrink-0" /><span><strong>充气：</strong>从 RM 2.50/PSI 起</span></li>
             </ul>
             <p className="mt-4 text-xs text-slate-500 font-medium">
