@@ -93,12 +93,45 @@ const nextConfig = {
       { source: '/senarai-harga-aircond',           destination: '/ms/aircond-service-price-malaysia',  statusCode: 301 },
       { source: '/aircond-service-price',           destination: '/aircond-service-price-malaysia',     statusCode: 301 },
       { source: '/blog-2', destination: '/blog', statusCode: 301 },
-      { 
-        source: '/', 
-        has: [{ type: 'query', key: 'pagelayer-template', value: 'home-header' }], 
-        destination: '/', 
-        statusCode: 301 
-      },
+      // ── GSC 404 cleanup (Sept 2026 audit) ────────────────────────────────
+      // Historical URLs Google still crawls from the pre-Next.js (WordPress /
+      // Pagelayer) era and from early blog slugs. Each 301 points at the live
+      // equivalent so "Not found" validation can pass in Search Console.
+      // Source-level causes were verified as gone from the codebase first:
+      // the /services/{search_term_string} SearchAction was already removed
+      // from the WebSite schema, and no internal link emits any of these paths.
+      { source: '/blog/best-aircond-brands-malaysia-2025',          destination: '/blog/best-aircond-brands-malaysia-2026',   statusCode: 301 },
+      { source: '/ms/blog/best-aircond-brands-malaysia-2025',       destination: '/ms/blog/best-aircond-brands-malaysia-2026', statusCode: 301 },
+      { source: '/zh/blog/best-aircond-brands-malaysia-2025',       destination: '/zh/blog/best-aircond-brands-malaysia-2026', statusCode: 301 },
+      // The MS indoor-air-quality page was renamed to its Bahasa slug.
+      { source: '/ms/indoor-air-quality-aircond',                   destination: '/ms/kualiti-udara-dalaman-aircond',          statusCode: 301 },
+      // The price guide lives at the root, not under /services/.
+      { source: '/services/aircond-service-price-malaysia',         destination: '/aircond-service-price-malaysia',            statusCode: 301 },
+      // Old assistant-tool path -> the diagnostic tool that replaced it.
+      { source: '/aircond-assistant',                               destination: '/which-aircond-service-do-i-need',           statusCode: 301 },
+      { source: '/ms/aircond-assistant',                            destination: '/ms/which-aircond-service-do-i-need',        statusCode: 301 },
+      // Mangled template/parameter junk inherited from the old site —
+      // collapse to the homepage so crawlers stop hitting 404s on them.
+      // (/年 could not be matched by the redirects matcher and keeps serving
+      // a clean 404, which is the correct response for a junk path.)
+      { source: '/&',                                               destination: '/', statusCode: 301 },
+      { source: '/$',                                               destination: '/', statusCode: 301 },
+      { source: '/year',                                            destination: '/', statusCode: 301 },
+      { source: '/tahun',                                           destination: '/', statusCode: 301 },
+      // NOTE on ?pagelayer-template=... (GSC "Alternative page with proper
+      // canonical"): Next.js redirects ALWAYS preserve the incoming query
+      // string, so destination '/' redirects to itself — an infinite loop
+      // (verified locally: the previous rules 301'd to their own URL,
+      // including the old home-header rule). Query-stripping redirects are
+      // impossible in next.config, and middleware was deliberately removed
+      // from this project to keep 2,100+ pages static. Correct handling,
+      // already in place:
+      //   1. These URLs serve homepage HTML whose canonical is the bare
+      //      homepage, so Google consolidates them ("alternative page with
+      //      proper canonical" is an informational exclusion, not an error).
+      //   2. public/robots.txt disallows /*?pagelayer-template= so they are
+      //      never crawled again.
+      // Do NOT re-add a redirect rule for these without testing for loops.
     ];
   },
   async headers() {

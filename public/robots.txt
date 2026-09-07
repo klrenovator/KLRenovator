@@ -9,6 +9,11 @@ Disallow: /review
 Disallow: /ms/review
 Disallow: /zh/review
 
+# Legacy WordPress/Pagelayer builder URLs — query-param template chrome,
+# never real content (now 301'd server-side too; belt-and-braces).
+Disallow: /*?pagelayer-template=
+Disallow: /*&pagelayer-template=
+
 # Search and preview bots — full access
 User-agent: GPTBot
 Allow: /
