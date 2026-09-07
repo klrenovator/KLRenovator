@@ -7,10 +7,6 @@
   "auth": {
     "type": "none"
   },
-  "api": {
-    "type": "openapi",
-    "url": "https://www.klrenovator.com/.well-known/openapi.yaml"
-  },
   "logo_url": "https://www.klrenovator.com/logo/image.png",
   "contact_email": "info@klrenovator.com",
   "legal_info_url": "https://www.klrenovator.com/about"

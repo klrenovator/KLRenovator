@@ -96,6 +96,29 @@ if (fs.existsSync(sitemapBody)) {
   warn("sitemap.xml.body not found — skipped sitemap/page cross-check.");
 }
 
+// ─────────────────────────────────────────────────────────────────────────
+// AEO drift guard: public/llms.txt quotes a URL count from the sitemap
+// ("# Full URL inventory: …/sitemap.xml (NNNN URLs)"). The file is
+// hand-maintained and cannot import lib/sitemap, so it silently goes stale
+// whenever pages are added/removed. Audit 2026-09-07 found it saying 2166
+// while the sitemap had 2208. Fail the build verification on any drift so
+// the count gets updated in the same commit as the sitemap change.
+// ─────────────────────────────────────────────────────────────────────────
+if (sitemapCount && fs.existsSync("public/llms.txt")) {
+  const llms = fs.readFileSync("public/llms.txt", "utf8");
+  const claimed = llms.match(/sitemap\.xml \((\d+) URLs\)/);
+  if (!claimed) {
+    warn("llms.txt: no 'sitemap.xml (N URLs)' line found — URL-count sync check skipped.");
+  } else if (Number(claimed[1]) !== sitemapCount) {
+    fail(
+      `llms.txt URL inventory is stale: claims ${claimed[1]} but the sitemap has ${sitemapCount}. ` +
+        `Update public/llms.txt (and bump its # Version line) to match.`,
+    );
+  } else {
+    console.log(`  llms.txt URL count matches sitemap (${sitemapCount}) ✓`);
+  }
+}
+
 let noH1 = [];
 let multiH1 = [];
 let longTitles = [];
