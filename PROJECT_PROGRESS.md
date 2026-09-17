@@ -66,7 +66,7 @@ Phase 2 (owner-approved scope):
 - config/kampung-installation-depth.ts — profile-driven depth paragraphs (EN/MS/ZH) for kampung installation pages in the 12 major corridors (86 kampungs × 3 locales); wired into the generator; long-tail pages untouched. Result: gsc-audit near-duplicate warning for kampung-install EN eliminated.
 - Blog editorial price tables aligned to published rows (repair-vs-replace EN/MS/ZH, inverter-vs-non-inverter EN/MS/ZH, Daikin-vs-Panasonic EN/MS, landlord-tenant, drain-pump ZH row). No price invented.
 - /problems/aircond-thermostat-problems enriched with the "turns off by itself" cluster: 9 new FAQs (EN/BM/ZH), 3 new AEO extra-FAQs per locale, updated direct answers, meta descriptions targeting the query — no new page, no cannibalization.
-- .github/workflows/weekly-monitoring.yml — weekly crawl:deployed + build + audit:gsc
+- Weekly monitoring workflow shipped at docs/seo/weekly-monitoring.workflow.yml (Arena's GitHub connection cannot push .github/workflows/*; one-command activation documented in the file header) — weekly crawl:deployed + build + audit:gsc
 
 ## Phase 10 — Final QA 🟢 (Phase 1 + Phase 2)
 
