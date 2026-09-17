@@ -1,0 +1,76 @@
+# ┌─────────────────────────────────────────────────────────────────────────┐
+# │ SETUP: this file lives in docs/seo/ because the Arena GitHub connection │
+# │ cannot push workflow files (missing `workflows` permission). To enable  │
+# │ weekly monitoring, either:                                              │
+# │   a) move it into place and push from a connection that can:            │
+# │        mv docs/seo/weekly-monitoring.workflow.yml .github/workflows/    │
+# │      then commit + push, or                                             │
+# │   b) paste the content below into a new file                            │
+# │      .github/workflows/weekly-monitoring.yml via the GitHub web UI.     │
+# │ No secrets are required.                                                │
+# └─────────────────────────────────────────────────────────────────────────┘
+
+name: Weekly SEO monitoring
+
+# Why this exists
+# ---------------
+# Phase 2 of the SEO/GEO/AEO master plan (owner-approved "weekly" cadence):
+# a recurring, evidence-based check that the LIVE production site keeps
+# passing the indexability gates, and that the codebase still builds into a
+# Search-Console-clean export between releases.
+#
+#   Job 1 — crawl the deployed sitemap (real server responses, no JS):
+#           canonical/robots/noindex regressions, hreflang return-tag
+#           problems, locale mismatches, soft-404s on production.
+#   Job 2 — build the current branch and run the GSC readiness audit:
+#           titles/descriptions, duplicate-title detection, thin/near-
+#           duplicate families, sitemap resolution, h1 coverage.
+#
+# Failures surface in the Actions tab (GitHub email notifications on fail
+# by default). No secrets required.
+
+on:
+  schedule:
+    # Mondays 01:30 UTC = 09:30 MYT — before business hours in Malaysia.
+    - cron: "30 1 * * 1"
+  workflow_dispatch: # manual run after any SEO-relevant change
+
+concurrency:
+  group: weekly-seo-monitoring
+  cancel-in-progress: false
+
+jobs:
+  crawl-production:
+    name: Crawl deployed site
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Crawl sitemap & verify indexability
+        env:
+          SITE_URL: https://www.klrenovator.com
+        run: npm run crawl:deployed
+
+  build-and-audit:
+    name: Build + GSC readiness audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: npm run build
+      - name: Verify build output
+        run: npm run verify:build
+      - name: Search Console audit
+        run: npm run audit:gsc

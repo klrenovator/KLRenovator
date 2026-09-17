@@ -19,6 +19,8 @@ type ParentAreaRecord = {
   landmarks?: readonly string[];
 };
 
+export type KampungProfileKey = ProfileKey;
+
 type ProfileKey =
   | "highRise"
   | "shopOffice"
@@ -517,7 +519,7 @@ const TEXT = {
   },
 } as const;
 
-function detectProfile(k: KampungPageRecord): ProfileKey {
+export function detectKampungProfile(k: KampungPageRecord): ProfileKey {
   const haystack = [
     k.slug,
     k.name,
@@ -587,7 +589,7 @@ export function buildKampungUniquenessMatrix(
   parentArea: ParentAreaRecord | undefined,
   locale: KampungMatrixLocale
 ): KampungUniquenessMatrix {
-  const profile = detectProfile(k);
+  const profile = detectKampungProfile(k);
   const copy = PROFILE_COPY[locale][profile];
   const t = TEXT[locale];
   const parentName = parentArea?.name || k.parentSlug.replace(/-/g, " ");

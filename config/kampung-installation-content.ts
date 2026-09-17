@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { buildInstallationMetaTitle } from "@/lib/seo-title-optimizer";
 import { buildInstallationMetaDesc } from "@/lib/seo-description-optimizer";
 import { pickHeroImage } from "@/lib/og-image-pool";
+import { buildKampungInstallationDepth } from "@/config/kampung-installation-depth";
 
 export type KampungInstallationLocale = "en" | "ms" | "zh";
 
@@ -820,7 +821,13 @@ export function getKampungInstallationContent(
         : locale === "ms"
           ? `Memasang Aircond di ${name}: kepakaran tempatan`
           : `在${name}安装冷气：本地经验`,
-    localContextParagraphs: [...getLocalContext(kampung, parent, locale), ...getLocalContextExtra(kampung, parent, locale)],
+    localContextParagraphs: [
+      ...getLocalContext(kampung, parent, locale),
+      ...getLocalContextExtra(kampung, parent, locale),
+      // Phase 2 targeted depth: extra profile-driven paragraphs for priority
+      // corridors only (returns [] for long-tail kampungs — no change there).
+      ...buildKampungInstallationDepth(kampung, parent, locale),
+    ],
     localNoteTitle:
       locale === "en"
         ? `What to Know About Installing in ${name}`

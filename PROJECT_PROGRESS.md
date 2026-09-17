@@ -56,12 +56,18 @@ Legend: 🟢 completed & verified · 🟡 needs improvement · 🔴 pending · �
 - Duplicate metadata: resolved · Thin pages: none flagged · Cannibalization: checked (thermostat vs "turns off by itself" → propose enriching existing page)
 - Factual check: pricing drift eliminated · keyword stuffing: none detected · natural trilingual copy confirmed
 
-## Phase 8 — Approval ⚠️ (current gate)
+## Phase 8 — Approval 🟢 (owner approved 4 items)
 
-Awaiting owner decisions: kampung uniqueness scope, blog price-table handling, new problem page(s), scheduled monitoring workflow.
+Owner decisions received: (1) kampung uniqueness = TARGETED upgrades, (2) blog price tables = ALIGN to official rows, (3) "turns off by itself" = ENRICH existing thermostat page, (4) monitoring = weekly scheduled workflow.
 
-## Phase 9 — Implementation 🟢 (Phase-1 fixes done; Phase-2 pending approval)
+## Phase 9 — Implementation 🟢 (Phase 1 + Phase 2 complete)
 
-## Phase 10 — Final QA 🟢 (for Phase-1 changes)
+Phase 2 (owner-approved scope):
+- config/kampung-installation-depth.ts — profile-driven depth paragraphs (EN/MS/ZH) for kampung installation pages in the 12 major corridors (86 kampungs × 3 locales); wired into the generator; long-tail pages untouched. Result: gsc-audit near-duplicate warning for kampung-install EN eliminated.
+- Blog editorial price tables aligned to published rows (repair-vs-replace EN/MS/ZH, inverter-vs-non-inverter EN/MS/ZH, Daikin-vs-Panasonic EN/MS, landlord-tenant, drain-pump ZH row). No price invented.
+- /problems/aircond-thermostat-problems enriched with the "turns off by itself" cluster: 9 new FAQs (EN/BM/ZH), 3 new AEO extra-FAQs per locale, updated direct answers, meta descriptions targeting the query — no new page, no cannibalization.
+- .github/workflows/weekly-monitoring.yml — weekly crawl:deployed + build + audit:gsc
+
+## Phase 10 — Final QA 🟢 (Phase 1 + Phase 2)
 
 lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · robots ✓ · canonicals/hreflang sampled ✓ · schema valid JSON-LD ✓ · no URL changes · no deletions · no design changes · pricing preserved

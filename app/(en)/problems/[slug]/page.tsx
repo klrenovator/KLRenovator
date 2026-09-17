@@ -908,6 +908,7 @@ export const problemContent: Record<
       "PCB fault affecting the temperature regulation circuit",
       "Remote control thermostat setting locked at incorrect temperature",
       "Poor airflow causing hot spots in the room — unit never achieves the displayed set temperature",
+      "Drifting sensor reads the room as cooler than it is — unit turns off by itself before the room is cool",
     ],
     causesBM: [
       "Termistor suhu bilik rosak memberikan bacaan ambien tidak betul kepada PCB",
@@ -915,6 +916,7 @@ export const problemContent: Record<
       "Kerosakan PCB mempengaruhi litar pengawalan suhu",
       "Tetapan termostat kawalan jauh dikunci pada suhu yang salah",
       "Aliran udara yang lemah menyebabkan titik panas dalam bilik",
+      "Sensor lari daripada spesifikasi membaca bilik lebih sejuk — unit mati sendiri sebelum bilik sejuk",
     ],
     causesZH: [
       "室温热敏电阻故障，向PCB传送错误的环境温度读数",
@@ -922,6 +924,7 @@ export const problemContent: Record<
       "PCB故障影响温度调节电路",
       "遥控器温控器设置被锁定在错误温度",
       "气流不良导致房间内出现热点——机组从未达到显示的设定温度",
+      "传感器漂移误判房间已够凉——冷气在变冷之前自动关机",
     ],
     solutionEN: "KL Renovator tests the thermistor resistance with a multimeter to determine if it is giving correct readings for the ambient temperature. A faulty thermistor is replaced (RM 150–250). If the PCB's temperature regulation circuit is at fault, PCB repair or replacement is recommended. If the issue is poor airflow, a chemical wash resolves it.",
     solutionBM: "KL Renovator menguji rintangan termistor dengan multimeter untuk menentukan sama ada ia memberikan bacaan yang betul untuk suhu ambien. Termistor yang rosak diganti (RM 150–250). Jika litar pengawalan suhu PCB bermasalah, pembaikan atau penggantian PCB disyorkan.",
@@ -933,14 +936,23 @@ export const problemContent: Record<
       { q: "My aircond does not stop running even when the room is cold — is the thermostat broken?", a: "Possibly — the thermistor may be giving incorrect readings, causing the PCB to think the room is still warm. Other causes: set temperature too low, remote control calibration issue, or PCB fault. KL Renovator diagnoses with a multimeter." },
       { q: "My aircond cannot maintain a steady temperature — keeps cycling on and off too quickly. What is wrong?", a: "Short cycling usually means the unit is oversized for the room, refrigerant is overcharged, or the thermostat sensor is faulty. KL Renovator diagnoses the exact cause and advises the most economical solution." },
       { q: "How much does thermistor replacement cost for an aircond?", a: "Thermistor (temperature sensor) replacement: RM 150–250 depending on brand and sensor type. Diagnostic RM 88 (waived with repair). KL Renovator carries common thermistor types for same-day replacement." },
+      { q: "Why does my aircond turn off by itself after running for a few minutes?", a: "The most common causes: a faulty temperature sensor telling the PCB the room is cooler than it is, the compressor's thermal overload cutting out on overheating, a frozen coil from restricted airflow, or an accidentally set timer or sleep mode. If no timer is on screen, the unit needs a diagnosis — RM 88, waived with repair." },
+      { q: "My aircond turns off by itself but the room is still warm — is that the thermostat?", a: "Usually yes: a sensor drifting out of spec reads the room as cooler than reality, so the unit stops early. Less often it is a PCB relay fault or the compressor's thermal protector. KL Renovator tests the sensor and circuit on-site and replaces the faulty part same-day in most cases." },
+      { q: "Is it safe to keep restarting an aircond that keeps shutting off by itself?", a: "No — repeated restarts stress the compressor. Turn the unit off at the isolator and WhatsApp +60182983573. If the MCB trips rather than the unit stopping on its own, that points to an electrical fault instead — see our aircond tripping power guide." },
     ],
     faqsBM: [
       { q: "Aircond saya tidak berhenti berjalan walaupun bilik sejuk — adakah termostat rosak?", a: "Mungkin — termistor mungkin memberikan bacaan yang salah. KL Renovator mendiagnosis dengan multimeter." },
       { q: "Berapa kos ganti termistor aircond?", a: "Penggantian termistor: RM 150–250 bergantung pada jenama. Diagnostik RM 88 (dikecualikan dengan pembaikan). KL Renovator membawa jenis termistor biasa untuk penggantian hari sama." },
+      { q: "Kenapa aircond saya mati sendiri selepas berjalan beberapa minit?", a: "Punca paling biasa: sensor suhu rosak yang memberitahu PCB bilik lebih sejuk daripada sebenarnya, pelindung terma pekali terpotong kerana terlebih panas, gegelung membeku kerana aliran udara tersumbat, atau pemasa/mod tidur teraktif tanpa sengaja. Jika tiada pemasa pada skrin, unit perlu diagnosis — RM 88, dikecualikan dengan pembaikan." },
+      { q: "Aircond saya mati sendiri walaupun bilik masih panas — masalah termostat?", a: "Biasanya ya: sensor yang lari daripada spesifikasi membaca bilik lebih sejuk, jadi unit berhenti awal. Kadangkala ia kerosakan relay PCB atau pelindung terma pekali. KL Renovator menguji sensor dan litar di tempat dan mengganti bahagian rosak hari sama dalam kebanyakan kes." },
+      { q: "Selamatkah memulakan semula aircond yang asyik mati sendiri?", a: "Tidak — memulakan semula berulang kali memberi tekanan kepada pekali. Matikan unit di pengasing dan WhatsApp +60182983573. Jika MCB jatuh (bukan unit berhenti sendiri), itu menunjukkan kerosakan elektrik." },
     ],
     faqsZH: [
       { q: "我的冷气即使房间很冷也不停止运行——是温控器坏了吗？", a: "可能——热敏电阻可能在给出错误读数。KL Renovator使用万用表进行诊断。" },
       { q: "更换冷气热敏电阻需要多少钱？", a: "热敏电阻（温度传感器）更换：RM 150-250，取决于品牌。诊断费RM 88（维修则免收）。KL Renovator备有常见热敏电阻类型可当天更换。" },
+      { q: "为什么冷气运行几分钟后会自动关机？", a: "最常见原因：温度传感器故障向主板误报室温偏低、压缩机过热触发热保护、气流受阻导致结冰，或误设了定时/睡眠模式。如果屏幕上没有定时设置，就需要上门诊断——RM 88，维修则免收。" },
+      { q: "冷气自动关机但房间还不冷——是温控器问题吗？", a: "通常是：传感器漂移导致误判房间已够冷而提前停机。较少见的是PCB继电器故障或压缩机热保护器问题。KL Renovator会上门检测传感器和电路，大多数情况可当天更换故障部件。" },
+      { q: "冷气频繁自动关机，反复重启安全吗？", a: "不安全——反复重启会损伤压缩机。请在隔离开关处关机并WhatsApp +60182983573。如果是MCB跳闸（而非机器自行停止），则说明是电气故障。" },
     ],
   },
 };
