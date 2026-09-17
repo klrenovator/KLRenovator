@@ -397,7 +397,7 @@ export const allPosts: BlogPost[] = [
       <p>If both gas and coil cleaning have been done but cooling is still poor, the evaporator coil fins may be severely bent or the blower wheel may be so coated with grime that only a full clean will restore airflow.</p>
 
       <h2>What Happens If You Delay an Overhaul?</h2>
-      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–560 is far less expensive than a compressor replacement at RM 600–2,000 or a complete new unit installation.</p>
+      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–560 is far less expensive than a compressor replacement at RM 800–2,000 or a complete new unit installation.</p>
 
       <h2>What to Do</h2>
       <p>Chemical overhaul (Wall-Mounted Aircon only) starts from <strong>RM 420</strong> for a wall-mounted 1.0–1.5 HP unit. WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. See also: <a href="/services/chemical-overhaul">Chemical overhaul service page</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking guide</a></p>
@@ -425,7 +425,7 @@ export const allPosts: BlogPost[] = [
       <p>Jika kedua-dua gas dan pembersihan gegelung telah dilakukan tetapi penyejukan masih lemah, sirip gegelung evaporator mungkin sangat bengkok atau roda blower mungkin sangat kotor sehingga hanya pembersihan penuh yang akan memulihkan aliran udara.</p>
 
       <h2>Apa yang Berlaku Jika Anda Menangguhkan Overhaul?</h2>
-      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–560 jauh lebih murah berbanding penggantian kompressor pada RM 600–2,000 atau pemasangan unit baru yang lengkap.</p>
+      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–560 jauh lebih murah berbanding penggantian kompressor pada RM 800–2,000 atau pemasangan unit baru yang lengkap.</p>
 
       <h2>Apa yang Perlu Dilakukan</h2>
       <p>Overhaul kimia (Unit Dinding Sahaja) bermula dari <strong>RM 420</strong> untuk unit dinding 1.0–1.5 HP. WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>.</p>
@@ -664,10 +664,10 @@ export const allPosts: BlogPost[] = [
       <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 120起）或化学大修（仅限挂壁式冷气，RM 420起）。</p>
 
       <h2>原因 #4: 压缩机故障</h2>
-      <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 600-1,200）。如果是旧机器，可能需要考虑更换新机。</p>
+      <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 800-2,000）。如果是旧机器，可能需要考虑更换新机。</p>
 
       <h2>原因 #5: 电容故障</h2>
-      <p><strong>症状：</strong>压缩机嗡嗡响但不启动，或启动后立即停止。<br><strong>解决：</strong>电容更换（RM 80-150）。这是最常见也是最便宜的维修之一。</p>
+      <p><strong>症状：</strong>压缩机嗡嗡响但不启动，或启动后立即停止。<br><strong>解决：</strong>电容更换（RM 150-250）。这是最常见也是最便宜的维修之一。</p>
 
       <h2>原因 #6: 温控器问题</h2>
       <p><strong>症状：</strong>温度设置正确但冷气不停机或过早停机。<br><strong>解决：</strong>温控器校准或更换（RM 50-120）。</p>
@@ -1182,7 +1182,7 @@ export const allPosts: BlogPost[] = [
       <h2>Signs You Are Behind on Maintenance</h2>
       <p>If any of these apply to your unit, a service is overdue: the unit has a musty or sour smell when running; cooling is noticeably weaker than 6 months ago; water has dripped from the indoor unit at any point; the electricity bill has risen without changes in usage; or the unit has not received professional servicing in over 12 months. Each of these is a symptom of maintenance that is past due.</p>
       <h2>The True Cost of Skipping Maintenance</h2>
-      <p>A unit that skips basic servicing for 2 years in Malaysian conditions will typically show 20-30% reduced cooling efficiency, a 15-25% increase in electricity consumption per month, and a meaningfully higher risk of component failure requiring expensive repair. The RM 99–120 per service that seems deferrable adds up to far less than the RM 600–2,000 compressor replacement that results from running a neglected unit to failure.</p>
+      <p>A unit that skips basic servicing for 2 years in Malaysian conditions will typically show 20-30% reduced cooling efficiency, a 15-25% increase in electricity consumption per month, and a meaningfully higher risk of component failure requiring expensive repair. The RM 99–120 per service that seems deferrable adds up to far less than the RM 800–2,000 compressor replacement that results from running a neglected unit to failure.</p>
 
       <h2>Recording Your Maintenance History</h2>
       <p>Keep a simple record of each service date, the service provider, and what was done. This helps you track the interval between services, provides evidence for warranty claims if a technician's workmanship causes damage, and gives future technicians context about the unit's history. A WhatsApp message to yourself after each service with the date and service type takes 30 seconds and can be invaluable reference later. KL Renovator also keeps records of all services performed for our regular customers.</p>
@@ -1211,7 +1211,7 @@ export const allPosts: BlogPost[] = [
       <h2>Tanda Anda Terlewat dalam Penyelenggaraan</h2>
       <p>Jika mana-mana ciri ini terpakai pada unit anda, servis sudah tertangguh: unit berbau apak atau masam semasa beroperasi; penyejukan jelas lebih lemah berbanding 6 bulan lalu; air pernah menitis dari unit dalaman pada bila-bila masa; bil elektrik telah meningkat tanpa perubahan penggunaan; atau unit tidak menerima servis profesional selama lebih 12 bulan. Setiap satu daripada ini adalah simptom penyelenggaraan yang sudah lewat.</p>
       <h2>Kos Sebenar Melangkau Penyelenggaraan</h2>
-      <p>Unit yang melangkau servis asas selama 2 tahun dalam keadaan Malaysia biasanya menunjukkan kecekapan penyejukan berkurang 20-30%, peningkatan 15-25% dalam penggunaan elektrik setiap bulan, dan risiko kegagalan komponen yang jauh lebih tinggi yang memerlukan pembaikan mahal. RM 99–120 setiap servis yang nampak boleh ditangguhkan bertambah jauh kurang berbanding penggantian kompressor RM 600–2,000 yang terhasil daripada membiarkan unit terabai sehingga rosak.</p>
+      <p>Unit yang melangkau servis asas selama 2 tahun dalam keadaan Malaysia biasanya menunjukkan kecekapan penyejukan berkurang 20-30%, peningkatan 15-25% dalam penggunaan elektrik setiap bulan, dan risiko kegagalan komponen yang jauh lebih tinggi yang memerlukan pembaikan mahal. RM 99–120 setiap servis yang nampak boleh ditangguhkan bertambah jauh kurang berbanding penggantian kompressor RM 800–2,000 yang terhasil daripada membiarkan unit terabai sehingga rosak.</p>
 
       <h2>Merekod Sejarah Penyelenggaraan Anda</h2>
       <p>Simpan rekod ringkas setiap tarikh servis, penyedia servis, dan apa yang dilakukan. Ini membantu anda menjejaki selang masa antara servis, memberikan bukti untuk tuntutan waranti jika kerja juruteknik menyebabkan kerosakan, dan memberikan juruteknik masa depan konteks tentang sejarah unit. Mesej WhatsApp kepada diri sendiri selepas setiap servis dengan tarikh dan jenis servis mengambil masa 30 saat dan boleh menjadi rujukan berharga kemudian. KL Renovator juga menyimpan rekod semua servis yang dilakukan untuk pelanggan tetap kami.</p>
@@ -1398,10 +1398,10 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>维修项目</th><th>价格范围</th><th>说明</th></tr></thead>
         <tbody>
-          <tr><td>电容更换</td><td>RM 80-150</td><td>室外机不转/难启动常见项</td></tr>
+          <tr><td>电容更换</td><td>RM 150-250</td><td>室外机不转/难启动常见项</td></tr>
           <tr><td>PCB板更换</td><td>RM 150-500</td><td>视品牌与型号</td></tr>
           <tr><td>风扇电机更换</td><td>RM 150-300</td><td>室内或室外风机</td></tr>
-          <tr><td>压缩机更换</td><td>RM 600-1,200</td><td>开工前单独报价</td></tr>
+          <tr><td>压缩机更换</td><td>RM 800-2,000</td><td>开工前单独报价</td></tr>
           <tr><td>温控器/传感器</td><td>RM 50-150</td><td>乱跳温、误报错</td></tr>
           <tr><td>排水泵更换</td><td>RM 120-200</td><td>天花机/排水扬程场景</td></tr>
         </tbody>
@@ -1960,7 +1960,7 @@ export const allPosts: BlogPost[] = [
       <p>A unit with good remaining lifespan will: cool to the set temperature without running continuously at maximum output; have a compressor that starts cleanly without buzzing or humming; show stable gas pressure readings year over year (no significant drop indicating slow leak); respond normally to remote control and mode changes; and not require repeated repairs to different components. If your unit ticks all these boxes, consistent maintenance will keep it running reliably for many more years regardless of its age.</p>
 
       <h2>Compressor — The Most Expensive Component</h2>
-      <p>The compressor is the most expensive single component in any aircond unit, typically costing RM 600–2,000 to replace. A compressor that has been maintained with clean coils, correct gas levels, and clean filters rarely fails before 12 years in a properly sized application. The conditions that accelerate compressor failure are: running with low gas (compressor overheats without adequate refrigerant to cool it), running with a heavily fouled coil (compressor works harder and runs hotter), and frequent short-cycling from an oversized unit or blocked filter. All three are directly preventable with regular maintenance.</p>
+      <p>The compressor is the most expensive single component in any aircond unit, typically costing RM 800–2,000 to replace. A compressor that has been maintained with clean coils, correct gas levels, and clean filters rarely fails before 12 years in a properly sized application. The conditions that accelerate compressor failure are: running with low gas (compressor overheats without adequate refrigerant to cool it), running with a heavily fouled coil (compressor works harder and runs hotter), and frequent short-cycling from an oversized unit or blocked filter. All three are directly preventable with regular maintenance.</p>
     `,
     contentMS: `
       <h2>Jangka Hayat Purata Aircond di Malaysia</h2>
@@ -1992,7 +1992,7 @@ export const allPosts: BlogPost[] = [
       <p>Unit dengan jangka hayat berbaki yang baik akan: menyejukkan kepada suhu yang ditetapkan tanpa beroperasi secara berterusan pada output maksimum; mempunyai kompressor yang bermula dengan bersih tanpa bunyi dengung atau dengung; menunjukkan bacaan tekanan gas yang stabil tahun demi tahun (tiada penurunan ketara yang menunjukkan kebocoran perlahan); bertindak balas secara normal kepada kawalan jauh dan perubahan mod; dan tidak memerlukan pembaikan berulang kepada komponen yang berbeza. Jika unit anda memenuhi semua kriteria ini, penyelenggaraan yang konsisten akan mengekalkannya berfungsi dengan boleh dipercayai selama bertahun-tahun lagi tanpa mengira usianya.</p>
 
       <h2>Kompressor — Komponen Paling Mahal</h2>
-      <p>Kompressor adalah komponen tunggal paling mahal dalam mana-mana unit aircond, biasanya kos RM 600–2,000 untuk diganti. Kompressor yang telah diselenggara dengan gegelung bersih, tahap gas yang betul, dan penapis bersih jarang gagal sebelum 12 tahun dalam aplikasi bersaiz betul. Keadaan yang memburukkan kegagalan kompressor adalah: beroperasi dengan gas rendah (kompressor terlebih panas tanpa penyejuk yang mencukupi untuk menyejukkannya), beroperasi dengan gegelung yang sangat tercemar (kompressor bekerja lebih keras dan berjalan lebih panas), dan kitaran pendek yang kerap daripada unit bersaiz terlalu besar atau penapis tersumbat. Kesemua tiga ini boleh dicegah secara langsung dengan penyelenggaraan berkala.</p>
+      <p>Kompressor adalah komponen tunggal paling mahal dalam mana-mana unit aircond, biasanya kos RM 800–2,000 untuk diganti. Kompressor yang telah diselenggara dengan gegelung bersih, tahap gas yang betul, dan penapis bersih jarang gagal sebelum 12 tahun dalam aplikasi bersaiz betul. Keadaan yang memburukkan kegagalan kompressor adalah: beroperasi dengan gas rendah (kompressor terlebih panas tanpa penyejuk yang mencukupi untuk menyejukkannya), beroperasi dengan gegelung yang sangat tercemar (kompressor bekerja lebih keras dan berjalan lebih panas), dan kitaran pendek yang kerap daripada unit bersaiz terlalu besar atau penapis tersumbat. Kesemua tiga ini boleh dicegah secara langsung dengan penyelenggaraan berkala.</p>
     `,
     contentZH: `<h2>马来西亚冷气寿命 — 如何延长使用年限</h2>
       <p>冷气的寿命取决于品牌、使用习惯和保养频率。<a href="/near-me">KL Renovator</a>为您分析。</p>
@@ -2111,7 +2111,7 @@ export const allPosts: BlogPost[] = [
       <p>Bau hapak atau masam menunjukkan pertumbuhan kulat dan bakteria pada gegelung penyejat atau dulang saliran. Penyelesaian: cuci kimia (dari RM 120) membunuh biofilm yang menyebabkan bau. Untuk kes teruk, overhaul kimia diperlukan.</p>
 
       <h2>Masalah #4: Aircond Berfungsi Tapi Kompresor Tidak Hidup</h2>
-      <p>Kompresor tidak hidup boleh disebabkan kapasitor rosak, masalah PCB, atau kerosakan kompresor itu sendiri. Kapasitor ialah pembaikan paling biasa dan paling murah (RM 80-150). PCB dan kompresor lebih mahal.</p>
+      <p>Kompresor tidak hidup boleh disebabkan kapasitor rosak, masalah PCB, atau kerosakan kompresor itu sendiri. Kapasitor ialah pembaikan paling biasa dan paling murah (RM 150-250). PCB dan kompresor lebih mahal.</p>
 
       <h2>Masalah #5: Aircond Berbunyi Kuat</h2>
       <p>Bunyi berbeza menunjukkan masalah berbeza: berdengung (kapasitor), berderak (kipas longgar), berdecit (bearing haus), atau berdetik (panel longgar). Kebanyakan isu bunyi diselesaikan semasa servis asas.</p>
@@ -8181,7 +8181,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Cuci kimia</td><td>RM 120</td><td>RM 120</td><td>Sama</td></tr>
           <tr><td>Overhaul kimia (Unit Dinding Sahaja)</td><td>RM 420</td><td>RM 420</td><td>Sama</td></tr>
           <tr><td>Tambah gas R32</td><td>RM 3.00/PSI</td><td>RM 3.00/PSI</td><td>Sama</td></tr>
-          <tr><td>Kapasitor ganti</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
+          <tr><td>Kapasitor ganti</td><td>RM 150-250</td><td>RM 150-250</td><td>Sama</td></tr>
           <tr><td>PCB board</td><td>RM 200-400</td><td>RM 300-350</td><td>Daikin sedikit lebih mahal</td></tr>
           <tr><td>Kompresor ganti</td><td>RM 600-1,200</td><td>RM 550-1,100</td><td>Daikin sedikit lebih mahal</td></tr>
           <tr><td>Motor kipas dalaman</td><td>RM 150-280</td><td>RM 140-260</td><td>Hampir sama</td></tr>
@@ -8893,7 +8893,7 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>Komponen</th><th>Bukan Inverter</th><th>Inverter</th><th>Perbezaan</th></tr></thead>
         <tbody>
-          <tr><td>Kapasitor</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
+          <tr><td>Kapasitor</td><td>RM 150-250</td><td>RM 150-250</td><td>Sama</td></tr>
           <tr><td>PCB board</td><td>RM 150-250</td><td>RM 250-500</td><td>Inverter 50-100% lebih mahal</td></tr>
           <tr><td>Kompresor</td><td>RM 500-900</td><td>RM 700-1,200</td><td>Inverter 30-40% lebih mahal</td></tr>
           <tr><td>Motor kipas</td><td>RM 150-250</td><td>RM 250-300</td><td>Inverter sedikit lebih mahal</td></tr>

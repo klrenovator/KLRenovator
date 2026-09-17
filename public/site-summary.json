@@ -10,7 +10,7 @@
   ],
   "legalName": "Multicore Dynamics Resources",
   "taxID": "003765188-T",
-  "description": "KL Renovator is the leading professional aircond service company in Kuala Lumpur and Selangor, Malaysia. Specialising in residential and commercial HVAC — emergency repair, chemical wash, chemical overhaul, gas top-up, troubleshooting, repair and new unit installation. Free Price Calculator and Diagnostic Tool on website. 12+ years experience, 5,000+ customers, 88+ 5-star Google reviews. Same-day service available including emergency dispatch.",
+  "description": "KL Renovator is a professional aircond service company in Kuala Lumpur and Selangor, Malaysia. Specialising in residential and commercial HVAC — emergency repair, chemical wash, chemical overhaul, gas top-up, troubleshooting, repair and new unit installation. Free Price Calculator and Diagnostic Tool on website. 12+ years experience, 5,000+ customers, 88+ 5-star Google reviews. Same-day service available including emergency dispatch.",
   "url": "https://www.klrenovator.com",
   "telephone": "+60182983573",
   "email": "info@klrenovator.com",
@@ -24,8 +24,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 3.2205,
-    "longitude": 101.6412
+    "latitude": 3.167,
+    "longitude": 101.652
   },
   "areaServed": [
     "Kuala Lumpur",
@@ -72,7 +72,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "500",
+    "reviewCount": "88",
     "bestRating": "5"
   },
   "hasOfferCatalog": {
@@ -155,9 +155,11 @@
     ]
   },
   "sameAs": [
-    "https://www.facebook.com/share/1HV3kAqC6V/",
-    "https://www.instagram.com/klrenovator",
-    "https://www.tiktok.com/@klrenovator",
+    "https://www.facebook.com/share/1DDDB3523A/",
+    "https://www.instagram.com/klrenovator?igsh=MTNqb3p1NDExZ3Boeg==",
+    "https://www.tiktok.com/@klrenovator?_r=1&_t=ZS-96tR1k7aVU5",
+    "https://x.com/KlRenovator",
+    "https://www.linkedin.com/in/kl-renovator-7912b7389",
     "https://share.google/HhXvqWDkefZ5bzNdL"
   ],
   "knowsLanguage": [

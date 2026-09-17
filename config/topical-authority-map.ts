@@ -10,11 +10,11 @@
  *
  * SILO ARCHITECTURE:
  * Homepage (Authority Hub)
- *   ├── Service Silo       /services → [9 service pages]
+ *   ├── Service Silo       /services → [10 service pages]
  *   ├── Problem Silo       /problems → [20 problem pages]
- *   ├── Location Silo      /areas    → [39 area pages + 116 kampung pages]
- *   ├── Brand Silo         /brands   → [18 brand pages]
- *   └── Blog Silo          /blog     → [54 blog posts]
+ *   ├── Location Silo      /areas    → [40 area pages + 162 kampung pages]
+ *   ├── Brand Silo         /brands   → [20 brand pages]
+ *   └── Blog Silo          /blog     → [67 blog posts]
  *
  * CROSS-SILO LINK FLOW:
  * Service → Problem (service fixes these problems)

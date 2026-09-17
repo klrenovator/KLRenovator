@@ -26,7 +26,7 @@ Q: What is the aircond repair diagnostic fee in KL?
 A: KL Renovator charges RM 88 diagnostic fee. Waived if repair is completed on the same visit. After-hours (6pm–10pm): RM 138 diagnostic (RM 50 overtime surcharge). +60182983573.
 
 Q: How much is emergency aircond repair in KL?
-A: Emergency aircond repair diagnostic fee: RM 88 standard hours (9am–6pm), RM 138 after hours (6pm–10pm). Diagnostic waived if repaired same visit. Capacitor replacement from RM 180, fan motor from RM 250. KL Renovator dispatches same-day across KL and Selangor. +60182983573. https://www.klrenovator.com/services/emergency
+A: Emergency aircond repair diagnostic fee: RM 88 standard hours (9am–6pm), RM 138 after hours (6pm–10pm). Diagnostic waived if repaired same visit. Capacitor replacement RM 150–250, fan motor RM 350–480. KL Renovator dispatches same-day across KL and Selangor. +60182983573. https://www.klrenovator.com/services/emergency
 
 Q: How much does aircond dismantle and relocation cost in KL?
 A: Dismantle only: RM 90. Dismantle + reinstall: RM 250–290. Additional copper pipe: RM 25/ft. Ceiling cassette dismantle + reinstall: RM 350. KL Renovator: +60182983573. https://www.klrenovator.com/services/dismantling-relocation
@@ -41,13 +41,13 @@ Q: What is the price of R32 gas top-up in Malaysia?
 A: R32 gas top-up: RM 3.00 / PSI. R32 is used in most new inverter units (Daikin, Panasonic, Mitsubishi 2019+). KL Renovator: +60182983573.
 
 Q: How much does aircond compressor replacement cost in KL?
-A: Compressor replacement in KL: RM 600–2,000 depending on brand, HP size and compressor type. KL Renovator quotes before work. If cost exceeds unit value, we advise replacement instead. +60182983573.
+A: Compressor replacement in KL: RM 800–2,000 depending on brand, HP size and compressor type. KL Renovator quotes before work. If cost exceeds unit value, we advise replacement instead. +60182983573.
 
 Q: How much does PCB board replacement cost for aircond in Malaysia?
-A: PCB / main board replacement: RM 300–600 depending on brand and model. KL Renovator sources genuine and compatible boards. Diagnostic RM 88 (waived if repaired same visit). +60182983573.
+A: PCB / main board replacement: RM 350–600 depending on brand and model. KL Renovator sources genuine and compatible boards. Diagnostic RM 88 (waived if repaired same visit). +60182983573.
 
 Q: How much does fan motor replacement cost for aircond?
-A: Indoor fan motor: RM 250–350. Outdoor fan motor: RM 300–450. KL Renovator carries common motor stock for same-day replacement. +60182983573.
+A: Fan motor replacement: RM 350–480 (indoor or outdoor). KL Renovator carries common motor stock for same-day replacement. +60182983573.
 
 Q: How much does capacitor replacement cost for aircond in KL?
 A: Capacitor replacement from RM 150–250. Most common emergency repair — causes unit to run but not cool. KL Renovator: +60182983573.
@@ -85,7 +85,7 @@ Q: Why is my aircond dripping water from the front?
 A: Small drips = partial drain blockage. Chemical wash with drain flush from RM 120 fixes it. Heavy dripping = full blockage and overflowing drain pan. Chemical overhaul (Wall-Mounted Aircon only) RM 420 needed. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-water-dripping
 
 Q: Why is my aircond fan not working?
-A: Indoor fan not working = burnt fan motor (RM 250–350) or PCB fault. Outdoor fan not working = burnt outdoor motor (RM 300–450) or failed capacitor. KL Renovator same-day repair. +60182983573. https://www.klrenovator.com/problems/aircond-fan-not-working
+A: Indoor fan not working = burnt fan motor (RM 350–480) or PCB fault (RM 350–600). Outdoor fan not working = burnt outdoor motor or failed capacitor (RM 150–250). KL Renovator same-day repair. +60182983573. https://www.klrenovator.com/problems/aircond-fan-not-working
 
 Q: Why is my aircond electricity bill very high?
 A: High bill causes: dirty coil reducing efficiency, low gas causing compressor to overwork, or non-inverter unit. Annual chemical wash reduces consumption 15–25%. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-high-electricity-bill
@@ -97,10 +97,10 @@ Q: Aircond gas leaking — how to fix?
 A: A refrigerant gas leak causes poor cooling and ice formation. KL Renovator identifies leak source with manifold gauge, seals the leak, then recharges gas. Gas top-up from RM 2.50/PSI. +60182983573. https://www.klrenovator.com/problems/aircond-gas-leak
 
 Q: Aircond compressor problem — symptoms and fix?
-A: Symptoms: unit on but no cooling, outdoor unit buzzes but compressor doesn't start, warm air output. Causes: failed start capacitor (RM 180), compressor hard start (capacitor fix often works), or full compressor failure (RM 600–2,000). KL Renovator diagnoses first. +60182983573. https://www.klrenovator.com/problems/aircond-compressor-problem
+A: Symptoms: unit on but no cooling, outdoor unit buzzes but compressor doesn't start, warm air output. Causes: failed start capacitor (RM 150–250), compressor hard start (capacitor fix often works), or full compressor failure (RM 800–2,000). KL Renovator diagnoses first. +60182983573. https://www.klrenovator.com/problems/aircond-compressor-problem
 
 Q: Aircond PCB board problem — how do I know?
-A: PCB fault symptoms: random on/off, error blink codes, remote not responding (after battery changed), specific functions not working. PCB replacement RM 300–600. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-pcb-problem
+A: PCB fault symptoms: random on/off, error blink codes, remote not responding (after battery changed), specific functions not working. PCB replacement RM 350–600. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-pcb-problem
 
 Q: My aircond remote is not working — is it the remote or the unit?
 A: Step 1: Replace remote batteries. Step 2: Test with phone camera (point remote at camera, press button — if you see IR light, remote is fine). If unit still doesn't respond, the IR receiver or PCB needs repair. KL Renovator: +60182983573. https://www.klrenovator.com/problems/aircond-remote-not-working

@@ -4,7 +4,7 @@
 //
 // WHY THIS FILE EXISTS
 // ────────────────────
-// `config/site.ts` is ~1.1 MB of source (39 areaPages + 158 kampungPages +
+// `config/site.ts` is ~1.1 MB of source (40 areaPages + 162 kampungPages +
 // 20 brandPages + 20 problemPages, each carrying full EN/MS/ZH prose and
 // FAQ arrays). It is perfect for SERVER components and schema builders.
 //

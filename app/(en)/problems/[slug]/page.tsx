@@ -121,16 +121,16 @@ export const problemContent: Record<
     warningZH: "不要忽视不冷的冷气。运转但无效的机组消耗全额电力却毫无舒适感——长期低气压还会损坏压缩机。",
     faqs: [
       { q: "My aircond is blowing air but it's warm. Is it low gas?", a: "Low gas is the most common cause, but a dirty coil or faulty capacitor can produce the same symptom. KL Renovator diagnoses all three before recommending a solution — you pay for what you actually need." },
-      { q: "How much does it cost to fix an aircond that is not cold?", a: "If it is low gas: gas top-up from RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). If it is a dirty coil: chemical wash from RM 120. If it is a faulty capacitor: RM 180 replacement. Diagnostic fee RM 88 (waived if repair done same visit)." },
+      { q: "How much does it cost to fix an aircond that is not cold?", a: "If it is low gas: gas top-up from RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). If it is a dirty coil: chemical wash from RM 120. If it is a faulty capacitor: RM 150–250 replacement. Diagnostic fee RM 88 (waived if repair done same visit)." },
       { q: "Can the aircond be fixed the same day?", a: "Yes. Most causes of an aircond not being cold — gas top-up, chemical wash, capacitor replacement — are done in one visit. KL Renovator carries common parts on the van." },
     ],
     faqsBM: [
       { q: "Aircond saya menghembus udara tetapi panas. Adakah gas rendah?", a: "Gas rendah adalah punca paling biasa, tetapi gegelung kotor atau kapasitor rosak boleh menghasilkan gejala yang sama. KL Renovator mendiagnosis ketiga-tiganya sebelum mencadangkan penyelesaian." },
-      { q: "Berapa kos untuk membaiki aircond yang tidak sejuk?", a: "Jika gas rendah: top-up gas dari RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). Jika gegelung kotor: cuci kimia dari RM 120. Jika kapasitor rosak: penggantian RM 180." },
+      { q: "Berapa kos untuk membaiki aircond yang tidak sejuk?", a: "Jika gas rendah: top-up gas dari RM 2.50/PSI (R22), RM 3.00/PSI (R410A), RM 3.00/PSI (R32). Jika gegelung kotor: cuci kimia dari RM 120. Jika kapasitor rosak: penggantian RM 150–250." },
     ],
     faqsZH: [
       { q: "我的冷气在吹风，但是是暖风。是气体不足吗？", a: "气体不足是最常见的原因，但脏污的盘管或故障的电容器也会产生相同症状。KL Renovator会先诊断全部三项，再提供建议。" },
-      { q: "修理不冷的冷气需要多少费用？", a: "如果是气体不足：充气从 RM 2.50/PSI（R22）、RM 3.00/PSI（R410A）、RM 3.00/PSI（R32）起。如果是盘管脏污：化学清洗从RM 120起。如果是电容器故障：更换RM 180。" },
+      { q: "修理不冷的冷气需要多少费用？", a: "如果是气体不足：充气从 RM 2.50/PSI（R22）、RM 3.00/PSI（R410A）、RM 3.00/PSI（R32）起。如果是盘管脏污：化学清洗从RM 120起。如果是电容器故障：更换RM 150-250。" },
     ],
   },
   "aircond-water-leaking": {
@@ -257,15 +257,15 @@ export const problemContent: Record<
     faqs: [
       { q: "My aircond outdoor unit is making a loud rattling noise. What is causing it?", a: "Rattling from the outdoor unit is usually a loose fan blade, debris inside the unit, or loose screws on the casing. KL Renovator diagnoses and fixes the root cause in one visit." },
       { q: "My aircond indoor unit makes a squeaking noise when cooling. What is it?", a: "A squeaking indoor unit often indicates a dirty blower wheel rubbing against its housing, or a failing blower motor bearing. A chemical wash or blower motor replacement resolves this." },
-      { q: "How much does aircond noise repair cost in KL?", a: "Diagnostic fee is RM 88 (waived with repair). Fan motor replacement RM 250–450. Capacitor replacement RM 180." },
+      { q: "How much does aircond noise repair cost in KL?", a: "Diagnostic fee is RM 88 (waived with repair). Fan motor replacement RM 350–480. Capacitor replacement RM 150–250." },
     ],
     faqsBM: [
       { q: "Unit luar aircond saya membuat bunyi bising. Apakah penyebabnya?", a: "Bunyi bergetar dari unit luar biasanya disebabkan bilah kipas longgar, serpihan di dalam unit, atau skru longgar. KL Renovator mendiagnosis dan membaiki punca sebenar." },
-      { q: "Berapa kos pembaikan bunyi bising aircond di KL?", a: "Yuran diagnostik RM 88 (dilepaskan dengan pembaikan). Penggantian motor kipas RM 250–450. Penggantian kapasitor RM 180." },
+      { q: "Berapa kos pembaikan bunyi bising aircond di KL?", a: "Yuran diagnostik RM 88 (dilepaskan dengan pembaikan). Penggantian motor kipas RM 350–480. Penggantian kapasitor RM 150–250." },
     ],
     faqsZH: [
       { q: "我的冷气室外机发出很大的嘎嘎声。是什么原因？", a: "室外机嘎嘎声通常是风扇叶片松动、机内有异物或外壳螺丝松动所致。KL Renovator诊断并修复根本原因。" },
-      { q: "KL的冷气噪音维修费用是多少？", a: "诊断费RM 88（维修时免除）。风扇电机更换RM 250–450。电容器更换RM 180。" },
+      { q: "KL的冷气噪音维修费用是多少？", a: "诊断费RM 88（维修时免除）。风扇电机更换RM 350-480。电容器更换RM 150-250。" },
     ],
   },
   "aircond-low-gas": {
@@ -296,9 +296,9 @@ export const problemContent: Record<
     solutionEN: "KL Renovator performs a leak check before every gas top-up. If a leak is found, it is repaired first. Refrigerant is then added using a manifold gauge to achieve the exact operating pressure specified for the unit — not simply filled until the gauge looks right.",
     solutionBM: "KL Renovator melakukan pemeriksaan kebocoran sebelum setiap top-up gas. Jika kebocoran dijumpai, ia diperbaiki dahulu. Penyejuk kemudian ditambah menggunakan tolok manifold untuk mencapai tekanan operasi tepat.",
     solutionZH: "KL Renovator在每次充气前都进行泄漏检查。如果发现泄漏，先行修复。然后使用歧管表将制冷剂充至该机型规定的精确工作压力。",
-    warningEN: "Running an aircond with low gas causes the compressor to overwork, overheat, and eventually fail permanently. Gas top-up from RM 2.50/PSI is far cheaper than compressor replacement at RM 600–2,000.",
-    warningBM: "Menjalankan aircond dengan gas rendah menyebabkan pekali bekerja terlalu keras, terlalu panas, dan akhirnya gagal sepenuhnya. Top-up gas dari RM 2.50/PSI jauh lebih murah daripada penggantian pekali pada RM 600–2,000.",
-    warningZH: "在制冷剂不足的情况下运行冷气会导致压缩机过度工作、过热，最终永久损坏。充气从 RM 2.50/PSI 起，远比更换压缩机（RM 600–2,000）便宜得多。",
+    warningEN: "Running an aircond with low gas causes the compressor to overwork, overheat, and eventually fail permanently. Gas top-up from RM 2.50/PSI is far cheaper than compressor replacement at RM 800–2,000.",
+    warningBM: "Menjalankan aircond dengan gas rendah menyebabkan pekali bekerja terlalu keras, terlalu panas, dan akhirnya gagal sepenuhnya. Top-up gas dari RM 2.50/PSI jauh lebih murah daripada penggantian pekali pada RM 800–2,000.",
+    warningZH: "在制冷剂不足的情况下运行冷气会导致压缩机过度工作、过热，最终永久损坏。充气从 RM 2.50/PSI 起，远比更换压缩机（RM 800-2,000）便宜得多。",
     faqs: [
       { q: "How do I know if my aircond is low on gas?", a: "Symptoms include: not cold or barely cool air, longer cooling time, ice forming on the indoor coil, condensation on the outdoor unit pipes, and higher electricity bills." },
       { q: "How much does aircond gas top-up cost in KL?", a: "R22 from RM 2.50/PSI, R410A from RM 3.00/PSI, R32 from RM 3.00/PSI. Prices vary by HP size. Leak check is included with every gas top-up at KL Renovator." },
@@ -419,24 +419,24 @@ export const problemContent: Record<
       "接触器故障——压缩机无法从PCB接收电源信号",
       "长期在无制冷剂状态下运行导致压缩机卡死",
     ],
-    solutionEN: "KL Renovator diagnoses compressor faults by testing the capacitor, measuring compressor amperage, checking contactor continuity, and reading refrigerant pressures. If the capacitor is the issue, it is replaced on-site (RM 180 — most affordable fix). If the compressor winding is burnt, a replacement compressor is quoted (RM 600–2,000). We always advise whether repair or unit replacement is the more economical choice.",
-    solutionBM: "KL Renovator mendiagnosis kerosakan pekali dengan menguji kapasitor, mengukur ampere pekali, memeriksa kekuatan kontraktor, dan membaca tekanan refrigeran. Jika kapasitor bermasalah, ia diganti di tempat (RM 180). Jika belitan pekali terbakar, pekali ganti dikuotakan (RM 600–2,000).",
-    solutionZH: "KL Renovator通过测试电容器、测量压缩机电流、检查接触器连续性和读取制冷剂压力来诊断压缩机故障。如果是电容器问题，当场更换（RM 180——最经济的修复）。如果压缩机绕组烧毁，提供更换压缩机报价（RM 600-2,000）。我们始终建议维修还是换机更经济。",
+    solutionEN: "KL Renovator diagnoses compressor faults by testing the capacitor, measuring compressor amperage, checking contactor continuity, and reading refrigerant pressures. If the capacitor is the issue, it is replaced on-site (RM 150–250 — most affordable fix). If the compressor winding is burnt, a replacement compressor is quoted (RM 800–2,000). We always advise whether repair or unit replacement is the more economical choice.",
+    solutionBM: "KL Renovator mendiagnosis kerosakan pekali dengan menguji kapasitor, mengukur ampere pekali, memeriksa kekuatan kontraktor, dan membaca tekanan refrigeran. Jika kapasitor bermasalah, ia diganti di tempat (RM 150–250). Jika belitan pekali terbakar, pekali ganti dikuotakan (RM 800–2,000).",
+    solutionZH: "KL Renovator通过测试电容器、测量压缩机电流、检查接触器连续性和读取制冷剂压力来诊断压缩机故障。如果是电容器问题，当场更换（RM 150-250——最经济的修复）。如果压缩机绕组烧毁，提供更换压缩机报价（RM 800-2,000）。我们始终建议维修还是换机更经济。",
     warningEN: "If your outdoor unit is humming but the compressor is not running, do not keep turning the unit on and off — repeated restart attempts can damage the compressor windings further. Switch off and call KL Renovator.",
     warningBM: "Jika unit luar anda berdengung tetapi pekali tidak berjalan, jangan terus menghidupkan dan mematikan unit — percubaan memulakan semula berulang boleh merosakkan belitan pekali. Matikan dan hubungi KL Renovator.",
     warningZH: "如果室外机嗡嗡响但压缩机不运转，请勿反复开关机——多次重启尝试会进一步损坏压缩机绕组。关机并致电KL Renovator。",
     faqs: [
-      { q: "My outdoor unit is running but the compressor is not — what is wrong?", a: "The most likely cause is a failed start capacitor (RM 180 to replace — very common). Other causes include a tripped thermal protector (needs cooling down), contactor failure, or PCB fault. KL Renovator diagnoses on-site. Diagnostic RM 88 (waived with repair)." },
-      { q: "How much does aircond compressor replacement cost in KL?", a: "Compressor replacement in KL ranges from RM 600–2,000 depending on brand, HP size and compressor type (rotary vs scroll). KL Renovator sources genuine and quality-equivalent units. Full quote before work begins." },
+      { q: "My outdoor unit is running but the compressor is not — what is wrong?", a: "The most likely cause is a failed start capacitor (RM 150–250 to replace — very common). Other causes include a tripped thermal protector (needs cooling down), contactor failure, or PCB fault. KL Renovator diagnoses on-site. Diagnostic RM 88 (waived with repair)." },
+      { q: "How much does aircond compressor replacement cost in KL?", a: "Compressor replacement in KL ranges from RM 800–2,000 depending on brand, HP size and compressor type (rotary vs scroll). KL Renovator sources genuine and quality-equivalent units. Full quote before work begins." },
       { q: "Is it worth replacing the compressor or buying a new aircond?", a: "Rule of thumb: if the compressor replacement costs more than 60% of a new unit, replacement is often better value. KL Renovator gives an honest recommendation — we do not push unnecessary repairs." },
     ],
     faqsBM: [
-      { q: "Unit luar berjalan tetapi pekali tidak — apa yang salah?", a: "Punca paling mungkin adalah kapasitor permulaan gagal (RM 180 untuk ganti — sangat biasa). Punca lain termasuk pelindung terma terjatuh, kegagalan kontraktor, atau kerosakan PCB. KL Renovator mendiagnosis di tempat." },
-      { q: "Berapa kos ganti pekali aircond di KL?", a: "Penggantian pekali di KL antara RM 600–2,000 bergantung pada jenama, saiz HP dan jenis pekali. Sebut harga penuh sebelum kerja bermula." },
+      { q: "Unit luar berjalan tetapi pekali tidak — apa yang salah?", a: "Punca paling mungkin adalah kapasitor permulaan gagal (RM 150–250 untuk ganti — sangat biasa). Punca lain termasuk pelindung terma terjatuh, kegagalan kontraktor, atau kerosakan PCB. KL Renovator mendiagnosis di tempat." },
+      { q: "Berapa kos ganti pekali aircond di KL?", a: "Penggantian pekali di KL antara RM 800–2,000 bergantung pada jenama, saiz HP dan jenis pekali. Sebut harga penuh sebelum kerja bermula." },
     ],
     faqsZH: [
-      { q: "室外机运转但压缩机不启动——是什么问题？", a: "最可能的原因是启动电容器故障（更换RM 180——非常常见）。其他原因包括热保护器跳停、接触器故障或PCB问题。KL Renovator上门诊断。" },
-      { q: "吉隆坡更换冷气压缩机需要多少钱？", a: "KL更换压缩机费用为RM 600-2,000，取决于品牌、HP大小和压缩机类型（旋转式vs涡旋式）。施工前提供完整报价。" },
+      { q: "室外机运转但压缩机不启动——是什么问题？", a: "最可能的原因是启动电容器故障（更换RM 150-250——非常常见）。其他原因包括热保护器跳停、接触器故障或PCB问题。KL Renovator上门诊断。" },
+      { q: "吉隆坡更换冷气压缩机需要多少钱？", a: "KL更换压缩机费用为RM 800-2,000，取决于品牌、HP大小和压缩机类型（旋转式vs涡旋式）。施工前提供完整报价。" },
     ],
   },
   "aircond-pcb-problem": {
@@ -469,16 +469,16 @@ export const problemContent: Record<
     warningZH: "PCB故障可能导致不规律行为——随机关机、温度显示错误或无法响应遥控。不要反复重置机器——继续使用有故障PCB的机器可能对压缩机或风扇电机造成二次损坏。",
     faqs: [
       { q: "How do I know if my aircond PCB is faulty?", a: "Symptoms include: error code blinking lights, unit turns on but immediately shuts off, erratic temperature control, remote not responding (even after battery change), or unit powers up but fan does not run. WhatsApp KL Renovator the error code + brand for fast diagnosis." },
-      { q: "How much does aircond PCB replacement cost in KL?", a: "PCB board replacement in KL ranges from RM 300–600 depending on brand and model. KL Renovator sources OEM and quality compatible boards. Diagnostic RM 88 (waived if repaired same visit)." },
+      { q: "How much does aircond PCB replacement cost in KL?", a: "PCB board replacement in KL ranges from RM 350–600 depending on brand and model. KL Renovator sources OEM and quality compatible boards. Diagnostic RM 88 (waived if repaired same visit)." },
       { q: "Can a PCB board be repaired instead of replaced?", a: "Sometimes yes — if a single component (capacitor, relay, fuse) has failed, it can be repaired at lower cost. KL Renovator evaluates each case and recommends the most economical option." },
     ],
     faqsBM: [
       { q: "Bagaimana saya tahu papan PCB aircond saya rosak?", a: "Gejala termasuk: lampu berkelip kod ralat, unit hidup tetapi terus mati, kawalan suhu tidak menentu, kawalan jauh tidak bertindak balas. WhatsApp KL Renovator kod ralat + jenama untuk diagnosis cepat." },
-      { q: "Berapa kos ganti papan PCB aircond di KL?", a: "Penggantian papan PCB di KL antara RM 300–600 bergantung pada jenama dan model. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
+      { q: "Berapa kos ganti papan PCB aircond di KL?", a: "Penggantian papan PCB di KL antara RM 350–600 bergantung pada jenama dan model. Diagnostik RM 88 (dikecualikan dengan pembaikan)." },
     ],
     faqsZH: [
       { q: "如何知道我的冷气PCB板是否有问题？", a: "症状包括：闪烁错误代码灯、开机后立即关机、温度控制不稳、遥控无响应（换电池后仍无效）。WhatsApp KL Renovator错误代码+品牌以快速诊断。" },
-      { q: "吉隆坡更换冷气PCB板需要多少钱？", a: "KL更换PCB板费用为RM 300-600，取决于品牌和型号。诊断费RM 88（维修则免收）。" },
+      { q: "吉隆坡更换冷气PCB板需要多少钱？", a: "KL更换PCB板费用为RM 350-600，取决于品牌和型号。诊断费RM 88（维修则免收）。" },
     ],
   },
   "aircond-fan-not-working": {
@@ -510,17 +510,17 @@ export const problemContent: Record<
     warningBM: "Unit luar dengan kipas tidak berjalan akan menyebabkan pekali terlampau panas dan terjatuh dalam beberapa minit. Ini merosakkan pekali. Jangan cuba menjalankan unit — hubungi KL Renovator segera.",
     warningZH: "室外机风扇不运转会导致压缩机在几分钟内过热跳停。若不解决，将损坏压缩机。请勿继续尝试开机——立即联系KL Renovator。",
     faqs: [
-      { q: "My aircond is on but no air is coming out — what is wrong?", a: "The indoor fan motor has most likely failed. Other causes include PCB fault or capacitor failure. KL Renovator diagnoses on-site and replaces the motor same-day if needed. Indoor motor from RM 250." },
-      { q: "How much does aircond fan motor replacement cost in KL?", a: "Indoor fan motor: RM 250–350. Outdoor fan motor: RM 300–450. Exact cost depends on brand, HP size and motor type. All quoted before work begins." },
+      { q: "My aircond is on but no air is coming out — what is wrong?", a: "The indoor fan motor has most likely failed. Other causes include PCB fault or capacitor failure. KL Renovator diagnoses on-site and replaces the motor same-day if needed. Indoor motor from RM 350." },
+      { q: "How much does aircond fan motor replacement cost in KL?", a: "Indoor fan motor: RM 350–480. Outdoor fan motor: RM 350–480. Exact cost depends on brand, HP size and motor type. All quoted before work begins." },
       { q: "Can a seized fan motor be repaired or does it need replacement?", a: "A seized motor from dust and dry bearing can sometimes be freed and re-lubricated. A burnt motor must be replaced. KL Renovator checks first and replaces only if necessary." },
     ],
     faqsBM: [
-      { q: "Aircond hidup tetapi tiada udara keluar — apa yang salah?", a: "Motor kipas dalam kemungkinan besar telah gagal. KL Renovator mendiagnosis di tempat dan mengganti motor hari sama jika perlu. Motor dalam dari RM 250." },
-      { q: "Berapa kos ganti motor kipas aircond di KL?", a: "Motor kipas dalam: RM 250–350. Motor kipas luar: RM 300–450. Sebut harga tepat sebelum kerja bermula." },
+      { q: "Aircond hidup tetapi tiada udara keluar — apa yang salah?", a: "Motor kipas dalam kemungkinan besar telah gagal. KL Renovator mendiagnosis di tempat dan mengganti motor hari sama jika perlu. Motor dalam dari RM 350." },
+      { q: "Berapa kos ganti motor kipas aircond di KL?", a: "Motor kipas dalam: RM 350–480. Motor kipas luar: RM 350–480. Sebut harga tepat sebelum kerja bermula." },
     ],
     faqsZH: [
-      { q: "冷气开着但没有气流——是什么问题？", a: "室内风扇电机极有可能已经损坏。KL Renovator上门诊断，如需要当天更换电机。室内电机从RM 250起。" },
-      { q: "吉隆坡更换冷气风扇电机需要多少钱？", a: "室内风扇电机：RM 250-350。室外风扇电机：RM 300-450。施工前提供确切报价。" },
+      { q: "冷气开着但没有气流——是什么问题？", a: "室内风扇电机极有可能已经损坏。KL Renovator上门诊断，如需要当天更换电机。室内电机从RM 350起。" },
+      { q: "吉隆坡更换冷气风扇电机需要多少钱？", a: "室内风扇电机：RM 350-480。室外风扇电机：RM 350-480。施工前提供确切报价。" },
     ],
   },
   "aircond-tripping-power": {
@@ -552,16 +552,16 @@ export const problemContent: Record<
     warningBM: "MCB yang berulang kali jatuh adalah amaran keselamatan serius. Menetapkan semula berulang kali tanpa mencari punca berisiko kebakaran elektrik atau kerosakan peralatan. Matikan aircond dan jangan hidupkan semula sehingga diperiksa.",
     warningZH: "反复跳闸的MCB是严重的安全警告。在未找到原因前反复重置会有电气火灾或设备损坏的风险。关闭冷气，在检查前不要重新开启。",
     faqs: [
-      { q: "My aircond keeps tripping the MCB every time I turn it on — what is causing it?", a: "Most likely cause: failed capacitor (RM 180 to fix) or shorted compressor winding (RM 600–2,000). Other causes: earth leakage from damaged wiring or undersized MCB. KL Renovator diagnoses safely. Do NOT keep resetting the MCB." },
+      { q: "My aircond keeps tripping the MCB every time I turn it on — what is causing it?", a: "Most likely cause: failed capacitor (RM 150–250 to fix) or shorted compressor winding (RM 800–2,000). Other causes: earth leakage from damaged wiring or undersized MCB. KL Renovator diagnoses safely. Do NOT keep resetting the MCB." },
       { q: "Is it safe to keep resetting the MCB when the aircond trips it?", a: "No — this is dangerous. A tripping MCB is a safety circuit protecting you from electrical fire or equipment damage. Call KL Renovator at +60182983573 immediately for a safety inspection." },
-      { q: "How much does it cost to fix an aircond that trips the MCB?", a: "Capacitor replacement (most common): RM 180. Wiring repair: RM 100–300. PCB replacement: RM 300–600. Compressor (worst case): RM 600–2,000. Diagnostic RM 88 (waived with repair)." },
+      { q: "How much does it cost to fix an aircond that trips the MCB?", a: "Capacitor replacement (most common): RM 150–250. Wiring repair: RM 100–300. PCB replacement: RM 350–600. Compressor (worst case): RM 800–2,000. Diagnostic RM 88 (waived with repair)." },
     ],
     faqsBM: [
-      { q: "Aircond saya terus menjatuhkan MCB — apa yang menyebabkannya?", a: "Punca paling mungkin: kapasitor gagal (RM 180 untuk baiki) atau belitan pekali terlitar pintas (RM 600–2,000). JANGAN terus menetapkan semula MCB. Hubungi KL Renovator +60182983573." },
+      { q: "Aircond saya terus menjatuhkan MCB — apa yang menyebabkannya?", a: "Punca paling mungkin: kapasitor gagal (RM 150–250 untuk baiki) atau belitan pekali terlitar pintas (RM 800–2,000). JANGAN terus menetapkan semula MCB. Hubungi KL Renovator +60182983573." },
       { q: "Adakah selamat untuk terus menetapkan semula MCB?", a: "Tidak — ini berbahaya. MCB yang jatuh melindungi anda dari kebakaran elektrik. Hubungi KL Renovator +60182983573 segera untuk pemeriksaan keselamatan." },
     ],
     faqsZH: [
-      { q: "我的冷气每次开机都跳闸MCB——是什么原因？", a: "最可能的原因：电容器失效（修复RM 180）或压缩机绕组短路（RM 600-2,000）。请勿反复重置MCB。致电KL Renovator +60182983573。" },
+      { q: "我的冷气每次开机都跳闸MCB——是什么原因？", a: "最可能的原因：电容器失效（修复RM 150-250）或压缩机绕组短路（RM 800-2,000）。请勿反复重置MCB。致电KL Renovator +60182983573。" },
       { q: "反复重置MCB安全吗？", a: "不安全——这很危险。跳闸的MCB是保护您免受电气火灾的安全电路。立即致电KL Renovator +60182983573进行安全检查。" },
     ],
   },
@@ -596,7 +596,7 @@ export const problemContent: Record<
     faqs: [
       { q: "How do I test if my aircond remote is working?", a: "Point the remote at your phone's front or back camera and press any button. If you see a purple or white light flash on the camera screen, the remote IR emitter is working. If you see nothing, the remote itself is faulty — try replacing the batteries first." },
       { q: "My remote works (I can see the IR light) but the aircond does not respond — why?", a: "The indoor unit's IR receiver is likely faulty or blocked. Clean the receiver window (small black panel on the unit). If still no response, the IR receiver or the PCB needs replacement. KL Renovator diagnoses on-site." },
-      { q: "How much does it cost to fix an aircond remote problem?", a: "If it's just batteries: RM 5. If the remote itself is faulty: replacement remote RM 50–120. If the IR receiver is faulty: RM 150–250. If the PCB is causing the issue: RM 300–600. KL Renovator diagnoses the exact cause first." },
+      { q: "How much does it cost to fix an aircond remote problem?", a: "If it's just batteries: RM 5. If the remote itself is faulty: replacement remote RM 50–120. If the IR receiver is faulty: RM 150–250. If the PCB is causing the issue: RM 350–600. KL Renovator diagnoses the exact cause first." },
     ],
     faqsBM: [
       { q: "Bagaimana saya menguji sama ada kawalan jauh aircond berfungsi?", a: "Hala kawalan jauh ke kamera telefon anda dan tekan mana-mana butang. Jika anda melihat cahaya ungu atau putih berkelip pada skrin kamera, IR kawalan jauh berfungsi. Jika tidak ada cahaya, cuba ganti bateri dahulu." },
@@ -678,17 +678,17 @@ export const problemContent: Record<
     warningBM: "Jika unit dalam hidup tetapi unit luar tidak berjalan, sistem tidak menyejuk sama sekali. Menjalankan unit dalam sahaja membuang elektrik. Matikan sistem dan hubungi KL Renovator.",
     warningZH: "如果室内机开着但室外机不运转，系统完全无法制冷。单独运行室内机会浪费电力。关闭系统并联系KL Renovator。",
     faqs: [
-      { q: "My aircond indoor unit is on but the outdoor unit is not running — what is wrong?", a: "Most likely: failed capacitor (RM 180), tripped thermal overload (let cool 30 min then retry), contactor failure (RM 150–250), or PCB fault. KL Renovator diagnoses on-site. Do not keep running the indoor unit alone." },
-      { q: "How much does it cost to fix an outdoor unit that is not running?", a: "Capacitor: RM 180. Contactor: RM 150–250. Fan motor: RM 300–450. PCB: RM 300–600. Compressor: RM 600–2,000. KL Renovator diagnoses first and quotes before work." },
+      { q: "My aircond indoor unit is on but the outdoor unit is not running — what is wrong?", a: "Most likely: failed capacitor (RM 150–250), tripped thermal overload (let cool 30 min then retry), contactor failure (RM 150–250), or PCB fault. KL Renovator diagnoses on-site. Do not keep running the indoor unit alone." },
+      { q: "How much does it cost to fix an outdoor unit that is not running?", a: "Capacitor: RM 150–250. Contactor: RM 150–250. Fan motor: RM 350–480. PCB: RM 350–600. Compressor: RM 800–2,000. KL Renovator diagnoses first and quotes before work." },
       { q: "Can KL Renovator fix outdoor unit problems same-day?", a: "Yes — KL Renovator carries capacitors, contactors and common fan motor sizes for same-day repair. WhatsApp +60182983573 with your brand and HP size for fastest dispatch." },
     ],
     faqsBM: [
-      { q: "Unit dalam aircond hidup tetapi unit luar tidak berjalan — apa yang salah?", a: "Kemungkinan besar: kapasitor gagal (RM 180), pelindung terma terjatuh (biar sejuk 30 minit), kegagalan kontraktor (RM 150–250), atau kerosakan PCB. KL Renovator mendiagnosis di tempat." },
-      { q: "Berapa kos membaiki unit luar yang tidak berjalan?", a: "Kapasitor: RM 180. Kontraktor: RM 150–250. Motor kipas: RM 300–450. PCB: RM 300–600. KL Renovator mendiagnosis dahulu dan mengutip sebelum kerja." },
+      { q: "Unit dalam aircond hidup tetapi unit luar tidak berjalan — apa yang salah?", a: "Kemungkinan besar: kapasitor gagal (RM 150–250), pelindung terma terjatuh (biar sejuk 30 minit), kegagalan kontraktor (RM 150–250), atau kerosakan PCB. KL Renovator mendiagnosis di tempat." },
+      { q: "Berapa kos membaiki unit luar yang tidak berjalan?", a: "Kapasitor: RM 150–250. Kontraktor: RM 150–250. Motor kipas: RM 350–480. PCB: RM 350–600. KL Renovator mendiagnosis dahulu dan mengutip sebelum kerja." },
     ],
     faqsZH: [
-      { q: "室内机开着但室外机不运转——是什么问题？", a: "最有可能：电容器失效（RM 180）、热过载保护器跳停（冷却30分钟后重试）、接触器故障（RM 150-250）或PCB故障。KL Renovator上门诊断。" },
-      { q: "修复不运转的室外机需要多少费用？", a: "电容器：RM 180。接触器：RM 150-250。风扇电机：RM 300-450。PCB：RM 300-600。KL Renovator先诊断后报价。" },
+      { q: "室内机开着但室外机不运转——是什么问题？", a: "最有可能：电容器失效（RM 150-250）、热过载保护器跳停（冷却30分钟后重试）、接触器故障（RM 150-250）或PCB故障。KL Renovator上门诊断。" },
+      { q: "修复不运转的室外机需要多少费用？", a: "电容器：RM 150-250。接触器：RM 150-250。风扇电机：RM 350-480。PCB：RM 350-600。KL Renovator先诊断后报价。" },
     ],
   },
   "aircond-high-electricity-bill": {
@@ -805,16 +805,16 @@ export const problemContent: Record<
     warningZH: "如果MCB在重置后立即再次跳闸，请勿继续重置——存在活跃的电气故障。在再次开机前致电KL Renovator进行安全检查。",
     faqs: [
       { q: "My aircond will not turn on at all — what should I check first?", a: "Check in this order: (1) MCB panel — is the aircond breaker tripped? Reset once. (2) Remote battery — replace with fresh alkaline. (3) Power socket — plug something else in to test. If all fine and unit still dead, WhatsApp KL Renovator at +60182983573." },
-      { q: "My aircond makes a click sound but does not start — what is wrong?", a: "A clicking sound with no startup usually means a failed capacitor. The unit is receiving power and the PCB is attempting to start, but the capacitor cannot boost the compressor. Capacitor replacement: RM 180. KL Renovator diagnoses and fixes same-day." },
-      { q: "How much does it cost to fix an aircond that will not turn on?", a: "MCB reset: free. Battery: RM 5. Capacitor: RM 180. PCB: RM 300–600. Wiring: RM 100–300. Diagnostic RM 88 (waived with repair). KL Renovator diagnoses exact cause first." },
+      { q: "My aircond makes a click sound but does not start — what is wrong?", a: "A clicking sound with no startup usually means a failed capacitor. The unit is receiving power and the PCB is attempting to start, but the capacitor cannot boost the compressor. Capacitor replacement: RM 150–250. KL Renovator diagnoses and fixes same-day." },
+      { q: "How much does it cost to fix an aircond that will not turn on?", a: "MCB reset: free. Battery: RM 5. Capacitor: RM 150–250. PCB: RM 350–600. Wiring: RM 100–300. Diagnostic RM 88 (waived with repair). KL Renovator diagnoses exact cause first." },
     ],
     faqsBM: [
       { q: "Aircond saya langsung tidak hidup — apa yang perlu saya periksa dahulu?", a: "Periksa mengikut urutan: (1) Panel MCB — adakah pemutus litar aircond terjatuh? Tetapkan semula sekali. (2) Bateri kawalan jauh — ganti dengan alkali baharu. (3) Soket kuasa. Jika semua baik dan unit masih mati, WhatsApp KL Renovator +60182983573." },
-      { q: "Aircond saya berbunyi klik tetapi tidak bermula — apa yang salah?", a: "Bunyi klik tanpa permulaan biasanya bermakna kapasitor gagal. Penggantian kapasitor: RM 180. KL Renovator mendiagnosis dan membaiki hari sama." },
+      { q: "Aircond saya berbunyi klik tetapi tidak bermula — apa yang salah?", a: "Bunyi klik tanpa permulaan biasanya bermakna kapasitor gagal. Penggantian kapasitor: RM 150–250. KL Renovator mendiagnosis dan membaiki hari sama." },
     ],
     faqsZH: [
       { q: "我的冷气完全不开机——应该先检查什么？", a: "按此顺序检查：(1) MCB面板——冷气断路器是否跳闸？重置一次。(2) 遥控器电池——更换新碱性电池。(3) 电源插座。如果一切正常但机器仍不开机，WhatsApp KL Renovator +60182983573。" },
-      { q: "我的冷气发出咔哒声但不启动——是什么问题？", a: "有咔哒声但不启动通常意味着电容器故障。电容器更换：RM 180。KL Renovator当天诊断并修复。" },
+      { q: "我的冷气发出咔哒声但不启动——是什么问题？", a: "有咔哒声但不启动通常意味着电容器故障。电容器更换：RM 150-250。KL Renovator当天诊断并修复。" },
     ],
   },
   "aircond-blinking-light": {

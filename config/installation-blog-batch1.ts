@@ -36,7 +36,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>After completing over 500 aircond installations across KL and Selangor, our installation specialists have seen the same expensive mistakes repeated again and again. These errors don't just waste money upfront — they lead to higher TNB bills, frequent breakdowns, and units that fail 3-5 years earlier than they should.</p>
 
       <h2>Mistake #1: Skipping the Vacuum Pump Step</h2>
-      <p>Some installers skip vacuum evacuation to save 15-20 minutes. This single shortcut causes compressor failure within 2-3 years (replacement: RM 600-1,200), ice formation on copper pipes, and 15-20% higher electricity bills. <strong>Always insist on minimum 15-20 minutes vacuum time.</strong></p>
+      <p>Some installers skip vacuum evacuation to save 15-20 minutes. This single shortcut causes compressor failure within 2-3 years (replacement: RM 800-2,000), ice formation on copper pipes, and 15-20% higher electricity bills. <strong>Always insist on minimum 15-20 minutes vacuum time.</strong></p>
 
       <h2>Mistake #2: Using Type M Copper Pipe Instead of Type L</h2>
       <p>Type M copper has thinner walls and costs 30% less. Budget installers use it to increase margins. Result: pinhole leaks within 3-5 years and RM 400-800 re-piping costs. <a href="/aircond-installation-kl">Our installation specialists</a> use only Type L copper pipe — thicker walls rated for high-pressure R410A and R32 refrigerants.</p>
@@ -86,7 +86,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>Selepas lebih 500 pemasangan aircond di KL dan Selangor, <a href="/near-me">pakar pemasangan kami</a> melihat kesilapan mahal yang sama berulang. Kesilapan ini bukan sahaja membazirkan wang di peringkat awal — ia menyebabkan bil TNB lebih tinggi, kerosakan kerap, dan unit gagal 3-5 tahun lebih awal daripada yang sepatutnya.</p>
 
       <h2>Kesilapan #1: Melangkau Langkah Pam Vakum</h2>
-      <p>Sesetengah pemasang melangkau evakuasi vakum untuk menjimatkan 15-20 minit. Jalan pintas ini menyebabkan kegagalan pemampat dalam 2-3 tahun (penggantian: RM 600-1,200), pembentukan ais pada paip tembaga, dan bil elektrik 15-20% lebih tinggi. <strong>Sentiasa tekankan minimum 15-20 minit masa vakum.</strong></p>
+      <p>Sesetengah pemasang melangkau evakuasi vakum untuk menjimatkan 15-20 minit. Jalan pintas ini menyebabkan kegagalan pemampat dalam 2-3 tahun (penggantian: RM 800-2,000), pembentukan ais pada paip tembaga, dan bil elektrik 15-20% lebih tinggi. <strong>Sentiasa tekankan minimum 15-20 minit masa vakum.</strong></p>
 
       <h2>Kesilapan #2: Menggunakan Paip Tembaga Jenis M Bukan Jenis L</h2>
       <p>Tembaga Jenis M mempunyai dinding lebih nipis dan kos 30% kurang. Pemasang bajet menggunakannya untuk meningkatkan margin. Hasil: kebocoran lubang pin dalam 3-5 tahun dan kos pemasangan semula paip RM 400-800. <a href="/aircond-installation-kl">Pakar pemasangan kami</a> hanya menggunakan paip tembaga Jenis L — dinding lebih tebal yang dinilai untuk penyejuk tekanan tinggi R410A dan R32.</p>
@@ -136,7 +136,7 @@ export const installationBlogBatch1: BlogPost[] = [
       <p>在完成吉隆坡和雪兰莪超过500次冷气安装后，我们<a href="/near-me">安装专家</a>一次又一次看到同样昂贵的错误。这些错误不仅在前期浪费金钱——还导致更高的TNB账单、频繁故障，以及比预期提前3-5年故障的机组。</p>
 
       <h2>错误 #1：跳过真空泵步骤</h2>
-      <p>一些安装人员跳过真空抽气以节省15-20分钟。这个简单的捷径导致2-3年内压缩机故障（更换费用：RM 600-1,200）、铜管结冰和电费增加15-20%。<strong>始终要求至少15-20分钟真空时间。</strong></p>
+      <p>一些安装人员跳过真空抽气以节省15-20分钟。这个简单的捷径导致2-3年内压缩机故障（更换费用：RM 800-2,000）、铜管结冰和电费增加15-20%。<strong>始终要求至少15-20分钟真空时间。</strong></p>
 
       <h2>错误 #2：使用M型铜管而非L型</h2>
       <p>M型铜管壁更薄，成本低30%。预算安装人员使用它来提高利润率。结果：3-5年内出现针孔泄漏，重新布管费用RM 400-800。<a href="/aircond-installation-kl">我们的安装专家</a>只使用L型铜管——更厚的管壁额定用于R410A和R32高压冷媒。</p>

@@ -21,8 +21,8 @@ const waMsg = "Hi KL Renovator, saya nak tempah Cuci Aircond KL. Lokasi saya KL/
 const waHref = waLink(waMsg);
 
 export const metadata: Metadata = {
-  title: buildFreshMetaTitle("Cuci Aircond KL & Selangor 2026 — Chemical Wash RM120 | KL Renovator", "ms"),
-  description: padMetaDescription(`Cuci aircond KL & Selangor — chemical wash RM120. Same-day KL Renovator. ${reviewCountLabel} 5★ Google. Hapuskan bau, bocor & tak sejuk. WhatsApp +60182983573.`),
+  title: buildFreshMetaTitle("Servis Cuci Aircond KL & Selangor 2026 — Basuh Kimia RM120 | KL Renovator", "ms"),
+  description: padMetaDescription(`Cuci aircond KL & Selangor dari RM120. Basuh kimia tekanan tinggi, slot hari sama. ${reviewCountLabel} 5★ Google. Hapuskan bau hapak, bocor & tak sejuk. WhatsApp +60182983573.`),
   alternates: {
     canonical: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     languages: {
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: buildFreshMetaTitle("Cuci Aircond KL — RM120 | KL Renovator", "ms"),
-    description: `Chemical wash RM120. Same-day KL & Selangor. ${reviewCountLabel} 5-star. Waranti 1 bulan.`,
+    title: buildFreshMetaTitle("Servis Cuci Aircond KL — Basuh Kimia RM120 | KL Renovator", "ms"),
+    description: `Basuh kimia RM120. Hari sama di KL & Selangor. ${reviewCountLabel} 5-bintang. Waranti 1 bulan.`,
     url: "https://www.klrenovator.com/ms/cuci-aircond-kl",
     locale: "ms_MY",
     type: "website",
