@@ -397,7 +397,7 @@ export const allPosts: BlogPost[] = [
       <p>If both gas and coil cleaning have been done but cooling is still poor, the evaporator coil fins may be severely bent or the blower wheel may be so coated with grime that only a full clean will restore airflow.</p>
 
       <h2>What Happens If You Delay an Overhaul?</h2>
-      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–560 is far less expensive than a compressor replacement at RM 600–2,000 or a complete new unit installation.</p>
+      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–560 is far less expensive than a compressor replacement at RM 800–2,000 or a complete new unit installation.</p>
 
       <h2>What to Do</h2>
       <p>Chemical overhaul (Wall-Mounted Aircon only) starts from <strong>RM 420</strong> for a wall-mounted 1.0–1.5 HP unit. WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. See also: <a href="/services/chemical-overhaul">Chemical overhaul service page</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking guide</a></p>
@@ -425,7 +425,7 @@ export const allPosts: BlogPost[] = [
       <p>Jika kedua-dua gas dan pembersihan gegelung telah dilakukan tetapi penyejukan masih lemah, sirip gegelung evaporator mungkin sangat bengkok atau roda blower mungkin sangat kotor sehingga hanya pembersihan penuh yang akan memulihkan aliran udara.</p>
 
       <h2>Apa yang Berlaku Jika Anda Menangguhkan Overhaul?</h2>
-      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–560 jauh lebih murah berbanding penggantian kompressor pada RM 600–2,000 atau pemasangan unit baru yang lengkap.</p>
+      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–560 jauh lebih murah berbanding penggantian kompressor pada RM 800–2,000 atau pemasangan unit baru yang lengkap.</p>
 
       <h2>Apa yang Perlu Dilakukan</h2>
       <p>Overhaul kimia (Unit Dinding Sahaja) bermula dari <strong>RM 420</strong> untuk unit dinding 1.0–1.5 HP. WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>.</p>
@@ -664,10 +664,10 @@ export const allPosts: BlogPost[] = [
       <p><strong>症状：</strong>滤网干净但仍不冷，出风有异味。<br><strong>解决：</strong>化学清洗（RM 120起）或化学大修（仅限挂壁式冷气，RM 420起）。</p>
 
       <h2>原因 #4: 压缩机故障</h2>
-      <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 600-1,200）。如果是旧机器，可能需要考虑更换新机。</p>
+      <p><strong>症状：</strong>室外机不运转，完全无制冷。<br><strong>解决：</strong>压缩机更换（RM 800-2,000）。如果是旧机器，可能需要考虑更换新机。</p>
 
       <h2>原因 #5: 电容故障</h2>
-      <p><strong>症状：</strong>压缩机嗡嗡响但不启动，或启动后立即停止。<br><strong>解决：</strong>电容更换（RM 80-150）。这是最常见也是最便宜的维修之一。</p>
+      <p><strong>症状：</strong>压缩机嗡嗡响但不启动，或启动后立即停止。<br><strong>解决：</strong>电容更换（RM 150-250）。这是最常见也是最便宜的维修之一。</p>
 
       <h2>原因 #6: 温控器问题</h2>
       <p><strong>症状：</strong>温度设置正确但冷气不停机或过早停机。<br><strong>解决：</strong>温控器校准或更换（RM 50-120）。</p>
@@ -1182,7 +1182,7 @@ export const allPosts: BlogPost[] = [
       <h2>Signs You Are Behind on Maintenance</h2>
       <p>If any of these apply to your unit, a service is overdue: the unit has a musty or sour smell when running; cooling is noticeably weaker than 6 months ago; water has dripped from the indoor unit at any point; the electricity bill has risen without changes in usage; or the unit has not received professional servicing in over 12 months. Each of these is a symptom of maintenance that is past due.</p>
       <h2>The True Cost of Skipping Maintenance</h2>
-      <p>A unit that skips basic servicing for 2 years in Malaysian conditions will typically show 20-30% reduced cooling efficiency, a 15-25% increase in electricity consumption per month, and a meaningfully higher risk of component failure requiring expensive repair. The RM 99–120 per service that seems deferrable adds up to far less than the RM 600–2,000 compressor replacement that results from running a neglected unit to failure.</p>
+      <p>A unit that skips basic servicing for 2 years in Malaysian conditions will typically show 20-30% reduced cooling efficiency, a 15-25% increase in electricity consumption per month, and a meaningfully higher risk of component failure requiring expensive repair. The RM 99–120 per service that seems deferrable adds up to far less than the RM 800–2,000 compressor replacement that results from running a neglected unit to failure.</p>
 
       <h2>Recording Your Maintenance History</h2>
       <p>Keep a simple record of each service date, the service provider, and what was done. This helps you track the interval between services, provides evidence for warranty claims if a technician's workmanship causes damage, and gives future technicians context about the unit's history. A WhatsApp message to yourself after each service with the date and service type takes 30 seconds and can be invaluable reference later. KL Renovator also keeps records of all services performed for our regular customers.</p>
@@ -1211,7 +1211,7 @@ export const allPosts: BlogPost[] = [
       <h2>Tanda Anda Terlewat dalam Penyelenggaraan</h2>
       <p>Jika mana-mana ciri ini terpakai pada unit anda, servis sudah tertangguh: unit berbau apak atau masam semasa beroperasi; penyejukan jelas lebih lemah berbanding 6 bulan lalu; air pernah menitis dari unit dalaman pada bila-bila masa; bil elektrik telah meningkat tanpa perubahan penggunaan; atau unit tidak menerima servis profesional selama lebih 12 bulan. Setiap satu daripada ini adalah simptom penyelenggaraan yang sudah lewat.</p>
       <h2>Kos Sebenar Melangkau Penyelenggaraan</h2>
-      <p>Unit yang melangkau servis asas selama 2 tahun dalam keadaan Malaysia biasanya menunjukkan kecekapan penyejukan berkurang 20-30%, peningkatan 15-25% dalam penggunaan elektrik setiap bulan, dan risiko kegagalan komponen yang jauh lebih tinggi yang memerlukan pembaikan mahal. RM 99–120 setiap servis yang nampak boleh ditangguhkan bertambah jauh kurang berbanding penggantian kompressor RM 600–2,000 yang terhasil daripada membiarkan unit terabai sehingga rosak.</p>
+      <p>Unit yang melangkau servis asas selama 2 tahun dalam keadaan Malaysia biasanya menunjukkan kecekapan penyejukan berkurang 20-30%, peningkatan 15-25% dalam penggunaan elektrik setiap bulan, dan risiko kegagalan komponen yang jauh lebih tinggi yang memerlukan pembaikan mahal. RM 99–120 setiap servis yang nampak boleh ditangguhkan bertambah jauh kurang berbanding penggantian kompressor RM 800–2,000 yang terhasil daripada membiarkan unit terabai sehingga rosak.</p>
 
       <h2>Merekod Sejarah Penyelenggaraan Anda</h2>
       <p>Simpan rekod ringkas setiap tarikh servis, penyedia servis, dan apa yang dilakukan. Ini membantu anda menjejaki selang masa antara servis, memberikan bukti untuk tuntutan waranti jika kerja juruteknik menyebabkan kerosakan, dan memberikan juruteknik masa depan konteks tentang sejarah unit. Mesej WhatsApp kepada diri sendiri selepas setiap servis dengan tarikh dan jenis servis mengambil masa 30 saat dan boleh menjadi rujukan berharga kemudian. KL Renovator juga menyimpan rekod semua servis yang dilakukan untuk pelanggan tetap kami.</p>
@@ -1398,12 +1398,12 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>维修项目</th><th>价格范围</th><th>说明</th></tr></thead>
         <tbody>
-          <tr><td>电容更换</td><td>RM 80-150</td><td>室外机不转/难启动常见项</td></tr>
+          <tr><td>电容更换</td><td>RM 150-250</td><td>室外机不转/难启动常见项</td></tr>
           <tr><td>PCB板更换</td><td>RM 150-500</td><td>视品牌与型号</td></tr>
           <tr><td>风扇电机更换</td><td>RM 150-300</td><td>室内或室外风机</td></tr>
-          <tr><td>压缩机更换</td><td>RM 600-1,200</td><td>开工前单独报价</td></tr>
+          <tr><td>压缩机更换</td><td>RM 800-2,000</td><td>开工前单独报价</td></tr>
           <tr><td>温控器/传感器</td><td>RM 50-150</td><td>乱跳温、误报错</td></tr>
-          <tr><td>排水泵更换</td><td>RM 120-200</td><td>天花机/排水扬程场景</td></tr>
+          <tr><td>排水泵更换</td><td>RM 350-550</td><td>天花机/排水扬程场景</td></tr>
         </tbody>
       </table>
       <p>零件价格会因原厂/副厂与现场诊断结果而不同。我们不会先拆机再“突然加价”——材料与人工会在更换前说明。</p>
@@ -1960,7 +1960,7 @@ export const allPosts: BlogPost[] = [
       <p>A unit with good remaining lifespan will: cool to the set temperature without running continuously at maximum output; have a compressor that starts cleanly without buzzing or humming; show stable gas pressure readings year over year (no significant drop indicating slow leak); respond normally to remote control and mode changes; and not require repeated repairs to different components. If your unit ticks all these boxes, consistent maintenance will keep it running reliably for many more years regardless of its age.</p>
 
       <h2>Compressor — The Most Expensive Component</h2>
-      <p>The compressor is the most expensive single component in any aircond unit, typically costing RM 600–2,000 to replace. A compressor that has been maintained with clean coils, correct gas levels, and clean filters rarely fails before 12 years in a properly sized application. The conditions that accelerate compressor failure are: running with low gas (compressor overheats without adequate refrigerant to cool it), running with a heavily fouled coil (compressor works harder and runs hotter), and frequent short-cycling from an oversized unit or blocked filter. All three are directly preventable with regular maintenance.</p>
+      <p>The compressor is the most expensive single component in any aircond unit, typically costing RM 800–2,000 to replace. A compressor that has been maintained with clean coils, correct gas levels, and clean filters rarely fails before 12 years in a properly sized application. The conditions that accelerate compressor failure are: running with low gas (compressor overheats without adequate refrigerant to cool it), running with a heavily fouled coil (compressor works harder and runs hotter), and frequent short-cycling from an oversized unit or blocked filter. All three are directly preventable with regular maintenance.</p>
     `,
     contentMS: `
       <h2>Jangka Hayat Purata Aircond di Malaysia</h2>
@@ -1992,7 +1992,7 @@ export const allPosts: BlogPost[] = [
       <p>Unit dengan jangka hayat berbaki yang baik akan: menyejukkan kepada suhu yang ditetapkan tanpa beroperasi secara berterusan pada output maksimum; mempunyai kompressor yang bermula dengan bersih tanpa bunyi dengung atau dengung; menunjukkan bacaan tekanan gas yang stabil tahun demi tahun (tiada penurunan ketara yang menunjukkan kebocoran perlahan); bertindak balas secara normal kepada kawalan jauh dan perubahan mod; dan tidak memerlukan pembaikan berulang kepada komponen yang berbeza. Jika unit anda memenuhi semua kriteria ini, penyelenggaraan yang konsisten akan mengekalkannya berfungsi dengan boleh dipercayai selama bertahun-tahun lagi tanpa mengira usianya.</p>
 
       <h2>Kompressor — Komponen Paling Mahal</h2>
-      <p>Kompressor adalah komponen tunggal paling mahal dalam mana-mana unit aircond, biasanya kos RM 600–2,000 untuk diganti. Kompressor yang telah diselenggara dengan gegelung bersih, tahap gas yang betul, dan penapis bersih jarang gagal sebelum 12 tahun dalam aplikasi bersaiz betul. Keadaan yang memburukkan kegagalan kompressor adalah: beroperasi dengan gas rendah (kompressor terlebih panas tanpa penyejuk yang mencukupi untuk menyejukkannya), beroperasi dengan gegelung yang sangat tercemar (kompressor bekerja lebih keras dan berjalan lebih panas), dan kitaran pendek yang kerap daripada unit bersaiz terlalu besar atau penapis tersumbat. Kesemua tiga ini boleh dicegah secara langsung dengan penyelenggaraan berkala.</p>
+      <p>Kompressor adalah komponen tunggal paling mahal dalam mana-mana unit aircond, biasanya kos RM 800–2,000 untuk diganti. Kompressor yang telah diselenggara dengan gegelung bersih, tahap gas yang betul, dan penapis bersih jarang gagal sebelum 12 tahun dalam aplikasi bersaiz betul. Keadaan yang memburukkan kegagalan kompressor adalah: beroperasi dengan gas rendah (kompressor terlebih panas tanpa penyejuk yang mencukupi untuk menyejukkannya), beroperasi dengan gegelung yang sangat tercemar (kompressor bekerja lebih keras dan berjalan lebih panas), dan kitaran pendek yang kerap daripada unit bersaiz terlalu besar atau penapis tersumbat. Kesemua tiga ini boleh dicegah secara langsung dengan penyelenggaraan berkala.</p>
     `,
     contentZH: `<h2>马来西亚冷气寿命 — 如何延长使用年限</h2>
       <p>冷气的寿命取决于品牌、使用习惯和保养频率。<a href="/near-me">KL Renovator</a>为您分析。</p>
@@ -2111,7 +2111,7 @@ export const allPosts: BlogPost[] = [
       <p>Bau hapak atau masam menunjukkan pertumbuhan kulat dan bakteria pada gegelung penyejat atau dulang saliran. Penyelesaian: cuci kimia (dari RM 120) membunuh biofilm yang menyebabkan bau. Untuk kes teruk, overhaul kimia diperlukan.</p>
 
       <h2>Masalah #4: Aircond Berfungsi Tapi Kompresor Tidak Hidup</h2>
-      <p>Kompresor tidak hidup boleh disebabkan kapasitor rosak, masalah PCB, atau kerosakan kompresor itu sendiri. Kapasitor ialah pembaikan paling biasa dan paling murah (RM 80-150). PCB dan kompresor lebih mahal.</p>
+      <p>Kompresor tidak hidup boleh disebabkan kapasitor rosak, masalah PCB, atau kerosakan kompresor itu sendiri. Kapasitor ialah pembaikan paling biasa dan paling murah (RM 150-250). PCB dan kompresor lebih mahal.</p>
 
       <h2>Masalah #5: Aircond Berbunyi Kuat</h2>
       <p>Bunyi berbeza menunjukkan masalah berbeza: berdengung (kapasitor), berderak (kipas longgar), berdecit (bearing haus), atau berdetik (panel longgar). Kebanyakan isu bunyi diselesaikan semasa servis asas.</p>
@@ -6133,12 +6133,12 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>Fault</th><th>Typical Repair Cost</th><th>Verdict</th></tr></thead>
         <tbody>
-          <tr><td>Minor gas leak — seal and top-up</td><td>RM 150–250</td><td>✅ Repair</td></tr>
-          <tr><td>Faulty fan capacitor</td><td>from RM 2.50/PSI</td><td>✅ Repair</td></tr>
-          <tr><td>Blocked drain pipe</td><td>RM 99–150</td><td>✅ Repair — routine servicing</td></tr>
-          <tr><td>Failed PCB (inverter)</td><td>RM 400–800</td><td>⚠️ Consider — only if under 5 years old</td></tr>
-          <tr><td>Dead compressor</td><td>RM 800–1,500</td><td>❌ Replace — especially past 3 years</td></tr>
-          <tr><td>Major refrigerant leak (pierced coil)</td><td>RM 600–1,200</td><td>❌ Replace</td></tr>
+          <tr><td>Minor gas leak — seal and top-up</td><td>RM 120/leak + gas top-up</td><td>✅ Repair</td></tr>
+          <tr><td>Faulty fan capacitor</td><td>RM 150–250</td><td>✅ Repair</td></tr>
+          <tr><td>Blocked drain pipe</td><td>from RM 99</td><td>✅ Repair — routine servicing</td></tr>
+          <tr><td>Failed PCB (inverter)</td><td>RM 350–600</td><td>⚠️ Consider — only if under 5 years old</td></tr>
+          <tr><td>Dead compressor</td><td>RM 800–2,000</td><td>❌ Replace — especially past 3 years</td></tr>
+          <tr><td>Major refrigerant leak (pierced coil)</td><td>Quoted before work</td><td>❌ Replace</td></tr>
         </tbody>
       </table>
       <p>Capacitors, drains and small leaks are cheap, quick wins that restore full cooling. Compressors and coils are the two components whose replacement cost approaches the value of the whole unit.</p>
@@ -6163,7 +6163,7 @@ export const allPosts: BlogPost[] = [
       <h2>Get an Honest Assessment</h2>
       <p>WhatsApp us at <strong>+60 18-298 3573</strong> with your unit's age, brand and symptoms. Our technicians will tell you straight when a repair is not worth doing — we would rather quote you honestly than take payment for a fix that buys you six months. See also: <a href="/services/repair">repair and troubleshooting</a> | <a href="/services/installation">new unit installation</a> | <a href="/aircond-service-price-malaysia">full price list</a></p>
     `,
-    contentMS: '<p>Ini soalan paling biasa: <strong>"Baiki lagi ke atau tukar baru terus?"</strong> Jawapan bergantung pada umur unit, kos repair, jenis kerosakan, dan bil TNB semasa. Panduan ni bagi framework jelas.</p><h2>Peraturan 50%</h2><p>Peraturan paling mudah: <strong>kalau kos repair >50% daripada harga unit baru, tukar baru.</strong> Contoh: Aircond 1.5 HP baru = RM 1,200-1,800. Kalau repair RM 900+ — lebih baik tukar baru.</p><h2>Bila Repair Masih Berbaloi</h2><table><tr><th>Situasi</th><th>Kos Repair</th><th>Keputusan</th></tr><tr><td>Gas bocor sikit</td><td>RM 150-250</td><td>✅ Baiki</td></tr><tr><td>Kapasitor fan rosak</td><td>RM 120-200</td><td>✅ Baiki</td></tr><tr><td>Drain pipe tersumbat</td><td>RM 99-150</td><td>✅ Baiki</td></tr><tr><td>PCB rosak (inverter)</td><td>RM 400-800</td><td>⚠️ Fikir</td></tr><tr><td>Kompressor mati</td><td>RM 800-1,500</td><td>❌ Tukar baru</td></tr><tr><td>Coil bocor besar</td><td>RM 600-1,200</td><td>❌ Tukar baru</td></tr></table><h2>4 Tanda Masa Nak Tukar</h2><p><strong>1. Umur >10 tahun:</strong> Unit baru jimat 30-50% elektrik.</p><p><strong>2. Bil TNB naik:</strong> Unit lama tarik amp lebih.</p><p><strong>3. R22 gas:</strong> Dah discontinued, harga gas naik.</p><p><strong>4. Repair >2 kali setahun:</strong> Total kos dah melebihi bayaran unit baru.</p><p>WhatsApp <strong>+60 18-298 3573</strong> — nasihat jujur. <a href="/ms/services/repair">Servis repair</a> | <a href="/ms/services/installation">Pasang baru</a></p>',
+    contentMS: '<p>Ini soalan paling biasa: <strong>"Baiki lagi ke atau tukar baru terus?"</strong> Jawapan bergantung pada umur unit, kos repair, jenis kerosakan, dan bil TNB semasa. Panduan ni bagi framework jelas.</p><h2>Peraturan 50%</h2><p>Peraturan paling mudah: <strong>kalau kos repair >50% daripada harga unit baru, tukar baru.</strong> Contoh: Aircond 1.5 HP baru = RM 1,200-1,800. Kalau repair RM 900+ — lebih baik tukar baru.</p><h2>Bila Repair Masih Berbaloi</h2><table><tr><th>Situasi</th><th>Kos Repair</th><th>Keputusan</th></tr><tr><td>Gas bocor sikit</td><td>RM 120/kebocoran + gas</td><td>✅ Baiki</td></tr><tr><td>Kapasitor fan rosak</td><td>RM 150-250</td><td>✅ Baiki</td></tr><tr><td>Drain pipe tersumbat</td><td>dari RM 99</td><td>✅ Baiki</td></tr><tr><td>PCB rosak (inverter)</td><td>RM 350-600</td><td>⚠️ Fikir</td></tr><tr><td>Kompressor mati</td><td>RM 800-2,000</td><td>❌ Tukar baru</td></tr><tr><td>Coil bocor besar</td><td>Dikuotakan sebelum kerja</td><td>❌ Tukar baru</td></tr></table><h2>4 Tanda Masa Nak Tukar</h2><p><strong>1. Umur >10 tahun:</strong> Unit baru jimat 30-50% elektrik.</p><p><strong>2. Bil TNB naik:</strong> Unit lama tarik amp lebih.</p><p><strong>3. R22 gas:</strong> Dah discontinued, harga gas naik.</p><p><strong>4. Repair >2 kali setahun:</strong> Total kos dah melebihi bayaran unit baru.</p><p>WhatsApp <strong>+60 18-298 3573</strong> — nasihat jujur. <a href="/ms/services/repair">Servis repair</a> | <a href="/ms/services/installation">Pasang baru</a></p>',
     contentZH: `<h2>冷气坏了：该修理还是换新的？— 2026 马来西亚决策指南</h2>
       <p>当您的冷气出现故障且维修费用不菲时，您可能会面临两难选择：花钱修旧机，还是直接买新机？<strong>KL Renovator</strong> 的专家为您梳理了 5 个关键判断标准，帮您做出最省钱的决定。</p>
 
@@ -6182,7 +6182,7 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>故障类型</th><th>建议</th><th>说明</th></tr></thead>
         <tbody>
-          <tr><td>电容故障 / 漏水</td><td><strong>修理</strong></td><td>费用低（RM 80-220），修好能用很久</td></tr>
+          <tr><td>电容故障 / 漏水</td><td><strong>修理</strong></td><td>费用低（电容更换 RM 150-250），修好能用很久</td></tr>
           <tr><td>风扇马达损坏</td><td><strong>视情况</strong></td><td>费用中等，如果机龄小可修理</td></tr>
           <tr><td><strong>压缩机烧毁</strong></td><td><strong>换新</strong></td><td>核心部件极贵，维修不划算</td></tr>
           <tr><td><strong>主板 (PCB) 烧毁</strong></td><td><strong>视情况</strong></td><td>如果是新款变频机可修；旧机建议换新</td></tr>
@@ -6238,8 +6238,8 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Routine servicing (every 3–6 months)</td><td>Tenant or landlord — per agreement</td><td>RM 99–120</td></tr>
           <tr><td>Chemical wash (annual)</td><td>Landlord</td><td>from RM 120</td></tr>
-          <tr><td>Minor repairs (capacitor, drain)</td><td>Landlord</td><td>RM 99–200</td></tr>
-          <tr><td>Major repairs (compressor, PCB)</td><td>Landlord</td><td>RM 400–1,500</td></tr>
+          <tr><td>Minor repairs (capacitor, drain)</td><td>Landlord</td><td>RM 99–250</td></tr>
+          <tr><td>Major repairs (compressor, PCB)</td><td>Landlord</td><td>RM 350–2,000</td></tr>
           <tr><td>Damage from tenant negligence</td><td>Tenant</td><td>Depends on damage</td></tr>
         </tbody>
       </table>
@@ -8150,14 +8150,14 @@ export const allPosts: BlogPost[] = [
 
       <h2>Common Repair Cost Comparison</h2>
       <ul>
-        <li><strong>Daikin capacitor replacement:</strong> RM 150–220 (widely available, generic compatible parts exist)</li>
-        <li><strong>Panasonic capacitor replacement:</strong> RM 150–250 (Panasonic-specific capacitors slightly pricier)</li>
+        <li><strong>Daikin capacitor replacement:</strong> RM 150–250 (widely available, generic compatible parts exist)</li>
+        <li><strong>Panasonic capacitor replacement:</strong> RM 150–250 (same published range)</li>
         <li><strong>Daikin PCB board:</strong> RM 350–600 (common daikin blue PCB — widely stocked)</li>
-        <li><strong>Panasonic PCB board:</strong> RM 400–650 (nanoe-G models have pricier boards)</li>
-        <li><strong>Daikin fan motor:</strong> RM 280–380</li>
+        <li><strong>Panasonic PCB board:</strong> RM 350–600 (nanoe-G models sit at the upper end of the range)</li>
+        <li><strong>Daikin fan motor:</strong> RM 350–480</li>
         <li><strong>Panasonic fan motor:</strong> RM 350–480</li>
       </ul>
-      <p>Overall, Daikin has a slight advantage in parts availability and pricing because Daikin's market share in Malaysia is larger — parts are stocked at more suppliers across the country. Panasonic parts are also widely available but certain models with nanoe-X or nanoe-G features have pricier PCB boards. The difference is typically RM 50–100 maximum on major repairs.</p>
+      <p>Overall, Daikin has a slight advantage in parts availability because Daikin's market share in Malaysia is larger — parts are stocked at more suppliers across the country. Published replacement ranges are the same for both brands (capacitor RM 150–250, PCB RM 350–600, fan motor RM 350–480, compressor RM 800–2,000) — the final quote depends on the exact model and HP size rather than the brand badge.</p>
 
       <h2>Installation Cost</h2>
       <ul><li><strong>Daikin wall-mounted 1.0–1.5 HP:</strong> RM 199 (standard installation)</li><li><strong>Panasonic wall-mounted 1.0–1.5 HP:</strong> RM 199 (standard installation)</li></ul>
@@ -8181,14 +8181,14 @@ export const allPosts: BlogPost[] = [
           <tr><td>Cuci kimia</td><td>RM 120</td><td>RM 120</td><td>Sama</td></tr>
           <tr><td>Overhaul kimia (Unit Dinding Sahaja)</td><td>RM 420</td><td>RM 420</td><td>Sama</td></tr>
           <tr><td>Tambah gas R32</td><td>RM 3.00/PSI</td><td>RM 3.00/PSI</td><td>Sama</td></tr>
-          <tr><td>Kapasitor ganti</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
-          <tr><td>PCB board</td><td>RM 200-400</td><td>RM 300-350</td><td>Daikin sedikit lebih mahal</td></tr>
-          <tr><td>Kompresor ganti</td><td>RM 600-1,200</td><td>RM 550-1,100</td><td>Daikin sedikit lebih mahal</td></tr>
-          <tr><td>Motor kipas dalaman</td><td>RM 150-280</td><td>RM 140-260</td><td>Hampir sama</td></tr>
-          <tr><td>Penderia/thermistor</td><td>RM 60-120</td><td>RM 50-100</td><td>Daikin sedikit lebih mahal</td></tr>
+          <tr><td>Kapasitor ganti</td><td>RM 150-250</td><td>RM 150-250</td><td>Sama</td></tr>
+          <tr><td>PCB board</td><td>RM 350-600</td><td>RM 350-600</td><td>Julat sama</td></tr>
+          <tr><td>Kompresor ganti</td><td>RM 800-2,000</td><td>RM 800-2,000</td><td>Julat sama</td></tr>
+          <tr><td>Motor kipas dalaman</td><td>RM 350-480</td><td>RM 350-480</td><td>Julat sama</td></tr>
+          <tr><td>Penderia/thermistor</td><td>RM 150-250</td><td>RM 150-250</td><td>Julat sama</td></tr>
         </tbody>
       </table>
-      <p><strong>Kesimpulan:</strong> Kos penyelenggaraan rutin adalah sama untuk kedua-dua jenama. Perbezaan hanya pada komponen ganti tertentu, dan ia kecil — biasanya RM 20-50 sahaja.</p>
+      <p><strong>Kesimpulan:</strong> Kos penyelenggaraan rutin adalah sama untuk kedua-dua jenama. Julat penggantian komponen juga diterbitkan sama untuk kedua-duanya — sebenar harga mengikut model dan saiz HP, bukan jenama.</p>
 
       <h2>Kebolehpercayaan Jangka Panjang</h2>
       <ul>
@@ -8866,23 +8866,23 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>Component</th><th>Non-Inverter Cost</th><th>Inverter Cost</th><th>Why the Difference?</th></tr></thead>
         <tbody>
-          <tr><td>Capacitor replacement</td><td>RM 120–180</td><td>RM 150–250</td><td>Inverter capacitors are usually higher-rated and cost more</td></tr>
-          <tr><td>PCB board</td><td>RM 200–400</td><td>RM 350–700</td><td>Inverter PCBs are more complex with IGBT modules and PFC circuits</td></tr>
-          <tr><td>Fan motor</td><td>RM 180–280</td><td>RM 350–480</td><td>Inverter fan motors use DC brushless technology — more expensive</td></tr>
-          <tr><td>Compressor</td><td>RM 600–1,200</td><td>RM 900–2,000</td><td>Inverter compressors are variable-speed with more complex drive electronics</td></tr>
-          <tr><td>Temperature sensor</td><td>RM 80–120</td><td>RM 150–250</td><td>Inverter units have multiple sensors (coil, ambient, pipe)</td></tr>
+          <tr><td>Capacitor replacement</td><td>RM 150–250</td><td>RM 150–250</td><td>Same published range for both types</td></tr>
+          <tr><td>PCB board</td><td>RM 350–600</td><td>RM 350–600</td><td>Same published range — inverter failures sit more often at the upper end (IGBT modules, PFC circuits)</td></tr>
+          <tr><td>Fan motor</td><td>RM 350–480</td><td>RM 350–480</td><td>Same published range — inverter units use DC brushless motors that sit at the upper end</td></tr>
+          <tr><td>Compressor</td><td>RM 800–2,000</td><td>RM 800–2,000</td><td>Same published range — variable-speed inverter compressors sit at the upper end</td></tr>
+          <tr><td>Temperature sensor</td><td>RM 150–250</td><td>RM 150–250</td><td>Same published range — inverter units have more sensors (coil, ambient, pipe)</td></tr>
           <tr><td>Gas top-up (R32)</td><td>N/A (mostly R22)</td><td>RM 3.00/PSI–220</td><td>Inverter units use R32 (RM 3.00/PSI); non-inverter units use R22 (RM 2.50/PSI)</td></tr>
         </tbody>
       </table>
 
-      <h2>Key Finding: Inverter Parts Cost 30–60% More</h2>
-      <p>Across all major repair categories, inverter units cost 30–60% more to repair than equivalent non-inverter units. The largest difference is in PCB board replacement — inverter PCBs are significantly more complex and can cost up to RM 700 compared to RM 400 for a non-inverter board.</p>
+      <h2>Key Finding: The Repair Bill Difference Is Failure Frequency, Not Price List</h2>
+      <p>KL Renovator publishes one replacement range per component for both types — PCB RM 350–600, fan motor RM 350–480, compressor RM 800–2,000. The real difference is what fails: inverter repairs more often involve the complex end of that range, because inverter PCBs carry IGBT modules and PFC circuits that a simple non-inverter board does not.</p>
 
       <h2>Does This Mean Non-Inverter Is Better Value?</h2>
-      <p>Not necessarily. Here is the full picture: an inverter unit typically uses RM 40–70/month in electricity compared to RM 80–120/month for non-inverter — saving RM 40–50/month. Over 12 months, that is RM 480–600 saved. A PCB replacement every 5–7 years costs RM 350–700. Even with higher repair costs, the electricity savings from an inverter unit more than compensate over its 12–15 year lifespan. The total cost of ownership (purchase + electricity + maintenance) over 10 years is lower for inverter units despite higher per-repair costs.</p>
+      <p>Not necessarily. Here is the full picture: an inverter unit typically uses RM 40–70/month in electricity compared to RM 80–120/month for non-inverter — saving RM 40–50/month. Over 12 months, that is RM 480–600 saved. A PCB replacement every 5–7 years costs RM 350–600. Even where a repair lands at the upper end of the range, the electricity savings from an inverter unit more than compensate over its 12–15 year lifespan. The total cost of ownership (purchase + electricity + maintenance) over 10 years is lower for inverter units.</p>
 
       <h2>Maintenance Differences</h2>
-      <p>Both inverter and non-inverter units need the same basic maintenance: chemical wash every 12 months, basic service every 3–6 months. However, inverter compressors are more sensitive to low gas levels. Running an inverter unit with low refrigerant can damage the compressor more quickly than in non-inverter units. Annual gas pressure checks are especially important for inverter units over 5 years old — the RM 138 diagnostic fee can prevent a RM 1,500+ compressor replacement.</p>
+      <p>Both inverter and non-inverter units need the same basic maintenance: chemical wash every 12 months, basic service every 3–6 months. However, inverter compressors are more sensitive to low gas levels. Running an inverter unit with low refrigerant can damage the compressor more quickly than in non-inverter units. Annual gas pressure checks are especially important for inverter units over 5 years old — the RM 88 diagnostic fee (waived with repair) can prevent an RM 800+ compressor replacement.</p>
 
       <p>KL Renovator services both inverter and non-inverter units across all 20 brands. WhatsApp <strong>+60 18-298 3573</strong>. <a href="/services/repair">Repair & troubleshooting</a> | <a href="/services/basic-servicing">Basic service from RM 99</a></p>
     `,
@@ -8893,13 +8893,13 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>Komponen</th><th>Bukan Inverter</th><th>Inverter</th><th>Perbezaan</th></tr></thead>
         <tbody>
-          <tr><td>Kapasitor</td><td>RM 80-150</td><td>RM 80-150</td><td>Sama</td></tr>
-          <tr><td>PCB board</td><td>RM 150-250</td><td>RM 250-500</td><td>Inverter 50-100% lebih mahal</td></tr>
-          <tr><td>Kompresor</td><td>RM 500-900</td><td>RM 700-1,200</td><td>Inverter 30-40% lebih mahal</td></tr>
-          <tr><td>Motor kipas</td><td>RM 150-250</td><td>RM 250-300</td><td>Inverter sedikit lebih mahal</td></tr>
-          <tr><td>Penderia/thermistor</td><td>RM 50-80</td><td>RM 80-150</td><td>Inverter lebih mahal</td></tr>
-          <tr><td>Modul inverter</td><td>Tiada</td><td>RM 300-600</td><td>Komponen unik inverter</td></tr>
-          <tr><td>Reactor/filter</td><td>Tiada</td><td>RM 100-200</td><td>Komponen unik inverter</td></tr>
+          <tr><td>Kapasitor</td><td>RM 150-250</td><td>RM 150-250</td><td>Sama</td></tr>
+          <tr><td>PCB board</td><td>RM 350-600</td><td>RM 350-600</td><td>Julat sama — kerosakan inverter kerap di hujung atas julat</td></tr>
+          <tr><td>Kompresor</td><td>RM 800-2,000</td><td>RM 800-2,000</td><td>Julat sama — kompresor inverter di hujung atas</td></tr>
+          <tr><td>Motor kipas</td><td>RM 350-480</td><td>RM 350-480</td><td>Julat sama</td></tr>
+          <tr><td>Penderia/thermistor</td><td>RM 150-250</td><td>RM 150-250</td><td>Julat sama — inverter ada lebih banyak penderia</td></tr>
+          <tr><td>Modul inverter</td><td>Tiada</td><td>RM 350-600</td><td>Bahagian papan PCB inverter</td></tr>
+          <tr><td>Reactor/filter</td><td>Tiada</td><td>Termasuk dalam papan PCB</td><td>Komponen unik inverter</td></tr>
         </tbody>
       </table>
 
@@ -8928,7 +8928,7 @@ export const allPosts: BlogPost[] = [
       <h2>变频冷气 (Inverter) 维修成本</h2>
       <p>变频机的核心在于主板 (PCB)。它是机器的“大脑”，控制着压缩机的转速。主板一旦损坏，维修费较高。</p>
       <ul>
-        <li><strong>主板损坏：</strong> 通常由于雷击、电压不稳或散热不良引起。更换费 RM 350 - RM 700。</li>
+        <li><strong>主板损坏：</strong> 通常由于雷击、电压不稳或散热不良引起。更换费 RM 350 - RM 600。</li>
         <li><strong>传感器故障：</strong> 变频机有很多温控探头。更换费 RM 150 - RM 250。</li>
       </ul>
       <div class="summary-block"><strong>直接答案：</strong> 变频机维修由于零件精密，单次维修成本通常高于定频机。</div>
@@ -8936,7 +8936,7 @@ export const allPosts: BlogPost[] = [
       <h2>定频冷气 (Non-Inverter) 维修成本</h2>
       <p>定频机结构简单，只有几个核心电气部件。</p>
       <ul>
-        <li><strong>电容故障 (Capacitor)：</strong> 最常见的故障（冷气不冷只吹风）。更换费 RM 80 - RM 150。</li>
+        <li><strong>电容故障 (Capacitor)：</strong> 最常见的故障（冷气不冷只吹风）。更换费 RM 150 - RM 250。</li>
         <li><strong>启动器损坏：</strong> 价格也很低廉。</li>
       </ul>
       <div class="summary-block"><strong>直接答案：</strong> 定频机结构简单，大多数常见故障都能以较低成本快速修复。</div>
@@ -8945,9 +8945,9 @@ export const allPosts: BlogPost[] = [
       <table>
         <thead><tr><th>项目</th><th>定频机组 (Non-Inverter)</th><th>变频机组 (Inverter)</th></tr></thead>
         <tbody>
-          <tr><td><strong>常见小修 (电容等)</strong></td><td>RM 80 - 150</td><td>RM 150 - 250 (多为传感器)</td></tr>
-          <tr><td><strong>主板修理/更换</strong></td><td>RM 150 - 250</td><td><strong>RM 350 - 700</strong></td></tr>
-          <tr><td><strong>风扇马达更换</strong></td><td>RM 180 - 300</td><td>RM 250 - 450</td></tr>
+          <tr><td><strong>常见小修 (电容等)</strong></td><td>RM 150 - 250</td><td>RM 150 - 250 (同为官方区间)</td></tr>
+          <tr><td><strong>主板修理/更换</strong></td><td>RM 350 - 600</td><td><strong>RM 350 - 600</strong></td></tr>
+          <tr><td><strong>风扇马达更换</strong></td><td>RM 350 - 480</td><td>RM 350 - 480</td></tr>
           <tr><td><strong>加 Gas (R22 vs R32)</strong></td><td>RM 2.50 / PSI起</td><td>RM 3.00 / PSI起</td></tr>
         </tbody>
       </table>

@@ -142,7 +142,7 @@ const EN_FAQS: MasterFaqItem[] = [
   { category: "gas-topup", q: "How long does a gas top-up take?", a: "A gas top-up with leak check takes approximately 30–45 minutes. If a leak needs repair first (e.g., re-flaring a connection), add 15–30 minutes. We always vacuum the line before recharging to remove any air or moisture.", source: "/services/gas-topup" },
 
   // ─── REPAIR (8 questions) ───────────────────────────────────────────────────
-  { category: "repair", q: "How much does aircond repair cost?", a: "Diagnostic fee is RM 138 (waived if repair proceeds). Common repairs: capacitor replacement RM 80–150, PCB board RM 150–350, fan motor RM 180–280, thermostat sensor RM 80–120, compressor replacement RM 600–1,200. All prices confirmed before work begins.", source: "/services/repair" },
+  { category: "repair", q: "How much does aircond repair cost?", a: "Diagnostic fee is RM 88 (waived if repair proceeds). Common repairs: capacitor replacement RM 150–250, PCB board RM 350–600, fan motor RM 350–480, thermostat sensor RM 150–250, compressor replacement RM 800–2,000. All prices confirmed before work begins.", source: "/services/repair" },
   { category: "repair", q: "My aircond completely stopped working. What should I check?", a: "Before calling us, check: (1) Is the MCB/breaker tripped? (2) Does the remote have batteries? (3) Is the unit receiving power (any LED lights)? If the breaker trips repeatedly, don't reset it — there may be an electrical fault. Call us for diagnosis.", source: "/services/repair" },
   { category: "repair", q: "My aircond is freezing / forming ice. Why?", a: "Ice formation usually means: low refrigerant gas, dirty evaporator coil restricting airflow, or a faulty blower motor not circulating enough air. Running the unit with ice makes it worse. Switch off, let it thaw, and book a service — chemical wash or gas top-up usually fixes it.", source: "/services/repair" },
   { category: "repair", q: "My aircond remote control is not working. What can I do?", a: "First try replacing the batteries (AAA). If still not working, try pointing directly at the unit from 1 meter away. If the remote display works but the unit doesn't respond, the indoor unit's IR receiver may be faulty — a simple replacement part we carry on most service visits.", source: "/services/repair" },
@@ -264,7 +264,7 @@ const MS_FAQS: MasterFaqItem[] = [
   { category: "gas-topup", q: "Berapa lama tambah gas mengambil masa?", a: "Tambah gas dengan pemeriksaan kebocoran mengambil kira-kira 30–45 minit. Jika kebocoran perlu dibaiki dahulu, tambah 15–30 minit.", source: "/services/gas-topup" },
 
   // ─── PEMBAIKAN (8 soalan) ──────────────────────────────────────────────────
-  { category: "repair", q: "Berapa kos pembaikan aircond?", a: "Yuran diagnosis RM 88 (dikecualikan jika pembaikan diteruskan). Pembaikan biasa: kapasitor RM 80–150, papan PCB RM 150–350, motor kipas RM 180–280, pemampat RM 600–1,200.", source: "/services/repair" },
+  { category: "repair", q: "Berapa kos pembaikan aircond?", a: "Yuran diagnosis RM 88 (dikecualikan jika pembaikan diteruskan). Pembaikan biasa: kapasitor RM 150–250, papan PCB RM 350–600, motor kipas RM 350–480, pemampat RM 800–2,000.", source: "/services/repair" },
   { category: "repair", q: "Aircond saya berhenti sepenuhnya. Apa yang perlu diperiksa?", a: "Periksa: (1) MCB terpelantik? (2) Alat kawalan ada bateri? (3) Unit menerima kuasa (ada LED)? Jika MCB terpelantik berulang, jangan reset — mungkin ada kerosakan elektrik.", source: "/services/repair" },
   { category: "repair", q: "Aircond saya membeku. Kenapa?", a: "Pembentukan ais biasanya bermakna: gas rendah, gegelung kotor, atau motor kipas rosak. Tutup unit, biarkan cair, dan tempah servis.", source: "/services/repair" },
   { category: "repair", q: "Alat kawalan jauh tidak berfungsi. Apa yang boleh dilakukan?", a: "Cuba tukar bateri (AAA). Jika masih tidak berfungsi, penerima IR unit dalaman mungkin rosak — komponen ganti mudah yang kami bawa.", source: "/services/repair" },
@@ -386,7 +386,7 @@ const ZH_FAQS: MasterFaqItem[] = [
   { category: "gas-topup", q: "充气需要多长时间？", a: "加气含检漏约 30–45 分钟。若需先修复泄漏，加 15–30 分钟。", source: "/services/gas-topup" },
 
   // ─── 维修 (8 questions) ───────────────────────────────────────────────────
-  { category: "repair", q: "维修费用多少？", a: "诊断费 RM 88（维修则豁免）。常见维修：电容器 RM 80–150，PCB 板 RM 150–350，风扇电机 RM 180–280，压缩机 RM 600–1,200。", source: "/services/repair" },
+  { category: "repair", q: "维修费用多少？", a: "诊断费 RM 88（维修则豁免）。常见维修：电容器 RM 150–250，PCB 板 RM 350–600，风扇电机 RM 350–480，压缩机 RM 800–2,000。", source: "/services/repair" },
   { category: "repair", q: "冷气完全不工作了怎么办？", a: "检查：(1) 断路器是否跳闸？(2) 遥控器有电吗？(3) 机组有电源指示灯吗？若断路器反复跳闸，可能有电气故障。", source: "/services/repair" },
   { category: "repair", q: "冷气结冰是什么原因？", a: "结冰通常意味着：冷媒不足、蒸发器脏堵气流或风扇电机故障。关机让冰融化后预约服务。", source: "/services/repair" },
   { category: "repair", q: "遥控器不工作怎么办？", a: "先换电池（AAA）。若仍不行，室内机的红外接收器可能故障——我们携带常见替换零件。", source: "/services/repair" },

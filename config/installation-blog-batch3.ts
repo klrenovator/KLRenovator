@@ -331,7 +331,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <thead><tr><th>Mistake</th><th>Consequence</th><th>Fix Cost</th></tr></thead>
         <tbody>
           <tr><td>Bad flare connection</td><td>Refrigerant leak within weeks</td><td>RM 150-300</td></tr>
-          <tr><td>Skipped vacuum</td><td>Compressor failure in 1-2 years</td><td>RM 600-1,200</td></tr>
+          <tr><td>Skipped vacuum</td><td>Compressor failure in 1-2 years</td><td>RM 800-2,000</td></tr>
           <tr><td>Wrong wire size</td><td>Fire risk, MCB tripping</td><td>RM 300-500</td></tr>
           <tr><td>Poor drain slope</td><td>Water leaking inside home</td><td>RM 200-500</td></tr>
           <tr><td>Overcharged refrigerant</td><td>Compressor damage, high pressure</td><td>RM 400-800</td></tr>
@@ -410,7 +410,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <thead><tr><th>Kesilapan</th><th>Akibat</th><th>Kos Pembaikan</th></tr></thead>
         <tbody>
           <tr><td>Sambungan flare buruk</td><td>Kebocoran penyejuk dalam beberapa minggu</td><td>RM 150-300</td></tr>
-          <tr><td>Vakum dilangkau</td><td>Kegagalan pemampat dalam 1-2 tahun</td><td>RM 600-1,200</td></tr>
+          <tr><td>Vakum dilangkau</td><td>Kegagalan pemampat dalam 1-2 tahun</td><td>RM 800-2,000</td></tr>
           <tr><td>Saiz wayar salah</td><td>Risiko kebakaran, MCB terpelantik</td><td>RM 300-500</td></tr>
           <tr><td>Kecerunan saliran lemah</td><td>Air bocor dalam rumah</td><td>RM 200-500</td></tr>
           <tr><td>Penyejuk berlebihan</td><td>Kerosakan pemampat, tekanan tinggi</td><td>RM 400-800</td></tr>
@@ -489,7 +489,7 @@ export const installationBlogBatch3: BlogPost[] = [
         <thead><tr><th>错误</th><th>后果</th><th>修复费用</th></tr></thead>
         <tbody>
           <tr><td>扩口连接不良</td><td>几周内冷媒泄漏</td><td>RM 150-300</td></tr>
-          <tr><td>跳过真空</td><td>1-2年内压缩机故障</td><td>RM 600-1,200</td></tr>
+          <tr><td>跳过真空</td><td>1-2年内压缩机故障</td><td>RM 800-2,000</td></tr>
           <tr><td>线径错误</td><td>火灾风险、MCB跳闸</td><td>RM 300-500</td></tr>
           <tr><td>排水坡度不良</td><td>室内漏水</td><td>RM 200-500</td></tr>
           <tr><td>冷媒充注过量</td><td>压缩机损坏、高压</td><td>RM 400-800</td></tr>
