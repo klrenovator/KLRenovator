@@ -135,8 +135,7 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 - Diagnostic Fee: RM 88 (waived if repair done same visit)
 - After-Hours Diagnostic (6pm–10pm): RM 138 (includes RM 50 overtime surcharge)
 - Capacitor Replacement (most common emergency): RM 230
-- Fan Motor Replacement (indoor): RM 300–400
-- Fan Motor Replacement (outdoor): RM 300–450
+- Fan Motor Replacement: RM 350–480
 - PCB Board Replacement: RM 400–600
 - Emergency Drain Pipe Clearing: RM 170
 - Compressor Replacement: RM 850–2,000 (quoted before work)

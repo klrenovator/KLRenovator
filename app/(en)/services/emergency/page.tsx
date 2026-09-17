@@ -159,7 +159,7 @@ const faqSchema = {
       name: "How much does emergency aircond repair cost in KL?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Diagnostic fee is RM 138 (waived if repair is done on the same visit). Standard hours 9am–6pm apply normal pricing. Jobs between 6pm–10pm carry an overtime surcharge of RM 50. All prices confirmed before work begins.",
+        text: "Diagnostic fee is RM 88 during standard hours (9am–6pm), waived if the repair is done on the same visit. Jobs between 6pm–10pm carry an RM 50 overtime surcharge — RM 138 total, also waived if repaired. All prices confirmed before work begins.",
       },
     },
     {
@@ -366,9 +366,9 @@ export default function EmergencyPage() {
               <p className="text-xs font-black uppercase tracking-widest text-slate-500">Standard Hours (9am – 6pm)</p>
             </div>
             {[
-              { label: "Diagnostic Fee", price: "RM 138", note: "Waived if repair done same visit" },
+              { label: "Diagnostic Fee (Standard Hours 9am–6pm)", price: "RM 88", note: "Waived if repair done same visit" },
               { label: "Capacitor Replacement (common emergency)", price: "RM 230", note: "" },
-              { label: "Fan Motor Replacement", price: "RM 300–500", note: "" },
+              { label: "Fan Motor Replacement", price: "RM 350–480", note: "" },
               { label: "PCB Board Replacement", price: "RM 400–600", note: "" },
               { label: "Compressor Replacement", price: "RM 850–2,000", note: "Quote before work" },
               { label: "Drain Pipe Emergency Clear", price: "RM 170", note: "" },

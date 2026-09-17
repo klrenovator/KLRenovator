@@ -1021,7 +1021,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     process: [
       { step: "WhatsApp Your Emergency", desc: "Tell us your location, brand, unit count, and what happened. Photos of the unit and outdoor condenser help speed diagnosis. We reply within minutes." },
-      { step: "Get Confirmed Price", desc: "Diagnostic fee quoted upfront. Estimated repair range shared based on your description — capacitor ~RM 230, fan motor RM 300–400, PCB RM 400–600. No surprise bills." },
+      { step: "Get Confirmed Price", desc: "Diagnostic fee quoted upfront. Estimated repair range shared based on your description — capacitor ~RM 230, fan motor RM 350–480, PCB RM 400–600. No surprise bills." },
       { step: "Technician Arrives", desc: "Nearest available technician dispatched immediately from our Klang Valley network. Most arrivals in 30–60 minutes. Technician calls when nearby." },
       { step: "Diagnose & Repair", desc: "Full electrical + refrigerant diagnosis on-site. Common repairs completed same visit. Rare parts ordered overnight with priority return the next business day." },
     ],
@@ -1032,7 +1032,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "How much does emergency aircond repair cost in KL & Selangor?",
-        a: "Diagnostic fee is RM 88 during standard hours (9am–6pm), fully waived if the repair is completed on the same visit. After-hours (6pm–10pm) adds a RM 50 surcharge — so RM 138 diagnostic total, also waived if repaired. Most common emergency repairs: capacitor replacement ~RM 230, indoor fan motor ~RM 300–400, PCB board ~RM 400–600, drain clearing ~RM 170. Every repair price is confirmed with you BEFORE any work starts.",
+        a: "Diagnostic fee is RM 88 during standard hours (9am–6pm), fully waived if the repair is completed on the same visit. After-hours (6pm–10pm) adds a RM 50 surcharge — so RM 138 diagnostic total, also waived if repaired. Most common emergency repairs: capacitor replacement ~RM 230, fan motor ~RM 350–480, PCB board ~RM 400–600, drain clearing ~RM 170. Every repair price is confirmed with you BEFORE any work starts.",
       },
       {
         q: "What qualifies as a genuine aircond emergency?",
@@ -1059,7 +1059,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Berapa caj pembaikan aircond kecemasan di KL & Selangor?",
-        a: "Caj diagnostik RM 88 untuk waktu standard (9am–6pm), dikecualikan sepenuhnya jika pembaikan diselesaikan pada lawatan yang sama. Waktu luar (6pm–10pm) dikenakan surcaj RM 50 — jadi jumlah RM 138, juga dikecualikan jika dibaiki. Pembaikan kecemasan paling biasa: penggantian kapasitor ~RM 230, motor kipas dalaman ~RM 300–400, papan PCB ~RM 400–600, pembersihan longkang ~RM 170. Setiap harga pembaikan disahkan dengan anda SEBELUM sebarang kerja dimulakan.",
+        a: "Caj diagnostik RM 88 untuk waktu standard (9am–6pm), dikecualikan sepenuhnya jika pembaikan diselesaikan pada lawatan yang sama. Waktu luar (6pm–10pm) dikenakan surcaj RM 50 — jadi jumlah RM 138, juga dikecualikan jika dibaiki. Pembaikan kecemasan paling biasa: penggantian kapasitor ~RM 230, motor kipas ~RM 350–480, papan PCB ~RM 400–600, pembersihan longkang ~RM 170. Setiap harga pembaikan disahkan dengan anda SEBELUM sebarang kerja dimulakan.",
       },
       {
         q: "Apakah yang dikira sebagai kecemasan aircond sebenar?",
@@ -1086,7 +1086,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "吉隆坡和雪兰莠紧急冷气维修费用是多少？",
-        a: "标准时间（上午9点至下卡6点）诊断费RM 88，如果同次上门完成维修则全免。非工作时间（下卡6点至晚上10点）加收RM 50——合计RM 138，如果维修也一样免除。最常见紧急维修：电容更换约RM 230，室内风扇电机约RM 300-400，PCB电路板约RM 400-600，排水管疏通约RM 170。每项维修价格在开始任何工作之前与您确认。",
+        a: "标准时间（上午9点至下卡6点）诊断费RM 88，如果同次上门完成维修则全免。非工作时间（下卡6点至晚上10点）加收RM 50——合计RM 138，如果维修也一样免除。最常见紧急维修：电容更换约RM 230，风扇电机约RM 350-480，PCB电路板约RM 400-600，排水管疏通约RM 170。每项维修价格在开始任何工作之前与您确认。",
       },
       {
         q: "什么情况算真正的冷气紧急情况？",
@@ -1111,8 +1111,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Diagnostic Fee (waived if repaired same visit)", price: "FREE" },
       { label: "After-Hours Surcharge (6pm–10pm)", price: "RM 50" },
       { label: "Capacitor Replacement (most common emergency)", price: "RM 230" },
-      { label: "Fan Motor Replacement (indoor)", price: "RM 300–400" },
-      { label: "Fan Motor Replacement (outdoor)", price: "RM 300–450" },
+      { label: "Fan Motor Replacement", price: "RM 350–480" },
       { label: "PCB Board Replacement", price: "RM 400–600" },
       { label: "Emergency Drain Pipe Clearing", price: "RM 170" },
       { label: "Compressor Replacement (quoted before work)", price: "RM 850–2,000" },
