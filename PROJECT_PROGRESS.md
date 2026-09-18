@@ -71,3 +71,20 @@ Phase 2 (owner-approved scope):
 ## Phase 10 — Final QA 🟢 (Phase 1 + Phase 2)
 
 lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · robots ✓ · canonicals/hreflang sampled ✓ · schema valid JSON-LD ✓ · no URL changes · no deletions · no design changes · pricing preserved
+
+### Continuation audit — 17 September 2026 🟢
+
+- Fresh repository inspection completed; no untracked TODOs/placeholders or pending SEO implementation was found.
+- QA rerun after installing the lockfile dependencies: lint ✓ · typecheck ✓ · route contracts ✓ · sanitizer corpus (303 blog bodies) ✓.
+- Production build ✓: 2,215 static pages generated; build verification ✓ (2,208 sitemap URLs, all resolve; 2,214 HTML pages; 2,213 H1s).
+- GSC readiness audit ✓: 0 titles over 60 characters, 0 missing/short/long descriptions, no indexing-blocking errors.
+- Existing pages, URLs, UI/branding, features, and prices were left unchanged; no SEO/content changes were necessary in this continuation pass.
+- Security dependency pass completed: Next.js updated to 16.3.5 and the sharp override to 0.35.4; `npm audit` now reports 0 vulnerabilities. No `--force` upgrade was used.
+- Post-update QA passed: lint ✓ · typecheck ✓ · route contracts ✓ · sanitizer ✓ · production build (2,215 pages) ✓ · build verification ✓ · GSC readiness audit ✓. Sitemap count remains 2,208, titles/descriptions remain clean, and no UI/branding/URL/price/content changes were made.
+- Safe dependency refresh completed within existing version ranges; an explicit `tailwind-merge` dependency was added because the refreshed `tailwind-variants` build requires it. A first build caught this missing peer requirement; it was corrected without changing application code.
+- Post-refresh QA passed again: lint ✓ · typecheck ✓ · route contracts ✓ · sanitizer ✓ · npm audit (0 vulnerabilities) ✓ · production build (2,215 pages) ✓. No UI/branding/URL/price/content changes were made.
+- Major-version upgrades (for example ESLint 10, TypeScript 7, Tailwind 4.3, Google APIs 20, Framer Motion 13) remain intentionally held for a separate compatibility project; they are not security blockers and will not be changed without dedicated regression testing.
+- Final diff/runtime review completed: working-tree changes are limited to `package.json`, `package-lock.json`, and this progress log; no `.github/workflows` file was changed. Production server smoke-tested `/`, `/pricing`, `/services`, `/ms`, `/zh`, `/sitemap.xml`, and `/robots.txt` — all returned HTTP 200.
+- Major dependency pass continued: Google Calendar client updated to 20.0.0; Tailwind/PostCSS ecosystem and compatible React/Supabase/type tooling updates remain build- and SEO-clean. Full QA after this batch: lint ✓ · typecheck ✓ · route contracts ✓ · sanitizer ✓ · build 2,215 pages ✓ · verify:build ✓ · GSC audit ✓ · npm audit (0 vulnerabilities) ✓.
+- ESLint 10 remains held because the current eslint-plugin-import release declares support only through ESLint 9; TypeScript 7, HeroUI 3.2, Framer Motion 13, and Node type 26 remain separate compatibility migrations rather than being forced into a potentially breaking install. No `--force` or `--legacy-peer-deps` was used.
+- Weekly SEO workflow activation intentionally deferred per owner instruction.
