@@ -443,6 +443,7 @@ export const PROBLEM_BRAND_MAP: Record<string, string[]> = (() => {
 // ── BLOG → SERVICE MAP ────────────────────────────────────────────────────────
 // Which services to link from each blog post
 export const BLOG_SERVICE_MAP: Record<string, string[]> = {
+  "aircond-dry-mode-vs-cool-mode-malaysia": ["basic-servicing", "chemical-wash", "repair"],
   "aircond-service-batu-caves-selayang-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
   "aircond-chemical-wash-price-malaysia-2026": ["chemical-wash", "chemical-overhaul", "basic-servicing"],
   "signs-your-aircon-needs-chemical-overhaul-malaysia": ["chemical-overhaul", "chemical-wash", "repair"],
