@@ -16,6 +16,7 @@ import { newBlogBatch11 } from "./new-blog-batch11";
 import { newBlogBatch12 } from "./new-blog-batch12";
 import { newBlogBatch13 } from "./new-blog-batch13";
 import { newBlogBatch14 } from "./new-blog-batch14";
+import { newBlogBatch15 } from "./new-blog-batch15";
 import { reviewCountLabel, reviewCount, reviewRatingLabel } from "./reviews";
 
 export type BlogFaq = {
@@ -9702,7 +9703,7 @@ export const allPosts: BlogPost[] = [
   // ─── New multilingual SEO blogs (Batch 4): additions only, no replacements ──
   ...newBlogBatch4,
 
-  // ─── New multilingual SEO blogs (Batch 5–14): additions only, no replacements ──
+  // ─── New multilingual SEO blogs (Batch 5–15): additions only, no replacements ──
   ...newBlogBatch5,
   ...newBlogBatch6,
   ...newBlogBatch7,
@@ -9713,6 +9714,7 @@ export const allPosts: BlogPost[] = [
   ...newBlogBatch12,
   ...newBlogBatch13,
   ...newBlogBatch14,
+  ...newBlogBatch15,
 
 ];
 
