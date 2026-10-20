@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "START_PRICE_MISMATCH",
+    "service_slug": "chemical-wash",
+    "canonical_value": "RM 120",
+    "conflicting_value": "RM 2.50 / PSI",
+    "canonical_file": "config/site/pricing.ts (min of group)",
+    "conflicting_file": "config/services-data.ts (startPrice)"
+  },
+  {
+    "kind": "START_PRICE_MISMATCH",
+    "service_slug": "repair",
+    "canonical_value": "RM 88",
+    "conflicting_value": "RM 138",
+    "canonical_file": "config/site/pricing.ts (min of group)",
+    "conflicting_file": "config/services-data.ts (startPrice)"
+  }
+]

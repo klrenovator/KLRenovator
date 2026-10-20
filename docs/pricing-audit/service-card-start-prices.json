@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "startPrice": 199,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "startPrice": 88,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing / Routine Maintenance",
+    "startPrice": 99,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "startPrice": 120,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "chemical-overhaul",
+    "title": "Chemical Overhaul (Wall-Mounted Aircon only)",
+    "startPrice": 420,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "gas-topup",
+    "title": "Gas Top-Up / Precision Balancing",
+    "startPrice": 2.5,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "startPrice": 88,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "dismantling-relocation",
+    "title": "Dismantle & Relocation",
+    "startPrice": 90,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Solutions",
+    "startPrice": 150,
+    "source_file": "config/site/services.ts"
+  },
+  {
+    "slug": "maintenance-contract",
+    "title": "Maintenance Contract (AMC)",
+    "startPrice": 299,
+    "source_file": "config/site/services.ts"
+  }
+]

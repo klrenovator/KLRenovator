@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-10-20T02:45:53.378Z",
+  "commit": null,
+  "totals": {
+    "canonical_price_rules": 65,
+    "service_detail_price_rows": 66,
+    "service_card_start_prices": 10,
+    "rm_references_total": 10284,
+    "files_with_price_references": 151,
+    "blogs_total": 102,
+    "blogs_with_prices": 98,
+    "faq_pool": {
+      "en": 95,
+      "ms": 95,
+      "zh": 95,
+      "withPrice": {
+        "en": 18,
+        "ms": 16,
+        "zh": 16
+      }
+    },
+    "calculator_price_dependencies": 4,
+    "conflicts": 2,
+    "unmapped_parallel_rules": 4,
+    "review_candidates": 403,
+    "calculator_ui_hardcoded_prices": 94
+  },
+  "content_type_breakdown": [
+    {
+      "type": "Area page content",
+      "count": 2782
+    },
+    {
+      "type": "Blog registry / metadata",
+      "count": 1989
+    },
+    {
+      "type": "Content config",
+      "count": 1616
+    },
+    {
+      "type": "Blog content",
+      "count": 1388
+    },
+    {
+      "type": "Page content",
+      "count": 1143
+    },
+    {
+      "type": "Brand page content",
+      "count": 470
+    },
+    {
+      "type": "FAQ content",
+      "count": 251
+    },
+    {
+      "type": "UI component",
+      "count": 148
+    },
+    {
+      "type": "AI / machine-readable file",
+      "count": 144
+    },
+    {
+      "type": "Calculator logic",
+      "count": 111
+    },
+    {
+      "type": "Generated (site-public)",
+      "count": 70
+    },
+    {
+      "type": "Canonical price table",
+      "count": 65
+    },
+    {
+      "type": "Problem page content",
+      "count": 60
+    },
+    {
+      "type": "Other",
+      "count": 21
+    },
+    {
+      "type": "Library / helper",
+      "count": 13
+    },
+    {
+      "type": "Site config",
+      "count": 8
+    },
+    {
+      "type": "Generated (homepage JSON)",
+      "count": 5
+    }
+  ]
+}

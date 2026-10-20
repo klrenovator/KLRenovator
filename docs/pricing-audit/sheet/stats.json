@@ -1,0 +1,21 @@
+{
+  "master_rows": 75,
+  "location_rows": 272,
+  "change_log_rows": 1,
+  "sync_rows": 75,
+  "audit_rows": 177,
+  "blogs": 102,
+  "faqs_master_pool": 53,
+  "faqs_blog": 13,
+  "faqs_service": 9,
+  "needs_confirmation": [
+    "SERV-007",
+    "SERV-008",
+    "GAS-005",
+    "EMG-001",
+    "SUR-001",
+    "SUR-002",
+    "DIS-005",
+    "AMC-004"
+  ]
+}

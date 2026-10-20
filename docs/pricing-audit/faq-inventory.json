@@ -1,0 +1,68 @@
+{
+  "pool": {
+    "en": 95,
+    "ms": 95,
+    "zh": 95,
+    "withPrice": {
+      "en": 18,
+      "ms": 16,
+      "zh": 16
+    }
+  },
+  "services": {
+    "chemical-wash": {
+      "en": 7,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 9
+    },
+    "chemical-overhaul": {
+      "en": 8,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 6
+    },
+    "gas-topup": {
+      "en": 7,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 7
+    },
+    "repair": {
+      "en": 7,
+      "ms": 8,
+      "zh": 7,
+      "with_price": 7
+    },
+    "installation": {
+      "en": 8,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 6
+    },
+    "basic-servicing": {
+      "en": 7,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 8
+    },
+    "ceiling-cassette": {
+      "en": 7,
+      "ms": 6,
+      "zh": 8,
+      "with_price": 9
+    },
+    "dismantling-relocation": {
+      "en": 7,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 8
+    },
+    "emergency": {
+      "en": 7,
+      "ms": 7,
+      "zh": 7,
+      "with_price": 6
+    }
+  }
+}

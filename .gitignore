@@ -44,3 +44,7 @@ bun.lockb
 # Original image backups (pre-optimization)
 /public/hero_originals/
 /public/logo_originals/
+
+# generated pricing-audit artefacts (regenerate with scripts/pricing-audit.mjs)
+docs/pricing-audit/price-references.json
+docs/pricing-audit/price-review-candidates.json

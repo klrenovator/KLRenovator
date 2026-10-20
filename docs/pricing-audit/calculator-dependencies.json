@@ -1,0 +1,22 @@
+[
+  {
+    "group": "installation",
+    "label_match": [],
+    "hardcoded_fallback": null
+  },
+  {
+    "group": "materials",
+    "label_match": [],
+    "hardcoded_fallback": null
+  },
+  {
+    "group": "repair",
+    "label_match": [],
+    "hardcoded_fallback": null
+  },
+  {
+    "group": "gasTopup",
+    "label_match": [],
+    "hardcoded_fallback": null
+  }
+]

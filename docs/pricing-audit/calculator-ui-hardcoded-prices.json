@@ -1,0 +1,566 @@
+[
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 67,
+    "text": "RM 0.509",
+    "snippet": "rateHint: \"TNB domestic average ≈ RM 0.509/kWh — edit to match your bill\","
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 74,
+    "text": "RM 120",
+    "snippet": "tip: \"💡 Tip: a dirty coil makes your aircond run longer and use more electricity. A pressure chemical wash (from RM 120) restores efficiency — and upgrading to"
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 77,
+    "text": "RM 100–180",
+    "snippet": "note: \"Estimate uses typical rated power draw per HP (e.g. 1.0 HP ≈ 0.9 kW, 1.5 HP ≈ 1.2 kW, 2.0 HP ≈ 1.7 kW). Actual consumption depends on your model, age, th"
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 90,
+    "text": "RM 0.509",
+    "snippet": "rateHint: \"Purata domestik TNB ≈ RM 0.509/kWh — sunting mengikut bil anda\","
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 97,
+    "text": "RM 120",
+    "snippet": "tip: \"💡 Tip: gegelung kotor membuat aircond anda berjalan lebih lama dan menggunakan lebih elektrik. Cuci kimia tekanan (dari RM 120) memulihkan kecekapan — da"
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 100,
+    "text": "RM 100–180",
+    "snippet": "note: \"Anggaran menggunakan kuasa kadar biasa per HP (cth. 1.0 HP ≈ 0.9 kW, 1.5 HP ≈ 1.2 kW, 2.0 HP ≈ 1.7 kW). Penggunaan sebenar bergantung pada model, usia, t"
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 113,
+    "text": "RM 0.509",
+    "snippet": "rateHint: \"TNB家庭平均≈RM 0.509/千瓦时 — 按您的账单修改\","
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 120,
+    "text": "RM 120",
+    "snippet": "tip: \"💡 提示：盘管脏污会让冷气运行更久、用电更多。压力化学清洗（从RM 120起）可恢复效率 — 升级为变频机型通常可节省约35%的制冷用电。\","
+  },
+  {
+    "file": "components/calculators/electricity-calculator.tsx",
+    "line": 123,
+    "text": "RM 100–180",
+    "snippet": "note: \"估算使用各匹数的典型额定功率（例如1.0匹≈0.9千瓦、1.5匹≈1.2千瓦、2.0匹≈1.7千瓦）。实际耗电取决于型号、机龄、恒温器设置、房间大小和保养状况。最准确的方法是查看机器铭牌上的功率或您的国能账单。1.0–1.5匹每天运行8小时通常每月增加RM 100–180。\","
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 33,
+    "text": "RM 2.50",
+    "snippet": "{ value: \"r22\", label: \"R22 — RM 2.50/PSI (older units)\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 34,
+    "text": "RM 3.00",
+    "snippet": "{ value: \"r410a\", label: \"R410A — RM 3.00/PSI (standard)\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 35,
+    "text": "RM 3.00",
+    "snippet": "{ value: \"r32\", label: \"R32 — RM 3.00/PSI (newer inverter)\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 38,
+    "text": "RM 2.50",
+    "snippet": "{ value: \"r22\", label: \"R22 — RM 2.50/PSI (unit lama)\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 39,
+    "text": "RM 3.00",
+    "snippet": "{ value: \"r410a\", label: \"R410A — RM 3.00/PSI (standard)\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 40,
+    "text": "RM 3.00",
+    "snippet": "{ value: \"r32\", label: \"R32 — RM 3.00/PSI (inverter baharu)\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 43,
+    "text": "RM 2.50",
+    "snippet": "{ value: \"r22\", label: \"R22 — 每PSI RM 2.50（旧机型）\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 44,
+    "text": "RM 3.00",
+    "snippet": "{ value: \"r410a\", label: \"R410A — 每PSI RM 3.00（标准机型）\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 45,
+    "text": "RM 3.00",
+    "snippet": "{ value: \"r32\", label: \"R32 — 每PSI RM 3.00（新型变频）\" },"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 108,
+    "text": "RM 2.50",
+    "snippet": "note: \"Published rates: R22 at RM 2.50/PSI, R410A and R32 at RM 3.00/PSI. The estimate assumes a typical PSI shortfall for your HP size; the exact PSI is measur"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 108,
+    "text": "RM 3.00",
+    "snippet": "note: \"Published rates: R22 at RM 2.50/PSI, R410A and R32 at RM 3.00/PSI. The estimate assumes a typical PSI shortfall for your HP size; the exact PSI is measur"
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 129,
+    "text": "RM 2.50",
+    "snippet": "note: \"Kadar diterbitkan: R22 pada RM 2.50/PSI, R410A dan R32 pada RM 3.00/PSI. Anggaran mengandaikan kekurangan PSI biasa untuk saiz HP anda; PSI tepat diukur "
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 129,
+    "text": "RM 3.00",
+    "snippet": "note: \"Kadar diterbitkan: R22 pada RM 2.50/PSI, R410A dan R32 pada RM 3.00/PSI. Anggaran mengandaikan kekurangan PSI biasa untuk saiz HP anda; PSI tepat diukur "
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 150,
+    "text": "RM 2.50",
+    "snippet": "note: \"已公布费率：R22每PSI RM 2.50，R410A和R32每PSI RM 3.00。估算假设您的匹数存在典型PSI缺口；实际PSI在检查时用压力表测量。每次加气都附带检漏 — 冷媒不会自行\\\"用完\\\"，如果不足，就是泄漏了。\","
+  },
+  {
+    "file": "components/calculators/gas-topup-calculator.tsx",
+    "line": 150,
+    "text": "RM 3.00",
+    "snippet": "note: \"已公布费率：R22每PSI RM 2.50，R410A和R32每PSI RM 3.00。估算假设您的匹数存在典型PSI缺口；实际PSI在检查时用压力表测量。每次加气都附带检漏 — 冷媒不会自行\\\"用完\\\"，如果不足，就是泄漏了。\","
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 143,
+    "text": "RM 17–27",
+    "snippet": "note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 143,
+    "text": "RM 9",
+    "snippet": "note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 143,
+    "text": "RM 7",
+    "snippet": "note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 143,
+    "text": "RM 6",
+    "snippet": "note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 143,
+    "text": "RM 12",
+    "snippet": "note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 143,
+    "text": "RM 45–70",
+    "snippet": "note: `Standard installation includes the first ${FREE_RUN_FEET} ft of copper pipe, insulation, electrical wire and drain pipe free. Extra copper is RM 17–27/ft"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 188,
+    "text": "RM 17–27",
+    "snippet": "note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 188,
+    "text": "RM 9",
+    "snippet": "note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 188,
+    "text": "RM 7",
+    "snippet": "note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 188,
+    "text": "RM 6",
+    "snippet": "note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 188,
+    "text": "RM 12",
+    "snippet": "note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 188,
+    "text": "RM 45–70",
+    "snippet": "note: `Pemasangan standard termasuk ${FREE_RUN_FEET} kaki pertama paip tembaga, penebat, wayar elektrik dan paip saliran percuma. Paip tembaga tambahan RM 17–27"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 233,
+    "text": "RM 17–27",
+    "snippet": "note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 233,
+    "text": "RM 9",
+    "snippet": "note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 233,
+    "text": "RM 7",
+    "snippet": "note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 233,
+    "text": "RM 6",
+    "snippet": "note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 233,
+    "text": "RM 12",
+    "snippet": "note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 233,
+    "text": "RM 45–70",
+    "snippet": "note: `标准安装包含前${FREE_RUN_FEET}英尺铜管、保温层、电线和排水管。额外铜管按HP每英尺RM 17–27，电线每英尺RM 9，保温层每英尺RM 7，排水管每英尺RM ${DRAIN_PIPE_RATE}。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 366,
+    "text": "RM 6",
+    "snippet": "<NumberField label={s.smallPvc} value={smallPvcFeet} onChange={(v) => { setSmallPvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={10"
+  },
+  {
+    "file": "components/calculators/installation-cost-calculator.tsx",
+    "line": 367,
+    "text": "RM 12",
+    "snippet": "<NumberField label={s.largePvc} value={largePvcFeet} onChange={(v) => { setLargePvcFeet(Math.max(0, Math.min(100, v))); setShowResult(false); }} min={0} max={10"
+  },
+  {
+    "file": "components/calculators/savings-calculator.tsx",
+    "line": 71,
+    "text": "RM 0.509",
+    "snippet": "rateHint: \"TNB domestic average ≈ RM 0.509/kWh\","
+  },
+  {
+    "file": "components/calculators/savings-calculator.tsx",
+    "line": 79,
+    "text": "RM 12",
+    "snippet": "yearlySub: \"RM 12 × monthly\","
+  },
+  {
+    "file": "components/calculators/savings-calculator.tsx",
+    "line": 101,
+    "text": "RM 0.509",
+    "snippet": "rateHint: \"Purata domestik TNB ≈ RM 0.509/kWh\","
+  },
+  {
+    "file": "components/calculators/savings-calculator.tsx",
+    "line": 109,
+    "text": "RM 12",
+    "snippet": "yearlySub: \"RM 12 × bulanan\","
+  },
+  {
+    "file": "components/calculators/savings-calculator.tsx",
+    "line": 131,
+    "text": "RM 0.509",
+    "snippet": "rateHint: \"TNB家庭平均≈RM 0.509/千瓦时\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 76,
+    "text": "RM 99,",
+    "snippet": "linkCard1Desc: \"Basic service RM 99, chemical wash RM 120, Chemical Overhaul (Wall-Mounted only) from RM 420, gas RM 2.50/PSI. Full published price list.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 76,
+    "text": "RM 120,",
+    "snippet": "linkCard1Desc: \"Basic service RM 99, chemical wash RM 120, Chemical Overhaul (Wall-Mounted only) from RM 420, gas RM 2.50/PSI. Full published price list.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 76,
+    "text": "RM 420,",
+    "snippet": "linkCard1Desc: \"Basic service RM 99, chemical wash RM 120, Chemical Overhaul (Wall-Mounted only) from RM 420, gas RM 2.50/PSI. Full published price list.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 76,
+    "text": "RM 2.50",
+    "snippet": "linkCard1Desc: \"Basic service RM 99, chemical wash RM 120, Chemical Overhaul (Wall-Mounted only) from RM 420, gas RM 2.50/PSI. Full published price list.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 78,
+    "text": "RM 199",
+    "snippet": "linkCard2Desc: \"Installation from RM 199 — full materials breakdown: copper pipe, wire, casing & warranty.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 91,
+    "text": "RM 99,",
+    "snippet": "linkCard1Desc: \"Servis asas RM 99, cuci kimia RM 120, Overhaul (Unit Dinding Sahaja) dari RM 420, gas RM 2.50/PSI. Senarai harga penuh yang diterbitkan.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 91,
+    "text": "RM 120,",
+    "snippet": "linkCard1Desc: \"Servis asas RM 99, cuci kimia RM 120, Overhaul (Unit Dinding Sahaja) dari RM 420, gas RM 2.50/PSI. Senarai harga penuh yang diterbitkan.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 91,
+    "text": "RM 420,",
+    "snippet": "linkCard1Desc: \"Servis asas RM 99, cuci kimia RM 120, Overhaul (Unit Dinding Sahaja) dari RM 420, gas RM 2.50/PSI. Senarai harga penuh yang diterbitkan.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 91,
+    "text": "RM 2.50",
+    "snippet": "linkCard1Desc: \"Servis asas RM 99, cuci kimia RM 120, Overhaul (Unit Dinding Sahaja) dari RM 420, gas RM 2.50/PSI. Senarai harga penuh yang diterbitkan.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 93,
+    "text": "RM 199",
+    "snippet": "linkCard2Desc: \"Pemasangan dari RM 199 — pecahan bahan penuh: paip tembaga, wayar, pendakap, casing & waranti.\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 106,
+    "text": "RM 99",
+    "snippet": "linkCard1Desc: \"基本保养RM 99、化学清洗RM 120、化学大修（仅限挂壁式）起价 RM 420、气体每PSI RM 2.50。完整已公布价目表。\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 106,
+    "text": "RM 120",
+    "snippet": "linkCard1Desc: \"基本保养RM 99、化学清洗RM 120、化学大修（仅限挂壁式）起价 RM 420、气体每PSI RM 2.50。完整已公布价目表。\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 106,
+    "text": "RM 420",
+    "snippet": "linkCard1Desc: \"基本保养RM 99、化学清洗RM 120、化学大修（仅限挂壁式）起价 RM 420、气体每PSI RM 2.50。完整已公布价目表。\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 106,
+    "text": "RM 2.50",
+    "snippet": "linkCard1Desc: \"基本保养RM 99、化学清洗RM 120、化学大修（仅限挂壁式）起价 RM 420、气体每PSI RM 2.50。完整已公布价目表。\","
+  },
+  {
+    "file": "components/calculators/tool-page-layout.tsx",
+    "line": 108,
+    "text": "RM 199",
+    "snippet": "linkCard2Desc: \"安装从RM 199起 — 完整材料明细：铜管、电线、支架、线槽与保修。\","
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 41,
+    "text": "RM 199–449",
+    "snippet": "\"Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installatio"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 41,
+    "text": "RM 17–27",
+    "snippet": "\"Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installatio"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 41,
+    "text": "RM 9",
+    "snippet": "\"Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installatio"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 41,
+    "text": "RM 2.50",
+    "snippet": "\"Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installatio"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 41,
+    "text": "RM 3.00",
+    "snippet": "\"Every calculator uses KL Renovator's official published price list — the same figures shown on the service price page and installation price guide. Installatio"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 62,
+    "text": "RM 199–449",
+    "snippet": "\"Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 62,
+    "text": "RM 17–27",
+    "snippet": "\"Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 62,
+    "text": "RM 9",
+    "snippet": "\"Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 62,
+    "text": "RM 2.50",
+    "snippet": "\"Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 62,
+    "text": "RM 3.00",
+    "snippet": "\"Setiap kalkulator menggunakan senarai harga rasmi KL Renovator yang diterbitkan — angka yang sama pada halaman harga servis dan panduan harga pemasangan. Buruh"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 83,
+    "text": "RM 199–449",
+    "snippet": "\"每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 83,
+    "text": "RM 17–27",
+    "snippet": "\"每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 83,
+    "text": "RM 9",
+    "snippet": "\"每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 83,
+    "text": "RM 2.50",
+    "snippet": "\"每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 83,
+    "text": "RM 3.00",
+    "snippet": "\"每个计算器都使用KL Renovator官方已公布的价目表 — 与服务价格页和安装价格指南上的数字一致。安装人工按匹数（RM 199–449）、铜管每英尺RM 17–27、电线每英尺RM 9、R22气体每PSI RM 2.50、R410A/R32每PSI RM 3.00。凡是依赖现场检查的数字 — 精确气体PSI、排"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 99",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 120",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 420",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 2.50",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 99",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 120",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 420",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 2.50",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 99",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 120",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 420",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 201,
+    "text": "RM 2.50",
+    "snippet": "{lang === \"ms\" ? \"Asas RM 99 · Cuci kimia RM 120 · Overhaul (dinding sahaja) dari RM 420 · Gas RM 2.50/PSI.\" : lang === \"zh\" ? \"基本RM 99 · 化学清洗RM 120 · 大修（仅挂壁式）起"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 209,
+    "text": "RM 199",
+    "snippet": "{lang === \"ms\" ? \"Pemasangan dari RM 199 dengan pecahan bahan penuh.\" : lang === \"zh\" ? \"安装从RM 199起，含完整材料明细和保修条款。\" : \"Installation from RM 199 with full materia"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 209,
+    "text": "RM 199",
+    "snippet": "{lang === \"ms\" ? \"Pemasangan dari RM 199 dengan pecahan bahan penuh.\" : lang === \"zh\" ? \"安装从RM 199起，含完整材料明细和保修条款。\" : \"Installation from RM 199 with full materia"
+  },
+  {
+    "file": "components/calculators/tools-hub.tsx",
+    "line": 209,
+    "text": "RM 199",
+    "snippet": "{lang === \"ms\" ? \"Pemasangan dari RM 199 dengan pecahan bahan penuh.\" : lang === \"zh\" ? \"安装从RM 199起，含完整材料明细和保修条款。\" : \"Installation from RM 199 with full materia"
+  }
+]

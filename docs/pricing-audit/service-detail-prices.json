@@ -1,0 +1,596 @@
+[
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Wall-Mounted · 1.0 – 1.5 HP",
+    "price": "RM 120",
+    "row_index": 0,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Wall-Mounted · 2.0 – 2.5 HP",
+    "price": "RM 150",
+    "row_index": 1,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Wall-Mounted · 3.0 HP",
+    "price": "RM 180",
+    "row_index": 2,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Wall-Mounted · 4.0 – 5.0 HP",
+    "price": "RM 200",
+    "row_index": 3,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Ceiling Cassette · 1.0 – 1.5 HP",
+    "price": "RM 220",
+    "row_index": 4,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Ceiling Cassette · 2.0 – 3.0 HP",
+    "price": "RM 280",
+    "row_index": 5,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Ceiling Cassette · 4.0 – 5.0 HP",
+    "price": "RM 350",
+    "row_index": 6,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Window Unit · 1.0 – 2.0 HP",
+    "price": "RM 130",
+    "row_index": 7,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-wash",
+    "title": "Pressure Chemical Wash",
+    "label": "Window Unit · 2.5 – 3.0 HP",
+    "price": "RM 160",
+    "row_index": 8,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-overhaul",
+    "title": "Chemical Overhaul (Wall-Mounted Aircon only)",
+    "label": "Wall-Mounted · 1.0 – 1.5 HP",
+    "price": "RM 420",
+    "row_index": 0,
+    "startPrice": "RM 420",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-overhaul",
+    "title": "Chemical Overhaul (Wall-Mounted Aircon only)",
+    "label": "Wall-Mounted · 2.0 – 2.5 HP",
+    "price": "RM 490",
+    "row_index": 1,
+    "startPrice": "RM 420",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "chemical-overhaul",
+    "title": "Chemical Overhaul (Wall-Mounted Aircon only)",
+    "label": "Wall-Mounted · 3.0 – 3.5 HP",
+    "price": "RM 560",
+    "row_index": 2,
+    "startPrice": "RM 420",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "gas-topup",
+    "title": "Gas Top-Up / Precision Balancing",
+    "label": "R22 Gas Refill",
+    "price": "RM 2.50 / PSI",
+    "row_index": 0,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "gas-topup",
+    "title": "Gas Top-Up / Precision Balancing",
+    "label": "R410A Gas Refill",
+    "price": "RM 3.00 / PSI",
+    "row_index": 1,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "gas-topup",
+    "title": "Gas Top-Up / Precision Balancing",
+    "label": "R32 Gas Refill",
+    "price": "RM 3.00 / PSI",
+    "row_index": 2,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "gas-topup",
+    "title": "Gas Top-Up / Precision Balancing",
+    "label": "Gas Leak Repair",
+    "price": "RM 120 / leak",
+    "row_index": 3,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "gas-topup",
+    "title": "Gas Top-Up / Precision Balancing",
+    "label": "Structural Leak Check",
+    "price": "RM 88",
+    "row_index": 4,
+    "startPrice": "RM 2.50 / PSI",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Diagnostic Fee (waived with repair)",
+    "price": "RM 88",
+    "row_index": 0,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Capacitor Replacement",
+    "price": "RM 150 – 250",
+    "row_index": 1,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Fan Motor Replacement",
+    "price": "RM 350 – 480",
+    "row_index": 2,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "PCB Board Replacement",
+    "price": "RM 350 – 600",
+    "row_index": 3,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Gas Leak Repair",
+    "price": "RM 120 / leak",
+    "row_index": 4,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Temperature Sensor Replacement",
+    "price": "RM 150 – 250",
+    "row_index": 5,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Contactor Replacement",
+    "price": "RM 150 – 200",
+    "row_index": 6,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Drain Pump Replacement",
+    "price": "RM 350 – 550",
+    "row_index": 7,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "repair",
+    "title": "Troubleshooting & Repairs",
+    "label": "Compressor Replacement",
+    "price": "RM 800 – 2,000",
+    "row_index": 8,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Wall-Mounted · 1.0 – 1.5 HP",
+    "price": "RM 199",
+    "row_index": 0,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Wall-Mounted · 2.0 HP",
+    "price": "RM 249",
+    "row_index": 1,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Wall-Mounted · 2.5 HP",
+    "price": "RM 279",
+    "row_index": 2,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Wall-Mounted · 3.0 HP",
+    "price": "RM 329",
+    "row_index": 3,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Wall-Mounted · 4.0 HP",
+    "price": "RM 399",
+    "row_index": 4,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Wall-Mounted · 5.0 HP",
+    "price": "RM 449",
+    "row_index": 5,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Ceiling Cassette · 1.0 – 1.5 HP",
+    "price": "RM 290",
+    "row_index": 6,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Ceiling Cassette · 2.0 – 3.0 HP",
+    "price": "RM 350",
+    "row_index": 7,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Ceiling Cassette · 3.5 – 6.0 HP",
+    "price": "RM 400",
+    "row_index": 8,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Window Unit · 1.0 – 1.5 HP",
+    "price": "RM 199",
+    "row_index": 9,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "installation",
+    "title": "New Unit Installation",
+    "label": "Window Unit · 2.0 – 2.5 HP",
+    "price": "RM 249",
+    "row_index": 10,
+    "startPrice": "RM 199",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Wall-Mounted · 1.0 – 1.5 HP",
+    "price": "RM 99",
+    "row_index": 0,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Wall-Mounted · 2.0 – 2.5 HP",
+    "price": "RM 120",
+    "row_index": 1,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Wall-Mounted · 3.0 – 3.5 HP",
+    "price": "RM 150",
+    "row_index": 2,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Ceiling Cassette · 1.0 – 1.5 HP",
+    "price": "RM 150",
+    "row_index": 3,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Ceiling Cassette · 2.0 – 3.0 HP",
+    "price": "RM 200",
+    "row_index": 4,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Ceiling Cassette · 3.5 – 5.0 HP",
+    "price": "RM 250",
+    "row_index": 5,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Window Unit · 1.0 – 1.5 HP",
+    "price": "RM 99",
+    "row_index": 6,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "basic-servicing",
+    "title": "Basic Servicing",
+    "label": "Window Unit · 2.0 – 2.5 HP",
+    "price": "RM 120",
+    "row_index": 7,
+    "startPrice": "RM 99",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Basic Service · 1.0 – 1.5 HP",
+    "price": "RM 150",
+    "row_index": 0,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Basic Service · 2.0 – 3.0 HP",
+    "price": "RM 200",
+    "row_index": 1,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Basic Service · 3.5 – 5.0 HP",
+    "price": "RM 250",
+    "row_index": 2,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Chemical Wash · 1.0 – 1.5 HP",
+    "price": "RM 220",
+    "row_index": 3,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Chemical Wash · 2.0 – 3.0 HP",
+    "price": "RM 280",
+    "row_index": 4,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Chemical Wash · 4.0 – 5.0 HP",
+    "price": "RM 350",
+    "row_index": 5,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Installation · 1.0 – 1.5 HP",
+    "price": "RM 290",
+    "row_index": 6,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Installation · 2.0 – 3.0 HP",
+    "price": "RM 350",
+    "row_index": 7,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "ceiling-cassette",
+    "title": "Ceiling Cassette Service",
+    "label": "Installation · 3.5 – 6.0 HP",
+    "price": "RM 400",
+    "row_index": 8,
+    "startPrice": "RM 150",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "dismantling-relocation",
+    "title": "Dismantle & Relocation",
+    "label": "Dismantle Only (indoor + outdoor)",
+    "price": "RM 90",
+    "row_index": 0,
+    "startPrice": "RM 90",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "dismantling-relocation",
+    "title": "Dismantle & Relocation",
+    "label": "Dismantle + Reinstall Same Place (standard)",
+    "price": "RM 250",
+    "row_index": 1,
+    "startPrice": "RM 90",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "dismantling-relocation",
+    "title": "Dismantle & Relocation",
+    "label": "Dismantle + Reinstall Same Place (2.0–2.5 HP)",
+    "price": "RM 290",
+    "row_index": 2,
+    "startPrice": "RM 90",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "dismantling-relocation",
+    "title": "Dismantle & Relocation",
+    "label": "Dismantle + Reinstall Other Place",
+    "price": "RM 350",
+    "row_index": 3,
+    "startPrice": "RM 90",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "Diagnostic Fee (Standard Hours 9am–6pm)",
+    "price": "RM 88",
+    "row_index": 0,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "Diagnostic Fee (waived if repaired same visit)",
+    "price": "FREE",
+    "row_index": 1,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "After-Hours Surcharge (6pm–10pm)",
+    "price": "RM 50",
+    "row_index": 2,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "Capacitor Replacement (most common emergency)",
+    "price": "RM 230",
+    "row_index": 3,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "Fan Motor Replacement",
+    "price": "RM 350–480",
+    "row_index": 4,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "PCB Board Replacement",
+    "price": "RM 400–600",
+    "row_index": 5,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "Emergency Drain Pipe Clearing",
+    "price": "RM 170",
+    "row_index": 6,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  },
+  {
+    "slug": "emergency",
+    "title": "Emergency Aircond Repair",
+    "label": "Compressor Replacement (quoted before work)",
+    "price": "RM 850–2,000",
+    "row_index": 7,
+    "startPrice": "RM 138",
+    "source_file": "config/services-data.ts"
+  }
+]

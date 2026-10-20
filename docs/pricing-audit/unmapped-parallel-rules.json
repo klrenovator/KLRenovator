@@ -1,0 +1,26 @@
+[
+  {
+    "reason": "row exists in config/services-data.ts priceTable but not in config/site/pricing.ts",
+    "service_slug": "gas-topup",
+    "label": "Structural Leak Check",
+    "price": "RM 88"
+  },
+  {
+    "reason": "row exists in config/services-data.ts priceTable but not in config/site/pricing.ts",
+    "service_slug": "installation",
+    "label": "Wall-Mounted · 1.0 – 1.5 HP",
+    "price": "RM 199"
+  },
+  {
+    "reason": "row exists in config/services-data.ts priceTable but not in config/site/pricing.ts",
+    "service_slug": "basic-servicing",
+    "label": "Window Unit · 1.0 – 1.5 HP",
+    "price": "RM 99"
+  },
+  {
+    "reason": "row exists in config/services-data.ts priceTable but not in config/site/pricing.ts",
+    "service_slug": "basic-servicing",
+    "label": "Window Unit · 2.0 – 2.5 HP",
+    "price": "RM 120"
+  }
+]
