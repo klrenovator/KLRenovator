@@ -773,7 +773,7 @@ export default function EmergencyPage() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-4 py-1.5 text-xs font-black uppercase tracking-widest mb-6">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse inline-block" />
-            Available Now — Mon to Sun, 9am–6pm
+            Available Now — Mon to Sun, 9am–10pm
           </div>
           <h2 className="text-2xl sm:text-3xl font-black mb-4">
             Aircond Breakdown? Don&apos;t Wait.

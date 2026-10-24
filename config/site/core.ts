@@ -31,7 +31,7 @@ export const businessIdentity = {
   addressCountry: "MY",
   geoLat: 3.1670,
   geoLng: 101.6520,
-  hours: "Mon–Sun · 9:00 AM – 6:00 PM (Everyday Open)",
+  hours: "Mon–Sun · 9:00 AM – 10:00 PM (Everyday Open)",
   googleMapsEmbed: "https://maps.app.goo.gl/dG5WWYBCotRQzvRJA",
   googleBusinessProfile: "https://share.google/HhXvqWDkefZ5bzNdL",
   reviewCount: googlePlace.totalReviews,

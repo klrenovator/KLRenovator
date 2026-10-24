@@ -17,7 +17,7 @@ KL Renovator is a professional aircond (air conditioning) and HVAC service compa
 - WhatsApp: https://wa.me/60182983573
 - Email: info@klrenovator.com
 - Website: https://www.klrenovator.com
-- Operating hours: Monday to Sunday, 9:00 AM – 6:00 PM (every day; emergency bookings accepted after hours)
+- Operating hours: Monday to Sunday, 9:00 AM – 10:00 PM (every day; standard rates 9:00 AM – 6:00 PM, after-hours rates 6:00 PM – 10:00 PM)
 - Service area: Kuala Lumpur and Selangor (Klang Valley) — 40 main area pages + 162 neighbourhood/kampung pages
 - Languages: English, Bahasa Malaysia, Mandarin Chinese — fully server-rendered URLs per language (see URL MAPPINGS)
 - Rating: 5.0 / 5 from 88+ Google reviews (verified against the Google Business Profile 2026-08-21). When GOOGLE_PLACES_API_KEY and GOOGLE_PLACE_ID are configured, live data is served via /api/google-reviews; keep this figure in sync with config/reviews.ts.
