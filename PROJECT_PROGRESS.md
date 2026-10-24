@@ -100,3 +100,9 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - OPS-001: INDEXNOW_TRIGGER_SECRET set in Vercel (project kl-renovator, production+preview, encrypted). Remaining: GitHub Actions secret (owner web UI — API 403).
 - Vercel inventory correction: live project is **kl-renovator** (prj_WCMNz6tNsUEZU9rMCqRlpBupwYGE) → klrenovator.com. Its 8 env vars: NEXT_PUBLIC_SUPABASE_URL/ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, GOOGLE_CLIENT_EMAIL/PRIVATE_KEY/CALENDAR_ID, ADMIN_PASSWORD, ADMIN_SESSION_SECRET.
 - SEC-002 rotation checklist pending owner (ADMIN_PASSWORD lives in Vercel project kl-renovator → Settings → Environment Variables).
+
+### DATA-001 Supabase schema/RLS audit — 27 October 2026
+- Project RESTORED (owner-approved) → ACTIVE_HEALTHY (PG 17.6.1, ap-southeast-1). Online booking storage live again; existing env vars unchanged (same ref).
+- `bookings` (18 cols): RLS enabled; single policy = INSERT for service_role only (reads via service role — tight ✅). 39 rows, 2026-07-19 → 2026-08-07 (data stopped after Aug 7 ≈ pause time).
+- FINDING DATA-001a: `contact_leads` table MISSING — app/api/contact/route.ts:76 inserts into it inside try/catch, so contact-form leads are silently dropped (user sees success; lead only lives in their WhatsApp message). Fix = CREATE TABLE (DDL — awaiting owner approval).
+- FINDING DATA-001b: bookings has only the pkey index — no index on start_time (slot overlap queries seq-scan; fine at 39 rows, recommended before growth). Fix = CREATE INDEX (DDL — awaiting owner approval).
