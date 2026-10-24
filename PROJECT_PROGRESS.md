@@ -106,3 +106,8 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - `bookings` (18 cols): RLS enabled; single policy = INSERT for service_role only (reads via service role — tight ✅). 39 rows, 2026-07-19 → 2026-08-07 (data stopped after Aug 7 ≈ pause time).
 - FINDING DATA-001a: `contact_leads` table MISSING — app/api/contact/route.ts:76 inserts into it inside try/catch, so contact-form leads are silently dropped (user sees success; lead only lives in their WhatsApp message). Fix = CREATE TABLE (DDL — awaiting owner approval).
 - FINDING DATA-001b: bookings has only the pkey index — no index on start_time (slot overlap queries seq-scan; fine at 39 rows, recommended before growth). Fix = CREATE INDEX (DDL — awaiting owner approval).
+
+### DATA-001 fixes applied (owner-approved DDL) — 27 October 2026
+- CREATE TABLE contact_leads (id uuid PK, customer_name/area/service/units text NOT NULL, hp/message text, source text default 'contact_form', created_at timestamptz) + RLS enabled + service-role INSERT policy — verified present in catalog (contact_leads + contact_leads_pkey). Contact-form leads now persist.
+- CREATE INDEX idx_bookings_start_time ON bookings(start_time) — verified in pg_indexes.
+- Note: units column is text (API passes trimmed string, not number).
