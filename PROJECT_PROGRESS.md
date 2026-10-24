@@ -94,3 +94,9 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - SEC-001: dependency remediation — `npm audit fix` + sharp override 0.35.4→0.35.5. `npm audit` now 0 vulnerabilities (was 8: critical next→sharp/librsvg chain GHSA-wq5f-xc86-pv6w, braces DoS, source-map-js DoS). Verified: lint ✓ · typecheck ✓ · verify:routes ✓ · build (2,217 pages) ✓ · verify:build (2,211 sitemap URLs, llms.txt count matches) ✓ · audit:gsc ✓.
 - MON-001: weekly SEO monitoring ACTIVATED — moved docs/seo/weekly-monitoring.workflow.yml → .github/workflows/weekly-monitoring.yml (Monday 01:30 UTC crawl:deployed + build + audit:gsc).
 - OPS-001 (partial): IndexNow ping step added to ci.yml (runs on main pushes; skips cleanly until INDEXNOW_TRIGGER_SECRET is set in GitHub Actions secrets and Vercel env — GitHub secrets API not writable from this integration token).
+
+### SEC/OPS/SEO follow-ups — 27 October 2026
+- SEO-001 COMPLETE (commit eea0780): operating hours corrected to **9:00 AM–10:00 PM daily** (owner-confirmed) across 14 content/config/public files; pricing model preserved (standard rates 9am–6pm, after-hours 6pm–10pm +RM 50 → RM 138 diagnostic). QA green.
+- OPS-001: INDEXNOW_TRIGGER_SECRET set in Vercel (project kl-renovator, production+preview, encrypted). Remaining: GitHub Actions secret (owner web UI — API 403).
+- Vercel inventory correction: live project is **kl-renovator** (prj_WCMNz6tNsUEZU9rMCqRlpBupwYGE) → klrenovator.com. Its 8 env vars: NEXT_PUBLIC_SUPABASE_URL/ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, GOOGLE_CLIENT_EMAIL/PRIVATE_KEY/CALENDAR_ID, ADMIN_PASSWORD, ADMIN_SESSION_SECRET.
+- SEC-002 rotation checklist pending owner (ADMIN_PASSWORD lives in Vercel project kl-renovator → Settings → Environment Variables).
