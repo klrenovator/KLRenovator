@@ -38,7 +38,7 @@ export const sitePublic = {
   "email": "info@klrenovator.com",
   "address": "Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
   "parentCompany": "Multicore Dynamics Resources",
-  "hours": "Mon–Sun · 9:00 AM – 6:00 PM (Everyday Open)",
+  "hours": "Mon–Sun · 9:00 AM – 10:00 PM (Everyday Open)",
   "reviewCount": 88,
   "reviewRating": 5,
   "areas": [

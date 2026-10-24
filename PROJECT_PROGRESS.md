@@ -88,3 +88,34 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - Major dependency pass continued: Google Calendar client updated to 20.0.0; Tailwind/PostCSS ecosystem and compatible React/Supabase/type tooling updates remain build- and SEO-clean. Full QA after this batch: lint ✓ · typecheck ✓ · route contracts ✓ · sanitizer ✓ · build 2,215 pages ✓ · verify:build ✓ · GSC audit ✓ · npm audit (0 vulnerabilities) ✓.
 - ESLint 10 remains held because the current eslint-plugin-import release declares support only through ESLint 9; TypeScript 7, HeroUI 3.2, Framer Motion 13, and Node type 26 remain separate compatibility migrations rather than being forced into a potentially breaking install. No `--force` or `--legacy-peer-deps` was used.
 - Weekly SEO workflow activation intentionally deferred per owner instruction.
+
+### Implementation batch 1 — 17 October 2026 ⏳
+
+- SEC-001: dependency remediation — `npm audit fix` + sharp override 0.35.4→0.35.5. `npm audit` now 0 vulnerabilities (was 8: critical next→sharp/librsvg chain GHSA-wq5f-xc86-pv6w, braces DoS, source-map-js DoS). Verified: lint ✓ · typecheck ✓ · verify:routes ✓ · build (2,217 pages) ✓ · verify:build (2,211 sitemap URLs, llms.txt count matches) ✓ · audit:gsc ✓.
+- MON-001: weekly SEO monitoring ACTIVATED — moved docs/seo/weekly-monitoring.workflow.yml → .github/workflows/weekly-monitoring.yml (Monday 01:30 UTC crawl:deployed + build + audit:gsc).
+- OPS-001 (partial): IndexNow ping step added to ci.yml (runs on main pushes; skips cleanly until INDEXNOW_TRIGGER_SECRET is set in GitHub Actions secrets and Vercel env — GitHub secrets API not writable from this integration token).
+
+### SEC/OPS/SEO follow-ups — 27 October 2026
+- SEO-001 COMPLETE (commit eea0780): operating hours corrected to **9:00 AM–10:00 PM daily** (owner-confirmed) across 14 content/config/public files; pricing model preserved (standard rates 9am–6pm, after-hours 6pm–10pm +RM 50 → RM 138 diagnostic). QA green.
+- OPS-001: INDEXNOW_TRIGGER_SECRET set in Vercel (project kl-renovator, production+preview, encrypted). Remaining: GitHub Actions secret (owner web UI — API 403).
+- Vercel inventory correction: live project is **kl-renovator** (prj_WCMNz6tNsUEZU9rMCqRlpBupwYGE) → klrenovator.com. Its 8 env vars: NEXT_PUBLIC_SUPABASE_URL/ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, GOOGLE_CLIENT_EMAIL/PRIVATE_KEY/CALENDAR_ID, ADMIN_PASSWORD, ADMIN_SESSION_SECRET.
+- SEC-002 rotation checklist pending owner (ADMIN_PASSWORD lives in Vercel project kl-renovator → Settings → Environment Variables).
+
+### DATA-001 Supabase schema/RLS audit — 27 October 2026
+- Project RESTORED (owner-approved) → ACTIVE_HEALTHY (PG 17.6.1, ap-southeast-1). Online booking storage live again; existing env vars unchanged (same ref).
+- `bookings` (18 cols): RLS enabled; single policy = INSERT for service_role only (reads via service role — tight ✅). 39 rows, 2026-07-19 → 2026-08-07 (data stopped after Aug 7 ≈ pause time).
+- FINDING DATA-001a: `contact_leads` table MISSING — app/api/contact/route.ts:76 inserts into it inside try/catch, so contact-form leads are silently dropped (user sees success; lead only lives in their WhatsApp message). Fix = CREATE TABLE (DDL — awaiting owner approval).
+- FINDING DATA-001b: bookings has only the pkey index — no index on start_time (slot overlap queries seq-scan; fine at 39 rows, recommended before growth). Fix = CREATE INDEX (DDL — awaiting owner approval).
+
+### DATA-001 fixes applied (owner-approved DDL) — 27 October 2026
+- CREATE TABLE contact_leads (id uuid PK, customer_name/area/service/units text NOT NULL, hp/message text, source text default 'contact_form', created_at timestamptz) + RLS enabled + service-role INSERT policy — verified present in catalog (contact_leads + contact_leads_pkey). Contact-form leads now persist.
+- CREATE INDEX idx_bookings_start_time ON bookings(start_time) — verified in pg_indexes.
+- Note: units column is text (API passes trimmed string, not number).
+- Verification addendum: pg_policies re-check confirms both `bookings` and `contact_leads` carry only "Allow insert with service role key" (service_role INSERT, with_check true) — no anon/public read or write. DATA-001 now fully verified.
+- PR #98 CI: verify + Vercel checks pass, MERGEABLE.
+
+### WA-001 Calendar→Sheet auto-sync package — 27 October 2026
+- Owner decision: Google Apps Script (free, same Google account — PDPA-safe), single shared calendar as hub (WhatsApp Business + staff + website bookings), Bookings Log tab inside the remediation tracker.
+- DELIVERED: scripts/calendar-sheet-sync.gs (upsert by event key, phone extraction, reschedule updates, removed-event marking, date sort) + scripts/CALENDAR_SYNC_SETUP.md (5-min paste-and-run guide).
+- Sheet ready: Bookings Log tab + headers written; spreadsheet timezone set Asia/Kuala_Lumpur (locale en_US — Sheets rejected en_MY).
+- OWNER 5-min action: Extensions → Apps Script → paste scripts/calendar-sheet-sync.gs → run setup() once → authorize → add time-driven trigger syncBookings every 10 minutes.

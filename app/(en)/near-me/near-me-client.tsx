@@ -20,7 +20,7 @@ const T = {
     hero_desc: `Searching for a reliable aircond technician near you? KL Renovator dispatches trained HVAC technicians across Kuala Lumpur and Selangor — same-day slots, transparent pricing and all brands serviced. Trusted by ${reviewCountLabel} homeowners and businesses.`,
     hero_wa: "WhatsApp Us for a Same-Day Slot",
     hero_call: "Call",
-    hero_hours: "Mon–Sun, 9:00 AM – 6:00 PM · Reply within 30 minutes on WhatsApp",
+    hero_hours: "Mon–Sun, 9:00 AM – 10:00 PM · Reply within 30 minutes on WhatsApp",
     why_badge: "Why book a local aircond team",
     why_h2: "Fast, local & transparent aircond service near you",
     features: [
@@ -79,7 +79,7 @@ const T = {
     hero_desc: `Mencari juruteknik aircond yang dipercayai berdekatan anda? KL Renovator menghantar juruteknik HVAC terlatih ke seluruh Kuala Lumpur dan Selangor — slot hari sama, harga telus dan semua jenama diservis. Dipercayai ${reviewCountLabel} pemilik rumah dan perniagaan.`,
     hero_wa: "WhatsApp Kami untuk Slot Hari Sama",
     hero_call: "Hubungi",
-    hero_hours: "Isnin–Ahad, 9:00 PG – 6:00 PTG · Balas dalam 30 minit melalui WhatsApp",
+    hero_hours: "Isnin–Ahad, 9:00 PG – 10:00 Malam · Balas dalam 30 minit melalui WhatsApp",
     why_badge: "Mengapa tempah pasukan aircond tempatan",
     why_h2: "Servis aircond pantas, tempatan & telus berdekatan anda",
     features: [
@@ -138,7 +138,7 @@ const T = {
     hero_desc: `寻找附近可靠的冷气技术员？KL Renovator 在吉隆坡和雪兰莪全区派遣专业HVAC技术人员——当天预约、透明收费、覆盖所有品牌。已获${reviewCountLabel}住户和企业信赖。`,
     hero_wa: "WhatsApp 预约当天服务",
     hero_call: "致电",
-    hero_hours: "周一至周日 上午9时–下午6时 · WhatsApp 30分钟内回复",
+    hero_hours: "周一至周日 上午9时–晚上10时 · WhatsApp 30分钟内回复",
     why_badge: "为何选择本地冷气团队",
     why_h2: "附近快速、本地、透明的冷气服务",
     features: [

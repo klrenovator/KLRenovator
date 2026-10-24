@@ -192,7 +192,7 @@ export default function SiteRootLayout({
                     "Sunday",
                   ],
                   opens: "09:00",
-                  closes: "18:00",
+                  closes: "22:00",
                 },
               ],
               // Compact areaServed: area NAMES plus one geo circle. The

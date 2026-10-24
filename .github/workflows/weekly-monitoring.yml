@@ -1,13 +1,7 @@
 # ┌─────────────────────────────────────────────────────────────────────────┐
-# │ SETUP: this file lives in docs/seo/ because the Arena GitHub connection │
-# │ cannot push workflow files (missing `workflows` permission). To enable  │
-# │ weekly monitoring, either:                                              │
-# │   a) move it into place and push from a connection that can:            │
-# │        mv docs/seo/weekly-monitoring.workflow.yml .github/workflows/    │
-# │      then commit + push, or                                             │
-# │   b) paste the content below into a new file                            │
-# │      .github/workflows/weekly-monitoring.yml via the GitHub web UI.     │
-# │ No secrets are required.                                                │
+# │ Weekly SEO monitoring — activated 2026-10-17 by moving this file from   │
+# │ docs/seo/weekly-monitoring.workflow.yml into .github/workflows/         │
+# │ (owner-approved task MON-001). No secrets are required.                  │
 # └─────────────────────────────────────────────────────────────────────────┘
 
 name: Weekly SEO monitoring
