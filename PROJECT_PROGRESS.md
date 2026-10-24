@@ -113,3 +113,9 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - Note: units column is text (API passes trimmed string, not number).
 - Verification addendum: pg_policies re-check confirms both `bookings` and `contact_leads` carry only "Allow insert with service role key" (service_role INSERT, with_check true) — no anon/public read or write. DATA-001 now fully verified.
 - PR #98 CI: verify + Vercel checks pass, MERGEABLE.
+
+### WA-001 Calendar→Sheet auto-sync package — 27 October 2026
+- Owner decision: Google Apps Script (free, same Google account — PDPA-safe), single shared calendar as hub (WhatsApp Business + staff + website bookings), Bookings Log tab inside the remediation tracker.
+- DELIVERED: scripts/calendar-sheet-sync.gs (upsert by event key, phone extraction, reschedule updates, removed-event marking, date sort) + scripts/CALENDAR_SYNC_SETUP.md (5-min paste-and-run guide).
+- Sheet ready: Bookings Log tab + headers written; spreadsheet timezone set Asia/Kuala_Lumpur (locale en_US — Sheets rejected en_MY).
+- OWNER 5-min action: Extensions → Apps Script → paste scripts/calendar-sheet-sync.gs → run setup() once → authorize → add time-driven trigger syncBookings every 10 minutes.
