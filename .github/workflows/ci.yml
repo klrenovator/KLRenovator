@@ -63,3 +63,22 @@ jobs:
         # hreflang without return tags, near-duplicate page families,
         # self-serving review markup.
         run: npm run audit:gsc
+
+      - name: Ping IndexNow (Bing / Yandex)
+        # Tells IndexNow-engines about the freshly deployed URLs (all ~2.2k
+        # canonicals + hreflang alternates, per app/api/indexnow). Only for
+        # production pushes. Skips cleanly when the secret is not configured.
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_TRIGGER_SECRET }}
+        run: |
+          if [ -z "$INDEXNOW_KEY" ]; then
+            echo "::notice::INDEXNOW_TRIGGER_SECRET is not set — skipping IndexNow ping."
+            exit 0
+          fi
+          status=$(curl -sS -o /tmp/indexnow.log -w "%{http_code}" "https://www.klrenovator.com/api/indexnow?key=${INDEXNOW_KEY}")
+          echo "IndexNow endpoint responded: HTTP $status"
+          cat /tmp/indexnow.log || true
+          if [ "$status" != "200" ]; then
+            echo "::warning::IndexNow ping returned HTTP $status — check INDEXNOW_TRIGGER_SECRET in Vercel and GitHub."
+          fi

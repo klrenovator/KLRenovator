@@ -88,3 +88,9 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - Major dependency pass continued: Google Calendar client updated to 20.0.0; Tailwind/PostCSS ecosystem and compatible React/Supabase/type tooling updates remain build- and SEO-clean. Full QA after this batch: lint ✓ · typecheck ✓ · route contracts ✓ · sanitizer ✓ · build 2,215 pages ✓ · verify:build ✓ · GSC audit ✓ · npm audit (0 vulnerabilities) ✓.
 - ESLint 10 remains held because the current eslint-plugin-import release declares support only through ESLint 9; TypeScript 7, HeroUI 3.2, Framer Motion 13, and Node type 26 remain separate compatibility migrations rather than being forced into a potentially breaking install. No `--force` or `--legacy-peer-deps` was used.
 - Weekly SEO workflow activation intentionally deferred per owner instruction.
+
+### Implementation batch 1 — 17 October 2026 ⏳
+
+- SEC-001: dependency remediation — `npm audit fix` + sharp override 0.35.4→0.35.5. `npm audit` now 0 vulnerabilities (was 8: critical next→sharp/librsvg chain GHSA-wq5f-xc86-pv6w, braces DoS, source-map-js DoS). Verified: lint ✓ · typecheck ✓ · verify:routes ✓ · build (2,217 pages) ✓ · verify:build (2,211 sitemap URLs, llms.txt count matches) ✓ · audit:gsc ✓.
+- MON-001: weekly SEO monitoring ACTIVATED — moved docs/seo/weekly-monitoring.workflow.yml → .github/workflows/weekly-monitoring.yml (Monday 01:30 UTC crawl:deployed + build + audit:gsc).
+- OPS-001 (partial): IndexNow ping step added to ci.yml (runs on main pushes; skips cleanly until INDEXNOW_TRIGGER_SECRET is set in GitHub Actions secrets and Vercel env — GitHub secrets API not writable from this integration token).
