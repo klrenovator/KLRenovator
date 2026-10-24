@@ -111,3 +111,5 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - CREATE TABLE contact_leads (id uuid PK, customer_name/area/service/units text NOT NULL, hp/message text, source text default 'contact_form', created_at timestamptz) + RLS enabled + service-role INSERT policy — verified present in catalog (contact_leads + contact_leads_pkey). Contact-form leads now persist.
 - CREATE INDEX idx_bookings_start_time ON bookings(start_time) — verified in pg_indexes.
 - Note: units column is text (API passes trimmed string, not number).
+- Verification addendum: pg_policies re-check confirms both `bookings` and `contact_leads` carry only "Allow insert with service role key" (service_role INSERT, with_check true) — no anon/public read or write. DATA-001 now fully verified.
+- PR #98 CI: verify + Vercel checks pass, MERGEABLE.
