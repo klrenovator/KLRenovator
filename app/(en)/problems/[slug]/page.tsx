@@ -165,17 +165,17 @@ export const problemContent: Record<
     warningBM: "Aircond yang bocor dan dibiarkan menyebabkan pertumbuhan kulat di dinding dan siling, kerosakan air pada perabot, risiko litar pintas elektrik, dan kerosakan struktur dari masa ke masa.",
     warningZH: "长期不处理的漏水冷气会导致墙壁和天花板发霉、家具受水损坏、电气短路风险以及长期结构损坏。请立即修复。",
     faqs: [
-      { q: "Why is my aircond dripping water inside the room?", a: "The indoor unit drips water when the drain pipe is blocked and the drain pan overflows. KL Renovator clears the blockage in one visit — starting from RM 120 for a drain clear and chemical wash." },
-      { q: "How much does it cost to fix a leaking aircond in KL?", a: "Drain pipe clearing starts from RM 120. Chemical wash (recommended to prevent recurrence) from RM 120. Chemical overhaul (Wall-Mounted Aircon only) for severe or recurring leaks from RM 420. Drain pump installation RM 300–400." },
+      { q: "Why is my aircond dripping water inside the room?", a: "The indoor unit drips water when the drain pipe is blocked and the drain pan overflows. KL Renovator clears the blockage in one visit — Emergency drain pipe clearing from RM 170; chemical wash from RM 120." },
+      { q: "How much does it cost to fix a leaking aircond in KL?", a: "Drain pipe clearing from RM 170. Chemical wash (recommended to prevent recurrence) from RM 120. Chemical overhaul (Wall-Mounted Aircon only) for severe or recurring leaks from RM 420. Drain pump installation RM 300–400." },
       { q: "My aircond has been leaking for weeks. Is it serious?", a: "Yes. Prolonged leaking causes mould growth, ceiling damage and potential electrical risks. Book KL Renovator immediately via WhatsApp +60182983573 for same-day assessment." },
     ],
     faqsBM: [
-      { q: "Mengapa aircond saya menitis air di dalam bilik?", a: "Unit dalaman menitis apabila paip longkang tersumbat dan dulang longkang melimpah. KL Renovator membersihkan halangan dalam satu lawatan — bermula dari RM 120." },
-      { q: "Berapa kos untuk membaiki aircond bocor di KL?", a: "Pembersihan paip longkang bermula dari RM 120. Cuci kimia dari RM 120. Overhaul kimia (Unit Dinding Sahaja) untuk kebocoran teruk dari RM 420." },
+      { q: "Mengapa aircond saya menitis air di dalam bilik?", a: "Unit dalaman menitis apabila paip longkang tersumbat dan dulang longkang melimpah. KL Renovator membersihkan halangan dalam satu lawatan — pembersihan paip longkang kecemasan dari RM 170; cuci kimia dari RM 120." },
+      { q: "Berapa kos untuk membaiki aircond bocor di KL?", a: "Pembersihan paip longkang dari RM 170. Cuci kimia dari RM 120. Overhaul kimia (Unit Dinding Sahaja) untuk kebocoran teruk dari RM 420." },
     ],
     faqsZH: [
       { q: "为什么我的冷气在室内滴水？", a: "当排水管堵塞、排水盘溢水时，室内机就会滴水。KL Renovator一次上门即可清通堵塞，化学清洗从RM 120起。" },
-      { q: "在KL修理漏水冷气需要多少费用？", a: "排水管清通从RM 120起。化学清洗从RM 120起。严重漏水的化学大修（仅限挂壁式冷气）从RM 420起。排水泵安装RM 300–400。" },
+      { q: "在KL修理漏水冷气需要多少费用？", a: "排水管清通从RM 170起。化学清洗从RM 120起。严重漏水的化学大修（仅限挂壁式冷气）从RM 420起。排水泵安装RM 300–400。" },
     ],
   },
   "aircond-bad-smell": {
