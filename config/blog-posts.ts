@@ -2073,7 +2073,7 @@ export const allPosts: BlogPost[] = [
         <li>Check if the indoor unit is mounted level</li>
         <li>Look at the drain pipe outlet — is it blocked?</li>
       </ul>
-      <p><strong>Professional fix:</strong> Drain pipe clearing (RM 120), chemical wash (RM 120)</p>
+      <p><strong>Professional fix:</strong> Drain pipe clearing (RM 170), chemical wash (RM 120)</p>
       <h2>Problem: Aircond Making Noise</h2>
       <ul>
         <li>Rattling from indoor: loose front panel or debris in blower wheel</li>
@@ -4717,7 +4717,7 @@ export const allPosts: BlogPost[] = [
       <h3>1. Blocked drain pipe (40% of cases)</h3>
       <p><strong>Symptoms:</strong> Water dripping from the indoor unit, water stain on the wall below the AC, water pooling on the floor, musty smell.</p>
       <p><strong>Cause:</strong> Algae, mould, slime, and dust accumulate inside the 1cm PVC drain pipe over 6-12 months. The condensate water has nowhere to drain and overflows back through the indoor unit.</p>
-      <p><strong>Fix:</strong> Chemical flush of the drain pipe. KL Renovator uses a high-pressure pump + chemical solution to clear the blockage. Cost: included in chemical wash (RM 120 for 1.0-1.5 HP) or as a standalone service (RM 80-150 per unit).</p>
+      <p><strong>Fix:</strong> Chemical flush of the drain pipe. KL Renovator uses a high-pressure pump + chemical solution to clear the blockage. Cost: included in chemical wash (RM 120 for 1.0-1.5 HP) or as a standalone service (RM 170 per unit).</p>
       <h3>2. Dirty air filter (20% of cases)</h3>
       <p><strong>Symptoms:</strong> Weak cooling, ice on the indoor unit, water dripping.</p>
       <p><strong>Cause:</strong> A clogged filter restricts airflow over the evaporator coil. The coil gets too cold, ice forms on it, and the ice melts into water that overflows the drip tray.</p>
@@ -4807,7 +4807,7 @@ export const allPosts: BlogPost[] = [
       <h3>1. Paip saliran tersumbat (40% kes)</h3>
       <p><strong>Gejala:</strong> Air menitis dari unit dalam, kesan air pada dinding di bawah AC, air bertakung di lantai, bau apak.</p>
       <p><strong>Punca:</strong> Alga, kulat, lendir, dan habuk terkumpul di dalam paip saliran PVC 1cm dalam 6-12 bulan. Air kondensat tiada tempat untuk mengalir dan melimpah balik melalui unit dalam.</p>
-      <p><strong>Penyelesaian:</strong> Flush kimia paip saliran. KL Renovator guna pam tekanan tinggi + larutan kimia untuk keluarkan sumbatan. Kos: termasuk dalam cuci kimia (RM 120 untuk 1.0-1.5 HP) atau sebagai servis kendiri (RM 80-150 seunit).</p>
+      <p><strong>Penyelesaian:</strong> Flush kimia paip saliran. KL Renovator guna pam tekanan tinggi + larutan kimia untuk keluarkan sumbatan. Kos: termasuk dalam cuci kimia (RM 120 untuk 1.0-1.5 HP) atau sebagai servis kendiri (RM 170 seunit).</p>
       <h3>2. Penapis udara kotor (20% kes)</h3>
       <p><strong>Gejala:</strong> Sejuk lemah, ais pada unit dalam, air menitis.</p>
       <p><strong>Punca:</strong> Penapis tersumbat menyekat aliran udara melalui coil penyejat. Coil menjadi terlalu sejuk, ais terbentuk di atasnya, dan ais mencair menjadi air yang melimpah dulang titis.</p>
@@ -5791,7 +5791,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Indoor fan motor replacement</td><td><strong>RM 250 – 350</strong></td></tr>
           <tr><td>Outdoor fan motor replacement</td><td><strong>RM 300 – 450</strong></td></tr>
           <tr><td>PCB board replacement</td><td><strong>RM 300 – 600</strong></td></tr>
-          <tr><td>Emergency drain-pipe clearing</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Emergency drain-pipe clearing</td><td><strong>RM 170</strong></td></tr>
           <tr><td>Compressor replacement (quoted before work)</td><td><strong>RM 600 – 2,000</strong></td></tr>
         </tbody>
       </table>
@@ -5961,7 +5961,7 @@ export const allPosts: BlogPost[] = [
           <tr><td>Penggantian Motor Kipas Dalaman</td><td><strong>RM 250 - 350</strong></td></tr>
           <tr><td>Penggantian Motor Kipas Luaran</td><td><strong>RM 300 - 450</strong></td></tr>
           <tr><td>Penggantian Papan PCB</td><td><strong>RM 300 - 600</strong></td></tr>
-          <tr><td>Pembersihan Paip Longkang Kecemasan</td><td><strong>RM 120</strong></td></tr>
+          <tr><td>Pembersihan Paip Longkang Kecemasan</td><td><strong>RM 170</strong></td></tr>
           <tr><td>Penggantian Kompresor (dikuotakan sebelum kerja)</td><td><strong>RM 600 - 2,000</strong></td></tr>
         </tbody>
       </table>
