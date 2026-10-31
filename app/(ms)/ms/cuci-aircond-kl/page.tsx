@@ -49,16 +49,16 @@ export const metadata: Metadata = {
 const pricing = [
   { label: "Wall-Mounted 1.0–1.5 HP", price: "RM 120" },
   { label: "Wall-Mounted 2.0–2.5 HP", price: "RM 150" },
-  { label: "Wall-Mounted 3.0 HP", price: "RM 180" },
+  { label: "Wall-Mounted 3.0 HP", price: "RM 150" },
   { label: "Ceiling Cassette 1.0–1.5 HP", price: "RM 220" },
-  { label: "Ceiling Cassette 2.0–3.0 HP", price: "RM 280" },
+  { label: "Ceiling Cassette 2.0–3.0 HP", price: "RM 250" },
   { label: "Window Unit 1.0–2.0 HP", price: "RM 130" },
 ];
 
 const areas = ["Kuala Lumpur","Petaling Jaya","Subang Jaya","Shah Alam","Klang","Puchong","Cheras","Ampang","Kajang","Damansara","Bangsar","Mont Kiara","Kepong","Setapak","Gombak","Selayang","Rawang","Seri Kembangan","Bandar Utama","Ara Damansara","Kota Damansara","USJ"];
 
 const faqs = [
-  { q: "Berapa harga cuci aircond KL 2026?", a: "RM120 wall-mounted 1.0–1.5 HP. 2.0–2.5 HP RM150. 3.0 HP RM180. Ceiling cassette RM220+. Harga disahkan sebelum kerja. Multi-unit diskaun 5%/10%/15%." },
+  { q: "Berapa harga cuci aircond KL 2026?", a: "RM120 wall-mounted 1.0–1.5 HP. 2.0–2.5 HP RM150. 3.0 HP RM150. Ceiling cassette RM220+. Harga disahkan sebelum kerja. Multi-unit diskaun 5%/10%/15%." },
   { q: "Kawasan mana cover cuci aircond KL?", a: "Seluruh Klang Valley: KL, PJ, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Ampang, Kajang, Damansara, Bangsar, Mont Kiara, Kepong, Setapak, Gombak, Selayang, Rawang, Seri Kembangan. Same-day Isnin–Ahad." },
   { q: "Berapa kerap perlu cuci aircond di KL?", a: "Standard 12 bulan. Ground floor / tepi highway / construction: 6–8 bulan. Heavy use 8+ jam: 6 bulan servis asas + chemical wash tahunan." },
   { q: "Beza chemical wash vs servis biasa RM99?", a: "Servis biasa: permukaan sahaja. Chemical wash RM120: kimia 80–120 PSI tembus coil & blower, larutkan biofilm & kulat. Bau / angin lemah / 12+ bulan tak deep clean = chemical wash." },

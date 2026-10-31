@@ -156,8 +156,8 @@ export const newBlogBatch1: BlogPost[] = [
         </thead>
         <tbody>
           <tr><td>Dismantle only (indoor + outdoor)</td><td>RM 90</td><td>Pump-down, safe removal, pipe protection. No reinstall.</td></tr>
-          <tr><td>Dismantle + reinstall, same place / nearby (standard)</td><td>RM 250</td><td>Typical 1.0–1.5 HP wall-mounted move in the same building or nearby</td></tr>
-          <tr><td>Dismantle + reinstall, same place (2.0–2.5 HP)</td><td>RM 290</td><td>Larger wall-mounted split</td></tr>
+          <tr><td>Dismantle + reinstall, same place / nearby (standard)</td><td>RM 290</td><td>Typical 1.0–1.5 HP wall-mounted move in the same building or nearby</td></tr>
+          <tr><td>Dismantle + reinstall, same place (2.0–2.5 HP)</td><td>RM 340</td><td>Larger wall-mounted split</td></tr>
           <tr><td>Dismantle + reinstall, other place</td><td>RM 350</td><td>Different address. 1.0–1.5 HP package as published</td></tr>
         </tbody>
       </table>
@@ -187,12 +187,12 @@ export const newBlogBatch1: BlogPost[] = [
       <p>Building rules change. Do not treat this list as a universal Malaysian law. Ask management, then send us the condo name on WhatsApp so the visit can be planned. More detail is in our <a href="/blog/aircond-installation-condo-rules-malaysia-2026">condo installation rules guide</a>.</p>
 
       <h2>Should you relocate the old unit or buy a new one?</h2>
-      <p>Relocate if the unit is a working inverter, roughly under 8 years old, and has been serviced. A typical move costs RM 250–350. A replacement indoor/outdoor set plus install is a much larger bill.</p>
+      <p>Relocate if the unit is a working inverter, roughly under 8 years old, and has been serviced. A typical move costs RM 290–350. A replacement indoor/outdoor set plus install is a much larger bill.</p>
       <p>Think harder about replacement if the unit is 8+ years old, uses R22, already needs repeated gas top-ups, or has a noisy compressor. Moving a failing unit only relocates the next repair. We do both relocation and new installation, so the recommendation is based on the unit in front of us — not on selling a box.</p>
 
       <h2>Frequently asked questions</h2>
       <h3>How much does aircond dismantle and reinstallation cost in Malaysia?</h3>
-      <p>KL Renovator publishes dismantle-only from RM 90, same-place / nearby reinstall from RM 250 (standard) or RM 290 (2.0–2.5 HP), and a different-address package from RM 350 for 1.0–1.5 HP. Extra pipe, wire, brackets and difficult access are quoted before work.</p>
+      <p>KL Renovator publishes dismantle-only from RM 90, same-place / nearby reinstall from RM 290 (standard) or RM 340 (2.0–2.5 HP), and a different-address package from RM 350 for 1.0–1.5 HP. Extra pipe, wire, brackets and difficult access are quoted before work.</p>
 
       <h3>Will I lose gas if I move my aircond?</h3>
       <p>Not if a pump-down is done correctly. The refrigerant is stored in the outdoor unit and released after the new pipes are vacuumed. You only discuss a top-up if the system was already leaking.</p>
@@ -372,7 +372,7 @@ export const newBlogBatch1: BlogPost[] = [
       <p>Peraturan bangunan berubah. Jangan anggap senarai ini undang-undang Malaysia yang sama di semua tempat. Tanya pengurusan, kemudian hantar nama kondo di WhatsApp supaya lawatan boleh dirancang. Butiran lanjut dalam <a href="/ms/blog/aircond-installation-condo-rules-malaysia-2026">panduan peraturan pemasangan kondo</a>.</p>
 
       <h2>Patut pindah unit lama atau beli baru?</h2>
-      <p>Pindahkan jika unit inverter masih elok, lebih kurang bawah 8 tahun, dan dah diservis. Pindah biasa RM 250–350. Set ganti baru plus pasang jauh lebih besar.</p>
+      <p>Pindahkan jika unit inverter masih elok, lebih kurang bawah 8 tahun, dan dah diservis. Pindah biasa RM 290–350. Set ganti baru plus pasang jauh lebih besar.</p>
       <p>Fikir semula jika unit 8+ tahun, guna R22, dah kerap top up gas, atau kompressor dah bising. Memindah unit yang dah nak rosak cuma pindahkan pembaikan seterusnya. Kami buat kedua-dua pindah dan pasang baru, jadi cadangan ikut unit di hadapan — bukan nak jual kotak.</p>
 
       <h2>Soalan lazim</h2>
@@ -526,8 +526,8 @@ export const newBlogBatch1: BlogPost[] = [
         </thead>
         <tbody>
           <tr><td>只拆机（室内+室外）</td><td>RM 90</td><td>泵送、安全拆除、管口保护。不含重装。</td></tr>
-          <tr><td>拆机+重装，同地点/附近（标准）</td><td>RM 250</td><td>常见于同楼或附近的1.0–1.5匹挂壁机</td></tr>
-          <tr><td>拆机+重装，同地点（2.0–2.5匹）</td><td>RM 290</td><td>较大挂壁分体机</td></tr>
+          <tr><td>拆机+重装，同地点/附近（标准）</td><td>RM 290</td><td>常见于同楼或附近的1.0–1.5匹挂壁机</td></tr>
+          <tr><td>拆机+重装，同地点（2.0–2.5匹）</td><td>RM 340</td><td>较大挂壁分体机</td></tr>
           <tr><td>拆机+重装，其他地点</td><td>RM 350</td><td>不同地址。已公布的1.0–1.5匹套餐</td></tr>
         </tbody>
       </table>
@@ -562,7 +562,7 @@ export const newBlogBatch1: BlogPost[] = [
 
       <h2>常见问题</h2>
       <h3>马来西亚冷气拆机重装要多少钱？</h3>
-      <p>KL Renovator 公布：只拆机从 RM 90 起；同地点/附近重装从 RM 250（标准）或 RM 290（2.0–2.5匹）起；不同地址套餐1.0–1.5匹从 RM 350 起。额外铜管、电线、支架和困难作业会在开工前报价。</p>
+      <p>KL Renovator 公布：只拆机从 RM 90 起；同地点/附近重装从 RM 290（标准）或 RM 340（2.0–2.5匹）起；不同地址套餐1.0–1.5匹从 RM 350 起。额外铜管、电线、支架和困难作业会在开工前报价。</p>
 
       <h3>搬家会不会漏掉雪种？</h3>
       <p>正确泵送就不会。雪种存在室外机里，新铜管抽真空后再释放。只有系统本来就在漏，才另外谈加雪种。</p>

@@ -43,9 +43,9 @@ const INSTALL_PRICES = [
   { label: "Wall-Mounted · 1.5 HP", price: "RM 199" },
   { label: "Wall-Mounted · 2.0 HP", price: "RM 249" },
   { label: "Wall-Mounted · 2.5 HP", price: "RM 279" },
-  { label: "Wall-Mounted · 3.0 HP", price: "RM 329" },
+  { label: "Wall-Mounted · 3.0 HP", price: "RM 279" },
   { label: "Wall-Mounted · 4.0 HP", price: "RM 399" },
-  { label: "Wall-Mounted · 5.0 HP", price: "RM 449" },
+  { label: "Wall-Mounted · 5.0 HP", price: "RM 399" },
   { label: "Ceiling Cassette · 1.0–1.5 HP", price: "RM 290" },
   { label: "Ceiling Cassette · 2.0–3.0 HP", price: "RM 350" },
   { label: "Ceiling Cassette · 3.5–6.0 HP", price: "RM 400" },
@@ -72,7 +72,7 @@ const MATERIAL_PRICES = [
 ];
 
 const FAQS = [
-  { q: "How much is aircond installation in KL & Selangor 2026?", a: `Wall-mounted 1.0–1.5 HP from RM 199. 2.0 HP from RM 249, 2.5 HP from RM 279, 3.0 HP from RM 329. Ceiling cassette from RM 290. Window unit from RM 199. Every price includes 7ft copper piping, wiring, vacuum pump evacuation, leak test & commissioning — confirmed before we start. ${entityPhrases.copperTypeL}` },
+  { q: "How much is aircond installation in KL & Selangor 2026?", a: `Wall-mounted 1.0–1.5 HP from RM 199. 2.0 HP from RM 249, 2.5 HP from RM 279, 3.0 HP from RM 279. Ceiling cassette from RM 290. Window unit from RM 199. Every price includes 7ft copper piping, wiring, vacuum pump evacuation, leak test & commissioning — confirmed before we start. ${entityPhrases.copperTypeL}` },
   { q: "What does the RM 199 base installation include?", a: `9-point package: (1) Site survey & wall assessment, (2) 7ft correctly-sized copper pipe. ${entityPhrases.insulationStandard} (3) Electrical wiring through proper conduit. ${entityPhrases.dedicatedCircuit} (4) PVC drainage with correct fall, (5) indoor mounting with rubber vibration pads, (6) Two-stage vacuum pump evacuation (min 15 min). ${entityPhrases.vacuumMandatory} (7) Vacuum pump commissioning (500 microns), (8) Full commissioning — cooling, airflow, thermostat, (9) Written job card + 1-month workmanship warranty.` },
   { q: "Why is extra copper pipe charged after 7ft?", a: "Standard 7ft covers most room layouts. Longer runs need more copper pipe, insulation and labour. We charge per foot transparently using HP-wise rates: Copper Pipe RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Electrical wire RM 9/ft. Technician measures actual pipe run needed, confirms extra cost before cutting any pipe." },
   { q: "What's the difference between RM 199 base and full copper pipe package?", a: "RM 199 covers standard straight-run install up to 7ft copper. 'Full copper package' usually means 10–20ft+ copper, concealed trunking, outdoor cable tray, extra brackets — common in high-rise condos where outdoor unit is further from indoor. Exact cost depends on actual pipe length & materials, we quote on-site after survey." },

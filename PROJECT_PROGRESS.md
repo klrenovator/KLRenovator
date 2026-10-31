@@ -119,3 +119,9 @@ lint ✓ · typecheck ✓ · build (2,215 pages) ✓ · sitemap 2,208 ✓ · rob
 - DELIVERED: scripts/calendar-sheet-sync.gs (upsert by event key, phone extraction, reschedule updates, removed-event marking, date sort) + scripts/CALENDAR_SYNC_SETUP.md (5-min paste-and-run guide).
 - Sheet ready: Bookings Log tab + headers written; spreadsheet timezone set Asia/Kuala_Lumpur (locale en_US — Sheets rejected en_MY).
 - OWNER 5-min action: Extensions → Apps Script → paste scripts/calendar-sheet-sync.gs → run setup() once → authorize → add time-driven trigger syncBookings every 10 minutes.
+
+### GSC + New-Price sync — 31 October 2026 🟢 (branch arena/70f189be)
+- Official Sheet re-read (PRICES!A1:C80): 16 rows have New Price filled — 10 change value, 6 confirm same. Owner confirmed New Price is final. Applied all 10 site-wide EN/MS/ZH: Install 3.0HP 329→279, 5.0HP 449→399; ChemWash Wall 3.0 180→150, 4-5HP 200→150; ChemWash Cassette 2-3 280→250, 4-5 350→250; Overhaul 2-2.5 490→460, 3-3.5 560→500; Dismantle+Reinstall same standard 250→290, 2-2.5 290→340. Source config/site/pricing.ts + gen:site-public; calculators, service tables, FAQs, blogs, llms/aeo files synced. Market-comparison blog columns untouched (competitor prices).
+- Drive: new updated price Doc created (1csNrgAaHTsHQBpv6JsMoBzR_C8gFZ4RvrU2vfH_XFVA); Aug DOCX/PDF still hold old prices — flagged, not overwritten.
+- GSC Oct screenshots: 6 missing 404 redirects added (MS English-slug → Malay-slug + MS/ZH services price paths), verified 301→200 locally. Redirect/canonical/noindex/_next-chunk reports classified informational/intentional — see docs/seo/gsc-pricing-audit-2026-10-31.md. Pending owner: no Sheet row for 3.5HP wall install (fallback kept, not invented).
+- QA: lint ✓ typecheck ✓ verify:routes ✓ build 2,217 ✓ verify:build 2,211 ✓ gsc-audit ✓ server smoke + WhatsApp link ✓.

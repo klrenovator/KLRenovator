@@ -80,7 +80,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a pressure chemical wash cost in KL & Selangor?",
-        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
+        a: "Wall-mounted 1.0–1.5 HP: RM 120. Wall-mounted 2.0–2.5 HP: RM 150. Wall-mounted 3.0 HP: RM 150. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 250. Window unit: RM 130–160. Every price confirmed before the technician begins. Multi-unit discount: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units, same visit.",
       },
       {
         q: "How often should I get a chemical wash?",
@@ -107,7 +107,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga cuci kimia tekanan di KL & Selangor?",
-        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 180. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 280. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
+        a: "Dinding 1.0–1.5 HP: RM 120. Dinding 2.0–2.5 HP: RM 150. Dinding 3.0 HP: RM 150. Ceiling cassette 1.0–1.5 HP: RM 220. Cassette 2.0–3.0 HP: RM 250. Unit tingkap: RM 130–160. Setiap harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: Diskaun Tempahan Segera 5% untuk 5+ unit, Diskaun Tempahan Segera 10% untuk 10+ unit, lawatan sama.",
       },
       {
         q: "Berapa kerap saya perlu buat cuci kimia?",
@@ -131,7 +131,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的高压化学清洗费用是多少？",
-        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 180。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 280。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：5+台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
+        a: "挂壁式1.0–1.5 HP：RM 120。挂壁式2.0–2.5 HP：RM 150。挂壁式3.0 HP：RM 150。天花板卡式1.0–1.5 HP：RM 220。卡式2.0–3.0 HP：RM 250。窗式：RM 130–160。每项价格在技术员开始工作前确认。多台折扣：5+台享5%即时预订折扣（5% OFF Instant Booking Discount），10台以上享10%即时预订折扣（10% OFF Instant Booking Discount），同次上门。",
       },
       {
         q: "化学清洗应该多久做一次？",
@@ -155,11 +155,11 @@ export const servicesData: Record<string, ServiceDetail> = {
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 120" },
       { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 150" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 180" },
-      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 200" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 150" },
+      { label: "Wall-Mounted · 4.0 – 5.0 HP", price: "RM 150" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Ceiling Cassette · 4.0 – 5.0 HP", price: "RM 350" },
+      { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 250" },
+      { label: "Ceiling Cassette · 4.0 – 5.0 HP", price: "RM 250" },
       { label: "Window Unit · 1.0 – 2.0 HP", price: "RM 130" },
       { label: "Window Unit · 2.5 – 3.0 HP", price: "RM 160" },
     ],
@@ -203,7 +203,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical overhaul cost in KL & Selangor?",
-        a: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Wall-mounted 1.0\u20131.5 HP: RM 420. Wall-mounted 2.0\u20132.5 HP: RM 490. Wall-mounted 3.0\u20133.5 HP: RM 560. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation \u2014 these published prices do not apply to non-wall-mounted units.",
+        a: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Wall-mounted 1.0\u20131.5 HP: RM 420. Wall-mounted 2.0\u20132.5 HP: RM 460. Wall-mounted 3.0\u20133.5 HP: RM 500. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation \u2014 these published prices do not apply to non-wall-mounted units.",
       },
       {
         q: "When do I need a chemical overhaul vs a chemical wash?",
@@ -231,7 +231,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga chemical overhaul di KL & Selangor?",
-        a: "Harga Chemical Overhaul diterbitkan secara eksklusif untuk unit dinding sahaja. Dinding 1.0\u20131.5 HP: RM 420. Dinding 2.0\u20132.5 HP: RM 490. Dinding 3.0\u20133.5 HP: RM 560. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit. Ceiling cassette, ducted, floor-standing, portable, window dan mana-mana jenis aircond bukan-dinding yang lain memerlukan sebut harga dan penilaian berasingan di tapak \u2014 harga yang diterbitkan ini tidak terpakai untuk unit bukan-dinding.",
+        a: "Harga Chemical Overhaul diterbitkan secara eksklusif untuk unit dinding sahaja. Dinding 1.0\u20131.5 HP: RM 420. Dinding 2.0\u20132.5 HP: RM 460. Dinding 3.0\u20133.5 HP: RM 500. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit. Ceiling cassette, ducted, floor-standing, portable, window dan mana-mana jenis aircond bukan-dinding yang lain memerlukan sebut harga dan penilaian berasingan di tapak \u2014 harga yang diterbitkan ini tidak terpakai untuk unit bukan-dinding.",
       },
       {
         q: "Bilakah saya memerlukan overhaul kimia vs cuci kimia?",
@@ -255,7 +255,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪的化学大修费用是多少？",
-        a: "化学大修价格仅针对挂壁式冷气公布。挂壁式1.0–1.5 HP：RM 420。挂壁式2.0–2.5 HP：RM 490。挂壁式3.0–3.5 HP：RM 560。所有价格在技术员开始工作前确认。多台折扣适用：5+台享5%即时预订折扣，10台以上享10%即时预订折扣。天花板卡式、风管机、落地式、移动式、窗式及其他任何非挂壁式冷气类型需要另行现场评估和报价——以上公布价格不适用于非挂壁式机型。",
+        a: "化学大修价格仅针对挂壁式冷气公布。挂壁式1.0–1.5 HP：RM 420。挂壁式2.0–2.5 HP：RM 460。挂壁式3.0–3.5 HP：RM 500。所有价格在技术员开始工作前确认。多台折扣适用：5+台享5%即时预订折扣，10台以上享10%即时预订折扣。天花板卡式、风管机、落地式、移动式、窗式及其他任何非挂壁式冷气类型需要另行现场评估和报价——以上公布价格不适用于非挂壁式机型。",
       },
       {
         q: "何时需要化学大修而非化学清洗？",
@@ -278,8 +278,8 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 420" },
-      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 490" },
-      { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 560" },
+      { label: "Wall-Mounted · 2.0 – 2.5 HP", price: "RM 460" },
+      { label: "Wall-Mounted · 3.0 – 3.5 HP", price: "RM 500" },
     ],
     priceTableNote: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation.",
   },
@@ -637,9 +637,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 199" },
       { label: "Wall-Mounted · 2.0 HP", price: "RM 249" },
       { label: "Wall-Mounted · 2.5 HP", price: "RM 279" },
-      { label: "Wall-Mounted · 3.0 HP", price: "RM 329" },
+      { label: "Wall-Mounted · 3.0 HP", price: "RM 279" },
       { label: "Wall-Mounted · 4.0 HP", price: "RM 399" },
-      { label: "Wall-Mounted · 5.0 HP", price: "RM 449" },
+      { label: "Wall-Mounted · 5.0 HP", price: "RM 399" },
       { label: "Ceiling Cassette · 1.0 – 1.5 HP", price: "RM 290" },
       { label: "Ceiling Cassette · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Ceiling Cassette · 3.5 – 6.0 HP", price: "RM 400" },
@@ -797,7 +797,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does ceiling cassette servicing cost in KL & Selangor?",
-        a: "Basic service: RM 150 (1.0\u20131.5 HP), RM 200 (2.0\u20133.0 HP), RM 250 (3.5\u20135.0 HP). Chemical wash: RM 220 (1.0\u20131.5 HP), RM 280 (2.0\u20133.0 HP), RM 350 (4.0\u20135.0 HP). Chemical overhaul pricing is available for wall-mounted units only and is confirmed by HP. Installation: RM 290 (1.0\u20131.5 HP), RM 350 (2.0\u20133.0 HP), RM 400 (3.5\u20136.0 HP). Multi-unit discounts available for commercial premises \u2014 WhatsApp us your unit count for a custom quote.",
+        a: "Basic service: RM 150 (1.0\u20131.5 HP), RM 200 (2.0\u20133.0 HP), RM 250 (3.5\u20135.0 HP). Chemical wash: RM 220 (1.0\u20131.5 HP), RM 250 (2.0\u20133.0 HP), RM 250 (4.0\u20135.0 HP). Chemical overhaul pricing is available for wall-mounted units only and is confirmed by HP. Installation: RM 290 (1.0\u20131.5 HP), RM 350 (2.0\u20133.0 HP), RM 400 (3.5\u20136.0 HP). Multi-unit discounts available for commercial premises \u2014 WhatsApp us your unit count for a custom quote.",
       },
       {
         q: "My ceiling cassette is dripping water \u2014 what should I do immediately?",
@@ -824,7 +824,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsBM: [
       {
         q: "Berapa harga servis ceiling cassette di KL & Selangor?",
-        a: "Servis asas: RM 150 (1.0–1.5 HP), RM 200 (2.0–3.0 HP), RM 250 (3.5–5.0 HP). Cuci kimia: RM 220 (1.0–1.5 HP), RM 280 (2.0–3.0 HP), RM 350 (4.0–5.0 HP). Harga overhaul kimia hanya tersedia untuk unit dinding dan disahkan oleh HP. Pemasangan: RM 290 (1.0–1.5 HP), RM 350 (2.0–3.0 HP), RM 400 (3.5–6.0 HP). Diskaun pelbagai unit tersedia untuk premis komersial — WhatsApp kami jumlah unit anda untuk sebut harga khas.",
+        a: "Servis asas: RM 150 (1.0–1.5 HP), RM 200 (2.0–3.0 HP), RM 250 (3.5–5.0 HP). Cuci kimia: RM 220 (1.0–1.5 HP), RM 250 (2.0–3.0 HP), RM 250 (4.0–5.0 HP). Harga overhaul kimia hanya tersedia untuk unit dinding dan disahkan oleh HP. Pemasangan: RM 290 (1.0–1.5 HP), RM 350 (2.0–3.0 HP), RM 400 (3.5–6.0 HP). Diskaun pelbagai unit tersedia untuk premis komersial — WhatsApp kami jumlah unit anda untuk sebut harga khas.",
       },
       {
         q: "Ceiling cassette saya menitis air \u2014 apa yang perlu saya lakukan dengan segera?",
@@ -847,7 +847,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪天花板卡式机保养费用是多少？",
-        a: "基本保养：RM 150（1.0–1.5 HP），RM 200（2.0–3.0 HP），RM 250（3.5–5.0 HP）。化学清洗：RM 220（1.0–1.5 HP），RM 280（2.0–3.0 HP），RM 350（4.0–5.0 HP）。化学大修价格仅适用于挂壁式，按HP确认。安装：RM 290（1.0–1.5 HP），RM 350（2.0–3.0 HP），RM 400（3.5–6.0 HP）。商业场所享有多台折扣——WhatsApp告诉我们您的机器数量以获取定制报价。",
+        a: "基本保养：RM 150（1.0–1.5 HP），RM 200（2.0–3.0 HP），RM 250（3.5–5.0 HP）。化学清洗：RM 220（1.0–1.5 HP），RM 250（2.0–3.0 HP），RM 250（4.0–5.0 HP）。化学大修价格仅适用于挂壁式，按HP确认。安装：RM 290（1.0–1.5 HP），RM 350（2.0–3.0 HP），RM 400（3.5–6.0 HP）。商业场所享有多台折扣——WhatsApp告诉我们您的机器数量以获取定制报价。",
       },
       {
         q: "天花板卡式机滴水\u2014\u2014我该怎么办？",
@@ -874,8 +874,8 @@ export const servicesData: Record<string, ServiceDetail> = {
       { label: "Basic Service · 2.0 – 3.0 HP", price: "RM 200" },
       { label: "Basic Service · 3.5 – 5.0 HP", price: "RM 250" },
       { label: "Chemical Wash · 1.0 – 1.5 HP", price: "RM 220" },
-      { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 280" },
-      { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 350" },
+      { label: "Chemical Wash · 2.0 – 3.0 HP", price: "RM 250" },
+      { label: "Chemical Wash · 4.0 – 5.0 HP", price: "RM 250" },
       { label: "Installation · 1.0 – 1.5 HP", price: "RM 290" },
       { label: "Installation · 2.0 – 3.0 HP", price: "RM 350" },
       { label: "Installation · 3.5 – 6.0 HP", price: "RM 400" },
@@ -887,13 +887,13 @@ export const servicesData: Record<string, ServiceDetail> = {
   "dismantling-relocation": {
     slug: "dismantling-relocation",
     title: "Dismantle & Relocation",
-    tagline: "Safe pump-down, professional dismantle, and full recommissioning at your new address. Same move-in day installation available. From RM 250 complete.",
+    tagline: "Safe pump-down, professional dismantle, and full recommissioning at your new address. Same move-in day installation available. From RM 290 complete.",
     description:
-      "You are moving to a new condo in Petaling Jaya, or your office is relocating from Bangsar to Damansara. You have a perfectly good Daikin inverter unit that is only 3 years old \u2014 replacing it would cost RM 1,500+. Dismantling and relocating it makes financial sense. But this is not a job for general movers or a handyman with a spanner. An aircond relocation involves: safely pumping down the refrigerant into the outdoor condenser (so no gas is lost), disconnecting the electrical isolator, unbolting the indoor unit from the wall bracket, removing the outdoor condenser from its bracket or platform, extracting the copper pipes and wiring through the wall penetration, transporting both units securely to the new location, and then performing a full new installation: new copper pipes, new drainage, new wiring run, vacuum evacuation, and recommissioning. KL Renovator does this start to finish. Complete relocate and reinstall from RM 250 (1.0\u20131.5 HP, same building or nearby). RM 350 for a different-location relocation. Includes refrigerant recovery, 7ft new copper pipe, wiring, drainage, vacuum, and test. Same-day completion on most moves.",
+      "You are moving to a new condo in Petaling Jaya, or your office is relocating from Bangsar to Damansara. You have a perfectly good Daikin inverter unit that is only 3 years old \u2014 replacing it would cost RM 1,500+. Dismantling and relocating it makes financial sense. But this is not a job for general movers or a handyman with a spanner. An aircond relocation involves: safely pumping down the refrigerant into the outdoor condenser (so no gas is lost), disconnecting the electrical isolator, unbolting the indoor unit from the wall bracket, removing the outdoor condenser from its bracket or platform, extracting the copper pipes and wiring through the wall penetration, transporting both units securely to the new location, and then performing a full new installation: new copper pipes, new drainage, new wiring run, vacuum evacuation, and recommissioning. KL Renovator does this start to finish. Complete relocate and reinstall from RM 290 (1.0\u20131.5 HP, same building or nearby). RM 350 for a different-location relocation. Includes refrigerant recovery, 7ft new copper pipe, wiring, drainage, vacuum, and test. Same-day completion on most moves.",
     startPrice: "RM 90",
     heroImage: "/hero/aux-aircond-dismantle-relocation-kuala-lumpur-9.webp",
     ogImage: "/hero/aux-aircond-dismantle-relocation-kuala-lumpur-9.webp",
-    aioSummary: "Safe aircond relocation involving refrigerant pump-down and re-commissioning. Starting Price: RM 250 (Full package). Includes: New 7ft copper piping and vacuum cycle at the new location. Preserves 100% compressor integrity.",
+    aioSummary: "Safe aircond relocation involving refrigerant pump-down and re-commissioning. Starting Price: RM 290 (Full package). Includes: New 7ft copper piping and vacuum cycle at the new location. Preserves 100% compressor integrity.",
     aioSummaryMS: "Relokasi aircond yang selamat melibatkan 'pump-down' gas dan komisen semula. Harga: RM 250 (Pakej penuh). Termasuk: Paip kuprum 7 kaki baru dan kitaran vakum di lokasi baru. Melindungi integriti kompressor.",
     aioSummaryZH: "涉及冷媒泵送回收和重新调试的安全移机服务。起步价：RM 250（全包）。包含：新地点7尺新铜管及抽真空流程。100%保护压缩机寿命。",
     highlights: [
@@ -915,7 +915,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does aircond dismantle and relocation cost in KL & Selangor?",
-        a: "Dismantle only (without reinstall): RM 90. Full dismantle + reinstall same building/nearby: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Full dismantle + reinstall different location: RM 350 (1.0\u20131.5 HP). All full-relocation packages include: refrigerant pump-down, safe dismantle, transport, new 7ft copper pipe, new wiring, new drainage,  vacuum commissioning, and full test. Additional copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Additional wire beyond 7ft: RM 9/ft. If the new location requires roof-mount or high-rise external condenser mounting, additional bracket fees may apply \u2014 confirmed before work.",
+        a: "Dismantle only (without reinstall): RM 90. Full dismantle + reinstall same building/nearby: RM 290 (1.0\u20131.5 HP), RM 340 (2.0\u20132.5 HP). Full dismantle + reinstall different location: RM 350 (1.0\u20131.5 HP). All full-relocation packages include: refrigerant pump-down, safe dismantle, transport, new 7ft copper pipe, new wiring, new drainage,  vacuum commissioning, and full test. Additional copper pipe beyond 7ft: RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP). Additional wire beyond 7ft: RM 9/ft. If the new location requires roof-mount or high-rise external condenser mounting, additional bracket fees may apply \u2014 confirmed before work.",
       },
       {
         q: "Will my aircond refrigerant gas be lost during the relocation?",
@@ -935,14 +935,14 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Is it worth relocating an older unit, or should I buy a new one?",
-        a: "Our honest guidance: (1) Unit is under 5 years old, inverter, working perfectly \u2192 relocate. It will cost you RM 250\u2013350 vs RM 1,500+ for a new unit + installation. (2) Unit is 5\u20138 years old, working well, non-inverter \u2192 relocate is still worth it if the unit has been regularly serviced. An older but well-maintained unit can serve another 3\u20135 years. (3) Unit is 8+ years old, uses R22 gas, has needed repairs \u2192 strongly consider replacing. R22 is being phased out and getting expensive. A new R32 inverter unit will cut your electricity bill by 30\u201350% and pay for itself within 2\u20133 years. If you are unsure, WhatsApp us your unit's brand, model, and age, and we will give you an honest recommendation \u2014 we do both relocation and new installation, so there is no incentive to push one over the other.",
+        a: "Our honest guidance: (1) Unit is under 5 years old, inverter, working perfectly \u2192 relocate. It will cost you RM 290\u2013350 vs RM 1,500+ for a new unit + installation. (2) Unit is 5\u20138 years old, working well, non-inverter \u2192 relocate is still worth it if the unit has been regularly serviced. An older but well-maintained unit can serve another 3\u20135 years. (3) Unit is 8+ years old, uses R22 gas, has needed repairs \u2192 strongly consider replacing. R22 is being phased out and getting expensive. A new R32 inverter unit will cut your electricity bill by 30\u201350% and pay for itself within 2\u20133 years. If you are unsure, WhatsApp us your unit's brand, model, and age, and we will give you an honest recommendation \u2014 we do both relocation and new installation, so there is no incentive to push one over the other.",
       },
       { q: "Will the relocation process damage my unit's internal seals?", a: "Not when performed by KL Renovator. We use calibrated torque wrenches on all flare connections to ensure a factory-tight seal that prevents future gas loss at the new location." }
     ],
     faqsBM: [
       {
         q: "Berapa harga tanggal dan pindah aircond di KL & Selangor?",
-        a: "Tanggal sahaja (tanpa pasang semula): RM 90. Tanggal + pasang semula bangunan sama/berdekatan: RM 250 (1.0\u20131.5 HP), RM 290 (2.0\u20132.5 HP). Tanggal + pasang semula lokasi berbeza: RM 350 (1.0\u20131.5 HP). Semua pakej penuh termasuk: pam-turun bahan pendingin, tanggal selamat, pengangkutan, 7 kaki paip kuprum baharu, pendawaian baharu, longkang baharu dinding baharu, pentauliahan vakum, dan ujian penuh. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki.",
+        a: "Tanggal sahaja (tanpa pasang semula): RM 90. Tanggal + pasang semula bangunan sama/berdekatan: RM 290 (1.0\u20131.5 HP), RM 340 (2.0\u20132.5 HP). Tanggal + pasang semula lokasi berbeza: RM 350 (1.0\u20131.5 HP). Semua pakej penuh termasuk: pam-turun bahan pendingin, tanggal selamat, pengangkutan, 7 kaki paip kuprum baharu, pendawaian baharu, longkang baharu dinding baharu, pentauliahan vakum, dan ujian penuh. Paip kuprum tambahan melebihi 7 kaki: RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP). Wayar elektrik tambahan: RM 9/kaki.",
       },
       {
         q: "Adakah gas aircond saya akan hilang semasa pemindahan?",
@@ -958,7 +958,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Adakah berbaloi memindahkan unit lama, atau beli yang baharu?",
-        a: "Panduan jujur kami: (1) Unit bawah 5 tahun, inverter, berfungsi sempurna \u2192 pindahkan. Kos RM 250\u2013350 vs RM 1,500+ untuk unit baharu + pemasangan. (2) Unit 5\u20138 tahun, berfungsi baik, bukan inverter \u2192 masih berbaloi jika diservis secara berkala. (3) Unit 8+ tahun, gunakan gas R22, pernah dibaiki \u2192 pertimbangkan untuk ganti. R22 sedang dihentikan dan semakin mahal. Unit inverter R32 baharu akan mengurangkan bil elektrik 30\u201350%. Jika tidak pasti, WhatsApp kami jenama, model, dan umur unit anda.",
+        a: "Panduan jujur kami: (1) Unit bawah 5 tahun, inverter, berfungsi sempurna \u2192 pindahkan. Kos RM 290\u2013350 vs RM 1,500+ untuk unit baharu + pemasangan. (2) Unit 5\u20138 tahun, berfungsi baik, bukan inverter \u2192 masih berbaloi jika diservis secara berkala. (3) Unit 8+ tahun, gunakan gas R22, pernah dibaiki \u2192 pertimbangkan untuk ganti. R22 sedang dihentikan dan semakin mahal. Unit inverter R32 baharu akan mengurangkan bil elektrik 30\u201350%. Jika tidak pasti, WhatsApp kami jenama, model, dan umur unit anda.",
       },
       { q: "Adakah proses pemindahan akan merosakkan seal dalaman unit saya?", a: "Tidak jika dilakukan oleh KL Renovator. Kami menggunakan kunci tork bertauliah pada semua sambungan untuk memastikan kedap udara standard kilang yang menghalang kebocoran gas di lokasi baru." },
       { q: "Bolehkah saya menempah pemindahan pada hari yang sama?", a: "Ya — KL Renovator kerap mempunyai slot hari sama untuk pemindahan di seluruh KL & Selangor. WhatsApp +60182983573 awal pagi untuk peluang terbaik." }
@@ -966,7 +966,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqsZH: [
       {
         q: "吉隆坡和雪兰莪冷气拆机和搬迁费用是多少？",
-        a: "仅拆机（不重装）：RM 90。拆机+同楼/就近重装：RM 250（1.0-1.5 HP），RM 290（2.0-2.5 HP）。拆机+不同地点重装：RM 350（1.0-1.5 HP）。所有完整搬迁套餐包括：制冷剂泵送回收、安全拆机、运输、7尺新铜管、新电线、新排水管、新墙支架、真空调试和全面测试。超出7尺的额外铜管：RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP）。超出7尺的额外电线：RM 9/尺。",
+        a: "仅拆机（不重装）：RM 90。拆机+同楼/就近重装：RM 290（1.0-1.5 HP），RM 340（2.0-2.5 HP）。拆机+不同地点重装：RM 350（1.0-1.5 HP）。所有完整搬迁套餐包括：制冷剂泵送回收、安全拆机、运输、7尺新铜管、新电线、新排水管、新墙支架、真空调试和全面测试。超出7尺的额外铜管：RM 17/尺（1.0–1.5 HP），RM 23/尺（2.0–2.5 HP），RM 27/尺（3.0–3.5 HP）。超出7尺的额外电线：RM 9/尺。",
       },
       {
         q: "搬迁过程中冷媒气体会有损失吗？",
@@ -989,8 +989,8 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     priceTable: [
       { label: "Dismantle Only (indoor + outdoor)", price: "RM 90" },
-      { label: "Dismantle + Reinstall Same Place (standard)", price: "RM 250" },
-      { label: "Dismantle + Reinstall Same Place (2.0–2.5 HP)", price: "RM 290" },
+      { label: "Dismantle + Reinstall Same Place (standard)", price: "RM 290" },
+      { label: "Dismantle + Reinstall Same Place (2.0–2.5 HP)", price: "RM 340" },
       { label: "Dismantle + Reinstall Other Place", price: "RM 350" },
     ],
     priceTableNote: "7ft copper pipe, insulation, electrical wire, and drain pipe are free with reinstallation. Anything beyond 7ft, or any bracket / casing / electrical / access work, is charged per the Additional Materials & Special Charges rates below.",

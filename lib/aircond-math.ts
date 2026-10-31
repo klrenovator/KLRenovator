@@ -81,10 +81,10 @@ export function installationLabour(hp: HpSize, unitType: UnitType): number {
   if (h <= 1.5) return 199;
   if (h <= 2.0) return 249;
   if (h <= 2.5) return 279;
-  if (h <= 3.0) return 329;
-  if (h <= 3.5) return 329;
+  if (h <= 3.0) return 279;
+  if (h <= 3.5) return 329; // No published 3.5 HP wall-install row in the official sheet — keep prior fallback, do not invent a price
   if (h <= 4.0) return 399;
-  return 449;
+  return 399;
 }
 
 /** Copper pipe rate per foot beyond the free 7 ft — from pricing.materials. */
@@ -185,10 +185,10 @@ export const HP_BTU_TABLE: HpRecommendation[] = [
   { hp: "1.5", label: "1.5 HP (12,000 BTU)", minBTU: 9001, maxBTU: 12000, installFrom: 199 },
   { hp: "2.0", label: "2.0 HP (18,000 BTU)", minBTU: 12001, maxBTU: 18000, installFrom: 249 },
   { hp: "2.5", label: "2.5 HP (24,000 BTU)", minBTU: 18001, maxBTU: 24000, installFrom: 279 },
-  { hp: "3.0", label: "3.0 HP (30,000 BTU)", minBTU: 24001, maxBTU: 30000, installFrom: 329 },
+  { hp: "3.0", label: "3.0 HP (30,000 BTU)", minBTU: 24001, maxBTU: 30000, installFrom: 279 },
   { hp: "3.5", label: "3.5 HP (36,000 BTU)", minBTU: 30001, maxBTU: 36000, installFrom: 329 },
   { hp: "4.0", label: "4.0 HP (42,000 BTU)", minBTU: 36001, maxBTU: 42000, installFrom: 399 },
-  { hp: "5.0", label: "5.0 HP (48,000+ BTU)", minBTU: 42001, maxBTU: Infinity, installFrom: 449 },
+  { hp: "5.0", label: "5.0 HP (48,000+ BTU)", minBTU: 42001, maxBTU: Infinity, installFrom: 399 },
 ];
 
 export function recommendHpFromBtu(btu: number): HpRecommendation {

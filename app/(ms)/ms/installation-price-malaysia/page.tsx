@@ -49,9 +49,9 @@ const INSTALL_PRICES = [
   { label: "Dinding · 1.5 HP", price: "RM 199" },
   { label: "Dinding · 2.0 HP", price: "RM 249" },
   { label: "Dinding · 2.5 HP", price: "RM 279" },
-  { label: "Dinding · 3.0 HP", price: "RM 329" },
+  { label: "Dinding · 3.0 HP", price: "RM 279" },
   { label: "Dinding · 4.0 HP", price: "RM 399" },
-  { label: "Dinding · 5.0 HP", price: "RM 449" },
+  { label: "Dinding · 5.0 HP", price: "RM 399" },
   { label: "Ceiling Cassette · 1.0–1.5 HP", price: "RM 290" },
   { label: "Ceiling Cassette · 2.0–3.0 HP", price: "RM 350" },
   { label: "Ceiling Cassette · 3.5–6.0 HP", price: "RM 400" },
@@ -80,7 +80,7 @@ const MATERIAL_PRICES = [
 const FAQS = [
   {
     q: "Berapa harga pasang aircond di KL & Selangor 2026?",
-    a: "Dinding 1.0–1.5 HP dari RM 199. 2.0 HP dari RM 249, 2.5 HP dari RM 279, 3.0 HP dari RM 329. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Setiap harga termasuk 7 kaki paip kuprum, penebat, wayar elektrik dan paip longkang, vakum, ujian kebocoran dan pentauliahan — disahkan sebelum kami mula.",
+    a: "Dinding 1.0–1.5 HP dari RM 199. 2.0 HP dari RM 249, 2.5 HP dari RM 279, 3.0 HP dari RM 279. Ceiling cassette dari RM 290. Unit tingkap dari RM 199. Setiap harga termasuk 7 kaki paip kuprum, penebat, wayar elektrik dan paip longkang, vakum, ujian kebocoran dan pentauliahan — disahkan sebelum kami mula.",
   },
   {
     q: "Apa yang termasuk dalam pemasangan asas RM 199?",

@@ -602,10 +602,10 @@ export default async function AreaPage({
                   { service: "Basic Servicing (2.0–2.5 HP)", price: "RM 120" },
                   { service: "Pressure Chemical Wash (1.0–1.5 HP)", price: "RM 120" },
                   { service: "Pressure Chemical Wash (2.0–2.5 HP)", price: "RM 150" },
-                  { service: "Pressure Chemical Wash (3.0 HP)", price: "RM 180" },
-                  { service: "Pressure Chemical Wash (4.0–5.0 HP)", price: "RM 200" },
+                  { service: "Pressure Chemical Wash (3.0 HP)", price: "RM 150" },
+                  { service: "Pressure Chemical Wash (4.0–5.0 HP)", price: "RM 150" },
                   { service: "Chemical Overhaul (Wall-Mounted Aircon only, 1.0–1.5 HP)", price: "RM 420" },
-                  { service: "Chemical Overhaul (Wall-Mounted Aircon only, 2.0–2.5 HP)", price: "RM 490" },
+                  { service: "Chemical Overhaul (Wall-Mounted Aircon only, 2.0–2.5 HP)", price: "RM 460" },
                   { service: "Gas Top-Up R22", price: "RM 2.50 / PSI" },
                   { service: "Gas Top-Up R410A", price: "RM 3.00 / PSI" },
                   { service: "Gas Top-Up R32", price: "RM 3.00 / PSI" },
@@ -706,7 +706,7 @@ export default async function AreaPage({
           <div className="border border-slate-200 divide-y divide-slate-200 rounded-2xl overflow-hidden mb-6">
             {(area.faqs?.length > 0 ? area.faqs : [
               { q: `Does KL Renovator service aircond in ${area.name}?`, a: `Yes — KL Renovator provides full aircond servicing across all of ${area.name}, ${area.state}. Services include chemical wash, chemical overhaul, gas top-up, repairs and new installations. WhatsApp +60182983573 to book.` },
-              { q: `How much does aircond chemical wash cost in ${area.name}?`, a: `Pressure chemical wash in ${area.name} starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work.` },
+              { q: `How much does aircond chemical wash cost in ${area.name}?`, a: `Pressure chemical wash in ${area.name} starts from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 150 (3.0 HP). Ceiling cassette from RM 220. All prices confirmed before work.` },
               { q: `Is same-day aircond service available in ${area.name}?`, a: `Yes — same-day slots are frequently available in ${area.name}. WhatsApp +60182983573 in the morning to secure your slot. Mon–Sun, 9AM–6PM.` },
               { q: `Which aircond brands do you service in ${area.name}?`, a: `All major brands in ${area.name} — Daikin, Panasonic, Mitsubishi, York, Midea, LG, Samsung, Acson, Sharp, Toshiba and Haier. Inverter and non-inverter.` },
             ]).map((faq: { q: string; a: string }, i: number) => (

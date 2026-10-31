@@ -36,8 +36,8 @@ const SERVICE_LABELS: Record<ServiceType, string> = {
 
 const BASE_PRICES: Record<Exclude<ServiceType, "gas-topup" | "installation" | "relocate-same">, Record<string, number>> = {
   "basic-servicing": { "1.0-1.5": 99, "2.0-2.5": 120, "3.0-3.5": 150 },
-  "chemical-wash": { "1.0-1.5": 120, "2.0-2.5": 150, "3.0-3.5": 180 },
-  "chemical-overhaul": { "1.0-1.5": 420, "2.0-2.5": 490, "3.0-3.5": 560 },
+  "chemical-wash": { "1.0-1.5": 120, "2.0-2.5": 150, "3.0-3.5": 150 },
+  "chemical-overhaul": { "1.0-1.5": 420, "2.0-2.5": 460, "3.0-3.5": 500 },
   repair: { "1.0-1.5": 88, "2.0-2.5": 88, "3.0-3.5": 88 },
   dismantle: { "1.0-1.5": 90, "2.0-2.5": 90, "3.0-3.5": 90 },
   "relocate-other": { "1.0-1.5": 350, "2.0-2.5": 350, "3.0-3.5": 350 },
@@ -69,8 +69,8 @@ export function PriceCalculator() {
   const includesInstallationMaterials = service === "installation" || service === "relocate-same" || service === "relocate-other";
   const basePrice = useMemo(() => {
     if (service === "gas-topup") return gasType === "r22" ? 120 : gasType === "r410a" ? 150 : 180;
-    if (service === "installation") return hp === "1.0-1.5" ? 199 : hp === "2.0" ? 249 : hp === "2.5" ? 279 : 329;
-    if (service === "relocate-same") return hp === "2.0" || hp === "2.5" ? 290 : 250;
+    if (service === "installation") return hp === "1.0-1.5" ? 199 : hp === "2.0" ? 249 : hp === "2.5" ? 279 : 279; // 3.0-3.5 band starts at the published 3.0 HP row (RM 279); technician confirms final HP price before work
+    if (service === "relocate-same") return hp === "2.0" || hp === "2.5" ? 340 : 290;
     return BASE_PRICES[service as Exclude<ServiceType, "gas-topup" | "installation" | "relocate-same">]?.[hpBand(hp)] ?? 0;
   }, [service, gasType, hp]);
   const extra = (feet: number) => Math.max(0, feet - FREE_FEET);

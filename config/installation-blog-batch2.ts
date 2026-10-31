@@ -62,7 +62,7 @@ export const installationBlogBatch2: BlogPost[] = [
         <li><strong>1.5 HP:</strong> RM 219 — everywhere in KL & Selangor</li>
         <li><strong>2.0 HP:</strong> RM 249 — everywhere in KL & Selangor</li>
         <li><strong>2.5 HP:</strong> RM 279 — everywhere in KL & Selangor</li>
-        <li><strong>3.0 HP:</strong> RM 329 — everywhere in KL & Selangor</li>
+        <li><strong>3.0 HP:</strong> RM 279 — everywhere in KL & Selangor</li>
       </ul>
       <p>No condo surcharge. No KL premium. No parking fee passed to you. The price we quote on WhatsApp is the price you pay — period.</p>
 
@@ -119,7 +119,7 @@ export const installationBlogBatch2: BlogPost[] = [
         <li><strong>1.5 HP:</strong> RM 219 — di mana-mana di KL & Selangor</li>
         <li><strong>2.0 HP:</strong> RM 249 — di mana-mana di KL & Selangor</li>
         <li><strong>2.5 HP:</strong> RM 279 — di mana-mana di KL & Selangor</li>
-        <li><strong>3.0 HP:</strong> RM 329 — di mana-mana di KL & Selangor</li>
+        <li><strong>3.0 HP:</strong> RM 279 — di mana-mana di KL & Selangor</li>
       </ul>
       <p>Tiada surcaj kondominium. Tiada premium KL. Tiada caj parking dipindahkan kepada anda. Harga yang kami sebut di WhatsApp ialah harga yang anda bayar — titik.</p>
 
@@ -175,7 +175,7 @@ export const installationBlogBatch2: BlogPost[] = [
         <li><strong>1.5匹：</strong>RM 219——KL和雪兰莪统一</li>
         <li><strong>2.0匹：</strong>RM 249——KL和雪兰莪统一</li>
         <li><strong>2.5匹：</strong>RM 279——KL和雪兰莪统一</li>
-        <li><strong>3.0匹：</strong>RM 329——KL和雪兰莪统一</li>
+        <li><strong>3.0匹：</strong>RM 279——KL和雪兰莪统一</li>
       </ul>
       <p>无公寓附加费。无KL溢价。无停车费转嫁。我们在WhatsApp上报的价格就是您付的价格——句号。</p>
 

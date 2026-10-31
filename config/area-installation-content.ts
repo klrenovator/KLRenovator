@@ -449,7 +449,7 @@ function getFAQs(
     return [
       {
         q: `How much does aircond installation cost in ${name}?`,
-        a: `Wall-mounted installation in ${name} starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, and RM 279–RM 329 for larger units. Ceiling cassette starts from RM 290, and window units from RM 199. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. If an outdoor bracket is required, it is quoted separately as a paid special charge before work begins.`,
+        a: `Wall-mounted installation in ${name} starts from RM 199 for 1.0–1.5 HP, RM 249 for 2.0 HP, and RM 279–RM 399 for larger units. Ceiling cassette starts from RM 290, and window units from RM 199. Every quote includes the first 7 ft of copper pipe, insulation, electrical wire and drain pipe. If an outdoor bracket is required, it is quoted separately as a paid special charge before work begins.`,
       },
       {
         q: `How long does aircond installation take in ${name}?`,
@@ -474,7 +474,7 @@ function getFAQs(
     return [
       {
         q: `Berapa harga pemasangan aircond di ${name}?`,
-        a: `Pemasangan dinding di ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 329 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 199. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran standard.`,
+        a: `Pemasangan dinding di ${name} bermula RM 199 untuk 1.0–1.5 HP, RM 249 untuk 2.0 HP, dan RM 279–RM 399 untuk unit lebih besar. Ceiling cassette bermula RM 290, dan unit tingkap dari RM 199. Setiap sebut harga termasuk 7 ft paip tembaga, wayar, paip saliran standard.`,
       },
       {
         q: `Berapa lama pemasangan aircond di ${name}?`,
@@ -498,7 +498,7 @@ function getFAQs(
   return [
     {
       q: `${name}的冷气安装费用是多少？`,
-      a: `${name}的挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 329。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线和排水管；如需室外支架则另行收费。`,
+      a: `${name}的挂壁式安装从RM 199起（1.0–1.5匹），2.0匹RM 249，更大马力RM 279–RM 399。天花板卡式机从RM 290起，窗式机从RM 199起。每次报价均包含7尺铜管、电线和排水管；如需室外支架则另行收费。`,
     },
     {
       q: `${name}的冷气安装需要多长时间？`,

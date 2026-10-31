@@ -64,11 +64,11 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 ### 2. Pressure Chemical Wash
 - Wall-Mounted 1.0–1.5 HP: RM 120
 - Wall-Mounted 2.0–2.5 HP: RM 150
-- Wall-Mounted 3.0 HP: RM 180
-- Wall-Mounted 4.0–5.0 HP: RM 200
+- Wall-Mounted 3.0 HP: RM 150
+- Wall-Mounted 4.0–5.0 HP: RM 150
 - Ceiling Cassette 1.0–1.5 HP: RM 220
-- Ceiling Cassette 2.0–3.0 HP: RM 280
-- Ceiling Cassette 4.0–5.0 HP: RM 350
+- Ceiling Cassette 2.0–3.0 HP: RM 250
+- Ceiling Cassette 4.0–5.0 HP: RM 250
 - Unit stays mounted on wall during service
 - Includes: drain flush, filter clean, 1-month warranty
 - Recommended every 12 months
@@ -76,8 +76,8 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 
 ### 3. Chemical Overhaul (Wall-Mounted Aircon only)
 - Wall-Mounted 1.0–1.5 HP: RM 420
-- Wall-Mounted 2.0–2.5 HP: RM 490
-- Wall-Mounted 3.0–3.5 HP: RM 560
+- Wall-Mounted 2.0–2.5 HP: RM 460
+- Wall-Mounted 3.0–3.5 HP: RM 500
 - Full dismantle, chemical bath, reassembly, reinstallation
 - Takes 2–3 hours per unit
 - Best for: water leaking, ice formation, units not serviced in 3+ years
@@ -107,9 +107,9 @@ Blog posts have EN/MS/ZH server-rendered bodies with sanitization (lib/blog-html
 - Wall-Mounted 1.0–1.5 HP: RM 199 (includes 7ft copper pipe, wirings, drainage)
 - Wall-Mounted 2.0 HP: RM 249
 - Wall-Mounted 2.5 HP: RM 279
-- Wall-Mounted 3.0 HP: RM 329
+- Wall-Mounted 3.0 HP: RM 279
 - Wall-Mounted 4.0 HP: RM 399
-- Wall-Mounted 5.0 HP: RM 449
+- Wall-Mounted 5.0 HP: RM 399
 - Ceiling Cassette 1.0–1.5 HP: RM 290
 - Ceiling Cassette 2.0–3.0 HP: RM 350
 - Ceiling Cassette 3.5–6.0 HP: RM 400
@@ -363,7 +363,7 @@ KL Renovator offers free interactive tools on the homepage and dedicated tool pa
 
 ### Installation Cost Calculator
 - Inputs: number of units, HP, aircond type (wall/cassette/window), copper pipe length, electrical wire length, drain pipe length, PVC casing, outdoor bracket, aircond switch, water pump
-- Outputs: labour cost (published per-HP rates RM 199–449 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9/ft, drain ~RM 5/ft estimate, small PVC RM 6/ft or large PVC RM 12/fts RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 5+ units, 10% for 10+ units), grand total
+- Outputs: labour cost (published per-HP rates RM 199–399 wall, RM 290+ cassette), material cost (copper RM 17–27/ft, wire RM 9/ft, drain ~RM 5/ft estimate, small PVC RM 6/ft or large PVC RM 12/fts RM 35–70, switch RM 100, pump RM 350–550 published range), bundle discount (5% for 5+ units, 10% for 10+ units), grand total
 - URL: https://www.klrenovator.com/aircond-installation-cost-calculator
 
 ### Gas Top-up Cost Estimator

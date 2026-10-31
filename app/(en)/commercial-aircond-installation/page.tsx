@@ -38,7 +38,7 @@ const BUSINESS_TYPES = [
 const PRICING = [
   { type: "Wall-Mounted · 1.5 HP", price: "RM 199", suitable: "Small office, consultation room, retail counter" },
   { type: "Wall-Mounted · 2.0–2.5 HP", price: "RM 249–279", suitable: "Medium office, shoplot, waiting area" },
-  { type: "Wall-Mounted · 3.0 HP", price: "RM 329", suitable: "Large office, restaurant dining area" },
+  { type: "Wall-Mounted · 3.0 HP", price: "RM 279", suitable: "Large office, restaurant dining area" },
   { type: "Ceiling Cassette · 1.0–1.5 HP", price: "RM 290", suitable: "Small meeting room, private office" },
   { type: "Ceiling Cassette · 2.0–3.0 HP", price: "RM 350", suitable: "Open-plan office, shoplot, clinic waiting" },
   { type: "Ceiling Cassette · 3.5–6.0 HP", price: "RM 400", suitable: "Large commercial space, restaurant" },

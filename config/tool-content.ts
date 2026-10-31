@@ -32,14 +32,14 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
       howItWorksTitle: "How This Calculator Works",
       howItWorks: [
         "Select the number of units you need installed and the aircond type — wall-mounted, ceiling cassette or window unit.",
-        "Choose the horsepower (HP) of each unit — installation labour is charged per HP exactly as published (RM 199 for 1.0–1.5 HP wall-mounted, RM 249 for 2.0 HP, RM 329 for 3.0 HP, and so on).",
+        "Choose the horsepower (HP) of each unit — installation labour is charged per HP exactly as published (RM 199 for 1.0–1.5 HP wall-mounted, RM 249 for 2.0 HP, RM 279 for 3.0 HP, and so on).",
         "Enter the copper pipe, electrical wire and drain pipe run lengths. The first 7 ft of each is free with every installation; anything beyond is charged per foot using the published HP-wise rates.",
         "Add optional items: Small PVC casing (electrical wire) RM 6/ft or large PVC casing (copper pipe + wire + insulation) RM 12/ft, outdoor bracket (standard RM 45 or heavy duty RM 70), aircond switch / plug point (RM 100), wall hacking & concealment work (RM 25/ft) and a condensate water pump for concealed installs.",
         "The calculator applies the instant booking bundle discount — 5% OFF for 5+ units and 10% OFF for 10+ units — and shows your full line-item breakdown.",
         "Send the estimate to KL Renovator on WhatsApp for a confirmed quotation, or book a slot online. Final pricing is confirmed before any work begins.",
       ],
       factors: [
-        { title: "Horsepower (HP)", desc: "Bigger units cost more to install: 1.0–1.5 HP wall-mounted is RM 199, 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 329, 4.0 HP RM 399, 5.0 HP RM 449. Ceiling cassette starts from RM 290." },
+        { title: "Horsepower (HP)", desc: "Bigger units cost more to install: 1.0–1.5 HP wall-mounted is RM 199, 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 279, 4.0 HP RM 399, 5.0 HP RM 399. Ceiling cassette starts from RM 290." },
         { title: "Copper pipe length", desc: "7 ft is free. Extra copper pipe is RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP) and RM 27/ft (3.0 HP and above) — the single biggest price variable on most installs." },
         { title: "Electrical wire length", desc: "7 ft is free. Extra wire is RM 9/ft." },
         { title: "Drain pipe & PVC casing", desc: "7 ft of drain pipe is free; extra run is estimated at RM 5/ft and confirmed on-site. Small PVC casing for electrical wire is RM 6/ft; large PVC casing for copper pipe + wire + insulation is RM 12/ft." },
@@ -48,7 +48,7 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
         { title: "Bundle discount", desc: "Install 5+ units and get 5% OFF; 10+ units get 10% OFF. The discount applies to the whole installation package." },
       ],
       faqs: [
-        { q: "How much does aircond installation cost in Malaysia?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft of copper pipe, wiring and drain pipe, vacuum pump commissioning and a 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 199. 2.0 HP is RM 249, 2.5 HP RM 279, 3.0 HP RM 329, 4.0 HP RM 399 and 5.0 HP RM 449." },
+        { q: "How much does aircond installation cost in Malaysia?", a: "Wall-mounted installation starts from RM 199 for 1.0–1.5 HP including 7 ft of copper pipe, wiring and drain pipe, vacuum pump commissioning and a 1-month workmanship warranty. Ceiling cassette from RM 290, window unit from RM 199. 2.0 HP is RM 249, 2.5 HP RM 279, 3.0 HP RM 279, 4.0 HP RM 399 and 5.0 HP RM 399." },
         { q: "How much does copper pipe cost for aircond installation?", a: "The first 7 ft of copper pipe is free with installation. Beyond that, copper pipe is charged per foot by HP: RM 17/ft for 1.0–1.5 HP, RM 23/ft for 2.0–2.5 HP and RM 27/ft for 3.0 HP and above." },
         { q: "How much does aircond electrical wire cost per foot?", a: "The first 7 ft of electrical wire is free. Extra wire is RM 9/ft for every HP size." },
         { q: "Is there a discount for installing multiple aircond units?", a: "Yes — KL Renovator gives an instant booking discount on multi-unit installations: 5% OFF for 5+ units and 10% OFF for 10+ units. This is applied automatically in the calculator and on your final quotation." },
@@ -67,14 +67,14 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
       howItWorksTitle: "Cara Kalkulator Ini Berfungsi",
       howItWorks: [
         "Pilih bilangan unit yang ingin dipasang dan jenis aircond — dinding, ceiling cassette atau tingkap.",
-        "Pilih kuasa kuda (HP) setiap unit — buruh pemasangan dicaj mengikut HP seperti yang diterbitkan (RM 199 untuk 1.0–1.5 HP dinding, RM 249 untuk 2.0 HP, RM 329 untuk 3.0 HP, dan seterusnya).",
+        "Pilih kuasa kuda (HP) setiap unit — buruh pemasangan dicaj mengikut HP seperti yang diterbitkan (RM 199 untuk 1.0–1.5 HP dinding, RM 249 untuk 2.0 HP, RM 279 untuk 3.0 HP, dan seterusnya).",
         "Masukkan panjang paip tembaga, wayar elektrik dan paip saliran. 7 kaki pertama setiap satu adalah percuma; lebihan dicaj sekaki mengikut kadar HP yang diterbitkan.",
         "Tambah item pilihan: casing PVC kecil (wayar elektrik) RM 6/kaki atau casing PVC besar (paip kuprum + wayar + penebat) RM 12/kaki, pendakap luar (standard RM 45 atau heavy duty RM 70), suis / plug point aircond (RM 100), kerja pecah dinding & penyembunyian paip (RM 25/kaki) dan pam air untuk pemasangan tersembunyi.",
         "Kalkulator menggunakan diskaun tempahan segera — 5% OFF untuk 5+ unit dan 10% OFF untuk 10+ unit — serta menunjukkan pecahan penuh setiap item.",
         "Hantar anggaran ini kepada KL Renovator melalui WhatsApp untuk sebut harga sah, atau tempah slot dalam talian. Harga akhir disahkan sebelum kerja bermula.",
       ],
       factors: [
-        { title: "Kuasa Kuda (HP)", desc: "Unit lebih besar lebih mahal dipasang: 1.0–1.5 HP dinding RM 199, 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 329, 4.0 HP RM 399, 5.0 HP RM 449. Ceiling cassette dari RM 290." },
+        { title: "Kuasa Kuda (HP)", desc: "Unit lebih besar lebih mahal dipasang: 1.0–1.5 HP dinding RM 199, 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 279, 4.0 HP RM 399, 5.0 HP RM 399. Ceiling cassette dari RM 290." },
         { title: "Panjang paip tembaga", desc: "7 kaki percuma. Paip tembaga tambahan RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP) dan RM 27/kaki (3.0 HP ke atas) — pemboleh ubah harga terbesar pada kebanyakan pemasangan." },
         { title: "Panjang wayar elektrik", desc: "7 kaki percuma. Wayar tambahan RM 9/kaki." },
         { title: "Paip saliran & casing PVC", desc: "7 kaki paip saliran percuma; lebihan dianggarkan RM 5/kaki dan disahkan di tapak. Casing PVC kecil untuk wayar elektrik RM 6/kaki; casing PVC besar untuk paip kuprum + wayar + penebat RM 12/kaki." },
@@ -83,7 +83,7 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
         { title: "Diskaun pakej", desc: "Pasang 5+ unit dan dapat 5% OFF; 10+ unit dapat 10% OFF. Diskaun dikenakan pada keseluruhan pakej pemasangan." },
       ],
       faqs: [
-        { q: "Berapakah kos pemasangan aircond di Malaysia?", a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, wayar dan paip saliran, commissioning pam vakum dan waranti mutu kerja 1 bulan. Ceiling cassette dari RM 290, unit tingkap dari RM 199. 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 329, 4.0 HP RM 399 dan 5.0 HP RM 449." },
+        { q: "Berapakah kos pemasangan aircond di Malaysia?", a: "Pemasangan dinding bermula dari RM 199 untuk 1.0–1.5 HP termasuk 7 kaki paip tembaga, wayar dan paip saliran, commissioning pam vakum dan waranti mutu kerja 1 bulan. Ceiling cassette dari RM 290, unit tingkap dari RM 199. 2.0 HP RM 249, 2.5 HP RM 279, 3.0 HP RM 279, 4.0 HP RM 399 dan 5.0 HP RM 399." },
         { q: "Berapakah kos paip tembaga untuk pemasangan aircond?", a: "7 kaki pertama paip tembaga adalah percuma. Lebihan dicaj sekaki mengikut HP: RM 17/kaki untuk 1.0–1.5 HP, RM 23/kaki untuk 2.0–2.5 HP dan RM 27/kaki untuk 3.0 HP ke atas." },
         { q: "Berapakah kos wayar elektrik aircond sekaki?", a: "7 kaki pertama wayar elektrik adalah percuma. Wayar tambahan ialah RM 9/kaki untuk setiap saiz HP." },
         { q: "Adakah diskaun untuk pemasangan berbilang unit aircond?", a: "Ya — KL Renovator memberi diskaun tempahan segera untuk pemasangan berbilang unit: 5% OFF untuk 5+ unit dan 10% OFF untuk 10+ unit. Ini dikira automatik dalam kalkulator dan pada sebut harga akhir anda." },
@@ -102,14 +102,14 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
       howItWorksTitle: "计算器使用方法",
       howItWorks: [
         "选择需要安装的台数和冷气类型 — 挂壁式、天花板卡式或窗式。",
-        "选择每台的匹数（HP）— 安装人工按已公布的匹数收费（1.0–1.5匹挂壁式RM 199，2.0匹RM 249，3.0匹RM 329，依此类推）。",
+        "选择每台的匹数（HP）— 安装人工按已公布的匹数收费（1.0–1.5匹挂壁式RM 199，2.0匹RM 249，3.0匹RM 279，依此类推）。",
         "输入铜管、电线和排水管的长度。每项前7英尺免费；超出部分按已公布的匹数费率每英尺收费。",
         "添加可选项目：小型PVC线槽（电线，每英尺RM 6）或大型PVC线槽（铜管+电线+保温层，每英尺RM 12）、室外支架（标准RM 45或重型RM 70）、冷气开关/插座（RM 100）、打墙与隐藏式走管工程（每英尺RM 25）以及隐藏式安装用的排水泵。",
         "计算器自动套用即时预约折扣 — 5+台享5%折扣，10台以上享10%折扣 — 并显示完整的逐项明细。",
         "将估价通过WhatsApp发送给KL Renovator获取正式报价，或在线预约。最终价格在动工前确认。",
       ],
       factors: [
-        { title: "匹数（HP）", desc: "匹数越大安装费越高：1.0–1.5匹挂壁式RM 199，2.0匹RM 249，2.5匹RM 279，3.0匹RM 329，4.0匹RM 399，5.0匹RM 449。天花板卡式从RM 290起。" },
+        { title: "匹数（HP）", desc: "匹数越大安装费越高：1.0–1.5匹挂壁式RM 199，2.0匹RM 249，2.5匹RM 279，3.0匹RM 279，4.0匹RM 399，5.0匹RM 399。天花板卡式从RM 290起。" },
         { title: "铜管长度", desc: "前7英尺免费。额外铜管每英尺RM 17（1.0–1.5匹）、RM 23（2.0–2.5匹）、RM 27（3.0匹及以上）— 多数安装中最大的价格变量。" },
         { title: "电线长度", desc: "前7英尺免费。额外电线每英尺RM 9（1.0–1.5匹）、RM 13（2.0–2.5匹）、RM 17（3.0–4.0匹）。" },
         { title: "排水管与PVC线槽", desc: "7英尺排水管免费；超出部分按每英尺RM 5估算并现场确认。小型PVC线槽（电线）每英尺RM 6；大型PVC线槽（铜管+电线+保温层）每英尺RM 12。" },
@@ -118,7 +118,7 @@ export const TOOL_CONTENT: Record<ToolKey, Record<ToolLang, ToolContent>> = {
         { title: "多台折扣", desc: "安装5+台享5%折扣；10台以上享10%折扣。折扣适用于整个安装配套。" },
       ],
       faqs: [
-        { q: "马来西亚冷气安装费用是多少？", a: "挂壁式安装1.0–1.5匹从RM 199起，包含7英尺铜管、电线、排水管、真空泵调试和1个月工艺保修。天花板卡式从RM 290起，窗式从RM 199起。2.0匹RM 249，2.5匹RM 279，3.0匹RM 329，4.0匹RM 399，5.0匹RM 449。" },
+        { q: "马来西亚冷气安装费用是多少？", a: "挂壁式安装1.0–1.5匹从RM 199起，包含7英尺铜管、电线、排水管、真空泵调试和1个月工艺保修。天花板卡式从RM 290起，窗式从RM 199起。2.0匹RM 249，2.5匹RM 279，3.0匹RM 279，4.0匹RM 399，5.0匹RM 399。" },
         { q: "冷气安装的铜管多少钱一英尺？", a: "安装包含前7英尺铜管免费。超出部分按匹数每英尺收费：1.0–1.5匹RM 17，2.0–2.5匹RM 23，3.0匹及以上RM 27。" },
         { q: "冷气电线每英尺多少钱？", a: "前7英尺电线免费。额外电线：1.0–1.5匹每英尺RM 9，2.0–2.5匹RM 13，3.0–4.0匹RM 17。" },
         { q: "安装多台冷气有折扣吗？", a: "有 — KL Renovator为多台安装提供即时预约折扣：5+台享5%折扣，10台以上享10%折扣。计算器和最终报价都会自动套用。" },
