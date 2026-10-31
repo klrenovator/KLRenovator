@@ -69,7 +69,7 @@ export function PriceCalculator() {
   const includesInstallationMaterials = service === "installation" || service === "relocate-same" || service === "relocate-other";
   const basePrice = useMemo(() => {
     if (service === "gas-topup") return gasType === "r22" ? 120 : gasType === "r410a" ? 150 : 180;
-    if (service === "installation") return hp === "1.0-1.5" ? 199 : hp === "2.0" ? 249 : hp === "2.5" ? 279 : 279; // 3.0-3.5 band starts at the published 3.0 HP row (RM 279); technician confirms final HP price before work
+    if (service === "installation") return hp === "1.0-1.5" ? 199 : hp === "2.0" ? 249 : hp === "2.5" ? 279 : 279; // Owner-confirmed: 3.5 HP wall installation = same price as 3.0 HP (RM 279)
     if (service === "relocate-same") return hp === "2.0" || hp === "2.5" ? 340 : 290;
     return BASE_PRICES[service as Exclude<ServiceType, "gas-topup" | "installation" | "relocate-same">]?.[hpBand(hp)] ?? 0;
   }, [service, gasType, hp]);

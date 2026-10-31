@@ -25,7 +25,7 @@ Branch: `arena/70f189be-klrenovator` · Source of truth: Google Sheet **KL RENOV
 Drive: new Google Doc **“KL RENOVATOR - PRICE LIST (Updated Oct 2026 - from official Sheet)”** (`1csNrgAaHTsHQBpv6JsMoBzR_C8gFZ4RvrU2vfH_XFVA`). ⚠️ The Aug-2026 DOCX/PDF price lists in Drive still contain the old prices — do not use them; they were not overwritten (binary DOCX cannot be edited safely via the Drive connector).
 
 ### Pending owner clarification (NOT guessed)
-- Sheet has **no 3.5 HP wall-installation row**. Discrete 3.5 HP fallback in `lib/aircond-math.ts` kept at the prior value; the price-calculator's combined 3.0–3.5 band now starts at the published 3.0 HP row (RM 279) and technicians confirm the final HP price before work.
+- Sheet has **no 3.5 HP wall-installation row** — owner confirmed 31 Oct 2026 that 3.5 HP is charged the same as 3.0 HP (**RM 279**); applied in `lib/aircond-math.ts` (fallback + HP/BTU table) and the price calculator's 3.0–3.5 band.
 - Basic Window servicing (RM 99/120) exists in the Sheet but had no published website table row — left as-is.
 
 ## 2. GSC screenshot classification (Oct 2026)
