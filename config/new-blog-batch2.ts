@@ -117,7 +117,7 @@ export const newBlogBatch2: BlogPost[] = [
           <tr><td>Pressure chemical wash</td><td>Wall-mounted 2.0 – 2.5 HP</td><td>RM 150</td></tr>
           <tr><td>Pressure chemical wash</td><td>Ceiling cassette 1.0 – 1.5 HP</td><td>RM 220</td></tr>
           <tr><td>Pressure chemical wash</td><td>Window unit 1.0 – 2.0 HP</td><td>RM 130</td></tr>
-          <tr><td>Chemical overhaul (wall-mounted only)</td><td>1.0 – 1.5 / 2.0 – 2.5 / 3.0 – 3.5 HP</td><td>RM 420 / RM 490 / RM 560</td></tr>
+          <tr><td>Chemical overhaul (wall-mounted only)</td><td>1.0 – 1.5 / 2.0 – 2.5 / 3.0 – 3.5 HP</td><td>RM 420 / RM 460 / RM 500</td></tr>
         </tbody>
       </table>
       <p>Households and offices servicing several units at once get published volume discounts: 5% off for 5+ units and 10% off for 10+ units on the same booking. The full price list — including gas top-up at RM 2.50/PSI (R22) and RM 3.00/PSI (R32/R410A), and gas leak repair at RM 120 per leak — is on the <a href="/aircond-service-price-malaysia">aircond service price Malaysia page</a>, with a deeper breakdown in our <a href="/blog/aircond-chemical-wash-price-malaysia-2026">2026 chemical wash price guide</a>. If a fault is found during cleaning, diagnosis is RM 88 and that fee is waived when you proceed with the repair.</p>
@@ -174,7 +174,7 @@ export const newBlogBatch2: BlogPost[] = [
       <p>About 45–90 minutes per unit, including setup, canvas protection, cleaning, drain flush and the cooling test.</p>
 
       <h3>What is the difference between chemical wash and chemical overhaul?</h3>
-      <p>A chemical wash cleans the unit on the wall with pressure and containment. An overhaul fully dismantles the indoor unit for the deepest clean — published for wall-mounted units at RM 420–560 depending on HP. Overhaul is for severe blockage, persistent leaking or ice formation.</p>
+      <p>A chemical wash cleans the unit on the wall with pressure and containment. An overhaul fully dismantles the indoor unit for the deepest clean — published for wall-mounted units at RM 420–500 depending on HP. Overhaul is for severe blockage, persistent leaking or ice formation.</p>
 
       <h3>Will a chemical wash fix my leaking indoor unit?</h3>
       <p>Usually yes, because most indoor leaks come from a slime-blocked drain path, which the wash flushes out. If the leak is at a pipe joint instead, leak repair is RM 120 per leak. We explain the root cause in <a href="/blog/pressure-chemical-wash-leaking-aircond-kl-selangor">why pressure chemical wash fixes leaking aircond</a>.</p>
@@ -258,7 +258,7 @@ export const newBlogBatch2: BlogPost[] = [
           <tr><td>Cuci kimia bertekanan</td><td>Dinding 2.0 – 2.5 HP</td><td>RM 150</td></tr>
           <tr><td>Cuci kimia bertekanan</td><td>Keset siling 1.0 – 1.5 HP</td><td>RM 220</td></tr>
           <tr><td>Cuci kimia bertekanan</td><td>Unit tingkap 1.0 – 2.0 HP</td><td>RM 130</td></tr>
-          <tr><td>Overhaul kimia (dinding sahaja)</td><td>1.0 – 1.5 / 2.0 – 2.5 / 3.0 – 3.5 HP</td><td>RM 420 / RM 490 / RM 560</td></tr>
+          <tr><td>Overhaul kimia (dinding sahaja)</td><td>1.0 – 1.5 / 2.0 – 2.5 / 3.0 – 3.5 HP</td><td>RM 420 / RM 460 / RM 500</td></tr>
         </tbody>
       </table>
       <p>Rumah dan pejabat yang servis beberapa unit serentak dapat diskaun volum rasmi: diskaun 5% untuk 5+ unit dan 10% untuk 10+ unit dalam tempahan sama. Senarai harga penuh — termasuk top up gas RM 2.50/PSI (R22) dan RM 3.00/PSI (R32/R410A), serta pembaikan bocor gas RM 120 setiap kebocoran — ada di <a href="/ms/aircond-service-price-malaysia">halaman harga servis aircond Malaysia</a>, dengan pecahan lanjut dalam <a href="/ms/blog/aircond-chemical-wash-price-malaysia-2026">panduan harga cuci kimia 2026</a>. Kalau kerosakan ditemui semasa pembersihan, fi diagnosis RM 88 dan fi itu dikecualikan bila anda teruskan pembaikan.</p>
@@ -315,7 +315,7 @@ export const newBlogBatch2: BlogPost[] = [
       <p>Lebih kurang 45–90 minit setiap unit, termasuk persiapan, perlindungan kanvas, pembersihan, bilas longkang dan ujian penyejukan.</p>
 
       <h3>Apa beza cuci kimia dengan overhaul kimia?</h3>
-      <p>Cuci kimia membersihkan unit atas dinding dengan tekanan dan perlindungan kawasan. Overhaul membuka keseluruhan unit dalam untuk pembersihan paling mendalam — rasmi untuk unit dinding pada RM 420–560 ikut HP. Overhaul untuk sumbatan teruk, bocor berterusan atau pembentukan ais.</p>
+      <p>Cuci kimia membersihkan unit atas dinding dengan tekanan dan perlindungan kawasan. Overhaul membuka keseluruhan unit dalam untuk pembersihan paling mendalam — rasmi untuk unit dinding pada RM 420–500 ikut HP. Overhaul untuk sumbatan teruk, bocor berterusan atau pembentukan ais.</p>
 
       <h3>Cuci kimia boleh baiki unit dalam saya yang bocor?</h3>
       <p>Biasanya ya, kerana kebanyakan bocor unit dalam datang dari laluan longkang tersumbat lendir, yang dibilas oleh cuci kimia. Kalau bocor di sambungan paip pula, pembaikan bocor RM 120 setiap kebocoran. Kami terangkan punca sebenar dalam <a href="/ms/blog/pressure-chemical-wash-leaking-aircond-kl-selangor">kenapa cuci kimia bertekanan atasi aircond bocor</a>.</p>
@@ -399,7 +399,7 @@ export const newBlogBatch2: BlogPost[] = [
           <tr><td>高压化学清洗</td><td>挂壁式 2.0 – 2.5 HP</td><td>RM 150</td></tr>
           <tr><td>高压化学清洗</td><td>天花卡式 1.0 – 1.5 HP</td><td>RM 220</td></tr>
           <tr><td>高压化学清洗</td><td>窗口式 1.0 – 2.0 HP</td><td>RM 130</td></tr>
-          <tr><td>化学大修（仅挂壁式）</td><td>1.0 – 1.5 / 2.0 – 2.5 / 3.0 – 3.5 HP</td><td>RM 420 / RM 490 / RM 560</td></tr>
+          <tr><td>化学大修（仅挂壁式）</td><td>1.0 – 1.5 / 2.0 – 2.5 / 3.0 – 3.5 HP</td><td>RM 420 / RM 460 / RM 500</td></tr>
         </tbody>
       </table>
       <p>一次过清洗多台冷气的家庭和办公室可享公布的多台折扣：同一预约5台以上95折（5%），10台以上9折（10%）。完整价目表——包括加雪种 R22 RM 2.50/PSI、R32/R410A RM 3.00/PSI，以及雪种漏点维修 RM 120/处——见<a href="/zh/aircond-service-price-malaysia">马来西亚冷气服务价格页面</a>，更详细的拆解见我们的<a href="/zh/blog/aircond-chemical-wash-price-malaysia-2026">2026化学清洗价格指南</a>。清洗中发现故障时，诊断费 RM 88，若继续维修即豁免。</p>
@@ -456,7 +456,7 @@ export const newBlogBatch2: BlogPost[] = [
       <p>每台约45–90分钟，包括准备、铺帆布、清洗、冲排水和制冷测试。</p>
 
       <h3>化学清洗和化学大修有什么分别？</h3>
-      <p>化学清洗是在墙上原位用压力和防护清洗。大修是把室内机完全拆下来做最深层清洗——挂壁式公布价格 RM 420–560（按匹数）。严重堵塞、持续漏水或结冰才需要大修。</p>
+      <p>化学清洗是在墙上原位用压力和防护清洗。大修是把室内机完全拆下来做最深层清洗——挂壁式公布价格 RM 420–500（按匹数）。严重堵塞、持续漏水或结冰才需要大修。</p>
 
       <h3>化学清洗能修好我漏水的室内机吗？</h3>
       <p>通常可以，因为大多数室内机漏水来自黏液堵塞的排水通道，清洗会把它冲通。如果漏点在管接头，漏点维修为 RM 120/处。我们在<a href="/zh/blog/pressure-chemical-wash-leaking-aircond-kl-selangor">高压化学清洗如何解决冷气漏水</a>中解释了根本原因。</p>

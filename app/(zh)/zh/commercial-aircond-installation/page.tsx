@@ -38,7 +38,7 @@ const BUSINESS_TYPES = [
 const PRICING = [
   { type: "挂壁式 · 1.5 HP", price: "RM 199", suitable: "小型办公室、诊室、零售柜台" },
   { type: "挂壁式 · 2.0–2.5 HP", price: "RM 249–279", suitable: "中型办公室、店铺、等候区" },
-  { type: "挂壁式 · 3.0 HP", price: "RM 329", suitable: "大型办公室、餐厅用餐区" },
+  { type: "挂壁式 · 3.0 HP", price: "RM 279", suitable: "大型办公室、餐厅用餐区" },
   { type: "天花板卡式 · 1.0–1.5 HP", price: "RM 290", suitable: "小会议室、私人办公室" },
   { type: "天花板卡式 · 2.0–3.0 HP", price: "RM 350", suitable: "开放式办公室、店铺、诊所等候区" },
   { type: "天花板卡式 · 3.5–6.0 HP", price: "RM 400", suitable: "大型商业空间、餐厅" },

@@ -763,16 +763,16 @@ export const problemContent: Record<
     warningZH: "弱气流通常被视为正常，但实际上不是——这意味着机组比应该的工作更努力，消耗更多电力，冷却房间更慢。化学清洗可恢复性能并降低您的电费。",
     faqs: [
       { q: "Why is my aircond blowing weak air even though it is cold?", a: "A dirty blower wheel is the most likely cause — it can reduce airflow by 40% while still producing cold air. Chemical wash (from RM 120) cleans the blower wheel and restores full airflow. Most customers notice the difference immediately." },
-      { q: "How much does chemical wash cost to fix weak airflow?", a: "Pressure chemical wash from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette from RM 220. Chemical overhaul (for severely blocked units) from RM 420. All confirmed before work." },
+      { q: "How much does chemical wash cost to fix weak airflow?", a: "Pressure chemical wash from RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 150 (3.0 HP). Ceiling cassette from RM 220. Chemical overhaul (for severely blocked units) from RM 420. All confirmed before work." },
       { q: "How long does it take to fix weak airflow from an aircond?", a: "A chemical wash takes 30–45 minutes per unit. KL Renovator tests airflow at the vents after service to confirm the improvement. Same-day service available." },
     ],
     faqsBM: [
       { q: "Kenapa aircond saya menghembus udara lemah walaupun sejuk?", a: "Roda blower kotor adalah punca paling mungkin — boleh mengurangkan aliran udara sebanyak 40% sambil masih menghasilkan udara sejuk. Cuci kimia (dari RM 120) membersihkan roda blower dan memulihkan aliran udara penuh." },
-      { q: "Berapa kos cuci kimia untuk membaiki aliran udara lemah?", a: "Cuci kimia bertekanan dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 180 (3.0 HP). Ceiling cassette dari RM 220. Semua disahkan sebelum kerja." },
+      { q: "Berapa kos cuci kimia untuk membaiki aliran udara lemah?", a: "Cuci kimia bertekanan dari RM 120 (1.0–1.5 HP), RM 150 (2.0–2.5 HP), RM 150 (3.0 HP). Ceiling cassette dari RM 220. Semua disahkan sebelum kerja." },
     ],
     faqsZH: [
       { q: "为什么我的冷气出风虽然凉但风量很小？", a: "风轮脏污是最可能的原因——在仍然出冷风的情况下，气流量可减少40%。化学清洗（从RM 120起）清洁风轮并恢复完整气流。大多数客户立即感受到改善。" },
-      { q: "化学清洗修复弱气流需要多少钱？", a: "压力化学清洗从RM 120（1.0-1.5 HP）、RM 150（2.0-2.5 HP）、RM 180（3.0 HP）起。天花板卡式机从RM 220起。施工前全部确认。" },
+      { q: "化学清洗修复弱气流需要多少钱？", a: "压力化学清洗从RM 120（1.0-1.5 HP）、RM 150（2.0-2.5 HP）、RM 150（3.0 HP）起。天花板卡式机从RM 220起。施工前全部确认。" },
     ],
   },
   "aircond-not-turning-on": {

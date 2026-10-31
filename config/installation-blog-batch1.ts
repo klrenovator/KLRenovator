@@ -562,7 +562,7 @@ export const installationBlogBatch1: BlogPost[] = [
           <tr><td>150–250</td><td>1.5 HP</td><td>12,000</td><td>Master bedroom, small living</td><td><a href="/1.5hp-aircond-installation-kl">RM 219</a></td></tr>
           <tr><td>250–400</td><td>2.0 HP</td><td>18,000</td><td>Large living room</td><td><a href="/2hp-aircond-installation-kl">RM 249</a></td></tr>
           <tr><td>400–550</td><td>2.5 HP</td><td>24,000</td><td>Open-plan areas</td><td>RM 279</td></tr>
-          <tr><td>550–700</td><td>3.0 HP</td><td>30,000</td><td>Commercial / large halls</td><td>RM 329</td></tr>
+          <tr><td>550–700</td><td>3.0 HP</td><td>30,000</td><td>Commercial / large halls</td><td>RM 279</td></tr>
         </tbody>
       </table>
 
@@ -598,7 +598,7 @@ export const installationBlogBatch1: BlogPost[] = [
           <tr><td>150–250</td><td>1.5 HP</td><td>12,000</td><td>Bilik tidur utama, ruang tamu kecil</td><td><a href="/1.5hp-aircond-installation-kl">RM 219</a></td></tr>
           <tr><td>250–400</td><td>2.0 HP</td><td>18,000</td><td>Ruang tamu besar</td><td><a href="/2hp-aircond-installation-kl">RM 249</a></td></tr>
           <tr><td>400–550</td><td>2.5 HP</td><td>24,000</td><td>Kawasan pelan terbuka</td><td>RM 279</td></tr>
-          <tr><td>550–700</td><td>3.0 HP</td><td>30,000</td><td>Komersial / dewan besar</td><td>RM 329</td></tr>
+          <tr><td>550–700</td><td>3.0 HP</td><td>30,000</td><td>Komersial / dewan besar</td><td>RM 279</td></tr>
         </tbody>
       </table>
 
@@ -634,7 +634,7 @@ export const installationBlogBatch1: BlogPost[] = [
           <tr><td>150–250</td><td>1.5 HP</td><td>12,000</td><td>主卧、小客厅</td><td><a href="/1.5hp-aircond-installation-kl">RM 219</a></td></tr>
           <tr><td>250–400</td><td>2.0 HP</td><td>18,000</td><td>大客厅</td><td><a href="/2hp-aircond-installation-kl">RM 249</a></td></tr>
           <tr><td>400–550</td><td>2.5 HP</td><td>24,000</td><td>开放式区域</td><td>RM 279</td></tr>
-          <tr><td>550–700</td><td>3.0 HP</td><td>30,000</td><td>商业/大厅</td><td>RM 329</td></tr>
+          <tr><td>550–700</td><td>3.0 HP</td><td>30,000</td><td>商业/大厅</td><td>RM 279</td></tr>
         </tbody>
       </table>
 

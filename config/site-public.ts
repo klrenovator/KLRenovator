@@ -174,7 +174,7 @@ export const sitePublic = {
         },
         {
           "label": "Wall-Mounted · 3.0 HP",
-          "price": "RM 329"
+          "price": "RM 279"
         },
         {
           "label": "Wall-Mounted · 4.0 HP",
@@ -182,7 +182,7 @@ export const sitePublic = {
         },
         {
           "label": "Wall-Mounted · 5.0 HP",
-          "price": "RM 449"
+          "price": "RM 399"
         },
         {
           "label": "Ceiling Cassette · 1.0 – 1.5 HP",
@@ -249,11 +249,11 @@ export const sitePublic = {
         },
         {
           "label": "Wall-Mounted · 3.0 HP",
-          "price": "RM 180"
+          "price": "RM 150"
         },
         {
           "label": "Wall-Mounted · 4.0 – 5.0 HP",
-          "price": "RM 200"
+          "price": "RM 150"
         },
         {
           "label": "Ceiling Cassette · 1.0 – 1.5 HP",
@@ -261,11 +261,11 @@ export const sitePublic = {
         },
         {
           "label": "Ceiling Cassette · 2.0 – 3.0 HP",
-          "price": "RM 280"
+          "price": "RM 250"
         },
         {
           "label": "Ceiling Cassette · 4.0 – 5.0 HP",
-          "price": "RM 350"
+          "price": "RM 250"
         },
         {
           "label": "Window Unit · 1.0 – 2.0 HP",
@@ -286,11 +286,11 @@ export const sitePublic = {
         },
         {
           "label": "Wall-Mounted · 2.0 – 2.5 HP",
-          "price": "RM 490"
+          "price": "RM 460"
         },
         {
           "label": "Wall-Mounted · 3.0 – 3.5 HP",
-          "price": "RM 560"
+          "price": "RM 500"
         }
       ],
       "note": "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation."
@@ -367,11 +367,11 @@ export const sitePublic = {
         },
         {
           "label": "Dismantle + Reinstall Same Place (standard)",
-          "price": "RM 250"
+          "price": "RM 290"
         },
         {
           "label": "Dismantle + Reinstall Same Place (2.0–2.5 HP)",
-          "price": "RM 290"
+          "price": "RM 340"
         },
         {
           "label": "Dismantle + Reinstall Other Place",

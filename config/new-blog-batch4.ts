@@ -248,8 +248,8 @@ export const newBlogBatch4: BlogPost[] = [
         <thead><tr><th>Service</th><th>Wall-mounted</th><th>Ceiling cassette</th></tr></thead>
         <tbody>
           <tr><td>Basic servicing</td><td>RM 99 (1.0–1.5 HP) · RM 120 (2.0–2.5 HP) · RM 150 (3.0–3.5 HP)</td><td>RM 150 (1.0–1.5 HP) · RM 200 (2.0–3.0 HP) · RM 250 (3.5–5.0 HP)</td></tr>
-          <tr><td>Pressure chemical wash</td><td>RM 120 (1.0–1.5 HP) · RM 150 (2.0–2.5 HP) · RM 180 (3.0 HP) · RM 200 (4.0–5.0 HP)</td><td>RM 220 (1.0–1.5 HP) · RM 280 (2.0–3.0 HP) · RM 350 (4.0–5.0 HP)</td></tr>
-          <tr><td>Chemical overhaul (wall-mounted aircon only)</td><td>RM 420 (1.0–1.5 HP) · RM 490 (2.0–2.5 HP) · RM 560 (3.0–3.5 HP)</td><td>Separate on-site quote</td></tr>
+          <tr><td>Pressure chemical wash</td><td>RM 120 (1.0–1.5 HP) · RM 150 (2.0–2.5 HP) · RM 150 (3.0 HP) · RM 150 (4.0–5.0 HP)</td><td>RM 220 (1.0–1.5 HP) · RM 280 (2.0–3.0 HP) · RM 350 (4.0–5.0 HP)</td></tr>
+          <tr><td>Chemical overhaul (wall-mounted aircon only)</td><td>RM 420 (1.0–1.5 HP) · RM 460 (2.0–2.5 HP) · RM 500 (3.0–3.5 HP)</td><td>Separate on-site quote</td></tr>
         </tbody>
       </table>
       <p>Annual maintenance contracts are the easiest way to stop haze season from becoming a problem at all: the AMC Basic plan from RM 299 per unit per year covers 2 basic services and 1 chemical wash; AMC Standard from RM 499 adds a second chemical wash and a free emergency check. Prices are per wall-mounted 1.0–1.5 HP unit; multi-unit and commercial discounts are quoted on enquiry. Booking 5 or more units in one visit also qualifies for the 5% instant booking discount, and 10% for 10 or more.</p>
@@ -364,8 +364,8 @@ export const newBlogBatch4: BlogPost[] = [
         <thead><tr><th>Servis</th><th>Unit dinding</th><th>Ceiling cassette</th></tr></thead>
         <tbody>
           <tr><td>Servis asas</td><td>RM 99 (1.0–1.5 HP) · RM 120 (2.0–2.5 HP) · RM 150 (3.0–3.5 HP)</td><td>RM 150 (1.0–1.5 HP) · RM 200 (2.0–3.0 HP) · RM 250 (3.5–5.0 HP)</td></tr>
-          <tr><td>Cuci kimia bertekanan</td><td>RM 120 (1.0–1.5 HP) · RM 150 (2.0–2.5 HP) · RM 180 (3.0 HP) · RM 200 (4.0–5.0 HP)</td><td>RM 220 (1.0–1.5 HP) · RM 280 (2.0–3.0 HP) · RM 350 (4.0–5.0 HP)</td></tr>
-          <tr><td>Overhaul kimia (unit dinding sahaja)</td><td>RM 420 (1.0–1.5 HP) · RM 490 (2.0–2.5 HP) · RM 560 (3.0–3.5 HP)</td><td>Sebut harga di tapak berasingan</td></tr>
+          <tr><td>Cuci kimia bertekanan</td><td>RM 120 (1.0–1.5 HP) · RM 150 (2.0–2.5 HP) · RM 150 (3.0 HP) · RM 150 (4.0–5.0 HP)</td><td>RM 220 (1.0–1.5 HP) · RM 280 (2.0–3.0 HP) · RM 350 (4.0–5.0 HP)</td></tr>
+          <tr><td>Overhaul kimia (unit dinding sahaja)</td><td>RM 420 (1.0–1.5 HP) · RM 460 (2.0–2.5 HP) · RM 500 (3.0–3.5 HP)</td><td>Sebut harga di tapak berasingan</td></tr>
         </tbody>
       </table>
       <p>Kontrak penyelenggaraan tahunan (AMC) ialah cara paling mudah supaya musim kabut tidak menjadi masalah: pelan AMC Basic dari RM 299 seunit setahun meliputi 2 servis asas dan 1 cuci kimia; AMC Standard dari RM 499 menambah cuci kimia kedua dan pemeriksaan kecemasan percuma. Harga adalah per unit dinding 1.0–1.5 HP; diskaun berbilang unit dan komersial disebut semasa pertanyaan. Menempah 5 unit atau lebih dalam satu lawatan juga layak untuk diskaun tempahan segera 5%, dan 10% untuk 10 unit atau lebih.</p>
@@ -480,8 +480,8 @@ export const newBlogBatch4: BlogPost[] = [
         <thead><tr><th>服务</th><th>壁挂式</th><th>天花卡式</th></tr></thead>
         <tbody>
           <tr><td>基本保养</td><td>RM 99 (1.0–1.5 HP) · RM 120 (2.0–2.5 HP) · RM 150 (3.0–3.5 HP)</td><td>RM 150 (1.0–1.5 HP) · RM 200 (2.0–3.0 HP) · RM 250 (3.5–5.0 HP)</td></tr>
-          <tr><td>高压化学清洗</td><td>RM 120 (1.0–1.5 HP) · RM 150 (2.0–2.5 HP) · RM 180 (3.0 HP) · RM 200 (4.0–5.0 HP)</td><td>RM 220 (1.0–1.5 HP) · RM 280 (2.0–3.0 HP) · RM 350 (4.0–5.0 HP)</td></tr>
-          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420 (1.0–1.5 HP) · RM 490 (2.0–2.5 HP) · RM 560 (3.0–3.5 HP)</td><td>另行上门报价</td></tr>
+          <tr><td>高压化学清洗</td><td>RM 120 (1.0–1.5 HP) · RM 150 (2.0–2.5 HP) · RM 150 (3.0 HP) · RM 150 (4.0–5.0 HP)</td><td>RM 220 (1.0–1.5 HP) · RM 280 (2.0–3.0 HP) · RM 350 (4.0–5.0 HP)</td></tr>
+          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420 (1.0–1.5 HP) · RM 460 (2.0–2.5 HP) · RM 500 (3.0–3.5 HP)</td><td>另行上门报价</td></tr>
         </tbody>
       </table>
       <p>年度保养合约（AMC）是防止烟霾季变成问题的最省事方式：AMC Basic 每机每年 RM 299 起，含 2 次基本保养和 1 次化学清洗；AMC Standard RM 499 起，多 1 次化学清洗和免费紧急检查。价格按壁挂式 1.0–1.5 HP 机器计；多台及商用折扣可查询后报价。一次预约 5 台以上还可享 5% 即时预约折扣，10 台以上享 10%。</p>

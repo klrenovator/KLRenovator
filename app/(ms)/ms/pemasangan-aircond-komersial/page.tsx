@@ -38,7 +38,7 @@ const BUSINESS_TYPES = [
 const PRICING = [
   { type: "Dinding · 1.5 HP", price: "RM 199", suitable: "Pejabat kecil, bilik perundingan, kaunter runcit" },
   { type: "Dinding · 2.0–2.5 HP", price: "RM 249–279", suitable: "Pejabat sederhana, kedai, ruang menunggu" },
-  { type: "Dinding · 3.0 HP", price: "RM 329", suitable: "Pejabat besar, ruang makan restoran" },
+  { type: "Dinding · 3.0 HP", price: "RM 279", suitable: "Pejabat besar, ruang makan restoran" },
   { type: "Ceiling Cassette · 1.0–1.5 HP", price: "RM 290", suitable: "Bilik mesyuarat kecil, pejabat persendirian" },
   { type: "Ceiling Cassette · 2.0–3.0 HP", price: "RM 350", suitable: "Pejabat pelan terbuka, kedai, ruang tunggu klinik" },
   { type: "Ceiling Cassette · 3.5–6.0 HP", price: "RM 400", suitable: "Ruang komersial besar, restoran" },

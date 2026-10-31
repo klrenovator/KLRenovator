@@ -222,8 +222,8 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>1.0 – 1.5 HP: <strong>RM 120</strong></li>
         <li>2.0 – 2.5 HP: <strong>RM 150</strong></li>
-        <li>3.0 HP: <strong>RM 180</strong></li>
-        <li>4.0 – 5.0 HP: <strong>RM 200</strong></li>
+        <li>3.0 HP: <strong>RM 150</strong></li>
+        <li>4.0 – 5.0 HP: <strong>RM 150</strong></li>
       </ul>
 
       <h2>Ceiling Cassette Unit Prices</h2>
@@ -273,8 +273,8 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>1.0 – 1.5 HP: <strong>RM 120</strong></li>
         <li>2.0 – 2.5 HP: <strong>RM 150</strong></li>
-        <li>3.0 HP: <strong>RM 180</strong></li>
-        <li>4.0 – 5.0 HP: <strong>RM 200</strong></li>
+        <li>3.0 HP: <strong>RM 150</strong></li>
+        <li>4.0 – 5.0 HP: <strong>RM 150</strong></li>
       </ul>
 
       <h2>Harga Unit Ceiling Cassette</h2>
@@ -325,10 +325,10 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>壁挂式</td><td>1.0-1.5 HP</td><td>RM 120</td><td>60-75分钟</td></tr>
           <tr><td>壁挂式</td><td>2.0-2.5 HP</td><td>RM 150</td><td>75-90分钟</td></tr>
-          <tr><td>壁挂式</td><td>3.0 HP</td><td>RM 180</td><td>90-105分钟</td></tr>
+          <tr><td>壁挂式</td><td>3.0 HP</td><td>RM 150</td><td>90-105分钟</td></tr>
           <tr><td>天花板卡式</td><td>1.0-1.5 HP</td><td>RM 220</td><td>90-120分钟</td></tr>
-          <tr><td>天花板卡式</td><td>2.0-3.0 HP</td><td>RM 280</td><td>90-120分钟</td></tr>
-          <tr><td>天花板卡式</td><td>4.0-5.0 HP</td><td>RM 350</td><td>120-150分钟</td></tr>
+          <tr><td>天花板卡式</td><td>2.0-3.0 HP</td><td>RM 250</td><td>90-120分钟</td></tr>
+          <tr><td>天花板卡式</td><td>4.0-5.0 HP</td><td>RM 250</td><td>120-150分钟</td></tr>
         </tbody>
       </table>
 
@@ -398,13 +398,13 @@ export const allPosts: BlogPost[] = [
       <p>If both gas and coil cleaning have been done but cooling is still poor, the evaporator coil fins may be severely bent or the blower wheel may be so coated with grime that only a full clean will restore airflow.</p>
 
       <h2>What Happens If You Delay an Overhaul?</h2>
-      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–560 is far less expensive than a compressor replacement at RM 800–2,000 or a complete new unit installation.</p>
+      <p>Continuing to use a unit that needs a chemical overhaul leads to higher electricity bills as the compressor compensates for reduced airflow efficiency, persistent water leaking that can damage walls and ceilings, accelerated compressor wear from running in restricted conditions, and eventually a complete breakdown. A chemical overhaul (Wall-Mounted Aircon only) that costs RM 420–500 is far less expensive than a compressor replacement at RM 800–2,000 or a complete new unit installation.</p>
 
       <h2>What to Do</h2>
       <p>Chemical overhaul (Wall-Mounted Aircon only) starts from <strong>RM 420</strong> for a wall-mounted 1.0–1.5 HP unit. WhatsApp KL Renovator at <strong>+60 18-298 3573</strong>. See also: <a href="/services/chemical-overhaul">Chemical overhaul service page</a> | <a href="/problems/aircond-water-leaking">Aircond water leaking guide</a></p>
 
       <h2>Can You Delay an Overhaul?</h2>
-      <p>You can delay, but every week of continued use in a unit that needs an overhaul increases the risk of secondary damage. A cracked drain pan left unaddressed can leak onto electrical components and cause a PCB board failure. A severely fouled coil forces the compressor to run at high temperature, degrading compressor insulation. A unit that costs RM 420–560 to overhaul today can become a unit that costs RM 600–1,500 to repair in 6 months if the root cause is left unaddressed. Early action is always the more economical choice.</p>
+      <p>You can delay, but every week of continued use in a unit that needs an overhaul increases the risk of secondary damage. A cracked drain pan left unaddressed can leak onto electrical components and cause a PCB board failure. A severely fouled coil forces the compressor to run at high temperature, degrading compressor insulation. A unit that costs RM 420–500 to overhaul today can become a unit that costs RM 600–1,500 to repair in 6 months if the root cause is left unaddressed. Early action is always the more economical choice.</p>
     `,
     contentMS: `
       <h2>Apabila Cuci Kimia Tidak Mencukupi</h2>
@@ -426,13 +426,13 @@ export const allPosts: BlogPost[] = [
       <p>Jika kedua-dua gas dan pembersihan gegelung telah dilakukan tetapi penyejukan masih lemah, sirip gegelung evaporator mungkin sangat bengkok atau roda blower mungkin sangat kotor sehingga hanya pembersihan penuh yang akan memulihkan aliran udara.</p>
 
       <h2>Apa yang Berlaku Jika Anda Menangguhkan Overhaul?</h2>
-      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–560 jauh lebih murah berbanding penggantian kompressor pada RM 800–2,000 atau pemasangan unit baru yang lengkap.</p>
+      <p>Terus menggunakan unit yang memerlukan overhaul kimia menyebabkan bil elektrik lebih tinggi, kebocoran air berterusan yang boleh merosakkan dinding dan siling, dan hakisan kompressor yang lebih cepat. Overhaul kimia (Unit Dinding Sahaja) berharga RM 420–500 jauh lebih murah berbanding penggantian kompressor pada RM 800–2,000 atau pemasangan unit baru yang lengkap.</p>
 
       <h2>Apa yang Perlu Dilakukan</h2>
       <p>Overhaul kimia (Unit Dinding Sahaja) bermula dari <strong>RM 420</strong> untuk unit dinding 1.0–1.5 HP. WhatsApp KL Renovator di <strong>+60 18-298 3573</strong>.</p>
 
       <h2>Bolehkah Anda Menangguhkan Overhaul?</h2>
-      <p>Anda boleh menangguhkan, tetapi setiap minggu penggunaan berterusan dalam unit yang memerlukan overhaul meningkatkan risiko kerosakan sekunder. Dulang longkang yang retak dan dibiarkan boleh bocor ke komponen elektrik dan menyebabkan kegagalan papan PCB. Gegelung yang sangat tercemar memaksa kompressor berfungsi pada suhu tinggi, merosakkan penebat kompressor. Unit yang kos overhaul RM 420–560 hari ini boleh menjadi unit yang kos pembaikan RM 600–1,500 dalam masa 6 bulan jika sebab utama dibiarkan tidak ditangani. Tindakan awal sentiasa pilihan yang lebih ekonomik.</p>
+      <p>Anda boleh menangguhkan, tetapi setiap minggu penggunaan berterusan dalam unit yang memerlukan overhaul meningkatkan risiko kerosakan sekunder. Dulang longkang yang retak dan dibiarkan boleh bocor ke komponen elektrik dan menyebabkan kegagalan papan PCB. Gegelung yang sangat tercemar memaksa kompressor berfungsi pada suhu tinggi, merosakkan penebat kompressor. Unit yang kos overhaul RM 420–500 hari ini boleh menjadi unit yang kos pembaikan RM 600–1,500 dalam masa 6 bulan jika sebab utama dibiarkan tidak ditangani. Tindakan awal sentiasa pilihan yang lebih ekonomik.</p>
     `,
     contentZH: `<h2>5个迹象表明您的冷气需要化学大修</h2>
       <p>化学大修是冷气最彻底的保养方式——完全拆卸室内机进行深度清洗。<a href="/near-me">KL Renovator的专业技师</a>告诉您何时需要这项服务。</p>
@@ -457,8 +457,8 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>机型</th><th>价格</th><th>时间</th></tr></thead>
         <tbody>
           <tr><td>壁挂式 1.0-1.5 HP</td><td>RM 420</td><td>2-2.5小时</td></tr>
-          <tr><td>壁挂式 2.0-2.5 HP</td><td>RM 490</td><td>2.5-3小时</td></tr>
-          <tr><td>壁挂式 3.0-3.5 HP</td><td>RM 560</td><td>3-4小时</td></tr>
+          <tr><td>壁挂式 2.0-2.5 HP</td><td>RM 460</td><td>2.5-3小时</td></tr>
+          <tr><td>壁挂式 3.0-3.5 HP</td><td>RM 500</td><td>3-4小时</td></tr>
         </tbody>
       </table>
 
@@ -1288,16 +1288,16 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Wall-Mounted 1.0–1.5 HP: <strong>RM 120</strong></li>
         <li>Wall-Mounted 2.0–2.5 HP: <strong>RM 150</strong></li>
-        <li>Wall-Mounted 3.0 HP: <strong>RM 180</strong></li>
-        <li>Wall-Mounted 4.0–5.0 HP: <strong>RM 200</strong></li>
+        <li>Wall-Mounted 3.0 HP: <strong>RM 150</strong></li>
+        <li>Wall-Mounted 4.0–5.0 HP: <strong>RM 150</strong></li>
         <li>Ceiling Cassette 1.0–1.5 HP: <strong>RM 220</strong></li>
-        <li>Ceiling Cassette 2.0–3.0 HP: <strong>RM 280</strong></li>
+        <li>Ceiling Cassette 2.0–3.0 HP: <strong>RM 250</strong></li>
       </ul>
       <h2>Chemical Overhaul</h2>
       <ul>
         <li>Wall-Mounted 1.0–1.5 HP: <strong>RM 420</strong></li>
-        <li>Wall-Mounted 2.0–2.5 HP: <strong>RM 490</strong></li>
-        <li>Wall-Mounted 3.0–3.5 HP: <strong>RM 560</strong></li>
+        <li>Wall-Mounted 2.0–2.5 HP: <strong>RM 460</strong></li>
+        <li>Wall-Mounted 3.0–3.5 HP: <strong>RM 500</strong></li>
       </ul>
       <h2>Gas Top-Up</h2>
       <ul>
@@ -1335,14 +1335,14 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Dinding 1.0–1.5 HP: <strong>RM 120</strong></li>
         <li>Dinding 2.0–2.5 HP: <strong>RM 150</strong></li>
-        <li>Dinding 3.0 HP: <strong>RM 180</strong></li>
+        <li>Dinding 3.0 HP: <strong>RM 150</strong></li>
         <li>Ceiling Cassette 1.0–1.5 HP: <strong>RM 220</strong></li>
       </ul>
       <h2>Overhaul Kimia</h2>
       <ul>
         <li>Dinding 1.0–1.5 HP: <strong>RM 420</strong></li>
-        <li>Dinding 2.0–2.5 HP: <strong>RM 490</strong></li>
-        <li>Dinding 3.0–3.5 HP: <strong>RM 560</strong></li>
+        <li>Dinding 2.0–2.5 HP: <strong>RM 460</strong></li>
+        <li>Dinding 3.0–3.5 HP: <strong>RM 500</strong></li>
       </ul>
       <h2>Tambah Gas</h2>
       <ul>
@@ -1377,7 +1377,7 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>基本保养</td><td>RM 99</td><td>RM 120</td><td>RM 150</td></tr>
           <tr><td>化学清洗</td><td>RM 120</td><td>RM 150</td><td>RM 220</td></tr>
-          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420</td><td>RM 490</td><td>RM 560</td></tr>
+          <tr><td>化学大修（仅限挂壁式冷气）</td><td>RM 420</td><td>RM 460</td><td>RM 500</td></tr>
           <tr><td>充气 R22</td><td colspan='3'>RM 2.50 / PSI</td></tr>
           <tr><td>充气 R410A</td><td colspan='3'>RM 3.00 / PSI</td></tr>
           <tr><td>充气 R32</td><td colspan='3'>RM 3.00 / PSI</td></tr>
@@ -1811,7 +1811,7 @@ export const allPosts: BlogPost[] = [
         <li>Wall-Mounted 1.0–1.5 HP: <strong>RM 199</strong></li>
         <li>Wall-Mounted 2.0 HP: <strong>RM 249</strong></li>
         <li>Wall-Mounted 2.5 HP: <strong>RM 279</strong></li>
-        <li>Wall-Mounted 3.0 HP: <strong>RM 329</strong></li>
+        <li>Wall-Mounted 3.0 HP: <strong>RM 279</strong></li>
         <li>Ceiling Cassette 1.0–1.5 HP: <strong>RM 290</strong></li>
         <li>Ceiling Cassette 2.0–3.0 HP: <strong>RM 350</strong></li>
       </ul>
@@ -2205,7 +2205,7 @@ export const allPosts: BlogPost[] = [
       <ul>
         <li>Basic Service 1.0–1.5 HP: <strong>RM 150</strong></li>
         <li>Chemical Wash 1.0–1.5 HP: <strong>RM 220</strong></li>
-        <li>Chemical Wash 2.0–3.0 HP: <strong>RM 280</strong></li>
+        <li>Chemical Wash 2.0–3.0 HP: <strong>RM 250</strong></li>
       </ul>
       <h2>Annual Maintenance Contracts</h2>
       <ul>
@@ -2457,12 +2457,12 @@ export const allPosts: BlogPost[] = [
       </ul>
       <h2>Step 5 — Budget for Installation + Maintenance</h2>
       <ul>
-        <li>Installation: RM 199–449 (by HP)</li>
+        <li>Installation: RM 199–399 (by HP)</li>
         <li>Annual maintenance: approx. RM 400–450 per unit</li>
       </ul>
       <h2>Step 5 — Budget for Installation + Maintenance</h2>
       <ul>
-        <li>Installation: RM 199–449 (by HP)</li>
+        <li>Installation: RM 199–399 (by HP)</li>
         <li>Annual maintenance: approx. RM 400–450 per unit</li>
       </ul>
       <p>The total cost of ownership over 10 years includes purchase price, installation, and 10 years of maintenance. A RM 1,400 inverter unit with RM 200 installation and RM 4,000 in maintenance over 10 years totals RM 5,600 — far less than the cumulative electricity cost savings vs a non-inverter over the same period. Factor in the full picture before comparing upfront prices alone.</p>
@@ -2474,7 +2474,7 @@ export const allPosts: BlogPost[] = [
         <li>Confirm you have or can install a dedicated 15A electrical point</li>
         <li>Plan the pipe route from indoor to outdoor unit location</li>
         <li>Choose R32 inverter — it is the right choice for daily use in 2026</li>
-        <li>Budget for installation (RM 199–449) on top of the unit price</li>
+        <li>Budget for installation (RM 199–399) on top of the unit price</li>
         <li>Plan annual maintenance (RM 120 chemical wash minimum)</li>
       </ul>
       <h2>Ready to Install?</h2>
@@ -2703,8 +2703,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/aircond-chemical-wash-canvas-kepong-kl.webp",
     imageAlt: "High-pressure chemical wash flushing dirt from an indoor aircond unit in Selangor",
     lastReviewed: "2026-07-03",
-    content: "<p><em>A pressure chemical wash clears slime, dust and algae from the coil, blower and drain path without fully dismantling the indoor unit. It is often the fastest fix for moderate leaking, weak airflow and musty smell.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Condensation should flow through the drain pipe.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Chemical wash price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A professional technician protects the PCB and electrical area before washing.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator before the leak damages your wall, ceiling or furniture. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Cuci kimia bertekanan membersihkan lendir, habuk dan alga pada coil, blower dan saluran air tanpa membuka keseluruhan unit. Ia sering menjadi penyelesaian terpantas untuk bocor sederhana, angin lemah dan bau hapak.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kondensasi harus mengalir melalui paip longkang.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM180</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik profesional melindungi PCB dan kawasan elektrik sebelum mencuci.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>A pressure chemical wash clears slime, dust and algae from the coil, blower and drain path without fully dismantling the indoor unit. It is often the fastest fix for moderate leaking, weak airflow and musty smell.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Condensation should flow through the drain pipe.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Chemical wash price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM150</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> A professional technician protects the PCB and electrical area before washing.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator before the leak damages your wall, ceiling or furniture. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Cuci kimia bertekanan membersihkan lendir, habuk dan alga pada coil, blower dan saluran air tanpa membuka keseluruhan unit. Ia sering menjadi penyelesaian terpantas untuk bocor sederhana, angin lemah dan bau hapak.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>Why does an aircond leak water?</h2>\n<p>Condensation should flow through the drain pipe. When dust and humidity form jelly-like slime, water overflows from the indoor unit.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kondensasi harus mengalir melalui paip longkang.</div>\n<h2>How does chemical wash stop leaking?</h2>\n<p>Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Larutan kimia memecahkan kotoran pada gegelung evaporator dan blower, sementara bilasan tekanan tinggi membersihkan dulang saliran dan paip longkang.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM120</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM 3.00/PSI</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Wall-mounted 3.0HP</td><td>RM150</td><td>Chemical coil treatment + drain clear</td></tr><tr><td>Ceiling cassette 1.0–1.5HP</td><td>RM220</td><td>Panel spray, drain tray flush</td></tr><tr><td>Window unit</td><td>from RM130</td><td>Coil clean and tray wash</td></tr></tbody></table>\n<h2>When is overhaul better than chemical wash?</h2>\n<p>Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Jika bocor berulang kali, aliran udara sangat lemah atau dulang belakang tersumbat sepenuhnya, overhaul kimia penuh mungkin diperlukan.</div>\n<h2>Is chemical wash safe for inverter units?</h2>\n<p>A professional technician protects the PCB and electrical area before washing. The unit is tested after cleaning before handover.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Juruteknik profesional melindungi PCB dan kawasan elektrik sebelum mencuci.</div>\n<h2>Where is same-day service available?</h2>\n<p>KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> KL Renovator covers Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves and nearby towns.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-wash\">Pressure Chemical Wash</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪高压化学清洗 — 彻底解决漏水与异味</h2>
       <p>当基本保养无法解决风量变弱或滴水问题时，<strong>高压化学清洗 (Pressure Chemical Wash)</strong> 是最佳选择。它能通过化学药剂和高压水枪彻底清除盘管深处的灰尘和粘稠的霉菌。<strong>KL Renovator</strong> 为所有主流品牌提供此项服务，价格仅从 <strong>RM 120</strong> 起。</p>
 
@@ -2772,8 +2772,8 @@ export const allPosts: BlogPost[] = [
     image: "/hero/generic-aircond-chemical-overhaul-cheras-142.webp",
     imageAlt: "Aircond indoor unit dismantled for chemical overhaul cleaning in Ampang Selangor",
     lastReviewed: "2026-07-03",
-    content: "<p><em>Chemical overhaul is for heavily choked units. The indoor unit is dismantled, deep-cleaned and reassembled so hidden coils, blower wheel and drain sections can be cleaned properly.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Chemical overhaul price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM420</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM490</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM560</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Basic service cleans accessible areas only.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is still not cold after normal service. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
-    contentMS: "<p><em>Chemical overhaul sesuai untuk unit yang tersumbat teruk. Unit dalam dibuka, dibersihkan secara mendalam dan dipasang semula supaya coil tersembunyi, blower wheel dan bahagian saliran dapat dicuci dengan betul.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM420</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM490</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM560</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Servis asas hanya membersihkan kawasan yang boleh diakses.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
+    content: "<p><em>Chemical overhaul is for heavily choked units. The indoor unit is dismantled, deep-cleaned and reassembled so hidden coils, blower wheel and drain sections can be cleaned properly.</em></p>\n<p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots looking for a trusted aircond technician near me across KL and Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Chemical overhaul price guide</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM420</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM460</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM500</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Basic service cleans accessible areas only.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Direct answer:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang and Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL and Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Frequently asked questions</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator if your aircond is still not cold after normal service. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/areas\">KL & Selangor service areas</a>.</p>",
+    contentMS: "<p><em>Chemical overhaul sesuai untuk unit yang tersumbat teruk. Unit dalam dibuka, dibersihkan secara mendalam dan dipasang semula supaya coil tersembunyi, blower wheel dan bahagian saliran dapat dicuci dengan betul.</em></p>\n<p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mencari juruteknik aircond profesional berhampiran di KL dan Selangor.</p>\n<h2>What is chemical overhaul?</h2>\n<p>Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Ia adalah prosedur pembersihan mendalam dengan pembongkaran penuh untuk unit dalam yang kotor teruk, pembentukan ais, kebocoran kronik atau aliran udara sangat lemah.</div>\n<h2>What signs mean overhaul is needed?</h2>\n<p>Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Udara panas walaupun gas mencukupi, aliran udara rendah pada kelajuan kipas maksimum, kebocoran berulang, bau kuat dan ais pada gegelung adalah tanda biasa.</div>\n<h2>Panduan harga / perbandingan</h2>\n<table><thead><tr><th>Item</th><th>Price / Detail</th><th>Notes</th></tr></thead><tbody><tr><td>Wall-mounted 1.0–1.5HP</td><td>RM420</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 2.0–2.5HP</td><td>RM460</td><td>Full dismantle, chemical soak, reassembly</td></tr><tr><td>Wall-mounted 3.0–3.5HP</td><td>RM500</td><td>Full dismantle, chemical soak, reassembly</td></tr></tbody></table>\n<h2>Why not just do basic service?</h2>\n<p>Basic service cleans accessible areas only. Overhaul reaches hidden back trays, blower wheel grooves and deep coil sections.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Servis asas hanya membersihkan kawasan yang boleh diakses.</div>\n<h2>How long does overhaul take?</h2>\n<p>Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Kebanyakan unit dinding mengambil masa sekitar 2-3 jam bergantung pada akses, tahap kotoran dan ujian pemasangan semula.</div>\n<h2>Which properties need it most?</h2>\n<p>Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</p>\n<div class=\"summary-block\"><strong>Jawapan ringkas:</strong> Bilik tidur, pejabat, kedai dan unit sewa yang digunakan berat dan tidak dibersihkan mendalam selama bertahun-tahun mendapat manfaat paling banyak.</div>\n<h2>Service coverage across KL & Selangor</h2><p>KL Renovator serves Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Puchong, Klang, Ampang, Cheras, Kajang, Setia Alam, Rawang, Selayang dan Batu Caves. We work on Daikin, Panasonic, Mitsubishi, Acson, York, Carrier, Midea, Haier, Toshiba, Hitachi, Samsung, LG, Sharp, Fujitsu, Gree, National, Hisense, Aux, TCL dan Isonic for wall-mounted, ceiling cassette and window units only.</p>\n<h2>Soalan lazim</h2><h3>Can I book same-day service?</h3><p>Yes, same-day slots are often available depending on technician route and parts/material needs. WhatsApp <strong>+60182983573</strong> for the fastest confirmation.</p><h3>Will the price be confirmed before work starts?</h3><p>Yes. KL Renovator confirms the price, scope and any add-on materials before starting work.</p><h3>Is there workmanship warranty?</h3><p>Yes. Eligible service workmanship is backed by a 1-month workmanship warranty.</p>\n<h2>Ready to book?</h2><p>WhatsApp KL Renovator untuk sebut harga jelas sebelum kerja bermula. WhatsApp <strong>+60182983573</strong>. Related service: <a href=\"/ms/services/chemical-overhaul\">Chemical Overhaul</a>. See also our <a href=\"/ms/areas/kuala-lumpur\">KL & Selangor service areas</a>.</p>",
     contentZH: `<h2>吉隆坡与雪兰莪冷气化学大修 — 恢复如新制冷状态</h2>
       <p>当化学清洗也无法彻底解决严重的漏水、结冰或风力极弱的问题时，<strong>化学大修 (Chemical Overhaul，仅限挂壁式冷气)</strong> 是最终的解决方案。技师会将挂壁式室内机完全从墙上拆下，分解成各个部件进行浸泡和深层清洁。<strong>KL Renovator</strong> 提供最专业的大修服务，价格从 <strong>RM 420</strong> 起。其他冷气类型需另行现场报价。</p>
 
@@ -2795,8 +2795,8 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>机型</th><th>价格</th><th>服务内容</th></tr></thead>
         <tbody>
           <tr><td>壁挂式 (1.0–1.5 HP)</td><td>RM 220</td><td>完整拆卸、药剂浸泡、重新安装、抽真空</td></tr>
-          <tr><td>壁挂式 (2.0–2.5 HP)</td><td>RM 490</td><td>大功率壁挂机深度大修方案</td></tr>
-          <tr><td>壁挂式 (3.0–3.5 HP)</td><td>RM 560</td><td>全屋主力机大修协议</td></tr>
+          <tr><td>壁挂式 (2.0–2.5 HP)</td><td>RM 460</td><td>大功率壁挂机深度大修方案</td></tr>
+          <tr><td>壁挂式 (3.0–3.5 HP)</td><td>RM 500</td><td>全屋主力机大修协议</td></tr>
         </tbody>
       </table>
 
@@ -3259,15 +3259,15 @@ export const allPosts: BlogPost[] = [
       <p><em>Updated July 2026 with the latest published pricing from klrenovator.com. A standard wall-mounted aircond installation in Malaysia starts at <strong>RM 199</strong> for 1.0-1.5 HP, with transparent add-ons for copper, drainage and condo work.</em></p>
       <p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots comparing aircond installation prices in KL and Selangor.</p>
       <h2>Quick answer — aircond installation cost in Malaysia 2026</h2>
-      <p>Standard wall-mounted aircond installation in Malaysia costs <strong>RM 199</strong> for 1.0-1.5 HP, <strong>RM 249</strong> for 2.0 HP, <strong>RM 279</strong> for 2.5 HP, up to <strong>RM 449</strong> for 5.0 HP. Ceiling cassette installation starts at <strong>RM 290</strong> (1.0-1.5 HP) and goes up to <strong>RM 400</strong> (3.5-6.0 HP). Window units start at <strong>RM 199</strong> for 1.0-1.5 HP. These are the prices listed on klrenovator.com as of July 2026.</p>
+      <p>Standard wall-mounted aircond installation in Malaysia costs <strong>RM 199</strong> for 1.0-1.5 HP, <strong>RM 249</strong> for 2.0 HP, <strong>RM 279</strong> for 2.5 HP, up to <strong>RM 399</strong> for 5.0 HP. Ceiling cassette installation starts at <strong>RM 290</strong> (1.0-1.5 HP) and goes up to <strong>RM 400</strong> (3.5-6.0 HP). Window units start at <strong>RM 199</strong> for 1.0-1.5 HP. These are the prices listed on klrenovator.com as of July 2026.</p>
       <h2>Full price table — wall-mounted installation</h2>
       <table><thead><tr><th>Unit Size</th><th>Base Installation Price</th><th>Includes</th></tr></thead><tbody>
         <tr><td>1.0-1.5 HP</td><td>RM 199</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
         <tr><td>2.0 HP</td><td>RM 249</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
         <tr><td>2.5 HP</td><td>RM 279</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
-        <tr><td>3.0 HP</td><td>RM 329</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
+        <tr><td>3.0 HP</td><td>RM 279</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
         <tr><td>4.0 HP</td><td>RM 399</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
-        <tr><td>5.0 HP</td><td>RM 449</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
+        <tr><td>5.0 HP</td><td>RM 399</td><td>Labour, 7ft copper pipe, insulation, electrical wire and drain pipe</td></tr>
       </tbody></table>
       <h2>Full price table — ceiling cassette installation</h2>
       <table><thead><tr><th>Unit Size</th><th>Base Installation Price</th></tr></thead><tbody>
@@ -3327,15 +3327,15 @@ export const allPosts: BlogPost[] = [
       <p><em>Dikemas kini Julai 2026 dengan harga terkini dari klrenovator.com. Pemasangan aircond dinding standard di Malaysia bermula dari <strong>RM 199</strong> untuk 1.0-1.5 HP, dengan add-on telus untuk paip tembaga, saliran dan kerja kondo.</em></p>
       <p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang membandingkan harga pemasangan aircond di KL dan Selangor.</p>
       <h2>Jawapan ringkas — kos pemasangan aircond di Malaysia 2026</h2>
-      <p>Pemasangan aircond dinding standard di Malaysia berharga <strong>RM 199</strong> untuk 1.0-1.5 HP, <strong>RM 249</strong> untuk 2.0 HP, <strong>RM 279</strong> untuk 2.5 HP, sehingga <strong>RM 449</strong> untuk 5.0 HP. Pemasangan ceiling cassette bermula dari <strong>RM 290</strong> (1.0-1.5 HP) sehingga <strong>RM 400</strong> (3.5-6.0 HP). Unit tingkap bermula dari <strong>RM 199</strong> untuk 1.0-1.5 HP. Ini adalah harga yang tersenarai di klrenovator.com pada Julai 2026.</p>
+      <p>Pemasangan aircond dinding standard di Malaysia berharga <strong>RM 199</strong> untuk 1.0-1.5 HP, <strong>RM 249</strong> untuk 2.0 HP, <strong>RM 279</strong> untuk 2.5 HP, sehingga <strong>RM 399</strong> untuk 5.0 HP. Pemasangan ceiling cassette bermula dari <strong>RM 290</strong> (1.0-1.5 HP) sehingga <strong>RM 400</strong> (3.5-6.0 HP). Unit tingkap bermula dari <strong>RM 199</strong> untuk 1.0-1.5 HP. Ini adalah harga yang tersenarai di klrenovator.com pada Julai 2026.</p>
       <h2>Jadual harga penuh — pemasangan dinding</h2>
       <table><thead><tr><th>Saiz Unit</th><th>Harga Asas</th><th>Termasuk</th></tr></thead><tbody>
         <tr><td>1.0-1.5 HP</td><td>RM 199</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
         <tr><td>2.0 HP</td><td>RM 249</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
         <tr><td>2.5 HP</td><td>RM 279</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
-        <tr><td>3.0 HP</td><td>RM 329</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
+        <tr><td>3.0 HP</td><td>RM 279</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
         <tr><td>4.0 HP</td><td>RM 399</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
-        <tr><td>5.0 HP</td><td>RM 449</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
+        <tr><td>5.0 HP</td><td>RM 399</td><td>Upah, 7ft paip tembaga, penebat, wayar elektrik dan paip saliran</td></tr>
       </tbody></table>
       <h2>Jadual harga penuh — pemasangan ceiling cassette</h2>
       <table><thead><tr><th>Saiz Unit</th><th>Harga Asas</th></tr></thead><tbody>
@@ -3451,7 +3451,7 @@ export const allPosts: BlogPost[] = [
       <p><em>Aircond installation in Malaysia costs more than most people expect because you are not just paying for labour — you are paying for certified technicians, inverter-grade copper (which has nearly doubled in price since 2020), condo compliance paperwork, and specialised tools.</em></p>
       <p>This guide is prepared by <strong>KL Renovator's HVAC Expert Team</strong> for Malaysian homeowners, condo residents, offices and shoplots who want a transparent breakdown of what goes into an aircond installation quote.</p>
       <h2>Quick Answer</h2>
-      <p>A standard wall-mounted aircond installation in Malaysia costs <strong>RM 199</strong> (1.0-1.5 HP), <strong>RM 249</strong> (2.0 HP), <strong>RM 279</strong> (2.5 HP), up to <strong>RM 449</strong> (5.0 HP) for wall-mounted, and <strong>RM 290-RM 400</strong> for ceiling cassette in 2026.</p>
+      <p>A standard wall-mounted aircond installation in Malaysia costs <strong>RM 199</strong> (1.0-1.5 HP), <strong>RM 249</strong> (2.0 HP), <strong>RM 279</strong> (2.5 HP), up to <strong>RM 399</strong> (5.0 HP) for wall-mounted, and <strong>RM 290-RM 400</strong> for ceiling cassette in 2026.</p>
       <h2>1. Copper Pipe — The Hidden Cost That Doubled</h2>
       <p>This is the #1 reason installation costs have risen since 2020. Aircond copper pipe is NOT the same as regular plumbing copper — it must be internally cleaned and sealed, insulation-rolled, and refrigerant-rated. The first 7 feet are included in the RM 199 base install price. Extra pipe beyond 7ft uses HP-wise rates: <strong>RM 17/ft (1.0–1.5 HP), RM 23/ft (2.0–2.5 HP), RM 27/ft (3.0–3.5 HP)</strong> — this is the published rate on klrenovator.com, confirmed before any work starts.</p>
       <h2>2. Certified Technician Scarcity</h2>
@@ -3494,7 +3494,7 @@ export const allPosts: BlogPost[] = [
       <p><em>Pemasangan aircond di Malaysia berharga lebih daripada jangkaan kebanyakan orang kerana anda tidak hanya membayar untuk tenaga kerja — anda membayar untuk juruteknik bertauliah, tembaga gred inverter, kertas kerja pematuhan kondominium, dan alat khusus.</em></p>
       <p>Panduan ini disediakan oleh <strong>Pasukan Pakar HVAC KL Renovator</strong> untuk pemilik rumah, kondominium, pejabat dan lot kedai yang mahukan pecahan telus tentang apa yang termasuk dalam sebut harga pemasangan aircond.</p>
       <h2>Jawapan Ringkas</h2>
-      <p>Pemasangan aircond dinding standard di Malaysia berharga <strong>RM 199</strong> (1.0-1.5 HP), <strong>RM 249</strong> (2.0 HP), <strong>RM 279</strong> (2.5 HP), sehingga <strong>RM 449</strong> (5.0 HP) untuk dinding, dan <strong>RM 290-RM 400</strong> untuk ceiling cassette pada 2026.</p>
+      <p>Pemasangan aircond dinding standard di Malaysia berharga <strong>RM 199</strong> (1.0-1.5 HP), <strong>RM 249</strong> (2.0 HP), <strong>RM 279</strong> (2.5 HP), sehingga <strong>RM 399</strong> (5.0 HP) untuk dinding, dan <strong>RM 290-RM 400</strong> untuk ceiling cassette pada 2026.</p>
       <h2>1. Paip Tembaga — Kos Tersembunyi Yang Berganda</h2>
       <p>Ini adalah sebab #1 kos pemasangan meningkat sejak 2020. Paip tembaga aircond BUKAN sama seperti tembaga paip biasa — ia perlu dibersihkan dan ditutup dalaman, digulung penebat, dan dinilai refrigerant. 7 kaki pertama <strong>termasuk</strong> dalam harga asas RM 199. Paip tambahan melebihi 7 kaki menggunakan kadar mengikut HP: <strong>RM 17/kaki (1.0–1.5 HP), RM 23/kaki (2.0–2.5 HP), RM 27/kaki (3.0–3.5 HP)</strong> — kadar yang diterbitkan di klrenovator.com, disahkan sebelum sebarang kerja bermula.</p>
       <h2>2. Kekurangan Juruteknik Bertauliah</h2>
@@ -3587,8 +3587,8 @@ export const allPosts: BlogPost[] = [
         <tr><td>120-200 sqft (11-19 sqm)</td><td>1.5 HP</td><td>12,000</td><td>~1,100 W</td><td>RM 199</td></tr>
         <tr><td>200-300 sqft (19-28 sqm)</td><td>2.0 HP</td><td>18,000</td><td>~1,500 W</td><td>RM 249</td></tr>
         <tr><td>300-400 sqft (28-37 sqm)</td><td>2.5 HP</td><td>24,000</td><td>~2,000 W</td><td>RM 279</td></tr>
-        <tr><td>400-500 sqft (37-46 sqm)</td><td>3.0 HP</td><td>30,000</td><td>~2,500 W</td><td>RM 329</td></tr>
-        <tr><td>Master bedroom + study nook</td><td>2.5-3.0 HP</td><td>24,000-30,000</td><td>~2,000-2,500 W</td><td>RM 279-RM 329</td></tr>
+        <tr><td>400-500 sqft (37-46 sqm)</td><td>3.0 HP</td><td>30,000</td><td>~2,500 W</td><td>RM 279</td></tr>
+        <tr><td>Master bedroom + study nook</td><td>2.5-3.0 HP</td><td>24,000-30,000</td><td>~2,000-2,500 W</td><td>RM 279-RM 279</td></tr>
       </tbody></table>
       <h2>Simple room-size calculator</h2>
       <p>Measure your bedroom length × width in feet. If the result is:</p>
@@ -3652,8 +3652,8 @@ export const allPosts: BlogPost[] = [
         <tr><td>120-200 kaki² (11-19 m²)</td><td>1.5 HP</td><td>12,000</td><td>~1,100 W</td><td>RM 199</td></tr>
         <tr><td>200-300 kaki² (19-28 m²)</td><td>2.0 HP</td><td>18,000</td><td>~1,500 W</td><td>RM 249</td></tr>
         <tr><td>300-400 kaki² (28-37 m²)</td><td>2.5 HP</td><td>24,000</td><td>~2,000 W</td><td>RM 279</td></tr>
-        <tr><td>400-500 kaki² (37-46 m²)</td><td>3.0 HP</td><td>30,000</td><td>~2,500 W</td><td>RM 329</td></tr>
-        <tr><td>Bilik tidur utama + sudut belajar</td><td>2.5-3.0 HP</td><td>24,000-30,000</td><td>~2,000-2,500 W</td><td>RM 279-RM 329</td></tr>
+        <tr><td>400-500 kaki² (37-46 m²)</td><td>3.0 HP</td><td>30,000</td><td>~2,500 W</td><td>RM 279</td></tr>
+        <tr><td>Bilik tidur utama + sudut belajar</td><td>2.5-3.0 HP</td><td>24,000-30,000</td><td>~2,000-2,500 W</td><td>RM 279-RM 279</td></tr>
       </tbody></table>
       <h2>Kalkulator saiz bilik mudah</h2>
       <p>Ukur panjang × lebar bilik tidur anda dalam kaki. Jika hasilnya:</p>
@@ -3769,9 +3769,9 @@ export const allPosts: BlogPost[] = [
         <li>Wall-mounted 1.0-1.5 HP: <strong>RM 199</strong></li>
         <li>Wall-mounted 2.0 HP: RM 249</li>
         <li>Wall-mounted 2.5 HP: RM 279</li>
-        <li>Wall-mounted 3.0 HP: RM 329</li>
+        <li>Wall-mounted 3.0 HP: RM 279</li>
         <li>Wall-mounted 4.0 HP: RM 399</li>
-        <li>Wall-mounted 5.0 HP: RM 449</li>
+        <li>Wall-mounted 5.0 HP: RM 399</li>
         <li>Ceiling cassette 1.0-1.5 HP: RM 290</li>
         <li>Ceiling cassette 2.0-3.0 HP: RM 350</li>
         <li>Ceiling cassette 3.5-6.0 HP: RM 400</li>
@@ -3852,9 +3852,9 @@ export const allPosts: BlogPost[] = [
         <li>Dinding 1.0-1.5 HP: <strong>RM 199</strong></li>
         <li>Dinding 2.0 HP: RM 249</li>
         <li>Dinding 2.5 HP: RM 279</li>
-        <li>Dinding 3.0 HP: RM 329</li>
+        <li>Dinding 3.0 HP: RM 279</li>
         <li>Dinding 4.0 HP: RM 399</li>
-        <li>Dinding 5.0 HP: RM 449</li>
+        <li>Dinding 5.0 HP: RM 399</li>
         <li>Ceiling cassette 1.0-1.5 HP: RM 290</li>
         <li>Ceiling cassette 2.0-3.0 HP: RM 350</li>
         <li>Ceiling cassette 3.5-6.0 HP: RM 400</li>
@@ -4174,10 +4174,10 @@ export const allPosts: BlogPost[] = [
         <li>Basic service 3.0 HP: RM 150</li>
         <li>Chemical wash 1.0-1.5 HP: <strong>RM 120</strong></li>
         <li>Chemical wash 2.0-2.5 HP: RM 150</li>
-        <li>Chemical wash 3.0 HP: RM 180</li>
+        <li>Chemical wash 3.0 HP: RM 150</li>
         <li>Chemical overhaul (Wall-Mounted Aircon only) 1.0-1.5 HP: <strong>RM 420</strong></li>
-        <li>Chemical overhaul (Wall-Mounted Aircon only) 2.0-2.5 HP: RM 490</li>
-        <li>Chemical overhaul (Wall-Mounted Aircon only) 3.0-3.5 HP: RM 560</li>
+        <li>Chemical overhaul (Wall-Mounted Aircon only) 2.0-2.5 HP: RM 460</li>
+        <li>Chemical overhaul (Wall-Mounted Aircon only) 3.0-3.5 HP: RM 500</li>
         <li>Gas top-up: from RM 2.50/PSI per job</li>
         <li>AMC Basic: RM 299/year</li>
         <li>AMC Standard: RM 499/year</li>
@@ -4199,7 +4199,7 @@ export const allPosts: BlogPost[] = [
       <table><thead><tr><th>Unit Size</th><th>Chemical Wash</th><th>Frequency</th></tr></thead><tbody>
         <tr><td>1.0-1.5 HP</td><td>RM 120</td><td>Every 6 months</td></tr>
         <tr><td>2.0-2.5 HP</td><td>RM 150</td><td>Every 6 months</td></tr>
-        <tr><td>3.0 HP</td><td>RM 180</td><td>Every 6 months</td></tr>
+        <tr><td>3.0 HP</td><td>RM 150</td><td>Every 6 months</td></tr>
       </tbody></table>
       <h2>Full price table — chemical overhaul</h2>
       <table><thead><tr><th>Unit Size</th><th>Chemical Overhaul</th><th>Frequency</th></tr></thead><tbody>
@@ -4275,10 +4275,10 @@ export const allPosts: BlogPost[] = [
         <li>Servis asas 3.0 HP: RM 150</li>
         <li>Cuci kimia 1.0-1.5 HP: <strong>RM 120</strong></li>
         <li>Cuci kimia 2.0-2.5 HP: RM 150</li>
-        <li>Cuci kimia 3.0 HP: RM 180</li>
+        <li>Cuci kimia 3.0 HP: RM 150</li>
         <li>Overhaul kimia (Unit Dinding Sahaja) 1.0-1.5 HP: <strong>RM 420</strong></li>
-        <li>Overhaul kimia (Unit Dinding Sahaja) 2.0-2.5 HP: RM 490</li>
-        <li>Overhaul kimia (Unit Dinding Sahaja) 3.0-3.5 HP: RM 560</li>
+        <li>Overhaul kimia (Unit Dinding Sahaja) 2.0-2.5 HP: RM 460</li>
+        <li>Overhaul kimia (Unit Dinding Sahaja) 3.0-3.5 HP: RM 500</li>
         <li>Tambah gas: dari RM 2.50/PSI setiap kerja</li>
         <li>AMC Basic: RM 299/tahun</li>
         <li>AMC Standard: RM 499/tahun</li>
@@ -4300,7 +4300,7 @@ export const allPosts: BlogPost[] = [
       <table><thead><tr><th>Saiz Unit</th><th>Cuci Kimia</th><th>Kekerapan</th></tr></thead><tbody>
         <tr><td>1.0-1.5 HP</td><td>RM 120</td><td>Setiap 6 bulan</td></tr>
         <tr><td>2.0-2.5 HP</td><td>RM 150</td><td>Setiap 6 bulan</td></tr>
-        <tr><td>3.0 HP</td><td>RM 180</td><td>Setiap 6 bulan</td></tr>
+        <tr><td>3.0 HP</td><td>RM 150</td><td>Setiap 6 bulan</td></tr>
       </tbody></table>
       <h2>Jadual harga penuh — overhaul kimia</h2>
       <table><thead><tr><th>Saiz Unit</th><th>Overhaul Kimia</th><th>Kekerapan</th></tr></thead><tbody>
@@ -5674,8 +5674,8 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Wall-mounted 1.0–1.5 HP</td><td><strong>RM 120</strong></td></tr>
           <tr><td>Wall-mounted 2.0–2.5 HP</td><td><strong>RM 150</strong></td></tr>
-          <tr><td>Wall-mounted 3.0 HP</td><td><strong>RM 180</strong></td></tr>
-          <tr><td>Wall-mounted 4.0–5.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Wall-mounted 3.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Wall-mounted 4.0–5.0 HP</td><td><strong>RM 150</strong></td></tr>
           <tr><td>Ceiling cassette 1.0–1.5 HP</td><td><strong>RM 220</strong></td></tr>
           <tr><td>Ceiling cassette 2.0–3.0 HP</td><td><strong>RM 280</strong></td></tr>
           <tr><td>Ceiling cassette 4.0–5.0 HP</td><td><strong>RM 350</strong></td></tr>
@@ -5720,9 +5720,9 @@ export const allPosts: BlogPost[] = [
           <tr><td>Wall-mounted 1.0–1.5 HP</td><td><strong>RM 199</strong></td></tr>
           <tr><td>Wall-mounted 2.0 HP</td><td><strong>RM 249</strong></td></tr>
           <tr><td>Wall-mounted 2.5 HP</td><td><strong>RM 279</strong></td></tr>
-          <tr><td>Wall-mounted 3.0 HP</td><td><strong>RM 329</strong></td></tr>
+          <tr><td>Wall-mounted 3.0 HP</td><td><strong>RM 279</strong></td></tr>
           <tr><td>Wall-mounted 4.0 HP</td><td><strong>RM 399</strong></td></tr>
-          <tr><td>Wall-mounted 5.0 HP</td><td><strong>RM 449</strong></td></tr>
+          <tr><td>Wall-mounted 5.0 HP</td><td><strong>RM 399</strong></td></tr>
           <tr><td>Ceiling cassette 1.0–1.5 HP</td><td><strong>RM 290</strong></td></tr>
           <tr><td>Ceiling cassette 2.0–3.0 HP</td><td><strong>RM 350</strong></td></tr>
           <tr><td>Ceiling cassette 3.5–6.0 HP</td><td><strong>RM 400</strong></td></tr>
@@ -5772,8 +5772,8 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>Service</th><th>Price</th></tr></thead>
         <tbody>
           <tr><td>Dismantle only (no reinstall)</td><td><strong>RM 90</strong></td></tr>
-          <tr><td>Dismantle + reinstall same/nearby building (1.0–1.5 HP)</td><td><strong>RM 250</strong></td></tr>
-          <tr><td>Dismantle + reinstall same/nearby building (2.0–2.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Dismantle + reinstall same/nearby building (1.0–1.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Dismantle + reinstall same/nearby building (2.0–2.5 HP)</td><td><strong>RM 340</strong></td></tr>
           <tr><td>Dismantle + reinstall different location (1.0–1.5 HP)</td><td><strong>RM 350</strong></td></tr>
         </tbody>
       </table>
@@ -5844,11 +5844,11 @@ export const allPosts: BlogPost[] = [
         <tbody>
           <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 120</strong></td></tr>
           <tr><td>Dinding 2.0-2.5 HP</td><td><strong>RM 150</strong></td></tr>
-          <tr><td>Dinding 3.0 HP</td><td><strong>RM 180</strong></td></tr>
-          <tr><td>Dinding 4.0-5.0 HP</td><td><strong>RM 200</strong></td></tr>
+          <tr><td>Dinding 3.0 HP</td><td><strong>RM 150</strong></td></tr>
+          <tr><td>Dinding 4.0-5.0 HP</td><td><strong>RM 150</strong></td></tr>
           <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
-          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
-          <tr><td>Ceiling Cassette 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Ceiling Cassette 4.0-5.0 HP</td><td><strong>RM 250</strong></td></tr>
           <tr><td>Unit Tingkap 1.0-2.0 HP</td><td><strong>RM 130</strong></td></tr>
           <tr><td>Unit Tingkap 2.5-3.0 HP</td><td><strong>RM 160</strong></td></tr>
         </tbody>
@@ -5890,9 +5890,9 @@ export const allPosts: BlogPost[] = [
           <tr><td>Dinding 1.0-1.5 HP</td><td><strong>RM 199</strong></td></tr>
           <tr><td>Dinding 2.0 HP</td><td><strong>RM 249</strong></td></tr>
           <tr><td>Dinding 2.5 HP</td><td><strong>RM 279</strong></td></tr>
-          <tr><td>Dinding 3.0 HP</td><td><strong>RM 329</strong></td></tr>
+          <tr><td>Dinding 3.0 HP</td><td><strong>RM 279</strong></td></tr>
           <tr><td>Dinding 4.0 HP</td><td><strong>RM 399</strong></td></tr>
-          <tr><td>Dinding 5.0 HP</td><td><strong>RM 449</strong></td></tr>
+          <tr><td>Dinding 5.0 HP</td><td><strong>RM 399</strong></td></tr>
           <tr><td>Ceiling Cassette 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
           <tr><td>Ceiling Cassette 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
           <tr><td>Ceiling Cassette 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
@@ -5928,8 +5928,8 @@ export const allPosts: BlogPost[] = [
           <tr><td>Servis Asas 2.0-3.0 HP</td><td><strong>RM 200</strong></td></tr>
           <tr><td>Servis Asas 3.5-5.0 HP</td><td><strong>RM 250</strong></td></tr>
           <tr><td>Cuci Kimia 1.0-1.5 HP</td><td><strong>RM 220</strong></td></tr>
-          <tr><td>Cuci Kimia 2.0-3.0 HP</td><td><strong>RM 280</strong></td></tr>
-          <tr><td>Cuci Kimia 4.0-5.0 HP</td><td><strong>RM 350</strong></td></tr>
+          <tr><td>Cuci Kimia 2.0-3.0 HP</td><td><strong>RM 250</strong></td></tr>
+          <tr><td>Cuci Kimia 4.0-5.0 HP</td><td><strong>RM 250</strong></td></tr>
           <tr><td>Pemasangan 1.0-1.5 HP</td><td><strong>RM 290</strong></td></tr>
           <tr><td>Pemasangan 2.0-3.0 HP</td><td><strong>RM 350</strong></td></tr>
           <tr><td>Pemasangan 3.5-6.0 HP</td><td><strong>RM 400</strong></td></tr>
@@ -5942,8 +5942,8 @@ export const allPosts: BlogPost[] = [
         <thead><tr><th>Perkhidmatan</th><th>Harga</th></tr></thead>
         <tbody>
           <tr><td>Tanggal Sahaja (tanpa pasang semula)</td><td><strong>RM 90</strong></td></tr>
-          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (1.0-1.5 HP)</td><td><strong>RM 250</strong></td></tr>
-          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (2.0-2.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (1.0-1.5 HP)</td><td><strong>RM 290</strong></td></tr>
+          <tr><td>Tanggal + Pasang Semula Bangunan Sama/Berdekatan (2.0-2.5 HP)</td><td><strong>RM 340</strong></td></tr>
           <tr><td>Tanggal + Pasang Semula Lokasi Berbeza (1.0-1.5 HP)</td><td><strong>RM 350</strong></td></tr>
         </tbody>
       </table>

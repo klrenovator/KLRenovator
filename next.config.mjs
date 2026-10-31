@@ -110,6 +110,16 @@ const nextConfig = {
       // Old assistant-tool path -> the diagnostic tool that replaced it.
       { source: '/aircond-assistant',                               destination: '/which-aircond-service-do-i-need',           statusCode: 301 },
       { source: '/ms/aircond-assistant',                            destination: '/ms/which-aircond-service-do-i-need',        statusCode: 301 },
+      // ── GSC 404 cleanup (Oct 2026 screenshots, 17-URL report) ───────────
+      // The Malay pages live under Bahasa slugs, so the English-slug /ms/*
+      // URLs Google crawled 404. Point each at its live Malay equivalent
+      // (verified: no internal link emits these paths; destinations exist).
+      { source: '/ms/services/aircond-service-price-malaysia',      destination: '/ms/aircond-service-price-malaysia',         statusCode: 301 },
+      { source: '/zh/services/aircond-service-price-malaysia',      destination: '/zh/aircond-service-price-malaysia',         statusCode: 301 },
+      { source: '/ms/aircond-installation-kl',                      destination: '/ms/pemasangan-aircond-kl',                  statusCode: 301 },
+      { source: '/ms/commercial-aircond-service',                   destination: '/ms/servis-aircond-komersial',               statusCode: 301 },
+      { source: '/ms/commercial-aircond-installation',              destination: '/ms/pemasangan-aircond-komersial',           statusCode: 301 },
+      { source: '/ms/new-home-aircond-installation',                destination: '/ms/pemasangan-aircond-rumah-baru',          statusCode: 301 },
       // Mangled template/parameter junk inherited from the old site —
       // collapse to the homepage so crawlers stop hitting 404s on them.
       // (/年 could not be matched by the redirects matcher and keeps serving

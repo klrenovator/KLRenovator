@@ -4445,15 +4445,15 @@ export const kampungPages = [
       faqs: [
         { q: "My TTDI terrace house is over 25 years old — is the original aircond wiring still safe?", a: "Often it needs attention. On 20-30 year old TTDI units we inspect the capacitor, wiring insulation and isolator during every chemical wash, and flag anything fire-risk before it fails — replacement parts are quoted before any work starts." },
         { q: "Do you service condos near TTDI plaza and Kiara Park?", a: "Yes — wall-mounted and multi-split units in the condo towers around TTDI plaza, Lorong Burhanuddin and the Kiara fringe are regular jobs for our Damansara route. We follow each building's lift-lobby and security registration procedure." },
-        { q: "How much is chemical wash in TTDI?", a: "Pressure chemical wash from RM 120 (1.0-1.5 HP wall-mounted), RM 150 (2.0-2.5 HP), RM 180 (3.0 HP); ceiling cassette from RM 220. Basic servicing from RM 99. All prices confirmed before work begins." },
+        { q: "How much is chemical wash in TTDI?", a: "Pressure chemical wash from RM 120 (1.0-1.5 HP wall-mounted), RM 150 (2.0-2.5 HP), RM 150 (3.0 HP); ceiling cassette from RM 220. Basic servicing from RM 99. All prices confirmed before work begins." },
       ],
       faqsBM: [
         { q: "Rumah teres TTDI saya berusia lebih 25 tahun — adakah pendawaian asal masih selamat?", a: "Kerap perlu perhatian. Pada unit TTDI berusia 20-30 tahun kami memeriksa kapasitor, insulasi pendawaian dan isolator semasa setiap cuci kimia, dan menanda apa-apa risiko sebelum rosak." },
-        { q: "Berapa harga cuci kimia di TTDI?", a: "Cuci kimia tekanan dari RM 120 (1.0-1.5 HP dinding), RM 150 (2.0-2.5 HP), RM 180 (3.0 HP); ceiling cassette dari RM 220. Servis asas dari RM 99." },
+        { q: "Berapa harga cuci kimia di TTDI?", a: "Cuci kimia tekanan dari RM 120 (1.0-1.5 HP dinding), RM 150 (2.0-2.5 HP), RM 150 (3.0 HP); ceiling cassette dari RM 220. Servis asas dari RM 99." },
       ],
       faqsZH: [
         { q: "我家TTDI排屋已超过25年，原装电线还安全吗？", a: "通常需要留意。对20-30年机龄的TTDI冷气，我们每次化学清洗都会检查电容器、电线绝缘和隔离开关，并在故障前标记任何隐患，更换零件先报价后施工。" },
-        { q: "TTDI化学清洗多少钱？", a: "压力化学清洗 RM 120 起（1.0-1.5 HP挂壁式）、RM 150（2.0-2.5 HP）、RM 180（3.0 HP）；天花板卡式机 RM 220 起。基本保养 RM99 起。所有价格施工前确认。" },
+        { q: "TTDI化学清洗多少钱？", a: "压力化学清洗 RM 120 起（1.0-1.5 HP挂壁式）、RM 150（2.0-2.5 HP）、RM 150（3.0 HP）；天花板卡式机 RM 220 起。基本保养 RM99 起。所有价格施工前确认。" },
       ],
     },
     {
