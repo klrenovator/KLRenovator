@@ -52,3 +52,13 @@ Routes/URLs of ranking pages, WhatsApp (`wa.me/60182983573` verified in built HT
 1. GSC → *Not found (404)* → **Validate Fix**.
 2. GSC → URL Inspection on 2–3 Discovered pages → *Request Indexing* (optional, low value).
 3. Optionally trash/rename the two August DOCX/PDF files in Drive to stop accidental use.
+
+## 6. Chemical Overhaul deep-audit (31 Oct 2026, follow-up)
+Kami found & fixed in `config/services-data.ts` (flows to EN/MS/ZH service pages + FAQ schema):
+1. **Wrong price:** compare table + decision-guide FAQ (×3 languages) priced a chemical wash at "RM 170" (that's Emergency Drain Clearing) → corrected to **from RM 120**.
+2. **Discount inconsistency:** overhaul FAQs quoted 3 different volume discounts across languages (EN 4–10 units, MS 2–3/4–8 units) → all aligned to the Sheet: **5+ units = 5% OFF, 10+ units = 10% OFF** (same fix applied to the ceiling-cassette commercial FAQ).
+3. **Scope contradiction (ZH):** duration FAQ quoted cassette overhaul timing, but overhaul pricing is wall-mounted only → removed; cassette = separate on-site quote.
+4. **Overclaims softened:** "Mould Removal 100% Guaranteed / Permanent solution" → factual root-cause wording; wash labour time corrected to 30–45 min.
+5. **Content parity gap:** MS/ZH overhaul pages had **no comparison table** (EN only) → `compareTableMS`/`compareTableZH` added.
+6. **Content increased (unique, AEO-ready):** 3 new FAQs × 3 languages — overhaul-vs-replace decision (RM 420–500 vs replacement, R22/10-year rule), how-often/too-often guidance, and visit-preparation checklist. Verified present in built EN/MS/ZH HTML.
+Still flagged (unchanged, needs owner source): `llms-full.txt` Q&A says "Drain pipe clearing from RM 80" — no RM 80 drain row exists in the Sheet (Emergency Drain Clearing is RM 170); left untouched pending owner confirmation.

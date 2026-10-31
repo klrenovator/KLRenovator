@@ -181,8 +181,20 @@ export const servicesData: Record<string, ServiceDetail> = {
     compareTable: {
       title: "Chemical Overhaul vs Pressure Chemical Wash",
       subtitle: "Understand why an overhaul is the definitive fix for neglected wall-mounted units.",
-      columns: ["Feature", "Chemical Overhaul — Wall-Mounted only (RM 420)", "Pressure Wash (RM 170)"],
-      rows: [["Unit Type", "Wall-Mounted only", "Wall / Cassette / Window"], ["Unit Status", "100% Dismantled", "Stays mounted"], ["Back Tray Cleaning", "Yes (Scrubbed)", "No (Surface flush only)"], ["Mould Removal", "100% Guaranteed", "Surface removal only"], ["Water Leak Fix", "Permanent solution", "Temporary fix"], ["Labour Time", "2 - 3 Hours", "1 Hour"], ["Warranty", "1-Month Workmanship", "1-Month Workmanship"]]
+      columns: ["Feature", "Chemical Overhaul — Wall-Mounted only (RM 420)", "Pressure Wash (from RM 120)"],
+      rows: [["Unit Type", "Wall-Mounted only", "Wall / Cassette / Window"], ["Unit Status", "100% Dismantled", "Stays mounted"], ["Back Tray Cleaning", "Yes (Scrubbed)", "No (Surface flush only)"], ["Mould Removal", "Deep removal — every component scrubbed individually", "Surface removal only"], ["Water Leak Fix", "Fixes the root cause (drain pan / tray cleaned & water-tested)", "Surface clean only — deep blockage may remain"], ["Labour Time", "2 - 3 Hours", "30–45 Minutes"], ["Warranty", "1-Month Workmanship", "1-Month Workmanship"]]
+    },
+    compareTableMS: {
+      title: "Overhaul Kimia vs Cuci Kimia Bertekanan",
+      subtitle: "Fahami mengapa overhaul adalah penyelesaian muktamad untuk unit dinding yang terabai.",
+      columns: ["Ciri", "Overhaul Kimia — Unit Dinding Sahaja (RM 420)", "Cuci Kimia Bertekanan (dari RM 120)"],
+      rows: [["Jenis Unit", "Unit dinding sahaja", "Dinding / Kaset / Tingkap"], ["Status Unit", "Dibongkar 100%", "Kekal terpasang"], ["Pembersihan Dulang Belakang", "Ya (Digosok)", "Tidak (Siram permukaan sahaja)"], ["Pembuangan Kulat", "Pembuangan mendalam — setiap komponen digosok satu per satu", "Pembuangan permukaan sahaja"], ["Baiki Kebocoran Air", "Membetulkan punca utama (dulang dibersih & diuji air)", "Cucian permukaan sahaja — sumbatan dalam mungkin kekal"], ["Masa Kerja", "2 - 3 Jam", "30–45 Minit"], ["Waranti", "Waranti Mutu Kerja 1 Bulan", "Waranti Mutu Kerja 1 Bulan"]]
+    },
+    compareTableZH: {
+      title: "化学大修 vs 高压化学清洗",
+      subtitle: "了解为什么大修是被忽视的挂壁式冷气的彻底解决方案。",
+      columns: ["项目", "化学大修 — 仅限挂壁式（RM 420）", "高压化学清洗（RM 120起）"],
+      rows: [["适用机型", "仅限挂壁式", "挂壁 / 卡式 / 窗式"], ["机器状态", "100%拆解", "保持挂墙"], ["背部排水盘清洗", "有（刷洗）", "无（仅表面冲洗）"], ["除霉", "深度清除——每个零件单独刷洗", "仅表面清除"], ["漏水修复", "修复根本原因（排水盘清洗并做水流测试）", "仅表面清洗——深层堵塞可能残留"], ["工时", "2 - 3 小时", "30–45 分钟"], ["保修", "1个月工艺保修", "1个月工艺保修"]]
     },
     highlights: [
       "Complete 100% system teardown — zero components left uncleaned",
@@ -203,11 +215,11 @@ export const servicesData: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How much does a chemical overhaul cost in KL & Selangor?",
-        a: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Wall-mounted 1.0\u20131.5 HP: RM 420. Wall-mounted 2.0\u20132.5 HP: RM 460. Wall-mounted 3.0\u20133.5 HP: RM 500. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation \u2014 these published prices do not apply to non-wall-mounted units.",
+        a: "Chemical Overhaul pricing is published exclusively for Wall-Mounted Aircon units. Wall-mounted 1.0\u20131.5 HP: RM 420. Wall-mounted 2.0\u20132.5 HP: RM 460. Wall-mounted 3.0\u20133.5 HP: RM 500. All prices confirmed before technician begins. Multi-unit discount applies: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units. Ceiling cassette, ducted, floor-standing, portable, window and any other non-wall-mounted aircon types require a separate on-site assessment and quotation \u2014 these published prices do not apply to non-wall-mounted units.",
       },
       {
         q: "When do I need a chemical overhaul vs a chemical wash?",
-        a: "Use this decision guide: (1) Water leaking from the indoor unit \u2192 likely overhaul (drain pan/tray blocked or cracked). (2) Ice visible on the coil or copper pipe \u2192 overhaul (coil is so dirty that refrigerant cannot absorb heat, causing freezing). (3) Extremely foul, rotten smell even after cleaning \u2192 overhaul (biofilm deep inside blower barrel and housing). (4) Unit not opened/cleaned in 3+ years \u2192 overhaul. (5) Chemical wash done 6 months ago and problem is back \u2192 overhaul (surface clean not enough). If symptoms are mild \u2014 slightly weak cooling, light musty smell, no leaks \u2014 a chemical wash (RM 170) is likely sufficient. WhatsApp us your symptoms and we will advise honestly.",
+        a: "Use this decision guide: (1) Water leaking from the indoor unit \u2192 likely overhaul (drain pan/tray blocked or cracked). (2) Ice visible on the coil or copper pipe \u2192 overhaul (coil is so dirty that refrigerant cannot absorb heat, causing freezing). (3) Extremely foul, rotten smell even after cleaning \u2192 overhaul (biofilm deep inside blower barrel and housing). (4) Unit not opened/cleaned in 3+ years \u2192 overhaul. (5) Chemical wash done 6 months ago and problem is back \u2192 overhaul (surface clean not enough). If symptoms are mild \u2014 slightly weak cooling, light musty smell, no leaks \u2014 a chemical wash (from RM 120) is likely sufficient. WhatsApp us your symptoms and we will advise honestly.",
       },
       {
         q: "My aircond has been leaking water for weeks. Will overhaul stop it permanently?",
@@ -226,16 +238,19 @@ export const servicesData: Record<string, ServiceDetail> = {
         a: "No. Our technician performs a \u2018pump-down\u2019 procedure before removing the indoor unit: the refrigerant is pumped back into the outdoor condenser unit and the service valves are closed, so no gas is lost. The unit is reconnected to the same refrigerant charge after reassembly. If your refrigerant level was already low before the overhaul (which we check during the initial diagnostic), we will inform you and quote a top-up separately. The overhaul itself does not consume or release any refrigerant.",
       },
       { q: "Does a chemical overhaul include checking for refrigerant leaks?", a: "Yes. Every chemical overhaul includes a mandatory high-pressure test or electronic leak sweep after reassembly to ensure the sealed system is 100% airtight." },
-      { q: "Will my aircond be quieter after an overhaul?", a: "Significantly. By removing heavy sludge from the blower wheel and lubricating fan motor mounts, we eliminate the imbalances that cause vibration and high-frequency noise." }
+      { q: "Will my aircond be quieter after an overhaul?", a: "Significantly. By removing heavy sludge from the blower wheel and lubricating fan motor mounts, we eliminate the imbalances that cause vibration and high-frequency noise." },
+      { q: "Is a chemical overhaul worth it, or should I replace the aircond instead?", a: "It depends on the unit's age and compressor health. An overhaul costs RM 420\u2013500 (wall-mounted, by HP). If your unit is under 8 years old, the compressor is healthy (we check amp draw during diagnosis) and it cooled well when clean, an overhaul is usually the smart spend \u2014 it restores the unit for a fraction of a replacement. If the unit is 10+ years old, uses R22, has needed repeated repairs, or the compressor is noisy or weak, putting RM 420\u2013500 into it rarely makes sense and we will tell you so honestly \u2014 a new inverter unit will also cut your electricity bill. We do both overhaul and new installation, so our advice is not biased either way." },
+      { q: "How often should a chemical overhaul be done \u2014 can it be done too often?", a: "A chemical overhaul is not a routine service. For most homes it is needed at most once every 2\u20133 years, and only when there are clear signs: recurring water leaks, ice on the coil, or smell that returns within months of a chemical wash. Routine care is basic servicing every 3\u20136 months and a pressure chemical wash about once a year. Repeatedly dismantling a unit wears screw mounts and gaskets, so we never sell an overhaul 'just because' \u2014 if a chemical wash will solve it, that is what we recommend." },
+      { q: "What should I prepare before a chemical overhaul visit?", a: "Clear the floor area under the indoor unit and move fragile or valuable items nearby \u2014 we lay waterproof protection sheets, but space to work safely matters. Keep pets in another room, and make sure the technician can reach a water point and drain for rinsing and the water-flow test. Allow 2\u20133 hours per unit. There may be a mild chemical smell during the service; it ventilates away within about an hour after we finish. You do not need to be home the whole time, but please be reachable by WhatsApp in case we find a cracked drain pan or a part that needs your approval." }
     ],
     faqsBM: [
       {
         q: "Berapa harga chemical overhaul di KL & Selangor?",
-        a: "Harga Chemical Overhaul diterbitkan secara eksklusif untuk unit dinding sahaja. Dinding 1.0\u20131.5 HP: RM 420. Dinding 2.0\u20132.5 HP: RM 460. Dinding 3.0\u20133.5 HP: RM 500. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 2\u20133 unit, 10% untuk 4\u20138 unit. Ceiling cassette, ducted, floor-standing, portable, window dan mana-mana jenis aircond bukan-dinding yang lain memerlukan sebut harga dan penilaian berasingan di tapak \u2014 harga yang diterbitkan ini tidak terpakai untuk unit bukan-dinding.",
+        a: "Harga Chemical Overhaul diterbitkan secara eksklusif untuk unit dinding sahaja. Dinding 1.0\u20131.5 HP: RM 420. Dinding 2.0\u20132.5 HP: RM 460. Dinding 3.0\u20133.5 HP: RM 500. Semua harga disahkan sebelum juruteknik bermula. Diskaun pelbagai unit: 5% untuk 5+ unit, 10% untuk 10+ unit. Ceiling cassette, ducted, floor-standing, portable, window dan mana-mana jenis aircond bukan-dinding yang lain memerlukan sebut harga dan penilaian berasingan di tapak \u2014 harga yang diterbitkan ini tidak terpakai untuk unit bukan-dinding.",
       },
       {
         q: "Bilakah saya memerlukan overhaul kimia vs cuci kimia?",
-        a: "Gunakan panduan ini: (1) Air bocor dari unit dalaman \u2192 overhaul (dulang longkang tersumbat atau retak). (2) Ais kelihatan pada gegelung atau paip kuprum \u2192 overhaul (gegelung terlalu kotor, bahan pendingin tidak dapat menyerap haba). (3) Bau sangat busuk walaupun selepas dibersihkan \u2192 overhaul (biofilm jauh di dalam barrel kipas). (4) Unit tidak dibuka/dibersihkan 3+ tahun \u2192 overhaul. (5) Cuci kimia 6 bulan lepas dan masalah kembali \u2192 overhaul. Jika simptom ringan \u2014 penyejukan sedikit lemah, bau hapak ringan, tiada bocor \u2014 cuci kimia (RM 170) mungkin mencukupi. WhatsApp kami simptom anda dan kami akan menasihatkan dengan jujur.",
+        a: "Gunakan panduan ini: (1) Air bocor dari unit dalaman \u2192 overhaul (dulang longkang tersumbat atau retak). (2) Ais kelihatan pada gegelung atau paip kuprum \u2192 overhaul (gegelung terlalu kotor, bahan pendingin tidak dapat menyerap haba). (3) Bau sangat busuk walaupun selepas dibersihkan \u2192 overhaul (biofilm jauh di dalam barrel kipas). (4) Unit tidak dibuka/dibersihkan 3+ tahun \u2192 overhaul. (5) Cuci kimia 6 bulan lepas dan masalah kembali \u2192 overhaul. Jika simptom ringan \u2014 penyejukan sedikit lemah, bau hapak ringan, tiada bocor \u2014 cuci kimia (dari RM 120) mungkin mencukupi. WhatsApp kami simptom anda dan kami akan menasihatkan dengan jujur.",
       },
       {
         q: "Aircond saya telah bocor air berminggu-minggu. Adakah overhaul akan menghentikannya?",
@@ -250,7 +265,10 @@ export const servicesData: Record<string, ServiceDetail> = {
         a: "Tidak. Juruteknik kami melakukan prosedur 'pump-down' sebelum mengeluarkan unit dalaman: bahan pendingin dipam kembali ke dalam unit kondenser luar dan injap servis ditutup, jadi tiada gas hilang. Unit disambungkan semula ke cas bahan pendingin yang sama selepas pemasangan semula. Jika tahap bahan pendingin anda sudah rendah sebelum overhaul, kami akan memaklumkan anda.",
       },
       { q: "Adakah overhaul kimia termasuk pemeriksaan kebocoran gas?", a: "Ya. Setiap overhaul kimia termasuk ujian tekanan imbasan kebocoran elektronik jika diperlukan selepas pemasangan semula untuk memastikan sistem kedap udara 100%." },
-      { q: "Adakah aircond saya akan menjadi lebih senyap selepas overhaul?", a: "Ya, secara ketara. Dengan membuang kotoran berat dari roda kipas dan melincirkan motor, kami menghapuskan ketidakseimbangan yang menyebabkan getaran dan bunyi bising." }
+      { q: "Adakah aircond saya akan menjadi lebih senyap selepas overhaul?", a: "Ya, secara ketara. Dengan membuang kotoran berat dari roda kipas dan melincirkan motor, kami menghapuskan ketidakseimbangan yang menyebabkan getaran dan bunyi bising." },
+      { q: "Adakah overhaul kimia berbaloi, atau lebih baik tukar aircond baharu?", a: "Bergantung pada umur unit dan kesihatan kompressor. Overhaul berharga RM 420\u2013500 (unit dinding, mengikut HP). Jika unit bawah 8 tahun, kompressor sihat (kami semak amp draw semasa diagnosis) dan menyejuk dengan baik apabila bersih, overhaul biasanya pilihan bijak \u2014 ia memulihkan unit pada sebahagian kecil kos penggantian. Jika unit 10+ tahun, menggunakan R22, kerap rosak, atau kompressor bising/lemah, membelanjakan RM 420\u2013500 jarang berbaloi dan kami akan beritahu dengan jujur \u2014 unit inverter baharu juga menjimatkan bil elektrik anda. Kami melakukan kedua-dua overhaul dan pemasangan baharu, jadi nasihat kami tidak berat sebelah." },
+      { q: "Berapa kerap overhaul kimia patut dibuat \u2014 bolehkah terlalu kerap?", a: "Overhaul kimia bukan servis rutin. Bagi kebanyakan rumah, ia diperlukan paling kerap sekali setiap 2\u20133 tahun, dan hanya apabila ada tanda jelas: kebocoran air berulang, ais pada gegelung, atau bau yang kembali dalam beberapa bulan selepas cuci kimia. Penjagaan rutin ialah servis asas setiap 3\u20136 bulan dan cuci kimia bertekanan kira-kira sekali setahun. Membongkar unit berulang kali mehauserkan tapak skru dan gasket, jadi kami tidak menjual overhaul sewenang-wenangnya \u2014 jika cuci kimia boleh menyelesaikannya, itu yang kami syorkan." },
+      { q: "Apa yang perlu saya sediakan sebelum lawatan overhaul kimia?", a: "Kosongkan kawasan lantai di bawah unit dalaman dan alihkan barang mudah pecah atau berharga berdekatan \u2014 kami membentangkan kain pelindung kalis air, tetapi ruang untuk bekerja dengan selamat adalah penting. Letakkan haiwan peliharaan di bilik lain, dan pastikan juruteknik boleh mencapai punca air dan longkang untuk bilasan dan ujian aliran air. Peruntukkan 2\u20133 jam setiap unit. Mungkin ada bau kimia ringan semasa servis; ia hilang dalam kira-kira sejam selepas kami selesai. Anda tidak perlu berada di rumah sepanjang masa, tetapi sila boleh dihubungi melalui WhatsApp sekiranya kami menemui dulang longkang retak atau bahagian yang memerlukan kelulusan anda." }
     ],
     faqsZH: [
       {
@@ -259,7 +277,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "何时需要化学大修而非化学清洗？",
-        a: "使用此决策指南：（1）室内机漏水\u2192可能需要大修（排水盘堵塞或破裂）。（2）盘管或铜管可见结冰\u2192大修（盘管太脏导致冷媒无法吸热）。（3）即使清洗后仍有极臭气味\u2192大修（生物膜深入风轮桶和外壳内部）。（4）3年以上未打开/清洗\u2192大修。（5）6个月前做了化学清洗但问题复发\u2192大修（表面清洁不够）。如果症状轻微\u2014\u2014冷气稍弱、轻微霉味、无漏水\u2014\u2014化学清洗（RM 170）可能就足够了。WhatsApp我们您的症状，我们会诚实建议。",
+        a: "使用此决策指南：（1）室内机漏水\u2192可能需要大修（排水盘堵塞或破裂）。（2）盘管或铜管可见结冰\u2192大修（盘管太脏导致冷媒无法吸热）。（3）即使清洗后仍有极臭气味\u2192大修（生物膜深入风轮桶和外壳内部）。（4）3年以上未打开/清洗\u2192大修。（5）6个月前做了化学清洗但问题复发\u2192大修（表面清洁不够）。如果症状轻微\u2014\u2014冷气稍弱、轻微霉味、无漏水\u2014\u2014化学清洗（从 RM 120 起）可能就足够了。WhatsApp我们您的症状，我们会诚实建议。",
       },
       {
         q: "冷气漏水好几周了\u2014\u2014大修能永久解决吗？",
@@ -267,14 +285,17 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "化学大修需要多长时间？",
-        a: "挂壁式1.0\u20131.5 HP：2\u20132.5小时。挂壁式2.0\u20133.5 HP：2.5\u20133小时。天花板卡式：3\u20134小时（因天花板网格集成需要更多拆卸工作）。我们不赶工\u2014\u2014重新组装前正确干燥零件对防止电气短路至关重要。如果您有多台机器需要大修，我们可以安排在同一天依次完成。",
+        a: "挂壁式1.0\u20131.5 HP：2\u20132.5小时。挂壁式2.0\u20133.5 HP：2.5\u20133小时。化学大修仅适用于挂壁式；天花板卡式需另行现场报价。我们不赶工\u2014\u2014重新组装前正确干燥零件对防止电气短路至关重要。如果您有多台机器需要大修，我们可以安排在同一天依次完成。",
       },
       {
         q: "大修过程中会损失制冷剂吗？",
         a: "不会。我们的技术员在拆卸室内机前执行\u2018泵送\u2019程序：制冷剂被泵回室外冷凝器，检修阀关闭，因此不会损失气体。重新组装后机器重新连接到相同的制冷剂充注量。如果大修前您的制冷剂水平已经偏低（我们会在初步诊断时检查），我们会通知您并另行报价充气服务。大修本身不会消耗或释放任何制冷剂。",
       },
       { q: "化学大修包含冷媒查漏吗？", a: "是的。每次化学大修都包含强制性的高压氮气测试或电子检漏，确保重装后的密封系统100%气密。" },
-      { q: "大修后我的冷气会更安静吗？", a: "显著改善。通过清除风轮上的重度淤泥并润滑风扇电机支架，我们消除了导致震动和高频噪音的不平衡因素。" }
+      { q: "大修后我的冷气会更安静吗？", a: "显著改善。通过清除风轮上的重度淤泥并润滑风扇电机支架，我们消除了导致震动和高频噪音的不平衡因素。" },
+      { q: "化学大修值得做，还是直接换新冷气更好？", a: "取决于机器年龄和压缩机健康状况。大修价格 RM 420–500（挂壁式，按匹数）。如果机器在8年以内、压缩机健康（诊断时我们会检查电流）、干净时制冷良好，大修通常是明智的选择——以更换成本的一小部分恢复机器性能。如果机器已10年以上、使用R22、反复维修，或压缩机噪音大/无力，花 RM 420–500 通常不值得，我们会如实告诉您——新的变频机型还能降低电费。我们既做大修也做新机安装，所以建议不会偏向任何一方。" },
+      { q: "化学大修应该多久做一次——会不会太频繁？", a: "化学大修不是例行保养。对大多数家庭而言，最多每2–3年做一次，且仅在有明确征兆时：反复漏水、盘管结冰，或化学清洗后几个月内异味又回来。日常保养是每3–6个月基本保养、约每年一次高压化学清洗。反复拆机会磨损螺丝座和密封垫，所以我们绝不会无理由推销大修——如果化学清洗能解决问题，我们就会推荐化学清洗。" },
+      { q: "化学大修上门前我需要准备什么？", a: "请清空室内机下方的地面区域，并移开附近易碎或贵重物品——我们会铺设防水保护布，但安全的工作空间很重要。请把宠物安置在另一个房间，并确保技术员可以使用水源和排水口进行冲洗和水流测试。每台预留2–3小时。服务期间可能有轻微化学气味；结束后约一小时内通风散去。您不必全程在家，但如果我们发现排水盘开裂或有零件需要您确认，请保持 WhatsApp 畅通。" }
     ],
     priceTable: [
       { label: "Wall-Mounted · 1.0 – 1.5 HP", price: "RM 420" },
@@ -809,7 +830,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
       {
         q: "Can you service multiple ceiling cassette units across our entire premises in one visit?",
-        a: "Yes \u2014 this is what we do regularly for commercial clients. We can schedule 2\u20133 technicians on the same day for larger sites (restaurants with 4\u20136 units, offices with 8\u201312 units, retail floors). All units serviced, drain paths tested, and cooling verified before we leave. Volume discounts: 5% OFF Instant Booking Discount for 4\u201310 units, 10% OFF Instant Booking Discount for 10+ units on the same visit. Custom annual maintenance contracts (AMC) also available for quarterly or biannual scheduled servicing \u2014 WhatsApp us for a site-specific proposal.",
+        a: "Yes \u2014 this is what we do regularly for commercial clients. We can schedule 2\u20133 technicians on the same day for larger sites (restaurants with 4\u20136 units, offices with 8\u201312 units, retail floors). All units serviced, drain paths tested, and cooling verified before we leave. Volume discounts: 5% OFF Instant Booking Discount for 5+ units, 10% OFF Instant Booking Discount for 10+ units on the same visit. Custom annual maintenance contracts (AMC) also available for quarterly or biannual scheduled servicing \u2014 WhatsApp us for a site-specific proposal.",
       },
       {
         q: "Can you service our ceiling cassette units after business hours?",
